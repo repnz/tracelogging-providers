@@ -1,0 +1,426 @@
+ProviderNames:
+	Microsoft.Windows.App.Browser
+	TelemetryAssert
+	TelemetryAssertDiagTrack
+	Microsoft.Windows.HVSI.Manager
+
+
+
+**** Events *****
+ElevationBrokerFailedToStartCrossProcessMessaging(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	BOOLEAN isHighIL,
+	BOOLEAN isAdmin,
+	BOOLEAN isBuiltInAdmin
+	);
+
+CredentialsRetrieveAllFromBrokerCompleted(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	INT32 hr
+	);
+
+CredentialRemoveFromBrokerCompleted(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	INT32 hr
+	);
+
+CredentialsFindAllByUrlFromBrokerCompleted(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	INT32 hr
+	);
+
+CredentialGetFromBrokerCompleted(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	INT32 hr
+	);
+
+CredentialAddFromBrokerCompleted(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	INT32 hr
+	);
+
+CBrowserBrokerClassFactoryEvent(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	UINT32 eventLocation,
+	UINT32 dwordArg,
+	INT32 longArg,
+	INT32 hrArg
+	);
+
+BrowserBroker_BrokerCVListAction_End(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	INT32 eAction,
+	HRESULT hr,
+	HEXINT32 *pdwXMLVersionLow,
+	HEXINT32 *pdwXMLVersionHigh,
+	HEXINT32 *pdwCacheVersionLow,
+	HEXINT32 *pdwCacheVersionHigh,
+	HEXINT32 *pdwDOSTime,
+	BOOL32 *pfDomainAttributeSet
+	);
+
+BrowserBroker_BrokerCVListAction_Begin(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	INT32 eAction
+	);
+
+BrowserBroker_CCVListUpdateManager_DownloadFile_MoveFile(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	HRESULT hr,
+	HEXINT32 dwSourceAttributes,
+	UINT32 dwErrorSource,
+	HEXINT32 dwDestinationAttributes,
+	UINT32 dwErrorDestination
+	);
+
+BrowserBroker_CCVListUpdateManager_DownloadFile_UpdateDownloadUrlRegistry(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	HRESULT hr,
+	BOOL32 fNeedsToResetBrowserModeFilter
+	);
+
+BrowserBroker_CCVListUpdateManager_DownloadFile_UpdateTimeRegistry(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	HRESULT hr
+	);
+
+BrowserBroker_CCVListUpdateManager_DownloadFile_ParseVersionAndUpdateRegistry(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	HRESULT hr
+	);
+
+BrowserBroker_CCVListUpdateManager_DownloadFile_GetIEBrowserModeFilterSpartanMediumILPath(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	HRESULT hr,
+	UNICODESTRING szXMLPath
+	);
+
+BrowserBroker_DownloadCallback_OnStopBinding(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	HEXINT64 this,
+	HRESULT hresult,
+	UNICODESTRING szError
+	);
+
+BrowserBroker_DownloadCallback_OnProgress(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	HEXINT64 this,
+	INT32 ulProgress,
+	INT32 ulProgressMax,
+	INT32 ulStatusCode,
+	UNICODESTRING szStatusText,
+	HRESULT hr
+	);
+
+BrowserBroker_DownloadCallback_OnStartBinding(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	HEXINT64 this,
+	HEXINT64 pbinding
+	);
+
+BrowserBroker_DownloadToTempFile_End(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	HRESULT hr
+	);
+
+BrowserBroker_DownloadToTempFile_Begin(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	UNICODESTRING url,
+	UNICODESTRING tempFileName,
+	HEXINT64 callback,
+	HRESULT hr
+	);
+
+IEFavResolver_HandleFullScanItemFromEdge(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	UNICODESTRING title,
+	UNICODESTRING folderPath,
+	UNICODESTRING url,
+	INT32 hrValue
+	);
+
+IEFavResolver_HandleFullScanFromEdge(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	UINT32 successItemCount,
+	UINT32 totalItemCount
+	);
+
+IEFavResolver_HandleOrderChangedFromEdge(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	UNICODESTRING folderPath,
+	UINT32 itemCount,
+	INT32 hrValue
+	);
+
+IEFavResolver_HandleItemDeletedFromEdge(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	UNICODESTRING title,
+	UNICODESTRING relativePath,
+	INT32 hrValue
+	);
+
+IEFavResolver_HandleItemUpdatedFromEdge(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	UNICODESTRING newTitle,
+	UNICODESTRING oldTitle,
+	UNICODESTRING newRelativePath,
+	UNICODESTRING oldRelativePath,
+	INT32 hrValue
+	);
+
+IEFavResolver_HandleItemAddedFromEdge(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	UNICODESTRING title,
+	UNICODESTRING url,
+	INT32 hrValue
+	);
+
+IEFavResolver::IsInSyncList_RemovedFromList(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	UNICODESTRING itemPath,
+	UINT64 elapsedTime
+	);
+
+IEFavResolver::IsInSyncList_InSyncList(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	UNICODESTRING itemPath,
+	UINT64 elapsedTime
+	);
+
+IEFavResolver::AddToSyncList(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	UNICODESTRING itemPath,
+	UINT64 tickTime
+	);
+
+IEFavResolver_HandleFaviconData(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	UNICODESTRING title,
+	UNICODESTRING unifiedFolderPath,
+	UNICODESTRING iconUrl,
+	INT32 hr
+	);
+
+IEFavResolver_RequestFaviconDataFromEdge(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	UNICODESTRING title,
+	UNICODESTRING unifiedFolderPath,
+	INT32 hr
+	);
+
+IEFavResolver::ApplyFavoriteOrder_itemTitle(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	UNICODESTRING itemTitle
+	);
+
+IEFavResolver::ApplyFavoriteOrder_Folder(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	UNICODESTRING Folder
+	);
+
+IEFavResolver_PostOrderChangedEventToEdge_itemTitle(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	UNICODESTRING itemTitle
+	);
+
+IEFavResolver_PostOrderChangedEventToEdge_folder(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	UNICODESTRING fullParentPath
+	);
+
+IEFavResolver_OnIEFolderUpdated(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	UNICODESTRING fullPath
+	);
+
+IEFavResolver_OnIEFavUpdated(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	UNICODESTRING fullPath
+	);
+
+IEFavResolver_OnIEFavRenamed(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	BOOLEAN isFolder,
+	UNICODESTRING oldPath,
+	UNICODESTRING newPath
+	);
+
+IEFavResolver_OnIEFavDeleted(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	UNICODESTRING fullPath
+	);
+
+IEFavResolver_OnIEFavFolderAdded(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	UNICODESTRING FolderPath
+	);
+
+IEFavResolver_OnIEFavAdded(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	UNICODESTRING filePath
+	);
+
+IEFavResolver_StartFavoriteMonitoring(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid
+	);
+
+IEFavResolver::HandleOrderChangedEvent_folder(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	UNICODESTRING folder
+	);
+
+IEFavResolver_Uninitialize(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid
+	);
+
+IEFavResolver_ShutdownIEFavResolver(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid
+	);
+
+CredentialsRetrieveAllFromStoreCompleted(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	INT32 hr
+	);
+
+CredentialRemoveFromStoreCompleted(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	INT32 hr
+	);
+
+CredentialsRemoveAllFromStoreCompleted(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	INT32 hr
+	);
+
+CredentialGetFromStoreCompleted(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	INT32 hr
+	);
+
+CredentialsFindFromStoreCompleted(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	INT32 hr
+	);
+
+CredentialAddToStoreCompleted(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	INT32 hr
+	);
+
+Assert(
+	UINT32 assertVersion,
+	UINT32 rva,
+	UINT32 timestamp,
+	UINT32 imageSize,
+	ANSISTRING imageName,
+	UINT32 count,
+	UINT32 totalHits,
+	UINT32 ModuleCollection,
+	UINT32 GlobalCollection
+	);
+
+HvsiDVCChanelTimeout(
+	UINT32 Command,
+	HRESULT HResult
+	);
+

@@ -1,0 +1,140 @@
+ProviderNames:
+	Microsoft.Windows.OneSync.DiagCritical
+	Microsoft.Windows.Unistack.FailureTrigger
+	Microsoft.Windows.OneSync.DiagWarning
+	Microsoft.Windows.OneSync.DiagError
+	Microsoft.Windows.OneSync.SyncUtil
+	Microsoft.Windows.OneSync.DiagTrace
+
+
+
+**** Events *****
+FallbackError(
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+Assert(
+	HRESULT hr,
+	ANSISTRING file,
+	UINT32 line
+	);
+
+FallbackError(
+	UINT64 PartA_PrivTags,
+	SIGNED wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+FailureTrigger(
+	INT32 errorCode,
+	ANSISTRING expression,
+	ANSISTRING file,
+	INT32 line
+	);
+
+Warning(
+	HRESULT hr,
+	ANSISTRING file,
+	UINT32 line
+	);
+
+Error(
+	HRESULT hr,
+	ANSISTRING file,
+	UINT32 line
+	);
+
+GetWebTokenTimedOut(
+	UINT32 componentId,
+	ANSISTRING componentName,
+	ANSISTRING functionName,
+	SYSTEMTIME watchdogStartTime,
+	UINT32 watchdogDurationMs
+	);
+
+TokenBrokerError(
+	UINT32 Status,
+	INT32 TokenBrokerError,
+	HRESULT OneSyncError,
+	UNICODESTRING providerErrorText
+	);
+
+SyncUtil_XMLParse_LoadFailFilePos(
+	INT64 filePos
+	);
+
+SyncUtil_XMLParse_LoadFailSrcText(
+	UNICODESTRING srcText
+	);
+
+SyncUtil_XMLParse_LoadFailUrl(
+	UNICODESTRING url
+	);
+
+SyncUtil_XMLParse_LoadFailReason(
+	UNICODESTRING reason
+	);
+
+SyncUtil_XMLParse_LoadFailHresult(
+	HRESULT error
+	);
+
+CredUtil_UpdatePasswordForAccount(
+	HEXINT32 partnerId,
+	HRESULT hrDelete,
+	HRESULT hrRewrite
+	);
+
+Trace(
+	HEXINT32 pid,
+	ANSISTRING desc,
+	ANSISTRING text
+	);
+
+SyncUtil_OAuth_RefreshTokens(
+	HEXINT32 partnerId,
+	UNICODESTRING tokenType,
+	FILETIME expirationTime
+	);
+
+SyncUtil_OAuth_GetTokensFromAuthCode(
+	UNICODESTRING tokenType,
+	FILETIME expirationTime
+	);
+
+SyncUtil_OAuth_RefreshTokens(
+	UNICODESTRING tokenType,
+	FILETIME expirationTime
+	);
+

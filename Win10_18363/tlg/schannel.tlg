@@ -1,0 +1,172 @@
+ProviderNames:
+	Microsoft.Windows.Security.Schannel
+	Microsoft.Windows.TlgAggregateInternal
+
+
+
+**** Events *****
+TlsHandshakeInfoClientAggregated(
+	NULL connectionCount,
+	NULL elapsedTimeMin,
+	NULL elapsedTimeMax,
+	NULL elapsedTimeSum,
+	NULL targetName,
+	BOOL32 domainJoined,
+	UINT32 cipherSuite,
+	UNICODESTRING appName,
+	UINT8 handshakeType,
+	UINT64 contextReq,
+	UINT64 contextFlags,
+	UINT16 reconnectInfo,
+	UINT16 extendedMSInfo,
+	UINT32 tlsExtensionSent,
+	UINT32 tlsExtensionReceived,
+	HEXINT32 unknownTlsExtensionHexList,
+	UINT16 unknownTlsExtensionCount,
+	UINT32 curveType,
+	UINT32 protocol,
+	UINT32 keyExchangeLength,
+	UINT32 clientMinKeyLength,
+	UINT32 clientMaxKeyLength,
+	UINT32 ServerMinKeyLength,
+	UINT32 errorCode,
+	UINT8 alertNumber,
+	UINT32 errorState
+	);
+
+TlsErrorCertKeyUsage(
+	UINT32 keyXchAlgId,
+	UINT32 KeySignAlgId,
+	NULL targetName
+	);
+
+TlsErrorClientAggregated(
+	NULL connectionCount,
+	NULL elapsedTimeMin,
+	NULL elapsedTimeMax,
+	NULL elapsedTimeSum,
+	NULL targetName,
+	BOOL32 domainJoined,
+	UINT32 cipherSuite,
+	UNICODESTRING appName,
+	UINT8 handshakeType,
+	UINT64 contextReq,
+	UINT64 contextFlags,
+	UINT16 reconnectInfo,
+	UINT16 extendedMSInfo,
+	UINT32 tlsExtensionSent,
+	UINT32 tlsExtensionReceived,
+	HEXINT32 unknownTlsExtensionHexList,
+	UINT16 unknownTlsExtensionCount,
+	UINT32 curveType,
+	UINT32 protocol,
+	UINT32 keyExchangeLength,
+	UINT32 clientMinKeyLength,
+	UINT32 clientMaxKeyLength,
+	UINT32 ServerMinKeyLength,
+	UINT32 errorCode,
+	UINT8 alertNumber,
+	UINT32 errorState
+	);
+
+TlsRCMPUsage(
+	UINT16 serverRcmpUsage
+	);
+
+TlsHandshakeInfoServerCipherSuiteAggregated(
+	NULL connectionCount,
+	NULL cipherSuite1,
+	NULL cipherSuite2,
+	NULL cipherSuite3,
+	NULL cipherSuite4,
+	NULL cipherSuite5,
+	NULL cipherSuite6,
+	NULL cipherSuite7,
+	NULL cipherSuite8,
+	NULL cipherSuite9,
+	NULL cipherSuite10,
+	NULL cipherSuite11,
+	NULL cipherSuite12,
+	NULL cipherSuite13,
+	NULL cipherSuite14,
+	NULL cipherSuite15,
+	NULL cipherSuite16,
+	NULL elapsedTimeSum1,
+	NULL elapsedTimeSum2,
+	NULL elapsedTimeSum3,
+	NULL elapsedTimeSum4,
+	NULL elapsedTimeSum5,
+	NULL elapsedTimeSum6,
+	NULL elapsedTimeSum7,
+	NULL elapsedTimeSum8,
+	NULL elapsedTimeSum9,
+	NULL elapsedTimeSum10,
+	NULL elapsedTimeSum11,
+	NULL elapsedTimeSum12,
+	NULL elapsedTimeSum13,
+	NULL elapsedTimeSum14,
+	NULL elapsedTimeSum15,
+	NULL elapsedTimeSum16,
+	INT32 cipherGroupBaseOffest,
+	UNICODESTRING appName,
+	UINT8 handshakeType,
+	UINT64 contextReq,
+	UINT64 contextFlags,
+	UINT16 reconnectInfo,
+	UINT16 extendedMSInfo,
+	UINT32 tlsExtensionSent,
+	UINT32 tlsExtensionReceived,
+	HEXINT32 unknownTlsExtensionHexList,
+	UINT16 unknownTlsExtensionCount,
+	UINT32 curveType,
+	UINT32 protocol,
+	UINT32 keyExchangeLength,
+	UINT32 clientMinKeyLength,
+	UINT32 clientMaxKeyLength,
+	UINT32 ServerMinKeyLength,
+	UINT32 errorCode,
+	UINT8 alertNumber,
+	UINT32 errorState,
+	UINT32 clientOfferedProtocol,
+	HEXINT32 clientCipherList,
+	UINT32 clientCipherListCount
+	);
+
+TlsErrorServerAggregated(
+	NULL connectionCount,
+	UNICODESTRING appName,
+	UINT8 handshakeType,
+	UINT64 contextReq,
+	UINT64 contextFlags,
+	UINT16 reconnectInfo,
+	UINT16 extendedMSInfo,
+	UINT32 tlsExtensionSent,
+	UINT32 tlsExtensionReceived,
+	HEXINT32 unknownTlsExtensionHexList,
+	UINT16 unknownTlsExtensionCount,
+	UINT32 curveType,
+	UINT32 protocol,
+	UINT32 keyExchangeLength,
+	UINT32 clientMinKeyLength,
+	UINT32 clientMaxKeyLength,
+	UINT32 ServerMinKeyLength,
+	UINT32 errorCode,
+	UINT8 alertNumber,
+	UINT32 errorState,
+	UINT32 clientOfferedProtocol,
+	HEXINT32 clientCipherList,
+	UINT32 clientCipherListCount
+	);
+
+TlgAggregateSummary(
+	GUID Provider,
+	UINT64 NumFlushes,
+	UINT64 MaxEntriesStored,
+	UINT64 TotalEntriesFlushed,
+	UINT32 MaxEntriesFlushed,
+	UINT32 MinEntriesFlushed,
+	UINT32 NumBucketLimitReached,
+	UINT32 NumAllocationFailures,
+	UINT32 NumLargeEventFailures
+	);
+

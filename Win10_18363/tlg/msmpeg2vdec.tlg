@@ -1,0 +1,251 @@
+ProviderNames:
+	Microsoft.Windows.MediaFoundation.MPEGDecoder
+	Microsoft.Windows.MediaFoundation.H264Decoder
+	Microsoft.Windows.MediaFoundation.CallStack
+
+
+
+**** Events *****
+OPinConfiguration(
+	GUID InputMajorTypeGuid,
+	GUID InputSubTypeGuid,
+	GUID OutputMajorTypeGuid,
+	GUID OutputSubTypeGuid,
+	BOOL32 IsH264Stream,
+	BOOL32 IsBusEncryptionAvailable,
+	BOOL32 IsUsingDXVA2,
+	BOOL32 IsConnectedDXVA,
+	BOOL32 IsDXVAConfigurationForDVDMpeg1,
+	BOOL32 IsMPEG1VLDAvailable,
+	UINT32 Mpeg2D3DFormat,
+	UINT32 H264D3DFormat,
+	BOOL32 IsStoreMFT,
+	GUID MPEGDecoderMFTInstanceId
+	);
+
+MFMediaError(
+	ANSISTRING Function,
+	HEXINT32 hr,
+	UNICODESTRING Description,
+	GUID MFMediaTelemetrySessionID,
+	UINT32 MFMediaTelemetrySessionInstance,
+	GUID H264MFTInstanceId
+	);
+
+HWState(
+	ANSISTRING Function,
+	INT32 bUsingD3D11,
+	INT32 bUsingDXVA2,
+	INT32 bDXVA2Software,
+	UINT32 NumHWChanges,
+	GUID MFMediaTelemetrySessionID,
+	UINT32 MFMediaTelemetrySessionInstance,
+	GUID H264MFTInstanceId
+	);
+
+HWState(
+	ANSISTRING Function,
+	INT32 hr,
+	INT32 bUsingD3D11,
+	INT32 bUsingDXVA2,
+	INT32 bDXVA2Software,
+	UINT32 NumHWChanges,
+	GUID MFMediaTelemetrySessionID,
+	UINT32 MFMediaTelemetrySessionInstance,
+	GUID H264MFTInstanceId
+	);
+
+QualityStatistics(
+	INT32 SampleCorruptionCount,
+	INT32 SampleLagMin,
+	INT32 SampleLagMax,
+	INT32 SampleLagAvg,
+	INT32 SampleLagCount,
+	INT32 DropMode,
+	INT32 QualityLevel,
+	INT64 FramesSent,
+	UINT32 FramesDropped,
+	GUID MFMediaTelemetrySessionID,
+	UINT32 MFMediaTelemetrySessionInstance,
+	GUID H264MFTInstanceId
+	);
+
+EndStatistics(
+	INT32 SampleCorruptionCount,
+	INT32 SampleLagMin,
+	INT32 SampleLagMax,
+	INT32 SampleLagAvg,
+	INT32 SampleLagCount,
+	INT32 DropMode,
+	INT32 QualityLevel,
+	INT64 FramesSent,
+	UINT32 FramesDropped,
+	INT64 InvalidSliceHeaderNum,
+	INT64 ValidSliceHeaderNum,
+	INT32 OutputChanges,
+	INT32 HardwareChanges,
+	UINT32 Width,
+	UINT32 Height,
+	UINT32 FrameRateNumerator,
+	UINT32 FrameRateDenominator,
+	UINT32 MFNominalRange,
+	GUID OutputFormat,
+	INT64 AverageBitrate,
+	BOOL32 bThumbnailMode,
+	BOOL32 bLowLatencyMode,
+	BOOL32 bUseEncryption,
+	UINT32 UsingHWDRM,
+	BOOL32 UsingDX12,
+	BOOL32 UsingDX11,
+	BOOL32 UsingDX9,
+	BOOL32 SoftwareH264,
+	UNICODESTRING DX11 Device Description,
+	ANSISTRING DX9 Device Description,
+	UINT32 VendorId,
+	UINT32 DeviceId,
+	UINT32 ActualKBCount,
+	UINT64 ProcessInputCount,
+	UINT32 ProcessInputAverageKB,
+	UINT32 ProcessInputMinKB,
+	UINT32 ProcessInputMaxKB,
+	GUID MFMediaTelemetrySessionID,
+	UINT32 MFMediaTelemetrySessionInstance,
+	GUID H264MFTInstanceId
+	);
+
+Configuration(
+	ANSISTRING Info,
+	BOOL32 bH264MediaType,
+	BOOL32 bNALULengthInfoSet,
+	BOOL32 bLowLatencyMode,
+	BOOL32 bRemuxModeDecoderInitDecPar,
+	BOOL32 bThumbnailMode,
+	UINT32 uiRemuxMarKIPicAsCleanPointInitDecPar,
+	BOOL32 UsingDX12,
+	BOOL32 UsingDX11,
+	BOOL32 UsingDX9,
+	BOOL32 SoftwareH264,
+	UNICODESTRING DX11 Device Description,
+	ANSISTRING DX9 Device Description,
+	UINT32 VendorId,
+	UINT32 DeviceId,
+	BOOL32 bUseEncryption,
+	UINT32 UsingHWDRM,
+	GUID DecoderProfile,
+	GUID MFMediaTelemetrySessionID,
+	UINT32 MFMediaTelemetrySessionInstance,
+	GUID H264MFTInstanceId
+	);
+
+OutputState(
+	UNICODESTRING Info,
+	UINT32 Width,
+	UINT32 Height,
+	UINT32 FrameRateNumerator,
+	UINT32 FrameRateDenominator,
+	UINT32 MFNominalRange,
+	GUID OutputFormat,
+	INT64 AverageBitrate,
+	GUID MFMediaTelemetrySessionID,
+	UINT32 MFMediaTelemetrySessionInstance,
+	GUID H264MFTInstanceId,
+	UINT32 OutputChangeNum
+	);
+
+MFMediaError(
+	ANSISTRING Function,
+	HEXINT32 hr,
+	UNICODESTRING Description,
+	GUID MFMediaTelemetrySessionID,
+	UINT32 MFMediaTelemetrySessionInstance,
+	BOOL32 IsStoreMFT,
+	GUID MPEGDecMFTInstanceId
+	);
+
+QualityStatistics(
+	INT32 SampleLagMin,
+	INT32 SampleLagMax,
+	INT32 SampleLagAvg,
+	INT32 SampleLagCount,
+	INT32 DropMode,
+	INT32 QualityLevel,
+	INT32 FramesSent,
+	INT32 ActualKBCount,
+	INT32 ProcessInputCount,
+	INT32 ProcessInputAverageKB,
+	INT32 ProcessInputMinKB,
+	INT32 ProcessInputMaxKB,
+	GUID MFMediaTelemetrySessionID,
+	UINT32 MFMediaTelemetrySessionInstance,
+	BOOL32 IsStoreMFT,
+	GUID MPEGDecoderMFTInstanceId
+	);
+
+OutputState(
+	INT32 Width,
+	INT32 Height,
+	UINT32 FrameRateNumerator,
+	UINT32 FrameRateDenominator,
+	INT32 MFNominalRange,
+	GUID OutputFormat,
+	INT32 AverageBitrate,
+	INT32 OutputChangeNum,
+	GUID MFMediaTelemetrySessionID,
+	UINT32 MFMediaTelemetrySessionInstance,
+	BOOL32 IsStoreMFT,
+	GUID MPEGDecoderMFTInstanceId
+	);
+
+EndStatistics(
+	INT32 SampleLagMin,
+	INT32 SampleLagMax,
+	INT32 SampleLagAvg,
+	INT32 SampleLagCount,
+	INT32 DropMode,
+	INT32 QualityLevel,
+	INT32 FramesSent,
+	INT32 ActualKBCount,
+	INT32 ProcessInputCount,
+	INT32 ProcessInputAverageKB,
+	INT32 ProcessInputMinKB,
+	INT32 ProcessInputMaxKB,
+	INT32 OutputChanges,
+	INT32 Width,
+	INT32 Height,
+	UINT32 FrameRateNumerator,
+	UINT32 FrameRateDenominator,
+	INT32 MFNominalRange,
+	GUID OutputFormat,
+	INT32 AverageBitrate,
+	BOOL32 IsMPEG1,
+	BOOL32 UsingDX11,
+	BOOL32 UsingDX9,
+	BOOL32 UsingDX2Software,
+	UINT32 VendorId,
+	UINT32 DeviceId,
+	BOOL32 bThumbnailMode,
+	BOOL32 bLowLatencyMode,
+	BOOL32 bUseEncryption,
+	GUID MFMediaTelemetrySessionID,
+	UINT32 MFMediaTelemetrySessionInstance,
+	BOOL32 IsStoreMFT,
+	GUID MPEGDecoderMFTInstanceId
+	);
+
+Configuration(
+	BOOL32 IsMPEG1,
+	BOOL32 UsingDX11,
+	BOOL32 UsingDX9,
+	BOOL32 UsingDX2Software,
+	UINT32 VendorId,
+	UINT32 DeviceId,
+	BOOL32 bLowLatencyMode,
+	BOOL32 bThumbnailMode,
+	BOOL32 bUseEncryption,
+	GUID DecoderProfile,
+	GUID MFMediaTelemetrySessionID,
+	UINT32 MFMediaTelemetrySessionInstance,
+	BOOL32 IsStoreMFT,
+	GUID MPEGDecoderMFTInstanceId
+	);
+

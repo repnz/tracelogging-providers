@@ -1,0 +1,65 @@
+ProviderNames:
+	Microsoft.Windows.DriverInstall
+
+
+
+**** Events *****
+DeviceInstall(
+	UNICODESTRING DeviceInstanceId,
+	UNICODESTRING ParentDeviceInstanceId,
+	FILETIME InstallDate,
+	UNICODESTRING FirstHardwareId,
+	UNICODESTRING LastCompatibleId,
+	UNICODESTRING MatchingDeviceId,
+	UNICODESTRING DriverInfName,
+	BOOL32 GenericDriver,
+	UNICODESTRING OriginalDriverInfName,
+	UNICODESTRING DriverInfSectionName,
+	GUID ClassGuid,
+	FILETIME DriverDate,
+	UNICODESTRING DriverVersion,
+	UNICODESTRING DriverProvider,
+	UNICODESTRING DriverPackageId,
+	UNICODESTRING SubmissionId,
+	UNICODESTRING FlightIds,
+	UNICODESTRING ExtensionDrivers,
+	UNICODESTRING DriverDescription,
+	UNICODESTRING ServiceName,
+	UNICODESTRING UpperFilters,
+	UNICODESTRING LowerFilters,
+	UNICODESTRING ClassUpperFilters,
+	UNICODESTRING ClassLowerFilters,
+	UNICODESTRING CoInstallers,
+	UNICODESTRING DeviceStack,
+	FILETIME FirmwareDate,
+	UNICODESTRING FirmwareVersion,
+	UNICODESTRING FirmwareRevision,
+	BOOL32 SetupMode,
+	BOOL32 Inbox,
+	HEXINT32 Problem,
+	NTSTATUS ProblemStatus,
+	HEXINT32 ConfigFlags,
+	FILETIME StartTime,
+	FILETIME EndTime,
+	WIN32ERROR Error,
+	BOOL32 NeedReboot,
+	BOOL32 DriverUpdated,
+	BOOL32 SecondaryDevice,
+	BOOL32 PendedUntilReboot,
+	BOOL32 FinishInstallUI,
+	BOOL32 FinishInstallAction,
+	BOOL32 DeviceConfigured,
+	WIN32ERROR LegacyInstallReasonError
+	);
+
+DriverUpdatesInstall(
+	UINT32 DriverUpdateCount,
+	UINT32 PublishedDriverUpdateCount,
+	UINT32 InstalledDriverUpdateCount,
+	UINT32 InstalledDeviceCount,
+	WIN32ERROR DriverUpdateError,
+	UNICODESTRING FailedDriverPackageId,
+	UINT32 UnpublishedDriverUpdateCount,
+	UINT32 RevertedDeviceCount
+	);
+

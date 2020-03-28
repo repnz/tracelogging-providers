@@ -1,0 +1,1249 @@
+ProviderNames:
+	Microsoft.Windows.Power.RtApi
+	Microsoft.Windows.Power.RtApi
+
+
+
+**** Events *****
+ActivityStoppedAutomatically(
+	VOID
+	);
+
+PmiEscEnded(
+	INT32 batteryStatus,
+	UINT32 changeStamp,
+	HEXINT64 powerManagerImpl,
+	BOOLEAN powerSavingStatusChanged,
+	INT32 powerSavingStatus,
+	INT32 powerSupplyStatus,
+	INT32 remainingCharge,
+	BINARY stateName
+	);
+
+PmiEscInvokePsascEnded(
+	UINT32 handlerCount,
+	HRESULT hresult,
+	HEXINT64 powerManagerImpl,
+	INT32 powerSavingStatus,
+	UINT32 changeStamp,
+	BINARY stateName
+	);
+
+PmiEscInvokePsascEntered(
+	UINT32 handlerCount,
+	HEXINT64 powerManagerImpl,
+	INT32 powerSavingStatus,
+	UINT32 changeStamp,
+	BINARY stateName
+	);
+
+PmiEscStateInvariantFailed(
+	UINT32 byteCount,
+	UINT32 changeStamp,
+	HEXINT64 powerManagerImpl
+	);
+
+PmiEscSettingInvariantFailed(
+	UINT32 byteCount,
+	UINT32 changeStamp,
+	HEXINT64 powerManagerImpl
+	);
+
+PmiEscArgumentInvariantFailed(
+	UINT32 byteCount,
+	UINT32 changeStamp,
+	HEXINT64 powerManagerImpl,
+	BINARY stateName
+	);
+
+PmiEscEntered(
+	UINT32 changeStamp,
+	HEXINT64 powerManagerImpl,
+	BINARY stateName
+	);
+
+PmiDtcEnded(
+	HEXINT64 powerManagerImpl,
+	INT64 dischargeTimeSpan,
+	BOOLEAN dischargeTimeChanged
+	);
+
+PmiCbcInvokeRdtcEnded(
+	UINT32 handlerCount,
+	HRESULT hresult,
+	UINT32 changeStamp,
+	HEXINT64 powerManagerImpl,
+	UINT64 dischargeTimeSec
+	);
+
+PmiCbcInvokeRdtcEntered(
+	UINT32 handlerCount,
+	UINT32 changeStamp,
+	HEXINT64 powerManagerImpl,
+	UINT64 dischargeTimeSec
+	);
+
+PmiDtcArgumentInvariantFailed(
+	UINT32 byteCount,
+	UINT32 changeStamp,
+	HEXINT64 powerManagerImpl,
+	BINARY stateName
+	);
+
+PmiDtcEntered(
+	UINT32 changeStamp,
+	HEXINT64 powerManagerImpl
+	);
+
+PmiCbcEnded(
+	UINT32 activeCount,
+	INT32 batteryStatus,
+	BOOLEAN batteryStatusChanged,
+	HEXINT32 capabilities,
+	UINT32 capacity,
+	UINT32 designCapacity,
+	UINT32 fullChargeCapacity,
+	HEXINT64 powerManagerImpl,
+	INT32 powerSavingStatus,
+	HEXINT32 powerState,
+	INT32 powerSupplyStatus,
+	BOOLEAN powerSupplyStatusChanged,
+	SYSTEMTIME priorUpdateTime,
+	INT32 remainingCharge,
+	BOOLEAN remainingChargeChanged
+	);
+
+PmiCbcInvokeRcpcEnded(
+	UINT32 handlerCount,
+	HRESULT hresult,
+	UINT32 changeStamp,
+	HEXINT64 powerManagerImpl,
+	INT32 remainingCharge
+	);
+
+PmiCbcInvokeRcpcEntered(
+	UINT32 handlerCount,
+	UINT32 changeStamp,
+	HEXINT64 powerManagerImpl,
+	INT32 remainingCharge
+	);
+
+PmiCbcInvokePsuscEnded(
+	UINT32 handlerCount,
+	HRESULT hresult,
+	UINT32 changeStamp,
+	HEXINT64 powerManagerImpl,
+	INT32 powerSupplyStatus
+	);
+
+PmiCbcInvokePsuscEntered(
+	UINT32 handlerCount,
+	UINT32 changeStamp,
+	HEXINT64 powerManagerImpl,
+	INT32 powerSupplyStatus
+	);
+
+PmiCbcInvokeBscEnded(
+	UINT32 handlerCount,
+	HRESULT hresult,
+	INT32 batteryStatus,
+	UINT32 changeStamp,
+	HEXINT64 powerManagerImpl
+	);
+
+PmiCbcInvokeBscEntered(
+	UINT32 handlerCount,
+	INT32 batteryStatus,
+	UINT32 changeStamp,
+	HEXINT64 powerManagerImpl
+	);
+
+PmiCbcUpdatedWithHighCapacity(
+	HEXINT32 capabilities,
+	UINT32 capacity,
+	UINT32 designCapacity,
+	UINT32 fullChargeCapacity,
+	HEXINT64 powerManagerImpl
+	);
+
+PmiCbcUpdatedWithHighRatio(
+	HEXINT32 capabilities,
+	UINT32 capacity,
+	UINT32 designCapacity,
+	UINT32 fullChargeCapacity,
+	HEXINT64 powerManagerImpl
+	);
+
+PmiCbcUpdatedWithUnknownCapacities(
+	HEXINT32 capabilities,
+	UINT32 capacity,
+	UINT32 designCapacity,
+	UINT32 fullChargeCapacity,
+	HEXINT64 powerManagerImpl
+	);
+
+PmiCbcNoPayload(
+	HEXINT64 powerManagerImpl
+	);
+
+PmiCbcArgumentInvariantFailed(
+	UINT32 byteCount,
+	UINT32 changeStamp,
+	HEXINT64 powerManagerImpl,
+	BINARY stateName
+	);
+
+PmiCbcEntered(
+	UINT32 changeStamp,
+	HEXINT64 powerManagerImpl
+	);
+
+PmiRrdtcEnded(
+	HEXINT64 powerManagerImpl,
+	HRESULT hresult,
+	UINT64 eventToken
+	);
+
+PmiRrdtcEntered(
+	HEXINT64 powerManagerImpl,
+	UINT64 eventToken
+	);
+
+PmiArdtcEnded(
+	HEXINT64 powerManagerImpl,
+	HRESULT hresult,
+	UINT64 eventToken
+	);
+
+PmiArdtcAddFailed(
+	HEXINT64 powerManagerImpl
+	);
+
+PmiArdtcReceivedNull(
+	HEXINT64 powerManagerImpl
+	);
+
+PmiArdtcEntered(
+	HEXINT64 powerManagerImpl
+	);
+
+PmiGrdtEnded(
+	HEXINT64 powerManagerImpl,
+	HRESULT hresult,
+	INT64 dischargeTimeSpan
+	);
+
+PmiGrdtEntered(
+	HEXINT64 powerManagerImpl
+	);
+
+PmiRrcpcEnded(
+	HEXINT64 powerManagerImpl,
+	HRESULT hresult,
+	UINT64 eventToken
+	);
+
+PmiRrcpcEntered(
+	HEXINT64 powerManagerImpl,
+	UINT64 eventToken
+	);
+
+PmiArcpcEnded(
+	HEXINT64 powerManagerImpl,
+	HRESULT hresult,
+	UINT64 eventToken
+	);
+
+PmiArcpcAddFailed(
+	HEXINT64 powerManagerImpl
+	);
+
+PmiArcpcReceivedNull(
+	HEXINT64 powerManagerImpl
+	);
+
+PmiArcpcEntered(
+	HEXINT64 powerManagerImpl
+	);
+
+PmiGrcpEnded(
+	HEXINT64 powerManagerImpl,
+	HRESULT hresult,
+	INT32 remainingCharge
+	);
+
+PmiGrcpEntered(
+	HEXINT64 powerManagerImpl
+	);
+
+PmiRpsuscEnded(
+	HEXINT64 powerManagerImpl,
+	HRESULT hresult,
+	UINT64 eventToken
+	);
+
+PmiRpsuscEntered(
+	HEXINT64 powerManagerImpl,
+	UINT64 eventToken
+	);
+
+PmiApsuscEnded(
+	HEXINT64 powerManagerImpl,
+	HRESULT hresult,
+	UINT64 eventToken
+	);
+
+PmiApsuscAddFailed(
+	HEXINT64 powerManagerImpl
+	);
+
+PmiApsuscReceivedNull(
+	HEXINT64 powerManagerImpl
+	);
+
+PmiApsuscEntered(
+	HEXINT64 powerManagerImpl
+	);
+
+PmiGpsusEnded(
+	HEXINT64 powerManagerImpl,
+	HRESULT hresult,
+	INT32 powerSupplyStatus
+	);
+
+PmiGpsusEntered(
+	HEXINT64 powerManagerImpl
+	);
+
+PmiRbscEnded(
+	HEXINT64 powerManagerImpl,
+	HRESULT hresult,
+	UINT64 eventToken
+	);
+
+PmiRbscEntered(
+	HEXINT64 powerManagerImpl,
+	UINT64 eventToken
+	);
+
+PmiAbscEnded(
+	HEXINT64 powerManagerImpl,
+	HRESULT hresult,
+	UINT64 eventToken
+	);
+
+PmiAbscAddFailed(
+	HEXINT64 powerManagerImpl
+	);
+
+PmiAbscReceivedNull(
+	HEXINT64 powerManagerImpl
+	);
+
+PmiAbscEntered(
+	HEXINT64 powerManagerImpl
+	);
+
+PmiGbsEnded(
+	HEXINT64 powerManagerImpl,
+	HRESULT hresult,
+	INT32 batteryStatus
+	);
+
+PmiGbsEntered(
+	HEXINT64 powerManagerImpl
+	);
+
+PmiRpsascEnded(
+	HEXINT64 powerManagerImpl,
+	HRESULT hresult,
+	UINT64 eventToken
+	);
+
+PmiRpsascEntered(
+	HEXINT64 powerManagerImpl,
+	UINT64 eventToken
+	);
+
+PmiApsascEnded(
+	HEXINT64 powerManagerImpl,
+	HRESULT hresult,
+	UINT64 eventToken
+	);
+
+PmiApsascAddFailed(
+	HEXINT64 powerManagerImpl
+	);
+
+PmiApsascReceivedNull(
+	HEXINT64 powerManagerImpl
+	);
+
+PmiApsascEntered(
+	HEXINT64 powerManagerImpl
+	);
+
+PmiGpsasEnded(
+	HEXINT64 powerManagerImpl,
+	HRESULT hresult,
+	INT32 powerSavingStatus
+	);
+
+PmiGpsasEntered(
+	HEXINT64 powerManagerImpl
+	);
+
+PmiRciEnded(
+	HEXINT64 powerManagerImpl,
+	HRESULT hresult
+	);
+
+PmiRciSubscribeEsSettingFailed(
+	HEXINT64 powerManagerImpl,
+	NTSTATUS ntstatus
+	);
+
+PmiRciQuerySubscribeEsStateFailed(
+	HEXINT64 powerManagerImpl,
+	NTSTATUS ntstatus
+	);
+
+PmiRciQuerySubscribeDischargeTimeFailed(
+	HEXINT64 powerManagerImpl,
+	NTSTATUS ntstatus
+	);
+
+PmiRciQuerySubscribeCompositeFailed(
+	HEXINT64 powerManagerImpl,
+	NTSTATUS ntstatus
+	);
+
+PmiRciEntered(
+	HEXINT64 powerManagerImpl
+	);
+
+PmiDtorEnded(
+	HEXINT64 powerManagerImpl
+	);
+
+PmiDtorUnsubscribeEsSettingFailed(
+	HEXINT64 powerManagerImpl,
+	NTSTATUS ntstatus
+	);
+
+PmiDtorUnsubscribeEsStateFailed(
+	HEXINT64 powerManagerImpl,
+	NTSTATUS ntstatus
+	);
+
+PmiDtorUnsubscribeDischargeTimeFailed(
+	HEXINT64 powerManagerImpl,
+	NTSTATUS ntstatus
+	);
+
+PmiDtorUnsubscribeCompositeFailed(
+	HEXINT64 powerManagerImpl,
+	NTSTATUS ntstatus
+	);
+
+PmiDtorEntered(
+	HEXINT64 powerManagerImpl
+	);
+
+DriSRHUNotRegistered(
+	HEXINT64 displayRequestImpl
+	);
+
+DriSRHUnregistered(
+	HEXINT64 displayRequestImpl
+	);
+
+DriSRHRegistered(
+	HRESULT hresult,
+	HEXINT64 displayRequestImpl
+	);
+
+DriAsccNotSet(
+	HEXINT64 displayRequestImpl,
+	UINT32 applicationState
+	);
+
+DriAsccSet(
+	HEXINT64 displayRequestImpl,
+	HEXINT64 foregroundDriver,
+	UINT32 applicationState
+	);
+
+DriClearMore(
+	HEXINT64 displayRequestImpl,
+	UINT32 referenceCount
+	);
+
+DriClearLast(
+	HEXINT64 displayRequestImpl
+	);
+
+DriClearRedundant(
+	HEXINT64 displayRequestImpl
+	);
+
+DriSetFirst(
+	HRESULT hresult,
+	HEXINT64 displayRequestImpl
+	);
+
+DriSetInitializeFailed(
+	HRESULT hresult,
+	HEXINT64 displayRequestImpl
+	);
+
+DriSetMore(
+	HEXINT64 displayRequestImpl,
+	UINT32 referenceCount
+	);
+
+DriSetRedundant(
+	HEXINT64 displayRequestImpl
+	);
+
+DriReleasedRequest(
+	HRESULT hresult,
+	HEXINT64 displayRequestImpl,
+	UINT32 referenceCount
+	);
+
+DriRequestedActive(
+	HRESULT hresult,
+	HEXINT64 displayRequestImpl,
+	UINT32 referenceCount
+	);
+
+DriDestroyed(
+	HEXINT64 displayRequestImpl,
+	UINT32 referenceCount
+	);
+
+DriCreated(
+	HEXINT64 displayRequestImpl,
+	UINT32 referenceCount
+	);
+
+FdrdOrmcRegisterFailed(
+	HRESULT hresult,
+	HEXINT64 foregroundDriver
+	);
+
+FdrdOrmcLost(
+	HEXINT64 foregroundDriver
+	);
+
+FdrdOrmcAcquired(
+	HEXINT64 foregroundDriver
+	);
+
+FdrdOrmcGetNotificationSuccess(
+	HEXINT64 foregroundDriver,
+	UINT64 rmRequest,
+	UINT32 notificationType
+	);
+
+FdrdOrmcGetNotificationFailed(
+	HRESULT hresult,
+	HEXINT64 foregroundDriver,
+	UINT64 rmRequest
+	);
+
+FdrdOrmcGetNotificationEmptied(
+	HRESULT hresult,
+	HEXINT64 foregroundDriver,
+	UINT64 rmRequest
+	);
+
+FdrdOrmcRace(
+	VOID
+	);
+
+FdrdUwrmUnregisterDone(
+	HRESULT hresult,
+	HEXINT64 foregroundDriver
+	);
+
+FdrdUwrmUnregisterStart(
+	HEXINT64 foregroundDriver,
+	UINT64 rmRequest
+	);
+
+FdrdRwrmAcquireOk(
+	HEXINT64 foregroundDriver,
+	BOOL32 pending,
+	UINT64 rmRequest
+	);
+
+FdrdRwrmAcquireFailed(
+	HRESULT hresult,
+	HEXINT64 foregroundDriver
+	);
+
+FdrdRwrmAcquireStart(
+	HEXINT64 foregroundDriver
+	);
+
+FdrdSasU(
+	HEXINT64 foregroundDriver
+	);
+
+FdrdSasRegisterSucceeded(
+	HEXINT64 foregroundDriver
+	);
+
+FdrdSasRegisterFailed(
+	HRESULT hresult,
+	HEXINT64 foregroundDriver
+	);
+
+FdrdSasQ(
+	HEXINT64 foregroundDriver
+	);
+
+FdrdSasQUnregistered(
+	HEXINT64 foregroundDriver
+	);
+
+FdrdRoprClearedRequests(
+	HEXINT64 foregroundDriver,
+	HEXINT64 handle
+	);
+
+FdrdRoprClearSystemFailed(
+	HRESULT hresult,
+	HEXINT64 foregroundDriver,
+	HEXINT64 handle
+	);
+
+FdrdRoprClearDisplayFailed(
+	HRESULT hresult,
+	HEXINT64 foregroundDriver,
+	HEXINT64 handle
+	);
+
+FdrdToprSetRequests(
+	HEXINT64 foregroundDriver,
+	HEXINT64 handle
+	);
+
+FdrdToprRevokeDisplayFailed(
+	HRESULT hresult,
+	HEXINT64 foregroundDriver,
+	HEXINT64 handle
+	);
+
+FdrdToprSetSystemFailed(
+	HRESULT hresult,
+	HEXINT64 foregroundDriver,
+	HEXINT64 handle
+	);
+
+FdrdToprSetDisplayFailed(
+	HRESULT hresult,
+	HEXINT64 foregroundDriver,
+	HEXINT64 handle
+	);
+
+FdrdNttmNotify(
+	HRESULT hresult,
+	HEXINT64 foregroundDriver
+	);
+
+FdrdNttmGetCoreWindowHandleOK(
+	HRESULT hresult,
+	HEXINT64 foregroundDriver,
+	HEXINT64 handle
+	);
+
+FdrdNttmGetCoreWindowHandleFailed(
+	HRESULT hresult,
+	HEXINT64 foregroundDriver
+	);
+
+FdrdCoprCreateRequestOK(
+	HRESULT hresult,
+	HEXINT64 foregroundDriver,
+	HEXINT64 handle
+	);
+
+FdrdCoprCreateRequestFailed(
+	HRESULT hresult,
+	HEXINT64 foregroundDriver
+	);
+
+FdrdCoprGetModuleFailed(
+	HRESULT hresult,
+	HEXINT64 foregroundDriver
+	);
+
+FdrdCoprGcpfmUnexpected(
+	HRESULT hresult,
+	HEXINT64 foregroundDriver
+	);
+
+FdrdCoprGcpfmBufferFailed(
+	HRESULT hresult,
+	HEXINT64 foregroundDriver
+	);
+
+FdrdCoprGcpfmFailed(
+	HRESULT hresult,
+	HEXINT64 foregroundDriver
+	);
+
+FdrdCoprGcpfmNoIdentity(
+	HRESULT hresult,
+	HEXINT64 foregroundDriver
+	);
+
+FdrdInitRegisterFailed(
+	HRESULT hresult,
+	HEXINT64 foregroundDriver
+	);
+
+FdrdInitHandleFailed(
+	HRESULT hresult,
+	HEXINT64 foregroundDriver
+	);
+
+FdrdInitWaitFailed(
+	HRESULT hresult,
+	HEXINT64 foregroundDriver
+	);
+
+FdrdInitEventFailed(
+	HRESULT hresult,
+	HEXINT64 foregroundDriver
+	);
+
+FdrdDestructed(
+	HEXINT64 foregroundDriver
+	);
+
+FdrdCloseRequestFailed(
+	HRESULT hresult,
+	HEXINT64 foregroundDriver
+	);
+
+FdrdCloseAccessEventFailed(
+	HRESULT hresult,
+	HEXINT64 foregroundDriver
+	);
+
+FdrdInstantiated(
+	HEXINT64 foregroundDriver
+	);
+
+BsiGetCoreApplicationSingleton(
+	HEXINT64 batteryStaticsImpl,
+	ANSISTRING message
+	);
+
+BsiWbcEnded(
+	HEXINT64 batteryStaticsImpl,
+	HRESULT hresult,
+	HEXINT64 batteryImpl,
+	UINT32 instanceCount,
+	UINT32 removedCount,
+	UINT32 visitCount,
+	ANSISTRING walkType
+	);
+
+BsiWbcNoSelection(
+	HEXINT64 batteryStaticsImpl,
+	UINT32 instanceCount,
+	UINT32 removedCount,
+	UINT32 visitCount,
+	ANSISTRING walkType
+	);
+
+BsiWbcWalkThrew(
+	HEXINT64 batteryStaticsImpl,
+	UINT32 instanceCount,
+	UINT32 removedCount,
+	UINT32 visitCount,
+	ANSISTRING walkType
+	);
+
+BsiWbcCallbackReturnedInvalidValue(
+	HEXINT64 batteryStaticsImpl,
+	HRESULT hresult,
+	HEXINT64 batteryImpl,
+	UINT32 instanceCount,
+	UINT32 removedCount,
+	UINT32 visitCount,
+	ANSISTRING walkType
+	);
+
+BsiWbcCallbackSelected(
+	HEXINT64 batteryStaticsImpl,
+	HRESULT hresult,
+	HEXINT64 batteryImpl,
+	UINT32 instanceCount,
+	UINT32 removedCount,
+	UINT32 visitCount,
+	ANSISTRING walkType
+	);
+
+BsiWbcCallbackFailed(
+	HEXINT64 batteryStaticsImpl,
+	HRESULT hresult,
+	HEXINT64 batteryImpl,
+	UINT32 instanceCount,
+	UINT32 removedCount,
+	UINT32 visitCount,
+	ANSISTRING walkType
+	);
+
+BsiWbcResolveWeakRefFailed(
+	HEXINT64 batteryStaticsImpl,
+	HRESULT hresult,
+	UINT32 instanceCount,
+	UINT32 removedCount,
+	UINT32 visitCount,
+	ANSISTRING walkType
+	);
+
+BsiWbcEntered(
+	HEXINT64 batteryStaticsImpl,
+	ANSISTRING walkType
+	);
+
+BsiCbcEnded(
+	HRESULT hresult,
+	UINT32 activeCount,
+	HEXINT64 batteryStaticsImpl,
+	UINT32 changeStamp
+	);
+
+BsiCbcWalkCacheUpdateFailed(
+	HRESULT hresult,
+	HEXINT64 batteryStaticsImpl,
+	UINT32 changeStamp
+	);
+
+BsiCbcAggregateUpdateFailed(
+	HRESULT hresult,
+	HEXINT64 batteryImpl,
+	HEXINT64 batteryStaticsImpl,
+	UINT32 changeStamp
+	);
+
+BsiCbcMissingAggregateBattery(
+	HEXINT64 batteryStaticsImpl,
+	UINT32 changeStamp
+	);
+
+BsiCbcArgumentInvariantFailed(
+	HEXINT64 batteryStaticsImpl,
+	UINT32 byteCount,
+	UINT32 changeStamp,
+	BINARY stateName
+	);
+
+BsiCbcEntered(
+	HEXINT64 batteryStaticsImpl,
+	UINT32 changeStamp
+	);
+
+BsiGdsEnded(
+	HEXINT64 batteryStaticsImpl,
+	HRESULT hresult
+	);
+
+BsiGdsEntered(
+	HEXINT64 batteryStaticsImpl
+	);
+
+BsiFiaEnded(
+	HRESULT hresult,
+	COUNTEDSTRING deviceId
+	);
+
+BsiFiaMakeAsyncOperationFailed(
+	HEXINT64 batteryStaticsImpl,
+	HRESULT hresult,
+	COUNTEDSTRING deviceId
+	);
+
+BsiFiaDuplicateIdFailed(
+	HEXINT64 batteryStaticsImpl,
+	HRESULT hresult,
+	COUNTEDSTRING deviceId
+	);
+
+BsiFiaInitializeIdFailed(
+	HEXINT64 batteryStaticsImpl,
+	HRESULT hresult,
+	COUNTEDSTRING deviceId
+	);
+
+BsiFiaReceivedIdWithNull(
+	HEXINT64 batteryStaticsImpl,
+	HRESULT hresult,
+	COUNTEDSTRING deviceId
+	);
+
+BsiFiaReceivedLongPath(
+	HEXINT64 batteryStaticsImpl,
+	UINT32 characterCount
+	);
+
+BsiFiaReceivedNullResult(
+	HEXINT64 batteryStaticsImpl
+	);
+
+BsiFiaEntered(
+	HEXINT64 batteryStaticsImpl
+	);
+
+BsiFiaWorkerEnded(
+	HEXINT64 batteryImpl,
+	HEXINT64 batteryStaticsImpl,
+	COUNTEDSTRING deviceId,
+	HRESULT hresult
+	);
+
+BsiGetAggregateBatteryEnded(
+	HEXINT64 batteryStaticsImpl,
+	HRESULT hresult,
+	HEXINT64 batteryImpl
+	);
+
+BsiGetAggregateBatteryEntered(
+	HEXINT64 batteryStaticsImpl
+	);
+
+BsiGbdEnded(
+	HEXINT64 batteryStaticsImpl,
+	HRESULT hresult,
+	HEXINT64 batteryImpl,
+	COUNTEDSTRING deviceId
+	);
+
+BsiGbdCacheMiss(
+	HEXINT64 batteryStaticsImpl,
+	HEXINT64 batteryImpl
+	);
+
+BsiGbdPushBackThrew(
+	HEXINT64 batteryStaticsImpl
+	);
+
+BsiGbdBatteryAsWeakRefFailed(
+	HEXINT64 batteryStaticsImpl,
+	HRESULT hresult
+	);
+
+BsiGbdNewWeakRefThrew(
+	HEXINT64 batteryStaticsImpl,
+	HEXINT64 batteryImpl,
+	COUNTEDSTRING deviceId
+	);
+
+BsiGbdInitialUpdateFailed(
+	HEXINT64 batteryStaticsImpl,
+	HRESULT hresult,
+	HEXINT64 batteryImpl,
+	COUNTEDSTRING deviceId
+	);
+
+BsiGbdDeviceNotFound(
+	HEXINT64 batteryStaticsImpl,
+	HRESULT hresult,
+	HEXINT64 batteryImpl,
+	COUNTEDSTRING deviceId
+	);
+
+BsiGbdMakeBatteryFailed(
+	HEXINT64 batteryStaticsImpl,
+	HRESULT hresult,
+	COUNTEDSTRING deviceId
+	);
+
+BsiGbdCacheHitRemoved(
+	HEXINT64 batteryStaticsImpl,
+	HRESULT hresult,
+	HEXINT64 batteryImpl,
+	COUNTEDSTRING deviceId
+	);
+
+BsiGbdCacheHitPresent(
+	HEXINT64 batteryStaticsImpl,
+	HRESULT hresult,
+	HEXINT64 batteryImpl,
+	COUNTEDSTRING deviceId
+	);
+
+BsiGbdCacheWalkFailed(
+	HEXINT64 batteryStaticsImpl,
+	HRESULT hresult,
+	COUNTEDSTRING deviceId
+	);
+
+BsiGbdEntered(
+	HEXINT64 batteryStaticsImpl
+	);
+
+BsiRciEnded(
+	HEXINT64 batteryStaticsImpl,
+	HRESULT hresult
+	);
+
+BsiRciCompositeSubscriptionFailed(
+	HEXINT64 batteryStaticsImpl,
+	NTSTATUS ntstatus
+	);
+
+BsiRciMakeAggregateFailed(
+	HEXINT64 batteryStaticsImpl,
+	HRESULT hresult
+	);
+
+BsiRciValueFactoryFailed(
+	HEXINT64 batteryStaticsImpl,
+	HRESULT hresult
+	);
+
+BsiRciAggregateIdFailed(
+	HEXINT64 batteryStaticsImpl,
+	HRESULT hresult
+	);
+
+BsiRciEntered(
+	HEXINT64 batteryStaticsImpl
+	);
+
+BsiDtorEnded(
+	HEXINT64 batteryStaticsImpl
+	);
+
+BsiDtorUnsubscribeCompositeFailed(
+	HEXINT64 batteryStaticsImpl,
+	NTSTATUS ntstatus
+	);
+
+BsiDtorWalkThrew(
+	HEXINT64 batteryStaticsImpl
+	);
+
+BsiDtorFoundLiveBattery(
+	HEXINT64 batteryStaticsImpl,
+	HRESULT hresult,
+	HEXINT64 batteryImpl
+	);
+
+BsiDtorEntered(
+	HEXINT64 batteryStaticsImpl
+	);
+
+DllLoaded(
+	VOID
+	);
+
+DllUnloaded(
+	VOID
+	);
+
+QasSubscribeFailed(
+	NTSTATUS ntstatus,
+	UINT32 changeStamp,
+	BINARY stateName
+	);
+
+QasQueryFailed(
+	NTSTATUS ntstatus,
+	BINARY stateName
+	);
+
+BiLogBatteryDetails(
+	HEXINT64 batteryImpl,
+	COUNTEDSTRING deviceId,
+	HEXINT32 capabilities,
+	UINT8 technology,
+	STRING chemistry,
+	UINT32 designCapacity,
+	UINT32 fullChargeCapacity,
+	UINT32 defaultAlert1,
+	UINT32 defaultAlert2,
+	UINT32 criticalBias,
+	UINT32 cycleCount,
+	HEXINT32 powerState,
+	UINT32 capacity,
+	UINT32 voltage,
+	INT32 chargeRate
+	);
+
+BiRrueEnded(
+	UINT32 handlerCount,
+	HRESULT hresult,
+	HEXINT64 batteryImpl
+	);
+
+BiRrueEntered(
+	UINT32 handlerCount,
+	HEXINT64 batteryImpl
+	);
+
+BiMirAsReferenceFailed(
+	HEXINT64 batteryImpl,
+	HRESULT hresult,
+	COUNTEDSTRING deviceId,
+	UINT32 intPropertyId,
+	INT32 intPropertyValue
+	);
+
+BiMirCreateIntFailed(
+	HEXINT64 batteryImpl,
+	HRESULT hresult,
+	COUNTEDSTRING deviceId,
+	UINT32 intPropertyId,
+	INT32 intPropertyValue
+	);
+
+BiMcvCapacityTooLarge(
+	HEXINT64 batteryImpl,
+	UINT32 capacity,
+	COUNTEDSTRING deviceId,
+	UINT32 intPropertyId
+	);
+
+BiUpdatedNotPresent(
+	HEXINT64 batteryImpl,
+	HRESULT hresult,
+	COUNTEDSTRING deviceId,
+	SYSTEMTIME priorUpdateTime
+	);
+
+BiUpdated(
+	HEXINT64 batteryImpl,
+	HRESULT hresult,
+	INT32 batteryStatus,
+	HEXINT32 capabilities,
+	UINT32 capacity,
+	UINT32 designCapacity,
+	COUNTEDSTRING deviceId,
+	UINT32 fullChargeCapacity,
+	HEXINT32 powerState,
+	SYSTEMTIME priorUpdateTime,
+	INT32 remainingCharge
+	);
+
+BiRruEnded(
+	HEXINT64 batteryImpl,
+	HRESULT hresult,
+	UINT64 eventToken
+	);
+
+BiRruEntered(
+	HEXINT64 batteryImpl,
+	UINT64 eventToken
+	);
+
+BiAruEnded(
+	HEXINT64 batteryImpl,
+	HRESULT hresult,
+	UINT64 eventToken
+	);
+
+BiAruAddFailed(
+	HEXINT64 batteryImpl
+	);
+
+BiAruReceivedNull(
+	HEXINT64 batteryImpl
+	);
+
+BiAruEntered(
+	HEXINT64 batteryImpl
+	);
+
+BiGetReportEnded(
+	HEXINT64 batteryImpl,
+	HRESULT hresult
+	);
+
+BiGetReportEntered(
+	HEXINT64 batteryImpl
+	);
+
+BiGetDeviceIdEnded(
+	HEXINT64 batteryImpl,
+	HRESULT hresult
+	);
+
+BiGetDeviceIdEntered(
+	HEXINT64 batteryImpl
+	);
+
+BiSubdiNtPowerInformationFailed(
+	HEXINT64 batteryImpl,
+	NTSTATUS ntstatus,
+	COUNTEDSTRING deviceId,
+	INT32 priorBatteryStatus,
+	BOOLEAN priorDeviceRemoved,
+	SYSTEMTIME priorUpdateTime
+	);
+
+BiSubdiBatteryPresent(
+	HEXINT64 batteryImpl,
+	HRESULT hresult,
+	COUNTEDSTRING deviceId,
+	INT32 priorBatteryStatus,
+	BOOLEAN priorDeviceRemoved,
+	SYSTEMTIME priorUpdateTime
+	);
+
+BiSubdiBatteryRemoved(
+	HEXINT64 batteryImpl,
+	HRESULT hresult,
+	COUNTEDSTRING deviceId,
+	INT32 priorBatteryStatus,
+	BOOLEAN priorDeviceRemoved,
+	SYSTEMTIME priorUpdateTime
+	);
+
+BiSubdiDeviceRemoved(
+	HEXINT64 batteryImpl,
+	HRESULT hresult,
+	COUNTEDSTRING deviceId,
+	INT32 priorBatteryStatus,
+	BOOLEAN priorDeviceRemoved,
+	SYSTEMTIME priorUpdateTime
+	);
+
+BiRciEnded(
+	HEXINT64 batteryImpl,
+	HRESULT hresult,
+	COUNTEDSTRING deviceId
+	);
+
+BiRciDeviceIdNotTerminated(
+	HEXINT64 batteryImpl,
+	HRESULT hresult,
+	COUNTEDSTRING deviceId
+	);
+
+BiRciDeviceIdHasEmbeddedNull(
+	HEXINT64 batteryImpl,
+	HRESULT hresult,
+	COUNTEDSTRING deviceId
+	);
+
+BiRciStringInitFailed(
+	HEXINT64 batteryImpl,
+	HRESULT hresult,
+	COUNTEDSTRING deviceId
+	);
+
+BiDestroyed(
+	HEXINT64 batteryImpl,
+	HEXINT64 batteryStaticsImpl,
+	COUNTEDSTRING deviceId
+	);
+

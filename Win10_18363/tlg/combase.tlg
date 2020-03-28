@@ -1,0 +1,674 @@
+ProviderNames:
+	Microsoft.Windows.COM.ComTelemetry
+	CombaseTraceLoggingProvider
+	Microsoft.Windows.Com.PoFAggregate
+	Microsoft.Windows.TlgAggregateInternal
+	TelemetryAssert
+	TelemetryAssertDiagTrack
+	Microsoft.Windows.WinRTClassActivation
+	CombaseTraceLoggingProvider
+	Microsoft.Windows.COM.MetadataBasedMarshaler
+
+
+
+**** Events *****
+FallbackError(
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+FallbackError(
+	UINT64 PartA_PrivTags,
+	SIGNED wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+PrivateHiveSharingViolation(
+	UINT32 Retries,
+	BOOLEAN Succeeded
+	);
+
+PrivateUserHiveLoadKeyFailed(
+	INT32 hr,
+	UNICODESTRING Path,
+	UINT32 SamDesired,
+	UINT32 Flags
+	);
+
+LogPrivateHiveFileInfo(
+	UNICODESTRING path,
+	BOOLEAN exists
+	);
+
+User32LoadFailureResolvedOnRetry(
+	VOID
+	);
+
+User32LoadFailure(
+	VOID
+	);
+
+AstaCallWouldHaveTimedOut(
+	GUID IID,
+	UINT16 ProcNum,
+	UINT32 serverCall->GetCallTraceId(),
+	UINT64 PartA_PrivTags
+	);
+
+ContainerDCOM: Unable to reach server process(
+	WIN32ERROR STATUS,
+	GUID IID,
+	UINT16 Method ProcNum
+	);
+
+ContainerDCOM: Process failed to register gContainerAuthnSvc(
+	WIN32ERROR STATUS,
+	UINT32 gContainerAuthnSvc
+	);
+
+ContainerDCOM: AccessPermission check failed(
+	HRESULT HRESULT,
+	GUID IID,
+	GUID AppID,
+	UNICODESTRING Client SID
+	);
+
+ContainerDCOM: IsPotentialActivateOnHostCallback failed during access check(
+	HRESULT HRESULT,
+	GUID IID
+	);
+
+ContainerDCOM: Failed to set custom authentication info on proxy(
+	WIN32ERROR STATUS,
+	UNICODESTRING PrincipalName,
+	UINT32 AuthnLevel,
+	UINT32 AuthnSvc,
+	UINT32 AuthzSvc,
+	UINT32 Capabilities,
+	UINT32 ImpersonationLevel,
+	UINT32 IdentityTracking
+	);
+
+TrustedUnmarshalerActivated(
+	GUID ClassId
+	);
+
+PrematureStubRundownDetected(
+	GUID IID_of_call_failure,
+	UINT32 Procnum_of_call_failure,
+	HRESULT HRESULT,
+	GUID Implemented_interface_1,
+	GUID Implemented_interface_2,
+	GUID Implemented_interface_3
+	);
+
+AstaCallDispatchedBeforeExtendedTimeout(
+	GUID IID,
+	UINT16 ProcNum,
+	UINT32 pServerCall->GetCallTraceId(),
+	UINT64 PartA_PrivTags
+	);
+
+AstaCallTimeout(
+	GUID IID,
+	UINT16 ProcNum,
+	UINT32 pServerCall->GetCallTraceId(),
+	UINT64 PartA_PrivTags
+	);
+
+ContainerDCOM: Server failed to listen on requested transport(
+	WIN32ERROR STATUS,
+	UNICODESTRING Protseq,
+	UNICODESTRING listen address
+	);
+
+ContainerDCOM: WriteObjRef failed for MSHCTX_CONTAINER (no container transport in DSA)(
+	HRESULT HRESULT
+	);
+
+IidMismatchInUnmarshalInterface(
+	GUID IID in OBJREF,
+	GUID IID requested,
+	GUID Handler CLSID,
+	UINT64 PartA_PrivTags
+	);
+
+FailedToCorrectIidMismatchInUnmarshalInterface(
+	GUID IID in OBJREF,
+	GUID IID requested,
+	GUID Handler CLSID,
+	HRESULT HRESULT,
+	UINT64 PartA_PrivTags
+	);
+
+EventActivityCtrlGetIdFailed(
+	WIN32ERROR error
+	);
+
+ContainerDCOM: Failed to set default authentication info on proxy(
+	WIN32ERROR STATUS,
+	UINT32 Capabilities,
+	UINT32 ImpersonationLevel,
+	UINT32 IdentityTracking
+	);
+
+WinrtAsyncChannelErrorForwarding(
+	GUID Async method IID,
+	UINT16 Async method procnum,
+	UNICODESTRING Async operation name,
+	HRESULT HRESULT,
+	HEXINT64 Delegate interface pointer
+	);
+
+LogVerbose(
+	UNICODESTRING message
+	);
+
+RoFailFastCalled(
+	BOOLEAN HasStowedException,
+	INT32 ErrorCode,
+	UINT32 ExceptionForm,
+	INT32 RoFailFastHr,
+	INT32 FailureLine,
+	UINT32 NumStowedExceptions,
+	UINT32 NumStowedExceptionsFromThread,
+	GUID CRestrictedErrorID
+	);
+
+POFSnapshotCollectionAggregate(
+	NULL POFMinCaptureDurationNano,
+	NULL POFMaxCaptureDurationNano,
+	UNICODESTRING POFSignature,
+	HRESULT HrResult
+	);
+
+LocalDelegateFailure(
+	GUID CRestrictedErrorID,
+	HEXINT64 Delegate interface pointer
+	);
+
+RoFailFastCalled(
+	BOOLEAN HasStowedException,
+	INT32 RoFailFastHr,
+	INT32 FailureLine
+	);
+
+RoFailFastWithSignature(
+	UNICODESTRING Signature,
+	GUID CRestrictedErrorID
+	);
+
+POFSnapshotStatistics(
+	GUID CRestrictedErrorID,
+	UINT64 TotalCycleCount,
+	UINT64 TotalWallClockPeriod,
+	UINT64 VaCloneCycleCount,
+	UINT64 VaCloneWallClockPeriod,
+	UINT64 VaSpaceCycleCount,
+	UINT64 VaSpaceWallClockPeriod,
+	UINT64 AuxPagesCycleCount,
+	UINT64 AuxPagesWallClockPeriod,
+	UINT64 HandlesCycleCount,
+	UINT64 HandlesWallClockPeriod,
+	UINT64 ThreadsCycleCount,
+	UINT64 ThreadsWallClockPeriod
+	);
+
+POFSnapshotExpired(
+	GUID CRestrictedErrorID
+	);
+
+POFExpiredSnapshotRequested(
+	GUID CRestrictedErrorID
+	);
+
+POFReportGenerated(
+	GUID CRestrictedErrorID,
+	INT32 HrResult,
+	INT64 DumpFileSize
+	);
+
+CreateStub(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+TypeDoesNotSupportInterface(
+	UNICODESTRING typeName,
+	GUID refiid
+	);
+
+ActivityIntermediateStop(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+CreateProxy(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	SIGNED wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+CreateProxy(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId,
+	GUID IID
+	);
+
+GetTypeInformation(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId,
+	GUID IID
+	);
+
+TypeCannotProvideInterfaces(
+	UNICODESTRING typeName,
+	GUID refiid
+	);
+
+CreateStub(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	SIGNED wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+ActivityError(
+	UINT64 PartA_PrivTags,
+	SIGNED wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+GetTypeInformation(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	SIGNED wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+GenerateNdrStrings(
+	VOID
+	);
+
+GetTypeInformation(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+CreateProxy(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+CreateStub(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId,
+	GUID IID
+	);
+
+ReturnFormatStrings(
+	VOID
+	);
+
+CreateConverter(
+	UNICODESTRING typeName
+	);
+
+GetTypeNameFromIID(
+	GUID refiid
+	);
+
+GetTypeResolver(
+	VOID
+	);
+
+ActivityStoppedAutomatically(
+	VOID
+	);
+
+ReachedMaxForcedClassActivationInfo(
+	UINT32 PID
+	);
+
+WinRtClassActivationInfoDebuggerPresent(
+	UINT64 ApiHashArray,
+	UINT32 CallCounts,
+	UINT32 PID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	BOOL32 IsWinRTApp,
+	UINT64 RuntimeMs,
+	UINT32 NumConsequtiveTimerEvents
+	);
+
+WinRtClassActivationInfo(
+	UINT64 ApiHashArray,
+	UINT32 CallCounts,
+	UINT32 PID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	BOOL32 IsWinRTApp,
+	UINT64 RuntimeMs,
+	UINT32 NumConsequtiveTimerEvents
+	);
+
+LogTokenInfo(
+	HEXINT64 Token,
+	UNICODESTRING Capability
+	);
+
+LogTokenInfo(
+	HEXINT64 Token,
+	COUNTEDSTRING Security Attribute Value
+	);
+
+LogTokenInfo(
+	HEXINT64 Token,
+	ANSISTRING Value Type
+	);
+
+LogTokenInfo(
+	HEXINT64 Token,
+	COUNTEDSTRING Security Attribute Value,
+	UINT64 Version
+	);
+
+LogTokenInfo(
+	HEXINT64 Token,
+	UINT32 Elevation type
+	);
+
+LogTokenInfo(
+	HEXINT64 Token,
+	UINT32 Ace#,
+	UNICODESTRING Sid,
+	UINT32 Access Mask,
+	UINT8 Ace type,
+	UINT8 Ace Flags
+	);
+
+LogTokenInfo(
+	HEXINT64 Token,
+	UINT16 Default Dacl Ace Count
+	);
+
+LogTokenInfo(
+	HEXINT64 Token,
+	UINT32 isLowBox
+	);
+
+LogTokenInfo(
+	HEXINT64 Token,
+	UINT32 isTokenVirtualizationEnabled
+	);
+
+LogTokenInfo(
+	HEXINT64 Token,
+	UINT32 Privilege low part,
+	UINT32 Privilege high part,
+	UINT32 Attributes
+	);
+
+LogTokenInfo(
+	HEXINT64 Token,
+	ANSISTRING Value Type,
+	UINT16 Value
+	);
+
+LogTokenInfo(
+	HEXINT64 Token,
+	INT64 Security Attribute Value
+	);
+
+LogTokenInfo(
+	HEXINT64 Token,
+	UNICODESTRING Primary Group Sid
+	);
+
+LogTokenInfo(
+	HEXINT64 Token,
+	UNICODESTRING Sid,
+	UINT32 Attributes
+	);
+
+LogTokenInfo(
+	HEXINT64 Token,
+	UINT32 Restricted Group Count
+	);
+
+LogTokenInfo(
+	HEXINT64 Token,
+	UINT32 Mandatory Policy
+	);
+
+LogTokenInfo(
+	HEXINT64 Token,
+	UINT64 Security Attribute Value
+	);
+
+LogTokenInfo(
+	HEXINT64 Token,
+	UINT32 Session Id
+	);
+
+LogTokenInfo(
+	HEXINT64 Token,
+	UINT32 Capability Count
+	);
+
+LogTokenInfo(
+	HEXINT64 Token,
+	UINT32 Group Count
+	);
+
+LogTokenInfo(
+	HEXINT64 Token,
+	UINT32 uiAccess
+	);
+
+LogTokenInfo(
+	HEXINT64 Token,
+	UINT32 Authentication Id low part,
+	UINT32 Authentication Id high part
+	);
+
+LogTokenInfo(
+	HEXINT64 Token,
+	UINT32 lowBoxNumber
+	);
+
+LogTokenInfo(
+	HEXINT64 Token,
+	UINT32 sandboxInert
+	);
+
+LogTokenInfo(
+	HEXINT64 Token,
+	COUNTEDSTRING Attribute Name
+	);
+
+LogTokenInfo(
+	HEXINT64 Token,
+	UNICODESTRING Integrity Level
+	);
+
+LogTokenInfo(
+	HEXINT64 Token,
+	UNICODESTRING Package SID
+	);
+
+TlgAggregateSummary(
+	GUID Provider,
+	UINT64 NumFlushes,
+	UINT64 MaxEntriesStored,
+	UINT64 TotalEntriesFlushed,
+	UINT32 MaxEntriesFlushed,
+	UINT32 MinEntriesFlushed,
+	UINT32 NumBucketLimitReached,
+	UINT32 NumAllocationFailures,
+	UINT32 NumLargeEventFailures
+	);
+
+Assert(
+	UINT32 assertVersion,
+	UINT32 rva,
+	UINT32 timestamp,
+	UINT32 imageSize,
+	ANSISTRING imageName,
+	UINT32 count,
+	UINT32 totalHits,
+	UINT32 ModuleCollection,
+	UINT32 GlobalCollection
+	);
+
+AssertWithArgs(
+	UINT32 assertVersion,
+	UINT32 rva,
+	UINT32 timestamp,
+	UINT32 imageSize,
+	ANSISTRING imageName,
+	UINT32 count,
+	UINT32 totalHits,
+	ANSISTRING originatingBinary,
+	UINT32 bucketArgument1,
+	UINT32 bucketArgument2,
+	UINT32 ModuleCollection,
+	UINT32 GlobalCollection
+	);
+
+ComError(
+	HRESULT hresult,
+	ANSISTRING code,
+	UNICODESTRING message,
+	ANSISTRING function,
+	ANSISTRING fileName,
+	UINT16 lineNumber
+	);
+
+ComError(
+	HRESULT hresult,
+	ANSISTRING code,
+	UNICODESTRING message,
+	ANSISTRING function,
+	ANSISTRING fileName,
+	UINT16 lineNumber
+	);
+
+ComError(
+	HRESULT hresult,
+	ANSISTRING code,
+	UNICODESTRING message,
+	ANSISTRING function,
+	ANSISTRING fileName,
+	UINT32 lineNumber
+	);
+
+TypeCannotDiscoverInterface(
+	UNICODESTRING typeName,
+	GUID refiid
+	);
+

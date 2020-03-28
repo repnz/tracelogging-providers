@@ -1,0 +1,224 @@
+ProviderNames:
+	Microsoft.Windows.Shell.SystemSettings.Maps
+
+
+
+**** Events *****
+StartPausedCanceled(
+	GUID mapSessionId,
+	UINT32 downloadedRegionId
+	);
+
+FallbackError(
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+FallbackError(
+	UINT64 PartA_PrivTags,
+	SIGNED wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+SettingsServiceInitSlow(
+	GUID mapSessionId
+	);
+
+StorageMigrationComplete(
+	BOOL32 newStorageIsSystemDrive,
+	UINT32 newStorageDeviceType,
+	UINT32 newStorageBusType,
+	UINT32 MigrationState,
+	GUID mapSessionId
+	);
+
+SettingsServiceRuntimeFail(
+	GUID mapSessionId,
+	HRESULT mosHostFailureHRESULT
+	);
+
+SettingsLaunchSuccess(
+	BOOL32 storageIsSystemDrive,
+	UINT32 storageDeviceType,
+	UINT32 storageBusType,
+	GUID mapSessionId
+	);
+
+SettingsLaunchServiceInitNoData(
+	GUID mapSessionId
+	);
+
+StorageMigrationFailed(
+	BOOL32 newStorageIsSystemDrive,
+	UINT32 newStorageDeviceType,
+	UINT32 newStorageBusType,
+	UINT32 MigrationState,
+	HRESULT HResult,
+	GUID mapSessionId
+	);
+
+StorageMigrationCanceled(
+	BOOL32 newStorageIsSystemDrive,
+	UINT32 newStorageDeviceType,
+	UINT32 newStorageBusType,
+	GUID mapSessionId
+	);
+
+StorageMigrationStart(
+	BOOL32 newStorageIsSystemDrive,
+	UINT32 newStorageDeviceType,
+	UINT32 newStorageBusType,
+	UINT32 MigrationState,
+	GUID mapSessionId
+	);
+
+StorageMigrationValidNotConfirming(
+	BOOL32 newStorageIsSystemDrive,
+	UINT32 newStorageDeviceType,
+	UINT32 newStorageBusType,
+	GUID mapSessionId
+	);
+
+StorageMigrationPerfSlow(
+	BOOL32 newStorageIsSystemDrive,
+	UINT32 newStorageDeviceType,
+	UINT32 newStorageBusType,
+	GUID mapSessionId
+	);
+
+StorageMigrationNoCacheSpace(
+	BOOL32 newStorageIsSystemDrive,
+	UINT32 newStorageDeviceType,
+	UINT32 newStorageBusType,
+	GUID mapSessionId
+	);
+
+StorageMigrationNoDiskSpace(
+	BOOL32 newStorageIsSystemDrive,
+	UINT32 newStorageDeviceType,
+	UINT32 newStorageBusType,
+	GUID mapSessionId
+	);
+
+StorageMigrationLocationSelected(
+	BOOL32 newStorageIsSystemDrive,
+	UINT32 newStorageDeviceType,
+	UINT32 newStorageBusType,
+	BOOL32 isFromStorageSettingsPage,
+	GUID mapSessionId
+	);
+
+AllowDownloadOverMeteredConnection(
+	GUID mapSessionId
+	);
+
+DisallowDownloadOverMeteredConnection(
+	GUID mapSessionId
+	);
+
+TurnAutoUpdateOff(
+	GUID mapSessionId
+	);
+
+TurnAutoUpdateOn(
+	GUID mapSessionId
+	);
+
+MapDownloaded(
+	BOOL32 storageIsSystemDrive,
+	UINT32 storageDeviceType,
+	UINT32 storageBusType,
+	GUID mapSessionId,
+	UINT32 downloadedRegionId
+	);
+
+ProtocolLaunchDownloaded(
+	UINT32 numberOfRegionsSelectedForDownload,
+	UINT32 protocolLaunchId,
+	GUID mapSessionId
+	);
+
+ProtocolLaunchShown(
+	UINT32 numberOfRegionsAvailable,
+	UINT32 numberOfRegionsAlreadyDownloaded,
+	DOUBLE latitude,
+	DOUBLE longitude,
+	UINT32 protocolLaunchId,
+	GUID mapSessionId
+	);
+
+RegionPickerInitialized(
+	GUID mapSessionId
+	);
+
+UserDownloadedRegionsListLoaded(
+	GUID mapSessionId,
+	UINT32 numberOfTotalRegions,
+	UINT32 numberOfDownloadedRegions
+	);
+
+UpdateMaps(
+	GUID mapSessionId
+	);
+
+CheckForUpdates(
+	GUID mapSessionId
+	);
+
+SettingsLaunchServiceOpenSuccess(
+	GUID mapSessionId
+	);
+
+SettingsLaunchServiceInitFailed(
+	GUID mapSessionId,
+	HRESULT mosHostFailureHRESULT
+	);
+
+SettingsLaunchServiceOpenFailed(
+	GUID mapSessionId,
+	HRESULT mosHostFailureHRESULT
+	);
+
+SettingsLaunchModelInitFailed(
+	GUID mapSessionId,
+	HRESULT mosHostFailureHRESULT
+	);
+
+SettingsStartLaunch(
+	GUID mapSessionId
+	);
+
+SettingsLaunchServiceEarlyClose(
+	GUID mapSessionId
+	);
+

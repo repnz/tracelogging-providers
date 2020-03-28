@@ -1,0 +1,78 @@
+ProviderNames:
+	Microsoft.Windows.Security.TokenBroker.BrowserSSO
+	Microsoft.Windows.Security.TokenBroker
+	Microsoft.Windows.TlgAggregateInternal
+
+
+
+**** Events *****
+CTBAuthProtocolParseAndBindOutputUrl(
+	UNICODESTRING outputUrl
+	);
+
+CTBAuthProtocolParseAndBind(
+	INT32 HResult,
+	UINT8 isIE,
+	UINT8 isEdge,
+	UNICODESTRING codePath,
+	UINT64 durationMs,
+	UNICODESTRING URL
+	);
+
+CTBAuthProtocolParseAndBindInputUri(
+	UNICODESTRING inputUri
+	);
+
+CTBAuthProtocolParseAndBindError(
+	UINT32 dwCookieState,
+	UNICODESTRING URL
+	);
+
+LaunchPushCookieProcessForEdgeParentAcTokenIsNullError(
+	UINT32 dwError,
+	UNICODESTRING browserProfile,
+	UNICODESTRING requestId
+	);
+
+LaunchPushCookieProcessAtLowILResult(
+	UINT32 dwError,
+	UNICODESTRING codePath,
+	UNICODESTRING url
+	);
+
+EdgeSid_null_token(
+	UINT32 LastError
+	);
+
+LaunchPushCookieProcessForEdgeResult(
+	UINT32 dwError,
+	UNICODESTRING codePath,
+	UNICODESTRING requestId
+	);
+
+CreateEnvironmentBlock_Failed(
+	UINT32 LastError
+	);
+
+LaunchPushCookieProcessForEdgeError(
+	UINT32 dwError,
+	UNICODESTRING browserProfile,
+	UNICODESTRING requestId
+	);
+
+GetAppContainerFolderPath_Failed(
+	UINT32 LastError
+	);
+
+TlgAggregateSummary(
+	GUID Provider,
+	UINT64 NumFlushes,
+	UINT64 MaxEntriesStored,
+	UINT64 TotalEntriesFlushed,
+	UINT32 MaxEntriesFlushed,
+	UINT32 MinEntriesFlushed,
+	UINT32 NumBucketLimitReached,
+	UINT32 NumAllocationFailures,
+	UINT32 NumLargeEventFailures
+	);
+

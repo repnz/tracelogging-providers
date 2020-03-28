@@ -1,0 +1,33 @@
+ProviderNames:
+	BitLockerMDMUI
+	Microsoft.Windows.Security.BitLocker.CSP.State.Update
+	Microsoft.Windows.Security.BitLocker.EncryptionDelay
+	Microsoft.Windows.Security.BitLocker.BcdUpdate
+
+
+
+**** Events *****
+BitLocker.MDM.CheckBox.Choices(
+	BOOLEAN ConsentReceived,
+	BOOLEAN OptOutPicked
+	);
+
+BitLocker.MDM.Help.Link.Clicked(
+	VOID
+	);
+
+BitLocker.MDM.Launch.Wizard(
+	VOID
+	);
+
+BitLocker.MDM.Launch.DE.Page(
+	VOID
+	);
+
+BitLocker.CSP.Update.State(
+	INT32 BitLockerStatus,
+	UINT32 data,
+	INT32 hr,
+	UINT64 PartA_PrivTags
+	);
+

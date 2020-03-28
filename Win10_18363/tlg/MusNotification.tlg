@@ -1,0 +1,2040 @@
+ProviderNames:
+	Microsoft.Windows.Update.Ux.MusNotification
+	Microsoft.Windows.Update.Ux.MusNotification
+	Microsoft.Windows.Update.Orchestrator
+
+
+
+**** Events *****
+Error Originate:RebootTimeUtility::GetLastRebootMarkedTime:114(
+	INT32 hr
+	);
+
+Info Message(
+	ANSISTRING message,
+	FILETIME Reboot pending time
+	);
+
+Error Originate:RebootTimeUtility::DeleteLastRebootMarkedTime:174(
+	INT32 hr
+	);
+
+Info Message(
+	ANSISTRING message
+	);
+
+Warning:RebootTimeUtility::UpdateLastMarkedTimesPostReboot:217(
+	INT32 hr
+	);
+
+Error Originate:RebootTimeUtility::UpdateLastMarkedTimesPostReboot:228(
+	INT32 hr
+	);
+
+Error Originate:RebootTimeUtility::UpdateLastMarkedTimesPostReboot:238(
+	INT32 hr
+	);
+
+Error Originate:RebootTimeUtility::UpdateLastMarkedTimesPostReboot:245(
+	INT32 hr
+	);
+
+Info Message(
+	UNICODESTRING message
+	);
+
+Error Originate:ActiveHoursHelper::GetDeviceActiveHours:307(
+	INT32 hr
+	);
+
+Error Originate:ActiveHoursHelper::GetDeviceActiveHours:314(
+	INT32 hr
+	);
+
+Info Message(
+	UNICODESTRING message
+	);
+
+Info Message(
+	UNICODESTRING message,
+	UINT16 activeHoursStart,
+	UINT16 activeHoursEnd
+	);
+
+UxBrokerGraceDeadlinePolicy(
+	UINT64 PartA_PrivTags,
+	BOOLEAN isDevicePastDeadline,
+	BOOLEAN isDevicePastEffectiveDeadline,
+	BOOLEAN isGracePeriodEligible,
+	FILETIME effectiveDeadlineTimeLocalTime,
+	FILETIME effectiveDeadlineUtcTime,
+	UINT32 hoursUntilDeadline
+	);
+
+UxBrokerMgmtState(
+	BOOLEAN isEngagedRestartTransitionForNonFUConfigured,
+	UINT32 engagedRestartTransitionInDaysForNonFU,
+	BOOLEAN isEngagedRestartSnoozeForNonFUConfigured,
+	UINT32 engagedRestartSnoozeInDaysForNonFU,
+	BOOLEAN isEngagedRestartDeadlineForNonFUConfigured,
+	UINT32 engagedRestartDeadlineInDaysForNonFU,
+	BOOLEAN isEngagedRestartTransitionForFUConfigured,
+	UINT32 engagedRestartTransitionInDaysForFU,
+	BOOLEAN isEngagedRestartSnoozeForFUConfigured,
+	UINT32 engagedRestartSnoozeInDaysForFU,
+	BOOLEAN isEngagedRestartDeadlineForFUConfigured,
+	UINT32 engagedRestartDeadlineInDaysForFU
+	);
+
+UxBrokerMgmtState(
+	UINT64 PartA_PrivTags,
+	INT32 InstallAtMaintenanceTimeSet,
+	INT32 InstallAtScheduledTimeSet,
+	INT32 NoAutoRebootWithLoggedOnUsersSet,
+	INT32 AutoRestartCountdownMinutesSet,
+	INT32 NoUXSet,
+	INT32 ActiveHoursPoliciesSet,
+	UINT32 RestartCountdownMinutes,
+	UINT16 ScheduledInstallDay,
+	UINT16 ScheduledInstallTime,
+	INT32 AutoRestartRequiredNotificationConfigured,
+	INT32 AutoRestartReminderConfigured,
+	UINT32 AutoRestartReminderOption,
+	UINT32 AutoRestartReminderMinutes,
+	INT32 DisableAutoRestartNotificationsConfigured,
+	INT32 DisableAllNotificationsSet,
+	INT32 AutoRestartWarningConfigured,
+	UINT32 AutoRestartWarningReminderHours,
+	UINT32 AutoRestartImminentWarningMinutes,
+	INT32 CustomizeAutoRestartWarningConfigured,
+	INT32 AutoRestartDeadlineForNonFUConfigured,
+	INT32 AutoRestartDeadlineForFUConfigured
+	);
+
+UxBrokerLaunchedByRebootScheduledTask(
+	UNICODESTRING Argument,
+	UINT64 PartA_PrivTags
+	);
+
+UxBrokerLaunched(
+	UNICODESTRING Argument
+	);
+
+BrokerRunNotAllowedOnBattery(
+	UINT32 BatteryLevel,
+	UNICODESTRING BrokerArg,
+	UINT64 PartA_PrivTags
+	);
+
+Broker message(
+	ANSISTRING Message
+	);
+
+Info Message(
+	ANSISTRING message
+	);
+
+UxBrokerFirstReadyToReboot(
+	VOID
+	);
+
+FallbackError(
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+FallbackError(
+	UINT64 PartA_PrivTags,
+	SIGNED wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+Initializing tracing(
+	VOID
+	);
+
+Error Propagate:ConfigUtil::CheckIfUserLoggedInWhenMgmtPolicySet(
+	INT32 hr
+	);
+
+Info Message(
+	ANSISTRING message,
+	UINT32 State
+	);
+
+Warning:ConfigUtil::CheckIfUserLoggedInWhenMgmtPolicySet:64(
+	INT32 hr
+	);
+
+Error Originate:ConfigUtil::CheckIfUserLoggedInWhenMgmtPolicySet:51(
+	INT32 hr
+	);
+
+UpdateUxUserProcessTimeout(
+	UNICODESTRING CommandLineArgs,
+	SYSTEMTIME UtcTime
+	);
+
+UpdateUxUserProcessLaunched(
+	UNICODESTRING CommandLineArgs,
+	SYSTEMTIME UtcTime
+	);
+
+UpdateUxUserProcessLaunchFailed(
+	UNICODESTRING CommandLineArgs,
+	SYSTEMTIME UtcTime
+	);
+
+UpdateUxUserNotLoggedIn(
+	SYSTEMTIME UtcTime
+	);
+
+ForcedRestartReminderVisible(
+	UINT32 Minutes
+	);
+
+Launched UX from broker and the user process timed out on wait(
+	VOID
+	);
+
+Error Originate:UserProcess::GetUserTokenForLoggedInUser:1380(
+	INT32 hr
+	);
+
+Error Originate:UserProcess::GetUserTokenForLoggedInUser:1368(
+	INT32 hr
+	);
+
+Error Originate:UserProcess::GetUserTokenForLoggedInUser:1361(
+	INT32 hr
+	);
+
+Error Originate:UserProcess::GetUserTokenForLoggedInUser:1350(
+	INT32 hr
+	);
+
+Error Originate:UserProcess::GetUserTokenForLoggedInUser:1338(
+	INT32 hr
+	);
+
+Error Originate:UserProcess::GetNotificationCommandLineArguments:1301(
+	INT32 hr
+	);
+
+Error Originate:UserProcess::GetNotificationCommandLineArguments:1291(
+	INT32 hr
+	);
+
+Error Originate:UserProcess::GetNotificationCommandLineArguments:1281(
+	INT32 hr
+	);
+
+Error Originate:UserProcess::GetNotificationCommandLineArguments:1270(
+	INT32 hr
+	);
+
+Error Propagate:UserProcess::LaunchToastProcessOnWindowsMobile(
+	INT32 hr
+	);
+
+Error Originate:UserProcess::LaunchToastProcessOnWindowsMobile:862(
+	INT32 hr
+	);
+
+Error Propagate:UserProcess::LaunchDialogProcessOnWindowsMobile(
+	INT32 hr
+	);
+
+Error Originate:UserProcess::LaunchDialogProcessOnWindowsMobile:806(
+	INT32 hr
+	);
+
+Error Originate:UserProcess::LaunchDialogProcessOnWindowsMobile:794(
+	INT32 hr
+	);
+
+Error Propagate:UserProcess::IsUserSessionActive(
+	INT32 hr
+	);
+
+Error Originate:UserProcess::IsUserSessionActive:626(
+	INT32 hr
+	);
+
+Error Propagate:UserProcess::LaunchToastProcess(
+	INT32 hr
+	);
+
+Error Originate:UserProcess::LaunchToastProcess:569(
+	INT32 hr
+	);
+
+Error Propagate:UserProcess::LaunchDialogProcess(
+	INT32 hr
+	);
+
+Error Originate:UserProcess::LaunchDialogProcess:511(
+	INT32 hr
+	);
+
+Error Originate:UserProcess::LaunchDialogProcess:499(
+	INT32 hr
+	);
+
+Error Propagate:UserProcess::LaunchUxAsUser(
+	INT32 hr
+	);
+
+Error Originate:UserProcess::LaunchUxAsUser:410(
+	INT32 hr
+	);
+
+Error Originate:UserProcess::LaunchUxAsUser:387(
+	INT32 hr
+	);
+
+Info Message(
+	UNICODESTRING message
+	);
+
+Broker is ready to launch a notification(
+	ANSISTRING NotificationType
+	);
+
+UxBrokerExpectedNextState(
+	ANSISTRING NextState
+	);
+
+RebootNoLongerNeeded(
+	SYSTEMTIME UtcTime
+	);
+
+UxBrokerRebootResults(
+	INT32 ErrorCode
+	);
+
+DataMigrationStatus(
+	ANSISTRING Msg
+	);
+
+ShowUpdateResultsAfterReboot(
+	SYSTEMTIME UtcTime
+	);
+
+RebootRequiredButNoScheduleExists(
+	VOID
+	);
+
+USORebootInvoked(
+	GUID UpdateId,
+	UINT32 UpdateRevision,
+	SYSTEMTIME UtcTime
+	);
+
+RebootRequestReasonsToIgnore(
+	UINT64 Reason
+	);
+
+UpdateUxBatterySaverEnabled(
+	VOID
+	);
+
+Info Message(
+	ANSISTRING message,
+	BOOL32 Is SBC Allowed:
+	);
+
+Info Message(
+	ANSISTRING message,
+	UINT32 Hours Limit
+	);
+
+Info Message(
+	ANSISTRING message,
+	BOOL32 Is Applicable:
+	);
+
+Info Message(
+	ANSISTRING message,
+	UINT32 threshold
+	);
+
+Info Message(
+	ANSISTRING message,
+	UINT32 hours
+	);
+
+Info Message(
+	ANSISTRING message,
+	UINT32 ignorableReasons
+	);
+
+Error Originate:RebootStateHelper::IsDeviceReadyForReboot:2271(
+	INT32 hr
+	);
+
+Error Propagate:RebootStateHelper::ScheduleForcedReminder(
+	INT32 hr
+	);
+
+Info Message(
+	ANSISTRING message,
+	HRESULT Error
+	);
+
+Error Originate:RebootStateHelper::ScheduleForcedReminder:2116(
+	INT32 hr
+	);
+
+Error Originate:RebootStateHelper::ScheduleForcedReminder:2107(
+	INT32 hr
+	);
+
+Error Originate:RebootStateHelper::ScheduleForcedReminder:2097(
+	INT32 hr
+	);
+
+Error Originate:RebootStateHelper::ScheduleForcedReminder:2089(
+	INT32 hr
+	);
+
+Error Originate:RebootStateHelper::ScheduleForcedReminder:2073(
+	INT32 hr
+	);
+
+Error Originate:RebootStateHelper::ScheduleForcedReminder:2045(
+	INT32 hr
+	);
+
+Error Propagate:RebootStateHelper::ScheduleSoftForcedRestart(
+	INT32 hr
+	);
+
+Error Originate:RebootStateHelper::ScheduleSoftForcedRestart:1972(
+	INT32 hr
+	);
+
+Error Originate:RebootStateHelper::ScheduleSoftForcedRestart:1960(
+	INT32 hr
+	);
+
+Error Originate:RebootStateHelper::ScheduleSoftForcedRestart:1951(
+	INT32 hr
+	);
+
+Error Originate:RebootStateHelper::ScheduleSoftForcedRestart:1929(
+	INT32 hr
+	);
+
+Error Propagate:RebootStateHelper::IsRebootTimeForced(
+	INT32 hr
+	);
+
+Error Originate:RebootStateHelper::IsRebootTimeForced:1874(
+	INT32 hr
+	);
+
+Error Originate:RebootStateHelper::IsRebootOutsideOfActiveHours:1830(
+	INT32 hr
+	);
+
+Error Originate:RebootStateHelper::IsRebootScheduledInTheFuture:1783(
+	INT32 hr
+	);
+
+Error Originate:RebootStateHelper::IsRebootScheduledInTheFuture:1773(
+	INT32 hr
+	);
+
+Error Originate:RebootStateHelper::IsRebootScheduled:1727(
+	INT32 hr
+	);
+
+Error Originate:RebootStateHelper::IsRebootScheduled:1714(
+	INT32 hr
+	);
+
+Error Propagate:RebootStateHelper::IsRebootTimeMatchingScheduledTime(
+	INT32 hr
+	);
+
+Error Originate:RebootStateHelper::IsRebootTimeMatchingScheduledTime:1661(
+	INT32 hr
+	);
+
+Expecting a saved reboot time in USO session variable but not found(
+	VOID
+	);
+
+Error Originate:RebootStateHelper::IsRebootTimeMatchingScheduledTime:1645(
+	INT32 hr
+	);
+
+Error Propagate:RebootStateHelper::RescheduleForceReboot(
+	INT32 hr
+	);
+
+Error Originate:RebootStateHelper::RescheduleForceReboot:1569(
+	INT32 hr
+	);
+
+Info Message(
+	ANSISTRING message,
+	UINT32 Value,
+	UNICODESTRING Name
+	);
+
+Info Message(
+	ANSISTRING message,
+	UINT32 Minutes since last forced warning dialog
+	);
+
+Info Message(
+	ANSISTRING message,
+	FILETIME Last Forced Warning Timestamp,
+	FILETIME Last Reboot Required Timestamp
+	);
+
+Reboot schedule does not exist(
+	VOID
+	);
+
+Error Originate:RebootStateHelper::IsValidTimeToShowRebootNotificationOnLogon:1068(
+	INT32 hr
+	);
+
+Error Originate:RebootStateHelper::IsValidTimeToReboot:1021(
+	INT32 hr
+	);
+
+Error Propagate:RebootStateHelper::ShowMgmtUpdateResults(
+	INT32 hr
+	);
+
+Error Originate:RebootStateHelper::ShowMgmtUpdateResults:963(
+	INT32 hr
+	);
+
+Error Propagate:RebootStateHelper::DidDataMigrationSucceed(
+	INT32 hr
+	);
+
+Error Originate:RebootStateHelper::DidDataMigrationSucceed:926(
+	INT32 hr
+	);
+
+Error Propagate:RebootStateHelper::ShowUpdateResultsNotification(
+	INT32 hr
+	);
+
+Error Originate:RebootStateHelper::ShowUpdateResultsNotification:878(
+	INT32 hr
+	);
+
+Error Originate:RebootStateHelper::ShowUpdateResultsNotification:846(
+	INT32 hr
+	);
+
+Error Originate:RebootStateHelper::ShowUpdateResultsNotification:833(
+	INT32 hr
+	);
+
+Error Originate:RebootStateHelper::ShowUpdateResultsNotification:810(
+	INT32 hr
+	);
+
+Call to USO to get reboot results failed(
+	VOID
+	);
+
+Error Originate:RebootStateHelper::ShowUpdateResultsNotification:773(
+	INT32 hr
+	);
+
+Error Propagate:RebootStateHelper::ShowUpdateResults(
+	INT32 hr
+	);
+
+Error Originate:RebootStateHelper::ShowUpdateResults:696(
+	INT32 hr
+	);
+
+Removing a task from task scheduler failed(
+	VOID
+	);
+
+Error Propagate:RebootStateHelper::ScheduleRebootIn5Minutes(
+	INT32 hr
+	);
+
+Error Originate:RebootStateHelper::ScheduleRebootIn5Minutes:610(
+	INT32 hr
+	);
+
+DeferredRebootReasonSmartBusyCheckPredictedUser(
+	UINT64 PartA_PrivTags
+	);
+
+McsDeferredRebootReasonACPowerNeeded(
+	UINT64 PartA_PrivTags
+	);
+
+Deferred the reboot and the reason is: system is needed(
+	VOID
+	);
+
+Deferred the reboot and the reason is: display is needed(
+	VOID
+	);
+
+Deferred the reboot and the reason is: user active(
+	VOID
+	);
+
+Deferred the reboot(
+	UINT32 Reason
+	);
+
+Error Propagate:RebootStateHelper::InvokeUSOReboot(
+	INT32 hr
+	);
+
+Reboot call to USO from UX Failed(
+	VOID
+	);
+
+Error Originate:RebootStateHelper::InvokeUSOReboot:304(
+	INT32 hr
+	);
+
+Error Originate:RebootStateHelper::InvokeUSOReboot:279(
+	INT32 hr
+	);
+
+Error Originate:RebootStateHelper::InvokeUSOReboot:237(
+	INT32 hr
+	);
+
+UxBrokerUpdateState(
+	ANSISTRING RunningState,
+	ANSISTRING NotificationReason,
+	ANSISTRING CategoryType,
+	ANSISTRING RebootRequired,
+	FILETIME OldestUpdateTime
+	);
+
+EnhancedEngagedRebootUxState(
+	ANSISTRING RebootVersion,
+	UINT32 RebootUxState,
+	UINT32 EngagedModeLimit,
+	UINT32 SkipToAutoModeLimit,
+	UINT32 AcceptAutoModeLimit,
+	UINT32 EnterAutoModeLimit,
+	UINT32 AutoToAutoFailedLimit,
+	INT32 IsForcedEnabled,
+	INT32 IsUltimateForcedEnabled,
+	SYSTEMTIME DeviceLocalTime,
+	UNICODESTRING ETag,
+	GUID UpdateId,
+	UINT32 UpdateRevision,
+	FILETIME OldestUpdateLocalTime
+	);
+
+Info Message(
+	ANSISTRING message,
+	FILETIME Last Fair Warning Timestamp,
+	FILETIME Last Reboot Required Timestamp
+	);
+
+Show DataMigrationFailed dialog(
+	VOID
+	);
+
+Info Message(
+	ANSISTRING message,
+	INT32 UxRebootState
+	);
+
+Info Message(
+	ANSISTRING message,
+	UINT32 StartHour,
+	UINT32 EndHour
+	);
+
+DisplayNotificationUxState(
+	UINT32 UxStartState,
+	UINT32 UxNextState
+	);
+
+UxBrokerWorkflow(
+	ANSISTRING LaunchedForFlow,
+	UNICODESTRING CommandLineArg
+	);
+
+Error Originate:UpdateNotification::IsDisplayNeeded:692(
+	INT32 hr
+	);
+
+Error Originate:UpdateNotification::IsDisplayNeeded:677(
+	INT32 hr
+	);
+
+Error Originate:UpdateNotification::IsDisplayNeeded:648(
+	INT32 hr
+	);
+
+Error Originate:UpdateNotification::IsNotificationSkipped:571(
+	INT32 hr
+	);
+
+Error Originate:UpdateNotification::IsNotificationSkipped:560(
+	INT32 hr
+	);
+
+Error Propagate:UpdateNotification::DisplayNotification(
+	INT32 hr
+	);
+
+Error Originate:UpdateNotification::DisplayNotification:465(
+	INT32 hr
+	);
+
+Notification is not defined for current ux state(
+	VOID
+	);
+
+Info Message(
+	ANSISTRING message,
+	UINT32 MusUxState
+	);
+
+Error Originate:UpdateNotification::DisplayNotification:341(
+	INT32 hr
+	);
+
+Error Propagate:UpdateNotification::ProcessUpdateNotificationOnUserLogon(
+	INT32 hr
+	);
+
+Error Propagate:UpdateNotification::ProcessUpdateNotification(
+	INT32 hr
+	);
+
+Error Propagate:UpdateNotification::DoAction(
+	INT32 hr
+	);
+
+Error Propagate:NotificationFactory::ProcessNotification(
+	INT32 hr
+	);
+
+Error Propagate:UxDisplaySurfaceManager::DisplaySurfaceNotification(
+	INT32 hr
+	);
+
+Error Originate:UxDisplaySurfaceManager::DisplaySurfaceNotification:85(
+	INT32 hr
+	);
+
+Error Propagate:UpToDateStatusHelper::RecalcUpToDateStatus(
+	INT32 hr
+	);
+
+Warning:UpToDateStatusHelper::RecalcUpToDateStatus:491(
+	INT32 hr
+	);
+
+Error Originate:UpToDateStatusHelper::RecalcUpToDateStatus:481(
+	INT32 hr
+	);
+
+Error Originate:UpToDateStatusHelper::RecalcUpToDateStatus:472(
+	INT32 hr
+	);
+
+Error Originate:UpToDateStatusHelper::RecalcUpToDateStatus:463(
+	INT32 hr
+	);
+
+Error Originate:UpToDateStatusHelper::RecalcUpToDateStatus:449(
+	INT32 hr
+	);
+
+Info Message(
+	ANSISTRING message,
+	UINT32 Days Before Warning Default,
+	UINT32 Days Before Alert Default
+	);
+
+Error Originate:UpToDateStatusHelper::RecalcUpToDateStatus:430(
+	INT32 hr
+	);
+
+Info Message(
+	ANSISTRING message,
+	UINT32 currentStatus
+	);
+
+Warning:UpToDateStatusHelper::GetCurrentStatus:347(
+	INT32 hr
+	);
+
+Error Originate:UpToDateStatusHelper::GetCurrentStatus:335(
+	INT32 hr
+	);
+
+Error Originate:UpToDateStatusHelper::GetCurrentStatus:328(
+	INT32 hr
+	);
+
+Warning:UpToDateStatusHelper::GetCurrentStatus:289(
+	INT32 hr
+	);
+
+Error Originate:UpToDateStatusHelper::GetCurrentStatus:280(
+	INT32 hr
+	);
+
+Info Message(
+	ANSISTRING message,
+	UINT32 daysBeforeWarning,
+	UINT32 daysBeforeAlert
+	);
+
+Error Originate:UpToDateStatusHelper::ShouldRecalcUpToDateStatus:145(
+	INT32 hr
+	);
+
+Error Originate:UpToDateStatusHelper::ShouldRecalcUpToDateStatus:133(
+	INT32 hr
+	);
+
+Error Propagate:RebootActiveHoursAutomatic::IsFairWarningActive(
+	INT32 hr
+	);
+
+Error Propagate:RebootActiveHoursAutomatic::ExecuteInteractiveReboot(
+	INT32 hr
+	);
+
+Error Originate:RebootActiveHoursAutomatic::ExecuteInteractiveReboot:3014(
+	INT32 hr
+	);
+
+Error Originate:RebootActiveHoursAutomatic::EvaluateUserInitiatedRebootCondition:2961(
+	INT32 hr
+	);
+
+Info Message(
+	ANSISTRING message,
+	UINT32 Minutes
+	);
+
+Error Propagate:RebootActiveHoursAutomatic::ScheduleForceReboot(
+	INT32 hr
+	);
+
+Error Originate:RebootActiveHoursAutomatic::ScheduleForceReboot:2774(
+	INT32 hr
+	);
+
+Error Originate:RebootActiveHoursAutomatic::ScheduleForceReboot:2763(
+	INT32 hr
+	);
+
+Error Originate:RebootActiveHoursAutomatic::ScheduleForceReboot:2752(
+	INT32 hr
+	);
+
+Error Originate:RebootActiveHoursAutomatic::IsDeviceReadyForReboot:2709(
+	INT32 hr
+	);
+
+Error Propagate:RebootActiveHoursAutomatic::ProcessUserResponse(
+	INT32 hr
+	);
+
+Error Originate:RebootActiveHoursAutomatic::ProcessUserResponse:2577(
+	INT32 hr
+	);
+
+Error Originate:RebootActiveHoursAutomatic::ProcessUserResponse:2548(
+	INT32 hr
+	);
+
+Error Propagate:RebootActiveHoursAutomatic::ShowRebootDialogOnLogon(
+	INT32 hr
+	);
+
+Error Originate:RebootActiveHoursAutomatic::ShowRebootDialogOnLogon:2502(
+	INT32 hr
+	);
+
+Error Originate:RebootActiveHoursAutomatic::ShowRebootDialogOnLogon:2493(
+	INT32 hr
+	);
+
+Error Originate:RebootActiveHoursAutomatic::ShowRebootDialogOnLogon:2452(
+	INT32 hr
+	);
+
+Error Originate:RebootActiveHoursAutomatic::ShowRebootDialogOnLogon:2403(
+	INT32 hr
+	);
+
+Error Originate:RebootActiveHoursAutomatic::ShowRebootDialogOnLogon:2392(
+	INT32 hr
+	);
+
+Error Originate:RebootActiveHoursAutomatic::ShowRebootDialogOnLogon:2383(
+	INT32 hr
+	);
+
+Error Propagate:RebootActiveHoursAutomatic::ShowRebootDialog(
+	INT32 hr
+	);
+
+Error Originate:RebootActiveHoursAutomatic::ShowRebootDialog:2342(
+	INT32 hr
+	);
+
+Error Originate:RebootActiveHoursAutomatic::ShowRebootDialog:2307(
+	INT32 hr
+	);
+
+Error Originate:RebootActiveHoursAutomatic::ShowRebootDialog:2243(
+	INT32 hr
+	);
+
+Error Originate:RebootActiveHoursAutomatic::ShowRebootDialog:2216(
+	INT32 hr
+	);
+
+Error Originate:RebootActiveHoursAutomatic::ShowRebootDialog:2206(
+	INT32 hr
+	);
+
+Error Originate:RebootActiveHoursAutomatic::ShowRebootDialog:2196(
+	INT32 hr
+	);
+
+Error Propagate:RebootActiveHoursAutomatic::ScheduleReboot(
+	INT32 hr
+	);
+
+Error Originate:RebootActiveHoursAutomatic::ScheduleReboot:2154(
+	INT32 hr
+	);
+
+Error Originate:RebootActiveHoursAutomatic::ScheduleReboot:2112(
+	INT32 hr
+	);
+
+Error Originate:RebootActiveHoursAutomatic::ScheduleReboot:2096(
+	INT32 hr
+	);
+
+Error Originate:RebootActiveHoursAutomatic::ScheduleReboot:2081(
+	INT32 hr
+	);
+
+Error Propagate:RebootActiveHoursAutomatic::PostponeRebootDialog(
+	INT32 hr
+	);
+
+Error Originate:RebootActiveHoursAutomatic::PostponeRebootDialog:2036(
+	INT32 hr
+	);
+
+Error Originate:RebootActiveHoursAutomatic::PostponeRebootDialog:1993(
+	INT32 hr
+	);
+
+Error Originate:RebootActiveHoursAutomatic::PostponeRebootDialog:1982(
+	INT32 hr
+	);
+
+Error Originate:RebootActiveHoursAutomatic::PostponeRebootDialog:1967(
+	INT32 hr
+	);
+
+Error Propagate:RebootActiveHoursAutomatic::ScheduleRebootDialog(
+	INT32 hr
+	);
+
+Error Originate:RebootActiveHoursAutomatic::ScheduleRebootDialog:1920(
+	INT32 hr
+	);
+
+Error Originate:RebootActiveHoursAutomatic::ScheduleRebootDialog:1877(
+	INT32 hr
+	);
+
+Error Originate:RebootActiveHoursAutomatic::ScheduleRebootDialog:1852(
+	INT32 hr
+	);
+
+Error Originate:RebootActiveHoursAutomatic::ScheduleRebootDialog:1841(
+	INT32 hr
+	);
+
+Error Originate:RebootActiveHoursAutomatic::ScheduleRebootDialog:1825(
+	INT32 hr
+	);
+
+Error Propagate:RebootActiveHoursAutomatic::ScheduleForcedRestartRetry(
+	INT32 hr
+	);
+
+Error Originate:RebootActiveHoursAutomatic::ScheduleForcedRestartRetry:1745(
+	INT32 hr
+	);
+
+Error Originate:RebootActiveHoursAutomatic::ScheduleForcedRestartRetry:1717(
+	INT32 hr
+	);
+
+Error Originate:RebootActiveHoursAutomatic::ScheduleForcedRestartRetry:1703(
+	INT32 hr
+	);
+
+Error Propagate:RebootActiveHoursAutomatic::ScheduleForcedRestartReminder(
+	INT32 hr
+	);
+
+Error Originate:RebootActiveHoursAutomatic::ScheduleForcedRestartReminder:1637(
+	INT32 hr
+	);
+
+Error Originate:RebootActiveHoursAutomatic::ScheduleForcedRestartReminder:1628(
+	INT32 hr
+	);
+
+Error Originate:RebootActiveHoursAutomatic::ScheduleForcedRestartReminder:1619(
+	INT32 hr
+	);
+
+Error Originate:RebootActiveHoursAutomatic::ScheduleForcedRestartReminder:1604(
+	INT32 hr
+	);
+
+Error Originate:RebootActiveHoursAutomatic::ScheduleForcedRestartReminder:1593(
+	INT32 hr
+	);
+
+Error Originate:RebootActiveHoursAutomatic::ScheduleForcedRestartReminder:1565(
+	INT32 hr
+	);
+
+Error Originate:RebootActiveHoursAutomatic::ScheduleForcedRestartReminder:1556(
+	INT32 hr
+	);
+
+Error Originate:RebootActiveHoursAutomatic::ScheduleForcedRestartReminder:1547(
+	INT32 hr
+	);
+
+Error Originate:RebootActiveHoursAutomatic::ScheduleForcedRestartReminder:1511(
+	INT32 hr
+	);
+
+Error Originate:RebootActiveHoursAutomatic::ScheduleForcedRestartReminder:1499(
+	INT32 hr
+	);
+
+Error Originate:RebootActiveHoursAutomatic::ScheduleForcedRestartReminder:1482(
+	INT32 hr
+	);
+
+Error Originate:RebootActiveHoursAutomatic::ScheduleForcedRestartReminder:1468(
+	INT32 hr
+	);
+
+Error Originate:RebootActiveHoursAutomatic::ScheduleForcedRestartReminder:1451(
+	INT32 hr
+	);
+
+Error Originate:RebootActiveHoursAutomatic::ScheduleForcedRestartReminder:1441(
+	INT32 hr
+	);
+
+Error Propagate:RebootActiveHoursAutomatic::ExecuteForcedReboot(
+	INT32 hr
+	);
+
+Error Originate:RebootActiveHoursAutomatic::ExecuteForcedReboot:1362(
+	INT32 hr
+	);
+
+Error Originate:RebootActiveHoursAutomatic::ExecuteForcedReboot:1305(
+	INT32 hr
+	);
+
+Error Propagate:RebootActiveHoursAutomatic::ExecuteReboot(
+	INT32 hr
+	);
+
+Error Originate:RebootActiveHoursAutomatic::ExecuteReboot:1256(
+	INT32 hr
+	);
+
+Error Originate:RebootActiveHoursAutomatic::EvaluatePreRebootCondition:1172(
+	INT32 hr
+	);
+
+Error Originate:RebootActiveHoursAutomatic::EvaluatePreRebootCondition:1150(
+	INT32 hr
+	);
+
+Error Propagate:RebootActiveHoursAutomatic::ExecuteStateAction(
+	INT32 hr
+	);
+
+Reboot next action is not found in state table(
+	UINT32 CurrentRebootState
+	);
+
+Error Propagate:RebootActiveHoursAutomatic::ShowRebootUpdateResults(
+	INT32 hr
+	);
+
+Error Propagate:RebootActiveHoursAutomatic::OnLogonRebootDialog(
+	INT32 hr
+	);
+
+Error Propagate:RebootActiveHoursAutomatic::OnForceRebootRetry(
+	INT32 hr
+	);
+
+Error Originate:RebootActiveHoursAutomatic::OnForceRebootRetry:922(
+	INT32 hr
+	);
+
+Error Originate:RebootActiveHoursAutomatic::OnForceRebootRetry:904(
+	INT32 hr
+	);
+
+Error Propagate:RebootActiveHoursAutomatic::OnForceRebootDevice(
+	INT32 hr
+	);
+
+Error Originate:RebootActiveHoursAutomatic::OnForceRebootDevice:807(
+	INT32 hr
+	);
+
+Error Originate:RebootActiveHoursAutomatic::OnForceRebootDevice:789(
+	INT32 hr
+	);
+
+Error Originate:RebootActiveHoursAutomatic::OnForceRebootDevice:773(
+	INT32 hr
+	);
+
+Error Originate:RebootActiveHoursAutomatic::OnForceRebootDevice:757(
+	INT32 hr
+	);
+
+Error Propagate:RebootActiveHoursAutomatic::OnForceRebootReminder(
+	INT32 hr
+	);
+
+Error Originate:RebootActiveHoursAutomatic::OnForceRebootReminder:714(
+	INT32 hr
+	);
+
+Error Originate:RebootActiveHoursAutomatic::OnForceRebootReminder:662(
+	INT32 hr
+	);
+
+Error Originate:RebootActiveHoursAutomatic::OnForceRebootReminder:648(
+	INT32 hr
+	);
+
+Error Originate:RebootActiveHoursAutomatic::OnForceRebootReminder:635(
+	INT32 hr
+	);
+
+Error Originate:RebootActiveHoursAutomatic::OnForceRebootReminder:619(
+	INT32 hr
+	);
+
+Error Originate:RebootActiveHoursAutomatic::OnForceRebootReminder:602(
+	INT32 hr
+	);
+
+Error Originate:RebootActiveHoursAutomatic::OnForceRebootReminder:586(
+	INT32 hr
+	);
+
+Error Originate:RebootActiveHoursAutomatic::OnForceRebootReminder:564(
+	INT32 hr
+	);
+
+Error Originate:RebootActiveHoursAutomatic::OnForceRebootReminder:549(
+	INT32 hr
+	);
+
+Error Originate:RebootActiveHoursAutomatic::OnForceRebootReminder:524(
+	INT32 hr
+	);
+
+Error Originate:RebootActiveHoursAutomatic::OnForceRebootReminder:505(
+	INT32 hr
+	);
+
+Error Originate:RebootActiveHoursAutomatic::OnForceRebootReminder:492(
+	INT32 hr
+	);
+
+Error Originate:RebootActiveHoursAutomatic::OnForceRebootReminder:481(
+	INT32 hr
+	);
+
+Error Propagate:RebootActiveHoursAutomatic::OnRebootDevice(
+	INT32 hr
+	);
+
+Error Originate:RebootActiveHoursAutomatic::OnRebootDevice:417(
+	INT32 hr
+	);
+
+Error Originate:RebootActiveHoursAutomatic::OnRebootDevice:384(
+	INT32 hr
+	);
+
+Error Propagate:RebootActiveHoursAutomatic::OnRebootDialog(
+	INT32 hr
+	);
+
+Error Originate:RebootActiveHoursAutomatic::OnRebootDialog:298(
+	INT32 hr
+	);
+
+Error Originate:RebootActiveHoursAutomatic::OnRebootDialog:280(
+	INT32 hr
+	);
+
+Error Originate:RebootActiveHoursAutomatic::OnRebootDialog:253(
+	INT32 hr
+	);
+
+Error Propagate:RebootActiveHoursAutomatic::OnFirstReadyToReboot(
+	INT32 hr
+	);
+
+Reboot schedule exists(
+	VOID
+	);
+
+Error Originate:RebootActiveHoursAutomatic::OnFirstReadyToReboot:209(
+	INT32 hr
+	);
+
+Error Originate:RebootActiveHoursAutomatic::OnFirstReadyToReboot:196(
+	INT32 hr
+	);
+
+Error Originate:RebootActiveHoursAutomatic::OnFirstReadyToReboot:183(
+	INT32 hr
+	);
+
+Error Originate:RebootActiveHoursAutomatic::OnFirstReadyToReboot:172(
+	INT32 hr
+	);
+
+Error Originate:RebootActiveHoursAutomatic::OnFirstReadyToReboot:161(
+	INT32 hr
+	);
+
+Error Propagate:RebootActiveHoursAutomatic::CreateInstance(
+	INT32 hr
+	);
+
+Error Originate:RebootActiveHoursAutomatic::CreateInstance:79(
+	INT32 hr
+	);
+
+Error Originate:RebootActiveHoursAutomatic::CreateInstance:69(
+	INT32 hr
+	);
+
+UxRebootWorkflowRun(
+	ANSISTRING WorkflowName,
+	UINT64 PartA_PrivTags
+	);
+
+Info Message(
+	ANSISTRING message,
+	BOOLEAN IsFeatureUpdatePending,
+	INT32 IsRebootScheduledByUser,
+	BOOLEAN IsUserLoggedIn
+	);
+
+Error Propagate:RebootWorkflowMandatory::IsFairWarningActive(
+	INT32 hr
+	);
+
+Error Propagate:RebootWorkflowMandatory::ShowRebootDialogOnLogon(
+	INT32 hr
+	);
+
+Error Originate:RebootWorkflowMandatory::ShowRebootDialogOnLogon:551(
+	INT32 hr
+	);
+
+Error Originate:RebootWorkflowMandatory::ShowRebootDialogOnLogon:539(
+	INT32 hr
+	);
+
+Error Originate:RebootWorkflowMandatory::ShowRebootDialogOnLogon:520(
+	INT32 hr
+	);
+
+Error Originate:RebootWorkflowMandatory::ShowRebootDialogOnLogon:503(
+	INT32 hr
+	);
+
+Error Propagate:RebootWorkflowMandatory::ShowRebootDialog(
+	INT32 hr
+	);
+
+Error Originate:RebootWorkflowMandatory::ShowRebootDialog:462(
+	INT32 hr
+	);
+
+Error Originate:RebootWorkflowMandatory::ShowRebootDialog:450(
+	INT32 hr
+	);
+
+Error Propagate:RebootWorkflowMandatory::ExecuteReboot(
+	INT32 hr
+	);
+
+Error Propagate:RebootWorkflowMandatory::ExecuteStateAction(
+	INT32 hr
+	);
+
+Error Propagate:RebootWorkflowMandatory::ShowRebootUpdateResults(
+	INT32 hr
+	);
+
+Error Propagate:RebootWorkflowMandatory::OnLogonRebootDialog(
+	INT32 hr
+	);
+
+Error Propagate:RebootWorkflowMandatory::OnRebootDevice(
+	INT32 hr
+	);
+
+Error Propagate:RebootWorkflowMandatory::OnFirstReadyToReboot(
+	INT32 hr
+	);
+
+Error Originate:RebootWorkflowMandatory::OnFirstReadyToReboot:156(
+	INT32 hr
+	);
+
+Error Originate:RebootWorkflowMandatory::OnFirstReadyToReboot:147(
+	INT32 hr
+	);
+
+Error Propagate:RebootWorkflowMandatory::CreateInstance(
+	INT32 hr
+	);
+
+Error Originate:RebootWorkflowMandatory::CreateInstance:59(
+	INT32 hr
+	);
+
+Error Originate:RebootWorkflowMandatory::CreateInstance:49(
+	INT32 hr
+	);
+
+Error Propagate:RebootWorkflowMgmtUpdates::IsFairWarningActive(
+	INT32 hr
+	);
+
+Error Propagate:RebootWorkflowMgmtUpdates::ShowRebootImminentDialog(
+	INT32 hr
+	);
+
+Error Originate:RebootWorkflowMgmtUpdates::ShowRebootImminentDialog:1356(
+	INT32 hr
+	);
+
+Error Originate:RebootWorkflowMgmtUpdates::ShowRebootImminentDialog:1345(
+	INT32 hr
+	);
+
+Error Originate:RebootWorkflowMgmtUpdates::ShowRebootImminentDialog:1333(
+	INT32 hr
+	);
+
+Error Originate:RebootWorkflowMgmtUpdates::ShowRebootImminentDialog:1316(
+	INT32 hr
+	);
+
+Error Originate:RebootWorkflowMgmtUpdates::ShowRebootImminentDialog:1293(
+	INT32 hr
+	);
+
+Error Originate:RebootWorkflowMgmtUpdates::ShowRebootImminentDialog:1284(
+	INT32 hr
+	);
+
+Error Originate:RebootWorkflowMgmtUpdates::ShowRebootImminentDialog:1273(
+	INT32 hr
+	);
+
+Error Propagate:RebootWorkflowMgmtUpdates::ScheduleNoUxReboot(
+	INT32 hr
+	);
+
+Error Originate:RebootWorkflowMgmtUpdates::ScheduleNoUxReboot:1228(
+	INT32 hr
+	);
+
+Error Originate:RebootWorkflowMgmtUpdates::ScheduleNoUxReboot:1223(
+	INT32 hr
+	);
+
+Error Originate:RebootWorkflowMgmtUpdates::ScheduleNoUxReboot:1218(
+	INT32 hr
+	);
+
+Error Propagate:RebootWorkflowMgmtUpdates::RescheduleReboot(
+	INT32 hr
+	);
+
+Error Originate:RebootWorkflowMgmtUpdates::RescheduleReboot:1154(
+	INT32 hr
+	);
+
+Error Originate:RebootWorkflowMgmtUpdates::RescheduleReboot:1149(
+	INT32 hr
+	);
+
+Error Originate:RebootWorkflowMgmtUpdates::RescheduleReboot:1144(
+	INT32 hr
+	);
+
+Error Originate:RebootWorkflowMgmtUpdates::RescheduleReboot:1103(
+	INT32 hr
+	);
+
+Error Propagate:RebootWorkflowMgmtUpdates::ScheduleRebootPostpone(
+	INT32 hr
+	);
+
+Error Originate:RebootWorkflowMgmtUpdates::ScheduleRebootPostpone:1065(
+	INT32 hr
+	);
+
+Error Originate:RebootWorkflowMgmtUpdates::ScheduleRebootPostpone:1026(
+	INT32 hr
+	);
+
+Error Originate:RebootWorkflowMgmtUpdates::ScheduleRebootPostpone:1015(
+	INT32 hr
+	);
+
+Error Originate:RebootWorkflowMgmtUpdates::ScheduleRebootPostpone:987(
+	INT32 hr
+	);
+
+Error Originate:RebootWorkflowMgmtUpdates::ScheduleRebootPostpone:976(
+	INT32 hr
+	);
+
+Error Originate:RebootWorkflowMgmtUpdates::ScheduleRebootPostpone:962(
+	INT32 hr
+	);
+
+Error Propagate:RebootWorkflowMgmtUpdates::ShowRebootDialogOnLogon(
+	INT32 hr
+	);
+
+Error Originate:RebootWorkflowMgmtUpdates::ShowRebootDialogOnLogon:910(
+	INT32 hr
+	);
+
+Error Originate:RebootWorkflowMgmtUpdates::ShowRebootDialogOnLogon:898(
+	INT32 hr
+	);
+
+Error Originate:RebootWorkflowMgmtUpdates::ShowRebootDialogOnLogon:879(
+	INT32 hr
+	);
+
+Error Originate:RebootWorkflowMgmtUpdates::ShowRebootDialogOnLogon:863(
+	INT32 hr
+	);
+
+Error Propagate:RebootWorkflowMgmtUpdates::ExecuteForcedReboot(
+	INT32 hr
+	);
+
+Error Propagate:RebootWorkflowMgmtUpdates::ExecuteScheduledTimeNoUXPolicy(
+	INT32 hr
+	);
+
+Error Originate:RebootWorkflowMgmtUpdates::ExecuteScheduledTimeNoUXPolicy:761(
+	INT32 hr
+	);
+
+Error Propagate:RebootWorkflowMgmtUpdates::ExecuteAutoRestartCountdownPolicy(
+	INT32 hr
+	);
+
+Error Originate:RebootWorkflowMgmtUpdates::IsValidTimeToRebootAtMaintenanceTime:611(
+	INT32 hr
+	);
+
+Error Propagate:RebootWorkflowMgmtUpdates::ExecuteStateAction(
+	INT32 hr
+	);
+
+Error Propagate:RebootWorkflowMgmtUpdates::ShowRebootUpdateResults(
+	INT32 hr
+	);
+
+Error Propagate:RebootWorkflowMgmtUpdates::OnLogonRebootDialog(
+	INT32 hr
+	);
+
+Error Propagate:RebootWorkflowMgmtUpdates::OnForceRebootDevice(
+	INT32 hr
+	);
+
+Error Propagate:RebootWorkflowMgmtUpdates::OnRebootDevice(
+	INT32 hr
+	);
+
+Error Propagate:RebootWorkflowMgmtUpdates::OnFirstReadyToReboot(
+	INT32 hr
+	);
+
+Error Originate:RebootWorkflowMgmtUpdates::OnFirstReadyToReboot:149(
+	INT32 hr
+	);
+
+Error Propagate:RebootWorkflowMgmtUpdates::CreateInstance(
+	INT32 hr
+	);
+
+Error Originate:RebootWorkflowMgmtUpdates::CreateInstance:66(
+	INT32 hr
+	);
+
+Error Originate:RebootWorkflowMgmtUpdates::CreateInstance:56(
+	INT32 hr
+	);
+
+Info Message(
+	ANSISTRING message,
+	BOOL32 Can show deadline warning:
+	);
+
+Info Message(
+	ANSISTRING message,
+	UINT32 minutes:
+	);
+
+Info Message(
+	ANSISTRING message,
+	UINT32 cadence in hours:
+	);
+
+Info Message(
+	ANSISTRING message,
+	UINT32 User response ID
+	);
+
+Info Message(
+	ANSISTRING message,
+	UINT32 Ux state
+	);
+
+Info Message(
+	ANSISTRING message,
+	BOOL32 autoRebootAllowed,
+	UINT32 nextEscalationWindow
+	);
+
+Info Message(
+	ANSISTRING message,
+	BOOL32 rebootComesFirst
+	);
+
+Info Message(
+	ANSISTRING message,
+	SYSTEMTIME nextEngagedReminderTime
+	);
+
+Info Message(
+	ANSISTRING message,
+	SYSTEMTIME nextRebootDialogTime
+	);
+
+Info Message(
+	ANSISTRING message,
+	UINT32 rebootEscalationWindow
+	);
+
+Info Message(
+	ANSISTRING message,
+	UINT32 countdown in  minutes
+	);
+
+Info Message(
+	ANSISTRING message,
+	UINT32 UX State
+	);
+
+Info Message(
+	ANSISTRING message,
+	UINT32 minimumUpdateGentleNotificationDays,
+	UINT32 minimumUpdateStrongNotificationDays
+	);
+
+Error Originate:UxStateMachine::EvaluateUxLowUptimeTransitionCondition:525(
+	INT32 hr
+	);
+
+Error Originate:UxStateMachine::EvaluateUxLowUptimeTransitionCondition:511(
+	INT32 hr
+	);
+
+Error Originate:UxStateMachine::EvaluateUxOneShotUpdateTransitionCondition:457(
+	INT32 hr
+	);
+
+Error Originate:UxStateMachine::EvaluateUxDefaultTransitionCondition:383(
+	INT32 hr
+	);
+
+Error Originate:UxStateMachine::EvaluateUxDefaultTransitionCondition:357(
+	INT32 hr
+	);
+
+Error Propagate:UxStateMachine::FindNextUxState(
+	INT32 hr
+	);
+
+Notification next action is not found in state table(
+	UINT32 NotificationStartState
+	);
+
+Error Originate:UxStateMachine::FindNextUxState:223(
+	INT32 hr
+	);
+
+Error Originate:UxUpdateUtil::IsNonFeatureUpdatePending:195(
+	INT32 hr
+	);
+
+Error Originate:UxUpdateUtil::IsNonFeatureUpdatePending:187(
+	INT32 hr
+	);
+
+Error Originate:UxUpdateUtil::IsFeatureUpdatePending:163(
+	INT32 hr
+	);
+
+Error Originate:UxUpdateUtil::IsFeatureUpdatePending:149(
+	INT32 hr
+	);
+
+PreventSleep(
+	UINT64 PartA_PrivTags,
+	GUID wuDeviceid,
+	BOOLEAN isOnAC,
+	UINT32 batteryLevel,
+	UINT32 updateState,
+	UINT32 durationInMins,
+	BOOLEAN hasFeatureUpdate
+	);
+
+AllowSleep(
+	UINT64 PartA_PrivTags,
+	GUID wuDeviceid,
+	BOOLEAN isOnAC,
+	UINT32 batteryLevel,
+	UINT32 preventSleepState
+	);
+
+Info Message(
+	ANSISTRING message,
+	UINT32 DaysSinceRebootRequired,
+	UINT32 MaxDaysToSupressNotificationsDuringRebootRequired
+	);
+
+Info Message(
+	ANSISTRING message,
+	BOOLEAN isDisplayAllowed,
+	BOOLEAN isDevicePresenting,
+	BOOLEAN isGameModeActive
+	);
+
+Info Message(
+	ANSISTRING message,
+	INT32 SeekerUpdateApplicable
+	);
+
+Info Message(
+	ANSISTRING message,
+	INT32 Configured
+	);
+
+Info Message(
+	ANSISTRING message,
+	UINT32 approvedSeekerPromotedUpdateCount,
+	UINT32 approvedSeekerFeatureUpdateCount,
+	UINT32 approvedSeekerQualityUpdateCount
+	);
+
+Info Message(
+	ANSISTRING message,
+	UINT32 seekerPromotedUpdateCount,
+	UINT32 seekerFeatureUpdateCount,
+	UINT32 seekerQualityUpdateCount
+	);
+
+Info Message(
+	ANSISTRING message,
+	UINT32 Days limit
+	);
+
+Info Message(
+	ANSISTRING message,
+	BOOLEAN restartDeferredOnBlockingApps
+	);
+
+Info Message(
+	ANSISTRING message,
+	UINT32 Value
+	);
+
+Info Message(
+	ANSISTRING message,
+	UINT32 toastToDialogReminderInHours,
+	UINT32 dialogToSecondDialogReminderInHours,
+	UINT32 secondDialogToAcceptAutoReminderInHours,
+	UINT32 skipToAcceptAutoReminderInHours,
+	UINT32 acceptAutoToEnterAutoInHours,
+	UINT32 autoEnterToForcedModeInHours,
+	UINT32 forcedToUltimateForcedModeInHours,
+	BOOLEAN isForcedModeEnabled,
+	BOOLEAN isUltimateForcedModeEnabled,
+	UINT32 rebootImminentToAutoFailedInHours,
+	UINT32 forcedPrecursorToForcedDialogInHours,
+	UINT32 autoEnterToIntermediateAutoInHours,
+	UINT32 intermediateAutoToUltimateAutoInHours,
+	UINT32 toastRebootReminderCadenceInHours,
+	UINT32 dialogRebootReminderCadenceInHours,
+	UINT32 secondDialogRebootReminderCadenceInHours,
+	BOOLEAN IsSystemNeededReasonIgnoredInAutoMode,
+	UINT32 intermediateAutoIgnorableReasons,
+	UINT32 ultimateAutoIgnorableReasons
+	);
+
+Info Message(
+	ANSISTRING message,
+	BOOLEAN Value
+	);
+
+Info Message(
+	ANSISTRING message,
+	BOOLEAN DTE Enabled from OneSettings,
+	BOOLEAN DTE Enabled by default for Ring,
+	BOOLEAN DTE Enabled by test hook,
+	BOOLEAN Feature Update pending
+	);
+
+Info Message(
+	ANSISTRING message,
+	UINT32 RebootScheduleTimeInDays
+	);
+
+Warning:UpdateUtil::GetUpdatePayloadInfo:501(
+	INT32 hr
+	);
+
+Error Originate:UpdateUtil::GetUpdatePayloadInfo:522(
+	INT32 hr
+	);
+
+Error Originate:UpdateUtil::GetUpdatePayloadInfo:473(
+	INT32 hr
+	);
+
+Error Originate:UpdateUtil::GetUpdatePayloadInfo:494(
+	INT32 hr
+	);
+
+Error Originate:UpdateUtil::GetUpdatePayloadInfo:432(
+	INT32 hr
+	);
+
+Error Originate:UpdateUtil::GetUpdatePayloadInfo:450(
+	INT32 hr
+	);
+
+Info Message(
+	ANSISTRING message,
+	BOOL32 isDeadlineForFUConfigured,
+	UINT32 deadlineInDaysForFU,
+	BOOL32 isDeadlineForNonFUConfigured,
+	UINT32 deadlineInDaysForNonFU,
+	BOOL32 isOptedIntoAutoReboot,
+	BOOL32 isDevicePastDeadline,
+	UINT32 hoursUntilDeadline,
+	BOOL32 isDevicePastEffectiveDeadline,
+	FILETIME effectiveDeadlineTime,
+	UINT32 rebootEscalationWindow,
+	UINT32 gracePeriodInDays
+	);
+
+Info Message(
+	ANSISTRING message,
+	BOOL32 Grace Deadline enabled by test hook,
+	BOOL32 isDeadlineForFUConfigured,
+	UINT32 deadlineInDaysForFU,
+	UINT32 gracePeriodInDays,
+	BOOL32 isDevicePastDeadline,
+	UINT32 hoursUntilDeadline,
+	BOOL32 isOptedIntoAutoReboot
+	);
+
+Info Message(
+	ANSISTRING message,
+	BOOL32 isDevicePastDeadline,
+	UINT32 hoursUntilDeadline:,
+	FILETIME pendingRebootLocalFileTime
+	);
+
+Info Message(
+	ANSISTRING message,
+	BOOL32 nonFeatureUpdatePending,
+	BOOL32 isDeadlineForNonFUConfigured,
+	BOOL32 featureUpdatePending,
+	BOOL32 isDeadlineForFUConfigured
+	);
+
+Info Message(
+	ANSISTRING message,
+	UINT32 restartDeadlineInDays
+	);
+
+Info Message(
+	ANSISTRING message,
+	INT32 Update Option
+	);
+
+Info Message(
+	ANSISTRING message,
+	BOOLEAN InstallOnlyQU
+	);
+
+Error Originate:PolicyUtil::GetTransitionDaysIfEngagedPolicyInEffect:2825(
+	INT32 hr
+	);
+
+Info Message(
+	ANSISTRING message,
+	UINT32 Reboot deadline in days
+	);
+
+Info Message(
+	ANSISTRING message,
+	UINT32 deadlineInDays
+	);
+
+Info Message(
+	ANSISTRING message,
+	UINT32 transitionInDays
+	);
+
+Info Message(
+	ANSISTRING message,
+	UINT32 snoozeInDays
+	);
+
+Info Message(
+	ANSISTRING message,
+	UINT32 remainingDurationInMinutes,
+	UINT32 intermediateDurationInMinutes,
+	UINT32 rebootDurationInMinutes,
+	FILETIME effectiveDeadlineTime,
+	FILETIME endBoundFileTime
+	);
+
+Info Message(
+	ANSISTRING message,
+	FILETIME currentTime,
+	FILETIME pendingRebootTime,
+	FILETIME effectiveDeadlineTime,
+	UINT32 escaltedRebootPercentage,
+	UINT32 engagedToAutoRebootPercentage
+	);
+
+Info Message(
+	ANSISTRING message,
+	UINT32 percentage:
+	);
+
+Info Message(
+	ANSISTRING message,
+	FILETIME pendingRebootFileTime,
+	FILETIME effectiveDeadlineFileTime,
+	UINT32 gracePeriodInDays,
+	BOOL32 isGracePeriodEligible,
+	UINT32 hoursUntilDeadline,
+	BOOL32 isDevicePastEffectiveDeadline
+	);
+
+Info Message(
+	ANSISTRING message,
+	UINT32 SuggestedStartHour,
+	UINT32 SuggestedEndHour,
+	UINT32 OverlapInHours,
+	INT32 IsExceedingLimit
+	);
+
+Info Message(
+	ANSISTRING message,
+	UINT32 ResultStatus
+	);
+
+Info Message(
+	ANSISTRING message,
+	BOOLEAN SmartActiveHoursAllowed
+	);
+
+Info Message(
+	ANSISTRING message,
+	INT32 SmartSchedulingOn,
+	INT32 VelocityFeatureOn,
+	UINT32 FeaturePayload
+	);
+
+Error Originate:SettingUtil::IsDeviceTimeOutsideRebootBounds:1059(
+	INT32 hr
+	);
+
+Info Message(
+	ANSISTRING message,
+	FILETIME Oldest reboot update local time
+	);
+
+Info Message(
+	ANSISTRING message,
+	INT32 UX reboot State:,
+	INT32 Auto reboot set in hours from pending reboot:,
+	INT32 Auto reboot limit passed in hours:
+	);
+
+Info Message(
+	ANSISTRING message,
+	BOOL32 Device in auto reboot limit:
+	);
+
+SuggestedActiveHoursUsed(
+	BOOL32 SuggestedActiveHoursUsed,
+	INT32 CurrentSmartActiveHoursState,
+	INT32 CurrentSmartActiveHoursSuggestionState,
+	UINT64 PartA_PrivTags
+	);
+
+SmartActiveHoursSuggestionChange(
+	INT32 CurrentSmartActiveHoursState,
+	INT32 CurrentSmartActiveHoursSuggestionState,
+	INT32 CurrentStartHour,
+	INT32 CurrentEndHour,
+	INT32 SuggestedStartHour,
+	INT32 SuggestedEndHour,
+	INT32 OverlapInHours,
+	INT32 OverlapThreshold,
+	BOOL32 IsExceedingMaximumHoursOverlapAllowed,
+	UINT64 PartA_PrivTags
+	);
+
+RebootScheduled(
+	SYSTEMTIME scheduledRebootTime,
+	SYSTEMTIME scheduledRebootTimeInUTC,
+	INT32 rebootState,
+	UNICODESTRING rebootArgument,
+	BOOL32 rebootScheduledByUser,
+	BOOL32 activeHoursApplicable,
+	BOOL32 rebootOutsideOfActiveHours,
+	GUID updateId,
+	BOOL32 IsEnhancedEngagedReboot,
+	BOOL32 rebootUsingSmartScheduler,
+	INT32 revisionNumber,
+	GUID wuDeviceid
+	);
+
+Info Message(
+	ANSISTRING message,
+	BOOLEAN is Feature Update,
+	UINT32 Fair Warning Duration
+	);
+
+SmartSchedulerResult(
+	UINT16 MinimumConfidence,
+	UINT32 MinimumDuration,
+	SYSTEMTIME StartTime,
+	SYSTEMTIME StartTimeInUTC,
+	SYSTEMTIME EndTime,
+	SYSTEMTIME EndTimeInUTC,
+	UINT16 ActualConfidence,
+	UNICODESTRING Status,
+	UNICODESTRING PredictionType,
+	UNICODESTRING Scenario,
+	ANSISTRING __TlgCV__
+	);
+
+SmartSchedulerStart(
+	UINT64 PartA_PrivTags,
+	UNICODESTRING PredictionType,
+	ANSISTRING __TlgCV__
+	);
+
+SmartSchedulerAHStart(
+	UINT64 PartA_PrivTags,
+	UINT16 ActiveHoursStart,
+	UINT16 ActiveHoursEnd,
+	UNICODESTRING PredictionType,
+	ANSISTRING __TlgCV__
+	);
+

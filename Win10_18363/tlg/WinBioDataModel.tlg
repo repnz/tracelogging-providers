@@ -1,0 +1,772 @@
+ProviderNames:
+	Microsoft.Windows.WinBioDataModel
+	Microsoft.Windows.Wil.FeatureLogging
+	TelemetryAssert
+	TelemetryAssertDiagTrack
+
+
+
+**** Events *****
+FallbackError(
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+FallbackError(
+	UINT64 PartA_PrivTags,
+	SIGNED wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+FeatureError(
+	UINT32 featureId,
+	INT32 featureVersion,
+	INT32 featureBaseVersion,
+	INT16 featureStage,
+	HRESULT hr,
+	ANSISTRING file,
+	UINT16 lineNumber,
+	ANSISTRING module,
+	ANSISTRING process,
+	ANSISTRING originFile,
+	UINT16 originLineNumber,
+	ANSISTRING originModule,
+	ANSISTRING originName,
+	ANSISTRING message,
+	ANSISTRING callerModule,
+	UINT32 callerReturnAddressOffset,
+	ANSISTRING originCallerModule,
+	UINT32 originCallerReturnAddressOffset
+	);
+
+FeatureVariantUsage(
+	UINT32 featureId,
+	INT32 featureVersion,
+	INT32 featureBaseVersion,
+	INT16 featureStage,
+	BOOLEAN enabled,
+	UINT32 variantKind,
+	UINT8 variant,
+	UINT64 addend
+	);
+
+EnabledFeatureUsage(
+	UINT32 featureId,
+	INT32 featureVersion,
+	INT32 featureBaseVersion,
+	INT16 featureStage,
+	BOOLEAN enabled,
+	UINT32 kind,
+	UINT64 addend
+	);
+
+FeatureUsage(
+	UINT32 featureId,
+	INT32 featureVersion,
+	INT32 featureBaseVersion,
+	INT16 featureStage,
+	BOOLEAN enabled,
+	UINT32 kind,
+	UINT64 addend
+	);
+
+EnrollingActivity(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+EnrollingActivity(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+ActivityStoppedAutomatically(
+	VOID
+	);
+
+ActivityError(
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+ActivityError(
+	UINT64 PartA_PrivTags,
+	SIGNED wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+FaceEnrollmentStatistics(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+FaceEnrollmentStatistics(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+OOBEHelloEnrollmentManager_RuntimeClassInitialize(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId
+	);
+
+OOBEHelloEnrollmentManager_GetSupportedEnrollmentKindsAsyncThread(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId
+	);
+
+OOBEHelloEnrollmentManager_GetSupportedEnrollmentKindsAsyncThread(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	SIGNED wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+OOBEHelloEnrollmentManager_GetSupportedEnrollmentKindsAsyncThread(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+ActivityIntermediateStop(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+ActivityError(
+	UINT64 PartA_PrivTags,
+	SIGNED wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+OOBEHelloEnrollmentManager_RuntimeClassInitialize(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	SIGNED wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+OOBEHelloEnrollmentManager_RuntimeClassInitialize(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+ActivityStoppedAutomatically(
+	VOID
+	);
+
+OOBEBioEnrollment_GetSupportedEnrollmentKinds(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId
+	);
+
+WinBioGetEnrolledFactors(
+	UINT32 enrolledFactors
+	);
+
+WinBioEnumBiometricUnits(
+	UINT32 count
+	);
+
+WinBioGetDomainLogonSetting(
+	BOOLEAN isEnabled
+	);
+
+WinBioGetLogonSetting(
+	BOOLEAN isEnabled
+	);
+
+WinBioGetEnabledSetting(
+	BOOLEAN isEnabled
+	);
+
+UserHasPasswordCheck(
+	BOOLEAN isEnabled
+	);
+
+DomainCheck(
+	BOOLEAN isDomainUser
+	);
+
+OOBEBioEnrollment_GetSupportedEnrollmentKinds(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	SIGNED wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function,
+	UINT32 enrollmentKinds
+	);
+
+OOBEBioEnrollment_GetSupportedEnrollmentKinds(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId,
+	UINT32 enrollmentKinds
+	);
+
+OOBEBioEnrollment_GetSupportedEnrollmentKinds(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	SIGNED wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+OOBEBioEnrollment_GetSupportedEnrollmentKinds(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+EnrollingActivity(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId,
+	UINT32 enrollmentKind,
+	UINT32 enrollmentContext,
+	UINT8 isPinEnrolled
+	);
+
+NgcVerificationActivity(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId
+	);
+
+VerifyUserAsyncActivity(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId
+	);
+
+CatastrophicError(
+	INT32 apiStatus,
+	UINT32 biometricType
+	);
+
+NgcFailure(
+	INT32 errorCode
+	);
+
+InitializeEnrollmentKind(
+	UINT8 enrollmentKind
+	);
+
+CancelEnrollmentStop(
+	VOID
+	);
+
+EnrollBeginSent(
+	VOID
+	);
+
+CancelEnrollmentStart(
+	VOID
+	);
+
+EnrollingActivity(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	BOOLEAN enrollmentWasSuccessful,
+	BOOLEAN userInitiatedCancel
+	);
+
+EnrollingActivity(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId,
+	BOOLEAN enrollmentWasSuccessful,
+	BOOLEAN userInitiatedCancel
+	);
+
+VerifyUserAsyncActivity(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+VerifyUserAsyncActivity(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+ActivityIntermediateStop(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+NgcVerificationActivity(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+NgcVerificationActivity(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+CloseWinbioSessionAndFramework(
+	VOID
+	);
+
+WinbioDataModelDestroyed(
+	VOID
+	);
+
+OpenWinbioSession(
+	VOID
+	);
+
+OpenWinbioFramework(
+	VOID
+	);
+
+OpenWinbioFrameWorkAndSession(
+	VOID
+	);
+
+FaceEnrollmentStatistics(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId
+	);
+
+FaceEnrollmentErrorState(
+	UINT8 errorState
+	);
+
+FacePresenceArrive(
+	UINT64 trackingId
+	);
+
+FacePresenceDepart(
+	UINT64 trackingId
+	);
+
+FaceMonitorPresence(
+	INT32 apiStatus,
+	UINT32 changeType
+	);
+
+FaceEnrollSelect(
+	INT32 apiStatus
+	);
+
+FaceEnrollDiscard(
+	INT32 apiStatus
+	);
+
+FaceEnrollCommit(
+	INT32 apiStatus
+	);
+
+FaceEnrollmentStateUpdate(
+	UINT32 completedCaptures
+	);
+
+FaceEnrollCaptureStatistics(
+	UINT32 captureSent,
+	UINT32 captureGood,
+	UINT32 captureBad,
+	UINT32 captureUnknown
+	);
+
+FaceEnrollCaptureUnknownStatus(
+	INT32 apiStatus
+	);
+
+FaceEnrollCaptureBad(
+	UINT32 positionalFlags,
+	UINT32 nonPositionalFlags
+	);
+
+FaceEnrollBegin(
+	INT32 apiStatus,
+	UINT32 experiencePhase
+	);
+
+FaceEnrollCancel(
+	FLOAT percentComplete
+	);
+
+FaceEnrollFatalError(
+	INT32 apiStatus
+	);
+
+FaceEnrollGetPropertyReceived(
+	INT32 apiStatus
+	);
+
+FaceResumeCapture(
+	BOOLEAN pauseEnrollCapture,
+	BOOLEAN readyToEnrollCapture
+	);
+
+FacePauseCapture(
+	BOOLEAN pauseEnrollCapture
+	);
+
+WinbioCancelSent(
+	VOID
+	);
+
+FaceWinBioGetPropertySent(
+	VOID
+	);
+
+FaceEnrollCommitSent(
+	VOID
+	);
+
+FaceEnrollCompleted(
+	VOID
+	);
+
+FaceEnrollCaptureInvalidOperation(
+	VOID
+	);
+
+FaceEnrollCaptureGood(
+	VOID
+	);
+
+FaceEnrollmentStatistics(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 faceNotDetected,
+	UINT32 needsFrontal,
+	UINT32 needsLeft,
+	UINT32 needsUp,
+	UINT32 needsRight,
+	UINT32 needsBottom,
+	UINT32 tooNear,
+	UINT32 tooFar,
+	UINT32 tooBright,
+	UINT32 tooDark,
+	UINT32 poorQuality,
+	UINT32 tooManyFaces,
+	UINT32 eyesOccluded,
+	UINT32 finished,
+	UINT32 error
+	);
+
+FaceEnrollmentStatistics(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId,
+	UINT32 faceNotDetected,
+	UINT32 needsFrontal,
+	UINT32 needsLeft,
+	UINT32 needsUp,
+	UINT32 needsRight,
+	UINT32 needsBottom,
+	UINT32 tooNear,
+	UINT32 tooFar,
+	UINT32 tooBright,
+	UINT32 tooDark,
+	UINT32 poorQuality,
+	UINT32 tooManyFaces,
+	UINT32 eyesOccluded,
+	UINT32 finished,
+	UINT32 error
+	);
+
+FaceRestartCapture(
+	VOID
+	);
+
+IrisEnrollmentErrorState(
+	INT32 errorCode,
+	UINT8 errorState
+	);
+
+IrisEnrollGetProperty(
+	INT32 apiStatus
+	);
+
+IrisEnrollCapture(
+	INT32 apiStatus,
+	UINT32 flags
+	);
+
+IrisEnrollSelect(
+	INT32 apiStatus
+	);
+
+IrisEnrollBegin(
+	INT32 apiStatus
+	);
+
+IrisEnrollCommit(
+	INT32 apiStatus
+	);
+
+IrisPauseCapture(
+	VOID
+	);
+
+IrisResumeCapture(
+	VOID
+	);
+
+Assert(
+	UINT32 assertVersion,
+	UINT32 rva,
+	UINT32 timestamp,
+	UINT32 imageSize,
+	ANSISTRING imageName,
+	UINT32 count,
+	UINT32 totalHits,
+	UINT32 ModuleCollection,
+	UINT32 GlobalCollection
+	);
+

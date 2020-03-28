@@ -1,0 +1,136 @@
+ProviderNames:
+	Microsoft.Windows.TextInput.SpellCheckerEngine
+	Microsoft.Windows.TextInput.LinguisticData
+
+
+
+**** Events *****
+SpellerMultilingual(
+	UNICODESTRING CorrectLang,
+	UINT32 CorrectLangOrder,
+	UNICODESTRING CurrentLang
+	);
+
+SpellerSettings(
+	INT32 Autocorrection,
+	INT32 SpellChecking,
+	UNICODESTRING KeyboardsInstalled
+	);
+
+SpellerAutocorrectionSupressed(
+	GUID editId,
+	UNICODESTRING Word,
+	UNICODESTRING Autocorrection,
+	UNICODESTRING CurrentLang,
+	UNICODESTRING SupressLang,
+	ANSISTRING Source
+	);
+
+FallbackError(
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+FallbackError(
+	UINT64 PartA_PrivTags,
+	SIGNED wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+SpellerUndoAutocorrection(
+	GUID editId,
+	UNICODESTRING UndoWord,
+	UNICODESTRING Autocorrection,
+	UNICODESTRING CurrentLang,
+	UNICODESTRING MultiLangList
+	);
+
+SpellerRedSquiggle(
+	GUID editId,
+	UNICODESTRING Word,
+	UNICODESTRING CurrentLang,
+	UNICODESTRING MultiLangList,
+	UNICODESTRING Keyboard,
+	UNICODESTRING PreviousWord_First,
+	UNICODESTRING PreviousWord_Second
+	);
+
+SpellerAutocorrection(
+	GUID editId,
+	UNICODESTRING Word,
+	UNICODESTRING Autocorrection,
+	UNICODESTRING CurrentLang,
+	UNICODESTRING MultiLangList,
+	UNICODESTRING PreviousWord_First,
+	UNICODESTRING PreviousWord_Second
+	);
+
+SpellerSessionStatistics(
+	INT32 RemainingCount,
+	INT32 TotalInSession,
+	INT32 EditedCount,
+	INT32 AddCount,
+	INT32 AlternatesCount,
+	INT32 IgnoreCount,
+	INT32 AutocorrectionCount,
+	INT32 AutocorrectionUndoCount,
+	INT32 ContextDismissCount
+	);
+
+SpellerIgnoreWord(
+	GUID editId,
+	UNICODESTRING IgnoreWord,
+	UNICODESTRING Lang
+	);
+
+SpellerAddedWord(
+	GUID editId,
+	UNICODESTRING AddedWord,
+	UNICODESTRING Lang
+	);
+
+SpellerReplaceWithAlternate(
+	GUID editId,
+	UNICODESTRING Original,
+	UNICODESTRING New,
+	UNICODESTRING Lang
+	);
+
+SpellerContextMenuDismissed(
+	GUID editId,
+	UNICODESTRING Original,
+	UNICODESTRING Alternates,
+	UNICODESTRING Lang,
+	UNICODESTRING Source
+	);
+

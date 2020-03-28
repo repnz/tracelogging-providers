@@ -1,0 +1,514 @@
+ProviderNames:
+	RDP
+	RDP.Transport
+	RDP.Graphics
+	RDWin32ClientAxTelemetryProvider
+	RDP.MSTSCAXTelemetry
+	Microsoft.Windows.HVSI.RDP
+	Microsoft.Windows.TlgAggregateInternal
+	Microsoft.Windows.RemoteDesktopServices.RailPlugin
+	RDP.Graphics
+
+
+
+**** Events *****
+ZOrderSetForegroundWindow(
+	HEXINT32 LocalHwnd
+	);
+
+ZOrderDeferWindowPos(
+	HEXINT32 LocalHwnd,
+	HEXINT32 InsertAfterWindow
+	);
+
+ZOrderWindow(
+	HEXINT32 WindowId,
+	HEXINT32 LocalHwnd,
+	UNICODESTRING Title,
+	HEXINT32 OwnerWindow,
+	HEXINT32 PreviousWindow,
+	BOOL32 Topmost,
+	HEXINT64 Style,
+	HEXINT64 StyleEx
+	);
+
+ZOrderInvisibleWindow(
+	HEXINT32 WindowId,
+	HEXINT32 LocalHwnd,
+	UNICODESTRING Title,
+	HEXINT32 OwnerWindow
+	);
+
+ZOrderMarkerWindow(
+	HEXINT32 WindowId
+	);
+
+RDPEmulation(
+	XML Monitors,
+	UINT32 monitorId,
+	UINT32 Left Coordinate,
+	UINT32 Top Coordinate,
+	UINT32 width,
+	UINT32 height,
+	UINT32 physicalWidth,
+	UINT32 physicalHeight,
+	UINT32 orientation,
+	UINT32 desktopScaleFactor,
+	UINT32 modernScaleFactor,
+	UINT32 flags
+	);
+
+RDPTransportURCPDelaySegmentStats(
+	GUID correlationId,
+	DOUBLE durationInSeconds,
+	UINT32 maxRateInKbps,
+	UINT32 averageRateAdvertizedInKbps,
+	UINT32 averageRateSentInKbps,
+	UINT32 averageRawDelayInMs,
+	UINT32 averageDelayInMs,
+	UINT32 averageBytesInFlight,
+	DOUBLE averageDelayInMsPerBytesInFlight,
+	UINT32 averageRoundTripTimeInMs,
+	UINT32 averageURCPOperationPointInMs,
+	UINT32 delaySmoothPeriodInMs,
+	UINT32 maxRateAdvertizedInKbps,
+	UINT32 maxRateSentInKbps,
+	UINT32 maxRawDelayInMs,
+	UINT32 maxDelayInMs,
+	UINT32 maxBytesInFlight,
+	DOUBLE maxDelayInMsPerBytesInFlight,
+	UINT32 maxRoundTripTimeInMs,
+	UINT32 minRateAdvertizedInKbps,
+	UINT32 minRoundTripTimeInMs
+	);
+
+RDPTransportUDPProfile(
+	GUID correlationId,
+	UINT32 udpVersion
+	);
+
+RDPTransportURCPSessionStats(
+	GUID correlationId,
+	UINT32 maxRateInKbps,
+	UINT32 averageRateAdvertizedInKbps,
+	UINT32 maxRateAdvertizedInKbps,
+	UINT32 maxRateSentInKbps,
+	UINT32 maxRoundTripTimeInMs,
+	UINT32 minRateAdvertizedInKbps,
+	DOUBLE averageLossRate,
+	DOUBLE averageLossRateDueToTimeout,
+	UINT32 numLossDelayTransitions,
+	UINT32 numFalseLossTransitions,
+	UINT32 totalNumTimesBandwidthTooLow,
+	DOUBLE ratioOfBurstLossvsSingleLoss,
+	DOUBLE averageBurstLossLength,
+	DOUBLE reorderedBytesTop1tenthPercent0.1,
+	DOUBLE reorderedBytesTop1tenthPercent0.2,
+	DOUBLE reorderedBytesTop1tenthPercent0.3,
+	DOUBLE reorderedBytesTop1tenthPercent0.4,
+	DOUBLE reorderedBytesTop1tenthPercent0.5,
+	DOUBLE reorderedBytesTop1tenthPercent0.6,
+	DOUBLE reorderedBytesTop1tenthPercent0.7,
+	DOUBLE reorderedBytesTop1tenthPercent0.8,
+	DOUBLE reorderedBytesTop1tenthPercent0.9,
+	DOUBLE reorderedBytesTop1tenthPercent1
+	);
+
+RDPTransportError(
+	GUID correlationId,
+	UNICODESTRING Error String
+	);
+
+RDPTransportURCPLossSegmentStats(
+	GUID correlationId,
+	DOUBLE durationInSeconds,
+	BOOL32 isFalseLossTransition,
+	UINT32 averageLossIntervalInMs,
+	DOUBLE averageLossRate,
+	DOUBLE averageLossRateDueToTimeout,
+	DOUBLE averageTrueLossRateDueToTimeout,
+	UINT32 averageTimeoutInMsInLossDueToTimeOut,
+	UINT32 averageDelayInMsAroundLoss,
+	UINT32 maxTimeoutInMsInLossDueToTimeOut,
+	UINT32 maxDelayInMsAroundLoss,
+	UINT32 averageRateAdvertizedInKbps,
+	UINT32 averageRateSentInKbps,
+	UINT32 averageRoundTripTimeInMs,
+	UINT32 maxRateAdvertizedInKbps,
+	UINT32 maxRateSentInKbps,
+	UINT32 averageMaxRoundTripTimeInMs,
+	UINT32 minRateAdvertizedInKbps,
+	UINT32 averageMinRoundTripTimeInMs
+	);
+
+RDPTransportURCPDelaySegmentAggregatedStats(
+	GUID correlationId,
+	DOUBLE durationInSeconds,
+	UINT32 maxRateInKbps,
+	UINT32 averageRateAdvertizedInKbps,
+	UINT32 averageRateSentInKbps,
+	UINT32 averageRawDelayInMs,
+	UINT32 averageDelayInMs,
+	UINT32 averageBytesInFlight,
+	DOUBLE averageDelayInMsPerBytesInFlight,
+	UINT32 averageRoundTripTimeInMs,
+	UINT32 averageURCPOperationPointInMs,
+	UINT32 delaySmoothPeriodInMs,
+	UINT32 maxRateAdvertizedInKbps,
+	UINT32 maxRateSentInKbps,
+	UINT32 maxRawDelayInMs,
+	UINT32 maxDelayInMs,
+	UINT32 maxBytesInFlight,
+	DOUBLE maxDelayInMsPerBytesInFlight,
+	UINT32 maxRoundTripTimeInMs,
+	UINT32 minRateAdvertizedInKbps,
+	UINT32 minRoundTripTimeInMs
+	);
+
+RDPTransportURCPLossSegmentAggregatedStats(
+	GUID correlationId,
+	DOUBLE durationInSeconds,
+	BOOL32 isFalseLossTransition,
+	UINT32 averageLossIntervalInMs,
+	DOUBLE averageLossRate,
+	DOUBLE averageLossRateDueToTimeout,
+	DOUBLE averageTrueLossRateDueToTimeout,
+	UINT32 averageTimeoutInMsInLossDueToTimeOut,
+	UINT32 averageDelayInMsAroundLoss,
+	UINT32 maxTimeoutInMsInLossDueToTimeOut,
+	UINT32 maxDelayInMsAroundLoss,
+	UINT32 averageRateAdvertizedInKbps,
+	UINT32 averageRateSentInKbps,
+	UINT32 averageRoundTripTimeInMs,
+	UINT32 maxRateAdvertizedInKbps,
+	UINT32 maxRateSentInKbps,
+	UINT32 averageMaxRoundTripTimeInMs,
+	UINT32 minRateAdvertizedInKbps,
+	UINT32 averageMinRoundTripTimeInMs
+	);
+
+RDPGraphicsAvcDecodeInfo(
+	GUID correlationId,
+	INT32 hardwareDecodingDisabled,
+	INT32 hardwareDecodingAllowed,
+	UINT32 vendorId,
+	UINT32 deviceId
+	);
+
+RDPGraphicsSessionInfo(
+	GUID correlationId,
+	UINT64 desktopWidth,
+	UINT64 desktopHeight,
+	UINT64 numMonitors
+	);
+
+RDPGraphicsDecoderStats(
+	GUID correlationId,
+	UINT64 capsVersion,
+	UINT32 imageCodecId,
+	DOUBLE cachePixelsPercentage,
+	DOUBLE solidFillPixelsPercentage,
+	DOUBLE motionPixelsPercentage,
+	DOUBLE imagePixelsPercentage,
+	DOUBLE textPixelsPercentage,
+	DOUBLE lowImageQualityPixelsPercentage,
+	DOUBLE averageImageQualityPixelsPercentage,
+	DOUBLE goodImageQualityPixelsPercentage,
+	DOUBLE highImageQualityPixelsPercentage,
+	DOUBLE decoderSessionDurationSeconds,
+	DOUBLE preBulkDecodeMBytes,
+	DOUBLE postBulkDecodeMBytes,
+	DOUBLE textCodecMBytes,
+	DOUBLE imageCodecMBytes,
+	UINT64 ghostFrameCount,
+	UINT64 chromaOnlyFrameCount,
+	UINT64 dirtyFrameCount,
+	DOUBLE percentageFramesLowDecodeTime,
+	DOUBLE percentageFramesMediumDecodeTime,
+	DOUBLE percentageFramesHighDecodeTime,
+	DOUBLE percentageFramesVeryHighDecodeTime
+	);
+
+RDPGraphicsDecoderError(
+	GUID correlationId,
+	UINT32 imageCodecId,
+	UINT64 eventSource,
+	HRESULT hrDecode
+	);
+
+RDPGraphicsVobrDataStats(
+	GUID correlationId,
+	DOUBLE vobrDataMBytes
+	);
+
+RDPGraphicsMonitorInfoClient(
+	GUID correlationId,
+	INT64 monitorLeft,
+	INT64 monitorTop,
+	INT64 monitorWidth,
+	INT64 monitorHeight
+	);
+
+RDPGraphicsPipelineRestart(
+	GUID correlationId,
+	UINT32 imageCodecId,
+	HRESULT hrDecode
+	);
+
+RDPGraphicsVobrFrameStats(
+	GUID correlationId,
+	UINT64 numVobrFrames,
+	DOUBLE vobrDecoderSessionDurationSeconds,
+	UINT32 videoWidth,
+	UINT32 videoHeight,
+	BOOL32 usingHardwareDecode,
+	BOOL32 usingHardwareRender
+	);
+
+RDPGraphicsHardwareMode(
+	GUID correlationId,
+	BOOL32 hardwareModeSetting,
+	BOOL32 useHardwareResources
+	);
+
+PnPRedirectionEnabled(
+	VOID
+	);
+
+POSDeviceRedirectionEnabled(
+	VOID
+	);
+
+MicrophoneRedirectionEnabled(
+	VOID
+	);
+
+MSTSCAXLoaded(
+	UNICODESTRING ProcessName
+	);
+
+PrintTo(
+	NULL Count,
+	UINT32 HResult,
+	UNICODESTRING Name,
+	UINT32 Policy
+	);
+
+CopyPasteFormatId(
+	NULL Count,
+	UINT32 ContentType,
+	UNICODESTRING ContentTypeString,
+	BOOL32 IsAllowed
+	);
+
+PrintEnumeration(
+	UNICODESTRING Name,
+	UINT32 Type,
+	UINT32 Policy,
+	BOOLEAN IsAllowed
+	);
+
+CopyPasteSettingCheck(
+	NULL Count,
+	UINT32 Action,
+	UINT32 ContentType,
+	UNICODESTRING ContentTypeString,
+	UINT32 ClipboardRedirectionPolicy,
+	UINT32 ClipboardRedirectionCheck,
+	BOOL32 DialogStatus
+	);
+
+TlgAggregateSummary(
+	GUID Provider,
+	UINT64 NumFlushes,
+	UINT64 MaxEntriesStored,
+	UINT64 TotalEntriesFlushed,
+	UINT32 MaxEntriesFlushed,
+	UINT32 MinEntriesFlushed,
+	UINT32 NumBucketLimitReached,
+	UINT32 NumAllocationFailures,
+	UINT32 NumLargeEventFailures
+	);
+
+CloakRailOrderReceived(
+	HEXINT32 WindowId,
+	BOOL32 Cloaked
+	);
+
+PowerDisplayRequestRailOrderReceived(
+	BOOL32 Active
+	);
+
+HandshakeExRailOrderReceived(
+	UINT32 BuildNum,
+	HEXINT32 Flags
+	);
+
+ZOrderSyncRailOrderReceived(
+	HEXINT32 MarkerWindowId
+	);
+
+UnknownRailOrderReceived(
+	HEX TypeId
+	);
+
+GetAppIdRespExRailOrderReceived(
+	HEXINT32 WindowId,
+	UNICODESTRING AppId,
+	UINT32 ProcessId,
+	UNICODESTRING ProcessImageName
+	);
+
+ExecResultRailOrderReceived(
+	COUNTEDSTRING ApplicationName,
+	HEX Flags,
+	HEX Result,
+	HEXINT32 RawResult
+	);
+
+LocalMoveSizeRailOrderReceived(
+	HEXINT32 WindowId,
+	BOOL32 IsStart,
+	HEX Type,
+	INT16 X,
+	INT16 Y
+	);
+
+MinMaxInfoRailOrderReceived(
+	HEXINT32 WindowId,
+	INT16 MaxWidth,
+	INT16 MaxHeight,
+	INT16 MaxPosX,
+	INT16 MaxPosY,
+	INT16 MinTrackWidth,
+	INT16 MinTrackHeight,
+	INT16 MaxTrackWidth,
+	INT16 MaxTrackHeight
+	);
+
+SysParamRailOrderReceived(
+	HEXINT32 SystemParameter,
+	BOOL32 Value
+	);
+
+HandshakeRailOrderReceived(
+	UINT32 BuildNum
+	);
+
+TaskbarInfoRailOrderReceived(
+	HEXINT32 Message,
+	HEXINT32 WindowIdTab,
+	HEXINT32 Body
+	);
+
+CompartmentInfoRailOrderReceived(
+	BOOL32 Open,
+	HEXINT32 ConversionMode,
+	HEXINT32 SentenceMode,
+	BOOL32 KanaOn
+	);
+
+LangBarInfoRailOrderReceived(
+	HEXINT32 Status
+	);
+
+GetAppIdRespRailOrderReceived(
+	HEXINT32 WindowId,
+	UNICODESTRING AppId
+	);
+
+WindowOrderReceived(
+	HEXINT64 pdu,
+	HEXINT32 DecodeHResult,
+	HEXINT32 FieldsPresent,
+	HEXINT32 WindowId,
+	BOOL32 New,
+	BOOL32 Deleted,
+	HEXINT32 OwnerWindowId,
+	HEXINT32 Style,
+	HEXINT32 StyleEx,
+	UINT8 Show,
+	UNICODESTRING Title,
+	INT32 X,
+	INT32 Y,
+	UINT32 Width,
+	UINT32 Height
+	);
+
+IconWindowOrderReceived(
+	HEXINT64 pdu,
+	HEXINT32 DecodeHResult,
+	HEXINT32 FieldsPresent,
+	HEXINT32 WindowId,
+	BOOL32 New,
+	BOOL32 Big,
+	BOOL32 Overlay,
+	UINT16 CacheEntry,
+	UINT8 CacheId,
+	UINT8 bpp,
+	UINT16 Width,
+	UINT16 Height
+	);
+
+DesktopWindowOrderReceived(
+	HEXINT64 pdu
+	);
+
+UnknownWindowOrderReceived(
+	HEXINT64 pdu
+	);
+
+DesktopWindowOrderReceived(
+	HEXINT64 pdu,
+	HEXINT32 DecodeHResult,
+	HEXINT32 FieldsPresent,
+	HEXINT32 ActiveWindow,
+	HEXINT32 ZOrder
+	);
+
+UnknownWindowOrderReceived(
+	HEXINT64 pdu,
+	HEXINT32 DecodeHResult
+	);
+
+CachedIconWindowOrderReceived(
+	HEXINT64 pdu,
+	HEXINT32 DecodeHResult,
+	HEXINT32 FieldsPresent,
+	HEXINT32 WindowId,
+	BOOL32 New,
+	BOOL32 Big,
+	BOOL32 Overlay,
+	UINT16 CacheEntry,
+	UINT8 CacheId
+	);
+
+NotificationIconWindowOrderReceived(
+	HEXINT64 pdu,
+	HEXINT32 DecodeHResult,
+	HEXINT32 WindowId,
+	HEXINT32 NotifyIconId
+	);
+
+CachedIconWindowOrderReceived(
+	HEXINT64 pdu
+	);
+
+NotificationIconWindowOrderReceived(
+	HEXINT64 pdu
+	);
+
+WindowOrderReceived(
+	HEXINT64 pdu
+	);
+
+IconWindowOrderReceived(
+	HEXINT64 pdu
+	);
+
+RDPGraphicsSubsampleError(
+	GUID correlationId,
+	HRESULT error,
+	UINT32 subsamplerType
+	);
+

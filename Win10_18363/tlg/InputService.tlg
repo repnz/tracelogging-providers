@@ -1,0 +1,3001 @@
+ProviderNames:
+	Microsoft.Windows.Wil.FeatureLogging
+	TextInput
+	TelemetryAssert
+	TelemetryAssertDiagTrack
+	Microsoft.Windows.TextInput.LinguisticData
+	Microsoft.Windows.Input.InputService
+	Microsoft.Windows.TextInput.InputPersonalizationTraceLogging
+	Microsoft.Windows.TextInput.FlipProcessor
+	Microsoft.Windows.TextInput.SpellCheckingEngine
+	Microsoft.Windows.TextInput.LITE
+	Microsoft.Windows.TextInput.JpnProcessor
+	Microsoft.Windows.TextInput.KorProcessor
+	Microsoft.Windows.TextInput.VieProcessor
+	Microsoft.Windows.Mobile.TextInput.ChsIme
+	Microsoft.Windows.Mobile.TextInput.ChtIme
+	Microsoft.Windows.Shell.CandidateWindow
+	Microsoft.Windows.TextInput.ChsIme
+	Microsoft.Windows.TextInput.DictationInputProcessor
+	Microsoft.Windows.TextInput.ExpressiveInput
+	Microsoft.Windows.TextInput.InputSession
+	Microsoft.Windows.Desktop.Shell.InputDll
+
+
+
+**** Events *****
+FallbackError(
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+FeatureUsage(
+	UINT32 featureId,
+	INT32 featureVersion,
+	INT32 featureBaseVersion,
+	INT16 featureStage,
+	BOOLEAN enabled,
+	UINT32 kind,
+	UINT64 addend
+	);
+
+FeatureError(
+	UINT32 featureId,
+	INT32 featureVersion,
+	INT32 featureBaseVersion,
+	INT16 featureStage,
+	HRESULT hr,
+	ANSISTRING file,
+	UINT16 lineNumber,
+	ANSISTRING module,
+	ANSISTRING process,
+	ANSISTRING originFile,
+	UINT16 originLineNumber,
+	ANSISTRING originModule,
+	ANSISTRING originName,
+	ANSISTRING message,
+	ANSISTRING callerModule,
+	UINT32 callerReturnAddressOffset,
+	ANSISTRING originCallerModule,
+	UINT32 originCallerReturnAddressOffset
+	);
+
+FallbackError(
+	UINT64 PartA_PrivTags,
+	SIGNED wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+FeatureVariantUsage(
+	UINT32 featureId,
+	INT32 featureVersion,
+	INT32 featureBaseVersion,
+	INT16 featureStage,
+	BOOLEAN enabled,
+	UINT32 variantKind,
+	UINT8 variant,
+	UINT64 addend
+	);
+
+EnabledFeatureUsage(
+	UINT32 featureId,
+	INT32 featureVersion,
+	INT32 featureBaseVersion,
+	INT16 featureStage,
+	BOOLEAN enabled,
+	UINT32 kind,
+	UINT64 addend
+	);
+
+InputService!KeyEventProcessor::OnKeyEvent(
+	UINT16 KeyboardID,
+	UINT16 EventFlags
+	);
+
+InputService!KeyEventProcessor::OnKeyEvent(
+	UINT16 KeyboardID,
+	UINT16 EventFlags,
+	ANSISTRING "KeyEvent skipped because it didn't come from the focused thread"
+	);
+
+InputService!KeyEventProcessor::QueueKey(
+	UINT32 Timestamp,
+	ANSISTRING "The key event queue is full, drop key event"
+	);
+
+InputService!KeyEventProcessor::OnEditClientSelectionChanged(
+	UINT32 dwEditBufferID,
+	INT32 iSelectionBegin,
+	INT32 iSelectionEnd
+	);
+
+InputService!KeyEventProcessor::OnStringKey2(
+	UINT16 EventFlags,
+	ANSISTRING "KeyEvent skipped because it didn't come from the focused thread"
+	);
+
+InputService!KeyEventProcessor::OnStringKey(
+	UINT16 EventFlags,
+	UINT16 VirtualKey,
+	UNICODESTRING Text,
+	INT16 TouchX,
+	INT16 TouchY,
+	UINT32 TimeStamp
+	);
+
+InputService!KeyEventProcessor::OnKeyEvent(
+	UINT16 KeyboardID,
+	UINT16 EventFlags,
+	UINT16 ScanCode,
+	ANSISTRING "KeyEvent skipped because focused edit buffer is no populated"
+	);
+
+InputService!KeyEventProcessor::OnKeyEvent(
+	UINT16 KeyboardID,
+	UINT16 EventFlags,
+	UINT16 ScanCode,
+	ANSISTRING "KeyEvent dropped because input method is not available"
+	);
+
+InputService!KeyEventProcessor::StopKeyQueuing(
+	VOID
+	);
+
+InputService!KeyEventProcessor::OnKeyEvent(
+	UINT16 KeyboardID,
+	UINT16 EventFlags,
+	ANSISTRING "KeyEvent skipped because focused edit buffer is no populated"
+	);
+
+InputService!KeyEventProcessor::OnVirtualKey(
+	UINT16 EventFlags,
+	ANSISTRING "KeyEventProcessor_OnVirtualKey: KeyEvent dropped because input method is not available"
+	);
+
+InputService!KeyEventProcessor::OnKeyEvent(
+	UINT16 KeyboardID,
+	UINT16 EventFlags,
+	UINT16 ScanCode,
+	UINT64 TimeStartFromCicero;,
+	UINT64 BeginTimeOfISOnKeyEvent
+	);
+
+InputService!KeyEventProcessor::OnStringKey(
+	UINT16 EventFlags,
+	UINT16 VirtualKey,
+	UNICODESTRING Text,
+	INT16 TouchX,
+	INT16 TouchY,
+	UINT32 TimeStamp,
+	ANSISTRING "KeyEventProcessor_OnStringKey: KeyEvent dropped because input is disabled"
+	);
+
+InputService!KeyEventProcessor::FinishSendKey(
+	UINT16 EventFlags,
+	BOOLEAN QueuingEnabled
+	);
+
+InputService!KeyEventProcessor::OnStringKey(
+	UINT16 EventFlags,
+	UINT16 VirtualKey,
+	UNICODESTRING Text,
+	ANSISTRING "KeyEvent skipped because focused edit buffer is no populated"
+	);
+
+InputService!KeyEventProcessor::OnEditControlContextChanged(
+	UINT32 TextInputClientID1,
+	UINT64 TextInputClientID2,
+	UINT32 EditBufferID,
+	BOOLEAN IsOverride,
+	ANSISTRING "Replay pending keys in current edit control"
+	);
+
+InputService!KeyEventProcessor::ReplayUndoneKeys(
+	UINT16 EventFlags,
+	UINT16 VirtualKey,
+	BOOLEAN bCharacterEventsEnabled
+	);
+
+InputService!KeyEventProcessor::RequestInputHistoryUpdate(
+	VOID
+	);
+
+InputService!KeyEventProcessor::ThreadProc(
+	ANSISTRING "InputService started"
+	);
+
+InputService!KeyEventProcessor::FinishSendKey(
+	UINT16 EventFlags,
+	UINT16 VirtualKey,
+	BOOLEAN QueuingEnabled
+	);
+
+InputService!KeyEventProcessor::OnEditFocusChange(
+	UINT32 EditBufferID,
+	UINT32 eFocusEventFlags,
+	UINT32 InputScope,
+	UINT32 InputSettings
+	);
+
+InputService!KeyEventProcessor::OnVirtualKey(
+	UINT16 EventFlags,
+	ANSISTRING "KeyEvent skipped because focused edit buffer is no populated"
+	);
+
+InputService!KeyEventProcessor::SendCurrentKeyEvent(
+	UINT16 EventFlags
+	);
+
+InputService!KeyEventProcessor::StartKeyQueuing(
+	VOID
+	);
+
+InputService!KeyEventProcessor::OnStringKey(
+	UINT16 EventFlags,
+	INT16 TouchX,
+	INT16 TouchY,
+	UINT32 TimeStamp,
+	ANSISTRING "KeyEventProcessor_OnStringKey: KeyEvent dropped because input is disabled"
+	);
+
+InputService!KeyEventProcessor::StopKeyQueuing(
+	HEXINT64 m_pKeyEventBufferInFocus,
+	UINT32 BinaryBlobSize
+	);
+
+InputService!KeyEventProcessor::OnInputSettingsChange(
+	UINT32 EditBufferID,
+	UINT32 m_dwEditBufferID,
+	UINT32 InputSettings
+	);
+
+InputService!KeyEventProcessor::OnVirtualKey(
+	UINT16 EventFlags,
+	ANSISTRING "KeyEvent skipped because it didn't come from the focused thread"
+	);
+
+InputService!KeyEventProcessor::QueueKey(
+	UINT16 VirtualKey,
+	UINT32 Timestamp
+	);
+
+InputService!KeyEventProcessor::StartNavigateFocus(
+	UINT32 dwEditBufferID,
+	HEXINT64 pKeyEventHandler,
+	BOOLEAN bOverride
+	);
+
+InputService!KeyEventProcessor::OnEditControlContextChanged(
+	UINT32 TextInputClientID1,
+	UINT64 TextInputClientID2,
+	UINT32 EditBufferID,
+	BOOLEAN IsOverride
+	);
+
+InputService!KeyEventProcessor::OnStringKey(
+	UINT16 EventFlags,
+	INT16 TouchX,
+	INT16 TouchY,
+	UINT32 TimeStamp,
+	ANSISTRING "KeyEventProcessor_OnStringKey: KeyEvent dropped because input method is not available"
+	);
+
+InputService!KeyEventProcessor::OnVirtualKey(
+	UINT16 EventFlags
+	);
+
+InputService!KeyEventProcessor::OnStringKey(
+	UINT16 EventFlags,
+	INT16 TouchX,
+	INT16 TouchY,
+	UINT32 TimeStamp
+	);
+
+InputService!KeyEventProcessor::OnEditClientTapped(
+	UINT32 EditBufferID,
+	INT32 CaretPosition,
+	BOOLEAN SettingFocus
+	);
+
+InputProcessorSwitch(
+	GUID editId,
+	UNICODESTRING oldInputProcessor,
+	UNICODESTRING oldLocale,
+	UNICODESTRING newInputProcessor,
+	UNICODESTRING newLocale,
+	UNICODESTRING switchReason
+	);
+
+InputService!KeyEventProcessor::QueueKey(
+	UINT16 VirtualKey,
+	UINT32 Timestamp,
+	ANSISTRING "The key event queue is full, drop key event"
+	);
+
+InputService!KeyEventProcessor::StopKeyQueuing(
+	HEXINT64 m_pKeyEventBufferInFocus,
+	UINT16 VirtualKey,
+	ANSISTRING "key event dropped"
+	);
+
+InputService!KeyEventProcessor::EndProcessKey(
+	UINT16 EventFlags,
+	UINT16 VirtualKey
+	);
+
+InputService!KeyEventProcessor::FinishSendKey(
+	ANSISTRING KeyPressPendingState
+	);
+
+InputService!KeyEventProcessor::StopNavigateFocus(
+	VOID
+	);
+
+InputService!KeyEventProcessor::SaveUndoneKeys(
+	HEXINT64 pBuffer,
+	BOOLEAN bOverride,
+	UINT64 cKeys
+	);
+
+InputService!KeyEventProcessor::ThreadProc(
+	ANSISTRING "InputService stopped"
+	);
+
+InputService!KeyEventProcessor::OnVirtualKey(
+	UINT16 EventFlags,
+	UINT16 VirtualKey,
+	ANSISTRING "KeyEventProcessor_OnVirtualKey: KeyEvent dropped because input method is not available"
+	);
+
+InputService!KeyEventProcessor::CancelNavigateFocus(
+	VOID
+	);
+
+InputService!KeyEventProcessor::OnKeyEvent(
+	UINT16 KeyboardID,
+	UINT16 EventFlags,
+	UINT16 ScanCode,
+	ANSISTRING "KeyEvent skipped because it didn't come from the focused thread"
+	);
+
+InputService!KeyEventProcessor::RequestSoftwareKeyboardVisibilityChange(
+	ANSISTRING "Show suppressed due to hardware keyboard"
+	);
+
+InputService!KeyEventProcessor::OnNewInputHostFound(
+	UINT32 textInputHostInfo.SystemProcessID,
+	UINT32 textInputHostInfo.SystemThreadID,
+	HEXINT64 *ppKeyEventHandler
+	);
+
+InputService!KeyEventProcessor::OnKeyEvent(
+	UINT16 KeyboardID,
+	UINT16 EventFlags,
+	UINT16 ScanCode,
+	ANSISTRING "KeyEvent dropped because input is disabled"
+	);
+
+InputService!KeyEventProcessor::OnStringKey(
+	UINT16 EventFlags,
+	UINT16 VirtualKey,
+	UNICODESTRING Text,
+	INT16 TouchX,
+	INT16 TouchY,
+	UINT32 TimeStamp,
+	ANSISTRING "KeyEventProcessor_OnStringKey: KeyEvent dropped because input method is not available"
+	);
+
+InputService!KeyEventProcessor::OnKeyEventFocusChange(
+	ANSISTRING "Transfer pending key events into new buffer",
+	UINT64 Number of keys pending
+	);
+
+InputService!KeyEventProcessor::StopKeyQueuing(
+	HEXINT64 m_pKeyEventBufferInFocus,
+	ANSISTRING "key event dropped"
+	);
+
+TextInputFramework!KeyEventProcessor::OnVirtualKey2(
+	UINT64 startTimeOfCicero
+	);
+
+InputService!KeyEventProcessor::OnVirtualKey(
+	UINT16 EventFlags,
+	ANSISTRING "KeyEventProcessor_OnVirtualKey: KeyEvent dropped because input is disabled"
+	);
+
+InputService!KeyEventProcessor::EvaluateSIPDisplay(
+	UINT32 eFocusEventFlags,
+	BOOLEAN m_fManualInputPaneDisplay,
+	BOOLEAN m_fInputEnabled,
+	BOOLEAN m_fEditControlInFocus,
+	BOOLEAN m_fEditControlReadOnly,
+	UINT32 m_dwCurrentInputScope,
+	BOOLEAN m_fEnableSIPDismissOnHardwareKeyboardAttach,
+	BOOLEAN fHWKeyboardDeployed,
+	BOOLEAN m_fKeepSoftwareKeyboardVisibleOnEditControlFocusLoss
+	);
+
+InputService!KeyEventProcessor::CancelKeyQueueing(
+	ANSISTRING "There is pending unhandled key, only flush the queue without stopping key queuing"
+	);
+
+InputService!KeyEventProcessor::CancelKeyQueueing(
+	VOID
+	);
+
+InputService!KeyEventProcessor::NotifySoftwareKeyboardDeployChange(
+	UINT32 Show
+	);
+
+InputService!KeyEventProcessor::SendKey(
+	UINT16 EventFlags,
+	UINT16 VirtualKey
+	);
+
+InputService!KeyEventProcessor::ReplayUndoneKeys(
+	UINT16 EventFlags,
+	BOOLEAN bCharacterEventsEnabled
+	);
+
+InputService!KeyEventProcessor::OnKeyEvent(
+	UINT16 KeyboardID,
+	UINT16 EventFlags,
+	ANSISTRING "KeyEvent dropped because input is disabled"
+	);
+
+InputService!KeyEventProcessor::OnKeyEvent(
+	UINT16 KeyboardID,
+	UINT16 EventFlags,
+	ANSISTRING "KeyEvent dropped because input method is not available"
+	);
+
+InputService!KeyEventProcessor::OnSoftKBForceDown(
+	VOID
+	);
+
+InputService!KeyEventProcessor::OnVirtualKey(
+	UINT16 EventFlags,
+	UINT16 VirtualKey
+	);
+
+InputService!KeyEventProcessor::OnVirtualKey(
+	UINT16 EventFlags,
+	UINT16 VirtualKey,
+	ANSISTRING "KeyEvent skipped because focused edit buffer is no populated"
+	);
+
+InputService!KeyEventProcessor::UninitializeInputMethod(
+	VOID
+	);
+
+InputService!KeyEventProcessor::QueueKey(
+	UINT32 Timestamp
+	);
+
+InputService!KeyEventProcessor::OnNewInputClientFound(
+	UINT32 textInputClientInfo.SystemProcessID,
+	UINT32 textInputClientInfo.SystemThreadID,
+	HEXINT64 *ppKeyEventHandler
+	);
+
+InputService!KeyEventProcessor::OnVirtualKey(
+	UINT16 EventFlags,
+	UINT16 VirtualKey,
+	ANSISTRING "KeyEventProcessor_OnVirtualKey: KeyEvent dropped because input is disabled"
+	);
+
+InputService!KeyEventProcessor::EndProcessKey(
+	UINT16 EventFlags
+	);
+
+InputService!KeyEventProcessor::RequestSoftwareKeyboardVisibilityChange(
+	BOOLEAN Request Show,
+	UINT32 SIP View Type
+	);
+
+InputService!KeyEventProcessor::OnKeyEventFocusChange(
+	HEXINT64 m_pKeyEventBufferInFocus,
+	UINT32 oldInfo.SystemProcessID,
+	UINT32 oldInfo.SystemThreadID,
+	HEXINT64 pBuffer,
+	UINT32 newInfo.SystemProcessID,
+	UINT32 newInfo.SystemThreadID
+	);
+
+InputService!KeyEventProcessor::OnBeginFocusTransition(
+	UINT32 dwEditBufferID,
+	HEXINT64 pKeyEventHandler,
+	BOOLEAN bOverride
+	);
+
+InputService!KeyEventProcessor::NotifyLocaleChange(
+	UINT32 Locale
+	);
+
+InputService!KeyEventProcessor::OnStringKey(
+	UINT16 EventFlags,
+	ANSISTRING "KeyEvent skipped because focused edit buffer is no populated"
+	);
+
+ISKeyEventProcessorOnKeyEvent(
+	UINT64 TimeStartFromCicero;,
+	UINT64 BeginTimeOfISOnKeyEvent,
+	UINT32 ProfileType,
+	UINT32 LangID,
+	GUID CLSID,
+	GUID GuidProfile,
+	UINT32 HKL,
+	UINT32 hklSubstitute,
+	UINT32 KLID,
+	UINT32 Caps,
+	UINT32 Flags,
+	UINT64 EndTimeOfISOnKeyEvent
+	);
+
+InputService!KeyEventProcessor::OnEndFocusTransition(
+	VOID
+	);
+
+InputService!KeyEventProcessor::SendKey(
+	UINT16 EventFlags
+	);
+
+InputService!KeyEventProcessor::StopKeyQueuing(
+	HEXINT64 m_pKeyEventBufferInFocus,
+	UINT64 listPendingKeys.size
+	);
+
+InputService!KeyEventProcessor::OnKeyEventFocusChange(
+	ANSISTRING "Focus removed from a key event buffer while key queuing is still enabled.",
+	BOOLEAN m_fTransferPendingkeys,
+	UINT64 Number of keys pending
+	);
+
+InputService!KeyEventProcessor::SendKeyEvent(
+	UINT16 VirtualKey,
+	UINT16 EventFlags
+	);
+
+InputService!KeyEventProcessor::SendKeyEvent(
+	UINT16 EventFlags
+	);
+
+InputService!KeyEventProcessor::SendCurrentKeyEvent(
+	UINT16 EventFlags,
+	UINT16 VirtualKey
+	);
+
+InputService!CAcceleratorKeyProcessor::StopRouting(
+	HEXINT64 this,
+	HEXINT64 pFocus
+	);
+
+PerfISKeyEventBufferISKeyExit(
+	BOOL32 IsKeyUp,
+	BOOL32 IsHWKB,
+	UINT32 ProfileType,
+	UINT32 LangID,
+	GUID CLSID,
+	GUID GuidProfile,
+	UINT32 HKL,
+	UINT32 hklSubstitute,
+	UINT32 KLID,
+	UINT32 Caps,
+	UINT32 Flags,
+	UINT64 TimeStartFromCicero,
+	UINT64 TimeStartFromIS,
+	UINT64 TimeEndFromIS,
+	UINT64 TimeStartFromIME,
+	UINT64 TimeEndFromIME,
+	UINT64 TimeStartFromApp,
+	UINT64 TimeEndFromApp,
+	UINT64 TimeStartFromISKeyEventprocessor,
+	UINT64 TimeEndFromISKeyEventprocessor
+	);
+
+InputService!CKeyEventBuffer::BeginKeyEventPayload(
+	HEXINT64 this,
+	UINT32 PID,
+	UINT32 TID,
+	UINT32 uKeyEventID
+	);
+
+InputService!CKeyEventBuffer::ClearQueuedKeyPresses(
+	HEXINT64 this,
+	UINT32 PID,
+	UINT32 TID,
+	UINT32 cKeyEvents,
+	UINT32 cKeyPresses
+	);
+
+InputService!CKeyEventBuffer::SendAcceleratorKeyEvent(
+	HEXINT64 this,
+	UINT32 PID,
+	UINT32 TID,
+	HEXINT64 pSender,
+	INT32 RoutingStage,
+	UINT16 EventFlags
+	);
+
+InputService!CKeyEventBuffer::OnClientNotifyKeyEvent(
+	HEXINT64 this,
+	UINT32 PID,
+	UINT32 TID,
+	UINT32 uKeyEventID
+	);
+
+InputService!CKeyEventBuffer::OnClientNotifyKeyEvent(
+	ANSISTRING "Dequeue pending key press"
+	);
+
+InputService!CKeyEventBuffer::OnClientNotifyKeyEventRaised(
+	HEXINT64 this,
+	UINT32 PID,
+	UINT32 TID,
+	UINT32 uKeyEventID
+	);
+
+InputService!CKeyEventBuffer::Clear(
+	HEXINT64 this,
+	UINT32 PID,
+	UINT32 TID,
+	UINT32 cKeyEvents,
+	UINT32 cKeyPresses
+	);
+
+InputService!CKeyEventBuffer::EndKeyEventPayload(
+	HEXINT64 this,
+	UINT32 PID,
+	UINT32 TID,
+	UINT32 uKeyEventID
+	);
+
+InputService!CKeyEventBuffer::SendCharacterEvent(
+	HEXINT64 this,
+	UINT32 PID,
+	UINT32 TID,
+	UINT32 uKeyEventID
+	);
+
+InputService!CKeyEventBuffer::SendAcceleratorKeyEvent(
+	HEXINT64 this,
+	UINT32 PID,
+	UINT32 TID,
+	HEXINT64 pSender,
+	INT32 RoutingStage,
+	UINT16 EventFlags,
+	UINT16 VirtualKey
+	);
+
+InputService!CKeyEventBuffer::OnClientNotifyKeyEvent(
+	ANSISTRING "Key event in the front of queue",
+	UINT32 dwKeyEventID,
+	UINT16 EventFlags,
+	UINT16 VirtualKey
+	);
+
+InputService!CKeyEventBuffer::OnClientNotifyAcceleratorKeyEvent(
+	HEXINT64 this,
+	UINT32 PID,
+	UINT32 TID,
+	UINT32 KeyEventID
+	);
+
+InputService!CKeyEventBuffer::SendKeyEvent(
+	HEXINT64 this,
+	UINT32 PID,
+	UINT32 TID,
+	UINT32 uKeyEventID
+	);
+
+InputService!CKeyEventBuffer::ClearByEditControlID(
+	HEXINT64 this,
+	UINT32 PID,
+	UINT32 TID,
+	UINT32 uEditControlID
+	);
+
+InputService!CKeyEventBuffer::~CKeyEventBuffer(
+	HEXINT64 this,
+	UINT32 PID,
+	UINT32 TID
+	);
+
+InputService!CKeyEventBuffer::SendCharacterEvent(
+	HEXINT64 this,
+	UINT32 PID,
+	UINT32 TID,
+	UINT32 uKeyEventID,
+	UINT16 Character
+	);
+
+InputService!CKeyEventBuffer::OnClientNotifyAcceleratorKeyEvent(
+	ANSISTRING "Dequeue pending accelerator key event",
+	UINT32 KeyEventID,
+	UINT16 EventFlags,
+	UINT16 VirtualKey
+	);
+
+InputService!CKeyEventBuffer::QueuedKeyPress(
+	HEXINT64 this,
+	UINT32 cKeyEvents,
+	UINT32 cKeyPresses
+	);
+
+InputService!CKeyEventBuffer::SendKeyEvent(
+	HEXINT64 this,
+	UINT32 PID,
+	UINT32 TID,
+	UINT32 uKeyEventID,
+	UINT16 EventFlags,
+	UINT16 VirtualKey
+	);
+
+TypingStatistics(
+	UINT32 totalWordCount,
+	UINT32 typedWordCount,
+	UINT32 editWordCount,
+	UINT32 badWordCount,
+	UINT32 backspaceWordCount,
+	UINT32 redSquiggleCount,
+	UINT32 redSquiggleFixedCount,
+	UINT32 keyPressCount,
+	UINT32 totalCharacters,
+	UINT32 typedCharacters,
+	UINT32 backspaceCount,
+	UINT32 candidateCharactersSaved,
+	UINT32 shapedCharactersSaved,
+	UINT32 autocorrectionCount,
+	UINT32 undoneAutocorrectionCount,
+	UINT32 rejectAutocorrectionCount,
+	UINT32 cancelAutocorrectionCount,
+	UINT32 backCorrectionCount,
+	UINT32 suppressedAutocorrectionCount,
+	UINT32 multilingualSuppressCorrectionCount,
+	UINT32 suggestionCount,
+	UINT32 highConfidenceSuggestionCount,
+	UINT32 predictionCount,
+	UINT32 predictionExtendedCount,
+	UINT32 nextWordCount,
+	UINT32 nextWordExtendedCount,
+	UINT32 alternateCount,
+	UINT32 shapewriteCount,
+	UINT32 rejectedShapewriteCount,
+	UINT32 failedShapewriteCount,
+	UINT32 shapewriteAlternateCount,
+	UINT32 shapewriteCorrectionCount,
+	UINT32 wordAddedExplicitCount,
+	UINT32 wordDeletedCount,
+	UINT32 emojiTranslationCount,
+	UINT32 emojiCorrectionCount,
+	UINT32 emojiPredictionCount,
+	INT32 suggestionControlEnabled,
+	INT32 spellcheckControlEnabled,
+	INT32 autocorrectControlEnabled,
+	INT32 shapewriteControlEnabled,
+	INT32 emojiControlEnabled,
+	INT32 suggestionSettingEnabled,
+	INT32 spellcheckSettingEnabled,
+	INT32 autocorrectSettingEnabled,
+	INT32 shapewriteSettingEnabled,
+	INT32 emojiSettingEnabled,
+	BOOL32 hwkbdPredictionEnabled,
+	BOOL32 hwkbdAutocorrectionEnabled,
+	BOOL32 multilingualPredictionsEnabled,
+	UINT32 SIPwidth,
+	UINT32 SIPheight,
+	UINT32 totalTime,
+	UINT32 typingTime,
+	UINT32 shapewriteTime,
+	UINT32 suggestionTime,
+	UINT32 editingTime,
+	UNICODESTRING inputLanguage,
+	UNICODESTRING multilingualLanguages,
+	UNICODESTRING appName,
+	UINT32 SearchDataSources,
+	UINT32 ShapeDataSources,
+	BOOL32 hwkbdUsed
+	);
+
+ShapeWritingWordDeleted(
+	GUID editId,
+	UNICODESTRING locale,
+	UNICODESTRING replacedWord,
+	BOOL32 isHwKbdMode
+	);
+
+FailedHResult(
+	INT32 HRESULT,
+	UNICODESTRING Error Message
+	);
+
+AverageTypingSpeedStatistics(
+	UINT32 avgTimeBetweenKeys,
+	UINT32 numberOfAutocorrectionRateChanges
+	);
+
+TransliterationSuggestionIndex(
+	GUID editId,
+	UNICODESTRING applicationName,
+	UNICODESTRING localeBCP47,
+	UINT32 inputMethodId,
+	BOOL32 isHardwareKeyboard,
+	UINT32 selectedCandidateIndex,
+	UINT32 finalizedReadingStringLength,
+	UINT32 finalizedDisplayStringLength
+	);
+
+FlipMtfLatency(
+	GUID editId,
+	UINT64 PartA_PrivTags,
+	UNICODESTRING applicationName,
+	UNICODESTRING localeBCP47,
+	UINT32 inputMethodId,
+	BOOL32 isHwkb,
+	UNICODESTRING queryType,
+	UINT64 mtfLatencyInMicrosecond
+	);
+
+RejectAutoCorrection(
+	GUID editId,
+	UINT64 PartA_PrivTags,
+	UNICODESTRING applicationName,
+	UINT32 inputScope,
+	ANSISTRING rejectMethod,
+	UNICODESTRING localeName,
+	UNICODESTRING wordLocale,
+	UNICODESTRING originalWord,
+	UNICODESTRING autoCorrection,
+	UNICODESTRING userCorrection,
+	UNICODESTRING previousWords_first,
+	UNICODESTRING previousWords_second,
+	BOOL32 isHwKbdMode,
+	UINT64 frameworkType,
+	UINT64 controlType
+	);
+
+UserAddedWord(
+	GUID editId,
+	UINT64 PartA_PrivTags,
+	UNICODESTRING applicationName,
+	UINT32 inputScope,
+	UNICODESTRING localeName,
+	UNICODESTRING wordAdded,
+	BOOL32 isHwKbdMode
+	);
+
+UserDeletedWord(
+	GUID editId,
+	UINT64 PartA_PrivTags,
+	UNICODESTRING applicationName,
+	UINT32 inputScope,
+	UNICODESTRING localeName,
+	UNICODESTRING wordDeleted,
+	BOOL32 isHwKbdMode
+	);
+
+FLIPAutocorrectionSuppressed(
+	GUID editId,
+	UINT64 PartA_PrivTags,
+	UNICODESTRING applicationName,
+	UINT32 inputScope,
+	UNICODESTRING Word,
+	UNICODESTRING Autocorrection,
+	UNICODESTRING CurrentLang,
+	UNICODESTRING SuppressLang,
+	UINT32 reason,
+	UNICODESTRING previousWords_first,
+	UNICODESTRING previousWords_second,
+	UINT32 uiFlags,
+	UINT32 uiScore,
+	UINT32 uiScoreAdjust,
+	UINT32 uiLangPenalty,
+	BOOL32 isHwKbdMode
+	);
+
+FlipCandidatesFocusChangedFlush(
+	GUID editId,
+	UINT64 PartA_PrivTags,
+	UINT32 focusChanges,
+	UINT32 imm32ControlsEncountered,
+	UINT32 exemptApplicationsEncountered,
+	UINT32 autoSuggestBoxesEncountered
+	);
+
+AppliedTextSuggestion(
+	GUID editId,
+	UINT64 PartA_PrivTags,
+	UNICODESTRING applicationName,
+	UINT32 inputScope,
+	UNICODESTRING originalWord,
+	UNICODESTRING appliedWord,
+	UINT32 suggestionIndex,
+	ANSISTRING applyMethod,
+	UNICODESTRING locale,
+	UNICODESTRING wordLocale,
+	UINT64 produceTimeInUs,
+	STRING previousWords,
+	UNICODESTRING first,
+	UNICODESTRING second,
+	UINT32 inputMethodId,
+	BOOL32 isHwKbdMode,
+	UINT64 frameworkType,
+	UINT64 controlType,
+	UINT64 PersonalizationOriginalWordFlags,
+	UINT64 PersonalizationAppliedWordFlags
+	);
+
+CandidateItemSelected(
+	GUID editId,
+	UNICODESTRING applicationName,
+	UNICODESTRING localeBCP47,
+	UINT32 inputMethodId,
+	BOOL32 isHardwareKeyboard,
+	UINT32 compositionReadingStringLength,
+	UINT32 finalizedReadingStringLength,
+	UINT32 selectedCandidateIndex,
+	UINT32 backspaceCountInsideComposition,
+	UINT32 editingKeystrokeCount
+	);
+
+FlipCandidatesExpectedSuppressed(
+	GUID editId,
+	UINT64 PartA_PrivTags,
+	UNICODESTRING applicationName,
+	UNICODESTRING localeBCP47,
+	BOOL32 isHardwareKeyboard,
+	UINT32 reason,
+	UINT32 frameworkType,
+	UINT32 inputScope
+	);
+
+ShapeWritingCorrection(
+	GUID editId,
+	UINT64 PartA_PrivTags,
+	UNICODESTRING applicationName,
+	UINT32 inputScope,
+	UNICODESTRING word,
+	BOOLEAN shapes,
+	UINT16 x,
+	UINT16 y,
+	UINT16 timeStamp,
+	BOOL32 isHwKbdMode
+	);
+
+CancelAutoCorrection(
+	GUID editId,
+	UINT64 PartA_PrivTags,
+	UNICODESTRING applicationName,
+	UINT32 inputScope,
+	UNICODESTRING localeName,
+	UNICODESTRING wordLocale,
+	UNICODESTRING originalWord,
+	UNICODESTRING autoCorrection,
+	UNICODESTRING previousWords_first,
+	UNICODESTRING previousWords_second,
+	BOOL32 isHwKbdMode,
+	UINT64 frameworkType,
+	UINT64 controlType
+	);
+
+FlipHardwareKeyboardCandidateReliabilityAggregate(
+	GUID editId,
+	UNICODESTRING applicationName,
+	UINT32 candidateDelayToShowMax,
+	UINT32 candidateDelayToShowAvg,
+	UINT32 keyTypedToCandidateDelayMax,
+	UINT32 keyTypedToCandidateDelayAvg,
+	UINT32 keyTypedToCandidateShowMax,
+	UINT32 keyTypedToCandidateShowAvg,
+	UINT32 keysTyped,
+	UINT32 candidateDelaysCalled,
+	UINT32 candidateShowsCalled,
+	UINT32 updateContextCalled,
+	BOOL32 noShowsWhenShowsWereExpected
+	);
+
+UndoneAutoCorrection(
+	GUID editId,
+	UINT64 PartA_PrivTags,
+	UNICODESTRING applicationName,
+	UINT32 inputScope,
+	ANSISTRING undoMethod,
+	UNICODESTRING localeName,
+	UNICODESTRING wordLocale,
+	UNICODESTRING wordOriginal,
+	UNICODESTRING wordCorrected,
+	STRING previousWords,
+	UNICODESTRING first,
+	UNICODESTRING second,
+	BOOL32 isHwKbdMode,
+	UINT64 frameworkType,
+	UINT64 controlType,
+	UINT64 PersonalizationOriginalWordFlags,
+	UINT64 PersonalizationCorrectedWordFlags
+	);
+
+InputSessionFinalized(
+	GUID editId,
+	UINT64 PartA_PrivTags,
+	UNICODESTRING applicationName,
+	UNICODESTRING localeBCP47,
+	UINT32 inputMethodId,
+	BOOL32 isHardwareKeyboard,
+	UINT64 totalTimeMilliseconds,
+	UINT32 finalizedDisplayStringLength,
+	UINT32 backspaceCountOutsideComposition,
+	UINT32 backspaceCountInsideComposition
+	);
+
+ActivityIntermediateStop(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+MultilingualDictionariesLoading(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+ActivityError(
+	UINT64 PartA_PrivTags,
+	SIGNED wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+MultilingualDictionariesLoading(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+ActivityError(
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+MultilingualDictionariesLoading(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId
+	);
+
+ActivityStoppedAutomatically(
+	VOID
+	);
+
+ActivityStoppedAutomatically(
+	VOID
+	);
+
+ActivityError(
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+ActivityError(
+	UINT64 PartA_PrivTags,
+	SIGNED wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+OnUIEvent(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId,
+	UINT32 Mode,
+	BOOLEAN ActiveComponentExists
+	);
+
+OnUIEvent(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 Mode,
+	BOOLEAN ActiveComponentExists
+	);
+
+OnUIEvent(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId,
+	UINT32 EventType,
+	UINT32 SenderId,
+	UINT32 Mode,
+	BOOLEAN ActiveComponentExists
+	);
+
+OnUIEvent(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+OnUIEvent(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+UIShown(
+	UINT32 LocaleId,
+	INT32 InputScope,
+	UNICODESTRING AppName,
+	UINT32 Trigger,
+	UNICODESTRING TriggerKey,
+	UINT32 KeyboardType,
+	UNICODESTRING ShownCandidateProviders,
+	UNICODESTRING EventVersion
+	);
+
+ComponentActivated(
+	UINT32 LocaleId,
+	INT32 InputScope,
+	UNICODESTRING AppName,
+	UINT32 Trigger,
+	UNICODESTRING TriggerKey,
+	UINT32 KeyboardType,
+	UNICODESTRING EventVersion
+	);
+
+RichContentControlTextChanged(
+	UINT32 LocaleId,
+	INT32 InputScope,
+	UNICODESTRING AppName,
+	UINT32 RichContentType,
+	UNICODESTRING EventVersion
+	);
+
+EmojiSiufNpsTriggered(
+	GUID editId
+	);
+
+OnCandidateUIEvent(
+	UINT64 PartA_PrivTags,
+	UINT32 EventType
+	);
+
+UICloseRequested(
+	UINT64 PartA_PrivTags,
+	UINT32 LocaleId,
+	INT32 InputScope,
+	UNICODESTRING AppName,
+	UINT32 Trigger,
+	UNICODESTRING TriggerKey,
+	UINT32 KeyboardType,
+	BOOLEAN HasSearchResult,
+	UINT32 ClosedReason,
+	UNICODESTRING EventVersion
+	);
+
+CandidateSelectedWithSearchStringPii(
+	UINT32 LocaleId,
+	INT32 InputScope,
+	UNICODESTRING AppName,
+	UINT32 Trigger,
+	UNICODESTRING TriggerKey,
+	UINT32 KeyboardType,
+	UNICODESTRING SearchString,
+	UNICODESTRING SelectedCandidate,
+	BOOLEAN IsMultiSelection,
+	UINT32 CandidateIndex,
+	UINT32 CandidateIndexInProvider,
+	UNICODESTRING ShownCandidateProviders,
+	UNICODESTRING SelectedCandidateProvider,
+	UNICODESTRING EventVersion
+	);
+
+ItemSelected(
+	UINT64 PartA_PrivTags,
+	UINT32 LocaleId,
+	INT32 InputScope,
+	UNICODESTRING AppName,
+	UINT32 Trigger,
+	UNICODESTRING TriggerKey,
+	UINT32 KeyboardType,
+	BOOLEAN IsMultiSelection,
+	UINT32 CandidateIndex,
+	UINT32 CandidateIndexInProvider,
+	UNICODESTRING ShownCandidateProviders,
+	UNICODESTRING SelectedCandidateProvider,
+	UNICODESTRING EventVersion
+	);
+
+UIClosedWithSearchStringPii(
+	UINT32 LocaleId,
+	INT32 InputScope,
+	UNICODESTRING AppName,
+	UINT32 Trigger,
+	UNICODESTRING TriggerKey,
+	UINT32 KeyboardType,
+	UNICODESTRING SearchString,
+	BOOLEAN HasSearchResult,
+	UINT32 ClosedReason,
+	UNICODESTRING EventVersion
+	);
+
+PerformanceQueryAndUIUpdated(
+	UINT32 LocaleId,
+	INT32 InputScope,
+	UNICODESTRING AppName,
+	UINT32 Trigger,
+	UNICODESTRING TriggerKey,
+	UINT32 KeyboardType,
+	UINT32 Type,
+	UINT32 TotalElapsed,
+	UINT32 QueryElapsed,
+	UINT32 UIUpdateElapsed,
+	UNICODESTRING EventVersion
+	);
+
+ProcessorKeyDownEventActivity(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+ProcessorKeyDownEventActivity(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+HardwareKeyboardDeployed(
+	UINT32 layoutFileId,
+	UNICODESTRING vendorIds
+	);
+
+SentenceBreakAdded(
+	UINT32 wordCountInSentence,
+	UNICODESTRING applicationName,
+	UINT32 inputScope
+	);
+
+ProcessorKeyDownEventActivity(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId,
+	UNICODESTRING keyboardLayout,
+	BOOLEAN isHardwareKeyboard
+	);
+
+CompositionLengthReachedFull(
+	GUID editId,
+	BOOL32 isHardwareKeyboard,
+	UNICODESTRING keyboardLayout
+	);
+
+MultiTapExitMethodUsed(
+	GUID editId,
+	UNICODESTRING multiTapExitMethod,
+	UINT16 repeatCount
+	);
+
+CandidateItemSelected(
+	GUID editId,
+	UNICODESTRING applicationName,
+	BOOL32 isHardwareKeyboard,
+	BOOL32 isNextWordPrediction,
+	UNICODESTRING keyboardLayout,
+	UINT32 compositionReadingStringLength,
+	UINT32 finalizedReadingStringLength,
+	UINT32 finalizedDisplayStringLength,
+	UINT32 selectedCandidateIndex,
+	UNICODESTRING viewType,
+	UINT32 durationMillisecondsToSelection,
+	UINT32 editingKeystrokeCount,
+	UINT32 backspaceCount,
+	UINT16 candidateSourceLangId,
+	GUID queryId,
+	BOOL32 isExternalDisplay
+	);
+
+InputSessionFinalized(
+	GUID editId,
+	UNICODESTRING applicationName,
+	BOOL32 isHardwareKeyboard,
+	UNICODESTRING keyboardLayout,
+	UINT64 totalTimeMilliseconds,
+	UINT32 finalizedDisplayStringLength,
+	UINT32 backspaceCountOutsideComposition,
+	UINT32 backspaceCountInsideComposition,
+	UINT32 f6HiraganaConversionCount,
+	UINT32 f7KatakanaConversionCount,
+	UINT32 f8HalfKatakanaConversionCount,
+	UINT32 f9NumberConversionCount,
+	UINT32 f10HalfNumberConversionCount,
+	UINT32 ctrlUHiraganaConversionCount,
+	UINT32 ctrlIKatakanaConversionCount,
+	UINT32 ctrlOHalfKatakanaConversionCount,
+	UINT32 ctrlPNumberConversionCount,
+	UINT32 ctrlTHalfNumberConversionCount,
+	UINT32 selectionWithSpaceCount,
+	UINT32 selectionWithConversionCount,
+	UINT32 noConversionCount
+	);
+
+MtfRequestSuggestion(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId,
+	UINT32 inputLocale,
+	UINT32 queryType,
+	UINT32 stringLength
+	);
+
+MtfRequestSuggestion(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+MtfRequestSuggestion(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+ActivityStoppedAutomatically(
+	VOID
+	);
+
+ActivityFailure(
+	UINT64 PartA_PrivTags,
+	HEX wilActivity,
+	UINT32 hresult,
+	UINT32 threadId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+ActivityFailure(
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+ActivityIntermediateStop(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+ActivityError(
+	UINT64 PartA_PrivTags,
+	SIGNED wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+KorProcessorKeyHandle(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId
+	);
+
+KorProcessorKeyHandle(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+KorProcessorKeyHandle(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	SIGNED wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+KorProcessorFocusChange(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+KorProcessorFocusChange(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId
+	);
+
+KorProcessorFocusChange(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+KorProcessorInitialize(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId
+	);
+
+KorProcessorInitialize(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+KorProcessorInitialize(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+CompositionFinalized(
+	GUID editId,
+	BOOL32 isHardwareKeyboard,
+	ANSISTRING keyboardLayout
+	);
+
+CandidateItemSelected(
+	GUID editId,
+	ANSISTRING keyboardLayout,
+	UNICODESTRING applicationName,
+	UINT32 actualKeystrokeCount,
+	UINT32 expectedKeystrokeCount,
+	UINT32 selectedCandidateIndex,
+	ANSISTRING candidateActionType,
+	ANSISTRING candidateSource,
+	UINT64 durationMillisecondsToSelection,
+	UINT32 backspaceCountInsideComposition,
+	UINT32 editingKeystrokeCount,
+	UINT32 compositionReadingStringLength,
+	UINT32 finalizedReadingStringLength
+	);
+
+InputSessionFinalized(
+	GUID editId,
+	UNICODESTRING applicationName,
+	BOOL32 isHardwareKeyboard,
+	ANSISTRING keyboardLayout,
+	UINT64 totalTimeMilliseconds,
+	UINT32 totalCharacterCount,
+	UINT32 backspaceKeyCountInsideComposition,
+	UINT32 backspaceKeyCountOutsideComposition
+	);
+
+VieProcessorKeyHandle(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId
+	);
+
+VieProcessorKeyHandle(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+VieProcessorKeyHandle(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	SIGNED wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+VieProcessorFocusChange(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+VieProcessorFocusChange(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId
+	);
+
+VieProcessorFocusChange(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+VieProcessorInitialize(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId
+	);
+
+VieProcessorInitialize(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+VieProcessorInitialize(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+InputSessionFinalized(
+	GUID editId,
+	ANSISTRING keyboardLayout,
+	UNICODESTRING applicationName,
+	BOOL32 isHardwareKeyboard,
+	UINT64 totalTimeMilliseconds,
+	UINT32 finalizedDisplayStringLength,
+	UINT32 backspaceCountOutsideComposition,
+	UINT32 backspaceCountInsideComposition,
+	UINT32 finalizedStringModificationCount,
+	UINT32 finalizedStringModificationLength
+	);
+
+CompositionInput(
+	GUID editId,
+	UNICODESTRING ime,
+	UINT32 inputScope,
+	UNICODESTRING env,
+	UINT64 previousTickCount,
+	UNICODESTRING actions,
+	UINT64 currentTickCount,
+	UNICODESTRING app,
+	UNICODESTRING version
+	);
+
+InitialPredictionInput(
+	GUID editId,
+	UNICODESTRING ime,
+	UINT32 inputScope,
+	UNICODESTRING env,
+	UINT64 previousTickCount,
+	UNICODESTRING actions,
+	UINT64 currentTickCount,
+	UNICODESTRING app,
+	UNICODESTRING version
+	);
+
+DirectInput(
+	GUID editId,
+	UNICODESTRING ime,
+	UINT32 inputScope,
+	UNICODESTRING env,
+	UINT64 previousTickCount,
+	UNICODESTRING actions,
+	UINT64 currentTickCount,
+	UNICODESTRING app,
+	UNICODESTRING version
+	);
+
+SiufChsWubiSatisfactionTriggered(
+	GUID editId
+	);
+
+SiufChsStrokeSatisfactionTriggered(
+	GUID editId
+	);
+
+SiufChsQwertySatisfactionTriggered(
+	GUID editId
+	);
+
+SiufChs12KeySatisfactionTriggered(
+	GUID editId
+	);
+
+CompositionStarted(
+	GUID editId,
+	UNICODESTRING ime,
+	UNICODESTRING app,
+	UNICODESTRING version
+	);
+
+InputSessionFinalized(
+	GUID editId,
+	UNICODESTRING applicationName,
+	UNICODESTRING keyboardLayout,
+	BOOL32 isHardwareKeyboard,
+	UINT64 totalTimeMilliseconds,
+	UINT32 finalizedDisplayStringLength,
+	UINT32 backspaceCountOutsideComposition,
+	UINT32 backspaceCountInsideComposition
+	);
+
+CompositionStarted(
+	UNICODESTRING ime,
+	UNICODESTRING app,
+	UNICODESTRING version
+	);
+
+CandidateItemSelected(
+	GUID editId,
+	UNICODESTRING applicationName,
+	UNICODESTRING keyboardLayout,
+	ANSISTRING candidateType,
+	BOOL32 isHardwareKeyboard,
+	BOOL32 isCandidateViewExpanded,
+	UINT32 compositionReadingStringLength,
+	UINT32 finalizedReadingStringLength,
+	UINT32 finalizedDisplayStringLength,
+	UINT32 selectedCandidateIndex,
+	UINT64 durationMillisecondsToSelection,
+	UINT32 editingKeystrokeCount,
+	UINT32 backspaceCount,
+	UINT32 primitiveCountOfLongCandidate
+	);
+
+SubmitCandidates(
+	VOID
+	);
+
+SubmitCandidatesWithHighlightPos(
+	VOID
+	);
+
+FODToastShown(
+	GUID editId
+	);
+
+EmEntryPointActivity(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+EmEntryPointActivity(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+EmEntryPointActivity(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UNICODESTRING IME,
+	UNICODESTRING KeyboardType,
+	UNICODESTRING Application,
+	UNICODESTRING ControlName,
+	UNICODESTRING TsfVersion,
+	UNICODESTRING SchemaVersion,
+	UNICODESTRING E2EScenario,
+	UNICODESTRING EMEntryPoint,
+	UINT32 SuccessCount,
+	UINT32 FailureCount
+	);
+
+EmEntryPointActivity(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId,
+	UNICODESTRING IME,
+	UNICODESTRING KeyboardType,
+	UNICODESTRING Application,
+	UNICODESTRING ControlName,
+	UNICODESTRING TsfVersion,
+	UNICODESTRING SchemaVersion,
+	UNICODESTRING E2EScenario,
+	UNICODESTRING EMEntryPoint,
+	UINT32 SuccessCount,
+	UINT32 FailureCount
+	);
+
+EmEntryPointActivity(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId,
+	UNICODESTRING IME,
+	UNICODESTRING KeyboardType,
+	UNICODESTRING Application,
+	UNICODESTRING ControlName,
+	UNICODESTRING TsfVersion,
+	UNICODESTRING SchemaVersion,
+	UNICODESTRING E2EScenario,
+	UNICODESTRING EMEntryPoint
+	);
+
+CompositionInput(
+	GUID editId,
+	UNICODESTRING ime,
+	UNICODESTRING keyboardType,
+	UNICODESTRING tsfVersion,
+	UNICODESTRING app,
+	UINT32 inputScope,
+	UNICODESTRING version,
+	UINT64 previousTickCount,
+	UINT64 currentTickCount,
+	UNICODESTRING env,
+	UNICODESTRING actions
+	);
+
+DirectInput(
+	GUID editId,
+	UNICODESTRING ime,
+	UNICODESTRING keyboardType,
+	UNICODESTRING tsfVersion,
+	UNICODESTRING app,
+	UINT32 inputScope,
+	UNICODESTRING version,
+	UINT64 previousTickCount,
+	UINT64 currentTickCount,
+	UNICODESTRING env,
+	UNICODESTRING actions
+	);
+
+KeyProcessedDuration(
+	UNICODESTRING IME,
+	UNICODESTRING KeyboardType,
+	UNICODESTRING Application,
+	UNICODESTRING InputScenario,
+	UNICODESTRING TsfVersion,
+	UNICODESTRING SchemaVersion,
+	UINT32 SampleRate,
+	UINT32 KeyInIMETime
+	);
+
+KeyProcessed(
+	UNICODESTRING IME,
+	UNICODESTRING KeyboardType,
+	UNICODESTRING Application,
+	UNICODESTRING InputScenario,
+	UNICODESTRING TsfVersion,
+	UNICODESTRING SchemaVersion,
+	UINT32 CountBetween0to10ms,
+	UINT32 CountBetween10to20ms,
+	UINT32 CountBetween20to30ms,
+	UINT32 CountBetween30to40ms,
+	UINT32 CountBetween40to50ms,
+	UINT32 CountBetween50to60ms,
+	UINT32 CountBetween60to70ms,
+	UINT32 CountBetween70to80ms,
+	UINT32 CountBetween80to90ms,
+	UINT32 CountBetween90to100ms,
+	UINT32 CountLongerThan100ms
+	);
+
+CandidateSelectionActivity(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId,
+	INT64 candidateSelectionPerfCount
+	);
+
+CandidateSelectionActivity(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+CandidateSelectionActivity(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	SIGNED wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+SiufTriggered(
+	GUID editId,
+	UNICODESTRING TsfVersion,
+	UNICODESTRING Question
+	);
+
+TipWindowShown(
+	GUID editId,
+	UNICODESTRING tipWindowType
+	);
+
+TipWindowClicked(
+	GUID editId,
+	UNICODESTRING tipWindowType
+	);
+
+CorrectionGraphHasArcSpanGreaterThanSupportedEvent(
+	VOID
+	);
+
+InputService!HotKeyProcessor::DetectAndProcessHotKey(
+	ANSISTRING "Enabled hotkey found",
+	UINT32 vk,
+	BOOLEAN fKeyUp,
+	UINT32 m_uiModifiers,
+	UINT64 m_setKeysDown.size(),
+	UINT64 m_mapHotKeys.size()
+	);
+
+InputService!HotKeyProcessor::DetectAndProcessHotKey(
+	ANSISTRING "Called OnHotKeyDetected",
+	UINT32 phk->id,
+	UINT32 phk->fsModifiers,
+	UINT32 phk->vk,
+	UINT64 m_setKeysDown.size(),
+	UINT64 m_mapHotKeys.size()
+	);
+
+InputService!HotKeyProcessor::FindEnabledHotKey(
+	ANSISTRING "Registered HotKey was found, but was ignored because of KeyProcessingFlag_NoHotkeys flag.",
+	UINT32 fsModifiers,
+	UINT32 vk
+	);
+
+InputService!HotKeyProcessor::DetectAndProcessHotKey(
+	UINT32 vk,
+	BOOLEAN fKeyUp,
+	UINT32 m_uiModifiers,
+	UINT64 m_setKeysDown.size(),
+	UINT64 m_mapHotKeys.size()
+	);
+
+InputService!HotKeyProcessor vkey down(
+	UINT32 vk
+	);
+
+InputService!HotKeyProcessor::DetectAndProcessHotKey(
+	ANSISTRING "Checking hotkey for all keys up",
+	UINT32 pPreviousHotKey->id,
+	UINT32 pPreviousHotKey->fsModifiers,
+	UINT32 pPreviousHotKey->vk
+	);
+
+InputService!HotKeyProcessor::DetectAndProcessHotKey(
+	ANSISTRING "Called OnHotKeyAllKeysUp",
+	UINT32 pPreviousHotKey->id,
+	UINT32 pPreviousHotKey->fsModifiers,
+	UINT32 pPreviousHotKey->vk
+	);
+
+InputService!HotKeyProcessor::FindHotKey(
+	ANSISTRING "Searching for hotkey",
+	UINT32 vk,
+	UINT32 fsModifiers,
+	UINT64 m_setKeysDown.size(),
+	UINT64 m_mapHotKeys.size()
+	);
+
+InputService!HotKeyProcessor::DetectAndProcessHotKey(
+	ANSISTRING "Registered hotkey found",
+	UINT32 vk,
+	UINT32 fsModifiers,
+	UINT64 m_setKeysDown.size(),
+	UINT64 m_mapHotKeys.size()
+	);
+
+InputService!HotKeyProcessor::DetectAndProcessHotKey(
+	UINT32 m_uiModifiers,
+	UINT64 m_setKeysDown.size()
+	);
+
+CandidateUIEventReceived(
+	UINT32 Platform,
+	UINT32 KeyboardType,
+	UINT32 LocaleId,
+	BOOLEAN HasValidOwner,
+	UINT32 UIEventType,
+	UNICODESTRING EventVersion
+	);
+
+InputTriggered(
+	UINT32 Platform,
+	UINT32 LocaleId,
+	UINT32 KeyboardType,
+	UNICODESTRING AppName,
+	INT32 InputScope,
+	UINT32 Trigger,
+	UNICODESTRING EventVersion
+	);
+
+CandidateSelected(
+	UINT32 Platform,
+	UINT32 LocaleId,
+	UINT32 KeyboardType,
+	UNICODESTRING AppName,
+	INT32 InputScope,
+	UINT32 Trigger,
+	UNICODESTRING SearchString,
+	UNICODESTRING SelectedCandidate,
+	BOOL32 IsMultiSelection,
+	UNICODESTRING EventVersion
+	);
+
+CandidateSelected(
+	UINT32 Platform,
+	UINT32 LocaleId,
+	UINT32 KeyboardType,
+	UNICODESTRING AppName,
+	INT32 InputScope,
+	UINT32 Trigger,
+	UNICODESTRING SearchString,
+	UNICODESTRING SelectedCandidate,
+	UNICODESTRING EventVersion
+	);
+
+PerfCandShown(
+	UINT32 Platform,
+	UINT32 LocaleId,
+	UINT32 KeyboardType,
+	UNICODESTRING AppName,
+	INT32 InputScope,
+	UINT32 Trigger,
+	BOOL32 HasSearchText,
+	UINT32 Duration,
+	UNICODESTRING EventVersion
+	);
+
+ContextRequestReceived(
+	UINT32 Platform,
+	UINT32 LocaleId,
+	UINT32 KeyboardType,
+	UNICODESTRING AppName,
+	INT32 InputScope,
+	UINT32 Trigger,
+	BOOLEAN IsEditBufferEmpty,
+	UNICODESTRING EventVersion
+	);
+
+LoadSpellerUserDictionaryFailure(
+	INT32 HRESULT,
+	UINT32 LANGID,
+	UINT32 InitializationState,
+	UINT64 PartA_PrivTags
+	);
+
+Assert(
+	UINT32 assertVersion,
+	UINT32 rva,
+	UINT32 timestamp,
+	UINT32 imageSize,
+	ANSISTRING imageName,
+	UINT32 count,
+	UINT32 totalHits,
+	UINT32 ModuleCollection,
+	UINT32 GlobalCollection
+	);
+
+InputProfileChanged(
+	UINT64 PartA_PrivTags,
+	GUID previousTextServiceId,
+	GUID previousProfileId,
+	UINT32 previousLangId,
+	UINT32 previousKeyboardLayoutId,
+	UINT32 previousMobileLocaleId,
+	UNICODESTRING previousProfileName,
+	GUID textServiceId,
+	GUID profileId,
+	UINT32 langId,
+	UINT32 keyboardLayoutId,
+	UINT32 mobileLocaleId,
+	UNICODESTRING profileName
+	);
+
+InputSessionFinalized(
+	UINT64 PartA_PrivTags,
+	UNICODESTRING applicationName,
+	UNICODESTRING editControlName,
+	UINT32 processId,
+	UINT32 threadId,
+	UINT32 editControlId,
+	UINT32 inputScope,
+	BOOL32 isPrivateField,
+	UINT32 editSettings,
+	UINT32 inputSettings,
+	UINT32 frameworkType,
+	BOOL32 isLastKeyByHardwareKeyboard,
+	INT32 lastKeyType,
+	INT32 lastConversionMode,
+	UINT32 keystrokeCount,
+	UINT32 backspaceCount,
+	UINT32 moveCount,
+	UINT32 compositionKeystrokeCount,
+	UINT32 compositionBackspaceCount,
+	UINT32 compositionMoveCount,
+	UINT32 compositionEscapeCount,
+	UINT32 sipKeystrokeCount,
+	UINT32 sipBackspaceCount,
+	UINT32 sipMoveCount,
+	UINT32 sipCompositionKeystrokeCount,
+	UINT32 sipCompositionBackspaceCount,
+	UINT32 sipCompositionMoveCount,
+	UINT32 sipCompositionEscapeCount,
+	UINT32 compositionModeSwitchCount,
+	UINT32 compositionModeErrorCount,
+	UINT32 compositionHotKeyCount,
+	UINT32 injectedKeystrokeCount,
+	INT32 finalizedCharacterCount,
+	INT32 sipFinalizedCharacterCount,
+	UINT32 finalizedCompositionCount,
+	UINT32 sipFinalizedCompositionCount,
+	UINT32 cancelledCompositionCount,
+	UINT32 unhandledCompositionCount,
+	UINT32 unhandledSessionCount,
+	UINT32 cancelledKeystrokeCount,
+	UINT32 conversionModeSetCount,
+	UINT32 invalidConversionModeCount,
+	UINT32 sipVisibilitySwitchCount,
+	UINT32 accumulatedFinalizedCompositionCount,
+	UINT32 sipAccumulatedFinalizedCompositionCount,
+	UINT64 shortcutCount,
+	UINT64 shortcutWinCount,
+	UINT64 timeMilliseconds,
+	GUID textServiceId,
+	GUID profileId,
+	UINT32 langId,
+	UINT32 keyboardLayoutId,
+	UINT32 mobileLocaleId,
+	UNICODESTRING profileName,
+	INT32 layoutDeviceType,
+	UINT32 layoutLocaleId,
+	UNICODESTRING layoutName,
+	INT32 reason,
+	UINT32 keySentPerfTypical,
+	UINT32 keySentPerfResponsive,
+	UINT32 keySentPerfNotResponsive,
+	UINT32 textInsertedPerfTypical,
+	UINT32 textInsertedPerfResponsive,
+	UINT32 textInsertedPerfNotResponsive,
+	UINT64 worstKeyPerf,
+	INT32 worstKeyType,
+	BINARY eventData
+	);
+
+InputSessionStarted(
+	UINT64 PartA_PrivTags,
+	UNICODESTRING applicationName,
+	UNICODESTRING editControlName,
+	UINT32 processId,
+	UINT32 threadId,
+	UINT32 editControlId,
+	UINT32 inputScope,
+	BOOL32 isPrivateField,
+	UINT32 editSettings,
+	UINT32 inputSettings,
+	UINT32 frameworkType,
+	BOOL32 isFirstKeyByHardwareKeyboard,
+	INT32 firstKeyType,
+	BOOL32 isInComposition,
+	UINT64 firstKeyPerf,
+	GUID textServiceId,
+	GUID profileId,
+	UINT32 langId,
+	UINT32 keyboardLayoutId,
+	UINT32 mobileLocaleId,
+	UNICODESTRING profileName,
+	INT32 layoutDeviceType,
+	UINT32 layoutLocaleId,
+	UNICODESTRING layoutName,
+	UINT32 compositionHotKeyCount,
+	UINT32 inputProfileSwitchCount
+	);
+
+AppliedCompositionSuggestion(
+	GUID editId,
+	UNICODESTRING applicationName,
+	UINT32 inputScope,
+	UNICODESTRING originalWord,
+	UNICODESTRING appliedWord,
+	ANSISTRING applyMethod,
+	UNICODESTRING locale,
+	UINT32 inputMethodId
+	);
+
+ShapeWrittenText(
+	GUID editId,
+	UINT64 PartA_PrivTags,
+	UNICODESTRING applicationName,
+	UINT32 inputScope,
+	COUNTEDSTRING userText,
+	UNICODESTRING installedLangauges,
+	BOOL32 isHwKbdMode
+	);
+
+RedSquiggle(
+	GUID editId,
+	UNICODESTRING word,
+	UNICODESTRING locale,
+	UNICODESTRING applicationName,
+	UINT32 inputScope,
+	BOOL32 isHwKbdMode
+	);
+
+DPTipcSample(
+	GUID editId,
+	BOOLEAN UtcAggParams,
+	UINT32 Period,
+	UINT32 MaxEvents,
+	UINT8 Mode,
+	UINT64 PartA_PrivTags,
+	UNICODESTRING applicationName,
+	UINT32 inputScope,
+	COUNTEDSTRING userText,
+	UNICODESTRING installedLangauges,
+	BOOL32 isHwKbdMode
+	);
+
+InputService!TextBuffer::SetOrReplaceRun(
+	INT32 cpStart,
+	INT32 cpEnd,
+	INT32 cchCachedLength,
+	ANSISTRING "Delete failed for Unpopulate - could leak memory from cpStart to cchCachedLength"
+	);
+
+SpeechProcessorSetLocaleEvent(
+	UINT32 lcid
+	);
+
+SpeechProcessorInitializeEvent(
+	VOID
+	);
+
+SpeechProcessorActivateOnSelectionEvent(
+	VOID
+	);
+
+SpeechCandidateReplacementActivity(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId,
+	INT32 speechCandidateIndex
+	);
+
+OnStringKey(
+	UINT16 virtualKey,
+	UINT16 text
+	);
+
+SpeechProcessorActivateOnTapEvent(
+	VOID
+	);
+
+SpeechProcessorUninitializeEvent(
+	VOID
+	);
+
+SpeechCandidateReplacementActivity(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+SetCandidateList(
+	VOID
+	);
+
+SpeechCandidateReplacementActivity(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+UpdateContext(
+	VOID
+	);
+
+NotifySelection(
+	VOID
+	);
+
+SpeechCandidateReplacementActivity(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	INT32 speechCandidateIndex
+	);
+
+SpeechProcessorPseudoActivatedActivity(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	SIGNED wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+Activate(
+	VOID
+	);
+
+NotifyAction(
+	VOID
+	);
+
+Deactivate(
+	VOID
+	);
+
+SpeechCandidateReplacementActivity(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId
+	);
+
+NotifyFocusLoss(
+	VOID
+	);
+
+NotifyFocusGained(
+	VOID
+	);
+
+InputProcessorEventActivity(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId
+	);
+
+SpeechProcessorPseudoActivatedActivity(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+InputProcessorEventActivity(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+InputProcessorEventActivity(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+InstallLayoutOrTipPrivateWorker(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId
+	);
+
+InstallLayoutOrTipPrivateWorker(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	SIGNED wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+InstallLayoutOrTipPrivateWorker(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+SetDefaultInputMethod(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId,
+	UNICODESTRING Parameter
+	);
+
+SetDefaultInputMethod(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	SIGNED wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+SetDefaultInputMethod(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+CorrectionGrapthAlignmentActivity(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId
+	);
+
+NewDictationSessionActivity(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId
+	);
+
+SegmentPartialResultActivity(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId
+	);
+
+SegmentCommitingActivity(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId
+	);
+
+UnitCommandActivity(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId
+	);
+
+InputProcessorCreationActivity(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId
+	);
+
+SpeechCandidateRetrievalActivity(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId
+	);
+
+AllTextFinalizedEvent(
+	INT32 eReason
+	);
+
+Verb(
+	UINT32 command,
+	UINT32 selectUnit,
+	UINT32 AlignUnit,
+	INT32 selectCount
+	);
+
+ConfusionNetworkLengthEvent(
+	INT32 recoLength,
+	INT32 cnLength
+	);
+
+UnitCommandActivity(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+CommandComplete(
+	VOID
+	);
+
+CommandException(
+	VOID
+	);
+
+UnitCommandActivity(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+CorrectionGrapthAlignmentActivity(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+CorrectionGrapthAlignmentActivity(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+SegmentCommitingActivity(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+SegmentCommitingActivity(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+SegmentPartialResultActivity(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+SegmentPartialResultActivity(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+NewDictationSessionActivity(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+NewDictationSessionActivity(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+SpeechCandidateRetrievalActivity(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 speechCandidateCount,
+	BOOL32 wordSelected
+	);
+
+SpeechCandidateRetrievalActivity(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId,
+	UINT32 speechCandidateCount,
+	BOOL32 wordSelected
+	);
+
+SpeechCandidateRetrievalActivity(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+SpeechCandidateRetrievalActivity(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+Trace(
+	ANSISTRING file,
+	ANSISTRING function,
+	UINT32 line,
+	UNICODESTRING message
+	);
+
+InputProcessorCreationActivity(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+InputProcessorCreationActivity(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+FirstHypothesisDisplayedEvent(
+	VOID
+	);
+

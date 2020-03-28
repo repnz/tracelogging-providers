@@ -1,0 +1,204 @@
+ProviderNames:
+	Microsoft.Windows.Analog.HolographicDriverClient
+
+
+
+**** Events *****
+FallbackError(
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+FallbackError(
+	UINT64 PartA_PrivTags,
+	SIGNED wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+LogKnownErrorHResult(
+	INT32 HResult,
+	ANSISTRING Function,
+	ANSISTRING SourceFile,
+	UINT32 SourceLine,
+	UNICODESTRING String,
+	UINT64 PartA_PrivTags
+	);
+
+SpatialObjectDeviceRemoved(
+	HEXINT64 pWatcher,
+	UNICODESTRING deviceInterfacePath,
+	UINT64 PartA_PrivTags
+	);
+
+SpatialObjectDeviceAdded(
+	HEXINT64 pWatcher,
+	UNICODESTRING deviceInterfacePath,
+	UINT64 PartA_PrivTags
+	);
+
+SpatialObjectDeviceWatcherStarted(
+	HEXINT64 pWatcher,
+	GUID deviceInterfaceGuid,
+	UINT64 PartA_PrivTags
+	);
+
+SpatialObjectDeviceWatcherDestroyed(
+	HEXINT64 pWatcher,
+	UINT64 PartA_PrivTags
+	);
+
+SpatialObjectDeviceWatcherCreated(
+	HEXINT64 pWatcher,
+	GUID deviceInterfaceGuid,
+	UINT64 PartA_PrivTags
+	);
+
+ObjectSubscriptionDestroyed(
+	HEXINT64 pSubscriptionObject,
+	GUID objectId,
+	HEXINT32 subscriptionFlags,
+	UINT64 PartA_PrivTags
+	);
+
+ObjectSubscriptionCreated(
+	HEXINT64 pSubscriptionObject,
+	GUID objectId,
+	HEXINT32 subscriptionFlags,
+	UINT64 PartA_PrivTags
+	);
+
+SpatialObjectFactoryDestroyed(
+	HEXINT64 pFactory,
+	UINT64 PartA_PrivTags
+	);
+
+SpatialObjectFactoryCreated(
+	HEXINT64 pFactory,
+	UINT64 PartA_PrivTags
+	);
+
+LogKnownErrorWin32(
+	UINT32 Error,
+	ANSISTRING Function,
+	ANSISTRING SourceFile,
+	UINT32 SourceLine,
+	UNICODESTRING String,
+	UINT64 PartA_PrivTags
+	);
+
+SpatialObjectDeviceClosed(
+	HEXINT64 pHandleWrapper,
+	UNICODESTRING deviceInterfacePath,
+	GUID deviceId,
+	UINT64 PartA_PrivTags
+	);
+
+SpatialObjectDeviceClosed(
+	HEXINT64 pHandleWrapper,
+	UNICODESTRING deviceInterfacePath,
+	GUID deviceId
+	);
+
+SpatialObjectDeviceOpened(
+	HEXINT64 pHandleWrapper,
+	UNICODESTRING deviceInterfacePath,
+	GUID deviceId,
+	UINT64 PartA_PrivTags
+	);
+
+SpatialObjectDeviceOpened(
+	HEXINT64 pHandleWrapper,
+	UNICODESTRING deviceInterfacePath,
+	GUID deviceId
+	);
+
+TraceLoggingError(
+	UNICODESTRING traceLoggingMessage
+	);
+
+SpatialObjectAdded(
+	HEXINT64 pWatcher,
+	GUID parentObjectId,
+	GUID propertyId,
+	GUID addedObjectId,
+	UINT64 PartA_PrivTags
+	);
+
+SpatialObjectRemoved(
+	HEXINT64 pWatcher,
+	GUID parentObjectId,
+	GUID propertyId,
+	GUID removedObjectId,
+	UINT64 PartA_PrivTags
+	);
+
+SpatialObjectWatcherDestroyed(
+	HEXINT64 pWatcher,
+	GUID parentObjectId,
+	GUID property,
+	UINT64 PartA_PrivTags
+	);
+
+SpatialObjectWatcherCreated(
+	HEXINT64 pWatcher,
+	GUID parentObjectId,
+	GUID property,
+	UINT64 PartA_PrivTags
+	);
+
+StateStreamReaderDestroyed(
+	HEXINT64 pReader,
+	GUID stateStreamObjectId,
+	HEXINT32 subscriptionFlags,
+	UINT64 PartA_PrivTags
+	);
+
+StateStreamReaderDestroyed(
+	HEXINT64 pReader,
+	GUID stateStreamObjectId,
+	HEXINT32 subscriptionFlags
+	);
+
+StateStreamReaderCreated(
+	HEXINT64 pReader,
+	GUID stateStreamObjectId,
+	HEXINT32 subscriptionFlags,
+	UINT64 PartA_PrivTags
+	);
+
+StateStreamReaderCreated(
+	HEXINT64 pReader,
+	GUID stateStreamObjectId,
+	HEXINT32 subscriptionFlags
+	);
+

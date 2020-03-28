@@ -1,0 +1,96 @@
+ProviderNames:
+	Microsoft.Windows.RemoteDesktop.RAIL.RdpInit
+	Microsoft.Windows.RemoteDesktop.RAIL.Server.Diagnostics
+
+
+
+**** Events *****
+ShellNotificationLaunchedInfo(
+	GUID activityId,
+	UINT32 shellNotificationOwnerHandle,
+	UNICODESTRING processName
+	);
+
+TrayErrorEvent(
+	GUID activityId,
+	UINT32 trayEventId,
+	UNICODESTRING trayEvent,
+	HRESULT result
+	);
+
+TrayEvent(
+	GUID activityId,
+	UINT32 trayEventId,
+	UNICODESTRING trayEvent
+	);
+
+StateTransitionFailure(
+	GUID activityId,
+	UINT32 oldStateId,
+	UNICODESTRING oldState,
+	UINT32 newStateId,
+	UNICODESTRING newState,
+	UINT32 initEventId,
+	UNICODESTRING initEvent,
+	HRESULT result
+	);
+
+StateTransitionSuccess(
+	GUID activityId,
+	UINT32 oldStateId,
+	UNICODESTRING oldState,
+	UINT32 newStateId,
+	UNICODESTRING newState,
+	UINT32 initEventId,
+	UNICODESTRING initEvent
+	);
+
+AppExecute(
+	GUID activityId,
+	UINT32 pid,
+	UNICODESTRING executableName
+	);
+
+RdpInitVersion(
+	GUID activityId,
+	UINT32 sessionId,
+	BOOL32 isSxS
+	);
+
+AppActivationFailure(
+	GUID activityId,
+	UINT32 source,
+	UINT32 operation,
+	UINT32 code,
+	UNICODESTRING codeSymbolic,
+	UNICODESTRING message,
+	BOOL32 internal
+	);
+
+AppExecutionFailure(
+	GUID activityId,
+	UINT32 source,
+	UINT32 operation,
+	UINT32 code,
+	UNICODESTRING codeSymbolic,
+	UNICODESTRING message,
+	BOOL32 internal
+	);
+
+ConnectionFailure(
+	GUID activityId,
+	UINT32 source,
+	UINT32 operation,
+	UINT32 code,
+	UNICODESTRING codeSymbolic,
+	UNICODESTRING message,
+	BOOL32 internal
+	);
+
+ConnectionCheckpoint(
+	GUID activityId,
+	UINT32 source,
+	UINT32 operation,
+	UNICODESTRING message
+	);
+

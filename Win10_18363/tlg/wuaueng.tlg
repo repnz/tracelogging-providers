@@ -1,0 +1,1168 @@
+ProviderNames:
+	SoftwareUpdateClientTelemetry
+	SoftwareUpdateClientTelemetry
+	SIHTraceLogging
+	WUTraceLogging
+
+
+
+**** Events *****
+DownloadHeartbeat(
+	UNICODESTRING DownloadState,
+	GUID UpdateId,
+	UINT32 RevisionNumber,
+	INT8 EventType,
+	GUID ServiceGuid,
+	UNICODESTRING FlightId,
+	UINT64 BytesTransferred,
+	UINT64 BytesTotal,
+	UINT32 ResumeCount,
+	UINT32 SuspendCount,
+	UINT32 SuspendReason,
+	INT32 PowerState,
+	UINT32 DownloadFlags,
+	UINT32 CurrentError,
+	ANSISTRING __TlgCV__,
+	ANSISTRING RelatedCV,
+	INT32 ConnectionStatus,
+	INT64 MOAppDownloadLimit,
+	INT64 MOUpdateDownloadLimit,
+	BOOL32 IsNetworkMetered,
+	UNICODESTRING WUDeviceID,
+	UNICODESTRING ClientVersion,
+	UNICODESTRING CallerApplicationName
+	);
+
+WUPerf(
+	UNICODESTRING Name,
+	UINT64 Value,
+	UNICODESTRING Unit,
+	UNICODESTRING Context
+	);
+
+UpdateMetadataIntegrity(
+	UNICODESTRING EventScenario,
+	ANSISTRING __TlgCV__,
+	GUID ServiceGuid,
+	UNICODESTRING EndpointUrl,
+	UNICODESTRING SLSPrograms,
+	UINT8 MetadataIntegrityMode,
+	UNICODESTRING RawMode,
+	HRESULT StatusCode,
+	HRESULT ExtendedStatusCode,
+	UNICODESTRING CallerApplicationName,
+	UINT32 RevisionId,
+	GUID UpdateId,
+	UINT32 RevisionNumber,
+	FILETIME TimestampTokenId,
+	UINT32 LeafCertId,
+	UNICODESTRING SHA256OfLeafCertPublicKey,
+	UNICODESTRING MetadataSignature,
+	UNICODESTRING SignatureAlgorithm,
+	UNICODESTRING SHA256OfTimestampToken
+	);
+
+UpdateMetadataIntegrity(
+	UNICODESTRING EventScenario,
+	ANSISTRING __TlgCV__,
+	GUID ServiceGuid,
+	UNICODESTRING EndpointUrl,
+	UNICODESTRING SLSPrograms,
+	UINT8 MetadataIntegrityMode,
+	UNICODESTRING RawMode,
+	HRESULT StatusCode,
+	HRESULT ExtendedStatusCode,
+	UNICODESTRING CallerApplicationName,
+	FILETIME TimestampTokenId,
+	UINT32 ValidityWindowInDays,
+	UNICODESTRING SHA256OfTimestampToken
+	);
+
+UpdateMetadataIntegrity(
+	UNICODESTRING EventScenario,
+	ANSISTRING __TlgCV__,
+	GUID ServiceGuid,
+	UNICODESTRING EndpointUrl,
+	UNICODESTRING SLSPrograms,
+	UINT8 MetadataIntegrityMode,
+	UNICODESTRING RawMode,
+	HRESULT StatusCode,
+	HRESULT ExtendedStatusCode,
+	UNICODESTRING CallerApplicationName,
+	UNICODESTRING RawValidityWindowInDays,
+	UINT32 LeafCertId,
+	UNICODESTRING SHA256OfLeafCerData,
+	UNICODESTRING ListOfSHA256OfIntermediateCerData
+	);
+
+UpdateMetadataIntegrity(
+	UNICODESTRING EventScenario,
+	ANSISTRING __TlgCV__,
+	GUID ServiceGuid,
+	UNICODESTRING EndpointUrl,
+	UNICODESTRING SLSPrograms,
+	UINT8 MetadataIntegrityMode,
+	UNICODESTRING RawMode,
+	HRESULT StatusCode,
+	HRESULT ExtendedStatusCode,
+	UNICODESTRING CallerApplicationName
+	);
+
+ApplicabilityResults(
+	ANSISTRING __TlgCV__,
+	GUID ServiceGuid,
+	UNICODESTRING CallerApplicationName,
+	UNICODESTRING Criteria,
+	UNICODESTRING InstalledCatsOrDets,
+	UNICODESTRING NotApplicableCatsOrDets,
+	UNICODESTRING InstalledUpds,
+	UNICODESTRING InstallableUpds,
+	UNICODESTRING NotApplicableUpds
+	);
+
+CheckForUpdates(
+	UNICODESTRING EventScenario,
+	ANSISTRING __TlgCV__,
+	UNICODESTRING WUDeviceID,
+	GUID ServiceGuid,
+	UNICODESTRING CallerApplicationName,
+	INT32 StatusCode,
+	UNICODESTRING Context
+	);
+
+CheckForUpdates(
+	UNICODESTRING EventScenario,
+	ANSISTRING __TlgCV__,
+	UNICODESTRING WUDeviceID,
+	GUID ServiceGuid,
+	UNICODESTRING CallerApplicationName,
+	INT32 StatusCode
+	);
+
+UpdateDetected(
+	ANSISTRING __TlgCV__,
+	UNICODESTRING WUDeviceID,
+	UNICODESTRING CallerApplicationName,
+	INT32 NumberOfApplicableUpdates,
+	UNICODESTRING ApplicableUpdateInfo,
+	UNICODESTRING IntentPFNs,
+	ANSISTRING RelatedCV,
+	GUID ServiceGuid
+	);
+
+CheckForUpdates(
+	UNICODESTRING EventScenario,
+	GUID EventInstanceID,
+	UNICODESTRING ClientVersion,
+	UNICODESTRING WUDeviceID,
+	ANSISTRING __TlgCV__,
+	UNICODESTRING CallerApplicationName,
+	UNICODESTRING ProcessName,
+	GUID ServiceGuid,
+	ANSISTRING RelatedCV,
+	BOOLEAN IsWUfBEnabled,
+	BOOLEAN IsWUfBDualScanEnabled,
+	INT8 QualityUpdatePause,
+	INT8 FeatureUpdatePause,
+	UINT32 CommonProps,
+	INT32 StatusCode,
+	INT32 ExtendedStatusCode,
+	GUID ActivityMatchingId,
+	INT8 SyncType,
+	INT8 IPVersion,
+	INT32 NumberOfApplicationsCategoryScanEvaluated,
+	INT32 ScanDurationInSeconds,
+	INT32 ScanEnqueueTime,
+	INT32 NumberOfLoop,
+	INT32 NumberOfUpdatesEvaluated,
+	INT32 NumberOfNewUpdatesFromServiceSync,
+	UNICODESTRING ServiceUrl,
+	BOOL32 Online,
+	BOOL32 AllowCachedResults,
+	INT8 MetadataIntegrityMode,
+	UINT32 TotalNumMetadataSignatures,
+	UINT32 NumFailedMetadataSignatures,
+	BOOLEAN DriverSyncPassPerformed,
+	UINT32 ScanProps,
+	INT32 MSIError,
+	INT32 DriverError,
+	INT32 FailedUpdatesCount,
+	GUID FailedUpdateGuids,
+	UNICODESTRING CapabilityDetectoidGuid,
+	UNICODESTRING ExtendedMetadataCabUrl,
+	INT32 CDNId,
+	UNICODESTRING CDNCountryCode,
+	UINT8 NetworkConnectivityDetected,
+	UNICODESTRING IntentPFNs
+	);
+
+CheckForUpdates(
+	UNICODESTRING EventScenario,
+	GUID EventInstanceID,
+	UNICODESTRING ClientVersion,
+	UNICODESTRING WUDeviceID,
+	ANSISTRING __TlgCV__,
+	UNICODESTRING CallerApplicationName,
+	UNICODESTRING ProcessName,
+	GUID ServiceGuid,
+	ANSISTRING RelatedCV,
+	BOOLEAN IsWUfBEnabled,
+	BOOLEAN IsWUfBDualScanEnabled,
+	INT8 QualityUpdatePause,
+	INT8 FeatureUpdatePause,
+	UINT32 CommonProps,
+	INT32 StatusCode,
+	INT32 ExtendedStatusCode,
+	GUID ActivityMatchingId,
+	INT8 SyncType,
+	INT8 IPVersion,
+	INT32 NumberOfApplicationsCategoryScanEvaluated,
+	INT32 ScanDurationInSeconds,
+	INT32 ScanEnqueueTime,
+	INT32 NumberOfLoop,
+	INT32 NumberOfUpdatesEvaluated,
+	INT32 NumberOfNewUpdatesFromServiceSync,
+	UNICODESTRING ServiceUrl,
+	BOOL32 Online,
+	BOOL32 AllowCachedResults,
+	INT8 MetadataIntegrityMode,
+	UINT32 TotalNumMetadataSignatures,
+	UINT32 NumFailedMetadataSignatures,
+	BOOLEAN DriverSyncPassPerformed,
+	UINT32 ScanProps,
+	INT32 NumberOfApplicableUpdates,
+	UNICODESTRING ApplicableUpdateInfo,
+	UINT32 WebServiceRetryMethods,
+	UNICODESTRING IntentPFNs
+	);
+
+CheckForUpdates(
+	UNICODESTRING EventScenario,
+	GUID EventInstanceID,
+	UNICODESTRING ClientVersion,
+	UNICODESTRING WUDeviceID,
+	ANSISTRING __TlgCV__,
+	UNICODESTRING CallerApplicationName,
+	UNICODESTRING ProcessName,
+	GUID ServiceGuid,
+	ANSISTRING RelatedCV,
+	BOOLEAN IsWUfBEnabled,
+	BOOLEAN IsWUfBDualScanEnabled,
+	INT8 QualityUpdatePause,
+	INT8 FeatureUpdatePause,
+	UINT32 CommonProps,
+	INT32 StatusCode,
+	INT32 ExtendedStatusCode,
+	GUID ActivityMatchingId,
+	INT8 SyncType,
+	INT8 IPVersion,
+	INT32 NumberOfApplicationsCategoryScanEvaluated,
+	INT32 ScanDurationInSeconds,
+	INT32 ScanEnqueueTime,
+	INT32 NumberOfLoop,
+	INT32 NumberOfUpdatesEvaluated,
+	INT32 NumberOfNewUpdatesFromServiceSync,
+	UNICODESTRING ServiceUrl,
+	BOOL32 Online,
+	BOOL32 AllowCachedResults,
+	INT8 MetadataIntegrityMode,
+	UINT32 TotalNumMetadataSignatures,
+	UINT32 NumFailedMetadataSignatures,
+	BOOLEAN DriverSyncPassPerformed,
+	UINT32 ScanProps,
+	INT32 NumberOfApplicableUpdates,
+	UNICODESTRING ApplicableUpdateInfo,
+	UINT32 WebServiceRetryMethods,
+	UNICODESTRING DeferredUpdates,
+	UNICODESTRING PausedUpdates,
+	UNICODESTRING BranchReadinessLevel,
+	INT16 DeferralPolicySources,
+	INT16 QualityUpdateDeferral,
+	UNICODESTRING PauseQualityUpdatesStartTime,
+	UNICODESTRING PauseQualityUpdatesEndTime,
+	UINT32 QualityUpdatePausePeriod,
+	INT16 FeatureUpdateDeferral,
+	UNICODESTRING PauseFeatureUpdatesStartTime,
+	UNICODESTRING PauseFeatureUpdatesEndTime,
+	UINT32 FeatureUpdatePausePeriod,
+	INT8 DriverExclusionPolicy,
+	UNICODESTRING IntentPFNs
+	);
+
+CheckForUpdates(
+	UNICODESTRING EventScenario,
+	GUID EventInstanceID,
+	UNICODESTRING ClientVersion,
+	UNICODESTRING WUDeviceID,
+	ANSISTRING __TlgCV__,
+	UNICODESTRING CallerApplicationName,
+	UNICODESTRING ProcessName,
+	GUID ServiceGuid,
+	ANSISTRING RelatedCV,
+	BOOLEAN IsWUfBEnabled,
+	BOOLEAN IsWUfBDualScanEnabled,
+	INT8 QualityUpdatePause,
+	INT8 FeatureUpdatePause,
+	UINT32 CommonProps,
+	UNICODESTRING ClientVersion,
+	INT32 StatusCode,
+	INT32 ExtendedStatusCode,
+	GUID ActivityMatchingId,
+	INT8 SyncType,
+	INT8 IPVersion,
+	INT32 NumberOfApplicationsCategoryScanEvaluated,
+	INT32 ScanDurationInSeconds,
+	INT32 ScanEnqueueTime,
+	INT32 NumberOfLoop,
+	INT32 NumberOfUpdatesEvaluated,
+	INT32 NumberOfNewUpdatesFromServiceSync,
+	UNICODESTRING ServiceUrl,
+	BOOL32 Online,
+	BOOL32 AllowCachedResults,
+	INT8 MetadataIntegrityMode,
+	UINT32 TotalNumMetadataSignatures,
+	UINT32 NumFailedMetadataSignatures,
+	BOOLEAN DriverSyncPassPerformed,
+	UINT32 ScanProps
+	);
+
+CheckForUpdates(
+	UNICODESTRING EventScenario,
+	GUID EventInstanceID,
+	UNICODESTRING ClientVersion,
+	UNICODESTRING WUDeviceID,
+	ANSISTRING __TlgCV__,
+	UNICODESTRING CallerApplicationName,
+	UNICODESTRING ProcessName,
+	GUID ServiceGuid,
+	ANSISTRING RelatedCV,
+	BOOLEAN IsWUfBEnabled,
+	BOOLEAN IsWUfBDualScanEnabled,
+	INT8 QualityUpdatePause,
+	INT8 FeatureUpdatePause,
+	UINT32 CommonProps,
+	INT8 IsWUfBFederatedScanDisabled,
+	UNICODESTRING ClientVersion,
+	GUID ActivityMatchingId
+	);
+
+DownloadCheckpoint(
+	UNICODESTRING EventScenario,
+	INT8 EventType,
+	ANSISTRING FileId,
+	UNICODESTRING FileName,
+	INT32 StatusCode,
+	INT32 ExtendedStatusCode,
+	ANSISTRING __TlgCV__,
+	ANSISTRING RelatedCV,
+	UNICODESTRING FlightId,
+	UNICODESTRING CallerApplicationName,
+	GUID ServiceGuid,
+	GUID UpdateId,
+	UINT32 RevisionNumber,
+	UNICODESTRING WUDeviceID,
+	UNICODESTRING ClientVersion
+	);
+
+Download(
+	UNICODESTRING EventScenario,
+	GUID EventInstanceID,
+	UNICODESTRING ClientVersion,
+	UNICODESTRING WUDeviceID,
+	ANSISTRING __TlgCV__,
+	UNICODESTRING CallerApplicationName,
+	UNICODESTRING ProcessName,
+	GUID ServiceGuid,
+	ANSISTRING RelatedCV,
+	BOOLEAN IsWUfBEnabled,
+	BOOLEAN IsWUfBDualScanEnabled,
+	INT8 QualityUpdatePause,
+	INT8 FeatureUpdatePause,
+	UINT32 CommonProps,
+	UNICODESTRING HardwareId,
+	INT16 UpdateImportance,
+	INT32 RegulationResult,
+	INT8 EventType,
+	GUID UpdateId,
+	UINT32 RevisionNumber,
+	GUID BundleId,
+	UINT32 BundleRevisionNumber,
+	INT32 DownloadPriority,
+	UNICODESTRING FlightId,
+	INT32 FlightBuildNumber,
+	UNICODESTRING PackageFullName,
+	UINT32 DownloadProps,
+	INT32 StatusCode,
+	INT32 ExtendedStatusCode
+	);
+
+Download(
+	UNICODESTRING EventScenario,
+	GUID EventInstanceID,
+	UNICODESTRING ClientVersion,
+	UNICODESTRING WUDeviceID,
+	ANSISTRING __TlgCV__,
+	UNICODESTRING CallerApplicationName,
+	UNICODESTRING ProcessName,
+	GUID ServiceGuid,
+	ANSISTRING RelatedCV,
+	BOOLEAN IsWUfBEnabled,
+	BOOLEAN IsWUfBDualScanEnabled,
+	INT8 QualityUpdatePause,
+	INT8 FeatureUpdatePause,
+	UINT32 CommonProps,
+	UNICODESTRING HardwareId,
+	INT16 UpdateImportance,
+	INT32 RegulationResult,
+	INT8 EventType,
+	GUID UpdateId,
+	UINT32 RevisionNumber,
+	GUID BundleId,
+	UINT32 BundleRevisionNumber,
+	INT32 DownloadPriority,
+	UNICODESTRING FlightId,
+	INT32 FlightBuildNumber,
+	UNICODESTRING PackageFullName,
+	UINT32 DownloadProps
+	);
+
+Download(
+	UNICODESTRING EventScenario,
+	GUID EventInstanceID,
+	UNICODESTRING ClientVersion,
+	UNICODESTRING WUDeviceID,
+	ANSISTRING __TlgCV__,
+	UNICODESTRING CallerApplicationName,
+	UNICODESTRING ProcessName,
+	GUID ServiceGuid,
+	ANSISTRING RelatedCV,
+	BOOLEAN IsWUfBEnabled,
+	BOOLEAN IsWUfBDualScanEnabled,
+	INT8 QualityUpdatePause,
+	INT8 FeatureUpdatePause,
+	UINT32 CommonProps,
+	UNICODESTRING HardwareId,
+	INT16 UpdateImportance,
+	INT32 RegulationResult,
+	INT8 EventType,
+	GUID UpdateId,
+	UINT32 RevisionNumber,
+	GUID BundleId,
+	UINT32 BundleRevisionNumber,
+	INT32 DownloadPriority,
+	UNICODESTRING FlightId,
+	INT32 FlightBuildNumber,
+	UNICODESTRING PackageFullName,
+	UINT32 DownloadProps,
+	INT32 StatusCode,
+	INT32 ExtendedStatusCode,
+	INT8 IPVersion,
+	INT32 NetworkCost,
+	INT8 NetworkRestrictionStatus,
+	INT64 ConnectTime,
+	UNICODESTRING HostName,
+	INT32 CDNId,
+	UNICODESTRING CDNCountryCode,
+	INT64 ActiveDownloadTime,
+	INT32 RepeatFailCount,
+	UINT64 BytesDownloaded,
+	UINT64 TotalExpectedBytes,
+	BOOL32 UsedDO,
+	UINT8 CbsMethod,
+	UINT64 BundleBytesDownloaded,
+	INT32 BundleRepeatFailCount,
+	UINT32 AppXBlockHashFailures,
+	UNICODESTRING AppXScope,
+	INT32 PostDnldTime,
+	INT32 SizeCalcTime
+	);
+
+Download(
+	UNICODESTRING EventScenario,
+	GUID EventInstanceID,
+	UNICODESTRING ClientVersion,
+	UNICODESTRING WUDeviceID,
+	ANSISTRING __TlgCV__,
+	UNICODESTRING CallerApplicationName,
+	UNICODESTRING ProcessName,
+	GUID ServiceGuid,
+	ANSISTRING RelatedCV,
+	BOOLEAN IsWUfBEnabled,
+	BOOLEAN IsWUfBDualScanEnabled,
+	INT8 QualityUpdatePause,
+	INT8 FeatureUpdatePause,
+	UINT32 CommonProps,
+	UNICODESTRING HardwareId,
+	INT16 UpdateImportance,
+	INT32 RegulationResult,
+	INT8 EventType,
+	GUID UpdateId,
+	UINT32 RevisionNumber,
+	GUID BundleId,
+	UINT32 BundleRevisionNumber,
+	INT32 DownloadPriority,
+	UNICODESTRING FlightId,
+	INT32 FlightBuildNumber,
+	UNICODESTRING PackageFullName,
+	UINT32 DownloadProps,
+	UINT32 Reason
+	);
+
+Revert(
+	UNICODESTRING EventScenario,
+	GUID EventInstanceID,
+	UNICODESTRING ClientVersion,
+	UNICODESTRING WUDeviceID,
+	ANSISTRING __TlgCV__,
+	UNICODESTRING CallerApplicationName,
+	UNICODESTRING ProcessName,
+	GUID ServiceGuid,
+	ANSISTRING RelatedCV,
+	BOOLEAN IsWUfBEnabled,
+	BOOLEAN IsWUfBDualScanEnabled,
+	INT8 QualityUpdatePause,
+	INT8 FeatureUpdatePause,
+	UINT32 CommonProps,
+	INT32 StatusCode,
+	INT32 ExtendedStatusCode,
+	GUID TargetGroupId,
+	INT32 RepeatFailCount,
+	INT8 EventType,
+	UNICODESTRING TargetingVersion,
+	INT16 UpdateImportance,
+	BOOL32 IsFirmware,
+	BOOL32 IsFinalOutcomeEvent,
+	UNICODESTRING DriverPingBack,
+	UNICODESTRING DriverRecoveryIds,
+	UNICODESTRING HardwareId,
+	INT8 IsSuccessFailurePostReboot,
+	GUID UpdateId,
+	UINT32 RevisionNumber,
+	GUID BundleId,
+	UINT32 BundleRevisionNumber,
+	INT32 HandlerType,
+	UNICODESTRING FlightId,
+	BOOL32 UsedSystemVolume,
+	INT32 FlightBuildNumber,
+	INT32 BundleRepeatFailCount,
+	BOOLEAN MergedUpdate,
+	UINT8 DeploymentProviderMode,
+	INT32 CSIErrorType
+	);
+
+Uninstall(
+	UNICODESTRING EventScenario,
+	GUID EventInstanceID,
+	UNICODESTRING ClientVersion,
+	UNICODESTRING WUDeviceID,
+	ANSISTRING __TlgCV__,
+	UNICODESTRING CallerApplicationName,
+	UNICODESTRING ProcessName,
+	GUID ServiceGuid,
+	ANSISTRING RelatedCV,
+	BOOLEAN IsWUfBEnabled,
+	BOOLEAN IsWUfBDualScanEnabled,
+	INT8 QualityUpdatePause,
+	INT8 FeatureUpdatePause,
+	UINT32 CommonProps,
+	INT32 StatusCode,
+	INT32 ExtendedStatusCode,
+	GUID TargetGroupId,
+	INT32 RepeatFailCount,
+	INT8 EventType,
+	UNICODESTRING TargetingVersion,
+	INT16 UpdateImportance,
+	BOOL32 IsFirmware,
+	BOOL32 IsFinalOutcomeEvent,
+	UNICODESTRING DriverPingBack,
+	UNICODESTRING DriverRecoveryIds,
+	UNICODESTRING HardwareId,
+	INT8 IsSuccessFailurePostReboot,
+	GUID UpdateId,
+	UINT32 RevisionNumber,
+	GUID BundleId,
+	UINT32 BundleRevisionNumber,
+	INT32 HandlerType,
+	UNICODESTRING FlightId,
+	BOOL32 UsedSystemVolume,
+	INT32 FlightBuildNumber,
+	INT32 BundleRepeatFailCount,
+	BOOLEAN MergedUpdate,
+	UINT8 DeploymentProviderMode
+	);
+
+Install(
+	UNICODESTRING EventScenario,
+	GUID EventInstanceID,
+	UNICODESTRING ClientVersion,
+	UNICODESTRING WUDeviceID,
+	ANSISTRING __TlgCV__,
+	UNICODESTRING CallerApplicationName,
+	UNICODESTRING ProcessName,
+	GUID ServiceGuid,
+	ANSISTRING RelatedCV,
+	BOOLEAN IsWUfBEnabled,
+	BOOLEAN IsWUfBDualScanEnabled,
+	INT8 QualityUpdatePause,
+	INT8 FeatureUpdatePause,
+	UINT32 CommonProps,
+	INT32 StatusCode,
+	INT32 ExtendedStatusCode,
+	GUID TargetGroupId,
+	INT32 RepeatFailCount,
+	INT8 EventType,
+	UNICODESTRING TargetingVersion,
+	INT16 UpdateImportance,
+	BOOL32 IsFirmware,
+	BOOL32 IsFinalOutcomeEvent,
+	UNICODESTRING DriverPingBack,
+	UNICODESTRING DriverRecoveryIds,
+	UNICODESTRING HardwareId,
+	INT8 IsSuccessFailurePostReboot,
+	GUID UpdateId,
+	UINT32 RevisionNumber,
+	GUID BundleId,
+	UINT32 BundleRevisionNumber,
+	INT32 HandlerType,
+	UNICODESTRING FlightId,
+	BOOL32 UsedSystemVolume,
+	INT32 FlightBuildNumber,
+	INT32 BundleRepeatFailCount,
+	BOOLEAN MergedUpdate,
+	UINT8 DeploymentProviderMode,
+	INT32 ExtendedErrorCode,
+	INT32 CSIErrorType,
+	UNICODESTRING MsiAction,
+	UNICODESTRING MsiProductCode,
+	UNICODESTRING TransactionCode,
+	UNICODESTRING PackageFullName,
+	UNICODESTRING IntentPFNs,
+	UINT32 InstallProps
+	);
+
+Commit(
+	UNICODESTRING EventScenario,
+	ANSISTRING __TlgCV__,
+	GUID ServiceGuid,
+	INT8 EventType,
+	GUID UpdateId,
+	GUID BundleId,
+	UINT32 BundleRevisionNumber,
+	UINT32 RevisionNumber,
+	INT32 HandlerType,
+	UNICODESTRING FlightId,
+	UNICODESTRING CallerApplicationName,
+	UINT8 DeploymentProviderMode
+	);
+
+DataStoreHealth(
+	UNICODESTRING EventScenario,
+	INT32 StatusCode
+	);
+
+SLSDiscovery(
+	UNICODESTRING EventScenario,
+	UNICODESTRING WUAVersion,
+	GUID ServiceID,
+	UNICODESTRING UrlPath,
+	HRESULT HResult,
+	UNICODESTRING ETag,
+	INT64 HTTPStatusCode,
+	BOOLEAN IsBackground,
+	FILETIME NextExpirationTime,
+	UNICODESTRING EnvironmentId,
+	INT64 newRevisionId,
+	INT64 localRevisionId
+	);
+
+Metadata(
+	UNICODESTRING Info
+	);
+
+AppAU(
+	UNICODESTRING Info
+	);
+
+SIH(
+	UNICODESTRING Info
+	);
+
+EndPointProvider(
+	UNICODESTRING Info
+	);
+
+EEHandler(
+	UNICODESTRING Info
+	);
+
+Inventory(
+	UNICODESTRING Info
+	);
+
+Test(
+	UNICODESTRING Info
+	);
+
+OfflineSync(
+	UNICODESTRING Info
+	);
+
+ComApi(
+	UNICODESTRING Info
+	);
+
+DataStore(
+	UNICODESTRING Info
+	);
+
+WebServices(
+	UNICODESTRING Info
+	);
+
+Shared(
+	UNICODESTRING Info
+	);
+
+Handler(
+	UNICODESTRING Info
+	);
+
+Timer(
+	UNICODESTRING Info
+	);
+
+Setup(
+	UNICODESTRING Info
+	);
+
+Api(
+	UNICODESTRING Info
+	);
+
+IdleTimer(
+	UNICODESTRING Info
+	);
+
+Misc(
+	UNICODESTRING Info
+	);
+
+Driver(
+	UNICODESTRING Info
+	);
+
+ProtocolTalker(
+	UNICODESTRING Info
+	);
+
+Reporter(
+	UNICODESTRING Info
+	);
+
+DownloadManager(
+	UNICODESTRING Info
+	);
+
+SLS(
+	UNICODESTRING Info
+	);
+
+Metadata(
+	UNICODESTRING Info
+	);
+
+Agent(
+	UNICODESTRING Info
+	);
+
+AppAU(
+	UNICODESTRING Info
+	);
+
+SIH(
+	UNICODESTRING Info
+	);
+
+EndPointProvider(
+	UNICODESTRING Info
+	);
+
+EEHandler(
+	UNICODESTRING Info
+	);
+
+Inventory(
+	UNICODESTRING Info
+	);
+
+Test(
+	UNICODESTRING Info
+	);
+
+OfflineSync(
+	UNICODESTRING Info
+	);
+
+ComApi(
+	UNICODESTRING Info
+	);
+
+DataStore(
+	UNICODESTRING Info
+	);
+
+WebServices(
+	UNICODESTRING Info
+	);
+
+Shared(
+	UNICODESTRING Info
+	);
+
+Handler(
+	UNICODESTRING Info
+	);
+
+Timer(
+	UNICODESTRING Info
+	);
+
+Setup(
+	UNICODESTRING Info
+	);
+
+Api(
+	UNICODESTRING Info
+	);
+
+IdleTimer(
+	UNICODESTRING Info
+	);
+
+Misc(
+	UNICODESTRING Info
+	);
+
+Driver(
+	UNICODESTRING Info
+	);
+
+ProtocolTalker(
+	UNICODESTRING Info
+	);
+
+Reporter(
+	UNICODESTRING Info
+	);
+
+DownloadManager(
+	UNICODESTRING Info
+	);
+
+SLS(
+	UNICODESTRING Info
+	);
+
+Metadata(
+	UNICODESTRING Info
+	);
+
+Agent(
+	UNICODESTRING Info
+	);
+
+AppAU(
+	UNICODESTRING Info
+	);
+
+SIH(
+	UNICODESTRING Info
+	);
+
+EndPointProvider(
+	UNICODESTRING Info
+	);
+
+EEHandler(
+	UNICODESTRING Info
+	);
+
+Inventory(
+	UNICODESTRING Info
+	);
+
+Test(
+	UNICODESTRING Info
+	);
+
+OfflineSync(
+	UNICODESTRING Info
+	);
+
+ComApi(
+	UNICODESTRING Info
+	);
+
+DataStore(
+	UNICODESTRING Info
+	);
+
+WebServices(
+	UNICODESTRING Info
+	);
+
+Shared(
+	UNICODESTRING Info
+	);
+
+Handler(
+	UNICODESTRING Info
+	);
+
+Timer(
+	UNICODESTRING Info
+	);
+
+Setup(
+	UNICODESTRING Info
+	);
+
+Api(
+	UNICODESTRING Info
+	);
+
+IdleTimer(
+	UNICODESTRING Info
+	);
+
+Misc(
+	UNICODESTRING Info
+	);
+
+Driver(
+	UNICODESTRING Info
+	);
+
+ProtocolTalker(
+	UNICODESTRING Info
+	);
+
+Reporter(
+	UNICODESTRING Info
+	);
+
+DownloadManager(
+	UNICODESTRING Info
+	);
+
+SLS(
+	UNICODESTRING Info
+	);
+
+Metadata(
+	UNICODESTRING Info
+	);
+
+Agent(
+	UNICODESTRING Info
+	);
+
+AppAU(
+	UNICODESTRING Info
+	);
+
+SIH(
+	UNICODESTRING Info
+	);
+
+EndPointProvider(
+	UNICODESTRING Info
+	);
+
+EEHandler(
+	UNICODESTRING Info
+	);
+
+Inventory(
+	UNICODESTRING Info
+	);
+
+Test(
+	UNICODESTRING Info
+	);
+
+OfflineSync(
+	UNICODESTRING Info
+	);
+
+ComApi(
+	UNICODESTRING Info
+	);
+
+DataStore(
+	UNICODESTRING Info
+	);
+
+WebServices(
+	UNICODESTRING Info
+	);
+
+Shared(
+	UNICODESTRING Info
+	);
+
+Handler(
+	UNICODESTRING Info
+	);
+
+Timer(
+	UNICODESTRING Info
+	);
+
+Setup(
+	UNICODESTRING Info
+	);
+
+Api(
+	UNICODESTRING Info
+	);
+
+IdleTimer(
+	UNICODESTRING Info
+	);
+
+Misc(
+	UNICODESTRING Info
+	);
+
+Driver(
+	UNICODESTRING Info
+	);
+
+ProtocolTalker(
+	UNICODESTRING Info
+	);
+
+Reporter(
+	UNICODESTRING Info
+	);
+
+DownloadManager(
+	UNICODESTRING Info
+	);
+
+SLS(
+	UNICODESTRING Info
+	);
+
+Metadata(
+	UNICODESTRING Info
+	);
+
+Agent(
+	UNICODESTRING Info
+	);
+
+AppAU(
+	UNICODESTRING Info
+	);
+
+SIH(
+	UNICODESTRING Info
+	);
+
+EndPointProvider(
+	UNICODESTRING Info
+	);
+
+EEHandler(
+	UNICODESTRING Info
+	);
+
+Inventory(
+	UNICODESTRING Info
+	);
+
+Test(
+	UNICODESTRING Info
+	);
+
+OfflineSync(
+	UNICODESTRING Info
+	);
+
+ComApi(
+	UNICODESTRING Info
+	);
+
+DataStore(
+	UNICODESTRING Info
+	);
+
+WebServices(
+	UNICODESTRING Info
+	);
+
+Shared(
+	UNICODESTRING Info
+	);
+
+Handler(
+	UNICODESTRING Info
+	);
+
+Timer(
+	UNICODESTRING Info
+	);
+
+Setup(
+	UNICODESTRING Info
+	);
+
+Api(
+	UNICODESTRING Info
+	);
+
+IdleTimer(
+	UNICODESTRING Info
+	);
+
+Misc(
+	UNICODESTRING Info
+	);
+
+Driver(
+	UNICODESTRING Info
+	);
+
+ProtocolTalker(
+	UNICODESTRING Info
+	);
+
+Reporter(
+	UNICODESTRING Info
+	);
+
+DownloadManager(
+	UNICODESTRING Info
+	);
+
+SLS(
+	UNICODESTRING Info
+	);
+
+Agent(
+	UNICODESTRING Info
+	);
+
+WUPerf(
+	ANSISTRING __TlgCV__,
+	UNICODESTRING WebMethod,
+	UNICODESTRING Context,
+	INT32 StatusCode,
+	UNICODESTRING Detail,
+	UNICODESTRING Name,
+	UINT64 Value,
+	UNICODESTRING Unit
+	);
+

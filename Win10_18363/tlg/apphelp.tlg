@@ -1,0 +1,56 @@
+ProviderNames:
+	Microsoft.Windows.Compatibility.Apphelp
+	Microsoft.Windows.Compatibility.Encapsulation
+	Microsoft.Windows.Compatibility.Asl
+
+
+
+**** Events *****
+SdbFix(
+	GUID FixID,
+	UINT32 Flags,
+	UNICODESTRING ImageName,
+	UNICODESTRING AppName
+	);
+
+ApiShimInitialize(
+	UINT64 PartA_PrivTags,
+	ANSISTRING kind,
+	PID pid
+	);
+
+Api(
+	UINT64 PartA_PrivTags,
+	UINT16 ver,
+	ANSISTRING kind,
+	BOOL32 final,
+	PID pid,
+	STRING apis,
+	ANSISTRING name,
+	UINT32 called
+	);
+
+TelemetryClient(
+	UINT64 BinFileVersion,
+	ANSISTRING ChannelName,
+	ANSISTRING CorrelationVectors,
+	ANSISTRING Types,
+	ANSISTRING Names,
+	ANSISTRING Counts,
+	ANSISTRING Metrics,
+	UNICODESTRING Messages,
+	ANSISTRING ActivityResults
+	);
+
+TelemetryClient(
+	UINT64 BinFileVersion,
+	ANSISTRING ChannelName,
+	ANSISTRING CorrelationVectors,
+	ANSISTRING Types,
+	ANSISTRING Names,
+	ANSISTRING Counts,
+	ANSISTRING Metrics,
+	UNICODESTRING Messages,
+	ANSISTRING ActivityResults
+	);
+

@@ -1,0 +1,2440 @@
+ProviderNames:
+	Microsoft.Windows.App.Browser
+	Microsoft.Windows.App.Browser.Diagnostics
+	Microsoft.Windows.App.Browser.Aggregate
+	TelemetryAssert
+	TelemetryAssertDiagTrack
+	F12ToolsProvider
+	Microsoft.Windows.App.Browser
+
+
+
+**** Events *****
+Diagnostic(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	HEXINT64 telemetryContextFlags,
+	ANSISTRING ModuleName,
+	UNICODESTRING Message
+	);
+
+ContentCoreWindowReceivedFocus(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	INT32 focusDirection,
+	HEXINT64 coreWindow,
+	HEXINT64 inputWindow
+	);
+
+ConfiguredHostRightsForComponent(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid
+	);
+
+ConfigureHostRightsForComponentFailure(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	INT32 hr
+	);
+
+SetupControllerNavigation(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	BOOLEAN acceptDirectionalNavigation,
+	INT32 coreWindowRect.left,
+	INT32 coreWindowRect.right,
+	INT32 coreWindowRect.top,
+	INT32 coreWindowRect.bottom,
+	INT32 startPosition.x,
+	INT32 startPosition.y
+	);
+
+ActivationCanceledForNonActiveTab(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid
+	);
+
+RequestActivation(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	UINT32 isoCompHandle,
+	INT32 reason,
+	BOOLEAN acceptRestoreFocus,
+	BOOLEAN acceptDirectionalNavigation
+	);
+
+OnFocusNavigating(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	UINT32 isoCompHandle,
+	INT32 reason,
+	BOOLEAN acceptRestoreFocus,
+	BOOLEAN acceptDirectionalNavigation
+	);
+
+ControllerNavigationCrossedBoundsDispatchedCallback(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	INT32 point.x,
+	INT32 point.y,
+	INT32 coreWindowRect.left,
+	INT32 coreWindowRect.right,
+	INT32 coreWindowRect.top,
+	INT32 coreWindowRect.bottom,
+	INT32 reason
+	);
+
+FirstContentProcessActivation(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid
+	);
+
+ContentProcessMissingManagerTermination(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	UINT32 pid
+	);
+
+CpThread0_RunCoreApplication(
+	VOID
+	);
+
+OnWindowActivated(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	INT32 static_cast<int>(windowActivationState)
+	);
+
+ProxyStubFactoryUnregisteredIID(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	GUID IID
+	);
+
+FireOnBeforeUnloadEvent(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	UINT32 tabId,
+	UINT64 durationMilliseconds
+	);
+
+AskCortanaPaneInvokeFailed(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	UNICODESTRING Source,
+	UNICODESTRING Error,
+	INT32 HResult
+	);
+
+AskCortanaPaneInvoked(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	UNICODESTRING Source,
+	UNICODESTRING EndpointUrl,
+	INT32 isLink,
+	INT32 isImage
+	);
+
+NewTabProcessHandshakeCompleted(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	INT32 hrValue
+	);
+
+BrowserTabFrameActivatedIO(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	UINT32 tabId
+	);
+
+BrowserTabInitializing(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	UINT32 tabId
+	);
+
+BrowserTabBringIEToForeground_CoAllowSetForegroundWindow_Stop(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	HEXINT64 telemetryContextFlags,
+	INT32 hrASFW
+	);
+
+BrowserTabBringIEToForeground(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	HEXINT64 telemetryContextFlags
+	);
+
+BrowserTabBringIEToForeground_CoAllowSetForegroundWindow_Start(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	HEXINT64 telemetryContextFlags
+	);
+
+GetDominantImages(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	HEXINT64 telemetryContextFlags,
+	UINT32 isLogo,
+	UINT32 imageSource,
+	UNICODESTRING image
+	);
+
+HandleDominantImages(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	HEXINT64 telemetryContextFlags,
+	UINT32 imageCount
+	);
+
+ReplyAsyncWebDriverCommand(
+	ANSISTRING location,
+	UINT32 correlationID,
+	UINT32 responseCode,
+	ANSISTRING result
+	);
+
+HandleWebDriverMessage_Leave(
+	ANSISTRING location,
+	BOOL32 async,
+	UINT32 cmdCode,
+	UINT32 correlationID
+	);
+
+HandleWebDriverMessage_Enter(
+	ANSISTRING location,
+	UINT32 cmdCode,
+	UNICODESTRING method,
+	UNICODESTRING path,
+	UINT32 correlationID,
+	UINT32 timeout,
+	UNICODESTRING parameters
+	);
+
+AsyncHungCheck_ReplySent(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	HEXINT64 telemetryContextFlags,
+	UINT32 processId,
+	UINT32 threadId,
+	UINT32 correlationId,
+	INT32 hr
+	);
+
+Diagnostic(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	HEXINT64 telemetryContextFlags,
+	ANSISTRING ModuleName,
+	UNICODESTRING Message
+	);
+
+Diagnostic(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	HEXINT64 telemetryContextFlags,
+	ANSISTRING ModuleName,
+	UNICODESTRING Message
+	);
+
+UsableBrowser(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid
+	);
+
+TabCloseFastFailure(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid
+	);
+
+BrowserTabGetReadingContentError(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	INT32 hr,
+	UNICODESTRING errorMessage
+	);
+
+AnnotationEnterComplete(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	INT32 hresult,
+	UNICODESTRING errorMessage
+	);
+
+Annotation_RecoveryFailure(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	UINT32 failedModule,
+	INT32 errorCode
+	);
+
+Annotation_SaveRecoveryFailure(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	INT32 errorCode
+	);
+
+Annotation_RecoveryInitiated(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid
+	);
+
+AnnotationExitNavBackFailed(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid
+	);
+
+BookReader_CreationFailed(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	UNICODESTRING localStreamViewerUrl,
+	GUID protocolId,
+	INT32 hr
+	);
+
+FormFill_Credentials_Consent(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	GUID correlationGUID,
+	INT32 consentGiven,
+	BOOLEAN isNewCredential
+	);
+
+BrowserTabQueueDialog(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	UINT32 tabThreadId
+	);
+
+PageContextMenuItemInvoked(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	UNICODESTRING Item
+	);
+
+CpHandleContextMenuSelection(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid
+	);
+
+LaunchIE(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	UNICODESTRING url,
+	INT32 launchIEFrom
+	);
+
+NeedIEAutoLaunchChanged(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	UNICODESTRING url,
+	INT32 newState
+	);
+
+TargetNewWindowCreated(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	INT32 hrValue
+	);
+
+CreateTargetNewWindowInvoked(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid
+	);
+
+DownloadSaveTargetAs(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid
+	);
+
+Diagnostic(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	HEXINT64 telemetryContextFlags,
+	ANSISTRING ModuleName,
+	UNICODESTRING Message
+	);
+
+BadExtensionEntry_Failure(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	UNICODESTRING extensionName,
+	INT32 index,
+	INT32 hr
+	);
+
+RemovedExtensionDuringDatastoreLoad(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	INT32 expectedCount,
+	INT32 actualCount,
+	INT32 errorHr
+	);
+
+FailedToReadExtensionRegistry(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	INT32 keyValue,
+	UNICODESTRING registryName,
+	INT32 errorHr
+	);
+
+HistoryData_CreateComponent_MessagePosted(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	UINT32 integrity,
+	UINT32 correlationNumber,
+	UINT32 command
+	);
+
+HistoryData_CreateComponent_PostMessage_Failed(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	UINT32 integrity,
+	UINT32 correlationNumber,
+	UINT32 command,
+	INT32 hr
+	);
+
+FormFill_Credentials_Eligible_PII(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	GUID correlationGUID,
+	UNICODESTRING url
+	);
+
+FormFill_Credentials_AutoSelected(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	GUID correlationGUID,
+	INT32 passwordHR,
+	INT32 usernameHR
+	);
+
+FormFill_Credentials_InteractionStarted(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	GUID correlationGUID
+	);
+
+FormFill_Credentials_UserConsentShown(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	GUID correlationGUID,
+	UINT32 saveTrigger
+	);
+
+SmartPrintEligibility(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	GUID printSessionId,
+	INT32 eligibilityState
+	);
+
+SmartPrintFailed(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	GUID printSessionId,
+	INT32 hrValue,
+	UNICODESTRING errorMessage
+	);
+
+StartPrint(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	UNICODESTRING method
+	);
+
+InitializePrintManagerResult(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	INT32 hrValue
+	);
+
+SmartPrintContentExtracted(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	GUID printSessionId,
+	INT32 hrValue
+	);
+
+SmartPrintUrl(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	GUID printSessionId,
+	UNICODESTRING url
+	);
+
+ShowPrintUI(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	UNICODESTRING Status,
+	INT32 hrValue,
+	INT32 queryInterfaceHrValue
+	);
+
+InvokePrintWithDocumentSource(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	UNICODESTRING DocumentType
+	);
+
+SmartPrint_GotReadingContent(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid
+	);
+
+SmartPrintInitiated(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	GUID printSessionId
+	);
+
+PrintCompleted(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	GUID printSessionId,
+	INT32 smartPrintOption,
+	INT32 printCompletedArg
+	);
+
+SmartPrint_Off(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid
+	);
+
+SmartPrint_On(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid
+	);
+
+ReadingModeComprehensionToolsJSError(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	UNICODESTRING type,
+	UNICODESTRING message
+	);
+
+ReadAloudJSError(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	GUID readOutLoudSessionId,
+	UNICODESTRING type,
+	UNICODESTRING message
+	);
+
+ReadingModeLayoutUpdated(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	UINT32 numberOfPages,
+	UINT32 browserWidth,
+	UINT32 browserHeight
+	);
+
+ReadingModeLineFocusState(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	GUID lineFocusId,
+	UNICODESTRING state
+	);
+
+ReadingModeInitialized(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	GUID instanceId,
+	UNICODESTRING pendingOperationPostEnteringReadingMode,
+	GUID pendingOperationId
+	);
+
+ReadingModeContentExtractedCharacteristics(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	UINT32 titleLength,
+	UINT32 bodyLength
+	);
+
+ReadingModeExtractContent(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	UINT64 durationMilliseconds
+	);
+
+ReadingModeEligibilityCheckedNoPIIPayload(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	BOOLEAN isEligible
+	);
+
+ReadingModeEligibilityChecked(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	BOOLEAN isEligible,
+	UINT32 mask,
+	UINT64 durationMilliseconds,
+	UNICODESTRING url,
+	UINT32 clusterLength
+	);
+
+ReadingModeComprehensionToolsStatus(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	GUID comprehensionId,
+	UNICODESTRING status
+	);
+
+ReadAloudStatus(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	GUID readAloudSessionId,
+	UNICODESTRING status
+	);
+
+ToggleReadingModeToEnter_NoPII(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	GUID eligibilityCheckedEventGuid
+	);
+
+ToggleReadingModeToEnter(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	GUID eligibilityCheckedEventGuid,
+	UNICODESTRING url,
+	UINT32 clusterLength,
+	BOOLEAN isEligible
+	);
+
+ReadingModeMultiPageComplete(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	GUID enterReadingModeEventGuid
+	);
+
+ReadingModeAppendNextPage(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	UINT32 pageNum,
+	GUID enterReadingModeEventGuid
+	);
+
+ReadingModeUnsetViewer(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	GUID enterReadingModeEventGuid
+	);
+
+ReadingModeViaProtocol(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid
+	);
+
+ToggleReadingModeToExit(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid
+	);
+
+ReadingModeExtractionFailed(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid
+	);
+
+ReadingModeThemeChange(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	UINT32 value
+	);
+
+ReadingModeImagesCharacteristics(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	UNICODESTRING imageSizes,
+	INT32 contentImageCount
+	);
+
+ReadingModeViewerLoaded(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid
+	);
+
+ParsePublisherImage(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	UNICODESTRING url,
+	UNICODESTRING imageUrl,
+	UNICODESTRING imageResource
+	);
+
+ContentProcessStart(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	UINT32 processType
+	);
+
+ProactiveContentProcessConsumed(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	UINT32 integrity
+	);
+
+RepairedSystemRegistryPermissionsForAppContainers(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	INT32 hr
+	);
+
+ContentProcessStartSpecial(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	UINT32 processType
+	);
+
+ManagerProcessEndedTimeout(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	BOOLEAN gotCPSM
+	);
+
+WilError(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	UINT64 PartA_PrivTags,
+	SIGNED wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+FallbackError(
+	UINT64 PartA_PrivTags,
+	SIGNED wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+FallbackError(
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+CpThread0_LoadEdgehtml(
+	VOID
+	);
+
+CpThread0_InitializeLocalHtmlEngine(
+	VOID
+	);
+
+CpThread0_RegisterCOMObjects(
+	VOID
+	);
+
+Entering LCIEStartAsContentProcess(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	HEXINT64 telemetryContextFlags
+	);
+
+CpThread0_StartMainThread(
+	VOID
+	);
+
+CpThread0_AddManagerProcessHamDependency(
+	VOID
+	);
+
+CpThread0_AttachShims(
+	BOOLEAN true
+	);
+
+CpThread0_SetAsContentProcess(
+	VOID
+	);
+
+ProactiveContentProcessCreation_ScopeCallbackType_ThreadCreated(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	HEXINT64 telemetryContextFlags
+	);
+
+LCIEStartTabProcess(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	HEXINT64 telemetryContextFlags
+	);
+
+LCIEStartExtensionProcess(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	HEXINT64 telemetryContextFlags
+	);
+
+IsoProcessManagerEndedTimeout(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid
+	);
+
+LCIEStartBinaryControlHostProcess(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	HEXINT64 telemetryContextFlags
+	);
+
+LCIEStartServiceWorkerGlobalScopeHostProcess(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	HEXINT64 telemetryContextFlags
+	);
+
+LCIEStartServiceUIProcess(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	HEXINT64 telemetryContextFlags
+	);
+
+LCIEStartF12Process(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	HEXINT64 telemetryContextFlags
+	);
+
+ManagerProcessEnded(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid
+	);
+
+IsoProcessManagerEnded(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid
+	);
+
+ContentProcessOOM(
+	UINT64 MemoryLimit
+	);
+
+CPSM_SuspendTimeoutTimerSet(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	UINT32 timeout,
+	BOOLEAN hasExtendedExecution
+	);
+
+CPSM_SuspendNotificationReceived(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	BOOLEAN blockSuspend,
+	BOOLEAN hasDeferral
+	);
+
+CPSM_LastSuspendRoutine_End(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	UINT64 durationInMs,
+	UINT64 unbiasedDurationInMs
+	);
+
+CPSM_SavingDataEE_Revoked(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	UINT32 revokeReason
+	);
+
+CPSM_SavingDataEE_RequestResult(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	UINT32 result
+	);
+
+CPSM_SavingDataEE_Closed(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid
+	);
+
+CPSM_SuspendTimeoutTimerExpired(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid
+	);
+
+CPSM_SavingDataEE_RequestSent(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid
+	);
+
+CPSM_ResumeNotificationReceived(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid
+	);
+
+CPSM_OnClearTracksComplete(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid
+	);
+
+CPSM_OnBrowserTabReadyToSuspend(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	UINT32 completedHandle
+	);
+
+CPSM_UnblockSuspendCompletion(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid
+	);
+
+CPSM_PrepareForSuspend(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	BOOLEAN blockSuspend,
+	BOOLEAN isoProcessSuspended
+	);
+
+CPSM_LastSuspendRoutine_Begin(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid
+	);
+
+CPSM_FirstSuspendRoutine_Begin(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid
+	);
+
+CPSM_FirstSuspendRoutine_End(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	BOOLEAN obtainedEE
+	);
+
+CPSM_Cleanup(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid
+	);
+
+MarkProcessTelemetryStateFailed(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	UINT32 failedLocation,
+	HRESULT hr
+	);
+
+WerReporting_ReportScriptError(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	HRESULT submitHr,
+	INT32 submitResult,
+	UNICODESTRING packageFullName,
+	UNICODESTRING packageRelativeAppId,
+	UNICODESTRING restrictedStackHash,
+	UNICODESTRING errorType,
+	UNICODESTRING sourceFile,
+	UNICODESTRING sourcePosition
+	);
+
+Assert(
+	UINT32 assertVersion,
+	UINT32 rva,
+	UINT32 timestamp,
+	UINT32 imageSize,
+	ANSISTRING imageName,
+	UINT32 count,
+	UINT32 totalHits,
+	UINT32 ModuleCollection,
+	UINT32 GlobalCollection
+	);
+
+AssertWithArgs(
+	UINT32 assertVersion,
+	UINT32 rva,
+	UINT32 timestamp,
+	UINT32 imageSize,
+	ANSISTRING imageName,
+	UINT32 count,
+	UINT32 totalHits,
+	ANSISTRING originatingBinary,
+	UINT32 bucketArgument1,
+	UINT32 bucketArgument2,
+	UINT32 ModuleCollection,
+	UINT32 GlobalCollection
+	);
+
+EdpHttpRequestEnd(
+	GUID sessionId,
+	UINT64 timeToResponse,
+	UINT16 responseCode,
+	UNICODESTRING responseBody
+	);
+
+EdpHttpRequestStart(
+	GUID sessionId,
+	INT32 httpVerb,
+	COUNTEDANSISTRING userAgent,
+	UNICODESTRING urlAbsolutePath
+	);
+
+EdpSessionEnd(
+	GUID sessionId,
+	UINT64 length,
+	BOOL32 closedByWebSocket
+	);
+
+EdpSessionStart(
+	GUID sessionId,
+	INT32 type
+	);
+
+FetchFileDownloader_4GBDownloadStart(
+	HEXINT64 fetchInterface
+	);
+
+FetchFileDownloader_4GBDownloadContentLength(
+	HEXINT64 fetchInterface
+	);
+
+BrowserDataMigration_CookiesImportStart(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid
+	);
+
+BrowserDataMigration_LoginImportEnd(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	INT32 count,
+	INT32 hr
+	);
+
+BrowserDataMigration_ImportCookie(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	INT32 hresult,
+	UNICODESTRING Url,
+	UNICODESTRING pwszName,
+	UNICODESTRING pwszValue,
+	UNICODESTRING pwszDomain,
+	UNICODESTRING pwszPath,
+	UINT32 dwFlags,
+	FILETIME ftExpires,
+	INT32 fExpiresSet
+	);
+
+BrowserDataMigration_CookiesImportEnd(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	INT32 discoveredCookiesCount,
+	INT32 importedCookiesCount,
+	INT32 hr
+	);
+
+BrowserDataMigration_HistoryImportEnd(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	INT32 count,
+	INT32 hr
+	);
+
+BrowserDataMigration_HistoryImportStart(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid
+	);
+
+BrowserDataMigration_LoginImportStart(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid
+	);
+
+ClearTracks_PhishingFilter_End(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	UINT32 integrity,
+	INT32 didPhishFilterDeleteHr,
+	BOOLEAN result
+	);
+
+ClearTracks_Cookies(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	INT32 result,
+	UNICODESTRING dataname
+	);
+
+ClearTracks_Forms_End(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	UINT32 integrity,
+	INT32 autoSuggestForForms,
+	BOOLEAN result
+	);
+
+ClearTacks_HasWinInetData(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	UINT32 IsoIntegrity,
+	INT32 WinInetCapability
+	);
+
+ClearTracks_DeleteUrlCacheEntry_First(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	INT32 resultHr,
+	UNICODESTRING dataName
+	);
+
+ClearTracks_DeleteUrlCacheEntry_Retry(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	INT32 resultHr,
+	UNICODESTRING dataName
+	);
+
+ClearTracks_FreeUrlCacheSpace_Retry(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	INT32 resultHr
+	);
+
+ClearTracks_FreeUrlCacheSpace_First(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	INT32 resultHr
+	);
+
+ClearTracks_AppCacheFreeSpace(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	INT32 resultHr
+	);
+
+ClearTracks_Passwords_End(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	UINT32 integrity,
+	INT32 autoSuggestForPasswords,
+	BOOLEAN result
+	);
+
+ClearTracks_AppCacheFreeSpace_Retry(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	INT32 resultHr
+	);
+
+ClearTracks_CacheConfig_End(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	UINT32 integrity,
+	BOOLEAN result
+	);
+
+BhxHeldMessageIsNull(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid
+	);
+
+CDownloadMessenger_Destructor(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid
+	);
+
+BrowserDataMigration_ManagerBrowserDataJsonFileParseFailure(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	INT32 hr,
+	BOOLEAN succeeded
+	);
+
+BrowserDataMigration_ManagerBrowserDataJsonFileSizeFailure(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	UINT32 dataSizeLow,
+	UINT32 dataSizeHigh
+	);
+
+BrowserDataMigration_MigrationFailedHr(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	INT32 hr,
+	ANSISTRING operation
+	);
+
+ProcessMarkedForRecycle(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	UINT32 processID,
+	INT64 PrivateUsage,
+	INT64 PeakWorkingSetSize,
+	INT64 WorkingSetSize
+	);
+
+ProcessSizeCheckIn(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	UINT32 processID,
+	INT64 PrivateUsage,
+	INT64 PeakWorkingSetSize,
+	INT64 WorkingSetSize
+	);
+
+ModalUISyncStartFailure(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	UINT32 waitResult,
+	INT32 waitError
+	);
+
+ModalUISyncCompletionFailure(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	UINT32 waitResult,
+	INT32 waitError
+	);
+
+LCIEUrlPolicy(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	COUNTEDANSISTRING location,
+	COUNTEDSTRING host,
+	INT8 skipNeutralCheck,
+	INT8 checkDontShowNeedHvsi,
+	INT8 checkDontShowNeedIe,
+	INT8 waitForProxy,
+	UINT32 desiredPicAndFlags,
+	INT8 isContentProcess,
+	INT8 isInPrivate,
+	INT8 isEdpEnabled,
+	INT8 isInactive,
+	INT8 isRecycled,
+	INT8 isHvsiContainer,
+	INT8 isHvsiHost,
+	UINT32 processPic,
+	COUNTEDSTRING processEnterpriseId,
+	COUNTEDSTRING urlEnterpriseId,
+	INT8 didTimeoutUrlEnterpriseIdLookup,
+	INT8 isUrlEdpNeutral,
+	INT8 didUpgradePicForEdp,
+	UINT8 urlPicSource,
+	UINT32 urlPic,
+	INT8 isUrlPicNeutral,
+	UINT32 tabProcConfig,
+	INT8 isTabProcConfigValid,
+	UINT8 hvsiUntrustedReason,
+	INT8 transitionToIE,
+	INT8 transitionToHvsiContainer,
+	INT8 transitionToHvsiHost,
+	INT8 hideTransitionUi,
+	INT8 isProxyRequired,
+	INT8 fileIntegrityIsUnavailable,
+	INT8 isWebDavResource,
+	HRESULT result,
+	BOOL32 doTransition,
+	UINT32 transitionReason
+	);
+
+HVSITrusted(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	ANSISTRING Function,
+	INT32 HVSIUntrustedReason,
+	BOOL32 Trusted
+	);
+
+HVSITrusted(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	ANSISTRING Function,
+	INT32 HVSIUntrustedReason,
+	BOOL32 Trusted,
+	HRESULT hr
+	);
+
+LCIEUrlPolicy(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	COUNTEDANSISTRING location,
+	COUNTEDSTRING host,
+	INT8 skipNeutralCheck,
+	INT8 checkDontShowNeedHvsi,
+	INT8 checkDontShowNeedIe,
+	INT8 waitForProxy,
+	UINT32 desiredPicAndFlags,
+	INT8 isContentProcess,
+	INT8 isInPrivate,
+	INT8 isEdpEnabled,
+	INT8 isInactive,
+	INT8 isRecycled,
+	INT8 isHvsiContainer,
+	INT8 isHvsiHost,
+	UINT32 processPic,
+	COUNTEDSTRING processEnterpriseId,
+	COUNTEDSTRING urlEnterpriseId,
+	INT8 didTimeoutUrlEnterpriseIdLookup,
+	INT8 isUrlEdpNeutral,
+	INT8 didUpgradePicForEdp,
+	UINT8 urlPicSource,
+	UINT32 urlPic,
+	INT8 isUrlPicNeutral,
+	UINT32 tabProcConfig,
+	INT8 isTabProcConfigValid,
+	UINT8 hvsiUntrustedReason,
+	INT8 transitionToIE,
+	INT8 transitionToHvsiContainer,
+	INT8 transitionToHvsiHost,
+	INT8 hideTransitionUi,
+	INT8 isProxyRequired,
+	INT8 fileIntegrityIsUnavailable,
+	INT8 isWebDavResource,
+	HRESULT result,
+	UINT32 redirectionPolicy
+	);
+
+LCIEServiceWorkerGlobalScope-ReceivedMessage(
+	ANSISTRING messageType
+	);
+
+SimpleHttpRequestBase_Destructor(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid
+	);
+
+LCIEWebStorageEventMessageRundownInitFailure(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	HRESULT hr
+	);
+
+AboutFlagsUpdated(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	UNICODESTRING description,
+	UINT32 value
+	);
+
+PageAnnotationShared(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	GUID annotationSessionID
+	);
+
+AnnotationSessionComplete(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	GUID annotationSessionID
+	);
+
+AnnotationSessionStarted_NoDomain(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	GUID annotationSessionId,
+	UNICODESTRING contentType
+	);
+
+ClippedAnnotationShared(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	GUID annotationSessionID
+	);
+
+ClippedAnnotationSaved(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	GUID annotationSessionID
+	);
+
+PageAnnotationSaved(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	GUID annotationSessionID
+	);
+
+AnnotationSessionStarted(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	GUID annotationSessionID,
+	UNICODESTRING domain,
+	UNICODESTRING url
+	);
+
+Annotation_RecoveryComplete(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid
+	);
+
+AnnotationSwitchToolSyncComplete(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid
+	);
+
+AnnotationStrokeCompleted(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	UINT32 newStrokeCount
+	);
+
+AnnotationStrokeRecorded(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	UNICODESTRING strokeType,
+	UINT32 color,
+	FLOAT sizeWidth,
+	FLOAT sizeHeight,
+	GUID annotationSessionID
+	);
+
+Annotations_InkAnnotationModule_PersistInkDuringInvalidState(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	UINT32 state
+	);
+
+AnnotationClearInkCompleted(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid
+	);
+
+AnnotationSwitchToolAsyncComplete(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid
+	);
+
+Annotation_SaveRawInkCompleted(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid
+	);
+
+TypedAnnotationAdded(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	GUID annotationSessionID
+	);
+
+AnnotationTypedNoteDeleted(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid
+	);
+
+AnnotationTypedNoteDragOver(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid
+	);
+
+AnnotationTypedNoteDragStart(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid
+	);
+
+ClippedAnnotationCopied(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	GUID annotationSessionID
+	);
+
+BinaryControlHostIsoInitFailure(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	INT32 hr,
+	BOOLEAN managerAlive,
+	UNICODESTRING source
+	);
+
+BookReader_PublicationDrmDetected_NoPII(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	GUID readerInstanceId,
+	GUID protocolId
+	);
+
+BookReader_AssetInitializationFailed_NoPII(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	GUID protocolId,
+	UNICODESTRING assetPath,
+	INT32 hr
+	);
+
+DBH_CreateComponent_GetSharedMemoryAddress_Failed(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	INT32 hr
+	);
+
+ClearTracks_Cookies_End(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	UINT32 integrity,
+	BOOLEAN cacheCookiesWebData,
+	INT32 appCaches,
+	BOOLEAN result
+	);
+
+ClearTracks_History_End(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	UINT32 integrity,
+	BOOLEAN emptyHistory,
+	INT32 browserEmulationUserData,
+	INT32 bingPDPHistory,
+	BOOLEAN result
+	);
+
+ClearTracks_PrivacyAdvisor_End(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	UINT32 integrity,
+	INT32 trackingProtectionKey,
+	INT32 privacyAdvisorHr,
+	INT32 resetUserFilter,
+	BOOLEAN result
+	);
+
+ClearTracks_Cache_End(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	UINT32 integrity,
+	INT32 deleteIndexFileHr,
+	BOOLEAN imageCacheData,
+	INT32 removeDirectoriesRecursive,
+	INT32 deletePdfAttachmentHr,
+	BOOLEAN result
+	);
+
+ClearTracks_AddOnData(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	INT32 result,
+	UNICODESTRING clsid
+	);
+
+ClearTracks_EmptyHistory(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	INT32 urlHistoryHr,
+	INT32 deleteIndexFileHr,
+	INT32 deleteWSHistDataProviderHr,
+	INT32 deleteTabContentHr,
+	INT32 deleteOpenSearchProviderHr,
+	INT32 deleteTopSitesDataStoreHr,
+	INT32 deleteUriToAppIdMappingsHr,
+	BOOLEAN result
+	);
+
+ClearTracks_PrivateCache_End(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	UINT32 integrity,
+	INT32 urlCacheContainerHr,
+	BOOLEAN trackingExceptions,
+	INT32 emeDataStoreFolder,
+	BOOLEAN didNeedIEDeletePrivate,
+	BOOLEAN popupExceptions,
+	INT32 browserModeFilter,
+	INT32 inPrivateDownloadDelete,
+	BOOLEAN result
+	);
+
+ClearTracks_AddOnData_End(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	UINT32 integrity,
+	UINT32 addOnCount,
+	UINT32 DBHCount,
+	BOOLEAN result
+	);
+
+ClearTracks_ForCP_Started(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	UINT32 integrity
+	);
+
+ClearTracks_ForCP_CreateComponent_Started(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid
+	);
+
+ClearTracks_ForCP_Completed(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	UINT32 integrity,
+	UINT32 clearTracksError
+	);
+
+DownloadBingImage_URLDownloadToCacheFile(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	INT32 result,
+	UNICODESTRING imageUrl
+	);
+
+DownloadBingImage(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	INT32 result,
+	UINT32 imageCount
+	);
+
+DownloadOpenGraphImage_URLDownloadToCacheFile(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	INT32 result,
+	UNICODESTRING imageUrl
+	);
+
+DialogLoopProtection(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	UNICODESTRING currentUrl,
+	UNICODESTRING previousUrl,
+	INT32 dialogType
+	);
+
+PromptDialogResponded(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	INT32 Result
+	);
+
+InformationDialogResponded(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	INT32 Result,
+	BOOLEAN CheckBoxResult
+	);
+
+OnInformationDialogResponse(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	BOOLEAN hasCurrentTask
+	);
+
+OnPromptDialogResponse(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	BOOLEAN hasCurrentTask
+	);
+
+PopupDialogManager_ShowPromptOrPasswordDialog(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid
+	);
+
+PopupDialogManager_ShowInformationDialog(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid
+	);
+
+NtpAuthDialogManager_ShowNtpAuthDialog(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid
+	);
+
+ShowFileOpenPicker_ShowFailed(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	INT32 result
+	);
+
+ShowFileOpenPicker_CreateInstanceFailed(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	INT32 result
+	);
+
+ShowFileOpenPicker_Start(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	INT32 multiple
+	);
+
+ShowFileOpenPicker_DataError(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	INT32 result
+	);
+
+ShowFileOpenPicker_WaitForCompletionFailed(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	INT32 result
+	);
+
+ShowFileOpenPicker_TreatAsCancelled(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid
+	);
+
+ShowFileOpenPicker_Cancelled(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid
+	);
+
+ShowFileOpenPicker_Complete(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid
+	);
+
+OpenSearchDescriptionDiscovered(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	HEXINT64 telemetryContextFlags,
+	UNICODESTRING host,
+	UNICODESTRING url,
+	UNICODESTRING displayName
+	);
+
+OpenSearchDescriptionDiscarded(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	HEXINT64 telemetryContextFlags,
+	UNICODESTRING host,
+	UNICODESTRING url,
+	UNICODESTRING displayName
+	);
+
+OpenSearchDescriptionDiscoverStart(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	HEXINT64 telemetryContextFlags,
+	UNICODESTRING host
+	);
+
+OpenSearchDescriptionDiscoverComplete(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	HEXINT64 telemetryContextFlags,
+	UNICODESTRING host
+	);
+
+PageLoadEnd(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	HEXINT64 telemetryContextFlags,
+	UINT32 tabId
+	);
+
+CredentialAddCompleted(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	INT32 hr,
+	UNICODESTRING source
+	);
+
+CredentialGetCompleted(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	INT32 hr,
+	UNICODESTRING source
+	);
+
+CredentialsFindAllCompleted(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	INT32 hr,
+	UNICODESTRING source
+	);
+
+CredentialRemoveCompleted(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	INT32 hr,
+	UNICODESTRING source
+	);
+
+SimpleHttpRequestServer_Destructor(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	HEXINT64 telemetryContextFlags
+	);
+
+IsoSendForRuntimePortMessageFailed(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	UNICODESTRING extensionId,
+	INT32 hr
+	);
+
+RuntimePortPostMessageCacheCleared(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid
+	);
+
+RuntimePortPostMessageAckReceived(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid
+	);
+
+RuntimePortPostMessageCached(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid
+	);
+
+NTP_FrequentsPopulationEnd(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	INT32 hr
+	);
+
+NTP_PopulateFromHistory(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	INT32 hr,
+	UINT32 count
+	);
+
+NTP_FrequentsPopulationStart(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid
+	);
+
+NTP_PostDataToFrame(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	INT32 hr,
+	UINT32 dataSize
+	);
+
+HJ_HistoryAddUrl(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	UINT32 tabId,
+	UINT32 managerProcessId,
+	FILETIME historyUrlLogFileTime,
+	BINARY navigationUrlBytes,
+	UINT8 navigationUrlRejectCode,
+	BINARY navigationRefererBytes,
+	UINT8 navigationRefererRejectCode,
+	BINARY historyUrlTitleBinary,
+	UNICODESTRING historyUrlVideoDataW,
+	ANSISTRING historyUrlImageData,
+	BINARY historyUrlTextDataBinary,
+	UINT16 navigationMethod,
+	UINT64 historyUrlSimHash,
+	UINT8 historyUrlHash,
+	BOOLEAN isCortanaEnabled,
+	UNICODESTRING browserId
+	);
+
+HJ_PageLoadEnd(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	UINT32 tabId,
+	UINT32 managerProcessId,
+	BOOLEAN isCortanaEnabled,
+	UNICODESTRING browserId
+	);
+
+HJ_NavigateElementClicked(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	UINT32 tabId,
+	UINT32 managerProcessId,
+	UNICODESTRING domElementPathW,
+	BINARY domElementContentBinary,
+	BINARY hrefBytes,
+	UINT8 hrefRejectCode,
+	BOOLEAN isCortanaEnabled,
+	UNICODESTRING browserId
+	);
+
+HJ_ReadyStateInteractive(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	UINT32 tabId,
+	UINT32 managerProcessId,
+	BOOLEAN isCortanaEnabled,
+	UNICODESTRING browserId
+	);
+
+HJ_ReadingModeEligibility(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	UINT32 tabId,
+	UINT32 managerProcessId,
+	BOOLEAN isEligible,
+	BOOLEAN isCortanaEnabled,
+	UNICODESTRING browserId
+	);
+
+HJ_NavigateCompleteExtended(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	UINT32 tabId,
+	UINT32 frameId,
+	UINT32 managerProcessId,
+	BINARY navigationUrlBytes,
+	UINT8 navigationUrlRejectCode,
+	BINARY navigationRefererBytes,
+	UINT8 navigationRefererRejectCode,
+	BINARY navigationLocationUrlBytes,
+	UINT8 navigationLocationUrlRejectCode,
+	BOOLEAN isNavRefererEqualToUrl,
+	BOOLEAN isNavLocUrlEqualToUrl,
+	BOOLEAN isNavUrlTopLevelUrl,
+	UINT16 httpStatusCode,
+	BOOLEAN isCortanaEnabled,
+	UNICODESTRING browserId,
+	GUID correlationGuid
+	);
+
+HJ_FlipAheadTargetGenerated(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	UINT32 tabId,
+	UINT32 managerProcessId,
+	BOOLEAN isCortanaEnabled,
+	UNICODESTRING browserId
+	);
+
+HJ_DominantImageSelected(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	UNICODESTRING dominantImageDocumentUrl,
+	UNICODESTRING dominantImageSuggestedUrls,
+	UNICODESTRING dominantImageSelectedUrl,
+	UNICODESTRING dominantImageScenario,
+	BOOLEAN isCortanaEnabled,
+	UNICODESTRING browserId
+	);
+
+HJ_BeforeNavigateExtended(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	UINT32 tabId,
+	UINT32 frameId,
+	UINT32 managerProcessId,
+	BINARY navigationUrlBytes,
+	UINT8 navigationUrlRejectCode,
+	BINARY navigationLocationUrlBytes,
+	UINT8 navigationLocationUrlRejectCode,
+	BOOLEAN isNavLocUrlEqualToUrl,
+	BOOLEAN isNavUrlTopLevelUrl,
+	UINT32 deviceFeatureStatus,
+	BOOLEAN isCortanaEnabled,
+	UNICODESTRING browserId
+	);
+
+HJ_FlipAheadTargetInvoked(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	UINT32 tabId,
+	UINT32 managerProcessId,
+	UINT32 flipAheadRuleFileVersion,
+	UINT32 flipAheadRuleId,
+	BOOLEAN isCortanaEnabled,
+	UNICODESTRING browserId
+	);
+
+HJ_ReadingModeNavigateShow(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	UINT32 tabId,
+	UINT32 managerProcessId,
+	BOOLEAN isCortanaEnabled,
+	UNICODESTRING browserId
+	);
+
+ServiceUIWebPlatformHostMessageHandlingFailed(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	HEXINT64 telemetryContextFlags,
+	UNICODESTRING serviceUIType,
+	UINT32 messageType,
+	UINT32 messageSize
+	);
+
+ServiceUIWebPlatformHostStub(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	HEXINT64 telemetryContextFlags,
+	GUID correlationGuid,
+	ANSISTRING releaseState
+	);
+
+ServiceUIWebPlatformHost(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	HEXINT64 telemetryContextFlags,
+	ANSISTRING eventName,
+	UNICODESTRING serviceUIType,
+	UNICODESTRING url,
+	INT32 reason
+	);
+
+ServiceUIWebPlatformHost(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	HEXINT64 telemetryContextFlags,
+	ANSISTRING eventName,
+	UNICODESTRING serviceUIType,
+	UNICODESTRING eventToFire
+	);
+
+ServiceUIWebPlatformHost(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	HEXINT64 telemetryContextFlags,
+	ANSISTRING eventName,
+	UNICODESTRING serviceUIType,
+	UNICODESTRING messageType
+	);
+
+ServiceUIWebPlatformHost(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	HEXINT64 telemetryContextFlags,
+	ANSISTRING eventName,
+	GUID conversationGuid,
+	UNICODESTRING serviceUIType,
+	UNICODESTRING url
+	);
+
+ServiceUIWebPlatformHost(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	HEXINT64 telemetryContextFlags,
+	ANSISTRING eventName,
+	UNICODESTRING serviceUIType
+	);
+
+SharedCookieMigration_ExportCookie_Ended(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	INT32 hr
+	);
+
+SharedCookieMigration_ApplyCookie_Ended(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	INT32 hr,
+	UINT32 discoveredCookiesCount,
+	UINT32 importedCookiesCount
+	);
+
+SharedCookieMigration_ApplyCookie_Started(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid
+	);
+
+SharedCookieMigration_ExportCookie_Started(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid
+	);
+
+SharedCookieMigration_ExportCookie(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	UNICODESTRING pwszDomain,
+	UNICODESTRING pwszPath,
+	UNICODESTRING pwszName,
+	UNICODESTRING pwszValue,
+	UINT32 dwFlags,
+	FILETIME ftExpires,
+	INT32 fExpiresSet
+	);
+
+SharedCookieMigration_ApplyCookie(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	INT32 hresult,
+	UNICODESTRING Url,
+	UNICODESTRING pwszDomain,
+	UNICODESTRING pwszPath,
+	UNICODESTRING pwszName,
+	UNICODESTRING pwszValue,
+	UINT32 dwFlags,
+	FILETIME ftExpires,
+	INT32 fExpiresSet
+	);
+
+LCIEServiceWorkerClientHost-ReceivedMessage(
+	ANSISTRING messageType
+	);
+
+LCIEServiceWorkerFetchEventMessenger-QueueFetchEvent-Failure(
+	GUID clientId,
+	GUID serviceWorkerVersion,
+	UINT32 fetchId,
+	HRESULT hr
+	);
+
+LCIEServiceWorkerFetchEventMessenger-BeginInitializeBackgroundComponent-Failure(
+	HRESULT hr
+	);
+
+LCIEServiceWorkerFetchEventMessenger-QueueNonSubResourceFetchEvent-Failure(
+	UINT32 fetchId,
+	HRESULT hr
+	);
+
+LCIEServiceWorkerFetchEventMessenger-EnsureBackgroundComponentInitializationFinished-Failure(
+	HRESULT hr
+	);
+
+LCIEServiceWorkerFetchEventMessenger-ResolveFetchEvent-Failure(
+	GUID clientId,
+	UINT32 fetchId,
+	HRESULT hr
+	);
+
+LCIEServiceWorkerFetchEventMessenger-ResolveNonSubResourceFetchEvent-Failure(
+	GUID clientId,
+	UINT32 fetchId,
+	HRESULT hr
+	);
+
+LCIEServiceWorkerFetchEventComponent-Start-Failure(
+	HRESULT hr
+	);
+
+LCIEServiceWorkerFetchEventComponent-FinishStarting-Failure(
+	HRESULT hr
+	);
+
+LCIEServiceWorkerFetchEventComponent-HandleMessage-Failure(
+	HRESULT hr
+	);
+
+LCIEServiceWorkerFetchEventComponent-ReceivedMessage(
+	ANSISTRING messageType
+	);
+
+LCIEServiceWorkerFetchEventComponent-RequestStop-Failure(
+	HRESULT hr
+	);
+
+LCIEServiceWorkerFetchEventComponent-Stop-Unexpected(
+	HRESULT reason
+	);
+
+LCIEStreamTransferManager-TransferCompleted-WithUnexpectedError(
+	UINT64 ownerId,
+	UINT64 transferId,
+	HRESULT result,
+	UINT64 bytesRead,
+	UINT64 bytesSent,
+	UINT64 bytesReceived,
+	UINT64 bytesEnqueued
+	);
+
+HistoryData_DeleteHistoryItemsCompleted(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid
+	);
+
+IsoProxyServiceUIFrameControl(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	HEXINT64 telemetryContextFlags,
+	ANSISTRING eventName,
+	UNICODESTRING serviceUIType,
+	UNICODESTRING messageType
+	);
+
+IsoProxyServiceUIFrameControl(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	HEXINT64 telemetryContextFlags,
+	ANSISTRING eventName,
+	UNICODESTRING serviceUIType
+	);
+

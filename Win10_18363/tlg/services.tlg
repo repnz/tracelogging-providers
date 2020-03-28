@@ -1,0 +1,431 @@
+ProviderNames:
+	Microsoft.Windows.ServiceHealth
+	Microsoft.Windows.ServiceControlManager
+	Microsoft.Windows.TlgAggregateInternal
+	Microsoft.Wdf.UMDF.Dm
+
+
+
+**** Events *****
+ServiceDeleted(
+	UNICODESTRING ServiceName
+	);
+
+ServiceConfigChange(
+	UNICODESTRING ServiceName,
+	UNICODESTRING Operation,
+	UINT32 NewStartType
+	);
+
+ServiceLargePreShutdownTimeout(
+	UNICODESTRING ServiceName,
+	UINT32 TimeoutInMs
+	);
+
+PreShutdownStop(
+	UINT64 DurationInMs
+	);
+
+PreShutdownStart(
+	VOID
+	);
+
+ServiceSendControl(
+	UNICODESTRING ServiceName,
+	UINT32 ControlCode
+	);
+
+PreshutdownSerialPhaseEnd(
+	UINT64 DurationInMs
+	);
+
+ServicePreShutdownTimeout(
+	UNICODESTRING ServiceName,
+	UINT32 TimeoutInMs
+	);
+
+ServiceShutdownTimeout(
+	UNICODESTRING ServiceName,
+	UINT32 WaitHintInMS,
+	UINT32 CurrentState
+	);
+
+ServiceRecoveryAction(
+	UNICODESTRING ServiceName,
+	UINT32 FailCount,
+	UINT32 ActionDelay,
+	UINT32 ActionType,
+	UINT32 ResetPeriod,
+	UINT32 FailureReason,
+	BOOL32 IsOwnProcess,
+	UNICODESTRING Action
+	);
+
+UserServiceShutdownStop(
+	UINT64 UserContext,
+	UINT64 DurationInMs
+	);
+
+UserServiceShutdownStart(
+	UINT64 UserContext
+	);
+
+ServiceMemoryUsage(
+	UNICODESTRING serviceName,
+	UINT64 aveMemAlloc,
+	UINT64 maxMemAlloc,
+	UINT64 currentMemAlloc,
+	UINT32 NumSamples,
+	BOOLEAN singleServiceHost,
+	UINT32 state
+	);
+
+ServiceStateChange(
+	UNICODESTRING ServiceName,
+	UINT32 OldState,
+	UINT32 NewState,
+	UINT64 DurationInMs
+	);
+
+ServiceStateChange(
+	UNICODESTRING ServiceName,
+	UINT32 OldState,
+	UINT32 NewState,
+	UINT64 DurationInMs
+	);
+
+ServiceFailed(
+	UNICODESTRING ServiceName,
+	UNICODESTRING ImageName,
+	BOOL32 IsOwnProcess,
+	BOOL32 ShutdownInProgress,
+	UINT32 Reason,
+	UINT32 Status
+	);
+
+ServiceHostFailed(
+	UNICODESTRING ServiceHostName
+	);
+
+SvchostServiceHang(
+	UNICODESTRING ServiceName,
+	UNICODESTRING DllName
+	);
+
+FailedToRevertToLKG(
+	UNICODESTRING ServiceName,
+	WIN32ERROR StartError,
+	WIN32ERROR LkgError,
+	UINT32 Service->GetErrorControl()
+	);
+
+AutoStartPhaseComplete(
+	UINT64 DurationInMs
+	);
+
+AutoStartPhase1Complete(
+	UINT64 DurationInMs
+	);
+
+AutoStartPhaseStart(
+	VOID
+	);
+
+MedicTimerFired(
+	UINT64 CurrentSystemTime
+	);
+
+MedicTimerArmed(
+	UINT64 CurrentSystemTime,
+	UINT64 DueTime
+	);
+
+MedicLauncherSucceeded(
+	ANSISTRING __TlgCV__
+	);
+
+MedicLauncherFailed(
+	WIN32ERROR Error,
+	ANSISTRING __TlgCV__
+	);
+
+LaunchingMedic(
+	UNICODESTRING ScpMedicGlobals.CommandLine,
+	ANSISTRING __TlgCV__
+	);
+
+LaunchingMedicMeasure(
+	UNICODESTRING ScpMedicGlobals.CommandLine,
+	ANSISTRING __TlgCV__
+	);
+
+ServiceCommitLevelOverTarget(
+	UNICODESTRING ServiceName,
+	BOOL32 IsOwnProcess,
+	BOOL32 IsCritical,
+	UINT32 MemSoftLimit,
+	UINT32 MemMidLimit,
+	UINT32 MemHardLimit,
+	UINT64 CurrentMemUsage,
+	BOOL32 StopSent,
+	WIN32ERROR Status
+	);
+
+ServiceCommitLevelHigh(
+	UNICODESTRING ServiceName,
+	BOOL32 IsOwnProcess,
+	UINT32 MemSoftLimit,
+	UINT32 MemMidLimit,
+	UINT32 MemHardLimit,
+	UINT64 CurrentMemUsage,
+	WIN32ERROR Status
+	);
+
+ServiceCommitLevelMedium(
+	UNICODESTRING ServiceName,
+	BOOL32 IsOwnProcess,
+	UINT32 MemSoftLimit,
+	UINT32 MemMidLimit,
+	UINT32 MemHardLimit,
+	UINT64 CurrentMemUsage,
+	WIN32ERROR Status
+	);
+
+ServiceResourceSetReleased(
+	UNICODESTRING serviceName,
+	HEXINT64 resourceSetId,
+	NTSTATUS status
+	);
+
+ServiceResourceSetApplied(
+	UNICODESTRING ServiceName,
+	HEXINT64 ResourceSetId,
+	NTSTATUS Status
+	);
+
+ServiceResourceSetAcquired(
+	UNICODESTRING ServiceName,
+	HEXINT64 ResourceSetId,
+	UINT32 MemSoftLimit,
+	UINT32 MemMidLimit,
+	UINT32 MemHardLimit,
+	NTSTATUS Status
+	);
+
+SCMDisconnectFromRM(
+	VOID
+	);
+
+SCMConnectionToRM(
+	NTSTATUS Status
+	);
+
+GenerateServiceDBStop(
+	UINT64 DurationInMs
+	);
+
+GenerateServiceDBStart(
+	VOID
+	);
+
+UserDelayStartPhaseComplete(
+	VOID
+	);
+
+DelayStartPhaseComplete(
+	UINT64 m_userContext
+	);
+
+UserDelayStartPhaseStart(
+	UINT64 m_userContext
+	);
+
+DelayStartPhaseStart(
+	VOID
+	);
+
+PackagedServiceProcessCreation(
+	UNICODESTRING ServiceName,
+	UNICODESTRING PackageFullName,
+	WIN32ERROR Status,
+	UINT32 FailurePoint,
+	UINT64 PartA_PrivTags
+	);
+
+PackagedServiceProcessCreation(
+	UNICODESTRING ServiceName,
+	UNICODESTRING PackageFullName,
+	UINT64 PartA_PrivTags
+	);
+
+ServiceFailedToStart(
+	UNICODESTRING ServiceName,
+	UINT32 FailStartReason,
+	NTSTATUS FailureStatus,
+	BOOL32 IsOwnProcess
+	);
+
+ServiceStarted(
+	UNICODESTRING ServiceName,
+	UINT32 StartReason,
+	UNICODESTRING LoadOrderGroup,
+	UNICODESTRING SvchostGroup,
+	UINT32 PID,
+	BOOL32 IsCritical,
+	BOOL32 IsUserService,
+	BOOL32 IsOwnProcess,
+	UINT32 TriggerType
+	);
+
+ServiceHostStarted(
+	UNICODESTRING ServiceHostName,
+	UINT32 PID
+	);
+
+ScInitSecurityProcessFailed(
+	UINT32 ErrorCode
+	);
+
+ShutdownStop(
+	UINT64 DurationInMs
+	);
+
+ShutdownStart(
+	VOID
+	);
+
+InitWudfDriverManagerRuntime(
+	UINT64 DurationInMs,
+	WIN32ERROR dwStatus
+	);
+
+IsSvchostProcessMitigationPolicyActive(
+	BOOL32 Enabled
+	);
+
+SCMConfiguration(
+	BOOL32 SplitSvcHost
+	);
+
+SvchostHealthServiceRuntime(Aggregate)(
+	NULL RuntimeMs,
+	UNICODESTRING ServiceName,
+	UNICODESTRING ServiceBinary,
+	UINT32 ServiceType,
+	BOOL32 IsSplit
+	);
+
+SvchostHealthServiceStartFailure(Aggregate)(
+	NULL StartFailureCount,
+	UNICODESTRING ServiceName,
+	UNICODESTRING ServiceBinary,
+	UINT32 ServiceType,
+	BOOL32 IsSplit,
+	UINT32 ErrorCode
+	);
+
+SvchostHealthServiceCrash(Aggregate)(
+	NULL CrashCount,
+	UNICODESTRING ServiceName,
+	UNICODESTRING ServiceBinary,
+	UINT32 ServiceType,
+	BOOL32 IsSplit
+	);
+
+SvchostHealthServiceStop(Aggregate)(
+	NULL StopCount,
+	UNICODESTRING ServiceName,
+	UNICODESTRING ServiceBinary,
+	UINT32 ServiceType,
+	BOOL32 IsSplit,
+	UINT32 Win32ExitCode,
+	UINT32 ServiceSpecificExitCode
+	);
+
+SvchostHealthServiceRunning(Aggregate)(
+	NULL RunningCount,
+	UNICODESTRING ServiceName,
+	UNICODESTRING ServiceBinary,
+	UINT32 ServiceType,
+	BOOL32 IsSplit
+	);
+
+SvchostHealthServiceStart(Aggregate)(
+	NULL StartCount,
+	UNICODESTRING ServiceName,
+	UNICODESTRING ServiceBinary,
+	UINT32 ServiceType,
+	BOOL32 IsSplit
+	);
+
+TlgAggregateSummary(
+	GUID Provider,
+	UINT64 NumFlushes,
+	UINT64 MaxEntriesStored,
+	UINT64 TotalEntriesFlushed,
+	UINT32 MaxEntriesFlushed,
+	UINT32 MinEntriesFlushed,
+	UINT32 NumBucketLimitReached,
+	UINT32 NumAllocationFailures,
+	UINT32 NumLargeEventFailures
+	);
+
+DrvMgrStartFailure(
+	UINT32 Win32ErrorCode
+	);
+
+DrvMgrDeviceFailed(
+	UINT32 FailureAction,
+	GUID HostLifetimeGUID,
+	UNICODESTRING PdoName,
+	UNICODESTRING HardwareId,
+	UNICODESTRING MatchingId,
+	UNICODESTRING DriverBinaryName,
+	UNICODESTRING InfDateAndVersion,
+	UINT8 IsDebugModeEnabled,
+	UINT8 IsMultipleDrivers,
+	UNICODESTRING PoolType,
+	HEX PoolConfig,
+	UINT8 CanRestartInOwnProcess,
+	UINT8 DontPoolHwIdOverride,
+	UINT8 DontPoolErrorTagOverride,
+	UINT8 DontPoolSoftOverride
+	);
+
+DrvMgrDeviceFailedInPool(
+	UINT32 FailureAction,
+	GUID HostLifetimeGUID,
+	UNICODESTRING PdoName,
+	UNICODESTRING HardwareId,
+	UNICODESTRING MatchingId,
+	UNICODESTRING DriverBinaryName,
+	UNICODESTRING InfDateAndVersion,
+	UINT8 IsDebugModeEnabled,
+	UINT8 IsMultipleDrivers,
+	UNICODESTRING PoolType,
+	HEX PoolConfig,
+	UINT8 CanRestartInOwnProcess,
+	UINT8 DontPoolHwIdOverride,
+	UINT8 DontPoolErrorTagOverride,
+	UINT8 DontPoolSoftOverride
+	);
+
+DrvMgrDeviceArrival(
+	GUID HostLifetimeGUID,
+	UNICODESTRING PdoName,
+	UNICODESTRING HardwareId,
+	UNICODESTRING MatchingId,
+	UNICODESTRING DriverBinaryName,
+	UNICODESTRING InfDateAndVersion,
+	UINT8 IsDebugModeEnabled,
+	UINT8 IsMultipleDrivers,
+	UINT32 MaxPoolErrorCount,
+	UINT32 MaxDeviceErrorCount,
+	UNICODESTRING PoolType,
+	HEX PoolConfig,
+	UINT8 CanRestartInOwnProcess,
+	UINT8 DontPoolHwIdOverride,
+	UINT8 DontPoolErrorTagOverride,
+	UINT8 DontPoolSoftOverride
+	);
+

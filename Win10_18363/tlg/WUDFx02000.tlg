@@ -1,0 +1,86 @@
+ProviderNames:
+	Microsoft.Wdf.UMDF.Fx
+	TelemetryAssert
+	TelemetryAssertDiagTrack
+
+
+
+**** Events *****
+UmdfCensusEvtDeviceStart(
+	NOPRINT CensusCommonV1,
+	GUID SessionGUID,
+	ANSISTRING DriverServiceName,
+	21 DriverConfigInfo,
+	UINT8 IsFilter,
+	UINT8 IsPowerPolicyOwner,
+	UINT8 IsS0IdleWakeFromS0Enabled,
+	UINT8 IsS0IdleUsbSSEnabled,
+	UINT8 IsS0IdleSystemManaged,
+	UINT8 IsSxWakeEnabled,
+	UINT8 IsUsingLevelTriggeredLineInterrupt,
+	UINT8 IsUsingEdgeTriggeredLineInterrupt,
+	UINT8 IsUsingMsiXOrSingleMsi22Interrupt,
+	UINT8 IsUsingMsi22MultiMessageInterrupt,
+	UINT8 IsUsingMultipleInterrupt,
+	UINT8 IsDirectHardwareAccessAllowed,
+	UINT8 IsUsingUserModemappingAccessMode,
+	UINT8 IsKernelModeClientAllowed,
+	UINT8 IsNullFileObjectAllowed,
+	UINT8 IsPoolingDisabled,
+	UINT8 IsMethodNeitherActionCopy,
+	UINT8 IsUsingDirectIoForReadWrite,
+	UINT8 IsUsingDirectIoForIoctl,
+	UINT8 IsUsingDriverWppRecorder,
+	UINT8 IsS0IdleEnabled,
+	UNICODESTRING SetupClass,
+	UNICODESTRING BusEnumerator,
+	UNICODESTRING HardwareId,
+	UNICODESTRING ManufacturerString
+	);
+
+WdfDriverErrorReportApiMissing(
+	NOPRINT CensusCommonV1,
+	GUID SessionGUID,
+	ANSISTRING DriverName,
+	UINT32 VersionMajor,
+	UINT32 VersionMinor,
+	UNICODESTRING FrameworkName,
+	UINT32 ApiIndex
+	);
+
+WdfCensusEvtDrvLoad(
+	NOPRINT CensusCommonV1,
+	GUID SessionGUID,
+	IPV6 DriverInfo,
+	ANSISTRING DriverService,
+	UNICODESTRING DriverImage,
+	UNICODESTRING WdfVersion,
+	UINT32 DriverVersionMajor,
+	UINT32 DriverVersionMinor,
+	BOOLEAN FxVerifierOn,
+	BOOLEAN DriverNonPnP,
+	BOOLEAN DriverNoDispatchOverride,
+	UINT32 FxEnhancedVeriferOptions
+	);
+
+UmdfClientFunctionCountMismatch(
+	COUNTEDSTRING ServiceName,
+	UINT32 FunctionCount,
+	UINT32 ExpectedCount
+	);
+
+AssertWithArgs(
+	UINT32 assertVersion,
+	UINT32 rva,
+	UINT32 timestamp,
+	UINT32 imageSize,
+	ANSISTRING imageName,
+	UINT32 count,
+	UINT32 totalHits,
+	ANSISTRING originatingBinary,
+	UINT32 bucketArgument1,
+	UINT32 bucketArgument2,
+	UINT32 ModuleCollection,
+	UINT32 GlobalCollection
+	);
+

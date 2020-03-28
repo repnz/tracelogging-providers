@@ -1,0 +1,39 @@
+ProviderNames:
+	Microsoft.Windows.Networking.Quic
+
+
+
+**** Events *****
+ServerStop(
+	VOID
+	);
+
+ServerStart(
+	VOID
+	);
+
+ConnectionCompleteV2(
+	UINT8 platform,
+	UINT32 version,
+	ANSISTRING alpn,
+	UINT16 port,
+	UINT16 family,
+	BOOLEAN isServer,
+	BOOLEAN used0RTT,
+	UINT32 state,
+	UINT32 closeErrorCode,
+	UINT64 lifetimeMilliseconds,
+	UINT64 sendTotalPackets,
+	UINT64 sendRetransmittablePackets,
+	UINT64 sendSuspectedLostPackets,
+	UINT64 sendSpuriousLostPackets,
+	UINT64 sendTotalBytes,
+	UINT32 sendRtoCount,
+	UINT32 sendSpuriousRtoCount,
+	UINT64 recvTotalPackets,
+	UINT64 recvReorderedPackets,
+	UINT64 recvDroppedPackets,
+	UINT64 recvDuplicatePackets,
+	UINT64 recvTotalBytes
+	);
+

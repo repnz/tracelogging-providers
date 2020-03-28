@@ -1,0 +1,40 @@
+ProviderNames:
+	Microsoft-Windows-Security-EFS-EDPAudit
+	Microsoft-Windows-Security-EFS-EDPAudit
+	Microsoft-Windows-Security-EFS-EDPAudit-CopyData
+	Microsoft-Windows-Security-EFS-EDPAudit-ApplicationGenerated
+	Microsoft-Windows-Security-EFS-EDPAudit-ApplicationLearning
+
+
+
+**** Events *****
+EdpAuditRead(
+	UINT32 status
+	);
+
+EdpAuditLogApplicationLearning(
+	UINT32 status,
+	UNICODESTRING appname,
+	UINT32 actiontype,
+	UINT32 appIdType
+	);
+
+EdpAuditLogApplicationGenerated(
+	UINT32 status,
+	UNICODESTRING policy
+	);
+
+EdpAuditLogProtectionRemoved(
+	NTSTATUS status
+	);
+
+EdpAuditLogSitesLearning(
+	UINT32 status,
+	UNICODESTRING SiteName
+	);
+
+EdpAuditLogDataCopied(
+	UINT32 status,
+	UNICODESTRING policy
+	);
+

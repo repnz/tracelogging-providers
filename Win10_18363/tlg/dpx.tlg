@@ -1,0 +1,83 @@
+ProviderNames:
+	Microsoft.Windows.Compression.DeltaPackageExpander
+	TelemetryAssert
+	TelemetryAssertDiagTrack
+
+
+
+**** Events *****
+DeltaCounts(
+	ANSISTRING __TlgCV__,
+	GUID dpxTelemetrySessionID,
+	UNICODESTRING dpxFileVersion,
+	UNICODESTRING dpxProductVersion,
+	UNICODESTRING package,
+	UNICODESTRING targetPath,
+	UINT64 totalDownload,
+	UINT64 numberOfFiles,
+	UINT64 numberOfDeltasInAsset,
+	UINT64 numberOfDeltasInTarget,
+	UINT64 numberOfFilesCopiedFromAsset,
+	UINT64 numberOfFilesCopiedToTarget,
+	UINT64 numberOfFallbacks,
+	UINT64 deltaAssetSize,
+	UINT64 deltaTargetSize,
+	UINT64 fallbackSize
+	);
+
+PeakMemoryUsage(
+	ANSISTRING __TlgCV__,
+	GUID dpxTelemetrySessionID,
+	UNICODESTRING dpxFileVersion,
+	UNICODESTRING dpxProductVersion,
+	UNICODESTRING package,
+	UNICODESTRING targetPath,
+	UINT64 peakCommitChargeValueBytes
+	);
+
+OverallRuntime(
+	ANSISTRING __TlgCV__,
+	GUID dpxTelemetrySessionID,
+	UNICODESTRING dpxFileVersion,
+	UNICODESTRING dpxProductVersion,
+	UNICODESTRING package,
+	UNICODESTRING targetPath,
+	UINT64 elapsedTimeMilliseconds
+	);
+
+MaxDiskUsage(
+	ANSISTRING __TlgCV__,
+	GUID dpxTelemetrySessionID,
+	UNICODESTRING dpxFileVersion,
+	UNICODESTRING dpxProductVersion,
+	UNICODESTRING package,
+	UNICODESTRING targetPath,
+	UINT64 MaxDiskFootprintBytes
+	);
+
+InventoryRuntime(
+	ANSISTRING __TlgCV__,
+	GUID dpxTelemetrySessionID,
+	UNICODESTRING dpxFileVersion,
+	UNICODESTRING dpxProductVersion,
+	UNICODESTRING package,
+	UNICODESTRING targetPath,
+	UNICODESTRING phase,
+	UINT64 elapsedTimeMilliseconds
+	);
+
+AssertWithArgs(
+	UINT32 assertVersion,
+	UINT32 rva,
+	UINT32 timestamp,
+	UINT32 imageSize,
+	ANSISTRING imageName,
+	UINT32 count,
+	UINT32 totalHits,
+	ANSISTRING originatingBinary,
+	UINT32 bucketArgument1,
+	UINT32 bucketArgument2,
+	UINT32 ModuleCollection,
+	UINT32 GlobalCollection
+	);
+

@@ -1,0 +1,143 @@
+ProviderNames:
+	Microsoft.Windows.Print.Workflow.Source
+
+
+
+**** Events *****
+Error(
+	UINT64 PartA_PrivTags,
+	SIGNED wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+CFileVersionInfo::GetAlternateLanguageVersionInfo - retrieved field (
+	UNICODESTRING message.c_str()
+	);
+
+WfpCloseSession - Close the printing session(
+	UINT64 Session Id
+	);
+
+WfpAbortSession - Abort the printing session(
+	UINT64 Session Id
+	);
+
+WfpWaitforJobCompletion - wait for the job to complete(
+	UINT64 Session Id
+	);
+
+WfpSetXpsDataType - Set the XPS data type(
+	UINT64 Session Id
+	);
+
+WfpSetJobInfo - Set job info(
+	UINT64 Session Id
+	);
+
+WfpSetPrintTicket - Set the print ticket(
+	UINT64 Session Id
+	);
+
+WfpGetOutputFileName - Getting Outputfile name from broker(
+	UINT64 Session Id
+	);
+
+WfpSetOutputFileName - Setting Outputfile Name(
+	UINT64 Session Id
+	);
+
+WfpCreateWorkflowSession - Source session created(
+	UINT64 Session Id
+	);
+
+WfpCreateWorkflowSession - Parent Window check(
+	UINT64 hwndParent,
+	UINT64 hwndLastPopup,
+	BOOLEAN isParentWindowCoreWindow
+	);
+
+IStreamOverSpoolFile::Clone(
+	VOID
+	);
+
+IStreamOverSpoolFile::Stat(
+	VOID
+	);
+
+IStreamOverSpoolFile::UnlockRegion(
+	VOID
+	);
+
+IStreamOverSpoolFile::LockRegion(
+	VOID
+	);
+
+IStreamOverSpoolFile::Revert(
+	VOID
+	);
+
+IStreamOverSpoolFile::SetSize E_NOTIMPL(
+	VOID
+	);
+
+IStreamOverSpoolFile::Seek(
+	VOID
+	);
+
+IStreamOverSpoolFile::Read E_NOTIMPL(
+	VOID
+	);
+
+IStreamOverSpoolFile::DuplicateSpoolingHandlesInSourceAppContext(
+	UINT32 brokerProcessId,
+	UINT32 sourceProcessId,
+	UINT64 originalWriteFileHandle,
+	UINT64 originalDataAvailableEventHandle,
+	UINT64 writeFileHandle,
+	UINT64 dataAvailableEventHandle
+	);
+
+IStreamOverSpoolFile::DuplicateSpoolingHandlesInSourceAppContext Enter(
+	VOID
+	);
+
+IStreamOverSpoolFile::Commit(
+	VOID
+	);
+
+IStreamOverSpoolFile::Write Exit(
+	UINT32 HResult
+	);
+
+IStreamOverSpoolFile::Write Enter(
+	UINT32 NumberOfBytes
+	);
+
+IStreamOverSpoolFile::Initialize Exit(
+	VOID
+	);
+
+IStreamOverSpoolFile::Initialize - Failed to request handles from broker, duplicate the handles by itself(
+	VOID
+	);
+
+IStreamOverSpoolFile::Initialize Enter(
+	VOID
+	);
+

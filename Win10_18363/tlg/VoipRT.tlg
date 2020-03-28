@@ -1,0 +1,207 @@
+ProviderNames:
+	Microsoft.Windows.Apps.VoipRTProviders
+	Microsoft-Windows-Telephony-VoipRT
+
+
+
+**** Events *****
+INCOMING_UPGRADE_VIDEO_CALL(
+	ANSISTRING details,
+	HEXINT32 CallId
+	);
+
+OUTGOING_UPGRADE_VIDEO_CALL(
+	ANSISTRING details,
+	HEXINT32 CallId,
+	GUID UpgradeGuid
+	);
+
+PHPERF_VOIP_NOTIFY_UNMUTED_BEGIN(
+	VOID
+	);
+
+PHPERF_VOIP_NOTIFY_MUTED_BEGIN(
+	VOID
+	);
+
+PHPERF_VOIP_APP_INITIATED_CALL_END(
+	VOID
+	);
+
+REQUEST_APP_INITIATED_VOIP_CALL(
+	ANSISTRING details,
+	HEXINT32 CallId
+	);
+
+PHPERF_VOIP_APP_INITIATED_CALL_BEGIN(
+	VOID
+	);
+
+PHPERF_VOIP_SETUP_NEW_ACCEPTED_CALL_END(
+	VOID
+	);
+
+SETUP_NEW_ACCEPTED_VOIP_CALL(
+	ANSISTRING details,
+	HEXINT32 CallId
+	);
+
+PHPERF_VOIP_SETUP_NEW_ACCEPTED_CALL_BEGIN(
+	VOID
+	);
+
+PHPERF_VOIP_OUTGOING_CALL_END(
+	VOID
+	);
+
+NEW_OUTGOING_VOIP_CALL(
+	ANSISTRING details,
+	HEXINT32 CallId
+	);
+
+PHPERF_VOIP_OUTGOING_CALL_BEGIN(
+	VOID
+	);
+
+NEW_INCOMING_VOIP_CALL(
+	ANSISTRING details,
+	HEXINT32 CallId
+	);
+
+PHPERF_VOIP_INCOMING_CALL_BEGIN(
+	VOID
+	);
+
+TRACE_STRING(
+	ANSISTRING details,
+	UNICODESTRING TraceString
+	);
+
+OPENED_VOIP_RPC_CLIENT(
+	ANSISTRING details
+	);
+
+OPENING_VOIP_RPC_CLIENT(
+	ANSISTRING details
+	);
+
+[Error] Assert(
+	HRESULT HResult,
+	ANSISTRING Location,
+	UINT32 Line Number
+	);
+
+[Error] Propagate(
+	HRESULT HResult,
+	ANSISTRING Location,
+	UINT32 Line Number
+	);
+
+[Error] Originate(
+	HRESULT HResult,
+	ANSISTRING Location,
+	UINT32 Line Number
+	);
+
+StaticWNFUserCallback(
+	UINT64 PartA_PrivTags,
+	HEXINT64 callbackContext,
+	FLOAT callbackTime,
+	HEXINT32 HResult
+	);
+
+CancelUpgrade(
+	UINT64 PartA_PrivTags,
+	GUID GUID
+	);
+
+TerminateCellularCall(
+	UINT64 PartA_PrivTags,
+	GUID GUID
+	);
+
+RequestOutgoingUpgradeToVideoCall(
+	UINT64 PartA_PrivTags,
+	GUID GUID
+	);
+
+RequestNewIncomingCallWithRemoteId(
+	UINT64 PartA_PrivTags,
+	GUID GUID
+	);
+
+RequestNewAppInitiatedCall(
+	UINT64 PartA_PrivTags,
+	GUID GUID
+	);
+
+SetupNewAcceptedCall(
+	UINT64 PartA_PrivTags,
+	GUID GUID
+	);
+
+RequestNewOutgoingCall(
+	UINT64 PartA_PrivTags,
+	UNICODESTRING Context,
+	UNICODESTRING ServiceName,
+	UINT32 VOIPMediaType,
+	GUID GUID,
+	HRESULT HResult
+	);
+
+RequestNewIncomingCall(
+	UINT64 PartA_PrivTags,
+	UNICODESTRING context,
+	UNICODESTRING serviceName,
+	UNICODESTRING callDetails,
+	UINT32 VOIPMediaType,
+	GUID GUID,
+	HRESULT HResult
+	);
+
+ReserveCallResourcesAsync(
+	UINT64 PartA_PrivTags,
+	UNICODESTRING taskEntryPoint,
+	FLOAT startTime,
+	GUID GUID,
+	HRESULT HResult
+	);
+
+TRY_SHOW_APP_UI(
+	ANSISTRING details,
+	HEXINT32 CallId
+	);
+
+INVOKING_REJECT_INCOMING(
+	ANSISTRING details,
+	HEXINT32 CallId
+	);
+
+INVOKING_ACCEPT_INCOMING(
+	ANSISTRING details,
+	HEXINT32 CallId
+	);
+
+INVOKING_UNHOLD(
+	ANSISTRING details,
+	HEXINT32 CallId
+	);
+
+INVOKING_HOLD(
+	ANSISTRING details,
+	HEXINT32 CallId
+	);
+
+INVOKING_END(
+	ANSISTRING details,
+	HEXINT32 CallId
+	);
+
+PHPERF_VOIP_END_CALL_BEGIN(
+	VOID
+	);
+
+TryShowAppUI(
+	VOID
+	);
+

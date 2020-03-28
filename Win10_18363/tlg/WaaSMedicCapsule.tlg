@@ -1,0 +1,382 @@
+ProviderNames:
+	Microsoft.Windows.WaaSMedic.Local
+	Microsoft.Windows.WaaSMedic
+
+
+
+**** Events *****
+LogLevelError(
+	UNICODESTRING fmt,
+	HRESULT hResult
+	);
+
+Verbose(
+	UNICODESTRING m
+	);
+
+Info(
+	UNICODESTRING m
+	);
+
+Warning(
+	UNICODESTRING m
+	);
+
+Error(
+	UNICODESTRING m
+	);
+
+VelocityResiliency1909Plugin.RemediatedUnhealthyVelocity1909(
+	UNICODESTRING versionString
+	);
+
+VelocityResiliency1909Plugin.RemediationFailure(
+	UNICODESTRING versionString
+	);
+
+VelocityResiliency1909Plugin.DetectionFailure(
+	UNICODESTRING versionString
+	);
+
+VelocityResiliency1909Plugin.DetectionFoundUnhealthyVelocity1909(
+	UNICODESTRING versionString
+	);
+
+FallbackError(
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+FallbackError(
+	UINT64 PartA_PrivTags,
+	SIGNED wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+DeletePathFailed(
+	UNICODESTRING targetPath,
+	HRESULT hResult
+	);
+
+BinaryHealthPlugin.RemediateCorruptedBinaryFailed(
+	UNICODESTRING versionString,
+	UNICODESTRING binaryName,
+	HRESULT hResult
+	);
+
+BinaryHealthPlugin.RemediateCorruptedBinarySuccess(
+	UNICODESTRING versionString,
+	UNICODESTRING binaryName,
+	HRESULT hResult
+	);
+
+BinaryHealthPlugin.RemediateCorruptedBinary(
+	UNICODESTRING versionString,
+	UNICODESTRING failureReason,
+	UNICODESTRING binaryName,
+	HRESULT hResult
+	);
+
+QueryBinaryForCorruptionFailed(
+	UNICODESTRING versionString,
+	UNICODESTRING binaryName,
+	UNICODESTRING failureReason,
+	HRESULT hResult
+	);
+
+QueryBinaryForCorruptionFailedAndIgnored(
+	UNICODESTRING versionString,
+	UNICODESTRING binaryName,
+	UNICODESTRING failureReason
+	);
+
+BinaryHealthPlugin.RunRemediationCanNotRemediate(
+	UNICODESTRING versionString,
+	UNICODESTRING binaryName
+	);
+
+BinaryHealthPlugin.MissingBinaryFound(
+	UNICODESTRING versionString,
+	UNICODESTRING binaryName
+	);
+
+BinaryHealthPlugin.RunDetectionHealthyBinary(
+	UNICODESTRING versionString,
+	UNICODESTRING binaryName
+	);
+
+BinaryHealthSkipped(
+	HRESULT hResult
+	);
+
+BinaryHealthPlugin.CoCreateInstanceFailed(
+	UNICODESTRING versionString,
+	HRESULT hResult
+	);
+
+ServiceHealthPlugin.FixedServiceConfiguration(
+	UNICODESTRING versionString,
+	UNICODESTRING serviceName
+	);
+
+ServiceHealthPlugin.ServiceNotConfiguredCorrectly(
+	UNICODESTRING versionString,
+	UNICODESTRING serviceName
+	);
+
+NoUsoScanPlugin.GetLastScanTimeFailed(
+	UNICODESTRING versionString,
+	HRESULT hResult
+	);
+
+NotificationManagerPlugin.ValidateSignatureOfFile(
+	UNICODESTRING versionString,
+	UNICODESTRING fileName,
+	HRESULT hResult
+	);
+
+TimeSyncPlugin.IsTimeSyncEnabledByUser(
+	VOID
+	);
+
+ServicingCleanupPlugin.DetectLastScavengeThresholdFailed(
+	UNICODESTRING versionString,
+	HRESULT hResult
+	);
+
+ScheduledTasksPlugin.NoStaticTaskXmlFilesLoaded(
+	UNICODESTRING versionString,
+	HRESULT hResult
+	);
+
+ScheduledTasksPlugin.TaskNotConfiguredCorrectly(
+	UNICODESTRING versionString,
+	UNICODESTRING taskName
+	);
+
+UsoHelper.IsUpgradeInProgressFailed(
+	UNICODESTRING versionString,
+	HRESULT hResult
+	);
+
+UsoHelper.GetLastErrorInfoFailed(
+	UNICODESTRING versionString,
+	HRESULT hResult
+	);
+
+UsoHelper.DetectLowDiskSpaceDetected(
+	UNICODESTRING versionString,
+	UNICODESTRING errorSource,
+	HRESULT lastUsoError
+	);
+
+UsoHelper.DetectLowDiskSpaceFailed(
+	UNICODESTRING versionString,
+	HRESULT hResult
+	);
+
+UsoHelper.GetRebootRequiredFailed(
+	UNICODESTRING versionString,
+	HRESULT hResult
+	);
+
+UsoHelper.StartScanFailed(
+	UNICODESTRING versionString,
+	HRESULT hResult,
+	BOOL32 fInteractiveScan,
+	BOOL32 fUseMsUpdateServiceOnly
+	);
+
+UsoHelper.GetPermanentSessionVariableFailed(
+	UNICODESTRING versionString,
+	UNICODESTRING variableName,
+	HRESULT hResult
+	);
+
+UsoHelper.InitializeFailed(
+	UNICODESTRING versionString,
+	HRESULT hResult
+	);
+
+SvcUtil.ServiceStopFailed(
+	UNICODESTRING versionString,
+	UNICODESTRING serviceName,
+	HRESULT hResult
+	);
+
+RegUtil.UnexpectedRootPathFromStateSeparationApi(
+	UNICODESTRING versionString,
+	UNICODESTRING stateSeparatedRootPath
+	);
+
+RegUtil.RegSetValueFromVariantFailed(
+	UNICODESTRING versionString,
+	UNICODESTRING subKey,
+	UNICODESTRING valueName,
+	BOOL32 protected,
+	HRESULT hResult
+	);
+
+RegUtil.RegGetValueAsVariantFailed(
+	UNICODESTRING versionString,
+	UNICODESTRING subKey,
+	UNICODESTRING valueName,
+	HRESULT hResult
+	);
+
+RegUtil.SafeRegQueryValueCchAllocHelperFailed(
+	UNICODESTRING versionString,
+	UNICODESTRING valueName,
+	HRESULT hResult
+	);
+
+RegUtil.SafeRegQueryValueCchHelperFailed(
+	UNICODESTRING versionString,
+	UNICODESTRING valueName,
+	HRESULT hResult
+	);
+
+RegUtil.RegDelAllValuesInKeyFailed(
+	UNICODESTRING versionString,
+	UNICODESTRING subKey,
+	HRESULT hResult
+	);
+
+RegUtil.RegDelTreeFailed(
+	UNICODESTRING versionString,
+	UNICODESTRING parentKey,
+	UNICODESTRING treeToDelete,
+	HRESULT hResult
+	);
+
+RegUtil.RegDelValueFailed(
+	UNICODESTRING versionString,
+	UNICODESTRING subKey,
+	UNICODESTRING valueName,
+	HRESULT hResult
+	);
+
+RegUtil.RegSetValueFailed(
+	UNICODESTRING versionString,
+	UNICODESTRING parentKey,
+	UNICODESTRING subKey,
+	UNICODESTRING valueName,
+	UINT32 valueType,
+	HRESULT hResult
+	);
+
+RegUtil.RegCreateKeyFailed(
+	UNICODESTRING versionString,
+	UNICODESTRING parentKey,
+	UNICODESTRING subKey,
+	HRESULT hResult
+	);
+
+FileUtil.LoadXMLFromFileFailed(
+	UNICODESTRING versionString,
+	UNICODESTRING FileName,
+	HRESULT hResult
+	);
+
+ProtectedSettingsState(
+	UNICODESTRING versionString,
+	UINT32 countProtectedRegkeys,
+	UINT32 countProtectedTasks,
+	UINT32 countProtectedSecurityDescriptors,
+	UINT32 countTotal
+	);
+
+RegUtil.RegQueryValueFailed(
+	UNICODESTRING versionString,
+	UNICODESTRING valueType,
+	UNICODESTRING valueName,
+	HRESULT hResult
+	);
+
+TasksHelper.IsTaskConfiguredProperlyFailed(
+	UNICODESTRING versionString,
+	UNICODESTRING taskName,
+	UNICODESTRING failedCheck,
+	HRESULT hResult
+	);
+
+TasksHelper.IsTaskConfiguredProperlyFailedExtended(
+	UNICODESTRING versionString,
+	UNICODESTRING taskName,
+	UNICODESTRING CurrentTaskXml,
+	UNICODESTRING ExpectedTaskXml,
+	UNICODESTRING failedCheck,
+	HRESULT hResult
+	);
+
+TasksHelper.GetLastTaskRuntimeFailed(
+	UNICODESTRING versionString,
+	UNICODESTRING taskName,
+	HRESULT hResult
+	);
+
+TasksHelper.CreateOrUpdateTaskFailed(
+	UNICODESTRING versionString,
+	UNICODESTRING taskName,
+	UNICODESTRING taskXml,
+	HRESULT hResult
+	);
+
+TasksHelper.RunTaskFailed(
+	UNICODESTRING versionString,
+	UNICODESTRING taskName,
+	HRESULT hResult
+	);
+
+TasksHelper.TaskExistsFailed(
+	UNICODESTRING versionString,
+	UNICODESTRING taskName,
+	HRESULT hResult
+	);
+
+TasksHelper.TaskExistsTaskDoesNotExist(
+	UNICODESTRING versionString,
+	UNICODESTRING taskName
+	);
+
+TasksHelper.InitializeFailed(
+	UNICODESTRING versionString,
+	UNICODESTRING taskFolderPath,
+	HRESULT hResult
+	);
+
+TasksHelper.InitializeSuccess(
+	UNICODESTRING versionString,
+	UNICODESTRING taskFolderPath
+	);
+

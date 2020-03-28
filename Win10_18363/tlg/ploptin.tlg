@@ -1,0 +1,42 @@
+ProviderNames:
+	Microsoft.Windows.PrelaunchOptIn
+
+
+
+**** Events *****
+OptInAppChanged(
+	UNICODESTRING AppUserModelId,
+	UINT16 OldArchitectureMask,
+	UINT16 OldAllow,
+	UINT16 OldVersionMajor,
+	UINT16 OldVersionMinor,
+	UINT16 OldVersionBuild,
+	UINT16 OldVersionRevision,
+	UINT16 NewArchitectureMask,
+	UINT16 NewAllow,
+	UINT16 NewVersionMajor,
+	UINT16 NewVersionMinor,
+	UINT16 NewVersionBuild,
+	UINT16 NewVersionRevision
+	);
+
+OptInAppDeleted(
+	UNICODESTRING AppUserModelId,
+	UINT16 ArchitectureMask,
+	UINT16 Allow,
+	UINT16 VersionMajor,
+	UINT16 VersionMinor,
+	UINT16 VersionBuild,
+	UINT16 VersionRevision
+	);
+
+OptInAppAdded(
+	UNICODESTRING AppUserModelId,
+	UINT16 ArchitectureMask,
+	UINT16 Allow,
+	UINT16 VersionMajor,
+	UINT16 VersionMinor,
+	UINT16 VersionBuild,
+	UINT16 VersionRevision
+	);
+

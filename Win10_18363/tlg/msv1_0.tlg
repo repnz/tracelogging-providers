@@ -1,0 +1,129 @@
+ProviderNames:
+	Microsoft.Windows.Security.Ntlm
+	Microsoft.Windows.TlgAggregateInternal
+
+
+
+**** Events *****
+LocalSAMLogon_Aggregate(
+	NULL Count,
+	HEXINT32 status
+	);
+
+SupplementalCredentialDecryptionError(
+	ANSISTRING function,
+	UINT32 LogonIdLow,
+	INT32 LogonIdHigh,
+	INT32 Status,
+	BOOLEAN CredIsoObjUsesEncryptedCredentials
+	);
+
+InsecureApiCall(
+	ANSISTRING function,
+	UNICODESTRING callingImageName,
+	INT32 logonIdHigh,
+	UINT32 logonIdLow,
+	BOOL32 isTcb,
+	UINT32 parameterControl,
+	UINT32 ntlmProtocolSupported
+	);
+
+MspGetStrongCredentialKeyFailure(
+	UINT32 KeyType,
+	UINT32 SourceType,
+	UINT32 LogonIdLow,
+	INT32 LogonIdHigh,
+	INT32 Status,
+	BOOLEAN LocalhostCredIsoObjUsesEncryptedCredentials,
+	BOOLEAN CredentialCredIsoObjIsRemote
+	);
+
+ReadRegistryValue_Aggregate(
+	INT64 Count,
+	ANSISTRING registryValue,
+	BOOLEAN isInRegistry,
+	HEXINT32 registryData,
+	HEXINT32 effectiveValue
+	);
+
+CredIsoUpdateRootSecretStatus(
+	INT32 isVsmBased,
+	INT32 registryStatus,
+	UINT32 registryValueType,
+	INT32 existingSecretStatus,
+	INT32 isRootSecretValid,
+	INT32 secretCreationStatus,
+	BOOLEAN bufferWasReencrypted,
+	INT32 registryPersistStatus,
+	INT32 status
+	);
+
+HardcodedNtlmCall_Aggregate(
+	NULL Count,
+	BOOLEAN isServerCall,
+	UNICODESTRING callingImageName
+	);
+
+LogonUserStop_Aggregate(
+	NULL Count,
+	HEXINT32 status,
+	INT32 logonType,
+	INT32 ntlmRunningIsolated,
+	NULL logonInfo,
+	BOOLEAN localUserAccount
+	);
+
+MsvpCheckSSOPolicy_Aggregate(
+	NULL count,
+	UNICODESTRING appName,
+	BOOLEAN hasActiveLogon,
+	UINT32 logonFlags,
+	UINT16 logonType,
+	UINT16 flagMSASSOControl,
+	UINT16 flagOrgSSOControl,
+	BOOLEAN permissive,
+	BOOLEAN canTellIsPrivate,
+	BOOLEAN isPrivate,
+	BOOLEAN retVal
+	);
+
+IsoRestrictedFunction_Aggregate(
+	NULL Count,
+	INT32 credGuardEn,
+	ANSISTRING function,
+	UNICODESTRING callingImageName,
+	BOOL32 isTcb
+	);
+
+InsecureSettingOverride_Aggregate(
+	NULL Count,
+	ANSISTRING setting,
+	UINT32 cfgSettingValue,
+	UINT32 secureDefaultValue
+	);
+
+InsecureApiCall_Aggregate(
+	NULL count,
+	ANSISTRING function,
+	UNICODESTRING callingImageName,
+	BOOL32 isTcb
+	);
+
+NtlmCredIsoRpcError(
+	ANSISTRING Function,
+	INT32 Line,
+	HEXINT32 RpcStatus
+	);
+
+TlgAggregateSummary(
+	GUID Provider,
+	UINT64 NumFlushes,
+	UINT64 MaxEntriesStored,
+	UINT64 TotalEntriesFlushed,
+	UINT32 MaxEntriesFlushed,
+	UINT32 MinEntriesFlushed,
+	UINT32 NumBucketLimitReached,
+	UINT32 NumAllocationFailures,
+	UINT32 NumLargeEventFailures
+	);
+

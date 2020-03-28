@@ -1,0 +1,77 @@
+ProviderNames:
+	Microsoft.Windows.DeviceManagement.SessionManagement
+	Microsoft.Windows.EnterpriseManagement.Enrollment
+	Microsoft.Windows.EnterpriseManagement.PolicyManager
+	Microsoft.Windows.DeviceManagement.OmaDmApiProvider
+	Microsoft.Windows.EnterpriseManagement.ResourceManager
+	Microsoft.Windows.DeviceManagement.OmaDmClient
+	Microsoft.Windows.DeviceManagement.ConfigManager2
+	Microsoft.Windows.EnterpriseManagement.DeclaredConfiguration
+	Microsoft.Windows.DeviceManagement.DevDetailCsp
+	Microsoft.Windows.DeviceManagement.OMADMPRC
+	Microsoft.Windows.EnterpriseManagement.ResourceManagerUnenrollHook
+	Microsoft.Windows.DeviceManagement.SecurityPolicyCsp
+	Microsoft.Windows.DeviceManagement.DmAccCsp
+	Microsoft.Windows.DeviceManagement.DevInfo
+	Microsoft.Windows.EnterpriseManagement.ConfigManagerHook
+	Microsoft-Windows-DeviceManagement-W7NodeProcessor
+	Microsoft.Windows.EMPS.Enrollment
+
+
+
+**** Events *****
+DmAccCSPStart(
+	VOID
+	);
+
+DmAccCSPEnd(
+	VOID
+	);
+
+ActivityStoppedAutomatically(
+	VOID
+	);
+
+W7NodeProcessor(
+	UNICODESTRING L"Provisioning a DM Account through WAP XML",
+	HRESULT HResult,
+	ANSISTRING __TlgCV__
+	);
+
+DM Client Version(
+	UNICODESTRING Dm Version,
+	ANSISTRING __TlgCV__
+	);
+
+DMACC Add(
+	UNICODESTRING ProviderID,
+	UNICODESTRING OMADM_ACCOUNTID_VARIABLE_NAME,
+	UNICODESTRING AccountID of modified account,
+	ANSISTRING __TlgCV__
+	);
+
+DmAccAccountDetails(
+	UNICODESTRING Account UID,
+	UNICODESTRING Server Version,
+	ANSISTRING __TlgCV__
+	);
+
+GetValue: Policy ID and Policy Value(
+	UINT32 dwPolicyId,
+	UINT32 dwValue
+	);
+
+DMCSP_DevDetail_SetDeviceName(
+	HRESULT HResult,
+	ANSISTRING __TlgCV__
+	);
+
+DMACC Mode(
+	ANSISTRING Mode,
+	ANSISTRING __TlgCV__
+	);
+
+Policy ID(
+	UNICODESTRING pszPolicyId
+	);
+

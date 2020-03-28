@@ -1,0 +1,83 @@
+ProviderNames:
+	Microsoft.Windows.HVSI.PolicyEvaluator
+
+
+
+**** Events *****
+FallbackError(
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+EvaluatorInvoked(
+	UNICODESTRING EnrollmentId,
+	UINT32 CurrentPolicyValue,
+	UINT32 ProviderSetPolicyValue,
+	UINT32 UpdatedPolicyValue,
+	UINT32 DisableHvsiRegKeyValue,
+	UINT32 CspEnrollmentType,
+	UNICODESTRING ProviderType,
+	BOOLEAN IsHVSIDependencySatisfied,
+	BOOLEAN IsEdgeDependencySatisfied,
+	BOOLEAN IsCentennialOfficeDependencySatisfied,
+	BOOLEAN CentennialOfficeBindFilterStatus,
+	BOOLEAN CentennialOfficeSideloadPackageStatus,
+	INT64 DependencyStatus,
+	INT64 FeatureStatus,
+	BOOL32 AllSpecRequirementsMet,
+	BOOL32 BabyWimExists,
+	UINT32 ProcessCountRequirement,
+	UINT32 ProcessCountActual,
+	BOOL32 ProcessCountRequirementMet,
+	UINT32 MemoryRequirement,
+	UINT32 MemoryActual,
+	BOOL32 MemoryRequirementMet,
+	UINT32 DiskSpaceRequirement,
+	UINT32 DiskSpaceActual,
+	BOOL32 DiskSpaceRequirementMet,
+	GUID CspTrackerGuid,
+	GUID EvalTrackerGuid,
+	HRESULT DisableHvsiRegKeyHResult,
+	HRESULT TrackerGuidHResult,
+	HRESULT EvalTrackerGuidHResult,
+	HRESULT GetPolicyStateValuesHResult,
+	HRESULT GetEnrollmentHResult,
+	HRESULT HResult
+	);
+
+FallbackError(
+	UINT64 PartA_PrivTags,
+	SIGNED wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+

@@ -1,0 +1,184 @@
+ProviderNames:
+	Microsoft.Windows.Fundamentals.SiufDeployMgrClient
+	Microsoft.Windows.Fundamentals.UserInitiatedFeedback
+
+
+
+**** Events *****
+Debug(
+	ANSISTRING Details
+	);
+
+Error(
+	ANSISTRING Description,
+	INT32 ErrorCode,
+	ANSISTRING File,
+	ANSISTRING FunctionDescription,
+	INT32 Line
+	);
+
+Error(
+	INT32 ErrorCode,
+	ANSISTRING File,
+	ANSISTRING FunctionDescription,
+	INT32 Line
+	);
+
+UifEscalationInfo(
+	ANSISTRING Message,
+	HRESULT StatusCode,
+	GUID ScenarioId,
+	GUID InstanceId
+	);
+
+Completed(
+	ANSISTRING info,
+	UNICODESTRING lang,
+	UINT32 scenariosInManifest,
+	UINT32 filesDownloaded,
+	UINT32 filesSkipped,
+	UINT32 filesNotFound,
+	UINT32 filesNotModified,
+	UINT32 filesCleanedUp,
+	UINT32 unexpectedResults,
+	UINT32 ringsMatched,
+	UINT32 ringsApplicable,
+	BOOLEAN isImpersonating,
+	INT32 skipRingMap,
+	INT32 skipLocFiles,
+	INT32 languageSupported,
+	INT32 hResult,
+	UINT16 effectiveSiufSetting,
+	UINT16 siufAuthority,
+	UINT16 newManifest,
+	INT32 anotherInstanceRunning,
+	INT32 triggeredByWNF,
+	INT32 isFeedbackHubAppInstalled,
+	INT32 GetFileFromOneSettingsResult,
+	INT32 CleanUpLocFilesResult,
+	INT32 CreateSiufLocFolderResult,
+	INT32 SaveRingMapResult,
+	INT32 InitializeWinHTTPResult,
+	INT32 GetScenariosListResult,
+	INT32 GetUILanguageResult,
+	INT32 GetEffectiveSiufStateResult,
+	INT32 IsFeedbackHubAppInstalledResult,
+	INT32 CreateSiufSystemRootRegResult,
+	INT32 ImpersonateAsLoggedOnUserResult,
+	INT32 IsAnotherInstanceRunningResult
+	);
+
+Debug(
+	ANSISTRING Details,
+	UNICODESTRING Name,
+	UINT32 Error,
+	UINT32 Disposition
+	);
+
+Starting(
+	ANSISTRING info
+	);
+
+Debug(
+	ANSISTRING info,
+	INT32 hr,
+	UNICODESTRING telmanPath
+	);
+
+Debug(
+	ANSISTRING Reason,
+	INT32 GetLastDownloadTimeFromWnf result,
+	UINT32 RegGetValueW error
+	);
+
+Debug(
+	ANSISTRING Details,
+	UINT64 Session Token,
+	HEXINT64 User Token,
+	INT32 Result
+	);
+
+Debug(
+	ANSISTRING Details,
+	INT32 Result
+	);
+
+Debug(
+	ANSISTRING Details,
+	UINT32 Result
+	);
+
+Debug(
+	ANSISTRING Details,
+	UNICODESTRING Account Name,
+	UNICODESTRING Domain Name,
+	UINT32 Name Use
+	);
+
+Debug(
+	ANSISTRING Details,
+	UINT32 Device Family,
+	INT32 Result
+	);
+
+Debug(
+	ANSISTRING Details,
+	HEXINT64 User Token,
+	UNICODESTRING SID,
+	UINT32 Result
+	);
+
+Debug(
+	ANSISTRING Details,
+	UINT32 Index,
+	UINT32 SessionId,
+	INT32 Result
+	);
+
+HttpError(
+	INT32 HttpStatus,
+	UNICODESTRING Path
+	);
+
+Debug(
+	ANSISTRING Details,
+	INT32 charactersConvertedToWide,
+	UNICODESTRING responseInUnicode
+	);
+
+Debug(
+	ANSISTRING Reason,
+	UNICODESTRING Path,
+	INT32 hr,
+	UINT32 bytesTotal
+	);
+
+Debug(
+	ANSISTRING Details,
+	UNICODESTRING Path
+	);
+
+Error(
+	ANSISTRING Description,
+	INT32 ErrorCode,
+	INT32 HTTPStatus,
+	ANSISTRING File,
+	ANSISTRING FunctionDescription,
+	INT32 Line
+	);
+
+Debug(
+	UNICODESTRING LocFilesPath
+	);
+
+Debug(
+	UNICODESTRING DiagnosisPath
+	);
+
+Error(
+	UNICODESTRING Description,
+	INT32 ErrorCode,
+	ANSISTRING FunctionDescription,
+	INT32 Line
+	);
+

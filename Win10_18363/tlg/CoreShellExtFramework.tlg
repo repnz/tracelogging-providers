@@ -1,0 +1,239 @@
+ProviderNames:
+	Microsoft.Windows.ComposableShell.Core.CoreShellExtFramework
+	Microsoft.Windows.ComposableShell.Core.CoreShellExtFramework
+
+
+
+**** Events *****
+ResultLoggingCallback(
+	UINT64 PartA_PrivTags,
+	ANSISTRING file,
+	UINT32 lineNumber,
+	UINT32 failureType,
+	INT32 failureCount,
+	UINT32 threadId,
+	HEXINT32 hr,
+	UNICODESTRING message,
+	ANSISTRING code,
+	ANSISTRING function
+	);
+
+Info(
+	UINT64 PartA_PrivTags,
+	ANSISTRING message,
+	INT32 kvp.first
+	);
+
+Info(
+	UINT64 PartA_PrivTags,
+	ANSISTRING message,
+	UINT32 processId
+	);
+
+Info(
+	UINT64 PartA_PrivTags,
+	ANSISTRING message,
+	INT32 completionId
+	);
+
+Info(
+	UINT64 PartA_PrivTags,
+	ANSISTRING message,
+	INT32 *completionId
+	);
+
+ActivityStoppedAutomatically(
+	VOID
+	);
+
+MaxCoreShellProcessRelaunchAttempts(
+	UNICODESTRING shellExecutable,
+	UINT32 maxRestartsAllowed
+	);
+
+CoreShellProcessRestarted(
+	UNICODESTRING shellExecutable,
+	UINT32 relaunchCount
+	);
+
+ActivityError(
+	UINT64 PartA_PrivTags,
+	SIGNED wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+ActivityError(
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+Info(
+	UINT64 PartA_PrivTags,
+	ANSISTRING message,
+	UINT32 c_maximumRestarts
+	);
+
+Info(
+	UINT64 PartA_PrivTags,
+	ANSISTRING message,
+	INT32 relaunchCount
+	);
+
+Info(
+	UINT64 PartA_PrivTags,
+	ANSISTRING message
+	);
+
+Info(
+	UINT64 PartA_PrivTags,
+	ANSISTRING message,
+	UNICODESTRING pathBuffer
+	);
+
+LaunchCoreShellProcessInAppContainerActivity(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId,
+	UNICODESTRING shellExecutable,
+	BOOL32 restartProcess,
+	BOOL32 isCoreShellRestartDisabled
+	);
+
+LaunchCoreShellProcessInAppContainerActivity(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UNICODESTRING shellExecutable,
+	BOOL32 restartProcess,
+	BOOL32 isCoreShellRestartDisabled
+	);
+
+LaunchCoreShellProcessInAppContainerActivity(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId,
+	UNICODESTRING shellExecutable,
+	BOOL32 restartProcess,
+	BOOL32 isCoreShellRestartDisabled
+	);
+
+LaunchCoreShellProcessInAppContainerActivity(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+LaunchCoreShellProcessInAppContainerActivity(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+FallbackError(
+	UINT64 PartA_PrivTags,
+	SIGNED wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+FallbackError(
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+Error(
+	UINT64 PartA_PrivTags,
+	ANSISTRING message,
+	UNICODESTRING Service Name,
+	UINT32 WaitServiceState Result
+	);
+

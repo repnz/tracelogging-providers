@@ -1,0 +1,172 @@
+ProviderNames:
+	Microsoft.Windows.ProfExt
+	Microsoft-Windows-AppModel-Runtime
+	TelemetryAssert
+	TelemetryAssertDiagTrack
+
+
+
+**** Events *****
+DeleteACProfile_start(
+	UNICODESTRING Name,
+	UINT32 Type
+	);
+
+ParentFolderInfoOfAccessDeniedFolderCreate(
+	HRESULT HrCreate,
+	UNICODESTRING FolderToCreate,
+	UNICODESTRING ParentPath,
+	HRESULT HrGetDACL,
+	UNICODESTRING ParentDACL
+	);
+
+IsAppContainerProfilePresent_start(
+	UNICODESTRING Name,
+	UINT32 Type
+	);
+
+CreateAppContainerProfileFirewallFailed(
+	UNICODESTRING Name,
+	HRESULT ErrorCode
+	);
+
+DeleteACProfile_stop(
+	UINT32 hr
+	);
+
+FailureNoContext(
+	UINT32 hr
+	);
+
+CreateACProfile_start(
+	UNICODESTRING Name,
+	UNICODESTRING Display,
+	UNICODESTRING Description,
+	UINT32 Type,
+	UINT32 CapabilityCount
+	);
+
+AppModelCreateAppContainerFailure(
+	UNICODESTRING Context,
+	UINT32 hr
+	);
+
+IsAppContainerProfilePresent_stop(
+	UINT32 hr
+	);
+
+AppModelAppContainerCreateFolderFailure(
+	UNICODESTRING Context,
+	UINT32 hr
+	);
+
+UpdateAppContainerProfileWorker_Failed(
+	UINT32 hr
+	);
+
+UpdateAppContainerProfileFirewallFailed(
+	UNICODESTRING Name,
+	HRESULT ErrorCode
+	);
+
+ActivityStoppedAutomatically(
+	VOID
+	);
+
+AppModelDeleteAppContainerFailure(
+	UNICODESTRING Context,
+	UINT32 hr
+	);
+
+AppModelAppContainerRegisterSidFailure(
+	UINT32 hr
+	);
+
+SuccessContext(
+	UNICODESTRING Context
+	);
+
+UpdateACProfile_start(
+	UNICODESTRING Name,
+	UNICODESTRING OldDisplay,
+	UNICODESTRING Display,
+	UNICODESTRING Description,
+	UINT32 Type,
+	UINT32 CapabilityCount
+	);
+
+CreateACProfile_stop(
+	UINT32 hr
+	);
+
+DeleteAppContainerProfileWorker_Failed(
+	UINT32 hr
+	);
+
+AppModelUpdateAppContainerFailure(
+	UNICODESTRING Context,
+	UINT32 hr
+	);
+
+UpdateACProfile_stop(
+	UINT32 hr
+	);
+
+FailureContext(
+	UNICODESTRING Context,
+	UINT32 hr
+	);
+
+FallbackError(
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+FallbackError(
+	UINT64 PartA_PrivTags,
+	SIGNED wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+Assert(
+	UINT32 assertVersion,
+	UINT32 rva,
+	UINT32 timestamp,
+	UINT32 imageSize,
+	ANSISTRING imageName,
+	UINT32 count,
+	UINT32 totalHits,
+	UINT32 ModuleCollection,
+	UINT32 GlobalCollection
+	);
+

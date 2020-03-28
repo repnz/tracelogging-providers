@@ -1,0 +1,75 @@
+ProviderNames:
+	WWAHostTraceLogging
+	TelemetryAssert
+	TelemetryAssertDiagTrack
+
+
+
+**** Events *****
+WWAHostAppPackageInitializedEvent(
+	UNICODESTRING packageFullName,
+	UNICODESTRING appID,
+	UINT32 processId
+	);
+
+WWAHostAppSuspend(
+	UINT32 events,
+	UINT32 appSuspendTimeMS,
+	UINT32 extraPLMTimeMS,
+	UINT32 downloadCountAtWaitStart,
+	UINT32 downloadCountAtWaitEnd,
+	UINT32 suspendingHandlersInvokedCount,
+	UINT32 maxZoomValue,
+	UINT32 minZoomValue,
+	UINT32 userZoomCount
+	);
+
+WWAHostLaunchComplete(
+	UINT32 launchTimeMS,
+	BOOL32 isFirstActivation,
+	UINT32 hostedAppPerfFlags,
+	UINT32 windowType
+	);
+
+WWAHostErrorEvent(
+	UINT8 isDebuggerEnabled,
+	UNICODESTRING packageFullName,
+	UINT32 processId,
+	UNICODESTRING terminationType,
+	UNICODESTRING errorDescription,
+	UNICODESTRING errorTypeText,
+	UINT32 errorNumber,
+	UNICODESTRING callStack,
+	BOOLEAN UTCReplace_AppSessionGuid
+	);
+
+WWAJseRacReport(
+	UNICODESTRING packageFullName,
+	UNICODESTRING packageRelativeApplicationId,
+	UNICODESTRING stackHash,
+	UNICODESTRING errorType,
+	UNICODESTRING sourceFile,
+	UNICODESTRING sourcePosition,
+	UINT32 pid,
+	UINT64 processCreationTime,
+	UNICODESTRING applicationBinaryPath,
+	UNICODESTRING reportId,
+	BOOLEAN UTCReplace_AppSessionGuid
+	);
+
+Assert(
+	UINT32 assertVersion,
+	UINT32 rva,
+	UINT32 timestamp,
+	UINT32 imageSize,
+	ANSISTRING imageName,
+	UINT32 count,
+	UINT32 totalHits,
+	UINT32 ModuleCollection,
+	UINT32 GlobalCollection
+	);
+
+WWAHostExternalNavigationOnTopLevelDoc(
+	BOOL32 isLocalAnchor
+	);
+

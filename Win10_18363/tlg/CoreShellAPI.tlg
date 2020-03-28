@@ -1,0 +1,381 @@
+ProviderNames:
+	Microsoft.Windows.PlatformExtensions
+	Microsoft.Windows.ComposableShell.Framework.CoreShellAPI.TerminalManager
+	Microsoft.Windows.ComposableShell.SessionManagement.Session
+
+
+
+**** Events *****
+ActivityStoppedAutomatically(
+	VOID
+	);
+
+EvaluatedRegistration(
+	UNICODESTRING extensionClass,
+	UNICODESTRING currentImplementation
+	);
+
+ActivityError(
+	UINT64 PartA_PrivTags,
+	SIGNED wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+ActivityError(
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+TryLookupExtensionAcidWithExtensionClass(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId,
+	UNICODESTRING implementationAcid
+	);
+
+TryLookupExtensionAcidWithExtensionClass(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UNICODESTRING implementationAcid
+	);
+
+TryLookupExtensionAcidWithExtensionClass(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId,
+	UNICODESTRING extensionPointName,
+	UNICODESTRING extensionClass
+	);
+
+TryLookupExtensionAcidWithExtensionClass(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+TryLookupExtensionAcidWithExtensionClass(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+FallbackError(
+	UINT64 PartA_PrivTags,
+	SIGNED wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+FallbackError(
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+DisplayRequestEnd(
+	UINT32 terminalId
+	);
+
+DisplayRequestBegin(
+	UINT32 terminalId
+	);
+
+DeviceMoved(
+	UINT32 sourceTerminalId,
+	UINT32 destTerminalId,
+	UINT32 ttmDeviceId,
+	BOOLEAN sourceTerminalRemoved
+	);
+
+DeviceRemoved(
+	UINT32 terminalId,
+	UINT32 ttmDeviceId,
+	BOOLEAN terminalRemoved
+	);
+
+DeviceAdded(
+	UINT32 terminalId,
+	UINT32 ttmDeviceId,
+	UINT32 provider,
+	UINT32 providerSpecificType,
+	UNICODESTRING deviceId
+	);
+
+TerminalTimeoutChanged(
+	UINT32 terminalId,
+	UINT32 timeoutOnACPower,
+	UINT32 dimOnACPower,
+	UINT32 timeoutOnBattery,
+	UINT32 dimOnBattery
+	);
+
+TerminalDestroyed(
+	UINT32 terminalId
+	);
+
+DisplayStateChanged(
+	UINT32 terminalId,
+	UNICODESTRING displayPowerState
+	);
+
+GlobalDisplayStateChangeRequested(
+	UNICODESTRING displayPowerState
+	);
+
+DisplayStateChangeRequested(
+	UINT32 terminalId,
+	UNICODESTRING displayPowerState,
+	UNICODESTRING completed
+	);
+
+GlobalUserActiveStateChangeRequested(
+	UNICODESTRING userActiveState
+	);
+
+UserActiveStateChangeRequested(
+	UINT32 terminalId,
+	UNICODESTRING userActiveState,
+	UNICODESTRING completed
+	);
+
+GlobalUserPresenceStateChangeRequested(
+	UNICODESTRING userPresenceState
+	);
+
+UserPresenceStateChangeRequested(
+	UINT32 terminalId,
+	UNICODESTRING userPresenceState,
+	UNICODESTRING completed
+	);
+
+TerminalCreated(
+	UINT32 terminalId,
+	UNICODESTRING displayPowerState,
+	UINT32 timeoutOnACPower,
+	UINT32 dimOnACPower,
+	UINT32 timeoutOnBattery,
+	UINT32 dimOnBattery
+	);
+
+ActivityStoppedAutomatically(
+	VOID
+	);
+
+TransitionHandlerFailed(
+	UINT32 id,
+	UNICODESTRING handler
+	);
+
+StateTransition(
+	UINT32 id,
+	UNICODESTRING state
+	);
+
+TransitionHandlerStarting(
+	UINT32 id,
+	UNICODESTRING handler
+	);
+
+ActivityError(
+	UINT64 PartA_PrivTags,
+	SIGNED wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+ActivityIntermediateStop(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+ActivityError(
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+SessionEnding(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId
+	);
+
+SessionEnding(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+SessionEnding(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+SessionStarting(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId
+	);
+
+SessionStarting(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+SessionStarting(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+

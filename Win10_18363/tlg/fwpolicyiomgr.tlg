@@ -1,0 +1,35 @@
+ProviderNames:
+	Microsoft.Windows.Firewall.PolicyIoManager
+	Microsoft.Windows.TlgAggregateInternal
+
+
+
+**** Events *****
+FwThreadWaitTimeAndHoldTimeForGpLockCritical(
+	ANSISTRING callerFunctionName,
+	UINT64 threadWaitAndLockHoldTimeMs,
+	UINT64 gpLockHoldTimeMs
+	);
+
+FwAggregateThreadWaitTimeAndHoldTimeForGpLock(
+	NULL Count,
+	NULL totalThreadWaitAndLockHoldTimeMs,
+	NULL minThreadWaitAndLockHoldTimeMs,
+	NULL maxThreadWaitAndLockHoldTimeMs,
+	NULL totalGpLockHoldTimeMs,
+	NULL minGpLockHoldTimeMs,
+	NULL maxGpLockHoldTimeMs
+	);
+
+TlgAggregateSummary(
+	GUID Provider,
+	UINT64 NumFlushes,
+	UINT64 MaxEntriesStored,
+	UINT64 TotalEntriesFlushed,
+	UINT32 MaxEntriesFlushed,
+	UINT32 MinEntriesFlushed,
+	UINT32 NumBucketLimitReached,
+	UINT32 NumAllocationFailures,
+	UINT32 NumLargeEventFailures
+	);
+

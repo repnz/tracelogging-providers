@@ -1,0 +1,202 @@
+ProviderNames:
+	Microsoft.Windows.Firewall
+	Microsoft.Windows.Firewall
+	Microsoft.Windows.Networking.EDP
+	Microsoft.Windows.Firewall.Aggregate
+	Microsoft.Windows.TlgAggregateInternal
+
+
+
+**** Events *****
+APIStats(
+	UNICODESTRING api,
+	UINT64 timesInvoked,
+	UINT64 timesFailed
+	);
+
+FwLockWatchDog(
+	UINT64 fwLockHoldTimeMs
+	);
+
+MPSSVCResume(
+	PID processId
+	);
+
+MPSSVCStarted(
+	PID processId
+	);
+
+QueryUser(
+	UNICODESTRING applicationName,
+	UNICODESTRING processImageFileName,
+	BOOL32 isService,
+	UINT8 ipVersion,
+	UINT16 port,
+	UINT16 protocol,
+	UINT32 reasonNotShown,
+	BOOL32 isEdgeQuery
+	);
+
+EnableLoopbackCapability(
+	UNICODESTRING appContainerName,
+	UNICODESTRING displayName,
+	UNICODESTRING description
+	);
+
+ComponentInitFailed(
+	ANSISTRING componentName,
+	HRESULT hresult,
+	PID processId,
+	BOOL32 preClassifyEnabled,
+	BOOL32 preClassifyEnabledForThirdParty
+	);
+
+ComponentInitFailed(
+	ANSISTRING componentName,
+	HRESULT hresult,
+	PID processId
+	);
+
+FwThreadWaitTimeAndHoldTimeForFwLock(
+	UNICODESTRING callersAppCommandLine,
+	ANSISTRING callerFunctionName,
+	UINT64 threadWaitAndLockHoldTimeMs,
+	UINT64 fwLockHoldTimeMs
+	);
+
+FwThreadWaitTimeAndHoldTimeForFwLock(
+	UNICODESTRING callersAppCommandLine,
+	ANSISTRING callerFunctionName,
+	UINT64 threadWaitAndLockHoldTimeMs,
+	UINT64 fwLockHoldTimeMs
+	);
+
+FwThreadWaitTimeAndHoldTimeForFwLock(
+	UINT32 callersAppPid,
+	UNICODESTRING callersAppSid,
+	UNICODESTRING callersAppCommandLine,
+	ANSISTRING callerFunctionName,
+	UINT64 threadWaitAndLockHoldTimeMs,
+	UINT64 fwLockHoldTimeMs
+	);
+
+FwThreadWaitTimeAndHoldTimeForFwLock(
+	UINT32 callersAppPid,
+	UNICODESTRING callersAppSid,
+	UNICODESTRING callersAppCommandLine,
+	ANSISTRING callerFunctionName,
+	UINT64 threadWaitAndLockHoldTimeMs,
+	UINT64 fwLockHoldTimeMs
+	);
+
+DisableFirewall(
+	UINT32 profileType,
+	UNICODESTRING modifyingAppName
+	);
+
+FwApiCompletionTimeoutCritical(
+	ANSISTRING apiName,
+	UINT32 pid,
+	UINT64 apiCompletionTimeMs
+	);
+
+GlobalConfigInitFailed(
+	ANSISTRING ConfigID,
+	HRESULT hresult
+	);
+
+FwGetEnterpriseIdAsync(
+	UINT32 totalTimeMs,
+	UINT32 dnsResolutionTimeMs,
+	UINT32 getBestRouteTimeMs
+	);
+
+FwGetEnterpriseIdAsync(
+	UINT32 totalTimeMs,
+	UINT32 dnsResolutionTimeMs,
+	UINT32 getBestRouteTimeMs
+	);
+
+FwScenarioTelemetryEvent(
+	UNICODESTRING scenario,
+	BOOL32 preClassifyEnabled,
+	BOOL32 policyChanged,
+	UINT32 activeProfiles,
+	UINT32 totalTimeMs,
+	UNICODESTRING dataUpdated
+	);
+
+FwScenarioTelemetryEvent(
+	UNICODESTRING scenario,
+	BOOL32 preClassifyEnabled,
+	BOOL32 policyChanged,
+	UINT32 activeProfiles,
+	UINT32 totalTimeMs,
+	UNICODESTRING dataUpdated
+	);
+
+FwFilterTranscactionStatistics(
+	NULL totalTransactions,
+	NULL totalTime,
+	NULL totalFiltersAdded,
+	NULL totalPreClassifyFiltersAdded,
+	BOOL32 preClassifyEnabled
+	);
+
+FwFilterTranscactionStatistics(
+	INT64 totalTime,
+	INT64 totalFiltersAdded,
+	INT64 totalPreClassifyFiltersAdded,
+	BOOL32 preClassifyEnabled
+	);
+
+FwNLAUpdate(
+	ANSISTRING UpdateType,
+	UINT8 PreclassificationVariant
+	);
+
+FwNLAUpdate(
+	ANSISTRING UpdateType,
+	UINT32 CurrentProfile,
+	UINT64 InterfaceCount,
+	INT64 InteRnetRanges,
+	INT64 IntrAnetRanges
+	);
+
+Census(
+	INT32 enforcementLevel,
+	UINT32 numInterfaces,
+	UNICODESTRING enterpriseProtectedDomainNames,
+	UNICODESTRING enterpriseNetworkDomainNames,
+	UNICODESTRING cloudResources,
+	UNICODESTRING neutralResources,
+	BOOL32 isDomainJoined,
+	BOOL32 isAppCompatEnabled,
+	BOOL32 isAppHVSIEnabled,
+	UINT32 numEnterpriseProtectedDomainNames,
+	UINT32 numEnterpriseNetworkDomainNames,
+	UINT32 numNeutralResources,
+	UINT32 numCloudResources
+	);
+
+NetworkIsolationCapabilityViolations(
+	UNICODESTRING relativePackageName,
+	UINT32 numberOfViolations
+	);
+
+FwGetAdapterAddressesFailed(
+	WIN32ERROR winError
+	);
+
+TlgAggregateSummary(
+	GUID Provider,
+	UINT64 NumFlushes,
+	UINT64 MaxEntriesStored,
+	UINT64 TotalEntriesFlushed,
+	UINT32 MaxEntriesFlushed,
+	UINT32 MinEntriesFlushed,
+	UINT32 NumBucketLimitReached,
+	UINT32 NumAllocationFailures,
+	UINT32 NumLargeEventFailures
+	);
+

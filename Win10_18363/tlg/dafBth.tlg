@@ -1,0 +1,62 @@
+ProviderNames:
+	Microsoft.Windows.Bluetooth
+
+
+
+**** Events *****
+PairingLEInfo(
+	UINT64 PartA_PrivTags,
+	GUID PairingSessionId,
+	UINT32 BDIFFlags,
+	UINT8 RemoteAddressType,
+	UINT64 BTDeviceAddress
+	);
+
+PairingAttempt(
+	UINT64 PartA_PrivTags,
+	GUID PairingSessionId,
+	INT8 ConnectionType,
+	BOOL32 WeInitiatedThisEvent,
+	UINT64 TickCountInMS,
+	UINT64 BTDeviceAddress
+	);
+
+PairingCancelled(
+	UINT64 PartA_PrivTags,
+	GUID PairingSessionId,
+	UINT32 BDIFFlags,
+	UINT8 AuthenticationRequirements,
+	UINT8 AuthenticationMethod,
+	UINT8 IOCapability,
+	UINT64 TickCountInMS,
+	UINT64 BTDeviceAddress
+	);
+
+GetAepId(
+	UINT64 PartA_PrivTags,
+	GUID PairingSessionId,
+	NULL AepId,
+	UNICODESTRING BTDeviceAddress,
+	UINT64 TickCountInMS,
+	INT32 RSSI
+	);
+
+PairingResult(
+	UINT64 PartA_PrivTags,
+	GUID PairingSessionId,
+	INT32 StatusErrorCode,
+	UINT32 BDIFFlags,
+	UINT8 AuthenticationRequirements,
+	UINT8 AuthenticationMethod,
+	UINT8 IOCapability,
+	UINT64 TickCountInMS,
+	UINT64 BTDeviceAddress
+	);
+
+AuthenticationIrpCallback(
+	UINT64 PartA_PrivTags,
+	GUID PairingSessionId,
+	UINT64 TickCountInMS,
+	UINT64 BTDeviceAddress
+	);
+

@@ -1,0 +1,52 @@
+ProviderNames:
+	WindowsDriverVerifierUi
+
+
+
+**** Events *****
+Vrf_TiP_DriverData(
+	UINT32 XdvTipTag,
+	UNICODESTRING DriverName,
+	UNICODESTRING ServiceName,
+	UNICODESTRING ObjectName,
+	COUNTEDSTRING ModuleName,
+	UNICODESTRING DriverVersion,
+	UNICODESTRING DeviceInstanceId
+	);
+
+Vrf_TiP_On_Failure(
+	UINT32 XdvTipTag
+	);
+
+Vrf_TiP_On_Success(
+	UINT32 XdvTipTag
+	);
+
+Vrf_TiP_Off(
+	UINT32 XdvTipTag
+	);
+
+Vrf_TiP_DriverData(
+	UINT32 XdvTipTag,
+	UNICODESTRING DriverName,
+	UNICODESTRING ServiceName,
+	UNICODESTRING ObjectName,
+	COUNTEDSTRING ModuleName,
+	UNICODESTRING DriverVersion,
+	UNICODESTRING DeviceInstanceId
+	);
+
+Vrf_User_Reset_Config(
+	VOID
+	);
+
+VrfPrintHelpMessage(
+	VOID
+	);
+
+VrfSetup(
+	HEXINT32 Flags,
+	COUNTEDSTRING VerifyDrivers,
+	COUNTEDSTRING SuppressedRules
+	);
+

@@ -1,0 +1,437 @@
+ProviderNames:
+	Microsoft.Xbox.ConnectedStorage.Service
+
+
+
+**** Events *****
+WebDownloadAborted(
+	GUID TransferId,
+	UINT32 TransferResult,
+	UINT16 HttpStatus,
+	UINT64 RetryTickCount,
+	UINT32 StatusFlags,
+	UINT32 Hresult
+	);
+
+DeleteLocalAndCloudStorageForContext(
+	UNICODESTRING ServiceConfigurationId,
+	UNICODESTRING Xuid,
+	UINT32 ElapsedTimeMs,
+	UINT32 Hresult
+	);
+
+DeleteLocalStorageForContext(
+	UNICODESTRING ServiceConfigurationId,
+	UNICODESTRING Xuid,
+	UINT32 ElapsedTimeMs,
+	UINT32 Hresult
+	);
+
+EnumerationFailedToLoadIndex(
+	UNICODESTRING FileName,
+	UINT32 Hresult
+	);
+
+WebUploadSummary(
+	UNICODESTRING ServiceConfigurationId,
+	UNICODESTRING Xuid,
+	UINT64 TotalBytesUploaded,
+	UINT64 TotalUncompressedSize,
+	UINT64 TotalElapsedTime,
+	UINT32 AtomCount,
+	UINT32 AtomCountCompressed,
+	UINT32 AtomCountRetry
+	);
+
+WebUploadContainer(
+	UNICODESTRING ServiceConfigurationId,
+	UNICODESTRING Xuid,
+	UNICODESTRING ContainerName,
+	UINT32 Bytes,
+	UINT32 ElapsedTime,
+	UINT32 Hresult,
+	UINT32 RetryCount
+	);
+
+WebUploadContainer(
+	UNICODESTRING ServiceConfigurationId,
+	UNICODESTRING Xuid,
+	UNICODESTRING ContainerName,
+	UINT32 Bytes,
+	UINT32 ElapsedTime,
+	UINT32 Hresult,
+	UINT32 RetryCount
+	);
+
+WebUploadAtom(
+	UNICODESTRING SerivceConfigurationId,
+	UNICODESTRING Xuid,
+	GUID AtomGuid,
+	UINT32 Bytes,
+	UINT32 ElapsedTime,
+	UINT32 Hresult,
+	UINT32 RetryCount
+	);
+
+WebUploadAtom(
+	UNICODESTRING SerivceConfigurationId,
+	UNICODESTRING Xuid,
+	GUID AtomGuid,
+	UINT32 Bytes,
+	UINT32 ElapsedTime,
+	UINT32 Hresult,
+	UINT32 RetryCount
+	);
+
+WebTrustedDevice(
+	UNICODESTRING Xuid,
+	UINT32 VerbFlags,
+	UINT32 ElapsedTime,
+	UINT32 Hresult,
+	UINT32 RetryCount
+	);
+
+WebReleaseLock(
+	UNICODESTRING ServiceConfigurationId,
+	UNICODESTRING Xuid,
+	UINT32 ElapsedTime,
+	UINT32 Hresult,
+	UINT32 RetryCount
+	);
+
+WebReleaseLock(
+	UNICODESTRING ServiceConfigurationId,
+	UNICODESTRING Xuid,
+	UINT32 ElapsedTime,
+	UINT32 Hresult,
+	UINT32 RetryCount
+	);
+
+WebListContainers(
+	UNICODESTRING ServiceConfigurationId,
+	UNICODESTRING Xuid,
+	BOOLEAN HasContinuation,
+	UINT32 ResultCount,
+	UINT32 ElapsedTime,
+	UINT32 Hresult,
+	UINT32 RetryCount
+	);
+
+WebDownloadSummary(
+	UNICODESTRING ServiceConfigurationId,
+	UNICODESTRING Xuid,
+	UINT64 TotalBytesDownloaded,
+	UINT64 TotalUncompressedSize,
+	UINT64 TotalDownloadTime,
+	UINT64 TotalElapsedTime,
+	UINT32 AtomCount,
+	UINT32 AtomCountCompressed,
+	UINT32 AtomCountRetry,
+	UINT32 ContainerCount
+	);
+
+WebDownloadContainer(
+	UNICODESTRING ServiceConfigurationId,
+	UNICODESTRING Xuid,
+	UNICODESTRING ContainerName,
+	UINT32 Bytes,
+	UINT32 ElapsedTime,
+	UINT32 Hresult,
+	UINT32 RetryCount
+	);
+
+WebDownloadContainer(
+	UNICODESTRING ServiceConfigurationId,
+	UNICODESTRING Xuid,
+	UNICODESTRING ContainerName,
+	UINT32 Bytes,
+	UINT32 ElapsedTime,
+	UINT32 Hresult,
+	UINT32 RetryCount
+	);
+
+WebDownloadAtom(
+	UNICODESTRING SerivceConfigurationId,
+	UNICODESTRING Xuid,
+	GUID AtomGuid,
+	UINT32 Bytes,
+	UINT32 ElapsedTime,
+	UINT32 Hresult,
+	UINT32 RetryCount
+	);
+
+WebDownloadAtom(
+	UNICODESTRING SerivceConfigurationId,
+	UNICODESTRING Xuid,
+	GUID AtomGuid,
+	UINT32 Bytes,
+	UINT32 ElapsedTime,
+	UINT32 Hresult,
+	UINT32 RetryCount
+	);
+
+WebDeleteContainer(
+	UNICODESTRING ServiceConfigurationId,
+	UNICODESTRING Xuid,
+	UNICODESTRING ContainerName,
+	UINT32 ElapsedTime,
+	UINT32 Hresult,
+	UINT32 RetryCount
+	);
+
+WebDeleteAllContainers(
+	UNICODESTRING ServiceConfigurationId,
+	UNICODESTRING Xuid,
+	UINT32 ElapsedTime,
+	UINT32 Hresult,
+	UINT32 RetryCount
+	);
+
+WebAcquireLock(
+	UNICODESTRING ServiceConfigurationId,
+	UNICODESTRING Xuid,
+	BOOLEAN BreakLock,
+	UINT32 ElapsedTime,
+	UINT32 Hresult,
+	UINT32 RetryCount
+	);
+
+WebAcquireLock(
+	UNICODESTRING ServiceConfigurationId,
+	UNICODESTRING Xuid,
+	BOOLEAN BreakLock,
+	UINT32 ElapsedTime,
+	UINT32 Hresult,
+	UINT32 RetryCount
+	);
+
+UserDeleted(
+	UNICODESTRING Xuid,
+	UINT32 ElapsedTimeMs,
+	UINT32 Hresult
+	);
+
+UploadsDisabled(
+	UNICODESTRING ServiceConfigurationId,
+	UNICODESTRING Xuid,
+	BOOLEAN IsGuest
+	);
+
+UpdateComplete(
+	UNICODESTRING ServiceConfigurationId,
+	UNICODESTRING Xuid,
+	BOOLEAN IsGuest,
+	UINT32 Hresult,
+	UINT32 ElapsedTimeMs,
+	GUID OperationId
+	);
+
+Update(
+	UNICODESTRING ServiceConfigurationId,
+	UNICODESTRING Xuid,
+	BOOLEAN IsGuest,
+	UINT32 TotalSize,
+	UINT32 UpdateCount,
+	UINT32 DeleteCount,
+	UNICODESTRING ContainerName,
+	UINT32 Hresult,
+	GUID OperationId
+	);
+
+ReadComplete(
+	UNICODESTRING ServiceConfigurationId,
+	UNICODESTRING Xuid,
+	BOOLEAN IsGuest,
+	UINT32 BytesRead,
+	UINT32 Hresult,
+	UINT32 ElapsedTimeMs,
+	GUID OperationId
+	);
+
+Read(
+	UNICODESTRING ServiceConfigurationId,
+	UNICODESTRING Xuid,
+	BOOLEAN IsGuest,
+	UINT32 AtomCount,
+	UNICODESTRING ContainerName,
+	UINT32 Hresult,
+	GUID OperationId
+	);
+
+QueryResults(
+	UNICODESTRING ServiceConfigurationId,
+	UNICODESTRING Xuid,
+	BOOLEAN IsGuest,
+	UNICODESTRING ContainerNamePrefix,
+	UINT32 ItemCountReturned,
+	UINT32 StartIndex,
+	UINT32 MaxCount,
+	UINT32 ElapsedTimeMs,
+	UINT32 Hresult
+	);
+
+PrepareContextComplete(
+	UNICODESTRING ServiceConfigurationId,
+	UNICODESTRING Xuid,
+	BOOLEAN IsGuest,
+	UINT32 Hresult,
+	UINT32 ElapsedTimeMs,
+	GUID OperationId,
+	UINT32 Type
+	);
+
+PrepareContext(
+	UNICODESTRING ServiceConfigurationId,
+	UNICODESTRING Xuid,
+	BOOLEAN IsGuest,
+	UINT32 Hresult,
+	GUID OperationId
+	);
+
+InternalError(
+	UNICODESTRING ErrorText,
+	UINT32 Hresult
+	);
+
+GetQuotaComplete(
+	UNICODESTRING ServiceConfigurationId,
+	UNICODESTRING Xuid,
+	BOOLEAN IsGuest,
+	INT32 BytesRemaining,
+	UINT32 Hresult,
+	UINT32 ElapsedTimeMs,
+	GUID OperationId
+	);
+
+GetQuota(
+	UNICODESTRING ServiceConfigurationId,
+	UNICODESTRING Xuid,
+	BOOLEAN IsGuest,
+	UINT32 Hresult,
+	GUID OperationId
+	);
+
+DeleteComplete(
+	UNICODESTRING ServiceConfigurationId,
+	UNICODESTRING Xuid,
+	BOOLEAN IsGuest,
+	UINT32 Hresult,
+	UINT32 ElapsedTimeMs,
+	GUID OperationId
+	);
+
+Delete(
+	UNICODESTRING ServiceConfigurationId,
+	UNICODESTRING Xuid,
+	BOOLEAN IsGuest,
+	UNICODESTRING ContainerName,
+	UINT32 Hresult,
+	GUID OperationId
+	);
+
+CreateQuery(
+	UNICODESTRING ServiceConfigurationId,
+	UNICODESTRING Xuid,
+	BOOLEAN IsGuest,
+	UNICODESTRING ContainerNamePrefix,
+	UINT32 Hresult
+	);
+
+CreateBlobQuery(
+	UNICODESTRING ServiceConfigurationId,
+	UNICODESTRING Xuid,
+	BOOLEAN IsGuest,
+	UNICODESTRING ContainerName,
+	UNICODESTRING BlobPrefix,
+	UINT32 Hresult
+	);
+
+CorruptContainerIndexVersion(
+	UINT32 Version,
+	UINT32 EntryCount
+	);
+
+CorruptContainerIndexString(
+	UINT32 CharacterCountRead
+	);
+
+CorruptContainerIndexInvalidEntryName(
+	UINT32 EntryNameLength
+	);
+
+CorruptContainerIndexEtagLength(
+	UINT32 EtagLength
+	);
+
+CorruptContainerIndexDuplicateName(
+	UNICODESTRING Name
+	);
+
+ContextActivationFailure(
+	UINT32 Hresult,
+	UINT32 SyncState,
+	BOOLEAN Canceled,
+	BOOLEAN Aborted,
+	UINT32 CallingLocation,
+	BOOLEAN ContainerIndexMissing,
+	BOOLEAN RetryAllowed,
+	BOOLEAN StartedOnline,
+	UNICODESTRING ServiceConfigurationId
+	);
+
+ContextActivation(
+	UNICODESTRING ServiceConfigurationId,
+	UNICODESTRING Xuid,
+	BOOLEAN IsGuest,
+	UINT32 TotalBytes,
+	UINT32 LockState,
+	UINT32 SyncState,
+	UINT32 ConflictResolution,
+	BOOLEAN Canceled
+	);
+
+ContainerLoadFailure(
+	UINT32 CurrentRecord,
+	UINT32 RecordCount,
+	UNICODESTRING ExceptionString,
+	UINT32 Hresult
+	);
+
+ContainerActivation(
+	UNICODESTRING ServiceConfigurationId,
+	UNICODESTRING Xuid,
+	UNICODESTRING ContainerName,
+	UINT32 CompleteLocation,
+	BOOLEAN Canceled,
+	BOOLEAN RetryAllowed,
+	UINT32 ConflictResolutionUsed,
+	UINT32 Hresult
+	);
+
+BlobQueryResults(
+	UNICODESTRING ServiceConfigurationId,
+	UNICODESTRING Xuid,
+	BOOLEAN IsGuest,
+	UNICODESTRING ContainerName,
+	UNICODESTRING BlobPrefix,
+	UINT32 ItemCountReturned,
+	UINT32 StartIndex,
+	UINT32 MaxCount,
+	UINT32 ElapsedTimeMs,
+	UINT32 Hresult
+	);
+
+BadContextDirectory(
+	UNICODESTRING DirectoryName,
+	UINT32 Hresult
+	);
+
+AllocatorQueueing(
+	UNICODESTRING ServiceConfigurationId,
+	UNICODESTRING Xuid,
+	BOOLEAN IsGuest,
+	UINT32 DesiredSize,
+	UINT32 RemainingSize,
+	UINT32 ItemsQueued
+	);
+

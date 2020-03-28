@@ -1,0 +1,248 @@
+ProviderNames:
+	Microsoft.Windows.Provisioning.Knobs.Core
+	TelemetryAssert
+	TelemetryAssertDiagTrack
+
+
+
+**** Events *****
+RegistryAccessor_Delete(
+	UNICODESTRING URI
+	);
+
+RegistryAccessor_Delete_Error(
+	UNICODESTRING URI,
+	HRESULT HResult
+	);
+
+RegistryAccessor_Set_Binary(
+	UNICODESTRING URI,
+	UNICODESTRING Value
+	);
+
+RegistryAccessor_Set_MultiString(
+	UNICODESTRING URI,
+	UNICODESTRING Value
+	);
+
+RegistryAccessor_Set_String(
+	UNICODESTRING URI,
+	UNICODESTRING Value
+	);
+
+RegistryAccessor_Set_Integer(
+	UNICODESTRING URI,
+	UINT32 Value
+	);
+
+RegistryAccessor_Set_Error(
+	UNICODESTRING URI,
+	HRESULT HResult
+	);
+
+RegistryAccessor_Get_Error(
+	UNICODESTRING URI,
+	HRESULT HResult
+	);
+
+RegistryAccessor_Get_Binary(
+	UNICODESTRING URI,
+	UNICODESTRING Value
+	);
+
+RegistryAccessor_Get_MultiString(
+	UNICODESTRING URI,
+	UNICODESTRING Value
+	);
+
+RegistryAccessor_Get_String(
+	UNICODESTRING URI,
+	UNICODESTRING Value
+	);
+
+RegistryAccessor_Get_Integer(
+	UNICODESTRING URI,
+	UINT32 Value
+	);
+
+RegistryAccessor_TypeMismatch(
+	UNICODESTRING URI,
+	UINT32 ExpectedValType,
+	UINT32 ReturnedValType
+	);
+
+Setting_Error_AccessDenied_Delete(
+	UNICODESTRING URI,
+	HEXINT32 AllowedAccessFlags
+	);
+
+Setting_Error_AccessDenied_Create(
+	UNICODESTRING URI,
+	HEXINT32 AllowedAccessFlags
+	);
+
+Setting_Error_AccessDenied_Replace(
+	UNICODESTRING URI,
+	HEXINT32 AllowedAccessFlags
+	);
+
+Setting_Error_AccessDenied_Get(
+	UNICODESTRING URI,
+	HEXINT32 AllowedAccessFlags
+	);
+
+KnobsDatastore_FindSetting_Stop(
+	UINT32 Settings Count
+	);
+
+KnobsDatastore_FindSetting_Error(
+	HRESULT HResult
+	);
+
+KnobsDatastore_FindSetting_FoundSetting(
+	UNICODESTRING URI
+	);
+
+KnobsDatastore_FindSetting_Start(
+	UNICODESTRING URI
+	);
+
+KnobsDatastore_Initialize_AllReaders_Fail(
+	HRESULT HResult
+	);
+
+KnobsDatastore_Initialize_RegReader_Fail(
+	HRESULT HResult
+	);
+
+KnobsDatastore_Initialize_KSReader_Fail(
+	HRESULT HResult
+	);
+
+OptionValidation_Error(
+	HRESULT HResult
+	);
+
+OptionValidation_IntegerValueNotAllowed(
+	UINT32 Value
+	);
+
+OptionValidation_StringValueNotAllowed(
+	UNICODESTRING Value
+	);
+
+RangeValidation_Error(
+	HRESULT HResult
+	);
+
+RangeValidation_IntegerValue_OutOfRange(
+	UINT32 Value,
+	UINT32 Min,
+	UINT32 Max
+	);
+
+RangeValidation_StringValue_InvalidLength(
+	UNICODESTRING Value,
+	UINT32 Min,
+	UINT32 Max
+	);
+
+RangeValidation_StringValueNotAllowed_MultiString(
+	UNICODESTRING Value,
+	UINT32 Min,
+	UINT32 Max
+	);
+
+RegReader_FindSetting_WildcardMatch(
+	UNICODESTRING Search URI,
+	UNICODESTRING Setting URI
+	);
+
+RegReader_ReadSettingFromKey_InvalidURI(
+	UNICODESTRING URI,
+	HRESULT HResult
+	);
+
+ReadSettingFromKey_Error(
+	UNICODESTRING RegKey,
+	HRESULT HResult
+	);
+
+RegReader_ReadSettingFromKey(
+	UNICODESTRING Setting URI,
+	UNICODESTRING Accessor Path URI
+	);
+
+RegReader_ReadSettingFromKey_NoAccessFlags(
+	UNICODESTRING RegKey
+	);
+
+RegReader_ReadSettingFromKey_NoStringOption(
+	UNICODESTRING RegKey,
+	UINT32 Option Index,
+	UNICODESTRING Option Name
+	);
+
+RegReader_ReadSettingFromKey_NoIntegerOption(
+	UNICODESTRING RegKey,
+	UINT32 Option Index,
+	UNICODESTRING Option Name
+	);
+
+RegReader_ReadSettingFromKey_OptionCountZero(
+	UNICODESTRING RegKey
+	);
+
+RegReader_ReadSettingFromKey_NoOptionCount(
+	UNICODESTRING RegKey
+	);
+
+RegReader_ReadSettingFromKey_NoOptionsKey(
+	UNICODESTRING RegKey
+	);
+
+RegReader_ReadSettingFromKey_NoMax(
+	UNICODESTRING RegKey
+	);
+
+RegReader_ReadSettingFromKey_NoMin(
+	UNICODESTRING RegKey
+	);
+
+RegReader_ReadSettingFromKey_NoValidationMethod(
+	UNICODESTRING RegKey
+	);
+
+RegReader_ReadSettingFromKey_NoSourcePath_CreateURIFromRegPath(
+	UNICODESTRING RegKey
+	);
+
+RegReader_ReadSettingFromKey_NoSourcePath(
+	UNICODESTRING RegKey
+	);
+
+RegReader_ReadSettingFromKey_NoNativeType(
+	UNICODESTRING RegKey
+	);
+
+RegReader_ReadSettingFromKey_NoSource(
+	UNICODESTRING RegKey
+	);
+
+KSReader_FindSettingInternal_SettingFound(
+	UNICODESTRING Setting URI,
+	UNICODESTRING Accessor Path URI
+	);
+
+Assert(
+	UINT32 assertVersion,
+	UINT32 rva,
+	UINT32 timestamp,
+	UINT32 imageSize,
+	ANSISTRING imageName,
+	UINT32 count,
+	UINT32 totalHits,
+	UINT32 ModuleCollection,
+	UINT32 GlobalCollection
+	);
+

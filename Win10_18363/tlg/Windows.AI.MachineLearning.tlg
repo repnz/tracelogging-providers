@@ -1,0 +1,302 @@
+ProviderNames:
+	Microsoft.Windows.AI.MachineLearning
+	Microsoft.Windows.AI.MachineLearning
+
+
+
+**** Events *****
+FallbackError(
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+FallbackError(
+	UINT64 PartA_PrivTags,
+	SIGNED wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+RegisterOperatorSetSchema(
+	BOOL32 UTCReplace_AppSessionGuid,
+	UINT64 PartA_PrivTags,
+	UINT8 schemaVersion,
+	ANSISTRING name,
+	INT32 inputCount,
+	INT32 outputCount,
+	INT32 typeConstraintCount,
+	INT32 attributeCount,
+	INT32 defaultAttributeCount,
+	INT32 m_runtimeSessionId
+	);
+
+RuntimePerf(
+	BOOL32 UTCReplace_AppSessionGuid,
+	UINT64 PartA_PrivTags,
+	UINT8 schemaVersion,
+	INT32 totalEvalCalls,
+	22 loadModelCounters,
+	INT32 count,
+	DOUBLE avgTime,
+	DOUBLE avgCpuUsage,
+	DOUBLE avgPageFaultCount,
+	DOUBLE avgWorkingSetMemory,
+	DOUBLE avgGpuUsage,
+	DOUBLE avgGpuDedicatedMemory,
+	DOUBLE avgGpuSharedMemory,
+	DOUBLE maxTime,
+	DOUBLE maxCpuUsage,
+	DOUBLE maxPageFaultCount,
+	DOUBLE maxWorkingSetMemory,
+	DOUBLE maxGpuUsage,
+	DOUBLE maxGpuDedicatedMemory,
+	DOUBLE maxGpuSharedMemory,
+	DOUBLE minTime,
+	DOUBLE minCpuUsage,
+	DOUBLE minPageFaultCount,
+	DOUBLE minWorkingSetMemory,
+	DOUBLE minGpuUsage,
+	DOUBLE minGpuDedicatedMemory,
+	DOUBLE minGpuSharedMemory,
+	22 evalModelCounters,
+	INT32 count,
+	DOUBLE avgTime,
+	DOUBLE avgCpuUsage,
+	DOUBLE avgPageFaultCount,
+	DOUBLE avgWorkingSetMemory,
+	DOUBLE avgGpuUsage,
+	DOUBLE avgGpuDedicatedMemory,
+	DOUBLE avgGpuSharedMemory,
+	DOUBLE maxTime,
+	DOUBLE maxCpuUsage,
+	DOUBLE maxPageFaultCount,
+	DOUBLE maxWorkingSetMemory,
+	DOUBLE maxGpuUsage,
+	DOUBLE maxGpuDedicatedMemory,
+	DOUBLE maxGpuSharedMemory,
+	DOUBLE minTime,
+	DOUBLE minCpuUsage,
+	DOUBLE minPageFaultCount,
+	DOUBLE minWorkingSetMemory,
+	DOUBLE minGpuUsage,
+	DOUBLE minGpuDedicatedMemory,
+	DOUBLE minGpuSharedMemory,
+	INT32 runtimeSessionId
+	);
+
+SessionCreation(
+	BOOL32 UTCReplace_AppSessionGuid,
+	UINT64 PartA_PrivTags,
+	UINT8 schemaVersion,
+	ANSISTRING modelname,
+	BOOL32 isCpu,
+	UINT32 adapterLuidLowPart,
+	UINT32 adapterLuidHighPart,
+	INT32 runtimeSessionId
+	);
+
+RuntimeError(
+	BOOL32 UTCReplace_AppSessionGuid,
+	UINT64 PartA_PrivTags,
+	UINT8 schemaVersion,
+	HRESULT hResult,
+	ANSISTRING errormessage,
+	ANSISTRING file,
+	ANSISTRING function,
+	INT32 line,
+	INT32 runtimeSessionId
+	);
+
+ProcessInfo(
+	BOOL32 UTCReplace_AppSessionGuid,
+	UINT64 PartA_PrivTags,
+	UINT8 schemaVersion
+	);
+
+RegisterOperatorKernel(
+	BOOL32 UTCReplace_AppSessionGuid,
+	UINT64 PartA_PrivTags,
+	UINT8 schemaVersion,
+	ANSISTRING name,
+	ANSISTRING domain,
+	INT32 executionType,
+	INT32 runtimeSessionId
+	);
+
+ModelCreation(
+	BOOL32 UTCReplace_AppSessionGuid,
+	UINT64 PartA_PrivTags,
+	UINT8 schemaVersion,
+	BOOL32 fromStream,
+	ANSISTRING author,
+	ANSISTRING name,
+	ANSISTRING domain,
+	ANSISTRING description,
+	INT64 version,
+	BOOL32 usefp16,
+	ANSISTRING bitmappixelformat,
+	ANSISTRING colorspacegamma,
+	ANSISTRING nominalpixelrange,
+	UINT64 metaDataCount,
+	ANSISTRING metaDataKeys,
+	ANSISTRING metaDataValues,
+	INT32 runtimeSessionId
+	);
+
+WinMLLogSink(
+	UINT64 PartA_PrivTags,
+	ANSISTRING message.Category(),
+	UINT32 (UINT32)message.Severity(),
+	ANSISTRING message.Message().c_str(),
+	ANSISTRING message.Location().ToString(onnxruntime::CodeLocation::kFilenameAndPath).c_str()
+	);
+
+WinMLLogSink(
+	ANSISTRING message.Category(),
+	UINT32 (UINT32)message.Severity(),
+	ANSISTRING message.Message().c_str(),
+	ANSISTRING message.Location().ToString(onnxruntime::CodeLocation::kFilenameAndPath).c_str()
+	);
+
+OnnxRuntimeProfiling(
+	ANSISTRING Category,
+	INT32 Duration (us),
+	INT32 Time Stamp (us),
+	ANSISTRING Event Name,
+	INT32 Process ID,
+	INT32 Thread ID
+	);
+
+OnnxRuntimeProfiling(
+	ANSISTRING Category,
+	INT32 Duration (us),
+	INT32 Time Stamp (us),
+	ANSISTRING Event Name,
+	ANSISTRING Operator Name,
+	INT32 Process ID,
+	INT32 Thread ID
+	);
+
+WinMLLogSink(
+	ANSISTRING message.Category(),
+	UINT32 (UINT32)message.Severity(),
+	ANSISTRING message.Message().c_str(),
+	ANSISTRING message.Location().ToString(onnxruntime::CodeLocation::kFilenameAndPath).c_str()
+	);
+
+WinMLLogSink(
+	UINT64 PartA_PrivTags,
+	ANSISTRING message.Category(),
+	UINT32 (UINT32)message.Severity(),
+	ANSISTRING message.Message().c_str(),
+	ANSISTRING message.Location().ToString(onnxruntime::CodeLocation::kFilenameAndPath).c_str()
+	);
+
+WinMLLogSink(
+	ANSISTRING message.Category(),
+	UINT32 (UINT32)message.Severity(),
+	ANSISTRING message.Message().c_str(),
+	ANSISTRING message.Location().ToString(onnxruntime::CodeLocation::kFilenameAndPath).c_str()
+	);
+
+started event(
+	BOOL32 UTCReplace_AppSessionGuid,
+	ANSISTRING event,
+	INT64 eventId
+	);
+
+stopped event(
+	BOOL32 UTCReplace_AppSessionGuid,
+	ANSISTRING event,
+	INT64 eventId
+	);
+
+WinMLInputValidation(
+	ANSISTRING msg.c_str()
+	);
+
+DX12TextureToGPUTensor(
+	HEXINT32 Type,
+	INT32 Height,
+	INT32 Width
+	);
+
+ConvertVideoFrameWithSoftwareBitmapToCPUTensor(
+	HEXINT32 Type,
+	INT32 Height,
+	INT32 Width
+	);
+
+ConvertVideoFrameWithSoftwareBitmapToCPUTensor(
+	HEXINT32 HRESULT
+	);
+
+DX12TextureToGPUTensor(
+	HEXINT32 HRESULT
+	);
+
+GPUTensorToDX12Texture(
+	HEXINT32 HRESULT
+	);
+
+ConvertCPUTensorToVideoFrameWithSoftwareBitmap(
+	HEXINT32 Type,
+	INT32 Height,
+	INT32 Width
+	);
+
+GPUTensorToDX12Texture(
+	HEXINT32 Type,
+	INT32 Height,
+	INT32 Width
+	);
+
+ConvertCPUTensorToVideoFrameWithSoftwareBitmap(
+	HEXINT32 HRESULT
+	);
+
+InputVideoFrame(
+	BOOL32 Convert,
+	HEXINT32 HRESULT,
+	INT32 iWidth,
+	INT32 oWidth,
+	INT32 iHeight,
+	INT32 oHeight,
+	HEXINT64 iLuid,
+	HEXINT64 oLuid,
+	HEXINT32 iFormat,
+	INT32 rX,
+	INT32 rY,
+	INT32 rW,
+	INT32 rH
+	);
+

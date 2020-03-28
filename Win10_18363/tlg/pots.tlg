@@ -1,0 +1,97 @@
+ProviderNames:
+	PowerTroubleshooter
+	Microsoft.Windows.Power.Troubleshooter
+
+
+
+**** Events *****
+SleepDirtyTransition(
+	UINT32 sleepState,
+	HEXINT32 attributes,
+	HEXINT32 bugcheckCode,
+	UINT64 bugcheckP1,
+	UINT64 bugcheckP2,
+	UINT64 bugcheckP3,
+	UINT64 bugcheckP4,
+	NTSTATUS bootAppStatus
+	);
+
+SleepResumeBugcheck(
+	UINT32 attributes,
+	UNICODESTRING bugcheckCode,
+	UNICODESTRING bugcheckP1,
+	UNICODESTRING bugcheckP2,
+	UNICODESTRING bugcheckP3,
+	UNICODESTRING bugcheckP4,
+	UNICODESTRING bootAppStatus
+	);
+
+SleepResumePerformance(
+	UINT32 totalSleepTime,
+	UINT32 totalResumeTime,
+	UINT32 hiberFileReadTime,
+	UINT32 hiberFileWriteTime,
+	UINT32 biosInitTime,
+	UINT32 hiberPagesReadPerMs,
+	UINT32 driverInitTime,
+	UINT32 sleepState,
+	UINT32 attributes,
+	UINT32 overallResumeTime,
+	UINT32 hiberfileWrittenSize,
+	UINT32 biosCorruptPagesCount,
+	UINT64 biosCorruptFirstPage,
+	UINT64 biosCorruptPageLast,
+	UINT64 postTime,
+	UINT64 resumeAppTime,
+	UINT64 PostResumeAppTime,
+	UINT64 pagesProcessed,
+	UINT64 bootPagesProcessed,
+	UINT64 kernelPagesProcessed,
+	UINT64 securePagesProcessed,
+	UINT64 hiberWriteRate,
+	UINT64 compressionRate,
+	UINT64 resumeIoTime,
+	UINT64 decompressTime,
+	UINT32 effectiveState,
+	UINT32 totalHibernateTime,
+	UINT32 noMultiStageResumeReason,
+	UINT32 checkpointTime
+	);
+
+SleepReliability(
+	UINT32 successFailure,
+	UINT32 sleepState,
+	UINT32 attributes,
+	UNICODESTRING statusCode
+	);
+
+SleepReliability(
+	UINT32 successFailure,
+	UINT32 sleepState,
+	UINT32 attributes,
+	UNICODESTRING statusCode
+	);
+
+AbnormalResetOccurred(
+	VOID
+	);
+
+SleepResumeReason(
+	COUNTEDSTRING WakeSourceText,
+	COUNTEDSTRING WakeTimerOwner,
+	COUNTEDSTRING WakeTimerContext,
+	UINT32 SleepState,
+	BOOL32 IsBatteryStatsReliable,
+	BOOL32 AcOnLine,
+	UINT32 RemainingCapacity,
+	UINT32 MaxCapacity,
+	BOOL32 IsAcpiTimer
+	);
+
+SleepResumeVeto(
+	UINT32 sleepState,
+	UINT32 attributes,
+	UINT32 vetoType,
+	UNICODESTRING vetoName
+	);
+

@@ -1,0 +1,473 @@
+ProviderNames:
+	Microsoft.Windows.Apps.PhoneUtilsProviders
+	Microsoft-Windows-Telephony-PhoneUtil
+	TelemetryAssert
+	TelemetryAssertDiagTrack
+
+
+
+**** Events *****
+OperationWatchdog: Operation Completed(
+	UINT32 Id,
+	ANSISTRING Context,
+	UINT32 ActualTime(ms)
+	);
+
+OperationWatchdog: Operation Timed Out(
+	UINT32 Id,
+	ANSISTRING Context,
+	UINT32 TimeOut(ms),
+	UINT32 ActualTime(ms)
+	);
+
+AUDIOHARDWAREHELPER_DISABLE(
+	ANSISTRING details,
+	BOOL32 placeholderStreamStarted
+	);
+
+AUDIOHARDWAREHELPER_ENABLE(
+	ANSISTRING details,
+	BOOL32 placeholderStreamStarted
+	);
+
+[Error] Propagate(
+	HRESULT HResult,
+	ANSISTRING Location,
+	UINT32 Line Number
+	);
+
+[Error] Originate(
+	HRESULT HResult,
+	ANSISTRING Location,
+	UINT32 Line Number
+	);
+
+[Error] Assert(
+	HRESULT HResult,
+	ANSISTRING Location,
+	UINT32 Line Number
+	);
+
+PHONE_EVENT_GETREGISTRATIONDISPLAYSTATUS(
+	ANSISTRING details,
+	UINT32 brandingArea,
+	UINT32 simState,
+	UINT32 registrationState,
+	UINT32 brandingFlags,
+	UINT32 ids,
+	UNICODESTRING brandingText
+	);
+
+INVALID_BRANDING_RULE_INDICES(
+	ANSISTRING details,
+	UINT32 simState,
+	UINT32 registrationState
+	);
+
+VOIPLINE_FOUND_APP_PACKAGES(
+	ANSISTRING details,
+	INT32 PackageListSize,
+	UNICODESTRING PackageFamilyName
+	);
+
+SimomDiscoveryStateChange(
+	ANSISTRING details,
+	UINT32 Ordinal,
+	UINT32 State
+	);
+
+SimomRegisteringForSimPinLockChanges(
+	ANSISTRING details,
+	UINT32 Ordinal,
+	HEXINT64 CanPointer,
+	GUID CanGuid,
+	HEXINT64 AppPointer
+	);
+
+SimomApplyingNullPinLockState(
+	ANSISTRING details,
+	UINT32 Ordinal,
+	HEXINT64 CanPointer,
+	GUID CanGuid,
+	HEXINT64 AppPointer
+	);
+
+SimomUnregisteringFromSimPinLockChanges(
+	ANSISTRING details,
+	UINT32 Ordinal,
+	HEXINT64 CanPointer,
+	GUID CanGuid,
+	HEXINT64 AppPointer
+	);
+
+SimomOnRegistrationPreferencesChanged(
+	ANSISTRING details,
+	UINT32 Ordinal,
+	HEXINT64 CanPointer,
+	GUID CanGuid,
+	UINT32 Params,
+	UINT32 RoamingMode
+	);
+
+SimomRegisteredLineInfo(
+	ANSISTRING details,
+	UINT32 Ordinal,
+	GUID CanGuid,
+	UINT32 LineIndex,
+	HEXINT64 LinePointer,
+	UINT32 SystemType
+	);
+
+SimomOnRegistrationStatusChanged(
+	ANSISTRING details,
+	UINT32 Ordinal,
+	HEXINT64 CanPointer,
+	GUID CanGuid,
+	UINT32 Count
+	);
+
+SimomCanSlotAssociation(
+	ANSISTRING details,
+	UINT32 Ordinal,
+	GUID Guid,
+	UINT32 Int
+	);
+
+SimomConfiguredLineInfo(
+	ANSISTRING details,
+	UINT32 Ordinal,
+	GUID CanGuid,
+	UINT32 LineIndex,
+	HEXINT64 LinePointer
+	);
+
+SimomOnConfiguredLinesChange(
+	ANSISTRING details,
+	UINT32 Ordinal,
+	HEXINT64 CanPointer,
+	GUID CanGuid,
+	UINT32 Count
+	);
+
+SimomApplyingPinLockState(
+	ANSISTRING details,
+	UINT32 Ordinal,
+	HEXINT64 Pointer
+	);
+
+SimomIgnoredOnUICCPinLockStateChange(
+	ANSISTRING details,
+	UINT32 Ordinal,
+	HEXINT64 Pointer
+	);
+
+SimomOnUICCPinLockStateChange(
+	ANSISTRING details,
+	UINT32 Ordinal,
+	HEXINT64 UiccPointer,
+	UINT32 Params,
+	UINT32 Huiccapp,
+	UINT32 KeyRef,
+	UINT32 State,
+	UINT32 VerifyCount,
+	UINT32 UnblockCount
+	);
+
+SimomServiceProviderNameChange(
+	ANSISTRING details,
+	UINT32 Ordinal,
+	HEXINT64 Pointer
+	);
+
+SimomFriendlyNameChange(
+	ANSISTRING details,
+	UINT32 Ordinal,
+	HEXINT64 Pointer
+	);
+
+SimomOnUICCAppFetchDone(
+	ANSISTRING details,
+	UINT32 Ordinal,
+	HEXINT64 Pointer
+	);
+
+SimomOnUICCAppRemoved(
+	ANSISTRING details,
+	UINT32 Ordinal,
+	HEXINT64 Pointer1,
+	HEXINT64 Pointer2
+	);
+
+SimomOnUICCAppAdded(
+	ANSISTRING details,
+	UINT32 Ordinal,
+	HEXINT64 Pointer1,
+	UINT32 AppType,
+	HEXINT64 Pointer2
+	);
+
+SimomUICCIccIdString(
+	ANSISTRING details,
+	UINT32 Ordinal,
+	UNICODESTRING String
+	);
+
+SimomUICCAlreadyHasId(
+	ANSISTRING details,
+	UINT32 Ordinal,
+	HEXINT64 Pointer
+	);
+
+SimomUICCIccId(
+	ANSISTRING details,
+	UINT32 Ordinal,
+	HEXINT64 Pointer
+	);
+
+SimomOnFirstSnapshotDone(
+	ANSISTRING details,
+	UINT32 Ordinal,
+	HEXINT64 Pointer,
+	UINT32 Index
+	);
+
+SimomOnUICCRemoved(
+	ANSISTRING details,
+	UINT32 Ordinal,
+	HEXINT64 SlotPointer,
+	UINT32 SlotIndex,
+	HEXINT64 UICCPointer
+	);
+
+SimomOnUICCAdded(
+	ANSISTRING details,
+	UINT32 Ordinal,
+	HEXINT64 SlotPointer,
+	UINT32 SlotIndex,
+	HEXINT64 UICCPointer
+	);
+
+SimomOnSlotStateChanged(
+	ANSISTRING details,
+	UINT32 Ordinal,
+	HEXINT64 SlotPointer,
+	UINT32 SlotIndex,
+	UINT32 SlotState
+	);
+
+SimomOnSlotExistenceDone(
+	ANSISTRING details,
+	UINT32 Ordinal,
+	HEXINT64 Pointer,
+	GUID Guid
+	);
+
+SimomOnSlotRemoved(
+	ANSISTRING details,
+	UINT32 Ordinal,
+	HEXINT64 SlotPointer,
+	UINT32 SlotIndex,
+	HEXINT64 ModemPointer,
+	GUID ModemGuid
+	);
+
+SimomOnSlotAdded(
+	ANSISTRING details,
+	UINT32 Ordinal,
+	HEXINT64 SlotPointer,
+	UINT32 SlotIndex,
+	HEXINT64 ModemPointer,
+	GUID ModemGuid
+	);
+
+SimomOnCanDone(
+	ANSISTRING details,
+	UINT32 Ordinal,
+	HEXINT64 Pointer,
+	GUID Guid
+	);
+
+SimomOnCanRemoved(
+	ANSISTRING details,
+	UINT32 Ordinal,
+	HEXINT64 CanPointer,
+	GUID CanGuid,
+	HEXINT64 ModemPointer,
+	GUID ModemGuid
+	);
+
+SimomOnCanAdded(
+	ANSISTRING details,
+	UINT32 Ordinal,
+	HEXINT64 CanPointer,
+	GUID CanGuid,
+	HEXINT64 ModemPointer,
+	GUID ModemGuid
+	);
+
+SimomOnModemExistenceDone(
+	ANSISTRING details,
+	UINT32 Ordinal
+	);
+
+SimomOnModemRemoved(
+	ANSISTRING details,
+	UINT32 Ordinal,
+	HEXINT64 Pointer,
+	GUID Guid
+	);
+
+SimomOnModemAdded(
+	ANSISTRING details,
+	UINT32 Ordinal,
+	HEXINT64 Pointer,
+	GUID Guid
+	);
+
+SimomNotifyingClient(
+	ANSISTRING details,
+	UINT32 Ordinal,
+	HEXINT64 ClientCallbacks,
+	UINT32 Event
+	);
+
+SimomNotifyingClientDiscoveryState(
+	ANSISTRING details,
+	UINT32 Ordinal,
+	HEXINT64 ClientCallbacks,
+	UINT32 State
+	);
+
+SimomUnadvising(
+	ANSISTRING details,
+	UINT32 Ordinal,
+	HEXINT64 Callbacks
+	);
+
+SimomAdvising(
+	ANSISTRING details,
+	UINT32 Ordinal,
+	HEXINT64 Callbacks
+	);
+
+SimomShuttingDown(
+	ANSISTRING details,
+	UINT32 Ordinal,
+	HEXINT64 CellularApiRoot
+	);
+
+SimomStartingUp(
+	ANSISTRING details,
+	UINT32 Ordinal,
+	HEXINT64 CellularApiRoot
+	);
+
+PhoneNumberMatching(
+	UINT32 tailCount
+	);
+
+PHONE_DIAL_ASSIST_PARAMETERS(
+	ANSISTRING details,
+	UNICODESTRING HomeCountryCode,
+	UNICODESTRING CurrentCountryCode,
+	BOOL32 PlusCodeDialingSupported
+	);
+
+AssistedDialing(
+	ANSISTRING ccpfEventCANId,
+	UINT32 rule,
+	UINT32 reflexiveRule,
+	UINT32 dialAssistFlags,
+	UNICODESTRING originalAnonymized,
+	UNICODESTRING modifiedAnonymized,
+	UNICODESTRING currentCountryCode,
+	BOOL32 dialAssistEnabled,
+	BOOL32 plusCodeSupported
+	);
+
+AssistedDialing(
+	ANSISTRING ccpfEventCANId,
+	UNICODESTRING ccpfCan0SimMcc,
+	UNICODESTRING ccpfCan0SimMnc,
+	UNICODESTRING ccpfCan0NWMcc,
+	UNICODESTRING ccpfCan0NWMnc,
+	UNICODESTRING ccpfCan0NWRegStatus,
+	UNICODESTRING ccpfCan0NWRegRAT,
+	UNICODESTRING ccpfCan0IMSSystemType,
+	UNICODESTRING ccpfCan0IMSSvcList,
+	UNICODESTRING ccpfCan1SimMcc,
+	UNICODESTRING ccpfCan1SimMnc,
+	UNICODESTRING ccpfCan1NWMcc,
+	UNICODESTRING ccpfCan1NWMnc,
+	UNICODESTRING ccpfCan1NWRegStatus,
+	UNICODESTRING ccpfCan1NWRegRAT,
+	UNICODESTRING ccpfCan1IMSSystemType,
+	UNICODESTRING ccpfCan1IMSSvcList,
+	UINT32 rule,
+	UINT32 reflexiveRule,
+	UINT32 dialAssistFlags,
+	UNICODESTRING originalAnonymized,
+	UNICODESTRING modifiedAnonymized,
+	UNICODESTRING currentCountryCode,
+	BOOL32 dialAssistEnabled,
+	BOOL32 plusCodeSupported
+	);
+
+PHONE_DIAL_ASSIST_RULE_USED(
+	ANSISTRING details,
+	HEXINT64 DialAssistRule
+	);
+
+PHONE_DIAL_ASSIST_HOME_LCID(
+	ANSISTRING details,
+	UINT32 HomeLcid,
+	UINT32 CountryCode
+	);
+
+PHONE_DIAL_ASSIST_HOME_GEOID(
+	ANSISTRING details,
+	UINT32 HomeGeoId,
+	UINT32 CountryCode
+	);
+
+PHONE_DIAL_ASSIST_ACTION(
+	ANSISTRING details,
+	UINT32 Action,
+	UINT32 Rhs
+	);
+
+PHONE_DIAL_ASSIST_CONDITION(
+	ANSISTRING details,
+	UINT32 Lhs,
+	UINT32 Operator,
+	UINT32 Rhs,
+	UINT32 Rhs2,
+	UINT32 Pass
+	);
+
+PHONE_DIAL_ASSIST_RULE(
+	ANSISTRING details,
+	HEXINT64 Pointer,
+	UNICODESTRING Descriptiong
+	);
+
+PHPERF_ASSISTEDDIAL_END(
+	VOID
+	);
+
+PHPERF_ASSISTEDDIAL_BEGIN(
+	VOID
+	);
+
+Assert(
+	UINT32 assertVersion,
+	UINT32 rva,
+	UINT32 timestamp,
+	UINT32 imageSize,
+	ANSISTRING imageName,
+	UINT32 count,
+	UINT32 totalHits,
+	UINT32 ModuleCollection,
+	UINT32 GlobalCollection
+	);
+

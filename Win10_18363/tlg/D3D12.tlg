@@ -1,0 +1,118 @@
+ProviderNames:
+	Microsoft.Windows.Graphics.D3D12Dred
+	Microsoft.Windows.Graphics.D3D12
+
+
+
+**** Events *****
+ProcessInfo(
+	BOOL32 UTCReplace_AppSessionGuid,
+	UINT8 schemaVersion
+	);
+
+BasicEventOnce(
+	BOOL32 UTCReplace_AppSessionGuid,
+	UINT64 EventsMask,
+	UINT8 schemaVersion
+	);
+
+SM51Usage(
+	BOOL32 UTCReplace_AppSessionGuid,
+	UINT8 schemaVersion
+	);
+
+TextureUINTViewUsage(
+	BOOL32 UTCReplace_AppSessionGuid,
+	UINT8 schemaVersion,
+	UINT32 format
+	);
+
+D3D12EnableExperiments(
+	BOOL32 UTCReplace_AppSessionGuid,
+	UINT8 schemaVersion,
+	UINT32 NumFeatures,
+	GUID FeatureGUIDs,
+	UINT32 hrEnableResult
+	);
+
+CreateStateObjectUsage(
+	BOOL32 UTCReplace_AppSessionGuid,
+	UINT8 schemaVersion,
+	HEXINT64 deviceId,
+	UINT64 adapterLuid,
+	UINT32 hresult
+	);
+
+Texture420OpaqueUsage(
+	BOOL32 UTCReplace_AppSessionGuid,
+	UINT8 schemaVersion
+	);
+
+TextureLayoutUsage(
+	BOOL32 UTCReplace_AppSessionGuid,
+	UINT8 schemaVersion,
+	UINT32 textureLayout
+	);
+
+HeapUsage(
+	BOOL32 UTCReplace_AppSessionGuid,
+	UINT8 schemaVersion,
+	UINT32 heapFlags
+	);
+
+CreateCommandListNodeMask(
+	BOOL32 UTCReplace_AppSessionGuid,
+	UINT8 schemaVersion,
+	HEXINT64 deviceId,
+	UINT32 appAdapterMask
+	);
+
+RemoveCommandList(
+	BOOL32 UTCReplace_AppSessionGuid,
+	UINT8 schemaVersion,
+	HEXINT64 deviceId,
+	INT32 messageId,
+	UINT32 hr,
+	ANSISTRING message
+	);
+
+ImplicitMultiGPU(
+	BOOL32 UTCReplace_AppSessionGuid,
+	UINT8 schemaVersion,
+	HEXINT64 deviceId,
+	BOOL32 ddiDisableFlagSet,
+	UINT32 implicitPhysicalAdapterMask
+	);
+
+RemoveDevice(
+	BOOL32 UTCReplace_AppSessionGuid,
+	UINT8 schemaVersion,
+	HEXINT64 deviceId,
+	UINT32 reasonHR,
+	UINT64 adapterLuid,
+	INT32 kernelDeviceExecutionState
+	);
+
+CreateDevice(
+	BOOL32 UTCReplace_AppSessionGuid,
+	UINT8 schemaVersion,
+	HEXINT64 deviceId,
+	INT32 driverType_in,
+	INT32 featureLevel_in,
+	INT32 hwFeatureLevel_out,
+	UINT64 adapterLuid,
+	UINT64 driverDDIVersion,
+	XML extendedFeatureVersions,
+	UINT32 core,
+	UINT32 image,
+	UINT32 video,
+	UINT32 shaderCaching,
+	UINT32 passExperiment,
+	UINT32 contentProtectionResources,
+	UINT32 contentProtectionStreaming,
+	UINT32 raytracingPrototype,
+	UINT32 metaCommand,
+	UINT32 renderPass,
+	UINT32 downlevelSupport
+	);
+

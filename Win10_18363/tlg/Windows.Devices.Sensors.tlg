@@ -1,0 +1,259 @@
+ProviderNames:
+	Microsoft.Windows.Sensors.WinRTLayer
+	TelemetryAssert
+	TelemetryAssertDiagTrack
+
+
+
+**** Events *****
+SensorsAPITracing(
+	UINT32 SensorType,
+	ANSISTRING RuntimeClassName,
+	ANSISTRING MethodName,
+	ANSISTRING MethodLayer,
+	INT32 ErrorCode,
+	INT32 ReturnValue,
+	ANSISTRING TriggerEvent
+	);
+
+SensorsAPITracing(
+	GUID SensorType,
+	ANSISTRING RuntimeClassName,
+	ANSISTRING MethodName,
+	ANSISTRING MethodLayer,
+	INT32 ErrorCode,
+	INT32 ReturnValue,
+	UINT32 SubscribedActivities,
+	HEXINT64 Context,
+	ANSISTRING TriggerEvent
+	);
+
+SensorsAPITracing(
+	GUID SensorType,
+	ANSISTRING RuntimeClassName,
+	ANSISTRING MethodName,
+	ANSISTRING MethodLayer,
+	INT32 ErrorCode,
+	INT32 ReturnValue
+	);
+
+SensorsAPITracing(
+	GUID SensorType,
+	ANSISTRING RuntimeClassName,
+	ANSISTRING MethodName,
+	ANSISTRING MethodLayer,
+	UINT32 ReportInterval,
+	INT32 ErrorCode,
+	INT32 ReturnValue,
+	HEXINT64 Context
+	);
+
+SensorsAPITracing(
+	GUID SensorType,
+	ANSISTRING RuntimeClassName,
+	ANSISTRING MethodName,
+	ANSISTRING MethodLayer,
+	INT32 ErrorCode,
+	INT32 ReturnValue,
+	INT32 ListenerAddHResult,
+	INT32 SensorStartHResult,
+	INT64 out_EventRegistrationToken,
+	UINT64 NumberOfCurrentListeners,
+	UINT32 SubscribedActivities
+	);
+
+SensorsAPITracing(
+	GUID SensorType,
+	ANSISTRING RuntimeClassName,
+	ANSISTRING MethodName,
+	ANSISTRING MethodLayer,
+	INT32 ErrorCode,
+	INT32 ReturnValue,
+	UINT32 out_MinimumReportInterval
+	);
+
+SensorsAPITracing(
+	GUID SensorType,
+	ANSISTRING RuntimeClassName,
+	ANSISTRING MethodName,
+	ANSISTRING MethodLayer,
+	INT32 ErrorCode,
+	INT32 ReturnValue,
+	HEXINT64 out_ReadingPointer
+	);
+
+SensorsAPITracing(
+	GUID SensorType,
+	ANSISTRING RuntimeClassName,
+	ANSISTRING MethodName,
+	ANSISTRING MethodLayer,
+	HEXINT64 inout_Context,
+	INT32 ErrorCode,
+	INT32 ReturnValue,
+	INT64 StartQPC,
+	INT64 EndQPC
+	);
+
+SensorsAPITracing(
+	GUID SensorType,
+	ANSISTRING RuntimeClassName,
+	ANSISTRING MethodName,
+	ANSISTRING MethodLayer,
+	INT64 FromTime,
+	INT32 ErrorCode,
+	INT32 ReturnValue,
+	INT64 out_SystemHistoryStart,
+	INT64 out_SystemHistoryEnd,
+	INT64 StartQPC,
+	INT64 EndQPC
+	);
+
+SensorsAPITracing(
+	GUID SensorType,
+	ANSISTRING RuntimeClassName,
+	ANSISTRING MethodName,
+	ANSISTRING MethodLayer,
+	INT32 ErrorCode,
+	INT32 ReturnValue,
+	UINT32 out_SupportedActivities
+	);
+
+SensorsAPITracing(
+	GUID SensorType,
+	ANSISTRING RuntimeClassName,
+	ANSISTRING MethodName,
+	ANSISTRING MethodLayer,
+	INT32 ErrorCode,
+	INT32 ReturnValue,
+	HEXINT64 out_ppResult
+	);
+
+SensorsAPITracing(
+	GUID SensorType,
+	ANSISTRING RuntimeClassName,
+	ANSISTRING MethodName,
+	ANSISTRING MethodLayer,
+	INT32 ErrorCode,
+	INT32 ReturnValue,
+	UINT64 NumberOfCurrentListeners,
+	UINT32 SubscribedActivities
+	);
+
+SensorsAPITracing(
+	GUID SensorType,
+	ANSISTRING RuntimeClassName,
+	ANSISTRING MethodName,
+	ANSISTRING MethodLayer,
+	INT32 ErrorCode,
+	INT32 ReturnValue,
+	UNICODESTRING out_DeviceId
+	);
+
+SensorsAPITracing(
+	GUID SensorType,
+	ANSISTRING RuntimeClassName,
+	ANSISTRING MethodName,
+	ANSISTRING MethodLayer,
+	INT32 ErrorCode,
+	INT32 ReadingInitHResult,
+	INT64 StartQPC,
+	INT64 EndQPC
+	);
+
+SensorsAPITracing(
+	GUID SensorType,
+	ANSISTRING RuntimeClassName,
+	ANSISTRING MethodName,
+	ANSISTRING MethodLayer,
+	INT32 ErrorCode,
+	INT32 ReturnValue,
+	INT32 SensorStartHResult,
+	INT64 out_EventRegistrationToken,
+	UINT64 NumberOfCurrentListeners
+	);
+
+SensorsAPITracing(
+	GUID SensorType,
+	ANSISTRING RuntimeClassName,
+	ANSISTRING MethodName,
+	ANSISTRING MethodLayer,
+	UNICODESTRING in_interfaceId,
+	INT32 ErrorCode,
+	INT32 ReturnValue
+	);
+
+SensorsAPITracing(
+	GUID SensorType,
+	ANSISTRING RuntimeClassName,
+	ANSISTRING MethodName,
+	ANSISTRING MethodLayer,
+	GUID in_deviceClassGuid,
+	HEXINT64 out_pResult,
+	INT32 ErrorCode,
+	INT32 ReturnValue
+	);
+
+SensorsAPITracing(
+	ANSISTRING RuntimeClassName,
+	ANSISTRING MethodName,
+	ANSISTRING MethodLayer,
+	INT32 ErrorCode,
+	INT32 ReturnValue
+	);
+
+SensorsAPITracing(
+	GUID SensorType,
+	ANSISTRING RuntimeClassName,
+	ANSISTRING MethodName,
+	ANSISTRING MethodLayer,
+	INT32 ReturnValue,
+	UINT8 NativeOrientation,
+	UINT8 ReferenceFrame,
+	UINT8 RotationApplied
+	);
+
+SensorAPITelemetryEventOverflow(
+	INT32 IsEventsOverflow
+	);
+
+SensorAPITelemetryEventThrottled(
+	INT32 IsEventsThrottled
+	);
+
+SensorAPITelemetry(
+	INT32 MethodName,
+	INT32 MethodLayer,
+	INT32 SensorClassName,
+	INT32 ErrCode,
+	INT32 InternalErrCode,
+	INT32 Version
+	);
+
+SensorAPITelemetry(
+	INT32 MethodLayer,
+	INT32 MethodName,
+	HEXINT64 Handle,
+	INT32 ErrCode,
+	INT32 InternalErrCode,
+	UNICODESTRING Interface,
+	GUID SensorGuid,
+	INT32 SensorClassName,
+	UINT32 Count,
+	UINT32 Version
+	);
+
+AssertWithArgs(
+	UINT32 assertVersion,
+	UINT32 rva,
+	UINT32 timestamp,
+	UINT32 imageSize,
+	ANSISTRING imageName,
+	UINT32 count,
+	UINT32 totalHits,
+	ANSISTRING originatingBinary,
+	UINT32 bucketArgument1,
+	UINT32 bucketArgument2,
+	UINT32 ModuleCollection,
+	UINT32 GlobalCollection
+	);
+

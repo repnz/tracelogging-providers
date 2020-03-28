@@ -1,0 +1,101 @@
+ProviderNames:
+	Microsoft.Windows.CapabilityAccessManager
+
+
+
+**** Events *****
+SetUserAppConsent(
+	HRESULT hr,
+	UINT32 failureLineNumber,
+	UNICODESTRING callerUserSid,
+	UNICODESTRING callerProcessName,
+	UNICODESTRING callerAppPfn,
+	UNICODESTRING targetUserSid,
+	UNICODESTRING appPackageFamily,
+	UNICODESTRING consentId,
+	UNICODESTRING capabilityForConsent,
+	INT32 oldConsentValue,
+	INT32 newConsentValue,
+	BOOLEAN isSetByHigherAuthority,
+	INT32 effectiveConsentValue
+	);
+
+SetUserGlobalConsent(
+	HRESULT hr,
+	UINT32 failureLineNumber,
+	UNICODESTRING callerUserSid,
+	UNICODESTRING callerProcessName,
+	UNICODESTRING callerAppPfn,
+	UNICODESTRING targetUserSid,
+	UNICODESTRING consentId,
+	UNICODESTRING capabilityForConsent,
+	INT32 oldConsentValue,
+	INT32 newConsentValue,
+	BOOLEAN isSetByHigherAuthority,
+	INT32 effectiveConsentValue
+	);
+
+SetSystemGlobalConsent(
+	HRESULT hr,
+	UINT32 failureLineNumber,
+	UNICODESTRING callerUserSid,
+	UNICODESTRING callerProcessName,
+	UNICODESTRING callerAppPfn,
+	UNICODESTRING capabilityForConsent,
+	INT32 oldConsentValue,
+	INT32 newConsentValue,
+	BOOLEAN isSetByHigherAuthority,
+	INT32 effectiveConsentValue
+	);
+
+FallbackError(
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+FallbackError(
+	UINT64 PartA_PrivTags,
+	SIGNED wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+CapabilityConsentManagerCreationFailure(
+	HRESULT hr,
+	UINT32 failureLineNumber,
+	UNICODESTRING callerProcessName,
+	UNICODESTRING callerAppPfn,
+	BOOLEAN isCallerAppContainer,
+	BOOLEAN isCallerInproc,
+	BOOLEAN isCallerShellExperienceApp
+	);
+

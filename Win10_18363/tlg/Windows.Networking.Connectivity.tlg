@@ -1,0 +1,75 @@
+ProviderNames:
+	Microsoft.Windows.NetworkInformation
+	TelemetryAssert
+	TelemetryAssertDiagTrack
+	Microsoft.Windows.TlgAggregateInternal
+
+
+
+**** Events *****
+InterfacesNLMfailedtoTrack(
+	UINT64 PartA_PrivTags,
+	GUID interfaceGuid,
+	BOOL32 isHardwareInterface,
+	BOOL32 isFilterInterface,
+	BOOL32 isPhysical,
+	UINT32 ifType,
+	UINT32 tunnelType
+	);
+
+MethodDurationByResult(Aggregate)(
+	NULL Count,
+	NULL DurationTotal(ms),
+	NULL DurationMin(ms),
+	NULL DurationMax(ms),
+	ANSISTRING m_methodName,
+	HRESULT Result,
+	UINT64 PartA_PrivTags
+	);
+
+ActivityStoppedAutomatically(
+	VOID
+	);
+
+NlmCoCreateHangDetected(
+	VOID
+	);
+
+NlmCoCreateDuringSetup(
+	HRESULT result
+	);
+
+NlmCoCreateDuringSetup(
+	VOID
+	);
+
+InterfaceWasDisconnected(
+	UINT64 PartA_PrivTags,
+	GUID interfaceGuid,
+	UNICODESTRING profileName
+	);
+
+Assert(
+	UINT32 assertVersion,
+	UINT32 rva,
+	UINT32 timestamp,
+	UINT32 imageSize,
+	ANSISTRING imageName,
+	UINT32 count,
+	UINT32 totalHits,
+	UINT32 ModuleCollection,
+	UINT32 GlobalCollection
+	);
+
+TlgAggregateSummary(
+	GUID Provider,
+	UINT64 NumFlushes,
+	UINT64 MaxEntriesStored,
+	UINT64 TotalEntriesFlushed,
+	UINT32 MaxEntriesFlushed,
+	UINT32 MinEntriesFlushed,
+	UINT32 NumBucketLimitReached,
+	UINT32 NumAllocationFailures,
+	UINT32 NumLargeEventFailures
+	);
+

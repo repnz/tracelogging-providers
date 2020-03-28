@@ -1,0 +1,43 @@
+ProviderNames:
+	Microsoft.Windows.MediaFoundation.MP3Source
+	Microsoft.Windows.MediaFoundation.AVISource
+	Microsoft.Windows.MediaFoundation.CallStack
+
+
+
+**** Events *****
+MP3SourceError(
+	GUID MFMediaTelemetrySessionID,
+	UINT32 MFMediaTelemetrySessionInstance,
+	HRESULT hr
+	);
+
+Mp3SourceAggregation(
+	INT32 EncodingType,
+	UINT64 Duration,
+	UINT32 Bitrate,
+	UINT32 Samplerate,
+	UINT32 Channels,
+	UINT8 MajorVersion,
+	UINT8 MinorVersion,
+	UINT32 Id3TagList,
+	GUID MFMediaTelemetrySessionID,
+	UINT32 MFMediaTelemetrySessionInstance
+	);
+
+ID3Write(
+	INT32 hresult,
+	UINT32 FramesWritten
+	);
+
+AVIInformation(
+	GUID MFMediaTelemetrySessionID,
+	UINT32 MFMediaTelemetrySessionInstance,
+	HRESULT hr,
+	HEXINT32 HandlerFourCC,
+	INT32 StreamsInHeader,
+	UINT32 HeaderParsingState,
+	UINT32 IndexLoadState,
+	BOOL32 IndexBuildAttempted
+	);
+

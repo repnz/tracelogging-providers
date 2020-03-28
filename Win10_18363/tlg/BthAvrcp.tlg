@@ -1,0 +1,148 @@
+ProviderNames:
+	Microsoft.Windows.Bluetooth
+
+
+
+**** Events *****
+EventOccurrence(
+	UINT64 PartA_PrivTags,
+	ANSISTRING EventOccurrenceName,
+	UINT32 EventOccurrenceResult,
+	UNICODESTRING BTDeviceAddress
+	);
+
+AvrcpConnectionInfo(
+	UINT64 PartA_PrivTags,
+	UINT16 AvrcpInfoLocalCtFeatures,
+	UINT16 AvrcpInfoLocalTgFeatures,
+	UINT16 AvrcpInfoRemoteCtVersion,
+	UINT16 AvrcpInfoRemoteCtFeatures,
+	BOOL32 AvrcpInfoRemoteCtAbsoluteVolumeSupported,
+	UINT16 AvrcpInfoRemoteTgVersion,
+	UINT16 AvrcpInfoRemoteTgFeatures,
+	BOOL32 AvrcpInfoRemoteTgAbsoluteVolumeSupported,
+	UINT64 BTDeviceAddress
+	);
+
+AvrcpRemoteTgGetCapabilitiesResponse(
+	UINT64 PartA_PrivTags,
+	UINT8 AvrcpCType,
+	UINT8 AvrcpEventId,
+	UINT64 BTDeviceAddress
+	);
+
+AvrcpLocalCtEventRegistered(
+	UINT64 PartA_PrivTags,
+	UINT8 AvrcpEventId,
+	UINT64 BTDeviceAddress
+	);
+
+AvrcpLocalCtSetAbsoluteVolume(
+	UINT64 PartA_PrivTags,
+	UINT8 AvrcpAbsoluteVolumeLevel,
+	UINT64 BTDeviceAddress
+	);
+
+AvrcpLocalCtPassthroughSent(
+	UINT64 PartA_PrivTags,
+	UINT8 AvrcpPassthroughId,
+	UINT64 BTDeviceAddress
+	);
+
+AvrcpRemoteTgAbsoluteVolumeChanged(
+	UINT64 PartA_PrivTags,
+	UINT8 AvrcpAbsoluteVolumeLevel,
+	UINT64 BTDeviceAddress
+	);
+
+AvrcpRemoteTgSetAbsoluteVolumeResponseLevel(
+	UINT64 PartA_PrivTags,
+	UINT8 AvrcpAbsoluteVolumeLevel,
+	BOOL32 AvrcpAbsoluteVolumeLevelUnequal,
+	UINT8 AvrcpCType,
+	UINT64 BTDeviceAddress
+	);
+
+AvrcpLocalCtPassthroughSent(
+	UINT64 PartA_PrivTags,
+	UINT32 AvrcpPassthroughId,
+	UINT8 AvrcpCType,
+	UINT64 BTDeviceAddress
+	);
+
+AvrcpRemoteCtEventRegistered(
+	UINT64 PartA_PrivTags,
+	UINT8 AvrcpEventId,
+	UINT64 BTDeviceAddress
+	);
+
+AvrcpRemoteCtPassthroughSent(
+	UINT64 PartA_PrivTags,
+	UINT32 AvrcpPassthroughId,
+	UINT32 AvrcpPassthroughResult,
+	UINT64 BTDeviceAddress
+	);
+
+GetFolderItemsRequest(
+	UINT64 PartA_PrivTags,
+	UINT8 AvrcpScopeOfRequest,
+	UINT8 AvrcpNumberOfAttributesRequested,
+	BOOL32 MediaTitle,
+	BOOL32 MediaArtistName,
+	BOOL32 MediaAlbumName,
+	BOOL32 MediaTrackNumber,
+	BOOL32 MediaGenre,
+	BOOL32 MediaPlayingTime,
+	UNICODESTRING BTDeviceAddress
+	);
+
+GetNowPlayingFolderItemsResponse(
+	UINT64 PartA_PrivTags,
+	UINT8 AvrcpScopeOfRequest,
+	UINT32 AvrcpNumberOfAttributesRequested,
+	UINT32 AvrcpNumberOfAttributesFromApp,
+	UINT32 AvrcpNumberOfAttributesReturned,
+	UINT32 MediaTitle,
+	UINT32 MediaArtistName,
+	UINT32 MediaAlbumName,
+	UINT32 MediaTrackNumber,
+	UINT32 MediaGenre,
+	UINT32 MediaPlayingTime,
+	UNICODESTRING BTDeviceAddress
+	);
+
+GetVfsFolderItemsResponse(
+	UINT64 PartA_PrivTags,
+	UINT8 AvrcpScopeOfRequest,
+	UINT32 AvrcpNumberOfItemsRequested,
+	UINT32 AvrcpNumberOfItemsFromApp,
+	UINT32 AvrcpNumberOfItemsReturned,
+	UINT32 MediaTitle,
+	UINT32 MediaArtistName,
+	UINT32 MediaAlbumName,
+	UINT32 MediaTrackNumber,
+	UINT32 MediaGenre,
+	UINT32 MediaPlayingTime,
+	UNICODESTRING BTDeviceAddress
+	);
+
+GetMediaPlayerListFolderItemsResponse(
+	UINT64 PartA_PrivTags,
+	UINT8 AvrcpScopeOfRequest,
+	UNICODESTRING AvrcpMediaPlayerName,
+	UINT32 AvrcpNumberOfItemsRequested,
+	UINT32 AvrcpNumberOfItemsFromOs,
+	UINT8 AvrcpFeatureBitMask,
+	UNICODESTRING BTDeviceAddress
+	);
+
+AvrcpAbsoluteVolumeDisabledCompatDB(
+	UINT64 PartA_PrivTags,
+	UINT64 BTDeviceAddress
+	);
+
+AvrcpAbsoluteVolumeDisabledRegistry(
+	UINT64 PartA_PrivTags,
+	UINT64 BTDeviceAddress
+	);
+

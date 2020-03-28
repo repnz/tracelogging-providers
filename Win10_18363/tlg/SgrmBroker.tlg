@@ -1,0 +1,882 @@
+ProviderNames:
+	Microsoft.Windows.Oct.Broker
+	Microsoft.Windows.Oct.Enclave
+
+
+
+**** Events *****
+ServiceStop(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId
+	);
+
+ServiceStart(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId
+	);
+
+ServiceStart(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+ServiceStart(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+ActivityIntermediateStop(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+ActivityError(
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+ActivityError(
+	UINT64 PartA_PrivTags,
+	SIGNED wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+ServiceStop(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+ServiceStop(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+ActivityStoppedAutomatically(
+	VOID
+	);
+
+FallbackError(
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+FallbackError(
+	UINT64 PartA_PrivTags,
+	SIGNED wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+GetSessionCertificate(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId,
+	UINT64 PartA_PrivTags,
+	UNICODESTRING CallerProcess,
+	UINT64 SessionHandle
+	);
+
+GetRuntimeReport(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId,
+	UINT64 PartA_PrivTags,
+	UNICODESTRING CallerProcess,
+	UINT64 SessionHandle,
+	BINARY Nonce
+	);
+
+GetSessionReport(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId,
+	UINT64 PartA_PrivTags,
+	UNICODESTRING CallerProcess,
+	UINT64 SessionHandle
+	);
+
+EndSession(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId,
+	UINT64 PartA_PrivTags,
+	UINT64 SessionHandle
+	);
+
+CreateSession(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId,
+	UINT64 PartA_PrivTags,
+	UNICODESTRING CallerProcess,
+	UNICODESTRING RPId,
+	BINARY Nonce
+	);
+
+GetSessionCertificate(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+GetSessionCertificate(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+GetSessionCertificate(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT64 PartA_PrivTags,
+	INT32 HResult,
+	UINT64 SessionHandle
+	);
+
+GetSessionCertificate(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId,
+	UINT64 PartA_PrivTags,
+	INT32 HResult,
+	UINT64 SessionHandle
+	);
+
+GetRuntimeReport(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+GetRuntimeReport(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+GetRuntimeReport(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT64 PartA_PrivTags,
+	INT32 HResult,
+	UINT64 SessionHandle,
+	UINT32 ReportSize
+	);
+
+GetRuntimeReport(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId,
+	UINT64 PartA_PrivTags,
+	INT32 HResult,
+	UINT64 SessionHandle,
+	UINT32 ReportSize
+	);
+
+GetSessionReport(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+GetSessionReport(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+GetSessionReport(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT64 PartA_PrivTags,
+	INT32 HResult,
+	UINT64 SessionHandle,
+	UINT32 ReportSize
+	);
+
+GetSessionReport(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId,
+	UINT64 PartA_PrivTags,
+	INT32 HResult,
+	UINT64 SessionHandle,
+	UINT32 ReportSize
+	);
+
+EndSession(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+EndSession(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+CreateSession(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+CreateSession(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+CreateSession(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT64 PartA_PrivTags,
+	INT32 HResult,
+	UINT64 SessionHandle
+	);
+
+CreateSession(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId,
+	UINT64 PartA_PrivTags,
+	INT32 HResult,
+	UINT64 SessionHandle
+	);
+
+BrokerInfo(
+	HRESULT HResult,
+	ANSISTRING Function,
+	UINT32 Line,
+	ANSISTRING Message
+	);
+
+BrokerInfoImportant(
+	HRESULT HResult,
+	ANSISTRING Function,
+	UINT32 Line,
+	ANSISTRING Message
+	);
+
+BrokerWarning(
+	HRESULT HResult,
+	ANSISTRING Function,
+	UINT32 Line,
+	ANSISTRING Message
+	);
+
+BrokerError(
+	HRESULT HResult,
+	ANSISTRING Function,
+	UINT32 Line,
+	ANSISTRING Message
+	);
+
+HttpPost(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId,
+	UINT64 PartA_PrivTags,
+	UNICODESTRING Host,
+	UNICODESTRING Path,
+	UINT16 Port,
+	UNICODESTRING CorrelationVector
+	);
+
+LpacStop(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId
+	);
+
+LpacStart(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId
+	);
+
+HttpPost(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+HttpPost(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+LpacStop(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+LpacStop(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+LpacStart(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+LpacStart(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+LuaExecutionFailed(
+	GUID ScriptId,
+	ANSISTRING ErrorMessage,
+	INT32 IsVsm
+	);
+
+EngineInitializationCompleted(
+	INT32 Status,
+	GUID ScriptId,
+	UINT32 AssertionRecordCount,
+	INT32 IsVsm
+	);
+
+EnclaveError(
+	HRESULT HResult,
+	ANSISTRING Function,
+	UINT32 Line,
+	ANSISTRING Message
+	);
+
+EnclaveWarning(
+	HRESULT HResult,
+	ANSISTRING Function,
+	UINT32 Line,
+	ANSISTRING Message
+	);
+
+EnclaveInfoImportant(
+	HRESULT HResult,
+	ANSISTRING Function,
+	UINT32 Line,
+	ANSISTRING Message
+	);
+
+EnclaveInfo(
+	HRESULT HResult,
+	ANSISTRING Function,
+	UINT32 Line,
+	ANSISTRING Message
+	);
+
+LuaFrameworkPerformanceAccounting(
+	UINT64 PartA_PrivTags,
+	UNICODESTRING CorrelationVector,
+	ANSISTRING AccountingRecordJson
+	);
+
+PerformanceAccounting(
+	UINT64 PartA_PrivTags,
+	UNICODESTRING CorrelationVector,
+	UINT64 TimeElapsedSinceLastAccountingMs,
+	BOOL32 IsVsm,
+	31 EngineAccountingRecord,
+	UINT32 ExecuteNextAssertionCount,
+	HEXINT64 ExecuteNextAssertionTotalUserTimeMs,
+	HEXINT64 ExecuteNextAssertionLongestUserTimeMs,
+	UINT32 ReportResultWriteCount,
+	UINT32 ReportAccessRequestCount,
+	UINT32 ReportAccessRequestFailureCount,
+	GUID AssertionIds,
+	UINT32 AssertionLogicEntryCount,
+	UINT32 AssertionLogicFailureCount,
+	UINT32 AssertionRunCount,
+	UINT32 AssertionRecordPassedWriteCount,
+	UINT32 AssertionRecordFailedWriteCount,
+	UINT32 NativeCallbackCount,
+	UINT32 NativeCallbackFailureCount,
+	UINT32 NativeCallbackReadMappedCount,
+	UINT32 NativeCallbackReadDirectCount,
+	HEXINT64 LuaMemoryCommit,
+	HEXINT64 LuaMemoryCommitGc,
+	UINT32 LuaPcallCount,
+	UINT32 LuaPcallFailureCount,
+	UINT32 LuaPanicCount,
+	UINT32 LuaExhaustedMemoryCount_Persisted,
+	UINT32 NotificationCount,
+	UINT32 DispatchedNotificationCount,
+	UINT32 DroppedNotificationCount,
+	HEXINT64 AccountingRecordCreationTimestamp,
+	HEXINT64 AccountingRecordRetrievalTimestamp,
+	UINT32 ThreadPriorityBumpCount,
+	UINT32 ActiveClientCount,
+	UINT32 ClientCreationCount,
+	UINT32 FailedLuaAccountingRetrievalCount,
+	TID ProcessCpuTotalAccounting,
+	UINT32 LogicalProcessorCount,
+	UINT64 ProcessKernelTime,
+	UINT64 ProcessUserTime,
+	UINT64 SystemKernelTime,
+	UINT64 SystemUserTime,
+	UINT64 SystemIdleTime,
+	IPV6 ProcessMemoryTotalAccounting,
+	UINT32 PageFaultCount,
+	UINT64 PeakWorkingSetSize,
+	UINT64 WorkingSetSize,
+	UINT64 QuotaPeakPagedPoolUsage,
+	UINT64 QuotaPagedPoolUsage,
+	UINT64 QuotaPeakNonPagedPoolUsage,
+	UINT64 QuotaNonPagedPoolUsage,
+	UINT64 PagefileUsage,
+	UINT64 PeakPagefileUsage
+	);
+
+AssertionFailed(
+	UINT64 PartA_PrivTags,
+	GUID ScriptId,
+	GUID AssertionId,
+	UINT32 AssertionVersion,
+	BOOLEAN AuditMode,
+	ANSISTRING ContextJson,
+	BOOL32 IsVsm,
+	UINT32 ActiveClientCount
+	);
+
+LuaScriptLoading(
+	UINT64 PartA_PrivTags,
+	UINT32 SignatureEnforcementType,
+	BINARY LuaScriptDigest,
+	UINT32 LuaScriptSVN,
+	UINT16 LuaScriptMajorVersion,
+	UINT16 LuaScriptMinorVersion,
+	UINT16 LuaEngineMajorVersion,
+	UINT16 LuaEngineMinorVersion,
+	UINT32 Reserved1,
+	UINT32 Reserved2,
+	UINT32 Reserved3,
+	UINT32 LuaScriptSize,
+	HRESULT HResult
+	);
+
+Attest(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId,
+	UINT64 PartA_PrivTags,
+	UNICODESTRING RPId,
+	UINT64 SessionHandle,
+	UNICODESTRING CorrelationVector
+	);
+
+EnclaveInitialization(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId,
+	BOOL32 IsVsm
+	);
+
+EngineReinitialization(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId
+	);
+
+EngineInitialization(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId
+	);
+
+Attest(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+Attest(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+EngineReinitialization(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+EngineReinitialization(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+EngineInitialization(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+EngineInitialization(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+EnclaveInitialization(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+EnclaveInitialization(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+

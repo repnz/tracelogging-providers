@@ -1,0 +1,173 @@
+ProviderNames:
+	RDP.ServerStack.Diagnostics
+	RDP.Transport
+
+
+
+**** Events *****
+ConnectionCheckpoint(
+	UINT32 operation,
+	UINT32 disconnectSource,
+	UINT32 code,
+	ANSISTRING codeSymbolic
+	);
+
+ConnectionFailure(
+	UINT32 source,
+	UINT32 operation,
+	UINT32 code,
+	ANSISTRING codeSymbolic,
+	ANSISTRING message,
+	BOOL32 internal
+	);
+
+ConnectionEnd(
+	VOID
+	);
+
+ConnectionCheckpoint(
+	UINT32 operation
+	);
+
+RDPTransportURCPDelaySegmentStats(
+	GUID correlationId,
+	DOUBLE durationInSeconds,
+	UINT32 maxRateInKbps,
+	UINT32 averageRateAdvertizedInKbps,
+	UINT32 averageRateSentInKbps,
+	UINT32 averageRawDelayInMs,
+	UINT32 averageDelayInMs,
+	UINT32 averageBytesInFlight,
+	DOUBLE averageDelayInMsPerBytesInFlight,
+	UINT32 averageRoundTripTimeInMs,
+	UINT32 averageURCPOperationPointInMs,
+	UINT32 delaySmoothPeriodInMs,
+	UINT32 maxRateAdvertizedInKbps,
+	UINT32 maxRateSentInKbps,
+	UINT32 maxRawDelayInMs,
+	UINT32 maxDelayInMs,
+	UINT32 maxBytesInFlight,
+	DOUBLE maxDelayInMsPerBytesInFlight,
+	UINT32 maxRoundTripTimeInMs,
+	UINT32 minRateAdvertizedInKbps,
+	UINT32 minRoundTripTimeInMs
+	);
+
+RDPTransportURCPSessionStats(
+	GUID correlationId,
+	UINT32 maxRateInKbps,
+	UINT32 averageRateAdvertizedInKbps,
+	UINT32 maxRateAdvertizedInKbps,
+	UINT32 maxRateSentInKbps,
+	UINT32 maxRoundTripTimeInMs,
+	UINT32 minRateAdvertizedInKbps,
+	DOUBLE averageLossRate,
+	DOUBLE averageLossRateDueToTimeout,
+	UINT32 numLossDelayTransitions,
+	UINT32 numFalseLossTransitions,
+	UINT32 totalNumTimesBandwidthTooLow,
+	DOUBLE ratioOfBurstLossvsSingleLoss,
+	DOUBLE averageBurstLossLength,
+	DOUBLE reorderedBytesTop1tenthPercent0.1,
+	DOUBLE reorderedBytesTop1tenthPercent0.2,
+	DOUBLE reorderedBytesTop1tenthPercent0.3,
+	DOUBLE reorderedBytesTop1tenthPercent0.4,
+	DOUBLE reorderedBytesTop1tenthPercent0.5,
+	DOUBLE reorderedBytesTop1tenthPercent0.6,
+	DOUBLE reorderedBytesTop1tenthPercent0.7,
+	DOUBLE reorderedBytesTop1tenthPercent0.8,
+	DOUBLE reorderedBytesTop1tenthPercent0.9,
+	DOUBLE reorderedBytesTop1tenthPercent1
+	);
+
+RDPTransportStats(
+	GUID correlationId,
+	BOOL32 isUDP,
+	UINT32 averageRateAdvertizedInKbps,
+	UINT32 averageBytesInFlight,
+	UINT32 averageRoundTripTimeInMs,
+	UINT32 maxRateAdvertizedInKbps,
+	UINT32 maxBytesInFlight,
+	UINT32 maxRoundTripTimeInMs,
+	UINT32 minRateAdvertizedInKbps,
+	UINT32 minRoundTripTimeInMs
+	);
+
+RDPTransportUDPProfile(
+	GUID correlationId,
+	UINT32 udpVersion
+	);
+
+RDPTransportURCPLossSegmentStats(
+	GUID correlationId,
+	DOUBLE durationInSeconds,
+	BOOL32 isFalseLossTransition,
+	UINT32 averageLossIntervalInMs,
+	DOUBLE averageLossRate,
+	DOUBLE averageLossRateDueToTimeout,
+	DOUBLE averageTrueLossRateDueToTimeout,
+	UINT32 averageTimeoutInMsInLossDueToTimeOut,
+	UINT32 averageDelayInMsAroundLoss,
+	UINT32 maxTimeoutInMsInLossDueToTimeOut,
+	UINT32 maxDelayInMsAroundLoss,
+	UINT32 averageRateAdvertizedInKbps,
+	UINT32 averageRateSentInKbps,
+	UINT32 averageRoundTripTimeInMs,
+	UINT32 maxRateAdvertizedInKbps,
+	UINT32 maxRateSentInKbps,
+	UINT32 averageMaxRoundTripTimeInMs,
+	UINT32 minRateAdvertizedInKbps,
+	UINT32 averageMinRoundTripTimeInMs
+	);
+
+RDPTransportError(
+	GUID correlationId,
+	UNICODESTRING Error String
+	);
+
+RDPTransportURCPLossSegmentAggregatedStats(
+	GUID correlationId,
+	DOUBLE durationInSeconds,
+	BOOL32 isFalseLossTransition,
+	UINT32 averageLossIntervalInMs,
+	DOUBLE averageLossRate,
+	DOUBLE averageLossRateDueToTimeout,
+	DOUBLE averageTrueLossRateDueToTimeout,
+	UINT32 averageTimeoutInMsInLossDueToTimeOut,
+	UINT32 averageDelayInMsAroundLoss,
+	UINT32 maxTimeoutInMsInLossDueToTimeOut,
+	UINT32 maxDelayInMsAroundLoss,
+	UINT32 averageRateAdvertizedInKbps,
+	UINT32 averageRateSentInKbps,
+	UINT32 averageRoundTripTimeInMs,
+	UINT32 maxRateAdvertizedInKbps,
+	UINT32 maxRateSentInKbps,
+	UINT32 averageMaxRoundTripTimeInMs,
+	UINT32 minRateAdvertizedInKbps,
+	UINT32 averageMinRoundTripTimeInMs
+	);
+
+RDPTransportURCPDelaySegmentAggregatedStats(
+	GUID correlationId,
+	DOUBLE durationInSeconds,
+	UINT32 maxRateInKbps,
+	UINT32 averageRateAdvertizedInKbps,
+	UINT32 averageRateSentInKbps,
+	UINT32 averageRawDelayInMs,
+	UINT32 averageDelayInMs,
+	UINT32 averageBytesInFlight,
+	DOUBLE averageDelayInMsPerBytesInFlight,
+	UINT32 averageRoundTripTimeInMs,
+	UINT32 averageURCPOperationPointInMs,
+	UINT32 delaySmoothPeriodInMs,
+	UINT32 maxRateAdvertizedInKbps,
+	UINT32 maxRateSentInKbps,
+	UINT32 maxRawDelayInMs,
+	UINT32 maxDelayInMs,
+	UINT32 maxBytesInFlight,
+	DOUBLE maxDelayInMsPerBytesInFlight,
+	UINT32 maxRoundTripTimeInMs,
+	UINT32 minRateAdvertizedInKbps,
+	UINT32 minRoundTripTimeInMs
+	);
+

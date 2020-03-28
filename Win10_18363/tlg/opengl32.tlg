@@ -1,0 +1,102 @@
+ProviderNames:
+	Microsoft.Windows.Graphics.OpenGL
+	Microsoft.Windows.Graphics.DirectXDatabaseHelper
+
+
+
+**** Events *****
+DListMismatchResultInfo(
+	UINT64 PartA_PrivTags,
+	BOOL32 UTCReplace_AppSessionGuid,
+	UINT8 schemaVersion,
+	UNICODESTRING DxDbVersion,
+	UINT32 DxDbResult,
+	UINT64 IHVAdapterLuid,
+	UINT64 IHVDriverVersion,
+	BOOL32 IHVDListResult,
+	UINT32 IHVExportResult
+	);
+
+DListMismatchResultInfo(
+	UINT64 PartA_PrivTags,
+	BOOL32 UTCReplace_AppSessionGuid,
+	UINT8 schemaVersion,
+	UNICODESTRING DxDbVersion,
+	UINT32 DxDbResult,
+	UINT64 IHVAdapterLuid,
+	UINT64 IHVDriverVersion,
+	BOOL32 IHVDListResult,
+	UINT32 IHVExportResult
+	);
+
+FallbackError(
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+DirectXDatabaseAccessError(
+	BOOLEAN UTCReplace_AppSessionGuid,
+	UINT8 schemaVersion,
+	UINT32 HResult,
+	UNICODESTRING DxDbVersion,
+	UINT32 QueryType,
+	UNICODESTRING processName,
+	UINT32 DxDbSourceType,
+	UINT64 PartA_PrivTags
+	);
+
+FallbackError(
+	UINT64 PartA_PrivTags,
+	SIGNED wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+DirectXDatabaseConfigAccessError(
+	BOOLEAN UTCReplace_AppSessionGuid,
+	UINT8 schemaVersion,
+	UINT32 HResult,
+	UINT32 ConfigQueryType,
+	UINT32 DxDbSourceType,
+	UINT64 PartA_PrivTags
+	);
+
+DuplicateAppEntryInDatabase(
+	BOOLEAN UTCReplace_AppSessionGuid,
+	UINT8 schemaVersion,
+	UNICODESTRING processName,
+	UINT32 numDuplicates,
+	UNICODESTRING DxDbVersion,
+	UINT32 DxDbSourceType,
+	UINT64 PartA_PrivTags
+	);
+

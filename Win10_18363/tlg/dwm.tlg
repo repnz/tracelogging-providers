@@ -1,0 +1,41 @@
+ProviderNames:
+	Microsoft.Windows.Dwm.BlackScreenDiag
+	TelemetryAssert
+	TelemetryAssertDiagTrack
+
+
+
+**** Events *****
+RunDiagnostics(
+	UINT64 PartA_PrivTags,
+	GUID BlackScreenInstanceGuid,
+	INT32 CallingSource,
+	INT32 DiagnosticsFlags
+	);
+
+ReportQueued(
+	UINT64 PartA_PrivTags,
+	GUID BlackScreenInstanceGuid
+	);
+
+CallingGraphics(
+	UINT64 PartA_PrivTags,
+	GUID BlackScreenInstanceGuid,
+	BOOLEAN DoReset
+	);
+
+AssertWithArgs(
+	UINT32 assertVersion,
+	UINT32 rva,
+	UINT32 timestamp,
+	UINT32 imageSize,
+	ANSISTRING imageName,
+	UINT32 count,
+	UINT32 totalHits,
+	ANSISTRING originatingBinary,
+	UINT32 bucketArgument1,
+	UINT32 bucketArgument2,
+	UINT32 ModuleCollection,
+	UINT32 GlobalCollection
+	);
+

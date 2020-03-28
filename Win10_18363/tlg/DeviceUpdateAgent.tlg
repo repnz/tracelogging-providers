@@ -1,0 +1,98 @@
+ProviderNames:
+	Microsoft.Windows.Update.DeviceUpdateAgent
+
+
+
+**** Events *****
+UpdateAgentAnalysisSummary(
+	UINT16 missingUpdateCount,
+	UINT16 missingDriverCount,
+	UINT16 unpublishedCount,
+	UINT16 publishedCount,
+	UINT16 analysisErrorCount,
+	BOOL32 activated,
+	BOOL32 summaryAppendError,
+	UINT16 truncatedDriverCount,
+	UINT16 truncatedDeviceCount,
+	COUNTEDSTRING summary,
+	GUID objectId,
+	UNICODESTRING sessionId,
+	INT32 scenarioId,
+	UNICODESTRING flightId,
+	UNICODESTRING updateId,
+	ANSISTRING relatedCV,
+	ANSISTRING __TlgCV__
+	);
+
+UpdateAgentCommit(
+	INT32 result,
+	HRESULT errorCode,
+	GUID objectId,
+	UNICODESTRING sessionId,
+	INT32 scenarioId,
+	UNICODESTRING flightId,
+	UNICODESTRING updateId,
+	ANSISTRING relatedCV,
+	ANSISTRING __TlgCV__
+	);
+
+UpdateAgentInstall(
+	INT32 result,
+	HRESULT errorCode,
+	GUID objectId,
+	UNICODESTRING sessionId,
+	INT32 scenarioId,
+	UNICODESTRING flightId,
+	UNICODESTRING updateId,
+	ANSISTRING relatedCV,
+	ANSISTRING __TlgCV__
+	);
+
+UpdateAgentDownloadRequest(
+	INT32 result,
+	HRESULT errorCode,
+	INT32 rangeRequestState,
+	INT32 deletedCorruptFiles,
+	INT32 packageCountTotal,
+	INT32 packageCountRequired,
+	INT32 packageCountOptional,
+	INT64 packageSizeCanonical,
+	INT64 packageSizeDiff,
+	INT64 packageSizeExpress,
+	INT32 packageCountTotalCanonical,
+	INT32 packageCountTotalDiff,
+	INT32 packageCountTotalExpress,
+	GUID objectId,
+	UNICODESTRING sessionId,
+	INT32 scenarioId,
+	UNICODESTRING flightId,
+	UNICODESTRING updateId,
+	ANSISTRING relatedCV,
+	ANSISTRING __TlgCV__
+	);
+
+UpdateAgentInitialize(
+	INT32 result,
+	HRESULT errorCode,
+	UNICODESTRING sessionData,
+	UNICODESTRING flightMetadata,
+	GUID objectId,
+	UNICODESTRING sessionId,
+	INT32 scenarioId,
+	UNICODESTRING flightId,
+	UNICODESTRING updateId,
+	ANSISTRING relatedCV,
+	ANSISTRING __TlgCV__
+	);
+
+UpdateAgentModeStart(
+	INT32 mode,
+	GUID objectId,
+	UNICODESTRING sessionId,
+	INT32 scenarioId,
+	UNICODESTRING flightId,
+	UNICODESTRING updateId,
+	ANSISTRING relatedCV,
+	ANSISTRING __TlgCV__
+	);
+

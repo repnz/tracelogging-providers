@@ -1,0 +1,220 @@
+ProviderNames:
+	Microsoft.Windows.PBR
+	Microsoft.Windows.StartRepairCore
+	TelemetryAssert
+	TelemetryAssertDiagTrack
+
+
+
+**** Events *****
+PBRUserCancelled(
+	GUID SessionID,
+	UINT32 CancelPage,
+	UINT32 PBRVariation
+	);
+
+PBRInstallWinREFailed(
+	GUID SessionID
+	);
+
+PBRLayoutImageFailed(
+	GUID SessionID
+	);
+
+PBRLayoutImageSucceed(
+	GUID SessionID
+	);
+
+PBREnableJournalingFailed(
+	GUID SessionID
+	);
+
+PBRFormatOSVolumeFailed(
+	GUID SessionID,
+	INT32 JustDeleteFiles
+	);
+
+PBRFormatOSVolumeSucceed(
+	GUID SessionID,
+	INT32 JustDeleteFiles
+	);
+
+PBRRestoreLicenseFailed(
+	GUID SessionID
+	);
+
+PBRClearTPMFailed(
+	GUID SessionID
+	);
+
+PBRIOCTLErasureFailed(
+	GUID SessionID,
+	UINT32 ErrorCode
+	);
+
+PBRIOCTLErasureSucceed(
+	GUID SessionID
+	);
+
+PBRDriverInjectionFailed(
+	GUID SessionID
+	);
+
+PBRWinREInstallationFailed(
+	GUID SessionID
+	);
+
+PBRFinalizeNewSystemSucceed(
+	GUID SessionID
+	);
+
+PBRFinalizeNewSystemFailed(
+	GUID SessionID,
+	INT32 HRESULT,
+	UINT32 SPPhase,
+	UINT32 SPOperation,
+	INT32 SPErrorCode
+	);
+
+PBRCreateNewSystemReconstructionSucceed(
+	GUID SessionID,
+	UINT32 PBRType,
+	UINT32 CBSPackageCount,
+	UINT32 CustomizationPackageCount
+	);
+
+PBRCreateNewSystemReconstructionFailed(
+	GUID SessionID,
+	UINT32 PBRType,
+	INT32 HRESULT,
+	UINT32 SPPhase,
+	UINT32 SPOperation,
+	INT32 SPErrorCode
+	);
+
+PBRReconstructionInitiated(
+	GUID SessionID
+	);
+
+PBRClearRollBackEntry(
+	GUID SessionID
+	);
+
+PBROEM2Failed(
+	GUID SessionID,
+	UINT32 PBRType,
+	INT32 HRESULT,
+	UNICODESTRING ScriptName,
+	UNICODESTRING Parameters
+	);
+
+PBROEM1Failed(
+	GUID SessionID,
+	UINT32 PBRType,
+	INT32 HRESULT,
+	UNICODESTRING ScriptName,
+	UNICODESTRING Parameters
+	);
+
+PBRExecuteRollback(
+	GUID SessionID
+	);
+
+PBRMaxAttempsReached(
+	GUID SessionID
+	);
+
+PBRPostApplyFailed(
+	GUID SessionID
+	);
+
+PBRPostApplyFinished(
+	GUID SessionID
+	);
+
+PBRPostApplyStarted(
+	GUID SessionID
+	);
+
+PBRPreApplyFailed(
+	GUID SessionID
+	);
+
+PBRPreApplyFinished(
+	GUID SessionID
+	);
+
+PBRPreApplyStarted(
+	GUID SessionID
+	);
+
+PBRVersionsMistmatch(
+	GUID SessionID,
+	UNICODESTRING REVersion,
+	UNICODESTRING OSVersion
+	);
+
+PBRSucceed(
+	UNICODESTRING SessionID,
+	UNICODESTRING OSVersion,
+	UINT32 PBRType
+	);
+
+PBRReachedOOBE(
+	UNICODESTRING SessionID
+	);
+
+PBRFinalUserSelection(
+	GUID SessionID,
+	UINT32 PBRVariation,
+	UINT32 PBREraseData,
+	UINT32 PBRWipeDataDrives,
+	UINT32 PBRRepartitionDisk,
+	UINT32 PBRRecoveryStrategy
+	);
+
+PBRRequirementChecksFailed(
+	GUID SessionID,
+	UINT32 ErrorType,
+	UINT32 PBRStartedFrom,
+	UNICODESTRING PBRImageVersion,
+	UINT64 DiskSpaceRequired,
+	UINT64 DiskSpaceAvailable,
+	UINT32 PBRType,
+	UINT32 PBRRecoveryStrategy
+	);
+
+PBRRequirementChecksPassed(
+	GUID SessionID,
+	UNICODESTRING OSVersion,
+	UNICODESTRING PBRImageVersion,
+	UINT32 PBRImageType,
+	UINT32 PBRStartedFrom,
+	UINT32 PBRRecoveryStrategy
+	);
+
+PBRRequirementChecks(
+	GUID SessionID,
+	INT32 DeploymentType,
+	UINT32 PBRType,
+	UINT32 InstallType
+	);
+
+PBRFailed(
+	UNICODESTRING SessionID,
+	INT32 ErrorType,
+	UINT32 PBRType
+	);
+
+Assert(
+	UINT32 assertVersion,
+	UINT32 rva,
+	UINT32 timestamp,
+	UINT32 imageSize,
+	ANSISTRING imageName,
+	UINT32 count,
+	UINT32 totalHits,
+	UINT32 ModuleCollection,
+	UINT32 GlobalCollection
+	);
+

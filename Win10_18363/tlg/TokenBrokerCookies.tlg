@@ -1,0 +1,41 @@
+ProviderNames:
+	Microsoft.Windows.Security.TokenBroker.BrowserSSO
+	Microsoft.Windows.TlgAggregateInternal
+
+
+
+**** Events *****
+TokenBrokerCookiesExeResult(
+	UNICODESTRING appContainerSid,
+	UINT32 cookies,
+	UINT32 errorInstances,
+	UNICODESTRING requestId,
+	UNICODESTRING codePath
+	);
+
+TokenBrokerCookiesExeError(
+	UINT32 dwError,
+	UINT32 dwCookieState,
+	UNICODESTRING appContainerSid,
+	UINT32 sequenceId,
+	UNICODESTRING requestId
+	);
+
+TokenBrokerCookiesExeInput(
+	UNICODESTRING url,
+	UINT32 cookies,
+	UNICODESTRING appContainerSid
+	);
+
+TlgAggregateSummary(
+	GUID Provider,
+	UINT64 NumFlushes,
+	UINT64 MaxEntriesStored,
+	UINT64 TotalEntriesFlushed,
+	UINT32 MaxEntriesFlushed,
+	UINT32 MinEntriesFlushed,
+	UINT32 NumBucketLimitReached,
+	UINT32 NumAllocationFailures,
+	UINT32 NumLargeEventFailures
+	);
+

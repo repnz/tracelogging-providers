@@ -1,0 +1,69 @@
+ProviderNames:
+	Microsoft.Windows.AppEnergyManager
+
+
+
+**** Events *****
+OnEnergyQuotaChanged_Start(
+	UNICODESTRING PackageFullName
+	);
+
+PackageThrottledForEnergyUsage(
+	UNICODESTRING PackageFullName,
+	UINT64 BackgroundEnergyUsage,
+	UINT64 BackgroundEnergyQuota
+	);
+
+OnPackageStateChanged_Start(
+	UNICODESTRING PackageFullName,
+	UINT32 PackageState
+	);
+
+OnEnergyConsumed_Stop(
+	UNICODESTRING PackageFullName
+	);
+
+OnEnergyQuotaChanged_Stop(
+	UNICODESTRING PackageFullName
+	);
+
+StartTrackingEnergyUsage_Stop(
+	UNICODESTRING PackageFullName
+	);
+
+OnEnergyConsumed_Start(
+	UNICODESTRING PackageFullName
+	);
+
+PackageEnergyUsage(
+	UNICODESTRING PackageFullName,
+	UINT32 BackgroundScreenOffEnergyUsage,
+	UINT32 BackgroundScreenOnEnergyUsage,
+	UINT32 ForegroundScreenOffEnergyUsage,
+	UINT32 ForegroundScreenOnEnergyUsage
+	);
+
+E3StartUpFailure(
+	UNICODESTRING PackageFullName,
+	UINT32 HRESULT
+	);
+
+ActivityStoppedAutomatically(
+	VOID
+	);
+
+StartTrackingEnergyUsage_Start(
+	UNICODESTRING PackageFullName
+	);
+
+OnPackageStateChanged_Stop(
+	UNICODESTRING PackageFullName,
+	UINT32 HRESULT
+	);
+
+PackageUnThrottledForEnergyUsage(
+	UNICODESTRING PackageFullName,
+	UINT64 BackgroundEnergyUsage,
+	UINT64 BackgroundEnergyQuota
+	);
+

@@ -1,0 +1,99 @@
+ProviderNames:
+	RuntimeBrokerActivations
+	Microsoft.Windows.WinRTClassActivation
+	CombaseTraceLoggingProvider
+	CombaseTraceLoggingProvider
+
+
+
+**** Events *****
+ReadClientProcess(
+	HRESULT HRESULT
+	);
+
+Shared_BrokeredActivation(
+	UNICODESTRING ActivatableClassId,
+	GUID ActivationFactoryIID,
+	HRESULT HRESULT,
+	UNICODESTRING ActivationFunction,
+	UNICODESTRING ClientApplicationIdentity,
+	UNICODESTRING ClientProcess
+	);
+
+ReadBrokerAumidError(
+	HRESULT HRESULT
+	);
+
+ReadClientAumidError(
+	HRESULT HRESULT
+	);
+
+PerApp_BrokeredActivation(
+	UNICODESTRING ActivatableClassId,
+	GUID ActivationFactoryIID,
+	HRESULT HRESULT,
+	UNICODESTRING ActivationFunction,
+	UNICODESTRING ClientApplicationIdentity,
+	UNICODESTRING ClientProcess,
+	UNICODESTRING BrokerApplicationIdentity
+	);
+
+FallbackError(
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+ComError(
+	HRESULT hresult,
+	ANSISTRING code,
+	UNICODESTRING message,
+	ANSISTRING function,
+	ANSISTRING fileName,
+	UINT16 lineNumber
+	);
+
+FallbackError(
+	UINT64 PartA_PrivTags,
+	SIGNED wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+ComError(
+	HRESULT hresult,
+	ANSISTRING code,
+	UNICODESTRING message,
+	ANSISTRING function,
+	ANSISTRING fileName,
+	UINT16 lineNumber
+	);
+

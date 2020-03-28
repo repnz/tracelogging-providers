@@ -1,0 +1,527 @@
+ProviderNames:
+	Microsoft.Xbox.AuthManager
+	Microsoft.Xbox.WinHttp
+
+
+
+**** Events *****
+ResultLoggingCallback(
+	ANSISTRING file,
+	UINT32 lineNumber,
+	UINT32 failureType,
+	INT32 failureCount,
+	UINT32 threadId,
+	HEXINT32 hr,
+	UNICODESTRING message,
+	ANSISTRING code,
+	ANSISTRING function
+	);
+
+ApiFailure(
+	ANSISTRING API,
+	UINT32 Result,
+	UNICODESTRING url,
+	UINT32 cookie
+	);
+
+ApiFailure(
+	ANSISTRING API,
+	UINT32 Result,
+	UNICODESTRING hostName,
+	UINT16 port,
+	UINT32 proto,
+	UNICODESTRING titleId
+	);
+
+ApiFailure(
+	ANSISTRING API,
+	UINT32 Result,
+	UNICODESTRING token
+	);
+
+ApiFailure(
+	ANSISTRING API,
+	UINT32 Result
+	);
+
+ApiFailure(
+	ANSISTRING API,
+	UINT32 Result,
+	NULL msaUserName
+	);
+
+ApiFailure(
+	ANSISTRING API,
+	UINT32 Result,
+	BOOL32 enable,
+	UINT32 flags
+	);
+
+ApiFailure(
+	ANSISTRING API,
+	UINT32 Result,
+	UNICODESTRING httpMethod,
+	UNICODESTRING url
+	);
+
+ApiFailure(
+	ANSISTRING API,
+	UINT32 Result,
+	UINT32 status,
+	UNICODESTRING msaAccountId,
+	UNICODESTRING appSid,
+	UNICODESTRING msaTarget,
+	UNICODESTRING msaPolicy,
+	UNICODESTRING httpMethod,
+	UNICODESTRING url
+	);
+
+ApiFailure(
+	ANSISTRING API,
+	UINT32 Result,
+	UNICODESTRING xuid
+	);
+
+ApiFailure(
+	ANSISTRING API,
+	UINT32 Result,
+	UINT64 userContextToken,
+	UNICODESTRING webAccountId,
+	UNICODESTRING webAccountProviderId
+	);
+
+ApiFailure(
+	ANSISTRING API,
+	UINT32 Result,
+	UNICODESTRING appSid
+	);
+
+ApiFailure(
+	ANSISTRING API,
+	UINT32 Result,
+	UNICODESTRING xuid,
+	UNICODESTRING titleId
+	);
+
+ApiFailure(
+	ANSISTRING API,
+	UINT32 Result,
+	UNICODESTRING appSid,
+	UNICODESTRING msaTarget,
+	UNICODESTRING msaPolicy,
+	UNICODESTRING httpMethod,
+	UNICODESTRING url
+	);
+
+ApiFailure(
+	ANSISTRING API,
+	UINT32 Result,
+	UINT64 userContextToken,
+	UNICODESTRING titleId,
+	UNICODESTRING httpMethod,
+	UNICODESTRING url
+	);
+
+ApiFailure(
+	ANSISTRING API,
+	UINT32 Result,
+	UINT64 userContextToken,
+	UNICODESTRING xboxAccountId,
+	UNICODESTRING appSid,
+	UNICODESTRING msaTarget,
+	UNICODESTRING msaPolicy,
+	UNICODESTRING httpMethod,
+	UNICODESTRING url
+	);
+
+ApiFailure(
+	ANSISTRING API,
+	UINT32 Result,
+	UNICODESTRING xuid,
+	UNICODESTRING titleId,
+	UNICODESTRING titleIdForNsal,
+	UNICODESTRING httpMethod,
+	UNICODESTRING url
+	);
+
+ApiFailure(
+	ANSISTRING API,
+	UINT32 Result,
+	UNICODESTRING xuid,
+	UNICODESTRING titleId,
+	UNICODESTRING httpMethod,
+	UNICODESTRING url
+	);
+
+ApiFailure(
+	ANSISTRING API,
+	UINT32 Result,
+	UNICODESTRING userHash,
+	UINT32 cookie,
+	UNICODESTRING httpMethod,
+	UNICODESTRING url
+	);
+
+ApiFailure(
+	ANSISTRING API,
+	UINT32 Result,
+	UNICODESTRING userHash,
+	UNICODESTRING titleId,
+	UNICODESTRING httpMethod,
+	UNICODESTRING url
+	);
+
+ApiFailure(
+	ANSISTRING API,
+	UINT32 Result,
+	NULL msaUserName,
+	UNICODESTRING titleId,
+	UNICODESTRING httpMethod,
+	UNICODESTRING url
+	);
+
+ApiFailure(
+	ANSISTRING API,
+	UINT32 Result,
+	UINT32 cookie,
+	UNICODESTRING titleId,
+	UNICODESTRING url
+	);
+
+ApiFailure(
+	ANSISTRING API,
+	UINT32 Result,
+	UINT32 sessionId,
+	UNICODESTRING xuid
+	);
+
+ApiFailure(
+	ANSISTRING API,
+	UINT32 Result,
+	NULL msaUserName,
+	UNICODESTRING titleId,
+	UNICODESTRING target,
+	UNICODESTRING subTarget,
+	UINT32 format
+	);
+
+ApiFailure(
+	ANSISTRING API,
+	UINT32 Result,
+	UNICODESTRING url,
+	UNICODESTRING titleId
+	);
+
+ApiFailure(
+	ANSISTRING API,
+	UINT32 Result,
+	UNICODESTRING url,
+	UINT32 cookie,
+	UNICODESTRING titleId
+	);
+
+ApiFailure(
+	ANSISTRING API,
+	UINT32 Result,
+	NULL msaUserName,
+	UNICODESTRING titleId
+	);
+
+ApiFailure(
+	ANSISTRING API,
+	UINT32 Result,
+	UNICODESTRING appId,
+	UNICODESTRING msaAccountId
+	);
+
+ApiFailure(
+	ANSISTRING API,
+	UINT32 Result,
+	UNICODESTRING accountId,
+	UNICODESTRING xuid
+	);
+
+ApiFailure(
+	ANSISTRING API,
+	UINT32 Result,
+	NULL msaUserName,
+	UINT64 userContextToken
+	);
+
+ApiFailure(
+	ANSISTRING API,
+	UINT32 Result,
+	UNICODESTRING xuid,
+	UNICODESTRING target,
+	UNICODESTRING policy,
+	UINT32 flags
+	);
+
+HttpTitleCookie(
+	UINT32 Cookie,
+	UNICODESTRING TitleId
+	);
+
+NetworkConnectivityLevel(
+	HEXINT32 Flags
+	);
+
+FailedToRenewDeviceXToken(
+	UINT32 Result
+	);
+
+UserSignedOut(
+	NULL UserName,
+	BOOL32 WasXblAuthenticated
+	);
+
+QueueMsaUserAuthCallback(
+	NULL UserName,
+	UINT32 Result,
+	UNICODESTRING AuthUrl,
+	UNICODESTRING EndAuthUrl,
+	UNICODESTRING FlowToken,
+	BOOL32 ForUserAuth
+	);
+
+QueueTitleAuthCallback(
+	UNICODESTRING TitleId,
+	UINT32 Result,
+	GUID ContentId
+	);
+
+QueueDeviceAuthCallback(
+	UINT32 Result,
+	UNICODESTRING Redirect
+	);
+
+ConnectedStandbyStateChanged(
+	BOOL32 Standby
+	);
+
+PublishXboxLiveConnectivityChanged(
+	BOOL32 Connected
+	);
+
+PublishSystemTitleAuthChanged(
+	UINT32 Result
+	);
+
+InvalidateXToken(
+	NULL UserNames,
+	UNICODESTRING Xuids,
+	UNICODESTRING TitleId,
+	UNICODESTRING Target
+	);
+
+InvalidateTitleTokens(
+	UNICODESTRING TitleId,
+	BOOL32 SaveTToken
+	);
+
+InvalidateUserToken(
+	NULL UserName,
+	UNICODESTRING Xuid
+	);
+
+EntitlementReceiptRequested(
+	UNICODESTRING Xuid,
+	UNICODESTRING Receipt,
+	UINT32 StatusCode,
+	UINT32 Result
+	);
+
+AuthenticateGuestUser(
+	UINT32 GuestIndex,
+	UNICODESTRING GuestUserName,
+	NULL SponsorUserName,
+	UNICODESTRING Xuid,
+	UNICODESTRING UserHash,
+	UINT32 Result
+	);
+
+AuthenticateUser(
+	NULL UserName,
+	UNICODESTRING Xuid,
+	UNICODESTRING UserHash,
+	UINT32 Result
+	);
+
+AuthenticateTitle(
+	UNICODESTRING TitleId,
+	UNICODESTRING AppSid,
+	UINT64 BuildVersion,
+	GUID BuildId,
+	GUID ContentId,
+	UINT32 CachedVetoesErased,
+	BOOL32 QueuedRetry,
+	UINT32 Result
+	);
+
+DevModeRequestComplete(
+	UINT32 Result,
+	UINT32 HttpStatusCode,
+	UINT64 RenewAfter,
+	BOOL32 RemoveCert
+	);
+
+NSALMaxUrlLength(
+	UNICODESTRING TitleId,
+	UINT32 UrlLength
+	);
+
+BesTVAuthorization(
+	UINT32 Result,
+	UINT32 HttpStatusCode,
+	UINT32 StatusCode,
+	UNICODESTRING ReturnStatus,
+	BOOL32 ShouldDeregister
+	);
+
+QueueXblUserAuthCallback(
+	NULL UserName,
+	UINT32 Result,
+	UNICODESTRING UserHash,
+	UNICODESTRING Redirect,
+	UNICODESTRING Message,
+	UNICODESTRING HelpId
+	);
+
+MsaUserAuthComplete(
+	NULL UserName,
+	UNICODESTRING Target,
+	UNICODESTRING Policy,
+	UNICODESTRING AppSid,
+	UINT32 Result
+	);
+
+TitleAuthComplete(
+	UNICODESTRING TitleId,
+	UINT32 Result,
+	UINT32 HttpStatusCode
+	);
+
+WebTokenRequestFailureOnXboxAccountViewCreation(
+	UINT32 HResult,
+	UNICODESTRING appSid,
+	UNICODESTRING appPfn,
+	UNICODESTRING scope
+	);
+
+NSALUnknownTitle(
+	UNICODESTRING TitleId,
+	UINT32 Result
+	);
+
+NSALInvalidSignaturePolicy(
+	UNICODESTRING TitleId,
+	UINT32 SignaturePolicyIndex,
+	UINT32 Result
+	);
+
+NSALInvalidRootCert(
+	UNICODESTRING TitleId,
+	UINT32 CertIndex,
+	UINT32 Result
+	);
+
+NSALInvalidEndpoint(
+	UNICODESTRING TitleId,
+	UINT32 EndpointIndex,
+	UINT32 Result
+	);
+
+NSALInvalidCert(
+	UNICODESTRING TitleId,
+	UINT32 CertIndex,
+	UINT32 Result
+	);
+
+EndpointOperationComplete(
+	UNICODESTRING TitleId,
+	UINT32 StatusCode,
+	UINT32 Result
+	);
+
+ChallengeRequestComplete(
+	UINT32 ResponsesSent,
+	UINT32 ChallengesReceived,
+	UINT32 StatusCode,
+	UINT64 Lifetime,
+	UINT32 Result
+	);
+
+ChallengeProcessed(
+	UNICODESTRING QuestionId,
+	UINT32 Result
+	);
+
+ConsoleAuthComplete(
+	UINT32 Result,
+	UINT32 HttpStatusCode
+	);
+
+UserAuthComplete(
+	NULL UserName,
+	UNICODESTRING TitleId,
+	UINT32 Result,
+	UINT32 HttpStatusCode
+	);
+
+XAuthComplete(
+	NULL UserNames,
+	UNICODESTRING TitleId,
+	UNICODESTRING RelyingParty,
+	UINT32 Result,
+	UINT32 Reason,
+	UINT32 HttpStatusCode
+	);
+
+HttpRequestFailure(
+	NTSTATUS PartB_Ms.Qos.OutgoingServiceRequest,
+	UNICODESTRING operationName,
+	UNICODESTRING targetUri,
+	INT32 latencyMs,
+	INT32 serviceErrorCode,
+	BOOLEAN succeeded,
+	UNICODESTRING requestMethod,
+	UNICODESTRING responseContentType,
+	UNICODESTRING protocol,
+	UNICODESTRING protocolStatusCode,
+	UNICODESTRING dependencyOperationName,
+	UNICODESTRING dependencyOperationVersion,
+	UNICODESTRING dependencyName,
+	UNICODESTRING dependencyType,
+	INT32 responseSizeBytes,
+	UNICODESTRING __TlgCV__,
+	UINT32 InternetConnectionState,
+	UNICODESTRING Version,
+	UNICODESTRING Headers,
+	UINT32 SecureFailureFlags
+	);
+
+InternalFailureSummary(
+	UNICODESTRING OperationName,
+	UNICODESTRING TargetHostName,
+	UINT32 ServiceErrorCode,
+	UINT64 TotalLatencyMs,
+	UINT64 MinLatencyMs,
+	UINT32 ErrorCount,
+	UNICODESTRING Version
+	);
+
+OutgoingServiceRequestSummary(
+	UNICODESTRING OperationName,
+	UNICODESTRING TargetHostName,
+	UNICODESTRING RequestMethod,
+	UNICODESTRING ResponseCodeGrouping,
+	UINT16 GroupResponseCount,
+	UINT64 TotalGroupLatencyMs,
+	UINT64 MinimumGroupLatencyMs,
+	UINT64 MaximumGroupLatencyMs,
+	UNICODESTRING SampleCorrelationVector,
+	UNICODESTRING Protocol,
+	BOOL32 Succeeded,
+	UNICODESTRING Version
+	);
+

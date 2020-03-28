@@ -1,0 +1,86 @@
+ProviderNames:
+	Microsoft.Windows.Kernel.BootEnvironment
+	Microsoft.Windows.Kernel.BootEnvironment
+	MicrosoftWindowsCodeIntegrityTraceLoggingProvider
+	MicrosoftWindowsCodeIntegrityAuditTraceLoggingProvider
+
+
+
+**** Events *****
+CodeIntegritySignCheckTriggeredCatalogFallback(
+	HEXINT32 NTStatus,
+	UNICODESTRING FileName,
+	UINT32 HashAlgId,
+	HEX FileHash,
+	UINT32 SigningPolicyCheckFlags
+	);
+
+MSSignedWinLoadDriverLoadSuccessAudit(
+	UNICODESTRING FileName,
+	ANSISTRING VerificationFileType,
+	HEXINT32 VerificationStatus,
+	HEXINT32 RootPolicyBits,
+	FILETIME SigningTime,
+	FILETIME CurrentSystemTime,
+	UINT32 TBSHashAlgID,
+	UINT8 TBSHash,
+	STRING IssuerCommonName,
+	STRING PublisherCommonName
+	);
+
+UnsignedWinLoadDriverLoadSuccessAudit(
+	UNICODESTRING FileName,
+	ANSISTRING VerificationFileType
+	);
+
+CodeIntegrityImageSignatureVerificationFailed(
+	UNICODESTRING FileName,
+	HEXINT32 StatusCode,
+	UINT32 HashAlgId,
+	HEX FileHash
+	);
+
+CodeIntegrityBinarySignatureExpired(
+	UNICODESTRING FileName,
+	FILETIME ValidFrom,
+	FILETIME ValidTo,
+	FILETIME CurrentSystemTime
+	);
+
+ThirdPartySignedWinLoadDriverLoadSuccessAudit(
+	UNICODESTRING FileName,
+	ANSISTRING VerificationFileType,
+	HEXINT32 VerificationStatus,
+	HEXINT32 RootPolicyBits,
+	FILETIME SigningTime,
+	FILETIME CurrentSystemTime,
+	UINT32 TBSHashAlgID,
+	UINT8 TBSHash,
+	UINT8 EncodedCertBlob
+	);
+
+CodeIntegrityWHQLDriverFailure(
+	UNICODESTRING FileName,
+	ANSISTRING VerificationFileType,
+	HEXINT32 VerificationStatus,
+	HEXINT32 RootPolicyBits,
+	HEXINT32 LoadInformation,
+	FILETIME SigningTime,
+	FILETIME CurrentSystemTime,
+	UINT8 EncodedCertBlob
+	);
+
+CodeIntegrityWHQLDriverAuditFailure(
+	UNICODESTRING FileName,
+	ANSISTRING VerificationFileType,
+	HEXINT32 VerificationStatus,
+	HEXINT32 RootPolicyBits,
+	FILETIME SigningTime,
+	FILETIME CurrentSystemTime,
+	UINT8 EncodedCertBlob
+	);
+
+TcbLaunchRamDiskAllocationRetry(
+	NTSTATUS Status
+	);
+

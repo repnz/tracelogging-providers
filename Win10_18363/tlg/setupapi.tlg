@@ -1,0 +1,75 @@
+ProviderNames:
+	Microsoft.Windows.SetupApi
+	Microsoft.Windows.DriverStore
+
+
+
+**** Events *****
+WindowsUpdateCallback(
+	UINT64 PartA_PrivTags
+	);
+
+InstallHinfSection(
+	UNICODESTRING InfSourcePath,
+	UNICODESTRING InfFile,
+	UNICODESTRING SectionName,
+	BOOL32 Primitive,
+	BOOL32 PrimitiveInstalled,
+	HEXINT32 Flags,
+	WIN32ERROR Error
+	);
+
+SetupInstallServicesFromInfSectionEx(
+	UNICODESTRING DeviceInstanceId,
+	FILETIME InstallDate,
+	UNICODESTRING InfSourcePath,
+	UNICODESTRING InfName,
+	UNICODESTRING SectionName,
+	HEXINT32 Flags,
+	BOOL32 NeedReboot,
+	WIN32ERROR Error
+	);
+
+SetupInstallFilesFromInfSection(
+	UNICODESTRING InfSourcePath,
+	UNICODESTRING InfName,
+	UNICODESTRING SectionName,
+	UNICODESTRING SourceRootPath,
+	HEXINT32 CopyFlags,
+	WIN32ERROR Error
+	);
+
+SetupInstallFromInfSection(
+	UNICODESTRING DeviceInstanceId,
+	FILETIME InstallDate,
+	UNICODESTRING InfSourcePath,
+	UNICODESTRING InfName,
+	UNICODESTRING SectionName,
+	HEXINT32 Flags,
+	UNICODESTRING SourceRootPath,
+	HEXINT32 CopyFlags,
+	WIN32ERROR Error
+	);
+
+DriverNotFound(
+	UNICODESTRING DeviceInstanceId,
+	UNICODESTRING FirstHardwareId,
+	UNICODESTRING ParentDeviceInstanceId
+	);
+
+DriverPackageImport(
+	INT16 ProcessorArchitecture,
+	UNICODESTRING DriverInfName,
+	UNICODESTRING DriverPackageId,
+	UNICODESTRING ClassGuid,
+	UNICODESTRING DriverProvider,
+	UNICODESTRING DriverVersion,
+	UNICODESTRING DriverDate,
+	UNICODESTRING TargetComputerIds,
+	INT32 PnpLockdown,
+	INT32 SignerScore,
+	UNICODESTRING DigitalSigner,
+	INT32 LegacyFlags,
+	WIN32ERROR ReturnCode
+	);
+

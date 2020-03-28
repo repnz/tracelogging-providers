@@ -1,0 +1,36 @@
+ProviderNames:
+	Microsoft.Windows.GroupPolicy.CSEs
+	Microsoft.Windows.GroupPolicy.RegistryCSE
+	TelemetryAssert
+	TelemetryAssertDiagTrack
+
+
+
+**** Events *****
+CSEReport(
+	BOOL32 MachineCSE,
+	BOOL32 LocalDataStore,
+	BOOL32 UsingPreviousResults,
+	GUID ExtensionGuid,
+	UINT32 ExtensionReturnCode,
+	UINT32 ExtensionRunTime
+	);
+
+RegistryHandlerData(
+	BOOL32 MachinePolicies,
+	ANSISTRING RegistryPolicies,
+	BOOL32 Truncated
+	);
+
+Assert(
+	UINT32 assertVersion,
+	UINT32 rva,
+	UINT32 timestamp,
+	UINT32 imageSize,
+	ANSISTRING imageName,
+	UINT32 count,
+	UINT32 totalHits,
+	UINT32 ModuleCollection,
+	UINT32 GlobalCollection
+	);
+

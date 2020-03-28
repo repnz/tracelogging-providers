@@ -1,0 +1,82 @@
+ProviderNames:
+	MSAClientTraceLoggingProvider
+
+
+
+**** Events *****
+CloudAP_CallAuthPkg(
+	BOOLEAN UserTokenMissingForConnectedAccount,
+	HEXINT32 statusUserToken
+	);
+
+GetPoPTokens(
+	HEXINT32 hrAccountType,
+	HEXINT32 statusUserToken,
+	HEXINT32 AccountType
+	);
+
+CloudAP_WLIDCAcquireTokensEx(
+	HEXINT32 hr,
+	HEXINT32 CloudAP_WLIDCAcquireTokensEx_MappedStatus
+	);
+
+InternetPresenceAtLogon(
+	BOOL32 IsInternetPresent
+	);
+
+CloudAP_MissingDefaultCreds(
+	UINT64 PartA_PrivTags,
+	NULL CID
+	);
+
+Disconnect(
+	NULL CID
+	);
+
+Connect(
+	NULL CID,
+	UNICODESTRING HasCloudPassword
+	);
+
+NgcSignWithUserIdKeyEx(
+	HEXINT32 hr
+	);
+
+NgcGetUserIdKeyPublicKey(
+	HEXINT32 hr
+	);
+
+NgcEnumUserIdKeys(
+	HEXINT32 hr,
+	HEXINT32 ContainerStatus
+	);
+
+NgcCreateUserIdKeyEx(
+	HEXINT32 hr
+	);
+
+NgcCreateUserIdKey(
+	HEXINT32 hr
+	);
+
+NgcEnumContainers(
+	HEXINT32 hr,
+	HEXINT32 ContainerStatus
+	);
+
+NgcCreateContainer(
+	HEXINT32 hr
+	);
+
+NgcDeleteContainerEx(
+	HEXINT32 hr
+	);
+
+NgcDeleteContainer(
+	HEXINT32 hr
+	);
+
+DeviceIdTpmSignFailure(
+	HEXINT32 hr
+	);
+

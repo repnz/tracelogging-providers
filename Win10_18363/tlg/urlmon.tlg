@@ -1,0 +1,655 @@
+ProviderNames:
+	Microsoft.Web.Platform
+	TelemetryAssert
+	TelemetryAssertDiagTrack
+	Microsoft.Windows.Wil.FeatureLogging
+
+
+
+**** Events *****
+SingleSignOnGetCookiesMsaFinished(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	UNICODESTRING CorrelationId,
+	UINT32 tokenCount,
+	INT32 getCookiesCallResult
+	);
+
+SingleSignOnGetCookiesAadFinished(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	UNICODESTRING CorrelationId,
+	UINT32 tokenCount,
+	INT32 getCookiesCallResult
+	);
+
+SingleSignOnGetCookiesMsaStarted(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	UNICODESTRING CorrelationId
+	);
+
+SingleSignOnGetCookiesAadStarted(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	UNICODESTRING CorrelationId
+	);
+
+CINetLegacyReportResult(
+	HEXINT64 CINetObject,
+	HRESULT Result,
+	INT32 Error,
+	UNICODESTRING ResultString
+	);
+
+CINetLegacyStart(
+	HEXINT64 CINetObject,
+	HEXINT64 TransactionObject,
+	UNICODESTRING DownloadUri,
+	HEXINT32 BindFlags,
+	HEXINT32 BindFlags2,
+	HEXINT32 BindFlagsReserved
+	);
+
+FeatureError(
+	UINT32 featureId,
+	INT32 featureVersion,
+	INT32 featureBaseVersion,
+	INT16 featureStage,
+	HRESULT hr,
+	ANSISTRING file,
+	UINT16 lineNumber,
+	ANSISTRING module,
+	ANSISTRING process,
+	ANSISTRING originFile,
+	UINT16 originLineNumber,
+	ANSISTRING originModule,
+	ANSISTRING originName,
+	ANSISTRING message,
+	ANSISTRING callerModule,
+	UINT32 callerReturnAddressOffset,
+	ANSISTRING originCallerModule,
+	UINT32 originCallerReturnAddressOffset
+	);
+
+FeatureVariantUsage(
+	UINT32 featureId,
+	INT32 featureVersion,
+	INT32 featureBaseVersion,
+	INT16 featureStage,
+	BOOLEAN enabled,
+	UINT32 variantKind,
+	UINT8 variant,
+	UINT64 addend
+	);
+
+EnabledFeatureUsage(
+	UINT32 featureId,
+	INT32 featureVersion,
+	INT32 featureBaseVersion,
+	INT16 featureStage,
+	BOOLEAN enabled,
+	UINT32 kind,
+	UINT64 addend
+	);
+
+FeatureUsage(
+	UINT32 featureId,
+	INT32 featureVersion,
+	INT32 featureBaseVersion,
+	INT16 featureStage,
+	BOOLEAN enabled,
+	UINT32 kind,
+	UINT64 addend
+	);
+
+FallbackError(
+	UINT64 PartA_PrivTags,
+	SIGNED wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+FallbackError(
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+CINetHttpEdgeWebRequestHeadersReceivedResponseRedirected(
+	HEXINT64 CINetObject,
+	UNICODESTRING RedirectUri
+	);
+
+CINetHttpEdgeWebRequestHeadersReceivedResponseCancelled(
+	HEXINT64 CINetObject
+	);
+
+CINetHttpEdgeWebRequestHeadersReceivedResponse(
+	HEXINT64 CINetObject,
+	HRESULT statusCode,
+	BOOL32 BlockingResponse
+	);
+
+CINetHttpEdgeWebRequestHeadersReceived(
+	HEXINT64 CINetObject
+	);
+
+CINetHttpEdgeWebRequestSendHeaders(
+	HEXINT64 CINetObject
+	);
+
+CINetHttpEdgeWebRequestBeforeSendHeadersResponseCancelled(
+	HEXINT64 CINetObject
+	);
+
+CINetHttpEdgeWebRequestBeforeSendHeadersResponseReceived(
+	HEXINT64 CINetObject,
+	HRESULT statusCode,
+	BOOL32 BlockingResponse
+	);
+
+CINetHttpEdgeWebRequestBeforeSendHeaders(
+	HEXINT64 CINetObject
+	);
+
+CINetEdgeComputeSameSiteCookiePolicy(
+	HEXINT64 CINetObject,
+	BOOLEAN IsSamesiteCookiePolicySupported,
+	BOOLEAN IsEnabledByRegistry,
+	HEXINT32 CookieLevel
+	);
+
+CINetHttpEdgeRedirectToAppCacheFallback(
+	HEXINT64 CINetObject,
+	UNICODESTRING FallbackUri
+	);
+
+CINetHttpEdgeWrite(
+	HEXINT64 CINetObject,
+	INT32 BytesToWrite
+	);
+
+CINetHttpEdgeLastRequestHandleClosed(
+	HEXINT64 CINetObject
+	);
+
+CINetHttpEdgeINetAsyncRestart(
+	HEXINT64 CINetObject
+	);
+
+CINetQueryLocationConversionFailure(
+	HEXINT64 CINetObject,
+	HEXINT32 codePageHost,
+	HEXINT32 codePageExtra,
+	BOOL32 encodePathExtra,
+	UNICODESTRING baseUrl,
+	BINARY locationUrl,
+	HEXINT32 errorCode,
+	BOOLEAN UTCReplace_AppSessionGuid
+	);
+
+CINetHttpEdgeSendRequestContinueError(
+	HEXINT64 CINetObject,
+	HEXINT32 EdgeDownloadState
+	);
+
+CINetHttpEdgeINetAsyncSendRequest(
+	HEXINT64 CINetObject
+	);
+
+CINetHttpEdgeINetAsyncOpenRequest(
+	HEXINT64 CINetObject
+	);
+
+GetWindowForErrorDlgFailure(
+	ANSISTRING functionName,
+	HEXINT64 CINetObject,
+	INT32 Flags,
+	HEXINT64 HWND
+	);
+
+CINetEdgeReadData(
+	HEXINT64 CINetObject,
+	INT32 BytesRead,
+	INT64 TotalBytesRead
+	);
+
+CINetEdgeReadDirect_4GB(
+	HEXINT64 CINetObject,
+	INT64 TotalBytesRead,
+	INT64 PreviousTotalBytesRead,
+	HRESULT Result
+	);
+
+CINetEdgeRedirectRequest(
+	HEXINT64 CINetObject,
+	UNICODESTRING OriginUri,
+	UNICODESTRING DestinationUri
+	);
+
+CINetEdgeReadData(
+	HEXINT64 CINetObject,
+	INT32 BytesRead,
+	INT64 TotalBytesRead,
+	HRESULT Result,
+	INT32 TransMsgId
+	);
+
+CINetEdgeReadData_4GB(
+	HEXINT64 CINetObject,
+	INT64 TotalBytesRead,
+	INT64 PreviousTotalBytesRead,
+	HRESULT Result
+	);
+
+CINetEdgeInternetCloseHandleServer(
+	HEXINT64 CINetObject,
+	HEXINT64 Handle
+	);
+
+CINetEdgeInternetCloseHandleRequest(
+	HEXINT64 CINetObject,
+	HEXINT64 Handle
+	);
+
+CINetEdgeINetRequestComplete(
+	HEXINT64 CINetObject,
+	UINT16 INetState,
+	INT32 Result,
+	INT32 Error
+	);
+
+CINetEdgeINetAsyncConnect(
+	HEXINT64 CINetObject
+	);
+
+CINetEdgeInternetConnect(
+	HEXINT64 CINetObject
+	);
+
+CINetEdgeINetAsyncOpen(
+	HEXINT64 CINetObject
+	);
+
+CINetEdgeReportResult(
+	HEXINT64 CINetObject,
+	HRESULT Result,
+	INT32 Error,
+	UNICODESTRING ResultString
+	);
+
+CINetEdgeReportData(
+	HEXINT64 CINetObject,
+	HEXINT32 BindStatusCallbackFlag,
+	UINT32 Progress,
+	UINT32 ProgressMax
+	);
+
+CINetEdgeReportProgress(
+	HEXINT64 CINetObject,
+	UINT32 StatusCode,
+	UNICODESTRING StatusText
+	);
+
+CINetEdgeDeconstruct(
+	HEXINT64 CINetObject
+	);
+
+CINetEdgeTerminate(
+	HEXINT64 CINetObject,
+	HEXINT32 Options
+	);
+
+CINetEdgeContinueAbort(
+	HEXINT64 CINetObject,
+	HRESULT Reason,
+	HEXINT32 Options
+	);
+
+CINetEdgeAbort(
+	HEXINT64 CINetObject,
+	HRESULT Reason,
+	HEXINT32 Options
+	);
+
+CINetEdgeContinue(
+	HEXINT64 CINetObject,
+	UINT16 INetState,
+	UINT16 INetEdgeState
+	);
+
+CINetEdgeWebRequestFireSyncEventResponseReceived(
+	HEXINT64 CINetObject
+	);
+
+CINetEdgeWebRequestFireSyncEvent(
+	HEXINT64 CINetObject
+	);
+
+CINetEdgeWebRequestResult(
+	HEXINT64 CINetObject
+	);
+
+CINetEdgeWebRequestResponseStarted(
+	HEXINT64 CINetObject
+	);
+
+CINetEdgeWebRequestBeforeRedirect(
+	HEXINT64 CINetObject,
+	UNICODESTRING OriginUri,
+	UNICODESTRING RedirectUri
+	);
+
+CINetEdgeWebRequestAuthRequired(
+	HEXINT64 CINetObject
+	);
+
+CINetEdgeWebRequestBeforeRequest(
+	HEXINT64 CINetObject
+	);
+
+CINetEdgeHasWebRequestListener(
+	HEXINT64 CINetObject
+	);
+
+CINetEdgeStart(
+	HEXINT64 CINetObject,
+	HEXINT64 TransactionObject,
+	UNICODESTRING DownloadUri,
+	HEXINT32 BindFlags,
+	HEXINT32 BindFlags2,
+	HEXINT32 BindFlagsReserved
+	);
+
+MaxActiveDownloads(
+	INT32 peakObjectCount,
+	BOOLEAN UTCReplace_AppSessionGuid
+	);
+
+EnsureCINetEdgeFailureInstance(
+	ANSISTRING functionName,
+	BOOLEAN UTCReplace_AppSessionGuid
+	);
+
+EdgeRegisterNameSpaceBlockedProtocolInstance(
+	UNICODESTRING protocol,
+	BOOLEAN UTCReplace_AppSessionGuid
+	);
+
+TransactionSetRedirectIUriDPAError(
+	HEXINT64 TransactionObject
+	);
+
+EnsureINetCallbackUnexpectedPostMessageFailureInstance(
+	HRESULT hresult
+	);
+
+CTransactionDispatchReport(
+	HEXINT64 TransactionObject,
+	UINT32 StatusCode,
+	UNICODESTRING StatusText,
+	UINT32 BindStatusCallbackFlag,
+	UINT32 Progress,
+	UINT32 ProgressMax,
+	HRESULT Result,
+	INT32 Error
+	);
+
+CTransactionThreadTransfer(
+	HEXINT64 TransactionObject
+	);
+
+MhtmlProtocolUsageInstance(
+	UNICODESTRING uri,
+	BOOLEAN UTCReplace_AppSessionGuid
+	);
+
+MhtmlProtocolBlockedInstance(
+	UNICODESTRING uri,
+	BOOLEAN UTCReplace_AppSessionGuid
+	);
+
+ResProtocolUsageInstance(
+	UNICODESTRING uri,
+	BOOLEAN UTCReplace_AppSessionGuid
+	);
+
+EdgeTransactionResume(
+	HEXINT64 TransactionObject
+	);
+
+EdgeTransactionSuspend(
+	HEXINT64 TransactionObject
+	);
+
+EdgeTransactionTerminate(
+	HEXINT64 TransactionObject,
+	HEXINT32 Options
+	);
+
+EdgeTransactionAbort(
+	HEXINT64 TransactionObject,
+	HRESULT Reason,
+	HEXINT32 Options
+	);
+
+EdgeTransactionContinue(
+	HEXINT64 TransactionObject
+	);
+
+EdgeTransactionStartReturn(
+	HEXINT64 TransactionObject,
+	HRESULT Result,
+	UNICODESTRING DownloadUri
+	);
+
+EdgeTransactionStart(
+	HEXINT64 TransactionObject
+	);
+
+EdgeTransactionRedirect(
+	HEXINT64 TransactionObject,
+	UNICODESTRING OriginUri,
+	UNICODESTRING RedirectUri
+	);
+
+EdgeTransactionRestart(
+	HEXINT64 TransactionObject,
+	HRESULT Result,
+	UNICODESTRING DownloadUri
+	);
+
+EdgeTransactionRestart(
+	HEXINT64 TransactionObject
+	);
+
+EdgeTransactionSwitch(
+	HEXINT64 TransactionObject
+	);
+
+EdgeTransactionDeconstruct(
+	HEXINT64 TransactionObject
+	);
+
+EdgeTransactionCreate(
+	HEXINT64 TransactionObject,
+	HEXINT32 BindFlags,
+	BOOL32 FreeThreaded
+	);
+
+BrowserExtensionUsed(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	UINT32 type,
+	GUID clsid
+	);
+
+BrowserExtensionActivated(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	UINT32 type,
+	GUID clsid
+	);
+
+VersionManagementIntranet(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	UNICODESTRING Entry,
+	UNICODESTRING FileName,
+	UINT32 ProductVersionMajor,
+	UINT32 ProductVersionMinor,
+	UINT32 ProductVersionBuild,
+	UINT32 ProductVersionRev,
+	UINT32 FileVersionMajor,
+	UINT32 FileVersionMinor,
+	UINT32 FileVersionBuild,
+	UINT32 FileVersionRev,
+	UNICODESTRING ProductName,
+	UNICODESTRING CompanyName,
+	INT32 IsWow64Process,
+	UINT32 PageUrlZone,
+	UNICODESTRING AbsoluteUri,
+	INT32 IsAuditModeEnabled,
+	INT32 VersionCheckEnabled,
+	UINT32 State,
+	UINT32 Reason,
+	UINT32 BlockListVersion,
+	INT32 EPMCompatible
+	);
+
+VersionManagementInternet(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	UNICODESTRING Entry,
+	UNICODESTRING FileName,
+	UINT32 ProductVersionMajor,
+	UINT32 ProductVersionMinor,
+	UINT32 ProductVersionBuild,
+	UINT32 ProductVersionRev,
+	UINT32 FileVersionMajor,
+	UINT32 FileVersionMinor,
+	UINT32 FileVersionBuild,
+	UINT32 FileVersionRev,
+	UNICODESTRING ProductName,
+	UNICODESTRING CompanyName,
+	INT32 IsWow64Process,
+	UINT32 PageUrlZone,
+	UNICODESTRING AbsoluteUri,
+	INT32 IsAuditModeEnabled,
+	INT32 VersionCheckEnabled,
+	UINT32 State,
+	UINT32 Reason,
+	UINT32 BlockListVersion,
+	INT32 EPMCompatible
+	);
+
+VersionManagement(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	UNICODESTRING Entry,
+	UNICODESTRING FileName,
+	UINT32 ProductVersionMajor,
+	UINT32 ProductVersionMinor,
+	UINT32 ProductVersionBuild,
+	UINT32 ProductVersionRev,
+	UINT32 FileVersionMajor,
+	UINT32 FileVersionMinor,
+	UINT32 FileVersionBuild,
+	UINT32 FileVersionRev,
+	UNICODESTRING ProductName,
+	UNICODESTRING CompanyName,
+	INT32 IsWow64Process,
+	UINT32 PageUrlZone,
+	UINT32 ExtensionType,
+	UNICODESTRING AbsoluteUri,
+	INT32 IsAuditModeEnabled,
+	INT32 VersionCheckEnabled,
+	UINT32 State,
+	UINT32 Reason,
+	UINT32 BlockListVersion,
+	INT32 EPMCompatible,
+	UINT32 GeoId
+	);
+
+HVSITrusted(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	ANSISTRING Function,
+	INT32 HVSIUntrustedReason,
+	BOOL32 Trusted,
+	HRESULT hr
+	);
+
+WdagTrustDeterminationTimeout(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	UINT32 timeoutInMilliseconds
+	);
+
+WdagUnclassifiedProtocol(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	UNICODESTRING protocol,
+	UINT32 usesNetwork,
+	INT32 hr
+	);
+
+Assert(
+	UINT32 assertVersion,
+	UINT32 rva,
+	UINT32 timestamp,
+	UINT32 imageSize,
+	ANSISTRING imageName,
+	UINT32 count,
+	UINT32 totalHits,
+	UINT32 ModuleCollection,
+	UINT32 GlobalCollection
+	);
+
+FileRedirectionBlockedInstance(
+	UNICODESTRING originalUrl,
+	UNICODESTRING redirectedUrl,
+	BOOLEAN UTCReplace_AppSessionGuid
+	);
+

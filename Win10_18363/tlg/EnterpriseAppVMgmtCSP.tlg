@@ -1,0 +1,84 @@
+ProviderNames:
+	Microsoft.Windows.AppMan.AppV
+	TelemetryAssert
+	TelemetryAssertDiagTrack
+
+
+
+**** Events *****
+EnterpriseAppVMgmtCSP Error(
+	UINT64 PartA_PrivTags,
+	SIGNED wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+EnterpriseAppVMgmtCSPNodeSetValue(
+	UNICODESTRING TokenName,
+	UINT32 NodeId,
+	BOOLEAN Global
+	);
+
+EnterpriseAppVMgmtCSPNodeAdd(
+	UNICODESTRING TokenName,
+	UINT32 NodeId,
+	BOOLEAN Global
+	);
+
+EnterpriseAppVMgmtCSPNodeExecute(
+	UNICODESTRING TokenName,
+	UINT32 NodeId,
+	BOOLEAN Global
+	);
+
+EnterpriseAppVMgmtCSPNodeGetProperty(
+	UNICODESTRING TokenName,
+	UINT32 NodeId,
+	BOOLEAN Global
+	);
+
+EnterpriseAppVMgmtCSPNodeGetValue(
+	UNICODESTRING TokenName,
+	UINT32 NodeId,
+	BOOLEAN Global
+	);
+
+EnterpriseAppVMgmtCSPNodeGetChildNodeNames(
+	UNICODESTRING TokenName,
+	UINT32 NodeId,
+	BOOLEAN Global
+	);
+
+EnterpriseAppVMgmtCSPNodeDeleteChild(
+	UNICODESTRING TokenName,
+	UINT32 NodeId,
+	BOOLEAN Global
+	);
+
+Assert(
+	UINT32 assertVersion,
+	UINT32 rva,
+	UINT32 timestamp,
+	UINT32 imageSize,
+	ANSISTRING imageName,
+	UINT32 count,
+	UINT32 totalHits,
+	UINT32 ModuleCollection,
+	UINT32 GlobalCollection
+	);
+

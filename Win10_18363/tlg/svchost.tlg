@@ -1,0 +1,21 @@
+ProviderNames:
+	Microsoft.Windows.SvchostTelemetryProvider
+
+
+
+**** Events *****
+LowResourceCallback(
+	UNICODESTRING serviceName,
+	UINT64 heapLimit,
+	BOOL32 notifyService
+	);
+
+ServiceHeapUsage(
+	UNICODESTRING serviceName,
+	UINT64 aveHeapAlloc,
+	UINT64 maxHeapAlloc,
+	UINT64 currentHeapAlloc,
+	BOOLEAN singleServiceHost,
+	UINT32 state
+	);
+

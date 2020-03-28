@@ -1,0 +1,81 @@
+ProviderNames:
+	Microsoft.Windows.Security.WSC
+
+
+
+**** Events *****
+WinReInitiateOfflineCleaningFailed(
+	INT32 status
+	);
+
+WscDSASystemDialogShown(
+	INT32 notificationType,
+	UNICODESTRING productName,
+	UNICODESTRING companyName,
+	UNICODESTRING productVersion,
+	HEXINT32 HResult,
+	ANSISTRING __TlgCV__
+	);
+
+UninstallSystemDialogClicked(
+	UINT32 dialogType,
+	UNICODESTRING productName,
+	UNICODESTRING exePath,
+	ANSISTRING __TlgCV__
+	);
+
+RenewSystemDialogClicked(
+	UNICODESTRING companyName,
+	UINT32 dialogType,
+	UNICODESTRING productName,
+	UNICODESTRING exePath,
+	UNICODESTRING productVersion,
+	ANSISTRING __TlgCV__
+	);
+
+WscDSAOkDefaultClicked(
+	ANSISTRING __TlgCV__
+	);
+
+WscDSANewDefaultClicked(
+	UNICODESTRING companyName,
+	UNICODESTRING productVersion,
+	UNICODESTRING productName,
+	INT64 status,
+	ANSISTRING __TlgCV__
+	);
+
+WscDSASameDefaultClicked(
+	ANSISTRING __TlgCV__
+	);
+
+ShowDefenderOnUpgradeNotificationNoThirdPartyAVToast(
+	VOID
+	);
+
+ShowDefenderOnUpgradeNotificationNoUpgradeEXEToasts(
+	UNICODESTRING avDisplayName
+	);
+
+ShowProductUpgradeToasts(
+	UNICODESTRING avDisplayName,
+	UNICODESTRING avPath,
+	UNICODESTRING companyName,
+	UNICODESTRING productVersion
+	);
+
+ProductUpgradeToastClicked(
+	UNICODESTRING exePath,
+	BOOLEAN updateButtonPressed,
+	BOOLEAN defenderUiOpened
+	);
+
+ToastNotificationClicked(
+	INT32 notificationType,
+	UNICODESTRING controlName
+	);
+
+ToastNotificationShown(
+	INT32 notificationType
+	);
+

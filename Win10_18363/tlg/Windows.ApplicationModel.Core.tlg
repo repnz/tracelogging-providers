@@ -1,0 +1,334 @@
+ProviderNames:
+	Microsoft-Windows-AppModel-Runtime
+	TelemetryAssert
+	TelemetryAssertDiagTrack
+
+
+
+**** Events *****
+ActivityStoppedAutomatically(
+	VOID
+	);
+
+ActivityStoppedAutomatically(
+	VOID
+	);
+
+LaunchRACProcess_Stop(
+	HRESULT hr
+	);
+
+LaunchRACProcess_Start(
+	UNICODESTRING RacName,
+	UNICODESTRING commandLine,
+	UINT32 Flags
+	);
+
+LaunchRACProcess(
+	UNICODESTRING Caller
+	);
+
+LaunchRACProcessFromNonPackagedCaller(
+	VOID
+	);
+
+LaunchRACProcess_Failed(
+	HRESULT hr,
+	ANSISTRING file,
+	ANSISTRING function,
+	UINT32 line
+	);
+
+RACCreateRecovery_Stop(
+	HRESULT hr
+	);
+
+RACCreateRecovery_Start(
+	UNICODESTRING RACName,
+	UNICODESTRING Display,
+	UNICODESTRING clientAppContainer,
+	HRESULT HrFixAccess,
+	HRESULT createError
+	);
+
+RetryCreateRACIfNeededInternal_Failed(
+	UNICODESTRING RAC,
+	UNICODESTRING Client,
+	UINT32 isRecovery,
+	UINT32 hr
+	);
+
+RACCreateProfileRetry_Stop(
+	HRESULT hr
+	);
+
+RACCreateProfileRetry_Start(
+	UNICODESTRING RACName,
+	UNICODESTRING Display,
+	UINT32 capabilityCount,
+	UNICODESTRING clientAppContainer
+	);
+
+CreateRACUnderImpersonation(
+	UNICODESTRING RAC,
+	UNICODESTRING Client,
+	UINT32 isRecovery
+	);
+
+CheckRACHealthForOpen_Failed(
+	UNICODESTRING RAC,
+	UNICODESTRING Client
+	);
+
+CheckMissingRACKeyACLs_Failed(
+	UNICODESTRING RAC,
+	UNICODESTRING Client,
+	UINT32 hr
+	);
+
+AddRACSidACEToPath(
+	UNICODESTRING RACPath
+	);
+
+CheckForAndApplyMissingAppContainerACLs_Failed(
+	UNICODESTRING RAC,
+	UINT32 hr
+	);
+
+CheckForMissingAppContainerState_Failed(
+	UNICODESTRING RAC,
+	UINT32 hr
+	);
+
+ProvisionRac(
+	UINT32 capabilityCount
+	);
+
+RuntimeClassInitialize(
+	UNICODESTRING RAC,
+	UNICODESTRING RegStoragePath,
+	UNICODESTRING Client
+	);
+
+RuntimeClassInitialize(
+	UNICODESTRING Client
+	);
+
+RuntimeClassInitialize(
+	UINT32 capabilities,
+	UNICODESTRING Client
+	);
+
+RACFindAllAsync_Stop(
+	HRESULT hr
+	);
+
+RACFindAllAsync_Start(
+	VOID
+	);
+
+RACFindAllWorker_Stop(
+	VOID
+	);
+
+RACFindAllWorker_Start(
+	UNICODESTRING Client
+	);
+
+FindAllWorker_Failed(
+	UINT32 hr
+	);
+
+RACOpenActivity_Stop(
+	HRESULT hr
+	);
+
+RACOpenActivity_Start(
+	UNICODESTRING RACName
+	);
+
+RACOpen_Failed(
+	UINT32 hr
+	);
+
+InternalOpen returns partial profile(
+	UNICODESTRING RACName,
+	UINT32 hr
+	);
+
+RACDeleteAsync_Stop(
+	HRESULT hr
+	);
+
+RACDeleteAsync_Start(
+	UNICODESTRING RACName
+	);
+
+RACDeleteWorker_Stop(
+	HRESULT hr
+	);
+
+RACDeleteWorker(
+	HRESULT hr,
+	UNICODESTRING StorageLocation
+	);
+
+RACDeleteWorkder_Start(
+	UNICODESTRING Client,
+	UNICODESTRING RACName
+	);
+
+RACCreate2Async_Stop(
+	HRESULT hr
+	);
+
+RACCreate2Async_Start(
+	UNICODESTRING RACName
+	);
+
+RACCreate2Worker_Stop(
+	HRESULT hr
+	);
+
+RACCreate2Worker_Start(
+	UNICODESTRING RACName
+	);
+
+RACCreateAsync_Stop(
+	HRESULT hr
+	);
+
+RACCreateAsync_Start(
+	UNICODESTRING RACName,
+	UINT32 capabilities
+	);
+
+RACCreateWorker_Stop(
+	HRESULT hr
+	);
+
+RACCreateWorker_Start(
+	UNICODESTRING RACName,
+	UINT32 capabilities
+	);
+
+GetToken_Stop(
+	HRESULT hr
+	);
+
+GetToken_Start(
+	VOID
+	);
+
+GetToken_Failed(
+	HRESULT hr,
+	UINT32 line
+	);
+
+TerminateAll_Stop(
+	HRESULT hr
+	);
+
+TerminateAll_Start(
+	VOID
+	);
+
+RACUpdateCapabilitiesAsync_Stop(
+	HRESULT hr
+	);
+
+RACUpdateCapabilitiesAsync_Start(
+	UNICODESTRING RACName,
+	UINT32 capabilities
+	);
+
+RACUpdateCapabilitiesWorker_Stop(
+	HRESULT hr
+	);
+
+RACUpdateCapabilitiesWorker_Start(
+	UNICODESTRING Client,
+	UINT32 capabilities
+	);
+
+RACUpdateCapabilitiesByNameAsync_Stop(
+	HRESULT hr
+	);
+
+RACUpdateCapabilitiesByNameAsync_Start(
+	UNICODESTRING RACName
+	);
+
+RACUpdateCapabilitiesByNameWorker_Stop(
+	HRESULT hr
+	);
+
+RACUpdateCapabilitiesByNameWorker_Start(
+	UNICODESTRING RACName,
+	UNICODESTRING Client
+	);
+
+RACUpdateCapabilitiesByNameWorker(
+	UINT32 CapabilityLen
+	);
+
+FailureNoContext(
+	HRESULT hr
+	);
+
+FailureContext(
+	UNICODESTRING Context,
+	UINT32 hr
+	);
+
+SuccessContext(
+	UNICODESTRING Context
+	);
+
+ThrottleCreateRequestTookOverLockFile(
+	UNICODESTRING Path,
+	HRESULT lastError
+	);
+
+ThrottleCreateRequestFailed(
+	UNICODESTRING Path,
+	HRESULT hr
+	);
+
+ThrottleCreateRequestFailed(
+	UNICODESTRING Path,
+	HRESULT hr,
+	UINT64 Elapsed
+	);
+
+ThrottleCreateRequestDone(
+	UNICODESTRING Path,
+	UINT64 Elapsed
+	);
+
+ThrottleOpenRequestDeletedLockFile(
+	UNICODESTRING Path
+	);
+
+ThrottleOpenRequestFailed(
+	UNICODESTRING Path,
+	HRESULT hr
+	);
+
+ThrottleOpenRequestDone(
+	UNICODESTRING Path,
+	UINT64 Elapsed
+	);
+
+Assert(
+	UINT32 assertVersion,
+	UINT32 rva,
+	UINT32 timestamp,
+	UINT32 imageSize,
+	ANSISTRING imageName,
+	UINT32 count,
+	UINT32 totalHits,
+	UINT32 ModuleCollection,
+	UINT32 GlobalCollection
+	);
+

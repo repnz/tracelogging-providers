@@ -1,0 +1,79 @@
+ProviderNames:
+	Microsoft.Windows.DeviceManagement.OmaDmApiProvider
+	Microsoft.Windows.DeviceManagement.SessionManagement
+	Microsoft.Windows.DeviceManagement.OmaDmClient
+	Microsoft.Windows.DeviceManagement.OMADMPRC
+	Microsoft.Windows.EnterpriseManagement.ResourceManager
+	Microsoft.Windows.EnterpriseManagement.ResourceManagerUnenrollHook
+	Microsoft.Windows.DeviceManagement.DmAccCsp
+	Microsoft.Windows.DeviceManagement.DevInfo
+	Microsoft.Windows.DeviceManagement.DevDetailCsp
+	Microsoft-Windows-DeviceManagement-W7NodeProcessor
+	Microsoft.Windows.DeviceManagement.SecurityPolicyCsp
+	Microsoft.Windows.EnterpriseManagement.DeclaredConfiguration
+	Microsoft.Windows.EnterpriseManagement.PolicyManager
+	Microsoft.Windows.EnterpriseManagement.ConfigManagerHook
+	Microsoft.Windows.DeviceManagement.ConfigManager2
+	Microsoft.Windows.EMPS.Enrollment
+	Microsoft.Windows.EnterpriseManagement.Enrollment
+
+
+
+**** Events *****
+UnenrollHook(
+	UNICODESTRING L"No user found",
+	HRESULT HResult
+	);
+
+UnenrollHook(
+	UNICODESTRING L"User deleted",
+	HRESULT HResult
+	);
+
+WmiAppRemoval(
+	UNICODESTRING L"Error getting JobID",
+	HRESULT HResult
+	);
+
+WmiAppRemoval(
+	UNICODESTRING JobID,
+	HRESULT HResult
+	);
+
+WmiAppRemoval(
+	UNICODESTRING L"Caught Exception",
+	HRESULT HResult
+	);
+
+UnEnrollHook(
+	UNICODESTRING EnrollmentID,
+	UNICODESTRING ResourceURI,
+	HRESULT HResult,
+	ANSISTRING __TlgCV__
+	);
+
+UnEnrollHook(
+	UNICODESTRING pszMessage,
+	HRESULT HResult,
+	ANSISTRING __TlgCV__
+	);
+
+UnEnrollHook(
+	UNICODESTRING pszMessage,
+	UNICODESTRING EnrollmentID,
+	UNICODESTRING ResourceURI,
+	HRESULT HResult,
+	ANSISTRING __TlgCV__
+	);
+
+UnEnrollHook(
+	SYSTEMTIME UnEnrollStartTime,
+	UNICODESTRING EnrollmentID,
+	UNICODESTRING ProviderID,
+	UNICODESTRING UserSID,
+	BOOL32 DeviceWide,
+	SYSTEMTIME UnEnrollEndTime,
+	HRESULT HResult,
+	ANSISTRING __TlgCV__
+	);
+

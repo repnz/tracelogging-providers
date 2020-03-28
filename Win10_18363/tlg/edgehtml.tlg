@@ -1,0 +1,4867 @@
+ProviderNames:
+	Microsoft.Web.Platform
+	Microsoft.Web.Platform.FetchDiagnostics
+	TelemetryAssertDiagTrack
+	TelemetryAssert
+	F12ToolsProvider
+	TextInput
+	Microsoft.Windows.HVSI.Manager
+	Microsoft.Windows.Wil.FeatureLogging
+	TelemetryAssertDiagTrack
+	TelemetryAssert
+	Microsoft.Windows.TextInput.SpellCheckerEngine
+	Microsoft.Windows.TextInput.LinguisticData
+
+
+
+**** Events *****
+IsEDPContentProcess(
+	INT32 isProcessTokenValid,
+	HRESULT hrGetEnterpriseId,
+	BOOL32 hasEnterpriseId
+	);
+
+ProcessDetached(
+	VOID
+	);
+
+CoreWebViewSetSize(
+	GUID targetAppSessionGuid,
+	UINT32 webViewId,
+	FLOAT webViewWidth,
+	FLOAT webViewHeight,
+	FLOAT hostWindowWidth,
+	FLOAT hostWindowHeight,
+	FLOAT scaleFactor
+	);
+
+UnsafeContentWarningDialogDisplaying(
+	VOID
+	);
+
+UnsafeContentWarningIgnored(
+	VOID
+	);
+
+UnsafeContentWarningFalsePositiveReported(
+	VOID
+	);
+
+UnsafeContentWarningPageDisplaying(
+	VOID
+	);
+
+CoreWebViewUsageTime(
+	GUID targetAppSessionGuid,
+	UINT32 webViewId,
+	UINT64 totalUsageTimeMS,
+	UINT64 totalLifetimeMS,
+	UINT32 focusEventCount
+	);
+
+ConsoleWrite(
+	UNICODESTRING Source,
+	INT32 ELevel,
+	INT32 MessageId,
+	UNICODESTRING MessageText,
+	UNICODESTRING FileUrl,
+	UINT32 Line
+	);
+
+ConsoleWrite(
+	UNICODESTRING Source,
+	INT32 ELevel,
+	INT32 MessageId,
+	UNICODESTRING MessageText,
+	UNICODESTRING FileUrl
+	);
+
+ConsoleWrite(
+	UNICODESTRING Source,
+	INT32 ELevel,
+	INT32 MessageId,
+	UNICODESTRING MessageText,
+	UNICODESTRING FileUrl,
+	UINT32 Line,
+	UINT32 Column
+	);
+
+ConsoleWrite(
+	UNICODESTRING Source,
+	INT32 ELevel,
+	INT32 MessageId,
+	UNICODESTRING MessageText
+	);
+
+FeatureError(
+	UINT32 featureId,
+	INT32 featureVersion,
+	INT32 featureBaseVersion,
+	INT16 featureStage,
+	HRESULT hr,
+	ANSISTRING file,
+	UINT16 lineNumber,
+	ANSISTRING module,
+	ANSISTRING process,
+	ANSISTRING originFile,
+	UINT16 originLineNumber,
+	ANSISTRING originModule,
+	ANSISTRING originName,
+	ANSISTRING message,
+	ANSISTRING callerModule,
+	UINT32 callerReturnAddressOffset,
+	ANSISTRING originCallerModule,
+	UINT32 originCallerReturnAddressOffset
+	);
+
+EnabledFeatureUsage(
+	UINT32 featureId,
+	INT32 featureVersion,
+	INT32 featureBaseVersion,
+	INT16 featureStage,
+	BOOLEAN enabled,
+	UINT32 kind,
+	UINT64 addend
+	);
+
+FeatureVariantUsage(
+	UINT32 featureId,
+	INT32 featureVersion,
+	INT32 featureBaseVersion,
+	INT16 featureStage,
+	BOOLEAN enabled,
+	UINT32 variantKind,
+	UINT8 variant,
+	UINT64 addend
+	);
+
+FeatureUsage(
+	UINT32 featureId,
+	INT32 featureVersion,
+	INT32 featureBaseVersion,
+	INT16 featureStage,
+	BOOLEAN enabled,
+	UINT32 kind,
+	UINT64 addend
+	);
+
+FallbackError(
+	UINT64 PartA_PrivTags,
+	SIGNED wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+FallbackError(
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+GwndTaskProfileData(
+	BINARY gwndTasks.data()
+	);
+
+InputTaskProfileData(
+	BINARY inputTasks.data()
+	);
+
+TaskProfilerSuspensionFlags(
+	UINT32 Flags
+	);
+
+InputDelayTrigger(
+	UINT32 DelayTime
+	);
+
+TaskDelayBuckets(
+	ANSISTRING TaskName,
+	UINT32 PerfectCount,
+	UINT32 OkCount,
+	UINT32 NoticeableCount,
+	UINT32 PoorCount,
+	UINT32 BadCount,
+	UINT32 VeryBadCount,
+	UINT32 TerribleCount
+	);
+
+EventLoopDriveIdleTaskByPaint(
+	VOID
+	);
+
+PauseTaskEnabled(
+	UINT32 callbacksPerSecond,
+	UINT32 callbackRateThreshold,
+	BOOL32 PauseTaskFeatureStatus
+	);
+
+PauseTaskDisabled(
+	UINT64 goodBuckets,
+	UINT64 restoreThreshold
+	);
+
+TimersStarvedByPaintRequest(
+	UINT32 msDuration
+	);
+
+Assert(
+	UINT32 assertVersion,
+	UINT32 rva,
+	UINT32 timestamp,
+	UINT32 imageSize,
+	ANSISTRING imageName,
+	UINT32 count,
+	UINT32 totalHits
+	);
+
+PageLoadEnd(
+	BOOLEAN isPrerendered,
+	INT32 isEdgeHtml,
+	UINT32 virtualTabId,
+	GUID sessionID,
+	GUID userInputID
+	);
+
+ActiveXEdge(
+	UNICODESTRING clsid,
+	UINT32 blockedReason,
+	GUID sessionID,
+	GUID userInputID
+	);
+
+WebStorageCompleteFireStorageEventOnDocument(
+	COUNTEDSTRING DocumentURL,
+	COUNTEDSTRING SourceUrl,
+	COUNTEDSTRING Key,
+	COUNTEDSTRING OldValue,
+	COUNTEDSTRING NewValue,
+	BOOLEAN IsFromSession
+	);
+
+NavigateToNeedIEErrorPage(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	UNICODESTRING url,
+	UINT32 reason,
+	HRESULT navigateToErrorPageResult
+	);
+
+RedirectHVSI(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	HRESULT HResult
+	);
+
+ExecCommand(
+	UNICODESTRING command,
+	BOOL32 showUI,
+	INT32 contentEditability,
+	INT32 returnValue
+	);
+
+CDocument::GetActiveElement returning null as there is no client element(
+	VOID
+	);
+
+WebStoragePreloadLocalStorageFailed(
+	HEXINT64 this,
+	COUNTEDSTRING originUrl,
+	HRESULT hr
+	);
+
+CHTMLSelection::collapseToEnd(
+	VOID
+	);
+
+CHTMLSelection::collapseToStart(
+	VOID
+	);
+
+CHTMLSelection::collapse(
+	INT32 NodeTag,
+	INT32 Offset
+	);
+
+CHTMLSelection::addRange(
+	VOID
+	);
+
+CHTMLSelection::removeRange(
+	VOID
+	);
+
+CHTMLSelection::selectAllChildren(
+	INT32 NodeTag
+	);
+
+CHTMLSelection::deleteFromDocument(
+	VOID
+	);
+
+CHTMLSelection::setBaseAndExtent(
+	INT32 AnchorNodeTag,
+	INT32 AnchorOffset,
+	INT32 FocusNodeTag,
+	INT32 FocusOffset
+	);
+
+CHTMLSelection::extend(
+	INT32 NodeTag,
+	INT32 Offset
+	);
+
+CDoc::WinRTSaveSegmentToClipboard(
+	BOOLEAN WasDocFocused
+	);
+
+WinRTSaveSegmentToClipboardCalled(
+	BOOLEAN WasDocFocused,
+	HRESULT HResultFinal
+	);
+
+CDoc::BeginUndoUnit(
+	VOID
+	);
+
+CDoc::EndUndoUnit(
+	VOID
+	);
+
+VisibilityStateUpdated(
+	UNICODESTRING state,
+	GUID sessionID,
+	GUID userInputID
+	);
+
+NewWindowInTheSameProcess(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	BOOLEAN isSameLocation,
+	BOOLEAN replace,
+	BOOLEAN suggestNewWnd,
+	BOOLEAN emptyTgtUrl
+	);
+
+SuperNavigateInternalCancelled(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	UINT32 reason,
+	INT32 hresult
+	);
+
+SetClipboardCalled(
+	INT32 FormSetClipboardStatus,
+	INT32 SetClipboardStatus,
+	BOOLEAN WasDocFocused
+	);
+
+CSelectionObject::GetType - called(
+	INT32 SelectionType,
+	HRESULT HRESULT
+	);
+
+ActivityStoppedAutomatically(
+	VOID
+	);
+
+EnforcingProtocolLaunchFrequency(
+	VOID
+	);
+
+TSF3 Disabled for CDoc(
+	VOID
+	);
+
+InitializeBhxForServiceWorkerHost(
+	HRESULT statusCode
+	);
+
+PdfTabSessionOver(
+	UINT64 pdfSessionId,
+	ANSISTRING pdfTabActivityType,
+	GUID sessionID,
+	GUID userInputID
+	);
+
+HostConfiguration(
+	BOOL32 OutOfProcBinaryControls
+	);
+
+DXDeviceReset(
+	HEXINT32 deviceResetReason
+	);
+
+MediaAutoPlaySettingRequested(
+	HEXINT64 DocPointer,
+	UNICODESTRING NewBehavior
+	);
+
+AutoPlaySettingResponseIgnored(
+	HEXINT64 DocPointer,
+	UNICODESTRING RequestUri,
+	UNICODESTRING CurrentUri
+	);
+
+MediaAutoPlayBehaviorChanged(
+	HEXINT64 DocPointer,
+	INT32 NewBehavior
+	);
+
+UpdateTravelLog(
+	UINT32 virtualTabId,
+	UNICODESTRING url,
+	GUID sessionID,
+	GUID userInputID
+	);
+
+CDoc::GetHTMLEditor - CHTMLEditor initialization failed(
+	HRESULT HRESULT
+	);
+
+CDoc::GetHTMLEditor - _pWindowPrimary is null(
+	HRESULT HRESULT
+	);
+
+CDoc::GetHTMLEditor - CHTMLEditor creation failed(
+	HRESULT HRESULT
+	);
+
+CDoc::Select(
+	INT32 SelectionType
+	);
+
+CDoc::GetEditingServices(
+	HRESULT HRESULT
+	);
+
+CDoc::GetEditServices(
+	HRESULT HRESULT
+	);
+
+CDoc::NotifySelection(
+	INT32 eSelectionNotification
+	);
+
+CDoc::ShouldCreateHTMLEditor(
+	BOOL32 fCreate,
+	INT32 SelectionNotification
+	);
+
+SetInteractiveInternalCancelled(
+	UINT32 reason,
+	GUID sessionID,
+	GUID userInputID
+	);
+
+OMSNavigateComplete(
+	UNICODESTRING url,
+	UINT32 zone,
+	GUID sessionID,
+	GUID userInputID
+	);
+
+NavigateComplete(
+	BOOLEAN isPrerendered,
+	UNICODESTRING url,
+	INT32 isEdgeHtml,
+	UINT32 virtualTabId,
+	GUID sessionID,
+	GUID userInputID
+	);
+
+ReadyStateInteractive(
+	BOOLEAN isPrerendered,
+	INT32 isEdgeHtml,
+	UINT32 virtualTabId,
+	GUID sessionID,
+	GUID userInputID
+	);
+
+ReadyStateComplete(
+	BOOLEAN isPrerendered,
+	INT32 isEdgeHtml,
+	UINT32 virtualTabId,
+	GUID sessionID,
+	GUID userInputID
+	);
+
+CDoc::SetCurrentElement(
+	INT32 OldCurrentElementTag,
+	INT32 NewCurrentElementTag
+	);
+
+ProcessTerminated(
+	HEXINT64 thisPointer
+	);
+
+CDocDestroyed(
+	HEXINT64 thisPointer
+	);
+
+CDocCreated(
+	HEXINT64 thisPointer
+	);
+
+CDoc::GiveMessageToEditor(
+	UINT32 Message,
+	INT32 SmartGPNodeFireEventTag,
+	BOOL32 SkipEditorForCurrencyChange,
+	BOOL32 HadCapture
+	);
+
+CDoc::GiveMessageToEditorSecondChance(
+	UINT32 Message,
+	INT32 SmartGPNodeFireEventTag,
+	INT32 ElemCurrentOldTag
+	);
+
+CDoc::HandleMessageForTargetElementBranch(
+	UINT32 Message
+	);
+
+CDoc::PumpMessage(
+	UINT32 Message,
+	INT32 SmartGPNodeTargetTag,
+	BOOL32 PerformTA
+	);
+
+DocumentInteractionTokenReset(
+	HEXINT64 DocPointer,
+	UNICODESTRING InteractionUri
+	);
+
+DocumentInteractionTokenActivate(
+	HEXINT64 DocPointer,
+	UNICODESTRING InteractionUri
+	);
+
+RemoveDNTException(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	UNICODESTRING DomainToRemove,
+	UNICODESTRING URLHost,
+	UNICODESTRING URLDomain,
+	BOOLEAN IsWebWide,
+	INT32 HRESULT,
+	UNICODESTRING FailureExplanation
+	);
+
+AddDNTException(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	UNICODESTRING DomainToAdd,
+	UNICODESTRING URLHost,
+	UNICODESTRING URLDomain,
+	UNICODESTRING DetailURI,
+	UNICODESTRING SiteName,
+	INT32 AlreadyExists,
+	BOOLEAN IsWebWide,
+	INT32 HRESULT,
+	UNICODESTRING FailureExplanation
+	);
+
+DoNavigateCancelled(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	UINT32 reason,
+	INT32 hresult
+	);
+
+NonNavigatingProtocol(
+	UNICODESTRING targetProtocolName,
+	GUID sessionID,
+	GUID userInputID
+	);
+
+LocalLinkNavigation(
+	UNICODESTRING urlAction,
+	UNICODESTRING urlContext,
+	GUID sessionID,
+	GUID userInputID
+	);
+
+DoNavigateCancelled(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	UINT32 reason,
+	INT32 hresult
+	);
+
+AppInvalidArguments(
+	UNICODESTRING callerUri,
+	UNICODESTRING destinationUri,
+	GUID sessionID,
+	GUID userInputID
+	);
+
+AppActivated(
+	UNICODESTRING callerUri,
+	UNICODESTRING handledUri,
+	GUID sessionID,
+	GUID userInputID
+	);
+
+BeforeNavigateAsync(
+	BOOLEAN isPrerendered,
+	UNICODESTRING sourceUrl,
+	UNICODESTRING destinationUrl,
+	INT32 isEdgeHtml,
+	UINT32 virtualTabId,
+	GUID sessionID,
+	GUID userInputID
+	);
+
+BeforeNavigate(
+	BOOLEAN isPrerendered,
+	UNICODESTRING sourceUrl,
+	UNICODESTRING destinationUrl,
+	INT32 isEdgeHtml,
+	UINT32 virtualTabId,
+	GUID sessionID,
+	GUID userInputID
+	);
+
+FollowHyperlinkCancelled(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	UINT32 reason,
+	INT32 hresult
+	);
+
+PopupDisallowedBySandbox(
+	VOID
+	);
+
+EnforceSandboxOnCDoc(
+	BOOL32 isSandboxed,
+	UINT32 sandboxBindCtxParamFlags
+	);
+
+ActivityStoppedAutomatically(
+	VOID
+	);
+
+ElementExitingFullScreen(
+	UNICODESTRING tagName,
+	UINT32 remainingFullScreenElements
+	);
+
+ElementEnteringFullScreen(
+	UNICODESTRING tagName
+	);
+
+PasteTraceActivityStopped(
+	BOOLEAN WasDocFocused
+	);
+
+CopyTraceActivityStopped(
+	BOOLEAN WasDocFocused
+	);
+
+CopyTraceActivityStarted(
+	BOOLEAN WasCopyTraceActivityStopped,
+	BOOLEAN WasDocFocused
+	);
+
+PasteTraceActivityStarted(
+	BOOLEAN WasPasteTraceActivityStopped,
+	BOOLEAN WasDocFocused
+	);
+
+NavigationStopped(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	UNICODESTRING url,
+	UINT32 virtualTabId
+	);
+
+NavigationMetaRefresh(
+	INT32 isRedirect,
+	UNICODESTRING refreshUrl,
+	UINT32 virtualTabId,
+	GUID sessionID,
+	GUID userInputID
+	);
+
+ExtensionBackgroundScriptReady(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid
+	);
+
+PhoneNumberHighlighted(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid
+	);
+
+CEntityCopyToClipboardCalled(
+	BOOLEAN WasDocFocused
+	);
+
+PhoneNumberClicked(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	INT32 ReturnCode
+	);
+
+ForCopyEventExecHelperCalled(
+	BOOLEAN WasDocFocused
+	);
+
+CEditRouter::QueryStatusEditCommand - calling GetHTMLEditor(FALSE)(
+	HEXINT64 _pInternalCmdTarget
+	);
+
+CEditRouter::QueryStatusEditCommand(
+	INT32 command id,
+	INT32 command status,
+	BOOLEAN fQueryStatusForScript
+	);
+
+CEditRouter::ExecEditCommand(
+	INT32 command id,
+	BOOL32 commandEnabled,
+	BOOL32 eventDefaultPrevented,
+	BOOL32 Is queryCommandValue/execCommand?
+	);
+
+CEditRouter::SetInternalEditHandler - calling GetHTMLEditor(
+	BOOL32 fRange,
+	BOOL32 fForceCreate
+	);
+
+CopyLinkToClipboardHelperCalled(
+	BOOLEAN WasDocFocused
+	);
+
+WinRTCopyLinkToClipboardHelperCalled(
+	BOOLEAN WasDocFocused
+	);
+
+DragDropOnDrop(
+	HEXINT32 dropEffect,
+	BOOLEAN isHTMLSource
+	);
+
+AppCacheManifestResourceQuotaCheck(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	UINT32 appCacheResourceListAllowedLength,
+	UINT32 appCacheResourceListActualLength,
+	UNICODESTRING domainName
+	);
+
+AppCacheQuotaCheck(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	UINT64 appCacheCurrentSizeInBytes,
+	UINT64 appCacheAdditionalStorageInBytes,
+	UNICODESTRING domainName
+	);
+
+ActivityStoppedAutomatically(
+	VOID
+	);
+
+MarkupDestroyed(
+	HEXINT64 docPointer
+	);
+
+W3CNavigationTiming(
+	DOUBLE unloadEventStart,
+	DOUBLE unloadEventEnd,
+	DOUBLE domInteractive,
+	DOUBLE domContentLoadedStart,
+	DOUBLE domContentLoadedEnd,
+	DOUBLE domComplete,
+	DOUBLE loadEventStart,
+	DOUBLE loadEventEnd,
+	DOUBLE redirectStart,
+	DOUBLE redirectEnd,
+	DOUBLE fetchStart,
+	DOUBLE domainLookupStart,
+	DOUBLE domainLookupEnd,
+	DOUBLE connectStart,
+	DOUBLE secureConnectionStart,
+	DOUBLE connectEnd,
+	DOUBLE requestStart,
+	DOUBLE responseStart,
+	DOUBLE responseEnd,
+	GUID sessionID,
+	GUID userInputID
+	);
+
+ExceptionsThrownInFastDOM(
+	BINARY exceptionVector
+	);
+
+CSSAnimationPropertyUsage(
+	STRING PropertyUsage,
+	UNICODESTRING Name,
+	INT16 Count
+	);
+
+SecurityZone(
+	UINT32 secZone,
+	GUID sessionID,
+	GUID userInputID
+	);
+
+CSSTransitionPropertyUsage(
+	STRING PropertyUsage,
+	UNICODESTRING Name,
+	INT16 Count
+	);
+
+DocumentAndLayoutModeInfo(
+	UINT32 docMode,
+	INT32 layoutMode
+	);
+
+MarkupActivityStarted(
+	BOOLEAN isTopLevel,
+	BOOLEAN isDedicatedWorker,
+	BOOLEAN isServiceWorker,
+	GUID primaryAId,
+	HEXINT64 docPointer
+	);
+
+SetUri(
+	UNICODESTRING url,
+	UNICODESTRING domain,
+	UNICODESTRING originalUrl,
+	BOOLEAN hadRedirect,
+	BOOLEAN IsHvsiEnabled,
+	GUID sessionID,
+	GUID userInputID
+	);
+
+NoUriAvailable(
+	GUID sessionID,
+	GUID userInputID
+	);
+
+GainedFocus(
+	VOID
+	);
+
+LostFocus(
+	VOID
+	);
+
+NavigationBlockedDueToSecurityError(
+	UNICODESTRING blockedUrl,
+	BOOLEAN navigateToBlockPage
+	);
+
+OMSNavigateError(
+	INT32 errorCode,
+	INT32 navErrorCode,
+	UINT32 isRefresh,
+	UNICODESTRING url,
+	UINT32 zone,
+	GUID sessionID,
+	GUID userInputID
+	);
+
+NavigateError(
+	INT32 errorCode,
+	INT32 navErrorCode,
+	UINT32 isRefresh,
+	UNICODESTRING errorUrl,
+	UNICODESTRING redirectedUrl,
+	UINT32 virtualTabId,
+	ANSISTRING certChainThumbprints,
+	UNICODESTRING ipAddress,
+	GUID sessionID,
+	GUID userInputID
+	);
+
+NavigateErrorBasic(
+	INT32 errorCode,
+	INT32 navErrorCode,
+	UINT32 isRefresh,
+	UINT32 virtualTabId,
+	GUID sessionID,
+	GUID userInputID
+	);
+
+CreateFullSizeEmbedForPDFFailed(
+	HRESULT hresult
+	);
+
+IRVideoFallbackDuration(
+	INT32 msDuration
+	);
+
+DOMProfilerURL(
+	UNICODESTRING scriptSiteUrl
+	);
+
+DOMProfile(
+	UNICODESTRING interfaceName,
+	UNICODESTRING memberName,
+	UINT64 totalTimeInUs,
+	UINT32 totalCount,
+	UINT32 minTime,
+	UINT32 maxTime,
+	UINT32 exceptionCount,
+	INT32 uniqueID
+	);
+
+DOMProfileHolderCreate(
+	INT32 uniqueID
+	);
+
+CDoc::ActivateInPlaceWindow calling GetHTMLEditor(FALSE)(
+	VOID
+	);
+
+CDoc::CreateService called GetHTMLEditor(
+	VOID
+	);
+
+ExtensionsBytecodeCacheExecutionFailure(
+	UNICODESTRING extensionId,
+	UNICODESTRING excepDescription,
+	UNICODESTRING excepSource
+	);
+
+Extensions_ContentScriptInternalFailure(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	HRESULT hResult,
+	UNICODESTRING description,
+	UNICODESTRING source
+	);
+
+Extensions_BackgroundScriptInternalFailure(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	HRESULT hResult,
+	UNICODESTRING description,
+	UNICODESTRING source
+	);
+
+ResetContentZoomViaAccelerator(
+	GUID sessionID,
+	GUID userInputID
+	);
+
+ZoomViaAccelerator(
+	GUID sessionID,
+	GUID userInputID
+	);
+
+SetZoomFactor(
+	UINT32 zoomFactor,
+	UINT32 lastZoomFactor,
+	GUID sessionID,
+	GUID userInputID
+	);
+
+ZoomViaMouseWheel(
+	INT32 zoomScroll,
+	GUID sessionID,
+	GUID userInputID
+	);
+
+DrawBlackReplacedBox(
+	GUID sessionID,
+	GUID userInputID
+	);
+
+LayerLimitPolicy(
+	UINT32 CumulativeComposedPixels,
+	UINT32 MaxComposedPixels,
+	UINT32 CumulativeAllocatedPixels,
+	UINT32 MaxAllocatedPixels
+	);
+
+DXDeviceCreationErrors(
+	HRESULT hardwareFailErrorCode
+	);
+
+DXDeviceCreate(
+	HEXINT32 deviceCreateTime,
+	HEXINT32 createDecision,
+	HEXINT32 createForced
+	);
+
+DXAdapterDesc(
+	HEXINT32 vendorId,
+	HEXINT32 deviceId,
+	HEXINT32 subSysId,
+	HEXINT32 revision,
+	HEXINT32 dedicatedVideoMemory,
+	HEXINT32 dedicatedSystemMemory,
+	HEXINT32 sharedSystemMemory,
+	HEXINT32 graphicsDriverMajorVersion,
+	HEXINT32 graphicsDriverMinorVersion
+	);
+
+LayerManagerActivityStart(
+	VOID
+	);
+
+LayerManagerActivityStop(
+	UINT32 PeakVirtualSurfaceBackedLayerSize,
+	UINT32 PeakSurfaceBackedLayerSize,
+	UINT32 PeakCanvasBackedLayerSize
+	);
+
+IDBRPCServerFailureOnOpenDB(
+	HRESULT hresult,
+	COUNTEDANSISTRING origin
+	);
+
+IDBDiagnosticInfo(
+	HRESULT hresult,
+	ANSISTRING functionName,
+	ANSISTRING context
+	);
+
+IDBRPCServerFailureOnDelete(
+	HRESULT hresult,
+	COUNTEDANSISTRING origin
+	);
+
+IDBCreateObjectStoreFailed(
+	HRESULT HResult,
+	COUNTEDANSISTRING Origin
+	);
+
+IDBCloseTransactionFailed(
+	HRESULT HResult,
+	ANSISTRING Action,
+	COUNTEDANSISTRING Origin
+	);
+
+CIDBWorkerThreadSystem-CleanupOnUIThreadAndShutdown-Result(
+	BOOLEAN didShutdown
+	);
+
+ClipboardUsageConsumedHtml(
+	VOID
+	);
+
+ClipboardUsageConsumedUnicodeText(
+	VOID
+	);
+
+ClipboardUsageConsumedText(
+	VOID
+	);
+
+ClipboardUsageConsumedSourceUrl(
+	VOID
+	);
+
+CCaret::DeferUpdateCaret(
+	BOOL32 Scroll
+	);
+
+CCaret::DeferredUpdateCaret(
+	VOID
+	);
+
+CCaret::MoveCaretToPointer(
+	INT32 NodeTag,
+	INT32 Offset
+	);
+
+CCaret::MoveCaretToPointer(
+	VOID
+	);
+
+CCaret::InsertText(
+	VOID
+	);
+
+CCaret::MoveCaretToPosition(
+	INT32 NodeTag,
+	INT32 CharacterIndex
+	);
+
+ProcessEmbeddedFontUrlCount(
+	UINT32 UniqueUrlCount,
+	UINT32 TotalUrlCount
+	);
+
+InstallFontFailure(
+	HRESULT HResult
+	);
+
+ParsingBlockedByHTTPStatus(
+	HEXINT64 FontFetchContext,
+	HEXINT64 CEmbeddedFontFace,
+	INT32 Status Code
+	);
+
+CElement::blur(
+	INT32 ElementTag
+	);
+
+ElementNode::Var_focus(
+	INT32 ElementTag,
+	BOOL32 PreventScroll
+	);
+
+ElementNode::BecomeCurrent - Not Connected To Primary Markup(
+	VOID
+	);
+
+ElementNode::BecomeCurrent - SetCurrentElem Result(
+	HRESULT ReturnValue
+	);
+
+ElementNode::BecomeCurrent(
+	INT32 ElementTag
+	);
+
+ElementNode::BubbleBecomeCurrent(
+	INT32 ElementTag
+	);
+
+ElementNode::BecomeCurrent - Returning(
+	HRESULT ReturnValue
+	);
+
+RenderTaskQueue_QueueTaskAndSignal(
+	INT32 QueueDepth
+	);
+
+PageAvailable(
+	UINT32 hostPaintUpdateContext,
+	INT32 isEdgeHtml,
+	UINT32 virtualTabId,
+	GUID sessionID,
+	GUID userInputID
+	);
+
+CInput::Var_set_selectionEnd(
+	INT32 SelectionEnd
+	);
+
+CInput::Var_set_selectionStart(
+	INT32 SelectionStart
+	);
+
+CInput::select(
+	VOID
+	);
+
+FileUploadFileSelected(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	ANSISTRING extensionOfFirstFile,
+	INT32 numberOfFiles
+	);
+
+FileUploadFilePickerFailed(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	INT32 hrResult
+	);
+
+FileUploadFileSelected(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	UNICODESTRING extensionOfFirstFile,
+	INT32 numberOfFiles
+	);
+
+CInput::Var_setSelectionRange(
+	INT32 Start,
+	INT32 End
+	);
+
+CInput::Var_get_value(
+	UINT32 get value length
+	);
+
+CInput::Var_set_selectionDirection(
+	INT32 Direction
+	);
+
+CInput::Var_setSelectionRange(
+	INT32 Start,
+	INT32 End,
+	INT32 Direction
+	);
+
+CInput::UpdateValueFromSubMarkup(
+	INT32 text length
+	);
+
+SelectElementPopupAnimDone(
+	VOID
+	);
+
+CTextArea::setSelectionRange(
+	INT32 Start,
+	INT32 End
+	);
+
+CTextArea::Var_set_selectionEnd(
+	INT32 SelectionEnd
+	);
+
+CRichtext::select(
+	VOID
+	);
+
+CTextArea::Var_set_selectionStart(
+	INT32 SelectionStart
+	);
+
+ForCopyEventCreateImgDataObjectCalled(
+	BOOLEAN WasDocFocused
+	);
+
+XHR_XMLHttpRequest_ResetWithoutStateChange(
+	BOOL32 asynchronous,
+	UINT8 state
+	);
+
+XHR_XMLHttpRequest(
+	ANSISTRING apiName,
+	HRESULT HRESULT,
+	HEXINT64 XMLHttpRequest,
+	HEXINT64 IFetch,
+	BOOL32 asynchronous,
+	UINT8 state
+	);
+
+XHR_XMLHttpRequest_FetchSettings(
+	HEXINT64 XMLHttpRequest,
+	UNICODESTRING requestUri,
+	UNICODESTRING referrerUri,
+	UINT8 method,
+	UNICODESTRING customMethod,
+	UINT64 timeoutInMS,
+	UINT8 credentials,
+	UINT8 cache,
+	UINT8 referrerPolicy,
+	BOOL32 useCORSPreflight,
+	BOOL32 useURLCredentials
+	);
+
+XHR_XMLHttpRequest_Constructor(
+	HEXINT64 XMLHttpRequest
+	);
+
+ActivityStoppedAutomatically(
+	VOID
+	);
+
+RecursiveHttpFetchRequest(
+	UNICODESTRING RequestUrl,
+	UNICODESTRING RequestMethod
+	);
+
+HttpFetchRequest(
+	UNICODESTRING RequestUrl,
+	UNICODESTRING RequestMethod
+	);
+
+HttpFetchRequestHeaders(
+	UINT32 HeaderChunkNumber,
+	UNICODESTRING HeaderChunk
+	);
+
+HttpFetchResponse(
+	UINT32 StatusCode,
+	BOOLEAN IsServiceWorkerResponse
+	);
+
+HttpFetchResponseHeaders(
+	UINT32 HeaderChunkNumber,
+	UNICODESTRING HeaderChunk
+	);
+
+HttpFetchResult(
+	ANSISTRING ResponseType,
+	UINT32 FailureReason,
+	BOOL32 HasNetworkSecurityError,
+	BOOL32 UsedProxy,
+	BOOL32 CancelledByWebRequest,
+	UINT32 FirewallError,
+	BOOL32 BlockedDueToMixedContent,
+	BOOL32 BlockedDueToContentSecurityPolicy,
+	BOOL32 VTabSwitchedPOSTMethodToGet,
+	UNICODESTRING ExtendedErrorDetails
+	);
+
+HttpFetchComplete(
+	INT32 ResponseBodyChunkNumber,
+	INT32 ResponseBodyChunk
+	);
+
+FetchToFileFailure(
+	UNICODESTRING path,
+	HRESULT hresult
+	);
+
+FetchResponseErrorDetected(
+	HEXINT64 fetchTaskAddress,
+	ANSISTRING location,
+	UNICODESTRING originalUrl
+	);
+
+HttpFetchInterceptedForDebug(
+	UNICODESTRING TargetUrl,
+	BOOLEAN RequestDropped
+	);
+
+FetchProgress(
+	HEXINT64 fetchTaskAddress,
+	ANSISTRING location,
+	UNICODESTRING originalUrl
+	);
+
+FetchProgress(
+	HEXINT64 fetchTaskAddress,
+	ANSISTRING location
+	);
+
+FetchProgress(
+	HEXINT64 fetchTaskAddress,
+	ANSISTRING location,
+	UNICODESTRING requestId
+	);
+
+PdfResponseError(
+	HRESULT errorValue
+	);
+
+FetchInfoProgress(
+	HEXINT64 currentInfoAddress,
+	HEXINT64 otherContextAddress,
+	ANSISTRING location
+	);
+
+FetchInfoProgress(
+	HEXINT64 currentInfoAddress,
+	ANSISTRING location,
+	UNICODESTRING context
+	);
+
+FetchInfoProgress(
+	HEXINT64 currentInfoAddress,
+	ANSISTRING location,
+	HRESULT context
+	);
+
+FetchInfoProgress(
+	HEXINT64 currentInfoAddress,
+	ANSISTRING location,
+	BOOLEAN context
+	);
+
+FetchInfoProgress(
+	HEXINT64 currentInfoAddress,
+	ANSISTRING location
+	);
+
+FetchInfoProgress(
+	HEXINT64 currentInfoAddress,
+	ANSISTRING location,
+	UNICODESTRING originalUrl
+	);
+
+FetchContextProgress(
+	HEXINT64 currentInfoAddress,
+	HEXINT64 currentContextAddress,
+	ANSISTRING location,
+	UNICODESTRING context
+	);
+
+FetchContextProgress(
+	HEXINT64 currentInfoAddress,
+	HEXINT64 currentContextAddress,
+	ANSISTRING location,
+	HRESULT context
+	);
+
+FetchContextProgress(
+	HEXINT64 currentInfoAddress,
+	HEXINT64 currentContextAddress,
+	ANSISTRING location,
+	BOOLEAN context
+	);
+
+FetchContextProgress(
+	HEXINT64 currentInfoAddress,
+	HEXINT64 currentContextAddress,
+	ANSISTRING location
+	);
+
+FetchContextProgress(
+	HEXINT64 currentInfoAddress,
+	HEXINT64 currentContextAddress,
+	ANSISTRING location,
+	UNICODESTRING originalUrl
+	);
+
+FetchContextSkippedWorkDetected(
+	HEXINT64 currentInfoAddress,
+	HEXINT64 currentContextAddress,
+	ANSISTRING location
+	);
+
+Fetch_HeadersInstanceAPICall(
+	ANSISTRING apiName
+	);
+
+Fetch_HeadersConstructor(
+	INT32 HRESULT,
+	BOOL32 hasHeadersInit
+	);
+
+Fetch_RequestInstanceAPICall(
+	ANSISTRING apiName
+	);
+
+Fetch_RequestConstructor(
+	INT32 HRESULT,
+	BOOL32 hasRequestInit
+	);
+
+Fetch_ResponseInstanceAPICall(
+	ANSISTRING apiName
+	);
+
+Fetch_ResponseConstructor(
+	INT32 HRESULT,
+	BOOL32 hasBody,
+	BOOL32 hasResponseInit
+	);
+
+Dom_AbortControllerAPICall(
+	ANSISTRING apiName
+	);
+
+Dom_AbortControllerConstructor(
+	INT32 HRESULT
+	);
+
+Dom_AbortSignalAPICall(
+	ANSISTRING apiName
+	);
+
+FileSourceClose(
+	HEXINT64 self,
+	HRESULT reason,
+	ANSISTRING source
+	);
+
+FileSourceProgress(
+	HEXINT64 self,
+	UINT64 progress,
+	UINT64 total,
+	HRESULT result
+	);
+
+FileSourceStart(
+	HEXINT64 self,
+	HRESULT result
+	);
+
+FileSourceInitialize(
+	HEXINT64 self,
+	UNICODESTRING path,
+	HRESULT result
+	);
+
+StreamToFileClose(
+	HEXINT64 self,
+	HRESULT reason,
+	ANSISTRING source
+	);
+
+StreamToFileProgress(
+	HEXINT64 self,
+	UINT64 progress,
+	UINT64 total,
+	HRESULT result
+	);
+
+StreamToFileStart(
+	HEXINT64 self,
+	HRESULT result
+	);
+
+StreamToFileInitialize(
+	HEXINT64 self,
+	UNICODESTRING path,
+	HRESULT result
+	);
+
+HttpFetchComplete(
+	UINT32 ResponseBodyChunkNumber,
+	BINARY ResponseBodyChunk
+	);
+
+HttpFetchResponseBody(
+	UINT32 ResponseBodyChunkNumber,
+	BINARY ResponseBodyChunk
+	);
+
+NavigationBlockedDueToIllegalRedirectTargetScheme(
+	UNICODESTRING blockedUrl
+	);
+
+NavigationTopLevelReferrerUrl(
+	UNICODESTRING referrerUrl,
+	UNICODESTRING currentTargetUrl,
+	UNICODESTRING referrerPolicyToUse,
+	BOOL32 NavigationHasDowngradedSecurity,
+	BOOL32 AllowReferrerOnDowngrade
+	);
+
+NavigationProgress(
+	HEXINT64 currentNavigationCookie,
+	ANSISTRING location,
+	HRESULT result
+	);
+
+NavigationProgress(
+	HEXINT64 currentNavigationAddress,
+	ANSISTRING location
+	);
+
+NavigationProgress(
+	HEXINT64 currentNavigationAddress,
+	ANSISTRING location,
+	UNICODESTRING originalUrl
+	);
+
+NavigationProgress(
+	HEXINT64 currentNavigationAddress,
+	ANSISTRING location,
+	INT32 Status Code,
+	UNICODESTRING originalUrl
+	);
+
+NavigationSkippedWorkDetected(
+	HEXINT64 currentNavigationAddress,
+	ANSISTRING location,
+	UNICODESTRING FilterType,
+	BOOLEAN Is Allowed
+	);
+
+NavigationError(
+	HEXINT64 currentNavigationAddress,
+	ANSISTRING location
+	);
+
+NavigationSkippedWorkDetected(
+	HEXINT64 currentNavigationAddress,
+	ANSISTRING location
+	);
+
+ProcessImageDataLogged(
+	UINT32 decodes,
+	UINT32 reclaims,
+	UINT32 redecodesFromNoImageData,
+	UINT32 redecodesFromRequestImageBits,
+	UINT32 redecodesFromRightSizeDisabled,
+	INT64 maxFreeBudgetBytesConsumed,
+	INT64 maxOfferBudgetBytesConsumed,
+	INT64 maxResidentFreeBudgetBytesConsumed,
+	INT64 maxResidentOfferBudgetBytesConsumed,
+	BOOL32 isSystemMemoryConstrained,
+	INT64 pixelsSavedByRightSizing,
+	UINT32 forceDecodesOMEvent,
+	UINT32 forceDecodesOMAttachEvent,
+	UINT32 forceDecodesOMEventListener,
+	UINT32 forceDecodesOMParentEventListener,
+	UINT32 forceDecodesOMAccess,
+	UINT32 forceDecodesImgInfoLock,
+	UINT32 forceDecodesSmallSize,
+	UINT32 forceDecodesViewSpeculative,
+	UINT32 forceDecodesCanvasUse,
+	UINT32 forceDecodesNoMetadataDecode,
+	UINT32 forceDecodesBackgroundImage,
+	UINT32 forceDecodesBackgroundInfo,
+	UINT32 forceDecodesSaveImage,
+	UINT32 forceDecodesViewVeto,
+	UINT32 forceDecodesReadyForPaint,
+	UINT32 forceDecodesIViewObject,
+	UINT32 forceDecodesRenderElement,
+	UINT32 forceDecodesLazyDecodeNotAllowed,
+	UINT32 forceDecodesFullyDecodedCheck,
+	UINT32 forceDecodesImgHelperDraw,
+	UINT32 forceDecodesImgSrcAnimation,
+	UINT32 forceDecodesDecodeOnlyTask,
+	UINT32 forceDecodesImgInfoLockRedecode,
+	UINT32 forceDecodesForcePaint,
+	UINT32 forceDecodesNeedMetadata,
+	UINT32 forceDecodesWebGLUse,
+	UINT32 forceDecodesBorderImage,
+	UINT32 forceDecodesNeedMetaDataPendingImg,
+	UINT32 forceDecodesFunctionalTest,
+	UINT32 forceDecodesPaintHandlerPostFrame,
+	UINT32 rightSizingNotRequested,
+	UINT32 rightSizingNotAllowed,
+	UINT32 rightSizingMatchIntrinsicSize,
+	UINT32 rightSizingLocked,
+	UINT32 rightSizingDisabledImgSrcAnimation
+	);
+
+ImageMemCacheStats(
+	IPV4 cache,
+	UINT32 maxCacheSizeInBytes,
+	UINT32 maxObjectSizeInBytes,
+	UINT32 maxObjectCount,
+	UINT32 cacheHits,
+	UINT32 cacheMisses,
+	UINT32 cacheInserts,
+	UINT32 cacheUpdates,
+	UINT32 cacheEvictions
+	);
+
+InetProtBindMarkupDownload(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	UNICODESTRING Url,
+	BOOLEAN IsEdgeHtml
+	);
+
+BinaryControlPickFileAndGetResult(
+	HRESULT hresult,
+	GUID sessionID,
+	GUID userInputID
+	);
+
+BinaryControlCreatePrintTaskRequest(
+	HRESULT hresult,
+	GUID sessionID,
+	GUID userInputID
+	);
+
+BinaryControlContextMenu(
+	HRESULT hresult,
+	GUID sessionID,
+	GUID userInputID
+	);
+
+OleControlInPlaceDeactivateStarted(
+	HEXINT64 OleSite
+	);
+
+OleControlInPlaceDeactivateCompleted(
+	HEXINT64 OleSite,
+	HEXINT32 HRESULT
+	);
+
+OleControlReleaseInstanceStarted(
+	HEXINT64 OleSite
+	);
+
+OleControlReleaseInstanceCompleted(
+	HEXINT64 OleSite
+	);
+
+OleControlInPlaceActivateStarted(
+	HEXINT64 OleSite
+	);
+
+OleControlInPlaceActivateCompleted(
+	HEXINT64 OleSite,
+	HEXINT32 HRESULT
+	);
+
+OleControlCreateInstanceStarted(
+	HEXINT64 OleSite
+	);
+
+OleControlCreateInstanceCompleted(
+	HEXINT64 OleSite,
+	HEXINT32 HRESULT
+	);
+
+BCHostProcessCreated(
+	GUID remoteAppSessionGuid
+	);
+
+GetBCHostProcessTelemetryAppSessionGuidFailed(
+	HRESULT hresult
+	);
+
+FlashBFCachingFailure(
+	HRESULT hresult,
+	BOOLEAN UTCReplace_AppSessionGuid
+	);
+
+CSVGSVGElementCopyToClipboardCalled(
+	BOOLEAN WasDocFocused
+	);
+
+MsInk.EnsureMsInkContext.SetContext(
+	BOOLEAN UTCReplace_AppSessionGuid,
+	UNICODESTRING PageURL,
+	INT64 LogicalBitmapSizeX,
+	INT64 LogicalBitmapSizeY,
+	INT64 PhysicalBitmapSizeX,
+	INT64 PhysicalBitmapSizeY
+	);
+
+MsInk.EnsureMsInkContext.OtherContextExists(
+	BOOLEAN UTCReplace_AppSessionGuid
+	);
+
+TransferBindContextForPdfEnd(
+	VOID
+	);
+
+PdfStreamTelemetryLog(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	INT32 FailureHRESULT,
+	UNICODESTRING FailureMessage,
+	UINT64 pdfSessionId
+	);
+
+TransferBindContextFailed(
+	HRESULT hresult
+	);
+
+TransferBindContextForPdfStart(
+	VOID
+	);
+
+FileAttachmentInPdfOpened(
+	UINT64 pdfSessionId,
+	UNICODESTRING Ext,
+	BOOLEAN extensionBlocked,
+	GUID sessionID
+	);
+
+PdfHelper.PdfCopySelectionSuccessful(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid
+	);
+
+PDFGetPrintDocumentSource(
+	UINT64 pdfSessionId,
+	GUID sessionID,
+	GUID userInputID
+	);
+
+PDFClearRecoveryFailed(
+	UINT64 pdfSessionId,
+	HRESULT HResult,
+	GUID sessionID,
+	GUID userInputID
+	);
+
+PDFSaveTriggered(
+	UINT64 pdfSessionId,
+	BOOLEAN hasDirty,
+	INT32 SaveType,
+	GUID sessionID,
+	GUID userInputID
+	);
+
+PDFURL(
+	UINT64 pdfSessionId,
+	UNICODESTRING FullPdfURL,
+	GUID sessionID
+	);
+
+PDFDetach(
+	GUID userInputID,
+	UINT64 pdfSessionId,
+	GUID sessionID
+	);
+
+CPDFHelperInitializeFailed(
+	HRESULT errorResult,
+	UINT64 pdfSessionId,
+	GUID sessionID,
+	GUID userInputID
+	);
+
+PdfStateFullyDownloaded(
+	VOID
+	);
+
+PDFSaveCancelled(
+	UINT64 pdfSessionId,
+	INT32 SaveType,
+	GUID sessionID,
+	GUID userInputID
+	);
+
+PDFSaveCompleted(
+	UINT64 pdfSessionId,
+	INT32 SaveType,
+	HRESULT HResult,
+	GUID sessionID,
+	GUID userInputID
+	);
+
+PDFSaveComplete(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid
+	);
+
+PDFSaveRetryAsSaveAs(
+	UINT64 pdfSessionId,
+	INT32 SaveType,
+	HRESULT HResult,
+	GUID sessionID,
+	GUID userInputID
+	);
+
+PDFLoadError(
+	HRESULT pdfLoadErrorResult,
+	GUID userInputID,
+	UINT64 pdfSessionId,
+	GUID sessionID
+	);
+
+GetStorageFileFailed(
+	INT32 FailureHR,
+	UINT64 pdfSessionId,
+	GUID userInputID,
+	GUID sessionID
+	);
+
+PDFLoadStart(
+	UINT8 eTag,
+	GUID userInputID,
+	UINT64 pdfSessionId,
+	GUID AppSessionGuid,
+	UINT32 VirtualTabId,
+	UINT16 VisibilityState,
+	BOOLEAN MultiInstancing,
+	UINT32 TileCacheVariant,
+	UINT16 UrlType,
+	HEXINT64 docPointer,
+	GUID sessionID
+	);
+
+PDFRecoveryFileSavingFailed(
+	UINT64 pdfSessionId,
+	HRESULT FailureCode,
+	GUID sessionID,
+	GUID userInputID
+	);
+
+Save Recovery data complete(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid
+	);
+
+ApplyAnnotationUpdateFailed(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	HRESULT Failure hr
+	);
+
+DehydratePDFComponent(
+	UINT64 pdfSessionId,
+	GUID sessionID,
+	GUID userInputID
+	);
+
+PDFRecoveryFileCreationFailed(
+	UINT64 pdfSessionId,
+	HRESULT FailureCode,
+	GUID sessionID,
+	GUID userInputID
+	);
+
+PdfContextMenuTriggered(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	FLOAT xCoordinate,
+	FLOAT yCoordinate
+	);
+
+PdfLayoutChanged(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	UINT32 pdfLayout
+	);
+
+PDFRecoveryLoadFailed(
+	UINT64 pdfSessionId,
+	GUID sessionID,
+	GUID userInputID
+	);
+
+PdfPasswordProtectionEncountered(
+	UINT64 pdfSessionId,
+	GUID sessionID
+	);
+
+AddRoamingDataUpdateListenerFailed(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	HRESULT Failure HR
+	);
+
+LoadComponentFailure(
+	ANSISTRING failurePoint,
+	HRESULT errorResult,
+	UINT64 pdfSessionId,
+	GUID sessionID,
+	GUID userInputID
+	);
+
+LoadComponentFailure(
+	UNICODESTRING failurePoint,
+	HRESULT errorResult,
+	UINT64 pdfSessionId,
+	GUID sessionID,
+	GUID userInputID
+	);
+
+PageLabelNotPresent(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid
+	);
+
+PageLabelLoaded(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid
+	);
+
+PdfHelper.PdfCopySelectionSuccessful(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid
+	);
+
+TableOfContentsAvailable(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid
+	);
+
+PdfOnComponentLaunched(
+	UINT64 pdfSessionId,
+	GUID sessionID
+	);
+
+TableOfContentsNotAvailable(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid
+	);
+
+PDFLoadSuccess(
+	UINT64 pdfSessionId,
+	GUID userInputID,
+	GUID sessionID
+	);
+
+PdfEmbedToolbarLoadFailed(
+	UINT64 pdfSessionId,
+	GUID sessionID
+	);
+
+PdfEmbedToolbarLoadSuccess(
+	UINT64 pdfSessionId,
+	GUID sessionID
+	);
+
+PDFComponentLaunch(
+	UINT64 pdfSessionId,
+	UINT64 PdfComponentSessionId,
+	GUID userInputID,
+	HRESULT errorResult,
+	GUID sessionID
+	);
+
+PDFComponentTimeout(
+	UINT64 pdfSessionId,
+	BOOLEAN operationComplete,
+	GUID sessionID
+	);
+
+PdfSetRotationFailed(
+	UINT64 pdfSessionId,
+	GUID sessionID,
+	GUID userInputID
+	);
+
+PdfPasswordProtectedStart(
+	UINT64 pdfSessionId,
+	GUID sessionID
+	);
+
+OnBrokerLaunchPdfCompletedCalled(
+	UINT64 pdfSessionId,
+	UINT64 PdfComponentSessionId,
+	GUID userInputID,
+	HRESULT errorResult,
+	GUID sessionID
+	);
+
+PostPdfMessage_InvalidArgs(
+	UINT64 pdfSessionId,
+	GUID sessionID,
+	GUID userInputID
+	);
+
+PdfEmbedToolbarAction(
+	UNICODESTRING ButtonInvoked,
+	UINT64 pdfSessionId,
+	GUID sessionID
+	);
+
+PdfRandomAccessStreamSetToPdfBindStatusCallback(
+	VOID
+	);
+
+IStreamSetToPdfRandomAccessStream(
+	VOID
+	);
+
+TridentStreamCached(
+	VOID
+	);
+
+IStreamSetToPdfRandomAccessStreamFailed(
+	VOID
+	);
+
+InMemoryCachingEnabled(
+	VOID
+	);
+
+DiskCachingEnabled(
+	VOID
+	);
+
+EmbedPdfProgSinkReleaseFailed(
+	UINT64 pdfSessionId,
+	HRESULT errorResult,
+	GUID sessionID,
+	GUID userInputID
+	);
+
+EmbedPdfDownloadFailureHr(
+	UINT64 pdfSessionId,
+	GUID sessionID,
+	GUID userInputID
+	);
+
+EmbedPdfDownloadMimeCheckFailed(
+	UINT64 pdfSessionId,
+	GUID sessionID,
+	GUID userInputID
+	);
+
+EmbedDwnHelperInitializeFailed(
+	HRESULT errorResult,
+	UINT64 pdfSessionId,
+	GUID sessionID,
+	GUID userInputID
+	);
+
+RemoveProcessDependencyProcessIdInvalidRefCount(
+	UINT64 pdfSessionId,
+	HRESULT FailureCode,
+	GUID sessionID,
+	GUID userInputID
+	);
+
+AddProcessDependencyFailure(
+	UINT64 pdfSessionId,
+	HRESULT FailureCode,
+	GUID sessionID,
+	GUID userInputID
+	);
+
+ForCopyEventQueryServiceCalled(
+	BOOLEAN WasDocFocused
+	);
+
+ForCopyEventSetDataCalled(
+	BOOLEAN WasDocFocused
+	);
+
+WebAuthn_WebAuthnAssertionResponse(
+	BINARY AuthenticatorData,
+	BINARY Signature,
+	BINARY UserId
+	);
+
+WebAuthn_WebAuthnAttestationResponse(
+	BINARY AttestationObject,
+	BINARY CredentialId
+	);
+
+WebAuthn_CollectedClientData(
+	UNICODESTRING type,
+	UNICODESTRING origin,
+	BINARY ChallengeData,
+	UNICODESTRING tokenBindingId,
+	BINARY JsonData,
+	HRESULT result
+	);
+
+WebAuthn_TrustedFacetListDownloader(
+	ANSISTRING FunctionName,
+	BOOL32 isRedirectAuthorizedByServer,
+	BOOL32 hasFidoRedirectHeader,
+	BOOL32 hasLocationHeader
+	);
+
+WebAuthn_AuthenticatorSelectionCriteria(
+	BOOL32 RequireResidentKey,
+	UNICODESTRING AuthenticatorAttachment,
+	UNICODESTRING UserVerification,
+	HRESULT result
+	);
+
+WebAuthn_AuthenticationExtensionsClientOutputs(
+	ANSISTRING FunctionName,
+	UNICODESTRING enumName,
+	UINT32 enumValue
+	);
+
+WebAuthn_AppIdExtensionVerifier(
+	ANSISTRING FunctionName,
+	HRESULT result,
+	UINT32 majorVersion,
+	UINT32 minorVersion
+	);
+
+WebAuthn_PublicKeyCredentialUserEntity(
+	UNICODESTRING displayName,
+	BINARY userId,
+	UNICODESTRING name,
+	UNICODESTRING icon
+	);
+
+WebAuthn_RelyingPartyId(
+	UNICODESTRING relyingPartyId,
+	UNICODESTRING effectiveDomain,
+	UNICODESTRING name,
+	UNICODESTRING icon
+	);
+
+WebAuthn_TrustedFacetListDownloader(
+	ANSISTRING FunctionName,
+	BOOL32 blockedDueToRedirectMode,
+	BOOL32 blockedDueToContentSecurityPolicy,
+	BOOL32 cancelledByWebRequest,
+	BOOL32 blockedDueToMixedContent,
+	UINT32 firewallError
+	);
+
+WebAuthn_TrustedFacetListDownloader(
+	ANSISTRING FunctionName,
+	HRESULT result,
+	UINT32 responseStatus
+	);
+
+WebAuthn_Progress(
+	ANSISTRING FunctionName,
+	HRESULT result,
+	UNICODESTRING message
+	);
+
+WebAuthn_Progress(
+	ANSISTRING FunctionName,
+	HRESULT result
+	);
+
+WebAuthn_AppIdExtensionVerifier(
+	ANSISTRING FunctionName,
+	HRESULT result,
+	UNICODESTRING jsonResponse,
+	UINT32 redirectCount
+	);
+
+WebAuthn_AuthenticationExtensionsClientInputs(
+	ANSISTRING FunctionName,
+	UNICODESTRING message
+	);
+
+EDP_PastePromptGrantedAccess(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	BOOLEAN AccessGranted
+	);
+
+Streams_ByteLengthQueuingStrategyAPICall(
+	ANSISTRING apiName
+	);
+
+Streams_JavascriptQueuingStrategyConstructor(
+	INT32 HRESULT
+	);
+
+Streams_CountQueuingStrategyAPICall(
+	ANSISTRING apiName
+	);
+
+Streams_ReadableStreamInstanceAPICall(
+	ANSISTRING apiName
+	);
+
+Streams_ReadableStreamReaderAPICall(
+	ANSISTRING apiName
+	);
+
+Streams_WritableStreamConstructor(
+	INT32 HRESULT
+	);
+
+Streams_WritableStreamInstanceAPICall(
+	ANSISTRING apiName
+	);
+
+Streams_WritableStreamDefaultControllerAPICall(
+	ANSISTRING apiName
+	);
+
+Streams_WritableStreamWriterAPICall(
+	ANSISTRING apiName
+	);
+
+PaymentRequestCreation(
+	HRESULT hresult,
+	UINT32 createDurationUs,
+	GUID sessionID,
+	GUID userInputID
+	);
+
+PaymentRequestPreShow(
+	HRESULT hresult,
+	GUID sessionID,
+	GUID userInputID
+	);
+
+PaymentRequestShow(
+	HRESULT hresult,
+	UINT32 showDurationUs,
+	GUID sessionID,
+	GUID userInputID
+	);
+
+GchReattach(
+	UNICODESTRING activationArgs,
+	UNICODESTRING componentFactoryActivatableClassId,
+	UNICODESTRING applicationUserModelId,
+	UNICODESTRING componentObjectModelActivatableClass,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	GUID telemetryElementId,
+	GUID lastComponentId
+	);
+
+GchAttach(
+	UINT32 hResult,
+	UINT32 parametersCount,
+	UNICODESTRING activationArgs,
+	UNICODESTRING componentFactoryActivatableClassId,
+	UNICODESTRING applicationUserModelId,
+	UNICODESTRING componentObjectModelActivatableClass,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	GUID telemetryElementId,
+	GUID lastComponentId
+	);
+
+GchDomEvent(
+	UNICODESTRING domEventName,
+	UNICODESTRING domEventDetails,
+	UNICODESTRING domEventError,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	GUID telemetryElementId,
+	GUID lastComponentId
+	);
+
+GchDetach(
+	BOOLEAN UTCReplace_AppSessionGuid,
+	GUID telemetryElementId,
+	GUID lastComponentId
+	);
+
+GchAttachingInternal(
+	UINT32 hResult,
+	UINT32 errorContext,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	GUID telemetryElementId
+	);
+
+CWebSocketUnblockPLMSuspension(
+	UNICODESTRING NormalizedUri,
+	HEXINT64 Instance
+	);
+
+CWebSocketBlockPLMSuspension(
+	UNICODESTRING NormalizedUri,
+	HEXINT64 Instance
+	);
+
+VideoInputDeviceInit(
+	HRESULT hresult,
+	UNICODESTRING name,
+	UNICODESTRING id
+	);
+
+EdgeMFCreateDeviceSource(
+	HRESULT ErrorCode,
+	UNICODESTRING Label,
+	UNICODESTRING Kind
+	);
+
+ActivityStoppedAutomatically(
+	VOID
+	);
+
+ScreenCaptureShutdown(
+	VOID
+	);
+
+ScreenCaptureInitiated(
+	VOID
+	);
+
+ScreenCaptureConsentResponse(
+	UNICODESTRING ConsentResponse
+	);
+
+GetDisplayMediaError(
+	HRESULT Error,
+	UNICODESTRING ErrorName
+	);
+
+GetDisplayMediaSuccess(
+	VOID
+	);
+
+GetUserMediaError(
+	UNICODESTRING error
+	);
+
+GetUserMediaSuccess(
+	VOID
+	);
+
+MediaCaptureSplitterReset(
+	UNICODESTRING deviceLabel,
+	UINT32 samplesReceived
+	);
+
+ScreenCaptureWinRTProviderError(
+	HRESULT Error
+	);
+
+ActivityStoppedAutomatically(
+	VOID
+	);
+
+TakePendingPlayPromises(
+	UINT64 Count,
+	BOOL32 AutoplayDeferred
+	);
+
+QueuePendingMediaPlayPromise(
+	HEXINT64 PromisePtr
+	);
+
+RejectTakenMediaPlayPromises(
+	UINT64 Count,
+	UINT64 PendingCount,
+	HRESULT Exception
+	);
+
+ResolveTakenMediaPlayPromises(
+	UINT64 Count,
+	UINT64 PendingCount
+	);
+
+MediaCheckAutoplayAttempt(
+	INT32 AutoplayAllowed,
+	BOOL32 AutoplayAttempted,
+	BOOL32 AutoplayDeferred,
+	UINT64 PendingPromiseCount
+	);
+
+MediaPauseCall(
+	UINT64 PendingPromises,
+	UINT64 PreviouslyTakenPromises,
+	BOOL32 AutoplayDeferred
+	);
+
+MediaAttemptToPlay(
+	BOOL32 AutoplayDeferred
+	);
+
+MediaPlayAttemptDeferred(
+	VOID
+	);
+
+MediaPlayAttemptNotSupported(
+	VOID
+	);
+
+MediaEngineExtensionDestroyed(
+	VOID
+	);
+
+MediaElementIdChange(
+	UNICODESTRING newId
+	);
+
+MediaError(
+	UNICODESTRING currentMediaSource,
+	UNICODESTRING currentSrcAttribute,
+	BOOL32 srcAttrIsEmptyString,
+	UNICODESTRING mimeType,
+	UINT16 code,
+	HEXINT32 extendedCode
+	);
+
+MediaPlayNotAllowed(
+	UINT64 PromiseCount,
+	INT32 AutoplayBehavior,
+	BOOL32 AutoplayAttribute,
+	BOOL32 IsEffectivelyMuted,
+	BOOL32 HasMetadata,
+	BOOL32 HasEnabledAudio,
+	BOOL32 DisabledViaHostBehavior,
+	BOOL32 UserInteractedWithDocument,
+	BOOL32 IsUserInitiated,
+	BOOL32 HasMediaCaptureSource
+	);
+
+MediaElementPlaying(
+	INT32 AutoplayBehavior,
+	BOOL32 AutoplayAttribute,
+	BOOL32 IsEffectivelyMuted,
+	BOOL32 HasEnabledAudio,
+	BOOL32 DisabledViaHostBehavior,
+	BOOL32 UserInteractedWithDocument,
+	BOOL32 IsUserInitiated,
+	BOOL32 HasMediaCaptureSource,
+	GUID sessionID,
+	GUID userInputID
+	);
+
+UnknownMediaError(
+	HEXINT32 hresult
+	);
+
+MediaElementEnded(
+	GUID sessionID,
+	GUID userInputID
+	);
+
+MediaElementPause(
+	GUID sessionID,
+	GUID userInputID
+	);
+
+MediaSourceExtensionGetSecurityUriDiagnosticInfo(
+	HRESULT hresult,
+	UNICODESTRING refererUrl
+	);
+
+MediaSourceExtensionGetWebUriDataFromHashMapDiagnosticInfo(
+	HRESULT hresult,
+	UNICODESTRING bstrUrl,
+	UNICODESTRING securityUri
+	);
+
+MediaSourceExtensionTypeOfUriDiagnosticInfo(
+	ANSISTRING context,
+	UINT32 uriScheme
+	);
+
+MediaSourceExtensionDiagnosticInfo(
+	HRESULT hresult,
+	ANSISTRING context
+	);
+
+MediaSourceExtensionGetMarshaledWebUriDataDiagnosticInfo(
+	HRESULT hresult,
+	UNICODESTRING bstrUrl
+	);
+
+MediaEngineExtensionInitialized(
+	VOID
+	);
+
+MediaSuspensionDiagnosticInfo(
+	BOOLEAN Whether media is currently paused for video suspension.,
+	BOOLEAN Whether media is currently paused for audio-only suspension.,
+	ANSISTRING context
+	);
+
+MediaElementInitialized(
+	UNICODESTRING tagName
+	);
+
+MediaElementDestroyed(
+	VOID
+	);
+
+MediaOnPropertyChangePreload(
+	VOID
+	);
+
+CVideoElement_RenderStateChangeCallback(
+	VOID
+	);
+
+CVideoElement_RenderStateChangeCallback(
+	BOOLEAN releaseOffscreenBuffers,
+	BOOLEAN stopAudioOnlyMode,
+	BOOLEAN isAudioOnlyMode
+	);
+
+VideoResolutionAndDisplayOrientationMismatch(
+	INT32 currentOrientation,
+	UINT64 videoWidth,
+	UINT64 videoHeight
+	);
+
+CVideoPresenterManager_SwitchToPresenter(
+	VOID
+	);
+
+CVideoPresenterManagerDestroyed(
+	VOID
+	);
+
+CVideoPresenterManager(
+	ANSISTRING tagName
+	);
+
+StateManagerNotifyViewCreationCompleted(
+	INT32 ViewState,
+	BOOLEAN IsCoreWindowNull
+	);
+
+StateChangeToExitPresentDestroyViewPending(
+	INT32 ViewState
+	);
+
+StateManagerExitPresentInternalReleaseClient(
+	INT32 ViewState
+	);
+
+StateManagerResetInternal(
+	BOOLEAN HasExternalDisplay,
+	BOOLEAN IsCurrentlyPresenting
+	);
+
+StateManagerNotifySpatialInteractionManagerReceived(
+	INT32 ViewState
+	);
+
+StateNotifyD3DDeviceReset(
+	BOOLEAN IgnoreNextDeviceReset,
+	BOOLEAN IsCurrentlyPresenting
+	);
+
+StateManagerNotifyViewActivationCompleted(
+	UINT32 WindowInstanceId,
+	INT32 ViewState,
+	BOOLEAN IsInputDelegated,
+	BOOLEAN IsSuccess
+	);
+
+StateManagerNotifyViewDestroyCompleted(
+	INT32 ViewState,
+	BOOLEAN IsPresentingClientNull,
+	BOOLEAN IsInputDelegated
+	);
+
+StateManagerExitPresentInternal(
+	INT32 ViewState,
+	BOOLEAN IsPresentingClientNull,
+	BOOLEAN IsClientNull,
+	BOOLEAN IsDeferralResponse
+	);
+
+StateChangeToExitPresentDestroyView(
+	INT32 ViewState,
+	BOOLEAN IsCachedCoreWindowNull
+	);
+
+StateManagerImmersiveViewResponse(
+	BOOLEAN isAllowed
+	);
+
+StateManagerCreateSpatialInteractionManagerFailed(
+	VOID
+	);
+
+ActivityStoppedAutomatically(
+	VOID
+	);
+
+HoloSpaceAvailabilityChanged(
+	BOOLEAN IsDisplayNull,
+	BOOLEAN IsDisplayCurrent,
+	BOOLEAN IsHolographicDisplayNull
+	);
+
+HoloSpaceCheckDisplayAdapter(
+	BOOLEAN EdgeAdapterIsHardware,
+	BOOLEAN DispSystemAdapterMatchesHolographicDisplay
+	);
+
+HolographicSpacePumpingStart(
+	BOOLEAN IsRootMarkup
+	);
+
+HolographicSpacePumpingStop(
+	BOOLEAN IsShutdown
+	);
+
+HoloSpaceAvailabilityChangedDisplayInitialized(
+	VOID
+	);
+
+HoloSpaceNotifyRequestPresentCompleted(
+	BOOLEAN IsCoreWindowNull,
+	BOOLEAN IsDisplayNull
+	);
+
+HoloSpaceWaitForFrameFail(
+	VOID
+	);
+
+HoloSpaceFrameStarted(
+	DOUBLE WaitForHolographicFrameToStart,
+	DOUBLE FrameTimeStamp
+	);
+
+HoloSpacePresentCurrentFrame(
+	DOUBLE FrameTimeStamp
+	);
+
+HoloSpaceNotifyDestroyCompleted(
+	BOOLEAN IsExitPresentPromiseNull,
+	BOOLEAN IsOutstandingRequestPresentDisplayNull
+	);
+
+HoloSpaceNotifyRequestPresentCompletedSetDevice(
+	BOOLEAN SetDeviceSucceeded
+	);
+
+HoloSpaceNotifyRequestPresentCompletedRejectStopPresent(
+	VOID
+	);
+
+HoloSpaceNotifyInputDelegated(
+	BOOLEAN Delegated,
+	BOOLEAN IsDisplayNull
+	);
+
+HoloSpaceCreateNextFrame(
+	VOID
+	);
+
+HoloSpaceIsSupported(
+	UINT8 IsWebVREnabled,
+	UINT8 IsHolographicSupported
+	);
+
+VRDisplaySubmitFrameEnd(
+	DOUBLE GetRenderingParametersElapsed,
+	DOUBLE SubmitFrameElapsed
+	);
+
+VRDisplaySubmitFrameBegin(
+	VOID
+	);
+
+VRDisplayRequestPresentSecurityAccessDenied(
+	VOID
+	);
+
+VRDisplayRequestPresentDisconnected(
+	VOID
+	);
+
+VRDisplayRequestPresent(
+	VOID
+	);
+
+VRDisplayRequestPresentNotUserInitiated(
+	VOID
+	);
+
+VRDisplayRequestPresentNotGreaterMaxLayers(
+	VOID
+	);
+
+VRDisplaySetNotPresenting(
+	BOOLEAN isConnected
+	);
+
+VRDisplayRejectStopPresent(
+	BOOLEAN IsPumping
+	);
+
+VRDisplayCompleteOutstandingRequestPresentPromise(
+	BOOLEAN IsConnected
+	);
+
+VRDisplayExitPresent(
+	BOOLEAN isPresenting
+	);
+
+VRDisplayFireRAFCallbacks(
+	VOID
+	);
+
+VRDisplayCancelAnimationFrame(
+	VOID
+	);
+
+VRDisplayFireRAFCallbacks(
+	DOUBLE FrameTimestamp
+	);
+
+VRDisplayGetFrameData(
+	VOID
+	);
+
+VRDisplayRequestAnimationFrame(
+	VOID
+	);
+
+UpdateFrameDataAttachedReferenceLost(
+	VOID
+	);
+
+UpdateFrameDataStationaryReferenceLost(
+	VOID
+	);
+
+UpdateFrameDataStationaryReferenceRecovered(
+	UINT32 FramesLost
+	);
+
+UpdateFrameDataAttachedToStationaryNull(
+	VOID
+	);
+
+XRPumpingStop(
+	BOOLEAN IsShutdown
+	);
+
+XRPumpingStart(
+	BOOLEAN IsRootMarkup
+	);
+
+XRNotifyDestroyCompleted(
+	VOID
+	);
+
+XRSpaceWaitForFrameFail(
+	VOID
+	);
+
+XRSpaceCreateNextFrame(
+	VOID
+	);
+
+XRCheckDisplayAdapter(
+	BOOLEAN EdgeAdapterIsHardware,
+	BOOLEAN DispSystemAdapterMatchesHolographicDisplay
+	);
+
+XRDeviceAvailabilityChanged(
+	BOOLEAN IsDisplayNull,
+	BOOLEAN IsHolographicDisplayNull
+	);
+
+XRNotifyRequestPresentCompleted(
+	BOOLEAN IsCoreWindowNull,
+	BOOLEAN IsDisplayNull
+	);
+
+XRNotifyInputDelegated(
+	BOOLEAN Delegated,
+	BOOLEAN IsDeviceNull
+	);
+
+XRNotifyRequestPresentCompletedRejectStopPresent(
+	VOID
+	);
+
+XRNotifyRequestPresentCompletedSetDevice(
+	BOOLEAN SetDeviceSucceeded
+	);
+
+XRDeviceRequestSession(
+	VOID
+	);
+
+XRDeviceSupportsSession(
+	VOID
+	);
+
+XRDeviceCompleteOutstandingRequestSessionPromise(
+	VOID
+	);
+
+XRDeviceSetNotPresenting(
+	VOID
+	);
+
+XRDeviceRejectStopPresent(
+	BOOLEAN IsPumping
+	);
+
+XRSessionCancelAnimationFrame(
+	VOID
+	);
+
+XRSessionRequestAnimationFrame(
+	VOID
+	);
+
+XRSessionFireRAFCallbacks(
+	DOUBLE FrameTimestamp
+	);
+
+ORTCFinalReceiverStats(
+	UNICODESTRING codecName,
+	DOUBLE jitter,
+	DOUBLE fractionLoss,
+	UINT32 apiCallCounter,
+	UINT32 frameWidth,
+	UINT32 frameHeight,
+	DOUBLE framesPerSecond,
+	UINT32 framesSent,
+	UINT32 framesReceived,
+	UINT32 framesDropped,
+	UINT32 framesCorrupted
+	);
+
+OrtcSendError(
+	HRESULT W3CError,
+	HRESULT SenderBrokerError,
+	GUID CaptureActivity
+	);
+
+OrtcRtpSenderInitialized(
+	VOID
+	);
+
+ORTCFinalSenderStats(
+	UNICODESTRING codecName,
+	DOUBLE roundTripTime,
+	UINT32 apiCallCounter,
+	UINT32 frameWidth,
+	UINT32 frameHeight,
+	DOUBLE framesPerSecond,
+	UINT32 framesSent,
+	UINT32 framesReceived,
+	UINT32 framesDropped,
+	UINT32 framesCorrupted,
+	GUID CaptureActivity
+	);
+
+OrtcScreenSharingStreamCreated(
+	GUID CaptureActivity
+	);
+
+OrtcRtpSenderShutdown(
+	VOID
+	);
+
+OrtcSendParameters(
+	INT32 DegradationPreference,
+	GUID CaptureActivity
+	);
+
+RtcError(
+	COUNTEDSTRING component,
+	HRESULT hresult
+	);
+
+WebRTCSetRemoteDescription(
+	HRESULT hresult
+	);
+
+WebRTCAddIceCandidate(
+	VOID
+	);
+
+WebRTCSetLocalDescription(
+	HRESULT hresult
+	);
+
+WebRTCPeerConnectionShutdown(
+	VOID
+	);
+
+WebRTCCreateAnswer(
+	HRESULT hresult
+	);
+
+WebRTCScreenSharingStreamAdded(
+	VOID
+	);
+
+WebRTCCreateOffer(
+	HRESULT hresult
+	);
+
+WebRTCIceConnectionStateChange(
+	UNICODESTRING iceConnectionStateName
+	);
+
+WebRTCPeerConnectionInitialized(
+	VOID
+	);
+
+WebRTCIceCandidatesCounter(
+	UINT32 numberOfIceCandidates
+	);
+
+WebRTCStatsReport(
+	UNICODESTRING outAudioMediaType,
+	UNICODESTRING outAudioCodec,
+	UINT32 outAudioSsrc,
+	DOUBLE outAudioRoundTripTime,
+	UINT32 outAudioPacketsSent,
+	UNICODESTRING outVideoMediaType,
+	UNICODESTRING outVideoCodec,
+	UINT32 outVideoSsrc,
+	DOUBLE outVideoRoundTripTime,
+	UINT32 outVideoPacketsSent,
+	UNICODESTRING inAudioMediaType,
+	UNICODESTRING inAudioCodec,
+	UINT32 inAudioSsrc,
+	DOUBLE inAudioJitter,
+	DOUBLE inAudioFractionLoss,
+	UINT32 inAudioPacketsReceived,
+	UINT32 inAudioPacketsLost,
+	UNICODESTRING inVideoMediaType,
+	UNICODESTRING inVideoCodec,
+	UINT32 inVideoSsrc,
+	DOUBLE inVideoJitter,
+	DOUBLE inVideoFractionLoss,
+	UINT32 inVideoPacketsReceived,
+	UINT32 inVideoPacketsLost,
+	UINT32 outFramesDropped,
+	UINT32 outFramesCorrupted,
+	DOUBLE outAudioLevel,
+	UINT32 outFrameWidth,
+	UINT32 outFrameHeight,
+	UINT32 inFramesDropped,
+	UINT32 inFramesCorrupted,
+	UINT32 inFrameWidth,
+	UINT32 inFrameHeight,
+	DOUBLE inAudioLevel
+	);
+
+DedicatedWorker(
+	ANSISTRING State,
+	UINT32 WorkerId
+	);
+
+WorkerGlobalScopeThread(
+	ANSISTRING State,
+	UINT32 WorkerId,
+	UNICODESTRING ScriptUrl
+	);
+
+ServiceWorkerClientContext-CreationFailed(
+	UNICODESTRING ClientUrl,
+	BOOLEAN HasUniqueOrigin,
+	ANSISTRING FeatureStatus,
+	ANSISTRING MarkupSupportState,
+	ANSISTRING SecureContext,
+	HEXINT64 CDoc,
+	BOOLEAN IsPopupDoc,
+	BOOLEAN IsHostBehaviorEnabled,
+	BOOLEAN IsAllowedByCookiePolicy
+	);
+
+ServiceWorkerClientContext-Operation(
+	ANSISTRING Operation,
+	UNICODESTRING CreationUrl,
+	GUID Id,
+	ANSISTRING FrameType,
+	GUID ControllerVersion
+	);
+
+ServiceWorkerContext-SetRegistrationState(
+	ANSISTRING UpdateType,
+	GUID ContextId,
+	UNICODESTRING ScopeUrl,
+	GUID ServiceWorkerVersion,
+	UNICODESTRING NewState,
+	HEXINT64 JavaScriptRegistration,
+	HEXINT64 JavaScriptWorker
+	);
+
+ServiceWorkerContext-FetchEvent(
+	ANSISTRING EventType,
+	GUID ServiceWorkerVersion,
+	GUID ClientId,
+	UNICODESTRING TargetUrl,
+	UNICODESTRING ReferrerUrl,
+	UNICODESTRING Headers,
+	UNICODESTRING Integrity,
+	UNICODESTRING CustomMethod,
+	ANSISTRING Method,
+	ANSISTRING Type,
+	ANSISTRING Destination,
+	ANSISTRING ReferrerPolicy,
+	ANSISTRING Mode,
+	ANSISTRING Credentials,
+	ANSISTRING Cache,
+	ANSISTRING RedirectMode,
+	BOOLEAN KeepAlive,
+	BOOLEAN IsUnsafeRequest,
+	BOOLEAN UseURLCredentials,
+	BOOLEAN UseCORSPreflight,
+	GUID ReservedClientId,
+	GUID TargetClientId,
+	UINT32 FetchId
+	);
+
+ServiceWorkerExecutionContext-ExtendableEventOperation(
+	ANSISTRING Operation,
+	GUID ServiceWorkerVersion,
+	UNICODESTRING EventName,
+	UINT32 EventId,
+	BOOLEAN HasExtendLifetimePromises,
+	BOOLEAN HasExceededTimeLimit,
+	BOOLEAN IsAborted,
+	HRESULT EventErrorCode
+	);
+
+ServiceWorkerContext-FetchEventResponse(
+	ANSISTRING responseType,
+	GUID ServiceWorkerVersion,
+	GUID ClientId,
+	BOOLEAN IsNull,
+	UINT32 StatusCode,
+	UNICODESTRING StatusText,
+	UNICODESTRING Headers,
+	UNICODESTRING CorsExposedHeaderNames,
+	BOOLEAN DidRedirect,
+	UNICODESTRING TargetUrl,
+	ANSISTRING Type,
+	UINT32 FetchId
+	);
+
+ServiceWorkerExecutionContext-ScriptOperation(
+	ANSISTRING Operation,
+	GUID ServiceWorkerVersion,
+	UNICODESTRING ScriptUrl,
+	HRESULT ErrorCode
+	);
+
+PushManagerRejectSubscriptionCall(
+	GUID RegistrationId,
+	HRESULT ErrorCode,
+	BOOL32 HasApplicationServerKey,
+	BOOL32 IsUserVisibleOnly
+	);
+
+ServiceWorkerHelperScheduleJob(
+	UNICODESTRING ScopeUrl,
+	UNICODESTRING ScriptUrl,
+	GUID ContextId,
+	UNICODESTRING JobType,
+	GUID ActivityId
+	);
+
+ServiceWorkerInfo(
+	GUID Version
+	);
+
+ServiceWorkerGlobalScopeReportScriptError(
+	BOOL32 IsExtendableEventScriptRunning,
+	INT32 IsErrorHandled,
+	UNICODESTRING Url,
+	UNICODESTRING Description,
+	UINT32 Line,
+	UINT32 Column
+	);
+
+ServiceWorkerSetController(
+	GUID ServiceWorkerVersion
+	);
+
+ExtendableEventPromiseRejected(
+	UNICODESTRING EventName,
+	UNICODESTRING PropertyName,
+	UNICODESTRING RejectionString,
+	UNICODESTRING DomExceptionMessage,
+	INT32 DomExceptionCode
+	);
+
+IDBRPCServerConnectionFailureViaAPICalls(
+	HRESULT hresult,
+	ANSISTRING functionName
+	);
+
+IndexedDB_and_AppCache_AppQuota_DeleteAllDatabases-Failure(
+	HRESULT hr,
+	ANSISTRING description
+	);
+
+WebStorageDistributeEvent(
+	UNICODESTRING url,
+	UNICODESTRING key,
+	BOOLEAN didDistribute
+	);
+
+WebStorageRemoveItem(
+	HEXINT64 The address corresponding to the Storage entity creating onStorage events.,
+	COUNTEDSTRING Key,
+	COUNTEDSTRING OldValue
+	);
+
+WebStorageClear(
+	HEXINT64 The address corresponding to the Storage entity creating onStorage events.
+	);
+
+WebStorageUrlReference(
+	COUNTEDSTRING SourceUrl,
+	HEXINT64 The address corresponding to the Storage entity creating onStorage events.
+	);
+
+WebStorageSetItem(
+	HEXINT64 The address corresponding to the Storage entity creating onStorage events.,
+	COUNTEDSTRING Key,
+	COUNTEDSTRING OldValue,
+	COUNTEDSTRING NewValue
+	);
+
+CStorageInitPersistentStorage(
+	HRESULT hresult,
+	HRESULT hresultEnsureCacheContainer,
+	INT64 durationMicroseconds
+	);
+
+WebStorageAsyncInitFailed(
+	HEXINT64 this,
+	HRESULT result
+	);
+
+WebStorageDropItemFromCache(
+	UNICODESTRING key,
+	UINT64 previousCacheSyncTime,
+	UINT64 entryTime
+	);
+
+WebStorageDropItemFromDeleteCache(
+	UNICODESTRING key,
+	UINT64 previousCacheSyncTime,
+	UINT64 leftEntryTime,
+	UINT64 rightEntryTime
+	);
+
+CStorageDeleteEdpStorage(
+	HRESULT hresult
+	);
+
+FormSubmitNavigationStart(
+	INT32 isSpartan,
+	INT32 isEdgeHtml,
+	GUID sessionID,
+	GUID userInputID
+	);
+
+ReadingModeArticleLengthCalculated(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	HRESULT result,
+	UINT32 durationMilliseconds
+	);
+
+CSpellDocument::GetText - start position and end positions are invalid(
+	VOID
+	);
+
+CSpellDocument::GetTSFCPFromSpellEnginePositions(
+	VOID
+	);
+
+CSpellDocument::GetText - end position is inside an opaque element(
+	VOID
+	);
+
+CSpellDocument::GetText - start position is inside an opaque element(
+	VOID
+	);
+
+CSpellDocument::GetText - start position and end positions are not within the same editable scope(
+	VOID
+	);
+
+CSpellDocument::GetText - start position and end positions are not within the same markup(
+	VOID
+	);
+
+Extensions_ApiTracker(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	GUID inventoryListMapping,
+	BOOLEAN isContentScript,
+	BOOLEAN isSucceeded,
+	UNICODESTRING ErrorString,
+	BOOLEAN isSupported,
+	UINT32 extensionShortId,
+	UNICODESTRING storeExtensionId,
+	UNICODESTRING apiName
+	);
+
+Extensions_JsTraceLog(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	UNICODESTRING extensionId,
+	UNICODESTRING log,
+	UNICODESTRING data
+	);
+
+Extensions_JavascriptErrorsTracker(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	GUID inventoryListMapping,
+	BOOLEAN isContentScript,
+	UNICODESTRING ErrorType,
+	UNICODESTRING ErrorString,
+	UINT32 extensionShortId,
+	UNICODESTRING storeExtensionId
+	);
+
+CResProtocolStart(
+	UNICODESTRING DownloadUri
+	);
+
+CWebPlatform::OnTranslateAccelerator(
+	UINT32 Message
+	);
+
+UrlConstructor(
+	INT32 HRESULT,
+	UNICODESTRING urlString,
+	UNICODESTRING baseString,
+	UINT32 urlLength
+	);
+
+UrlInstanceAPICall(
+	INT32 HRESULT,
+	ANSISTRING apiName
+	);
+
+ParseFaviconCompleted(
+	HRESULT finalHresult,
+	INT32 faviconFoundAtLinkTagIndex
+	);
+
+CWebPlatformSnippet::SetDescription(
+	UNICODESTRING description
+	);
+
+CWebPlatformSnippet::SetTitle(
+	UNICODESTRING title
+	);
+
+CWebPlatformSnippet::InitWithExtractInfo(
+	VOID
+	);
+
+CWebPlatformSnippet::SetUrl(
+	UNICODESTRING url
+	);
+
+CWebPlatformSnippet::ExtractSnippet(
+	INT32 elementTag
+	);
+
+CWebPlatformSnippet::ExtractSnippet(
+	VOID
+	);
+
+CWebPlatformSnippet::ParsePublisherDescription(
+	VOID
+	);
+
+CWebPlatformSnippet::ParseFavicon(
+	VOID
+	);
+
+CWebPlatformSnippet::ParsePublisherImage(
+	VOID
+	);
+
+CWebPlatformSnippet::ExtractPublisherMetaTags(
+	VOID
+	);
+
+CWebPlatformSnippet::GetLinkElementData(
+	INT32 elementNodeTag,
+	BOOL32 typeValueRequested,
+	BOOL32 titleValueRequested,
+	BOOL32 hrefValueRequested
+	);
+
+CWebPlatformSnippet::ParsePublisherTitle(
+	VOID
+	);
+
+ExtractPublisherMetaTagsCompleted(
+	HRESULT hrParseTitle,
+	HRESULT hrParseDescription,
+	HRESULT hrParseImage,
+	HRESULT hrParseFavicon
+	);
+
+CWebPlatformSnippet::GetAttrValueFromElementNode(
+	INT32 elementNodeTag,
+	UNICODESTRING attributeName
+	);
+
+CWebPlatformSnippet::MatchRelIconValue(
+	UNICODESTRING candidateRelValue,
+	UNICODESTRING relValueSubstring
+	);
+
+CWebPlatformSnippet::GetLinkElementTitle(
+	INT32 elementNodeTag
+	);
+
+CWebPlatformSnippet::GetMetaElementContent(
+	INT32 elementNodeTag
+	);
+
+CWebPlatformSnippet::MatchRelValue(
+	UNICODESTRING candidateRelValue,
+	UNICODESTRING relValueSubstring
+	);
+
+CWebPlatformSnippet::SetDominantImageUrl(
+	UNICODESTRING imageUrl
+	);
+
+CWebPlatformSnippetObject::GetDataAsJsonString(
+	VOID
+	);
+
+CWebPlatformSnippetObject::SetUrl(
+	UNICODESTRING url
+	);
+
+CWebPlatformSnippetObject::SetTitle(
+	UNICODESTRING title
+	);
+
+GetDominantImageUrlCalled(
+	HRESULT Hresult,
+	UNICODESTRING dominantImageUrl
+	);
+
+CWebPlatformSnippetObject::GetDominantImageUrl(
+	VOID
+	);
+
+GetFaviconUrlCalled(
+	HRESULT Hresult,
+	UNICODESTRING faviconUrl
+	);
+
+CWebPlatformSnippetObject::GetFaviconUrl(
+	VOID
+	);
+
+GetDescriptionCalled(
+	HRESULT Hresult,
+	UNICODESTRING description
+	);
+
+CWebPlatformSnippetObject::GetDescription(
+	VOID
+	);
+
+GetDomainCalled(
+	HRESULT Hresult,
+	UNICODESTRING domain
+	);
+
+CWebPlatformSnippetObject::GetDomain(
+	VOID
+	);
+
+GetUrlCalled(
+	HRESULT Hresult,
+	UNICODESTRING url
+	);
+
+CWebPlatformSnippetObject::GetUrl(
+	VOID
+	);
+
+GetTitleCalled(
+	HRESULT Hresult,
+	UNICODESTRING title
+	);
+
+CWebPlatformSnippetObject::GetTitle(
+	VOID
+	);
+
+CWebPlatformSnippetObject::SetDomain(
+	UNICODESTRING domain
+	);
+
+CWebPlatformSnippetObject::SetDescription(
+	UNICODESTRING description
+	);
+
+CWebPlatformSnippetObject::SetFaviconUrl(
+	UNICODESTRING faviconUrl
+	);
+
+CWebPlatformSnippetObject::SetDominantImageUrl(
+	UNICODESTRING imageUrl
+	);
+
+WebDriverExecuteCommand(
+	UNICODESTRING Method,
+	UNICODESTRING Path,
+	UNICODESTRING Parameters,
+	UINT32 ResponseCode
+	);
+
+WebDriverExecuteCommandAsync(
+	UNICODESTRING Method,
+	UNICODESTRING Path,
+	UNICODESTRING Parameters,
+	UINT32 CorrelationId,
+	UINT32 ResponseCode
+	);
+
+CDoc::DestroySelection(
+	VOID
+	);
+
+Edit::Selection::SetBoundaryPositions - setting active selection(
+	INT32 selectionType,
+	BOOL32 scrollIntoView,
+	BOOL32 fDomCall,
+	BOOL32 selectionDirectionBackward
+	);
+
+Edit::Selection::SetBoundaryPositionsWithHighlight: highlightSegment not positioned!(
+	VOID
+	);
+
+Edit::Selection::SetBoundaryPositions - setting inactive selection(
+	INT32 selectionType,
+	BOOL32 scrollIntoView,
+	BOOL32 fDomCall,
+	BOOL32 selectionDirectionBackward
+	);
+
+Edit::FireBeforeExecCommandEvent - calling GetCHTMLEditor(FALSE)(
+	VOID
+	);
+
+Edit::FireExecCommandEvent - calling GetCHTMLEditor(FALSE)(
+	VOID
+	);
+
+Edit::GetSelectionSegment(
+	VOID
+	);
+
+SelmanInitializeCalled(
+	VOID
+	);
+
+ActiveSelectionWindowMarkupNotConnectedToPrimaryMarkup(
+	VOID
+	);
+
+CDoc::Select(
+	VOID
+	);
+
+CDoc::IsPointInSelection(
+	VOID
+	);
+
+CDoc::GetSelectionType(
+	VOID
+	);
+
+CDoc::EmptySelection(
+	VOID
+	);
+
+CHTMLEditor::FindCommonElement(
+	BOOL32 fIgnorePhrase,
+	BOOL32 fStayInMarkup
+	);
+
+FindCommonElementCalled(
+	HRESULT hrOldCompareStartEnd,
+	HRESULT hrStartPointerCurrentScope,
+	HRESULT hrStartPointerCurrentScopeOrMaster,
+	HRESULT hrLeftPointerCurrentScope,
+	HRESULT hrCurrentPointerCreateMarkupPointer,
+	HRESULT hrCurrentPointerMoveAdjacentToElement,
+	HRESULT hrOldCompareCurrentRightIgnorePhrase,
+	HRESULT hrCurrentPointerCurrentScopeOrMasterIgnorePhrase,
+	HRESULT hrOldCompareCurrentRightNoIgnorePhrase,
+	HRESULT hrCurrentPointerCurrentScopeOrMasterNoIgnorePhrase,
+	HRESULT hrParentElement,
+	INT32 iPosition
+	);
+
+CHTMLEditor::PostHandleEvent(
+	INT32 evt.GetType()
+	);
+
+CHTMLEditor::GetCommandTarget - selection in window is invalid(
+	HRESULT HRESULT,
+	HEXINT64 pMarkup,
+	HEXINT64 window
+	);
+
+CHTMLEditor::GetCommandTarget - window is nullptr(
+	HRESULT HRESULT,
+	HEXINT64 pMarkup
+	);
+
+CHTMLEditor::PreHandleEvent(
+	INT32 evt.GetType()
+	);
+
+CreateHTMLEditor - creation succeeded(
+	HEXINT64 CHTMLEditor,
+	INT32 CHTMLEditorRefCount
+	);
+
+CEditTracker::EmptySelection(
+	VOID
+	);
+
+CSelectionManager::GetTrackerType(
+	INT32 trackerType
+	);
+
+CSelectionManager::EnsureDefaultTrackerPassive(
+	VOID
+	);
+
+CSelectionManager::SetEditableElement - EditableElement Changed(
+	INT32 OldEditableElementTag,
+	INT32 NewEditableElementTag
+	);
+
+CSelectionManager::StartTouchTrackerFromCurrentSelection(
+	HRESULT HRESULT
+	);
+
+CSelectionManager::DeleteRebubble(
+	VOID
+	);
+
+CSelectionManager::IsUnselectable(
+	BOOL32 fIsUnselectable
+	);
+
+CSelectionManager::MakeEditContextElementCurrent(
+	VOID
+	);
+
+CSelectionManager::HandleEvent(
+	INT32 EventType
+	);
+
+CSelectionManager::ShouldChangeTracker(
+	INT32 pEvent->GetType(),
+	INT32 eTrackerType,
+	INT32 eResult [SST_RESULT],
+	BOOL32 *pfStarted,
+	HRESULT HRESULT
+	);
+
+CSelectionManager::ChangeTracker(
+	INT32 NewTrackerType
+	);
+
+CSelectionManager::IsDoubleTapDetected(
+	BOOL32 fDoubleTapDetected
+	);
+
+CSelectionManager::ShouldHandleEventInPre(
+	INT32 pEvent->GetType(),
+	INT32 eResult [SST_RESULT],
+	HRESULT HRESULT
+	);
+
+CSelectionManager::ShouldChangeTracker(
+	INT32 EventType
+	);
+
+CSelectionManager::DoesEditableAreaContainText(
+	HRESULT HRESULT,
+	BOOL32 pContainsText
+	);
+
+CSelectionManager::EmptySelection(
+	BOOL32 fHideCaret,
+	BOOL32 fChangeTrackerAndSetRange,
+	BOOL32 fDOMCall
+	);
+
+CCaretTracker::HandleChar(
+	INT32 IsShiftKeyDown
+	);
+
+CCaretTracker::RepositionForTap(
+	INT32 CaretTracker state
+	);
+
+CCaretTracker::PositionCaretFromEvent(
+	VOID
+	);
+
+CCaretTracker::PositionCaretAtEvent [1](
+	INT32 EventType,
+	BOOL32 fPositioningForTap
+	);
+
+CCaretTracker::PositionCaretAtEvent [2](
+	BOOL32 _fValidPosition,
+	BOOL32 _fShouldShowGripper,
+	BOOL32 fPositioningForTap,
+	HEXINT64 _dwTimeStampOfCaretLastTapPosition
+	);
+
+CCaretTracker::SetState - State Changed(
+	INT32 OldState,
+	INT32 NewState
+	);
+
+CCaretTracker::Init2(CDisplayPointer*,...)(
+	HEXINT64 dwTCFlags,
+	INT32 inLastCaretMove,
+	HRESULT HRESULT,
+	BOOL32 fCaretVisible
+	);
+
+CCaretTracker::Init2(ISegment*,...)(
+	HEXINT64 dwTCFlags,
+	INT32 inLastCaretMove,
+	HRESULT HRESULT
+	);
+
+CCaretTracker::Init2(CEditEvent*,...)(
+	HEXINT64 dwTCFlags,
+	INT32 _state,
+	INT32 EventType,
+	BOOL32 _fValidPosition,
+	HRESULT HRESULT
+	);
+
+CCaretTracker::Init2()(
+	VOID
+	);
+
+CCaretTracker::ShouldStartTracker(
+	INT32 EventType,
+	INT32 *peResult
+	);
+
+CCaretTracker::BecomeDormant(
+	VOID
+	);
+
+CCaretTracker::HandleTouchDown(
+	INT32 EventType,
+	INT32 CaretTracker state
+	);
+
+CCaretTracker::StartTapDetection(
+	INT32 EventType
+	);
+
+CCaretTracker::PositionCaretAt(
+	INT32 CARET_DIRECTION,
+	INT32 POSCARETOPT,
+	INT32 AdjustPointerOptions,
+	BOOL32 _fCaretShouldBeVisible,
+	BOOL32 _fValidPosition,
+	BOOL32 fScrollIntoView,
+	INT32 CaretTracker state
+	);
+
+CCaretTracker::HandleEvent(
+	INT32 EventType
+	);
+
+CCaretTracker::HandleMoveInTap(
+	INT32 EventType,
+	INT32 CaretTracker state
+	);
+
+CCaretTracker::HandleFailedTap(
+	INT32 EventType
+	);
+
+CCaretTracker::HandleMoveInTapIfInContact(
+	INT32 EventType,
+	INT32 CaretTracker state
+	);
+
+CCaretTracker::HandleTouchTap(
+	INT32 EventType,
+	INT32 CaretTracker state
+	);
+
+CCaretTracker::HandleTapDetection(
+	INT32 EventType
+	);
+
+CCaretTracker::StartTapDetection: Clearing selection(
+	VOID
+	);
+
+PasteFromClipboardCalled(
+	HRESULT FinalHresult,
+	HRESULT OleGetClipboardHResult,
+	HRESULT HandleUIPasteHTMLHResult,
+	HRESULT UnicodeTextInsertHResult,
+	HRESULT RTFAsTextInsertSanitizedTextHResult,
+	HRESULT IE50PasteHTMLHResult,
+	HRESULT FirePasteEventAndRemoveSelectionHResult,
+	BOOLEAN WasDocFocused
+	);
+
+GetStringDataFromDataPackageViewCalled(
+	HRESULT FinalHresult,
+	BOOLEAN WasDocFocused
+	);
+
+ClipboardContainsFormat(
+	UNICODESTRING format,
+	BOOLEAN hasDataForFormat
+	);
+
+WinRTPasteFromClipboardCalled(
+	HRESULT FinalHresult,
+	HRESULT GetContentHResult,
+	HRESULT HandleUIPasteHTMLHResult,
+	HRESULT UnicodeTextInsertHResult,
+	HRESULT RTFAsTextInsertSanitizedTextHResult,
+	HRESULT IE50PasteHTMLHResult,
+	HRESULT FirePasteEventAndRemoveSelection,
+	BOOLEAN WasDocFocused
+	);
+
+CPasteCommand::WinRTPasteFromClipboard(
+	VOID
+	);
+
+DataPackageViewEdpUnlocked(
+	BOOL32 dataPackageViewEdpUnlocked
+	);
+
+CPasteCommand::IsPastePossible(
+	VOID
+	);
+
+IsPastePossibleCalled(
+	HRESULT hrCanElementHaveHTML
+	);
+
+FireCommandEvent: Active element in CDoc is null(
+	VOID
+	);
+
+CPasteCommand::PrivateQueryStatus(
+	VOID
+	);
+
+PrivateQueryStatusCalled(
+	HRESULT hrGetSegmentPointers,
+	HRESULT hrFindCommonElement,
+	HRESULT hrQueryInterface,
+	HRESULT hrGetIsDisabled,
+	HRESULT hrIsPastePossible,
+	BOOL32 fCommandTargetIsRange
+	);
+
+CPasteCommand::FireBeforeCommandEvent(
+	BOOL32 Is CDoc focused
+	);
+
+FireBeforeCommandEvent: Active element in CDoc is null(
+	VOID
+	);
+
+CPasteCommand::FireCommandEvent(
+	BOOL32 Is CDoc focused
+	);
+
+CCopyCommand::FireCommandEvent(
+	BOOL32 Is CDoc focused
+	);
+
+CCopyCommand::FireBeforeCommandEvent(
+	BOOL32 Is CDoc focused
+	);
+
+CCutCommand::FireBeforeCommandEvent(
+	BOOL32 Is CDoc focused
+	);
+
+CCutCommand::FireCommandEvent(
+	BOOL32 Is CDoc focused
+	);
+
+CSelectTracker::HandleMessagePrivate(
+	INT32 Action,
+	INT32 EventType
+	);
+
+CSelectTracker::ShouldStartTracker(
+	INT32 EventType,
+	INT32 eResult,
+	INT32 eTag,
+	BOOL32 fIsMessageInSelection
+	);
+
+CSelectTracker::HandleEvent(
+	INT32 EventType
+	);
+
+CSelectTracker::BecomeDormant(
+	VOID
+	);
+
+CSelectTracker::DoTimerDrag - Select tracker became dormant after firing drag and drop events and selection manager became nullptr(
+	VOID
+	);
+
+CSelectTracker::SetState - State Changed(
+	INT32 OldState,
+	INT32 NewState
+	);
+
+CSelectTracker::BeginSelection failed(
+	HRESULT HRESULT
+	);
+
+CSelectTracker::BegingSelection(
+	INT32 EventType
+	);
+
+CSelectTracker::BecomePassive(
+	VOID
+	);
+
+CSelTrackServices::IsSelectionEmpty(
+	INT64 selectionVersion,
+	INT32 selectionType,
+	BOOL32 IsAnchorPositioned,
+	BOOL32 IsFocusPositioned
+	);
+
+CSelTrackServices::HandleChar(
+	INT32 IsShiftKeyDown
+	);
+
+CSelTrackServices::CreateSelectionSegments(
+	BOOL32 IsSelectionCollapsed
+	);
+
+CSelTrackServices::IsMessageInSelection(
+	INT32 EventType,
+	BOOL32 fIsInSelection
+	);
+
+CSelTrackServices::UpdateSelectionSegments(
+	BOOL32 IsSelectionCollapsed
+	);
+
+CSelTrackServices::Init2 DoWordSelection Failure(
+	HRESULT HRESULT
+	);
+
+CSelTrackServices::Init2 failure HRESULT(
+	HRESULT HRESULT
+	);
+
+CSelectTracker::Init2(ISegment*,...)(
+	VOID
+	);
+
+CSelectTracker::Init2(CEditEvent*,...)(
+	VOID
+	);
+
+CSelectTracker::Init2(CDisplayPointer*,...)(
+	VOID
+	);
+
+CTouchTracker::StartTrackerFromDoubleTap(
+	INT32 EventType,
+	INT32 TouchTracker state
+	);
+
+CTouchTracker::StartTrackerFromDoubleTap(
+	INT32 EventType,
+	BOOL32 fIsSelManContextEditable
+	);
+
+CTouchTracker::BeginSelection(
+	INT32 EventType
+	);
+
+CTouchTracker::BeginSelection failed!(
+	HRESULT HRESULT
+	);
+
+CTouchTracker::BecomePassive(
+	VOID
+	);
+
+CTouchTracker::ShouldStartTracker-3: hr == CTL_E_INVALIDLINE(
+	VOID
+	);
+
+CTouchTracker::ShouldStartTracker-4(
+	INT32 EventType,
+	INT32 eResult,
+	INT32 eTag,
+	BOOL32 fIsMessageInSelection,
+	BOOL32 fIsContextEditable
+	);
+
+CTouchTracker::HandleEvent(
+	INT32 EventType
+	);
+
+CTouchTracker::BecomeDormant(
+	VOID
+	);
+
+CTouchTracker::ShouldStartTracker-1(
+	INT32 selectionRestriction
+	);
+
+CTouchTracker::ShouldStartTracker-2(
+	VOID
+	);
+
+CTouchTracker::IsPointerOnText(
+	INT32 context,
+	BOOL32 fEventOnText,
+	HRESULT HRESULT
+	);
+
+CTouchTracker::HandleFailedTap(
+	INT32 EventType,
+	INT32 TouchTracker state
+	);
+
+CTouchTracker::EndGripperDrag(
+	INT32 EventType,
+	INT32 TouchTracker state,
+	HRESULT HRESULT
+	);
+
+CTouchTracker::HandleMoveInTap(
+	INT32 EventType,
+	INT32 TouchTracker state,
+	HRESULT HRESULT
+	);
+
+CTouchTracker::StartGripperDrag(
+	INT32 EventType,
+	INT32 TouchTracker state,
+	INT32 gripper,
+	HRESULT HRESULT
+	);
+
+CTouchTracker::HandleTouchUp(
+	INT32 EventType,
+	INT32 TouchTracker state,
+	HRESULT HRESULT
+	);
+
+CTouchTracker::HandleTouchTap(
+	INT32 EventType,
+	INT32 TouchTracker state,
+	HRESULT HRESULT
+	);
+
+CTouchTracker::HandleTapDetection(
+	INT32 EventType,
+	INT32 TouchTracker state
+	);
+
+CTouchTracker::HandleTouchDown(
+	INT32 EventType,
+	INT32 TouchTracker state,
+	HRESULT HRESULT
+	);
+
+CTouchTracker::StartTapDetection(
+	INT32 EventType,
+	INT32 _lContactID,
+	INT32 TouchTracker state
+	);
+
+CTouchTracker::SetState - State Changed(
+	INT32 OldState,
+	INT32 NewState
+	);
+
+CTouchTracker::IsTouchDownOnCaretGripper(
+	INT32 EventType,
+	INT32 TouchTracker gripper id,
+	BOOL32 fIsSelectionGripperCaret
+	);
+
+CTouchTracker::TransitionToCaretTracker(
+	INT32 EventType,
+	INT32 TouchTracker state
+	);
+
+CTouchTracker::ShouldStartSelectionFromCaretPlacement(
+	INT32 EventType,
+	BOOL32 isCaretAlreadyPlaced,
+	BOOL32 startSelectionFromCaretPlacement
+	);
+
+CTouchTracker::IsCaretInSameWord(
+	BOOL32 fAreCaretAndWordInFront,
+	BOOL32 fIsSelectionEmpty,
+	BOOL32 fIsEmptyWord,
+	BOOL32 fIsDisplayPointerInRange
+	);
+
+CTouchTracker::Init2(CDisplayPointer*,...)(
+	VOID
+	);
+
+CTouchTracker::Init2(ISegment*,...)(
+	VOID
+	);
+
+CTouchTracker::Init2(CEditEvent*,...)(
+	VOID
+	);
+
+EdUtil::BecomeCurrent(
+	INT32 ElementTag
+	);
+
+TravelLogTravelToEntry(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	UNICODESTRING tlogUrl,
+	BOOLEAN requiresVTabSwitch,
+	INT32 journeyOffsetNew,
+	BOOLEAN isLocalAnchorNavigation,
+	BOOLEAN isTravelLogPrerendered,
+	INT32 isFlipAhead
+	);
+
+XPath_Evaluate(
+	UINT32 NumSuccess,
+	UINT32 NumSuccessWGX,
+	UINT32 NumFailed,
+	UNICODESTRING FailedQuery,
+	INT32 FailedHR,
+	UINT32 NumNSResolver,
+	GUID sessionID,
+	GUID userInputID
+	);
+
+CommandProvider::ExecuteInsertLineBreak(
+	INT32 StartNodeTag,
+	INT32 StartCharacterIndex,
+	INT32 EndNodeTag,
+	INT32 EndCharacterIndex
+	);
+
+CommandProvider::ExecuteForwardDelete(
+	BOOL32 IsWordMode,
+	INT32 StartNodeTag,
+	INT32 StartCharacterIndex,
+	INT32 EndNodeTag,
+	INT32 EndCharacterIndex
+	);
+
+CommandProvider::ExecuteDelete(
+	BOOL32 IsWordMode,
+	INT32 StartNodeTag,
+	INT32 StartCharacterIndex,
+	INT32 EndNodeTag,
+	INT32 EndCharacterIndex
+	);
+
+CommandProvider::ExecuteInsertParagraph(
+	INT32 StartNodeTag,
+	INT32 StartCharacterIndex,
+	INT32 EndNodeTag,
+	INT32 EndCharacterIndex,
+	INT32 DefaultParagraphSeparator
+	);
+
+CommandProvider::ExecuteDefaultParagraphSeparator(
+	COUNTEDSTRING DefaultParagraphSeparator
+	);
+
+CommandProvider::ExecuteInsertText(
+	BOOL32 IsOverwriteEnabled,
+	INT32 StartNodeTag,
+	INT32 StartCharacterIndex,
+	INT32 EndNodeTag,
+	INT32 EndCharacterIndex
+	);
+
+EditableElementContext_NotifyFocusEnter(
+	INT32 EditableElementContext_EditableElementTag
+	);
+
+EditableElementContext_NotifyFocusLeave(
+	INT32 EditableElementContext_EditableElementTag
+	);
+
+EditableElementContext_OnTextUpdating_MovedByRawChracters(
+	VOID
+	);
+
+EditableElementContext_NotifyTextChanged(
+	INT32 EditableElementContext_RangeStart,
+	INT32 EditableElementContext_RangeEnd,
+	INT32 EditableElementContext_SelectionStart,
+	INT32 EditableElementContext_SelectionEnd,
+	INT32 EditableElementContext_CharacterChangedCount
+	);
+
+EditableElementContext_SlidingWindow_NegativeSelection_ResetToZero(
+	INT32 EditableElementContext_SelectionStart,
+	INT32 EditableElementContext_SelectionEnd,
+	INT32 EditableElementContext_RangeStart,
+	INT32 EditableElementContext_RangeEnd
+	);
+
+EditableElementContext_NotifySelectionChanged(
+	INT32 EditableElementContext_RangeStart,
+	INT32 EditableElementContext_RangeEnd,
+	INT32 EditableElementContext_SelectionStart,
+	INT32 EditableElementContext_SelectionEnd
+	);
+
+EditableElementContextManager::IsSIPDisplayPolicyManual(
+	BOOL32 IGNOREINITIALSCRIPTFOCUS,
+	BOOL32 NotHasUserInteractedWithPage
+	);
+
+EditableElementContextManager::IsSIPDisplayPolicyManual(
+	BOOL32 IsSIPDisplayPolicyManual
+	);
+
+EditableElementContextManager::OnCurrentInputLanguageChanged(
+	COUNTEDSTRING current input language
+	);
+
+EditableElementContextManager::IsSIPDisplayPolicyManual(
+	BOOL32 IsXbox
+	);
+
+EditableElementContext::CacheCompositionTextAndFireEvents--DetermineCompositionUpdate(
+	INT32 TextChangeStartOffset,
+	INT32 TextChangeEndOffset,
+	INT32 StartOffsetFromCompositionStart,
+	INT32 EndOffsetFromCompositionStart
+	);
+
+EditableElement's layout has changed(
+	FLOAT this->rcControlBounds.X,
+	FLOAT this->rcControlBounds.Y,
+	FLOAT this->rcControlBounds.Width,
+	FLOAT this->rcControlBounds.Height,
+	FLOAT this->rcTextBounds.X,
+	FLOAT this->rcTextBounds.Y,
+	FLOAT this->rcTextBounds.Width,
+	FLOAT this->rcTextBounds.Height
+	);
+
+EditableElementContext::UnregisterEditableElementContext(
+	VOID
+	);
+
+EditableElementContext::RegisterEditableElementContextEventHandlers(
+	VOID
+	);
+
+InputPaneDisplayPolicy set to Manual(
+	VOID
+	);
+
+InputPaneDisplayPolicy set to Automatic(
+	VOID
+	);
+
+EditableElementContext::OnSelectionUpdating(
+	INT32 StartCaretPosition,
+	INT32 EndCaretPosition
+	);
+
+EditableElementContext::OnTextUpdating(
+	VOID
+	);
+
+EditableElementContext::OnSelectionUpdating(
+	VOID
+	);
+
+EditableElementContext::OnTextUpdating - Calling OnTextUpdatingWorker(
+	INT32 StartCaretPosition,
+	INT32 EndCaretPosition
+	);
+
+EditableElementContext::OnCompositionStartedWorker(
+	INT32 CurrentOffset,
+	BOOL32 PreviousCompositionState
+	);
+
+EditableElementContext::OnCompositionCompleted(
+	VOID
+	);
+
+EditableElementContext::OnFormatUpdating(
+	VOID
+	);
+
+EditableElementContext::OnFormatUpdating(
+	INT32 StartCaretPosition,
+	INT32 EndCaretPosition,
+	INT32 CoreTextFormatUpdatingReason
+	);
+
+EditableElementContext_SelectionInvalid(
+	VOID
+	);
+
+Selection_GetMasterElement(
+	BOOL32 StringLiteral_AnchorAndFocusPositions_Invalid
+	);
+
+SpellerMultilingual(
+	UNICODESTRING CorrectLang,
+	UINT32 CorrectLangOrder,
+	UNICODESTRING CurrentLang
+	);
+
+SpellerSettings(
+	INT32 Autocorrection,
+	INT32 SpellChecking,
+	UNICODESTRING KeyboardsInstalled
+	);
+
+SpellerAutocorrectionSupressed(
+	GUID editId,
+	UNICODESTRING Word,
+	UNICODESTRING Autocorrection,
+	UNICODESTRING CurrentLang,
+	UNICODESTRING SupressLang,
+	ANSISTRING Source
+	);
+
+SpellerRedSquiggle(
+	GUID editId,
+	UNICODESTRING Word,
+	UNICODESTRING CurrentLang,
+	UNICODESTRING MultiLangList,
+	UNICODESTRING Keyboard,
+	UNICODESTRING PreviousWord_First,
+	UNICODESTRING PreviousWord_Second
+	);
+
+SpellerUndoAutocorrection(
+	GUID editId,
+	UNICODESTRING UndoWord,
+	UNICODESTRING Autocorrection,
+	UNICODESTRING CurrentLang,
+	UNICODESTRING MultiLangList
+	);
+
+SpellerAutocorrection(
+	GUID editId,
+	UNICODESTRING Word,
+	UNICODESTRING Autocorrection,
+	UNICODESTRING CurrentLang,
+	UNICODESTRING MultiLangList,
+	UNICODESTRING PreviousWord_First,
+	UNICODESTRING PreviousWord_Second
+	);
+
+SpellerSessionStatistics(
+	INT32 RemainingCount,
+	INT32 TotalInSession,
+	INT32 EditedCount,
+	INT32 AddCount,
+	INT32 AlternatesCount,
+	INT32 IgnoreCount,
+	INT32 AutocorrectionCount,
+	INT32 AutocorrectionUndoCount,
+	INT32 ContextDismissCount
+	);
+
+SpellerIgnoreWord(
+	GUID editId,
+	UNICODESTRING IgnoreWord,
+	UNICODESTRING Lang
+	);
+
+SpellerReplaceWithAlternate(
+	GUID editId,
+	UNICODESTRING Original,
+	UNICODESTRING New,
+	UNICODESTRING Lang
+	);
+
+SpellerAddedWord(
+	GUID editId,
+	UNICODESTRING AddedWord,
+	UNICODESTRING Lang
+	);
+
+SpellerContextMenuDismissed(
+	GUID editId,
+	UNICODESTRING Original,
+	UNICODESTRING Alternates,
+	UNICODESTRING Lang,
+	UNICODESTRING Source
+	);
+
+ProcessAttached(
+	UINT64 processCreateTime,
+	UINT32 pid,
+	BOOLEAN isEdgeHosted,
+	BOOLEAN UTCReplace_AppSessionGuid
+	);
+
+ProcessAttachedWithoutMetadata(
+	HEXINT32 getProcessTimesError,
+	BOOLEAN isEdgeHosted,
+	BOOLEAN UTCReplace_AppSessionGuid
+	);
+
+CspBlockAccess(
+	UNICODESTRING siteOrigin,
+	HEXINT32 blockedDirective,
+	HEXINT32 checkResult
+	);
+
+CspAddPolicy(
+	UNICODESTRING siteOrigin,
+	HEXINT32 policyType,
+	HEXINT32 enforcedDirectives
+	);
+
+ExtensionsBytecodeCacheInvalid(
+	UNICODESTRING extensionIdentifier,
+	UINT32 reason
+	);
+
+ExtensionsBytecodeCacheGenerationFailure(
+	VOID
+	);
+
+Extensions_InventoryAtPageLoad(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	UINT32 enabledExtensionCount,
+	UINT32 enabledHostExtensionCount,
+	UINT64 activeExtensionListCount,
+	UINT32 activeExtensionList,
+	GUID markupActivity,
+	GUID inventoryListMapping,
+	BOOLEAN UTCReplace_AppSessionGuid
+	);
+
+WrxExtensionScriptOrCssInjectionFailure(
+	UNICODESTRING ExtensionId,
+	UNICODESTRING StateAtFailure
+	);
+
+Listener::OnWebRequestEvent(
+	UNICODESTRING requestId,
+	INT32 eventType,
+	INT64 context
+	);
+
+Listener::OnWebRequestReplyMessage(
+	INT64 context
+	);
+
+HVSIUntrustedUnexpected(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	ANSISTRING Function,
+	INT32 HVSIUntrustedReason
+	);
+
+SmartScreenEvaluationResult(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	GUID evalId,
+	HRESULT result,
+	BOOL32 blocked
+	);
+
+AssertWithArgs(
+	UINT32 assertVersion,
+	UINT32 rva,
+	UINT32 timestamp,
+	UINT32 imageSize,
+	ANSISTRING imageName,
+	UINT32 count,
+	UINT32 totalHits,
+	ANSISTRING originatingBinary,
+	UINT32 bucketArgument1,
+	UINT32 bucketArgument2,
+	UINT32 ModuleCollection,
+	UINT32 GlobalCollection
+	);
+
+Assert(
+	UINT32 assertVersion,
+	UINT32 rva,
+	UINT32 timestamp,
+	UINT32 imageSize,
+	ANSISTRING imageName,
+	UINT32 count,
+	UINT32 totalHits,
+	UINT32 ModuleCollection,
+	UINT32 GlobalCollection
+	);
+
+WebNotificationToast(
+	GUID toastId
+	);
+
+WdagUnclassifiedProtocol(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	UNICODESTRING protocol,
+	UINT32 usesNetwork,
+	INT32 hr
+	);
+
+EdpMessage(
+	INT32 engineType,
+	UNICODESTRING method
+	);
+
+ScriptDiagnositics-PipeOnConnect(
+	INT32 EngineType,
+	UNICODESTRING PortName,
+	COUNTEDSTRING JsonData
+	);
+
+ScriptDiagnositics-PipeOnDetach(
+	INT32 EngineType
+	);
+
+ScriptDiagnositics-PipeSendMessage(
+	INT32 EngineType,
+	UNICODESTRING PortName,
+	COUNTEDSTRING JsonData
+	);
+
+ScriptDiagnositics-PipeResumeScriptExecution(
+	INT32 EngineType
+	);
+
+ScriptDiagnositics-PipeDetach(
+	INT32 EngineType
+	);
+
+ScriptDiagnositics-PipeExecuteScript(
+	INT32 EngineType,
+	COUNTEDSTRING Script,
+	UNICODESTRING FileName
+	);
+
+ScriptDiagnositics-PipeDeinitialize(
+	INT32 EngineType
+	);
+
+ScriptDiagnositics-PipeConnect(
+	INT32 EngineType,
+	UNICODESTRING PortName,
+	COUNTEDSTRING JsonData
+	);
+
+ScriptDiagnositics-PipeOnResumeScriptExecution(
+	INT32 EngineType
+	);
+
+ScriptDiagnositics-PipeOnExecuteScript(
+	INT32 EngineType,
+	COUNTEDSTRING Script,
+	UNICODESTRING FileName
+	);
+
+ScriptDiagnositics-PipeOnMessage(
+	INT32 EngineType,
+	UNICODESTRING PortName,
+	COUNTEDSTRING JsonData
+	);
+
+ScriptDiagnositics-PipeInitialize(
+	INT32 EngineType
+	);
+
+WebPlatStorageGetRpcEndpointFailure(
+	HRESULT HRESULT
+	);
+
+WebPlatStorageCreateRpcBindingFailure(
+	HRESULT HRESULT
+	);
+
+WebPlatStorageGetManagerFailure(
+	HRESULT HRESULT,
+	UNICODESTRING Process
+	);
+
+WebPlatStorageRpcBindFailure(
+	HRESULT HRESULT
+	);
+
+WebPlatStorageBrokerCoCreateFailure(
+	HRESULT HRESULT,
+	UNICODESTRING Process
+	);
+
+CEventMgr::_InvokeListeners - Invoking Listener(
+	UNICODESTRING EventType
+	);
+
+NeedIEContinueInSpartan(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	UNICODESTRING url
+	);
+
+LinkContextMenuNavigationStart(
+	INT32 useNewTab,
+	INT32 useNewWindow,
+	INT32 useInPrivate,
+	INT32 isSpartan,
+	UINT64 fhlFlags,
+	INT32 isEdgeHtml,
+	GUID sessionID,
+	GUID userInputID
+	);
+
+LinkNavigationStart(
+	INT32 pointerType,
+	INT32 delayForEndInteractionMessage,
+	INT32 delayForStartInteractionMessage,
+	BOOLEAN isSyntheticNavigation,
+	BOOLEAN useNewTab,
+	INT32 shiftKeyPressed,
+	INT32 ctrlKeyPressed,
+	INT32 isSpartan,
+	UINT64 fhlFlags,
+	INT32 isEdgeHtml,
+	GUID sessionID,
+	GUID userInputID
+	);
+
+FolderUploadFileEnumFailed(
+	INT32 HRESULT
+	);
+
+FolderUploadPickerFailure(
+	INT32 HRESULT
+	);
+
+FolderUploadEnumTime(
+	UINT32 numberOfFiles,
+	UINT32 numberOfFolders,
+	UINT32 maxFolderDepth,
+	UINT64 timeElapsed
+	);
+
+QuerySelectorStatistics(
+	UINT32 SelectorTypeAllCount,
+	UINT32 SelectorTypeIdCount,
+	UINT32 SelectorTypeClassCount,
+	UINT32 SelectorTypeExactNameAttributeCount,
+	UINT32 SelectorTypeUnknownCount,
+	UINT32 SelectorQueryTargetDocumentCount,
+	UINT32 SelectorQueryTargetElementCount,
+	UINT32 SelectorQueryOneCount,
+	UINT32 SelectorQueryAllCount,
+	UNICODESTRING UncategorizedSelector,
+	UINT64 UncategorizedSelectorUsedTimeInUs
+	);
+
+ScrollDelayTrackerIndependent(
+	UINT32 perfectCount,
+	UINT32 perfectSumDelay,
+	UINT32 okCount,
+	UINT32 okSumDelay,
+	UINT32 noticeableCount,
+	UINT32 noticeableSumDelay,
+	UINT32 poorCount,
+	UINT32 poorSumDelay,
+	UINT32 badCount,
+	UINT32 badSumDelay
+	);
+
+ScrollDelayTracker(
+	UINT32 perfectCount,
+	UINT32 perfectSumDelay,
+	UINT32 okCount,
+	UINT32 okSumDelay,
+	UINT32 noticeableCount,
+	UINT32 noticeableSumDelay,
+	UINT32 poorCount,
+	UINT32 poorSumDelay,
+	UINT32 badCount,
+	UINT32 badSumDelay
+	);
+
+UseTrackerExperimentalCounters(
+	BINARY uint32Vector,
+	BINARY schema
+	);
+
+UseTracker(
+	BINARY bitVector,
+	BINARY cssPropertyBitVector,
+	BINARY counterVector,
+	BINARY schema
+	);
+
+CCoreHostedEventHandler::OnCharacterReceived(
+	BOOL32 IsEnterKey,
+	INT32 ActiveElementTag,
+	BOOL32 IsTSF3Enabled,
+	BOOL32 IsOsOneCoreUap
+	);
+
+ContentCoreInputWindowReceivedFocus(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	HEXINT64 inputWindow
+	);
+
+CFrameServer(
+	VOID
+	);
+
+CFrameServer_CreateFramePresenter(
+	UINT32 width,
+	UINT32 height,
+	BOOLEAN hasAlpha
+	);
+
+CFrameServerDestroyed(
+	VOID
+	);
+
+CFrameServer_AdvanceVideoStream(
+	INT32 frameId,
+	INT32 hr
+	);
+
+CFrameServer_IsCurrentFrame(
+	INT32 currentFrameId,
+	INT32 frameId
+	);
+
+CFrameServer_IsVideoSourceAvailable(
+	BOOLEAN hasMediaEngine,
+	BOOLEAN hasVideo
+	);
+
+CFrameServer_IsPresenterStale(
+	INT32 hr,
+	INT32 isCurrent
+	);
+
+CFrameServerVideoPresenter_ShouldDraw(
+	BOOLEAN ShouldDraw
+	);
+
+CFrameServerVideoPresenter_Start(
+	BOOLEAN isPresenting
+	);
+
+CFrameServerVideoPresenter_CalculateDrawBoundsToCenterVideo(
+	INT32 elementDrawBoundsRight,
+	INT32 elementDrawBoundsLeft,
+	INT32 elementDrawBoundsBottom,
+	INT32 elementDrawBoundsTop 
+	);
+
+CFrameServerVideoPresenter_Draw(
+	VOID
+	);
+
+CFrameServerVideoPresenter_CalculateDrawBoundsToCenterVideo(
+	INT32 resultRight,
+	INT32 resultLeft,
+	INT32 resultBottom,
+	INT32 resultTop
+	);
+
+CFrameServerVideoPresenter_RecreateFramePresenterAndInvalidate(
+	INT32 hr
+	);
+
+CFrameServerVideoPresenter_GetFramePresenter(
+	VOID
+	);
+
+CFrameServerVideoPresenter_OnVideoTimer(
+	INT32 frameId
+	);
+
+CFrameServerVideoPresenter_EnsureFramePresenterUsesCurrentDevice(
+	VOID
+	);
+
+CFrameServerVideoPresenter_TryCreateFramePresenter(
+	VOID
+	);
+
+CFrameServerVideoPresenter_TryCreateFramePresenter(
+	INT32 hr
+	);
+
+CFrameServerVideoPresenter_InvalidateIfNecessary(
+	VOID
+	);
+
+CFrameServerPresenterBase(
+	VOID
+	);
+
+CFrameServerPresenterBaseDestroyed(
+	VOID
+	);
+
+CFrameServerPresenterBase_Stop(
+	BOOLEAN isPresenting
+	);
+
+CFrameServerPresenterBase_Start(
+	BOOLEAN isPlaying,
+	BOOLEAN isSeeking,
+	INT32 hr
+	);
+
+CFrameServerPresenterBase_StartTimer(
+	BOOLEAN isTimerStarted
+	);
+
+CFrameServerPresenterBase_StartTimerIfPlayingOrSeeking(
+	BOOLEAN isPlaying,
+	BOOLEAN isSeeking,
+	INT32 hr
+	);
+
+CFrameServerPresenterBase_StopTimer(
+	BOOLEAN isTimerStarted
+	);
+
+CFrameServerPresenterBase_OnMediaEngineEvent(
+	UINT32 eventId,
+	BOOLEAN isSeeking,
+	BOOLEAN isPlaying
+	);
+

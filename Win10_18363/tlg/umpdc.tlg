@@ -1,0 +1,86 @@
+ProviderNames:
+	Microsoft.Windows.Kernel.Pdc
+
+
+
+**** Events *****
+PDCV2_Deactivate(
+	UINT32 ClientID,
+	UNICODESTRING Task,
+	UNICODESTRING SubTask,
+	UINT32 ActivationCount,
+	UINT32 ActivationsUpCounter,
+	INT64 ActivationDuration,
+	UINT64 ActivationHandle,
+	HEXINT32 Status,
+	HEXINT32 PdcVersion,
+	UNICODESTRING ModuleName
+	);
+
+PDCV2_ClientCallback(
+	UINT32 ClientID,
+	UNICODESTRING Task,
+	UNICODESTRING SubTask,
+	UINT32 CallbackReason,
+	UINT32 ActivationCount,
+	UINT32 ActivationsUpCounter,
+	UINT32 RenewalUpCounter,
+	INT64 ActivationDuration,
+	UINT64 ActivationHandle,
+	HEXINT32 Status,
+	HEXINT32 PdcVersion,
+	UNICODESTRING ModuleName
+	);
+
+PDCV2_Deactivate(
+	UINT32 ClientID,
+	UNICODESTRING Task,
+	UNICODESTRING SubTask,
+	UINT32 ActivationCount,
+	UINT32 ActivationsUpCounter,
+	INT64 ActivationDuration,
+	UINT64 ActivationHandle,
+	HEXINT32 Status,
+	HEXINT32 PdcVersion,
+	UNICODESTRING ModuleName
+	);
+
+PDCV2_ClientCallback(
+	UINT32 ClientID,
+	UNICODESTRING Task,
+	UNICODESTRING SubTask,
+	UINT32 CallbackReason,
+	UINT32 ActivationCount,
+	UINT32 ActivationsUpCounter,
+	UINT32 RenewalUpCounter,
+	INT64 ActivationDuration,
+	UINT64 ActivationHandle,
+	HEXINT32 Status,
+	HEXINT32 PdcVersion,
+	UNICODESTRING ModuleName
+	);
+
+PDCV2_ClientCallback(
+	UINT32 ClientID,
+	UNICODESTRING Task,
+	UNICODESTRING SubTask,
+	UINT32 CallbackReason,
+	UINT32 ActivationCount,
+	UINT32 ActivationsUpCounter,
+	UINT32 RenewalUpCounter,
+	INT64 ActivationDuration,
+	UINT64 ActivationHandle,
+	HEXINT32 Status,
+	HEXINT32 PdcVersion,
+	UNICODESTRING ModuleName
+	);
+
+PdcClientCallWatchdogFired(
+	UINT32 TimeoutMs,
+	UINT32 ProcessId,
+	UINT32 ThreadId,
+	UINT32 PdcClientId,
+	ANSISTRING FunctionName,
+	UNICODESTRING ProcessExeName
+	);
+

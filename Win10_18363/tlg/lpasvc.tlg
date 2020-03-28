@@ -1,0 +1,1688 @@
+ProviderNames:
+	Microsoft.Windows.Cellcore.LPA.ServiceTelemetry
+	Microsoft.Windows.Cellcore.LPA.Service
+
+
+
+**** Events *****
+Asn1DecodingFailure(
+	ANSISTRING Component,
+	ANSISTRING Location
+	);
+
+Asn1DecodingFailure(
+	ANSISTRING Component,
+	ANSISTRING Location,
+	HRESULT hr,
+	UINT32 profileinfolisterror
+	);
+
+NoProfilesInstalled(
+	ANSISTRING Component,
+	ANSISTRING Location
+	);
+
+UnexpectedValue(
+	ANSISTRING Component,
+	ANSISTRING Location,
+	ANSISTRING field,
+	HRESULT hr
+	);
+
+UnexpectedValue(
+	ANSISTRING Component,
+	ANSISTRING Location,
+	ANSISTRING field
+	);
+
+LpaInvalidProfileData(
+	UNICODESTRING profileId,
+	ANSISTRING field
+	);
+
+UnexpectedValue(
+	ANSISTRING Component,
+	ANSISTRING Location,
+	ANSISTRING field
+	);
+
+Asn1DecodingFailure(
+	ANSISTRING Component,
+	ANSISTRING Location,
+	HRESULT hr,
+	UINT32 errorresult
+	);
+
+NoPendingNotifications(
+	ANSISTRING Component,
+	ANSISTRING Location
+	);
+
+NotificationNotParsed(
+	ANSISTRING Component,
+	ANSISTRING Location,
+	INT32 index,
+	HEX seqnum,
+	ANSISTRING address,
+	HRESULT hrTemp
+	);
+
+UnexpectedValue(
+	ANSISTRING Component,
+	ANSISTRING Location,
+	UINT32 errorreason
+	);
+
+UnexpectedValue(
+	ANSISTRING Component,
+	ANSISTRING Location,
+	UINT32 downloaderrorcode
+	);
+
+UnexpectedValue(
+	ANSISTRING Component,
+	ANSISTRING Location,
+	HRESULT hrTemp
+	);
+
+UnexpectedValue(
+	ANSISTRING Component,
+	ANSISTRING Location,
+	UINT32 authenticateerrorcode
+	);
+
+UnexpectedValue(
+	ANSISTRING Component,
+	ANSISTRING Location,
+	UINT32 verifyeventlisterrorcode
+	);
+
+SendApdu(
+	ANSISTRING Component,
+	ANSISTRING Location,
+	UINT32 m_ulChannel,
+	GUID guidInterface,
+	HEX vCommandApdu.data()
+	);
+
+CommandDataFailure(
+	ANSISTRING Component,
+	ANSISTRING Location,
+	HRESULT hr
+	);
+
+Asn1EncodingFailure(
+	ANSISTRING Component,
+	ANSISTRING Location
+	);
+
+SendApduResponse(
+	ANSISTRING Component,
+	ANSISTRING Location,
+	GUID guidInterface,
+	HEX pApduCompleteInfo->ApduInfo.Response
+	);
+
+CardStatusFailure(
+	ANSISTRING Component,
+	ANSISTRING Location,
+	HEX pApduCompleteInfo->ApduInfo.Status[0],
+	HEX pApduCompleteInfo->ApduInfo.Status[1]
+	);
+
+WwapiAsyncResponseFailure(
+	ANSISTRING Component,
+	ANSISTRING Location,
+	HRESULT hr
+	);
+
+CloseChannel(
+	ANSISTRING Component,
+	ANSISTRING Location,
+	GUID guidInterface,
+	UINT32 ulChannel
+	);
+
+OpenChannel(
+	ANSISTRING Component,
+	ANSISTRING Location,
+	GUID guidInterface
+	);
+
+CardStatusFailure(
+	ANSISTRING Component,
+	ANSISTRING Location,
+	HEX pUiccCloseChannelCompleteInfo->CloseChannelInfo.Status[0],
+	HEX pUiccCloseChannelCompleteInfo->CloseChannelInfo.Status[1]
+	);
+
+InvalidChannelId(
+	ANSISTRING Component,
+	ANSISTRING Location
+	);
+
+CardStatusFailure(
+	ANSISTRING Component,
+	ANSISTRING Location,
+	HEX pUiccOpenChannelCompleteInfo->OpenChannelInfo.Status[0],
+	HEX pUiccOpenChannelCompleteInfo->OpenChannelInfo.Status[1]
+	);
+
+ChannelExpired(
+	ANSISTRING Component,
+	ANSISTRING Location,
+	GUID guidInterface,
+	UINT32 ulChannel
+	);
+
+ChannelClosed(
+	ANSISTRING Component,
+	ANSISTRING Location,
+	GUID guidInterface
+	);
+
+ChannelOpened(
+	ANSISTRING Component,
+	ANSISTRING Location,
+	GUID guidInterface,
+	UINT32 ulChannel
+	);
+
+RequestIdNotFound(
+	ANSISTRING Component,
+	ANSISTRING Location,
+	UINT32 ulRequestId
+	);
+
+ChannelRemoved(
+	ANSISTRING Component,
+	ANSISTRING Location,
+	GUID guidInterface,
+	UINT32 ulChannel
+	);
+
+CloseChannelFailure(
+	ANSISTRING Component,
+	ANSISTRING Location,
+	HRESULT hr
+	);
+
+ApduOperationFailure(
+	ANSISTRING Component,
+	ANSISTRING Location,
+	HRESULT hr
+	);
+
+RunningStateChange(
+	ANSISTRING Component,
+	ANSISTRING Location,
+	UINT32 PrevState,
+	UINT32 NewState
+	);
+
+Exception(
+	ANSISTRING Component,
+	ANSISTRING Location,
+	HRESULT CommonUtil::ExceptionToHResult()
+	);
+
+LpaCoreServiceReset(
+	ANSISTRING Component,
+	ANSISTRING Location
+	);
+
+LpaCoreServiceStop(
+	ANSISTRING Component,
+	ANSISTRING Location,
+	BOOL32 fIsGraceful
+	);
+
+LpaCoreServiceStart(
+	ANSISTRING Component,
+	ANSISTRING Location,
+	HRESULT hr
+	);
+
+ToastNotificationFailed(
+	ANSISTRING Component,
+	ANSISTRING Location,
+	HRESULT hr
+	);
+
+SetWipeEsimResult(
+	ANSISTRING Component,
+	ANSISTRING Location,
+	HRESULT hr,
+	UNICODESTRING esimId,
+	HRESULT hrActionResult
+	);
+
+SetWipeEsimResult(
+	ANSISTRING Component,
+	ANSISTRING Location,
+	HRESULT hr,
+	UNICODESTRING esimId,
+	HRESULT hrActionResult
+	);
+
+AddStagedProfile(
+	ANSISTRING Component,
+	ANSISTRING Location,
+	HRESULT hr,
+	UNICODESTRING esimId,
+	UNICODESTRING profileId,
+	UNICODESTRING serverName,
+	UNICODESTRING matchingId,
+	BOOL32 enableProfile,
+	UNICODESTRING omadmAccountId,
+	UINT32 retriesLeft
+	);
+
+AddStagedProfile(
+	ANSISTRING Component,
+	ANSISTRING Location,
+	HRESULT hr,
+	UNICODESTRING esimId,
+	UNICODESTRING profileId,
+	UNICODESTRING serverName,
+	UNICODESTRING matchingId,
+	BOOL32 enableProfile,
+	UNICODESTRING omadmAccountId,
+	UINT32 retriesLeft
+	);
+
+AddProfile(
+	ANSISTRING Component,
+	ANSISTRING Location,
+	HRESULT hr,
+	UNICODESTRING esimId,
+	UNICODESTRING profileId,
+	UNICODESTRING serverName,
+	UNICODESTRING matchingId,
+	UINT32 profileState,
+	UINT32 errorDetail
+	);
+
+AddProfile(
+	ANSISTRING Component,
+	ANSISTRING Location,
+	HRESULT hr,
+	UNICODESTRING esimId,
+	UNICODESTRING profileId,
+	UNICODESTRING serverName,
+	UNICODESTRING matchingId,
+	UINT32 profileState,
+	UINT32 errorDetail
+	);
+
+NotifyMdmServer(
+	ANSISTRING Component,
+	ANSISTRING Location,
+	HRESULT hr
+	);
+
+NotifyMdmServer(
+	ANSISTRING Component,
+	ANSISTRING Location,
+	HRESULT hr
+	);
+
+EnterpriseSettings(
+	ANSISTRING Component,
+	ANSISTRING Location,
+	HRESULT hr,
+	UINT32 numkeys
+	);
+
+EnterpriseSettings(
+	ANSISTRING Component,
+	ANSISTRING Location,
+	HRESULT hr,
+	UINT32 index,
+	UINT32 keylength
+	);
+
+DeleteStagedProfile(
+	ANSISTRING Component,
+	ANSISTRING Location,
+	HRESULT hr,
+	UNICODESTRING esimId,
+	UNICODESTRING profileId
+	);
+
+DeleteStagedProfile(
+	ANSISTRING Component,
+	ANSISTRING Location,
+	HRESULT hr,
+	UNICODESTRING esimId,
+	UNICODESTRING profileId
+	);
+
+DeleteProfile(
+	ANSISTRING Component,
+	ANSISTRING Location,
+	HRESULT hr,
+	UNICODESTRING esimId,
+	UNICODESTRING profileId,
+	UINT32 profileState
+	);
+
+DeleteProfile(
+	ANSISTRING Component,
+	ANSISTRING Location,
+	HRESULT hr,
+	UNICODESTRING esimId,
+	UNICODESTRING profileId,
+	UINT32 profileState
+	);
+
+PersistentSettingsKeyError(
+	ANSISTRING Component,
+	ANSISTRING Location,
+	HRESULT hr
+	);
+
+ProfileIdMismatch(
+	ANSISTRING Component,
+	ANSISTRING Location,
+	UNICODESTRING expectedProfileId,
+	UNICODESTRING availableProfileId
+	);
+
+TransactionNotFound(
+	ANSISTRING Component,
+	ANSISTRING Location,
+	HRESULT hr,
+	UINT32 ulTransactionId
+	);
+
+TransactionNotFound(
+	ANSISTRING Component,
+	ANSISTRING Location,
+	HRESULT hr,
+	UINT32 ulTransactionId
+	);
+
+SetEsimPolicy(
+	ANSISTRING Component,
+	ANSISTRING Location,
+	HRESULT hr,
+	UNICODESTRING esimId,
+	UINT32 dwPolicyMask,
+	UINT32 dwPolicyState
+	);
+
+SetEsimPolicy(
+	ANSISTRING Component,
+	ANSISTRING Location,
+	HRESULT hr,
+	UNICODESTRING esimId,
+	UINT32 dwPolicyMask,
+	UINT32 dwPolicyState
+	);
+
+LpaOperationDetails(
+	UNICODESTRING serverNameString,
+	INT32 state,
+	UINT32 hResult,
+	UINT32 transactionId,
+	UINT32 esimOperation,
+	UNICODESTRING guidInterface,
+	UNICODESTRING esimId,
+	UNICODESTRING profileId,
+	UINT32 clientMode,
+	UINT32 errorDetails,
+	UNICODESTRING providerName,
+	UNICODESTRING mccName,
+	UNICODESTRING mncName
+	);
+
+ProfileAlreadyStaged(
+	ANSISTRING Component,
+	ANSISTRING Location,
+	UNICODESTRING esimId,
+	UNICODESTRING profileId,
+	BOOL32 profileStaged,
+	BOOL32 profileExists,
+	BOOL32 profileInstallFailed
+	);
+
+InvalidOperationId(
+	ANSISTRING Component,
+	ANSISTRING Location,
+	UINT32 operation
+	);
+
+ProvisioningStatus(
+	ANSISTRING Component,
+	ANSISTRING Location,
+	BOOL32 old,
+	BOOL32 new,
+	BOOL32 provisioned
+	);
+
+TacInvalid(
+	ANSISTRING Component,
+	ANSISTRING Location,
+	UINT16 high,
+	UINT16 low
+	);
+
+ProvisioningUsageAlreadyExists(
+	ANSISTRING Component,
+	ANSISTRING Location,
+	UINT32 ulRequestId
+	);
+
+InternetPresence(
+	ANSISTRING Component,
+	ANSISTRING Location,
+	BOOL32 presence,
+	UINT32 stamp
+	);
+
+EsimRecordNotFound(
+	ANSISTRING Component,
+	ANSISTRING Location,
+	GUID guidInterface
+	);
+
+UnexpectedValue(
+	ANSISTRING Component,
+	ANSISTRING Location,
+	HRESULT hr
+	);
+
+EsimRecordNotFound(
+	ANSISTRING Component,
+	ANSISTRING Location,
+	GUID guidInterface
+	);
+
+TransactionNotFound(
+	ANSISTRING Component,
+	ANSISTRING Location,
+	HRESULT hr,
+	UINT32 ulTransactionId,
+	GUID guidInterface
+	);
+
+TransactionNotFound(
+	ANSISTRING Component,
+	ANSISTRING Location,
+	HRESULT hr,
+	UINT32 ulTransactionId,
+	GUID guidInterface
+	);
+
+DisablingTestProfile(
+	ANSISTRING Component,
+	ANSISTRING Location,
+	HRESULT hr
+	);
+
+DisablingTestProfile(
+	ANSISTRING Component,
+	ANSISTRING Location,
+	HRESULT hr
+	);
+
+DisablingProvisioningProfile(
+	ANSISTRING Component,
+	ANSISTRING Location,
+	HRESULT hr
+	);
+
+DisablingProvisioningProfile(
+	ANSISTRING Component,
+	ANSISTRING Location,
+	HRESULT hr
+	);
+
+ApduValueUnexpected(
+	ANSISTRING Component,
+	ANSISTRING Location,
+	HRESULT hr,
+	GUID guidInterface
+	);
+
+UnexpectedValue(
+	ANSISTRING Component,
+	ANSISTRING Location,
+	HRESULT hr,
+	GUID guidInterface
+	);
+
+ApduValueUnexpected(
+	ANSISTRING Component,
+	ANSISTRING Location,
+	HRESULT hr,
+	GUID guidInterface
+	);
+
+OutOfRange(
+	ANSISTRING Component,
+	ANSISTRING Location,
+	UNICODESTRING name,
+	UINT64 size,
+	UINT64 minimum,
+	UINT64 maximum
+	);
+
+ProfileRegistered(
+	ANSISTRING Component,
+	ANSISTRING Location,
+	UINT32 state,
+	BOOLEAN isregistered,
+	BOOLEAN hadregistered,
+	GUID interface
+	);
+
+ATR(
+	ANSISTRING Component,
+	ANSISTRING Location,
+	GUID GUID,
+	HEX ATR,
+	BOOL32 IsEsim
+	);
+
+AllocationFailure(
+	ANSISTRING Component,
+	ANSISTRING Location,
+	UINT64 size
+	);
+
+WwapiValueUnexepcted(
+	ANSISTRING Component,
+	ANSISTRING Location,
+	HRESULT hr,
+	GUID guidInterface
+	);
+
+EnablingProvisioningProfile(
+	ANSISTRING Component,
+	ANSISTRING Location,
+	HRESULT hr
+	);
+
+EnablingProvisioningProfile(
+	ANSISTRING Component,
+	ANSISTRING Location,
+	HRESULT hr
+	);
+
+ActivationTokenParsed(
+	ANSISTRING Component,
+	ANSISTRING Location,
+	HRESULT hr,
+	ANSISTRING SmdpAddress,
+	ANSISTRING AcToken,
+	ANSISTRING SmdpId,
+	BOOL32 CcRequired,
+	ANSISTRING CiPkIndicator
+	);
+
+ActivationTokenParsed(
+	ANSISTRING Component,
+	ANSISTRING Location,
+	HRESULT hr,
+	ANSISTRING SmdpAddress,
+	ANSISTRING AcToken,
+	ANSISTRING SmdpId,
+	BOOL32 CcRequired,
+	ANSISTRING CiPkIndicator
+	);
+
+CardResetComplete(
+	ANSISTRING Component,
+	ANSISTRING Location,
+	UINT32 count,
+	GUID guidInterface,
+	UINT32 readyState,
+	BOOL32 midoperation,
+	HRESULT hr
+	);
+
+WwapiEsimUpdate(
+	ANSISTRING Component,
+	ANSISTRING Location,
+	BOOL32 fIsEsimInterface,
+	BOOL32 fIsInterfaceRemoved,
+	GUID guidInterface,
+	UINT32 readyState
+	);
+
+OperationCompleted(
+	ANSISTRING Component,
+	ANSISTRING Location,
+	UINT32 Operation,
+	UINT32 InternalTxId
+	);
+
+OperationInitiated(
+	ANSISTRING Component,
+	ANSISTRING Location,
+	UINT32 Operation,
+	UINT32 InternalTxId,
+	UINT32 ClientTxId
+	);
+
+CreateNewEsimEntry(
+	ANSISTRING Component,
+	ANSISTRING Location,
+	UINT32 readyState,
+	UNICODESTRING rgIccid,
+	HRESULT hr
+	);
+
+EsimRecordNotFound(
+	ANSISTRING Component,
+	ANSISTRING Location,
+	GUID guid,
+	HRESULT hr
+	);
+
+ApduValueUnexpected(
+	ANSISTRING Component,
+	ANSISTRING Location,
+	HRESULT hrTemp,
+	GUID Interface
+	);
+
+OperationCompleted(
+	ANSISTRING Component,
+	ANSISTRING Location,
+	GUID Interface,
+	UINT32 Operation,
+	UINT32 InternalTxId,
+	UINT32 ClientTxId
+	);
+
+WwapiValueUnexepcted(
+	ANSISTRING Component,
+	ANSISTRING Location,
+	HRESULT hr
+	);
+
+RegistryReadError(
+	ANSISTRING Component,
+	ANSISTRING Location,
+	HRESULT hr
+	);
+
+DownloadSequenceEvent(
+	ANSISTRING Component,
+	ANSISTRING Location,
+	INT32 task,
+	UINT32 taskId,
+	ANSISTRING eventlabel,
+	UINT32 fsmevent,
+	UINT32 error
+	);
+
+DownloadSequenceEvent(
+	ANSISTRING Component,
+	ANSISTRING Location,
+	INT32 task,
+	UINT32 taskId,
+	ANSISTRING eventlabel,
+	UINT32 fsmevent,
+	UINT32 error
+	);
+
+DownloadSequenceState(
+	ANSISTRING Component,
+	ANSISTRING Location,
+	INT32 task,
+	UINT32 taskId,
+	ANSISTRING statelabel,
+	UINT32 state,
+	UINT32 stateId
+	);
+
+Asn1DecodingFailure(
+	ANSISTRING Component,
+	ANSISTRING Location
+	);
+
+NoMatchingCiPublicKeysFound(
+	ANSISTRING Component,
+	ANSISTRING Location
+	);
+
+SendNotifToSmdpComplete(
+	ANSISTRING Component,
+	ANSISTRING Location,
+	HRESULT hr,
+	GUID guidInterface,
+	UINT32 ulTransactionId
+	);
+
+SendNotifToSmdpComplete(
+	ANSISTRING Component,
+	ANSISTRING Location,
+	HRESULT hr,
+	GUID guidInterface,
+	UINT32 ulTransactionId
+	);
+
+DownloadSequenceState(
+	ANSISTRING Component,
+	ANSISTRING Location,
+	INT32 task,
+	UINT32 taskId,
+	ANSISTRING statelabel,
+	UINT32 state,
+	UINT32 stateId
+	);
+
+OutOfRange(
+	ANSISTRING Component,
+	ANSISTRING Location,
+	UINT32 ulIconType
+	);
+
+JsonValue(
+	ANSISTRING Component,
+	ANSISTRING Location,
+	BOOL32 incoming,
+	UNICODESTRING key,
+	UNICODESTRING value
+	);
+
+Asn1DecodingFailure(
+	ANSISTRING Component,
+	ANSISTRING Location
+	);
+
+ApduValueUnexpected(
+	ANSISTRING Component,
+	ANSISTRING Location,
+	ANSISTRING field
+	);
+
+CertificateVerificationFailure(
+	ANSISTRING Component,
+	ANSISTRING Location,
+	ANSISTRING szOID_AUTHORITY_KEY_IDENTIFIER2
+	);
+
+ServerAddressInvalid(
+	ANSISTRING Component,
+	ANSISTRING Location
+	);
+
+CertificateVerificationFailure(
+	ANSISTRING Component,
+	ANSISTRING Location,
+	ANSISTRING szOID_SUBJECT_ALT_NAME2
+	);
+
+CaughtException(
+	ANSISTRING Component,
+	ANSISTRING Location,
+	ANSISTRING what
+	);
+
+Es9Aborted(
+	ANSISTRING Component,
+	ANSISTRING Location,
+	ANSISTRING what
+	);
+
+Es9HttpProtocolError(
+	ANSISTRING Component,
+	ANSISTRING Location,
+	ANSISTRING what
+	);
+
+Es9JsonParsingFailure(
+	ANSISTRING Component,
+	ANSISTRING Location,
+	ANSISTRING what
+	);
+
+Es9JsonMalformed(
+	ANSISTRING Component,
+	ANSISTRING Location,
+	HRESULT hr,
+	ANSISTRING what
+	);
+
+Es9JsonParsingFailure(
+	ANSISTRING Component,
+	ANSISTRING Location,
+	HRESULT hr,
+	ANSISTRING what
+	);
+
+Es9HttpResponseCodeUnexpected(
+	ANSISTRING Component,
+	ANSISTRING Location,
+	UINT16 status,
+	ANSISTRING what
+	);
+
+EnqueLambdaFailure(
+	ANSISTRING Component,
+	ANSISTRING Location,
+	HRESULT hr
+	);
+
+CertificateVerificationFailure(
+	ANSISTRING Component,
+	ANSISTRING Location,
+	ANSISTRING szOID_CERT_POLICIES
+	);
+
+CertificateVerificationFailure(
+	ANSISTRING Component,
+	ANSISTRING Location,
+	ANSISTRING szOID_KEY_USAGE
+	);
+
+CertificateVerificationFailure(
+	ANSISTRING Component,
+	ANSISTRING Location,
+	ANSISTRING szOID_ENHANCED_KEY_USAGE
+	);
+
+CertificateVerificationFailure(
+	ANSISTRING Component,
+	ANSISTRING Location,
+	ANSISTRING szOID_SUBJECT_KEY_IDENTIFIER
+	);
+
+CertificateVerificationFailure(
+	ANSISTRING Component,
+	ANSISTRING Location,
+	ANSISTRING "Certificate issuer not in store"
+	);
+
+CertificateVerificationFailure(
+	ANSISTRING Component,
+	ANSISTRING Location,
+	ANSISTRING "Certificate chain length"
+	);
+
+UnableToOpenEsimCertStore(
+	ANSISTRING Component,
+	ANSISTRING Location,
+	HRESULT hr
+	);
+
+Es9SmdpResponse(
+	ANSISTRING Component,
+	ANSISTRING Location,
+	HRESULT hresult,
+	UNICODESTRING status,
+	UNICODESTRING subject_code,
+	UNICODESTRING reason_code,
+	UNICODESTRING subject_id,
+	UNICODESTRING message
+	);
+
+Es9SmdpResponse(
+	ANSISTRING Component,
+	ANSISTRING Location,
+	HRESULT hresult,
+	UNICODESTRING status,
+	UNICODESTRING subject_code,
+	UNICODESTRING reason_code,
+	UNICODESTRING subject_id,
+	UNICODESTRING message
+	);
+
+SessionNotCanceled(
+	ANSISTRING Component,
+	ANSISTRING Location,
+	HRESULT hr
+	);
+
+CCEncryptionFailure(
+	ANSISTRING Component,
+	ANSISTRING Location,
+	HRESULT hr
+	);
+
+SendNotifToSmdpInitiated(
+	ANSISTRING Component,
+	ANSISTRING Location,
+	HEX seqnum,
+	HRESULT hr
+	);
+
+SendNotifToSmdpInitiated(
+	ANSISTRING Component,
+	ANSISTRING Location,
+	HEX seqnum,
+	HRESULT hr
+	);
+
+LpaEnterpriseProfileDetails(
+	UNICODESTRING profileId,
+	UNICODESTRING esimId,
+	UNICODESTRING interfaceGuid,
+	UINT32 profileState,
+	UNICODESTRING serverName
+	);
+
+LpaEnterpriseEsimDetails(
+	UNICODESTRING esimId,
+	UINT32 numEsimProfiles
+	);
+
+LpaProfileAvailable(
+	UNICODESTRING guidInterface,
+	UNICODESTRING esimId,
+	UNICODESTRING profileId,
+	UNICODESTRING providerName,
+	UNICODESTRING profileNickName,
+	UINT32 profileState
+	);
+
+LpaServiceDetails(
+	UINT32 numEsims,
+	UINT32 servicePolicyMask,
+	UINT32 userAuthMode
+	);
+
+LpaProfileDetails(
+	UNICODESTRING providerName,
+	UNICODESTRING profileName,
+	UNICODESTRING profileNickName,
+	UNICODESTRING profileId,
+	UNICODESTRING esimId,
+	UNICODESTRING interfaceGuid,
+	UINT32 profileState,
+	UINT32 profilePolicyMask,
+	UINT32 profileClass
+	);
+
+LpaEsimDetails(
+	UNICODESTRING esimId,
+	GUID interfaceGuid,
+	UINT32 esimState,
+	UINT32 esimPolicyMask,
+	UINT32 numEsimProfiles,
+	UNICODESTRING activeProfileId
+	);
+
+LuiAsyncResult(
+	ANSISTRING Component,
+	ANSISTRING Location,
+	UINT32 ulTransactionId,
+	UINT32 hrResult,
+	HEX error,
+	ANSISTRING baseType,
+	UINT32 dwParams,
+	UINT32 error,
+	UINT32 violation
+	);
+
+LpaOperationDetails(
+	INT32 state,
+	UINT32 hResult,
+	UINT32 transactionId,
+	UINT32 esimOperation,
+	UNICODESTRING guidInterface,
+	UNICODESTRING esimId,
+	UNICODESTRING profileId,
+	UINT32 clientMode,
+	UINT32 errorDetails,
+	UNICODESTRING providerName,
+	UNICODESTRING mccName,
+	UNICODESTRING mncName
+	);
+
+LpaOperationDetails(
+	UINT32 esimPolicyMask,
+	UINT32 esimPolicyState,
+	INT32 state,
+	UINT32 hResult,
+	UINT32 transactionId,
+	UINT32 esimOperation,
+	UNICODESTRING guidInterface,
+	UNICODESTRING esimId,
+	UNICODESTRING profileId,
+	UINT32 clientMode,
+	UINT32 errorDetails,
+	UNICODESTRING providerName,
+	UNICODESTRING mccName,
+	UNICODESTRING mncName
+	);
+
+LpaOperationDetails(
+	UNICODESTRING profileNickName,
+	INT32 state,
+	UINT32 hResult,
+	UINT32 transactionId,
+	UINT32 esimOperation,
+	UNICODESTRING guidInterface,
+	UNICODESTRING esimId,
+	UNICODESTRING profileId,
+	UINT32 clientMode,
+	UINT32 errorDetails,
+	UNICODESTRING providerName,
+	UNICODESTRING mccName,
+	UNICODESTRING mncName
+	);
+
+LpaOperationDetails(
+	UINT32 installChoice,
+	INT32 state,
+	UINT32 hResult,
+	UINT32 transactionId,
+	UINT32 esimOperation,
+	UNICODESTRING guidInterface,
+	UNICODESTRING esimId,
+	UNICODESTRING profileId,
+	UINT32 clientMode,
+	UINT32 errorDetails,
+	UNICODESTRING providerName,
+	UNICODESTRING mccName,
+	UNICODESTRING mncName
+	);
+
+LpaOperationDetails(
+	ANSISTRING serverNameString,
+	BOOL32 isInternetAvaialble,
+	BOOL32 isAutoProvisioningApplicable,
+	INT32 state,
+	UINT32 hResult,
+	UINT32 transactionId,
+	UINT32 esimOperation,
+	UNICODESTRING guidInterface,
+	UNICODESTRING esimId,
+	UNICODESTRING profileId,
+	UINT32 clientMode,
+	UINT32 errorDetails,
+	UNICODESTRING providerName,
+	UNICODESTRING mccName,
+	UNICODESTRING mncName
+	);
+
+ProvisioningProfileNotReleased(
+	ANSISTRING Component,
+	ANSISTRING Location,
+	HRESULT hr
+	);
+
+LuiBroadcastMessage(
+	ANSISTRING Component,
+	ANSISTRING Location,
+	UINT32 msgType,
+	UINT32 cbData,
+	UINT32 cbSize,
+	UINT32 dwParams,
+	BOOLEAN bConfirmationCodeRequired,
+	UINT32 policyViolation,
+	UINT32 dwBytesInstalled,
+	UINT32 dwBytesInTotal,
+	NTSTATUS profile,
+	ANSISTRING baseType,
+	UINT32 cbSize,
+	UINT32 dwParams,
+	PID info,
+	ANSISTRING baseType,
+	UINT32 dwParams,
+	UNICODESTRING id,
+	INT32 state,
+	UNICODESTRING esimId,
+	UINT32 dwPolicies,
+	INT32 dwClass,
+	UNICODESTRING rgProfileName,
+	UNICODESTRING rgNickName,
+	UNICODESTRING rgProviderName,
+	UNICODESTRING rgMcc,
+	UNICODESTRING rgMnc,
+	UINT32 typeIcon,
+	UINT32 cbProviderIcon,
+	UNICODESTRING rgHriServerAddress
+	);
+
+LuiBroadcastMessage(
+	ANSISTRING Component,
+	ANSISTRING Location,
+	UINT32 msgType,
+	UINT32 cbData,
+	UINT32 cbSize,
+	UINT32 dwParams,
+	PID info,
+	ANSISTRING baseType,
+	UINT32 dwParams,
+	UNICODESTRING id,
+	INT32 state,
+	UNICODESTRING esimId,
+	UINT32 dwPolicies,
+	INT32 dwClass,
+	UNICODESTRING rgProfileName,
+	UNICODESTRING rgNickName,
+	UNICODESTRING rgProviderName,
+	UNICODESTRING rgMcc,
+	UNICODESTRING rgMnc,
+	UINT32 typeIcon,
+	UINT32 cbProviderIcon,
+	UNICODESTRING rgHriServerAddress
+	);
+
+LuiBroadcastMessage(
+	ANSISTRING Component,
+	ANSISTRING Location,
+	UINT32 msgType,
+	UINT32 cbData,
+	UINT32 dwParams,
+	UNICODESTRING id,
+	INT32 state,
+	UNICODESTRING esimId
+	);
+
+LuiBroadcastMessage(
+	ANSISTRING Component,
+	ANSISTRING Location,
+	UINT32 msgType,
+	UINT32 cbData,
+	UINT32 cbSize,
+	UINT32 dwParams,
+	PORT info,
+	ANSISTRING baseType,
+	UINT32 dwParams,
+	UNICODESTRING id,
+	UNICODESTRING guidInterface,
+	UINT32 dwPolicies,
+	INT32 state,
+	UINT32 dwNumProfiles,
+	UNICODESTRING profileActive,
+	UNICODESTRING smdpAddress,
+	INT32 operationCurrent,
+	UINT32 ulOperationCurrentId,
+	INT32 operationCurrentSubstate,
+	UINT32 dwNonVolatileMemoryAvailable,
+	UNICODESTRING versionFirmware
+	);
+
+LuiBroadcastMessage(
+	ANSISTRING Component,
+	ANSISTRING Location,
+	UINT32 msgType,
+	UINT32 cbData,
+	UINT32 dwParams,
+	UNICODESTRING id,
+	UNICODESTRING guidInterface,
+	UINT32 dwPolicies,
+	INT32 state,
+	UINT32 dwNumProfiles
+	);
+
+LuiBroadcastMessage(
+	ANSISTRING Component,
+	ANSISTRING Location,
+	UINT32 msgType,
+	UINT32 cbData,
+	UINT32 cbSize,
+	UINT32 dwParams,
+	INT32 userAuthMode,
+	UINT32 dwPolicies,
+	UINT32 dwNumESIMs
+	);
+
+LpaCoreRpcMessage(
+	ANSISTRING Component,
+	ANSISTRING Location,
+	HEXINT64 handle,
+	UINT32 txid
+	);
+
+IdleTimerFired(
+	ANSISTRING Component,
+	ANSISTRING Location
+	);
+
+IdleTimerCancelled(
+	ANSISTRING Component,
+	ANSISTRING Location
+	);
+
+IdleTimerStarted(
+	ANSISTRING Component,
+	ANSISTRING Location,
+	HRESULT hr
+	);
+
+LpaServiceStart(
+	ANSISTRING Component,
+	ANSISTRING Location
+	);
+
+LpaServiceStarting(
+	ANSISTRING Component,
+	ANSISTRING Location
+	);
+
+LpaServiceInit(
+	ANSISTRING Component,
+	ANSISTRING Location,
+	HRESULT hr
+	);
+
+LpaServiceStop(
+	ANSISTRING Component,
+	ANSISTRING Location,
+	HRESULT hr
+	);
+
+LpaServiceStopping(
+	ANSISTRING Component,
+	ANSISTRING Location
+	);
+
+LpaServiceMain(
+	ANSISTRING Component,
+	ANSISTRING Location,
+	HRESULT hr
+	);
+
+Exception(
+	ANSISTRING Component,
+	ANSISTRING Location
+	);
+
+Exception(
+	ANSISTRING Component,
+	ANSISTRING Location,
+	ANSISTRING e.what()
+	);
+
+LuiServerStopping(
+	ANSISTRING Component,
+	ANSISTRING Location,
+	HRESULT hr
+	);
+
+LuiServerStart(
+	ANSISTRING Component,
+	ANSISTRING Location,
+	HRESULT hr
+	);
+
+LuiPipeManagerCleanup(
+	ANSISTRING Component,
+	ANSISTRING Location
+	);
+
+LuiServerPipeGenerate(
+	ANSISTRING Component,
+	ANSISTRING Location,
+	UINT32 pipe,
+	HRESULT hr
+	);
+
+LuiServerPipeGenerate(
+	ANSISTRING Component,
+	ANSISTRING Location,
+	UINT32 pipe,
+	HRESULT hr
+	);
+
+LuiServerPipeDestroyed(
+	ANSISTRING Component,
+	ANSISTRING Location,
+	UINT32 pipe
+	);
+
+LuiServerPipeError(
+	ANSISTRING Component,
+	ANSISTRING Location,
+	UINT32 pipe,
+	HRESULT hr
+	);
+
+RevertToSelfFailure(
+	ANSISTRING Component,
+	ANSISTRING Location,
+	HRESULT hr
+	);
+
+LuiPipeRelease(
+	ANSISTRING Component,
+	ANSISTRING Location,
+	UINT32 pipe
+	);
+
+LuiPipeClaim(
+	ANSISTRING Component,
+	ANSISTRING Location,
+	UINT32 pipe,
+	UINT32 luicontext,
+	HRESULT hr
+	);
+
+LuiPipeClaim(
+	ANSISTRING Component,
+	ANSISTRING Location,
+	UINT32 pipe,
+	UINT32 luicontext,
+	HRESULT hr
+	);
+
+LuiPipeManagerDestroyed(
+	ANSISTRING Component,
+	ANSISTRING Location
+	);
+
+LuiPipeManagerCreated(
+	ANSISTRING Component,
+	ANSISTRING Location
+	);
+
+LuiServiceContextRundown(
+	ANSISTRING Component,
+	ANSISTRING Location
+	);
+
+RpcRundownHandle(
+	ANSISTRING Component,
+	ANSISTRING Location,
+	HRESULT hr,
+	UINT32 luicontext
+	);
+
+RpcRundownHandle(
+	ANSISTRING Component,
+	ANSISTRING Location,
+	HRESULT hr,
+	UINT32 luicontext
+	);
+
+LuiServerContextDestroyed(
+	ANSISTRING Component,
+	ANSISTRING Location,
+	UINT32 luicontext
+	);
+
+LuiServerContextCreated(
+	ANSISTRING Component,
+	ANSISTRING Location,
+	UINT32 luicontext
+	);
+
+OperationTimeout(
+	ANSISTRING Component,
+	ANSISTRING Location
+	);
+
+LuiServerPipeWrite(
+	ANSISTRING Component,
+	ANSISTRING Location,
+	UINT32 pipe,
+	UINT32 dwNumberOfBytesTransfered,
+	UINT32 dwErrorCode
+	);
+
+LuiServerPipeWrite(
+	ANSISTRING Component,
+	ANSISTRING Location,
+	UINT32 pipe,
+	UINT32 dwNumberOfBytesTransfered,
+	UINT32 dwErrorCode
+	);
+
+LuiPipeWriteFailed(
+	ANSISTRING Component,
+	ANSISTRING Location,
+	HRESULT hr
+	);
+
+LuiPipeMaxMessages(
+	ANSISTRING Component,
+	ANSISTRING Location,
+	UINT32 count
+	);
+
+LuiPipeCreated(
+	ANSISTRING Component,
+	ANSISTRING Location,
+	UINT32 pipe
+	);
+
+LuiPipeDestroyed(
+	ANSISTRING Component,
+	ANSISTRING Location,
+	UINT32 pipe
+	);
+
+RpcSetUserAuthenticationMode(
+	ANSISTRING Component,
+	ANSISTRING Location,
+	HRESULT hr,
+	UINT32 luicontext,
+	UINT32 eUserAuthMode,
+	UINT32 ulTransactionId
+	);
+
+RpcWipeEsim(
+	ANSISTRING Component,
+	ANSISTRING Location,
+	HRESULT hr,
+	UINT32 luicontext,
+	UNICODESTRING esimId,
+	UINT32 ulTransactionId
+	);
+
+RpcVerifyClientToken(
+	ANSISTRING Component,
+	ANSISTRING Location,
+	HRESULT hr,
+	UINT32 luicontext,
+	UINT32 ulTransactionId
+	);
+
+RpcSetEsimPolicy(
+	ANSISTRING Component,
+	ANSISTRING Location,
+	HRESULT hr,
+	UINT32 luicontext,
+	UNICODESTRING esimId,
+	UINT32 dwPolicyMask,
+	UINT32 dwPolicyState,
+	UINT32 ulTransactionId
+	);
+
+RpcSetDefaultSmdpAddress(
+	ANSISTRING Component,
+	ANSISTRING Location,
+	HRESULT hr,
+	UINT32 luicontext,
+	UNICODESTRING esimId,
+	UNICODESTRING smdpaddress,
+	UINT32 ulTransactionId
+	);
+
+RpcSetProfileNickname(
+	ANSISTRING Component,
+	ANSISTRING Location,
+	HRESULT hr,
+	UINT32 luicontext,
+	UNICODESTRING esimId,
+	UNICODESTRING profileId,
+	COUNTEDSTRING nickname,
+	UINT32 ulTransactionId
+	);
+
+RpcDownloadProfile(
+	ANSISTRING Component,
+	ANSISTRING Location,
+	HRESULT hr,
+	UINT32 luicontext,
+	UNICODESTRING esimId,
+	UNICODESTRING strActivation,
+	UINT32 ulTransactionId
+	);
+
+RpcInstallProfile(
+	ANSISTRING Component,
+	ANSISTRING Location,
+	HRESULT hr,
+	UINT32 luicontext,
+	UNICODESTRING esimId,
+	UNICODESTRING profileId,
+	UINT32 choice,
+	UNICODESTRING strConfirmationCode,
+	UINT32 ulTransactionId
+	);
+
+RpcRequestProvisioningProfile(
+	ANSISTRING Component,
+	ANSISTRING Location,
+	HRESULT hr,
+	UINT32 luicontext,
+	UNICODESTRING esimId,
+	UINT32 ulTransactionId
+	);
+
+RpcReleaseProvisioningProfile(
+	ANSISTRING Component,
+	ANSISTRING Location,
+	HRESULT hr,
+	UINT32 luicontext,
+	UNICODESTRING esimId,
+	UINT32 ulTransactionId
+	);
+
+RpcDisableProfile(
+	ANSISTRING Component,
+	ANSISTRING Location,
+	HRESULT hr,
+	UINT32 luicontext,
+	UNICODESTRING esimId,
+	UNICODESTRING profileId,
+	UINT32 ulTransactionId
+	);
+
+RpcDeleteProfile(
+	ANSISTRING Component,
+	ANSISTRING Location,
+	HRESULT hr,
+	UINT32 luicontext,
+	UNICODESTRING esimId,
+	UNICODESTRING profileId,
+	UINT32 ulTransactionId
+	);
+
+RpcEnableProfile(
+	ANSISTRING Component,
+	ANSISTRING Location,
+	HRESULT hr,
+	UINT32 luicontext,
+	UNICODESTRING esimId,
+	UNICODESTRING profileId,
+	UINT32 ulTransactionId
+	);
+
+RpcDiscoverProfiles(
+	ANSISTRING Component,
+	ANSISTRING Location,
+	HRESULT hr,
+	UINT32 luicontext,
+	UNICODESTRING esimId,
+	UINT32 discoveryMode,
+	UNICODESTRING strRspServerAddress,
+	UNICODESTRING strMatchingId,
+	UINT32 ulTransactionId
+	);
+
+RpcCancelOperation(
+	ANSISTRING Component,
+	ANSISTRING Location,
+	HRESULT hr,
+	UINT32 luicontext,
+	UNICODESTRING esimId,
+	UINT32 ulOperationId,
+	UINT32 ulTransactionId
+	);
+
+RpcAddProfile(
+	ANSISTRING Component,
+	ANSISTRING Location,
+	HRESULT hr,
+	UINT32 luicontext,
+	UNICODESTRING pEsimId,
+	UNICODESTRING profileId,
+	UNICODESTRING strServerName,
+	UNICODESTRING strMatchingId,
+	BOOL32 fEnableProfile,
+	UNICODESTRING strOmadmAccountId,
+	UINT32 ulTransactionId
+	);
+
+RpcRegisterForAllProfileNotifs(
+	ANSISTRING Component,
+	ANSISTRING Location,
+	HRESULT hr,
+	UINT32 luicontext,
+	UNICODESTRING esimId,
+	UINT32 ulTransactionId
+	);
+
+RpcRegisterForEsimNotifs(
+	ANSISTRING Component,
+	ANSISTRING Location,
+	HRESULT hr,
+	UINT32 luicontext,
+	UNICODESTRING esimId,
+	UINT32 ulTransactionId
+	);
+
+RpcRegisterForAllEnterpriseProfileNotifs(
+	ANSISTRING Component,
+	ANSISTRING Location,
+	HRESULT hr,
+	UINT32 luicontext,
+	UNICODESTRING esimId,
+	UINT32 ulTransactionId
+	);
+
+RpcRegisterForEnterpriseEsimNotifs(
+	ANSISTRING Component,
+	ANSISTRING Location,
+	HRESULT hr,
+	UINT32 luicontext,
+	UNICODESTRING esimId,
+	UINT32 ulTransactionId
+	);
+
+RpcOpenHandle(
+	ANSISTRING Component,
+	ANSISTRING Location,
+	HRESULT hr,
+	UINT32 luicontext,
+	UINT32 eClientMode
+	);
+
+RpcRegisterForLpaNotifs(
+	ANSISTRING Component,
+	ANSISTRING Location,
+	HRESULT hr,
+	UINT32 luicontext,
+	UINT32 ulTransactionId
+	);
+
+RpcCloseHandle(
+	ANSISTRING Component,
+	ANSISTRING Location,
+	HRESULT hr,
+	UINT32 luicontext
+	);
+
+LuiServerGetClientProcess(
+	ANSISTRING Component,
+	ANSISTRING Location,
+	HRESULT hr
+	);
+
+LuiServerGetClientToken(
+	ANSISTRING Component,
+	ANSISTRING Location,
+	HRESULT hr
+	);
+

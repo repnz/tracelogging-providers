@@ -1,0 +1,4498 @@
+ProviderNames:
+	Microsoft.Windows.Ink.InkManager
+	Microsoft.Windows.Ink.Eraser
+	Microsoft.Windows.UI.Input.Inking.DirectInk
+	Microsoft.Windows.UI.Input.Inking.TraceLogging
+	TelemetryAssert
+	TelemetryAssertDiagTrack
+	Microsoft.Windows.Ink.DirectInk.InkPresenterRuler
+
+
+
+**** Events *****
+InkManagerInitialize(
+	HEXINT32 HRESULT
+	);
+
+InkStrokeEnd(
+	UINT32 PointerType,
+	UINT32 InkDrawingAttributesKind,
+	BOOLEAN IsDrawAsHighlighter,
+	BOOLEAN IsFitToCurve,
+	BOOLEAN IsIgnorePressure,
+	BOOLEAN IsIgnoreTilt,
+	UINT32 PenId,
+	UINT64 InkDurationHns,
+	UNICODESTRING InkAPI
+	);
+
+FallbackError(
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+RecognitionActivity(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+ActivityIntermediateStop(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+RecognitionActivity(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId,
+	UINT32 ResultsCount
+	);
+
+ActivityError(
+	UINT64 PartA_PrivTags,
+	SIGNED wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+RecognitionActivity(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId,
+	UNICODESTRING RecognizerName,
+	UNICODESTRING Factoid,
+	PID Guide,
+	HEX WritingRect,
+	INT32 X,
+	INT32 Y,
+	INT32 Width,
+	INT32 Height,
+	HEX DrawingRect,
+	INT32 X,
+	INT32 Y,
+	INT32 Width,
+	INT32 Height,
+	INT32 Rows,
+	INT32 Columns,
+	INT32 Midline
+	);
+
+InkRecognizerContainerRecognizeAsync(
+	UINT32 RecognitionTarget,
+	INT32 StrokeCount,
+	DOUBLE RecognitionDurationInMs,
+	INT32 HR
+	);
+
+FallbackError(
+	UINT64 PartA_PrivTags,
+	SIGNED wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+RecognitionActivity(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 ResultsCount
+	);
+
+RecognitionActivity(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+ActivityError(
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+ActivityStoppedAutomatically(
+	VOID
+	);
+
+PointEraseInvoked(
+	FLOAT width,
+	FLOAT height,
+	UINT32 count
+	);
+
+ISFInkPasteFromClipboard(
+	UINT64 StartTime,
+	DOUBLE DurationOfIO,
+	DOUBLE DurationOfAddClipboardStrokes,
+	DOUBLE DurationOfPasteFromClipboard
+	);
+
+LoadAsync(
+	UINT64 StartTime,
+	DOUBLE DurationOfLoadAsync
+	);
+
+InkManagerInputTypeChanged(
+	UINT32 PointerTypeFrom,
+	UINT32 PointerTypeTo,
+	INT32 StrokeCount
+	);
+
+DirectInkInputTypeChanged(
+	UINT32 PointerTypeFrom,
+	UINT32 PointerTypeTo,
+	INT32 StrokeCount
+	);
+
+DryInkPresenterOnContentsChanged(
+	UINT32 NumberOfStrokes,
+	DOUBLE DurationOfRedrawAll,
+	DOUBLE DurationOfCommit
+	);
+
+ISFInkPasteFromClipboardInkStrokesInkPoints(
+	UINT64 StartTime,
+	UINT32 NumberOfInkStrokesPasted,
+	UINT32 NumberOfInkPointsPasted
+	);
+
+ISFInkLoadingStrokeCollection(
+	UINT64 StartTime,
+	DOUBLE DurationOfIO,
+	DOUBLE DurationOfInkLoad,
+	DOUBLE DurationOfInkRaisedEvent,
+	UINT32 NumberOfStrokes,
+	UINT32 NumberOfInkPoints
+	);
+
+LinearPredictor::AddPoint(
+	FLOAT point.x,
+	FLOAT point.y,
+	FLOAT m_xMean,
+	FLOAT m_yMean,
+	FLOAT m_lastResult.velocity,
+	UINT64 m_points.size()
+	);
+
+LinearPredictor::Fit(
+	DOUBLE var_xx,
+	DOUBLE var_yy,
+	DOUBLE var_xy,
+	FLOAT m_lastResult.avgError,
+	FLOAT m_lastResult.maxError,
+	FLOAT m_lastResult.b,
+	FLOAT m_lastResult.m,
+	INT32 static_cast<int>(m_lastResult.type),
+	FLOAT m_lastResult.velocity,
+	UINT64 m_points.size(),
+	FLOAT m_xMean,
+	FLOAT m_yMean,
+	BOOLEAN m_lastResult.valid
+	);
+
+LinearPredictor::Predict(
+	FLOAT result.x,
+	FLOAT result.y
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"InkStrokeModelerWindows::GetStats" L"[Exit]"),
+	HRESULT (((HRESULT)0L))
+	);
+
+InkStrokePredictionError(
+	FLOAT MaxNormalError,
+	FLOAT MinNormalError,
+	FLOAT MeanNormalError,
+	FLOAT MaxOvershootError,
+	FLOAT MinOvershootError,
+	FLOAT MeanOvershootError,
+	FLOAT MaxLagError,
+	FLOAT MinLagError,
+	FLOAT MeanLagError,
+	UINT32 PredictedPoints,
+	UINT32 OvershootPoints,
+	UINT32 PointerType,
+	UINT32 InkDrawingAttributesKind
+	);
+
+DirectInkDestructor(
+	UNICODESTRING (L"CInkD2DRenderer")
+	);
+
+ActivityStoppedAutomatically(
+	VOID
+	);
+
+DirectInkRenderCreateD2DPencilTiltInkStroke(
+	UNICODESTRING L"CreateD2DPencilTiltInkStroke, GetRenderingInfo"
+	);
+
+DirectInkRenderCreateD2DPencilTiltInkStroke(
+	UNICODESTRING L"CreateD2DPencilTiltInkStroke, GetRenderingInfo"
+	);
+
+DirectInkRenderCreateD2DInkStroke(
+	UNICODESTRING L"CreateD2DInkStroke, GetRenderingInfo"
+	);
+
+DirectInkRenderCreateD2DInkStroke(
+	UNICODESTRING L"CreateD2DInkStroke, GetRenderingInfo"
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"RenderHelper::RenderHighlighterBackgroundStrokes" L"[Exit]"),
+	HRESULT (hr)
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"RenderHelper::RenderHighlighterBackgroundStrokes" L"[Enter]")
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"RenderHelper::RenderHighlighterBackgroundStrokes" L"[Exit]"),
+	HRESULT (hr)
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"SurfaceStrokeRendererManager::RenderInkStrokes" L"[Enter]")
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"SurfaceStrokeRendererManager::RenderInkStrokes" L"[Exit]"),
+	HRESULT (hr)
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"SurfaceStrokeRendererManager::RenderInkStrokes" L"[Exit]"),
+	HRESULT (hr)
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"SurfaceDefaultRender::RenderInkStroke" L"[Exit]"),
+	HRESULT (hr)
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"SurfaceDefaultRender::RenderInkStroke" L"[Exit]"),
+	HRESULT (hr)
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"SurfaceDefaultRender::RenderInkStroke" L"[Enter]")
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"SurfacePencilTiltRender::RenderInkStroke" L"[Exit]"),
+	HRESULT (hr)
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"SurfacePencilTiltRender::RenderInkStroke" L"[Exit]"),
+	HRESULT (hr)
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"SurfacePencilTiltRender::RenderInkStroke" L"[Enter]")
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"DirectInkCoreServer::add_CommitNeeded" L"[Exit]"),
+	HRESULT (hr)
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"DirectInkCoreServer::add_CommitNeeded" L"[Exit]"),
+	HRESULT (hr)
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"DirectInkCoreServer::remove_HighContrastAdjustmentChanged" L"[Exit]"),
+	HRESULT (hr)
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"DirectInkCoreServer::remove_HighContrastAdjustmentChanged" L"[Exit]"),
+	HRESULT (hr)
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"DirectInkCoreServer::remove_CommitNeeded" L"[Exit]"),
+	HRESULT (hr)
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"DirectInkCoreServer::remove_CommitNeeded" L"[Exit]"),
+	HRESULT (hr)
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"DirectInkCoreServer::add_HighContrastAdjustmentChanged" L"[Exit]"),
+	HRESULT (hr)
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"DirectInkCoreServer::add_HighContrastAdjustmentChanged" L"[Exit]"),
+	HRESULT (hr)
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"DirectInkCoreServer::ProcessInkPointDrawingAttributesUpdate" L"[Exit]"),
+	HRESULT (hr)
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"DirectInkCoreServer::add_StrokesErased" L"[Exit]"),
+	HRESULT (hr)
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"DirectInkCoreServer::add_StrokesErased" L"[Exit]"),
+	HRESULT (hr)
+	);
+
+DirectInkEventHandlers(
+	ANSISTRING Event,
+	UINT32 Type
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"DirectInkCoreServer::ProcessInkPointDrawingAttributesUpdate" L"[Exit]"),
+	HRESULT (hr)
+	);
+
+SetSessionTag(
+	GUID SessionId,
+	UNICODESTRING Tag
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"DirectInkCoreServer::remove_StrokesErased" L"[Exit]"),
+	HRESULT (hr)
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"DirectInkCoreServer::remove_StrokesErased" L"[Exit]"),
+	HRESULT (hr)
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"DirectInkCoreServer::add_StrokesCollected" L"[Exit]"),
+	HRESULT (hr)
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"DirectInkCoreServer::put_DefaultDrawingAttributes" L"[Exit]"),
+	HRESULT (hr),
+	INT64 pUnkDrawingAttributes
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"DirectInkCoreServer::put_DefaultDrawingAttributes" L"[Exit]"),
+	HRESULT (hr),
+	INT64 pUnkDrawingAttributes
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"DirectInkCoreServer::remove_StrokesCollected" L"[Exit]"),
+	HRESULT (hr)
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"DirectInkCoreServer::remove_StrokesCollected" L"[Exit]"),
+	HRESULT (hr)
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"DirectInkCoreServer::add_StrokesCollected" L"[Exit]"),
+	HRESULT (hr)
+	);
+
+put_AllowMultiTouchManipulations(
+	BOOLEAN IsEnabled
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"DirectInkCoreServer::put_InputTypes" L"[Exit]"),
+	HRESULT (hr),
+	UINT32 InputTypes
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"DirectInkCoreServer::put_InputTypes" L"[Exit]"),
+	HRESULT (hr),
+	UINT32 InputTypes
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"DirectInkCoreServer::put_StrokeContainer" L"[Exit]"),
+	HRESULT (hr),
+	INT64 pInkStrokeContainer
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"DirectInkCoreServer::put_StrokeContainer" L"[Exit]"),
+	HRESULT (hr),
+	INT64 pInkStrokeContainer
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"DirectInkCoreServer::put_Enabled" L"[Exit]"),
+	HRESULT (hr),
+	BOOLEAN fEnable
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"DirectInkCoreServer::SetPredefinedConfugration" L"[Exit]"),
+	HRESULT (hr),
+	BOOLEAN fMultiPointerEnabled
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"DirectInkCoreServer::SetPredefinedConfugration" L"[Exit]"),
+	HRESULT (hr),
+	BOOLEAN fMultiPointerEnabled
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"DirectInkCoreServer::ActivateCustomDrying" L"[Exit]"),
+	HRESULT (hr)
+	);
+
+SetInputDeviceTypes(
+	UINT32 InputTypes
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"DirectInkCoreServer::put_Enabled" L"[Exit]"),
+	HRESULT (hr),
+	BOOLEAN fEnable
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"DirectInkCoreServer::SetSize" L"[Exit]"),
+	HRESULT (hr),
+	FLOAT Width,
+	FLOAT Height
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"DirectInkCoreServer::SetSize" L"[Exit]"),
+	HRESULT (hr),
+	FLOAT Width,
+	FLOAT Height
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"DirectInkCoreServer::GetSize" L"[Exit]"),
+	HRESULT (hr)
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"DirectInkCoreServer::GetSize" L"[Exit]"),
+	HRESULT (hr)
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"DirectInkCoreServer::ActivateCustomDrying" L"[Exit]"),
+	HRESULT (hr)
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"DirectInkCoreServer::OnHighContrastChanged" L"[Exit]"),
+	HRESULT (hr)
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"DirectInkCoreServer::OnHighContrastChanged" L"[Exit]"),
+	HRESULT (hr)
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"DirectInkCoreServer::SetCommitProvider" L"[Exit]"),
+	HRESULT (hr),
+	INT64 pCommitProvider
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"DirectInkCoreServer::SetCommitProvider" L"[Exit]"),
+	HRESULT (hr),
+	INT64 pCommitProvider
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"DirectInkCoreServer::SetRootVisual" L"[Exit]"),
+	HRESULT (hr),
+	INT64 pRootVisual
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"DirectInkCoreServer::SetRootVisual" L"[Exit]"),
+	HRESULT (hr)
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"DirectInkCoreServer::SetRootVisual" L"[Exit]"),
+	HRESULT (hr)
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"DirectInkCoreServer(IInkPresenterDesktop)::SetRootVisual" L"[Exit]"),
+	HRESULT (hr),
+	INT64 pRootVisual
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"DirectInkCoreServer(IInkPresenterDesktop)::SetRootVisual" L"[Exit]"),
+	HRESULT (hr),
+	INT64 pRootVisual
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"DirectInkCoreServer::SetRootVisual" L"[Exit]"),
+	HRESULT (hr),
+	INT64 pRootVisual
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"DirectInkCoreServer::SetCommitRequestHandler" L"[Exit]"),
+	HRESULT (hr),
+	INT64 pInkCommitRequestHandler
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"DirectInkCoreServer::SetCommitRequestHandler" L"[Exit]"),
+	HRESULT (hr),
+	INT64 pInkCommitRequestHandler
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"DirectInkCoreServer::RuntimeClassInitialize" L"[Exit]"),
+	HRESULT (hr)
+	);
+
+DirectInkInitialize(
+	GUID SessionId,
+	HEXINT32 HRESULT
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"DirectInkCoreServer::RuntimeClassInitialize" L"[Exit]"),
+	HRESULT (hr)
+	);
+
+DirectInkDestructor(
+	UNICODESTRING (L"DirectInkCoreServer")
+	);
+
+DirectInkDestructor(
+	UNICODESTRING (L"CInkInputConfiguration")
+	);
+
+DirectInkDestructor(
+	UNICODESTRING (L"CInkInputProcessingConfiguration")
+	);
+
+DirectInkDestructor(
+	UNICODESTRING (L"CoreInkIndependentInputSourceServer")
+	);
+
+DirectInkDestructor(
+	UNICODESTRING (L"CoreWetStrokeUpdateSourceServer")
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CDirectInkImpl::_DeactivateInput" L"[Exit]"),
+	HRESULT (hr)
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CDirectInkImpl::_CheckAndActivateInput" L"[Exit]"),
+	HRESULT (hr),
+	BOOLEAN fIsEnabled,
+	BOOLEAN fHasInputTypes,
+	BOOLEAN fHasRootVisual,
+	BOOLEAN fHasStencils,
+	BOOLEAN fIsZeroSizedVisual,
+	BOOLEAN fIsCompositionTypeWinComp,
+	BOOLEAN fInputActivated
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CDirectInkImpl::_CheckAndActivateInput" L"[Exit]"),
+	HRESULT (hr),
+	BOOLEAN fIsEnabled,
+	BOOLEAN fHasInputTypes,
+	BOOLEAN fHasRootVisual,
+	BOOLEAN fHasStencils,
+	BOOLEAN fIsZeroSizedVisual,
+	BOOLEAN fIsCompositionTypeWinComp,
+	BOOLEAN fInputActivated
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CDirectInkImpl::_DeactivateInput" L"[Exit]"),
+	HRESULT (hr)
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CDirectInkImpl::AddStencil" L"[Exit]"),
+	HRESULT (hr)
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CDirectInkImpl::AddStencil" L"[Exit]"),
+	HRESULT (hr)
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CDirectInkImpl::ProcessInkPointDrawingAttributesUpdate" L"[Exit]"),
+	HRESULT (hr)
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CDirectInkImpl::ProcessInkPointDrawingAttributesUpdate" L"[Exit]"),
+	HRESULT (hr)
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CDirectInkImpl::SetSize" L"[Exit]"),
+	HRESULT (hr),
+	FLOAT Width,
+	FLOAT Height
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CDirectInkImpl::SetSize" L"[Exit]"),
+	HRESULT (hr),
+	FLOAT Width,
+	FLOAT Height
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CDirectInkImpl::SetHighContrastState" L"[Exit]"),
+	HRESULT (hr)
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CDirectInkImpl::SetHighContrastState" L"[Exit]"),
+	HRESULT (hr)
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CDirectInkImpl::SetInputConfiguration" L"[Exit]"),
+	HRESULT (hr),
+	BOOLEAN IsPrimaryBarrelButtonInputEnabled,
+	BOOLEAN IsEraserInputEnabled
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CDirectInkImpl::SetInputConfiguration" L"[Exit]"),
+	HRESULT (hr),
+	BOOLEAN IsPrimaryBarrelButtonInputEnabled,
+	BOOLEAN IsEraserInputEnabled
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CDirectInkImpl::SetInputTypes" L"[Exit]"),
+	HRESULT (hr),
+	UINT32 InputTypes
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CDirectInkImpl::SetDrawingAttributes" L"[Exit]"),
+	HRESULT (hr)
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CDirectInkImpl::SetDrawingAttributes" L"[Exit]"),
+	HRESULT (hr)
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CDirectInkImpl::AllowMultiTouchManipulations" L"[Exit]"),
+	HRESULT (hr),
+	BOOL32 Enabled
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CDirectInkImpl::AllowMultiTouchManipulations" L"[Exit]"),
+	HRESULT (hr),
+	BOOL32 Enabled
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CDirectInkImpl::Enable" L"[Exit]"),
+	HRESULT (hr),
+	BOOLEAN fEnable
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CDirectInkImpl::Enable" L"[Exit]"),
+	HRESULT (hr),
+	BOOLEAN fEnable
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CDirectInkImpl::SetInputTypes" L"[Exit]"),
+	HRESULT (hr),
+	UINT32 InputTypes
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CDirectInkImpl::SetMultiPointerEnabled" L"[Exit]"),
+	HRESULT (hr),
+	BOOLEAN value
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CDirectInkImpl::SetMultiPointerEnabled" L"[Exit]"),
+	HRESULT (hr),
+	BOOLEAN value
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CDirectInkImpl::Initialize" L"[Exit]"),
+	HRESULT (hr)
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CDirectInkImpl::Initialize" L"[Exit]"),
+	HRESULT (hr)
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CDirectInkImpl::SetRootVisual" L"[Exit]"),
+	HRESULT (hr)
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CDirectInkImpl::SetRootVisual" L"[Exit]"),
+	HRESULT (hr)
+	);
+
+DirectInkDestructor(
+	UNICODESTRING (L"CDirectInkImpl")
+	);
+
+DirectInkUnexpected(
+	UNICODESTRING context,
+	HRESULT hr,
+	UNICODESTRING msg
+	);
+
+DirectInkIndependentInput_Telemetry(
+	DOUBLE CallbackDuration,
+	UINT32 InputEvent
+	);
+
+DirectInkDestructor(
+	UNICODESTRING (L"CCallbackHelper")
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CInkInputConfiguration::put_IsEraserInputEnabled" L"[Exit]"),
+	HRESULT (hr),
+	UINT8 IsPrimaryBarrelButtonInputEnabled,
+	UINT8 IsEraserInputEnabled
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CInkInputConfiguration::put_IsEraserInputEnabled" L"[Exit]"),
+	HRESULT (hr),
+	UINT8 IsPrimaryBarrelButtonInputEnabled,
+	UINT8 IsEraserInputEnabled
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CInkInputConfiguration::put_IsPrimaryBarrelButtonInputEnabled" L"[Exit]"),
+	HRESULT (hr),
+	UINT8 IsPrimaryBarrelButtonInputEnabled,
+	UINT8 IsEraserInputEnabled
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CInkInputConfiguration::put_IsPrimaryBarrelButtonInputEnabled" L"[Exit]"),
+	HRESULT (hr),
+	UINT8 IsPrimaryBarrelButtonInputEnabled,
+	UINT8 IsEraserInputEnabled
+	);
+
+DirectInkDestructor(
+	UNICODESTRING (L"CAsyncInputMgr")
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CAsyncInputMgr::OnInputEvent" L"[Exit]"),
+	HRESULT (hr),
+	IPV4 InputHandlerData,
+	UINT32 PointerId,
+	UINT32 FrameId,
+	UINT32 InputEvent,
+	UINT32 InputAction,
+	BOOLEAN CancelProcessing,
+	BOOLEAN InputEnabled,
+	BOOLEAN AllowedByFilter,
+	BOOLEAN HandledByPlugin
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CAsyncInputMgr::DeliverInput" L"[Exit]"),
+	HRESULT (hr)
+	);
+
+EndDestroy(
+	UNICODESTRING objContext
+	);
+
+BeginDestroy(
+	UNICODESTRING objContext
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CInkInputProcessingConfiguration::GetProcessingAction" L"[Exit]"),
+	HRESULT (hr),
+	UINT32 Mode,
+	UINT32 RightDragAction,
+	UINT8 isEraser,
+	UINT8 isRightDrag,
+	UINT32 Action
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CInkInputProcessingConfiguration::GetProcessingAction" L"[Exit]"),
+	HRESULT (hr),
+	UINT32 Mode,
+	UINT32 RightDragAction,
+	UINT8 isEraser,
+	UINT8 isRightDrag,
+	UINT32 Action
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CInkInputProcessingConfiguration::put_RightDragAction" L"[Exit]"),
+	HRESULT (hr),
+	UINT32 Mode,
+	UINT32 RightDragAction
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CInkInputProcessingConfiguration::put_RightDragAction" L"[Exit]"),
+	HRESULT (hr),
+	UINT32 Mode,
+	UINT32 RightDragAction
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CInkInputProcessingConfiguration::put_Mode" L"[Exit]"),
+	HRESULT (hr),
+	UINT32 Mode,
+	UINT32 RightDragAction
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CInkInputProcessingConfiguration::put_Mode" L"[Exit]"),
+	HRESULT (hr),
+	UINT32 Mode,
+	UINT32 RightDragAction
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CInputContext::_SuppressVisualization" L"[Exit]"),
+	HRESULT (hr),
+	UINT32 pointerId,
+	BOOLEAN fSuppress,
+	INT32 fIsDwmShowContactPresent
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CInputContext::_SuppressVisualization" L"[Exit]"),
+	HRESULT (hr),
+	UINT32 pointerId,
+	BOOLEAN fSuppress,
+	INT32 fIsDwmShowContactPresent
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CInputContext::_AsyncQueueStrokeInput" L"[Exit]"),
+	HRESULT (hr),
+	IPV4 InputHandlerData,
+	UINT32 PointerId,
+	UINT32 FrameId,
+	UINT32 InputEvent,
+	UINT32 InputAction,
+	BOOLEAN CancelProcessing,
+	BOOLEAN InputEnabled,
+	BOOLEAN AllowedByFilter,
+	BOOLEAN HandledByPlugin
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CInputContext::_AsyncQueueStrokeInput" L"[Exit]"),
+	HRESULT (hr),
+	IPV4 InputHandlerData,
+	UINT32 PointerId,
+	UINT32 FrameId,
+	UINT32 InputEvent,
+	UINT32 InputAction,
+	BOOLEAN CancelProcessing,
+	BOOLEAN InputEnabled,
+	BOOLEAN AllowedByFilter,
+	BOOLEAN HandledByPlugin
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CInputContext::_PreProcessStrokeInputContinued" L"[Exit]"),
+	HRESULT (hr),
+	IPV4 InputHandlerData,
+	UINT32 PointerId,
+	UINT32 FrameId,
+	UINT32 InputEvent,
+	UINT32 InputAction,
+	BOOLEAN CancelProcessing,
+	BOOLEAN InputEnabled,
+	BOOLEAN AllowedByFilter,
+	BOOLEAN HandledByPlugin
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CInputContext::_PreProcessStrokeInputContinued" L"[Exit]"),
+	HRESULT (hr),
+	IPV4 InputHandlerData,
+	UINT32 PointerId,
+	UINT32 FrameId,
+	UINT32 InputEvent,
+	UINT32 InputAction,
+	BOOLEAN CancelProcessing,
+	BOOLEAN InputEnabled,
+	BOOLEAN AllowedByFilter,
+	BOOLEAN HandledByPlugin
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CInputContext::_PreProcessStrokeInputStart"),
+	UNICODESTRING L"Allow multi-touch manipulations is not active - re-configuring for ALL touch."
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CInputContext::_PreProcessStrokeInputStart"),
+	UNICODESTRING L"Allow multi-touch manipulations is active - re-configuring for 1 touch."
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CInputContext::_DetermineInputActionOnContinue" L"[Exit]"),
+	HRESULT (hr),
+	UINT32 InputAction,
+	BOOLEAN fIsCancellation
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CInputContext::_PreProcessStrokeInputContinued"),
+	UNICODESTRING L"Grace period to start manipulation expired. Re-configuring for ALL touch."
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CInputContext::_PreProcessStrokeInputStart" L"[Exit]"),
+	HRESULT (hr),
+	IPV4 InputHandlerData,
+	UINT32 PointerId,
+	UINT32 FrameId,
+	UINT32 InputEvent,
+	UINT32 InputAction,
+	BOOLEAN CancelProcessing,
+	BOOLEAN InputEnabled,
+	BOOLEAN AllowedByFilter,
+	BOOLEAN HandledByPlugin
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CInputContext::_PreProcessStrokeInputStart" L"[Exit]"),
+	HRESULT (hr),
+	IPV4 InputHandlerData,
+	UINT32 PointerId,
+	UINT32 FrameId,
+	UINT32 InputEvent,
+	UINT32 InputAction,
+	BOOLEAN CancelProcessing,
+	BOOLEAN InputEnabled,
+	BOOLEAN AllowedByFilter,
+	BOOLEAN HandledByPlugin
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CInputContext::OnPointerCaptureLost" L"[Exit]"),
+	HRESULT (hr),
+	IPV4 InputHandlerData,
+	UINT32 PointerId,
+	UINT32 FrameId,
+	UINT32 InputEvent,
+	UINT32 InputAction,
+	BOOLEAN CancelProcessing,
+	BOOLEAN InputEnabled,
+	BOOLEAN AllowedByFilter,
+	BOOLEAN HandledByPlugin
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CInputContext::OnPointerCaptureLost" L"[Exit]"),
+	HRESULT (hr),
+	IPV4 InputHandlerData,
+	UINT32 PointerId,
+	UINT32 FrameId,
+	UINT32 InputEvent,
+	UINT32 InputAction,
+	BOOLEAN CancelProcessing,
+	BOOLEAN InputEnabled,
+	BOOLEAN AllowedByFilter,
+	BOOLEAN HandledByPlugin
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CInputContext::OnPointerReleased" L"[Exit]"),
+	HRESULT (hr),
+	IPV4 InputHandlerData,
+	UINT32 PointerId,
+	UINT32 FrameId,
+	UINT32 InputEvent,
+	UINT32 InputAction,
+	BOOLEAN CancelProcessing,
+	BOOLEAN InputEnabled,
+	BOOLEAN AllowedByFilter,
+	BOOLEAN HandledByPlugin
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CInputContext::_DetermineInputActionOnContinue" L"[Exit]"),
+	HRESULT (hr),
+	UINT32 InputAction,
+	BOOLEAN fIsCancellation
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CInputContext::_DetermineInputActionOnPressed" L"[Exit]"),
+	HRESULT (hr),
+	UINT32 InputAction
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CInputContext::_DetermineInputActionOnPressed" L"[Exit]"),
+	HRESULT (hr),
+	UINT32 InputAction
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CInputContext::OnPointerPressed" L"[Exit]"),
+	HRESULT (hr),
+	IPV4 InputHandlerData,
+	UINT32 PointerId,
+	UINT32 FrameId,
+	UINT32 InputEvent,
+	UINT32 InputAction,
+	BOOLEAN CancelProcessing,
+	BOOLEAN InputEnabled,
+	BOOLEAN AllowedByFilter,
+	BOOLEAN HandledByPlugin
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CInputContext::OnPointerPressed" L"[Exit]"),
+	HRESULT (hr),
+	IPV4 InputHandlerData,
+	UINT32 PointerId,
+	UINT32 FrameId,
+	UINT32 InputEvent,
+	UINT32 InputAction,
+	BOOLEAN CancelProcessing,
+	BOOLEAN InputEnabled,
+	BOOLEAN AllowedByFilter,
+	BOOLEAN HandledByPlugin
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CInputContext::OnPointerMoved" L"[Exit]"),
+	HRESULT (hr),
+	UINT32 pointerId,
+	UINT32 frameId,
+	UINT8 fIsInContact
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CInputContext::OnPointerReleased" L"[Exit]"),
+	HRESULT (hr),
+	IPV4 InputHandlerData,
+	UINT32 PointerId,
+	UINT32 FrameId,
+	UINT32 InputEvent,
+	UINT32 InputAction,
+	BOOLEAN CancelProcessing,
+	BOOLEAN InputEnabled,
+	BOOLEAN AllowedByFilter,
+	BOOLEAN HandledByPlugin
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CInputContext::_OnPointerMoved" L"[Exit]"),
+	HRESULT (hr),
+	IPV4 InputHandlerData,
+	UINT32 PointerId,
+	UINT32 FrameId,
+	UINT32 InputEvent,
+	UINT32 InputAction,
+	BOOLEAN CancelProcessing,
+	BOOLEAN InputEnabled,
+	BOOLEAN AllowedByFilter,
+	BOOLEAN HandledByPlugin
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CInputContext::_OnPointerMoved" L"[Exit]"),
+	HRESULT (hr),
+	IPV4 InputHandlerData,
+	UINT32 PointerId,
+	UINT32 FrameId,
+	UINT32 InputEvent,
+	UINT32 InputAction,
+	BOOLEAN CancelProcessing,
+	BOOLEAN InputEnabled,
+	BOOLEAN AllowedByFilter,
+	BOOLEAN HandledByPlugin
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CInputContext::_InkThreadApplyProperties" L"[Exit]"),
+	HRESULT (hr),
+	BOOLEAN fWasActive,
+	BOOLEAN fIsActive
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CInputContextSharedData::ApplyProperties" L"[Exit]"),
+	HRESULT (hr),
+	BOOLEAN fHasInputSink,
+	BOOLEAN fIsEnabled,
+	UINT32 InputTypes
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CInputContext::OnPointerMoved" L"[Exit]"),
+	HRESULT (hr),
+	UINT32 pointerId,
+	UINT32 frameId,
+	UINT8 fIsInContact
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CInputContext::_InkThreadApplyProperties" L"[Exit]"),
+	HRESULT (hr),
+	BOOLEAN fWasActive,
+	BOOLEAN fIsActive
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CInputContext::SetInputConfiguration" L"[Exit]"),
+	HRESULT (hr),
+	BOOLEAN IsPrimaryBarrelButtonInputEnabled,
+	BOOLEAN IsEraserInputEnabled,
+	BOOLEAN fWasActive
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CInputContext::SetInputTypes" L"[Exit]"),
+	HRESULT (hr),
+	UINT32 oldTypes,
+	UINT32 inputTypes,
+	BOOLEAN fWasActive
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CInputContext::SetInputTypes" L"[Exit]"),
+	HRESULT (hr),
+	UINT32 oldTypes,
+	UINT32 inputTypes,
+	BOOLEAN fWasActive
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CInputContextSharedData::ApplyProperties" L"[Exit]"),
+	HRESULT (hr),
+	BOOLEAN fHasInputSink,
+	BOOLEAN fIsEnabled,
+	UINT32 InputTypes
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CInputContext::_ApplyProperties" L"[Exit]"),
+	HRESULT (hr)
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CInputContext::_ApplyProperties" L"[Exit]"),
+	HRESULT (hr)
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CInputContext::SetInputConfiguration" L"[Exit]"),
+	HRESULT (hr),
+	BOOLEAN IsPrimaryBarrelButtonInputEnabled,
+	BOOLEAN IsEraserInputEnabled,
+	BOOLEAN fWasActive
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CInputContext::Enable" L"[Exit]"),
+	HRESULT (hr),
+	BOOLEAN fEnable,
+	BOOLEAN fWasEnabled,
+	BOOLEAN fWasActive
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CInputContext::SetSourceVisual" L"[Exit]"),
+	HRESULT (hr),
+	INT64 pUnkDIVisual
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CInputContext::AllowMultiTouchManipulations" L"[Exit]"),
+	HRESULT (hr),
+	BOOLEAN value
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CInputContext::SetMultiPointerEnabled" L"[Exit]"),
+	HRESULT (hr),
+	BOOLEAN value
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CInputContext::SetMultiPointerEnabled" L"[Exit]"),
+	HRESULT (hr),
+	BOOLEAN value
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CInputContext::Enable" L"[Exit]"),
+	HRESULT (hr),
+	BOOLEAN fEnable,
+	BOOLEAN fWasEnabled,
+	BOOLEAN fWasActive
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CInputContext::Activate" L"[Exit]"),
+	HRESULT (hr),
+	BOOLEAN fIsActive
+	);
+
+DirectInkDestructor(
+	UNICODESTRING (L"CInputContext")
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CInputContext::Deactivate" L"[Exit]"),
+	HRESULT (hr),
+	BOOLEAN fIsActive
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CInputContext::Deactivate" L"[Exit]"),
+	HRESULT (hr),
+	BOOLEAN fIsActive
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CInputContext::Activate" L"[Exit]"),
+	HRESULT (hr),
+	BOOLEAN fIsActive
+	);
+
+DirectInkDestructor(
+	UNICODESTRING (L"CInputContextSharedData")
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CMarshaller::ActivateInput" L"[Exit]"),
+	HRESULT (hr)
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CMarshaller::ActivateInput" L"[Exit]"),
+	HRESULT (hr)
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CMarshaller::Initialize" L"[Exit]"),
+	HRESULT (hr)
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CMarshaller::Initialize" L"[Exit]"),
+	HRESULT (hr)
+	);
+
+DirectInkDestructor(
+	UNICODESTRING (L"CMarshaller")
+	);
+
+DirectInkDebug(
+	UNICODESTRING L"CInkThread::_InkThreadProc",
+	HRESULT hr
+	);
+
+DirectInkDebug(
+	UNICODESTRING L"CInkThread::_InkThreadProc - Started",
+	HRESULT hr
+	);
+
+DirectInkDestructor(
+	UNICODESTRING (L"CInkThread")
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CCustomDryInkSynchronizer::Initialize" L"[Exit]"),
+	HRESULT (hr)
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CCustomDryInkSynchronizer::EndDry" L"[Exit]"),
+	HRESULT (hr)
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CCustomDryInkSynchronizer::EndDry" L"[Exit]"),
+	HRESULT (hr)
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CCustomDryInkSynchronizer::SetCommitProvider" L"[Exit]"),
+	HRESULT (hr)
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CCustomDryInkSynchronizer::SetCommitProvider" L"[Exit]"),
+	HRESULT (hr)
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CCustomDryInkSynchronizer::Initialize" L"[Exit]"),
+	HRESULT (hr)
+	);
+
+DirectInkDestructor(
+	UNICODESTRING (L"CCustomDryInkSynchronizer")
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CCustomDryInkSynchronizer::BeginDry" L"[Exit]"),
+	HRESULT (hr)
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CCustomDryInkSynchronizer::BeginDry" L"[Exit]"),
+	HRESULT (hr)
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CInputProvider::AdjustPalmRejection" L"[Exit]"),
+	HRESULT (hr),
+	INT32 fEnablePalmRejection,
+	UINT32 InputTypes
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CInputProvider::AdjustPalmRejection" L"[Exit]"),
+	HRESULT (hr),
+	INT32 fEnablePalmRejection,
+	UINT32 InputTypes
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CInputProvider::Initialize" L"[Exit]"),
+	HRESULT (hr)
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CInputProvider::SetInputType" L"[Exit]"),
+	HRESULT (hr),
+	UINT32 InputTypes
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CInputProvider::SetInputType" L"[Exit]"),
+	HRESULT (hr),
+	UINT32 InputTypes
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CInputProvider::Initialize" L"[Exit]"),
+	HRESULT (hr)
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CPointerTracker::GetProcessingAction" L"[Exit]"),
+	HRESULT (hr),
+	UINT32 pointerId,
+	UINT32 InputAction
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CPointerTracker::IsTracked" L"[Exit]"),
+	HRESULT (hr),
+	UINT32 pointerId,
+	UINT8 fHasKey
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CPointerTracker::IsTracked" L"[Exit]"),
+	HRESULT (hr),
+	UINT32 pointerId,
+	UINT8 fHasKey
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CPointerTracker::Untrack" L"[Exit]"),
+	HRESULT (hr),
+	UINT32 pointerId
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CPointerTracker::GetProcessingAction" L"[Exit]"),
+	HRESULT (hr),
+	UINT32 pointerId,
+	UINT32 InputAction
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CPointerTracker::SetProcessingAction" L"[Exit]"),
+	HRESULT (hr),
+	UINT32 pointerId,
+	UINT32 InputAction
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CPointerTracker::SetProcessingAction" L"[Exit]"),
+	HRESULT (hr),
+	UINT32 pointerId,
+	UINT32 InputAction
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CPointerTracker::Untrack" L"[Exit]"),
+	HRESULT (hr),
+	UINT32 pointerId
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CPointerTracker::Track" L"[Exit]"),
+	HRESULT (hr),
+	UINT32 pointerId,
+	UINT32 mapSize,
+	BOOLEAN fShouldProcessPointer
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CPointerTracker::Track" L"[Exit]"),
+	HRESULT (hr),
+	UINT32 pointerId,
+	UINT32 mapSize,
+	BOOLEAN fShouldProcessPointer
+	);
+
+DirectInkDestructor(
+	UNICODESTRING (L"CPointerTracker")
+	);
+
+ActivityStoppedAutomatically(
+	VOID
+	);
+
+DirectInkDebug(
+	UNICODESTRING L"CRenderLatencyTracer::PointerUpdate",
+	JSON InputTelemetryData,
+	UINT64 UniqueKey,
+	UINT32 InputType,
+	UINT16 NumTouchPoints,
+	UINT32 PointerFrameId,
+	UINT32 InteractionType,
+	UINT64 KernelInputStart,
+	UINT64 HostInputSend,
+	UINT64 ContainerInputReceive,
+	UINT64 InteractionLibraryStart,
+	UINT64 InteractionLibraryStop,
+	UINT64 HostPerformanceFrequency,
+	UINT32 NumCoalescedFrames
+	);
+
+DirectInkDebug(
+	UNICODESTRING L"CRenderLatencyTracer::PointerEnd",
+	UINT64 UniqueKey
+	);
+
+DirectInkDebug(
+	UNICODESTRING L"CRenderLatencyTracer::PointerBegin",
+	UINT64 UniqueKey,
+	UINT16 SurfaceWidth,
+	UINT16 SurfaceHeight,
+	UNICODESTRING AppUserModeId,
+	UINT32 AppType
+	);
+
+DirectInkDebug(
+	UNICODESTRING L"CInputTracer::_GetTraceData",
+	HRESULT hr
+	);
+
+DirectInkDebug(
+	UNICODESTRING L"CInputTracer::_GetPointCount",
+	HRESULT hr
+	);
+
+DirectInkDebug(
+	UNICODESTRING L"OnPointerMoved",
+	SOCKETADDRESS InputTraceData,
+	UINT32 PointerId,
+	UINT32 FrameId,
+	UINT64 Timestamp,
+	BOOLEAN RightButton,
+	BOOLEAN Canceled,
+	BOOLEAN CaptureLost,
+	UINT32 DeviceType,
+	FLOAT X,
+	FLOAT Y,
+	FLOAT Pressure
+	);
+
+DirectInkDebug(
+	UNICODESTRING L"OnPointerMoved count != 1",
+	SOCKETADDRESS InputTraceData,
+	UINT32 PointerId,
+	UINT32 FrameId,
+	UINT64 Timestamp,
+	BOOLEAN RightButton,
+	BOOLEAN Canceled,
+	BOOLEAN CaptureLost,
+	UINT32 DeviceType,
+	FLOAT X,
+	FLOAT Y,
+	FLOAT Pressure,
+	UINT32 count
+	);
+
+DirectInkDebug(
+	UNICODESTRING L"OnPointerPressed",
+	SOCKETADDRESS InputTraceData,
+	UINT32 PointerId,
+	UINT32 FrameId,
+	UINT64 Timestamp,
+	BOOLEAN RightButton,
+	BOOLEAN Canceled,
+	BOOLEAN CaptureLost,
+	UINT32 DeviceType,
+	FLOAT X,
+	FLOAT Y,
+	FLOAT Pressure
+	);
+
+DirectInkDebug(
+	UNICODESTRING L"OnPointerExited",
+	SOCKETADDRESS InputTraceData,
+	UINT32 PointerId,
+	UINT32 FrameId,
+	UINT64 Timestamp,
+	BOOLEAN RightButton,
+	BOOLEAN Canceled,
+	BOOLEAN CaptureLost,
+	UINT32 DeviceType,
+	FLOAT X,
+	FLOAT Y,
+	FLOAT Pressure
+	);
+
+DirectInkDebug(
+	UNICODESTRING L"OnPointerCaptureLost",
+	SOCKETADDRESS InputTraceData,
+	UINT32 PointerId,
+	UINT32 FrameId,
+	UINT64 Timestamp,
+	BOOLEAN RightButton,
+	BOOLEAN Canceled,
+	BOOLEAN CaptureLost,
+	UINT32 DeviceType,
+	FLOAT X,
+	FLOAT Y,
+	FLOAT Pressure
+	);
+
+DirectInkDebug(
+	UNICODESTRING L"OnPointerReleased",
+	SOCKETADDRESS InputTraceData,
+	UINT32 PointerId,
+	UINT32 FrameId,
+	UINT64 Timestamp,
+	BOOLEAN RightButton,
+	BOOLEAN Canceled,
+	BOOLEAN CaptureLost,
+	UINT32 DeviceType,
+	FLOAT X,
+	FLOAT Y,
+	FLOAT Pressure
+	);
+
+DirectInkDestructor(
+	UNICODESTRING (L"CInputTracer")
+	);
+
+DirectInkStrokeInputPacket(
+	SOCKETADDRESS InputTraceData,
+	UINT32 PointerId,
+	UINT32 FrameId,
+	UINT64 Timestamp,
+	BOOLEAN RightButton,
+	BOOLEAN Canceled,
+	BOOLEAN CaptureLost,
+	UINT32 DeviceType,
+	FLOAT X,
+	FLOAT Y,
+	FLOAT Pressure
+	);
+
+DirectInkDebug(
+	UNICODESTRING L"OnPointerHover",
+	SOCKETADDRESS InputTraceData,
+	UINT32 PointerId,
+	UINT32 FrameId,
+	UINT64 Timestamp,
+	BOOLEAN RightButton,
+	BOOLEAN Canceled,
+	BOOLEAN CaptureLost,
+	UINT32 DeviceType,
+	FLOAT X,
+	FLOAT Y,
+	FLOAT Pressure
+	);
+
+DirectInkDebug(
+	UNICODESTRING L"OnPointerHover count != 1",
+	SOCKETADDRESS InputTraceData,
+	UINT32 PointerId,
+	UINT32 FrameId,
+	UINT64 Timestamp,
+	BOOLEAN RightButton,
+	BOOLEAN Canceled,
+	BOOLEAN CaptureLost,
+	UINT32 DeviceType,
+	FLOAT X,
+	FLOAT Y,
+	FLOAT Pressure,
+	UINT32 count
+	);
+
+DirectInkDebug(
+	UNICODESTRING L"OnPointerEntered",
+	SOCKETADDRESS InputTraceData,
+	UINT32 PointerId,
+	UINT32 FrameId,
+	UINT64 Timestamp,
+	BOOLEAN RightButton,
+	BOOLEAN Canceled,
+	BOOLEAN CaptureLost,
+	UINT32 DeviceType,
+	FLOAT X,
+	FLOAT Y,
+	FLOAT Pressure
+	);
+
+DirectInkStrokeInput(
+	SOCKETADDRESS InputTraceData,
+	UINT32 PointerId,
+	UINT32 FrameId,
+	UINT64 Timestamp,
+	BOOLEAN RightButton,
+	BOOLEAN Canceled,
+	BOOLEAN CaptureLost,
+	UINT32 DeviceType,
+	FLOAT X,
+	FLOAT Y,
+	FLOAT Pressure
+	);
+
+DirectInkStrokeInputPacket(
+	SOCKETADDRESS InputTraceData,
+	UINT32 PointerId,
+	UINT32 FrameId,
+	UINT64 Timestamp,
+	BOOLEAN RightButton,
+	BOOLEAN Canceled,
+	BOOLEAN CaptureLost,
+	UINT32 DeviceType,
+	FLOAT X,
+	FLOAT Y,
+	FLOAT Pressure
+	);
+
+DirectInkStrokeInput(
+	SOCKETADDRESS InputTraceData,
+	UINT32 PointerId,
+	UINT32 FrameId,
+	UINT64 Timestamp,
+	BOOLEAN RightButton,
+	BOOLEAN Canceled,
+	BOOLEAN CaptureLost,
+	UINT32 DeviceType,
+	FLOAT X,
+	FLOAT Y,
+	FLOAT Pressure
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CCoreWetStroke::get_InkPoints" L"[Exit]"),
+	HRESULT (hr)
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CCoreWetStroke::get_InkPoints" L"[Exit]"),
+	HRESULT (hr)
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CCoreWetStroke::get_DrawingAttributes" L"[Exit]"),
+	HRESULT (hr)
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CCoreWetStroke::get_DrawingAttributes" L"[Exit]"),
+	HRESULT (hr)
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CInkDesktopHost::_InkHostThreadProc" L"[Enter]")
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CInkDesktopHost::CreateAndInitializeInkPresenter" L"[Exit]"),
+	HRESULT (hr)
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CInkDesktopHost::CreateAndInitializeInkPresenter" L"[Exit]"),
+	HRESULT (hr)
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CInkDesktopHost::_InkHostThreadProc" L"[Exit]"),
+	HRESULT (hr)
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CInkDesktopHost::_InkHostThreadProc" L"[Exit]"),
+	HRESULT (hr)
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CInkDesktopHost::CreateInkPresenter" L"[Exit]"),
+	HRESULT (hr)
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CInkDesktopHost::CreateInkPresenter" L"[Enter]")
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CInkDesktopHost::QueueWorkItem" L"[Exit]"),
+	HRESULT (hr)
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CInkDesktopHost::QueueWorkItem" L"[Exit]"),
+	HRESULT (hr)
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CInkDesktopHost::CreateAndInitializeInkPresenter" L"[Enter]")
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CInkDesktopHost::CreateInkPresenter" L"[Exit]"),
+	HRESULT (hr)
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CInkDesktopHost::RuntimeClassInitialize" L"[Exit]"),
+	HRESULT (hr)
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CInkDesktopHost::RuntimeClassInitialize" L"[Enter]")
+	);
+
+DirectInkDestructor(
+	UNICODESTRING (L"CInkDesktopHost")
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CInkDesktopHost::QueueWorkItem" L"[Enter]")
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CInkDesktopHost::RuntimeClassInitialize" L"[Exit]"),
+	HRESULT (hr)
+	);
+
+InkPresenterProtractor_Strokes(
+	UINT32 count
+	);
+
+InkPresenterProtractor_Transform(
+	BOOLEAN scale
+	);
+
+InkPresenterProtractor_Hide(
+	UINT32 hr
+	);
+
+InkPresenterProtractor_Show(
+	UINT32 hr
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CInkPresenterProtractor::_OnManipulationUpdated"),
+	HEX manipulationDelta,
+	STRING Translation,
+	FLOAT X,
+	FLOAT Y,
+	FLOAT Scale,
+	FLOAT Rotation,
+	FLOAT Expansion
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CInkPresenterProtractor::_FindClosestColinearInkPoint"),
+	UNICODESTRING L"Co-linear point has no intersection"
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CInkPresenterProtractor::_OnManipulationUpdated" L"[Enter]"),
+	BOOL32 m_fManipulationLocked,
+	UINT32 m_manipulatorsCount
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CInkPresenterProtractor::_SetTransform" L"[Enter]"),
+	BOOL32 fUpdateManipulationTransform
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CInkPresenterProtractor::_SetIsResizable" L"[Exit]"),
+	HRESULT (hr)
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CInkPresenterProtractor::_SetTransform" L"[Exit]"),
+	HRESULT (hr)
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CInkPresenterProtractor::_SetTransform" L"[Exit]"),
+	HRESULT (hr)
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CInkPresenterProtractor::_SetRaysVisibility" L"[Enter]")
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CInkPresenterProtractor::_SetAngleReadoutVisibility" L"[Exit]"),
+	HRESULT (hr)
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CInkPresenterProtractor::_SetAngleReadoutVisibility" L"[Exit]"),
+	HRESULT (hr)
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CInkPresenterProtractor::_SetIsResizable" L"[Exit]"),
+	HRESULT (hr)
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CInkPresenterProtractor::_SetIsResizable" L"[Enter]")
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CInkPresenterProtractor::_SetRaysVisibility" L"[Exit]"),
+	HRESULT (hr)
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CInkPresenterProtractor::_SetRaysVisibility" L"[Exit]"),
+	HRESULT (hr)
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CInkPresenterProtractor::_SetAccentColor" L"[Exit]"),
+	HRESULT (hr)
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CInkPresenterProtractor::_SetAccentColor" L"[Exit]"),
+	HRESULT (hr)
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CInkPresenterProtractor::_SetAccentColor" L"[Enter]")
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CInkPresenterProtractor::_SetAngleReadoutVisibility" L"[Enter]")
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CInkPresenterProtractor::_SetCenterMarkerVisibility" L"[Exit]"),
+	HRESULT (hr)
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CInkPresenterProtractor::_SetCenterMarkerVisibility" L"[Exit]"),
+	HRESULT (hr)
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CInkPresenterProtractor::_SetCenterMarkerVisibility" L"[Enter]")
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CInkPresenterProtractor::_Show" L"[Exit]"),
+	HRESULT (hr)
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CInkPresenterProtractor::_Show" L"[Enter]")
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CInkPresenterProtractor::_SetSize" L"[Exit]"),
+	HRESULT (hr)
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CInkPresenterProtractor::_SetSize" L"[Exit]"),
+	HRESULT (hr)
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CInkPresenterProtractor::_SetSize" L"[Enter]")
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CInkPresenterProtractor::_Show" L"[Exit]"),
+	HRESULT (hr)
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CInkPresenterProtractor::put_IsResizable" L"[Exit]"),
+	HRESULT (hr)
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CInkPresenterProtractor::put_IsResizable" L"[Enter]"),
+	BOOLEAN value
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CInkPresenterProtractor::put_IsAngleReadoutVisible" L"[Exit]"),
+	HRESULT (hr)
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CInkPresenterProtractor::put_IsAngleReadoutVisible" L"[Exit]"),
+	HRESULT (hr)
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CInkPresenterProtractor::put_AccentColor" L"[Exit]"),
+	HRESULT (hr)
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CInkPresenterProtractor::put_AccentColor" L"[Exit]"),
+	HRESULT (hr)
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CInkPresenterProtractor::put_AccentColor" L"[Enter]"),
+	HEX value,
+	UINT8 A,
+	UINT8 R,
+	UINT8 G,
+	UINT8 B
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CInkPresenterProtractor::put_IsResizable" L"[Exit]"),
+	HRESULT (hr)
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CInkPresenterProtractor::put_AreRaysVisible" L"[Exit]"),
+	HRESULT (hr)
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CInkPresenterProtractor::put_AreRaysVisible" L"[Exit]"),
+	HRESULT (hr)
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CInkPresenterProtractor::put_AreRaysVisible" L"[Enter]"),
+	BOOLEAN value
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CInkPresenterProtractor::put_IsAngleReadoutVisible" L"[Enter]"),
+	BOOLEAN value
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CInkPresenterProtractor::put_IsCenterMarkerVisible" L"[Exit]"),
+	HRESULT (hr)
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CInkPresenterProtractor::put_IsCenterMarkerVisible" L"[Exit]"),
+	HRESULT (hr)
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CInkPresenterProtractor::put_IsCenterMarkerVisible" L"[Enter]"),
+	BOOLEAN value
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CInkPresenterProtractor::put_Radius" L"[Exit]"),
+	HRESULT (hr)
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CInkPresenterProtractor::put_Radius" L"[Exit]"),
+	HRESULT (hr)
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CInkPresenterProtractor::put_Radius" L"[Enter]"),
+	DOUBLE value
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CInkPresenterProtractor WetStrokeCanceledPrivate Callback" L"[Exit]"),
+	HRESULT (subHr)
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CInkPresenterProtractor WetStrokeCanceledPrivate Callback" L"[Exit]"),
+	HRESULT (subHr)
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CInkPresenterProtractor WetStrokeCanceledPrivate Callback" L"[Enter]")
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CInkPresenterProtractor WetStrokeStoppingPrivate Callback" L"[Exit]"),
+	HRESULT (subHr)
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CInkPresenterProtractor WetStrokeContinuingPrivate Callback" L"[Exit]"),
+	HRESULT (subHr)
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CInkPresenterProtractor WetStrokeContinuingPrivate Callback" L"[Enter]")
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CInkPresenterProtractor WetStrokeStartingPrivate Callback" L"[Exit]"),
+	HRESULT (subHr)
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CInkPresenterProtractor WetStrokeStartingPrivate Callback" L"[Exit]"),
+	HRESULT (subHr)
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CInkPresenterProtractor WetStrokeStoppingPrivate Callback" L"[Exit]"),
+	HRESULT (subHr)
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CInkPresenterProtractor WetStrokeStoppingPrivate Callback" L"[Enter]")
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CInkPresenterProtractor WetStrokeContinuingPrivate Callback" L"[Exit]"),
+	HRESULT (subHr)
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CInkPresenterProtractor::InitializeWetStrokeUpdateHandling" L"[Enter]")
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CInkPresenterProtractor WetStrokeStartingPrivate Callback" L"[Enter]")
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CInkPresenterProtractor::InitializeWetStrokeUpdateHandling" L"[Exit]"),
+	HRESULT (hr)
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CInkPresenterProtractor::InitializeWetStrokeUpdateHandling" L"[Exit]"),
+	HRESULT (hr)
+	);
+
+DirectInkDestructor(
+	UNICODESTRING (L"CInkPresenterProtractor")
+	);
+
+InkPresenterProtractor_Initialize(
+	VOID
+	);
+
+InkPresenterRuler_Hide(
+	UINT32 hr
+	);
+
+InkPresenterRuler_Show(
+	UINT32 hr
+	);
+
+InkPresenterRuler_Strokes(
+	UINT32 count
+	);
+
+InkPresenterRuler_Transform(
+	BOOLEAN rotation,
+	BOOLEAN scale,
+	BOOLEAN translation
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CInkPresenterRuler::_SetTransform" L"[Enter]"),
+	BOOL32 fUpdateManipulationTransform
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CInkPresenterRuler::_SetCompassVisibility" L"[Exit]"),
+	HRESULT (hr)
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CInkPresenterRuler::_SetCompassVisibility" L"[Exit]"),
+	HRESULT (hr)
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CInkPresenterRuler::_SetTransform" L"[Exit]"),
+	HRESULT (hr)
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CInkPresenterRuler::_SetTransform" L"[Exit]"),
+	HRESULT (hr)
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CInkPresenterRuler::_Show" L"[Exit]"),
+	HRESULT (hr)
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CInkPresenterRuler::_Show" L"[Exit]"),
+	HRESULT (hr)
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CInkPresenterRuler::_Show" L"[Enter]")
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CInkPresenterRuler::_SetCompassVisibility" L"[Enter]")
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CInkPresenterRuler::_SetSize" L"[Exit]"),
+	HRESULT (hr)
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CInkPresenterRuler::_SetSize" L"[Exit]"),
+	HRESULT (hr)
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CInkPresenterRuler::_SetSize" L"[Enter]")
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CInkPresenterRuler::put_Width" L"[Exit]"),
+	HRESULT (hr)
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CInkPresenterRuler::put_Width" L"[Exit]"),
+	HRESULT (hr)
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CInkPresenterRuler::put_Width" L"[Enter]"),
+	DOUBLE value
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CInkPresenterRuler::put_Length" L"[Exit]"),
+	HRESULT (hr)
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CInkPresenterRuler::put_IsCompassVisible" L"[Exit]"),
+	HRESULT (hr)
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CInkPresenterRuler::put_IsCompassVisible" L"[Exit]"),
+	HRESULT (hr)
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CInkPresenterRuler::put_IsCompassVisible" L"[Enter]"),
+	BOOLEAN value
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CInkPresenterRuler WetStrokeCanceledPrivate Callback" L"[Exit]"),
+	HRESULT (hr)
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CInkPresenterRuler WetStrokeCanceledPrivate Callback" L"[Exit]"),
+	HRESULT (hr)
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CInkPresenterRuler WetStrokeCanceledPrivate Callback" L"[Enter]")
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CInkPresenterRuler WetStrokeStoppingPrivate Callback" L"[Exit]"),
+	HRESULT (hr)
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CInkPresenterRuler::put_Length" L"[Exit]"),
+	HRESULT (hr)
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CInkPresenterRuler::put_Length" L"[Enter]"),
+	DOUBLE value
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CInkPresenterRuler WetStrokeContinuingPrivate Callback" L"[Enter]")
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CInkPresenterRuler WetStrokeStartingPrivate Callback" L"[Exit]"),
+	HRESULT (hr)
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CInkPresenterRuler WetStrokeStartingPrivate Callback" L"[Exit]"),
+	HRESULT (hr)
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CInkPresenterRuler WetStrokeStoppingPrivate Callback" L"[Exit]"),
+	HRESULT (hr)
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CInkPresenterRuler WetStrokeStoppingPrivate Callback" L"[Enter]")
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CInkPresenterRuler WetStrokeContinuingPrivate Callback" L"[Exit]"),
+	HRESULT (hr)
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CInkPresenterRuler WetStrokeContinuingPrivate Callback" L"[Exit]"),
+	HRESULT (hr)
+	);
+
+DirectInkDestructor(
+	UNICODESTRING (L"CInkPresenterRuler")
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CInkPresenterRuler WetStrokeStartingPrivate Callback" L"[Enter]")
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CInkPresenterRuler::InitializeWetStrokeUpdateHandling" L"[Exit]"),
+	HRESULT (hr)
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CInkPresenterRuler::InitializeWetStrokeUpdateHandling" L"[Exit]"),
+	HRESULT (hr)
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CInkPresenterRuler::InitializeWetStrokeUpdateHandling" L"[Enter]")
+	);
+
+InkPresenterRuler_Initialize(
+	VOID
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"InkPresenterStencilBase::_SetTickMarksVisibility" L"[Exit]"),
+	HRESULT (hr)
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"InkPresenterStencilBase::_SetTickMarksVisibility" L"[Exit]"),
+	HRESULT (hr)
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"InkPresenterStencilBase::_SetForegroundColor" L"[Enter]")
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"InkPresenterStencilBase::_SetBackgroundColor" L"[Exit]"),
+	HRESULT (hr)
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"InkPresenterStencilBase::_SetBackgroundColor" L"[Exit]"),
+	HRESULT (hr)
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"InkPresenterStencilBase::_SetTickMarksVisibility" L"[Enter]")
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"InkPresenterStencilBase::_SetForegroundColor" L"[Exit]"),
+	HRESULT (hr)
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"InkPresenterStencilBase::_SetForegroundColor" L"[Exit]"),
+	HRESULT (hr)
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"InkPresenterStencilBase::_Hide" L"[Enter]")
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"InkPresenterStencilBase::_Show" L"[Exit]"),
+	HRESULT (hr)
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"InkPresenterStencilBase::_Show" L"[Exit]"),
+	HRESULT (hr)
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"InkPresenterStencilBase::_Show" L"[Enter]")
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"InkPresenterStencilBase::_SetBackgroundColor" L"[Enter]")
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"InkPresenterStencilBase::_Hide" L"[Exit]"),
+	HRESULT (hr)
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"InkPresenterStencilBase::_Hide" L"[Exit]"),
+	HRESULT (hr)
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"InkPresenterStencilBase::_EnableInput" L"[Exit]"),
+	HRESULT (hr)
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"InkPresenterStencilBase::_EnableInput" L"[Exit]"),
+	HRESULT (hr)
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"InkPresenterStencilBase::_EnableInput" L"[Enter]")
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"InkPresenterStencilBase::_DisableInput" L"[Exit]"),
+	HRESULT (hr)
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"InkPresenterStencilBase::_DisableInput" L"[Exit]"),
+	HRESULT (hr)
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"InkPresenterStencilBase::_DisableInput" L"[Enter]")
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"InkPresenterStencilBase::_ReleaseInput" L"[Exit]"),
+	HRESULT (((HRESULT)0L))
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"InkPresenterStencilBase::_ReleaseInput" L"[Enter]")
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"InkPresenterStencilBase::_OnManipulationUpdated" L"[Exit]"),
+	HRESULT (hr)
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"InkPresenterStencilBase::_OnManipulationUpdated" L"[Exit]"),
+	HRESULT (hr)
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"InkPresenterStencilBase::_OnManipulationUpdated"),
+	FLOAT m_committedRotationDegrees,
+	FLOAT newRotationDegrees,
+	FLOAT rotationStep,
+	FLOAT histeresisFactor,
+	UINT32 mCommittedRotationDegrees,
+	FLOAT qCommittedRotationDegrees,
+	UINT32 mNewRotationDegrees,
+	FLOAT qNewRotationDegrees
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"InkPresenterStencilBase::_OnManipulationUpdated"),
+	STRING manipulationCenter,
+	FLOAT X,
+	FLOAT Y,
+	HEX manipulationDelta,
+	STRING Translation,
+	FLOAT X,
+	FLOAT Y,
+	FLOAT Scale,
+	FLOAT Rotation,
+	FLOAT Expansion
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"InkPresenterStencilBase::_OnManipulationCompleted" L"[Exit]"),
+	HRESULT (hr)
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"InkPresenterStencilBase::_OnManipulationCompleted" L"[Exit]"),
+	HRESULT (hr)
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"InkPresenterStencilBase::_OnManipulationCompleted" L"[Enter]"),
+	BOOL32 m_fManipulationLocked,
+	BOOL32 m_enableDiscreteManipulation,
+	BOOL32 m_fInPointerWheelEvent,
+	UINT32 m_manipulatorsCount
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"InkPresenterStencilBase::_OnManipulationStarted" L"[Exit]"),
+	HRESULT (hr)
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"InkPresenterStencilBase::_OnManipulationStarted" L"[Exit]"),
+	HRESULT (hr)
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"InkPresenterStencilBase::_OnManipulationUpdated" L"[Enter]"),
+	BOOL32 m_fManipulationLocked,
+	BOOL32 m_enableDiscreteManipulation,
+	BOOL32 m_fInPointerWheelEvent,
+	UINT32 m_manipulatorsCount
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"InkPresenterStencilBase::_RegisterManipulationEventHandlers" L"[Exit]"),
+	HRESULT (hr)
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"InkPresenterStencilBase::_RegisterManipulationEventHandlers" L"[Enter]")
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"InkPresenterStencilBase::_OnManipulationStarted" L"[Enter]"),
+	BOOL32 m_fManipulationLocked,
+	BOOL32 m_enableDiscreteManipulation,
+	BOOL32 m_fInPointerWheelEvent,
+	UINT32 m_manipulatorsCount
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"InkPresenterStencilBase::_RegisterManipulationEventHandlers" L"[Exit]"),
+	HRESULT (hr)
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"InkPresenterStencilBase::_OnPointerRoutedTo" L"[Exit]"),
+	HRESULT (hr)
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"InkPresenterStencilBase::_OnPointerRoutedTo" L"[Enter]")
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"InkPresenterStencilBase::_OnPointerRoutedReleased" L"[Exit]"),
+	HRESULT (hr)
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"InkPresenterStencilBase::_OnPointerRoutedReleased" L"[Exit]"),
+	HRESULT (hr)
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"InkPresenterStencilBase::_OnPointerRoutedTo" L"[Exit]"),
+	HRESULT (hr)
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"InkPresenterStencilBase::_OnPointerWheelChanged" L"[Exit]"),
+	HRESULT (hr)
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"InkPresenterStencilBase::_OnPointerWheelChanged" L"[Exit]"),
+	HRESULT (hr)
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"InkPresenterStencilBase::_OnPointerWheelChanged" L"[Enter]")
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"InkPresenterStencilBase::_OnPointerReleased" L"[Exit]"),
+	HRESULT (hr)
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"InkPresenterStencilBase::_OnPointerRoutedReleased" L"[Enter]")
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"InkPresenterStencilBase::_OnPointerRoutedAway" L"[Exit]"),
+	HRESULT (((HRESULT)0L))
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"InkPresenterStencilBase::_OnPointerRoutedAway" L"[Enter]")
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"InkPresenterStencilBase::_OnPointerMoved" L"[Exit]"),
+	HRESULT (hr)
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"InkPresenterStencilBase::_OnPointerMoved" L"[Enter]")
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"InkPresenterStencilBase::_OnPointerPressed" L"[Exit]"),
+	HRESULT (hr)
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"InkPresenterStencilBase::_OnPointerReleased" L"[Exit]"),
+	HRESULT (hr)
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"InkPresenterStencilBase::_OnPointerReleased" L"[Enter]")
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"InkPresenterStencilBase::_OnPointerMoved" L"[Exit]"),
+	HRESULT (hr)
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"InkPresenterStencilBase::_OnPointerPressed" L"[Enter]")
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"InkPresenterStencilBase::_OnPointerCaptureLost" L"[Exit]"),
+	HRESULT (((HRESULT)0L))
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"InkPresenterStencilBase::_OnPointerCaptureLost" L"[Enter]")
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"InkPresenterStencilBase::_OnPointerPressed" L"[Exit]"),
+	HRESULT (hr)
+	);
+
+ProcessDownEventFailed(
+	UNICODESTRING L"Windows::UI::Input::Inking::InkPresenterStencilBase::_OnPointerPressed",
+	HRESULT hr,
+	ANSISTRING lastPointerEvent,
+	BOOLEAN isInContact,
+	FLOAT X,
+	FLOAT Y
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"InkPresenterStencilBase::_UnregisterPointerEventHandlers" L"[Enter]")
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"InkPresenterStencilBase::_RegisterPointerEventHandlers" L"[Exit]"),
+	HRESULT (hr)
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"InkPresenterStencilBase::_UnregisterPointerEventHandlers" L"[Exit]"),
+	HRESULT (((HRESULT)0L))
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"InkPresenterStencilBase::_RegisterPointerEventHandlers" L"[Enter]")
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"InkPresenterStencilBase::_ReleaseGestureRecognizer" L"[Exit]"),
+	HRESULT (((HRESULT)0L))
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"InkPresenterStencilBase::_RegisterPointerEventHandlers" L"[Exit]"),
+	HRESULT (hr)
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"InkPresenterStencilBase::_CreateAndInitializeGestureRecognizer" L"[Enter]")
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"InkPresenterStencilBase::_CreateIndependentInput" L"[Exit]"),
+	HRESULT (hr)
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"InkPresenterStencilBase::_ReleaseGestureRecognizer" L"[Enter]")
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"InkPresenterStencilBase::_CreateAndInitializeGestureRecognizer" L"[Exit]"),
+	HRESULT (hr)
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"InkPresenterStencilBase::_CreateAndInitializeGestureRecognizer" L"[Exit]"),
+	HRESULT (hr)
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"InkPresenterStencilBase::_Destroy" L"[Exit]"),
+	HRESULT (((HRESULT)0L))
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"InkPresenterStencilBase::_Destroy" L"[Enter]")
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"InkPresenterStencilBase::put_AreTickMarksVisible" L"[Exit]"),
+	HRESULT (hr)
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"InkPresenterStencilBase::put_AreTickMarksVisible" L"[Exit]"),
+	HRESULT (hr)
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"InkPresenterStencilBase::_CreateIndependentInput" L"[Exit]"),
+	HRESULT (hr)
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"InkPresenterStencilBase::_CreateIndependentInput" L"[Enter]")
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"InkPresenterStencilBase::put_Transform" L"[Enter]"),
+	TID value,
+	FLOAT M11,
+	FLOAT M12,
+	FLOAT M21,
+	FLOAT M22,
+	FLOAT M31,
+	FLOAT M32
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"InkPresenterStencilBase::put_ForegroundColor" L"[Exit]"),
+	HRESULT (hr)
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"InkPresenterStencilBase::put_ForegroundColor" L"[Exit]"),
+	HRESULT (hr)
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"InkPresenterStencilBase::put_AreTickMarksVisible" L"[Enter]"),
+	BOOLEAN value
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"InkPresenterStencilBase::put_Transform" L"[Exit]"),
+	HRESULT (hr)
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"InkPresenterStencilBase::put_Transform" L"[Exit]"),
+	HRESULT (hr)
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"InkPresenterStencilBase::put_IsVisible" L"[Exit]"),
+	HRESULT (hr)
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"InkPresenterStencilBase::put_IsVisible" L"[Exit]"),
+	HRESULT (hr)
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"InkPresenterStencilBase::put_IsVisible" L"[Enter]"),
+	BOOLEAN value
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"InkPresenterStencilBase::UpdateInkAreaSize" L"[Exit]"),
+	HRESULT (hr)
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"InkPresenterStencilBase::put_ForegroundColor" L"[Enter]"),
+	HEX value,
+	UINT8 A,
+	UINT8 R,
+	UINT8 G,
+	UINT8 B
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"InkPresenterStencilBase::put_BackgroundColor" L"[Exit]"),
+	HRESULT (hr)
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"InkPresenterStencilBase::put_BackgroundColor" L"[Exit]"),
+	HRESULT (hr)
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"InkPresenterStencilBase::put_BackgroundColor" L"[Enter]"),
+	HEX value,
+	UINT8 A,
+	UINT8 R,
+	UINT8 G,
+	UINT8 B
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"InkPresenterStencilBase::SetHighContrastState" L"[Exit]"),
+	HRESULT (hr)
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"InkPresenterStencilBase::SetHighContrastState" L"[Enter]"),
+	BOOLEAN isHighContrast
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"InkPresenterStencilBase::Destroy" L"[Exit]"),
+	HRESULT (hr)
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"InkPresenterStencilBase::Destroy" L"[Exit]"),
+	HRESULT (hr)
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"InkPresenterStencilBase::UpdateInkAreaSize" L"[Exit]"),
+	HRESULT (hr)
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"InkPresenterStencilBase::UpdateInkAreaSize" L"[Enter]"),
+	FLOAT Width,
+	FLOAT Height
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"InkPresenterStencilBase::SetHighContrastState" L"[Exit]"),
+	HRESULT (hr)
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"InkPresenterStencilBase::InitializeInput" L"[Enter]")
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"InkPresenterStencilBase::Initialize" L"[Exit]"),
+	HRESULT (hr)
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"InkPresenterStencilBase::Initialize" L"[Exit]"),
+	HRESULT (hr)
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"InkPresenterStencilBase::Destroy" L"[Enter]")
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"InkPresenterStencilBase::InitializeInput" L"[Exit]"),
+	HRESULT (hr)
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"InkPresenterStencilBase::InitializeInput" L"[Exit]"),
+	HRESULT (hr)
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"InkPresenterStencilBase::Initialize" L"[Enter]")
+	);
+
+Assert(
+	UINT32 assertVersion,
+	UINT32 rva,
+	UINT32 timestamp,
+	UINT32 imageSize,
+	ANSISTRING imageName,
+	UINT32 count,
+	UINT32 totalHits,
+	UINT32 ModuleCollection,
+	UINT32 GlobalCollection
+	);
+
+SuperWetInkStopped(
+	UINT32 PointerId
+	);
+
+SuperWetInkStarted(
+	UINT32 PointerId,
+	UINT32 PenType,
+	UINT32 PenNibShape,
+	BOOL32 IsPenNibTransformIdentity
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CInkSync::_HandleRenderLatencyTelemetry" L"[Exit]"),
+	HRESULT (hr)
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CInkSync::_HandleRenderLatencyTelemetry" L"[Exit]"),
+	HRESULT (hr)
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CInkSync::_EnsureDry" L"[Exit]"),
+	HRESULT (hr)
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CInkSync::_InitializeContent" L"[Enter]")
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CInkSync::_EnsureDry" L"[Exit]"),
+	HRESULT (hr)
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CInkSync::_InitializeContent" L"[Exit]"),
+	HRESULT (hr)
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CInkSync::_InitializeContent" L"[Exit]"),
+	HRESULT (hr)
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CInkSync::_OnDryComplete" L"[Enter]")
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CInkSync::_OnDryComplete" L"[Exit]"),
+	HRESULT (hr),
+	UINT32 cWetStrokes
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CInkSync::_OnShowSemiDryComplete" L"[Exit]"),
+	HRESULT (hr)
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CInkSync::_OnShowSemiDryComplete" L"[Exit]"),
+	HRESULT (hr)
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CInkSync::_EnsureDryInkPresenter" L"[Exit]"),
+	HRESULT (hr)
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CInkSync::_EnsureDryInkPresenter" L"[Exit]"),
+	HRESULT (hr)
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CInkSync::_OnDryComplete" L"[Exit]"),
+	HRESULT (hr),
+	UINT32 cWetStrokes
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CInkSync::_OnHideSemiDryComplete" L"[Exit]"),
+	HRESULT (hr)
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CInkSync::_OnHideSemiDryComplete" L"[Enter]")
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CInkSync::_OnHideSemiDryComplete" L"[Exit]"),
+	HRESULT (hr)
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CInkSync::_OnClearSemiDryComplete" L"[Exit]"),
+	HRESULT (hr)
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CInkSync::_OnShowSemiDryComplete" L"[Enter]")
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CInkSync::_OnClearSemiDryComplete" L"[Enter]")
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CInkSync::_OnClearSemiDryComplete" L"[Exit]"),
+	HRESULT (hr)
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CInkSync::_TransitionWetStrokesToSemiDry" L"[Exit]"),
+	HRESULT (hr)
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CInkSync::_TransitionWetStrokesToSemiDry" L"[Enter]")
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CInkSync::_OnStrokesAvailableToDry" L"[Exit]"),
+	HRESULT (hr)
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CInkSync::_OnStrokesAvailableToDry" L"[Exit]"),
+	HRESULT (hr)
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CInkSync::_TransitionWetStrokesToSemiDry" L"[Exit]"),
+	HRESULT (hr)
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CInkSync::_OnStrokesAvailableToDry" L"[Enter]")
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CInkSync::_ReleaseSemiDry" L"[Exit]"),
+	HRESULT (((HRESULT)0L))
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CInkSync::_ReleaseSemiDry" L"[Enter]")
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CInkSync::_ClearSemiDry" L"[Exit]"),
+	HRESULT (hr)
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CInkSync::_ClearSemiDry" L"[Exit]"),
+	HRESULT (hr)
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CInkSync::_ClearSemiDry" L"[Enter]")
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CInkSync::_AcquireSemiDry" L"[Exit]"),
+	HRESULT (((HRESULT)0L))
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CInkSync::_OnSemiDryComplete" L"[Exit]"),
+	HRESULT (hr),
+	BOOLEAN fSignalledHostThread,
+	BOOLEAN fHostPickupPending
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CInkSync::_AcquireSemiDry" L"[Enter]")
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CInkSync::_TryAcquireSemiDry" L"[Exit]"),
+	HRESULT (((HRESULT)0L))
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CInkSync::_TryAcquireSemiDry" L"[Enter]")
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CInkSync::_ProcessStrokesAddedCollection" L"[Exit]"),
+	HRESULT (hr),
+	UINT32 cStrokes
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CInkSync::_WetToSemiDrySync" L"[Enter]")
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CInkSync::_ProcessStrokesAddedCollection" L"[Exit]"),
+	HRESULT (hr),
+	UINT32 cStrokes
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CInkSync::_OnSemiDryComplete" L"[Enter]")
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CInkSync::_OnSemiDryComplete" L"[Exit]"),
+	HRESULT (hr),
+	BOOLEAN fSignalledHostThread,
+	BOOLEAN fHostPickupPending
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CInkSync::_WetToSemiDrySync" L"[Exit]"),
+	HRESULT (hr),
+	BOOLEAN _fSemiDryingInProgress
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CInkSync::_WetToSemiDrySync" L"[Exit]"),
+	HRESULT (hr),
+	BOOLEAN _fSemiDryingInProgress
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CInkSync::EndDry" L"[Exit]"),
+	HRESULT (hr),
+	BOOLEAN fBeginDryWasFaked,
+	BOOLEAN fEndDryWasReleaseOnly
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CInkSync::_UpdateStrokesCollected" L"[Enter]")
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CInkSync::EndDry" L"[Exit]"),
+	HRESULT (hr),
+	BOOLEAN fBeginDryWasFaked,
+	BOOLEAN fEndDryWasReleaseOnly
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CInkSync::_UpdateStrokesCollected" L"[Exit]"),
+	HRESULT (hr),
+	UINT32 cStrokes
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CInkSync::_ProcessStrokesAddedCollection" L"[Enter]")
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CInkSync::_UpdateStrokesCollected" L"[Exit]"),
+	HRESULT (hr),
+	UINT32 cStrokes
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CInkSync::ActivateCustomDrying" L"[Exit]"),
+	HRESULT (hr)
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CInkSync::BeginDry" L"[Enter]")
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CInkSync::ActivateCustomDrying" L"[Exit]"),
+	HRESULT (hr)
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CInkSync::BeginDry" L"[Exit]"),
+	HRESULT (hr),
+	UINT32 cStrokes,
+	BOOLEAN _fDryingInProgress,
+	BOOLEAN _fBeginDryFaked,
+	BOOLEAN fPreviousSequenceStillInProgress
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CInkSync::EndDry" L"[Enter]")
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CInkSync::BeginDry" L"[Exit]"),
+	HRESULT (hr),
+	UINT32 cStrokes,
+	BOOLEAN _fDryingInProgress,
+	BOOLEAN _fBeginDryFaked,
+	BOOLEAN fPreviousSequenceStillInProgress
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CInkSync::CancelStroke" L"[Exit]"),
+	HRESULT (hr)
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CInkSync::CancelStroke" L"[Exit]"),
+	HRESULT (hr)
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CInkSync::OnWetStrokeStopped" L"[Exit]"),
+	HRESULT (hr)
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CInkSync::CancelStroke" L"[Enter]")
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CInkSync::_RequestInkCommit" L"[Exit]"),
+	HRESULT (hr)
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CInkSync::ActivateCustomDrying" L"[Enter]")
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CInkSync::_RequestInkCommit" L"[Enter]")
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CInkSync::_RequestInkCommit" L"[Exit]"),
+	HRESULT (hr)
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CInkSync::OnWetStrokeStopped" L"[Enter]")
+	);
+
+InkStrokeEnd(
+	GUID SessionId,
+	UNICODESTRING Tag,
+	UINT32 PointerType,
+	UINT32 InkDrawingAttributesKind,
+	BOOLEAN IsDrawAsHighlighter,
+	BOOLEAN IsFitToCurve,
+	BOOLEAN IsIgnorePressure,
+	BOOLEAN IsIgnoreTilt,
+	UINT32 CountBelowTiltThreshold,
+	UINT32 CountAboveTiltThreshold,
+	FLOAT FirstTilt,
+	FLOAT MinTilt,
+	FLOAT MaxTilt,
+	FLOAT SumTilt,
+	UINT32 PenId,
+	UINT64 InkDurationHns,
+	UNICODESTRING InkAPI
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CInkSync::OnWetStrokeStopped" L"[Exit]"),
+	HRESULT (hr)
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CInkSync::OnWetStrokeContinued" L"[Enter]")
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CInkSync::OnWetStrokeStarted" L"[Exit]"),
+	HRESULT (hr)
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CInkSync::OnWetStrokeStarted" L"[Exit]"),
+	HRESULT (hr)
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CInkSync::OnWetStrokeContinued" L"[Exit]"),
+	HRESULT (hr)
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CInkSync::OnWetStrokeContinued" L"[Exit]"),
+	HRESULT (hr)
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CInkSync::SetHighContrastState" L"[Exit]"),
+	HRESULT (hr)
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CInkSync::SetHighContrastState" L"[Exit]"),
+	HRESULT (hr)
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CInkSync::OnWetStrokeStarted" L"[Enter]")
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CInkSync::SetDryInkContainer" L"[Exit]"),
+	HRESULT (hr),
+	INT64 NewValue
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CInkSync::SetDryInkContainer" L"[Exit]"),
+	HRESULT (hr),
+	INT64 NewValue
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CInkSync::SetDryInkContainer" L"[Enter]")
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CInkSync::SetHighContrastState" L"[Enter]")
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CInkSync::SetRootVisual" L"[Exit]"),
+	HRESULT (hr)
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CInkSync::SetRootVisual" L"[Exit]"),
+	HRESULT (hr)
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CInkSync::GetDryInkContainer" L"[Exit]"),
+	HRESULT (hr),
+	INT64 ReturnedValue
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CInkSync::GetDryInkContainer" L"[Exit]"),
+	HRESULT (hr),
+	INT64 ReturnedValue
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CInkSync::GetDryInkContainer" L"[Enter]")
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CInkSync::SetSize" L"[Enter]")
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CInkSync::SetRootVisual" L"[Enter]")
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CInkSync::SetSize" L"[Exit]"),
+	HRESULT (hr),
+	BOOLEAN _fContentInitialized,
+	FLOAT Width,
+	FLOAT Height
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CInkSync::SetSize" L"[Exit]"),
+	HRESULT (hr),
+	BOOLEAN _fContentInitialized,
+	FLOAT Width,
+	FLOAT Height
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CInkSync::Initialize" L"[Enter]")
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CInkSync::Initialize" L"[Exit]"),
+	HRESULT (hr)
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CInkSync::Initialize" L"[Exit]"),
+	HRESULT (hr)
+	);
+
+DirectInkDestructor(
+	UNICODESTRING (L"CInkSync")
+	);
+
+DirectInkDestructor(
+	UNICODESTRING (L"CInkContentUpdateHelper")
+	);
+
+DirectInkDestructor(
+	UNICODESTRING (L"CEraser")
+	);
+
+DirectInkDestructor(
+	UNICODESTRING (L"CDryInkPresenter")
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CHostCommitHelper::_GetLastConfirmedBatchId" L"[Exit]"),
+	HRESULT (hr),
+	UINT32 *pBatchId
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CHostCommitHelper::_RequestCommit" L"[Exit]"),
+	HRESULT (hr)
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CHostCommitHelper::_RequestCommit" L"[Exit]"),
+	HRESULT (hr)
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CHostCommitHelper::SetProvider" L"[Exit]"),
+	HRESULT (hr),
+	INT64 pCommitProvider
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CHostCommitHelper::_GetLastConfirmedBatchId" L"[Exit]"),
+	HRESULT (hr),
+	UINT32 *pBatchId
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CHostCommitHelper::_GetCurrentBatchId" L"[Exit]"),
+	HRESULT (hr),
+	UINT32 *pBatchId
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CHostCommitHelper::_GetCurrentBatchId" L"[Exit]"),
+	HRESULT (hr),
+	UINT32 *pBatchId
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CCommitHelper::_GetLastConfirmedBatchId" L"[Exit]"),
+	HRESULT (hr),
+	UINT32 *pBatchId
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CCommitHelper::_GetCurrentBatchId" L"[Exit]"),
+	HRESULT (hr),
+	UINT32 *pBatchId
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CCommitHelper::_GetCurrentBatchId" L"[Exit]"),
+	HRESULT (hr),
+	UINT32 *pBatchId
+	);
+
+DirectInkDestructor(
+	UNICODESTRING (L"CHostCommitHelper")
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CHostCommitHelper::SetProvider" L"[Exit]"),
+	HRESULT (hr),
+	INT64 pCommitProvider
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CCommitHelper::_GetLastConfirmedBatchId" L"[Exit]"),
+	HRESULT (hr),
+	UINT32 *pBatchId
+	);
+
+CommitActivity(
+	VOID
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CCommitHelper::_RequestCommit" L"[Exit]"),
+	HRESULT (hr)
+	);
+
+CommitActivity(
+	VOID
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CCommitHelper::_RequestCommit" L"[Exit]"),
+	HRESULT (hr)
+	);
+
+DirectInkDestructor(
+	UNICODESTRING (L"CCommitHelper")
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CCommitHelper::SetProvider" L"[Exit]"),
+	HRESULT (hr),
+	INT64 pDCompDevice
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CCommitHelper::SetProvider" L"[Exit]"),
+	HRESULT (hr),
+	INT64 pDCompDevice
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CCommitHelperBase::GetDevice" L"[Exit]"),
+	HRESULT (hr)
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CCommitHelperBase::RequestCommitAndNotify" L"[Exit]"),
+	HRESULT (hr),
+	UINT32 batchId
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CCommitHelperBase::RequestCommitAndNotify" L"[Exit]"),
+	HRESULT (hr),
+	UINT32 batchId
+	);
+
+DirectInkDestructor(
+	UNICODESTRING (L"CCommitHelperBase")
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CCommitHelperBase::GetDevice" L"[Exit]"),
+	HRESULT (hr)
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CDryInkPresenter::OnPointerLost" L"[Exit]"),
+	HRESULT (hr),
+	BOOLEAN fHandleInput
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CDryInkPresenter::OnPointerLost" L"[Exit]"),
+	HRESULT (hr),
+	BOOLEAN fHandleInput
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CDryInkPresenter::OnPointerPressed" L"[Exit]"),
+	HRESULT (hr),
+	BOOLEAN fHandleInput
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CDryInkPresenter::OnPointerMoved" L"[Exit]"),
+	HRESULT (hr),
+	BOOLEAN fHandleInput
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CDryInkPresenter::OnPointerPressed" L"[Exit]"),
+	HRESULT (hr),
+	BOOLEAN fHandleInput
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CDryInkPresenter::OnPointerReleased" L"[Exit]"),
+	HRESULT (hr),
+	BOOLEAN fHandleInput
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CDryInkPresenter::OnPointerReleased" L"[Exit]"),
+	HRESULT (hr),
+	BOOLEAN fHandleInput
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CDryInkPresenter::OnPointerMoved" L"[Exit]"),
+	HRESULT (hr),
+	BOOLEAN fHandleInput
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CDryInkPresenter::DeferCommit" L"[Exit]"),
+	HRESULT (hr),
+	UINT32 _cDeferCommit
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CDryInkPresenter::DeferCommit" L"[Exit]"),
+	HRESULT (hr),
+	UINT32 _cDeferCommit
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CDryInkPresenter::RedrawAll" L"[Exit]"),
+	HRESULT (hr),
+	UINT32 cStrokesInContainer
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CDryInkPresenter::RedrawAll" L"[Exit]"),
+	HRESULT (hr),
+	UINT32 cStrokesInContainer
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CDryInkPresenter::RequestCommit" L"[Exit]"),
+	HRESULT (hr),
+	UINT32 _cDeferCommit
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CDryInkPresenter::RequestCommit" L"[Exit]"),
+	HRESULT (hr),
+	UINT32 _cDeferCommit
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CDryInkPresenter::UndeferCommit" L"[Exit]"),
+	HRESULT (hr),
+	UINT32 _cDeferCommit
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CDryInkPresenter::UndeferCommit" L"[Exit]"),
+	HRESULT (hr),
+	UINT32 _cDeferCommit
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CDryInkPresenter::AddContainerListeners" L"[Exit]"),
+	HRESULT (hr)
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CDryInkPresenter::AddContainerListeners" L"[Exit]"),
+	HRESULT (hr)
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CDryInkPresenter::RemoveContainerListeners" L"[Exit]"),
+	HRESULT (hr)
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CDryInkPresenter::RemoveContainerListeners" L"[Exit]"),
+	HRESULT (hr)
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CDryInkPresenter::ReleaseDryInkContainer" L"[Exit]"),
+	HRESULT (hr)
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CDryInkPresenter::AttachDryInkContainer" L"[Exit]"),
+	HRESULT (hr)
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CDryInkPresenter::ReleaseDryInkContainer" L"[Exit]"),
+	HRESULT (hr)
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CDryInkPresenter::AttachDryInkContainer" L"[Exit]"),
+	HRESULT (hr)
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CDryInkPresenter::OnStrokesModified" L"[Exit]"),
+	HRESULT (hr),
+	UINT32 cStrokesInContainer
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CDryInkPresenter::OnStrokesModified" L"[Exit]"),
+	HRESULT (hr),
+	UINT32 cStrokesInContainer
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CDryInkPresenter::OnStrokesRemoved" L"[Exit]"),
+	HRESULT (hr),
+	UINT32 cStrokesInContainer
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CDryInkPresenter::OnStrokesReplaced" L"[Exit]"),
+	HRESULT (hr),
+	UINT32 cStrokesInContainer
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CDryInkPresenter::OnStrokesReplaced" L"[Exit]"),
+	HRESULT (hr),
+	UINT32 cStrokesInContainer
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CDryInkPresenter::OnContentsChanged" L"[Exit]"),
+	HRESULT (hr),
+	UINT32 cStrokesInContainer
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CDryInkPresenter::OnContentsChanged" L"[Exit]"),
+	HRESULT (hr),
+	UINT32 cStrokesInContainer
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CDryInkPresenter::GetContainerEventStrokes" L"[Exit]"),
+	HRESULT (hr),
+	UINT32 cStrokes
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CDryInkPresenter::OnStrokesCollected" L"[Exit]"),
+	HRESULT (hr),
+	INT32 hrEnd,
+	UINT32 cStrokesDried
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CDryInkPresenter::OnStrokesAppended" L"[Exit]"),
+	HRESULT (hr),
+	UINT32 cStrokesInContainer
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CDryInkPresenter::OnStrokesRemoved" L"[Exit]"),
+	HRESULT (hr),
+	UINT32 cStrokesInContainer
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CDryInkPresenter::GetContainerEventStrokes" L"[Exit]"),
+	HRESULT (hr),
+	UINT32 cStrokes
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CDryInkPresenter::OnStrokesAppended" L"[Exit]"),
+	HRESULT (hr),
+	UINT32 cStrokesInContainer
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CDryInkPresenter::SetDryInkContainer" L"[Exit]"),
+	HRESULT (hr),
+	BOOLEAN fContainerChanged,
+	BOOLEAN fNeedRedraw,
+	UINT32 cStrokesOld,
+	UINT32 cStrokesNew
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CDryInkPresenter::SetDryInkContainer" L"[Exit]"),
+	HRESULT (hr),
+	BOOLEAN fContainerChanged,
+	BOOLEAN fNeedRedraw,
+	UINT32 cStrokesOld,
+	UINT32 cStrokesNew
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CDryInkPresenter::GetDryInkContainer" L"[Exit]"),
+	HRESULT (hr)
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CDryInkPresenter::GetDryInkContainer" L"[Exit]"),
+	HRESULT (hr)
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CDryInkPresenter::OnStrokesCollected" L"[Exit]"),
+	HRESULT (hr),
+	INT32 hrEnd,
+	UINT32 cStrokesDried
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CDryInkPresenter::Uninitialize" L"[Exit]"),
+	HRESULT (hr)
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CDryInkPresenter::Uninitialize" L"[Exit]"),
+	HRESULT (hr)
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CDryInkPresenter::Initialize" L"[Exit]"),
+	HRESULT (hr)
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CDryInkPresenter::Initialize" L"[Exit]"),
+	HRESULT (hr)
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CInkTree::ResizeInputVisual" L"[Exit]"),
+	HRESULT (hr),
+	FLOAT Width,
+	FLOAT Height
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CInkTree::GetInputVisual" L"[Exit]"),
+	HRESULT (hr),
+	INT64 pInputVisual
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CInkTree::GetInputVisual" L"[Exit]"),
+	HRESULT (hr),
+	INT64 pInputVisual
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CInkTree::ResizeInputVisual" L"[Exit]"),
+	HRESULT (hr),
+	FLOAT Width,
+	FLOAT Height
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CInkTree::SetupDCompInputVisual" L"[Exit]"),
+	HRESULT (hr),
+	INT64 pInputVisual,
+	INT64 pInputSurface
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CInkTree::SetupDCompInputVisual" L"[Exit]"),
+	HRESULT (hr),
+	INT64 pInputVisual,
+	INT64 pInputSurface
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CInkTree::HideSemiDryBranch" L"[Exit]"),
+	HRESULT (hr)
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CInkTree::ShowSemiDryBranch" L"[Exit]"),
+	HRESULT (hr)
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CInkTree::HideSemiDryBranch" L"[Exit]"),
+	HRESULT (hr)
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CInkTree::ShowSemiDryBranch" L"[Exit]"),
+	HRESULT (hr)
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CInkTree::AddSemiDryBranch" L"[Exit]"),
+	HRESULT (hr)
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CInkTree::AddDryBranch" L"[Exit]"),
+	HRESULT (hr)
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CInkTree::AddWetBranch" L"[Exit]"),
+	HRESULT (hr)
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CInkTree::AddSemiDryBranch" L"[Exit]"),
+	HRESULT (hr)
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CInkTree::AddStencilsBranch" L"[Exit]"),
+	HRESULT (hr)
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CInkTree::AddStencilsBranch" L"[Exit]"),
+	HRESULT (hr)
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CInkTree::AddDryBranch" L"[Exit]"),
+	HRESULT (hr)
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CInkTree::SetRootVisual" L"[Exit]"),
+	HRESULT (hr),
+	BOOLEAN fHadRoot,
+	BOOLEAN fNewRoot,
+	BOOLEAN fExcludeSemiDry
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CInkTree::SetSize" L"[Exit]"),
+	HRESULT (hr),
+	FLOAT Width,
+	FLOAT Height
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CInkTree::Initialize" L"[Exit]"),
+	HRESULT (hr)
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CInkTree::SetRootVisual" L"[Exit]"),
+	HRESULT (hr),
+	BOOLEAN fHadRoot,
+	BOOLEAN fNewRoot,
+	BOOLEAN fExcludeSemiDry
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CInkTree::AddWetBranch" L"[Exit]"),
+	HRESULT (hr)
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CInkTree::SetSize" L"[Exit]"),
+	HRESULT (hr),
+	FLOAT Width,
+	FLOAT Height
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CInkTree::Initialize" L"[Exit]"),
+	HRESULT (hr)
+	);
+
+DirectInkDestructor(
+	UNICODESTRING (L"CInkTree")
+	);
+
+DirectInkDestructor(
+	UNICODESTRING (L"CInkRoot")
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CEraser::EndErase" L"[Exit]"),
+	HRESULT (hr),
+	BOOLEAN InputHandlerData,
+	UINT32 PointerId,
+	FLOAT RawPosition.X,
+	FLOAT RawPosition.Y
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CEraser::StartErase" L"[Exit]"),
+	HRESULT (hr),
+	BOOLEAN InputHandlerData,
+	UINT32 PointerId,
+	FLOAT RawPosition.X,
+	FLOAT RawPosition.Y
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CEraser::ContinueErase" L"[Exit]"),
+	HRESULT (hr),
+	FLOAT NewRawPosition.X,
+	FLOAT NewRawPosition.Y,
+	BOOLEAN InputHandlerData,
+	UINT32 PointerId,
+	FLOAT RawPosition.X,
+	FLOAT RawPosition.Y
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CEraser::EndErase" L"[Exit]"),
+	HRESULT (hr),
+	BOOLEAN InputHandlerData,
+	UINT32 PointerId,
+	FLOAT RawPosition.X,
+	FLOAT RawPosition.Y
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CEraser::StartErase" L"[Exit]"),
+	HRESULT (hr),
+	BOOLEAN InputHandlerData,
+	UINT32 PointerId,
+	FLOAT RawPosition.X,
+	FLOAT RawPosition.Y
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CEraser::ContinueErase" L"[Exit]"),
+	HRESULT (hr),
+	FLOAT NewRawPosition.X,
+	FLOAT NewRawPosition.Y,
+	BOOLEAN InputHandlerData,
+	UINT32 PointerId,
+	FLOAT RawPosition.X,
+	FLOAT RawPosition.Y
+	);
+
+DirectInkDestructor(
+	UNICODESTRING (L"CStencilsBranch")
+	);
+
+DirectInkDestructor(
+	UNICODESTRING (L"CInkBranch")
+	);
+
+DirectInkDestructor(
+	UNICODESTRING (L"CDirectInkRenderManager")
+	);
+
+DirectInkDestructor(
+	UNICODESTRING (L"CDirectInkRenderResource")
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"PencilTiltRenderImpl::RenderInk" L"[Exit]"),
+	HRESULT (hr),
+	UINT32 cStrokes
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"PencilTiltRenderImpl::RenderInk" L"[Exit]"),
+	HRESULT (hr),
+	UINT32 cStrokes
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"PencilTiltRenderImpl::InsertAndRenderInk" L"[Exit]"),
+	HRESULT (hr),
+	UINT32 cStrokes
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"PencilTiltRenderImpl::InsertAndRenderInk" L"[Exit]"),
+	HRESULT (hr),
+	UINT32 cStrokes
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"PencilTiltRenderImpl::RedrawRenderedInk" L"[Exit]"),
+	HRESULT (hr),
+	UINT32 cStrokes
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"PencilTiltRenderImpl::RedrawRenderedInk" L"[Exit]"),
+	HRESULT (hr),
+	UINT32 cStrokes
+	);
+
+DirectInkRenderCreateDCompPencilStroke(
+	UNICODESTRING L"PencilTiltRenderImpl::CreateDCompPencilStroke, GetRenderingInfo"
+	);
+
+DirectInkRenderCreateDCompPencilStroke(
+	UNICODESTRING L"PencilTiltRenderImpl::CreateDCompPencilStroke, GetRenderingInfo"
+	);
+
+DirectInkDestructor(
+	UNICODESTRING (L"PencilTiltRenderImpl")
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CDirectInkGenericPrimitiveDefaultRenderImpl::InsertAndRenderInk" L"[Exit]"),
+	HRESULT (hr),
+	UINT32 cStrokes
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CDirectInkGenericPrimitiveDefaultRenderImpl::InsertAndRenderInk" L"[Exit]"),
+	HRESULT (hr),
+	UINT32 cStrokes
+	);
+
+DirectInkRenderCreateDCompInkStroke(
+	UNICODESTRING L"CDirectInkGenericPrimitiveDefaultRenderImpl::CreateDCompInkStroke, GetRenderingInfo"
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CDirectInkGenericPrimitiveDefaultRenderImpl::RedrawRenderedInk" L"[Exit]"),
+	HRESULT (hr),
+	UINT32 cStrokes
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CDirectInkGenericPrimitiveDefaultRenderImpl::RedrawRenderedInk" L"[Exit]"),
+	HRESULT (hr),
+	UINT32 cStrokes
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CDirectInkGenericPrimitiveDefaultRenderImpl::RenderInk" L"[Exit]"),
+	HRESULT (hr),
+	UINT32 cStrokes
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CDirectInkGenericPrimitiveDefaultRenderImpl::RenderInk" L"[Exit]"),
+	HRESULT (hr),
+	UINT32 cStrokes
+	);
+
+DirectInkDestructor(
+	UNICODESTRING (L"CDirectInkGenericPrimitiveDefaultRenderImpl")
+	);
+
+DirectInkRenderCreateDCompInkStroke(
+	UNICODESTRING L"CDirectInkGenericPrimitiveDefaultRenderImpl::CreateDCompInkStroke, GetRenderingInfo"
+	);
+
+ActivityStoppedAutomatically(
+	VOID
+	);
+
+DirectInkRenderCancelStroke(
+	UNICODESTRING L"CDirectInkWetGenericPrimitiveDefaultRenderImpl::CancelStroke",
+	UINT32 strokeId
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CDirectInkWetGenericPrimitiveDefaultRenderImpl::CancelStroke" L"[Exit]"),
+	HRESULT (hr)
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CDirectInkWetGenericPrimitiveDefaultRenderImpl::CancelStroke" L"[Exit]"),
+	HRESULT (hr)
+	);
+
+DirectInkRenderCancelStroke(
+	UNICODESTRING L"CDirectInkWetGenericPrimitiveDefaultRenderImpl::CancelStroke",
+	UINT32 strokeId
+	);
+
+DirectInkRenderWetStrokeStopped(
+	UNICODESTRING L"CDirectInkWetGenericPrimitiveDefaultRenderImpl::ProcessWetStrokeStopped",
+	UINT32 strokeId
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CDirectInkWetGenericPrimitiveDefaultRenderImpl::ProcessWetStrokeStopped" L"[Exit]"),
+	HRESULT (hr)
+	);
+
+DirectInkWetStrokeStopped(
+	UNICODESTRING L"CDirectInkWetGenericPrimitiveDefaultRenderImpl::ProcessWetStrokeStopped",
+	UINT32 strokeId
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CDirectInkWetGenericPrimitiveDefaultRenderImpl::ProcessWetStrokeStopped" L"[Exit]"),
+	HRESULT (hr)
+	);
+
+DirectInkRenderWetStrokeContinued(
+	UNICODESTRING L"CDirectInkWetGenericPrimitiveDefaultRenderImpl::ProcessWetStrokeContinued",
+	UINT32 strokeId
+	);
+
+DirectInkRenderWetStrokeContinued(
+	UNICODESTRING L"CDirectInkWetGenericPrimitiveDefaultRenderImpl::ProcessWetStrokeContinued",
+	UINT32 strokeId
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CDirectInkWetGenericPrimitiveDefaultRenderImpl::ProcessWetStrokeContinued" L"[Exit]"),
+	HRESULT (hr)
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CDirectInkWetGenericPrimitiveDefaultRenderImpl::ProcessWetStrokeContinued" L"[Exit]"),
+	HRESULT (hr)
+	);
+
+DirectInkRenderWetStrokeStarted(
+	UNICODESTRING L"CDirectInkWetGenericPrimitiveDefaultRenderImpl::ProcessWetStrokeStarted",
+	UINT32 strokeId
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CDirectInkWetGenericPrimitiveDefaultRenderImpl::ProcessWetStrokeStarted" L"[Exit]"),
+	HRESULT (hr)
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"CDirectInkWetGenericPrimitiveDefaultRenderImpl::ProcessWetStrokeStarted" L"[Exit]"),
+	HRESULT (hr)
+	);
+
+DirectInkRenderWetStrokeStarted(
+	UNICODESTRING L"CDirectInkWetGenericPrimitiveDefaultRenderImpl::ProcessWetStrokeStarted",
+	UINT32 strokeId
+	);
+
+DirectInkDestructor(
+	UNICODESTRING (L"CDirectInkWetGenericPrimitiveDefaultRenderImpl")
+	);
+
+DirectInkRenderCancelStroke(
+	UNICODESTRING L"WetPencilTiltRenderImpl::CancelStroke",
+	UINT32 strokeId
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"WetPencilTiltRenderImpl::CancelStroke" L"[Exit]"),
+	HRESULT (hr)
+	);
+
+DirectInkRenderCancelStroke(
+	UNICODESTRING L"WetPencilTiltRenderImpl::CancelStroke",
+	UINT32 strokeId
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"WetPencilTiltRenderImpl::CancelStroke" L"[Exit]"),
+	HRESULT (hr)
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"WetPencilTiltRenderImpl::ProcessWetStrokeStopped" L"[Exit]"),
+	HRESULT (hr)
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"WetPencilTiltRenderImpl::ProcessWetStrokeStopped" L"[Exit]"),
+	HRESULT (hr)
+	);
+
+DirectInkRenderWetStrokeStopped(
+	UNICODESTRING L"WetPencilTiltRenderImpl::ProcessWetStrokeStopped",
+	UINT32 strokeId
+	);
+
+DirectInkWetStrokeStopped(
+	UNICODESTRING L"WetPencilTiltRenderImpl::ProcessWetStrokeStopped",
+	UINT32 strokeId
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"WetPencilTiltRenderImpl::ProcessWetStrokeContinued" L"[Exit]"),
+	HRESULT (hr)
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"WetPencilTiltRenderImpl::ProcessWetStrokeContinued" L"[Exit]"),
+	HRESULT (hr)
+	);
+
+DirectInkRenderWetStrokeContinued(
+	UNICODESTRING L"WetPencilTiltRenderImpl::ProcessWetStrokeContinued",
+	UINT32 strokeId
+	);
+
+DirectInkRenderWetStrokeContinued(
+	UNICODESTRING L"WetPencilTiltRenderImpl::ProcessWetStrokeContinued",
+	UINT32 strokeId
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"WetPencilTiltRenderImpl::ProcessWetStrokeStarted" L"[Exit]"),
+	HRESULT (hr)
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"WetPencilTiltRenderImpl::ProcessWetStrokeStarted" L"[Exit]"),
+	HRESULT (hr)
+	);
+
+DirectInkRenderWetStrokeStarted(
+	UNICODESTRING L"WetPencilTiltRenderImpl::ProcessWetStrokeStarted",
+	UINT32 strokeId
+	);
+
+DirectInkRenderWetStrokeStarted(
+	UNICODESTRING L"WetPencilTiltRenderImpl::ProcessWetStrokeStarted",
+	UINT32 strokeId
+	);
+
+DirectInkDestructor(
+	UNICODESTRING (L"WetPencilTiltRenderImpl")
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"DirectInkPrimitiveRenderBaseImpl::RedrawStrokeCollection" L"[Exit]"),
+	HRESULT (hr)
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"DirectInkPrimitiveRenderBaseImpl::RedrawStrokeCollection" L"[Exit]"),
+	HRESULT (hr)
+	);
+
+DirectInkRenderRedrawStrokeCollection(
+	UNICODESTRING L"DirectInkPrimitiveRenderBaseImpl::RedrawStrokeCollection"
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"DirectInkPrimitiveRenderBaseImpl::ClearRenderedInkStroke" L"[Exit]"),
+	HRESULT (hr)
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"DirectInkPrimitiveRenderBaseImpl::ClearRenderedInkStroke" L"[Exit]"),
+	HRESULT (hr)
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"DirectInkPrimitiveRenderBaseImpl::InsertStroke" L"[Exit]"),
+	HRESULT (hr)
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"DirectInkPrimitiveRenderBaseImpl::ClearStroke" L"[Exit]"),
+	HRESULT (hr)
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"DirectInkPrimitiveRenderBaseImpl::InsertStroke" L"[Exit]"),
+	HRESULT (hr)
+	);
+
+DirectInkRenderRedrawStrokeCollection(
+	UNICODESTRING L"DirectInkPrimitiveRenderBaseImpl::RedrawStrokeCollection"
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"DirectInkPrimitiveRenderBaseImpl::ProcessStrokeCollection" L"[Exit]"),
+	HRESULT (hr)
+	);
+
+DirectInkRenderClearStroke(
+	UNICODESTRING L"DirectInkPrimitiveRenderBaseImpl::ClearStroke"
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"DirectInkPrimitiveRenderBaseImpl::ClearStroke" L"[Exit]"),
+	HRESULT (hr)
+	);
+
+DirectInkRenderClearStroke(
+	UNICODESTRING L"DirectInkPrimitiveRenderBaseImpl::ClearStroke"
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"DirectInkPrimitiveRenderBaseImpl::ProcessStroke" L"[Exit]"),
+	HRESULT (hr)
+	);
+
+DirectInkRenderProcessStrokeCollection(
+	UNICODESTRING L"DirectInkPrimitiveRenderBaseImpl::ProcessStrokeCollection"
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"DirectInkPrimitiveRenderBaseImpl::ProcessStrokeCollection" L"[Exit]"),
+	HRESULT (hr)
+	);
+
+DirectInkRenderProcessStrokeCollection(
+	UNICODESTRING L"DirectInkPrimitiveRenderBaseImpl::ProcessStrokeCollection"
+	);
+
+DirectInkRenderProcessStroke(
+	UNICODESTRING L"DirectInkPrimitiveRenderBaseImpl::ProcessStroke"
+	);
+
+DirectInkDebug(
+	UNICODESTRING (L"DirectInkPrimitiveRenderBaseImpl::ProcessStroke" L"[Exit]"),
+	HRESULT (hr)
+	);
+
+DirectInkRenderProcessStroke(
+	UNICODESTRING L"DirectInkPrimitiveRenderBaseImpl::ProcessStroke"
+	);
+
+DirectInkDestructor(
+	UNICODESTRING (L"DirectInkPrimitiveRenderBaseImpl")
+	);
+

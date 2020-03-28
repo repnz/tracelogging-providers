@@ -1,0 +1,250 @@
+ProviderNames:
+	Update360Telemetry
+	Microsoft.Windows.CbsLite
+
+
+
+**** Events *****
+UpdateAgentMitigationSummary(
+	HRESULT Result,
+	INT32 MitigationScenario,
+	INT32 Total,
+	INT32 Applicable,
+	INT32 Failed,
+	INT64 TimeDiff,
+	GUID ObjectId,
+	UNICODESTRING SessionId,
+	INT32 ScenarioId,
+	UNICODESTRING FlightId,
+	UNICODESTRING UpdateId,
+	ANSISTRING RelatedCV,
+	ANSISTRING __TlgCV__
+	);
+
+UpdateAgentCommit(
+	INT32 Result,
+	HRESULT ErrorCode,
+	GUID ObjectId,
+	UNICODESTRING SessionId,
+	INT32 ScenarioId,
+	UNICODESTRING FlightId,
+	UNICODESTRING UpdateId,
+	ANSISTRING RelatedCV,
+	ANSISTRING __TlgCV__
+	);
+
+UpdateAgentSetupBoxLaunch(
+	INT32 SetupMode,
+	INT32 Quiet,
+	INT32 UserSession,
+	INT64 SandboxSize,
+	INT64 FreeSpace,
+	INT32 InstallCount,
+	BOOL32 ContainsExpressPackage,
+	GUID ObjectId,
+	UNICODESTRING SessionId,
+	INT32 ScenarioId,
+	UNICODESTRING FlightId,
+	UNICODESTRING UpdateId,
+	ANSISTRING RelatedCV,
+	ANSISTRING __TlgCV__
+	);
+
+UpdateAgentMerge(
+	INT32 Result,
+	HRESULT ErrorCode,
+	UNICODESTRING MergeId,
+	GUID ObjectId,
+	UNICODESTRING SessionId,
+	INT32 ScenarioId,
+	UNICODESTRING FlightId,
+	UNICODESTRING UpdateId,
+	ANSISTRING RelatedCV,
+	ANSISTRING __TlgCV__
+	);
+
+UpdateAgentInstall(
+	UNICODESTRING ExtensionName,
+	INT32 Result,
+	HRESULT ErrorCode,
+	HRESULT InternalFailureResult,
+	GUID ObjectId,
+	UNICODESTRING SessionId,
+	INT32 ScenarioId,
+	UNICODESTRING FlightId,
+	UNICODESTRING UpdateId,
+	ANSISTRING RelatedCV,
+	ANSISTRING __TlgCV__
+	);
+
+PauseResume(
+	HRESULT ErrorCode,
+	INT32 Result,
+	UNICODESTRING Operation,
+	GUID ObjectId,
+	UNICODESTRING SessionId,
+	INT32 ScenarioId,
+	UNICODESTRING FlightId,
+	UNICODESTRING UpdateId,
+	ANSISTRING RelatedCV,
+	ANSISTRING __TlgCV__
+	);
+
+UpdateAgentPostRebootResult(
+	HRESULT ErrorCode,
+	HRESULT PostRebootResult,
+	GUID ObjectId,
+	UNICODESTRING SessionId,
+	INT32 ScenarioId,
+	UNICODESTRING FlightId,
+	UNICODESTRING UpdateId,
+	ANSISTRING RelatedCV,
+	ANSISTRING __TlgCV__
+	);
+
+UpdateAgentDownloadRequest(
+	UNICODESTRING ExtensionName,
+	INT32 Result,
+	HRESULT ErrorCode,
+	HRESULT InternalFailureResult,
+	INT32 RangeRequestState,
+	INT32 DeletedCorruptFiles,
+	INT32 DownloadRequests,
+	INT32 PackageCountTotal,
+	INT32 PackageCountRequired,
+	INT32 PackageCountOptional,
+	INT64 PackageSizeCanonical,
+	INT64 PackageSizeDiff,
+	INT64 PackageSizeExpress,
+	INT32 PackageCountTotalCanonical,
+	INT32 PackageCountTotalDiff,
+	INT32 PackageCountTotalExpress,
+	INT32 PackageExpressType,
+	INT32 PackageCategoriesSkipped,
+	INT32 SandboxTaggedForReserves,
+	GUID ObjectId,
+	UNICODESTRING SessionId,
+	INT32 ScenarioId,
+	UNICODESTRING FlightId,
+	UNICODESTRING UpdateId,
+	ANSISTRING RelatedCV,
+	ANSISTRING __TlgCV__
+	);
+
+UpdateAgentExpand(
+	HRESULT ErrorCode,
+	INT64 ElapsedTickCount,
+	INT64 StartSandboxSize,
+	INT64 EndSandboxSize,
+	INT64 StartFreeSpace,
+	INT64 EndFreeSpace,
+	BOOL32 CanonicalRequestedOnError,
+	GUID ObjectId,
+	UNICODESTRING SessionId,
+	INT32 ScenarioId,
+	UNICODESTRING FlightId,
+	UNICODESTRING UpdateId,
+	ANSISTRING RelatedCV,
+	ANSISTRING __TlgCV__
+	);
+
+Revert(
+	HRESULT ErrorCode,
+	HRESULT RevertResult,
+	BOOL32 RebootRequired,
+	GUID ObjectId,
+	UNICODESTRING SessionId,
+	INT32 ScenarioId,
+	UNICODESTRING FlightId,
+	UNICODESTRING UpdateId,
+	ANSISTRING RelatedCV,
+	ANSISTRING __TlgCV__
+	);
+
+UpdateAgentMitigationResult(
+	HRESULT Result,
+	INT32 MitigationScenario,
+	UNICODESTRING Name,
+	INT32 Index,
+	BOOL32 Applicable,
+	INT32 FileCount,
+	INT32 RegistryCount,
+	INT32 CommandCount,
+	INT32 CustomCount,
+	UNICODESTRING OperationName,
+	INT32 OperationIndex,
+	INT64 TimeDiff,
+	GUID ObjectId,
+	UNICODESTRING SessionId,
+	INT32 ScenarioId,
+	UNICODESTRING FlightId,
+	UNICODESTRING UpdateId,
+	ANSISTRING RelatedCV,
+	ANSISTRING __TlgCV__
+	);
+
+UpdateAgentReboot(
+	INT32 Result,
+	HRESULT ErrorCode,
+	HRESULT ErrorCode,
+	GUID ObjectId,
+	UNICODESTRING SessionId,
+	INT32 ScenarioId,
+	UNICODESTRING FlightId,
+	UNICODESTRING UpdateId,
+	ANSISTRING RelatedCV,
+	ANSISTRING __TlgCV__
+	);
+
+UpdateAgentInitialize(
+	INT32 Result,
+	HRESULT ErrorCode,
+	UNICODESTRING SessionData,
+	UNICODESTRING FlightMetadata,
+	GUID ObjectId,
+	UNICODESTRING SessionId,
+	INT32 ScenarioId,
+	UNICODESTRING FlightId,
+	UNICODESTRING UpdateId,
+	ANSISTRING RelatedCV,
+	ANSISTRING __TlgCV__
+	);
+
+UpdateAgentFellBackToCanonical(
+	INT32 PackageCount,
+	UNICODESTRING PackageList,
+	GUID ObjectId,
+	UNICODESTRING SessionId,
+	INT32 ScenarioId,
+	UNICODESTRING FlightId,
+	UNICODESTRING UpdateId,
+	ANSISTRING RelatedCV,
+	ANSISTRING __TlgCV__
+	);
+
+UpdateAgentModeStart(
+	INT32 Mode,
+	UNICODESTRING Version,
+	GUID ObjectId,
+	UNICODESTRING SessionId,
+	INT32 ScenarioId,
+	UNICODESTRING FlightId,
+	UNICODESTRING UpdateId,
+	ANSISTRING RelatedCV,
+	ANSISTRING __TlgCV__
+	);
+
+UpdateAgentOneSettings(
+	HRESULT Result,
+	INT32 Count,
+	UNICODESTRING Parameters,
+	UNICODESTRING Values,
+	GUID ObjectId,
+	UNICODESTRING SessionId,
+	INT32 ScenarioId,
+	UNICODESTRING FlightId,
+	UNICODESTRING UpdateId,
+	ANSISTRING RelatedCV,
+	ANSISTRING __TlgCV__
+	);
+

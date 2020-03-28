@@ -1,0 +1,30 @@
+ProviderNames:
+	Microsoft.Windows.Kernel.HAL
+
+
+
+**** Events *****
+TimerHardware(
+	UINT32 ClockTimer,
+	UINT32 PerformanceCounter,
+	UINT32 AlwaysOnTimer,
+	UINT32 VpptPhysicalTimer,
+	UINT32 AlwaysOnCounter,
+	UINT32 Watchdog,
+	UINT32 AuxiliaryCounter
+	);
+
+TimerRtcFailures(
+	UINT32 RtcFailuresDuringResume
+	);
+
+TimerRtcFailures(
+	UINT32 RtcFailuresDuringRuntime
+	);
+
+TimerTscSync(
+	BOOLEAN TscAdjustAvailable,
+	UINT64 MaximumComputedSpread,
+	UINT32 MaximumWaves
+	);
+

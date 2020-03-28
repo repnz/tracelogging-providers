@@ -1,0 +1,64 @@
+ProviderNames:
+	Microsoft.Windows.Shell.SystemSettings.Maps
+
+
+
+**** Events *****
+UpdateTaskCompleted(
+	BOOL32 currentStorageIsSystemDrive,
+	UINT32 currentStorageDeviceType,
+	UINT32 currentBusType,
+	GUID mapSessionId,
+	GUID mapSessionId
+	);
+
+FallbackError(
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+FallbackError(
+	UINT64 PartA_PrivTags,
+	SIGNED wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+UpdateTaskFailed(
+	BOOL32 currentStorageIsSystemDrive,
+	UINT32 currentStorageDeviceType,
+	UINT32 currentBusType,
+	GUID mapSessionId,
+	HRESULT HResult,
+	GUID mapSessionId
+	);
+

@@ -1,0 +1,41 @@
+ProviderNames:
+	Microsoft.Windows.Graphics.DxilConv
+
+
+
+**** Events *****
+ProcessInfo(
+	BOOL32 UTCReplace_AppSessionGuid,
+	UINT8 schemaVersion
+	);
+
+DxilConvertFail(
+	BOOL32 UTCReplace_AppSessionGuid,
+	UINT8 schemaVersion,
+	UINT64 inHash,
+	UINT32 inSize,
+	UINT64 optHash,
+	UINT32 hr,
+	UINT64 microSecs,
+	BINARY bc
+	);
+
+DxilConvertSuccess(
+	BOOL32 UTCReplace_AppSessionGuid,
+	UINT8 schemaVersion,
+	UINT64 inHash,
+	UINT32 inSize,
+	UINT64 optHash,
+	UINT64 outHash,
+	UINT32 outSize,
+	UINT64 microSecs
+	);
+
+TelemetryThrottled(
+	BOOL32 UTCReplace_AppSessionGuid,
+	UINT32 Bucket,
+	UINT32 IntervalEventCount,
+	FLOAT IntervalDuration,
+	FLOAT IntervalStartTime
+	);
+

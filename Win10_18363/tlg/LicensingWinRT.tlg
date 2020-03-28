@@ -1,0 +1,89 @@
+ProviderNames:
+	Microsoft.Windows.Licensing.LicensingPolicyManager
+	Microsoft.Windows.Licensing.Troubleshooter
+
+
+
+**** Events *****
+GetEulaFileAsync(
+	HRESULT HResult,
+	HRESULT SkuGetEditionEulaFilePathHResult
+	);
+
+ActivateWindowsAsync(
+	HRESULT HResult
+	);
+
+RedeemProductKeyAsync(
+	HRESULT HResult,
+	HRESULT ErrorCode
+	);
+
+ApplyPolicySetAsync(
+	HRESULT HResult,
+	UINT32 ProductKeyAction
+	);
+
+EvaluateProductKeyAsync(
+	HRESULT HResult,
+	HRESULT ErrorCode,
+	UINT32 ProductKeyAction,
+	UNICODESTRING ProductKeyType,
+	UNICODESTRING EditionId,
+	BOOLEAN IsRedeemable
+	);
+
+TroubleShooterGatherStateStart(
+	VOID
+	);
+
+TroubleshooterOptionsDisplayed(
+	UINT32 TSOption,
+	UINT32 TSError,
+	UINT32 TSReactivationOption,
+	HRESULT Result
+	);
+
+TroubleshooterOptionsDisplayed(
+	UINT32 TSOption,
+	UINT32 TSError,
+	UINT32 TSReactivationOption,
+	HRESULT ErrorCode,
+	HRESULT Result
+	);
+
+TroubleshooterOptionsDisplayed(
+	UINT32 TSOption,
+	UINT32 TSReactivationOption,
+	UINT32 TSError,
+	HRESULT Result
+	);
+
+ActivityStoppedAutomatically(
+	VOID
+	);
+
+TroubleshooterRepair(
+	HRESULT ReinstallLicensesHResult,
+	UNICODESTRING BackupKey,
+	HRESULT InstallProductKeyHResult,
+	HRESULT DoesRegistryMatchKeyHResult
+	);
+
+TroubleShooterGatherStateStop(
+	VOID
+	);
+
+TroubleshooterCheckEntitlements(
+	UINT32 EntitlementCheckEditionId,
+	HRESULT EntitlementCheckResult,
+	UINT32 CurrentEditionId,
+	UNICODESTRING CurrentActivationChannel,
+	HRESULT Result
+	);
+
+PolicyStateForTroubleshooterOSREvent(
+	INT32 mdmPolicyValue,
+	HRESULT PolicyHResult
+	);
+

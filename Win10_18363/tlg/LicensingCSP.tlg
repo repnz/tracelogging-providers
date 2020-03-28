@@ -1,0 +1,38 @@
+ProviderNames:
+	Microsoft.Windows.LicensingCSP
+	TelemetryAssert
+	TelemetryAssertDiagTrack
+
+
+
+**** Events *****
+SMode.AddSwitchingPolicy(
+	UINT32 currentSwitchingPolicy,
+	UINT32 requestedSwitchingPolicy,
+	HRESULT Result
+	);
+
+SMode.SwitchFromSModeInitiated(
+	BOOL32 CalledOnSModeDevice,
+	BOOL32 CalledOnPermanentlyBlockedDevice,
+	HRESULT Result
+	);
+
+SMode.SetSwitchingPolicy(
+	UINT32 currentSwitchingPolicy,
+	UINT32 requestedSwitchingPolicy,
+	HRESULT Result
+	);
+
+Assert(
+	UINT32 assertVersion,
+	UINT32 rva,
+	UINT32 timestamp,
+	UINT32 imageSize,
+	ANSISTRING imageName,
+	UINT32 count,
+	UINT32 totalHits,
+	UINT32 ModuleCollection,
+	UINT32 GlobalCollection
+	);
+

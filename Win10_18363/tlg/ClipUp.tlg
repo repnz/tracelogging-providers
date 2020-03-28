@@ -1,0 +1,88 @@
+ProviderNames:
+	Microsoft.ClipUp
+
+
+
+**** Events *****
+CreateOutputFile(
+	HRESULT Result,
+	UNICODESTRING TokenId,
+	UNICODESTRING LicenseIdentifier,
+	UNICODESTRING PFM
+	);
+
+ConversionSuccess(
+	UNICODESTRING Datasource,
+	UINT32 Attempted
+	);
+
+DisableUpgradeTaskFailed(
+	HRESULT Result
+	);
+
+ValidateHardwareId(
+	HRESULT Result,
+	INT32 ToleranceDiff,
+	INT32 ToleranceMax,
+	UNICODESTRING LegacyHardwareIdDownlevel,
+	UNICODESTRING LegacyHardwareIdUplevel
+	);
+
+CreateProductKeyGT(
+	HRESULT Result,
+	HRESULT FirstFailure,
+	INT32 TotalAttempted,
+	INT32 SuccessfulConversions,
+	INT32 ExplicitPFNMatches
+	);
+
+CreateProductKeyGTFailed(
+	INT32 KeySource,
+	INT32 PkeyconfigSource,
+	HRESULT Result
+	);
+
+ConvertLooseFiles(
+	HRESULT Result
+	);
+
+ValidateAndConvertLegacyFileFail(
+	UNICODESTRING PFM,
+	HRESULT Result
+	);
+
+ValidateGenuineAuthzSessionId(
+	HRESULT Result,
+	UINT32 OsMajorVersion
+	);
+
+ConversionZeroResults(
+	UNICODESTRING Datasource
+	);
+
+CreateOSGenuineTicketWithPreviousId(
+	UNICODESTRING PreviousDeviceId,
+	HRESULT Result,
+	UNICODESTRING PFN
+	);
+
+CreateOsLicense(
+	HRESULT Result,
+	HRESULT FirstFailure,
+	INT32 TotalAttempted,
+	INT32 SuccessfulConversions,
+	INT32 ExplicitPFNMatches
+	);
+
+ConversionFail_Catastrophic(
+	UNICODESTRING Datasource,
+	HRESULT Result
+	);
+
+ConversionSuccess_FirstFailure(
+	UNICODESTRING Datasource,
+	UINT32 Attempted,
+	UINT32 Successful,
+	HRESULT FirstFailure
+	);
+

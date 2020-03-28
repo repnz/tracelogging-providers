@@ -1,0 +1,80 @@
+ProviderNames:
+	RDP.Graphics
+
+
+
+**** Events *****
+GraphicsRedirectionChannelInit(
+	GUID correlationId
+	);
+
+GraphicsRedirectionChannelClosed(
+	GUID correlationId
+	);
+
+GraphicsRedirectionChannelOpen(
+	GUID correlationId
+	);
+
+GraphicsRedirectionModeError(
+	GUID correlationId,
+	UNICODESTRING state,
+	HRESULT hrCode
+	);
+
+VAILModeError(
+	GUID correlationId,
+	UNICODESTRING state,
+	HRESULT hrCode
+	);
+
+VAILModeState(
+	GUID correlationId,
+	UNICODESTRING state
+	);
+
+DWMIndirectDestroy(
+	GUID correlationId,
+	UNICODESTRING deviceName
+	);
+
+DWMIndirectCreate(
+	GUID correlationId,
+	UNICODESTRING deviceName
+	);
+
+VmSharedMemoryCreation(
+	GUID correlationId,
+	HRESULT hrCode
+	);
+
+TimeToFirstFrame(
+	GUID correlationId,
+	UINT32 dwmRemotingMode,
+	UINT32 firstFrameMs,
+	UINT32 firstHiDefFrameMs
+	);
+
+ContainerModePerformance(
+	GUID correlationId,
+	UINT64 numFrames,
+	UINT32 avgBlockTimeMs,
+	UINT32 maxBlockTimeMs,
+	UINT64 totalDurationSec,
+	UINT32 percentHighFrameRate,
+	UINT32 percentMediumFrameRate,
+	UINT32 percentLowFrameRate,
+	UINT32 percentIdle,
+	UINT32 numSectionsCreated,
+	UINT32 avgCreateMappingTimeMs,
+	UINT32 maxCreateMappingTimeMs
+	);
+
+RdsDWMDirectUnload(
+	VOID
+	);
+
+RdsDWMDirectLoad(
+	VOID
+	);
+

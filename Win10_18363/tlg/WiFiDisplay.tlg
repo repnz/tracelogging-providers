@@ -1,0 +1,189 @@
+ProviderNames:
+	WirelessDisplay
+
+
+
+**** Events *****
+SinkDisconnectComplete(
+	GUID SessionGuid,
+	UNICODESTRING SinkModel,
+	UNICODESTRING SinkFirmwareVersion,
+	UNICODESTRING SourceDeviceAddress,
+	UINT32 ErrorCode,
+	UINT64 DurationMs,
+	BOOL32 IsInfraCastSession,
+	GUID SourceId
+	);
+
+SinkConnectionComplete(
+	GUID SessionGuid,
+	UINT32 ErrorCode,
+	UINT32 DurationMs,
+	GUID InterfaceGUID,
+	UINT32 OperatingChannel,
+	BOOL32 GetSessionEndpointPairsFailure,
+	UINT32 GetSessionEndpointPairsDurationMs,
+	BOOL32 ConfigureFirewallForSessionFailure,
+	UINT32 ConfigureFirewallForSessionDurationMs,
+	UNICODESTRING SinkModel,
+	UNICODESTRING SinkFirmwareVersion,
+	UNICODESTRING SourceDeviceAddress,
+	GUID WlanInterfaceGuid,
+	UINT32 WlanChannel,
+	UNICODESTRING DeviceInstanceId,
+	BOOL32 IsWdi,
+	BOOL32 IsInfraCastSession,
+	UINT32 TransportType,
+	UINT16 RtspPort,
+	GUID SourceId
+	);
+
+SinkPairingComplete(
+	GUID SessionGuid,
+	UINT32 ErrorCode,
+	UINT32 DurationMs,
+	UINT32 PairingMethod,
+	GUID InterfaceGUID,
+	UINT32 OperatingChannel,
+	UNICODESTRING SinkModel,
+	UNICODESTRING SinkFirmwareVersion,
+	UNICODESTRING SourceDeviceAddress,
+	GUID WlanInterfaceGuid,
+	UINT32 WlanChannel,
+	UNICODESTRING DeviceInstanceId,
+	BOOL32 IsWdi
+	);
+
+SinkInfraSessionRequested(
+	VOID
+	);
+
+OpenMiracastSessionComplete(
+	GUID SessionGuid,
+	UNICODESTRING SinkManufacturer,
+	UNICODESTRING SinkModel,
+	UNICODESTRING SinkFirmwareVersion,
+	BOOL32 IsInfraCastEnabled,
+	UINT64 InfraCastHostNameResolutionTimeMs,
+	UINT64 InfraCastAspSessionSetupTimeMs,
+	UINT32 HostNameResolutionDnsType,
+	GUID InterfaceGuid,
+	UINT32 ErrorCode
+	);
+
+FirewallComplete(
+	GUID SessionGuid,
+	UINT32 ErrorCode,
+	UINT32 DurationMs,
+	GUID InterfaceGUID,
+	UNICODESTRING DeviceInstanceId
+	);
+
+DhcpComplete(
+	GUID SessionGuid,
+	UINT32 ErrorCode,
+	UINT32 DurationMs,
+	GUID InterfaceGUID,
+	UNICODESTRING DeviceInstanceId
+	);
+
+ConnectionComplete(
+	GUID SessionGuid,
+	UINT32 ErrorCode,
+	UINT32 DurationMs,
+	UINT32 Role,
+	GUID InterfaceGUID,
+	UINT32 OperatingChannel,
+	BOOL32 IsReconnect,
+	UNICODESTRING SinkManufacturer,
+	UNICODESTRING SinkModel,
+	UNICODESTRING SinkFirmwareVersion,
+	GUID WlanInterfaceGuid,
+	UINT32 WlanChannel,
+	UNICODESTRING DeviceInstanceId,
+	BOOL32 IsWdi
+	);
+
+CancelWorkComplete(
+	VOID
+	);
+
+RemoveAssociationComplete(
+	UINT32 ErrorCode
+	);
+
+AssociationComplete(
+	UINT32 ErrorCode,
+	UINT32 DurationMs,
+	UNICODESTRING SinkManufacturer,
+	UNICODESTRING SinkModel,
+	UNICODESTRING SinkFirmwareVersion,
+	UNICODESTRING DeviceInstanceId
+	);
+
+PairingComplete(
+	UINT32 ErrorCode,
+	UINT32 DurationMs,
+	UINT32 Role,
+	UINT32 PairingMethod,
+	GUID InterfaceGUID,
+	UINT32 OperatingChannel,
+	GUID WlanInterfaceGuid,
+	UNICODESTRING SinkManufacturer,
+	UNICODESTRING SinkModel,
+	UNICODESTRING SinkFirmwareVersion,
+	UINT32 WlanChannel,
+	UNICODESTRING DeviceInstanceId,
+	BOOL32 IsWdi
+	);
+
+InitAssociation(
+	UNICODESTRING SinkManufacturer,
+	UNICODESTRING SinkModel,
+	UNICODESTRING SinkFirmwareVersion,
+	UNICODESTRING DeviceInstanceId,
+	UNICODESTRING DriverVersion,
+	UNICODESTRING DriverService,
+	UNICODESTRING DriverManufacturer,
+	UNICODESTRING DriverDate,
+	UNICODESTRING DriverFile,
+	BOOL32 IsWdi
+	);
+
+ReadCeremonyComplete(
+	HRESULT ErrorCode
+	);
+
+WriteCeremonyComplete(
+	HRESULT ErrorCode,
+	UINT32 State
+	);
+
+SelectCeremonyComplete(
+	UINT32 ErrorCode,
+	UINT32 ReasonCode,
+	UINT32 PairingMethod
+	);
+
+EnumerateCeremoniesComplete(
+	UINT32 ErrorCode,
+	UINT32 DurationMs,
+	UNICODESTRING DeviceInstanceId
+	);
+
+ConnectionStart(
+	GUID SessionGuid,
+	BOOL32 IsInfraCastSupportedBySink,
+	BOOL32 IsInfraCastEnabledForSource,
+	UNICODESTRING SinkManufacturer,
+	UNICODESTRING SinkModel,
+	UNICODESTRING SinkFirmwareVersion,
+	UNICODESTRING DeviceInstanceId,
+	UNICODESTRING DriverVersion,
+	UNICODESTRING DriverService,
+	UNICODESTRING DriverManufacturer,
+	UNICODESTRING DriverDate,
+	UNICODESTRING DriverFile,
+	BOOL32 IsWdi
+	);
+

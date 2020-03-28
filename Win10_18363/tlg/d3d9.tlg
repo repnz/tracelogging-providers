@@ -1,0 +1,328 @@
+ProviderNames:
+	Microsoft.Windows.Graphics.DirectXDatabaseHelper
+	Microsoft.Windows.Graphics.D3D9
+
+
+
+**** Events *****
+NotifyGraphicsPerformanceMonitor(
+	BOOL32 UTCReplace_AppSessionGuid,
+	INT32 Status,
+	UINT64 SwapChainLuid
+	);
+
+FallbackError(
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+DirectXDatabaseAccessError(
+	BOOLEAN UTCReplace_AppSessionGuid,
+	UINT8 schemaVersion,
+	UINT32 HResult,
+	UNICODESTRING DxDbVersion,
+	UINT32 QueryType,
+	UNICODESTRING processName,
+	UINT32 DxDbSourceType,
+	UINT64 PartA_PrivTags
+	);
+
+FallbackError(
+	UINT64 PartA_PrivTags,
+	SIGNED wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+DirectXDatabaseConfigAccessError(
+	BOOLEAN UTCReplace_AppSessionGuid,
+	UINT8 schemaVersion,
+	UINT32 HResult,
+	UINT32 ConfigQueryType,
+	UINT32 DxDbSourceType,
+	UINT64 PartA_PrivTags
+	);
+
+DuplicateAppEntryInDatabase(
+	BOOLEAN UTCReplace_AppSessionGuid,
+	UINT8 schemaVersion,
+	UNICODESTRING processName,
+	UINT32 numDuplicates,
+	UNICODESTRING DxDbVersion,
+	UINT32 DxDbSourceType,
+	UINT64 PartA_PrivTags
+	);
+
+SetDialogBoxMode(
+	BOOL32 UTCReplace_AppSessionGuid,
+	UINT8 schemaVersion,
+	BOOL32 bEnableDialogs_in,
+	UINT32 hr
+	);
+
+GetAvailableTextureMem(
+	BOOL32 UTCReplace_AppSessionGuid,
+	UINT8 schemaVersion,
+	UINT32 availableMem_out,
+	UINT32 callCount_out
+	);
+
+PresentWithAdapterGroup(
+	BOOL32 UTCReplace_AppSessionGuid,
+	UINT8 schemaVersion,
+	BOOL32 requireAdapterGroupShim_in,
+	UINT32 adapterGroupCount_in,
+	INT64 adapterLuid_in
+	);
+
+PresentWithGammaCorrection(
+	BOOL32 UTCReplace_AppSessionGuid,
+	UINT8 schemaVersion
+	);
+
+PresentWithDirtyRegion(
+	BOOL32 UTCReplace_AppSessionGuid,
+	UINT8 schemaVersion,
+	ANSISTRING dirtyRegion_in
+	);
+
+PresentWithHwndOverride(
+	BOOL32 UTCReplace_AppSessionGuid,
+	UINT8 schemaVersion
+	);
+
+PresentWithScrOrDestRect(
+	BOOL32 UTCReplace_AppSessionGuid,
+	UINT8 schemaVersion,
+	HEX srcRect_in,
+	INT32 top,
+	INT32 left,
+	INT32 right,
+	INT32 bottom,
+	HEX dstRect_in,
+	INT32 top,
+	INT32 left,
+	INT32 right,
+	INT32 bottom
+	);
+
+MultipleSwapChainPresent(
+	BOOL32 UTCReplace_AppSessionGuid,
+	UINT8 schemaVersion
+	);
+
+CreateAuthenticatedChannel(
+	BOOL32 UTCReplace_AppSessionGuid,
+	UINT8 schemaVersion,
+	UINT32 type,
+	UINT32 hr
+	);
+
+DListMismatchResultInfo(
+	UINT64 PartA_PrivTags,
+	BOOL32 UTCReplace_AppSessionGuid,
+	UINT8 schemaVersion,
+	UNICODESTRING DxDbVersion,
+	UINT32 DxDbResult,
+	UINT64 IHVAdapterLuid,
+	UINT64 IHVDriverVersion,
+	BOOL32 IHVDListResult,
+	UINT32 IHVExportResult
+	);
+
+FullscreenPresentInfo(
+	BOOL32 UTCReplace_AppSessionGuid,
+	UINT8 schemaVersion,
+	UINT64 swapChainLuid,
+	UINT32 processDPIAwareness,
+	IPV4 FullscreenPresentRectStatus,
+	UINT32 rectMatchCount,
+	UINT32 rectMismatchCount,
+	UINT32 windowRectAndClientRectMismatchCount,
+	UINT32 windowRectAndDisplayRectMismatchCount,
+	UINT32 windowRectNotLocatedAtDisplayRectOriginCount,
+	UINT32 windowRectAndDisplayRectIntersectCount,
+	UINT32 windowRectHeightLargerThanDisplayRectCount,
+	UINT32 windowRectWidthLargerThanDisplayRectCount,
+	HEX MaximumWindowRect,
+	INT32 top,
+	INT32 left,
+	INT32 right,
+	INT32 bottom,
+	HEX MinimumWindowRect,
+	INT32 top,
+	INT32 left,
+	INT32 right,
+	INT32 bottom,
+	HEX DisplayRect,
+	INT32 top,
+	INT32 left,
+	INT32 right,
+	INT32 bottom
+	);
+
+SwapChainStatus(
+	BOOL32 UTCReplace_AppSessionGuid,
+	UINT8 schemaVersion,
+	UINT64 swapChainLuid,
+	UINT32 presentCount,
+	BOOL32 isDestroying
+	);
+
+ResetSwapChain(
+	BOOL32 UTCReplace_AppSessionGuid,
+	UINT8 schemaVersion,
+	HEXINT64 deviceId,
+	UINT64 swapChainLuid,
+	UINT64 adapterLuid,
+	PID D3DDisplayModeEx,
+	UINT32 size_in,
+	UINT32 width_in,
+	UINT32 height_in,
+	UINT32 refreshRate_in,
+	INT32 format_in,
+	JSON D3DPRESENT_PARAMETERS,
+	UINT32 backBufferWidth_in,
+	UINT32 backBufferHeight_in,
+	INT32 backBufferFormat_in,
+	UINT32 backBufferCount_in,
+	INT32 multiSampleType_in,
+	UINT32 multiSampleQuality_in,
+	INT32 swapEffect_in,
+	BOOL32 windowed_in,
+	UINT32 flags_in,
+	UINT32 fullScreen_RefreshRateInHz_in,
+	UINT32 presentationInterval_in,
+	BOOL32 windowless_in,
+	BOOL32 maximizedWindowedModeEnabled_out,
+	BOOL32 adapterSupportsMaximizedWindowedModeForGameDVR_in,
+	STRING CoinVelocityGameConfigStoreOverride,
+	BOOL32 gameConfigStoreOverrideEnabled_in,
+	UINT32 gameConfigStoreOverrideVariant_in,
+	PID MaximizedWindowedModeShim,
+	BOOL32 maximizedWindowedModeShimEnabled_in,
+	BOOL32 gameConfigStoreEnabled_in,
+	UINT32 shimCompatValue_in,
+	BOOL32 regCompatEnabled_in,
+	BOOL32 windowed_out,
+	PID SwapEffectUpgradesShim,
+	BOOL32 swapEffectUpgradesShimEnabled_in,
+	BOOL32 gameConfigStoreEnabled_in,
+	UINT32 shimCompatValue_in,
+	BOOL32 regCompatEnabled_in,
+	INT32 swapEffect_out,
+	UINT32 hr
+	);
+
+TelemetryThrottled(
+	BOOL32 UTCReplace_AppSessionGuid,
+	UINT32 Bucket,
+	UINT32 IntervalEventCount,
+	FLOAT IntervalDuration,
+	FLOAT IntervalStartTime
+	);
+
+CreateDevice(
+	BOOL32 UTCReplace_AppSessionGuid,
+	UINT8 schemaVersion,
+	HEXINT64 deviceId,
+	BOOL32 enumEx_in,
+	BOOL32 deviceEx_in,
+	BOOLEAN CreateDeviceParams,
+	UINT64 adapterLuid,
+	INT32 deviceType_in,
+	UINT32 behaviorFlags_in,
+	BOOL32 Requests9on12,
+	UINT32 hr
+	);
+
+VideoProcessorStreamFormat(
+	BOOL32 UTCReplace_AppSessionGuid,
+	UINT8 schemaVersion,
+	UINT32 streamIndex,
+	UINT32 sampleFormat
+	);
+
+VideoProcessorStreamAlpha(
+	BOOL32 UTCReplace_AppSessionGuid,
+	UINT8 schemaVersion,
+	UINT32 streamIndex,
+	FLOAT alpha
+	);
+
+VideoProcessorStreamUsage(
+	BOOL32 UTCReplace_AppSessionGuid,
+	UINT8 schemaVersion,
+	UINT32 numSourceStreams
+	);
+
+VideoProcessorAlpha(
+	BOOL32 UTCReplace_AppSessionGuid,
+	UINT8 schemaVersion,
+	FLOAT alpha
+	);
+
+VideoProcessorProcAmp(
+	BOOL32 UTCReplace_AppSessionGuid,
+	UINT8 schemaVersion,
+	FLOAT brightness,
+	FLOAT contrast,
+	FLOAT hue,
+	FLOAT saturation
+	);
+
+SetVideoProcessorBltStatePrivate(
+	BOOL32 UTCReplace_AppSessionGuid,
+	UINT8 schemaVersion
+	);
+
+SetVideoProcessorStreamStatePrivate(
+	BOOL32 UTCReplace_AppSessionGuid,
+	UINT8 schemaVersion
+	);
+
+CreateExtensionDevice(
+	BOOL32 UTCReplace_AppSessionGuid,
+	UINT8 schemaVersion,
+	GUID extensionGuid
+	);
+
+DecodeExecuteExtension(
+	BOOL32 UTCReplace_AppSessionGuid,
+	UINT8 schemaVersion
+	);
+
+ProcessInfo(
+	BOOL32 UTCReplace_AppSessionGuid,
+	UINT8 schemaVersion
+	);
+

@@ -1,0 +1,1923 @@
+ProviderNames:
+	Microsoft.Windows.Security.NGC.CredProv
+	Microsoft.Windows.Security.NGC.CredProv
+	Microsoft.Windows.PlatformExtensions
+
+
+
+**** Events *****
+FallbackError(
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+FallbackError(
+	UINT64 PartA_PrivTags,
+	SIGNED wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+ICredentialProviderTileDataEventsRequestOptionExpansionError(
+	INT32 retVal
+	);
+
+ICredentialProviderEventsAsError(
+	INT32 retVal
+	);
+
+ICredentialProviderTileDataEventsRequestLockScreenDismissError(
+	INT32 retVal
+	);
+
+ICredentialProviderEventsCredentialsChangedError(
+	INT32 retVal
+	);
+
+SamQueryInformationUserError(
+	INT32 retVal
+	);
+
+SamOpenUserError(
+	INT32 retVal
+	);
+
+SamLookupNamesInDomain2Error(
+	INT32 retVal
+	);
+
+SamOpenDomainError(
+	INT32 retVal
+	);
+
+SamConnectError(
+	INT32 retVal
+	);
+
+LsaQueryInformationPolicyError(
+	INT32 retVal
+	);
+
+LsaOpenPolicyError(
+	INT32 retVal
+	);
+
+NgcQueryEnabledError(
+	INT32 retVal
+	);
+
+WinStationIsSessionRemoteableError(
+	UINT32 retVal
+	);
+
+GetTokenInformationError(
+	UINT32 retVal
+	);
+
+WrlMakeAndInitializeNgcPinCredentialPrebootError(
+	INT32 retVal
+	);
+
+ConvertStringSidToSidWError(
+	UINT32 retVal
+	);
+
+NgcPreboot::GetPrebootCredential(
+	INT32 retVal
+	);
+
+WrlMakeAndInitializeNgcPinCredentialLogonUIOtherUserError(
+	INT32 retVal
+	);
+
+KeyEnumManagerEnumerateKeysError(
+	INT32 retVal
+	);
+
+NgcMgmtEnumContainersError(
+	INT32 retVal
+	);
+
+WrlMakeAndInitializeNgcPinCredentialLogonUIOtherUserResetStatusError(
+	INT32 retVal
+	);
+
+NgcPinResetScenarioTileCreatedUnderOtherUser(
+	UNICODESTRING domainName,
+	UNICODESTRING userName,
+	UNICODESTRING userSid,
+	UINT32 sessionId
+	);
+
+GetUserAssociatedSessionIdWarning(
+	INT32 retVal
+	);
+
+NgcUtilsGetUserAccountTypeError(
+	INT32 retVal
+	);
+
+NgcUtilsGetUserNameAndDomainError(
+	INT32 retVal
+	);
+
+WrlMakeAndInitializeNgcPinCredentialLogonUILocalError(
+	INT32 retVal
+	);
+
+WrlMakeAndInitializeNgcPinCredentialLogonUIRecoveryError(
+	INT32 retVal
+	);
+
+NgcPinResetScenarioTileCreatedUnderTargetUser(
+	UNICODESTRING domainName,
+	UNICODESTRING userName,
+	UNICODESTRING userSid,
+	UINT32 sessionId
+	);
+
+WrlMakeAndInitializeNgcPinCredentialLogonUIResetStatusError(
+	INT32 retVal
+	);
+
+NgcUtilsClearDestructiveResetInProgressStatusWarning(
+	INT32 retVal
+	);
+
+WrlMakeAndInitializeNgcPinCredentialLogonUIKeyCreationError(
+	INT32 retVal
+	);
+
+WrlMakeAndInitializeNgcPinCredentialLogonUISetupError(
+	INT32 retVal
+	);
+
+NgcPinResetRecoveryScenarioTileCreatedUnderTargetUser(
+	UNICODESTRING domainName,
+	UNICODESTRING userName,
+	UNICODESTRING userSid,
+	UINT32 sessionId
+	);
+
+PaintedPinTiles(
+	UINT64 PartA_PrivTags,
+	UINT32 signInTileCount,
+	UINT32 resetStatusTileCount,
+	UINT32 webSignInMsaStubTileCount,
+	UINT32 webDialogDisplayTileCount,
+	UINT32 upsellTileCount,
+	UINT32 keyCreationTileCount,
+	UINT32 recoveryTileCount,
+	UINT32 inProgressRecoverySignInTileCount,
+	BOOLEAN paintedSignInTileForOtherUser,
+	BOOLEAN paintedResetStatusTileForOtherUser
+	);
+
+CredentialsChangedError(
+	INT32 retVal
+	);
+
+NgcCredProvInvalidateLogonKeysCacheWarning(
+	INT32 retVal
+	);
+
+CredentialRefreshRequiredSkippingWebSignInScenario(
+	VOID
+	);
+
+CredProvNotAdvisedDuringNotification(
+	INT32 retVal
+	);
+
+CredentialRefreshRequiredNotificationReceived(
+	UINT32 reason
+	);
+
+HibernateWakePrebootCredNotSerialized(
+	INT32 retVal
+	);
+
+NgcUtilsCoMemResourceStringAllocCopyError(
+	INT32 retVal
+	);
+
+InvalidFlags(
+	INT32 retVal,
+	UINT32 flags
+	);
+
+WrlMakeAndInitializeNgcPinCredentialNegotiateError(
+	INT32 retVal
+	);
+
+ConvertSidToStringSidWError(
+	UINT32 retVal
+	);
+
+ConvertStringSidToSidW(
+	UINT32 retVal
+	);
+
+NgcQueryEffectiveCertPolicyError(
+	INT32 retVal
+	);
+
+InputSerializationBufferNotCurrentUser(
+	INT32 retVal
+	);
+
+NgcUtilsGetCallerSidError(
+	INT32 retVal
+	);
+
+NgcUtilsGetUserSidError(
+	INT32 retVal
+	);
+
+NotEnumeratingForSmartCardWithSspi(
+	VOID
+	);
+
+NgcUtilsUnpackNegotiateInputSerializationBufferError(
+	INT32 retVal
+	);
+
+NotEnumeratingCredentials(
+	INT32 retVal
+	);
+
+FallbackToEnumCurrentUserDueToInputSerializationUnpackFailure(
+	INT32 retVal
+	);
+
+InvalidSerialization(
+	INT32 retVal,
+	UINT32 authPackageId
+	);
+
+WrlMakeAndInitializeError(
+	INT32 retVal
+	);
+
+NgcUtilsGetNtlmAuthPackageIdError(
+	INT32 retVal
+	);
+
+NgcUtilsGetNegoAuthPackageIdError(
+	INT32 retVal
+	);
+
+NgcPinScenarioCredUITileInfo(
+	UINT64 numTiles,
+	UINT32 defaultIndex
+	);
+
+NgcUtilsUnpackGestureCollectionInputSerializationBufferError(
+	INT32 retVal
+	);
+
+NgcUtilsGetAuthPackageIdError(
+	INT32 retVal
+	);
+
+EnumAdminsNotSupportWithPackSmartCard(
+	INT32 retVal
+	);
+
+InvalidFlagsCombination(
+	INT32 retVal,
+	UINT32 flags
+	);
+
+UserArrayGetAccountOptionsError(
+	INT32 retVal
+	);
+
+UserGetProviderIDError(
+	INT32 retVal
+	);
+
+UserGetStringQualifiedUserNameError(
+	INT32 retVal
+	);
+
+UserGetSidError(
+	INT32 retVal
+	);
+
+UserArrayGetAtError(
+	INT32 retVal
+	);
+
+UserArrayGetCountError(
+	INT32 retVal
+	);
+
+WnfPublishWarning(
+	INT32 retVal
+	);
+
+StateDataSetContextUserSidWarning(
+	INT32 retVal
+	);
+
+CflClearScenarioDataWarning(
+	INT32 retVal
+	);
+
+ClearPinResetInProgressUserWarning(
+	INT32 retVal
+	);
+
+ICredentialProviderCredentialEventsSetContextMessageFieldStringError(
+	INT32 retVal
+	);
+
+CoInitializerInitializeWarning(
+	INT32 retVal
+	);
+
+NgcPinResetScenarioTransitionSetupComplete(
+	UNICODESTRING domainName,
+	UNICODESTRING userName,
+	UNICODESTRING userSid,
+	UINT32 sessionId
+	);
+
+CopySidWarning(
+	UINT32 retVal
+	);
+
+ConvertStringSidToSidWWarning(
+	UINT32 retVal
+	);
+
+NgcUtilsCoMemAllocCopyFailed(
+	INT32 retVal
+	);
+
+ICredentialProviderCredentialEvents4RequestSerializationError(
+	INT32 retVal
+	);
+
+CflGetTransitionScenarioDataError(
+	INT32 retVal
+	);
+
+InvalidLogonUIInitializationContextParameter(
+	INT32 retVal
+	);
+
+TryActivateContractExtension(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId,
+	UNICODESTRING extensionPointName,
+	UINT32 contextWindowId,
+	GUID requestedIid
+	);
+
+ActivityError(
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+ActivityError(
+	UINT64 PartA_PrivTags,
+	SIGNED wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+TryActivateContractExtension(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+TryActivateContractExtension(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+ActivityError(
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+ActivityError(
+	UINT64 PartA_PrivTags,
+	SIGNED wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+TryLookupExtensionPointImplementationAcid(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+TryLookupExtensionPointImplementationAcid(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+ActivityStoppedAutomatically(
+	VOID
+	);
+
+TryLookupExtensionPointImplementationAcid(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId,
+	UNICODESTRING extensionPointName
+	);
+
+EvaluatingRegistration(
+	UNICODESTRING acid,
+	BOOLEAN isDefault
+	);
+
+TryLookupExtensionPointImplementationAcid(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UNICODESTRING implementationAcid
+	);
+
+TryLookupExtensionPointImplementationAcid(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId,
+	UNICODESTRING implementationAcid
+	);
+
+TryActivateContractExtension(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	BOOLEAN wasImplementationReturned,
+	BOOLEAN wasRedirectorUsed,
+	UNICODESTRING registeredAcid
+	);
+
+TryActivateContractExtension(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId,
+	BOOLEAN wasImplementationReturned,
+	BOOLEAN wasRedirectorUsed,
+	UNICODESTRING registeredAcid
+	);
+
+WebDialogLinkClick(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId,
+	ANSISTRING __TlgCV__,
+	UINT32 intent
+	);
+
+ChangeUIDisposition(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId,
+	ANSISTRING __TlgCV__,
+	UINT32 transition
+	);
+
+HandlePinChangeError(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId,
+	ANSISTRING __TlgCV__,
+	INT32 pinChangeError
+	);
+
+HandleSerializationError(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId,
+	ANSISTRING __TlgCV__,
+	INT32 serializationError
+	);
+
+SerializeResponseInternal(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId,
+	ANSISTRING __TlgCV__,
+	UINT32 response,
+	BOOLEAN isValid,
+	UINT32 uiDisposition,
+	BOOLEAN isConvenienceCredential,
+	UINT32 accountType,
+	UINT32 keyImplType,
+	BOOLEAN packSmartCardBuffer,
+	BOOLEAN packSspiBuffer,
+	UINT32 webDialogScenarioState,
+	BOOLEAN resetScenarioStarted
+	);
+
+WebDialogVisibilityChange(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId,
+	ANSISTRING __TlgCV__,
+	BOOLEAN isVisible
+	);
+
+NCryptGetGestureCharacteristicsPropertyError(
+	INT32 retVal
+	);
+
+NCryptGetSoftLockoutInfoPropertyError(
+	INT32 retVal
+	);
+
+NCryptOpenKeyError(
+	INT32 retVal
+	);
+
+NCryptOpenStorageProviderError(
+	INT32 retVal
+	);
+
+ActivityIntermediateStop(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+WebDialogLinkClick(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+WebDialogLinkClick(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+ChangeUIDisposition(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+ChangeUIDisposition(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+ICredentialProviderCredentialEventsSetFieldStringWarning(
+	INT32 retVal
+	);
+
+FormatMessageWFailed(
+	UINT32 retVal
+	);
+
+HandlePinChangeError(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+HandlePinChangeError(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+HandleSerializationError(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+HandleSerializationError(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+NgcSerializeKeyPasswordChangeCredentialError(
+	INT32 retVal
+	);
+
+NgcSerializeConveniencePasswordChangeCredentialError(
+	INT32 retVal
+	);
+
+NgcSerializePasswordCredentialError(
+	INT32 retVal
+	);
+
+NgcChangePinSilentError(
+	INT32 retVal
+	);
+
+NgcSerializeKeySspiCredentialError(
+	INT32 retVal
+	);
+
+NgcSerializeSmartCardCredentialError(
+	INT32 retVal
+	);
+
+NgcSerializeKeyCredentialError(
+	INT32 retVal
+	);
+
+NgcSerializeConvenineceCredentialError(
+	INT32 retVal
+	);
+
+SerializeResponseInternal(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+SerializeResponseInternal(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+PinPolicyRulesValidatePinError(
+	INT32 retVal
+	);
+
+PinPolicyRulesValidateNumericPinError(
+	INT32 retVal
+	);
+
+SetPinBlockProtectionRegValue(
+	INT32 retVal
+	);
+
+UnexpectedAuthenticationError(
+	UINT64 PartA_PrivTags,
+	ANSISTRING __TlgCV__,
+	UINT32 accountType,
+	BOOLEAN isConvenienceCredential,
+	BOOLEAN failConvenienceLogon,
+	INT32 status,
+	INT32 subStatus
+	);
+
+ClearPinBlockProtectionRegValueAfterSuccessfulPin(
+	INT32 retVal
+	);
+
+RegSetKeyValueForPasswordStuffer(
+	UINT32 retVal
+	);
+
+NgcPinResetScenarioUserAuthSetupComplete(
+	UNICODESTRING domainName,
+	UNICODESTRING userName,
+	UNICODESTRING userSid,
+	UINT32 sessionId
+	);
+
+SetPinResetInProgressUserWarning(
+	INT32 retVal
+	);
+
+NgcPinResetScenarioInfoGetScenarioUserAuthTypeError(
+	INT32 retVal
+	);
+
+NgcPinResetScenarioInfoSetScenarioDataWarning(
+	INT32 retVal
+	);
+
+WebDialogReportResult(
+	UINT64 PartA_PrivTags,
+	ANSISTRING __TlgCV__,
+	INT32 status,
+	INT32 subStatus
+	);
+
+ClearPinBlockProtectionRegValueAfterChangingDisposition(
+	INT32 retVal
+	);
+
+InitializationContext(
+	UINT64 PartA_PrivTags,
+	ANSISTRING __TlgCV__,
+	UINT32 credType,
+	UINT32 credScenario,
+	UNICODESTRING scenarioId,
+	UINT32 uiDisposition,
+	UINT32 accountType,
+	BOOLEAN isConvenienceCredential
+	);
+
+WebDialogVisibilityChange(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+WebDialogVisibilityChange(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+ActivityStoppedAutomatically(
+	VOID
+	);
+
+ActivityStoppedAutomatically(
+	VOID
+	);
+
+ICredentialProviderCredentialSwitchProviderEventsSwitchCredentialProviderWarning(
+	INT32 retVal
+	);
+
+NgcPinSetupScenarioUserAuthSetupComplete(
+	UNICODESTRING domainName,
+	UNICODESTRING userName,
+	UNICODESTRING userSid,
+	UINT32 sessionId
+	);
+
+NgcUpsellProvisioningInitiated(
+	UINT64 PartA_PrivTags,
+	ANSISTRING __TlgCV__
+	);
+
+RegSetValueExWError(
+	INT32 retVal
+	);
+
+RegCreateKeyExWError(
+	INT32 retVal
+	);
+
+ConvertStringSecurityDescriptorToSecurityDescriptorWError(
+	UINT32 retVal
+	);
+
+NgcSerializeMsaPasswordCredentialError(
+	INT32 retVal
+	);
+
+NgcPinCredentialLogonUISetup::SerializeResponse(
+	INT32 retVal,
+	BOOLEAN isValid
+	);
+
+NgcPinCredentialLogonUISetup::SerializeResponse(
+	INT32 retVal,
+	BOOLEAN isValid
+	);
+
+NgcUpsellTileSelected(
+	UINT64 PartA_PrivTags,
+	ANSISTRING __TlgCV__,
+	UINT32 credTileResourceId
+	);
+
+ConvertStringSidToSidWWarning(
+	INT32 retVal
+	);
+
+WinBioGetAvailableFactorsCommonWarning(
+	INT32 retVal
+	);
+
+NgcUtilsCoMemResourceFormatStringAllocCopyError(
+	INT32 retVal
+	);
+
+ICredentialProviderCredentialEvents2EndFieldUpdatesWarning(
+	INT32 retVal
+	);
+
+ICredentialProviderCredentialEventsSetPinFieldInteractiveStateError(
+	INT32 retVal
+	);
+
+ICredentialProviderCredentialEventsSetUserNameFieldInteractiveStateError(
+	INT32 retVal
+	);
+
+ICredentialProviderCredentialEvents2BeginFieldUpdatesWarning(
+	INT32 retVal
+	);
+
+ICredentialProviderCredentialEventsSetUserNameFieldStateError(
+	INT32 retVal
+	);
+
+NgcUtilsCacheUserNameAndSidWarning(
+	INT32 retVal
+	);
+
+UnexpectedPolicyStateOrType(
+	UINT32 state,
+	UINT32 type
+	);
+
+PolicyManager_GetPolicyWarning(
+	INT32 retVal
+	);
+
+NgcUtilsGetMachineNameError(
+	INT32 retVal
+	);
+
+NgcPinResetScenarioInfoIsScenarioEnabledError(
+	INT32 retVal
+	);
+
+NgcPinCredentialPreboot::SerializeResponse(
+	INT32 retVal,
+	BOOLEAN isValid
+	);
+
+NgcPinCredentialPreboot::SerializeResponse(
+	INT32 retVal,
+	BOOLEAN isValid
+	);
+
+ICredentialProviderCredentialEvents4::RequestSerialization(
+	INT32 retVal
+	);
+
+NgcSerializeConvenienceCredentialError(
+	INT32 retVal
+	);
+
+GetSerialization(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId,
+	ANSISTRING __TlgCV__,
+	UINT32 credType
+	);
+
+CommandLinkClicked(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId,
+	ANSISTRING __TlgCV__,
+	UINT32 credType,
+	UINT32 fieldId
+	);
+
+ReportResultStatusFailure(
+	INT32 status,
+	INT32 subStatus,
+	UNICODESTRING statusText,
+	UINT32 statusIcon
+	);
+
+GetSerializationResponseFailure(
+	UINT32 response,
+	UNICODESTRING statusText,
+	UINT32 statusIcon
+	);
+
+GetSerialization(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+GetSerialization(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+CommandLinkClicked(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+CommandLinkClicked(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+NgcUtilsPackContainerCreationOutputSerializationBufferError(
+	INT32 retVal
+	);
+
+NgcPinPolicyValidatePinError(
+	INT32 retVal
+	);
+
+NgcPinPolicyValidateNumericPinError(
+	INT32 retVal
+	);
+
+InvalidPinTypeCheckboxRequestIgnored(
+	INT32 retVal
+	);
+
+NgcUtilsUnpackContainerCreationInputSerializationBufferError(
+	INT32 retVal
+	);
+
+NgcUtilsPackPinCollectionOutputSerializationBufferError(
+	INT32 retVal
+	);
+
+PinLengthRequiredForAutoSubmitPin(
+	INT32 retVal
+	);
+
+PinGestureNotAllowed(
+	INT32 retVal
+	);
+
+NgcUtilsPackPinChangeOutputSerializationBufferError(
+	INT32 retVal
+	);
+
+ICredentialProviderCredentialEventsSetPinStringError(
+	INT32 retVal
+	);
+
+NgcUtilsUnpackPinChangeInputSerializationBufferError(
+	INT32 retVal
+	);
+
+TpmGetDictionaryAttackParametersWarning(
+	INT32 retVal
+	);
+
+NgcUtilsIsTpm20Warning(
+	INT32 retVal
+	);
+
+UserHitLockoutUI(
+	UINT64 PartA_PrivTags,
+	ANSISTRING __TlgCV__,
+	UINT32 lockoutType
+	);
+
+ICredentialProviderCredentialEventsSetFieldStateError(
+	INT32 retVal
+	);
+
+ICredentialProviderCredentialEventsSetFieldStringError(
+	INT32 retVal
+	);
+
+ICredentialProviderCredentialEventsSetPinPolicyLinkFieldStateError(
+	INT32 retVal
+	);
+
+ICredentialProviderCredentialEventsSetPinPolicyDetailsFieldStateError(
+	INT32 retVal
+	);
+
+ICredentialProviderCredentialEvents2SetConfirmPinFieldOptionsError(
+	INT32 retVal
+	);
+
+ICredentialProviderCredentialEvents2SetFieldNewPinOptionsError(
+	INT32 retVal
+	);
+
+NgcPolicyInitializeError(
+	INT32 retVal
+	);
+
+PinPolicyInitializeError(
+	INT32 retVal
+	);
+
+InvalidSerializationPinPolicyLengthOverrun(
+	INT32 retVal
+	);
+
+InvalidSerializationInvalidPinPolicyOffset(
+	INT32 retVal
+	);
+
+InvalidSerializationArithmeticOverflow(
+	INT32 retVal
+	);
+
+InvalidSerializationTooSmall(
+	INT32 retVal
+	);
+
+NgcPolicyAlreadyInitialized(
+	INT32 retVal
+	);
+
+NgcPinPolicyAlreadyInitialized(
+	INT32 retVal
+	);
+
+NgcPolicyValidationFailedInvalidAttestationPolicy(
+	INT32 retVal
+	);
+
+NgcPolicyValidationFailedInvalidSmartCardPolicy(
+	INT32 retVal
+	);
+
+NgcPolicyValidationFailedInvalidbiometricsPolicy(
+	INT32 retVal
+	);
+
+NgcPolicyValidationFailedInvalidVersion(
+	INT32 retVal
+	);
+
+ConversionFromSmartCardPolicyOptionFailedInvalidValue(
+	INT32 retVal
+	);
+
+InvalidPinDigitSequenceNotAllowed(
+	INT32 retVal
+	);
+
+InvalidPinOtherCharacterNotAllowed(
+	INT32 retVal
+	);
+
+InvalidPinSpecialCharacterNotAllowed(
+	INT32 retVal
+	);
+
+InvalidPinDigitNotAllowed(
+	INT32 retVal
+	);
+
+InvalidPinLowercaseLetterNotAllowed(
+	INT32 retVal
+	);
+
+InvalidPinUppercaseLetterNotAllowed(
+	INT32 retVal
+	);
+
+InvalidPinOtherCharacterRequired(
+	INT32 retVal
+	);
+
+InvalidPinSpecialCharacterRequired(
+	INT32 retVal
+	);
+
+InvalidPinDigitRequired(
+	INT32 retVal
+	);
+
+InvalidPinLowercaseLetterRequired(
+	INT32 retVal
+	);
+
+InvalidPinUppercaseLetterRequired(
+	INT32 retVal
+	);
+
+InvalidPinUnknownCharacterClass(
+	INT32 retVal
+	);
+
+InvalidPinTooManyCharacters(
+	INT32 retVal
+	);
+
+InvalidPinTooFewCharacters(
+	INT32 retVal
+	);
+
+PinPolicyRulesNotInitializedBeforeValidation(
+	INT32 retVal
+	);
+
+PinPolicyRules.ValidatePin(
+	INT32 retVal,
+	UINT32 resultValidatePin
+	);
+
+PinPolicyRules.ValidatePin(
+	INT32 retVal,
+	UINT32 resultValidatePin
+	);
+
+InvalidPinPolicySerializationUnsupportedVersion(
+	INT32 retVal
+	);
+
+InvalidPinPolicySerializationWrongSizeV3(
+	INT32 retVal
+	);
+
+InvalidPinPolicySerializationWrongSizeV2(
+	INT32 retVal
+	);
+
+InvalidPinPolicySerializationWrongSizeV1(
+	INT32 retVal
+	);
+
+InvalidPinPolicySerializationTooSmall(
+	INT32 retVal
+	);
+
+PinPolicyRulesAlreadyInitialized(
+	INT32 retVal
+	);
+
+ValidationFailedInvalidExpiration(
+	INT32 retVal
+	);
+
+ValidationFailedInvalidPinHistoryCount(
+	INT32 retVal
+	);
+
+ValidationFailedAllCharacterClassesDisallowed(
+	INT32 retVal
+	);
+
+ValidationFailedInvalidCharacterPolicyOption(
+	INT32 retVal
+	);
+
+ValidationFailedInvalidMinOrMaxLength(
+	INT32 retVal
+	);
+
+InvalidPinPolicySerializationVersion(
+	INT32 retVal
+	);
+
+InvalidOtherCharactersPolicyOption(
+	INT32 retVal
+	);
+
+InvalidSpecialCharactersPolicyOption(
+	INT32 retVal
+	);
+
+InvalidDigitsPolicyOption(
+	INT32 retVal
+	);
+
+InvalidLowercaseCharacterPolicyOption(
+	INT32 retVal
+	);
+
+InvalidUppercaseCharacterPolicyOption(
+	INT32 retVal
+	);
+
+RegOpenKeyExWError(
+	UINT32 retVal
+	);
+
+RegDeleteValueError(
+	UINT32 retVal
+	);
+
+RegOpenKeyExWFailed(
+	UINT32 retVal
+	);
+
+RegGetValueWFailed(
+	UINT32 retVal
+	);
+
+ConvertSidToStringSidW(
+	UINT32 retVal
+	);
+
+RegOpenKeyExWError(
+	INT32 retVal
+	);
+
+memcpy_sRsaKeyBlobError(
+	INT32 retVal
+	);
+
+memcpy_sPrebootAuthBlobError(
+	INT32 retVal
+	);
+
+NCryptExportKeyTpmVersionError(
+	INT32 retVal
+	);
+
+CopySidError(
+	INT32 retVal
+	);
+
+memcpy_sTpmPublicKeyBlobError(
+	INT32 retVal
+	);
+
+memcpy_sTpmPrivateKeyBlobError(
+	INT32 retVal
+	);
+
+memcpy_sTpmKeyBlobError(
+	INT32 retVal
+	);
+
+NCryptExportKeyType2ConsistencyError(
+	INT32 retVal
+	);
+
+NCryptExportKeyBlobDataError(
+	INT32 retVal
+	);
+
+NCryptExportKeyType1ConsistencyError(
+	INT32 retVal
+	);
+
+NCryptExportKeyGetSizeError(
+	INT32 retVal
+	);
+
+NCryptExportKeyActualError(
+	INT32 retVal
+	);
+
+NCryptEncryptActualError(
+	INT32 retVal
+	);
+
+NCryptFinalizeKeyError(
+	INT32 retVal
+	);
+
+NCryptEncryptGetSizeError(
+	INT32 retVal
+	);
+
+NCryptSetPropertyPinError(
+	INT32 retVal
+	);
+
+NCryptCreatePersistedKeyError(
+	INT32 retVal
+	);
+
+NCryptSetPropertyPcpKeyUsagePolicyError(
+	INT32 retVal
+	);
+
+BCryptGenRandomError(
+	INT32 retVal
+	);
+
+EqualSidError(
+	INT32 retVal
+	);
+
+NgcMgmtEnumContainersClientBind(
+	INT32 retVal
+	);
+
+c_NgcMgmtEnumContainers(
+	INT32 retVal
+	);
+
+ClientRpcRecoverableError(
+	INT32 retVal
+	);
+
+memcpy_sFailed(
+	INT32 retVal
+	);
+
+LoadStringWFailed(
+	UINT32 retVal
+	);
+
+CertGetEnhancedKeyUsage(
+	UINT32 retVal
+	);
+
+HideNegoCredDueToNoLogonEku(
+	VOID
+	);
+
+CertGetEnhancedKeyUsageRequiredByteCount(
+	UINT32 retVal
+	);
+
+CertGetIntendedKeyUsage(
+	UINT32 retVal
+	);
+
+HideNegoCredDueToNoSignatureKeyUseOnCert(
+	VOID
+	);
+
+HideNegoCredDueToCertVerifyFailure(
+	BOOL32 isSelfSigned,
+	BOOL32 isExpired
+	);
+
+CertVerifySubjectCertificateContext(
+	UINT32 retVal
+	);
+
+HideNegoCredDueToCertLookupFailure(
+	INT32 retVal
+	);
+
+CertCreateCertificateContext(
+	UINT32 retVal
+	);
+
+HideNegoCredDueToCertMissing(
+	INT32 retVal
+	);
+
+HideNegoCredDueToNoSmartCardEmulation(
+	INT32 retVal
+	);
+
+NCryptOpenStorageProvider(
+	INT32 retVal
+	);
+
+NCryptOpenKey(
+	INT32 retVal
+	);
+
+HideNegoCredForUnknownUser(
+	VOID
+	);
+
+HideNegoCredDueToPolicy(
+	VOID
+	);
+
+HideNegoCredForPackAsSmartCardWithLocalUser(
+	VOID
+	);
+
+HideNegoCredForPackAsSSPIWithLocalUser(
+	VOID
+	);
+
+HideNegoCredForKeyNameFilterMismatch(
+	VOID
+	);
+
+NgcCredProvInvalidateLogonKeysCacheFailed(
+	INT32 retVal
+	);
+
+ShouldShowNegoCredential(
+	NULL keyName,
+	UINT32 accountType,
+	UINT32 allowedGestures,
+	BOOLEAN packAsSmartCard,
+	BOOLEAN packAsSspi,
+	BOOLEAN certRequiredForOnPremAuth,
+	UINT32 hideNegoCredReason,
+	BOOLEAN shouldShowNegoCredential,
+	INT32 retVal
+	);
+
+NgcCredProvEnumLogonKeysFailed(
+	INT32 retVal
+	);
+
+NetGetJoinInformationFailed(
+	UINT32 retVal
+	);
+
+LsaLookupUserAccountType(
+	INT32 retVal
+	);
+
+RtlUnicodeStringToAnsiStringError(
+	INT32 retVal
+	);
+
+LsaLookupAuthenticationPackageError(
+	INT32 retVal
+	);
+
+LsaConnectUntrustedError(
+	INT32 retVal
+	);
+
+ConvertLogonCredsAvailableRegKeyNameToSid(
+	UINT32 retVal
+	);
+
+QueryInfoLogonCredsAvailableRegKey(
+	UINT32 retVal
+	);
+
+EnumKeysUnderLogonCredsAvailableRegKey(
+	UINT32 retVal
+	);
+
+OpenLogonCredsAvailableRegKey(
+	UINT32 retVal
+	);
+
+LogonKeysAvailableRegValue(
+	UINT32 valueState
+	);
+
+QueryLogonCredsAvailableRegValue(
+	UINT32 retVal
+	);
+
+OpenLogonCredsAvailableRegKey(
+	UINT32 retVal
+	);
+
+ConvertSidToStringSid(
+	INT32 retVal
+	);
+
+CacheGetUserNameAndDomain(
+	SID userSid,
+	UNICODESTRING userName,
+	UNICODESTRING domain
+	);
+
+CacheGetUserSid(
+	UNICODESTRING userName,
+	SID sid
+	);
+
+GetComputerNameExW(
+	UINT32 retVal
+	);
+
+GetComputerNameExWBufferSize(
+	UINT32 retVal
+	);
+
+LsaLookupSids2(
+	INT32 retVal
+	);
+
+InvalidSidNameUse(
+	INT32 retVal,
+	UINT32 sidNameUse
+	);
+
+LookupAccountSidLocalW(
+	UINT32 retVal
+	);
+
+FallBackToLocalSidLookup(
+	INT32 retVal
+	);
+
+LsaOpenPolicy(
+	INT32 retVal
+	);
+
+GetTokenInformation(
+	UINT32 retVal
+	);
+
+LookupAccountNameLocalWFailed(
+	UINT32 retVal
+	);
+
+LookupAccountNameLocalWSizeQuerySucceededUnexpectedly(
+	INT32 retVal
+	);
+
+LookupAccountNameLocalWSizeQueryFailed(
+	UINT32 retVal
+	);
+
+ParseNgcKeyNameStringTenant(
+	INT32 retVal
+	);
+
+ParseNgcKeyNameStringAccountId(
+	INT32 retVal
+	);
+
+ParseNgcKeyNameStringDomain(
+	INT32 retVal
+	);
+
+BuildNgcKeyNameStringConvertContainerId(
+	INT32 retVal
+	);
+
+ParseNgcKeyNameStringContainerId(
+	INT32 retVal
+	);
+
+ParseNgcKeyNameStringSid(
+	INT32 retVal
+	);
+
+BuildNgcKeyNameStringConvertSid(
+	INT32 retVal
+	);
+
+ParseNgcKeyNameStringInvalidLength(
+	INT32 retVal
+	);
+
+InvalidSerializationBufferUserSidTooLarge(
+	INT32 retVal
+	);
+
+InvalidSerializationBufferTooSmall(
+	INT32 retVal
+	);
+
+NCryptGetProperty(
+	INT32 retVal
+	);
+
+NCryptGetPropertyRequiredByteCount(
+	INT32 retVal
+	);
+
+UnmarshaledCredentialUnsupportedType(
+	INT32 retVal
+	);
+
+CredUnmarshalCredential(
+	UINT32 retVal
+	);
+
+CredUnPackAuthenticationBufferWFailed(
+	UINT32 retVal
+	);
+
+CredUnPackAuthenticationBufferWSizeQueryFailed(
+	UINT32 retVal
+	);
+
+CredUnPackAuthenticationBufferWSizeQuerySucceededUnexpectedly(
+	INT32 retVal
+	);
+
+InvalidSerializationBufferBadSubmitType(
+	INT32 retVal
+	);
+
+SspiUnmarshalCredUIContext(
+	INT32 retVal
+	);
+
+UnmarshaledSspiCredentialNotV2(
+	INT32 retVal
+	);
+
+CredUnPackAuthenticationBufferWIsNotPresent(
+	INT32 retVal
+	);
+
+CertGetCertificateContextProperty(
+	UINT32 retVal
+	);
+
+CertFindCertificateInStore(
+	UINT32 retVal
+	);
+
+CertGetCertificateContextPropertyRequiredSize(
+	UINT32 retVal
+	);
+
+CertOpenSystemStore(
+	UINT32 retVal
+	);
+
+CertNotPresentInMyStore(
+	UINT32 retVal
+	);
+
+NgcPolicyInitializeDefaultError(
+	INT32 retVal
+	);
+
+InvalidSerializationBufferNgcPolicySerializationTooLarge(
+	INT32 retVal
+	);
+
+RpcClientBindError(
+	INT64 retVal
+	);
+
+RpcClientCreateBindingHandleError(
+	INT32 retVal
+	);
+
+RpcClientAlreadyBound(
+	VOID
+	);
+
+NoNewBindAttemptsOnUnrecoverableError(
+	INT32 retVal
+	);
+
+RpcClientCannotCopyServerSid(
+	UINT32 retVal
+	);
+
+RpcClientCreateSecurityDescriptorFailure(
+	UINT32 retVal
+	);
+
+RpcClientInvalidServerSid(
+	UINT32 retVal
+	);
+

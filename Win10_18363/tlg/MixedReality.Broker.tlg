@@ -1,0 +1,638 @@
+ProviderNames:
+	Microsoft.Windows.Holographic.StageManagement
+	Microsoft.Windows.Shell.HolographicFirstRun
+	Microsoft.Windows.Holographic.Install
+	Microsoft.Windows.Holographic.DesktopFodInstaller
+
+
+
+**** Events *****
+StageCandidateDisambig(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId,
+	BOOLEAN IsStageDisambigPending,
+	UINT64 NumStageCandidates
+	);
+
+LocatableSpatialEntity_Added(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId,
+	UNICODESTRING SpatialEntityId,
+	GUID SpatialAnchorId,
+	GUID SpatialAnchorSpaceId,
+	BOOLEAN DisableStageNearbyRequirement
+	);
+
+LocatableSpatialEntity_AbandonRelocateAttempts(
+	GUID SpatialAnchorId
+	);
+
+LocatableSpatialEntity_QueueRelocateAttempt(
+	GUID SpatialAnchorId
+	);
+
+LocatableSpatialEntity_IgnoreStageEntity(
+	BOOLEAN IsStage
+	);
+
+LocatableSpatialEntity_DisambigQueued(
+	UNICODESTRING SpatialAnchorSpaceId,
+	BOOLEAN IsDisambigTimerPending
+	);
+
+LocatableSpatialEntity_LateRelocalization(
+	UNICODESTRING SpatialEntityId,
+	GUID SpatialAnchorId,
+	GUID SpatialAnchorSpaceId
+	);
+
+StageCandidateDisambig(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+StageCandidateDisambig(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+LocatableSpatialEntity_StageCandidateDisambigTimerStarted(
+	VOID
+	);
+
+ActivityIntermediateStop(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+LocatableSpatialEntity_NoLocator(
+	VOID
+	);
+
+ActivityError(
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+ActivityError(
+	UINT64 PartA_PrivTags,
+	SIGNED wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+LocatableSpatialEntity_Added(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+LocatableSpatialEntity_Added(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+ActivityStoppedAutomatically(
+	VOID
+	);
+
+StopStageWatcher(
+	VOID
+	);
+
+FallbackError(
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+FallbackError(
+	UINT64 PartA_PrivTags,
+	SIGNED wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+StartStageWatcher(
+	VOID
+	);
+
+DoesAnyStageHaveBoundaries(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId
+	);
+
+UpdateStageAnchor(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId
+	);
+
+PersistNewStage(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId
+	);
+
+SetBoundaryEnabled(
+	BOOLEAN Enabled
+	);
+
+AreMovementBoundsPresentForCurrentStage(
+	UNICODESTRING SpatialEntityId,
+	BOOLEAN AreBoundsPresent
+	);
+
+UpdateStageAnchor(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+UpdateStageAnchor(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+DoesAnyStageHaveBoundaries(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	BOOLEAN DoesAnyStageHaveBoundaries
+	);
+
+DoesAnyStageHaveBoundaries(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId,
+	BOOLEAN DoesAnyStageHaveBoundaries
+	);
+
+DoesAnyStageHaveBoundaries(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+DoesAnyStageHaveBoundaries(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+PersistNewStage(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+PersistNewStage(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+SysHolographicWindowingEnvironment_StatusChanged(
+	UNICODESTRING Status
+	);
+
+SysHolographicWindowingEnvironment_IsPreviewActive(
+	BOOLEAN IsPreviewActive
+	);
+
+SysHolographicWindowingEnvironment_SetIsSpeechPersonalizationEnabled(
+	BOOLEAN IsSpeechPersonalizationEnabled
+	);
+
+SysHolographicWindowingEnvironment_IsProtectedContentPresent(
+	BOOLEAN IsProtectedContentPresent
+	);
+
+SysHolographicWindowingEnvironment_GetIsLearningExperienceComplete(
+	BOOLEAN IsLearningExperienceComplete
+	);
+
+SysHolographicWindowingEnvironment_SetIsLearningExperienceComplete(
+	BOOLEAN IsLearningExperienceComplete
+	);
+
+SysHolographicWindowingEnvironment_GetIsDeviceSetupComplete(
+	BOOLEAN IsDeviceSetupComplete
+	);
+
+SysHolographicWindowingEnvironment_SetIsDeviceSetupComplete(
+	BOOLEAN IsDeviceSetupComplete
+	);
+
+SysHolographicWindowingEnvironment_IsPreviewActiveChanged(
+	BOOLEAN IsPreviewActive
+	);
+
+SysHolographicWindowingEnvironment_IsProtectedContentPresentChanged(
+	BOOLEAN IsProtectedContentPresent
+	);
+
+CoordinatorWatchdogStop(
+	VOID
+	);
+
+CoordinatorWatchdogAwoken(
+	VOID
+	);
+
+CoordinatorWatchdogWait(
+	VOID
+	);
+
+CoordinatorWatchdogStart(
+	VOID
+	);
+
+FailedToGetCoordinatorInstance(
+	VOID
+	);
+
+RemoveDuplicateStageFromStore(
+	UNICODESTRING StageToConsiderForRemovalSpatialEntityId,
+	FLOAT DistanceFromCurrentStageMeters,
+	FLOAT HeightDifferenceFromCurrentStageMeters,
+	BOOLEAN IsStageToBeRemoved
+	);
+
+SetCurrentStage(
+	UNICODESTRING SpatialEntityId,
+	GUID SpatialAnchorId
+	);
+
+LocatableSpatialEntity_IsAnchorNearby(
+	GUID SpatialAnchorId,
+	FLOAT DistanceFromAnchorMeters,
+	FLOAT HeightDifferenceFromAnchorMeters,
+	BOOLEAN IsAnchorConsideredNearby
+	);
+
+StageCandidateDisambig_CandidateSelection(
+	UNICODESTRING BestCandidateSpatialEntityId,
+	UNICODESTRING OtherCandidateSpatialEntityId,
+	UNICODESTRING SeStageCandidateSelectionReasonlectionReason
+	);
+
+EnumerateStageEntites_Stop(
+	UINT32 NumEnumeratedStageEntities
+	);
+
+EnumerateStageEntites_Start(
+	BOOLEAN LocatableOnly
+	);
+
+BloomSuppression_MessageSessionThread(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId
+	);
+
+BloomSuppression_OnConnectionOpened(
+	INT32 CurrentState,
+	INT32 DesiredState
+	);
+
+BloomSuppression_OnConnectionDenied(
+	INT32 CurrentState,
+	INT32 DesiredState
+	);
+
+BloomSuppression_OnRequestDisconnect(
+	INT32 CurrentState,
+	INT32 DesiredState
+	);
+
+BloomSuppression_OnFeatureEnabled(
+	INT32 CurrentState,
+	INT32 DesiredState
+	);
+
+BloomSuppression_ReleaseControl(
+	INT32 CurrentState,
+	INT32 DesiredState
+	);
+
+BloomSuppression_TakeControl(
+	INT32 CurrentState,
+	INT32 DesiredState
+	);
+
+BloomSuppression_OnConnectionClosed(
+	INT32 CurrentState,
+	INT32 DesiredState
+	);
+
+BloomSuppression_DisconnectFromShell(
+	VOID
+	);
+
+BloomSuppression_ConnectToShell(
+	VOID
+	);
+
+BloomSuppression_EnableFeature(
+	VOID
+	);
+
+ActivityIntermediateStop(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+ActivityError(
+	UINT64 PartA_PrivTags,
+	SIGNED wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+ActivityError(
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+BloomSuppression_MessageSessionThread(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+BloomSuppression_MessageSessionThread(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+ActivityStoppedAutomatically(
+	VOID
+	);
+
+FodRequest(
+	UNICODESTRING FodCapabilityName,
+	ANSISTRING __TlgCV__
+	);
+
+RequestResult(
+	UNICODESTRING dependencyName,
+	INT32 RequestHresult,
+	ANSISTRING __TlgCV__
+	);
+
+InstallState(
+	UINT32 installState
+	);
+
+Configuration(
+	BOOLEAN forceSideload,
+	BOOLEAN disableAppCompatCheck,
+	BOOLEAN deliverAppsViaFod,
+	BOOLEAN includeRevisionWithVersionCheck,
+	ANSISTRING __TlgCV__
+	);
+
+AddDependenciesCompleted(
+	UINT32 InstallationTimeMs,
+	INT32 InstallHresult,
+	ANSISTRING __TlgCV__
+	);
+
+DependencyInstallState(
+	UNICODESTRING dependencyName,
+	BOOLEAN isInstalled
+	);
+
+FodCompatibilityCheck(
+	BOOLEAN isFodCompatible,
+	UINT32 fodVersion,
+	UINT32 osVersion
+	);
+
+GpoQuery(
+	UINT32 PathRetrievedResult,
+	UNICODESTRING PathValue,
+	BOOLEAN isDomainJoined,
+	BOOLEAN isCloudDomainJoined
+	);
+
+FodUninstallHelperCompleted(
+	UINT32 AcquisitionTimeMs,
+	INT32 FodHelperHresult,
+	UINT32 CbsRequiredAction
+	);
+
+FodHelperCompleted(
+	UINT32 AcquisitionTimeMs,
+	INT32 FodHelperHresult,
+	UINT32 CbsRequiredAction
+	);
+
+TraceLoggingInfo(
+	UNICODESTRING traceLoggingMessage
+	);
+

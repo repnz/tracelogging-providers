@@ -1,0 +1,107 @@
+ProviderNames:
+	Microsoft.Windows.GameOverlay
+	Microsoft.Windows.GameOverlayTracing
+
+
+
+**** Events *****
+SessionStart(
+	ANSISTRING __TlgCV__,
+	UNICODESTRING settingsData,
+	UINT32 isHardwareEncoding,
+	UNICODESTRING language,
+	UNICODESTRING locale,
+	UNICODESTRING titleName,
+	UNICODESTRING appId
+	);
+
+Screenshot(
+	ANSISTRING __TlgCV__,
+	UINT32 videoWidth,
+	UINT32 videoHeight,
+	UINT32 screenshotWidth,
+	UINT32 screenshotHeight,
+	BOOLEAN isHdr
+	);
+
+Info(
+	ANSISTRING __TlgCV__,
+	UINT32 infoID,
+	UNICODESTRING infoName,
+	UNICODESTRING data,
+	UNICODESTRING titleName,
+	UNICODESTRING appId
+	);
+
+Move(
+	ANSISTRING __TlgCV__,
+	DOUBLE originalPosX,
+	DOUBLE originalPosY,
+	DOUBLE newPosX,
+	DOUBLE newPosY,
+	UNICODESTRING titleName,
+	UNICODESTRING appId
+	);
+
+Performance(
+	ANSISTRING __TlgCV__,
+	UNICODESTRING performanceName,
+	DOUBLE duration,
+	UNICODESTRING notes,
+	UNICODESTRING titleName,
+	UNICODESTRING appId
+	);
+
+Error(
+	ANSISTRING __TlgCV__,
+	UINT32 errorID,
+	UINT32 errorCode,
+	UNICODESTRING errorName,
+	UNICODESTRING titleName,
+	UNICODESTRING appId,
+	UNICODESTRING errorHistory
+	);
+
+PageAction(
+	ANSISTRING __TlgCV__,
+	UNICODESTRING buttonId,
+	UNICODESTRING titleName,
+	UNICODESTRING appId,
+	UNICODESTRING accessibilityType,
+	UNICODESTRING data,
+	UNICODESTRING language,
+	UNICODESTRING locale,
+	UINT32 windowMode,
+	UINT32 isHardwareEncoding,
+	UNICODESTRING userXuid
+	);
+
+Error(
+	UINT32 errorID,
+	UINT32 errorCode,
+	UNICODESTRING errorName,
+	UNICODESTRING titleName,
+	UNICODESTRING appId,
+	UNICODESTRING errorHistory
+	);
+
+TraceMessage(
+	ANSISTRING  
+	);
+
+TraceMessage(
+	ANSISTRING  
+	);
+
+TraceMessage(
+	ANSISTRING  
+	);
+
+TraceMessage(
+	ANSISTRING  
+	);
+
+TraceMessage(
+	ANSISTRING  
+	);
+

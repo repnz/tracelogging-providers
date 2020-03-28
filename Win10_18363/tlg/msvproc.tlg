@@ -1,0 +1,97 @@
+ProviderNames:
+	Microsoft.Windows.MediaFoundation.XVP
+	Microsoft.Windows.MediaFoundation.CallStack
+
+
+
+**** Events *****
+MFMediaError(
+	ANSISTRING Function,
+	HEXINT32 hr,
+	UNICODESTRING Description
+	);
+
+Configuration(
+	GUID MFMediaTelemetrySessionID,
+	UINT32 MFMediaTelemetrySessionInstance,
+	HEXINT32 fourCCSrc,
+	UINT32 srcPixelAspectRatioNum,
+	UINT32 srcPixelAspectRatioDiv,
+	BOOL32 fSrcInterlaced,
+	UINT32 srcInterlaceMode,
+	BOOL32 srcSampleInterlaceBFF,
+	UINT32 srcHeight,
+	UINT32 srcWidth,
+	BINARY rcSrcApp,
+	UINT32 srcRectHeightAdjusted,
+	UINT32 srcRectWidthAdjusted,
+	UINT32 srcRectHeight,
+	UINT32 srcRectWidth,
+	UINT32 srcBitDepth,
+	UINT32 srcBitOffset,
+	FLOAT srcMaxLightLevel,
+	UINT32 srcNominalRange,
+	UINT32 srcPrimariesMT,
+	UINT32 srcTransferFunction,
+	UINT32 inputColorSpace,
+	UINT32 srcRotation,
+	UINT32 srcRotationAddition,
+	UINT32 eMirror,
+	UINT32 eRotation,
+	BOOL32 srcColorSpInexact,
+	HEXINT32 fourCCDst,
+	UINT32 dstPixelAspectRatioNum,
+	UINT32 dstPixelAspectRatioDiv,
+	BINARY rcDstApp,
+	UINT32 dstHeight,
+	UINT32 dstWidth,
+	BINARY rcDst,
+	UINT32 dstRectHeight,
+	UINT32 dstRectWidth,
+	UINT32 dstBitDepth,
+	UINT32 dstBitOffset,
+	FLOAT dstMaxLightLevel,
+	UINT32 dstNominalRange,
+	UINT32 dstPrimariesMT,
+	UINT32 dstTransferFunction,
+	UINT32 outputColorSpace,
+	BOOL32 dstColorSpInexact,
+	BOOL32 fOutputFrameRateSet,
+	BOOL32 fPlaybackMode,
+	BOOL32 fLowLatency,
+	BOOL32 bSupportSSE2,
+	BOOL32 fCallerAlloc,
+	BOOL32 fWinRTMode,
+	BOOL32 fDisableFRC,
+	BOOL32 fVideoProcessorSupportsRotation,
+	BOOL32 fVideoProcessorSupportsNominalRange,
+	BOOL32 fVideoProcessorSupportsMirroring,
+	BOOL32 applyDX11RotationMirroring,
+	BOOL32 fD3D11Mode,
+	UINT8 AutoProcessingInfo,
+	BOOL32 fSphereMap,
+	UINT32 eSphereFormat,
+	UINT32 eSphereProjectionMode,
+	UINT32 uiSphericalViewChangeCount,
+	UINT32 uiFoVChangeCount,
+	UNICODESTRING ApplicationPackage,
+	BOOL32 OutsideMode,
+	BOOL32 PostConvertFallback
+	);
+
+OutsideModeState(
+	GUID MFMediaTelemetrySessionID,
+	UINT32 MFMediaTelemetrySessionInstance,
+	UINT32 Lux,
+	UINT32 MinLuxLevel,
+	UINT32 MaxLuxLevel,
+	UINT32 LightEnvChangedCount
+	);
+
+OutsideModeInitialLux(
+	GUID MFMediaTelemetrySessionID,
+	UINT32 MFMediaTelemetrySessionInstance,
+	UINT32 LUX_CurentValue,
+	UINT32 LUX_AverageValue
+	);
+

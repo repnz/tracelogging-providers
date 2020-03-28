@@ -1,0 +1,260 @@
+ProviderNames:
+	Microsoft.Windows.FileSystem.ReFSUtil
+
+
+
+**** Events *****
+UserBreak(
+	GUID RunGuid,
+	UINT32 ControlType
+	);
+
+Complete(
+	GUID RunGuid,
+	UINT64 RunTimeMilliseconds,
+	WIN32ERROR Error
+	);
+
+Start(
+	GUID RunGuid
+	);
+
+LeakDetectionStart(
+	GUID RunGuid
+	);
+
+VerifyPass2Complete(
+	GUID RunGuid,
+	UINT64 RunTimeMilliseconds,
+	NTSTATUS Status
+	);
+
+SchemaTableTraversalComplete(
+	GUID RunGuid,
+	UINT64 RunTimeMilliseconds,
+	NTSTATUS Status
+	);
+
+ContainerIndexTableTraversalComplete(
+	GUID RunGuid,
+	UINT64 RunTimeMilliseconds,
+	NTSTATUS Status
+	);
+
+VerifyPass4Complete(
+	GUID RunGuid,
+	UINT64 RunTimeMilliseconds,
+	NTSTATUS Status
+	);
+
+SchemaTableDuplicateTraversalComplete(
+	GUID RunGuid,
+	UINT64 RunTimeMilliseconds,
+	NTSTATUS Status
+	);
+
+ParentChildTableTraversalComplete(
+	GUID RunGuid,
+	UINT64 RunTimeMilliseconds,
+	NTSTATUS Status
+	);
+
+LeakDetectionComplete(
+	GUID RunGuid,
+	UINT64 LeakedClusters,
+	UINT64 LeakedReferenceCount,
+	UINT64 LeaksFixed,
+	UINT64 RunTimeMilliseconds,
+	WIN32ERROR LastError
+	);
+
+VerifyPass1Complete(
+	GUID RunGuid,
+	UINT64 RunTimeMilliseconds,
+	NTSTATUS Status
+	);
+
+LeakParameters(
+	GUID RunGuid,
+	BOOLEAN ExclusiveNoSnapshot,
+	BOOLEAN QueryRequiredSpace,
+	BOOLEAN RebuildMAA,
+	BOOLEAN DiagnoseOnly,
+	BOOLEAN Verbose,
+	UINT32 ThreadCount
+	);
+
+VerifyPass3Complete(
+	GUID RunGuid,
+	UINT64 RunTimeMilliseconds,
+	NTSTATUS Status
+	);
+
+ObjectTableTraversalComplete(
+	GUID RunGuid,
+	UINT64 RunTimeMilliseconds,
+	NTSTATUS Status
+	);
+
+ObjectTableDuplicateTraversalComplete(
+	GUID RunGuid,
+	UINT64 RunTimeMilliseconds,
+	NTSTATUS Status
+	);
+
+FullScanStart(
+	GUID RunGuid
+	);
+
+InteractiveConsoleStart(
+	GUID RunGuid
+	);
+
+ScanVolumeForLCNsComplete(
+	GUID RunGuid,
+	UINT64 RunTimeMilliseconds
+	);
+
+CopyFilesComplete(
+	GUID RunGuid,
+	UINT64 RunTimeMilliseconds,
+	UINT64 NumberOfFilesCopied,
+	NTSTATUS Status
+	);
+
+QuickScanStart(
+	GUID RunGuid
+	);
+
+CopyAllFilesComplete(
+	GUID RunGuid,
+	UINT64 RunTimeMilliseconds,
+	UINT32 NumberOfVolumeFiles,
+	UINT64 TotalFilesCopied,
+	UINT64 TotalFilesScanned,
+	NTSTATUS Status
+	);
+
+FullScanComplete(
+	GUID RunGuid,
+	UINT64 RunTimeMilliseconds,
+	NTSTATUS Status
+	);
+
+CopyAllFilesStart(
+	GUID RunGuid
+	);
+
+ClassifyLCNsComplete(
+	GUID RunGuid,
+	UINT64 RunTimeMilliseconds
+	);
+
+InteractiveConsoleComplete(
+	GUID RunGuid,
+	UINT64 RunTimeMilliseconds,
+	NTSTATUS Status
+	);
+
+CopyFilesStart(
+	GUID RunGuid
+	);
+
+QuickScanVolumeComplete(
+	GUID RunGuid,
+	UINT64 RunTimeMilliseconds,
+	NTSTATUS Status
+	);
+
+QuickScanComplete(
+	GUID RunGuid,
+	UINT64 RunTimeMilliseconds,
+	NTSTATUS Status
+	);
+
+DiagnoseVolumeComplete(
+	GUID RunGuid,
+	UINT64 RunTimeMilliseconds,
+	NTSTATUS Status
+	);
+
+DiagnoseVolumeStart(
+	GUID RunGuid
+	);
+
+QuickScanVolumeStart(
+	GUID RunGuid,
+	UINT32 ClusterSize,
+	UINT64 ClusterCount
+	);
+
+TableRootValidation(
+	GUID RunGuid,
+	UINT64 TableRootsValidated,
+	UINT64 TotalTableRoots,
+	UINT64 RunTimeMilliseconds
+	);
+
+EnumerateTables(
+	GUID RunGuid,
+	UINT64 TablesEnumerated,
+	UINT64 TotalTables,
+	UINT64 RunTimeMilliseconds
+	);
+
+ConfigInitialize(
+	GUID RunGuid,
+	UNICODESTRING Version
+	);
+
+ConfigInitializeComplete(
+	GUID RunGuid,
+	GUID VolumeId,
+	UINT32 Operation,
+	BOOL32 WriteProtected,
+	NTSTATUS Status
+	);
+
+ConfigDispatchComplete(
+	GUID RunGuid,
+	UINT32 Operation,
+	NTSTATUS Status
+	);
+
+ConfigInitializeOpenFailure(
+	GUID RunGuid,
+	NTSTATUS Status
+	);
+
+ConfigHelp(
+	GUID RunGuid
+	);
+
+ConfigDispatchStart(
+	GUID RunGuid,
+	UINT32 Operation
+	);
+
+ConfigInitializePartitionMapFailure(
+	GUID RunGuid,
+	NTSTATUS Status
+	);
+
+VersionInfo(
+	GUID RunGuid,
+	UINT16 ReFSVersionMajor,
+	UINT16 ReFSVersionMinor
+	);
+
+ContainerIndexTablePages(
+	GUID RunGuid,
+	UINT32 ProcessedPages,
+	UINT32 InvalidPages
+	);
+
+ContainerTableEntryPages(
+	GUID RunGuid,
+	UINT32 ProcessedPages,
+	UINT32 InvalidPages
+	);
+

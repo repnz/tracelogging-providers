@@ -1,0 +1,1302 @@
+ProviderNames:
+	Microsoft.Windows.Update.Orchestrator
+	Microsoft.Windows.Update.Orchestrator
+	Microsoft.Windows.Wil.FeatureLogging
+
+
+
+**** Events *****
+TaskRunning(
+	UINT64 PartA_PrivTags,
+	GUID wuDeviceid,
+	UNICODESTRING TaskName,
+	SYSTEMTIME StartTime,
+	SYSTEMTIME NextRuntime,
+	INT32 MissedRuns,
+	UNICODESTRING ActionArg
+	);
+
+TaskModified(
+	UINT64 PartA_PrivTags,
+	GUID wuDeviceid,
+	UNICODESTRING TaskName,
+	SYSTEMTIME NextRuntime,
+	SYSTEMTIME LastRuntime,
+	HRESULT LastResult,
+	INT8 ModificationType,
+	INT8 TaskState,
+	INT32 MissedRuns,
+	BOOLEAN WakeToRun,
+	UNICODESTRING ActionPath,
+	UNICODESTRING ActionArg
+	);
+
+Info Message(
+	UNICODESTRING message
+	);
+
+Error Originate:ActiveHoursHelper::GetDeviceActiveHours:307(
+	INT32 hr
+	);
+
+Error Originate:ActiveHoursHelper::GetDeviceActiveHours:314(
+	INT32 hr
+	);
+
+Info Message(
+	UNICODESTRING message
+	);
+
+Info Message(
+	UNICODESTRING message,
+	UINT16 activeHoursStart,
+	UINT16 activeHoursEnd
+	);
+
+Info Message(
+	UNICODESTRING message
+	);
+
+Info Message(
+	UNICODESTRING message
+	);
+
+Info Message(
+	UNICODESTRING message,
+	UNICODESTRING sessionType
+	);
+
+Info Message(
+	UNICODESTRING message,
+	UNICODESTRING filterState
+	);
+
+Info Message(
+	UNICODESTRING message
+	);
+
+Info Message(
+	UNICODESTRING message
+	);
+
+FallbackError(
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+FallbackError(
+	UINT64 PartA_PrivTags,
+	SIGNED wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+Error Originate:RulesEngine::ProcessRules:839(
+	INT32 hr
+	);
+
+Error Originate:RulesEngine::ProcessRules:830(
+	INT32 hr
+	);
+
+Error Originate:RulesEngine::ProcessRules:773(
+	INT32 hr
+	);
+
+Error Originate:RulesEngine::ProcessRules:756(
+	INT32 hr
+	);
+
+Error Originate:RulesEngine::ProcessRules:747(
+	INT32 hr
+	);
+
+Error Originate:RulesEngine::ProcessRules:730(
+	INT32 hr
+	);
+
+Error Originate:RulesEngine::ProcessRules:716(
+	INT32 hr
+	);
+
+Error Originate:RulesEngine::RulesEngineLoopThreadProc:258(
+	INT32 hr
+	);
+
+Error Originate:RulesEngine::RulesEngineLoopThreadProc:245(
+	INT32 hr
+	);
+
+Svc(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId,
+	BOOLEAN moStack
+	);
+
+Failed to mark flight pending commit(
+	INT32 Hr
+	);
+
+USO service created InstallAtShutdownKey volatile registry key(
+	VOID
+	);
+
+USO service skipping commit during preshutdown(
+	VOID
+	);
+
+USO service commiting flight during preshutdown(
+	VOID
+	);
+
+USO service started(
+	VOID
+	);
+
+USO service received preshutdown notification(
+	VOID
+	);
+
+USO service received stop notification(
+	VOID
+	);
+
+USO service received shutdown notification(
+	VOID
+	);
+
+Svc(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	BOOLEAN moStack
+	);
+
+Svc(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId,
+	BOOLEAN moStack
+	);
+
+USO service stop initiated(
+	VOID
+	);
+
+USO service stopping(
+	VOID
+	);
+
+ActivityStoppedAutomatically(
+	VOID
+	);
+
+ActivityError(
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+ActivityError(
+	UINT64 PartA_PrivTags,
+	SIGNED wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+Svc(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+Svc(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+FeatureError(
+	UINT32 featureId,
+	INT32 featureVersion,
+	INT32 featureBaseVersion,
+	INT16 featureStage,
+	HRESULT hr,
+	ANSISTRING file,
+	UINT16 lineNumber,
+	ANSISTRING module,
+	ANSISTRING process,
+	ANSISTRING originFile,
+	UINT16 originLineNumber,
+	ANSISTRING originModule,
+	ANSISTRING originName,
+	ANSISTRING message,
+	ANSISTRING callerModule,
+	UINT32 callerReturnAddressOffset,
+	ANSISTRING originCallerModule,
+	UINT32 originCallerReturnAddressOffset
+	);
+
+FeatureVariantUsage(
+	UINT32 featureId,
+	INT32 featureVersion,
+	INT32 featureBaseVersion,
+	INT16 featureStage,
+	BOOLEAN enabled,
+	UINT32 variantKind,
+	UINT8 variant,
+	UINT64 addend
+	);
+
+EnabledFeatureUsage(
+	UINT32 featureId,
+	INT32 featureVersion,
+	INT32 featureBaseVersion,
+	INT16 featureStage,
+	BOOLEAN enabled,
+	UINT32 kind,
+	UINT64 addend
+	);
+
+FeatureUsage(
+	UINT32 featureId,
+	INT32 featureVersion,
+	INT32 featureBaseVersion,
+	INT16 featureStage,
+	BOOLEAN enabled,
+	UINT32 kind,
+	UINT64 addend
+	);
+
+Warning:UxUpdateManager::CommitAndRebootForFullServicingStackWithLoggedOnUser::<lambda_51255aec6183e43cec8dc703ee639966>::operator ():1237(
+	INT32 hr
+	);
+
+Error Originate:UsoMigrationManager::Migrate:32(
+	INT32 hr
+	);
+
+PfiuRawHistory(
+	UINT16 History,
+	SYSTEMTIME LastEntryTime,
+	SYSTEMTIME LastEntryTimeInUTC,
+	UINT32 MinutesPerEntry,
+	UINT16 RequiredConfidenceThreshold,
+	UINT32 RequiredDurationInMinutes,
+	BOOL32 PredictionExists,
+	SYSTEMTIME PredictedStartTime,
+	SYSTEMTIME PredictedStartTimeInUTC,
+	UINT16 PredictedConfidence,
+	BOOL32 IsPredictionAccurate
+	);
+
+SmartSchedulerResult(
+	UINT16 MinimumConfidence,
+	UINT32 MinimumDuration,
+	SYSTEMTIME StartTime,
+	SYSTEMTIME StartTimeInUTC,
+	SYSTEMTIME EndTime,
+	SYSTEMTIME EndTimeInUTC,
+	UINT16 ActualConfidence,
+	UNICODESTRING Status,
+	UNICODESTRING PredictionType,
+	UNICODESTRING Scenario,
+	ANSISTRING __TlgCV__
+	);
+
+SmartSchedulerAHStart(
+	UINT64 PartA_PrivTags,
+	UINT16 ActiveHoursStart,
+	UINT16 ActiveHoursEnd,
+	UNICODESTRING PredictionType,
+	ANSISTRING __TlgCV__
+	);
+
+SmartSchedulerStart(
+	UINT64 PartA_PrivTags,
+	UNICODESTRING PredictionType,
+	ANSISTRING __TlgCV__
+	);
+
+Info Message(
+	ANSISTRING message
+	);
+
+SmartBusyCheckEvaluation(
+	ANSISTRING operationType,
+	BOOL32 result,
+	BOOL32 deviceWokeUp,
+	DOUBLE threshold,
+	UNICODESTRING modelId,
+	UNICODESTRING settingName,
+	ANSISTRING __TlgCV__
+	);
+
+Prediction unit API call was successfully verified in Smart busy check: Machine woke up automatically to run reboot task(
+	VOID
+	);
+
+Prediction uni API call was successful(
+	BOOL32 Prediction result,
+	DOUBLE Prediction raw value
+	);
+
+SmartBusyCheckSmartSignalEvaluation(
+	ANSISTRING operationType,
+	BOOL32 result,
+	BOOL32 deviceWokeUp,
+	BOOL32 usingDefaultThreshold,
+	UINT32 threshold,
+	UNICODESTRING signalName,
+	UNICODESTRING signalCollectionId,
+	UNICODESTRING tag,
+	ANSISTRING __TlgCV__
+	);
+
+Smart busy check signal evaluation Result:(
+	HRESULT Error code
+	);
+
+Smart busy check signal evaluation Result:(
+	BOOL32 User activity predicted
+	);
+
+Unexpected value recevied in threshold so resetting it to 0.(
+	VOID
+	);
+
+Prediction API result(
+	HRESULT Error code
+	);
+
+Prediction API result(
+	BOOL32 User activity predicted
+	);
+
+SmartSignalRegistration feature is NOT on so calling prediction unit.(
+	VOID
+	);
+
+SmartSignalRegistration feature is on but signal evaluation failed. Using inbox model for prediction.(
+	VOID
+	);
+
+SmartSignalRegistration feature is on so evaluating the Smart Busy Check Signal.(
+	UINT32 threshold
+	);
+
+Error Originate:UsoUpdateSession::CreateUpdateServiceManager:80(
+	INT32 hr
+	);
+
+Error Originate:UsoUpdateSession::CreateUpdateServiceManager:78(
+	INT32 hr
+	);
+
+Error Originate:UsoUpdateSession::CreateUpdateServiceManager:76(
+	INT32 hr
+	);
+
+Error Originate:UsoUpdateSession::CreateUpdateInstaller:67(
+	INT32 hr
+	);
+
+Error Originate:UsoUpdateSession::CreateUpdateInstaller:65(
+	INT32 hr
+	);
+
+Error Originate:UsoUpdateSession::CreateUpdateInstaller:63(
+	INT32 hr
+	);
+
+Error Originate:UsoUpdateSession::CreateUpdateDownloader:54(
+	INT32 hr
+	);
+
+Error Originate:UsoUpdateSession::CreateUpdateDownloader:52(
+	INT32 hr
+	);
+
+Error Originate:UsoUpdateSession::CreateUpdateDownloader:50(
+	INT32 hr
+	);
+
+Error Originate:UsoUpdateSession::CreateUpdateSearcher:40(
+	INT32 hr
+	);
+
+Error Originate:UsoUpdateSession::CreateUpdateSearcher:38(
+	INT32 hr
+	);
+
+Error Originate:UsoUpdateSession::CreateUpdateSearcher:36(
+	INT32 hr
+	);
+
+Error Originate:UsoUpdateSearcher::Invoke:130(
+	INT32 hr
+	);
+
+Error Originate:UsoUpdateSearcher::Invoke:128(
+	INT32 hr
+	);
+
+Error Originate:UsoUpdateSearcher::RequestAbort:121(
+	INT32 hr
+	);
+
+Error Originate:UsoUpdateSearcher::RequestAbort:119(
+	INT32 hr
+	);
+
+Error Originate:UsoUpdateSearcher::EndSearch:112(
+	INT32 hr
+	);
+
+Error Originate:UsoUpdateSearcher::EndSearch:110(
+	INT32 hr
+	);
+
+Error Originate:UsoUpdateSearcher::EndSearch:108(
+	INT32 hr
+	);
+
+Error Originate:UsoUpdateSearcher::EndSearch:106(
+	INT32 hr
+	);
+
+Error Originate:UsoUpdateSearcher::put_IncludeDriverSets:90(
+	INT32 hr
+	);
+
+Error Originate:UsoUpdateSearcher::put_IncludeDriverSets:88(
+	INT32 hr
+	);
+
+Error Originate:UsoUpdateSearcher::put_InternalConfigurationProperty:46(
+	INT32 hr
+	);
+
+Error Originate:UsoUpdateSearcher::put_InternalConfigurationProperty:44(
+	INT32 hr
+	);
+
+Error Originate:UsoUpdateSearcher::CreateInstance:23(
+	INT32 hr
+	);
+
+Error Originate:UsoUpdateSearcher::CreateInstance:19(
+	INT32 hr
+	);
+
+Error Originate:UsoUpdateDownloader::Add:114(
+	INT32 hr
+	);
+
+Error Originate:UsoUpdateDownloader::Add:112(
+	INT32 hr
+	);
+
+Error Originate:UsoUpdateDownloader::Invoke:103(
+	INT32 hr
+	);
+
+Error Originate:UsoUpdateDownloader::Invoke:101(
+	INT32 hr
+	);
+
+Error Originate:UsoUpdateDownloader::Invoke:94(
+	INT32 hr
+	);
+
+Error Originate:UsoUpdateDownloader::Invoke:92(
+	INT32 hr
+	);
+
+Error Originate:UsoUpdateDownloader::put_InternalConfigurationProperty:85(
+	INT32 hr
+	);
+
+Error Originate:UsoUpdateDownloader::put_InternalConfigurationProperty:83(
+	INT32 hr
+	);
+
+Error Originate:UsoUpdateDownloader::EndDownload:74(
+	INT32 hr
+	);
+
+Error Originate:UsoUpdateDownloader::EndDownload:72(
+	INT32 hr
+	);
+
+Error Originate:UsoUpdateDownloader::EndDownload:70(
+	INT32 hr
+	);
+
+Error Originate:UsoUpdateDownloader::EndDownload:68(
+	INT32 hr
+	);
+
+Error Originate:UsoUpdateDownloader::BeginDownload:58(
+	INT32 hr
+	);
+
+Error Originate:UsoUpdateDownloader::BeginDownload:56(
+	INT32 hr
+	);
+
+Error Originate:UsoUpdateDownloader::BeginDownload:48(
+	INT32 hr
+	);
+
+Error Originate:UsoUpdateDownloader::put_Updates:39(
+	INT32 hr
+	);
+
+Error Originate:UsoUpdateDownloader::put_Updates:37(
+	INT32 hr
+	);
+
+Error Originate:UsoUpdateDownloader::CreateInstance:20(
+	INT32 hr
+	);
+
+Error Originate:UsoUpdateDownloader::CreateInstance:16(
+	INT32 hr
+	);
+
+Error Originate:UsoUpdateServiceManager::AddService:69(
+	INT32 hr
+	);
+
+Error Originate:UsoUpdateServiceManager::get_OptInToMU:50(
+	INT32 hr
+	);
+
+Error Originate:UsoUpdateServiceManager::get_OptInToMU:43(
+	INT32 hr
+	);
+
+Error Originate:UsoUpdateServiceManager::get_OptInToMU:41(
+	INT32 hr
+	);
+
+Error Originate:UsoUpdateServiceManager::get_OptInToMU:40(
+	INT32 hr
+	);
+
+Error Originate:UsoUpdateServiceManager::get_OptInToMU:38(
+	INT32 hr
+	);
+
+Error Originate:UsoUpdateServiceManager::CreateInstance:24(
+	INT32 hr
+	);
+
+Error Originate:UsoUpdateServiceManager::CreateInstance:20(
+	INT32 hr
+	);
+
+Error Originate:UsoUpdateSearchResult::get_Updates:38(
+	INT32 hr
+	);
+
+Error Originate:UsoUpdateSearchResult::get_Updates:36(
+	INT32 hr
+	);
+
+Error Originate:UsoUpdateSearchResult::get_Updates:34(
+	INT32 hr
+	);
+
+Error Originate:UsoUpdateSearchResult::CreateInstance:23(
+	INT32 hr
+	);
+
+Error Originate:UsoUpdateSearchResult::CreateInstance:19(
+	INT32 hr
+	);
+
+Error Originate:UsoUpdateDownloadJob::get_IDownloadJob:55(
+	INT32 hr
+	);
+
+Error Originate:UsoUpdateDownloadJob::CreateInstance:17(
+	INT32 hr
+	);
+
+Error Originate:UsoUpdateDownloadJob::CreateInstance:13(
+	INT32 hr
+	);
+
+Error Originate:UsoDownloadResult::GetUpdateResult:38(
+	INT32 hr
+	);
+
+Error Originate:UsoDownloadResult::GetUpdateResult:36(
+	INT32 hr
+	);
+
+Error Originate:UsoDownloadResult::GetUpdateResult:34(
+	INT32 hr
+	);
+
+Error Originate:UsoDownloadResult::CreateInstance:17(
+	INT32 hr
+	);
+
+Error Originate:UsoDownloadResult::CreateInstance:13(
+	INT32 hr
+	);
+
+Error Originate:UsoInstallationResult::GetUpdateResult:39(
+	INT32 hr
+	);
+
+Error Originate:UsoInstallationResult::GetUpdateResult:37(
+	INT32 hr
+	);
+
+Error Originate:UsoInstallationResult::GetUpdateResult:35(
+	INT32 hr
+	);
+
+Error Originate:UsoInstallationResult::CreateInstance:23(
+	INT32 hr
+	);
+
+Error Originate:UsoInstallationResult::CreateInstance:19(
+	INT32 hr
+	);
+
+Error Originate:UsoUpdateDownloadResult::CreateInstance:15(
+	INT32 hr
+	);
+
+Error Originate:UsoUpdateDownloadResult::CreateInstance:11(
+	INT32 hr
+	);
+
+Error Originate:UsoUpdateInstallationResult::CreateInstance:16(
+	INT32 hr
+	);
+
+Error Originate:UsoUpdateInstallationResult::CreateInstance:12(
+	INT32 hr
+	);
+
+Error Originate:UsoUpdateInternal::QueryInterface:501(
+	INT32 hr
+	);
+
+Error Originate:UsoUpdateInternal::put_UpdateExpirationDate:144(
+	INT32 hr
+	);
+
+Error Originate:UsoUpdateInternal::put_UpdateExpirationDate:142(
+	INT32 hr
+	);
+
+Error Originate:UsoUpdateInternal::get_UpdateExpirationDate:132(
+	INT32 hr
+	);
+
+Error Originate:UsoUpdateInternal::get_UpdateExpirationDate:129(
+	INT32 hr
+	);
+
+Error Originate:UsoUpdateInternal::get_IUpdate:120(
+	INT32 hr
+	);
+
+Error Originate:UsoUpdateInternal::SerializeUpdate:113(
+	INT32 hr
+	);
+
+Error Originate:UsoUpdateInternal::SerializeUpdate:111(
+	INT32 hr
+	);
+
+Error Originate:UsoUpdateInternal::SerializeUpdate:109(
+	INT32 hr
+	);
+
+Error Originate:UsoUpdateInternal::put_InternalProperty:100(
+	INT32 hr
+	);
+
+Error Originate:UsoUpdateInternal::put_InternalProperty:98(
+	INT32 hr
+	);
+
+Error Originate:UsoUpdateInternal::get_InternalProperty:89(
+	INT32 hr
+	);
+
+Error Originate:UsoUpdateInternal::get_InternalProperty:87(
+	INT32 hr
+	);
+
+Error Originate:UsoUpdateInternal::get_InternalProperty:85(
+	INT32 hr
+	);
+
+Error Originate:UsoUpdateInternal::get_CanRequestUserInput:75(
+	INT32 hr
+	);
+
+Error Originate:UsoUpdateInternal::get_CanRequestUserInput:73(
+	INT32 hr
+	);
+
+Error Originate:UsoUpdateInternal::get_CanRequestUserInput:71(
+	INT32 hr
+	);
+
+Error Originate:UsoUpdateInternal::get_RebootRequired:62(
+	INT32 hr
+	);
+
+Error Originate:UsoUpdateInternal::get_RebootRequired:60(
+	INT32 hr
+	);
+
+Error Originate:UsoUpdateInternal::get_RebootRequired:58(
+	INT32 hr
+	);
+
+Error Originate:UsoUpdateInternal::get_Impact:49(
+	INT32 hr
+	);
+
+Error Originate:UsoUpdateInternal::get_Impact:47(
+	INT32 hr
+	);
+
+Error Originate:UsoUpdateInternal::get_Impact:45(
+	INT32 hr
+	);
+
+Error Originate:UsoUpdateInternal::get_DriverClass:36(
+	INT32 hr
+	);
+
+Error Originate:UsoUpdateInternal::get_DriverClass:34(
+	INT32 hr
+	);
+
+Error Originate:UsoUpdateInternal::get_DriverClass:32(
+	INT32 hr
+	);
+
+Error Originate:UsoUpdateInternal::CreateInstance:15(
+	INT32 hr
+	);
+
+Error Originate:UsoUpdateInternal::CreateInstance:11(
+	INT32 hr
+	);
+
+Error Originate:UsoSettings::GetSettingName:797(
+	INT32 hr
+	);
+
+Error Originate:UsoSettings::GetSettingName:790(
+	INT32 hr
+	);
+
+Error Originate:UsoSettings::GetSettingName:774(
+	INT32 hr
+	);
+
+Error Originate:UsoSettings::GetSettingName:767(
+	INT32 hr
+	);
+
+Error Originate:UsoSettings::GetSettingName:760(
+	INT32 hr
+	);
+
+Error Originate:UsoScheduler::ScheduleCrmRun:455(
+	INT32 hr
+	);
+
+Error Originate:UsoScheduler::ScheduleCrmRun:440(
+	INT32 hr
+	);
+
+Error Originate:UsoScheduler::ScheduleCrmRun:426(
+	INT32 hr
+	);
+
+Error Originate:UsoScheduler::ScheduleCrmRun:411(
+	INT32 hr
+	);
+
+Error Originate:UsoScheduler::ScheduleCrmRun:397(
+	INT32 hr
+	);
+
+Error Originate:UsoScheduler::ScheduleCrmRun:385(
+	INT32 hr
+	);
+
+Error Originate:UsoScheduler::SetInterval:285(
+	INT32 hr
+	);
+
+Error Originate:UsoScheduler::RunCallback:250(
+	INT32 hr
+	);
+
+Error Originate:UsoScheduler::ResetTimer:206(
+	INT32 hr
+	);
+
+Error Originate:UsoScheduler::ResetTimer:198(
+	INT32 hr
+	);
+
+Error Originate:UsoScheduler::ResetTimer:193(
+	INT32 hr
+	);
+
+Warning:UsoScheduler::ResetTimer:185(
+	INT32 hr
+	);
+
+Error Originate:UsoScheduler::ResetTimer:165(
+	INT32 hr
+	);
+
+Error Originate:ThreadPoolTimerCallback:140(
+	INT32 hr
+	);
+
+Error Originate:ThreadPoolTimerCallback:129(
+	INT32 hr
+	);
+
+Error Originate:ThreadPoolTimerCallback:120(
+	INT32 hr
+	);
+
+Error Originate:ThreadPoolTimerCallback:111(
+	INT32 hr
+	);
+
+Error Originate:ThreadPoolTimerCallback:102(
+	INT32 hr
+	);
+
+Error Originate:UsoScheduler::SaveRunTime:53(
+	INT32 hr
+	);
+
+UniversalOrchestratorPauseBlocked(
+	UINT64 PartA_PrivTags,
+	GUID wuDeviceid,
+	UNICODESTRING triggerSource,
+	UNICODESTRING blockReason,
+	UNICODESTRING updaterId
+	);
+
+UniversalOrchestratorPauseWorkRequested(
+	UINT64 PartA_PrivTags,
+	GUID wuDeviceid,
+	UNICODESTRING triggerSource
+	);
+
+UniversalOrchestratorWorkBlocked(
+	UINT64 PartA_PrivTags,
+	GUID wuDeviceid,
+	UNICODESTRING triggerSource,
+	UNICODESTRING blockReason,
+	UNICODESTRING updaterId
+	);
+
+UniversalOrchestratorStartWorkRequested(
+	UINT64 PartA_PrivTags,
+	GUID wuDeviceid,
+	UNICODESTRING triggerSource
+	);
+
+UniversalOrchestratorTaskMissed(
+	UINT64 PartA_PrivTags,
+	GUID wuDeviceid,
+	UNICODESTRING TaskName,
+	SYSTEMTIME scheduledTimeUTC
+	);
+
+UniversalOrchestratorTaskCancelled(
+	UINT64 PartA_PrivTags,
+	GUID wuDeviceid,
+	UNICODESTRING TaskName,
+	SYSTEMTIME scheduledTimeUTC
+	);
+
+UniversalOrchestratorInvalidSignature(
+	UINT64 PartA_PrivTags,
+	GUID wuDeviceid,
+	UNICODESTRING updaterId,
+	UNICODESTRING updaterCmdLine
+	);
+
+UniversalOrchestratorScheduleWorkInvalidCmd(
+	UINT64 PartA_PrivTags,
+	GUID wuDeviceid,
+	UNICODESTRING updaterId,
+	UNICODESTRING updaterCmdLine
+	);
+
+UniversalOrchestratorScheduleWorkNonSystem(
+	UINT64 PartA_PrivTags,
+	GUID wuDeviceid,
+	UNICODESTRING updaterId,
+	UNICODESTRING updaterCmdLine
+	);
+
+UniversalOrchestratorTaskWakeDisabledByPolicy(
+	UINT64 PartA_PrivTags,
+	GUID wuDeviceid
+	);
+
+UniversalOrchestratorTaskWakeDisabled(
+	UINT64 PartA_PrivTags,
+	GUID wuDeviceid,
+	UINT32 wakeOnDCCount,
+	UINT32 wakeFailureThreshold
+	);
+
+UniversalOrchestratorWakeOnDc(
+	UINT64 PartA_PrivTags,
+	GUID wuDeviceid,
+	UINT32 wakeOnDCCount
+	);
+
+UpdaterCallbackFailed(
+	UINT64 PartA_PrivTags,
+	GUID wuDeviceid,
+	UNICODESTRING updaterId,
+	UNICODESTRING updaterCmdLine,
+	UNICODESTRING updaterArgument
+	);
+
+UpdaterMalformedData(
+	UINT64 PartA_PrivTags,
+	GUID wuDeviceid,
+	UNICODESTRING updaterId,
+	UNICODESTRING malformedRegValue
+	);
+
+UpdaterTimedOut(
+	UINT64 PartA_PrivTags,
+	GUID wuDeviceid,
+	UNICODESTRING updaterId,
+	UINT32 waitTimeoutMins,
+	SYSTEMTIME queueTime,
+	UNICODESTRING updaterMode,
+	SYSTEMTIME oobeCompleteTime
+	);
+
+UpdaterBlocked(
+	UINT64 PartA_PrivTags,
+	GUID wuDeviceid,
+	UNICODESTRING updaterId,
+	SYSTEMTIME queueTime
+	);
+
+UpdaterCompleted(
+	UINT64 PartA_PrivTags,
+	GUID wuDeviceid,
+	UNICODESTRING updaterId,
+	SYSTEMTIME queueTime,
+	UNICODESTRING updaterMode,
+	SYSTEMTIME oobeCompleteTime
+	);
+
+UpdaterPaused(
+	UINT64 PartA_PrivTags,
+	GUID wuDeviceid,
+	UNICODESTRING updaterId,
+	UNICODESTRING updaterCmdLine,
+	UNICODESTRING updaterPauseArgument,
+	UNICODESTRING triggerSource,
+	SYSTEMTIME queueTime,
+	UNICODESTRING updaterMode,
+	SYSTEMTIME oobeCompleteTime
+	);
+
+UpdaterStarted(
+	UINT64 PartA_PrivTags,
+	GUID wuDeviceid,
+	UNICODESTRING updaterId,
+	UNICODESTRING updaterCmdLine,
+	UNICODESTRING updaterStartArgument,
+	UNICODESTRING triggerSource,
+	BOOLEAN isOnAC,
+	SYSTEMTIME queueTime,
+	UNICODESTRING updaterMode,
+	SYSTEMTIME oobeCompleteTime
+	);
+
+UpdaterScheduled(
+	UINT64 PartA_PrivTags,
+	GUID wuDeviceid,
+	UNICODESTRING updaterId,
+	UNICODESTRING updaterCmdLine,
+	UNICODESTRING updaterStartArgument,
+	UNICODESTRING updaterPauseArgument,
+	BOOLEAN wakeToRun,
+	SYSTEMTIME queueTime,
+	SYSTEMTIME scheduledTimeUTC,
+	UNICODESTRING updaterMode,
+	SYSTEMTIME oobeCompleteTime
+	);
+
+UpdaterScheduleRequested(
+	UINT64 PartA_PrivTags,
+	GUID wuDeviceid,
+	UNICODESTRING updaterId
+	);
+
+SeekUpdate(
+	UINT64 PartA_PrivTags,
+	GUID wuDeviceid,
+	GUID updateId,
+	INT32 revisionNumber,
+	BOOL32 isFeatureUpdate,
+	UNICODESTRING flightID
+	);
+
+UnstickUpdate(
+	UINT64 PartA_PrivTags,
+	GUID wuDeviceid,
+	GUID updateId
+	);
+
+StickUpdate(
+	UINT64 PartA_PrivTags,
+	GUID wuDeviceid,
+	GUID updateId
+	);
+
+UWFSetScanAtStartup(
+	UINT64 PartA_PrivTags
+	);
+
+FailedToAddTimeTriggerToScanTask(
+	UINT64 PartA_PrivTags,
+	GUID wuDeviceid,
+	HRESULT errorCode
+	);
+
+AllowSleep(
+	UINT64 PartA_PrivTags,
+	GUID wuDeviceid,
+	BOOLEAN isOnAC,
+	UINT32 batteryLevel,
+	UINT32 preventSleepState
+	);
+
+PreventSleep(
+	UINT64 PartA_PrivTags,
+	GUID wuDeviceid,
+	BOOLEAN isOnAC,
+	UINT32 batteryLevel,
+	UINT32 updateState,
+	UINT32 durationInMins,
+	BOOLEAN hasFeatureUpdate
+	);
+
+CommitFailed(
+	UINT64 PartA_PrivTags,
+	GUID wuDeviceid,
+	HRESULT errorCode
+	);
+
+RebootFailed(
+	UINT64 PartA_PrivTags,
+	ANSISTRING __TlgCV__,
+	SYSTEMTIME EventPublishedTime,
+	UINT64 deferReason,
+	HRESULT RebootResults,
+	BOOLEAN rebootOutsideOfActiveHours,
+	UINT32 uxRebootstate,
+	UINT32 batteryLevel,
+	GUID wuDeviceid,
+	INT32 updateScenarioType,
+	GUID updateId,
+	INT32 revisionNumber,
+	UNICODESTRING flightID
+	);
+
+InitiatingReboot(
+	UINT64 PartA_PrivTags,
+	ANSISTRING __TlgCV__,
+	SYSTEMTIME EventPublishedTime,
+	GUID wuDeviceid,
+	INT32 updateScenarioType,
+	GUID updateId,
+	INT32 revisionNumber,
+	BOOLEAN interactive,
+	BOOLEAN rebootOutsideOfActiveHours,
+	UINT32 uxRebootstate,
+	UNICODESTRING flightID
+	);
+
+DisplayNeeded(
+	UINT64 PartA_PrivTags,
+	ANSISTRING __TlgCV__,
+	INT32 eventScenario,
+	GUID wuDeviceid,
+	INT32 updateScenarioType,
+	GUID updateId,
+	INT32 revisionNumber,
+	UNICODESTRING displayNeededReason,
+	BOOLEAN rebootOutsideOfActiveHours,
+	UINT32 uxRebootstate
+	);
+
+SystemNeeded(
+	UINT64 PartA_PrivTags,
+	ANSISTRING __TlgCV__,
+	INT32 eventScenario,
+	GUID wuDeviceid,
+	INT32 updateScenarioType,
+	GUID updateId,
+	INT32 revisionNumber,
+	UNICODESTRING systemNeededReason,
+	BOOLEAN rebootOutsideOfActiveHours,
+	UINT32 uxRebootstate
+	);
+
+DeferRestart(
+	UINT64 PartA_PrivTags,
+	ANSISTRING __TlgCV__,
+	GUID wuDeviceid,
+	INT32 updateScenarioType,
+	GUID updateId,
+	INT32 revisionNumber,
+	UINT64 eventScenario,
+	UINT64 filteredDeferReason,
+	UINT64 IgnoreReasonsForRestart,
+	UNICODESTRING systemNeededReason,
+	UNICODESTRING displayNeededReason,
+	UNICODESTRING ignoredReason,
+	UNICODESTRING gameModeReason
+	);
+
+RestoreRebootTask(
+	UINT64 PartA_PrivTags,
+	SYSTEMTIME RebootTaskRestoredTime,
+	SYSTEMTIME RebootTaskNextTimeUTC,
+	GUID wuDeviceid
+	);
+
+Install(
+	UINT64 PartA_PrivTags,
+	ANSISTRING __TlgCV__,
+	INT32 eventScenario,
+	UINT64 deferReason,
+	UINT64 IgnoreReasonsForRestart,
+	BOOL32 interactive,
+	BOOLEAN rebootOutsideOfActiveHours,
+	UINT32 uxRebootstate,
+	GUID wuDeviceid,
+	INT32 updateScenarioType,
+	UINT32 batteryLevel
+	);
+
+Info Message(
+	UNICODESTRING message
+	);
+

@@ -1,0 +1,50 @@
+ProviderNames:
+	Microsoft.Windows.MediaFoundation.SensorGroup
+
+
+
+**** Events *****
+MFSensorGroupLoadProfilesForDevice(
+	UNICODESTRING SymbolicLink,
+	UINT32 ProfileVersion,
+	UNICODESTRING ProfileList
+	);
+
+MFSensorGroupRevoke(
+	UNICODESTRING SensorGroupName,
+	UNICODESTRING FriendlyName,
+	UINT32 DeviceCount
+	);
+
+MFSensorGroupPublish(
+	UNICODESTRING SensorGroupName,
+	UNICODESTRING FriendlyName,
+	UINT32 DeviceCount,
+	UINT32 SphericalDeviceCount
+	);
+
+MFCaptureDevicePnpStats(
+	UNICODESTRING SymLinkName,
+	UNICODESTRING DriverName,
+	UNICODESTRING DriverVersion,
+	UNICODESTRING DriverDate,
+	UNICODESTRING Manufacturer,
+	UNICODESTRING Description,
+	UNICODESTRING HardwareIds,
+	UNICODESTRING PanelLocation,
+	UNICODESTRING Enumerator,
+	UINT32 VideoResWidth,
+	UINT32 VideoResHeight,
+	UINT32 VideoResNum,
+	UINT32 VideoResDen,
+	UINT32 VideoFrWidth,
+	UINT32 VideoFrHeight,
+	UINT32 VideoFrNum,
+	UINT32 VideoFrDen,
+	UINT32 PhotoResWidth,
+	UINT32 PhotoResHeight,
+	INT32 CacheUVCControl,
+	UINT32 MOSFaceAuthV2,
+	INT32 SensorOrientation
+	);
+

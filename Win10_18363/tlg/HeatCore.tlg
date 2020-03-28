@@ -1,0 +1,466 @@
+ProviderNames:
+	Microsoft.Windows.Heat.HeatCore
+	Microsoft.Windows.Heat.HeatCore.Test
+	Microsoft.Windows.Wil.FeatureLogging
+	Microsoft.Windows.Heat.HeatCore.Perf
+
+
+
+**** Events *****
+DebugInfo(
+	ANSISTRING LineInfo,
+	UNICODESTRING Message
+	);
+
+FallbackError(
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+FeatureUsage(
+	UINT32 featureId,
+	INT32 featureVersion,
+	INT32 featureBaseVersion,
+	INT16 featureStage,
+	BOOLEAN enabled,
+	UINT32 kind,
+	UINT64 addend
+	);
+
+DebugCritical(
+	ANSISTRING LineInfo,
+	UNICODESTRING Message
+	);
+
+FeatureError(
+	UINT32 featureId,
+	INT32 featureVersion,
+	INT32 featureBaseVersion,
+	INT16 featureStage,
+	HRESULT hr,
+	ANSISTRING file,
+	UINT16 lineNumber,
+	ANSISTRING module,
+	ANSISTRING process,
+	ANSISTRING originFile,
+	UINT16 originLineNumber,
+	ANSISTRING originModule,
+	ANSISTRING originName,
+	ANSISTRING message,
+	ANSISTRING callerModule,
+	UINT32 callerReturnAddressOffset,
+	ANSISTRING originCallerModule,
+	UINT32 originCallerReturnAddressOffset
+	);
+
+DebugVerbose(
+	ANSISTRING LineInfo,
+	UNICODESTRING Message
+	);
+
+CheckResultError(
+	ANSISTRING FileName,
+	UINT32 LineNumber,
+	ANSISTRING FunctionName,
+	UNICODESTRING Message,
+	HRESULT Result
+	);
+
+DebugWarning(
+	ANSISTRING LineInfo,
+	UNICODESTRING Message
+	);
+
+DebugError(
+	ANSISTRING LineInfo,
+	UNICODESTRING Message
+	);
+
+FallbackError(
+	UINT64 PartA_PrivTags,
+	SIGNED wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+FeatureVariantUsage(
+	UINT32 featureId,
+	INT32 featureVersion,
+	INT32 featureBaseVersion,
+	INT16 featureStage,
+	BOOLEAN enabled,
+	UINT32 variantKind,
+	UINT8 variant,
+	UINT64 addend
+	);
+
+EnabledFeatureUsage(
+	UINT32 featureId,
+	INT32 featureVersion,
+	INT32 featureBaseVersion,
+	INT16 featureStage,
+	BOOLEAN enabled,
+	UINT32 kind,
+	UINT64 addend
+	);
+
+InputReportProcessingStarted(
+	INT64 InputQPC
+	);
+
+InputReportProcessing(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId
+	);
+
+DeviceInitialization(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId
+	);
+
+InputReportProcessing(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	SIGNED wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+InputReportProcessing(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+InputReportProcessingCompleted(
+	INT64 InputQPC
+	);
+
+ActivityIntermediateStop(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+ActivityError(
+	UINT64 PartA_PrivTags,
+	SIGNED wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+DeviceInitialization(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	SIGNED wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+DeviceInitialization(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+ActivityStoppedAutomatically(
+	VOID
+	);
+
+FrameProcessingStarted(
+	INT64 InputQPC
+	);
+
+FrameProcessing(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId
+	);
+
+ProcessorAPICall(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId,
+	INT32 ProcessingPhase
+	);
+
+HingeAngleMessageProcessed(
+	INT64 ArrivalTime
+	);
+
+FrameConstructionCompleted(
+	INT64 InputQPC
+	);
+
+FrameProcessing(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	SIGNED wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+FrameProcessing(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+FrameProcessingCompleted(
+	INT64 InputQPC
+	);
+
+HeatFallback(
+	VOID
+	);
+
+ProcessorAPICall(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	SIGNED wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+ProcessorAPICall(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+HeatProcessorFailure(
+	INT32 FailureType,
+	UINT32 ErrorCount,
+	HRESULT Result
+	);
+
+HeatDllLoadFailure(
+	UNICODESTRING DllPath,
+	HRESULT Result
+	);
+
+HeatPerfFailure(
+	UINT64 PartA_PrivTags,
+	UINT64 Phase,
+	UINT64 Duration
+	);
+
+HeatProcessorDllOtherPerf(
+	UINT64 PartA_PrivTags,
+	HEX GetCapabilities,
+	UINT32 Count,
+	UINT64 MaxTimeInUs,
+	UINT64 MinTimeInUs,
+	UINT64 AvgTimeInUs,
+	HEX DeviceAttach,
+	UINT32 Count,
+	UINT64 MaxTimeInUs,
+	UINT64 MinTimeInUs,
+	UINT64 AvgTimeInUs,
+	HEX DeviceDetach,
+	UINT32 Count,
+	UINT64 MaxTimeInUs,
+	UINT64 MinTimeInUs,
+	UINT64 AvgTimeInUs,
+	HEX SystemContext,
+	UINT32 Count,
+	UINT64 MaxTimeInUs,
+	UINT64 MinTimeInUs,
+	UINT64 AvgTimeInUs
+	);
+
+HeatProcessorDllFramePerf(
+	UINT64 PartA_PrivTags,
+	HEX SanitizeHeatmap,
+	UINT32 Count,
+	UINT64 MaxTimeInUs,
+	UINT64 MinTimeInUs,
+	UINT64 AvgTimeInUs,
+	HEX ProcessFrame,
+	UINT32 Count,
+	UINT64 MaxTimeInUs,
+	UINT64 MinTimeInUs,
+	UINT64 AvgTimeInUs,
+	HEX PostDispatch,
+	UINT32 Count,
+	UINT64 MaxTimeInUs,
+	UINT64 MinTimeInUs,
+	UINT64 AvgTimeInUs
+	);
+
+HeatCoreFramePerf(
+	UINT64 PartA_PrivTags,
+	HEX InitializeHost,
+	UINT32 Count,
+	UINT64 MaxTimeInUs,
+	UINT64 MinTimeInUs,
+	UINT64 AvgTimeInUs,
+	HEX TransferReport,
+	UINT32 Count,
+	UINT64 MaxTimeInUs,
+	UINT64 MinTimeInUs,
+	UINT64 AvgTimeInUs,
+	HEX TransferFrame,
+	UINT32 Count,
+	UINT64 MaxTimeInUs,
+	UINT64 MinTimeInUs,
+	UINT64 AvgTimeInUs,
+	HEX InjectInput,
+	UINT32 Count,
+	UINT64 MaxTimeInUs,
+	UINT64 MinTimeInUs,
+	UINT64 AvgTimeInUs,
+	HEX E2E,
+	UINT32 Count,
+	UINT64 MaxTimeInUs,
+	UINT64 MinTimeInUs,
+	UINT64 AvgTimeInUs
+	);
+
+InputInjection(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId
+	);
+
+InputInjection(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	SIGNED wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+InputInjection(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+

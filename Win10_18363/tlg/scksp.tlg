@@ -1,0 +1,32 @@
+ProviderNames:
+	Microsoft.Windows.Security.SmartCards.Ksp
+
+
+
+**** Events *****
+VerifyClaimStart(
+	VOID
+	);
+
+KspVerifyClaimInternalStart(
+	VOID
+	);
+
+KspCreateClaimInternalStart(
+	VOID
+	);
+
+VerifyClaimEnd(
+	VOID
+	);
+
+KspVerifyClaimInternalEnd(
+	UINT32 claimType,
+	UINT32 retVal
+	);
+
+KspCreateClaimInternalEnd(
+	UINT32 claimType,
+	INT32 retVal
+	);
+

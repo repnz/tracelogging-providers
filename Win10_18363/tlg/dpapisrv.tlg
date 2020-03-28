@@ -1,0 +1,122 @@
+ProviderNames:
+	Microsoft.Windows.Security.Dpapi
+	Microsoft.Windows.TlgAggregateInternal
+
+
+
+**** Events *****
+RetrieveCurrentDerivedCredential(
+	INT32 fDPOWF
+	);
+
+LocalUserPwdChangeActivityStart(
+	VOID
+	);
+
+ActivityStoppedAutomatically(
+	VOID
+	);
+
+LocalUserPwdChangeActivityStop(
+	HEXINT32 result
+	);
+
+SpCryptProtect(
+	UINT32 dwRet,
+	GUID guidMK,
+	UINT32 dwFlags,
+	UINT32 dwProtectionFlags,
+	UNICODESTRING szDataDescr
+	);
+
+SpCryptUnprotect(
+	UINT32 dwRet,
+	GUID guidMK,
+	UINT32 dwFlags,
+	UINT32 dwProtectionFlags,
+	UNICODESTRING szDataDescr
+	);
+
+CreateMasterKeyWithNoBackup(
+	INT32 fSuccess,
+	UINT32 dwMasterKeyDisposition,
+	INT32 IsDomainBackupRequired
+	);
+
+InitSyncMasterKeysActivityStart(
+	VOID
+	);
+
+RestoreMasterKeyStop(
+	HEXINT32 result
+	);
+
+LocalUserRecoveryPath(
+	HEXINT32 result
+	);
+
+DecryptDPAPIMasterKey(
+	HEXINT32 status,
+	UINT32 keyType
+	);
+
+DomainUserPwdChangeActivityStop(
+	HEXINT32 result
+	);
+
+DomainUserPwdChangeActivityStart(
+	VOID
+	);
+
+RestoreMasterKeyStart(
+	BOOLEAN domainUser,
+	BOOLEAN localUser
+	);
+
+CreateMasterKey(
+	INT32 fRequireBackup,
+	INT32 fOverrideToLocalSystem,
+	INT32 fUserCredentialValid
+	);
+
+GetSpecifiedMasterKeyAggregated(
+	NULL Count,
+	GUID KeyGUID,
+	INT32 fSuccess,
+	UINT32 dwLastError,
+	UINT32 dwMasterKeyDisposition,
+	UNICODESTRING userAccountType
+	);
+
+GetMasterKeyUserEncryptionKey(
+	BOOLEAN useNtowf
+	);
+
+InitSyncMasterKeysActivityStop(
+	HEXINT32 result
+	);
+
+DomainUserRecoveryPath(
+	HEXINT32 result
+	);
+
+PhaseOneRecovery(
+	HEXINT32 result
+	);
+
+ActivityStoppedAutomatically(
+	VOID
+	);
+
+TlgAggregateSummary(
+	GUID Provider,
+	UINT64 NumFlushes,
+	UINT64 MaxEntriesStored,
+	UINT64 TotalEntriesFlushed,
+	UINT32 MaxEntriesFlushed,
+	UINT32 MinEntriesFlushed,
+	UINT32 NumBucketLimitReached,
+	UINT32 NumAllocationFailures,
+	UINT32 NumLargeEventFailures
+	);
+

@@ -1,0 +1,372 @@
+ProviderNames:
+	Microsoft.Paint
+
+
+
+**** Events *****
+EmbeddedClientInfoFailed(
+	BOOL32 UTCReplace_AppSessionGuid,
+	GUID sessionID,
+	UINT64 sequenceNumber,
+	UNICODESTRING info,
+	HRESULT failureHr
+	);
+
+EmbeddedClientInfo(
+	BOOL32 UTCReplace_AppSessionGuid,
+	GUID sessionID,
+	UINT64 sequenceNumber,
+	UNICODESTRING name
+	);
+
+ColorChanged(
+	BOOL32 UTCReplace_AppSessionGuid,
+	GUID sessionID,
+	UINT64 sequenceNumber,
+	ANSISTRING button,
+	ANSISTRING color
+	);
+
+ModernPaintProtocolActivation(
+	BOOL32 UTCReplace_AppSessionGuid,
+	GUID sessionID,
+	UINT64 sequenceNumber
+	);
+
+ModernPaintFileActivation(
+	BOOL32 UTCReplace_AppSessionGuid,
+	GUID sessionID,
+	UINT64 sequenceNumber
+	);
+
+ModernPaintUpsellClicked(
+	BOOL32 UTCReplace_AppSessionGuid,
+	GUID sessionID,
+	UINT64 sequenceNumber
+	);
+
+ModernPaintLaunchFailedToOpenFile(
+	BOOL32 UTCReplace_AppSessionGuid,
+	GUID sessionID,
+	UINT64 sequenceNumber,
+	HRESULT failureHr
+	);
+
+ModernPaintLaunchFailed(
+	BOOL32 UTCReplace_AppSessionGuid,
+	GUID sessionID,
+	UINT64 sequenceNumber,
+	HRESULT failureHr
+	);
+
+ModernPaintLaunchSuccess(
+	BOOL32 UTCReplace_AppSessionGuid,
+	GUID sessionID,
+	UINT64 sequenceNumber
+	);
+
+ModernPaintAttemptingLaunch(
+	BOOL32 UTCReplace_AppSessionGuid,
+	GUID sessionID,
+	UINT64 sequenceNumber
+	);
+
+ModernPaintIsDisabled(
+	BOOL32 UTCReplace_AppSessionGuid,
+	GUID sessionID,
+	UINT64 sequenceNumber
+	);
+
+ModernPaintUnsupportedCommandLine(
+	BOOL32 UTCReplace_AppSessionGuid,
+	GUID sessionID,
+	UINT64 sequenceNumber
+	);
+
+InvertSelection(
+	BOOL32 UTCReplace_AppSessionGuid,
+	GUID sessionID,
+	UINT64 sequenceNumber
+	);
+
+TextTransparent(
+	BOOL32 UTCReplace_AppSessionGuid,
+	GUID sessionID,
+	UINT64 sequenceNumber,
+	BOOL32 transparent
+	);
+
+ImageTransparent(
+	BOOL32 UTCReplace_AppSessionGuid,
+	GUID sessionID,
+	UINT64 sequenceNumber,
+	BOOL32 transparent
+	);
+
+Flip(
+	BOOL32 UTCReplace_AppSessionGuid,
+	GUID sessionID,
+	UINT64 sequenceNumber,
+	BOOL32 horizontal
+	);
+
+SetWallpaper(
+	BOOL32 UTCReplace_AppSessionGuid,
+	GUID sessionID,
+	UINT64 sequenceNumber
+	);
+
+Rulers(
+	BOOL32 UTCReplace_AppSessionGuid,
+	GUID sessionID,
+	UINT64 sequenceNumber,
+	BOOL32 rulersOn
+	);
+
+FullScreen(
+	BOOL32 UTCReplace_AppSessionGuid,
+	GUID sessionID,
+	UINT64 sequenceNumber
+	);
+
+Properties(
+	BOOL32 UTCReplace_AppSessionGuid,
+	GUID sessionID,
+	UINT64 sequenceNumber
+	);
+
+Grid(
+	BOOL32 UTCReplace_AppSessionGuid,
+	GUID sessionID,
+	UINT64 sequenceNumber,
+	BOOL32 gridOn
+	);
+
+Thumbnail(
+	BOOL32 UTCReplace_AppSessionGuid,
+	GUID sessionID,
+	UINT64 sequenceNumber,
+	BOOL32 thumbNailOn
+	);
+
+About(
+	BOOL32 UTCReplace_AppSessionGuid,
+	GUID sessionID,
+	UINT64 sequenceNumber
+	);
+
+PrintPreview(
+	BOOL32 UTCReplace_AppSessionGuid,
+	GUID sessionID,
+	UINT64 sequenceNumber
+	);
+
+PrintSetup(
+	BOOL32 UTCReplace_AppSessionGuid,
+	GUID sessionID,
+	UINT64 sequenceNumber
+	);
+
+Print(
+	BOOL32 UTCReplace_AppSessionGuid,
+	GUID sessionID,
+	UINT64 sequenceNumber
+	);
+
+FromScanner(
+	BOOL32 UTCReplace_AppSessionGuid,
+	GUID sessionID,
+	UINT64 sequenceNumber
+	);
+
+SendMail(
+	BOOL32 UTCReplace_AppSessionGuid,
+	GUID sessionID,
+	UINT64 sequenceNumber
+	);
+
+Redo(
+	BOOL32 UTCReplace_AppSessionGuid,
+	GUID sessionID,
+	UINT64 sequenceNumber
+	);
+
+Undo(
+	BOOL32 UTCReplace_AppSessionGuid,
+	GUID sessionID,
+	UINT64 sequenceNumber,
+	UNICODESTRING undoCommand
+	);
+
+Crop(
+	BOOL32 UTCReplace_AppSessionGuid,
+	GUID sessionID,
+	UINT64 sequenceNumber
+	);
+
+Delete(
+	BOOL32 UTCReplace_AppSessionGuid,
+	GUID sessionID,
+	UINT64 sequenceNumber
+	);
+
+Skew(
+	BOOL32 UTCReplace_AppSessionGuid,
+	GUID sessionID,
+	UINT64 sequenceNumber,
+	BOOL32 wasVertical
+	);
+
+Resize(
+	BOOL32 UTCReplace_AppSessionGuid,
+	GUID sessionID,
+	UINT64 sequenceNumber
+	);
+
+FileSaveAs(
+	BOOL32 UTCReplace_AppSessionGuid,
+	GUID sessionID,
+	UINT64 sequenceNumber,
+	UINT64 fileType
+	);
+
+FileSave(
+	BOOL32 UTCReplace_AppSessionGuid,
+	GUID sessionID,
+	UINT64 sequenceNumber,
+	UINT64 fileType
+	);
+
+FileNew(
+	BOOL32 UTCReplace_AppSessionGuid,
+	GUID sessionID,
+	UINT64 sequenceNumber
+	);
+
+FileOpen(
+	BOOL32 UTCReplace_AppSessionGuid,
+	GUID sessionID,
+	UINT64 sequenceNumber,
+	UINT64 fileType
+	);
+
+ImageRotate(
+	BOOL32 UTCReplace_AppSessionGuid,
+	GUID sessionID,
+	UINT64 sequenceNumber
+	);
+
+TextStart(
+	BOOL32 UTCReplace_AppSessionGuid,
+	GUID sessionID,
+	UINT64 sequenceNumber
+	);
+
+SelectStart(
+	BOOL32 UTCReplace_AppSessionGuid,
+	GUID sessionID,
+	UINT64 sequenceNumber
+	);
+
+ShapeStart(
+	BOOL32 UTCReplace_AppSessionGuid,
+	GUID sessionID,
+	UINT64 sequenceNumber,
+	UINT64 toolID
+	);
+
+DrawStart(
+	BOOL32 UTCReplace_AppSessionGuid,
+	GUID sessionID,
+	UINT64 sequenceNumber,
+	UINT64 toolID
+	);
+
+Paste(
+	BOOL32 UTCReplace_AppSessionGuid,
+	GUID sessionID,
+	UINT64 sequenceNumber
+	);
+
+Copy(
+	BOOL32 UTCReplace_AppSessionGuid,
+	GUID sessionID,
+	UINT64 sequenceNumber
+	);
+
+Cut(
+	BOOL32 UTCReplace_AppSessionGuid,
+	GUID sessionID,
+	UINT64 sequenceNumber
+	);
+
+Deactivate(
+	BOOL32 UTCReplace_AppSessionGuid,
+	GUID sessionID,
+	UINT64 sequenceNumber
+	);
+
+Activate(
+	BOOL32 UTCReplace_AppSessionGuid,
+	GUID sessionID,
+	UINT64 sequenceNumber
+	);
+
+Exit(
+	BOOL32 UTCReplace_AppSessionGuid,
+	GUID sessionID,
+	UINT64 sequenceNumber,
+	UINT16 EdpFileOpen,
+	UINT16 EdpFileOpenAttemptFail,
+	UINT16 EdpFileSave,
+	UINT16 EdpPasteToPersonal,
+	UINT16 EdpPasteToNoContext,
+	UINT16 EdpPasteFromToPersonal,
+	UINT16 EdpPasteFromToNoContext
+	);
+
+LaunchWithAutomation(
+	BOOL32 UTCReplace_AppSessionGuid,
+	GUID sessionID,
+	UINT64 sequenceNumber
+	);
+
+LaunchWithEmbedding(
+	BOOL32 UTCReplace_AppSessionGuid,
+	GUID sessionID,
+	UINT64 sequenceNumber
+	);
+
+LaunchWithDocument(
+	BOOL32 UTCReplace_AppSessionGuid,
+	GUID sessionID,
+	UINT64 sequenceNumber
+	);
+
+LaunchWithPrintTo(
+	BOOL32 UTCReplace_AppSessionGuid,
+	GUID sessionID,
+	UINT64 sequenceNumber
+	);
+
+LaunchWithPrint(
+	BOOL32 UTCReplace_AppSessionGuid,
+	GUID sessionID,
+	UINT64 sequenceNumber
+	);
+
+AppStartState(
+	BOOL32 UTCReplace_AppSessionGuid,
+	GUID sessionID,
+	BOOL32 gridOn,
+	BOOL32 snapToGridOn,
+	BOOL32 rulersOn
+	);
+
+Launch(
+	BOOL32 UTCReplace_AppSessionGuid,
+	GUID sessionID,
+	UINT64 sequenceNumber,
+	UNICODESTRING source
+	);
+

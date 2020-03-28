@@ -1,0 +1,162 @@
+ProviderNames:
+	Microsoft.Windows.Networking.Teredo
+	Microsoft.Windows.TlgAggregateInternal
+
+
+
+**** Events *****
+EnableISATAP(
+	UNICODESTRING ISATAPEventSource,
+	INT8 ISATAPPreviousState,
+	INT8 ISATAPState
+	);
+
+Enable6to4(
+	UNICODESTRING 6to4EventSource,
+	INT8 6to4PreviousState,
+	INT8 6to4State
+	);
+
+TeredoConfigSource(
+	UINT32 source,
+	UINT32 previousClientType,
+	UINT32 clientType
+	);
+
+UserConfig(
+	BOOL32 userConfigured,
+	INT32 type
+	);
+
+TeredoSessionInfo(
+	HRESULT infoGatherResult,
+	UINT32 sessionDuration,
+	UNICODESTRING processName
+	);
+
+UPnPDeviceInfo(
+	UNICODESTRING upnpFriendlyName,
+	UNICODESTRING upnpManufacturerName,
+	UNICODESTRING upnpManufacturerUrl,
+	UNICODESTRING upnpModelName,
+	UNICODESTRING upnpModelNumber,
+	UNICODESTRING upnpModelUrl,
+	UINT32 upnpTelCollectionTime
+	);
+
+UPnPMapping(
+	HRESULT upnpGetInterfaceGuidResult,
+	UINT32 upnpDiscoveryTime,
+	HRESULT upnpDiscoveryResult,
+	UINT32 upnpDiscoveryBadInterfaceCount,
+	UINT32 upnpDiscoveredDevicesCount,
+	BOOLEAN upnpWanServicePresent,
+	HRESULT upnpWanServiceResult,
+	BOOLEAN upnpPppServicePresent,
+	HRESULT upnpPppServiceResult,
+	UINT32 upnpServiceDiscoveryTime,
+	BOOLEAN upnpMappingAttempted,
+	UINT32 upnpMappingTime,
+	HRESULT upnpMappingResult,
+	BOOLEAN upnpUnmappingAttempted,
+	UINT32 upnpUnmappingTime,
+	HRESULT upnpUnmappingResult,
+	BOOLEAN upnpDeviceEnumAttempt,
+	UINT32 upnpDeviceEnumTime,
+	HRESULT upnpDeviceEnumResult,
+	UINT32 upnpServiceEnumAttempts,
+	UINT32 upnpServiceEnumTime,
+	HRESULT upnpServiceEnumReesult,
+	UINT32 upnpGetExternalIpRetries,
+	UINT32 upnpMappingRetries
+	);
+
+ClientRefresh(
+	UINT32 teredoErrorType,
+	UINT32 systemErrorCode,
+	UINT32 consecutiveFailures,
+	UINT32 connectivityStatus,
+	BINARY clientTeredoAddress,
+	BINARY clientPublicAddress,
+	BINARY teredoServerAddress,
+	BOOLEAN managedNetworkDetectionInProgress,
+	UINT32 natType,
+	UINT32 previousNatType,
+	BOOLEAN isNatUPnP,
+	BOOLEAN isNatPortPreserving,
+	UINT32 clientType,
+	UINT32 protocolStateClientType,
+	UINT32 defaultClientType,
+	UINT32 totalBubblesSent,
+	UINT32 clientRefreshInterval,
+	UINT32 rsCount,
+	UINT32 listeningApps,
+	UINT32 pendingPackets,
+	UINT32 ipv6DisabledComponents
+	);
+
+SelfRemediation(
+	ANSISTRING remediationType,
+	ANSISTRING remediationMessage,
+	UINT32 remediationStatus,
+	UINT32 remediationProgress,
+	UINT32 remediationFailureCount,
+	UINT32 remediationPortNumber
+	);
+
+FailedQualificationAggregate(
+	NULL count,
+	UINT32 teredoErrorType,
+	UINT32 systemErrorCode,
+	UINT32 protocolStateClientType,
+	UINT32 ipv6DisabledComponents,
+	BOOLEAN managedNetworkDetectionInProgress,
+	UINT32 connectivityStatus,
+	BINARY teredoServerAddress,
+	BOOL32 upnpUseOldBehavior,
+	UINT32 startProgress
+	);
+
+FailedQualification(
+	UINT32 teredoErrorType,
+	UINT32 systemErrorCode,
+	UINT32 protocolStateClientType,
+	UINT32 totalBubblesSent,
+	UINT32 ipv6DisabledComponents,
+	BOOLEAN managedNetworkDetectionInProgress,
+	UINT32 connectivityStatus,
+	BINARY teredoServerAddress,
+	BOOL32 upnpUseOldBehavior,
+	UINT32 startProgress
+	);
+
+SuccessfulQualification(
+	BINARY clientTeredoAddress,
+	BINARY clientPublicAddress,
+	BINARY teredoServerAddress,
+	UINT32 natType,
+	UINT32 clientType,
+	UINT32 protocolStateClientType,
+	BOOLEAN natDetectionPerformed,
+	BOOLEAN isNatUPnP,
+	BOOLEAN isNatPortPreserving,
+	UINT32 totalBubblesSent,
+	UINT32 ipv6DisabledComponents,
+	BOOL32 upnpUseOldBehavior,
+	HRESULT error1,
+	HRESULT error2,
+	HRESULT error3
+	);
+
+TlgAggregateSummary(
+	GUID Provider,
+	UINT64 NumFlushes,
+	UINT64 MaxEntriesStored,
+	UINT64 TotalEntriesFlushed,
+	UINT32 MaxEntriesFlushed,
+	UINT32 MinEntriesFlushed,
+	UINT32 NumBucketLimitReached,
+	UINT32 NumAllocationFailures,
+	UINT32 NumLargeEventFailures
+	);
+

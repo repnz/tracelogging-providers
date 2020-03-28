@@ -1,0 +1,36 @@
+ProviderNames:
+	Microsoft.Windows.Security.TokenBroker
+	Microsoft.Windows.TlgAggregateInternal
+
+
+
+**** Events *****
+FailureInfo(
+	INT32 Error,
+	UNICODESTRING DebugString
+	);
+
+Reg_ConvertPluginIdToPluginPFNResultEvent(
+	UNICODESTRING PluginPFN
+	);
+
+Reg_ConvertPluginIdToPluginPFNEvent(
+	UNICODESTRING PluginId
+	);
+
+SetInterfaceSecurityFailed(
+	HRESULT HResult
+	);
+
+TlgAggregateSummary(
+	GUID Provider,
+	UINT64 NumFlushes,
+	UINT64 MaxEntriesStored,
+	UINT64 TotalEntriesFlushed,
+	UINT32 MaxEntriesFlushed,
+	UINT32 MinEntriesFlushed,
+	UINT32 NumBucketLimitReached,
+	UINT32 NumAllocationFailures,
+	UINT32 NumLargeEventFailures
+	);
+

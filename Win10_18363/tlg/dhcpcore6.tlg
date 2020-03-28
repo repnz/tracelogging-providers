@@ -1,0 +1,79 @@
+ProviderNames:
+	Microsoft.Windows.Networking.DHCPv6
+
+
+
+**** Events *****
+TimeToPlumbAddress(
+	UINT64 TotalTimeToPlumb,
+	INT64 LeaseObtainedTime,
+	INT64 MaxLeaseExpirationTime,
+	GUID InterfaceGuid,
+	UINT32 InterfaceIndex,
+	UINT32 NdisMedium,
+	UINT32 NdisPhysicalMedium,
+	GUID SessionTrackingGuid,
+	GUID BootSessionTrackingGuid
+	);
+
+RequestAttempt(
+	UINT64 TotalTimeToReceiveMs,
+	BOOL32 IsResponseReceived,
+	UINT32 Retries,
+	UINT32 Error,
+	BOOL32 IsMachineInCSState,
+	BOOL32 IsMachineInDSState,
+	UINT64 MaxLeaseTime,
+	UINT64 LeaseObtained,
+	UINT64 T1Time,
+	UINT64 T2Time,
+	UINT64 SecondsSinceBoot,
+	GUID InterfaceGuid,
+	UINT32 InterfaceIndex,
+	UINT32 NdisMedium,
+	UINT32 NdisPhysicalMedium,
+	UINT64 RetryDurationMs,
+	GUID SessionTrackingGuid,
+	GUID BootSessionTrackingGuid
+	);
+
+SolicitAttempt(
+	UINT64 TotalTimeToReceive,
+	BOOL32 GotAdvertise,
+	UINT32 Retries,
+	UINT32 Error,
+	BOOL32 V4AddressPresent,
+	BOOL32 V6AddressPresent,
+	BOOL32 IsMachineInCSState,
+	BOOL32 IsMachineInDSState,
+	UINT64 SecondsSinceBoot,
+	UINT64 MaxLeaseTime,
+	UINT64 LeaseObtained,
+	UINT64 T1Time,
+	UINT64 T2Time,
+	GUID InterfaceGuid,
+	UINT32 InterfaceIndex,
+	UINT32 NdisMedium,
+	UINT32 NdisPhysicalMedium,
+	BOOL32 IsWakeUpPatternPlumbed,
+	BOOL32 IsWakeUpPatternFeatureEnabled,
+	BOOL32 IsNetworkActivated,
+	GUID SessionTrackingGuid,
+	GUID BootSessionTrackingGuid
+	);
+
+Dhcpv6Options(
+	GUID InterfaceGuid,
+	UINT32 InterfaceIndex,
+	UINT32 NdisMedium,
+	UINT32 NdisPhysicalMedium,
+	UINT32 MessageType,
+	UINT32 Error,
+	UINT16 RcvdOptionCount,
+	UINT32 RcvdOptionsList,
+	UINT16 IgnoredOptionCount,
+	UINT32 IgnoredOptionsList,
+	GUID SessionTrackingGuid,
+	GUID BootSessionTrackingGuid
+	);
+

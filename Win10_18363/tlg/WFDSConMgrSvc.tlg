@@ -1,0 +1,109 @@
+ProviderNames:
+	Microsoft.Windows.Networking.WFDSConMgr
+
+
+
+**** Events *****
+SessionDisconnected(
+	UNICODESTRING RemoteDeviceAddress,
+	UINT32 ConnectType,
+	UINT32 Origin,
+	UINT32 TotalSessionActiveDurationMs,
+	UINT64 DisconnectTicks,
+	UINT32 Reason,
+	BOOL32 DisconnectWasUserInitiated,
+	BOOL32 MovementDetectionEnabled,
+	UINT64 MovementDetectedTicks,
+	UINT32 InfraState,
+	UINT32 ErrorCode
+	);
+
+ConnectionCompleted(
+	UNICODESTRING RemoteDeviceAddress,
+	UINT32 DafProviderType,
+	UINT32 Origin,
+	BOOL32 IsWDI,
+	UINT32 AdditionalFlags,
+	UINT64 StartingTickCount,
+	INT32 SignalStrength,
+	UINT32 LinkQuality,
+	UINT32 WlanChannel,
+	UNICODESTRING WlanDeviceInstanceId,
+	UNICODESTRING WlanDriverVersion,
+	UNICODESTRING WlanDriverManufacturer,
+	UNICODESTRING WlanDriverDate,
+	GUID WlanInterfaceGuid,
+	UINT32 DafPreConnectQueryDurationMs,
+	BOOL32 IsReconnect,
+	UINT32 InfraState,
+	BOOL32 IsWfdInfraReconnect,
+	UINT32 DeviceAndSessionType,
+	UNICODESTRING InfraHostNameResolutionMode,
+	UNICODESTRING RemoteManufacturer,
+	UNICODESTRING RemoteModelName,
+	UNICODESTRING RemoteFirmwareVersion,
+	UNICODESTRING RemoteFriendlyName,
+	UINT32 ConnectMethod,
+	UINT32 SecondConnectMethodIfInfraAttemptFailed,
+	UINT32 SinkPauseDurationMs,
+	UINT32 EnumerateCeremoniesDurationMs,
+	UINT32 SelectedConfigMethod,
+	UINT32 CompleteConnectDurationMs,
+	UINT32 WfdReconnectDurationMs,
+	UINT32 WfdReconnectRetries,
+	BOOL32 WasWfdForgottenPairing,
+	BOOL32 InfraConnectAttemptFailed,
+	UINT32 DafRemoveAssociationDurationMs,
+	UINT32 DafChallengeInfraDurationMs,
+	UNICODESTRING WsbServiceName,
+	UINT32 WsbServiceSupportedConfigMethods,
+	BOOL32 WsbLocalDidPreferGo,
+	UINT32 AspPreConnectQueryDurationMs,
+	UINT32 AspProvisioningStatus,
+	UINT32 PinEntryWaitDurationMs,
+	UINT32 InfraConnectAttemptDurationMs,
+	UINT32 WfdRole,
+	UINT32 OperatingChannel,
+	UINT32 PhyType,
+	GUID SessionInterfaceGuid,
+	UINT32 ConnectionSetupDurationMs,
+	UINT32 InfraBackChannelDurationMs,
+	UINT32 MiracastDhcpDurationMs,
+	UINT32 MiracastOpenFirewallDurationMs,
+	UINT32 MiracastDevnodeDurationMs,
+	UINT32 MiracastStartProjectDurationMs,
+	UINT32 MiracastSetupDurationMs,
+	UINT32 MiracastUibc,
+	UINT32 MaUsbSetupDurationMs,
+	UINT32 ErrorCodeForInfraAttempt,
+	UINT32 FailureStateForInfraAttempt,
+	UINT32 FinalErrorCode,
+	UINT32 FinalFailureState,
+	BOOL32 CanceledByUser,
+	UINT64 FinalTickCount,
+	UINT32 BtScanYieldDurationMs,
+	UINT32 NumIpAddresses
+	);
+
+ConnectionWatchdogFired(
+	UNICODESTRING RemoteDeviceAddress,
+	UINT32 Origin,
+	UINT32 ConnectMethod,
+	UINT32 SecondConnectMethodIfInfraAttemptFailed,
+	UNICODESTRING RemoteManufacturer,
+	UNICODESTRING RemoteModelName,
+	UNICODESTRING RemoteFirmwareVersion,
+	UNICODESTRING RemoteFriendlyName,
+	UINT32 Severity,
+	UINT32 CurrentState,
+	UINT32 InfraFailureState,
+	UINT32 ErrorCodeForInfraAttempt,
+	UINT64 StartingTickCount,
+	UINT64 CurrentTickCount,
+	UINT32 TimerPeriod
+	);
+
+ConnectionStarted(
+	UNICODESTRING RemoteDeviceAddress
+	);
+

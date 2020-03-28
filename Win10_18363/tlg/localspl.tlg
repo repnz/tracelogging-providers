@@ -1,0 +1,500 @@
+ProviderNames:
+	Microsoft.Windows.Print.LocalSpooler
+	Microsoft.Windows.Print.MS3DLocalSpooler
+	Microsoft.Windows.Print.SplLib
+	Microsoft.Windows.Print.DevmodeSizePatch
+
+
+
+**** Events *****
+FallbackError(
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+FallbackError(
+	UINT64 PartA_PrivTags,
+	SIGNED wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+RegistryPrinter(
+	UINT64 PartA_PrivTags,
+	NULL PrinterName,
+	UNICODESTRING DriverName,
+	NULL ShareName,
+	UNICODESTRING PortName,
+	UINT32 Attributes,
+	ANSISTRING Stage,
+	UNICODESTRING PreviousOS
+	);
+
+JobStarted(
+	UINT64 PartA_PrivTags,
+	GUID TelemetryJobId,
+	UINT32 JobId,
+	NULL PrinterName,
+	NULL ConnectionName,
+	HEXINT32 PrinterStatus,
+	UNICODESTRING DriverName,
+	UINT32 DriverModelVersion,
+	UNICODESTRING DriverVersion,
+	UNICODESTRING DriverTime,
+	UNICODESTRING DataType,
+	UNICODESTRING DocumentName,
+	UNICODESTRING PortType,
+	UNICODESTRING PortName,
+	BOOL32 IsPrinterConnection,
+	UINT32 NumberOfPortsAttachedToPrinter,
+	HEXINT32 InitialJobStatus,
+	BOOL32 IsBranchOfficePrintingEnabled,
+	UNICODESTRING PrintProcessor,
+	UNICODESTRING LanguageMonitor,
+	BOOL32 Is3DPrinter,
+	BOOL32 IsFaxPrinter,
+	BOOL32 IsXPSDriver,
+	BOOL32 IsClassDriver,
+	HEXINT32 PrinterAttributes,
+	BOOL32 IsDefaultPrinter,
+	UINT32 DefaultPrinterMode,
+	UNICODESTRING PrintingProcess,
+	UNICODESTRING HWIDList,
+	BOOL32 IsOnline,
+	UNICODESTRING FileExtension
+	);
+
+PrinterInstallationChanged(
+	UINT64 PartA_PrivTags,
+	UNICODESTRING PrinterAction,
+	NULL PrinterName,
+	UNICODESTRING DriverName,
+	HEXINT64 DriverVersion,
+	UINT32 MajorDriverVersion,
+	UINT32 DriverAttributes,
+	UNICODESTRING PortType,
+	UNICODESTRING PortName,
+	UNICODESTRING PortMonitor,
+	UNICODESTRING LanguageMonitor,
+	BOOL32 IsPlugAndPlay,
+	BOOL32 IsShared,
+	NULL ShareName,
+	BOOL32 IsEnterpriseCloudPrinter,
+	BOOL32 IsFax,
+	BOOL32 HasValidDevMode,
+	HEXINT32 Attributes,
+	UNICODESTRING DataType,
+	UINT32 Level,
+	UNICODESTRING ContainerId,
+	UNICODESTRING CompatibleIds,
+	UNICODESTRING HardwareId,
+	UNICODESTRING Environment,
+	HEXINT32 HResult,
+	UNICODESTRING DebugHint,
+	UNICODESTRING EntryPoint
+	);
+
+V4SupportError(
+	UINT64 PartA_PrivTags,
+	UNICODESTRING DriverName,
+	UNICODESTRING Function,
+	BOOLEAN V3toV4,
+	INT32 HResult
+	);
+
+SetJobCompleted(
+	UINT64 PartA_PrivTags,
+	HEXINT32 JobControlCommand,
+	GUID TelemetryJobId,
+	UINT32 JobId,
+	NULL PrinterName,
+	UNICODESTRING Datatype,
+	HEXINT32 JobStatus,
+	UINT32 Priority,
+	UINT32 Position,
+	UNICODESTRING PrintProcessor,
+	UNICODESTRING PrintProcessorParameters,
+	UINT32 StartTime,
+	UINT32 UntilTime,
+	UINT32 NextJobId,
+	UINT32 Level,
+	HEXINT32 HResult
+	);
+
+DriverChanged(
+	UINT64 PartA_PrivTags,
+	UNICODESTRING DriverAction,
+	UNICODESTRING DriverName,
+	UNICODESTRING BaseDriverName,
+	HEXINT64 DriverVersion,
+	UINT32 MajorDriverVersion,
+	HEXINT64 PreviousDriverVersion,
+	UINT32 PreviousMajorDriverVersion,
+	UNICODESTRING Manufacturer,
+	UNICODESTRING Model,
+	BOOL32 IsClassDriver,
+	BOOL32 IsShareable,
+	BOOL32 IsPackageAware,
+	HEXINT32 Attributes,
+	UNICODESTRING DeviceCategory,
+	FILETIME DriverDate,
+	UNICODESTRING Provider,
+	UNICODESTRING DefaultDataType,
+	UINT32 Level,
+	UNICODESTRING HardwareId,
+	UNICODESTRING Environment,
+	HEXINT32 LastError
+	);
+
+JobCompleted(
+	UINT64 PartA_PrivTags,
+	GUID TelemetryJobId,
+	UINT32 JobId,
+	NULL PrinterName,
+	HEXINT32 JobStatus,
+	INT64 SpoolFileSize,
+	INT64 BytesPrinted,
+	HEXINT32 SignificantError,
+	INT64 JobDuration
+	);
+
+UpgradedDrivers(
+	UINT64 PartA_PrivTags,
+	UNICODESTRING UpgradedDrivers
+	);
+
+PortChange(
+	UINT64 PartA_PrivTags,
+	NULL PrinterName,
+	UINT32 Level,
+	UINT32 NumPorts,
+	UNICODESTRING NewPortName,
+	UNICODESTRING NewMonitorDll,
+	UNICODESTRING NewMonitorName,
+	UNICODESTRING OldPortName,
+	UNICODESTRING OldMonitorDll,
+	UNICODESTRING OldMonitorName
+	);
+
+JobCompleted(
+	UINT64 PartA_PrivTags,
+	GUID TelemetryJobId,
+	UINT32 JobId,
+	NULL PrinterName,
+	HEXINT32 JobStatus,
+	INT64 SpoolFileSize,
+	INT64 BytesPrinted,
+	HEXINT32 SignificantError,
+	INT64 JobDuration
+	);
+
+Printer(
+	UINT64 PartA_PrivTags,
+	NULL PrinterName,
+	UNICODESTRING DriverName,
+	UNICODESTRING PortName,
+	HEXINT32 Attributes,
+	HEXINT32 Status,
+	UNICODESTRING PrinterEnumType,
+	UNICODESTRING OfflineStatus,
+	UNICODESTRING Manufacturer,
+	UNICODESTRING BusReportedDescription,
+	UNICODESTRING HardwareIds,
+	HEXINT32 DriverAttributes,
+	HEXINT32 MajorDriverVersion,
+	BOOL32 IsV4VirtualPrinter,
+	UNICODESTRING PortMonitor,
+	UNICODESTRING LanguageMonitor,
+	NULL ShareName,
+	BOOL32 HasValidDevMode
+	);
+
+JobDeleted(
+	UINT64 PartA_PrivTags,
+	GUID TelemetryJobId,
+	UINT32 JobId,
+	NULL PrinterName,
+	HEXINT32 JobStatus,
+	HEXINT32 SignificantError
+	);
+
+DriverPackageChanged(
+	UINT64 PartA_PrivTags,
+	UNICODESTRING DriverPackageAction,
+	UNICODESTRING Server,
+	UNICODESTRING InfPath,
+	UNICODESTRING DestinationInfPath,
+	UNICODESTRING Environment,
+	HEXINT32 HResult
+	);
+
+PrintQError(
+	UINT64 PartA_PrivTags,
+	NULL PrinterName,
+	UNICODESTRING DriverName,
+	UNICODESTRING Function,
+	INT32 Line,
+	UINT32 ErrorCode
+	);
+
+Driver(
+	UINT64 PartA_PrivTags,
+	UNICODESTRING DriverName,
+	UNICODESTRING Environment,
+	UNICODESTRING DriverPath,
+	UNICODESTRING MonitorName,
+	UNICODESTRING DefaultDataType,
+	HEXINT32 MajorVersion
+	);
+
+JobStarted(
+	UINT64 PartA_PrivTags,
+	GUID TelemetryJobId,
+	UINT32 JobId,
+	NULL PrinterName,
+	NULL ConnectionName,
+	HEXINT32 PrinterStatus,
+	UNICODESTRING DriverName,
+	UINT32 DriverModelVersion,
+	UNICODESTRING DriverVersion,
+	UNICODESTRING DriverTime,
+	UNICODESTRING DataType,
+	UNICODESTRING DocumentName,
+	UNICODESTRING PortType,
+	UNICODESTRING PortName,
+	BOOL32 IsPrinterConnection,
+	UINT32 NumberOfPortsAttachedToPrinter,
+	HEXINT32 InitialJobStatus,
+	BOOL32 IsBranchOfficePrintingEnabled,
+	UNICODESTRING PrintProcessor,
+	UNICODESTRING LanguageMonitor,
+	BOOL32 Is3DPrinter,
+	BOOL32 IsFaxPrinter,
+	BOOL32 IsXPSDriver,
+	BOOL32 IsClassDriver,
+	HEXINT32 PrinterAttributes,
+	BOOL32 IsDefaultPrinter,
+	UNICODESTRING PrintingProcess,
+	UNICODESTRING HWIDList,
+	BOOL32 IsOnline,
+	UNICODESTRING FileExtension
+	);
+
+JobStatusChange(
+	UINT64 PartA_PrivTags,
+	GUID TelemetryJobId,
+	UINT32 JobId,
+	NULL PrinterName,
+	HEXINT32 OldJobStatus,
+	HEXINT32 NewJobStatus,
+	UINT32 SequenceID
+	);
+
+Port(
+	UINT64 PartA_PrivTags,
+	UNICODESTRING PortName,
+	UNICODESTRING PortMonitor
+	);
+
+PrinterStatusChange(
+	NULL PrinterName,
+	HEXINT32 OldPrinterStatus,
+	HEXINT32 NewPrinterStatus
+	);
+
+PrintOfflineStatus(
+	NULL PrinterName,
+	BOOL32 IsOnline
+	);
+
+PrinterStatusExtChange(
+	NULL PrinterName,
+	HEXINT32 OldPrinterStatusExt,
+	HEXINT32 NewPrinterStatusExt
+	);
+
+SplEndDocPrinter(
+	UINT64 PartA_PrivTags,
+	NULL PrinterName,
+	UINT32 JobID,
+	UINT32 TypeOfHandle,
+	INT32 ReturnValue
+	);
+
+LogPrinterInfo(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	SIGNED wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+JobCreatedFromShadowFile(
+	UINT64 PartA_PrivTags,
+	GUID TelemetryJobId,
+	UINT32 JobId,
+	NULL PrinterName,
+	HEXINT32 PrinterStatus,
+	UNICODESTRING DriverName,
+	UINT32 DriverModelVersion,
+	UNICODESTRING DriverVersion,
+	UNICODESTRING DataType,
+	NULL DocumentName,
+	UNICODESTRING PortType,
+	BOOL32 IsPrinterConnection,
+	UINT32 NumberOfPortsAttachedToPrinter,
+	HEXINT32 InitialJobStatus,
+	BOOL32 IsBranchOfficePrintingEnabled,
+	UNICODESTRING PrintProcessor,
+	UNICODESTRING LanguageMonitor,
+	BOOL32 Is3DPrinter,
+	BOOL32 IsFaxPrinter,
+	BOOL32 IsXPSDriver,
+	BOOL32 IsClassDriver,
+	HEXINT32 PrinterAttributes
+	);
+
+ActivityError(
+	UINT64 PartA_PrivTags,
+	SIGNED wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+ActivityIntermediateStop(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+LogPrinterInfo(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId
+	);
+
+CleanupSPUpgradeRegistry(
+	INT32 Error1,
+	INT32 Error2,
+	UNICODESTRING Stage,
+	UINT64 PartA_PrivTags
+	);
+
+LogPrinterInfo(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+ActivityStoppedAutomatically(
+	VOID
+	);
+
+GetWindowsInfoResult(
+	INT32 HResult,
+	UINT64 PartA_PrivTags
+	);
+
+DefaultPrinterChanged(
+	NULL OldPrinterName,
+	NULL NewPrinterName,
+	INT32 IsSelectedBySpooler,
+	UINT32 DefaultPrinterMode,
+	UNICODESTRING UserSid,
+	UNICODESTRING DebugHint,
+	UINT32 HResult
+	);
+
+ChooseDefaultPrinter(
+	INT32 ReturnValue,
+	NULL ReturnedDefaultPrinter,
+	NULL ChosenDefaultPrinter,
+	NULL PrinterConnectionName,
+	NULL VirtualPrinterName,
+	UNICODESTRING TSPrinterName,
+	UNICODESTRING DebugHint
+	);
+
+MRUEstablishedValueChanged(
+	UINT32 IsMRUEstablished,
+	UINT32 ErrorCode
+	);
+
+DefaultPrinterModeChanged(
+	UINT32 DefaultPrinterMode,
+	UINT32 ErrorCode
+	);
+
+ErrorPrintCancelled(
+	UNICODESTRING DebugText
+	);
+
+FixDevmode(
+	NULL PrinterName,
+	UINT32 DevmodeType,
+	UINT32 Signature,
+	UNICODESTRING Fix,
+	UINT16 Size
+	);
+

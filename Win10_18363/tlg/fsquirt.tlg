@@ -1,0 +1,38 @@
+ProviderNames:
+	Microsoft.Windows.Bluetooth
+
+
+
+**** Events *****
+FileTransferEnded(
+	UINT64 PartA_PrivTags,
+	INT32 FileTransferDirectionSent,
+	UINT32 FileSizeInBytes,
+	UNICODESTRING FileType,
+	UINT64 TransferTimeInMS,
+	INT32 HResult
+	);
+
+FileWaitingEnded(
+	UINT64 PartA_PrivTags,
+	UINT64 WaitTimeInMS,
+	INT32 HResult
+	);
+
+FileTransferEnded(
+	UINT64 PartA_PrivTags,
+	INT32 FileTransferDirectionSent,
+	UINT32 FileSizeInBytes,
+	UNICODESTRING FileType,
+	UINT64 TransferTimeInMS,
+	INT32 AuthenticationRequired,
+	INT32 HResult
+	);
+
+FileTransferEnded(
+	UINT64 PartA_PrivTags,
+	INT32 AuthenticationRequired,
+	INT32 HResult,
+	UNICODESTRING BTDeviceAddress
+	);
+

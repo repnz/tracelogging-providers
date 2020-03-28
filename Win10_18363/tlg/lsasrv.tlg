@@ -1,0 +1,283 @@
+ProviderNames:
+	Microsoft.Windows.Security.LsaSrv
+	TelemetryAssert
+	TelemetryAssertDiagTrack
+
+
+
+**** Events *****
+CredManCredFileLoadFailure(
+	INT32 status,
+	INT32 subStatus,
+	BOOL32 isolationEnabled
+	);
+
+CredManFilenameMismatch(
+	BOOL32 isolationEnabled,
+	INT32 credType,
+	INT32 deletionStatus,
+	UNICODESTRING targetName
+	);
+
+CredManDpApiDecryptionFailure(
+	BOOL32 isolationEnabled,
+	INT32 decryptionError,
+	UNICODESTRING credFilename
+	);
+
+CredManDeleteCredentials(
+	INT32 result,
+	BOOL32 isolationEnabled,
+	INT32 credType,
+	UNICODESTRING callingProcess
+	);
+
+LsapGetCredentialKeyFailure(
+	UINT32 LogonIdLow,
+	INT32 LogonIdHigh,
+	INT32 Status
+	);
+
+ActivityStoppedAutomatically(
+	VOID
+	);
+
+NegLogonUserEx2WorkerStop(
+	UINT32 logonType,
+	INT32 isStandaloneManagedServiceAccount,
+	INT32 status,
+	INT32 apiSubStatus
+	);
+
+NegLogonUserEx2WorkerStart(
+	VOID
+	);
+
+NullTargetNtlmFallback(
+	VOID
+	);
+
+LoadPackages(
+	INT32 status,
+	UINT32 loadCount,
+	UINT32 newCount,
+	UINT32 indexPackage,
+	UINT32 indexOldPackage,
+	UNICODESTRING preferredPackageName,
+	UNICODESTRING defaultTlsProviderName,
+	UNICODESTRING defaultTlsProviderFileName
+	);
+
+LoadIumBoundMachineCert(
+	UINT32 status,
+	BOOL32 certFound
+	);
+
+ArsoUserToggle(
+	UINT64 PartA_PrivTags,
+	UINT32 version,
+	NTSTATUS retVal,
+	BOOL32 enable
+	);
+
+ArsoDisableSystemConsent(
+	UINT64 PartA_PrivTags,
+	UINT32 version,
+	NTSTATUS retVal
+	);
+
+ArsoEnableSystemConsent(
+	UINT64 PartA_PrivTags,
+	UINT32 version,
+	NTSTATUS retVal
+	);
+
+ArsoAllowedOnDevice(
+	UINT64 PartA_PrivTags,
+	UINT32 version,
+	NTSTATUS retVal,
+	BOOL32 isArsoAllowed,
+	BOOL32 isDomainJoined,
+	UINT32 platformId,
+	BOOL32 allowedByPolicy,
+	UINT32 modePolicy,
+	BOOL32 isManaged,
+	BOOL32 isSecure
+	);
+
+ArsoIsDeviceSecure(
+	UINT64 PartA_PrivTags,
+	UINT32 version,
+	NTSTATUS retVal,
+	HRESULT hr,
+	BOOL32 isSecure,
+	UINT32 fveSecureBootBindingState,
+	BOOL32 isBitlockerEnabledAndSecure
+	);
+
+ArsoIsDeviceManaged(
+	UINT64 PartA_PrivTags,
+	UINT32 version,
+	NTSTATUS retVal,
+	HRESULT hr,
+	BOOL32 isManaged,
+	BOOL32 isDomainJoined,
+	BOOL32 isCloudDomainJoined,
+	BOOL32 isWorkPlaceJoined,
+	BOOL32 isMdmManaged
+	);
+
+ArsoConfiguration(
+	UINT64 PartA_PrivTags,
+	UINT32 version,
+	NTSTATUS retVal,
+	BOOL32 isLastInteractiveUser,
+	BOOL32 blockedByAutologon,
+	BOOL32 isArsoAllowedOnDevice,
+	UINT32 accountType,
+	BOOL32 arsoTypeUser,
+	BOOL32 enabledByConset,
+	BOOL32 explicitlySet,
+	BOOL32 hasBlankPassword
+	);
+
+ArsoPreventBitLockerSuspension(
+	UINT64 PartA_PrivTags,
+	UINT32 version,
+	NTSTATUS retVal,
+	HRESULT hr
+	);
+
+ArsoIsBitLockerEnabledAndSecure(
+	UINT64 PartA_PrivTags,
+	UINT32 version,
+	NTSTATUS retVal,
+	HRESULT hr,
+	BOOL32 isEnabledAndSecure,
+	UINT32 fveFlags,
+	UINT64 fveExtendedFlags
+	);
+
+ArsoLocateLogonSessionWithSid(
+	UINT64 PartA_PrivTags,
+	UINT32 version,
+	NTSTATUS retVal,
+	UINT32 count,
+	UINT32 logonSessionFound,
+	BOOLEAN validLogonSessionFound
+	);
+
+ArsoLocateLogonSessionWithSidValidityCheck(
+	UINT64 PartA_PrivTags,
+	UINT32 version,
+	UINT32 count,
+	UINT32 index,
+	BOOL32 hasSid,
+	BOOL32 matchingSid,
+	UINT32 logonType
+	);
+
+ArsoUserLoggedOff(
+	UINT64 PartA_PrivTags,
+	UINT32 version
+	);
+
+ArsoNotifyUserLogon(
+	UINT64 PartA_PrivTags,
+	UINT32 version,
+	WIN32ERROR retVal,
+	BOOLEAN isProtectedUser
+	);
+
+ActivityStoppedAutomatically(
+	VOID
+	);
+
+LsapDisconnectLocalUserStop(
+	INT32 status
+	);
+
+LsapDisconnectLocalUserStart(
+	VOID
+	);
+
+LsapConnectLocalUserStop(
+	INT32 status
+	);
+
+LsapConnectLocalUserStart(
+	VOID
+	);
+
+LoopbackBadCall(
+	UINT64 PartA_PrivTags
+	);
+
+LoopbackMiss(
+	UINT64 upper,
+	UINT64 lower
+	);
+
+LoopbackHit(
+	UINT64 upper,
+	UINT64 lower
+	);
+
+LoopbackEndTracking(
+	UINT64 upper,
+	UINT64 lower
+	);
+
+LoopbackUpdateTracking(
+	UINT64 oldupper,
+	UINT64 oldlower,
+	UINT64 newupper,
+	UINT64 newlower,
+	BOOLEAN client,
+	BOOLEAN input
+	);
+
+LoopbackCallFailed(
+	ANSISTRING expression,
+	INT32 status
+	);
+
+LoopbackAllocationFailure(
+	ANSISTRING pointer
+	);
+
+LoopbackBeginTracking(
+	UINT64 upper,
+	UINT64 lower,
+	BOOLEAN client,
+	BOOLEAN input
+	);
+
+LoopbackUninitialized(
+	UINT64 PartA_PrivTags,
+	UINT64 hits,
+	UINT64 misses
+	);
+
+LoopbackInitialized(
+	UINT64 PartA_PrivTags,
+	INT32 TrackingState
+	);
+
+LoopbackBadThreading(
+	UINT64 PartA_PrivTags,
+	ANSISTRING condition
+	);
+
+Assert(
+	UINT32 assertVersion,
+	UINT32 rva,
+	UINT32 timestamp,
+	UINT32 imageSize,
+	ANSISTRING imageName,
+	UINT32 count,
+	UINT32 totalHits,
+	UINT32 ModuleCollection,
+	UINT32 GlobalCollection
+	);
+

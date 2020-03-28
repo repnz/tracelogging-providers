@@ -1,0 +1,25 @@
+ProviderNames:
+	Microsoft.Windows.AppMan.AppV
+
+
+
+**** Events *****
+AutoCleanupAttempted(
+	BOOL32 UTCReplace_AppSessionGuid,
+	GUID PackageID,
+	GUID PackageVersion,
+	UINT64 AppVError
+	);
+
+AutoCleanupEnabled(
+	BOOL32 UTCReplace_AppSessionGuid
+	);
+
+DebugMessage(
+	UINT32 LOGLEVEL,
+	UNICODESTRING MESSAGE,
+	UNICODESTRING FUNCTION,
+	UINT32 LINENO,
+	BOOL32 UTCReplace_AppSessionGuid
+	);
+

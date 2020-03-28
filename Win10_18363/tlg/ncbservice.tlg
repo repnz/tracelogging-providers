@@ -1,0 +1,111 @@
+ProviderNames:
+	NcbService
+
+
+
+**** Events *****
+SocketBrokerCreateEvent(
+	UNICODESTRING AppName,
+	GUID EventId,
+	UINT32 CallReason,
+	UINT32 Status
+	);
+
+SocketBrokerDeleteEvent(
+	GUID EventId,
+	UINT32 CallReason,
+	UINT32 Status
+	);
+
+SocketBrokerDisableEvent(
+	GUID EventId,
+	UINT32 CallReason,
+	UINT32 Status
+	);
+
+SocketBrokerTriggerApp(
+	GUID EventId,
+	UNICODESTRING SocketId,
+	UINT32 SocketType,
+	UINT32 TriggerReason,
+	UINT32 NotifyStatus,
+	UINT32 Status
+	);
+
+SocketBrokerEnableEvent(
+	GUID EventId,
+	UINT32 CallReason,
+	UINT32 Status
+	);
+
+SocketBrokerEnumSocketsStart(
+	VOID
+	);
+
+SocketBrokerCreatePushEnabledEnd(
+	GUID EventId,
+	UINT32 Status
+	);
+
+SocketBrokerCompleteRetrieveSocketEnd(
+	GUID EventId,
+	UNICODESTRING SocketId,
+	UINT32 Status
+	);
+
+SocketBrokerCompleteRetrieveSocketStart(
+	GUID EventId,
+	UNICODESTRING SocketId
+	);
+
+SocketBrokerRetrieveContextEnd(
+	GUID EventId,
+	UNICODESTRING SocketId,
+	UINT32 Status
+	);
+
+SocketBrokerCreatePushEnabledStart(
+	GUID EventId
+	);
+
+SocketBrokerRetrieveContextStart(
+	GUID EventId,
+	UNICODESTRING SocketId
+	);
+
+SocketBrokerRetrieveSocketEnd(
+	GUID EventId,
+	UNICODESTRING SocketId,
+	UINT32 Status
+	);
+
+SocketBrokerRetrieveSocketStart(
+	GUID EventId,
+	UNICODESTRING SocketId,
+	BOOL32 AllSockets
+	);
+
+SocketBrokerTransferOwnershipStart(
+	GUID EventId,
+	UNICODESTRING SocketId,
+	UINT32 AddressFamily,
+	UINT32 SocketType,
+	UINT32 Protocol,
+	UINT32 KeepAlive,
+	BOOL32 IsListner,
+	BOOL32 IsSSLSocket
+	);
+
+SocketBrokerTransferOwnershipEnd(
+	GUID EventId,
+	UNICODESTRING SocketId,
+	UNICODESTRING AppName,
+	UINT32 Status
+	);
+
+SocketBrokerEnumSocketsEnd(
+	UNICODESTRING AppName,
+	UINT32 Status,
+	UINT32 NumSockets
+	);
+

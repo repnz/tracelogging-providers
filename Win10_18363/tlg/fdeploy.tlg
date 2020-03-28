@@ -1,0 +1,28 @@
+ProviderNames:
+	Microsoft.Windows.FolderRedirection
+
+
+
+**** Events *****
+FRIsDeployedViaWMI(
+	BOOL32 FRIsDeployedViaWMI,
+	UINT32 FRDomainInfo
+	);
+
+FRIsProfileRoaming(
+	BOOL32 FRIsProfileRoaming,
+	UINT32 FRDomainInfo
+	);
+
+FRFolderPinned(
+	GUID FRFolderID,
+	BOOL32 FRFolderPinned,
+	UINT32 FRDomainInfo
+	);
+
+FRFolderRedirected(
+	GUID FRFolderID,
+	BOOL32 FRFolderRedirected,
+	UINT32 FRDomainInfo
+	);
+

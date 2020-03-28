@@ -1,0 +1,2105 @@
+ProviderNames:
+	Microsoft.Windows.Audio.Client
+	Microsoft.Windows.Audio.PolicyConfig
+	Microsoft.Windows.Audio.Spatial.Metadata
+	Microsoft.Windows.Audio.Spatial.CrossProcess
+	Microsoft.Windows.Audio.CrossProcess
+	Microsoft.Windows.Audio.License
+	Microsoft.Windows.Audio.LoopbackMixer
+
+
+
+**** Events *****
+FallbackError(
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+FallbackError(
+	UINT64 PartA_PrivTags,
+	SIGNED wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+IAudioClient::InitializeSharedAudioStream(
+	HEXINT64 this,
+	UINT32 StreamFlags,
+	UINT32 PeriodInFrames,
+	HEXINT64 pRequestedFormat,
+	IPV4 WAVEFORMATEX,
+	UINT16 cbSize,
+	UINT32 nAvgBytesPerSec,
+	UINT16 nBlockAlign,
+	UINT16 nChannels,
+	UINT32 nSamplesPerSec,
+	UINT16 wBitsPerSample,
+	UINT16 wFormatTag,
+	BINARY waveFormatExData,
+	HEXINT64 AudioSessionGuid,
+	GUID val_AudioSessionGuid,
+	HRESULT HResult
+	);
+
+IAudioClient2::IsOffloadCapable(
+	HEXINT64 this,
+	UINT32 Category,
+	HEXINT64 pbOffloadCapable,
+	BOOL32 bLogOffload,
+	HRESULT HResult
+	);
+
+IAudioCaptureClient::ReleaseBuffer(
+	HEXINT64 this,
+	UINT32 NumFramesRead,
+	HRESULT HResult
+	);
+
+IAudioSessionManager2::RegisterSessionNotification(
+	HEXINT64 this,
+	HEXINT64 NewNotifications,
+	HRESULT HResult
+	);
+
+IAudioClient::GetStreamLatency(
+	HEXINT64 this,
+	HEXINT64 phnsLatency,
+	INT64 hnsLogLatency,
+	HRESULT HResult
+	);
+
+IAudioSessionControl::GetIconPath(
+	HEXINT64 this,
+	HEXINT64 pRetVal,
+	UNICODESTRING pLogRetVal,
+	HRESULT HResult
+	);
+
+IAudioSessionControl::GetDisplayName(
+	HEXINT64 this,
+	HEXINT64 pRetVal,
+	UNICODESTRING pLogRetVal,
+	HRESULT HResult
+	);
+
+IAudioClient::GetDevicePeriod(
+	HEXINT64 this,
+	HEXINT64 phnsDefaultDevicePeriod,
+	HEXINT64 phnsMinimumDevicePeriod,
+	INT64 hnsLogDefault,
+	INT64 hnsLogMinimum,
+	HRESULT HResult
+	);
+
+IAudioSessionManager2::UnregisterSessionNotification(
+	HEXINT64 this,
+	HEXINT64 NewNotifications,
+	HRESULT HResult
+	);
+
+IAudioClient::GetMixFormat(
+	HEXINT64 this,
+	HEXINT64 ppDeviceFormat,
+	HEXINT64 pLogRetFormatPtr,
+	IPV4 WAVEFORMATEX,
+	UINT16 cbSize,
+	UINT32 nAvgBytesPerSec,
+	UINT16 nBlockAlign,
+	UINT16 nChannels,
+	UINT32 nSamplesPerSec,
+	UINT16 wBitsPerSample,
+	UINT16 wFormatTag,
+	BINARY waveFormatExData,
+	HRESULT HResult
+	);
+
+IAudioRenderClient::GetBuffer(
+	HEXINT64 this,
+	UINT32 NumFramesRequested,
+	HEXINT64 ppData,
+	HEXINT64 pData,
+	HRESULT HResult
+	);
+
+IAudioSessionControl2::GetSessionIdentifier(
+	HEXINT64 this,
+	HEXINT64 pRetVal,
+	UNICODESTRING pLogRetVal,
+	HRESULT HResult
+	);
+
+IAudioSessionManager2::GetSessionEnumerator(
+	HEXINT64 this,
+	HEXINT64 EnumerateSessions,
+	HEXINT64 pLogEnumerateSessions,
+	HRESULT HResult
+	);
+
+IAudioSessionManager::GetAudioSessionControl(
+	HEXINT64 this,
+	HEXINT64 SessionId,
+	GUID logSessionId,
+	HEXINT64 SessionControl,
+	HEXINT64 pLogSessionControl,
+	HRESULT HResult
+	);
+
+IAudioCaptureClient::GetBuffer(
+	HEXINT64 this,
+	HEXINT64 ppData,
+	HEXINT64 pData,
+	HEXINT64 pNumFramesToRead,
+	UINT32 logNumFramesToRead,
+	HEXINT64 pdwFlags,
+	UINT32 logFlags,
+	HEXINT64 pu64DevicePosition,
+	UINT64 logDevicePosition,
+	HEXINT64 pu64QPCPosition,
+	UINT64 logQPCPosition,
+	HRESULT HResult
+	);
+
+IAudioSessionControl2::IsSystemSoundsSession(
+	HEXINT64 this,
+	HRESULT HResult
+	);
+
+IAudioClient::Start(
+	HEXINT64 this,
+	HRESULT HResult
+	);
+
+IAudioCaptureClient::GetNextPacketSize(
+	HEXINT64 this,
+	HEXINT64 pNumFramesInNextPacket,
+	UINT32 logNumFrames,
+	HRESULT HResult
+	);
+
+IAudioSessionControl::SetIconPath(
+	HEXINT64 this,
+	HEXINT64 Value,
+	UNICODESTRING retVal,
+	HEXINT64 pguidEventContext,
+	GUID logGuid,
+	HRESULT HResult
+	);
+
+IAudioClock2::GetDevicePosition(
+	HEXINT64 this,
+	HEXINT64 DevicePosition,
+	UINT64 logPosition,
+	HEXINT64 QPCPosition,
+	UINT64 logQPCPosition,
+	HRESULT HResult
+	);
+
+IAudioClient::Reset(
+	HEXINT64 this,
+	HRESULT HResult
+	);
+
+IAudioSessionControl2::GetProcessId(
+	HEXINT64 this,
+	HEXINT64 pRetVal,
+	UINT32 logRetVal,
+	HRESULT HResult
+	);
+
+IAudioClient::GetCurrentPadding(
+	HEXINT64 this,
+	HEXINT64 pNumPaddingFrames,
+	UINT32 u32logSize,
+	HRESULT HResult
+	);
+
+IAudioSessionControl::RegisterAudioSessionNotification(
+	HEXINT64 this,
+	HEXINT64 NewNotifications,
+	HRESULT HResult
+	);
+
+IAudioSessionControl::SetGroupingParam(
+	HEXINT64 this,
+	HEXINT64 Class,
+	GUID logClass,
+	HEXINT64 pguidEventContext,
+	GUID logEvent,
+	HRESULT HResult
+	);
+
+IAudioRenderClient::ReleaseBuffer(
+	HEXINT64 this,
+	UINT32 NumFramesWritten,
+	UINT32 dwFlags,
+	HRESULT HResult
+	);
+
+IAudioClient2::SetClientProperties(
+	HEXINT64 this,
+	HEXINT64 pClientProperties,
+	BOOLEAN AudioClientProperties_V1,
+	UINT32 cbSize,
+	INT32 bIsOffload,
+	UINT32 eCategory,
+	NOPRINT AudioClientProperties,
+	UINT32 Options,
+	STRING AudioClientPropertiesPrivate,
+	UINT32 extCategory,
+	UINT32 prvOptions,
+	HRESULT HResult
+	);
+
+IAudioClock::GetFrequency(
+	HEXINT64 this,
+	HEXINT64 pu64Frequency,
+	UINT64 logFrequency,
+	HRESULT HResult
+	);
+
+Errors(
+	ANSISTRING Func,
+	UINT32 LineNum,
+	HRESULT HResult
+	);
+
+IAudioClient3::GetCurrentSharedModeEnginePeriod(
+	HEXINT64 this,
+	HEXINT64 pFormat,
+	IPV4 WAVEFORMATEX,
+	UINT16 cbSize,
+	UINT32 nAvgBytesPerSec,
+	UINT16 nBlockAlign,
+	UINT16 nChannels,
+	UINT32 nSamplesPerSec,
+	UINT16 wBitsPerSample,
+	UINT16 wFormatTag,
+	BINARY waveFormatExData,
+	HEXINT64 pDefaultPeriodInFrames,
+	UINT32 logDefaultPeriod,
+	HEXINT64 pFundamentalPeriodInFrames,
+	UINT32 logFundamental,
+	HEXINT64 pMinPeriodInFrames,
+	UINT32 logMin,
+	HEXINT64 pMaxPeriodInFrames,
+	UINT32 logMax,
+	HRESULT HResult
+	);
+
+IAudioSessionManager2::UnregisterDuckNotification(
+	HEXINT64 this,
+	HEXINT64 NewNotifications,
+	HRESULT HResult
+	);
+
+IAudioClient::GetBufferSize(
+	HEXINT64 this,
+	HEXINT64 pNumBufferFrames,
+	UINT32 u32logSize,
+	HRESULT HResult
+	);
+
+IAudioSessionManager2::RegisterDuckNotification(
+	HEXINT64 this,
+	HEXINT64 SessionID,
+	UNICODESTRING SessionID,
+	HEXINT64 NewNotifications,
+	HRESULT HResult
+	);
+
+IAudioClient3::GetCurrentSharedModeEnginePeriod(
+	HEXINT64 this,
+	HEXINT64 ppFormat,
+	HEXINT64 pLogRetFormatPtr,
+	IPV4 WAVEFORMATEX,
+	UINT16 cbSize,
+	UINT32 nAvgBytesPerSec,
+	UINT16 nBlockAlign,
+	UINT16 nChannels,
+	UINT32 nSamplesPerSec,
+	UINT16 wBitsPerSample,
+	UINT16 wFormatTag,
+	BINARY waveFormatExData,
+	HEXINT64 pCurrentPeriodInFrames,
+	UINT32 logCurrentPeriod,
+	HRESULT HResult
+	);
+
+IAudioSessionControl::GetGroupingParam(
+	HEXINT64 this,
+	HEXINT64 pRetVal,
+	GUID logGuid,
+	HRESULT HResult
+	);
+
+IAudioClient2::GetBufferSizeLimits(
+	HEXINT64 this,
+	HEXINT64 pFormat,
+	IPV4 WAVEFORMATEX,
+	UINT16 cbSize,
+	UINT32 nAvgBytesPerSec,
+	UINT16 nBlockAlign,
+	UINT16 nChannels,
+	UINT32 nSamplesPerSec,
+	UINT16 wBitsPerSample,
+	UINT16 wFormatTag,
+	BINARY waveFormatExData,
+	BOOL32 bEventDriven,
+	HEXINT64 phnsMaxBufferDuration,
+	HEXINT64 phnsMinBufferDuration,
+	INT64 hnsLogMaxBuffer,
+	INT64 hnsLogMinBuffer,
+	HRESULT HResult
+	);
+
+IAudioClient::Stop(
+	HEXINT64 this,
+	HRESULT HResult
+	);
+
+IAudioClient::GetService(
+	HEXINT64 this,
+	GUID riid,
+	HEXINT64 ppv,
+	HEXINT64 pv,
+	HRESULT HResult
+	);
+
+IAudioSessionControl::SetDisplayName(
+	HEXINT64 this,
+	HEXINT64 pRetVal,
+	UNICODESTRING retVal,
+	HEXINT64 pguidEventContext,
+	GUID logGuid,
+	HRESULT HResult
+	);
+
+IAudioClient::IsFormatSupported(
+	HEXINT64 this,
+	UINT32 ShareMode,
+	HEXINT64 pFormat,
+	HEXINT64 ppClosestMatch,
+	IPV4 WAVEFORMATEX,
+	UINT16 cbSize,
+	UINT32 nAvgBytesPerSec,
+	UINT16 nBlockAlign,
+	UINT16 nChannels,
+	UINT32 nSamplesPerSec,
+	UINT16 wBitsPerSample,
+	UINT16 wFormatTag,
+	BINARY waveFormatExData,
+	HEXINT64 pLogRetFormatPtr,
+	IPV4 WAVEFORMATEX,
+	UINT16 cbSize,
+	UINT32 nAvgBytesPerSec,
+	UINT16 nBlockAlign,
+	UINT16 nChannels,
+	UINT32 nSamplesPerSec,
+	UINT16 wBitsPerSample,
+	UINT16 wFormatTag,
+	BINARY waveFormatExData,
+	HRESULT HResult
+	);
+
+IAudioSessionControl2::SetDuckingPreference(
+	HEXINT64 this,
+	INT32 optOut,
+	HRESULT HResult
+	);
+
+IAudioClient::SetSampleRate(
+	HEXINT64 this,
+	FLOAT flSampleRate,
+	HRESULT HResult
+	);
+
+IAudioClock::GetPosition(
+	HEXINT64 this,
+	HEXINT64 pu64Position,
+	UINT64 logPosition,
+	HEXINT64 pu64hnsQPCPosition,
+	UINT64 logQPCPosition,
+	HRESULT HResult
+	);
+
+IAudioSessionManager::GetSimpleAudioVolume(
+	HEXINT64 this,
+	HEXINT64 SessionId,
+	GUID logSessionId,
+	HEXINT64 AudioVolume,
+	HEXINT64 pLogAudioVolume,
+	HRESULT HResult
+	);
+
+IAudioClock::GetCharacteristics(
+	HEXINT64 this,
+	HEXINT64 pdwCharacteristics,
+	UINT32 logCharacteristics,
+	HRESULT HResult
+	);
+
+Errors(
+	ANSISTRING Func,
+	UINT32 LineNum,
+	HRESULT originalHResult,
+	HRESULT HResult
+	);
+
+IAudioSessionControl::UnregisterAudioSessionNotification(
+	HEXINT64 this,
+	HEXINT64 NewNotifications,
+	HRESULT HResult
+	);
+
+IAudioSessionControl::GetState(
+	HEXINT64 this,
+	HEXINT64 pRetVal,
+	INT32 logState,
+	HRESULT HResult
+	);
+
+IAudioClient::Initialize(
+	HEXINT64 this,
+	UINT32 ShareMode,
+	UINT32 StreamFlags,
+	INT64 hnsBufferDuration,
+	INT64 hnsPeriodicity,
+	HEXINT64 pRequestedFormat,
+	IPV4 WAVEFORMATEX,
+	UINT16 cbSize,
+	UINT32 nAvgBytesPerSec,
+	UINT16 nBlockAlign,
+	UINT16 nChannels,
+	UINT32 nSamplesPerSec,
+	UINT16 wBitsPerSample,
+	UINT16 wFormatTag,
+	BINARY waveFormatExData,
+	HEXINT64 AudioSessionGuid,
+	GUID val_AudioSessionGuid,
+	HRESULT HResult
+	);
+
+IAudioSessionControl2::GetSessionInstanceIdentifier(
+	HEXINT64 this,
+	HEXINT64 pRetVal,
+	UNICODESTRING pLogRetVal,
+	HRESULT HResult
+	);
+
+CAudioClient::ReleaseServerResource(
+	HEXINT64 this,
+	INT64 streamId,
+	HRESULT hrDisconnect
+	);
+
+CAudioClient::OnAudioStreamDisconnectionRequest(
+	HEXINT64 this,
+	INT64 streamId,
+	HRESULT hrDisconnect
+	);
+
+CAudioClient::OnAudioStreamDisconnectionRequestCallback(
+	HEXINT64 this,
+	INT64 streamId,
+	HRESULT hrDisconnect
+	);
+
+CAudioClient::OnAudioSessionDisconnect(
+	HEXINT64 this,
+	UNICODESTRING sessionId,
+	UINT32 disconnectReason,
+	INT64 streamId,
+	HRESULT hrDisconnect
+	);
+
+AggregatedStreamVolumeChanges(
+	GUID AudioClientGuidId,
+	INT32 changes,
+	UINT32 channels,
+	DOUBLE burstDuration,
+	FLOAT rmsBefore,
+	FLOAT loudestChannelBefore,
+	FLOAT quietestChannelBefore,
+	FLOAT rmsMinimum,
+	FLOAT loudestChannelMinimum,
+	FLOAT quietestChannelMinimum,
+	FLOAT rmsMaximum,
+	FLOAT loudestChannelMaximum,
+	FLOAT quietestChannelMaximum,
+	FLOAT rmsAfter,
+	FLOAT loudestChannelAfter,
+	FLOAT quietestChannelAfter
+	);
+
+AmbisonicsSetHeadTracking(
+	GUID audioClientGuidId,
+	HRESULT hResult,
+	INT32 enableHeadTracking
+	);
+
+AmbisonicsSetData(
+	GUID audioClientGuidId,
+	HRESULT hResult,
+	UINT32 cbAmbisonicsParams,
+	UINT32 version,
+	INT32 type,
+	INT32 channelOrdering,
+	INT32 normalization
+	);
+
+PositionJitter(
+	GUID AudioClientGuidId,
+	UINT64 StreamPosition,
+	UINT64 StreamFrequency,
+	UINT64 QPC,
+	INT64 Jitter
+	);
+
+AudioCaptureClientReleaseBufferFailed(
+	GUID AudioClientGuidId,
+	GUID ContextId,
+	HRESULT HResult
+	);
+
+FirstPacket(
+	GUID AudioClientGuidId,
+	GUID ContextId,
+	UINT32 Frames
+	);
+
+AudioCaptureClientGetBufferFailed(
+	GUID AudioClientGuidId,
+	GUID ContextId,
+	HRESULT HResult
+	);
+
+AudioRenderClientReleaseBufferFailed(
+	GUID AudioClientGuidId,
+	GUID ContextId,
+	HRESULT HResult
+	);
+
+AudioRenderClientGetBufferFailed(
+	GUID AudioClientGuidId,
+	GUID ContextId,
+	HRESULT HResult
+	);
+
+AudioCaptureClientGetBufferLatency(
+	GUID AudioClientGuidId,
+	GUID ContextId,
+	DOUBLE secondsLatency,
+	INT64 hnsBufferDuration,
+	INT64 hnsPeriodicity,
+	UINT32 ShareMode,
+	UINT32 serverCategory,
+	INT32 Loopback,
+	INT32 Raw,
+	INT32 MatchFormatRequested
+	);
+
+AudioClientStop(
+	UNICODESTRING endpointInstanceId,
+	GUID AudioClientGuidId,
+	GUID ContextId,
+	HRESULT HResultInternal,
+	HRESULT HResult,
+	UINT32 GetBufferFailures,
+	UINT32 ReleaseBufferFailures,
+	DOUBLE Duration,
+	DOUBLE ContentDuration,
+	INT32 ClientProcessSuspensionState,
+	INT32 ActualStreamState
+	);
+
+AudioClientStart(
+	GUID AudioClientGuidId,
+	GUID ContextId,
+	HRESULT HResultInternal,
+	HRESULT HResult,
+	DOUBLE TimeToStartInSec,
+	INT32 ClientProcessSuspensionState,
+	INT32 ActualStreamState
+	);
+
+AudioClientInitialize(
+	GUID AudioClientGuidId,
+	GUID ContextId,
+	UINT32 StreamType,
+	UINT32 serverCategory,
+	UINT32 ShareMode,
+	INT32 RawStreamRequested,
+	INT32 MatchFormatRequested,
+	INT32 OffloadRequested,
+	INT32 UseAmbisonics,
+	UINT32 PeriodRequestPriority,
+	HEXINT32 StreamFlags,
+	UNICODESTRING EndpointId,
+	UNICODESTRING EndpointInstanceId,
+	INT64 RequestedBufferDuration,
+	INT64 RequestedPeriodicity,
+	HRESULT HResult,
+	HRESULT HResultMapped,
+	UNICODESTRING FormatType,
+	BOOLEAN ExpectedAlignmentFailure,
+	INT32 ConsecutiveFailures,
+	INT32 ClientQuiesced,
+	DOUBLE TimeToInitializeInSec,
+	UINT16 NumberOfChannels,
+	UINT32 SampleRate,
+	UINT32 AvgBytesPerSec,
+	GUID SubFormat,
+	HEXINT32 ChannelMask,
+	UINT16 ValidBitsPerSample
+	);
+
+AudioClientInitialize(
+	GUID AudioClientGuidId,
+	GUID ContextId,
+	UINT32 StreamType,
+	UINT32 serverCategory,
+	UINT32 ShareMode,
+	INT32 RawStreamRequested,
+	INT32 MatchFormatRequested,
+	INT32 OffloadRequested,
+	INT32 UseAmbisonics,
+	UINT32 PeriodRequestPriority,
+	HEXINT32 StreamFlags,
+	UNICODESTRING EndpointId,
+	UNICODESTRING EndpointInstanceId,
+	INT64 RequestedBufferDuration,
+	INT64 RequestedPeriodicity,
+	HRESULT HResult,
+	HRESULT HResultMapped,
+	UNICODESTRING FormatType,
+	BOOLEAN ExpectedAlignmentFailure,
+	INT32 ConsecutiveFailures,
+	INT32 ClientQuiesced,
+	DOUBLE TimeToInitializeInSec,
+	UINT16 NumberOfChannels,
+	UINT32 SampleRate,
+	UINT32 AvgBytesPerSec,
+	GUID SubFormat,
+	HEXINT32 ChannelMask,
+	UINT16 ValidBitsPerSample
+	);
+
+AudioClientInitialize(
+	GUID AudioClientGuidId,
+	GUID ContextId,
+	UINT32 StreamType,
+	UINT32 serverCategory,
+	UINT32 ShareMode,
+	INT32 RawStreamRequested,
+	INT32 MatchFormatRequested,
+	INT32 OffloadRequested,
+	INT32 UseAmbisonics,
+	UINT32 PeriodRequestPriority,
+	HEXINT32 StreamFlags,
+	UNICODESTRING EndpointId,
+	UNICODESTRING EndpointInstanceId,
+	INT64 RequestedBufferDuration,
+	INT64 RequestedPeriodicity,
+	HRESULT HResult,
+	HRESULT HResultMapped,
+	UNICODESTRING FormatType,
+	BOOLEAN ExpectedAlignmentFailure,
+	INT32 ConsecutiveFailures,
+	INT32 ClientQuiesced,
+	DOUBLE TimeToInitializeInSec,
+	UINT16 NumberOfChannels,
+	UINT32 SampleRate,
+	UINT32 AvgBytesPerSec,
+	GUID SubFormat
+	);
+
+AudioClientInitialize(
+	GUID AudioClientGuidId,
+	GUID ContextId,
+	UINT32 StreamType,
+	UINT32 serverCategory,
+	UINT32 ShareMode,
+	INT32 RawStreamRequested,
+	INT32 MatchFormatRequested,
+	INT32 OffloadRequested,
+	INT32 UseAmbisonics,
+	UINT32 PeriodRequestPriority,
+	HEXINT32 StreamFlags,
+	UNICODESTRING EndpointId,
+	UNICODESTRING EndpointInstanceId,
+	INT64 RequestedBufferDuration,
+	INT64 RequestedPeriodicity,
+	HRESULT HResult,
+	HRESULT HResultMapped,
+	UNICODESTRING FormatType,
+	BOOLEAN ExpectedAlignmentFailure,
+	INT32 ConsecutiveFailures,
+	INT32 ClientQuiesced,
+	DOUBLE TimeToInitializeInSec,
+	UINT16 NumberOfChannels,
+	UINT32 SampleRate,
+	UINT32 AvgBytesPerSec,
+	GUID SubFormat
+	);
+
+AudioClientInitialize(
+	GUID AudioClientGuidId,
+	GUID ContextId,
+	UINT32 StreamType,
+	UINT32 serverCategory,
+	UINT32 ShareMode,
+	INT32 RawStreamRequested,
+	INT32 MatchFormatRequested,
+	INT32 OffloadRequested,
+	INT32 UseAmbisonics,
+	UINT32 PeriodRequestPriority,
+	HEXINT32 StreamFlags,
+	UNICODESTRING EndpointId,
+	UNICODESTRING EndpointInstanceId,
+	INT64 RequestedBufferDuration,
+	INT64 RequestedPeriodicity,
+	HRESULT HResult,
+	HRESULT HResultMapped,
+	UNICODESTRING FormatType,
+	BOOLEAN ExpectedAlignmentFailure,
+	INT32 ConsecutiveFailures,
+	INT32 ClientQuiesced,
+	DOUBLE TimeToInitializeInSec
+	);
+
+AudioClientInitialize(
+	GUID AudioClientGuidId,
+	GUID ContextId,
+	UINT32 StreamType,
+	UINT32 serverCategory,
+	UINT32 ShareMode,
+	INT32 RawStreamRequested,
+	INT32 MatchFormatRequested,
+	INT32 OffloadRequested,
+	INT32 UseAmbisonics,
+	UINT32 PeriodRequestPriority,
+	HEXINT32 StreamFlags,
+	UNICODESTRING EndpointId,
+	UNICODESTRING EndpointInstanceId,
+	INT64 RequestedBufferDuration,
+	INT64 RequestedPeriodicity,
+	HRESULT HResult,
+	HRESULT HResultMapped,
+	UNICODESTRING FormatType,
+	BOOLEAN ExpectedAlignmentFailure,
+	INT32 ConsecutiveFailures,
+	INT32 ClientQuiesced,
+	DOUBLE TimeToInitializeInSec
+	);
+
+StreamAllChannelsVolumeChange(
+	GUID clientId,
+	FLOAT newVolumes
+	);
+
+StreamChannelVolumeChange(
+	GUID clientId,
+	UINT32 channel,
+	FLOAT newVolume
+	);
+
+SessionAllChannelsVolumeChange(
+	UNICODESTRING sessionInstanceId,
+	FLOAT newVolumes
+	);
+
+SessionChannelVolumeChange(
+	UNICODESTRING sessionInstanceId,
+	UINT32 channel,
+	FLOAT newVolume
+	);
+
+SessionMuteChange(
+	NULL sessionInstanceId,
+	INT32 newMuteState
+	);
+
+SessionVolumeChange(
+	UNICODESTRING sessionInstanceId,
+	FLOAT newVolume
+	);
+
+IAudioSessionEnumerator::GetSession(
+	HEXINT64 this,
+	INT32 Count,
+	HEXINT64 Session,
+	HEXINT64 ptrSession,
+	HRESULT HResult
+	);
+
+IAudioSessionEnumerator::GetCount(
+	HEXINT64 this,
+	HEXINT64 Count,
+	UINT64 retCount,
+	HRESULT HResult
+	);
+
+IVirtualAudioClient::DefaultAudioDeviceChanged(
+	HEXINT64 this,
+	UNICODESTRING DeviceInUseID,
+	HRESULT HResult
+	);
+
+IVirtualAudioClient::Initialize(
+	HEXINT64 this,
+	UNICODESTRING DeviceInUseID,
+	HRESULT HResult
+	);
+
+EndpointVolumeStepDown(
+	UNICODESTRING endpointId,
+	UNICODESTRING endpointInstanceId
+	);
+
+AggregatedEndpointVolumeStepUpDown(
+	UINT64 PartA_PrivTags,
+	UNICODESTRING endpointId,
+	UNICODESTRING endpointInstanceId,
+	UINT32 changes
+	);
+
+EndpointVolumeStepUp(
+	UNICODESTRING endpointId,
+	UNICODESTRING endpointInstanceId
+	);
+
+EndpointMuteChange(
+	UINT64 PartA_PrivTags,
+	UNICODESTRING endpointId,
+	UNICODESTRING endpointInstanceId,
+	INT32 newMuteState
+	);
+
+EndpointVolumeChannelChangeScalar(
+	UNICODESTRING endpointId,
+	UNICODESTRING endpointInstanceId,
+	UINT32 channel,
+	FLOAT newScalar
+	);
+
+AggregatedEndpointVolumeChannelChangesScalar(
+	UINT64 PartA_PrivTags,
+	UNICODESTRING endpointId,
+	UNICODESTRING endpointInstanceId,
+	UINT32 channel,
+	FLOAT newScalar,
+	UINT32 changes
+	);
+
+EndpointVolumeChannelChangeDb(
+	UNICODESTRING endpointId,
+	UNICODESTRING endpointInstanceId,
+	UINT32 channel,
+	FLOAT newDB
+	);
+
+AggregatedEndpointVolumeChannelChangesDb(
+	UINT64 PartA_PrivTags,
+	UNICODESTRING endpointId,
+	UNICODESTRING endpointInstanceId,
+	UINT32 channel,
+	FLOAT newDb,
+	UINT32 changes
+	);
+
+EndpointVolumeChangeMasterScalar(
+	UNICODESTRING endpointId,
+	UNICODESTRING endpointInstanceId,
+	FLOAT newScalar
+	);
+
+AggregatedEndpointVolumeChangesMasterScalar(
+	UINT64 PartA_PrivTags,
+	UNICODESTRING endpointId,
+	UNICODESTRING endpointInstanceId,
+	FLOAT newScalar,
+	UINT32 changes
+	);
+
+EndpointVolumeChangeMasterDb(
+	UNICODESTRING endpointId,
+	UNICODESTRING endpointInstanceId,
+	FLOAT newDB
+	);
+
+AggregatedEndpointVolumeChangesMasterDb(
+	UINT64 PartA_PrivTags,
+	UNICODESTRING endpointId,
+	UNICODESTRING endpointInstanceId,
+	FLOAT newDb,
+	UINT32 changes
+	);
+
+AudioPlayerPlay(
+	UINT32 ReplayCount,
+	DOUBLE ReplayDelay,
+	FLOAT InitialVolumeDb,
+	UINT32 AudioCategory,
+	UINT32 ExtendedAudioCategory,
+	GUID AudioSessionGuid,
+	UINT32 AudioClientStreamFlags,
+	DOUBLE BufferDuration,
+	DOUBLE StreamSwitchTimeout,
+	DOUBLE RendererLingerTimeout,
+	DOUBLE InvalidStateRecoveryTimeout,
+	UNICODESTRING EndpointId,
+	HRESULT HResult
+	);
+
+CAudioPlaybackEvents::OnReplayIterationCompleted(
+	VOID
+	);
+
+CAudioPlaybackEvents::OnNewState(
+	ANSISTRING "All Replays Finished",
+	INT32 AudioPlaybackState
+	);
+
+CAudioRenderingSequencer::QueueSound(
+	UINT32 Replays Remaining
+	);
+
+CAudioRenderingSequencer::QueueSound(
+	ANSISTRING "OnReplayIterationCompleted"
+	);
+
+AccessibilityAudioMonoMixState(
+	INT32 IsEnabled,
+	HRESULT hr
+	);
+
+SetDeviceSpatialSettings(
+	UNICODESTRING device,
+	UINT32 procID,
+	BOOLEAN SpatialEnabled,
+	GUID SpatialEcoder,
+	UINT16 VssFxMode,
+	UNICODESTRING FormatType,
+	UINT16 NumberOfChannels,
+	UINT32 SampleRate,
+	UINT32 AvgBytesPerSec,
+	GUID SubFormat
+	);
+
+SetDeviceFormatNullFormat(
+	UNICODESTRING device,
+	UINT32 procID
+	);
+
+SetDeviceSpatialSettingsNullFormat(
+	UNICODESTRING device,
+	UINT32 procID,
+	BOOLEAN SpatialEnabled,
+	GUID SpatialEcoder,
+	UINT16 VssFxMode
+	);
+
+SetDeviceFormat(
+	UNICODESTRING device,
+	UINT32 procID,
+	UNICODESTRING FormatType,
+	UINT16 NumberOfChannels,
+	UINT32 SampleRate,
+	UINT32 AvgBytesPerSec,
+	GUID SubFormat
+	);
+
+SetDefaultEndpoint(
+	ANSISTRING Function,
+	GUID Clsid,
+	GUID Iid,
+	UNICODESTRING EndpointId,
+	UNICODESTRING EndpointInstanceId,
+	INT32 Policy,
+	HRESULT HResult,
+	DOUBLE Duration
+	);
+
+SetSpatialAudioEndpointSettings(
+	UNICODESTRING EndpointId,
+	UNICODESTRING EndpointInstanceId,
+	HRESULT HResult,
+	UNICODESTRING Key,
+	INT32 SpatialAudioEnabled,
+	INT32 ShowTrayMenu,
+	INT32 AllowLegacyVSS,
+	GUID DefaultTechId,
+	GUID PreviousTechId,
+	GUID CurrentTechId,
+	INT32 SpatialAudioEnabledBeforePolicy,
+	UINT32 PolicyFlags
+	);
+
+SetSpatialAudioEndpointSettings(
+	UNICODESTRING EndpointId,
+	UNICODESTRING EndpointInstanceId,
+	HRESULT HResult,
+	UNICODESTRING Key,
+	INT32 SpatialAudioEnabled,
+	INT32 ShowTrayMenu,
+	INT32 AllowLegacyVSS,
+	GUID DefaultTechId,
+	GUID PreviousTechId,
+	GUID CurrentTechId,
+	INT32 SpatialAudioEnabledBeforePolicy,
+	UINT32 PolicyFlags,
+	UNICODESTRING CurrentFriendlyName,
+	UNICODESTRING CurrentDeepLink,
+	INT32 CurrentLicensePassed,
+	UINT32 CurrentRenderingMode
+	);
+
+AssertFailure(
+	ANSISTRING Function,
+	INT32 Line,
+	HRESULT ResultCode
+	);
+
+APICall(
+	INT32 TelemetryVersion,
+	ANSISTRING APIName,
+	HRESULT Hr
+	);
+
+MetadataClientInitialize(
+	INT32 TelemetryVersion,
+	GUID FormatId,
+	UNICODESTRING EndPointId,
+	HRESULT Hr
+	);
+
+Error(
+	ANSISTRING Function,
+	INT32 Line,
+	HRESULT ResultCode
+	);
+
+SpatialAudioMetadataClient::RuntimeClassInitialize(
+	HEXINT64 this,
+	HRESULT HResult,
+	GUID FormatId,
+	UNICODESTRING EndPointId
+	);
+
+SpatialAudioMetadataDictionary::RuntimeClassInitialize(
+	HEXINT64 this,
+	HRESULT HResult,
+	GUID FormatId,
+	UNICODESTRING EndPointId
+	);
+
+Unknown SpatialAudioEncoderId(
+	ANSISTRING Function,
+	INT32 Line,
+	HRESULT ResultCode
+	);
+
+SpatialObjectResourceStats(
+	GUID StreamContextId,
+	PID ActiveObjectStats,
+	UINT32 Count,
+	DOUBLE Sum,
+	UINT32 Min,
+	UINT32 Max,
+	DOUBLE StdDev,
+	PID AvailableObjectStats,
+	UINT32 Count,
+	DOUBLE Sum,
+	UINT32 Min,
+	UINT32 Max,
+	DOUBLE StdDev
+	);
+
+FinishedGlitching(
+	GUID StreamContextId,
+	FILETIME FirstGlitchTime,
+	FILETIME LastGlitchTime,
+	UINT32 GLITCH_TOTAL,
+	UINT32 SERVER_INPUT_STARVATION,
+	UINT32 CLIENT_OUTPUT_OVERFILL,
+	UINT64 ProcessingPassCount
+	);
+
+ActivelyGlitching(
+	GUID StreamContextId,
+	FILETIME FirstGlitchTime,
+	FILETIME LastGlitchTime,
+	UINT32 GLITCH_TOTAL,
+	UINT32 SERVER_INPUT_STARVATION,
+	UINT32 CLIENT_OUTPUT_OVERFILL,
+	UINT64 ProcessingPassCount
+	);
+
+FinishedErring(
+	GUID StreamContextId,
+	FILETIME FirstErrorTime,
+	FILETIME LastErrorTime,
+	UINT32 PING_PONG_STATE_CORRUPTION,
+	UINT32 SPATIAL_BLOCK_INVALID_STATE,
+	UINT32 CONTROL_DATA_INVALID
+	);
+
+ActivelyErring(
+	GUID StreamContextId,
+	FILETIME FirstErrorTime,
+	FILETIME LastErrorTime,
+	UINT32 PING_PONG_STATE_CORRUPTION,
+	UINT32 SPATIAL_BLOCK_INVALID_STATE,
+	UINT32 CONTROL_DATA_INVALID
+	);
+
+GetPosition(
+	GUID StreamContextId,
+	UINT64 clkDevPos,
+	UINT64 clkPaddingFrames,
+	UINT64 clkHnsQpcPos,
+	UINT64 deltaHnsQpc,
+	UINT64 prevPos,
+	UINT64 rawPos
+	);
+
+SetClientEvent(
+	GUID StreamContextId
+	);
+
+Control(
+	GUID StreamContextId,
+	ANSISTRING Context
+	);
+
+ReleaseInputDataPointer(
+	GUID StreamContextId,
+	UINT32 frameCount,
+	UINT32 procStarted
+	);
+
+GetInputDataPointer(
+	GUID StreamContextId,
+	UINT32 frameCount,
+	UINT32 bufferFlags,
+	UINT32 running
+	);
+
+EmptyBufferCount(
+	GUID StreamContextId,
+	UINT32 count
+	);
+
+GetAvailableObjectCount(
+	GUID StreamContextId,
+	ANSISTRING Context,
+	UINT32 objs
+	);
+
+AsarGranted(
+	GUID StreamContextId,
+	UINT32 objsGranted
+	);
+
+GrantedCompleted(
+	GUID StreamContextId,
+	UINT32 objsGranted
+	);
+
+SetGrantedCount(
+	GUID StreamContextId,
+	UINT32 objsGranted,
+	UINT64 hnsDeadline
+	);
+
+AsarObjUsage(
+	GUID StreamContextId,
+	UINT32 objsInUse,
+	UINT32 objsFree
+	);
+
+IndexMap(
+	GUID StreamContextId,
+	ANSISTRING Context,
+	UINT32 bufId,
+	UINT32 objId,
+	UINT32 index,
+	UINT32 firstRef,
+	HRESULT result
+	);
+
+Errors(
+	ANSISTRING Func,
+	UINT32 LineNum,
+	HRESULT HResult
+	);
+
+BlockObjects(
+	GUID StreamContextId,
+	ANSISTRING Context,
+	UINT32 bufId,
+	UINT32 objCount
+	);
+
+Trace(
+	ANSISTRING Func,
+	UINT32 LineNum
+	);
+
+Glitch(
+	GUID contextId,
+	INT32 inputStarvation,
+	INT32 outputOverfill
+	);
+
+CLoopbackManager::ProcessingSubmix(
+	UINT64 SubmixId
+	);
+
+CLoopbackStream::CreateLoopbackStream - Capture Buffer(
+	UINT64 Capture Buffer
+	);
+
+CLoopbackMixer::GetNextPacketSize - 0 frames(
+	VOID
+	);
+
+CLoopbackMixer::GetBuffer(
+	HEXINT64 ClientReadAddress,
+	UINT64 BufferPosition (Bytes),
+	UINT64 BufferSize (Frames),
+	UINT64 QPC in ms
+	);
+
+CLoopbackMixer::ReleaseBuffer - Read Position Advanced(
+	UINT32 New _readIter,
+	UINT64 New ReadQPC in ms
+	);
+
+CLoopbackMixer::ReleaseBuffer(
+	HEXINT64 ClientReadAddress
+	);
+
+CLoopbackMixer::Initialize(
+	VOID
+	);
+
+CLoopbackMixer::MixerThreadProc - GetNextPacketSize(
+	UINT32 NextPacketSize
+	);
+
+BufferPosInfoList Insertion Failed(
+	VOID
+	);
+
+CLoopbackMixer::MixerThreadProc - Wrap Buffer(
+	UINT32 BufferSizeRemaining (Bytes),
+	UINT64 BufferSize (Bytes)
+	);
+
+CLoopbackMixer::MixerThreadProc - Buffer to write(
+	UINT64 WritePosition,
+	UINT64 BufferStartPosition,
+	UINT32 Frames to write,
+	UINT64 Bytes to write
+	);
+
+CLoopbackMixer::MixerThreadProc - SetLastBufferPosition(
+	UINT64 BufferPosition (Bytes),
+	UINT64 QPC in ms
+	);
+
+CLoopbackMixer::MixerThreadProc - QPC Adjustment Details(
+	INT64 QPCAdjustment in HNS,
+	UINT64 New Client QPC
+	);
+
+CLoopbackMixer::MixerThreadProc - CurrentPacketFromFuture - GLITCHED(
+	UINT64 QPCPosition,
+	UINT64 WritePosition,
+	UINT64 QPCAdjustment
+	);
+
+CLoopbackMixer::MixerThreadProc - Buffer is Contiguous(
+	UINT64 QPCPosition,
+	UINT64 LastQPCPosition
+	);
+
+CLoopbackMixer::MixerThreadProc - GetBuffer Details(
+	UINT64 BufferSize (Bytes),
+	UINT64 Client QPC in ms
+	);
+
+CLoopbackMixer::MixerThreadProc - Packet missed Client Timer - GLITCHED(
+	INT64 Client Index
+	);
+
+LoopbackMixer::MixerThreadProc - New Timer(
+	INT64 Value in HNS
+	);
+
+LoopbackMixer::MixerThreadProc - Write Position Advanced(
+	UINT32 WriteIter,
+	UINT64 Write Position (Bytes),
+	UINT64 Write QPC in ms
+	);
+
+**********DATA READY EVENT*********(
+	UINT32 ClientID,
+	HEXINT64 StreamAddress
+	);
+
+LoopbackMixer::MixerThreadProc - ReadWrite Lag(
+	UINT32 ReadWriteLag,
+	UINT32 WriteIter,
+	UINT32 _readIter
+	);
+
+*********Timer elapsed**********(
+	VOID
+	);
+
+LoopbackMixer::MixerThreadProc - New Read Buffer Added(
+	UINT64 Buffer Position (Bytes),
+	UINT64 Buffer Size (Bytes),
+	UINT64 QPC in ms
+	);
+
+LoopbackMixer::MixerThreadProc - Read Position Advanced(
+	UINT32 New _readIter,
+	UINT64 New ReadQPC in ms
+	);
+
+*********WaitForMultipleObjectsEx**********(
+	UINT32 EventObject
+	);
+
+CLoopbackMixer::InitializeMixer - Completed(
+	VOID
+	);
+
+LoopbackMixer::MixerThreadProc(
+	UINT64 ***START QPC***
+	);
+
+LoopbackMixer::MixerThreadProc(
+	UINT64 Buffer Size (Frames),
+	UINT64 Buffer Size (Bytes),
+	UINT64 LPMIXER MAX Buffer Size (Bytes),
+	UINT64 Periodicity in ms,
+	UINT64 WriteAheadBufferCount,
+	UINT64 LPMIXER MAX Periodicity in ms
+	);
+
+LoopbackMixer::MixerThreadProc(
+	UINT32 StreamCount
+	);
+
+CLoopbackMixer::MixerThreadProc - Contiguous Buffer(
+	BOOL32 ContinguousBuffer,
+	UINT64 ClientPeriodicity,
+	UINT64 Current QPC,
+	UINT64 Last QPC,
+	UINT64 QPC difference
+	);
+
+CLoopbackMixer::MixerThreadProc - Trim Buffer End(
+	UINT64 DropBufferBytes,
+	UINT64 BufferSizeRemaining (Bytes),
+	UINT64 MaxBufferDuration in ms,
+	UINT64 BufferDropTimeDuration in ms
+	);
+
+LoopbackMixer::AddBuffer(
+	HEXINT64 BufferPositionAddress,
+	UINT64 BufferSize
+	);
+
+DialogSessionStopped(
+	HEXINT64 Id
+	);
+
+DialogSessionStarted(
+	HEXINT64 Id,
+	UNICODESTRING endpointId
+	);
+
+CCrossProcessServerOutputEndpoint::AddAudioHistoryPacket(
+	HEXINT64 this,
+	UINT32 FrameCount,
+	UINT32 BytesPerFrame,
+	UINT32 WriteOffset,
+	UINT32 EndOfHistoryDataOffset,
+	UINT32 WriteItem,
+	INT64 QPC
+	);
+
+GetPosition_Offload(
+	HEXINT64 this,
+	UINT32 u32Flags,
+	UINT64 pu64Position,
+	UINT64 pu64QPCPosition
+	);
+
+OffloadPositionAdjustment(
+	HEXINT64 this,
+	UINT64 DevicePos,
+	INT64 DeviceQPC,
+	UINT64 PreAdjustedPosition,
+	UINT64 u64ValidFramesRead
+	);
+
+SetCurrentTimeStamp(
+	HEXINT64 this,
+	HEXINT32 AEPositionFlag,
+	HEXINT32 EndpointFlags,
+	UINT64 PaddingFrames,
+	INT64 QPC,
+	UINT64 DevicePosition,
+	UINT64 StreamPosition
+	);
+
+FinishedGlitching(
+	GUID ContextId,
+	FILETIME FirstGlitchTime,
+	FILETIME LastGlitchTime,
+	UINT32 TOTAL,
+	UINT32 CLIENT_INPUT_NO_MESSAGES,
+	UINT32 CLIENT_INPUT_SIZE_MISMATCH,
+	UINT32 CLIENT_OUTPUT_SERVER_OVERREAD,
+	UINT32 CLIENT_OUTPUT_READ_POINTER_OVERWRITE,
+	UINT32 SERVER_INPUT_STARVATION,
+	UINT32 SERVER_OUTPUT_QUEUE_FULL_PACKET_DROP,
+	UINT32 SERVER_OUTPUT_READ_POINTER_OVERWRITE
+	);
+
+ActivelyGlitching(
+	GUID ContextId,
+	FILETIME FirstGlitchTime,
+	FILETIME LastGlitchTime,
+	UINT32 TOTAL,
+	UINT32 CLIENT_INPUT_NO_MESSAGES,
+	UINT32 CLIENT_INPUT_SIZE_MISMATCH,
+	UINT32 CLIENT_OUTPUT_SERVER_OVERREAD,
+	UINT32 CLIENT_OUTPUT_READ_POINTER_OVERWRITE,
+	UINT32 SERVER_INPUT_STARVATION,
+	UINT32 SERVER_OUTPUT_QUEUE_FULL_PACKET_DROP,
+	UINT32 SERVER_OUTPUT_READ_POINTER_OVERWRITE
+	);
+
+Glitch(
+	GUID ContextId,
+	INT32 glitchTypeEnum,
+	ANSISTRING glitchTypeString,
+	UINT32 numGlitches
+	);
+
+Errors(
+	ANSISTRING Func,
+	UINT32 LineNum,
+	HRESULT HResult
+	);
+
+SpatialProcessingPass(
+	GUID StreamContextId,
+	HEX BeginUpdatingAudioObjects,
+	UINT64 SuccessCount,
+	UINT64 FailureCount,
+	UINT64 ExpectedFailureCount,
+	HRESULT FirstFailureHResult,
+	HEX EndUpdatingAudioObjects,
+	UINT64 SuccessCount,
+	UINT64 FailureCount,
+	UINT64 ExpectedFailureCount,
+	HRESULT FirstFailureHResult,
+	HEX ActivateSpatialAudioObject,
+	UINT64 SuccessCount,
+	UINT64 FailureCount,
+	UINT64 ExpectedFailureCount,
+	HRESULT FirstFailureHResult,
+	HEX GetBuffer,
+	UINT64 SuccessCount,
+	UINT64 FailureCount,
+	UINT64 ExpectedFailureCount,
+	HRESULT FirstFailureHResult,
+	HEX SetEndOfStream,
+	UINT64 SuccessCount,
+	UINT64 FailureCount,
+	UINT64 ExpectedFailureCount,
+	HRESULT FirstFailureHResult
+	);
+
+SpatialAudioClientReset(
+	GUID StreamContextId,
+	HRESULT HResult
+	);
+
+SpatialAudioClientStop(
+	GUID StreamContextId,
+	HRESULT HResult,
+	DOUBLE Duration,
+	INT32 ClientProcessSuspensionState,
+	INT32 ActualStreamState
+	);
+
+SpatialAudioClientPositionJitter(
+	GUID StreamContextId,
+	UINT64 StreamPosition,
+	UINT64 StreamFrequency,
+	UINT64 QPC,
+	INT64 Jitter
+	);
+
+SpatialAudioClientStart(
+	GUID StreamContextId,
+	HRESULT HResult,
+	DOUBLE TimeToStartInSec,
+	INT32 ClientProcessSuspensionState,
+	INT32 ActualStreamState
+	);
+
+SpatialAudioClientInitialize(
+	GUID StreamContextId,
+	GUID AppContextId,
+	GUID AppId,
+	INT32 AppMajorVer,
+	INT32 AppMinorVer1,
+	INT32 AppMinorVer2,
+	INT32 AppMinorVer3,
+	INT64 InternalStreamIdentifier,
+	UINT32 StreamType,
+	UINT32 SpatializationStreamType,
+	UINT32 SpatialRenderingMode,
+	UINT32 serverCategory,
+	UINT32 ShareMode,
+	UINT32 StaticObjectCount,
+	HEXINT32 StaticObjectChannelMask,
+	BOOLEAN IsHolographicDisplayAvailable,
+	UINT32 MinDynamicObjectCount,
+	UINT32 MaxDynamicObjectCount,
+	UINT32 PriorityDynamicObjectCount,
+	INT32 MatchFormatRequested,
+	UINT32 PeriodRequestPriority,
+	HEXINT32 StreamFlags,
+	UNICODESTRING EndpointId,
+	UNICODESTRING EndpointInstanceId,
+	INT64 RequestedBufferDuration,
+	INT64 RequestedPeriodicity,
+	HRESULT HResult,
+	HRESULT HResultMapped,
+	UNICODESTRING FormatType,
+	INT32 ConsecutiveFailures,
+	DOUBLE TimeToInitializeInSec,
+	UINT16 NumberOfChannels,
+	UINT32 SampleRate,
+	UINT32 AvgBytesPerSec,
+	GUID SubFormat,
+	HEXINT32 ChannelMask
+	);
+
+SpatialAudioClientInitialize(
+	GUID StreamContextId,
+	GUID AppContextId,
+	GUID AppId,
+	INT32 AppMajorVer,
+	INT32 AppMinorVer1,
+	INT32 AppMinorVer2,
+	INT32 AppMinorVer3,
+	INT64 InternalStreamIdentifier,
+	UINT32 StreamType,
+	UINT32 SpatializationStreamType,
+	UINT32 SpatialRenderingMode,
+	UINT32 serverCategory,
+	UINT32 ShareMode,
+	UINT32 StaticObjectCount,
+	HEXINT32 StaticObjectChannelMask,
+	BOOLEAN IsHolographicDisplayAvailable,
+	UINT32 MinDynamicObjectCount,
+	UINT32 MaxDynamicObjectCount,
+	UINT32 PriorityDynamicObjectCount,
+	INT32 MatchFormatRequested,
+	UINT32 PeriodRequestPriority,
+	HEXINT32 StreamFlags,
+	UNICODESTRING EndpointId,
+	UNICODESTRING EndpointInstanceId,
+	INT64 RequestedBufferDuration,
+	INT64 RequestedPeriodicity,
+	HRESULT HResult,
+	HRESULT HResultMapped,
+	UNICODESTRING FormatType,
+	INT32 ConsecutiveFailures,
+	DOUBLE TimeToInitializeInSec,
+	UINT16 NumberOfChannels,
+	UINT32 SampleRate,
+	UINT32 AvgBytesPerSec,
+	GUID SubFormat
+	);
+
+SpatialAudioClientInitialize(
+	GUID StreamContextId,
+	GUID AppContextId,
+	GUID AppId,
+	INT32 AppMajorVer,
+	INT32 AppMinorVer1,
+	INT32 AppMinorVer2,
+	INT32 AppMinorVer3,
+	INT64 InternalStreamIdentifier,
+	UINT32 StreamType,
+	UINT32 SpatializationStreamType,
+	UINT32 SpatialRenderingMode,
+	UINT32 serverCategory,
+	UINT32 ShareMode,
+	UINT32 StaticObjectCount,
+	HEXINT32 StaticObjectChannelMask,
+	BOOLEAN IsHolographicDisplayAvailable,
+	UINT32 MinDynamicObjectCount,
+	UINT32 MaxDynamicObjectCount,
+	UINT32 PriorityDynamicObjectCount,
+	INT32 MatchFormatRequested,
+	UINT32 PeriodRequestPriority,
+	HEXINT32 StreamFlags,
+	UNICODESTRING EndpointId,
+	UNICODESTRING EndpointInstanceId,
+	INT64 RequestedBufferDuration,
+	INT64 RequestedPeriodicity,
+	HRESULT HResult,
+	HRESULT HResultMapped,
+	UNICODESTRING FormatType,
+	INT32 ConsecutiveFailures,
+	DOUBLE TimeToInitializeInSec
+	);
+
+SpatialAudioClientInitialize(
+	GUID StreamContextId,
+	GUID AppContextId,
+	GUID AppId,
+	INT32 AppMajorVer,
+	INT32 AppMinorVer1,
+	INT32 AppMinorVer2,
+	INT32 AppMinorVer3,
+	INT64 InternalStreamIdentifier,
+	UINT32 StreamType,
+	UINT32 SpatializationStreamType,
+	UINT32 SpatialRenderingMode,
+	UINT32 serverCategory,
+	UINT32 ShareMode,
+	UINT32 StaticObjectCount,
+	HEXINT32 StaticObjectChannelMask,
+	BOOLEAN IsHolographicDisplayAvailable,
+	UINT32 MinDynamicObjectCount,
+	UINT32 MaxDynamicObjectCount,
+	UINT32 PriorityDynamicObjectCount,
+	INT32 MatchFormatRequested,
+	UINT32 PeriodRequestPriority,
+	HEXINT32 StreamFlags,
+	UNICODESTRING EndpointId,
+	UNICODESTRING EndpointInstanceId,
+	INT64 RequestedBufferDuration,
+	INT64 RequestedPeriodicity,
+	HRESULT HResult,
+	HRESULT HResultMapped,
+	UNICODESTRING FormatType,
+	INT32 ConsecutiveFailures,
+	DOUBLE TimeToInitializeInSec,
+	UINT16 NumberOfChannels,
+	UINT32 SampleRate,
+	UINT32 AvgBytesPerSec,
+	GUID SubFormat,
+	HEXINT32 ChannelMask
+	);
+
+SpatialAudioClientInitialize(
+	GUID StreamContextId,
+	GUID AppContextId,
+	GUID AppId,
+	INT32 AppMajorVer,
+	INT32 AppMinorVer1,
+	INT32 AppMinorVer2,
+	INT32 AppMinorVer3,
+	INT64 InternalStreamIdentifier,
+	UINT32 StreamType,
+	UINT32 SpatializationStreamType,
+	UINT32 SpatialRenderingMode,
+	UINT32 serverCategory,
+	UINT32 ShareMode,
+	UINT32 StaticObjectCount,
+	HEXINT32 StaticObjectChannelMask,
+	BOOLEAN IsHolographicDisplayAvailable,
+	UINT32 MinDynamicObjectCount,
+	UINT32 MaxDynamicObjectCount,
+	UINT32 PriorityDynamicObjectCount,
+	INT32 MatchFormatRequested,
+	UINT32 PeriodRequestPriority,
+	HEXINT32 StreamFlags,
+	UNICODESTRING EndpointId,
+	UNICODESTRING EndpointInstanceId,
+	INT64 RequestedBufferDuration,
+	INT64 RequestedPeriodicity,
+	HRESULT HResult,
+	HRESULT HResultMapped,
+	UNICODESTRING FormatType,
+	INT32 ConsecutiveFailures,
+	DOUBLE TimeToInitializeInSec,
+	UINT16 NumberOfChannels,
+	UINT32 SampleRate,
+	UINT32 AvgBytesPerSec,
+	GUID SubFormat
+	);
+
+SpatialAudioClientInitialize(
+	GUID StreamContextId,
+	GUID AppContextId,
+	GUID AppId,
+	INT32 AppMajorVer,
+	INT32 AppMinorVer1,
+	INT32 AppMinorVer2,
+	INT32 AppMinorVer3,
+	INT64 InternalStreamIdentifier,
+	UINT32 StreamType,
+	UINT32 SpatializationStreamType,
+	UINT32 SpatialRenderingMode,
+	UINT32 serverCategory,
+	UINT32 ShareMode,
+	UINT32 StaticObjectCount,
+	HEXINT32 StaticObjectChannelMask,
+	BOOLEAN IsHolographicDisplayAvailable,
+	UINT32 MinDynamicObjectCount,
+	UINT32 MaxDynamicObjectCount,
+	UINT32 PriorityDynamicObjectCount,
+	INT32 MatchFormatRequested,
+	UINT32 PeriodRequestPriority,
+	HEXINT32 StreamFlags,
+	UNICODESTRING EndpointId,
+	UNICODESTRING EndpointInstanceId,
+	INT64 RequestedBufferDuration,
+	INT64 RequestedPeriodicity,
+	HRESULT HResult,
+	HRESULT HResultMapped,
+	UNICODESTRING FormatType,
+	INT32 ConsecutiveFailures,
+	DOUBLE TimeToInitializeInSec
+	);
+
+CSpatialAudioRenderStreamBase::GetAllVolumes(
+	HEXINT64 this,
+	UINT32 channelCount,
+	HRESULT HResult
+	);
+
+CSpatialAudioRenderStreamBase::SetAllVolumes(
+	HEXINT64 this,
+	UINT32 channelCount,
+	HRESULT HResult
+	);
+
+CSpatialAudioRenderStreamBase::GetAudioSessionService(
+	HEXINT64 this,
+	HRESULT HResult
+	);
+
+CSpatialAudioRenderStreamBase::PolicyChanged(
+	HEXINT64 this,
+	HRESULT HResult
+	);
+
+CSpatialAudioRenderStreamBase::GetChannelCount(
+	HEXINT64 this,
+	HRESULT HResult
+	);
+
+CSpatialAudioRenderStreamBase::GetChannelVolume(
+	HEXINT64 this,
+	UINT32 channelIndex,
+	HRESULT HResult
+	);
+
+CSpatialAudioRenderStreamBase::SetChannelVolume(
+	HEXINT64 this,
+	UINT32 channelIndex,
+	HRESULT HResult
+	);
+
+CSpatialAudioRenderStreamBase::GetOutputTrustAuthorityCount(
+	HEXINT64 this,
+	HRESULT HResult
+	);
+
+CSpatialAudioRenderStreamBase::GetOutputTrustAuthorityByIndex(
+	HEXINT64 this,
+	HRESULT HResult
+	);
+
+CSpatialAudioRenderStreamBase::IsFinal(
+	HEXINT64 this,
+	HRESULT HResult
+	);
+
+CSpatialAudioRenderStream_TraceMessage_Resumption_Notification(
+	ANSISTRING Func,
+	INT32 LineNum,
+	HEXINT64 Context
+	);
+
+CSpatialAudioRenderStream_TraceMessage_Context_nullptr(
+	ANSISTRING Func,
+	INT32 LineNum
+	);
+
+CSpatialAudioRenderStreamBase::ReleaseServerResource(
+	HEXINT64 this,
+	INT64 streamId,
+	HRESULT hrDisconnect
+	);
+
+SpatialAudioStream_AudioStreamDisconnectionRequestCallback(
+	HEXINT64 this,
+	INT64 streamId,
+	HRESULT hrDisconnect
+	);
+
+SpatialAudioStream_OnAudioStreamDisconnectionRequest(
+	HEXINT64 this,
+	INT64 streamId,
+	HRESULT hrDisconnect
+	);
+
+CSpatialAudioRenderStream_TraceMessage_Error_Remote_Disconnect_Request(
+	ANSISTRING Func,
+	INT32 LineNum,
+	INT64 StreamIdentifier,
+	HEXINT64 this,
+	HRESULT hresult
+	);
+
+CSpatialAudioRenderStream_TraceMessage_Suspend_Notification(
+	ANSISTRING Func,
+	INT32 LineNum,
+	HEXINT64 Context
+	);
+
+SpatialAudioStream_OnSpatialResourceChange(
+	HEXINT64 this,
+	UNICODESTRING sessionId,
+	INT64 streamID,
+	UINT32 SpatializationMode,
+	UINT32 AvailableObjectCount,
+	UINT64 ComplianceDeadline
+	);
+
+SpatialAudioStream_OnAudioSessionDisconnect(
+	HEXINT64 this,
+	UNICODESTRING sessionId,
+	UINT32 disconnectReason,
+	INT64 streamId,
+	HRESULT hrDisconnect
+	);
+
+SpatialAudioStream_GetService(
+	HEXINT64 this,
+	GUID riid,
+	HEXINT64 ppv,
+	HEXINT64 pv,
+	HRESULT HResult
+	);
+
+CSpatialAudioRenderStreamBase::SetEventHandle(
+	HEXINT64 this,
+	HEXINT64 eventHandle,
+	HRESULT HResult
+	);
+
+FunctionEnd(
+	ANSISTRING Func
+	);
+
+FunctionEndWithHResult(
+	ANSISTRING Func,
+	HRESULT HResult
+	);
+
+SpatialAudioStream_InitializeInternal(
+	UNICODESTRING EndpointId,
+	UNICODESTRING EndpointInstanceId,
+	GUID clsidEndpoint,
+	BOOL32 bBypassCrossprocessEndpoint,
+	INT64 InternalStreamIdentifier,
+	UINT32 StaticObjectCount,
+	HEXINT32 StaticObjectChannelMask,
+	UINT32 MinDynamicObjectCount,
+	UINT32 MaxDynamicObjectCount,
+	BOOL32 IsHolographicDisplayAvailable,
+	UINT32 PriorityDynamicObjectCount,
+	UINT32 SpatialRenderingMode,
+	GUID SpatialAudioStreamGuid,
+	INT64 TimeToInitializeInSec,
+	HRESULT HResult,
+	HRESULT HResultMapped,
+	HRESULT DisconnectError
+	);
+
+FunctionStart(
+	ANSISTRING Func,
+	UINT32 LineNum
+	);
+
+CSpatialAudioRenderStreamBase::GetMixFormatInfo(
+	HEXINT64 this,
+	UINT32 channelCount,
+	HRESULT HResult
+	);
+
+CSpatialAudioRenderStreamBase::GetDevicePeriod(
+	HEXINT64 this,
+	HEXINT64 phnsDefaultDevicePeriod,
+	HEXINT64 phnsMinimumDevicePeriod,
+	INT64 hnsLogDefault,
+	INT64 hnsLogMinimum,
+	HRESULT HResult
+	);
+
+CSpatialAudioClientNotificationDelegator::AddRef(
+	HEXINT64 this,
+	UINT32 RefCount
+	);
+
+CSpatialAudioClientNotificationDelegator::Release(
+	HEXINT64 this,
+	UINT32 RefCount
+	);
+
+CSpatialAudioClientNotificationDelegator::~CSpatialAudioClientNotificationDelegator(
+	HEXINT64 this
+	);
+
+CSpatialAudioClientNotificationDelegator::CSpatialAudioClientNotificationDelegator(
+	HEXINT64 this
+	);
+
+CSpatialAudioRenderStreamBase::Reset(
+	HEXINT64 this,
+	HRESULT HResult
+	);
+
+CSpatialAudioRenderStreamBase::Start(
+	HEXINT64 this,
+	HRESULT HResult
+	);
+
+CSpatialAudioRenderStreamBase::Stop(
+	HEXINT64 this,
+	HRESULT HResult
+	);
+
+CSpatialAudioClientClock::GetDevicePosition(
+	HEXINT64 this,
+	HEXINT64 DevicePosition,
+	UINT64 logPosition,
+	HEXINT64 QPCPosition,
+	UINT64 logQPCPosition,
+	HRESULT HResult
+	);
+
+CSpatialAudioClientClock::GetCharacteristics(
+	HEXINT64 this,
+	HEXINT64 pdwCharacteristics,
+	UINT32 logCharacteristics,
+	HRESULT HResult
+	);
+
+CSpatialAudioClientClock::GetFrequency(
+	HEXINT64 this,
+	HEXINT64 pu64Frequency,
+	UINT64 logFrequency,
+	HRESULT HResult
+	);
+
+CSpatialAudioClientClock::GetPosition(
+	HEXINT64 this,
+	UINT64 Position,
+	UINT64 QPCPosition,
+	HRESULT HResult
+	);
+
+AtmosLicenseCheckInfo(
+	ANSISTRING Msg
+	);
+
+AtmosLicenseCheck(
+	INT32 TelemetryVersion,
+	GUID ContextId,
+	HRESULT DDPlusDecEnabled,
+	HRESULT MatEncEnabled,
+	HRESULT DolbyHeadphonesEncEnabled,
+	HRESULT DolbySpeakersEncEnabled,
+	HRESULT DtsxHeadphonesEncEnabled,
+	HRESULT DtsxSpeakersEncEnabled,
+	ANSISTRING LicenseEvaluation,
+	HRESULT ErrorCode
+	);
+
+AtmosLicenseCheck(
+	INT32 TelemetryVersion,
+	GUID ContextId,
+	HRESULT DDPlusDecEnabled,
+	HRESULT MatEncEnabled,
+	HRESULT DolbyHeadphonesEncEnabled,
+	HRESULT DolbySpeakersEncEnabled,
+	HRESULT DtsxHeadphonesEncEnabled,
+	HRESULT DtsxSpeakersEncEnabled,
+	ANSISTRING LicenseEvaluation,
+	HRESULT ErrorCode
+	);
+
+AtmosLicenseCheckError(
+	ANSISTRING Msg,
+	HRESULT ErrorCode
+	);
+
+AtmosLicenseCheck::GetLicenseStatus(
+	UNICODESTRING spatialAudioSubtype,
+	HRESULT hr,
+	BOOLEAN isValid,
+	BOOLEAN isRendererCapable
+	);
+
+AtmosLicenseCheck::GetLicenseStatus called, but not in AppService mode.(
+	VOID
+	);
+
+AtmosLicenseCheck::RefreshSpatialAudioLicenseModelState(
+	BOOLEAN _fUseAppService
+	);
+
+AtmosLicenseCheck: Failed to get Default Device ID(
+	HRESULT hr
+	);
+

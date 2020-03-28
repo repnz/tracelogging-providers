@@ -1,0 +1,146 @@
+ProviderNames:
+	Microsoft.Windows.EnterpriseModernAppManagement
+	TelemetryAssert
+	TelemetryAssertDiagTrack
+
+
+
+**** Events *****
+CSP_IMPERSONATION_REVERT_ERROR(
+	HRESULT HR
+	);
+
+CSP_APP_INFO_ERROR(
+	UNICODESTRING AppId,
+	UNICODESTRING AppInfoField,
+	HRESULT HR
+	);
+
+CSPNodeGetValue(
+	HRESULT HR,
+	UNICODESTRING FullUriPath,
+	UNICODESTRING CSPNamespace,
+	UNICODESTRING TargetedUserSidName
+	);
+
+CSPNodeExecute_Stop(
+	HRESULT HR,
+	UNICODESTRING Data
+	);
+
+CSPNodeSetValue_Stop(
+	HRESULT HR,
+	UNICODESTRING Data
+	);
+
+CSPNodeGetValue_Stop(
+	HRESULT HR,
+	UNICODESTRING Data
+	);
+
+CSPNodeGetValue_Stop(
+	HRESULT HR,
+	INT32 Data
+	);
+
+CSPNodeGetChildNodeNames_Stop(
+	HRESULT HR,
+	UNICODESTRING Data
+	);
+
+CSPNodeDeleteChild_Stop(
+	HRESULT HR,
+	UNICODESTRING Data
+	);
+
+CSPNodeAdd_Stop(
+	HRESULT HR,
+	UNICODESTRING Data
+	);
+
+CSPNodeExecute_Start(
+	UNICODESTRING Data,
+	UNICODESTRING FullUriPath,
+	UNICODESTRING CSPNamespace,
+	UNICODESTRING TargetedUserSidName
+	);
+
+CSPNodeSetValue_Start(
+	UNICODESTRING Data,
+	UNICODESTRING FullUriPath,
+	UNICODESTRING CSPNamespace,
+	UNICODESTRING TargetedUserSidName
+	);
+
+CSPNodeSetValue_Start(
+	INT32 Data,
+	UNICODESTRING FullUriPath,
+	UNICODESTRING CSPNamespace,
+	UNICODESTRING TargetedUserSidName
+	);
+
+CSPNodeGetValue_Start(
+	UNICODESTRING Data,
+	UNICODESTRING FullUriPath,
+	UNICODESTRING CSPNamespace,
+	UNICODESTRING TargetedUserSidName
+	);
+
+CSPNodeGetChildNodeNames_Start(
+	UNICODESTRING Data,
+	UNICODESTRING FullUriPath,
+	UNICODESTRING CSPNamespace,
+	UNICODESTRING TargetedUserSidName
+	);
+
+CSPNodeDeleteChild_Start(
+	UNICODESTRING Data,
+	UNICODESTRING FullUriPath,
+	UNICODESTRING CSPNamespace,
+	UNICODESTRING TargetedUserSidName
+	);
+
+CSPNodeAdd_Start(
+	UNICODESTRING Data,
+	UNICODESTRING FullUriPath,
+	UNICODESTRING CSPNamespace,
+	UNICODESTRING TargetedUserSidName
+	);
+
+CSPNodeAdd_Start(
+	INT32 Data,
+	UNICODESTRING FullUriPath,
+	UNICODESTRING CSPNamespace,
+	UNICODESTRING TargetedUserSidName
+	);
+
+ActivityStoppedAutomatically(
+	VOID
+	);
+
+CSPAppInstallResult(
+	HEX PartB_Ms.Telemetry.Error,
+	HRESULT ErrorCode,
+	ANSISTRING ErrorLocation,
+	UINT32 LineNumber,
+	ANSISTRING ErrorMethod,
+	UNICODESTRING PackageFamilyName,
+	UNICODESTRING ProductId,
+	UNICODESTRING Sku,
+	UNICODESTRING DmEnrollmentId,
+	UINT32 Flags,
+	BOOL32 DeviceInstall
+	);
+
+Assert(
+	UINT32 assertVersion,
+	UINT32 rva,
+	UINT32 timestamp,
+	UINT32 imageSize,
+	ANSISTRING imageName,
+	UINT32 count,
+	UINT32 totalHits,
+	UINT32 ModuleCollection,
+	UINT32 GlobalCollection
+	);
+

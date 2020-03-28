@@ -1,0 +1,90 @@
+ProviderNames:
+	Microsoft.Windows.Networking.NetCfgExe
+
+
+
+**** Events *****
+Argument(
+	STRING Name,
+	UNICODESTRING Value
+	);
+
+GetINetCfgResult(
+	HRESULT hr
+	);
+
+GetINetCfg(
+	BOOL32 GetWriteLock
+	);
+
+INetCfgClassSetup::DeInstallResult(
+	UNICODESTRING Identifier,
+	GUID SetupClass,
+	HRESULT hr
+	);
+
+INetCfgClassSetup::DeInstall(
+	UNICODESTRING Identifier,
+	GUID SetupClass
+	);
+
+UninstallNetComponentResult(
+	UNICODESTRING Identifier,
+	HRESULT hr
+	);
+
+INetCfg::ApplyResult(
+	UNICODESTRING IdentifierResult
+	);
+
+INetCfg::Apply(
+	UNICODESTRING Identifier
+	);
+
+UninstallNetComponent(
+	UNICODESTRING Identifier
+	);
+
+INetCfgClassSetup::InstallResult(
+	UNICODESTRING Identifier,
+	GUID SetupClass,
+	HRESULT hr
+	);
+
+INetCfgClassSetup::Install(
+	UNICODESTRING Identifier,
+	GUID SetupClass
+	);
+
+InstallNetComponentResult(
+	UNICODESTRING Identifier,
+	UINT32 NetClass,
+	UNICODESTRING InfPath,
+	HRESULT hr
+	);
+
+INetCfg::ApplyResult(
+	UNICODESTRING Identifier,
+	HRESULT hr
+	);
+
+CopyOEMInfFailed(
+	UNICODESTRING InfPath,
+	HRESULT hr
+	);
+
+CopyOEMInfSucceeded(
+	UNICODESTRING InfPath,
+	UNICODESTRING InfPathCopy
+	);
+
+CopyOEMInf(
+	UNICODESTRING InfPath
+	);
+
+InstallNetComponent(
+	UNICODESTRING Identifier,
+	UINT32 NetClass,
+	UNICODESTRING InfPath
+	);
+

@@ -1,0 +1,212 @@
+ProviderNames:
+	Microsoft.Windows.Cellcore.Cellularapinew
+	TextInput
+	TelemetryAssert
+	TelemetryAssertDiagTrack
+
+
+
+**** Events *****
+CallHandover(
+	UINT32 callId,
+	UINT32 oldCallType,
+	UINT32 newCallType,
+	UINT32 handoverPhase,
+	UINT32 3gppCause
+	);
+
+SetAirplaneModeState(
+	UINT32 phase,
+	UINT32 state,
+	HRESULT hrStatus
+	);
+
+ImsHandoverAttempt(
+	UINT32 OldSystemType,
+	UINT32 NewSystemType,
+	HRESULT HandOverResult
+	);
+
+ModemResetStarted(
+	ANSISTRING ModemInterface,
+	GUID ModemId
+	);
+
+ReceiveMessageInfo(
+	UINT32 messageType,
+	SYSTEMTIME messageReceiveTime,
+	UINT32 messageFormat,
+	UINT32 messageEncoding,
+	UINT32 channelNumber,
+	UINT32 messageCode,
+	UINT32 broadcastType,
+	UINT32 geoScope,
+	UINT32 emergencyAlert,
+	UINT32 messagePopUp
+	);
+
+ReceiveMessageInfo(
+	UINT32 messageType,
+	SYSTEMTIME messageReceiveTime,
+	UINT32 messageFormat,
+	UINT32 messageEncoding,
+	UINT32 numMessages,
+	BOOL32 discardOption
+	);
+
+ReceiveMessageInfo(
+	UINT32 messageType,
+	SYSTEMTIME messageReceiveTime,
+	UINT32 messageFormat,
+	UINT32 messageEncoding,
+	UINT32 messageId
+	);
+
+ReceiveMessageInfo(
+	UINT32 messageType,
+	SYSTEMTIME messageReceiveTime,
+	UINT32 messageFormat,
+	UINT32 messageEncoding,
+	UINT32 messageTeleService,
+	UINT32 messageProtocol,
+	UINT32 messageClass,
+	UINT32 messagePort
+	);
+
+ReceiveMessageInfo(
+	UINT32 messageType,
+	SYSTEMTIME messageReceiveTime,
+	UINT32 messageFormat,
+	UINT32 messageEncoding,
+	UINT32 messageId,
+	UINT32 messageTeleService,
+	UINT32 messageProtocol
+	);
+
+SendActivityStop(
+	UNICODESTRING L"SendActivity Ends"
+	);
+
+SendMessage(
+	HRESULT sendMessageResult,
+	UINT32 errorCode,
+	UINT32 extendedErrorInfo,
+	UINT32 messageIdsSize,
+	UINT32 smsErrorType,
+	UINT32 smsFriendlyErrorClass,
+	UINT32 smsNetworkType,
+	UINT32 hrStatus,
+	UINT32 systemType,
+	UINT32 voiceDomain,
+	BOOL32 isImsCapable
+	);
+
+SendMessageTextProviderNull(
+	HRESULT sendMessageResult,
+	UINT32 errorCode,
+	UINT32 extendedErrorInfo,
+	UINT32 messageIdsSize,
+	UINT32 smsErrorType,
+	UINT32 smsFriendlyErrorClass,
+	UINT32 smsNetworkType
+	);
+
+SendActivityStart(
+	UNICODESTRING L"SendActivity Begins"
+	);
+
+SendNotification(
+	HRESULT notificationHrStatus,
+	UINT32 notificationErrorType,
+	UINT32 notificationFriendlyErrorClass,
+	UINT32 notificationErrorCode,
+	UINT32 notificationErrorExtendedInfo
+	);
+
+ReceiveMessageInfo(
+	UINT32 messageType,
+	SYSTEMTIME messageReceiveTime,
+	UINT32 messageFormat,
+	UINT32 messageEncoding,
+	UINT32 messageId,
+	UINT32 messageProtocol,
+	UINT32 messageTeleService,
+	UINT32 messageClass,
+	UINT32 replaceOption
+	);
+
+ReceiveDeliverStoreMessage(
+	HRESULT dlvrResult,
+	BOOL32 isGetStoreSuccess,
+	BOOL32 isReadyMessageCountNz,
+	BOOL32 isProcessMessageCalled
+	);
+
+ReceiveActivityStop(
+	UNICODESTRING L"ReceiveActivity Ends"
+	);
+
+ReceiveMessageNotification(
+	HRESULT result,
+	UINT32 messageAckID,
+	UINT32 messageAckStatus,
+	BOOL32 isMessageNull,
+	BOOL32 isMessageRecognized,
+	BOOL32 IsDlvrStoreCalled,
+	BOOL32 isMessageClassZero
+	);
+
+ReceiveMessageNotification(
+	HRESULT result,
+	UINT32 messageAckID,
+	UINT32 messageAckStatus,
+	BOOL32 isMessageNull,
+	BOOL32 isMessageRecognized,
+	BOOL32 IsDlvrStoreCalled,
+	BOOL32 isMessageClassZero,
+	BOOL32 isSmsHandledAckOnly,
+	UINT32 smsFragmentTotalParts,
+	UINT32 smsFragmentPartIndex,
+	UINT32 cbMessageUID,
+	UINT32 messageHashId,
+	UINT32 rilMessageType,
+	UINT32 rilMessageFlags,
+	UINT32 rilMessageParams
+	);
+
+ReceiveActivityStart(
+	UNICODESTRING L"ReceiveActivity Begins"
+	);
+
+ReceiveMessageDelivered(
+	BOOL32 isMessageDelivered
+	);
+
+ReceiveProviderProcessMessage(
+	HRESULT procMessageHResult,
+	INT32 procRilMessageCount,
+	ANSISTRING procMessageType,
+	UINT32 procMessageAckID
+	);
+
+ReceiveSetSmscCalled(
+	INT64 setSmscContext,
+	BOOL32 isSmscAddressNull
+	);
+
+ActivityStoppedAutomatically(
+	VOID
+	);
+
+Assert(
+	UINT32 assertVersion,
+	UINT32 rva,
+	UINT32 timestamp,
+	UINT32 imageSize,
+	ANSISTRING imageName,
+	UINT32 count,
+	UINT32 totalHits,
+	UINT32 ModuleCollection,
+	UINT32 GlobalCollection
+	);
+

@@ -1,0 +1,39 @@
+ProviderNames:
+	Microsoft.Windows.LicenseManager.Telemetry
+
+
+
+**** Events *****
+PackageRundownNotificationForStoreLicense(
+	UNICODESTRING PackageFullName,
+	HEXINT32 SessionID,
+	HEXINT32 ResultCode
+	);
+
+PackageSuspendedNotificationForStoreLicense(
+	UNICODESTRING PackageFullName,
+	HEXINT32 SessionID,
+	HEXINT32 ResultCode
+	);
+
+EnsureStoreLicenseForPackageActivation(
+	UNICODESTRING PackageFullName,
+	HEXINT32 SessionID,
+	INT64 Latency,
+	HEXINT32 ResultCode
+	);
+
+PrecacheStoreLicenseForPackageResume(
+	UNICODESTRING PackageFullName,
+	HEXINT32 SessionID,
+	INT64 Latency,
+	HEXINT32 ResultCode
+	);
+
+BeginAcquireStoreLicenseForPackageActivation(
+	UNICODESTRING PackageFullName,
+	HEXINT32 StorePackageActivationOptions,
+	HEXINT64 UserContext,
+	HEXINT32 ResultCode
+	);
+

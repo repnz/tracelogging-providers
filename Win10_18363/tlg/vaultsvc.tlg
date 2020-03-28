@@ -1,0 +1,32 @@
+ProviderNames:
+	Microsoft.Windows.Security.Credlocker.Critical
+	Microsoft.Windows.Security.Credlocker
+
+
+
+**** Events *****
+CredLockerDPAPICorruption(
+	UNICODESTRING userAccountType,
+	UINT32 reinitBuiltinVault
+	);
+
+RoamingCredentialDeletion(
+	UNICODESTRING id
+	);
+
+CredentialCreation(
+	UNICODESTRING appName,
+	UNICODESTRING serviceName,
+	UNICODESTRING userAccountType
+	);
+
+CredentialAdditionWithImmediateSync(
+	UNICODESTRING userAccountType
+	);
+
+CredentialDeletion(
+	UNICODESTRING id,
+	UNICODESTRING appName,
+	UNICODESTRING serviceName
+	);
+

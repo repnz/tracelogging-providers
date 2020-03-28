@@ -1,0 +1,1444 @@
+ProviderNames:
+	Microsoft.OSG.OSS.CredProvFramework
+	TelemetryAssert
+	TelemetryAssertDiagTrack
+	Microsoft.Windows.Security.CandidateAccountManagerPolicy
+
+
+
+**** Events *****
+LsaOpenLocalSystemPolicy(
+	ANSISTRING EventLevel,
+	ANSISTRING Invoke,
+	NTSTATUS ResultCode
+	);
+
+CCredentialProviderFramework::_SetGreetingTime(
+	ANSISTRING EventLevel,
+	ANSISTRING Invoke,
+	UNICODESTRING path,
+	HRESULT ResultCode
+	);
+
+CCredentialProviderFramework::_GetGreetingTime(
+	ANSISTRING EventLevel,
+	ANSISTRING Invoke,
+	UNICODESTRING path,
+	HRESULT ResultCode
+	);
+
+CCredentialProviderFramework::_GetGreetingRegkeyPath(
+	ANSISTRING EventLevel,
+	ANSISTRING Invoke,
+	HRESULT ResultCode
+	);
+
+CCredentialProviderFramework::OnThreadInitComplete(
+	ANSISTRING EventLevel,
+	ANSISTRING Invoke,
+	HEXINT32 InitState,
+	HRESULT ResultCode
+	);
+
+CCredentialProviderFramework::Shutdown(
+	ANSISTRING EventLevel,
+	ANSISTRING Invoke,
+	HEXINT32 InitState
+	);
+
+CCredentialProviderFramework::InitializeAsync(
+	ANSISTRING EventLevel,
+	ANSISTRING Invoke,
+	HRESULT ResultCode
+	);
+
+CLogonStatusHelper::GetLogonStatusString(
+	ANSISTRING EventLevel,
+	ANSISTRING Invoke,
+	UNICODESTRING LogonStatusString,
+	HRESULT ResultCode
+	);
+
+ActivityStoppedAutomatically(
+	VOID
+	);
+
+CCredentialProviderThread::NotifySelectionChange(
+	ANSISTRING EventLevel,
+	ANSISTRING Invoke,
+	GUID ProviderId,
+	HRESULT ResultCode
+	);
+
+CredProvFrameworkThreadStop(
+	INT32 ReturnCode,
+	INT32 ReleaseThread,
+	UINT32 UserTag,
+	UINT32 SessionId,
+	INT32 IsRemoteSession,
+	UNICODESTRING ProcessImage
+	);
+
+CCredentialProviderThread::_vThreadProc(
+	ANSISTRING EventLevel,
+	ANSISTRING Invoke,
+	UINT32 WaitCode,
+	WIN32ERROR LastErrorCode
+	);
+
+CCredentialProviderThread::_vThreadProc(
+	ANSISTRING EventLevel,
+	ANSISTRING Invoke,
+	WIN32ERROR ReturnCode
+	);
+
+CredProvFrameworkThreadStart(
+	VOID
+	);
+
+CCredentialProviderThread::_sThreadProc(
+	ANSISTRING EventLevel,
+	ANSISTRING Invoke
+	);
+
+CCredentialProviderThread::_sThreadProc(
+	ANSISTRING EventLevel,
+	ANSISTRING Invoke,
+	INT32 ResultCode
+	);
+
+CCredentialProviderThread::_CreateCredentialProviders(
+	ANSISTRING EventLevel,
+	ANSISTRING Invoke,
+	HRESULT ResultCode
+	);
+
+CCredentialProviderThread::_CreateCredentialProvidersFromRegKey(
+	ANSISTRING EventLevel,
+	ANSISTRING Invoke,
+	GUID ProviderCLSID,
+	HRESULT ResultCode
+	);
+
+CCredentialProviderThread::_CreateCredentialProvidersFromRegKey(
+	ANSISTRING EventLevel,
+	ANSISTRING Invoke,
+	GUID ProviderCLSID
+	);
+
+CCredentialProviderThread::_CreateCredentialProvidersFromRegKey(
+	ANSISTRING EventLevel,
+	ANSISTRING Invoke,
+	UNICODESTRING CredentialProviderRegKey,
+	BOOLEAN FallbackFlag
+	);
+
+CCredentialProviderThread::_WaitUntilThreadTerminates(
+	ANSISTRING EventLevel,
+	ANSISTRING Invoke,
+	UINT32 dwIndex,
+	HRESULT ResultCode
+	);
+
+CCredentialProviderThread::ReleaseThread(
+	ANSISTRING EventLevel,
+	ANSISTRING Invoke,
+	HRESULT ResultCode
+	);
+
+CCredentialProviderThread::ReleaseThread(
+	ANSISTRING EventLevel,
+	ANSISTRING Invoke
+	);
+
+CCredentialProviderThread::CreateThread(
+	ANSISTRING EventLevel,
+	ANSISTRING Invoke,
+	HRESULT ResultCode
+	);
+
+CCredentialProviderThread::~CCredentialProviderThread(
+	ANSISTRING EventLevel,
+	ANSISTRING Invoke
+	);
+
+ActivityStoppedAutomatically(
+	VOID
+	);
+
+ActivityStoppedAutomatically(
+	VOID
+	);
+
+CSetUserSuggestionJob::Do(
+	ANSISTRING EventLevel,
+	ANSISTRING Invoke,
+	HRESULT ResultCode
+	);
+
+CWebDialogVisibilityChangeJob::Do(
+	ANSISTRING EventLevel,
+	ANSISTRING Invoke,
+	HRESULT ResultCode
+	);
+
+CRequestSerializationJob::Do(
+	ANSISTRING EventLevel,
+	ANSISTRING Invoke,
+	HRESULT ResultCode
+	);
+
+CCredentialProviderSetProviderGroupJob::Do(
+	ANSISTRING EventLevel,
+	ANSISTRING Invoke
+	);
+
+CCredentialProviderSetProviderGroupJob::Do(
+	ANSISTRING EventLevel,
+	ANSISTRING Invoke,
+	GUID clsidProvider,
+	INT32 isVisible
+	);
+
+CCredentialProviderRequestSignInUXJob::Do(
+	ANSISTRING EventLevel,
+	ANSISTRING Invoke,
+	HRESULT ResultCode
+	);
+
+CCredentialProviderRequestOptionExpansionJob::Do(
+	ANSISTRING EventLevel,
+	ANSISTRING Invoke,
+	HRESULT ResultCode
+	);
+
+CCredentialProviderRequestLockScreenDismissJob::Do(
+	ANSISTRING EventLevel,
+	ANSISTRING Invoke,
+	HRESULT ResultCode
+	);
+
+CCredentialProviderRequestVisibilityChangeJob::Do(
+	ANSISTRING EventLevel,
+	ANSISTRING Invoke,
+	GUID ProviderCLSID,
+	HRESULT ResultCode
+	);
+
+CCredentialProviderRequestVisibilityChangeJob::Do(
+	ANSISTRING EventLevel,
+	ANSISTRING Invoke,
+	GUID ProviderCLSID
+	);
+
+CCredentialProviderBioEventsJob::EvaluateJobPriority(
+	ANSISTRING EventLevel,
+	ANSISTRING Invoke,
+	HRESULT ResultCode,
+	HEXINT32 NewFeedbackPriority,
+	HEXINT32 NewVisualState,
+	HEXINT32 CurrentFeedbackPriority,
+	HEXINT32 NewFeedbackPriority,
+	HEXINT32 NewAdviseContext,
+	HEXINT32 CurrentAdviseContext,
+	DOUBLE DecayPeriod
+	);
+
+CCredentialProviderBioEventsJob::Do(
+	ANSISTRING EventLevel,
+	ANSISTRING Invoke,
+	HRESULT ResultCode,
+	HEXINT32 VisualState,
+	UNICODESTRING Label
+	);
+
+CSetDisplayStateJob::Do(
+	ANSISTRING EventLevel,
+	ANSISTRING Invoke,
+	HRESULT ResultCode,
+	HEXINT32 CurrentState
+	);
+
+CSetDisplayStateJob::Do(
+	ANSISTRING EventLevel,
+	ANSISTRING Invoke,
+	HRESULT ResultCode,
+	HEXINT32 CurrentState
+	);
+
+CDisconnectCredentialsJob::Do(
+	ANSISTRING EventLevel,
+	ANSISTRING Invoke,
+	UINT32 CredentialId,
+	HRESULT ResultCode
+	);
+
+ReportResultStop(
+	UNICODESTRING OpitonalStatusText,
+	INT32 ProviderStatusIcon,
+	INT32 Status,
+	INT32 SubStatus,
+	GUID ProviderId,
+	INT32 ReturnCode,
+	INT32 IsConnectedUser,
+	INT32 IsV2CredProv,
+	INT32 IsPLAPTile,
+	GUID CredTileProviderId,
+	UINT32 UserTag,
+	UINT32 SessionId,
+	INT32 IsRemoteSession,
+	UNICODESTRING ProcessImage
+	);
+
+CReportResultJob::Do(
+	ANSISTRING EventLevel,
+	ANSISTRING Invoke,
+	UINT32 CredentialId,
+	NTSTATUS NtStatus,
+	NTSTATUS NtSubstatus,
+	HRESULT ResultCode
+	);
+
+ReportResultStart(
+	VOID
+	);
+
+_JobContextProviderDataFromCredentialData(
+	ANSISTRING EventLevel,
+	ANSISTRING Invoke,
+	UINT64 NumOfProviders,
+	UINT32 CredentialId,
+	HRESULT ResultCode
+	);
+
+PicturePasswordGetSerialization(
+	GUID ProviderId,
+	INT32 ReturnCode,
+	INT32 IsConnectedUser,
+	INT32 IsV2CredProv,
+	INT32 IsPLAPTile,
+	GUID CredTileProviderId,
+	UINT32 UserTag,
+	UINT32 SessionId,
+	INT32 IsRemoteSession,
+	UNICODESTRING ProcessImage
+	);
+
+PicturePasswordGetSerialization(
+	VOID
+	);
+
+CGetSerializationJob::AdjustVisibility(
+	ANSISTRING EventLevel,
+	ANSISTRING Invoke
+	);
+
+CGetSerializationJob::AdjustVisibility(
+	ANSISTRING EventLevel,
+	ANSISTRING Invoke,
+	GUID clsidProvider,
+	INT32 isVisible
+	);
+
+GetSerializationStop(
+	INT32 ProviderGetSerializationResponse,
+	INT32 ProviderStatusIcon,
+	GUID ProviderId,
+	UINT32 NumberOfUserInputs,
+	INT32 ReturnCode,
+	INT32 IsConnectedUser,
+	INT32 IsV2CredProv,
+	INT32 IsPLAPTile,
+	GUID CredTileProviderId,
+	UINT32 AuthenticationPackage,
+	GUID CredSerializeProviderId,
+	UINT32 UserTag,
+	UINT32 SessionId,
+	INT32 IsRemoteSession,
+	UNICODESTRING ProcessImage
+	);
+
+CGetSerializationJob::Do(
+	ANSISTRING EventLevel,
+	ANSISTRING Invoke,
+	GUID clsidProviderToSelect,
+	UNICODESTRING spszUserSid,
+	HEXINT32 NewCredentialProviderGetSerializationResponse,
+	HRESULT ResultCode
+	);
+
+CGetSerializationJob::Do(
+	ANSISTRING EventLevel,
+	ANSISTRING Invoke,
+	GUID ProviderCLSID,
+	UINT32 CredentialId,
+	HEXINT32 CredentialProviderGetSerializationResponse,
+	HRESULT ResultCode
+	);
+
+GetSerializationStart(
+	VOID
+	);
+
+_TryConnectCredential(
+	ANSISTRING EventLevel,
+	ANSISTRING Invoke,
+	UINT32 CredentialId,
+	BOOL32 ConnectSucceeded,
+	HRESULT ResultCode
+	);
+
+SelectCredentialStop(
+	UINT32 TileSelectionFlags,
+	UINT32 TileSelectionReplyFlags,
+	BOOLEAN WasSelected,
+	INT32 AutoSubmit,
+	GUID ProviderId,
+	INT32 ReturnCode,
+	INT32 IsConnectedUser,
+	INT32 IsV2CredProv,
+	INT32 IsPLAPTile,
+	GUID CredTileProviderId,
+	UINT32 UserTag,
+	UINT32 SessionId,
+	INT32 IsRemoteSession,
+	UNICODESTRING ProcessImage
+	);
+
+CSelectCredentialJob::Do(
+	ANSISTRING EventLevel,
+	ANSISTRING Invoke,
+	HEXINT32 TileSelectionFlags,
+	HEXINT32 TileSelectionReplyFlags
+	);
+
+CSelectCredentialJob::Do(
+	ANSISTRING EventLevel,
+	ANSISTRING Invoke,
+	GUID ProviderCLSID,
+	HEXINT32 TileSelectionFlags,
+	HEXINT32 TileSelectionReplyFlags
+	);
+
+CSelectCredentialJob::Do(
+	ANSISTRING EventLevel,
+	ANSISTRING Invoke,
+	GUID ProviderCLSID,
+	UINT32 CredentialId,
+	HRESULT ResultCode
+	);
+
+SelectCredentialStart(
+	VOID
+	);
+
+AdviseCredentialStop(
+	BOOL32 Advise,
+	HRESULT ResultCode
+	);
+
+AdviseCredentialStart(
+	VOID
+	);
+
+_JobContextFindCredentialDataFail(
+	ANSISTRING EventLevel,
+	ANSISTRING Invoke,
+	UINT64 NumOfProviders,
+	UINT32 ProviderId,
+	UINT32 CredentialId,
+	HRESULT ResultCode
+	);
+
+CGetEnumeratedTilesJob::Do(
+	ANSISTRING EventLevel,
+	ANSISTRING Invoke,
+	UINT32 ProviderID
+	);
+
+EnumerateTilesStop(
+	GUID ProviderId,
+	UINT32 NumberOfCredentials,
+	INT32 ReturnCode,
+	INT32 IsConnectedUser,
+	INT32 IsV2CredProv,
+	INT32 IsPLAPTile,
+	GUID CredTileProviderId,
+	UINT32 UserTag,
+	UINT32 SessionId,
+	INT32 IsRemoteSession,
+	UNICODESTRING ProcessImage
+	);
+
+EnumerateTilesStart(
+	VOID
+	);
+
+_JobContextFindProviderData(
+	ANSISTRING EventLevel,
+	ANSISTRING Invoke,
+	UINT64 NumOfProviders,
+	UINT32 ProviderId,
+	HRESULT ResultCode
+	);
+
+CEnumerateAllCredentialsJob::Do(
+	ANSISTRING EventLevel,
+	ANSISTRING Invoke,
+	UINT32 ProviderID
+	);
+
+CEnumerateAllCredentialsJob::Do(
+	ANSISTRING EventLevel,
+	ANSISTRING Invoke,
+	GUID LastLoggedOnProviderId,
+	UNICODESTRING SupportProviders,
+	UINT64 NumberOfSupportProviders,
+	UINT64 NumberOfProviders
+	);
+
+EnumerateCredentialsStop(
+	GUID LastLoggedOnProviderId,
+	UNICODESTRING SupportProviders,
+	UINT64 NumberOfSupportProviders,
+	UINT64 NumberOfProviders,
+	INT32 IsAutoLogon,
+	INT32 IsConnectedUser,
+	INT32 IsV2CredProv,
+	INT32 IsPLAPTile,
+	GUID CredTileProviderId,
+	UINT32 UserTag,
+	UINT32 SessionId,
+	INT32 IsRemoteSession,
+	UNICODESTRING ProcessImage
+	);
+
+EnumerateCredentialsStart(
+	VOID
+	);
+
+_GetLastLoggedOnProvider(
+	ANSISTRING EventLevel,
+	ANSISTRING Invoke,
+	HRESULT ResultCode
+	);
+
+_GetLastLoggedOnProvider(
+	ANSISTRING EventLevel,
+	ANSISTRING Invoke,
+	GUID ProviderCLSID
+	);
+
+_GetTileData(
+	ANSISTRING EventLevel,
+	ANSISTRING Invoke,
+	GUID ProviderCLSID,
+	UINT32 CredentialIndex,
+	UINT32 NumOfCredentials,
+	UNICODESTRING UserSid
+	);
+
+_GetTileData(
+	ANSISTRING EventLevel,
+	ANSISTRING Invoke,
+	GUID ProviderCLSID,
+	UINT32 CredentialIndex,
+	UINT32 NumOfCredentials,
+	UINT32 NumOfFields,
+	HRESULT ResultCode
+	);
+
+_GetFieldDescriptors(
+	ANSISTRING EventLevel,
+	ANSISTRING Invoke,
+	HEXINT64 ProviderPointer,
+	UINT32 FieldIndex,
+	UINT32 NumOfFields,
+	HRESULT ResultCode
+	);
+
+_GetFieldDescriptors(
+	ANSISTRING EventLevel,
+	ANSISTRING Invoke,
+	HEXINT64 ProviderPointer,
+	UINT32 NumOfFields,
+	HRESULT ResultCode
+	);
+
+_CreateEnumeratedCredentialDataForProvider(
+	ANSISTRING EventLevel,
+	ANSISTRING Invoke,
+	GUID ProviderCLSID,
+	UINT32 DefaultIndex,
+	BOOL32 IsAutoLogon,
+	HRESULT ResultCode
+	);
+
+_CreateEnumeratedCredentialDataForProvider(
+	ANSISTRING EventLevel,
+	ANSISTRING Invoke,
+	GUID ProviderCLSID,
+	UINT32 NumOfCredentials,
+	UINT32 DefaultIndex,
+	BOOL32 IsAutoLogon
+	);
+
+_CreateEnumeratedCredentialDataForProvider(
+	ANSISTRING EventLevel,
+	ANSISTRING Invoke,
+	GUID ProviderCLSID,
+	UINT32 NumOfCredentials,
+	UINT32 DefaultIndex,
+	BOOL32 IsAutoLogon,
+	HRESULT ResultCode,
+	UINT64 ExecutionTime
+	);
+
+CredProviderExecutionTime(
+	UNICODESTRING MethodName,
+	GUID ProviderCLSID,
+	UINT64 ExecutionTime,
+	HRESULT ResultCode
+	);
+
+_CreateAndAddCredentialDataAtIndexToProvider(
+	ANSISTRING EventLevel,
+	ANSISTRING Invoke,
+	GUID ProviderCLSID,
+	UINT32 CredentialIndex,
+	UINT32 CredentialId,
+	HRESULT ResultCode
+	);
+
+_CreateAndAddCredentialDataAtIndexToProvider(
+	ANSISTRING EventLevel,
+	ANSISTRING Invoke,
+	GUID ProviderCLSID,
+	UINT32 CredentialIndex,
+	HRESULT ResultCode,
+	UINT64 ExecutionTime
+	);
+
+ProviderCredentialsChangedStop(
+	HEXINT64 ProviderData
+	);
+
+CCredentialProviderEventsJob::Do(
+	ANSISTRING EventLevel,
+	ANSISTRING Invoke,
+	GUID ProviderCLSID,
+	UINT32 ProviderID,
+	UINT64 CurrentQueueSize
+	);
+
+CCredentialProviderEventsJob::Do(
+	ANSISTRING EventLevel,
+	ANSISTRING Invoke,
+	GUID ProviderCLSID
+	);
+
+ProviderCredentialsChangedStart(
+	VOID
+	);
+
+AdviseCredProvidersStop(
+	UINT64 NumberOfRegistedProviders,
+	BOOL32 Advise
+	);
+
+CAdviseCredProvsJob::Do(
+	ANSISTRING EventLevel,
+	ANSISTRING Invoke,
+	GUID ProviderCLSID,
+	HRESULT ResultCode
+	);
+
+CAdviseCredProvsJob::Do(
+	ANSISTRING EventLevel,
+	ANSISTRING Invoke,
+	GUID ProviderCLSID,
+	HRESULT ResultCode,
+	UINT64 ExecutionTime
+	);
+
+CAdviseCredProvsJob::Do(
+	ANSISTRING EventLevel,
+	ANSISTRING Invoke
+	);
+
+AdviseCredProvidersStart(
+	VOID
+	);
+
+EnumerateProvidersStop(
+	UINT64 NumberOfRegistedProviders,
+	INT32 UsageScenario,
+	UINT32 AuthenticationPackage,
+	GUID CredSerializeProviderId,
+	UINT32 UserTag,
+	UINT32 SessionId,
+	INT32 IsRemoteSession,
+	UNICODESTRING ProcessImage
+	);
+
+EnumerateProvidersStart(
+	VOID
+	);
+
+CStartCredProvsJob::_StartCredProvsForUsageScenario(
+	ANSISTRING EventLevel,
+	ANSISTRING Invoke,
+	GUID ProviderCLSID,
+	HRESULT ResultCode
+	);
+
+CStartCredProvsJob::_StartCredProvsForUsageScenario(
+	ANSISTRING EventLevel,
+	ANSISTRING Invoke,
+	HRESULT ResultCode
+	);
+
+CStartCredProvsJob::_StartCredProvsForUsageScenario(
+	ANSISTRING EventLevel,
+	ANSISTRING Invoke,
+	UINT32 ProviderId,
+	HEXINT64 ProviderPointer,
+	GUID ProviderCLSID,
+	HEXINT32 JobUsageScenario,
+	HEXINT32 Flags,
+	HEXINT32 StartingUsageScenario,
+	HRESULT ResultCode,
+	UINT64 ExecutionTime
+	);
+
+CStartCredProvsJob::_StartCredProvsForUsageScenario(
+	ANSISTRING EventLevel,
+	ANSISTRING Invoke,
+	UINT64 NumOfRegisteredProviders,
+	UINT64 NumOfFilteredProviders
+	);
+
+CStartCredProvsJob::_StartCredProvsForUsageScenario(
+	ANSISTRING EventLevel,
+	ANSISTRING Invoke,
+	GUID _cpcs.clsidCredentialProvider
+	);
+
+_BuildUserTileData(
+	ANSISTRING EventLevel,
+	ANSISTRING Invoke,
+	UINT32 NumOfUserTileData
+	);
+
+CredProviderHangMonitorTimeOut(
+	UNICODESTRING MethodName,
+	GUID ProviderCLSID,
+	UINT32 ExecutionTime
+	);
+
+RemoveExcludedCredentialProviders(
+	ANSISTRING EventLevel,
+	ANSISTRING Invoke,
+	GUID ProviderCLSID
+	);
+
+GetFilteredCredentialProviderCLSIDs(
+	ANSISTRING EventLevel,
+	ANSISTRING Invoke,
+	GUID ProviderCLSID
+	);
+
+GetFilteredCredentialProviderCLSIDs(
+	ANSISTRING EventLevel,
+	ANSISTRING Invoke
+	);
+
+GetFilteredCredentialProviderCLSIDs(
+	ANSISTRING EventLevel,
+	ANSISTRING Invoke,
+	HEXINT32 CredentialProviderUsageScenario,
+	HEXINT32 Flags
+	);
+
+_RunOneFilter(
+	ANSISTRING EventLevel,
+	ANSISTRING Invoke,
+	GUID ProviderCLSID,
+	GUID ProviderFilterCLSID
+	);
+
+_RunOneFilter(
+	ANSISTRING EventLevel,
+	ANSISTRING Invoke,
+	HRESULT ResultCode
+	);
+
+_RunOneFilter(
+	ANSISTRING EventLevel,
+	ANSISTRING Invoke,
+	GUID ProviderFilterCLSID,
+	HRESULT ResultCode
+	);
+
+CCredentialTileData::RequestVisibilityChange(
+	ANSISTRING EventLevel,
+	ANSISTRING Invoke,
+	HRESULT ResultCode
+	);
+
+CCredentialTileData::RequestVisibilityChange(
+	ANSISTRING EventLevel,
+	ANSISTRING Invoke
+	);
+
+CCredentialTileData::_NotifyCredentialEvent(
+	ANSISTRING EventLevel,
+	ANSISTRING Invoke,
+	HRESULT ResultCode
+	);
+
+CCredentialTileData::_NotifyCredentialEvent(
+	ANSISTRING EventLevel,
+	ANSISTRING Invoke
+	);
+
+CCredentialTileData::SwitchCredentialProvider(
+	ANSISTRING EventLevel,
+	ANSISTRING Invoke,
+	WIN32ERROR ReturnCode
+	);
+
+CCredentialTileData::SwitchCredentialProvider(
+	ANSISTRING EventLevel,
+	ANSISTRING Invoke,
+	HRESULT ResultCode
+	);
+
+CCredentialTileData::SetCredUISubmitButtonState(
+	ANSISTRING EventLevel,
+	ANSISTRING Invoke,
+	HRESULT ResultCode
+	);
+
+CCredentialTileData::SetCredUISubmitButtonState(
+	ANSISTRING EventLevel,
+	ANSISTRING Invoke,
+	HEXINT32 HideCredUISubmitButton
+	);
+
+CCredentialTileData::SetCredUISubmitButtonState(
+	ANSISTRING EventLevel,
+	ANSISTRING Invoke
+	);
+
+CCredentialTileData::SetUIMode(
+	ANSISTRING EventLevel,
+	ANSISTRING Invoke,
+	HRESULT ResultCode
+	);
+
+CCredentialTileData::SetUIMode(
+	ANSISTRING EventLevel,
+	ANSISTRING Invoke,
+	HEXINT32 uiMode
+	);
+
+CCredentialTileData::SetUIMode(
+	ANSISTRING EventLevel,
+	ANSISTRING Invoke
+	);
+
+CCredentialTileData::GetUIMode(
+	ANSISTRING EventLevel,
+	ANSISTRING Invoke,
+	HRESULT ResultCode,
+	HEXINT32 uiMode
+	);
+
+CCredentialTileData::RequestSelection(
+	ANSISTRING EventLevel,
+	ANSISTRING Invoke
+	);
+
+CCredentialTileData::DoRequestSerialization(
+	ANSISTRING EventLevel,
+	ANSISTRING Invoke
+	);
+
+CCredentialTileData::RequestSerialization(
+	ANSISTRING EventLevel,
+	ANSISTRING Invoke
+	);
+
+CCredentialTileData::RequestSerialization(
+	ANSISTRING EventLevel,
+	ANSISTRING Invoke,
+	WIN32ERROR ReturnCode
+	);
+
+CCredentialTileData::RequestSerialization(
+	ANSISTRING EventLevel,
+	ANSISTRING Invoke,
+	HRESULT ResultCode
+	);
+
+CCredentialTileData::SetFieldOptions(
+	ANSISTRING EventLevel,
+	ANSISTRING Invoke,
+	UINT32 FieldId,
+	HEXINT32 CredentialFieldChangeSetOptions
+	);
+
+CCredentialTileData::EndFieldUpdates(
+	ANSISTRING EventLevel,
+	ANSISTRING Invoke,
+	GUID providerCLSID
+	);
+
+CCredentialTileData::EndFieldUpdates(
+	ANSISTRING EventLevel,
+	ANSISTRING Invoke
+	);
+
+CCredentialTileData::RequestWebDialogVisibilityChange(
+	ANSISTRING EventLevel,
+	ANSISTRING Invoke,
+	HRESULT ResultCode
+	);
+
+CCredentialTileData::RequestWebDialogVisibilityChange(
+	ANSISTRING EventLevel,
+	ANSISTRING Invoke,
+	HEXINT32 isVisible
+	);
+
+CCredentialTileData::RequestWebDialogVisibilityChange(
+	ANSISTRING EventLevel,
+	ANSISTRING Invoke
+	);
+
+CCredentialTileData::SetRawAccessibilityViewForField(
+	ANSISTRING EventLevel,
+	ANSISTRING Invoke,
+	UINT32 FieldId,
+	BOOLEAN IsRawAccessibilityView
+	);
+
+CCredentialTileData::SetAccessibilityTextForField(
+	ANSISTRING EventLevel,
+	ANSISTRING Invoke,
+	UINT32 FieldId,
+	UNICODESTRING AccessibilityText
+	);
+
+CCredentialTileData::SetTextFieldMaxLength(
+	ANSISTRING EventLevel,
+	ANSISTRING Invoke,
+	UINT32 FieldId,
+	UINT32 MaxLength
+	);
+
+CCredentialTileData::SetFieldSubmitButton(
+	ANSISTRING EventLevel,
+	ANSISTRING Invoke,
+	UINT32 FieldId,
+	UINT32 AdjacentTo
+	);
+
+CCredentialTileData::AppendFieldComboBoxItem(
+	ANSISTRING EventLevel,
+	ANSISTRING Invoke,
+	UINT32 FieldId,
+	UNICODESTRING Item
+	);
+
+CCredentialTileData::DeleteFieldComboBoxItem(
+	ANSISTRING EventLevel,
+	ANSISTRING Invoke,
+	UINT32 FieldId,
+	UINT32 Item
+	);
+
+CCredentialTileData::SetFieldComboBoxSelectedItem(
+	ANSISTRING EventLevel,
+	ANSISTRING Invoke,
+	UINT32 FieldId,
+	UINT32 SelectedItem
+	);
+
+CCredentialTileData::SetFieldBitmapBuffer(
+	ANSISTRING EventLevel,
+	ANSISTRING Invoke,
+	UINT32 FieldId,
+	UINT32 ImageBufferSize
+	);
+
+CCredentialTileData::SetFieldCheckbox(
+	ANSISTRING EventLevel,
+	ANSISTRING Invoke,
+	UINT32 FieldId,
+	BOOL32 Checked
+	);
+
+CCredentialTileData::SetFieldString(
+	ANSISTRING EventLevel,
+	ANSISTRING Invoke,
+	UINT32 FieldId,
+	UNICODESTRING Value
+	);
+
+CCredentialTileData::SetFieldString(
+	ANSISTRING EventLevel,
+	ANSISTRING Invoke,
+	UINT32 FieldId,
+	ANSISTRING Value
+	);
+
+CCredentialTileData::SetFieldInteractiveState(
+	ANSISTRING EventLevel,
+	ANSISTRING Invoke,
+	UINT32 FieldId,
+	HEXINT32 CredentialProviderFieldInteractiveState
+	);
+
+CCredentialTileData::SetFieldState(
+	ANSISTRING EventLevel,
+	ANSISTRING Invoke,
+	UINT32 FieldId,
+	HEXINT32 CredentialProviderFieldState
+	);
+
+CCredentialTileData::GetCredential(
+	ANSISTRING EventLevel,
+	ANSISTRING Invoke,
+	HRESULT ResultCode
+	);
+
+CCredentialTileData::GetCredential(
+	ANSISTRING EventLevel,
+	ANSISTRING Invoke
+	);
+
+CCredentialTileData::ShouldEnableCredUISubmitButton(
+	ANSISTRING EventLevel,
+	ANSISTRING Invoke,
+	INT32 disableCredUISubmitButton
+	);
+
+CCredentialTileData::ShouldShowCredUISubmitButton(
+	ANSISTRING EventLevel,
+	ANSISTRING Invoke,
+	INT32 hideCredUISubmitButton
+	);
+
+CCredentialTileData::IsTileVisible(
+	ANSISTRING EventLevel,
+	ANSISTRING Invoke,
+	INT32 IsVisible,
+	UNICODESTRING UserSid,
+	GUID ProviderCLSID
+	);
+
+CCredentialTileData::SetSelected(
+	ANSISTRING EventLevel,
+	ANSISTRING Invoke,
+	HRESULT ResultCode
+	);
+
+_GetFieldData(
+	ANSISTRING EventLevel,
+	ANSISTRING Invoke,
+	UINT32 FieldIndex
+	);
+
+_GetIsAccessibilityViewRaw(
+	ANSISTRING EventLevel,
+	ANSISTRING Invoke,
+	BOOLEAN IsAccessibilityViewRaw
+	);
+
+_GetAccessibilityText(
+	ANSISTRING EventLevel,
+	ANSISTRING Invoke,
+	UNICODESTRING AccessibilityText
+	);
+
+_GetTextFieldMaxLength(
+	ANSISTRING EventLevel,
+	ANSISTRING Invoke,
+	UINT32 MaxLength
+	);
+
+_GetFieldOptions(
+	ANSISTRING EventLevel,
+	ANSISTRING Invoke,
+	HRESULT ResultCode
+	);
+
+_GetFieldOptions(
+	ANSISTRING EventLevel,
+	ANSISTRING Invoke,
+	UINT32 FieldId,
+	HEXINT32 CredentialFieldChangeSetOptions
+	);
+
+_GetFieldState(
+	ANSISTRING EventLevel,
+	ANSISTRING Invoke,
+	HRESULT ResultCode
+	);
+
+_GetFieldState(
+	ANSISTRING EventLevel,
+	ANSISTRING Invoke,
+	UINT32 FieldId,
+	HEXINT32 CredentialProviderFieldState,
+	HEXINT32 CredentialProviderFieldInteractiveState
+	);
+
+_GetSubmitButtonData(
+	ANSISTRING EventLevel,
+	ANSISTRING Invoke,
+	HRESULT ResultCode
+	);
+
+_GetSubmitButtonData(
+	ANSISTRING EventLevel,
+	ANSISTRING Invoke,
+	UINT32 FieldId,
+	UINT32 AdjacentTo
+	);
+
+_GetComboBoxData(
+	ANSISTRING EventLevel,
+	ANSISTRING Invoke,
+	HRESULT ResultCode
+	);
+
+_GetComboBoxData(
+	ANSISTRING EventLevel,
+	ANSISTRING Invoke,
+	UINT32 FieldId,
+	UINT32 SelectedItem
+	);
+
+_GetCheckboxData(
+	ANSISTRING EventLevel,
+	ANSISTRING Invoke,
+	HRESULT ResultCode
+	);
+
+_GetCheckboxData(
+	ANSISTRING EventLevel,
+	ANSISTRING Invoke,
+	UINT32 FieldId,
+	BOOL32 Checked
+	);
+
+_GetBitmapData(
+	ANSISTRING EventLevel,
+	ANSISTRING Invoke,
+	HRESULT ResultCode
+	);
+
+_GetBitmapData(
+	ANSISTRING EventLevel,
+	ANSISTRING Invoke,
+	UINT32 FieldId,
+	UINT32 ImageBufferSize
+	);
+
+_GetStringData(
+	ANSISTRING EventLevel,
+	ANSISTRING Invoke,
+	HRESULT ResultCode
+	);
+
+_GetStringData(
+	ANSISTRING EventLevel,
+	ANSISTRING Invoke,
+	UINT32 FieldId,
+	UNICODESTRING Value
+	);
+
+_GetStringData(
+	ANSISTRING EventLevel,
+	ANSISTRING Invoke,
+	UINT32 FieldId,
+	ANSISTRING Value
+	);
+
+CFieldData::SetBitmapBuffer(
+	ANSISTRING EventLevel,
+	ANSISTRING Invoke,
+	ANSISTRING HasFileHeader
+	);
+
+CFieldData::GetBitmapStream(
+	ANSISTRING EventLevel,
+	ANSISTRING Invoke,
+	HRESULT ResultCode
+	);
+
+Assert(
+	UINT32 assertVersion,
+	UINT32 rva,
+	UINT32 timestamp,
+	UINT32 imageSize,
+	ANSISTRING imageName,
+	UINT32 count,
+	UINT32 totalHits,
+	UINT32 ModuleCollection,
+	UINT32 GlobalCollection
+	);
+
+AssertWithArgs(
+	UINT32 assertVersion,
+	UINT32 rva,
+	UINT32 timestamp,
+	UINT32 imageSize,
+	ANSISTRING imageName,
+	UINT32 count,
+	UINT32 totalHits,
+	ANSISTRING originatingBinary,
+	UINT32 bucketArgument1,
+	UINT32 bucketArgument2,
+	UINT32 ModuleCollection,
+	UINT32 GlobalCollection
+	);
+
+ReplaceDotWithMachineName(
+	ANSISTRING EventLevel,
+	ANSISTRING Invoke,
+	HRESULT ResultCode
+	);
+
+GetMachineDomainName(
+	ANSISTRING EventLevel,
+	ANSISTRING Invoke,
+	HRESULT ResultCode
+	);
+
+GetMachineDomainName(
+	ANSISTRING EventLevel,
+	ANSISTRING Invoke,
+	UNICODESTRING DomainName
+	);
+
+GetMachineName(
+	ANSISTRING EventLevel,
+	ANSISTRING Invoke,
+	HRESULT ResultCode
+	);
+
+GetMachineName(
+	ANSISTRING EventLevel,
+	ANSISTRING Invoke,
+	UNICODESTRING MachineName
+	);
+
+CEnumCredentialProviderUsers::s_LookupInternetDisplayName(
+	ANSISTRING EventLevel,
+	ANSISTRING Invoke,
+	HRESULT ResultCode
+	);
+
+CEnumCredentialProviderUsers::s_EnumInternetUsers(
+	ANSISTRING EventLevel,
+	ANSISTRING Invoke,
+	HRESULT ResultCode
+	);
+
+CEnumCredentialProviderUsers::s_EnumInternetUsers(
+	ANSISTRING EventLevel,
+	ANSISTRING Invoke,
+	HRESULT ResultCode
+	);
+
+CEnumCredentialProviderUsers::s_EnumInternetUsers(
+	ANSISTRING EventLevel,
+	ANSISTRING Invoke,
+	WIN32ERROR WinError
+	);
+
+CEnumCredentialProviderUsers::CallCloudAPPackage(
+	ANSISTRING EventLevel,
+	ANSISTRING Invoke,
+	NTSTATUS NTStatus
+	);
+
+CEnumCredentialProviderUsers::CallCloudAPPackage(
+	ANSISTRING EventLevel,
+	ANSISTRING Invoke,
+	NTSTATUS NTStatus
+	);
+
+CEnumCredentialProviderUsers::s_CreatePropStoreFromFullNameAndSid(
+	ANSISTRING EventLevel,
+	ANSISTRING Invoke,
+	HRESULT ResultCode
+	);
+
+CEnumCredentialProviderUsers::s_CreatePropStoreFromFullNameAndSid(
+	ANSISTRING EventLevel,
+	ANSISTRING Invoke,
+	GUID ProviderGuid,
+	BOOL32 IsConnectedUser
+	);
+
+CEnumCredentialProviderUsers::s_CreatePropStoreFromFullNameAndSid(
+	ANSISTRING EventLevel,
+	ANSISTRING Invoke,
+	HRESULT ResultCode
+	);
+
+CEnumCredentialProviderUsers::s_LookupAccountName(
+	ANSISTRING EventLevel,
+	ANSISTRING Invoke,
+	HRESULT ResultCode
+	);
+
+CEnumCredentialProviderUsers::s_HasConnectedUser(
+	ANSISTRING EventLevel,
+	ANSISTRING Invoke,
+	HRESULT ResultCode
+	);
+
+CEnumCredentialProviderUsers::s_EnumerateLocalAdmins(
+	ANSISTRING EventLevel,
+	ANSISTRING Invoke,
+	HRESULT ResultCode
+	);
+
+CEnumCredentialProviderUsers::s_EnumerateCurrentUser(
+	ANSISTRING EventLevel,
+	ANSISTRING Invoke,
+	HRESULT ResultCode
+	);
+
+CEnumCredentialProviderUsers::s_EnumerateInSessionUser(
+	ANSISTRING EventLevel,
+	ANSISTRING Invoke,
+	UINT32 SessionId,
+	HRESULT ResultCode
+	);
+
+CEnumCredentialProviderUsers::s_EnumLastLoggedonUser(
+	ANSISTRING EventLevel,
+	ANSISTRING Invoke,
+	HRESULT ResultCode
+	);
+
+CEnumCredentialProviderUsers::s_EnumLogonUsers(
+	ANSISTRING EventLevel,
+	ANSISTRING Invoke,
+	HRESULT ResultCode
+	);
+
+s_FindConnectedUserBySid(
+	ANSISTRING EventLevel,
+	ANSISTRING Invoke,
+	HRESULT ResultCode
+	);
+
+s_CreatePropStoreFromAccount(
+	ANSISTRING EventLevel,
+	ANSISTRING Invoke,
+	HRESULT ResultCode
+	);
+
+s_CreatePropStoreFromAccount(
+	ANSISTRING EventLevel,
+	ANSISTRING Invoke,
+	BOOL32 IsConnectedUser,
+	GUID ProviderCLSID,
+	UNICODESTRING UserSid,
+	UINT32 LogonStatus
+	);
+
+s_GetLogonStatusString(
+	ANSISTRING EventLevel,
+	ANSISTRING Invoke,
+	HRESULT ResultCode
+	);
+
+s_GetLastLoggedOnUsernameAndSid(
+	ANSISTRING EventLevel,
+	ANSISTRING Invoke,
+	HRESULT ResultCode
+	);
+
+s_GetLastLoggedOnUsernameAndSid(
+	ANSISTRING EventLevel,
+	ANSISTRING Invoke,
+	UNICODESTRING UserSid
+	);
+
+CCredentialProviderUserArray::GetAccountOptions(
+	ANSISTRING EventLevel,
+	ANSISTRING Invoke,
+	HEXINT32 EmptyTileEnumerationFlags
+	);
+
+CCredentialProviderUserArray::SetProviderFilters(
+	ANSISTRING EventLevel,
+	ANSISTRING Invoke,
+	UINT64 FilteredSize,
+	INT32 InitialSize,
+	HEXINT32 EmptyTileEnumerationFlags
+	);
+
+CCredentialProviderUserArray::RuntimeClassInitialize(
+	ANSISTRING EventLevel,
+	ANSISTRING Invoke,
+	HEXINT32 UsageScenario,
+	HEXINT32 EmptyTileEnumerationFlags,
+	UINT64 NumOfUsers,
+	HRESULT ResultCode
+	);
+
+PolicyEnabled(
+	UNICODESTRING policy
+	);
+
+FallbackError(
+	UINT64 PartA_PrivTags,
+	SIGNED wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+FallbackError(
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+

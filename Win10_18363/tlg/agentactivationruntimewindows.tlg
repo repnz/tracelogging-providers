@@ -1,0 +1,298 @@
+ProviderNames:
+	Microsoft.Windows.AgentActivationRuntime.AgentInfo
+	Microsoft.Windows.AgentActivationRuntime.Settings
+
+
+
+**** Events *****
+ActivateAboveLock(
+	UNICODESTRING keyword,
+	UNICODESTRING aumid
+	);
+
+ActivateForegroundService(
+	UNICODESTRING keyword,
+	UNICODESTRING aumid
+	);
+
+FallbackError(
+	UINT64 PartA_PrivTags,
+	SIGNED wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+FallbackError(
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+SetStartupTaskState(
+	BOOLEAN enabled
+	);
+
+AddAgentInfo(
+	UNICODESTRING keyword,
+	UNICODESTRING keywordguid,
+	UNICODESTRING aumid,
+	UINT32 langId,
+	UNICODESTRING activationtype,
+	BOOLEAN enabled,
+	BOOLEAN enabledOnLockScreen,
+	UINT32 totalnum
+	);
+
+SkipAgent(
+	UNICODESTRING keyword,
+	UNICODESTRING keywordguid,
+	UNICODESTRING aumid,
+	UINT32 langId,
+	UNICODESTRING activationtype,
+	UINT32 totalnum
+	);
+
+ReceivedSystemEvent(
+	UINT32 eventId
+	);
+
+RemovedAgentInfo(
+	UNICODESTRING aumid,
+	UINT32 langId,
+	UINT32 totalnum
+	);
+
+UpdatedAgentInfo(
+	UNICODESTRING aumid,
+	UNICODESTRING setting,
+	BOOLEAN enabled,
+	UINT32 totalnum
+	);
+
+InitializeSettingManager(
+	UNICODESTRING status
+	);
+
+ActivateBackgroundTask(
+	UNICODESTRING keyword,
+	UNICODESTRING aumid
+	);
+
+AgentActivationRuntimeTrace(
+	ANSISTRING tag,
+	ANSISTRING message,
+	ANSISTRING object
+	);
+
+StartSwKws(
+	BOOLEAN started
+	);
+
+AgentActivationSettingManagerInitialize(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId
+	);
+
+AgentConfigurationUpdate(
+	UNICODESTRING appid,
+	INT32 updateKind
+	);
+
+AgentActivationSettingUpdate(
+	UNICODESTRING appid,
+	INT32 settingName
+	);
+
+AgentActivationSystemLanguageUpdate(
+	UNICODESTRING langaugeTag
+	);
+
+AgentConfigurationFilePath(
+	UNICODESTRING path
+	);
+
+ActivityIntermediateStop(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+ActivityError(
+	UINT64 PartA_PrivTags,
+	SIGNED wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+AgentActivationSettingManagerInitialize(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	SIGNED wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+AgentActivationSettingManagerInitialize(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+ActivityStoppedAutomatically(
+	VOID
+	);
+
+HighPriorityAgent(
+	UNICODESTRING aumid
+	);
+
+LanguageUpdate(
+	UNICODESTRING aumid,
+	UINT16 langId,
+	UNICODESTRING displayText
+	);
+
+AgentActivationConfigSource(
+	UNICODESTRING type,
+	UNICODESTRING sourceId
+	);
+
+AgentConfiguration(
+	UNICODESTRING configString
+	);
+
+AgentInstallStatus(
+	UNICODESTRING appid,
+	INT32 installStatusHR,
+	BOOLEAN isCortanaApp
+	);
+
+RegistrySettingMonitorSetup(
+	UNICODESTRING hiveRoot,
+	UNICODESTRING path
+	);
+
+RegistrySettingUpdate(
+	UNICODESTRING hiveRoot,
+	UNICODESTRING path
+	);
+
+VoiceActivationEnabledStatus(
+	UNICODESTRING aumid,
+	BOOLEAN enabled,
+	INT32 reason
+	);
+
+VoiceActivationOnLockScreenEnabledStatus(
+	UNICODESTRING aumid,
+	BOOLEAN enabled,
+	INT32 reason
+	);
+
+Trace(
+	UNICODESTRING message
+	);
+
+EnforcingCortanaVoiceActivationSettings(
+	UNICODESTRING setting,
+	BOOLEAN enabled
+	);
+
+SetVoiceActivationOnLockScreenEnabled(
+	UNICODESTRING aumid,
+	BOOLEAN enabled
+	);
+
+SetVoiceActivationEnabled(
+	UNICODESTRING aumid,
+	BOOLEAN enabled
+	);
+
+VoiceActivationOnLockScreenEnabledChanged(
+	UNICODESTRING aumid
+	);
+
+VoiceActivationEnabledChanged(
+	UNICODESTRING aumid
+	);
+
+UsingDefaultConfig(
+	VOID
+	);
+
+AgentConfigurationSourceRawText(
+	ANSISTRING text
+	);
+
+AgentConfigurationParsedItem(
+	UNICODESTRING aumid,
+	UNICODESTRING keyword,
+	UNICODESTRING keywordId,
+	UINT16 langId,
+	INT32 activationKind,
+	INT32 vaDefaultHint,
+	INT32 vaOnLockDefaultHint,
+	INT32 priority
+	);
+

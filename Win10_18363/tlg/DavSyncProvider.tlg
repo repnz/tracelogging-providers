@@ -1,0 +1,312 @@
+ProviderNames:
+	Microsoft.Windows.OneSync.DiagWarning
+	Microsoft.Windows.OneSync.DiagError
+	Microsoft.Windows.Unistack.FailureTrigger
+	Microsoft.Windows.OneSync.DiagCritical
+	Microsoft.Windows.OneSync.WebDavEngineProvider
+
+
+
+**** Events *****
+Warning(
+	HRESULT hr,
+	ANSISTRING file,
+	UINT32 line
+	);
+
+FallbackError(
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+FallbackError(
+	UINT64 PartA_PrivTags,
+	SIGNED wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+Error(
+	HRESULT hr,
+	ANSISTRING file,
+	UINT32 line
+	);
+
+FailureTrigger(
+	INT32 errorCode,
+	ANSISTRING expression,
+	ANSISTRING file,
+	INT32 line
+	);
+
+Assert(
+	HRESULT hr,
+	ANSISTRING file,
+	UINT32 line
+	);
+
+CardDavEngineInitEvent(
+	UINT32 syncSchedule,
+	ANSISTRING __TlgCV__
+	);
+
+CalDavEngineInitEvent(
+	UINT32 syncSchedule,
+	ANSISTRING __TlgCV__
+	);
+
+ActivityStoppedAutomatically(
+	VOID
+	);
+
+ActivityError(
+	UINT64 PartA_PrivTags,
+	SIGNED wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+ActivityError(
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+LogPerItemError(
+	GUID partnerGuid,
+	ANSISTRING itemType,
+	INT32 syncDirection,
+	INT32 syncCommandType,
+	INT32 syncItemResult
+	);
+
+SyncFolderError(
+	GUID partnerGuid,
+	UNICODESTRING folderID,
+	INT32 folderType,
+	FILETIME lastSuccessfulSyncTime,
+	INT32 syncFolderResult
+	);
+
+PurgeEvent(
+	ANSISTRING __TlgCV__,
+	GUID partnerGuid,
+	UINT32 reason
+	);
+
+SyncCancelEvent(
+	ANSISTRING __TlgCV__,
+	GUID partnerGuid,
+	UINT32 dataType
+	);
+
+WebDavEngineActivity(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId,
+	ANSISTRING __TlgCV__,
+	UNICODESTRING phase,
+	GUID partnerGUID,
+	UINT32 dataType,
+	UNICODESTRING emailDomain,
+	UINT32 syncType,
+	INT32 syncHResult,
+	INT64 downloadCount,
+	INT64 deletedCount,
+	INT64 updatedCount,
+	INT64 uploadCount,
+	UNICODESTRING cardDavServerName,
+	UNICODESTRING calDavServerName,
+	INT64 syncFolderCount,
+	INT64 folderErrorCount,
+	INT64 itemErrorCount
+	);
+
+WebDavEngineActivity(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	ANSISTRING __TlgCV__,
+	UNICODESTRING phase,
+	GUID partnerGUID,
+	UINT32 dataType,
+	UNICODESTRING emailDomain,
+	UINT32 syncType,
+	INT32 syncHResult,
+	INT64 downloadCount,
+	INT64 deletedCount,
+	INT64 updatedCount,
+	INT64 uploadCount,
+	UNICODESTRING cardDavServerName,
+	UNICODESTRING calDavServerName,
+	INT64 syncFolderCount,
+	INT64 folderErrorCount,
+	INT64 itemErrorCount
+	);
+
+WebDavEngineActivity(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId,
+	ANSISTRING __TlgCV__,
+	UNICODESTRING phase,
+	GUID partnerGUID,
+	UINT32 dataType,
+	UINT32 syncType,
+	HRESULT syncHResult,
+	INT64 downloadCount,
+	INT64 deletedCount,
+	INT64 updatedCount,
+	INT64 uploadCount,
+	INT64 syncFolderCount,
+	INT64 folderErrorCount,
+	INT64 itemErrorCount
+	);
+
+WebDavEngineActivity(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	ANSISTRING __TlgCV__,
+	UNICODESTRING phase,
+	GUID partnerGUID,
+	UINT32 dataType,
+	UINT32 syncType,
+	HRESULT syncHResult,
+	INT64 downloadCount,
+	INT64 deletedCount,
+	INT64 updatedCount,
+	INT64 uploadCount,
+	INT64 syncFolderCount,
+	INT64 folderErrorCount,
+	INT64 itemErrorCount
+	);
+
+AccountFailedToLoadEvent(
+	INT32 hr
+	);
+
+WebDavEngineActivity(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId,
+	ANSISTRING __TlgCV__,
+	UNICODESTRING phase,
+	GUID partnerGUID,
+	UINT32 dataType
+	);
+
+WebDavEngineActivity(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+WebDavEngineActivity(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+

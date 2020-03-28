@@ -1,0 +1,118 @@
+ProviderNames:
+	Microsoft.Windows.Audio.Service.PolicyManager
+
+
+
+**** Events *****
+OnPowerResumeSuspend(
+	INT32 g_bApmSuspended,
+	INT32 g_bIsSystemAsleep
+	);
+
+NotifyVirtualStreamStateChange(
+	UNICODESTRING endpoint,
+	UNICODESTRING category,
+	UINT32 oldState,
+	UINT32 newState
+	);
+
+LowPowerEpochNotificationCallback(
+	INT32 g_bLowPowerEpoch,
+	INT32 g_bIsSystemAsleep
+	);
+
+Errors(
+	ANSISTRING Func,
+	INT32 LineNum,
+	HRESULT HResult
+	);
+
+FallbackError(
+	UINT64 PartA_PrivTags,
+	SIGNED wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+FallbackError(
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+DuckedActiveAudioSession(
+	UNICODESTRING NewSession
+	);
+
+DuckedNewActiveAudioSession(
+	UNICODESTRING NewSession
+	);
+
+StaleParentPid(
+	PID DuplicateParentPID,
+	PID ProcessPID
+	);
+
+TsSessionConsoleLockedNotificationCallback(
+	ANSISTRING bConsoleLockedChanged ? "Locked Changed" : "Locked Unchanged",
+	INT32 bConsoleLocked
+	);
+
+TsSessionIdDisplayNotificationCallback(
+	ANSISTRING bSessionDisplaySettingChanged ? "Display Setting Changed" : "Display Setting Unchanged",
+	INT32 bSessionDisplayOn
+	);
+
+IsAudioInStandbyAllowed(
+	UINT32 SessionId,
+	INT32 bConsoleLocked,
+	INT32 bSessionDisplayOn,
+	INT32 g_bLowPowerEpoch,
+	INT32 g_bApmSuspended,
+	INT32 g_bIsSystemAsleep
+	);
+
+TsSessionRefreshSessionInformation(
+	UINT32 SessionId
+	);
+
+RpcTryInitializeUserSettings(
+	UINT32 SessionId
+	);
+
+ResetUserSettings(
+	UINT32 SessionId
+	);
+
+LoadingUserSettings(
+	UINT32 SessionId
+	);
+

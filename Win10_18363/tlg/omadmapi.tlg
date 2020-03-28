@@ -1,0 +1,47 @@
+ProviderNames:
+	Microsoft.Windows.DeviceManagement.OmaDmApiProvider
+	Microsoft.Windows.DeviceManagement.SessionManagement
+	Microsoft.Windows.DeviceManagement.OmaDmClient
+	Microsoft.Windows.DeviceManagement.OMADMPRC
+	Microsoft.Windows.EnterpriseManagement.ResourceManager
+	Microsoft.Windows.EnterpriseManagement.ResourceManagerUnenrollHook
+	Microsoft.Windows.DeviceManagement.DmAccCsp
+	Microsoft.Windows.DeviceManagement.DevInfo
+	Microsoft.Windows.DeviceManagement.DevDetailCsp
+	Microsoft-Windows-DeviceManagement-W7NodeProcessor
+	Microsoft.Windows.DeviceManagement.SecurityPolicyCsp
+	Microsoft.Windows.EnterpriseManagement.DeclaredConfiguration
+	Microsoft.Windows.EnterpriseManagement.PolicyManager
+	Microsoft.Windows.EnterpriseManagement.ConfigManagerHook
+	Microsoft.Windows.DeviceManagement.ConfigManager2
+	Microsoft.Windows.EMPS.Enrollment
+	Microsoft.Windows.EnterpriseManagement.Enrollment
+
+
+
+**** Events *****
+OmaDmApiCallstack(
+	HRESULT Hresult,
+	UNICODESTRING FunctionName,
+	UNICODESTRING ProcessName,
+	UNICODESTRING Callstack0,
+	UNICODESTRING Callstack1,
+	UNICODESTRING Callstack2,
+	ANSISTRING __TlgCV__
+	);
+
+OmaDmApiInitiateSession(
+	HRESULT Hresult,
+	UNICODESTRING AccountId,
+	UINT32 Lookuptype,
+	UNICODESTRING InitiationId,
+	HEXINT32 Mode,
+	HEXINT32 Origin,
+	UINT32 AutoDeleteKey,
+	UINT32 NumberOfAlerts,
+	UNICODESTRING FirstAlertType,
+	UNICODESTRING ProcessName,
+	UINT32 RunAsSystemOrAdmin,
+	ANSISTRING __TlgCV__
+	);
+

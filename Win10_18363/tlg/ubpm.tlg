@@ -1,0 +1,378 @@
+ProviderNames:
+	TelemetryAssert
+	TelemetryAssertDiagTrack
+	Microsoft.Windows.TaskScheduler
+
+
+
+**** Events *****
+References.DecPendingAction(
+	UNICODESTRING TaskName,
+	INT32 cPendingActions,
+	BOOL32 ConsumerUnregistered,
+	HEXINT64 pConsumerBlock,
+	BOOL32 WaitersSignalled
+	);
+
+TaskConfigChange(
+	UNICODESTRING TaskName,
+	BOOLEAN OldState,
+	BOOLEAN NewState
+	);
+
+References.IncPendingAction(
+	UNICODESTRING TaskName,
+	INT32 ConsumerBlock->cPendingActions,
+	BOOL32 ConsumerBlock->StateFlags.ConsumerUnregistered,
+	HEXINT32 Status,
+	HEXINT64 pConsumerBlock
+	);
+
+RegisterWaitUntilOobeCompleteError(
+	WIN32ERROR GetLastError()
+	);
+
+PowerSourceChangedStart(
+	VOID
+	);
+
+PowerSourceChangedEnd(
+	UINT32 StoredPowerSource,
+	UINT32 NewPowerSource,
+	UINT32 Status
+	);
+
+Assert(
+	UINT32 assertVersion,
+	UINT32 rva,
+	UINT32 timestamp,
+	UINT32 imageSize,
+	ANSISTRING imageName,
+	UINT32 count,
+	UINT32 totalHits,
+	UINT32 ModuleCollection,
+	UINT32 GlobalCollection
+	);
+
+Trigger.Cancelled(
+	UNICODESTRING TaskName
+	);
+
+MaintenanceTaskExecutionLimit(
+	UINT32 TaskID,
+	UINT64 ExecutionLimit
+	);
+
+References.WaitForZeroPendingAction(
+	HEXINT64 pConsumerBlock,
+	UNICODESTRING TaskName,
+	INT32 cPendingActions
+	);
+
+Trigger.Arrived(
+	UNICODESTRING TaskName,
+	WIN32ERROR dwStatus
+	);
+
+Trigger.Arrived(
+	UNICODESTRING TaskName
+	);
+
+TaskResult(
+	UNICODESTRING TaskName,
+	FILETIME LastRunTime,
+	FILETIME LastCompletionTime,
+	UINT32 LastRunResult,
+	UINT32 DurationSinceLastAttempt,
+	UINT32 DurationSinceLastCompletion
+	);
+
+Trigger.Cancelled(
+	UNICODESTRING TaskName,
+	WIN32ERROR dwStatus
+	);
+
+TimeTriggerTriggerMissedFired(
+	UNICODESTRING taskName,
+	GUID InstanceGuid
+	);
+
+RegistrationTriggerFired(
+	UNICODESTRING taskName,
+	GUID InstanceGuid
+	);
+
+LogonTriggerFired(
+	UNICODESTRING taskName,
+	GUID InstanceGuid
+	);
+
+MaintenanceQueueAttempted(
+	UNICODESTRING TaskName,
+	BOOLEAN CompletedInTimePeriod,
+	UINT32 QueuedAttempted,
+	UINT32 ErrorCode
+	);
+
+EventTriggerFired(
+	UNICODESTRING taskName,
+	GUID InstanceGuid
+	);
+
+BootTriggerFired(
+	UNICODESTRING taskName,
+	GUID InstanceGuid
+	);
+
+TimeTriggerTriggerFired(
+	UNICODESTRING taskName,
+	GUID InstanceGuid
+	);
+
+WnfTriggerFired(
+	UNICODESTRING taskName,
+	GUID InstanceGuid
+	);
+
+QueuedActionRun(
+	UNICODESTRING TaskName,
+	UINT32 ActionsRun
+	);
+
+Consumer.SnapList(
+	UINT32 NumRegisteredTasks,
+	UINT32 TotalTasks
+	);
+
+Rundown_NonHostedTask(
+	UNICODESTRING ConsumerName,
+	UNICODESTRING ActionName,
+	UINT32 SessionId,
+	PID Pid
+	);
+
+MaintenanceTaskStopped(
+	UNICODESTRING TaskName,
+	UINT32 UrgencyLevel,
+	UINT64 DurationSecs,
+	UINT32 TaskID,
+	UINT16 StopReason
+	);
+
+MaintenanceWindowRundown(
+	UINT16 RundownReason,
+	HEX UrgencyLevel,
+	BOOLEAN LevelCurrentlyActive,
+	UINT64 TotalCount,
+	UINT64 TotalLevelSecs,
+	UINT64 TotalUpdatimeSecs
+	);
+
+MaintenanceTaskRundown(
+	UINT32 TaskID,
+	UNICODESTRING TaskName,
+	UINT16 RundownReason,
+	UINT16 Periodicity_wYears,
+	UINT16 Periodicity_wMonths,
+	UINT16 Periodicity_wWeeks,
+	UINT16 Periodicity_wDays,
+	UINT16 Periodicity_wHours,
+	UINT16 Periodicity_wMinutes,
+	UINT16 Periodicity_wSeconds,
+	UINT16 Deadline_wYears,
+	UINT16 Deadline_wMonths,
+	UINT16 Deadline_wWeeks,
+	UINT16 Deadline_wDays,
+	UINT16 Deadline_wHours,
+	UINT16 Deadline_wMinutes,
+	UINT16 Deadline_wSeconds,
+	BOOLEAN IsExclusive,
+	BOOLEAN IsCritical,
+	UINT32 ConstraintFlags,
+	UINT16 ObservedUrgencyLevel,
+	FILETIME LastRunTime,
+	FILETIME LastCompletionTime,
+	SYSTEMTIME ObservedOobeTime,
+	UINT32 LastRunResult
+	);
+
+MeasuredTask.Registered(
+	UNICODESTRING TaskName,
+	BOOLEAN TaskDisabled,
+	BOOLEAN StartWhenAvailable,
+	UINT32 DelaySecs,
+	UINT32 RepetitionIntervalSec,
+	BOOLEAN RandomDelay,
+	FILETIME LastRunTime,
+	FILETIME LastCompletionTime,
+	FILETIME CreationTime,
+	WIN32ERROR ErrorCode
+	);
+
+MaintenanceWindowStart(
+	HEX UrgencyLevel
+	);
+
+MeasuredTask.Updated(
+	UNICODESTRING TaskName,
+	BOOLEAN TaskDisabled,
+	BOOLEAN StartWhenAvailable,
+	UINT32 DelaySecs,
+	UINT32 RepetitionIntervalSec,
+	BOOLEAN RandomDelay,
+	FILETIME LastRunTime,
+	FILETIME LastCompletionTime,
+	FILETIME CreationTime,
+	WIN32ERROR ErrorCode
+	);
+
+MaintenanceWindowStop(
+	HEX UrgencyLevel,
+	UINT64 DurationSecs,
+	UINT64 TotalCount,
+	UINT64 TotalLevelSecs
+	);
+
+MaintenanceLag(
+	UINT32 TaskID,
+	UINT32 Duration
+	);
+
+Rundown_Consumer(
+	UNICODESTRING ConsumerName
+	);
+
+Rundown_Consumer_Trigger(
+	UINT32 TriggerIndex,
+	UINT32 Broker,
+	HEXINT64 hAggregatedEvent,
+	HEXINT64 hAggregatedStopEvent,
+	UINT32 UbpmRepetitionSecs,
+	UINT32 UbpmValiditySecs,
+	UINT32 UbpmActionDelaysSecs,
+	UINT32 SebTriggerType
+	);
+
+MaintenanceTaskStarted(
+	UNICODESTRING TaskName,
+	UINT32 UrgencyLevel,
+	UINT32 TaskID
+	);
+
+Rundown_HostedTask(
+	UNICODESTRING ConsumerName,
+	UNICODESTRING ActionName,
+	GUID HostedActionClsId,
+	PID Pid
+	);
+
+MaintenanceStatsCorrupted.InvalidDateTime(
+	UINT32 TaskID,
+	UNICODESTRING TaskName
+	);
+
+MeasuredTask.ServiceStart(
+	WIN32ERROR ErrorCode
+	);
+
+MeasuredTask.TriggerArrived(
+	UNICODESTRING TaskName,
+	UINT32 TriggerIndex,
+	WIN32ERROR ErrorCode
+	);
+
+MaintenanceStatsCorrupted.InvalidRead(
+	UINT32 TaskID,
+	UNICODESTRING TaskName
+	);
+
+Rundown_Consumer_Trigger(
+	UINT32 TriggerIndex,
+	UINT32 Broker,
+	HEXINT64 hAggregatedEvent,
+	HEXINT64 hAggregatedStopEvent,
+	UINT32 DabTriggerType,
+	UINT32 DabTriggerFlags,
+	UINT32 DabActionDelaysSecs,
+	UINT32 DabRepetitionDurationSecs,
+	UINT32 DabValidityDurationSecs,
+	SYSTEMTIME StartBoundary,
+	SYSTEMTIME EndBoundary
+	);
+
+MaintenanceRetrigger(
+	VOID
+	);
+
+Maintenance.EvalAllTriggers(
+	VOID
+	);
+
+MaintenanceLaunch(
+	VOID
+	);
+
+MaintenanceRetrigger(
+	VOID
+	);
+
+MaintenanceSettingsMalformed(
+	UNICODESTRING UserMaintenanceSettingsErrorString
+	);
+
+MaintenanceConstraintCheck(
+	UNICODESTRING TaskName,
+	UINT32 TotalTasksRunning,
+	UINT32 Status,
+	BOOLEAN TaskRequeued
+	);
+
+Maintenance.EvalAllTriggers(
+	WIN32ERROR Status
+	);
+
+TakeMaintenanceReference(
+	BOOLEAN TakeReference,
+	UINT32 TotalMaintenanceTasksRunning,
+	UINT32 PdcMode,
+	HEXINT64 hMaintenanceActivator,
+	BOOLEAN fMaintenancePdcActive
+	);
+
+MaintenanceLaunch(
+	UINT16 CallbackFlags,
+	UINT32 NumTasksStarted,
+	HEXINT32 dwStatus
+	);
+
+MaintenanceRetriggered(
+	UINT16 Level
+	);
+
+CheckQueueMaintenanceLauncherFailed(
+	UINT32 ErrorCode
+	);
+
+ToggleMaintenancePdcActivator(
+	UINT32 PowerSourceEnum,
+	UINT32 MaintenanceTasksRunning
+	);
+
+MaintenanceSettings(
+	HEXINT32 Status,
+	BOOL32 Initialized,
+	SYSTEMTIME ActivationBoundary,
+	BOOLEAN WakeEnabled,
+	BOOLEAN Randomized,
+	BOOLEAN Disabled
+	);
+
+MaintenanceInit(
+	VOID
+	);
+
+DelayedProcessTerminate_WMClose(
+	WIN32ERROR ErrorCode,
+	PID Pid
+	);
+

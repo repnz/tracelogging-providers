@@ -1,0 +1,1134 @@
+ProviderNames:
+	MSAClientTraceLoggingProvider
+	MSAClientTraceLoggingProvider
+
+
+
+**** Events *****
+WLIDCRegisterUserIdkey(
+	HEXINT32 hr
+	);
+
+IdleCallback(
+	HEXINT32 hr,
+	UINT32 IsGroupIdle,
+	BOOLEAN CanStopService,
+	BOOLEAN IsServiceShuttingDown
+	);
+
+ServiceStop(
+	UINT64 ServiceRunTimeInMSecs,
+	UINT64 ServiceStartTimeInMSecs,
+	UINT64 ServiceStopTimeInMSecs
+	);
+
+WLIDSvcFailedToStart(
+	HEXINT32 hr
+	);
+
+NgcSignWithUserIdKeyEx(
+	HEXINT32 hr
+	);
+
+NgcGetUserIdKeyPublicKey(
+	HEXINT32 hr
+	);
+
+NgcEnumUserIdKeys(
+	HEXINT32 hr,
+	HEXINT32 ContainerStatus
+	);
+
+NgcCreateUserIdKeyEx(
+	HEXINT32 hr
+	);
+
+NgcCreateUserIdKey(
+	HEXINT32 hr
+	);
+
+NgcEnumContainers(
+	HEXINT32 hr,
+	HEXINT32 ContainerStatus
+	);
+
+NgcCreateContainer(
+	HEXINT32 hr
+	);
+
+NgcDeleteContainerEx(
+	HEXINT32 hr
+	);
+
+NgcDeleteContainer(
+	HEXINT32 hr
+	);
+
+AcquireTokens(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId
+	);
+
+ProvisionIdentityWithTransferToken(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId
+	);
+
+ProvisionIdentityWithTransferToken(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+ProvisionIdentityWithTransferToken(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+GetAppData(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId
+	);
+
+GetAppData(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+GetAppData(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+GetAppDataRequest_InvalidTimestamp(
+	UNICODESTRING RequestCreationTime,
+	UNICODESTRING ServerTime,
+	INT32 ClockSkew_BeforeRequest,
+	INT32 ClockSkew_AfterResponse,
+	INT32 RequestCounter
+	);
+
+GetTotpCodeFailure(
+	HEXINT32 hr
+	);
+
+ApproveSessionFailure(
+	HEXINT32 hr
+	);
+
+ListSessionsFailure(
+	HEXINT32 hr
+	);
+
+ManageApproverFailure(
+	HEXINT32 hr
+	);
+
+TpmKeyStatus(
+	HEXINT32 TpmKeyType,
+	HEXINT32 hr
+	);
+
+ActivityIntermediateStop(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+HandleGetProofOfPossessionTokens(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId
+	);
+
+ActivityStoppedAutomatically(
+	VOID
+	);
+
+ActivityError(
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+ActivityError(
+	UINT64 PartA_PrivTags,
+	SIGNED wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+HandleGetProofOfPossessionTokens(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+HandleGetProofOfPossessionTokens(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+ForceSigninRetryGetKey(
+	HEXINT32 hr
+	);
+
+GetSpecificKeyCacheMiss(
+	BOOLEAN IsRequestForRoamingCredential,
+	HEXINT32 Flags
+	);
+
+GetSpecificKeyCacheHit(
+	BOOLEAN IsRequestForRoamingCredential,
+	HEXINT32 Flags
+	);
+
+GetLatestKeyCacheMiss(
+	BOOLEAN IsRequestForRoamingCredential,
+	HEXINT32 Flags
+	);
+
+GetLatestKeyCacheHit(
+	BOOLEAN IsRequestForRoamingCredential,
+	HEXINT32 Flags
+	);
+
+ForceSigninRetry(
+	HEXINT32 hr
+	);
+
+SignInAssociatedUser_DARenewalFailure(
+	HEXINT32 hr
+	);
+
+ActivityIntermediateStop(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+MaxAcquireNgcLoop(
+	HEXINT32 hr
+	);
+
+ActivityError(
+	UINT64 PartA_PrivTags,
+	SIGNED wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+AcquireTokens(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	SIGNED wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+AcquireTokens(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+ActivityStoppedAutomatically(
+	VOID
+	);
+
+FallbackError(
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+FallbackError(
+	UINT64 PartA_PrivTags,
+	SIGNED wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+AcquireTokens(
+	HEXINT32 hr,
+	UINT32 AccountType,
+	NULL CID
+	);
+
+WLIDSvcNoCredsV2(
+	UINT64 PartA_PrivTags,
+	NULL CID,
+	BOOL32 AuthRequest,
+	UINT32 dwRequestFlags,
+	UINT64 currentTickCount,
+	UINT32 dwRequestCount,
+	BOOL32 isUserRequest,
+	BOOL32 IsConnected,
+	HEXINT32 hr,
+	HEXINT32 clearDefaultCredHr,
+	BOOL32 isTempProfile,
+	HEXINT32 hrGetProfileType,
+	HEXINT32 AccountType,
+	HEXINT32 hrReportingAccountType
+	);
+
+UpsellNgc(
+	BOOLEAN Result,
+	BOOLEAN IsHardware,
+	HEXINT32 TpmKspReadStatus,
+	HEXINT32 TpmStatus,
+	HEXINT32 hr
+	);
+
+WLIDSvcFailedToStart(
+	UNICODESTRING failureReason,
+	HEXINT32 hr
+	);
+
+WLIDSvcCredEnumerate(
+	UINT64 PartA_PrivTags,
+	NULL Target,
+	BOOL32 IsCred,
+	UINT32 Count,
+	BOOL32 ReturnValue,
+	UINT64 TickCount,
+	HEXINT32 hr
+	);
+
+WLIDSvcCredWrite(
+	UINT64 PartA_PrivTags,
+	NULL Target,
+	BOOL32 IsCred,
+	UINT32 CredType,
+	BOOL32 ReturnValue,
+	HEXINT32 hr,
+	UINT64 TickCount
+	);
+
+WLIDSvcCredDelete(
+	UINT64 PartA_PrivTags,
+	NULL Target,
+	BOOL32 IsCred,
+	UINT32 CredType,
+	BOOL32 ReturnValue,
+	HEXINT32 hr,
+	UINT64 TickCount
+	);
+
+InitializePathsAndMutableConfigs(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId
+	);
+
+DownloadAndReloadConfig(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId
+	);
+
+LoadConfiguration(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId
+	);
+
+SaveDownloadedConfig(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId
+	);
+
+SaveDownloadedConfig(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	SIGNED wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+SaveDownloadedConfig(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+DownloadAndReloadConfig(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	SIGNED wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+DownloadAndReloadConfig(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+ConfigDownloadData(
+	UNICODESTRING OldConfigVersion,
+	UNICODESTRING NewConfigVersion,
+	HEXINT32 hr,
+	BOOLEAN WlidsvcConfigXml,
+	BOOL32 IsCallInSystemContext,
+	UINT32 ProxyConfig,
+	UINT32 NetworkCallElapsedTime,
+	UINT32 CountOfProxiesTried,
+	HEXINT32 WinHttpErrorCode,
+	HEXINT32 WinHttpSecureStatusErrorCode,
+	HEXINT32 HttpStatusCode
+	);
+
+ConfigImmutableCopy(
+	UNICODESTRING InstalledConfigVersion
+	);
+
+InitializePathsAndMutableConfigs(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	SIGNED wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+InitializePathsAndMutableConfigs(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+ActivityError(
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+LoadConfiguration(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	SIGNED wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+LoadConfiguration(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+ActivityFailure(
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+ActivityFailure(
+	UINT64 PartA_PrivTags,
+	HEX wilActivity,
+	UINT32 hresult,
+	UINT32 threadId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+InvalidXMLChar(
+	HEXINT32 InvalidXMLChar
+	);
+
+DeviceIdRequestFailure(
+	ANSISTRING RequestType,
+	HEXINT32 SubErrorCode,
+	HEXINT32 hr,
+	HEXINT32 RequestStatus,
+	UNICODESTRING DeviceID,
+	UNICODESTRING DeviceName,
+	UNICODESTRING ServerBuildInfo
+	);
+
+WnfGlobalDeviceProvisioning(
+	HEXINT32 hr
+	);
+
+DeviceLicenseInstall(
+	HEXINT32 hr,
+	HEXINT32 RequestStatus,
+	UNICODESTRING DeviceID,
+	UNICODESTRING DeviceName,
+	UNICODESTRING ServerBuildInfo
+	);
+
+DeviceKeyholderLicenseInstall(
+	HEXINT32 hr,
+	HEXINT32 RequestStatus,
+	UNICODESTRING DeviceID,
+	UNICODESTRING DeviceName,
+	UNICODESTRING ServerBuildInfo
+	);
+
+WnfHWDeviceUpdated(
+	HEXINT32 hr
+	);
+
+DeviceIdTpmAttestationFailure(
+	HEXINT32 hr,
+	HEXINT32 RequestStatus,
+	UNICODESTRING DeviceID,
+	UNICODESTRING DeviceName,
+	UNICODESTRING ServerBuildInfo
+	);
+
+DeviceIdTpmAikCertFailure(
+	HEXINT32 hr,
+	HEXINT32 RequestStatus,
+	UNICODESTRING DeviceID,
+	UNICODESTRING DeviceName,
+	UNICODESTRING ServerBuildInfo
+	);
+
+TpmKeyStatus(
+	HEXINT32 TpmKeyType,
+	HEXINT32 hr,
+	HEXINT32 RequestStatus,
+	UNICODESTRING DeviceID,
+	UNICODESTRING DeviceName,
+	UNICODESTRING ServerBuildInfo
+	);
+
+HardwareCollectionFailure(
+	HEXINT32 hr,
+	HEXINT32 RequestStatus,
+	UNICODESTRING DeviceID,
+	UNICODESTRING DeviceName,
+	UNICODESTRING ServerBuildInfo
+	);
+
+DeviceSignFailure(
+	HEXINT32 hr,
+	HEXINT32 RequestStatus,
+	UNICODESTRING DeviceID,
+	UNICODESTRING DeviceName,
+	UNICODESTRING ServerBuildInfo
+	);
+
+InvalidDeviceDA(
+	HEXINT32 hr,
+	HEXINT32 RequestStatus,
+	UNICODESTRING DeviceID,
+	UNICODESTRING DeviceName,
+	UNICODESTRING ServerBuildInfo
+	);
+
+RequestRetryFailures(
+	HEXINT32 hr,
+	UINT32 RequestType,
+	UINT16 MaxRequestRetryCountOnFailure
+	);
+
+WnfHWDeviceUpdatedSts(
+	HEXINT32 hr
+	);
+
+DeviceIdTpmImportFailure(
+	HEXINT32 hr,
+	HEXINT32 RequestStatus,
+	UNICODESTRING DeviceID,
+	UNICODESTRING DeviceName,
+	UNICODESTRING ServerBuildInfo
+	);
+
+ServerErrors(
+	UINT64 PartA_PrivTags,
+	HEXINT32 hr,
+	HEXINT32 hrInternal,
+	UNICODESTRING ServerBuildInfo
+	);
+
+SessionKeySignFailure(
+	HEXINT32 hr,
+	HEXINT32 RequestStatus,
+	UNICODESTRING DeviceID,
+	UNICODESTRING DeviceName,
+	UNICODESTRING ServerBuildInfo
+	);
+
+EncryptCredsInSysCtx(
+	UINT64 PartA_PrivTags,
+	UNICODESTRING L"CryptProtectData",
+	HEXINT32 hr
+	);
+
+DecryptSysCtxCreds(
+	UINT64 PartA_PrivTags,
+	UNICODESTRING L"CryptUnprotectData",
+	HEXINT32 hr
+	);
+
+GetCachedAuthInfo(
+	UINT64 PartA_PrivTags,
+	NULL UserName,
+	HEXINT32 hr
+	);
+
+NgcAttestationFailure(
+	HEXINT32 hr,
+	HEXINT32 RequestStatus,
+	UNICODESTRING DeviceID,
+	UNICODESTRING DeviceName,
+	UNICODESTRING ServerBuildInfo
+	);
+
+ImportAuthState(
+	UINT64 PartA_PrivTags,
+	NULL UserName,
+	HEXINT32 hr
+	);
+
+HardwareDeviceProvisioning(
+	UNICODESTRING DeviceName,
+	UINT64 HardwareDeviceHWCollectionTime,
+	UINT64 HardwareDeviceProvisioningTime
+	);
+
+WLIDSvcCredRead(
+	UINT64 PartA_PrivTags,
+	NULL Target,
+	BOOL32 IsCred,
+	UINT32 CredType,
+	BOOL32 ReturnValue,
+	UINT64 TickCount,
+	HEXINT32 hr
+	);
+
+WLIDSvcNegativeCache(
+	NULL cacheKey,
+	UINT32 FailureCount,
+	HEXINT32 hr,
+	UINT64 RequestTimestamp,
+	UINT32 FailureType,
+	UINT32 NegativeCacheBlockActionType,
+	UINT64 LastSuccessfulRequestTimestamp,
+	UINT64 LastAccountPersistentFailureTimestamp
+	);
+
+DeviceProvisioningEarlyExitLogic(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId,
+	UNICODESTRING CurrentUserSid,
+	UINT64 CurrentTickCount,
+	INT64 ThreadCount,
+	INT64 FailureCount,
+	INT64 FailureThreshold
+	);
+
+UpdateDeviceLicenseInfo(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId
+	);
+
+UpdateDeviceTpmInfo(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId
+	);
+
+ShouldUpdateTpmInLongTermAttestationFailure(
+	UINT64 PartA_PrivTags,
+	HEXINT32 hrAIKCert,
+	HEXINT32 hrAutoPilot,
+	BOOLEAN IsWindowsAIKCertAvailable,
+	BOOLEAN TpmRequiredForAutoPilot,
+	BOOLEAN TpmUpdateRequired
+	);
+
+UpdateDeviceTpmInfo(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	SIGNED wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+UpdateDeviceTpmInfo(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+DeviceReprovision(
+	UNICODESTRING DeviceID,
+	UNICODESTRING DeviceName,
+	UNICODESTRING NewDeviceID,
+	UNICODESTRING NewDeviceName,
+	BOOL32 IsCallInSystemContext,
+	HEXINT32 hr
+	);
+
+LockAcquisition(
+	UNICODESTRING Context,
+	BOOLEAN MutexAcquired,
+	BOOLEAN AttemptProvisioning
+	);
+
+UpdateDeviceLicenseInfo(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	SIGNED wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+UpdateDeviceLicenseInfo(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+DeviceProvisioningEarlyExitLogic(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UNICODESTRING CurrentUserSid,
+	UINT64 CurrentTickCount,
+	INT64 ThreadCount,
+	INT64 FailureCount,
+	INT64 FailureThreshold,
+	HRESULT ReturnValue,
+	HRESULT SendResult
+	);
+
+DeviceProvisioningEarlyExitLogic(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId,
+	UNICODESTRING CurrentUserSid,
+	UINT64 CurrentTickCount,
+	INT64 ThreadCount,
+	INT64 FailureCount,
+	INT64 FailureThreshold,
+	HRESULT ReturnValue,
+	HRESULT SendResult
+	);
+
+DeviceProvisioningEarlyExitLogic(
+	UNICODESTRING CurrentUserSid,
+	UINT64 CurrentTickCount,
+	INT64 ThreadCount,
+	INT64 FailureCount,
+	INT64 FailureThreshold
+	);
+
+DeviceProvisioningEarlyExitLogic(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+DeviceProvisioningEarlyExitLogic(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+DeviceDeprovision(
+	UNICODESTRING DeviceID,
+	UNICODESTRING DeviceName,
+	UNICODESTRING AppGuid,
+	BOOL32 IsDeviceIdClosed,
+	BOOL32 IsCallInSystemContext,
+	HEXINT32 hr
+	);
+
+MutexReleaseFailure(
+	UINT32 LastError
+	);
+
+SendError(
+	HEXINT32 hr
+	);
+
+NetworkCallDetails(
+	BOOL32 SendReceiveSuccess,
+	BOOL32 IsCallInSystemContext,
+	UINT32 ProxyConfig,
+	UINT32 NetworkCallElapsedTime,
+	UINT32 CountOfProxiesTried,
+	HEXINT32 WinHttpErrorCode,
+	HEXINT32 WinHttpSecureStatusErrorCode,
+	HEXINT32 HttpStatusCode,
+	UINT32 RequestType
+	);
+
+WLIDSvcThrottled(
+	UINT64 PartA_PrivTags,
+	BOOL32 SkipThrottling,
+	UNICODESTRING ThrottleScenario,
+	UNICODESTRING Application,
+	UINT32 RequestType,
+	HEXINT32 hr
+	);
+
+RenameAccount(
+	BOOL32 IsConnected
+	);
+
+SetClockSkewFailure(
+	HEXINT32 hr,
+	UNICODESTRING ServerTime,
+	INT32 ClockSkew_BeforeRequest,
+	INT32 ClockSkew_AfterResponse
+	);
+
+GetAppDataRequestFailure(
+	HEXINT32 hr,
+	HEXINT32 hrInternal
+	);
+
+SessionKeySignFailureGetAppData(
+	HEXINT32 hr,
+	HEXINT32 RequestStatus,
+	UNICODESTRING DeviceID,
+	UNICODESTRING DeviceName,
+	UNICODESTRING ServerBuildInfo
+	);
+
+DeviceIdForceSignIn(
+	HEXINT32 hr,
+	HEXINT32 RequestStatus,
+	UNICODESTRING DeviceID,
+	UNICODESTRING DeviceName,
+	UNICODESTRING ServerBuildInfo
+	);
+
+DeviceIdForceKeyRoll(
+	HEXINT32 hr,
+	HEXINT32 RequestStatus,
+	UNICODESTRING DeviceID,
+	UNICODESTRING DeviceName,
+	UNICODESTRING ServerBuildInfo
+	);
+
+DeviceIdLoadFailure(
+	UNICODESTRING DeviceName,
+	BOOL32 IsCallInSystemContext,
+	BOOL32 IsXmlLiteUsed,
+	HEXINT32 hr,
+	HEXINT32 SubErrorCode
+	);
+
+KeyCacheCorruption(
+	HEXINT32 hr
+	);
+
+KeyCacheDecryptFailure(
+	HEXINT32 hr
+	);
+
+DeviceIdInvalidated(
+	UNICODESTRING DeviceName,
+	UNICODESTRING NewDeviceName,
+	BOOL32 IsCallInSystemContext,
+	HEXINT32 hr
+	);
+
+DeviceIdTpmSignFailure(
+	HEXINT32 hr
+	);
+

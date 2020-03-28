@@ -1,0 +1,2146 @@
+ProviderNames:
+	Microsoft.Windows.BrokerInfrastructure
+	TelemetryAssert
+	TelemetryAssertDiagTrack
+	Microsoft.Windows.TlgAggregateInternal
+	Microsoft.Windows.BackgroundManager
+	Microsoft.Windows.BackgroundManagerAggregated
+
+
+
+**** Events *****
+SystemIntUi_ContextAllocateState(
+	VOID
+	);
+
+SystemPsm_ReferenceBrokeredExecution(
+	UNICODESTRING psmKey,
+	SID userSid,
+	UINT32 sessionId,
+	HEXINT64 hostId,
+	UINT32 psmActivationType,
+	UINT32 flags,
+	NTSTATUS status
+	);
+
+SystemIntUi_QueryStateFailed(
+	UINT32 sessionId,
+	SID userSid,
+	UNICODESTRING psmKey,
+	BOOL32 isInForeground,
+	NTSTATUS status
+	);
+
+SystemPsm_TerminatePackage(
+	UNICODESTRING packageFullName,
+	SID userSid,
+	UINT32 sessionId,
+	NTSTATUS status
+	);
+
+SystemPsm_GetWorkItemDebugModeFailed(
+	UNICODESTRING packageFamilyName,
+	NTSTATUS status
+	);
+
+SystemPkg_QueryFullNameFailed(
+	UNICODESTRING package,
+	SID userSid,
+	NTSTATUS status,
+	UINT32 failedCheck
+	);
+
+SystemPsm_TerminateApplicationHost(
+	VOID
+	);
+
+SystemPsm_ReferenceBrokeredExecution(
+	VOID
+	);
+
+SystemPsm_TerminateApplicationHost(
+	UNICODESTRING psmKey,
+	SID userSid,
+	UINT32 sessionId,
+	NTSTATUS status
+	);
+
+SystemPsm_TerminateApplication(
+	VOID
+	);
+
+SystemPsm_TerminatePackage(
+	VOID
+	);
+
+SystemIntUi_ContextAllocateState(
+	HRESULT hr
+	);
+
+SystemPsm_TerminateApplication(
+	UNICODESTRING psmKey,
+	SID userSid,
+	UINT32 sessionId,
+	NTSTATUS status
+	);
+
+SystemState_IntUiStateChangedFailed(
+	UNICODESTRING psmKey,
+	SID userSid,
+	UINT32 sessionId,
+	BOOL32 IsInForeground,
+	NTSTATUS Status
+	);
+
+SystemState_CrmContextAllocateState(
+	VOID
+	);
+
+NetworkRequiredForWorkItem(
+	COUNTEDSTRING WorkItemName,
+	UNICODESTRING PackageName,
+	UINT32 TriggerType,
+	BOOL32 NetworkRequiredInCs
+	);
+
+SystemState_CrmActivityCallback(
+	UINT32 crmActivityId,
+	UINT32 notificationType
+	);
+
+SystemState_LowPowerEpoch(
+	WIN32ERROR errorCode,
+	BOOLEAN enteringLpe
+	);
+
+DisconnectedStandbyStateChanged(
+	BOOL32 PreviousLimited,
+	BOOL32 NewLimited
+	);
+
+WorkItemRequiresNetworkInCS(
+	COUNTEDSTRING Name,
+	UNICODESTRING PackageFullName
+	);
+
+SystemState_CrmActivityCallback(
+	UINT32 crmActivityId,
+	UINT32 notificationType,
+	NTSTATUS status
+	);
+
+SystemState_LowPowerEpoch(
+	VOID
+	);
+
+SystemState_CrmActivityAllocateStateFailed(
+	UINT32 crmActivityId,
+	UNICODESTRING description,
+	HEXINT64 crmActivityHandle,
+	NTSTATUS status
+	);
+
+BipAcPowerWorkCallbackWorkAllocFailed(
+	NTSTATUS Status
+	);
+
+SystemState_CrmActivityAllocateState(
+	UINT32 crmActivityId,
+	UNICODESTRING description
+	);
+
+BatteryDischargingNotification(
+	BOOL32 Discharging
+	);
+
+NetworkRequestInfo(
+	NTSTATUS Status,
+	BOOL32 NetworkRequestedInCS
+	);
+
+SystemCrm_ActivityStart(
+	GUID eventId,
+	GUID workItemId,
+	GUID instanceId,
+	UINT32 crmActivityId,
+	BOOLEAN started,
+	UNICODESTRING psmKey,
+	UNICODESTRING description,
+	NTSTATUS status
+	);
+
+SystemState_CrmContextAllocateState(
+	NTSTATUS status
+	);
+
+SystemCrm_ActivityStop(
+	UNICODESTRING res,
+	UNICODESTRING res,
+	GUID instanceId,
+	UINT32 crmActivityId,
+	BOOLEAN stopped
+	);
+
+SystemState_CrmActivityAllocateState(
+	UINT32 crmActivityId,
+	UNICODESTRING description,
+	HEXINT64 crmActivityHandle,
+	NTSTATUS status
+	);
+
+NetworkRequiredInCS(
+	UINT32 WorkItemsRequiringNetworkInCs
+	);
+
+QueryClientInformationFailed(
+	NTSTATUS status,
+	UINT32 failedCheck
+	);
+
+ForceCompletePushButtonReset(
+	SID UserSid,
+	UINT32 SessionId
+	);
+
+Session_ChangeUserStateCallbackError(
+	UNICODESTRING packageFullName,
+	SID userSid,
+	NTSTATUS status,
+	UINT32 failedCheck
+	);
+
+Session_ShellReadyUnbufferWorkItemsFailed(
+	NTSTATUS status
+	);
+
+WorkItemBlockingDisconnectedStandby(
+	GUID workItemId,
+	UNICODESTRING packageFullName,
+	UNICODESTRING entryPoint,
+	UNICODESTRING workItemName,
+	SID userSid,
+	UINT32 triggerType,
+	UINT8 scenarioInstanceId,
+	BOOLEAN alwaysAllowed,
+	BOOLEAN voipApp,
+	UINT32 usageHistory
+	);
+
+BiWorkItemCancelPending(
+	UNICODESTRING packageFullName,
+	UNICODESTRING entryPoint,
+	UNICODESTRING workItemName,
+	GUID workItemId
+	);
+
+ResourceTimer(
+	GUID workItemId,
+	GUID instanceId,
+	UNICODESTRING action,
+	UINT64 remainingTimeMs
+	);
+
+ResourceTimer(
+	GUID workItemId,
+	GUID instanceId,
+	UNICODESTRING action,
+	UINT64 timeElapsedMs
+	);
+
+ResourceTimer(
+	GUID workItemId,
+	GUID instanceId,
+	UNICODESTRING action,
+	UINT64 realTimeElapsedMs
+	);
+
+ResourceTimer(
+	GUID workItemId,
+	GUID instanceId,
+	UNICODESTRING action
+	);
+
+ResourceTimer(
+	GUID workItemId,
+	GUID instanceId,
+	UNICODESTRING action,
+	UINT64 durationMs
+	);
+
+BiTaskWatchdog(
+	UNICODESTRING packageFullName,
+	UNICODESTRING entryPoint,
+	UNICODESTRING workItemName,
+	GUID instance,
+	HEXINT64 UserContextId,
+	BOOL32 LockScreen,
+	SID UserSid
+	);
+
+TaskUnregistered(
+	GUID workItemId,
+	UNICODESTRING packageFullName,
+	UNICODESTRING entryPoint,
+	UNICODESTRING workItemName,
+	UINT32 Reason
+	);
+
+TaskUnlatched(
+	GUID workItemId,
+	UNICODESTRING packageFullName,
+	UNICODESTRING entryPoint,
+	UNICODESTRING workItemName
+	);
+
+TaskUnbuffered(
+	GUID workItemId,
+	UNICODESTRING packageFullName,
+	UNICODESTRING entryPoint,
+	UNICODESTRING workItemName,
+	GUID instance,
+	HEXINT32 latchReason
+	);
+
+BiTaskRundown(
+	UNICODESTRING packageFullName,
+	UNICODESTRING entryPoint,
+	UNICODESTRING workItemName,
+	GUID WorkItem,
+	GUID Broker,
+	GUID TriggerId,
+	UINT32 TriggerType,
+	BOOL32 Critical,
+	SID UserSid,
+	UINT32 NumConditionals
+	);
+
+BiTaskInstanceRundown(
+	UNICODESTRING PackageFullName,
+	GUID WorkItem,
+	PID TaskInstance,
+	UINT64 AppId,
+	HEXINT64 UserContextId,
+	UINT32 ActivationType,
+	UINT16 CpuThrottleCount,
+	UINT16 NetThrottleCount
+	);
+
+TaskExecutionFailed(
+	UNICODESTRING packageFullName,
+	UNICODESTRING entryPoint,
+	UNICODESTRING workItemName,
+	GUID workItemId,
+	UINT32 failureType,
+	HRESULT lastHResult,
+	UINT32 consecutiveFailures,
+	UINT32 maxConsecutiveFailures,
+	BOOLEAN workItemDisabled
+	);
+
+TaskDropped(
+	GUID workItemId,
+	UNICODESTRING packageFullName,
+	UNICODESTRING entryPoint,
+	UNICODESTRING workItemName,
+	GUID instance,
+	HEXINT32 reason,
+	GUID eventId,
+	FILETIME signalTime,
+	FILETIME bufferedTime,
+	FILETIME droppedTime,
+	UINT32 consecutiveFailures,
+	UINT32 maxConsecutiveFailures,
+	BOOL32 droppedDueToFailurePolicy
+	);
+
+TaskCompleted(
+	GUID workItemId,
+	GUID eventId,
+	UNICODESTRING packageFullName,
+	UNICODESTRING entryPoint,
+	UNICODESTRING workItemName,
+	GUID instance,
+	HRESULT hresult,
+	UINT32 triggerType,
+	FILETIME signalTime,
+	FILETIME bufferedTime,
+	FILETIME activationPermittedTime,
+	FILETIME activatedTime,
+	FILETIME cancelledTime,
+	FILETIME completedTime,
+	UINT64 wakeIdentifier,
+	BOOL32 causedWake,
+	INT32 completionReason,
+	UNICODESTRING psmKey,
+	UINT32 psmActivationType,
+	HEXINT64 hostId,
+	HEXINT32 policyFlags,
+	UINT32 wallClockLimitMs,
+	HEXINT32 workItemFlags,
+	HEXINT32 eventFlags,
+	BOOL32 coalescedActivation,
+	BOOL32 packageIsImportant,
+	UINT32 pendingActivationCount,
+	BOOL32 acPower,
+	BOOL32 lowPowerEpoch,
+	BOOL32 criticalActivation,
+	UINT64 unbiasedTaskDuration,
+	BOOL32 networkRequiredInCs,
+	BOOL32 userIsLoggedOff
+	);
+
+TaskCoalesced(
+	GUID workItemId,
+	GUID instanceId,
+	UNICODESTRING packageFullName,
+	UNICODESTRING entryPoint,
+	UNICODESTRING workItemName,
+	BOOL32 savedActivation,
+	UINT32 triggerType
+	);
+
+TaskCanceled(
+	GUID workItemId,
+	UNICODESTRING packageFullName,
+	UNICODESTRING entryPoint,
+	UNICODESTRING workItemName,
+	GUID instance,
+	HEXINT32 reason,
+	BOOL32 activationsPending
+	);
+
+TaskBufferedPolicy(
+	GUID workItemId,
+	UNICODESTRING packageFullName,
+	UNICODESTRING entryPoint,
+	UNICODESTRING workItemName,
+	GUID instance
+	);
+
+TaskBufferedPackageState(
+	GUID workItemId,
+	UNICODESTRING packageFullName,
+	UNICODESTRING entryPoint,
+	UNICODESTRING workItemName,
+	GUID instance,
+	HEXINT32 latchReason
+	);
+
+TaskActivationFailed(
+	GUID workItemId,
+	UNICODESTRING packageFullName,
+	UNICODESTRING entryPoint,
+	UNICODESTRING workItemName,
+	GUID instance,
+	HRESULT hresult,
+	UINT32 consecutiveFailures
+	);
+
+TaskActiveOnCsEntry(
+	GUID WorkItemId,
+	UNICODESTRING packageFullName,
+	UNICODESTRING entryPoint,
+	UNICODESTRING workItemName,
+	GUID instance,
+	UINT32 TriggerType,
+	FILETIME ActivationStartTime,
+	UNICODESTRING PsmKey
+	);
+
+TaskActivated(
+	GUID workItemId,
+	UNICODESTRING packageFullName,
+	UNICODESTRING entryPoint,
+	UNICODESTRING workItemName,
+	GUID instance,
+	GUID eventId,
+	UNICODESTRING psmKey,
+	UINT32 psmActivationType,
+	UINT32 triggerType,
+	UINT32 triggerTypeOverride,
+	HEXINT64 hostId,
+	HEXINT32 policyFlags,
+	UINT32 wallClockLimitMs,
+	HEXINT32 workItemFlags,
+	HEXINT32 eventFlags,
+	UINT32 pendingActivationCount,
+	BOOL32 acPower,
+	BOOL32 lowPowerEpoch,
+	BOOL32 coalescedActivation,
+	BOOL32 packageIsImportant,
+	BOOL32 criticalActivation
+	);
+
+PackageStateChangeStop(
+	UNICODESTRING PackageFullName,
+	UNICODESTRING UserAccountName,
+	HEXINT64 UserContextId,
+	UINT32 State
+	);
+
+PackageStateChangeStart(
+	UNICODESTRING PackageFullName,
+	UNICODESTRING UserAccountName,
+	HEXINT64 UserContextId,
+	UINT32 State
+	);
+
+BiPackageRundown(
+	UNICODESTRING PackageFullName,
+	UINT32 UserContextId,
+	UINT32 StateSummary,
+	UINT32 ActiveTaskCount,
+	BOOL32 LockScreen,
+	SID UserSid
+	);
+
+BiPackageRundown(
+	UNICODESTRING PackageFullName,
+	UINT64 UserContextId,
+	UINT32 StateSummary,
+	UINT32 ActiveTaskCount,
+	BOOL32 LockScreen,
+	SID UserSid
+	);
+
+BiPackageRundown(
+	UNICODESTRING PackageFullName,
+	UINT64 UserContextId,
+	UINT32 StateSummary,
+	UINT32 ActiveTaskCount,
+	BOOL32 LockScreen,
+	SID UserSid
+	);
+
+Package_UpdateStaleFullName(
+	UNICODESTRING package,
+	UNICODESTRING oldPackageName,
+	UNICODESTRING newPackageFullName,
+	SID userSid
+	);
+
+PsmBiExt_WerReportNotification(
+	UNICODESTRING psmKey,
+	SID userSid,
+	UINT32 sessionId,
+	UINT32 werType,
+	NTSTATUS status,
+	UINT32 failedCheck,
+	BOOLEAN stateChanged
+	);
+
+PsmBiExt_WerReportNotification(
+	UNICODESTRING psmKey,
+	SID userSid,
+	UINT32 sessionId,
+	UINT32 werType
+	);
+
+PsmBiExt_ResumePackage(
+	UNICODESTRING packageFullName,
+	UINT32 suspendType
+	);
+
+PsmBiExt_PrepareToSuspendPackage(
+	UNICODESTRING psmKey,
+	SID userSid,
+	UINT32 sessionId,
+	UINT32 suspendType,
+	NTSTATUS status,
+	UINT32 failedCheck,
+	BOOLEAN stateChanged
+	);
+
+PsmBiExt_PrepareToSuspendPackage(
+	UNICODESTRING psmKey,
+	SID userSid,
+	UINT32 sessionId,
+	UINT32 suspendType
+	);
+
+ServicingWatchdogInitialized(
+	NTSTATUS status,
+	UNICODESTRING packageFullName,
+	HEXINT64 userContextId
+	);
+
+Package_CreateFailed(
+	SID userSid,
+	UNICODESTRING packageFullName,
+	NTSTATUS status
+	);
+
+ServicingWatchdogCleared(
+	UNICODESTRING packageFullName,
+	HEXINT64 userContextId
+	);
+
+ForceClearPackageServicingState(
+	UNICODESTRING PackageFullName,
+	SID UserSid
+	);
+
+Package_UpdateForegroundStateFailed(
+	UNICODESTRING packageFullName,
+	UNICODESTRING applicationName,
+	SID userSid,
+	BOOLEAN foregroundStateChanged,
+	NTSTATUS status
+	);
+
+NotifyUser(
+	UINT32 channel,
+	UINT32 sessionId,
+	SID userSid,
+	HEXINT64 userContext,
+	HEXINT32 userContextFlags,
+	NTSTATUS status
+	);
+
+NotifySession(
+	UINT32 channel,
+	UINT32 sessionId,
+	NTSTATUS status
+	);
+
+NotifyQueued(
+	UINT32 channel,
+	UINT32 session,
+	UINT32 pendingCount,
+	NTSTATUS status
+	);
+
+Notify_NewSessionFailed(
+	UINT32 channel,
+	UINT32 sessionId,
+	NTSTATUS status
+	);
+
+NotifyDelete(
+	UINT32 channel,
+	GUID brokerId,
+	GUID eventId,
+	NTSTATUS status
+	);
+
+NotifyApplication(
+	UINT32 channel,
+	SID userSid,
+	UNICODESTRING packageId,
+	NTSTATUS status
+	);
+
+NotifyBackgroundAccess(
+	UINT32 channel,
+	SID userSid,
+	UNICODESTRING packageFullName,
+	BOOLEAN added
+	);
+
+Enumerate_WorkItemsFailed(
+	UINT32 workItemCount,
+	NTSTATUS status,
+	UINT32 failedCheck
+	);
+
+Enumerate_WorkItemIdsFailed(
+	UINT32 workItemCount,
+	NTSTATUS status,
+	UINT32 failedCheck
+	);
+
+EnergyBudget_BamSettingsUpdated(
+	UNICODESTRING PackageFullName,
+	UNICODESTRING UserSid
+	);
+
+EnergyBudget_PackageImportanceScoreUpdated(
+	UNICODESTRING PackageFullName,
+	BOOL32 IsImportant,
+	BOOL32 IsBamAlwaysAllowed,
+	BOOL32 IsBamNeverAllowed,
+	BOOL32 IsTilePinned,
+	BOOL32 IsOnLockScreen,
+	BOOL32 IsAlwaysImportant,
+	UINT64 DaysSinceLastUse,
+	UINT32 RecentlyUsedThresholdDays,
+	UINT32 PackageOrigin,
+	UINT32 PackageAccessState
+	);
+
+EnergyBudget_PackageFullNameChanged(
+	UNICODESTRING OldPackageFullName,
+	UNICODESTRING NewPackageFullName
+	);
+
+EnergyBudget_EnergyUsedCharged(
+	UNICODESTRING PackageFullName,
+	BOOL32 InfiniteBudget,
+	BOOL32 Important,
+	BOOL32 IsCurrentlyInUse,
+	INT32 BudgetBeforeUsageCharge,
+	UINT32 BackgroundEnergyUsedMillijoules,
+	UINT32 ForegroundEnergyUsedScreenOnMillijoules,
+	UINT32 ForegroundEnergyUsedScreenOffMillijoules
+	);
+
+EnergyBudget_EnergyUsedChargedToUnknownPackage(
+	UNICODESTRING PackageFullName
+	);
+
+EnergyBudget_PackageUninstalled(
+	UNICODESTRING PackageFullName,
+	UINT32 KnownPackageCount
+	);
+
+EnergyBudget_PackageCreated(
+	UNICODESTRING PackageFullName,
+	UINT32 KnownPackageCount
+	);
+
+EnergyBudget_EnergyBudgetAssigned(
+	UNICODESTRING PackageFullName,
+	BOOL32 PackageIsImportant,
+	BOOL32 ImportanceScoreUpdateRequired,
+	UINT32 RefCount,
+	UINT32 ConsecutiveZeroUsagePeriods,
+	BOOL32 IsCurrentlyInUse,
+	UINT64 PackageAccumulatedEnergyUsedBgMillijoules,
+	UINT64 PackageAccumulatedEnergyUsedFgMillijoules,
+	BOOL32 InfiniteBudget,
+	BOOL32 IsScreenOn,
+	BOOL32 IsOnAcPower,
+	BOOL32 BatteryDischarging,
+	UINT32 RolloverCreditsAssigned,
+	UINT32 CreditsForfeited,
+	UINT32 RecentInUseTimeSeconds,
+	INT32 CurrentEnergyBudgetMillijoules
+	);
+
+EnergyBudget_EnergyBudgetAssigned(
+	UNICODESTRING PackageFullName,
+	BOOL32 PackageIsImportant,
+	BOOL32 ImportanceScoreUpdateRequired,
+	UINT32 RefCount,
+	UINT32 ConsecutiveZeroUsagePeriods,
+	BOOL32 IsCurrentlyInUse,
+	UINT64 PackageAccumulatedEnergyUsedBgMillijoules,
+	UINT64 PackageAccumulatedEnergyUsedFgMillijoules,
+	BOOL32 InfiniteBudget,
+	BOOL32 IsScreenOn,
+	BOOL32 IsOnAcPower,
+	BOOL32 BatteryDischarging,
+	UINT32 RolloverCreditsAssigned,
+	UINT32 CreditsForfeited,
+	UINT32 RecentInUseTimeSeconds,
+	INT32 CurrentEnergyBudgetMillijoules
+	);
+
+EnergyBudget_CreateInsertQuotaInfoFailed(
+	NTSTATUS Status
+	);
+
+EnergyBudget_BatteryCapacityDetermined(
+	UINT32 CapcityMillijoules
+	);
+
+EnergyBudget_PackageForegroundStateChange(
+	UNICODESTRING PackageFullName,
+	BOOL32 IsInUse
+	);
+
+EnergyBudget_GetEnergyBudgetForUnknownPackage(
+	UNICODESTRING PackageFullName
+	);
+
+EnergyBudget_EnergyBudgetDeleted(
+	UNICODESTRING PackageFullName,
+	UINT32 KnownPackageCount
+	);
+
+EnergyBudget_CreateQuotaInfoFailed(
+	UNICODESTRING PackageFullName,
+	NTSTATUS Status
+	);
+
+EnergyBudget_ComputeNewBudgetsCompleted(
+	UINT32 NewBudgetCount,
+	UINT32 RolloverCreditsRemaining,
+	UINT32 CreditsGivenPerImportantPackage,
+	UINT32 ImportantPackagesCount,
+	UINT32 UnimportantPackageCount,
+	UINT32 CreditsPerUnimportantPackage
+	);
+
+EnergyBudget_ComputeNewBudgetsCompleted(
+	UINT32 NewBudgetCount,
+	UINT32 RolloverCreditsRemaining,
+	UINT32 CreditsGivenPerImportantPackage,
+	UINT32 ImportantPackagesCount,
+	UINT32 UnimportantPackageCount,
+	UINT32 CreditsPerUnimportantPackage
+	);
+
+EnergyBudget_QueueQuotaUpdateFailed(
+	NTSTATUS Status
+	);
+
+EnergyBudget_RolloverCreditsDiscarded(
+	UINT32 Credits
+	);
+
+EnergyBudget_ComputeNewBudgetsStart(
+	BOOL32 EnergyBudgetDisabled,
+	UINT16 RefillPeriodLengthMinutes,
+	UINT16 BatteryRundownTargetMinutes,
+	UINT16 BatteryPercentageForBgTasks,
+	UINT32 BatteryCapacityMillijoules,
+	FLOAT MinMillijoulesPerPeriodScreenOff,
+	FLOAT MinMillijoulesPerPeriodScreenOn,
+	BOOL32 AcPower,
+	BOOL32 BatteryDischarging,
+	BOOL32 ScreenOn,
+	UINT32 RolloverCredits,
+	UINT32 PreviousRefillPeriodSeconds,
+	BOOL32 ClearDebtOnFg,
+	BOOL32 InfiniteOnFg,
+	BOOL32 RolloverCreditsDisabled,
+	BOOL32 RolloverDebtCancellationDisabled,
+	BOOL32 RolloverForUnimportantAppsDisabled,
+	UINT16 RolloverPeriodsMax,
+	UINT16 RolloverPackageBudgetsMax,
+	UINT16 RolloverDebtMinFgSeconds
+	);
+
+EnergyBudget_ComputeNewBudgetsSkipped(
+	NTSTATUS allocCallbackWorkStatus,
+	UINT64 nextRequeryTileInfoTime,
+	UINT64 now
+	);
+
+EnergyBudget_PackageInDebt(
+	UNICODESTRING PackageFullName,
+	INT32 CurrentEnergyBudgetMillijoules
+	);
+
+EnergyBudget_QueryBatteryInfo(
+	WIN32ERROR ErrorCode,
+	UINT32 CapacityMillijoules
+	);
+
+EnergyBudget_RolloverBudgetForUnimportantPackage(
+	UNICODESTRING PackageFullName,
+	UINT32 CreditsGiven
+	);
+
+EnergyBudget_RolloverBudgetForPackage(
+	UNICODESTRING PackageFullName,
+	INT32 RolloverCreditsAssigned,
+	INT32 NewEnergyBudget
+	);
+
+EnergyBudget_CreditsScaledDuringRefillPeriod(
+	INT64 ScalePercentage
+	);
+
+EnergyBudget_OverrideAlwaysImportantAppAdded(
+	UNICODESTRING PackageFamilyName
+	);
+
+Application_TerminateInstancePhase2Failed(
+	NTSTATUS status
+	);
+
+GetCurrentPackageFullName(
+	UNICODESTRING packageFullName,
+	HRESULT hresult
+	);
+
+PackageTerminatePackageMismatch(
+	UNICODESTRING IncomingPackageFullName,
+	UNICODESTRING StoredPackageFullName,
+	UINT16 State
+	);
+
+ApplicationTerminatePackageMismatch(
+	UNICODESTRING IncomingPackageFullName,
+	UNICODESTRING StoredPackageFullName,
+	UINT16 State
+	);
+
+BipSignalTriggerEvent(
+	NTSTATUS status,
+	UINT32 activationStatus
+	);
+
+BipSignalTriggerEvent(
+	GUID eventId,
+	GUID brokerId,
+	SID userSid,
+	HEXINT32 eventFlags,
+	UINT32 triggerType,
+	GUID argumentsClassId,
+	UINT32 argumentsSize
+	);
+
+BipSignalEventWithLockHeld(
+	VOID
+	);
+
+BipSignalEventWithLockHeld(
+	GUID eventId,
+	GUID brokerId,
+	SID userSid,
+	HEXINT32 eventFlags,
+	UINT32 triggerType,
+	GUID argumentsClassId,
+	UINT32 argumentsSize
+	);
+
+Event_ResignalFailed(
+	GUID eventId,
+	NTSTATUS status
+	);
+
+EventDelete(
+	GUID eventId
+	);
+
+OrphanedEventDelete(
+	NULL Count,
+	GUID BrokerId,
+	UINT32 BrokerTypeId,
+	UINT32 TypeId,
+	UINT32 Flags,
+	UNICODESTRING PackageFullName,
+	UINT64 PartA_PrivTags
+	);
+
+EventMgr_CreateEventFailed(
+	GUID eventId,
+	UNICODESTRING packageFullName,
+	SID userSid,
+	SID forUserSid,
+	GUID brokerId,
+	HEXINT32 internalFlags,
+	HEXINT32 eventFlags,
+	UINT32 eventType,
+	BOOLEAN eventSavedToStorage,
+	NTSTATUS status,
+	UINT32 failedCheck
+	);
+
+BipSebGetStateNameFromEventId(
+	GUID SebEventId,
+	NTSTATUS Status,
+	UINT32 FailedCheck,
+	UINT32 SebUnpackFailedCheck
+	);
+
+BipSebGetStateNameFromEventId(
+	GUID SebEventId
+	);
+
+BipSebDeleteStaleStateNamesByTable(
+	NTSTATUS Status,
+	UINT32 ErrorCode,
+	UINT32 ConsideredStateNames,
+	UINT32 DeletedStateNames,
+	UINT32 PermanentStateNames
+	);
+
+SebStaleStateName_RegDelete(
+	UINT32 Result,
+	ANSISTRING StateNameString,
+	HEXINT32 StateName.Data[0],
+	HEXINT32 StateName.Data[1]
+	);
+
+BipSebDeleteStaleStateNamesByTable(
+	VOID
+	);
+
+BipSebCleanStateNames(
+	BOOLEAN IsWin8Migrated,
+	NTSTATUS Status,
+	UINT32 FailedCheck
+	);
+
+BipSebCleanStateNames(
+	BOOLEAN IsWin8Migrated
+	);
+
+BipImportMigratedStorage(
+	NTSTATUS Status,
+	BOOLEAN IsWin8Migrated,
+	UINT32 FailedCheck
+	);
+
+Upgrade_UnexpectedConfigurationVersion(
+	UINT32 CurrentVersion,
+	UINT32 FoundVersion
+	);
+
+BipImportMigratedStorage(
+	VOID
+	);
+
+Activation_ActivateInBackgroundFailed(
+	UNICODESTRING taskEntryPoint,
+	UNICODESTRING name,
+	GUID eventId,
+	UNICODESTRING packageFullName,
+	SID userSid,
+	SID forUserSid,
+	UINT32 eventType,
+	HEXINT32 policyFlags,
+	NTSTATUS status,
+	UINT32 failedCheck
+	);
+
+Activation_FailedQueryStatusStateName(
+	UNICODESTRING packageFullName,
+	UNICODESTRING taskEntryPoint
+	);
+
+TaskResourceUsage(
+	GUID workItemId,
+	GUID instance,
+	INT32 completionReason,
+	UINT64 processorRunningCycles,
+	UINT64 processorReadyCycles,
+	UINT64 ioAllPriorityIdleUs,
+	UINT64 ioNonLowPriorityIdleUs,
+	UINT64 ioReadBytes,
+	UINT64 ioWrittenBytes,
+	UINT64 memoryUsedBytes,
+	UINT64 peakMemoryUsedBytes,
+	UINT32 workItemCount,
+	UINT64 initialProcessorRunningCycles,
+	UINT64 initialProcessorReadyCycles,
+	UINT64 initialIoAllPriorityIdleUs,
+	UINT64 initialIoNonLowPriorityIdleUs,
+	UINT64 initialIoReadBytes,
+	UINT64 initialIoWrittenBytes,
+	UINT64 initialMemoryUsedBytes,
+	UINT64 initialPeakMemoryUsedBytes,
+	UINT32 initialWorkItemCount
+	);
+
+TaskForcedCompletion(
+	GUID workItemId,
+	UNICODESTRING packageFullName,
+	UNICODESTRING entryPoint,
+	UNICODESTRING workItemName,
+	GUID instance
+	);
+
+TaskLongActivationThreshold(
+	GUID workItemId,
+	UNICODESTRING packageFullName,
+	UNICODESTRING entryPoint,
+	UNICODESTRING workItemName,
+	GUID instance,
+	UINT32 activationType,
+	UINT64 activationLengthMs
+	);
+
+TaskActivatedComplete(
+	GUID workItemId,
+	GUID instance
+	);
+
+InitializeFailed(
+	NTSTATUS Status,
+	HEXINT32 FailCode
+	);
+
+Failed Server_AllocateState(
+	NTSTATUS Status,
+	UINT32 LocalFailCode
+	);
+
+WorkItem_DiscardActivations(
+	UNICODESTRING reserved,
+	GUID workItemId,
+	HEXINT32 discardFlags,
+	HEXINT32 dropReason
+	);
+
+ActivationDroppedRateThrottling(
+	GUID workItemId,
+	UNICODESTRING packageFullName,
+	COUNTEDSTRING entryPoint,
+	UINT32 triggerType,
+	UINT16 currentActivationCount,
+	UINT16 activationCount
+	);
+
+WorkItem_CheckForegroundRequirement(
+	GUID eventId,
+	GUID workItemId,
+	UINT32 activationStatus,
+	UINT32 failedCheck
+	);
+
+WorkItem_AllocateActivationInformationFailed(
+	UNICODESTRING reserved,
+	GUID workItemId,
+	UNICODESTRING reserved,
+	NTSTATUS status
+	);
+
+WorkItem_EaStart(
+	GUID eventId,
+	GUID workItemId,
+	ANSISTRING reserved,
+	NTSTATUS status,
+	UINT32 activationStatus,
+	UINT32 failedCheck
+	);
+
+WorkItem_CancelFailed(
+	GUID eventId,
+	GUID workItemId,
+	HEXINT64 userContextId,
+	HEXINT32 cancelReason,
+	NTSTATUS status
+	);
+
+WorkItem_EaLatch(
+	GUID eventId,
+	GUID workItemId,
+	ANSISTRING reserved,
+	HEXINT32 workItemFlags,
+	UNICODESTRING packageFullName,
+	COUNTEDSTRING workItemName
+	);
+
+SystemPsm_ResumeApplicationSandbox(
+	GUID workItemId,
+	GUID instanceId,
+	UINT32 suppressionReason,
+	HEXINT32 psmFlags
+	);
+
+PackageSuspend(
+	GUID workItemId,
+	UNICODESTRING packageFullName,
+	UNICODESTRING entryPoint,
+	UINT32 triggerType,
+	UINT16 psmQuotaType,
+	UINT32 policyFlags,
+	UINT32 wallClockLimitMs
+	);
+
+WorkItem_EaStop(
+	GUID eventId,
+	GUID workItemId,
+	ANSISTRING reserved,
+	NTSTATUS status,
+	UINT32 failedCheck
+	);
+
+WorkItemIdleNotificationAllocationFailed(
+	GUID workItemId,
+	UNICODESTRING packageFullName,
+	UNICODESTRING entryPoint
+	);
+
+WorkItem_DropAndResignal(
+	GUID eventId,
+	GUID workItemId,
+	NTSTATUS status
+	);
+
+WorkItem_EaStop(
+	GUID eventId,
+	GUID workItemId,
+	ANSISTRING reserved,
+	HEXINT32 workItemFlags
+	);
+
+WorkItem_UpdateCrmActivityFailed(
+	UNICODESTRING reserved,
+	GUID workItemId,
+	NTSTATUS status
+	);
+
+WorkItem_GetActivationAction(
+	GUID eventId,
+	GUID workItemId,
+	GUID taskInstanceId,
+	NTSTATUS status,
+	UINT32 action,
+	HEXINT32 latchReason,
+	HEXINT32 dropReason,
+	BOOLEAN concurrencyPolicyApplied
+	);
+
+WorkItem_DropAndResignal(
+	GUID eventId,
+	GUID workItemId
+	);
+
+WorkItem_EaStart(
+	GUID eventId,
+	GUID workItemId,
+	ANSISTRING reserved,
+	HEXINT32 workItemFlags,
+	UNICODESTRING packageFullName,
+	COUNTEDSTRING workItemName
+	);
+
+WorkItem_EaLatch(
+	GUID eventId,
+	GUID workItemId,
+	ANSISTRING reserved,
+	NTSTATUS status,
+	UINT32 failedCheck
+	);
+
+AssociateWorkItemFailed(
+	UNICODESTRING PackageFullName,
+	NTSTATUS Status,
+	UINT32 FailedCheck
+	);
+
+PackageResume(
+	GUID workItemId,
+	UNICODESTRING packageFullName,
+	UNICODESTRING entryPoint,
+	UINT16 psmQuotaType
+	);
+
+SystemPsm_SuppressApplicationSandbox(
+	GUID workItemId,
+	GUID instanceId,
+	UINT32 suppressionReason,
+	HEXINT32 psmFlags
+	);
+
+GlobalLockWatchdog(
+	VOID
+	);
+
+GlobalLockAcquire(
+	NULL Count,
+	NULL LongAcquireCount,
+	NULL MaxAcquireLengthNs,
+	NULL MinAcquireLengthNs,
+	NULL MaxWaiters,
+	INT64 Frequency,
+	UINT64 PartA_PrivTags
+	);
+
+PackageInstanceLeaveState(
+	UNICODESTRING packageFullName,
+	HEXINT64 userContextId,
+	UINT8 state,
+	HEXINT32 oldStateSummary,
+	HEXINT32 newStateSummary,
+	UINT32 stateCount,
+	BOOLEAN stateChange
+	);
+
+PackageInstanceEnterState(
+	UNICODESTRING packageFullName,
+	HEXINT64 userContextId,
+	UINT8 state,
+	HEXINT32 oldStateSummary,
+	HEXINT32 newStateSummary,
+	UINT32 stateCount,
+	BOOLEAN stateChange
+	);
+
+ExecMgr_TimerWorker(
+	VOID
+	);
+
+ExecMgr_SetTimer(
+	ANSISTRING reserved,
+	GUID workItemId,
+	ANSISTRING reserved,
+	UINT64 currentTime100Ns,
+	UINT64 dueTime100Ns
+	);
+
+ExecMgr_TimerWorker(
+	UINT64 currentTime100Ns,
+	UINT64 dueTime100Ns
+	);
+
+ExecMgr_UnbufferFailed(
+	NTSTATUS Status
+	);
+
+ExecMgr_TransitionToActivationPermitted(
+	ANSISTRING reserved,
+	GUID workItemId,
+	ANSISTRING reserved
+	);
+
+ExecMgr_TransitionToArmed(
+	ANSISTRING reserved,
+	GUID workItemId,
+	ANSISTRING reserved,
+	UINT64 coalesceStartTime100Ns,
+	UINT32 coalesceDurationMs
+	);
+
+ExecMgr_WorkItemStart(
+	ANSISTRING reserved,
+	GUID workItemId,
+	ANSISTRING reserved,
+	UINT64 currentTime100Ns,
+	UINT64 dueTime100Ns
+	);
+
+ExecMgr_TransitionToUnarmed(
+	ANSISTRING reserved,
+	GUID workItemId,
+	ANSISTRING reserved
+	);
+
+PackageSettings_LoadFailed(
+	UNICODESTRING package,
+	UINT32 failedIndex,
+	NTSTATUS status
+	);
+
+PackageSettings_LoadSessionCompleteExemptionsFailed(
+	UNICODESTRING package,
+	NTSTATUS status
+	);
+
+Pdc_SessionTimerCallback(
+	FILETIME startTime,
+	FILETIME debounceStartTime,
+	BOOLEAN stopMeasureSentForWake,
+	FILETIME currentTime,
+	UINT64 activatorsHeld,
+	UINT64 sessionId
+	);
+
+Pdc_Session(
+	FILETIME startTime,
+	UINT64 sessionId
+	);
+
+Pdc_RefAcquired(
+	UNICODESTRING packageFullName,
+	COUNTEDSTRING taskEntryPoint,
+	UINT64 wakeId,
+	UINT32 type
+	);
+
+Pdc_Session(
+	FILETIME startTime,
+	FILETIME endTime,
+	UINT64 sessionId,
+	UINT64 durationMs
+	);
+
+Pdc_RefReleased(
+	UNICODESTRING packageFullName,
+	COUNTEDSTRING taskEntryPoint,
+	UINT64 parallelTasksRemaining
+	);
+
+Pdc_SessionTimerSet(
+	FILETIME currentTime,
+	UINT64 sessionId
+	);
+
+TriggerConfig_LoadFailed(
+	UINT32 FailedIndex
+	);
+
+Storage_RestoreEvent(
+	GUID eventId,
+	GUID BrokerId,
+	NTSTATUS status,
+	UINT32 failedCheck
+	);
+
+Storage_SaveEventInStore(
+	GUID eventId
+	);
+
+Storage_RestoreEvent(
+	GUID eventId
+	);
+
+Storage_SaveEventInStore(
+	GUID eventId,
+	NTSTATUS status,
+	UINT32 failedCheck
+	);
+
+BipInitializeStorageWorker(
+	NTSTATUS Status,
+	UINT32 FailedCheck
+	);
+
+Storage_OpenStorageRootError(
+	NTSTATUS status,
+	UINT32 failedCheck,
+	FILETIME recoveredFromCorruptedHiveTime
+	);
+
+Storage_RestoreEventFailed(
+	GUID eventId,
+	GUID BrokerId,
+	NTSTATUS status,
+	UINT32 failedCheck
+	);
+
+Storage_WrongConfigurationVersion(
+	UINT32 CurrentVersion,
+	UINT32 CurrentMinorVersion,
+	UINT32 FoundVersion,
+	UINT32 FoundMinorVersion
+	);
+
+Storage_RestoreEvent(
+	GUID eventId,
+	GUID brokerId
+	);
+
+PackageUninstalledUserDeleted(
+	UNICODESTRING PackageFullName
+	);
+
+BipInitializeStorageWorker(
+	VOID
+	);
+
+QuotaMgr_EnergyQuotaSubscriberUpdateQueued(
+	UNICODESTRING PackageFullName,
+	UINT64 NewQuota,
+	BOOL32 Discarded
+	);
+
+QuotaMgr_EnergyQuotaManagerPublished(
+	HRESULT Result,
+	UINT16 RefillPeriodLengthMin,
+	UINT16 BatteryRundownTargetMin,
+	FLOAT MinBatteryPerPeriodScreenOff,
+	FLOAT MinBatteryPerPeriodScreenOn,
+	BOOL32 EnergyBudgetDisabled
+	);
+
+QuotaMgr_DuplicateEnergyQuotaNotificationRequested(
+	UNICODESTRING PackageFullName
+	);
+
+QuotaMgr_OnEnergyUsagePeriodEnd(
+	HRESULT Result
+	);
+
+QuotaMgr_UpdateQuotasCallbackComplete(
+	NTSTATUS Status
+	);
+
+QuotaMgr_CoInitializeFailed(
+	HRESULT Result
+	);
+
+QuotaMgr_EnergyQuotaSubscriberInvoked(
+	HRESULT Result,
+	UNICODESTRING PackageFullName,
+	UINT64 NewQuota,
+	BOOL32 Discarded
+	);
+
+QuotaMgr_EnergyQuotaNotificationRegistered(
+	UNICODESTRING PackageFullName,
+	UINT64 RegistrationCookie
+	);
+
+QuotaMgr_StaleSubscriptionRemoved(
+	UINT64 Cookie,
+	UNICODESTRING PackageFullName
+	);
+
+QuotaMgr_EnergyBudgetUpdateListEmpty(
+	VOID
+	);
+
+QuotaMgr_GetQuotaManagerFailed(
+	HRESULT Result
+	);
+
+QuotaMgr_OnEnergyQuotaChangedForPackage(
+	UNICODESTRING PackageFullName,
+	UINT64 NewQuota,
+	BOOL32 Discarded
+	);
+
+QuotaMgr_NullListenerForPackage(
+	UINT64 Cookie,
+	UNICODESTRING PackageFullName
+	);
+
+QuotaMgr_GetPinnedAppsForUserFailed(
+	BOOL32 startCollectionExists,
+	BOOL32 lockTileCollectionExists,
+	HRESULT result,
+	UINT32 failedCheck
+	);
+
+QuotaMgr_OnEnergyUsedUpdateBudgets(
+	UNICODESTRING PackageFullName,
+	UINT32 BackgroundEnergyConsumed,
+	UINT32 ForegroundEnergyConsumed
+	);
+
+QuotaMgr_EnergyQuotaNotificationUnregistered(
+	UNICODESTRING PackageFullName,
+	UINT64 RegistrationCookie
+	);
+
+QuotaMgr_DestroyQuotaManager(
+	VOID
+	);
+
+Srv_Cancel(
+	UNICODESTRING reserved,
+	GUID workItemId,
+	HEXINT32 cancelReason
+	);
+
+Srv_AssociateApplicationEntryPoint(
+	GUID eventId,
+	ANSISTRING reserved,
+	ANSISTRING reserved,
+	UNICODESTRING packageFullName,
+	COUNTEDSTRING taskEntryPoint,
+	UNICODESTRING name,
+	COUNTEDSTRING extensionContract,
+	HEXINT32 internalFlags,
+	HEXINT32 workItemFlags
+	);
+
+Srv_CreateEvent(
+	GUID eventId,
+	UNICODESTRING packageFullName,
+	SID userSid,
+	SID forUserSid,
+	GUID brokerId,
+	HEXINT32 internalFlags,
+	HEXINT32 eventFlags,
+	UINT32 eventType,
+	NTSTATUS status,
+	UINT32 failedCheck
+	);
+
+BiSrvQueryBrokeredEvent(
+	NTSTATUS Status,
+	UINT32 FailedCheck,
+	GUID EventId
+	);
+
+Srv_ActivateWorkItem(
+	GUID workItemId,
+	GUID instanceId,
+	BOOLEAN isHamManaged,
+	NTSTATUS status,
+	UINT32 failedCheck
+	);
+
+Srv_SignalEvent(
+	GUID eventId,
+	ANSISTRING reserved,
+	ANSISTRING reserved,
+	NTSTATUS status,
+	UINT32 activationStatus
+	);
+
+BiSrvDisassociateWorkItem(
+	NTSTATUS status
+	);
+
+BiSrvQueryBrokeredEvent(
+	GUID EventId
+	);
+
+Srv_ActivateInBackground(
+	UNICODESTRING packageFullName,
+	SID userSid,
+	SID forUserSid,
+	UNICODESTRING taskEntryPoint,
+	UNICODESTRING name
+	);
+
+Srv_AssociateApplicationEntryPoint(
+	GUID eventId,
+	GUID workItemId,
+	ANSISTRING reserved,
+	NTSTATUS status,
+	UINT32 failedCheck,
+	UNICODESTRING packageFullName,
+	COUNTEDSTRING taskEntryPoint,
+	UNICODESTRING name,
+	COUNTEDSTRING extensionContract,
+	HEXINT32 internalFlags,
+	HEXINT32 workItemFlags
+	);
+
+Srv_ActivateWorkItem(
+	GUID workItemId
+	);
+
+Srv_ActivateInBackground(
+	UNICODESTRING packageFullName,
+	SID userSid,
+	SID forUserSid,
+	UNICODESTRING taskEntryPoint,
+	UNICODESTRING name,
+	UNICODESTRING extensionContract,
+	HEXINT32 policyFlags,
+	GUID eventId,
+	GUID instanceId,
+	NTSTATUS status,
+	UINT32 failedCheck
+	);
+
+Srv_NewSession(
+	UINT32 sessionId,
+	HRESULT hr
+	);
+
+Srv_SignalEvent(
+	GUID eventId,
+	ANSISTRING reserved,
+	ANSISTRING reserved
+	);
+
+AssociateApplicationEntryPointFailed(
+	NTSTATUS status,
+	UINT32 failedCheck,
+	UNICODESTRING packageFullName,
+	COUNTEDSTRING taskEntryPoint,
+	UNICODESTRING name,
+	COUNTEDSTRING extensionContract,
+	HEXINT32 internalFlags,
+	HEXINT32 workItemFlags,
+	GUID eventId
+	);
+
+BiSrvDisassociateWorkItem(
+	GUID workItemId,
+	SID userSid,
+	UNICODESTRING packageFullName,
+	UINT32 flags
+	);
+
+Srv_Cancel(
+	UNICODESTRING reserved,
+	GUID workItemId,
+	HEXINT32 cancelReason,
+	NTSTATUS status,
+	UINT32 failedCheck
+	);
+
+Srv_NewSession(
+	UINT32 sessionId
+	);
+
+Srv_CreateEvent(
+	VOID
+	);
+
+Assert(
+	UINT32 assertVersion,
+	UINT32 rva,
+	UINT32 timestamp,
+	UINT32 imageSize,
+	ANSISTRING imageName,
+	UINT32 count,
+	UINT32 totalHits,
+	UINT32 ModuleCollection,
+	UINT32 GlobalCollection
+	);
+
+TlgAggregateSummary(
+	GUID Provider,
+	UINT64 NumFlushes,
+	UINT64 MaxEntriesStored,
+	UINT64 TotalEntriesFlushed,
+	UINT32 MaxEntriesFlushed,
+	UINT32 MinEntriesFlushed,
+	UINT32 NumBucketLimitReached,
+	UINT32 NumAllocationFailures,
+	UINT32 NumLargeEventFailures
+	);
+
+Activation_DispatchBackgroundTaskCallback(
+	ANSISTRING reserved,
+	GUID workItemId,
+	GUID taskInstanceId,
+	UNICODESTRING entryPoint,
+	UNICODESTRING applicationName
+	);
+
+Activation_DispatchBackgroundTaskCallback(
+	ANSISTRING reserved,
+	GUID workItemId,
+	GUID taskInstanceId,
+	UNICODESTRING entryPoint,
+	UNICODESTRING applicationName,
+	BOOLEAN comInitialized,
+	HRESULT hr
+	);
+
+OnFindPackageForUser(
+	HRESULT hr,
+	UNICODESTRING packageFullName
+	);
+
+BiActInitialize_FailCheck(
+	HRESULT HResult,
+	UINT32 FailCheck
+	);
+
+BipUnmarshalActivationContext_FailCheck(
+	UINT32 FailCheck
+	);
+
+Activation_DispatchCancellationFailed(
+	UNICODESTRING reserved,
+	UNICODESTRING reserved,
+	GUID instanceId,
+	HEXINT32 cancelReason,
+	HRESULT hr,
+	UINT32 failedCheck
+	);
+
+Activation_DispatchBackgroundTask(
+	GUID taskInstanceId
+	);
+
+Activation_DispatchBackgroundTask(
+	GUID eventId,
+	GUID workItemId,
+	GUID taskInstanceId,
+	HRESULT hresult,
+	UINT32 failedCheck
+	);
+
+OnEnsurePackageRegistered(
+	HRESULT hr,
+	UNICODESTRING packageFullName
+	);
+
+Srv_RemoteInstanceCompleted(
+	ANSISTRING reserved,
+	GUID workItemId,
+	GUID taskInstanceId,
+	BOOLEAN alreadyClosed,
+	BOOLEAN invokedCompletionCallback,
+	HRESULT taskHr,
+	BOOLEAN taskRan
+	);
+
+Srv_RemoteInstanceCompleted(
+	ANSISTRING reserved,
+	GUID workItemId,
+	GUID taskInstanceId
+	);
+
+OnFindPolicyResult(
+	UNICODESTRING psmKey,
+	GUID workItemId,
+	UINT8 isUapApp,
+	UINT8 defaultPolicyChosen,
+	UINT32 failedCheck,
+	INT32 hr
+	);
+
+OnPolicyError(
+	UNICODESTRING psmKey,
+	GUID workItemId,
+	UINT32 eventType,
+	INT32 hr
+	);
+
+OnWorkItemDropped(
+	UNICODESTRING psmKey,
+	GUID workItemId,
+	UINT32 eventType,
+	INT32 hr
+	);
+
+WorkItemProcessedInMoreThanThresholdValue(
+	GUID WorkItemId,
+	UNICODESTRING PsmKey,
+	UNICODESTRING EntryPoint,
+	UINT32 TriggerId,
+	UINT32 HostJobType,
+	UINT32 DurationOfWorkItemInQueue,
+	INT32 IsHighPriority
+	);
+
+WallClockExpired(
+	GUID workItemId,
+	SID userSid,
+	UINT32 sessionId,
+	UNICODESTRING psmKey,
+	UINT32 hostJobType,
+	UINT32 eventType,
+	UINT32 wallClockLimitMs,
+	BOOL32 legacyApp,
+	GUID taskInstanceId
+	);
+
+EvaluateActivationActionFailed(
+	GUID workItemId,
+	SID userSid,
+	UINT32 sessionId,
+	UNICODESTRING psmKey,
+	INT32 hostJobType,
+	HRESULT result
+	);
+
+WIActivationDroppedDueToMismatch(
+	GUID workItemId,
+	SID userSid,
+	UINT32 workItemSessionId,
+	UINT32 BISessionId,
+	UNICODESTRING psmKey,
+	INT32 hostJobType,
+	HEXINT64 hostId
+	);
+
+FallbackError(
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+FallbackError(
+	UINT64 PartA_PrivTags,
+	SIGNED wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+EmptyHostRsReleased(
+	HEXINT64 hostId,
+	UINT32 sessionId,
+	UNICODESTRING psmKey,
+	SID userSid,
+	UINT32 hostJobType,
+	BOOL32 criticalHost,
+	HEXINT64 resourceSetId
+	);
+
+EmptyHostDeleted(
+	HEXINT64 hostId,
+	UINT32 sessionId,
+	UNICODESTRING psmKey,
+	SID userSid,
+	UINT32 hostJobType,
+	BOOL32 criticalHost
+	);
+
+EmptyHostCreated(
+	HEXINT64 hostId,
+	UINT32 sessionId,
+	UNICODESTRING psmKey,
+	SID userSid,
+	UINT32 hostJobType,
+	BOOL32 criticalHost
+	);
+
+LowPriorityWorkItemActionsSummaryPerHour(
+	UINT32 WorkItemDroppedCount,
+	UINT32 WorkItemDiscardedCount,
+	UINT32 WorkItemCount0to5000ms,
+	UINT32 WorkItemCount5000to10000ms,
+	UINT32 WorkItemCount10000to20000ms,
+	UINT32 WorkItemCount20000to30000ms,
+	UINT32 MaxDurationOfWorkItemInQueue,
+	UINT32 MinDurationOfWorkItemInQueue
+	);
+
+HighPriorityWorkItemActionsSummaryPerHour(
+	UINT32 WorkItemDroppedCount,
+	UINT32 WorkItemDiscardedCount,
+	UINT32 WorkItemCount0to250ms,
+	UINT32 WorkItemCount250to500ms,
+	UINT32 WorkItemCount500to750ms,
+	UINT32 WorkItemCount750to1000ms,
+	UINT32 MaxDurationOfWorkItemInQueue,
+	UINT32 MinDurationOfWorkItemInQueue
+	);
+
+HamExternalResourcePriorityReset(
+	HRESULT hr,
+	HEXINT64 activityHandle,
+	UNICODESTRING psmKey,
+	HEXINT64 hostId,
+	UINT8 resourceType
+	);
+
+HamExternalResourcePrioritySet(
+	HRESULT hr,
+	HEXINT64 activityHandle,
+	UNICODESTRING psmKey,
+	HEXINT64 hostId,
+	UINT8 resourceType,
+	UINT8 resourcePriority
+	);
+
+HamActivityStarted(
+	HRESULT hr,
+	HEXINT64 activityHandle,
+	UNICODESTRING psmKey,
+	HEXINT64 hostId
+	);
+
+HamActivityClosed(
+	HEXINT64 activityHandle,
+	UNICODESTRING psmKey,
+	HEXINT64 hostId
+	);
+
+HamActivityHostTerminate(
+	HEXINT64 activityHandle,
+	UNICODESTRING psmKey,
+	HEXINT64 hostId,
+	NTSTATUS status
+	);
+
+HamActivityStarting(
+	GUID workItemId,
+	SID userSid,
+	UINT32 sessionId,
+	UNICODESTRING psmKey,
+	INT32 hostJobType,
+	UNICODESTRING resourcePolicyName,
+	BOOL32 fromSponsor,
+	BOOL32 replaceExisting,
+	HEXINT64 activityHandle,
+	HEXINT64 hostId
+	);
+
+AppModelAppInfoFailure(
+	UINT32 HRESULT,
+	UNICODESTRING psmKey,
+	GUID workItemId
+	);
+
+WIWallClockDisabledDueToExtendedLifetime(
+	GUID workItemId,
+	SID userSid,
+	UINT32 workItemSessionId,
+	UNICODESTRING psmKey,
+	INT32 hostJobType
+	);
+
+OnEvaluateActivationAction(
+	INT32 evalWorkItemFailed,
+	INT32 isNewItem,
+	UINT32 failedCheck,
+	INT32 hr
+	);
+
+OnFindByIdResult(
+	GUID workItemId,
+	INT32 hr,
+	INT32 workItemNull
+	);
+
+OnPolicyDropped(
+	UNICODESTRING psmKey,
+	GUID workItemId,
+	UINT32 eventType,
+	UINT32 policyDroppedReason,
+	UNICODESTRING workItemEntrypoint
+	);
+
+OnPolicyBuffered(
+	UNICODESTRING psmKey,
+	GUID workItemId,
+	UINT32 eventType,
+	UINT32 policyBufferingReason,
+	UNICODESTRING workItemEntrypoint
+	);
+
+RBiSrvTerminateApplicationHostForUser(
+	NTSTATUS status,
+	BOOLEAN forciblyTerminated
+	);
+
+RBiSrvSignalEvent(
+	GUID eventId
+	);
+
+RBiSrvChangeUserState(
+	UINT32 sessionId,
+	SID userSid,
+	UINT32 state
+	);
+
+RBiSrvChangeApplicationStateForPsmKeyForUser(
+	NTSTATUS status,
+	BOOLEAN forciblyTerminated
+	);
+
+RBiSrvNotifyNewUser(
+	UINT32 sessionId,
+	SID userSid,
+	HEXINT64 userContext
+	);
+
+RBiSrvSignalTriggerEvent(
+	NTSTATUS status
+	);
+
+RBiSrvSignalTriggerEvent(
+	GUID eventId
+	);
+
+RBiSrvNotifyNewUser(
+	HRESULT hr
+	);
+
+RBiSrvChangeApplicationStateForPackageNameForUser(
+	NTSTATUS status,
+	BOOLEAN forciblyTerminated
+	);
+
+RBiSrvChangeUserState(
+	NTSTATUS status
+	);
+
+RBiSrvSignalEvent(
+	NTSTATUS status
+	);
+
+RBiSrvChangeApplicationStateForPackageNameForUser(
+	UINT32 sessionId,
+	SID userSid,
+	UNICODESTRING packageFullName,
+	UINT32 state
+	);
+
+RpcSrvFt_NewSessionFailed(
+	HRESULT hr,
+	HEXINT64 activationContext,
+	UINT32 failedCheck
+	);
+
+RBiSrvTerminateApplicationHostForUser(
+	UINT32 sessionId,
+	SID userSid,
+	UNICODESTRING psmKey,
+	UINT32 hostType,
+	HEXINT64 hostID,
+	UINT32 terminateAction
+	);
+
+RBiSrvChangeApplicationStateForPsmKeyForUser(
+	UINT32 sessionId,
+	SID userSid,
+	UNICODESTRING psmKey,
+	UINT32 state
+	);
+
+RegisterWorkItemFailed(
+	HRESULT hr,
+	UINT32 failedCheck
+	);
+
+OdbFtRpcSrv_CancelTask(
+	UNICODESTRING res,
+	GUID workItemId,
+	HRESULT hr,
+	SID userSid,
+	UINT32 sessionId,
+	UINT32 odbId,
+	HEXINT32 cancellationReason
+	);
+
+OdbPtRpcSrv_CancelTask(
+	UNICODESTRING res,
+	GUID workItemId,
+	HRESULT hr,
+	SID userSid,
+	UINT32 sessionId,
+	UINT32 odbId,
+	HEXINT32 cancellationReason
+	);
+
+OdbFtRpcSrv_CancelTask(
+	VOID
+	);
+
+OdbFtRpcSrv_LaunchTask(
+	UNICODESTRING res,
+	GUID workItemId,
+	GUID instanceId,
+	HRESULT hr,
+	SID userSid,
+	SID forUserSid,
+	UINT32 sessionId,
+	UINT32 odbId,
+	UNICODESTRING packageFullName,
+	UNICODESTRING entryPoint
+	);
+
+OdbPtRpcSrv_CancelTask(
+	VOID
+	);
+
+OdbPtRpcSrv_LaunchTask(
+	UNICODESTRING res,
+	GUID workItemId,
+	GUID instanceId,
+	HRESULT hr,
+	SID userSid,
+	SID forUserSid,
+	UINT32 sessionId,
+	UINT32 odbId,
+	UNICODESTRING packageFullName,
+	UNICODESTRING entryPoint
+	);
+
+OdbFtRpcSrv_LaunchTask(
+	VOID
+	);
+
+OdbPtRpcSrv_LaunchTask(
+	VOID
+	);
+

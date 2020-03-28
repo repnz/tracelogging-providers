@@ -1,0 +1,44 @@
+ProviderNames:
+	Microsoft.Windows.Security.AppIdLogger
+
+
+
+**** Events *****
+ActivityStoppedAutomatically(
+	VOID
+	);
+
+ApplockerPolicyData(
+	UNICODESTRING policyName,
+	UINT32 enforcementMode,
+	UINT32 serviceEnforcementMode,
+	UINT32 ruleCount,
+	UINT32 allowCount,
+	UINT32 denyCount
+	);
+
+ConvertPolicy(
+	UINT32 result
+	);
+
+PluginPolicyConverter(
+	UINT32 result
+	);
+
+ConvertPolicy(
+	VOID
+	);
+
+PluginPolicyData(
+	GUID pluginId,
+	UNICODESTRING pluginName,
+	UINT32 pluginFlags,
+	GUID executionCategoryId,
+	UINT32 executionCategoryFlags,
+	UINT32 executionCategoryPolicyIdCount
+	);
+
+PolicyConversionTaskResult(
+	UINT32 result
+	);
+

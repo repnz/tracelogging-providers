@@ -1,0 +1,288 @@
+ProviderNames:
+	Microsoft.Windows.DeviceManagement.SessionManagement
+	Microsoft.Windows.EnterpriseManagement.Enrollment
+	Microsoft.Windows.EnterpriseManagement.PolicyManager
+	Microsoft.Windows.DeviceManagement.OmaDmApiProvider
+	Microsoft.Windows.EnterpriseManagement.ResourceManager
+	Microsoft.Windows.DeviceManagement.OmaDmClient
+	Microsoft.Windows.DeviceManagement.ConfigManager2
+	Microsoft.Windows.EnterpriseManagement.DeclaredConfiguration
+	Microsoft.Windows.DeviceManagement.DevDetailCsp
+	Microsoft.Windows.DeviceManagement.OMADMPRC
+	Microsoft.Windows.EnterpriseManagement.ResourceManagerUnenrollHook
+	Microsoft.Windows.DeviceManagement.SecurityPolicyCsp
+	Microsoft.Windows.DeviceManagement.DmAccCsp
+	Microsoft.Windows.DeviceManagement.DevInfo
+	Microsoft.Windows.EnterpriseManagement.ConfigManagerHook
+	Microsoft-Windows-DeviceManagement-W7NodeProcessor
+	Microsoft.Windows.EMPS.Enrollment
+	TelemetryAssert
+	TelemetryAssertDiagTrack
+	Microsoft.Windows.DeviceManagement.EdpConfiguration
+	Microsoft.Windows.Security.EdpPrecheck
+
+
+
+**** Events *****
+FallbackError(
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+FallbackError(
+	UINT64 PartA_PrivTags,
+	SIGNED wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+Error(
+	HEXINT32 HResult,
+	ANSISTRING File,
+	UINT32 LineNumber,
+	ANSISTRING Function,
+	UNICODESTRING Message,
+	ANSISTRING CallingContext
+	);
+
+IsDependencyResult(
+	INT32 resultValue,
+	INT32 isSatisfiedDependency,
+	UNICODESTRING stringParamNote
+	);
+
+FoundAllPolicyDependencies(
+	UNICODESTRING stringParamEnrollment
+	);
+
+PolicyFound(
+	UNICODESTRING stringPolicyArea,
+	UNICODESTRING stringPolicyName,
+	ANSISTRING __TlgCV__
+	);
+
+CurrentEdpDependencyProcessing(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	BOOL32 DependencySatisfied,
+	ANSISTRING __TlgCV__
+	);
+
+EdpEnforcementLevelCachedPolicyValueChanged(
+	UINT32 oldEdpEnforcementLevel,
+	UINT32 newEdpEnforcementLevel,
+	ANSISTRING __TlgCV__
+	);
+
+CurrentEdpDependencyProcessing(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId,
+	BOOL32 DependencySatisfied,
+	ANSISTRING __TlgCV__
+	);
+
+CurrentEdpDependencyProcessing(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+ActivityStoppedAutomatically(
+	VOID
+	);
+
+CurrentEdpDependencyProcessing(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId,
+	UNICODESTRING DependencyName,
+	ANSISTRING __TlgCV__
+	);
+
+ActivityError(
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+NoActiveUser(
+	INT32 resultValue
+	);
+
+CurrentEdpDependencyProcessing(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+ActivityError(
+	UINT64 PartA_PrivTags,
+	SIGNED wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+TaskAlreadyExists(
+	UNICODESTRING stringTaskName
+	);
+
+TaskCreated(
+	UNICODESTRING stringTaskName,
+	INT32 resultValue
+	);
+
+LogAllEdpTasksCreation(
+	INT32 resultValue
+	);
+
+EdpPrecheckInfo(
+	UNICODESTRING precheckCondition,
+	INT32 hr
+	);
+
+EdpPrecheck(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId
+	);
+
+ActivityIntermediateStop(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+EdpPrecheckError(
+	UNICODESTRING precheckErrorCondition,
+	INT32 hr
+	);
+
+EdpPrecheck(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+EdpPrecheck(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+Assert(
+	UINT32 assertVersion,
+	UINT32 rva,
+	UINT32 timestamp,
+	UINT32 imageSize,
+	ANSISTRING imageName,
+	UINT32 count,
+	UINT32 totalHits,
+	UINT32 ModuleCollection,
+	UINT32 GlobalCollection
+	);
+

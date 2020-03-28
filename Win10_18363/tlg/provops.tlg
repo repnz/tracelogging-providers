@@ -1,0 +1,907 @@
+ProviderNames:
+	Microsoft.Windows.Provisioning.Operations
+
+
+
+**** Events *****
+FallbackError(
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+ExceptionFailure(
+	HEXINT32 HResult,
+	ANSISTRING File,
+	UINT32 LineNumber,
+	ANSISTRING Function,
+	UNICODESTRING Message,
+	ANSISTRING CallingContext
+	);
+
+FallbackError(
+	UINT64 PartA_PrivTags,
+	SIGNED wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+ProvOpsErasePackageMetadata(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	SIGNED wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+RemovePackage(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+CreateProvisioningSession(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+UpgradeClearSettingsGroups(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	SIGNED wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+ProvOpsHandleStatesStarted(
+	VOID
+	);
+
+ProvOpsPrunePkgsEnded(
+	UINT32 PostPkgCount
+	);
+
+ActivityIntermediateStop(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+ActivityError(
+	UINT64 PartA_PrivTags,
+	SIGNED wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+RemovePackageMetadata(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+ProvOpsAddPkg(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId
+	);
+
+RemovePackageMetadataFailure(
+	UNICODESTRING PackageId,
+	UINT32 FailedStages
+	);
+
+ProvOpsAddPkgOpenPkgFailed(
+	VOID
+	);
+
+ProvOpsPostApr(
+	ANSISTRING __TlgCV__
+	);
+
+ProvOpsAddPkg(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+ActivityError(
+	UINT64 PartA_PrivTags,
+	SIGNED wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+CheckFirstRun(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+ProvOpsContext(
+	UINT32 Type,
+	UINT32 Turn,
+	UINT32 Slot,
+	UINT32 Status,
+	UNICODESTRING Source,
+	ANSISTRING __TlgCV__
+	);
+
+ProvOpsAddPkg(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+ProvOpsAddPkgFailed(
+	INT32 HResult,
+	ANSISTRING __TlgCV__
+	);
+
+ProvOpsHandleStatesSucceeded(
+	VOID
+	);
+
+PostProvisioningActivities(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	SIGNED wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+UpgradeClearSettingsGroups(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+UpgradeClearSettingsGroups(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId
+	);
+
+DebugTrace(
+	ANSISTRING debugString
+	);
+
+ProvOpsAddPkgRegisterLastPackageInOOBEFailed(
+	UNICODESTRING PackageId,
+	INT32 HResult
+	);
+
+RemovePackageMetadata(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId,
+	UNICODESTRING Source
+	);
+
+ProvOpsGeneralizeSkipAdd(
+	UNICODESTRING Source
+	);
+
+RemovePackageFailure(
+	UNICODESTRING PackageName,
+	UINT32 FailedStages
+	);
+
+ActivityIntermediateStop(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+ProvOpsApplyKnownPackages(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+ActivityStoppedAutomatically(
+	VOID
+	);
+
+CheckFirstRun(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	SIGNED wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+PostProvisioningActivities(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+RemovePackage(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	SIGNED wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+ProvOpsErasePackageMetadata(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId,
+	UNICODESTRING Source,
+	UNICODESTRING PackageID
+	);
+
+ProvOpsRemovePkgSucceeded(
+	VOID
+	);
+
+ProvOpsApplyKnownPackages(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId
+	);
+
+ProvOpsPrunePkgsStarted(
+	UINT32 PrePkgCount
+	);
+
+Validate_CV_FAIL(
+	ANSISTRING CV
+	);
+
+CreateProvisioningSession(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId
+	);
+
+ProvOpsAddPkgStarted(
+	UNICODESTRING Source,
+	ANSISTRING __TlgCV__
+	);
+
+ActivityStoppedAutomatically(
+	VOID
+	);
+
+CheckFirstRun(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId
+	);
+
+ProvOpsHandleStatesForPackagesSucceeded(
+	VOID
+	);
+
+ProvEngineNotDetected(
+	VOID
+	);
+
+RemovePackage(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId,
+	UNICODESTRING Source
+	);
+
+ProvOpsContextTrace(
+	UINT32 Type,
+	UINT32 Turn,
+	UINT32 Slot,
+	UINT32 Status,
+	UNICODESTRING Source
+	);
+
+ProvOpsApplyKnownPackages(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+ProvOpsGeneralizeSkipApply(
+	UINT32 Turn,
+	UNICODESTRING Source
+	);
+
+CreateProvisioningSession(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	SIGNED wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+PostProvisioningActivities(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId
+	);
+
+ActivityStoppedAutomatically(
+	VOID
+	);
+
+ProvOpsAddPkgContext(
+	UNICODESTRING Id,
+	UNICODESTRING Name,
+	UNICODESTRING Version,
+	UNICODESTRING Notes,
+	ANSISTRING __TlgCV__
+	);
+
+ProvOpsAddPkgSucceeded(
+	ANSISTRING __TlgCV__
+	);
+
+ProvOpsErasePackageMetadata(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+ActivityError(
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+ProvOpsHandleStatesForPackagesStarted(
+	VOID
+	);
+
+RemovePackageMetadata(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	SIGNED wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+PkgAbortNotUnique(
+	UNICODESTRING Id,
+	UNICODESTRING NewVersion,
+	UNICODESTRING InstalledVersion
+	);
+
+InstalledPkgVersionInvalid(
+	UNICODESTRING Id,
+	UNICODESTRING Version
+	);
+
+PkgVersionInvalid(
+	UNICODESTRING Id,
+	UNICODESTRING Version
+	);
+
+PkgOpenFailed(
+	UNICODESTRING PackagePath
+	);
+
+CheckPackageSignatureOpenPkgFailed(
+	VOID
+	);
+
+PackageSignedContext(
+	UNICODESTRING Id,
+	UNICODESTRING Name,
+	UNICODESTRING Version,
+	BOOLEAN IsTrusted
+	);
+
+PkgAbortUserAuthDeclined(
+	VOID
+	);
+
+PkgAbortSignatureCheckFailed(
+	VOID
+	);
+
+PkgAbortInvalidContentDetected(
+	VOID
+	);
+
+NoPackagesToApply(
+	VOID
+	);
+
+InstallAbortProvDisabled(
+	VOID
+	);
+
+DecryptCollectionOpenPkgFailed(
+	VOID
+	);
+
+PackageEncryptedContext(
+	UNICODESTRING Id,
+	UNICODESTRING Name,
+	UNICODESTRING Version
+	);
+
+PackageNotDecrypted(
+	INT32 hr,
+	UNICODESTRING Path
+	);
+
+PackagePotentiallyEncrypted(
+	UNICODESTRING Path
+	);
+
+PackageCollectorSearchDone(
+	VOID
+	);
+
+PackageCollectorPathCchCombineFullName(
+	UNICODESTRING Path,
+	UNICODESTRING FileName,
+	INT32 HResult
+	);
+
+PackageCollectorPackageFound(
+	UNICODESTRING Path,
+	UNICODESTRING FileName
+	);
+
+PackageCollectorFindError(
+	UNICODESTRING Path,
+	UINT32 LastError
+	);
+
+PackageCollectorFileNotFound(
+	UNICODESTRING Path
+	);
+
+PackageCollectorPathCchCombine(
+	UNICODESTRING Path,
+	INT32 HResult
+	);
+
+InvalidPackageExtension(
+	UNICODESTRING Path,
+	UNICODESTRING Name,
+	INT32 HResult
+	);
+
+InvalidPath(
+	UNICODESTRING Path
+	);
+
+NonPpkgDefaultPathFile(
+	UNICODESTRING Path,
+	UNICODESTRING Name
+	);
+
+PackageCollectorSkippingPackagePath(
+	UNICODESTRING Path
+	);
+
+PackageCollectorPathAdd(
+	UNICODESTRING Path,
+	INT32 HResult
+	);
+
+PackageCollectorPathAdd(
+	UNICODESTRING Path
+	);
+
+PackageCollectorDeinit(
+	VOID
+	);
+
+PackageCollectorInit(
+	VOID
+	);
+
+ProvisioningTargetUserFound(
+	UNICODESTRING TargetUserSid
+	);
+
+ProvAgentLockForProvisioningComplete(
+	VOID
+	);
+
+TurnMutexCreateComplete(
+	VOID
+	);
+
+ProvMutexCreateComplete(
+	VOID
+	);
+
+SetFileAttributesFailed(
+	UNICODESTRING FullPackagePath,
+	INT32 HResult
+	);
+
+GetFileAttributesFailed(
+	UNICODESTRING FullPackagePath,
+	INT32 HResult
+	);
+
+CopyFile2Failed(
+	UNICODESTRING FullSourcePath,
+	UNICODESTRING FullDestinationPath,
+	INT32 HResult
+	);
+
+CopyingDirectoriesIsNotSupported(
+	UNICODESTRING SourcePath
+	);
+
+PackageCopierSetRestrictiveAcls(
+	UNICODESTRING Path,
+	INT32 HResult
+	);
+
+PackageCopierDeleteFileEncryptedFile(
+	UNICODESTRING Path,
+	INT32 HResult
+	);
+
+PackageCopierSetFileAttributesEncryptedFile(
+	UNICODESTRING Path,
+	INT32 HResult
+	);
+
+PerfomCopyDidNotCommence(
+	VOID
+	);
+
+PackageCopierPathCchCombineFullName(
+	UNICODESTRING Path,
+	UNICODESTRING FileName,
+	INT32 HResult
+	);
+
+SourcePackageIsEmpty(
+	VOID
+	);
+
+NotAllPackagesCheckedForEncryption(
+	INT32 HResult
+	);
+
+EmptyParameters(
+	INT32 HResult
+	);
+
+PackageCopierDestructor(
+	VOID
+	);
+
+PackageCopierConstructor(
+	VOID
+	);
+
+EnrollmentMetadataErasedForPackage(
+	UNICODESTRING PackageId,
+	UNICODESTRING EnrollmentId,
+	HRESULT HResult
+	);
+
+ResourceTrackingStoppedForCspNode(
+	UNICODESTRING CspNodePath,
+	HRESULT HResult
+	);
+
+EnrollmentRemovedForPackage(
+	UNICODESTRING PackageId,
+	UNICODESTRING EnrollmentId
+	);
+
+PackageInfoRemoved(
+	UNICODESTRING PackageId
+	);
+
+NoPackageInfo(
+	UNICODESTRING PackageId
+	);
+
+CertificateChainTrustStatusNotSuccess(
+	UINT32 Status,
+	UNICODESTRING FilePath
+	);
+
+PolicyTrustError(
+	HEXINT64 Policy OID,
+	UINT32 ErrorCode,
+	UNICODESTRING FilePath
+	);
+
+ProvSignerGetFailed(
+	UINT32 LastError
+	);
+
+ProvDataConvertFailed(
+	UINT32 LastError
+	);
+
+WinVerifyTrustFailed(
+	INT32 ErrorCode,
+	UNICODESTRING FilePath,
+	UNICODESTRING CatalogPath
+	);
+
+RemoveProvPackagePackageFail(
+	UNICODESTRING Path,
+	UINT32 LastError
+	);
+
+RemoveProvPackage(
+	UNICODESTRING Path
+	);
+
+GetNextElementTooMany(
+	INT32 HResult
+	);
+
+GetNextElementFailed(
+	INT32 HResult
+	);
+
+NonProvisioningPackage(
+	UNICODESTRING PackageId,
+	UNICODESTRING PackagePath
+	);
+
+EnumerateElementsFailed(
+	INT32 HResult
+	);
+
+ProvPackageNotOpened(
+	VOID
+	);
+
+ProvPackageOpened(
+	UNICODESTRING PackageName,
+	INT32 HResult
+	);
+
+GetProvisionPackageNameFailed(
+	INT32 HResult
+	);
+
+TryCreateProvisioningFileManagerOnPPKGFailed(
+	UNICODESTRING Path
+	);
+
+OpenProvisioningPackageFailed(
+	UNICODESTRING Path,
+	INT32 HResult
+	);
+
+ProvPackageIsEmpty(
+	VOID
+	);
+
+OpeningProvPackage(
+	UNICODESTRING Path
+	);
+
+CreateCategoryReaderFromPath(
+	UNICODESTRING Path
+	);
+
+AutoDeleteFileStreamFailed(
+	UNICODESTRING Path
+	);
+

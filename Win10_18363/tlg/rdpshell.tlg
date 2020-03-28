@@ -1,0 +1,101 @@
+ProviderNames:
+	Microsoft.Windows.RemoteDesktop.RAIL.RdpShell
+	Microsoft.Windows.RemoteDesktop.RAIL.Server.Diagnostics
+
+
+
+**** Events *****
+WindowInfo(
+	GUID activityId,
+	UINT32 shellEventId,
+	UNICODESTRING shellEvent,
+	UINT32 windowHandle,
+	UNICODESTRING processName
+	);
+
+DisplayDriverInfo(
+	GUID activityId,
+	UINT32 sessionId,
+	UNICODESTRING displayDriverInfo
+	);
+
+MonitorDisplayInfo(
+	GUID activityId,
+	UNICODESTRING monitorName,
+	UINT32 monitorWidth,
+	UINT32 monitorHeight,
+	UINT32 desktopScaleFactor,
+	UINT32 deviceScaleFactor
+	);
+
+ShellErrorEvent(
+	GUID activityId,
+	UINT32 shellEventId,
+	UNICODESTRING shellEvent,
+	HRESULT result
+	);
+
+ShellEvent(
+	GUID activityId,
+	UINT32 shellEventId,
+	UNICODESTRING shellEvent
+	);
+
+StateTransitionFailure(
+	GUID activityId,
+	UINT32 oldStateId,
+	UNICODESTRING oldState,
+	UINT32 newStateId,
+	UNICODESTRING newState,
+	UINT32 shellEventId,
+	UNICODESTRING shellEvent,
+	HRESULT result
+	);
+
+StateTransitionSuccess(
+	GUID activityId,
+	UINT32 oldStateId,
+	UNICODESTRING oldState,
+	UINT32 newStateId,
+	UNICODESTRING newState,
+	UINT32 shellEventId,
+	UNICODESTRING shellEvent
+	);
+
+AppExecute(
+	GUID activityId,
+	UNICODESTRING executableName,
+	BOOL32 isParameterPresent,
+	BOOL32 isDocument
+	);
+
+RdpShellVersion(
+	GUID activityId,
+	UINT32 sessionId,
+	BOOL32 isSxS
+	);
+
+ConnectionFailure(
+	GUID activityId,
+	UINT32 source,
+	UINT32 operation,
+	UINT32 code,
+	UNICODESTRING codeSymbolic,
+	UNICODESTRING message,
+	BOOL32 internal
+	);
+
+AppExecuted(
+	GUID activityId,
+	UINT32 source,
+	UINT32 operation,
+	UNICODESTRING message
+	);
+
+ConnectionCheckpoint(
+	GUID activityId,
+	UINT32 source,
+	UINT32 operation,
+	UNICODESTRING message
+	);
+

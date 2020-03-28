@@ -1,0 +1,1221 @@
+ProviderNames:
+	Microsoft.Windows.Analog.HydrogenCompositor
+	Microsoft.Windows.HydrogenBaseTrace
+	Microsoft.Windows.Hydrogen.Engine.NewRPC
+	Microsoft.Windows.Hydrogen.ResourceManager
+	Microsoft.Windows.Hydrogen.RuntimeProject
+	Microsoft.Windows.Hydrogen.Engine.NewBase
+	Microsoft.Windows.Hydrogen.Input
+	Microsoft.Windows.Hydrogen.Common.Sound
+	Microsoft.Windows.Hydrogen.Renderer
+	Microsoft.Windows.Analog.HoloShell
+
+
+
+**** Events *****
+FallbackError(
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+FallbackError(
+	UINT64 PartA_PrivTags,
+	SIGNED wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+Downlevel2D_Disabled(
+	VOID
+	);
+
+Downlevel2D_Restored(
+	VOID
+	);
+
+CompositorClientDisconnected(
+	HEXINT64 Connection,
+	ANSISTRING ClientName
+	);
+
+OnShellConnect(
+	HEXINT32 ProcessId,
+	HEXINT32 WindowId
+	);
+
+CompositorClientConnected(
+	HEXINT32 ProcessId,
+	HEXINT32 WindowId
+	);
+
+CompositorClientDisconnected(
+	HEXINT64 Connection
+	);
+
+ReportFunction(
+	ANSISTRING Msg
+	);
+
+CompositorRuntime_Init(
+	VOID
+	);
+
+HydrogenLogOutput(
+	ANSISTRING LogLevel,
+	ANSISTRING LogOrigin,
+	ANSISTRING Message,
+	ANSISTRING FileName,
+	UINT32 FileLine,
+	UINT64 ThreadId,
+	UINT32 MessageId
+	);
+
+RealTrackingMode_Changed(
+	UINT32 PreviousId,
+	UINT32 CurrentId,
+	ANSISTRING CurrentName
+	);
+
+CompositorShutdown(
+	BOOLEAN Clean
+	);
+
+EffectiveTrackingMode_Changed(
+	UINT32 PreviousId,
+	UINT32 CurrentId,
+	ANSISTRING CurrentName
+	);
+
+RenderingTimings(
+	FLOAT minCpuFrameTimes,
+	FLOAT maxCpuFrameTimes,
+	FLOAT avgCpuFrameTimes,
+	FLOAT minGpuFrameTimes,
+	FLOAT maxGpuFrameTimes,
+	FLOAT avgGpuFrameTimes,
+	UINT16 maxRenderables,
+	UINT16 minVisibleRenderables,
+	UINT16 maxVisibleRenderables,
+	UINT16 numFrames
+	);
+
+SharedWorldStarted(
+	VOID
+	);
+
+EffectiveStageTrackingMode_Changed(
+	UINT32 PreviousId,
+	UINT32 CurrentId,
+	ANSISTRING CurrentName
+	);
+
+FocusedTextboxChanged(
+	UINT32 Left,
+	UINT32 Top,
+	UINT32 Width,
+	UINT32 Height
+	);
+
+FocusedWindowChanged(
+	UINT64 ActiveWindowId
+	);
+
+SoftwareKeyboardDeployedChanged(
+	BOOLEAN Deployed
+	);
+
+FocusedNodeChanged(
+	HEXINT64 FocusedNode
+	);
+
+CommandQueue_Enqueue(
+	HEXINT32 MethodHash,
+	HEXINT32 ObjectId,
+	ANSISTRING MethodName
+	);
+
+Codec_write_method_call_arg_validation_failed(
+	ANSISTRING MethodName
+	);
+
+Connection_DeserializingObjects(
+	HEXINT32 ProcessId,
+	HEXINT32 DeviceId,
+	INT32 BufferSize,
+	INT32 Objects,
+	INT32 SalvagedObjects
+	);
+
+Connection_ObjectCloning(
+	HEXINT32 ProcessId,
+	HEXINT32 DeviceId
+	);
+
+Connection_CloningFailure(
+	HEXINT32 ProcessId,
+	HEXINT32 DeviceId
+	);
+
+Connection_RemoveProtocol(
+	HEXINT32 ProcessId,
+	HEXINT32 DeviceId,
+	HEXINT32 Handle
+	);
+
+Connection_AddProtocol(
+	HEXINT32 ProcessId,
+	HEXINT32 DeviceId,
+	HEXINT32 Handle,
+	ANSISTRING Type
+	);
+
+Connection_CloningFailure(
+	HEXINT32 ProcessId,
+	HEXINT32 DeviceId,
+	INT32 CloneObjCount,
+	INT32 ExpectedObjCount
+	);
+
+Connection_CloningFailure(
+	HEXINT32 ProcessId,
+	HEXINT32 DeviceId,
+	INT32 SourceObjCount,
+	INT32 CloneObjCount
+	);
+
+Connection_ObjectCloning(
+	HEXINT32 ProcessId,
+	HEXINT32 DeviceId,
+	INT32 ObjectCount
+	);
+
+Connection_RpcHandleFailure(
+	HEXINT32 ProcessId,
+	HEXINT32 DeviceId
+	);
+
+Connection_RpcHandleMissingFailure(
+	HEXINT32 ProcessId,
+	HEXINT32 DeviceId
+	);
+
+Connection_ObjectDeserialized(
+	HEXINT32 HandleId,
+	HEXINT32 ObjectId
+	);
+
+Connection_objectHandleDeleted(
+	HEXINT32 ProcessId,
+	HEXINT32 DeviceId,
+	HEXINT32 ObjectId
+	);
+
+Connection_AddObjectWithoutRPCIdent(
+	HEXINT32 ProcessId,
+	HEXINT32 DeviceId,
+	ANSISTRING Type
+	);
+
+Connection_CantFindObject(
+	HEXINT32 ProcessId,
+	HEXINT32 DeviceId,
+	HEXINT32 ObjectId
+	);
+
+Connection_WrongConnectionForObject(
+	HEXINT32 ProcessId,
+	HEXINT32 DeviceId,
+	HEXINT32 HandleId,
+	HEXINT32 ObjectId
+	);
+
+Connection_Poll(
+	HEXINT32 ProcessId,
+	HEXINT32 DeviceId
+	);
+
+Connection_DecodeError(
+	HEXINT32 ProcessId,
+	HEXINT32 DeviceId
+	);
+
+RPC_NewTypeProcessed(
+	ANSISTRING NewTypeName
+	);
+
+ResourceStreamingFailed(
+	ANSISTRING Path,
+	ANSISTRING Cause
+	);
+
+DiscardAllUnnecessaryLODs(
+	VOID
+	);
+
+ResourceStreamingFailed(
+	ANSISTRING Path,
+	ANSISTRING Type,
+	ANSISTRING Event
+	);
+
+CreatedResourceOverwriting(
+	ANSISTRING ResourceId
+	);
+
+DocumentLoadTiming(
+	ANSISTRING FileName,
+	ANSISTRING ProjectDir,
+	ANSISTRING Operation,
+	DOUBLE Time
+	);
+
+Error_FailedToLoadDocument(
+	ANSISTRING Reason,
+	ANSISTRING FileName,
+	ANSISTRING ProjectDir
+	);
+
+TotalLoadingTime(
+	ANSISTRING FileName,
+	ANSISTRING ProjectDir,
+	DOUBLE TotalTime
+	);
+
+RuntimeLoadStats(
+	ANSISTRING ProjectDir,
+	BOOL32 IsExclusive,
+	DOUBLE TotalLoadingTime,
+	DOUBLE DocumentsLoaded,
+	DOUBLE averageLoadingTime,
+	DOUBLE medianLoadingTime
+	);
+
+ReportFunction(
+	UINT32 MessageId,
+	ANSISTRING Msg
+	);
+
+ReportFunction(
+	UINT32 MessageId,
+	ANSISTRING Msg
+	);
+
+ReportFunction(
+	UINT32 MessageId,
+	ANSISTRING Msg
+	);
+
+ReportFunction(
+	UINT32 MessageId,
+	ANSISTRING Msg
+	);
+
+Codec_execute_callableData(
+	HEXINT32 ObjectHandle,
+	ANSISTRING Callable,
+	HEXINT32 ResultHandle
+	);
+
+RPC_DataProcessed(
+	UINT64 Total,
+	HEXINT32 ProcessId,
+	HEXINT32 WindowId
+	);
+
+Codec_decode_deserializeObject(
+	VOID
+	);
+
+RPC_DataSent(
+	UINT64 Total,
+	UINT64 Last,
+	UINT64 Max
+	);
+
+RPC_DataRecv(
+	UINT64 Total,
+	UINT64 Last,
+	UINT64 Max,
+	HEXINT32 ProcessId,
+	HEXINT32 WindowId
+	);
+
+Codec_decode_psmResume(
+	VOID
+	);
+
+Codec_execution_data(
+	UINT32 Pending Frames,
+	UINT32 Total Commands
+	);
+
+Codec_decode_methodCall(
+	ANSISTRING MethodName,
+	ANSISTRING DecoderName
+	);
+
+Codec_decode_methodResult(
+	ANSISTRING MethodName
+	);
+
+Codec_decode_psmSuspend(
+	VOID
+	);
+
+Device_Disconnect(
+	VOID
+	);
+
+ResourceChanged(
+	ANSISTRING Path,
+	ANSISTRING Type,
+	ANSISTRING Event,
+	DOUBLE Time
+	);
+
+Node_AddComponent(
+	HEXINT64 Node,
+	HEXINT64 Component
+	);
+
+Node_SetParent(
+	HEXINT64 self,
+	HEXINT64 parent
+	);
+
+World_Log(
+	HEXINT64 World,
+	ANSISTRING Reason
+	);
+
+NodeComponent_FailedToStart(
+	HEXINT64 Component,
+	HEXINT64 Owner,
+	HEXINT64 World
+	);
+
+NodeComponent_SetOwner(
+	HEXINT64 Component,
+	HEXINT64 Owner,
+	HEXINT64 NewOwner
+	);
+
+VisualScript_Report(
+	ANSISTRING Script,
+	ANSISTRING Script Owner,
+	ANSISTRING Node Path,
+	ANSISTRING Message
+	);
+
+VisualScript_Report(
+	ANSISTRING Script,
+	ANSISTRING Script Owner,
+	ANSISTRING Node Path,
+	ANSISTRING Message
+	);
+
+ScriptComponent_ExecutionAborted(
+	HEXINT64 Component,
+	HEXINT64 Owner,
+	ANSISTRING Message
+	);
+
+ScriptComponent_ExecutionRejected(
+	HEXINT64 Component,
+	HEXINT64 Owner,
+	ANSISTRING Message
+	);
+
+VisualScript_Report(
+	ANSISTRING Script,
+	ANSISTRING Script Owner,
+	ANSISTRING Node Path,
+	ANSISTRING Message
+	);
+
+Non_Manifold(
+	UINT32 vertex2,
+	UINT32 vertex1
+	);
+
+Non_Manifold(
+	UINT32 vertex3,
+	UINT32 vertex2
+	);
+
+Non_Manifold(
+	UINT32 vertex1,
+	UINT32 vertex3
+	);
+
+Vertex_Out_Of_Range(
+	UINT32 faceIndex,
+	UINT32 numVertices,
+	UINT32 vertex1,
+	UINT32 vertex2,
+	UINT32 vertex3
+	);
+
+HolographicAppManagerComponent_registerParent(
+	HEXINT32 HolographicAppComponent,
+	UINT32 ProcessId,
+	ANSISTRING TileId
+	);
+
+HolographicAppManagerComponent_childOwnerChanged(
+	HEXINT32 ChildObjectId,
+	UINT32 ProcessId
+	);
+
+HolographicAppManagerComponent_registerChild(
+	HEXINT32 PlacementAnchorComponent,
+	UINT32 ProcessId
+	);
+
+HolographicAppManagerComponent_raiseLaunchEvent(
+	HEXINT32 ChildObjectId,
+	UINT32 ProcessId,
+	ANSISTRING TileId
+	);
+
+StageAdded(
+	UINT32 LookDirectionRange
+	);
+
+StageRemoved(
+	VOID
+	);
+
+AnchorManager_TrackingState(
+	BOOLEAN haveFullTracking,
+	BOOLEAN stageLocated
+	);
+
+AnchorManager_RequestTrackingMode(
+	BOOLEAN wantFullTracking
+	);
+
+HolographicPipelineQualityControllerSwitchLevel(
+	UINT8 CurrentLevel,
+	UINT8 NewLevel,
+	UINT32 FramesSinceLastSwitch
+	);
+
+PassthroughFailureGetPrediction(
+	INT32 HRESULT
+	);
+
+PassthroughFailureCRC(
+	VOID
+	);
+
+PassthroughFailureNotSupportedSize(
+	VOID
+	);
+
+PassthroughFailureNotSupportedFormat(
+	VOID
+	);
+
+PassthroughFailureHeadAtPrediction(
+	VOID
+	);
+
+PassthroughFailureHeadAtCapture(
+	VOID
+	);
+
+PassthroughFailureGetPoseFromSerializedRigPose(
+	INT32 HRESULT
+	);
+
+PassthroughFailureOnPerceptionAPI(
+	INT32 HRESULT,
+	UINT32 Line
+	);
+
+PassthroughFailureTryLocate(
+	VOID
+	);
+
+hkeSpatialInteractionComponent_Mirage_Event_Failure(
+	ANSISTRING Message
+	);
+
+hkeSpatialInteractionComponent_Mirage_Event_Failure(
+	ANSISTRING Message,
+	ANSISTRING Type,
+	INT32 hResult
+	);
+
+hkeSpatialInteractionComponent_Mirage_Event(
+	ANSISTRING Type,
+	INT8 Interaction
+	);
+
+hkeVoiceInputComponent_Trace(
+	ANSISTRING AsyncOperationComplete,
+	INT64 AsyncActionCounter,
+	INT8 Status
+	);
+
+hkeVoiceInputComponent_Trace(
+	ANSISTRING AsyncOperationComplete,
+	INT64 AsyncActionCounter,
+	INT8 Status
+	);
+
+hkeVoiceInputComponent_Trace(
+	ANSISTRING AsyncOperationStarted,
+	INT64 AsyncActionCounter
+	);
+
+hkeVoiceInputComponent_Speech_asyncCallIgnored(
+	VOID
+	);
+
+hkeVoiceInputComponent_Speech_eventFired(
+	UNICODESTRING CommandText,
+	UINT32 Confidence,
+	INT8 isBound
+	);
+
+hkeVoiceInputComponent_Speech_resultGenerated(
+	UNICODESTRING CommandText,
+	UINT32 Confidence
+	);
+
+hkeVoiceInputComponent_Speech_pauseLimitExceeded(
+	VOID
+	);
+
+hkeVoiceInputComponent_Speech_networkFailure(
+	VOID
+	);
+
+hkeVoiceInputComponent_Speech_unknownStatus(
+	VOID
+	);
+
+hkeVoiceInputComponent_Speech_resumeRecognition(
+	VOID
+	);
+
+hkeVoiceInputComponent_Speech_resumeRecognitionFailed(
+	INT32 hResult
+	);
+
+hkeVoiceInputComponent_Speech_pauseRecognition(
+	VOID
+	);
+
+hkeVoiceInputComponent_Speech_pauseRecognitionFailed(
+	INT32 hResult
+	);
+
+hkeVoiceInputComponent_Speech_topicLanguageNotSupported(
+	VOID
+	);
+
+hkeVoiceInputComponent_Speech_grammarLanguageMismatch(
+	VOID
+	);
+
+hkeVoiceInputComponent_Speech_grammarCompilationFailure(
+	VOID
+	);
+
+hkeVoiceInputComponent_Speech_timeoutExceeded(
+	VOID
+	);
+
+hkeVoiceInputComponent_Speech_microphoneUnavailable(
+	VOID
+	);
+
+hkeVoiceInputComponent_Speech_audioQualityFailure(
+	VOID
+	);
+
+hkeVoiceInputComponent_Speech_userCanceled(
+	VOID
+	);
+
+hkeVoiceInputComponent_Speech_unknownError(
+	VOID
+	);
+
+hkeVoiceInputComponent_Trace(
+	ANSISTRING AsyncOperationComplete,
+	INT64 AsyncActionCounter,
+	INT8 Status,
+	INT8 compileOk
+	);
+
+hkeVoiceInputComponent_Trace(
+	ANSISTRING AsyncOperationComplete,
+	INT64 AsyncActionCounter,
+	INT8 Status,
+	INT8 compileOk
+	);
+
+hkeVoiceInputComponent_Speech_get_ContinuousRecognitionSession(
+	INT32 hResult
+	);
+
+hkeVoiceInputComponent_UnregisterCommand(
+	ANSISTRING CommandText
+	);
+
+hkeVoiceInputComponent_Dictation_castRecognizer(
+	INT32 hResult
+	);
+
+hkeVoiceInputComponent_Dictation_createRecognizer(
+	INT32 hResult
+	);
+
+hkeVoiceInputComponent_Speech_castRecognizer(
+	INT32 hResult
+	);
+
+hkeVoiceInputComponent_Speech_createRecognizer(
+	INT32 hResult
+	);
+
+hkeVoiceInputComponent_Dictation_get_ContinuousRecognitionSession(
+	INT32 hResult
+	);
+
+hkeVoiceInputComponent_AudioCaptureDeviceChanged(
+	UNICODESTRING deviceId
+	);
+
+hkeVoiceInputComponent_RegisterCommand(
+	ANSISTRING CommandText
+	);
+
+hkeVoiceInputComponent_InitialAudioCaptureDevice(
+	UNICODESTRING deviceId
+	);
+
+SideChannel_SegmentMemoryMapped(
+	UINT16 ID,
+	INT32 Size,
+	UINT32 Access
+	);
+
+SideChannel_NewHandleCreated(
+	UINT64 CreatedLocalHandle,
+	UINT16 ID,
+	INT32 Size
+	);
+
+SideChannel_NewHandleCreated(
+	UINT64 Original,
+	UINT64 Duplicated,
+	UINT16 ID
+	);
+
+SideChannel_NewHandleCreated(
+	UINT64 OpenedLocalHandle,
+	UINT16 ID
+	);
+
+SideChannel_HandleClosed(
+	UINT64 Handle,
+	UINT16 ID,
+	INT32 Bytes
+	);
+
+RenderPipelineCreated(
+	UINT8 QualityLevel,
+	UINT8 PipelineType
+	);
+
+HolographicService_ResetReferenceFrames_Failed(
+	VOID
+	);
+
+HolographicService_HolographicSpace_IsAvailable_Changed(
+	BOOL32 isAvailable
+	);
+
+HolographicService_SpatialLocator_ReleaseResources(
+	VOID
+	);
+
+HolographicService_SpatialLocator_RecreateResources(
+	VOID
+	);
+
+HolographicService_SpatialLocator_Locatability_Changed(
+	INT32 Locatability
+	);
+
+SoundManager_Trace(
+	ANSISTRING Message
+	);
+
+Renderer_failed(
+	ANSISTRING Message
+	);
+
+PrimaryInput_Changed(
+	UINT32 FromInputDevice,
+	UINT32 ToInputDevice,
+	DOUBLE DurationMS
+	);
+
+ShellCursor_Press(
+	UINT32 sourceId,
+	UINT32 cursorId
+	);
+
+ShellCursor_GotSecondPressNoRelease(
+	UINT32 sourceId,
+	UINT32 cursorId
+	);
+
+ShellCursor_Release(
+	UINT32 sourceId,
+	UINT32 cursorId
+	);
+
+RoomBoundary_OutOfBounds(
+	BOOLEAN OutOfBounds,
+	FLOAT xPosition,
+	FLOAT yPosition,
+	FLOAT zPosition,
+	FLOAT xForward,
+	FLOAT yForward,
+	FLOAT zForward
+	);
+
+RoomBoundary_CollisionDetected(
+	BOOLEAN CollisionDetected,
+	UINT32 InputSourceType,
+	UINT32 InputSourceIndex,
+	FLOAT xPosition,
+	FLOAT yPosition,
+	FLOAT zPosition,
+	FLOAT xForward,
+	FLOAT yForward,
+	FLOAT zForward
+	);
+
+Locomotion_LocationRestore(
+	DOUBLE TimeSinceLocationSave,
+	FLOAT CurrentLocationX,
+	FLOAT CurrentLocationY,
+	FLOAT CurrentLocationZ
+	);
+
+Locomotion_LocationTest(
+	INT32 ValidLocationCount
+	);
+
+Locomotion_MajorHeightAdjustment(
+	FLOAT FloorHeightCorrection
+	);
+
+Locomotion_LocationTestSkippedCollision(
+	VOID
+	);
+
+PlacementCast_Stop(
+	UNICODESTRING ownerName,
+	BOOLEAN enabled
+	);
+
+PlacementCast_StopComplete(
+	UNICODESTRING ownerName
+	);
+
+PlacementCast_Start(
+	UNICODESTRING ownerName
+	);
+
+SixDof_ControllerRegistrationUpdated(
+	UINT32 deviceId,
+	BOOLEAN isRegistered
+	);
+
+SixDof_UnknownControllerDetected(
+	UINT32 deviceId,
+	UINT32 vendorId,
+	UINT32 productId,
+	UINT32 productVersion,
+	UINT32 handness
+	);
+
+SixDof_ControllerEnabled(
+	UINT32 deviceId,
+	UINT32 vendorId,
+	UINT32 productId,
+	UINT32 productVersion,
+	UINT32 handness
+	);
+
+SixDof_EncounteredError(
+	UINT32 deviceId,
+	UINT32 Error,
+	INT32 count
+	);
+
+SixDof_ControllerHiddenDueToErrors(
+	UINT32 deviceId
+	);
+
+SixDof_DriverModelStreamLoadFailed(
+	INT32 error
+	);
+
+SixDof_DriverModelReturnedNullStream(
+	VOID
+	);
+
+SixDof_DriverModelGltfLoadFailed(
+	VOID
+	);
+
+Teleportation_Success(
+	UINT32 Style,
+	FLOAT xOriginalPosition,
+	FLOAT yOriginalPosition,
+	FLOAT zOriginalPosition,
+	FLOAT wOriginalPosition,
+	FLOAT xOriginalForward,
+	FLOAT yOriginalForward,
+	FLOAT zOriginalForward,
+	FLOAT wOriginalForward,
+	FLOAT xFinalPosition,
+	FLOAT yFinalPosition,
+	FLOAT zFinalPosition,
+	FLOAT wFinalPosition,
+	FLOAT xFinalForward,
+	FLOAT yFinalForward,
+	FLOAT zFinalForward,
+	FLOAT wFinalForward
+	);
+
+Dash_Success(
+	FLOAT xOriginalPosition,
+	FLOAT yOriginalPosition,
+	FLOAT zOriginalPosition,
+	FLOAT wOriginalPosition,
+	FLOAT xOriginalForward,
+	FLOAT yOriginalForward,
+	FLOAT zOriginalForward,
+	FLOAT wOriginalForward,
+	FLOAT xFinalPosition,
+	FLOAT yFinalPosition,
+	FLOAT zFinalPosition,
+	FLOAT wFinalPosition,
+	FLOAT xFinalForward,
+	FLOAT yFinalForward,
+	FLOAT zFinalForward,
+	FLOAT wFinalForward
+	);
+
+Dash_Rotate(
+	FLOAT xOriginalPosition,
+	FLOAT yOriginalPosition,
+	FLOAT zOriginalPosition,
+	FLOAT wOriginalPosition,
+	FLOAT xOriginalForward,
+	FLOAT yOriginalForward,
+	FLOAT zOriginalForward,
+	FLOAT wOriginalForward,
+	FLOAT xFinalForward,
+	FLOAT yFinalForward,
+	FLOAT zFinalForward,
+	FLOAT wFinalForward
+	);
+
+Teleportation_InputCapabilitiesChange(
+	BOOLEAN Is3DEnabled,
+	BOOLEAN DisplayContextHMD
+	);
+
+Locomotion_End(
+	UINT32 InputDeviceType,
+	FLOAT Distance
+	);
+
+Dash_Begin(
+	UINT32 InputDeviceType
+	);
+
+Teleportation_Enabled(
+	FLOAT PlayspaceTranslationX,
+	FLOAT PlayspaceTranslationY,
+	FLOAT PlayspaceTranslationZ,
+	FLOAT PlayspaceRotationX,
+	FLOAT PlayspaceRotationY,
+	FLOAT PlayspaceRotationZ,
+	FLOAT TeleportTranslationX,
+	FLOAT TeleportTranslationY,
+	FLOAT TeleportTranslationZ,
+	FLOAT TeleportRotationY
+	);
+
+Teleportation_Begin(
+	UINT32 InputDeviceType
+	);
+
+Teleportation_ThumbstickInputPress(
+	BOOLEAN IsInputAllowed,
+	UINT32 ActiveDeviceType,
+	UINT32 CurrentState,
+	UINT32 ThumbstickDirection
+	);
+
+Locomotion_Begin(
+	UINT32 InputDeviceType
+	);
+
+Teleportation_Aborted(
+	VOID
+	);
+
+Teleportation_Disabled(
+	VOID
+	);
+
+FarManip_PointStopped(
+	UINT32 newPointCount
+	);
+
+FarManip_TwoPointManipStart(
+	UINT32 deviceDescriptor,
+	UINT64 PartA_PrivTags
+	);
+
+FarManip_OnePointManipStart(
+	UINT32 deviceDescriptor,
+	UINT64 PartA_PrivTags
+	);
+
+FarManip_PointStarted(
+	UINT32 newPointCount
+	);
+
+PushButton_Unpress(
+	INT64 button,
+	UINT32 sourceId
+	);
+
+PushButton_Press(
+	INT64 button,
+	UINT32 sourceId
+	);
+
+PushButton_HandleTouchUnpress(
+	INT64 button,
+	UINT32 sourceId
+	);
+
+PushButton_HandleTouch(
+	INT64 button,
+	FLOAT touchDistance,
+	FLOAT clickDistance,
+	FLOAT unclickDistance
+	);
+
+PushButton_TouchExitUnpress(
+	INT64 button,
+	UINT32 sourceId
+	);
+
+NearManip_PointStarted(
+	UINT32 newPointCount
+	);
+
+NearManip_PointStopped(
+	UINT32 newPointCount
+	);
+
+NearManip_OnePointManipStart(
+	UINT32 deviceDescriptor,
+	UINT64 PartA_PrivTags
+	);
+
+NearManip_TwoPointManipStart(
+	UINT32 deviceDescriptor,
+	UINT64 PartA_PrivTags
+	);
+
+SixDof_ControllerReused(
+	UINT32 deviceId,
+	BOOLEAN isInUse,
+	UINT32 handness
+	);
+
+SixDof_ControllerLookupFailed(
+	UINT32 deviceId,
+	UNICODESTRING knownIds
+	);
+
+SixDof_DeviceLost(
+	UINT32 deviceId
+	);
+
+SixDof_DeviceDetected(
+	UINT32 deviceId
+	);
+
+SixDof_RecoveredPointerPose(
+	UINT32 deviceId
+	);
+
+SixDof_OrientationValidChanged(
+	UINT32 deviceId,
+	BOOLEAN valid
+	);
+
+SixDof_PositionValidChanged(
+	UINT32 deviceId,
+	BOOLEAN valid
+	);
+
+SixDof_ButtonPressCount(
+	UINT32 deviceId,
+	UINT32 ButtonType,
+	UINT32 PressCount
+	);
+
+Teleportation_ThumbstickInputStarted(
+	UINT32 DeviceType,
+	UINT32 DeviceId,
+	UINT32 ThumbstickDirection
+	);
+
+TickRequested(
+	VOID
+	);
+
+SceneUnregistered(
+	HEXINT32 Scene,
+	ANSISTRING Name
+	);
+
+SceneRegistered(
+	HEXINT32 Scene,
+	ANSISTRING Name
+	);
+
+SoundManager_Trace(
+	ANSISTRING Message
+	);
+
+SoundManager_Trace(
+	UNICODESTRING DefaultRenderDeviceId
+	);
+
+SoundManager_Trace(
+	ANSISTRING Message
+	);
+
+SoundManager_Trace(
+	ANSISTRING Message
+	);
+
+SoundSource_Trace(
+	HEXINT64 Sound,
+	ANSISTRING Message
+	);
+
+SoundSource_Start(
+	HEXINT64 Sound,
+	ANSISTRING Message
+	);
+
+SoundSource_Stop(
+	HEXINT64 Sound,
+	INT32 hResult
+	);
+
+SoundSource_Start(
+	HEXINT64 Sound,
+	INT32 hResult
+	);
+
+SoundSource_Trace(
+	HEXINT64 Sound,
+	ANSISTRING Message
+	);
+
+SoundSource_Trace(
+	HEXINT64 Sound,
+	HEXINT64 Voice,
+	ANSISTRING Message
+	);
+
+SoundSource_Trace(
+	HEXINT64 Sound,
+	ANSISTRING Message
+	);
+
+SoundSource_Error_Failure(
+	HEXINT64 Sound
+	);
+
+SoundSource_SubmitSource(
+	HEXINT64 Sound,
+	INT32 hResult,
+	ANSISTRING bufferName
+	);
+
+SoundSource_FlushSources(
+	HEXINT64 Sound,
+	INT32 hResult
+	);
+
+SoundSource_Trace(
+	HEXINT64 Sound,
+	HEXINT64 Voice,
+	ANSISTRING Message
+	);
+
+SoundSource_Trace(
+	HEXINT64 Sound,
+	HEXINT64 Voice,
+	ANSISTRING Message
+	);
+
+SoundSource_Trace(
+	HEXINT64 Sound,
+	HEXINT64 Mixer,
+	ANSISTRING Message
+	);
+

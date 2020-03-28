@@ -1,0 +1,194 @@
+ProviderNames:
+	Microsoft.Windows.Storage.StorageUsage
+	Microsoft.Windows.TlgAggregateInternal
+
+
+
+**** Events *****
+StorageUsageScan(
+	UINT64 PartA_PrivTags
+	);
+
+StopTime(
+	UINT64 stoptime,
+	UINT64 PartA_PrivTags
+	);
+
+StorageSettings(
+	UINT32 storageType,
+	UINT32 storageIndex,
+	GUID storageId,
+	UINT32 storageSettingValue,
+	BOOLEAN isWriteAccessMusic,
+	BOOLEAN isWriteAccessVideo,
+	BOOLEAN isWriteAccessPictures,
+	BOOLEAN isWriteAccessAppData,
+	BOOLEAN isWriteAccessAppInstall,
+	BOOLEAN isWriteAccessDocuments,
+	BOOLEAN isWriteAccessDownloads,
+	BOOLEAN isWriteAccessBlinkdata,
+	HRESULT hResult,
+	UINT64 PartA_PrivTags
+	);
+
+CloudProviderMetaData(
+	UNICODESTRING ProviderId,
+	UNICODESTRING ProviderName,
+	UNICODESTRING ProviderVersion,
+	UINT32 HydrationPolicy,
+	UINT32 PopulationPolicy,
+	UINT32 CloudPolicyEnabled,
+	UINT32 CloudPolicyThreshold,
+	UINT32 IsMDMConfigured,
+	UINT64 TotalFiles,
+	UINT64 TotalDirectories,
+	UINT64 DehydratedCount,
+	UINT64 PartiallyHydratedCount,
+	UINT64 FullyHydratedCount,
+	UINT64 OnDiskFileSizeTotal,
+	UINT64 LogicalFileSizeTotalFind,
+	UINT64 UnPinnedFiles,
+	UINT64 PinnedFiles,
+	UINT64 UnspecifiedFiles,
+	UINT64 ExcludedFiles,
+	UINT64 UnPinnedDirectories,
+	UINT64 PinnedDirectories,
+	UINT64 UnspecifiedDirectories,
+	UINT64 ExcludedDirectories,
+	UINT64 NotCloudFileCount,
+	UINT64 InSyncCount,
+	HRESULT Result,
+	UINT64 PartA_PrivTags
+	);
+
+StorageBreakdownQueried(
+	UINT32 storageType,
+	UINT32 storageIndex,
+	GUID storageId,
+	UINT32 dataTypeEnum,
+	UNICODESTRING dataTypeString,
+	UINT64 size,
+	UINT64 itemCount,
+	HRESULT hResult,
+	UINT64 PartA_PrivTags
+	);
+
+WinOldPresence(
+	UINT32 isWinOldExist,
+	UINT32 isWinOldUsersExist,
+	UINT64 size,
+	UINT64 PartA_PrivTags
+	);
+
+StorageVolumeEnumerated(
+	UINT32 storageType,
+	UINT32 storageIndex,
+	UNICODESTRING volumeName,
+	GUID storageId,
+	UINT64 totalSize,
+	UINT64 freeSize,
+	UINT32 fileSystemType,
+	UINT32 busType,
+	UINT32 volumeStatus,
+	HRESULT hResult,
+	UINT64 PartA_PrivTags
+	);
+
+StorageUsageScan(
+	INT32 Phase,
+	UINT64 ElapsedTime,
+	HRESULT Result,
+	UINT64 PartA_PrivTags
+	);
+
+StorageUsageScan(
+	INT32 fullScan,
+	INT32 Phase,
+	UINT64 ElapsedTime,
+	BOOLEAN IsFailureThresholdHit,
+	HRESULT Result,
+	UINT64 PartA_PrivTags
+	);
+
+StoragePoliciesV2(
+	UINT32 policyInfo,
+	UINT32 IsMDMConfigured,
+	HRESULT HResult,
+	UINT64 PartA_PrivTags
+	);
+
+CFSyncRootLAT(
+	UNICODESTRING ProviderId,
+	UNICODESTRING ProviderName,
+	UNICODESTRING ProviderVersion,
+	UINT32 HydrationPolicy,
+	UINT32 PopulationPolicy,
+	UINT32 CloudPolicyEnabled,
+	UINT64 Bucket1,
+	UINT64 Bucket1Size,
+	UINT64 Bucket2,
+	UINT64 Bucket2Size,
+	UINT64 Bucket3,
+	UINT64 Bucket3Size,
+	UINT64 Bucket4,
+	UINT64 Bucket4Size,
+	UINT64 Bucket5,
+	UINT64 Bucket5Size,
+	UINT64 Bucket6,
+	UINT64 Bucket6Size,
+	HRESULT Result,
+	UINT64 PartA_PrivTags
+	);
+
+ScanDirectoryFailed(
+	UINT64 PartA_PrivTags,
+	UINT64 HResults,
+	UINT64 ScanModes,
+	UINT32 Lines,
+	COUNTEDSTRING FailurePaths
+	);
+
+InstallersHashScan(
+	UINT64 PartA_PrivTags,
+	UINT16 EntryCount,
+	UINT32 HashcodeLengthBytes,
+	COUNTEDSTRING FilePaths,
+	UINT64 FileSizes,
+	BINARY HashCodes,
+	UINT16 SkippedEntries
+	);
+
+WinOldScan(
+	UINT64 PartA_PrivTags,
+	UINT64 FileSizes,
+	COUNTEDSTRING FilePaths,
+	UINT16 SkippedEntries
+	);
+
+DirFootprint(
+	UINT64 PartA_PrivTags,
+	UINT64 DirFilesSizes,
+	COUNTEDSTRING DirNames
+	);
+
+LATScan_ColdFiles(
+	UINT64 PartA_PrivTags,
+	INT32 ScanMode,
+	UINT64 FileSizes,
+	UINT64 LastAccessTimes,
+	COUNTEDSTRING FileNames,
+	UINT16 SkippedEntries
+	);
+
+TlgAggregateSummary(
+	GUID Provider,
+	UINT64 NumFlushes,
+	UINT64 MaxEntriesStored,
+	UINT64 TotalEntriesFlushed,
+	UINT32 MaxEntriesFlushed,
+	UINT32 MinEntriesFlushed,
+	UINT32 NumBucketLimitReached,
+	UINT32 NumAllocationFailures,
+	UINT32 NumLargeEventFailures
+	);
+

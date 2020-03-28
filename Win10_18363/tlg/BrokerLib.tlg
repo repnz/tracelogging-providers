@@ -1,0 +1,215 @@
+ProviderNames:
+	Microsoft.Windows.BrokerBase
+	TelemetryAssert
+	TelemetryAssertDiagTrack
+
+
+
+**** Events *****
+BrGetQuota(
+	GUID brokerGuid,
+	WIN32ERROR status,
+	UNICODESTRING packageName,
+	UINT32 eventType,
+	UINT32 currentQuota
+	);
+
+BrDecQuota(
+	GUID brokerGuid,
+	WIN32ERROR status,
+	UNICODESTRING packageName,
+	UINT32 eventType,
+	UINT32 count
+	);
+
+BrQueryBrokeredApplicationState(
+	GUID brokerGuid,
+	WIN32ERROR status,
+	UNICODESTRING packageName
+	);
+
+BrSignalBrokerEvent(
+	GUID brokerGuid,
+	GUID eventId,
+	WIN32ERROR status
+	);
+
+BrDeleteBrokerInstance(
+	GUID brokerGuid,
+	WIN32ERROR status
+	);
+
+BrQueryBrokeredEventNoLock(
+	GUID brokerGuid,
+	WIN32ERROR status,
+	UNICODESTRING packageName,
+	UINT32 eventType,
+	UINT32 eventCount
+	);
+
+BrIncQuota(
+	GUID brokerGuid,
+	WIN32ERROR status,
+	UNICODESTRING packageName,
+	UINT32 eventType,
+	UINT32 count
+	);
+
+BrQueryBrokeredEvent(
+	GUID brokerGuid,
+	WIN32ERROR status,
+	UNICODESTRING packageName,
+	UINT32 eventType,
+	UINT32 eventCount
+	);
+
+Callback.OnCreate(
+	GUID brokerGuid,
+	GUID eventGuid,
+	WIN32ERROR status,
+	HEXINT64 eventContext,
+	UINT32 eventType,
+	UINT32 eaEventFlags,
+	UINT32 eventFlags,
+	UINT32 quotaCost
+	);
+
+Callback.OnDelete(
+	GUID brokerGuid,
+	GUID eventGuid,
+	UINT8 callReason
+	);
+
+Callback.OnDisable(
+	GUID brokerGuid,
+	GUID eventGuid,
+	WIN32ERROR status
+	);
+
+Callback.OnDelete(
+	GUID brokerGuid,
+	GUID eventGuid,
+	WIN32ERROR status
+	);
+
+GetBackgroundAccessAppsError(
+	GUID Broker,
+	WIN32ERROR Error
+	);
+
+Callback.OnCreate(
+	GUID brokerGuid,
+	GUID eventGuid,
+	UINT8 callReason,
+	UNICODESTRING packageName,
+	SID userSid
+	);
+
+Callback.OnDelete(
+	GUID brokerGuid,
+	GUID eventGuid,
+	UINT8 callReason,
+	HEXINT64 context
+	);
+
+Callback.OnEnable(
+	GUID brokerGuid,
+	GUID eventGuid,
+	WIN32ERROR status
+	);
+
+BrokerEvent.FreeEvent(
+	GUID eventId,
+	UINT32 eventType
+	);
+
+DeleteBrokeredEvent(
+	HEXINT64 eventPtr,
+	GUID eventId
+	);
+
+Callback.OnEnable(
+	GUID brokerGuid,
+	GUID eventGuid,
+	UINT8 callReason
+	);
+
+Callback.OnDisable(
+	GUID brokerGuid,
+	GUID eventGuid,
+	UINT8 callReason,
+	HEXINT64 context
+	);
+
+BrokerEvent.CreateEvent(
+	GUID eventId,
+	UINT32 eventType
+	);
+
+BrokerEvent.Signal(
+	GUID eventId,
+	UINT32 eventType,
+	UINT32 argumentSize
+	);
+
+BrokerEvent.SetState(
+	GUID eventId,
+	UINT32 eventType,
+	UINT8 stateBefore,
+	UINT8 stateAfter
+	);
+
+Assert(
+	UINT32 assertVersion,
+	UINT32 rva,
+	UINT32 timestamp,
+	UINT32 imageSize,
+	ANSISTRING imageName,
+	UINT32 count,
+	UINT32 totalHits,
+	UINT32 ModuleCollection,
+	UINT32 GlobalCollection
+	);
+
+BriDisableEvent(
+	GUID brokerId,
+	GUID eventId,
+	WIN32ERROR status,
+	UINT8 callReason
+	);
+
+BriSignalEvent(
+	GUID brokerId,
+	GUID eventId,
+	WIN32ERROR status
+	);
+
+BriCreateEvent(
+	GUID brokerGuid,
+	GUID eventGuid,
+	WIN32ERROR status,
+	UINT64 eventWNFName,
+	UINT8 callReason,
+	UNICODESTRING packageName,
+	SID userSid,
+	UINT32 controlFlags,
+	UINT32 eventType,
+	UINT32 eaEventFlags,
+	UINT32 eventFlags,
+	HEXINT64 eventHandle
+	);
+
+BriDeleteEvent(
+	HEXINT64 eventPtr,
+	GUID brokerId,
+	WIN32ERROR status,
+	UINT8 callReason
+	);
+
+BriEnableEvent(
+	GUID brokerId,
+	GUID eventId,
+	WIN32ERROR status,
+	UINT8 callReason
+	);
+

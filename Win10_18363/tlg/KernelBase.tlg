@@ -1,0 +1,286 @@
+ProviderNames:
+	Microsoft.Windows.Kernel.KernelBase
+	Microsoft-Windows-AppModel-Runtime
+	Microsoft.Windows.Kernel.Base
+	Microsoft.Windows.AppModel.StateManagerTelemetry
+
+
+
+**** Events *****
+BaseCopyStreamStop(
+	INT32 Status,
+	INT64 FileSize,
+	UINT8 Source_File_Encrypted,
+	UINT8 Destination_File_Encrypted,
+	UINT32 SourceFileEfsVersion,
+	UINT32 DestinationFileEfsVersion,
+	UNICODESTRING Source_File_System_Name,
+	UNICODESTRING Destination_File_System_Name,
+	UINT32 Source_File_Device,
+	UINT32 Destination_File_Device,
+	UNICODESTRING Input_File_Extension
+	);
+
+BasepCopyEncryptionIfNeeded.EdpCopyFileInfo(
+	UINT32 edpAction,
+	HRESULT protectFileToIdentityStatus,
+	BOOL32 isDestRemote,
+	BOOL32 CopyFlagsOverride,
+	BOOL32 returnStatus
+	);
+
+BasepCopyEncryptionIfNeeded.GetEnterpriseActionForCopy(
+	HRESULT status,
+	BOOL32 isDestRemote
+	);
+
+BaseCopyStreamStart(
+	VOID
+	);
+
+SetDeviceUnlockState(
+	INT32 hr,
+	UNICODESTRING AppModelUnlockStateSeparatedRegKeyPath,
+	UNICODESTRING PolicyUnlockStateSeparatedRegKeyPath,
+	UNICODESTRING UnlockValue,
+	BOOLEAN UnlockEnabled,
+	INT32 UnlockPolicyRegKeyVal
+	);
+
+DesktopAppxAliasActivation(
+	BOOLEAN UTCReplace_AppSessionGuid,
+	INT32 lastError,
+	BOOLEAN postProcessCreateAttempted,
+	UNICODESTRING packageFullName,
+	UNICODESTRING applicationPath,
+	BOOLEAN processCreated,
+	BOOLEAN processAttributesPresent,
+	BOOLEAN threadAttributesPresent,
+	BOOLEAN inheritHandles,
+	UINT32 creationFlags,
+	BOOLEAN environmentPresent,
+	BOOLEAN startupInfoZeroed,
+	BOOLEAN win32AttributesPresent
+	);
+
+ApiSetError(
+	UNICODESTRING functionname,
+	INT32 hr
+	);
+
+FallbackError(
+	UINT64 PartA_PrivTags,
+	SIGNED wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+FallbackError(
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+SubscribeWnfStateChangeNotificationError(
+	HRESULT hrSubscribe,
+	UINT32 stateName
+	);
+
+CreateWnfStateNameError(
+	HRESULT hrCreate
+	);
+
+WriteWnfStateNameToRegError(
+	HRESULT hrWrite,
+	HRESULT hrOpenStateNameKey
+	);
+
+ReadWnfStateNameFromRegError(
+	HRESULT hrRead,
+	HRESULT hrOpenStateNameKey
+	);
+
+AppHiveCreateKeyLoadError(
+	UNICODESTRING FamilyName,
+	HRESULT LoadHiveHRESULT,
+	UNICODESTRING KeyName
+	);
+
+AppHiveNotFoundLoadError(
+	UNICODESTRING FamilyName,
+	UNICODESTRING Path,
+	HRESULT LoadHiveHr,
+	UINT64 HiveFileAttribute,
+	HRESULT GetDiskFreeSpaceHr,
+	UINT64 BytesFree,
+	HRESULT GetWinDiskFreeSpaceHr,
+	UINT64 WindowsBytesFree
+	);
+
+StateSpace::Create(
+	UNICODESTRING packageFamilyMoniker,
+	INT32 hrCreate
+	);
+
+AppContainerLookupMoniker(
+	UNICODESTRING packageFamilyMoniker,
+	INT32 hrAppContainerLookupMoniker
+	);
+
+GetAppContainerSid(
+	UNICODESTRING packageFamilyMoniker,
+	INT32 hrGetAppContainerSid
+	);
+
+PackageNameAndPublisherIdFromFamilyName(
+	UNICODESTRING packageFamilyMoniker,
+	INT32 HRESULT_FROM_WIN32(errorPackageNameAndPublisherIdFromFamilyName)
+	);
+
+StringCchCopyW(
+	UNICODESTRING packageFamilyMoniker,
+	INT32 hrStringCchCopyW
+	);
+
+StringCchLengthW(
+	UNICODESTRING packageFamilyMoniker,
+	INT32 hrStringCchLengthW
+	);
+
+NtGetUserSidString(
+	UNICODESTRING packageFamilyMoniker,
+	INT32 hrGetUserSidString
+	);
+
+UnregisterSidFailed(
+	HRESULT hr,
+	ANSISTRING file,
+	ANSISTRING function,
+	UINT32 line
+	);
+
+AC_UnregisterSid_start(
+	VOID
+	);
+
+GetAppContainerSidFromTokenFailed(
+	HRESULT hr,
+	ANSISTRING file,
+	ANSISTRING function,
+	UINT32 line
+	);
+
+VerifyChildParentAppContainerRelationshipFailed(
+	HRESULT hr,
+	ANSISTRING file,
+	ANSISTRING function,
+	UINT32 line
+	);
+
+RegisterSidFailed(
+	HRESULT hr,
+	ANSISTRING file,
+	ANSISTRING function,
+	UINT32 line
+	);
+
+OpenMappingsRegistryKeyFailed(
+	HRESULT hr,
+	ANSISTRING file,
+	ANSISTRING function,
+	UINT32 line
+	);
+
+CreateAppContainerKeySecurityDescriptorFailed(
+	HRESULT hr,
+	ANSISTRING file,
+	ANSISTRING function,
+	UINT32 line
+	);
+
+AC_RegisterSid_start(
+	UNICODESTRING Moniker,
+	UNICODESTRING Display
+	);
+
+AC_UnregisterSid_Stop(
+	UINT32 hr,
+	UNICODESTRING Context
+	);
+
+CreateMappingsRegistryKeyFailed(
+	HRESULT hr,
+	ANSISTRING file,
+	ANSISTRING function,
+	UINT32 line
+	);
+
+CheckPolicyChildAppContainerFailed(
+	HRESULT hr,
+	ANSISTRING file,
+	ANSISTRING function,
+	UINT32 line
+	);
+
+ActivityStoppedAutomatically(
+	VOID
+	);
+
+OpenAppContainerKeyFailed(
+	HRESULT hr,
+	ANSISTRING file,
+	ANSISTRING function,
+	UINT32 line
+	);
+
+AC_RegisterSid_Stop(
+	UINT32 hr,
+	UNICODESTRING Context
+	);
+
+LookupStringValueFailed(
+	HRESULT hr,
+	ANSISTRING file,
+	ANSISTRING function,
+	UINT32 line
+	);
+
+IsChildAppContainerSidFailed(
+	HRESULT hr,
+	ANSISTRING file,
+	ANSISTRING function,
+	UINT32 line
+	);
+
+OpenAppContainerKey(
+	UNICODESTRING Key
+	);
+

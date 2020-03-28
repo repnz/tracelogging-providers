@@ -1,0 +1,434 @@
+ProviderNames:
+	Microsoft.Web.Platform.IDBLegacyServer
+	Microsoft.Web.Platform.StorageServer
+
+
+
+**** Events *****
+IDBServerCreateDatabase(
+	HRESULT hresult,
+	UINT32 contextFlags,
+	INT64 durationMicroseconds
+	);
+
+IDBServerDeleteAllDatabases(
+	HRESULT hresult,
+	BOOL32 isEdpEnabled
+	);
+
+IDBServerDeleteWebSiteDatabases(
+	HRESULT hresult,
+	BOOL32 isEdpEnabled
+	);
+
+IDBServerDeleteDatabase(
+	HRESULT hresult,
+	NTSTATUS asyncCallCompletionStatus,
+	UINT32 contextFlags,
+	INT64 durationMicroseconds
+	);
+
+IndexedDBSizePeriodicIncrements(
+	UINT64 storageInBytes,
+	UNICODESTRING AppId,
+	COUNTEDSTRING domain
+	);
+
+IndexedDBTelemetryError(
+	HRESULT hresult
+	);
+
+EdgeStorageTelemetryError(
+	HEXINT32 hresult
+	);
+
+ESE_JetDefragment(
+	HRESULT hresult,
+	HEXINT64 sessionId,
+	UINT32 databaseId,
+	UINT32 passes,
+	UINT32 seconds,
+	HEXINT32 grbit
+	);
+
+ESE_JetResizeDatabase(
+	HRESULT hresult,
+	HEXINT64 sessionId,
+	UINT32 databaseId,
+	UINT32 targetPageCount,
+	UINT32 actualPageCount,
+	HEXINT32 grbit
+	);
+
+ESE_JetGetTableInfo(
+	HRESULT hresult,
+	HEXINT64 sessionId,
+	HEXINT64 tableId,
+	BINARY result,
+	UINT32 infoLevel
+	);
+
+ESE_JetUpdate(
+	HRESULT hresult,
+	HEXINT64 sessionId,
+	HEXINT64 tableId,
+	BINARY bookmark
+	);
+
+ESE_JetTerm2(
+	HRESULT hresult,
+	HEXINT64 instance,
+	HEXINT32 grbit
+	);
+
+ESE_JetSetSystemParameter(
+	HRESULT hresult,
+	HEXINT64 instance,
+	HEXINT64 sessionId,
+	UINT32 paramId,
+	HEXINT64 numValue,
+	UNICODESTRING stringValue
+	);
+
+ESE_JetSetSessionContext(
+	HRESULT hresult,
+	HEXINT64 context
+	);
+
+ESE_JetSetIndexRange(
+	HRESULT hresult,
+	HEXINT64 sessionId,
+	HEXINT64 tableId,
+	HEXINT32 grbit
+	);
+
+ESE_JetSetCurrentIndex(
+	HRESULT hresult,
+	HEXINT64 sessionId,
+	HEXINT64 tableId,
+	UNICODESTRING indexName
+	);
+
+ESE_JetSetCurrentIndex2(
+	HRESULT hresult,
+	HEXINT64 sessionId,
+	HEXINT64 tableId,
+	UNICODESTRING indexName,
+	HEXINT32 grbit
+	);
+
+ESE_SetColumn(
+	UINT32 id,
+	BINARY data,
+	HEXINT32 grbit,
+	UINT32 longValue,
+	UINT32 tagSequence
+	);
+
+ESE_JetSetColumns(
+	HRESULT hresult,
+	HEXINT64 sessionId,
+	HEXINT64 tableId
+	);
+
+ESE_JetSeek(
+	HRESULT hresult,
+	HEXINT64 sessionId,
+	HEXINT64 tableId,
+	HEXINT32 grbit
+	);
+
+ESE_JetRollback(
+	HRESULT hresult,
+	HEXINT64 sessionId,
+	HEXINT32 grbit
+	);
+
+ESE_RetrieveColumn(
+	UINT32 id,
+	BINARY data,
+	HEXINT32 grbit,
+	UINT32 longValue,
+	UINT32 tagSequence
+	);
+
+ESE_JetRetrieveColumns(
+	HRESULT hresult,
+	HEXINT64 sessionId,
+	HEXINT64 tableId
+	);
+
+ESE_JetRetrieveColumn(
+	HRESULT hresult,
+	HEXINT64 sessionId,
+	HEXINT64 tableId,
+	UINT32 columnId,
+	BINARY data,
+	HEXINT32 grbit,
+	UINT32 longValue,
+	UINT32 tagSequence
+	);
+
+ESE_JetResetSessionContext(
+	HRESULT hresult,
+	HEXINT64 sessionId
+	);
+
+ESE_JetPrepareUpdate(
+	HRESULT hresult,
+	HEXINT64 sessionId,
+	HEXINT64 tableId,
+	UINT32 option
+	);
+
+ESE_JetOpenTable(
+	HRESULT hresult,
+	HEXINT64 sessionId,
+	UINT32 databaseId,
+	UNICODESTRING tableName,
+	HEXINT32 grbit,
+	HEXINT64 tableId
+	);
+
+ESE_JetOpenDatabase(
+	HRESULT hresult,
+	HEXINT64 sessionId,
+	UNICODESTRING filename,
+	UINT32 databaseId,
+	HEXINT32 grbit
+	);
+
+ESE_JetMove(
+	HRESULT hresult,
+	HEXINT64 sessionId,
+	HEXINT64 tableId,
+	INT32 offset,
+	HEXINT32 grbit
+	);
+
+ESE_JetMakeKey(
+	HRESULT hresult,
+	HEXINT64 sessionId,
+	HEXINT64 tableId,
+	BINARY data,
+	HEXINT32 grbit
+	);
+
+ESE_JetInit2(
+	HRESULT hresult,
+	HEXINT64 instance,
+	HEXINT32 grbit
+	);
+
+ESE_JetGotoBookmark(
+	HRESULT hresult,
+	HEXINT64 sessionId,
+	HEXINT64 tableId,
+	BINARY bookmark
+	);
+
+ESE_JetGetSystemParameter(
+	HRESULT hresult,
+	HEXINT64 instance,
+	HEXINT64 sessionId,
+	UINT32 paramId,
+	HEXINT64 numValue,
+	UNICODESTRING stringValue
+	);
+
+ESE_ColumnDef(
+	UINT32 id,
+	UINT32 type,
+	HEXINT32 grbit
+	);
+
+ESE_JetGetColumnInfo(
+	HRESULT hresult,
+	HEXINT64 sessionId,
+	UINT32 databaseId,
+	UNICODESTRING tableName,
+	UINT32 infoLevel
+	);
+
+ESE_JetEscrowUpdate(
+	HRESULT hresult,
+	HEXINT64 sessionId,
+	HEXINT64 tableId,
+	UINT32 columnId,
+	BINARY addend,
+	BINARY oldValue,
+	HEXINT32 grbit
+	);
+
+ESE_JetEndSession(
+	HRESULT hresult,
+	HEXINT64 sessionId
+	);
+
+ESE_JetDetachDatabase2(
+	HRESULT hresult,
+	HEXINT64 sessionId,
+	UNICODESTRING filename,
+	HEXINT32 grbit
+	);
+
+ESE_JetDeleteTable(
+	HRESULT hresult,
+	HEXINT64 sessionId,
+	UINT32 databaseId,
+	UNICODESTRING tableName
+	);
+
+ESE_JetDeleteIndex(
+	HRESULT hresult,
+	HEXINT64 sessionId,
+	HEXINT64 tableId,
+	UNICODESTRING indexName
+	);
+
+ESE_JetDeleteColumn(
+	HRESULT hresult,
+	HEXINT64 sessionId,
+	HEXINT64 tableId,
+	UNICODESTRING columnName
+	);
+
+ESE_JetDelete(
+	HRESULT hresult,
+	HEXINT64 sessionId,
+	HEXINT64 tableId
+	);
+
+ESE_ColumnCreate(
+	UNICODESTRING name,
+	UINT32 type,
+	HEXINT32 grbit,
+	BINARY defaultValue
+	);
+
+ESE_JetCreateTableColumnIndex3(
+	HRESULT hresult,
+	HEXINT64 sessionId,
+	UINT32 databaseId
+	);
+
+ESE_JetCreateInstance2(
+	HRESULT hresult,
+	HEXINT64 instance,
+	UNICODESTRING instanceName
+	);
+
+ESE_IndexCreate(
+	UNICODESTRING name,
+	UNICODESTRING key,
+	HEXINT32 grbit
+	);
+
+ESE_JetCreateIndex3(
+	HRESULT hresult,
+	HEXINT64 sessionId,
+	HEXINT64 tableId
+	);
+
+ESE_JetCreateDatabase2(
+	HRESULT hresult,
+	HEXINT64 sessionId,
+	UNICODESTRING filename,
+	UINT32 maxPages,
+	UINT32 databaseId,
+	HEXINT32 grbit
+	);
+
+ESE_JetCommitTransaction(
+	HRESULT hresult,
+	HEXINT64 sessionId,
+	HEXINT32 grbit
+	);
+
+ESE_JetCloseTable(
+	HRESULT hresult,
+	HEXINT64 sessionId,
+	HEXINT64 tableId
+	);
+
+ESE_JetCloseDatabase(
+	HRESULT hresult,
+	HEXINT64 sessionId,
+	UINT32 databaseId
+	);
+
+ESE_JetBeginTransaction(
+	HRESULT hresult,
+	HEXINT64 sessionId
+	);
+
+ESE_JetBeginSession(
+	HRESULT hresult,
+	HEXINT64 instance,
+	HEXINT64 sessionId
+	);
+
+ESE_JetAttachDatabase2(
+	HRESULT hresult,
+	HEXINT64 sessionId,
+	UNICODESTRING filename,
+	UINT32 maxPages,
+	HEXINT32 grbit
+	);
+
+ESE_JetAddColumn(
+	HRESULT hresult,
+	HEXINT64 sessionId,
+	HEXINT64 tableId,
+	UNICODESTRING columnName,
+	UINT32 columnType,
+	HEXINT32 columnGrbit,
+	BINARY defaultValue,
+	UINT32 columnId
+	);
+
+FallbackError(
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+FallbackError(
+	UINT64 PartA_PrivTags,
+	SIGNED wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+ESE_CorruptionDetected(
+	HRESULT hresult
+	);
+

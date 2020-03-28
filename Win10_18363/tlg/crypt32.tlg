@@ -1,0 +1,158 @@
+ProviderNames:
+	Microsoft.Windows.Security.Certificates
+
+
+
+**** Events *****
+CabInstalled(
+	UNICODESTRING fileName,
+	UNICODESTRING sequenceNumber
+	);
+
+CabUpdated(
+	UNICODESTRING fileName,
+	UNICODESTRING sequenceNumber
+	);
+
+HpkpHeader(
+	UNICODESTRING serverName,
+	ANSISTRING pkpValue,
+	ANSISTRING pkpRoValue,
+	UNICODESTRING serverThumbprint,
+	UNICODESTRING rootThumbprint,
+	UNICODESTRING caThumbprints
+	);
+
+PinRulesChecked(
+	UNICODESTRING serverName,
+	UNICODESTRING serverThumbprint,
+	UNICODESTRING rootThumbprint,
+	HEXINT32 statusBits,
+	UNICODESTRING caThumbprints
+	);
+
+PinRulesCheckedAnalytics(
+	UNICODESTRING serverName,
+	UNICODESTRING serverThumbprint,
+	UNICODESTRING rootThumbprint,
+	HEXINT32 statusBits,
+	UNICODESTRING caThumbprints
+	);
+
+PinRulesOfflineRevocation(
+	UNICODESTRING serverName,
+	FILETIME checkTime,
+	UNICODESTRING action,
+	HEXINT32 error,
+	HEXINT32 timeout,
+	FILETIME retrieveTime,
+	UNICODESTRING url,
+	UNICODESTRING responseHeaders,
+	UNICODESTRING serverThumbprint,
+	UNICODESTRING rootThumbprint,
+	UNICODESTRING caThumbprints
+	);
+
+PinRulesOfflineRevocation(
+	UNICODESTRING serverName,
+	FILETIME checkTime,
+	UNICODESTRING action,
+	HEXINT32 error,
+	FILETIME retrieveTime,
+	FILETIME expireTime,
+	UNICODESTRING url,
+	UNICODESTRING serverThumbprint,
+	UNICODESTRING rootThumbprint,
+	UNICODESTRING caThumbprints
+	);
+
+PinRulesServerCertUsed(
+	UNICODESTRING certThumbprint,
+	BINARY certBinary
+	);
+
+PinRulesServerCertUsedAnalytics(
+	UNICODESTRING certThumbprint,
+	BINARY certBinary
+	);
+
+PinRulesCaCertUsed(
+	UNICODESTRING certThumbprint,
+	BINARY certBinary
+	);
+
+PinRulesCaCertUsedAnalytics(
+	UNICODESTRING certThumbprint,
+	BINARY certBinary
+	);
+
+SslTimeSynchronized(
+	GUID sequenceId,
+	UINT32 eventId,
+	UINT64 tickCount,
+	FILETIME clientTime,
+	UINT32 serverTime,
+	INT64 chainId,
+	UNICODESTRING serverName,
+	FILETIME lastNotBefore,
+	FILETIME firstNotAfter,
+	HEXINT32 flags,
+	INT64 ocspRespId,
+	FILETIME ocspRespThisUpdate,
+	FILETIME ocspRespNextUpdate,
+	UINT32 state,
+	UINT32 confidence,
+	FILETIME minSslTime,
+	FILETIME maxSslTime,
+	FILETIME sslTime
+	);
+
+SslTimeUpdated(
+	GUID sequenceId,
+	UINT32 eventId,
+	UINT64 tickCount,
+	FILETIME clientTime,
+	UINT32 serverTime,
+	INT64 chainId,
+	UNICODESTRING serverName,
+	FILETIME lastNotBefore,
+	FILETIME firstNotAfter,
+	HEXINT32 flags,
+	INT64 ocspRespId,
+	FILETIME ocspRespThisUpdate,
+	FILETIME ocspRespNextUpdate,
+	UINT32 state,
+	UINT32 confidence,
+	FILETIME minSslTime,
+	FILETIME maxSslTime,
+	FILETIME sslTime
+	);
+
+CertSelectApi(
+	GUID sequenceGuid,
+	UINT32 flags,
+	UINT32 inCertsCount,
+	UINT32 inCertsEncodedByteLength,
+	UINT32 criteria,
+	UINT32 selectedCertsCount,
+	ANSISTRING keyTypes,
+	ANSISTRING keyTypesCount
+	);
+
+CertSelectCertificates(
+	GUID sequenceGuid,
+	UINT32 indexId,
+	UNICODESTRING signHashAlg,
+	INT32 keyType,
+	INT32 keyPriorityIndex,
+	UINT32 publicKeyBitLength,
+	UNICODESTRING keyProviderName,
+	FILETIME notBefore,
+	FILETIME notAfter,
+	UINT32 encodedByteLength,
+	ANSISTRING publicKeyAlg,
+	UINT32 keyUsage,
+	ANSISTRING ekuValues,
+	BINARY certSHA1Thumbprint
+	);
+

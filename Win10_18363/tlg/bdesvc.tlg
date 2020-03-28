@@ -1,0 +1,259 @@
+ProviderNames:
+	BdeSvcTraceLoggingProvider
+	Microsoft.Windows.Security.BitLocker.KeyRolling.Engine
+	Microsoft.Windows.Security.BitLocker.BcdUpdate
+	Microsoft.Windows.Security.BitLocker.CSP.State.Update
+	Microsoft.Windows.Security.BitLocker.EncryptionDelay
+	FveEnableLoggingProvider
+	TelemetryAssert
+	TelemetryAssertDiagTrack
+
+
+
+**** Events *****
+Bitlocker.AAD.Backup.Check(
+	UINT16 numMissingFromAAD,
+	UNICODESTRING KeyRecordsMissingFromAAD,
+	UINT16 numFoundInAAD,
+	UINT32 numKeysInAAD,
+	UINT16 numKeysMarkedBackedupToAAD,
+	BOOLEAN isServerError,
+	INT32 hrClientBackupInfo,
+	INT32 hrAADBackupInfo,
+	INT32 hrFormat,
+	INT32 hr,
+	UINT64 PartA_PrivTags
+	);
+
+Bitlocker.Client.RP.Rolling.Action(
+	UINT32 RetryCount,
+	INT32 hr,
+	UINT32 Exit,
+	UINT64 PartA_PrivTags
+	);
+
+Bitlocker.Boot.Success(
+	UINT64 PartA_PrivTags
+	);
+
+Bitlocker.Boot.Failure(
+	GUID FveID,
+	BOOL32 IsRecoveryHit,
+	UINT16 RecEventCount,
+	UINT64 RecEventSize,
+	BINARY RecEvent1,
+	BINARY RecEvent2,
+	BINARY RecEvent3,
+	BINARY RecEvent4,
+	BINARY RecEvent5,
+	UINT64 PartA_PrivTags
+	);
+
+Bitlocker.Client.RP.Rolling.Info(
+	BOOLEAN IsKeyRotationEnabled,
+	BOOLEAN RecoverySeen,
+	BOOLEAN WinREUnlock,
+	INT32 hrWNFEvent,
+	UINT64 PartA_PrivTags
+	);
+
+Bitlocker.Recovery.bootmgrRecovery(
+	UINT32 ErrorCode,
+	UINT16 bootmgrEventId
+	);
+
+Bitlocker.Recovery.bootmgrRecovery(
+	UINT16 bootmgrEventId,
+	UINT32 BcdSettingId
+	);
+
+Bitlocker.WinRE.Protection.Disabled(
+	UINT16 WinREEventId
+	);
+
+Bitlocker.Recovery.WinRERecoveryError(
+	INT32 ErrorCode,
+	UINT16 WinREEventId
+	);
+
+BitLocker.CFveApi.TcgLogOnSeal(
+	UINT16 WinREEventId,
+	UINT32 TcgLogSize,
+	BINARY TcgLog
+	);
+
+BitLocker.FveApi.PCR.Values(
+	UINT16 WinREEventId,
+	UINT32 PcrValuesSize,
+	BINARY PCRValues,
+	UINT32 PcrBitMapSource,
+	UINT32 PcrBitMap
+	);
+
+Bitlocker.WinRE.Invalid.SecureBoot(
+	UINT16 WinREEventId
+	);
+
+Bitlocker.Recovery.WinRERecovery(
+	INT32 BcdSettingId,
+	UINT16 WinREEventId,
+	GUID FveID,
+	UNICODESTRING ApplicationPath
+	);
+
+Bitlocker.Recovery.WinRERecovery(
+	GUID FveID,
+	UNICODESTRING ApplicationPath,
+	UINT16 WinREEventId
+	);
+
+Bitlocker.Recovery.WinRERecovery(
+	GUID FveID,
+	UINT16 WinREEventId
+	);
+
+Bitlocker.WinRE.Unlock(
+	GUID FveID,
+	UINT16 WinREEventId
+	);
+
+Bitlocker.Recovery.ReSeal(
+	GUID FveID,
+	UINT16 WinREEventId
+	);
+
+Bitlocker.BSvc.Suspend.Resume(
+	BOOLEAN DidSetupSuspend,
+	UINT32 ClearKeyCounter,
+	INT32 ExitCode
+	);
+
+BitLocker.Silent.Bitlocker.OsAndFdv(
+	INT32 policyStandardUserEncryption,
+	BOOLEAN allowStandardUser,
+	BOOLEAN IsStandardUserLogon,
+	BOOLEAN isTPMavailableChecked,
+	BOOLEAN IsTpmUnavailableForEnvironment,
+	BOOLEAN isTPMStatusChecked,
+	BOOLEAN IsTpmReadyForBitLocker,
+	BOOLEAN isWinreChecked,
+	BOOLEAN IsWinreConfigured,
+	UINT32 DiagCodeCounter,
+	UNICODESTRING HrErrorLog,
+	UINT32 FDVEncryptAttemptCount,
+	UINT32 FDVEncryptFailedCount,
+	INT32 ExitCode
+	);
+
+BitLocker.Silent.DE.OSAndFdv(
+	BOOLEAN IsOSVolumeDecrypted,
+	BOOLEAN IsPreventDeviceEncryptionSet,
+	BOOLEAN ClearedPreventDeviceEncryption,
+	UINT32 OSOptedAndCleared,
+	INT32 IsThinProvisioned,
+	UINT32 DiagCodeCounter,
+	UNICODESTRING HrErrorLog,
+	UINT32 FDVEncryptAttemptCount,
+	UINT32 FDVEncryptFailedCount,
+	INT32 ExitCode
+	);
+
+Bitlocker.Server.RP.Rolling.Action(
+	INT32 hrAlertMDMServerKeyRotation,
+	INT32 hrKeyRotation,
+	UINT64 PartA_PrivTags
+	);
+
+ActivityStoppedAutomatically(
+	VOID
+	);
+
+ProcessAdminlessProvisionStop(
+	INT32 FinalResult
+	);
+
+ProvisionAdminlessDEDataVolume(
+	UNICODESTRING Volume,
+	INT32 Result
+	);
+
+ProvisionAdminlessDEOSVolume(
+	UNICODESTRING Volume,
+	INT32 Result
+	);
+
+ProcessAdminlessProvisionStart(
+	UNICODESTRING CommandLine
+	);
+
+BitLocker.AdminlessDE.LoginType(
+	BOOL32 IsAdminlessAADJoin,
+	INT32 Result
+	);
+
+Password.Roll(
+	INT32 hr,
+	BOOLEAN RotationSuccess,
+	INT32 DeleteRequest,
+	UINT32 numKeysToRoll,
+	UINT32 numKeyDeleteAttempts,
+	UINT64 PartA_PrivTags
+	);
+
+BitLocker.BCD.Update(
+	INT32 hr
+	);
+
+BitLocker.CSP.Update.State(
+	INT32 BitLockerStatus,
+	UINT32 data,
+	INT32 hr,
+	UINT64 PartA_PrivTags
+	);
+
+BitLocker.OOBE.Complete(
+	BOOLEAN IsEulaManuallyAccepted,
+	BOOLEAN WasEulaDisplayedBySetup,
+	BOOLEAN IsUserLoggedOnPostOobe,
+	BOOLEAN WasEulaDisplayedAndMachineOobeCompleted,
+	BOOLEAN IsAutoPilotScenario,
+	BOOLEAN IsProvisioningComplete,
+	INT32 Status of Autopilot scenario resolution,
+	INT32 Failed to query WNF state data for EULA accepted,
+	INT32 Failed to query WNF state data for user logon completed post oobe,
+	INT32 Failed to query WNF state data for completion of machine oobe,
+	INT32 IsOOBEComplete,
+	INT32 hr_FveIsOOBECompleted
+	);
+
+BitLocker.AutoPilot.Scenario(
+	INT32 trackhr,
+	BOOLEAN IsAutoPilotScenario,
+	INT32 IsAutoPilotLocalProfileAvailable
+	);
+
+Bitlocker.FveApi.AAD.RP.Backup(
+	HRESULT ExitCode,
+	GUID FveID,
+	UINT32 VolumeType
+	);
+
+Bitlocker.FveApi.AD.RP.Backup.Retry(
+	ANSISTRING BackUpStatus,
+	HRESULT ExitCode,
+	GUID VolumeGuid,
+	BOOLEAN NoRetryStatus
+	);
+
+Assert(
+	UINT32 assertVersion,
+	UINT32 rva,
+	UINT32 timestamp,
+	UINT32 imageSize,
+	ANSISTRING imageName,
+	UINT32 count,
+	UINT32 totalHits,
+	UINT32 ModuleCollection,
+	UINT32 GlobalCollection
+	);
+

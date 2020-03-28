@@ -1,0 +1,263 @@
+ProviderNames:
+	Microsoft.Windows.Security.NaturalAuth.Service
+	Microsoft.Windows.TlgAggregateInternal
+
+
+
+**** Events *****
+RuleRegister(
+	HRESULT hResult,
+	UINT64 ruleId,
+	UINT32 signalType,
+	UINT64 dataWnfStateName,
+	ANSISTRING __TlgCV__
+	);
+
+RuleRegistrationActivityStart(
+	VOID
+	);
+
+RuleRegistrationActivityStop(
+	VOID
+	);
+
+ActivityStoppedAutomatically(
+	VOID
+	);
+
+UserPresenceMonitoringStopped(
+	INT64 ruleIds,
+	INT64 forceEvaluationCount
+	);
+
+IsUserPresenceMonitorEnabled(
+	BOOLEAN enabled,
+	UINT32 sessionId
+	);
+
+UserPresenceMonitorActivityStart(
+	VOID
+	);
+
+UserPresenceMonitoringFailedToStart(
+	BOOLEAN isPolicy,
+	HRESULT hResult
+	);
+
+UserPresenceMonitorActivityStop(
+	BOOLEAN isFailure,
+	HRESULT hResult
+	);
+
+EvaluateUserPresenceFailed(
+	UINT64 ruleId,
+	HRESULT hResult
+	);
+
+UserPresenceMonitorActivityStop(
+	BOOLEAN isFailure
+	);
+
+UserPresenceMonitoringStarted(
+	BOOLEAN isPolicy,
+	INT64 ruleIds
+	);
+
+PluginManagerParseSignal(
+	HRESULT parseResult,
+	UINT64 signalId,
+	UNICODESTRING signalType,
+	INT32 errorDetailsLine,
+	INT32 errorDetailsCharactorOffset,
+	UNICODESTRING errorDetailsSrcText,
+	UNICODESTRING errorDetailsDescription,
+	ANSISTRING __TlgCV__
+	);
+
+UpdateSignalLookupTableFailed(
+	WIN32ERROR errorStatus,
+	UINT32 pluginIndex,
+	UINT32 pluginCount,
+	UINT32 numSignals,
+	UINT32 signalTypeIndex,
+	UNICODESTRING signalType,
+	ANSISTRING __TlgCV__
+	);
+
+PluginManagerInitializationFailed(
+	WIN32ERROR errorStatus,
+	UINT32 pluginIndex,
+	UINT32 pluginCount,
+	ANSISTRING __TlgCV__
+	);
+
+ParseRule(
+	HRESULT hResult,
+	UINT32 errorDetailsLine,
+	UINT32 errorDetailsCharactorOffset,
+	UNICODESTRING errorDetailsSrcText,
+	UNICODESTRING errorDetailsDescription,
+	ANSISTRING __TlgCV__
+	);
+
+HandleCompositeElement(
+	HRESULT type,
+	HRESULT hResult,
+	UINT32 numElement,
+	UNICODESTRING errorDetailsSrcText,
+	ANSISTRING __TlgCV__
+	);
+
+NaturalAuthServiceStart(
+	VOID
+	);
+
+NaturalAuthServiceStop(
+	HRESULT hResult,
+	WIN32ERROR errorStatus
+	);
+
+ActivityStoppedAutomatically(
+	VOID
+	);
+
+TlgAggregateSummary(
+	GUID Provider,
+	UINT64 NumFlushes,
+	UINT64 MaxEntriesStored,
+	UINT64 TotalEntriesFlushed,
+	UINT32 MaxEntriesFlushed,
+	UINT32 MinEntriesFlushed,
+	UINT32 NumBucketLimitReached,
+	UINT32 NumAllocationFailures,
+	UINT32 NumLargeEventFailures
+	);
+
+TimePluginCreateError(
+	HRESULT hResult
+	);
+
+TaskSchedulerSignalCreateError(
+	UINT32 repeatType,
+	UINT32 ruleId,
+	HRESULT hResult
+	);
+
+TaskSchedulerSignalCreateAggregate(
+	NULL createCount,
+	UINT32 repeatType
+	);
+
+BluetoothDeviceNotFound(
+	UINT64 address,
+	UINT32 totalAttempts,
+	BOOLEAN deviceNotFound,
+	UINT8 rssiValue,
+	WIN32ERROR errorStatus,
+	UINT32 scenario,
+	ANSISTRING __TlgCV__
+	);
+
+InitializeDeviceListStart(
+	VOID
+	);
+
+BluetoothDeviceSpecificRssiValues(
+	INT8 rssiMin,
+	UINT8 rssiMinSource,
+	INT8 rssiMinArch,
+	INT8 rssiMinEnvVar,
+	INT8 rssiMinRegistry,
+	INT8 rssiMaxDelta,
+	UINT8 rssiMaxDeltaSource,
+	INT8 rssiMaxDeltaArch,
+	INT8 rssiMaxDeltaEnvVar,
+	INT8 rssiMaxDeltaRegistry
+	);
+
+BluetoothDeviceFound(
+	NULL pollingAttempts,
+	NULL retry0,
+	NULL retry1,
+	NULL retry2,
+	UINT32 scenario
+	);
+
+BluetoothSignalRegisterDevice(
+	UINT64 address,
+	UINT32 codMajor,
+	UINT32 codMinor,
+	INT8 rssiValue,
+	NULL deviceName,
+	ANSISTRING __TlgCV__
+	);
+
+InitializeDeviceList(
+	HRESULT hResult,
+	UINT32 numPairedDevices,
+	UINT32 numValidDevices,
+	UINT32 numRegisteredDevices,
+	UINT32 scenario,
+	ANSISTRING __TlgCV__
+	);
+
+InitializeDeviceListStop(
+	VOID
+	);
+
+IpConfigSignalCreateError(
+	UINT32 ruleId,
+	HRESULT hResult
+	);
+
+IpConfigSignalUpdateStateError(
+	UINT32 newState,
+	UINT32 addressSize,
+	UINT32 errorStatus,
+	UINT32 retryCount
+	);
+
+GeopositionInvokeError(
+	UINT32 status,
+	UINT32 ruleId,
+	UINT32 positionSource,
+	HRESULT hResult
+	);
+
+GeopositionInvokeAggregate(
+	NULL invokeCount,
+	UINT32 status,
+	UINT32 ruleId,
+	UINT32 positionSource
+	);
+
+GeolocSignalForceEvaluationAggregate(
+	NULL forceEvaluationCount,
+	UINT32 evaluateSource,
+	BOOLEAN isUpdating,
+	BOOLEAN expected
+	);
+
+GeolocSignalForceEvaluationError(
+	UINT32 evaluateSource,
+	BOOLEAN isUpdating,
+	BOOLEAN expected,
+	HRESULT hResult
+	);
+
+CdfDeviceMonitored(
+	UNICODESTRING deviceId
+	);
+
+CdfDeviceNotFound(
+	UNICODESTRING deviceId
+	);
+
+CdfSignalRegisterDevice(
+	UNICODESTRING deviceId
+	);
+
+CdfSignalUnregisterDevice(
+	UNICODESTRING deviceId
+	);
+

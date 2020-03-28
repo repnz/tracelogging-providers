@@ -1,0 +1,65 @@
+ProviderNames:
+	Microsoft.AAD.TokenBrokerPlugin.Provider
+
+
+
+**** Events *****
+ActivityStoppedAutomatically(
+	VOID
+	);
+
+Operation_Stop(
+	ANSISTRING operation,
+	UNICODESTRING CorrelationId,
+	UINT32 result
+	);
+
+Operation_Start(
+	ANSISTRING operation,
+	UNICODESTRING CorrelationId
+	);
+
+Operation_Info(
+	ANSISTRING operation,
+	UNICODESTRING CorrelationId,
+	UINT32 CookiesCount
+	);
+
+Operation_Info(
+	ANSISTRING operation,
+	UNICODESTRING CorrelationId,
+	UNICODESTRING CorrelationId
+	);
+
+Operation_Info(
+	ANSISTRING operation,
+	UNICODESTRING CorrelationId
+	);
+
+Operation_Info(
+	ANSISTRING operation,
+	UNICODESTRING CorrelationId,
+	UINT32 errorCode,
+	UNICODESTRING fallbackReason,
+	BOOL32 removeRefreshToken
+	);
+
+Operation_Info(
+	ANSISTRING operation,
+	UNICODESTRING CorrelationId,
+	ANSISTRING LightweightAccount
+	);
+
+Operation_Start(
+	ANSISTRING operation,
+	UNICODESTRING CorrelationId,
+	UINT32 errorCode
+	);
+
+Operation_Info(
+	ANSISTRING operation,
+	UNICODESTRING CorrelationId,
+	UINT32 result,
+	ANSISTRING Stage
+	);
+

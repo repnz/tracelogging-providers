@@ -1,0 +1,24 @@
+ProviderNames:
+	NLA
+	Microsoft.Windows.TlgAggregateInternal
+
+
+
+**** Events *****
+JoinCacheTableUsage(
+	UINT32 NumberTuples,
+	UINT32 OldTuples
+	);
+
+TlgAggregateSummary(
+	GUID Provider,
+	UINT64 NumFlushes,
+	UINT64 MaxEntriesStored,
+	UINT64 TotalEntriesFlushed,
+	UINT32 MaxEntriesFlushed,
+	UINT32 MinEntriesFlushed,
+	UINT32 NumBucketLimitReached,
+	UINT32 NumAllocationFailures,
+	UINT32 NumLargeEventFailures
+	);
+

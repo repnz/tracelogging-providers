@@ -1,0 +1,115 @@
+ProviderNames:
+	Microsoft.Windows.Mobile.Provisioning.Datastore
+	TelemetryAssert
+	TelemetryAssertDiagTrack
+
+
+
+**** Events *****
+ReturningProvisionData(
+	UNICODESTRING ProvisionData
+	);
+
+OpenMasterDatastore(
+	UNICODESTRING Path
+	);
+
+OpenMasterDatastoreFailed(
+	INT32 HResult,
+	UNICODESTRING Path
+	);
+
+MasterDatastoreOpenTag(
+	INT32 HResult,
+	UNICODESTRING Element
+	);
+
+MasterDatastoreCloseTagFailed(
+	INT32 HResult,
+	UNICODESTRING Element
+	);
+
+UsingSourceStore(
+	UNICODESTRING Name,
+	UNICODESTRING Path,
+	UINT32 Order
+	);
+
+ProfileReplaced(
+	UNICODESTRING ProfileId,
+	UINT32 ProfileSource
+	);
+
+ConfigSetAltitude(
+	UNICODESTRING SourceStore,
+	UNICODESTRING DataFile,
+	UINT32 Altitude,
+	UINT32 MaxAltitude
+	);
+
+InvalidFileExtension(
+	UNICODESTRING SourceStore,
+	UNICODESTRING DataFile,
+	UINT32 DataType
+	);
+
+ParseSourceDatastore(
+	UNICODESTRING Path
+	);
+
+ParseSourceDatastoreFailed(
+	UNICODESTRING Path,
+	INT32 HResult
+	);
+
+AfterMarketProfile(
+	UNICODESTRING ProfileId,
+	UINT32 ProfileSource,
+	UNICODESTRING KeyValuePairs
+	);
+
+QueryMismatch(
+	UNICODESTRING SourceStore,
+	UNICODESTRING DataFile,
+	UNICODESTRING MismatchedKey,
+	UNICODESTRING MismatchedValue,
+	UNICODESTRING ProfileId
+	);
+
+ActivityStoppedAutomatically(
+	VOID
+	);
+
+QueryReplaceMatch(
+	UNICODESTRING SourceStore,
+	UNICODESTRING DataFile,
+	UNICODESTRING ProfileId
+	);
+
+ParseSourceDatastore(
+	INT32 HResult,
+	UINT64 MatchCount
+	);
+
+QueryMatch(
+	UNICODESTRING SourceStore,
+	UNICODESTRING DataFile,
+	UNICODESTRING ProfileId
+	);
+
+AutoDeleteFileStreamFailed(
+	UNICODESTRING Path
+	);
+
+Assert(
+	UINT32 assertVersion,
+	UINT32 rva,
+	UINT32 timestamp,
+	UINT32 imageSize,
+	ANSISTRING imageName,
+	UINT32 count,
+	UINT32 totalHits,
+	UINT32 ModuleCollection,
+	UINT32 GlobalCollection
+	);
+

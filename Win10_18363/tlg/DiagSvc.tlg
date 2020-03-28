@@ -1,0 +1,567 @@
+ProviderNames:
+	Microsoft.DiagSvc.Engine.Telemetry
+
+
+
+**** Events *****
+DiagSvcEngineTelemetry(
+	ANSISTRING __TlgCV__,
+	HRESULT HResult,
+	ANSISTRING TraceMsg,
+	ANSISTRING FunctionName,
+	ANSISTRING FileName,
+	INT32 LineNumber
+	);
+
+DiagSvcEngineTelemetry(
+	ANSISTRING __TlgCV__,
+	HRESULT HResult,
+	ANSISTRING TraceMsg,
+	ANSISTRING FunctionName,
+	ANSISTRING FileName,
+	INT32 LineNumber,
+	INT32 OperationCode,
+	INT32 ReturnStatus
+	);
+
+DiagSvcEngineTelemetry(
+	ANSISTRING __TlgCV__,
+	HRESULT HResult,
+	ANSISTRING TraceMsg,
+	ANSISTRING FunctionName,
+	ANSISTRING FileName,
+	INT32 LineNumber,
+	INT32 CurrentState,
+	INT32 Win32ExitCode,
+	INT32 WaitHint,
+	INT32 ControlsAccepted,
+	INT32 Checkpoint
+	);
+
+DiagSvcEngineTelemetry(
+	ANSISTRING __TlgCV__,
+	HRESULT HResult,
+	ANSISTRING TraceMsg,
+	ANSISTRING FunctionName,
+	ANSISTRING FileName,
+	INT32 LineNumber,
+	INT32 SharedProcessStatus
+	);
+
+DiagSvcEngineTelemetry(
+	ANSISTRING __TlgCV__,
+	HRESULT HResult,
+	ANSISTRING TraceMsg,
+	ANSISTRING FunctionName,
+	ANSISTRING FileName,
+	INT32 LineNumber,
+	UINT64 IdleTimeMs
+	);
+
+DiagSvcEngineTelemetry(
+	ANSISTRING __TlgCV__,
+	HRESULT HResult,
+	ANSISTRING TraceMsg,
+	ANSISTRING FunctionName,
+	ANSISTRING FileName,
+	INT32 LineNumber,
+	INT32 MaxCalls,
+	INT32 SecurityDescriptor
+	);
+
+DiagSvcEngineTelemetry(
+	ANSISTRING __TlgCV__,
+	HRESULT HResult,
+	ANSISTRING TraceMsg,
+	ANSISTRING FunctionName,
+	ANSISTRING FileName,
+	INT32 LineNumber,
+	UNICODESTRING Protocol,
+	INT32 MaxConnections,
+	INT32 SecurityDescriptor
+	);
+
+DiagSvcEngineTelemetry(
+	ANSISTRING __TlgCV__,
+	HRESULT HResult,
+	ANSISTRING TraceMsg,
+	ANSISTRING FunctionName,
+	ANSISTRING FileName,
+	INT32 LineNumber,
+	WIN32ERROR PartB_Ms.Qos.IncomingServiceRequest,
+	ANSISTRING operationName,
+	ANSISTRING targetUri,
+	INT32 latencyMs,
+	INT32 serviceErrorCode,
+	BOOLEAN succeeded,
+	ANSISTRING requestMethod,
+	ANSISTRING responseContentType,
+	ANSISTRING protocol,
+	ANSISTRING protocolStatusCode,
+	ANSISTRING operationVersion,
+	ANSISTRING callerIpAddress,
+	ANSISTRING callerName,
+	INT32 requestSizeBytes,
+	ANSISTRING ClientCv
+	);
+
+DiagSvcEngineTelemetry(
+	ANSISTRING __TlgCV__,
+	HRESULT HResult,
+	ANSISTRING TraceMsg,
+	ANSISTRING FunctionName,
+	ANSISTRING FileName,
+	INT32 LineNumber,
+	ANSISTRING ClientCv
+	);
+
+DiagSvcEngineTelemetry(
+	ANSISTRING __TlgCV__,
+	HRESULT HResult,
+	ANSISTRING TraceMsg,
+	ANSISTRING FunctionName,
+	ANSISTRING FileName,
+	INT32 LineNumber,
+	ANSISTRING ClientCv,
+	INT32 DiagEngineRunTimeout
+	);
+
+DiagSvcEngineTelemetry(
+	ANSISTRING __TlgCV__,
+	HRESULT HResult,
+	ANSISTRING TraceMsg,
+	ANSISTRING FunctionName,
+	ANSISTRING FileName,
+	INT32 LineNumber,
+	ANSISTRING ClientCv,
+	UINT64 LatencyMs
+	);
+
+DiagSvcEngineTelemetry(
+	ANSISTRING __TlgCV__,
+	HRESULT HResult,
+	ANSISTRING TraceMsg,
+	ANSISTRING FunctionName,
+	ANSISTRING FileName,
+	INT32 LineNumber,
+	ANSISTRING ClientCv,
+	UNICODESTRING ServiceUrl
+	);
+
+DiagSvcEngineTelemetry(
+	ANSISTRING __TlgCV__,
+	HRESULT HResult,
+	ANSISTRING TraceMsg,
+	ANSISTRING FunctionName,
+	ANSISTRING FileName,
+	INT32 LineNumber,
+	ANSISTRING ClientCv,
+	UNICODESTRING UploadUri
+	);
+
+DiagSvcEngineTelemetry(
+	ANSISTRING __TlgCV__,
+	HRESULT HResult,
+	ANSISTRING TraceMsg,
+	ANSISTRING FunctionName,
+	ANSISTRING FileName,
+	INT32 LineNumber,
+	ANSISTRING ClientCv,
+	BOOL32 Service enabled
+	);
+
+DiagSvcEngineTelemetry(
+	ANSISTRING __TlgCV__,
+	HRESULT HResult,
+	ANSISTRING TraceMsg,
+	ANSISTRING FunctionName,
+	ANSISTRING FileName,
+	INT32 LineNumber,
+	UINT32 ActionState,
+	ANSISTRING ClientCv
+	);
+
+DiagSvcEngineTelemetry(
+	ANSISTRING __TlgCV__,
+	HRESULT HResult,
+	ANSISTRING TraceMsg,
+	ANSISTRING FunctionName,
+	ANSISTRING FileName,
+	INT32 LineNumber,
+	INT32 CurrentActionState,
+	UINT32 ExceptionCode,
+	ANSISTRING ClientCv
+	);
+
+DiagSvcEngineTelemetry(
+	ANSISTRING __TlgCV__,
+	HRESULT HResult,
+	ANSISTRING TraceMsg,
+	ANSISTRING FunctionName,
+	ANSISTRING FileName,
+	INT32 LineNumber,
+	INT32 CurrentActionState,
+	ANSISTRING ClientCv
+	);
+
+DiagSvcEngineTelemetry(
+	ANSISTRING __TlgCV__,
+	HRESULT HResult,
+	ANSISTRING TraceMsg,
+	ANSISTRING FunctionName,
+	ANSISTRING FileName,
+	INT32 LineNumber,
+	NTSTATUS PartB_Ms.Qos.OutgoingServiceRequest,
+	ANSISTRING operationName,
+	ANSISTRING targetUri,
+	INT32 latencyMs,
+	INT32 serviceErrorCode,
+	BOOLEAN succeeded,
+	ANSISTRING requestMethod,
+	ANSISTRING responseContentType,
+	ANSISTRING protocol,
+	ANSISTRING protocolStatusCode,
+	ANSISTRING dependencyOperationName,
+	ANSISTRING dependencyOperationVersion,
+	ANSISTRING dependencyName,
+	ANSISTRING dependencyType,
+	INT32 responseSizeBytes,
+	ANSISTRING ClientCv
+	);
+
+DiagSvcEngineTelemetry(
+	ANSISTRING __TlgCV__,
+	HRESULT HResult,
+	ANSISTRING TraceMsg,
+	ANSISTRING FunctionName,
+	ANSISTRING FileName,
+	INT32 LineNumber,
+	ANSISTRING ClientCv,
+	UNICODESTRING CabFilePath
+	);
+
+DiagSvcEngineTelemetry(
+	ANSISTRING __TlgCV__,
+	HRESULT HResult,
+	ANSISTRING TraceMsg,
+	ANSISTRING FunctionName,
+	ANSISTRING FileName,
+	INT32 LineNumber,
+	ANSISTRING ClientCv,
+	UNICODESTRING SasUri
+	);
+
+DiagSvcEngineTelemetry(
+	ANSISTRING __TlgCV__,
+	HRESULT HResult,
+	ANSISTRING TraceMsg,
+	ANSISTRING FunctionName,
+	ANSISTRING FileName,
+	INT32 LineNumber,
+	ANSISTRING ClientCv,
+	UNICODESTRING GetSasUriEndpoint
+	);
+
+DiagSvcEngineTelemetry(
+	ANSISTRING __TlgCV__,
+	HRESULT HResult,
+	ANSISTRING TraceMsg,
+	ANSISTRING FunctionName,
+	ANSISTRING FileName,
+	INT32 LineNumber,
+	NTSTATUS PartB_Ms.Qos.OutgoingServiceRequest,
+	ANSISTRING operationName,
+	ANSISTRING targetUri,
+	INT32 latencyMs,
+	INT32 serviceErrorCode,
+	BOOLEAN succeeded,
+	ANSISTRING requestMethod,
+	ANSISTRING responseContentType,
+	ANSISTRING protocol,
+	ANSISTRING protocolStatusCode,
+	ANSISTRING dependencyOperationName,
+	ANSISTRING dependencyOperationVersion,
+	ANSISTRING dependencyName,
+	ANSISTRING dependencyType,
+	INT32 responseSizeBytes,
+	ANSISTRING ClientCv,
+	UNICODESTRING SasUri
+	);
+
+DiagSvcEngineTelemetry(
+	ANSISTRING __TlgCV__,
+	HRESULT HResult,
+	ANSISTRING TraceMsg,
+	ANSISTRING FunctionName,
+	ANSISTRING FileName,
+	INT32 LineNumber,
+	ANSISTRING ClientCv,
+	UNICODESTRING ResponseUri
+	);
+
+DiagSvcEngineTelemetry(
+	ANSISTRING __TlgCV__,
+	HRESULT HResult,
+	ANSISTRING TraceMsg,
+	ANSISTRING FunctionName,
+	ANSISTRING FileName,
+	INT32 LineNumber,
+	ANSISTRING ClientCv,
+	UNICODESTRING ResponseJson
+	);
+
+DiagSvcEngineTelemetry(
+	ANSISTRING __TlgCV__,
+	HRESULT HResult,
+	ANSISTRING TraceMsg,
+	ANSISTRING FunctionName,
+	ANSISTRING FileName,
+	INT32 LineNumber,
+	ANSISTRING ClientCv,
+	INT32 HttpStatusCode
+	);
+
+DiagSvcEngineTelemetry(
+	ANSISTRING __TlgCV__,
+	HRESULT HResult,
+	ANSISTRING TraceMsg,
+	ANSISTRING FunctionName,
+	ANSISTRING FileName,
+	INT32 LineNumber,
+	ANSISTRING ClientCv,
+	INT64 LatencyMs
+	);
+
+DiagSvcEngineTelemetry(
+	ANSISTRING __TlgCV__,
+	HRESULT HResult,
+	ANSISTRING TraceMsg,
+	ANSISTRING FunctionName,
+	ANSISTRING FileName,
+	INT32 LineNumber,
+	ANSISTRING ClientCv,
+	UNICODESTRING GetSasUriResponse
+	);
+
+DiagSvcEngineTelemetry(
+	ANSISTRING __TlgCV__,
+	HRESULT HResult,
+	ANSISTRING TraceMsg,
+	ANSISTRING FunctionName,
+	ANSISTRING FileName,
+	INT32 LineNumber,
+	ANSISTRING ClientCv,
+	UNICODESTRING ServiceHostName,
+	UNICODESTRING DownloadFolder,
+	UNICODESTRING SessionId,
+	UNICODESTRING AutoHealId
+	);
+
+DiagSvcEngineTelemetry(
+	ANSISTRING __TlgCV__,
+	HRESULT HResult,
+	ANSISTRING TraceMsg,
+	ANSISTRING FunctionName,
+	ANSISTRING FileName,
+	INT32 LineNumber,
+	ANSISTRING ClientCv,
+	UNICODESTRING workspacePath
+	);
+
+DiagSvcEngineTelemetry(
+	ANSISTRING __TlgCV__,
+	HRESULT HResult,
+	ANSISTRING TraceMsg,
+	ANSISTRING FunctionName,
+	ANSISTRING FileName,
+	INT32 LineNumber,
+	ANSISTRING ClientCv,
+	UNICODESTRING BaseFolderPath
+	);
+
+DiagSvcEngineTelemetry(
+	ANSISTRING __TlgCV__,
+	HRESULT HResult,
+	ANSISTRING TraceMsg,
+	ANSISTRING FunctionName,
+	ANSISTRING FileName,
+	INT32 LineNumber,
+	ANSISTRING ClientCv,
+	UINT32 IndexOfResolutions,
+	UNICODESTRING ResolutionId
+	);
+
+DiagSvcEngineTelemetry(
+	ANSISTRING __TlgCV__,
+	HRESULT HResult,
+	ANSISTRING TraceMsg,
+	ANSISTRING FunctionName,
+	ANSISTRING FileName,
+	INT32 LineNumber,
+	ANSISTRING ClientCv,
+	UINT32 NumberOfResolutions
+	);
+
+DiagSvcEngineTelemetry(
+	ANSISTRING __TlgCV__,
+	HRESULT HResult,
+	ANSISTRING TraceMsg,
+	ANSISTRING FunctionName,
+	ANSISTRING FileName,
+	INT32 LineNumber,
+	ANSISTRING ClientCv,
+	UNICODESTRING ProblemStatusText
+	);
+
+DiagSvcEngineTelemetry(
+	ANSISTRING __TlgCV__,
+	HRESULT HResult,
+	ANSISTRING TraceMsg,
+	ANSISTRING FunctionName,
+	ANSISTRING FileName,
+	INT32 LineNumber,
+	ANSISTRING ClientCv,
+	UNICODESTRING VerificationResult
+	);
+
+DiagSvcEngineTelemetry(
+	ANSISTRING __TlgCV__,
+	HRESULT HResult,
+	ANSISTRING TraceMsg,
+	ANSISTRING FunctionName,
+	ANSISTRING FileName,
+	INT32 LineNumber,
+	ANSISTRING ClientCv,
+	INT32 NumberofProblems
+	);
+
+DiagSvcEngineTelemetry(
+	ANSISTRING __TlgCV__,
+	HRESULT HResult,
+	ANSISTRING TraceMsg,
+	ANSISTRING FunctionName,
+	ANSISTRING FileName,
+	INT32 LineNumber,
+	ANSISTRING ClientCv,
+	UNICODESTRING ClientCv
+	);
+
+DiagSvcEngineTelemetry(
+	ANSISTRING __TlgCV__,
+	HRESULT HResult,
+	ANSISTRING TraceMsg,
+	ANSISTRING FunctionName,
+	ANSISTRING FileName,
+	INT32 LineNumber,
+	ANSISTRING ClientCv,
+	UNICODESTRING ResultsXML
+	);
+
+DiagSvcEngineTelemetry(
+	ANSISTRING __TlgCV__,
+	HRESULT HResult,
+	ANSISTRING TraceMsg,
+	ANSISTRING FunctionName,
+	ANSISTRING FileName,
+	INT32 LineNumber,
+	ANSISTRING ClientCv,
+	UNICODESTRING key,
+	UNICODESTRING value,
+	BOOL32 bstrKey,
+	BOOL32 bstrValue
+	);
+
+DiagSvcEngineTelemetry(
+	ANSISTRING __TlgCV__,
+	HRESULT HResult,
+	ANSISTRING TraceMsg,
+	ANSISTRING FunctionName,
+	ANSISTRING FileName,
+	INT32 LineNumber,
+	ANSISTRING ClientCv,
+	INT32 propertyNodeCount
+	);
+
+DiagSvcEngineTelemetry(
+	ANSISTRING __TlgCV__,
+	HRESULT HResult,
+	ANSISTRING TraceMsg,
+	ANSISTRING FunctionName,
+	ANSISTRING FileName,
+	INT32 LineNumber,
+	ANSISTRING ClientCv,
+	UNICODESTRING filePath
+	);
+
+DiagSvcEngineTelemetry(
+	ANSISTRING __TlgCV__,
+	HRESULT HResult,
+	ANSISTRING TraceMsg,
+	ANSISTRING FunctionName,
+	ANSISTRING FileName,
+	INT32 LineNumber,
+	ANSISTRING ClientCv,
+	BOOL32 xmlBasePath,
+	BOOL32 resultMap
+	);
+
+DiagSvcEngineTelemetry(
+	ANSISTRING __TlgCV__,
+	HRESULT HResult,
+	ANSISTRING TraceMsg,
+	ANSISTRING FunctionName,
+	ANSISTRING FileName,
+	INT32 LineNumber,
+	ANSISTRING ClientCv,
+	BOOL32 SignaturePresent,
+	BOOL32 MicrosoftRoot
+	);
+
+DiagSvcEngineTelemetry(
+	ANSISTRING __TlgCV__,
+	HRESULT HResult,
+	ANSISTRING TraceMsg,
+	ANSISTRING FunctionName,
+	ANSISTRING FileName,
+	INT32 LineNumber,
+	ANSISTRING ClientCv,
+	BOOL32 Trusted
+	);
+
+DiagSvcEngineTelemetry(
+	ANSISTRING __TlgCV__,
+	HRESULT HResult,
+	ANSISTRING TraceMsg,
+	ANSISTRING FunctionName,
+	ANSISTRING FileName,
+	INT32 LineNumber,
+	ANSISTRING ClientCv,
+	UNICODESTRING WorkingFolder
+	);
+
+DiagSvcEngineTelemetry(
+	ANSISTRING __TlgCV__,
+	HRESULT HResult,
+	ANSISTRING TraceMsg,
+	ANSISTRING FunctionName,
+	ANSISTRING FileName,
+	INT32 LineNumber,
+	NTSTATUS PartB_Ms.Qos.OutgoingServiceRequest,
+	ANSISTRING operationName,
+	ANSISTRING targetUri,
+	INT32 latencyMs,
+	INT32 serviceErrorCode,
+	BOOLEAN succeeded,
+	ANSISTRING requestMethod,
+	ANSISTRING responseContentType,
+	ANSISTRING protocol,
+	ANSISTRING protocolStatusCode,
+	ANSISTRING dependencyOperationName,
+	ANSISTRING dependencyOperationVersion,
+	ANSISTRING dependencyName,
+	ANSISTRING dependencyType,
+	INT32 responseSizeBytes,
+	ANSISTRING ClientCv,
+	UNICODESTRING CabPackagePath
+	);
+

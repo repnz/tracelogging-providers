@@ -1,0 +1,1409 @@
+ProviderNames:
+	Microsoft.Geolocation.Service
+	Microsoft.Windows.Location.Crowdsource
+	Microsoft.Geolocation.Verbose
+	Microsoft.Windows.TlgAggregateInternal
+	Microsoft.Windows.Location.Uploader
+
+
+
+**** Events *****
+Inference(
+	NULL Count,
+	HEXINT32 properties,
+	UINT32 requestForPE,
+	UINT32 responsePE,
+	ANSISTRING beaconCountBucket,
+	HEXINT32 cacheHR,
+	ANSISTRING tileTotalTimeBucket,
+	HEXINT32 tileHR,
+	ANSISTRING orionTotalTimeBucket,
+	HEXINT32 webproxyHR,
+	HEXINT32 webproxyNetworkHR,
+	HEXINT32 orionHR,
+	UINT32 servingCellType
+	);
+
+Inference(
+	HEXINT32 properties,
+	UINT32 requestForPE,
+	UINT32 responsePE,
+	UINT32 beaconCount,
+	HEXINT32 cacheHR,
+	UINT32 tileTotalTime,
+	HEXINT32 tileHR,
+	UINT32 orionTotalTime,
+	HEXINT32 webproxyHR,
+	HEXINT32 webproxyNetworkHR,
+	HEXINT32 orionHR,
+	UINT32 servingCellType
+	);
+
+ServerCache_Update(
+	UINT32 cacheMaxSize,
+	HRESULT positionStatus,
+	HRESULT hr,
+	BOOLEAN IsCacheUpdated
+	);
+
+RecordApiSession(
+	GUID ProductId,
+	UNICODESTRING ProgramId,
+	UNICODESTRING FileId,
+	UNICODESTRING FileName,
+	UNICODESTRING DisplayNameString,
+	UINT32 ClientOriginated,
+	UINT32 SessionType,
+	UINT32 AccuracyType,
+	UINT32 AccuracyValue,
+	UINT32 Timeout,
+	UINT32 RequestAgeMs,
+	UINT32 VenueMandatory,
+	UINT32 ResponseAgeMs,
+	UINT32 DistanceThreshold,
+	UINT32 PollingInterval,
+	UINT32 ResponseAccuracy,
+	UINT32 ResponseTime,
+	UINT32 Provider,
+	UINT32 ResponseStatus,
+	UINT32 MeetsRequirements,
+	UINT32 SessionDuration,
+	UINT32 TimeToFirstAccurateResponseMs,
+	UINT32 FirstAccurateAccuracyValue,
+	UINT32 FirstAccurateFixProvider,
+	UINT32 LifeTimeAccuracyAverage,
+	UINT32 LifetimeConsecutiveLowQualityPositions,
+	UINT32 LowQualityPeriodAccuracy,
+	UINT64 LifetimeLongestTimeGapInPositions,
+	DOUBLE WindowJumpyPositionsRatio
+	);
+
+DefaultLocation_Get(
+	BOOL32 isDefaultLocationEmpty
+	);
+
+InjectedPosition_GetValue(
+	DOUBLE lat,
+	DOUBLE lon
+	);
+
+InjectedPosition_SetValue(
+	DOUBLE lat,
+	DOUBLE lon,
+	BOOLEAN postedToCpe
+	);
+
+OperationPerformance2(
+	NULL Log2MsCount0,
+	NULL Log2MsCount1,
+	NULL Log2MsCount2,
+	NULL Log2MsCount3,
+	NULL Log2MsCount4,
+	NULL Log2MsCount5,
+	NULL Log2MsCount6,
+	NULL Log2MsCount7,
+	NULL Log2MsCount8,
+	NULL Log2MsCount9,
+	NULL Log2MsCount10,
+	NULL Log2MsCount11,
+	NULL Log2MsCount12,
+	NULL Log2MsCount13,
+	NULL Log2MsCount14,
+	NULL Log2MsCount15,
+	NULL Log2MsCount16,
+	NULL Log2MsCount17,
+	NULL Log2MsCount18,
+	NULL Log2MsCount19,
+	NULL Log2MsCount20,
+	NULL Log2MsCount21,
+	NULL Log2MsCount22,
+	UNICODESTRING internalComponentId,
+	UNICODESTRING szCodeHint
+	);
+
+DefaultLocation_GetValue(
+	DOUBLE lat,
+	DOUBLE lon
+	);
+
+DefaultLocation_IsRecommended(
+	BOOL32 defaultRecommendedValue
+	);
+
+SuspectedDeadlockReported(
+	UNICODESTRING appName,
+	UNICODESTRING moduleName,
+	UNICODESTRING operationName,
+	INT32 maximumExpectedDurationMs,
+	UNICODESTRING codeHint
+	);
+
+LocationDeviceOverride(
+	BOOL32 OverrideStatus
+	);
+
+DefaultLocation_Set(
+	HRESULT hr,
+	BOOL32 isClearOperation
+	);
+
+LocationSettings_MasterSwitchUpdated(
+	BOOL32 locationMasterSwitchValue
+	);
+
+DefaultLocation_SetValue(
+	DOUBLE lat,
+	DOUBLE lon
+	);
+
+UserInfoHelper_ActiveUserPresence_Aggregate(
+	NULL Count,
+	BOOL32 ActiveUserAtConsoleOnlyRequest,
+	BOOL32 IsActiveUserPresent,
+	BOOL32 IsActiveUserAtConsole,
+	UINT32 LoggedInUsersCount
+	);
+
+OnUserLogOnLogOffNotification(
+	UINT32 sessionId,
+	UINT32 eventType
+	);
+
+ActiveUser_Computed(
+	BOOLEAN activeUserFound,
+	UINT32 activeSessionId,
+	BOOLEAN isActiveUserAtConsole,
+	UNICODESTRING activeUserSid,
+	UINT32 isConsoleUserPresent,
+	UINT32 consoleSessionId,
+	UINT32 remoteSessionId,
+	UINT32 initialActiveSessionId,
+	UINT32 LoggedInUsersCount
+	);
+
+OnSessionChangeNotification(
+	UINT32 sessionId,
+	UINT32 eventType
+	);
+
+UI_DL_ToastPrompted(
+	HEXINT32 toastHr,
+	UINT32 prevCount,
+	UINT32 newCount
+	);
+
+UI_Icon_NotifyToDisplay(
+	BOOL32 IsShowIcon
+	);
+
+UI_DL_ToastWorthyActivity(
+	BOOL32 isLastActivityToastWorthy,
+	UINT32 locationActivityType,
+	BOOL32 isClientAppContained,
+	BOOL32 isHighAccuracyRequest
+	);
+
+UI_DL_CanToastNow(
+	BOOL32 canToastNow,
+	UINT32 toastAttemptCount,
+	UINT32 timeElapsedSinceLastToastS,
+	UINT32 currentWaitTimeRequiredS
+	);
+
+UI_Icon_TimerFired(
+	VOID
+	);
+
+UI_Initialize(
+	UINT32 currToastAttemptCount
+	);
+
+AC_StopCalled(
+	VOID
+	);
+
+AC_StartCalled(
+	BOOL32 breadcrumbingStarted
+	);
+
+PdcCallback(
+	UINT32 callbackReason
+	);
+
+SmartPdcHistogram(
+	UINT32 PdcClientId,
+	FILETIME StartTime,
+	FILETIME EndTime,
+	UINT16 Histogram,
+	UINT32 TotalActiveDurationMs,
+	UINT32 TotalNumActivations,
+	UINT32 MaximumActivationDurationMs
+	);
+
+PowerHelper_EndNotifyClientPowerAttribution(
+	UNICODESTRING clientName
+	);
+
+PdcActivate(
+	VOID
+	);
+
+PowerHelper_BeginNotifyClientPowerAttribution(
+	UNICODESTRING clientName
+	);
+
+PdcDeactivate(
+	VOID
+	);
+
+GetLocationHistory_Aggregate(
+	NULL Count,
+	NULL minReadingsCount,
+	NULL maxReadingsCount,
+	NULL totalReadingsCount,
+	NULL zeroReadingsCount,
+	NULL relativeStartTime,
+	NULL relativeEndTime,
+	UNICODESTRING UserSID
+	);
+
+ClearLocationHistoryCalled(
+	VOID
+	);
+
+GetLocationHistory(
+	UNICODESTRING UserSID,
+	UINT32 readingsCount,
+	FILETIME StartTime,
+	FILETIME EndTime
+	);
+
+RemoveOldReadings_Aggregate(
+	NULL Count,
+	NULL minNumReadingsRemoved,
+	NULL maxNumReadingsRemoved,
+	NULL totalNumReadingsRemoved
+	);
+
+QM_SetQualityMetrics(
+	UINT32 m_TimeWindowMs,
+	UINT32 m_AccuracyType,
+	UINT32 m_AccuracyBucket,
+	UINT32 locationRequest.SessionType
+	);
+
+QM_GetQualityMetric(
+	UINT32 WindowAccuracyAverage,
+	UINT32 m_AccuracyBucket,
+	UINT64 LifetimeConsecutiveLowQualityPositions,
+	UINT64 LifetimeLongestTimeGapInPositions,
+	UINT32 LifeTimeAccuracyAverage,
+	UINT32 positionsInWindow,
+	BOOL32 meetingRequirements,
+	DOUBLE WindowJumpyPositionsRatio
+	);
+
+GNSSPnp_ManagerDeviceArrival(
+	BOOL32 DeviceAvailable,
+	UNICODESTRING SymbolicLink,
+	BOOL32 DeviceInUse,
+	HRESULT hr
+	);
+
+GnssFixFinished(
+	VOID
+	);
+
+GnssAdapterBreadcrumbingInactive(
+	VOID
+	);
+
+Agnss_Injection(
+	NULL Count,
+	UINT32 requestType,
+	UINT32 optionalBlobFormat,
+	UINT32 state,
+	UINT32 injectedNtStatus,
+	UINT32 injectIoctlHr,
+	UINT32 listenIoctlHr
+	);
+
+GNSS_HwTrackingDisabled(
+	VOID
+	);
+
+GnssAdapterBreadcrumbingPop(
+	UINT32 successfulCrumbs,
+	UINT32 errorCrumbs
+	);
+
+GnssFixStarted(
+	VOID
+	);
+
+GnssAdapt_DisableTracking(
+	HEXINT32 hr,
+	INT32 deviceInUse,
+	INT32 trackingDisabled,
+	INT32 trackingStatus
+	);
+
+OnGnssError(
+	UINT32 ErrorCode,
+	BOOL32 IsRecoverable,
+	UNICODESTRING ErrorDescription,
+	UNICODESTRING ManufacturerID,
+	UNICODESTRING HardwareID,
+	UNICODESTRING FirmwareVersion
+	);
+
+GnssAdapt_EnableTracking(
+	HEXINT32 hr,
+	INT32 deviceInUse,
+	INT32 trackingDisabled,
+	INT32 trackingStatus
+	);
+
+SuplRequest(
+	UNICODESTRING RequestorId,
+	UNICODESTRING SecondaryText,
+	UNICODESTRING SuplNiUrl,
+	UINT32 RequestPlaneType,
+	UINT32 RequestType,
+	UINT32 NotificationType
+	);
+
+OnGnssDriverRequest(
+	HRESULT HResult,
+	UINT32 Request,
+	UNICODESTRING ManufacturerID,
+	UNICODESTRING HardwareID,
+	UNICODESTRING FirmwareVersion
+	);
+
+GnssAdapterBreadcrumbingActive(
+	VOID
+	);
+
+Agnss_Injection(
+	UINT32 requestType,
+	UINT32 optionalBlobFormat,
+	UINT32 state,
+	UINT32 injectedNtStatus,
+	UINT32 injectIoctlHr,
+	UINT32 listenIoctlHr
+	);
+
+SuplEmergencyRequest(
+	BOOL32 ExistingNotificationRunning
+	);
+
+GnssChipsetInfo(
+	UNICODESTRING ManufacturerID,
+	UNICODESTRING HardwareID,
+	UNICODESTRING FirmwareVersion
+	);
+
+Supl_ReadHSLPFromUICCFailed(
+	HRESULT result
+	);
+
+SUPL(
+	INT32 registrationState,
+	INT32 trigger
+	);
+
+SUPL(
+	BOOLEAN modemExists
+	);
+
+SUPL(
+	BOOLEAN mobileBroadbandAccountExists
+	);
+
+Supl_NoEntryFoundInEF_ODF(
+	HRESULT result
+	);
+
+Supl_NobootstrapEntryFoundInEF_DODF(
+	HRESULT result
+	);
+
+SuplPushConfigurationSetup(
+	UNICODESTRING Imsi
+	);
+
+SuplConfiguration(
+	UNICODESTRING configuration,
+	UNICODESTRING reason
+	);
+
+SuplMaxRetriesReached(
+	VOID
+	);
+
+Supl_OnCspUpdatedWaitFailed(
+	HRESULT waitResult
+	);
+
+SuplRetry(
+	UINT32 RetryCounter,
+	UINT32 WaitTime
+	);
+
+SuplPushToDriver(
+	INT32 hr,
+	INT32 hslpSource,
+	ANSISTRING suplHslp,
+	ANSISTRING suplHslpFromImsi
+	);
+
+ImsiCompatibilityWithCsp(
+	INT32 areCompatible,
+	UINT32 mcc,
+	UINT32 mnc
+	);
+
+SuplPushConfigurationSetup(
+	UNICODESTRING hslpFromUicc
+	);
+
+Supl_ReadHSLPFromCSPFailed(
+	HRESULT result
+	);
+
+Supl_ReadHSLPFromImsiFailed(
+	HRESULT result
+	);
+
+GnssDriverIoctlFailed(
+	UINT32 FixSessionId,
+	UINT32 IoControlCode,
+	UINT32 duration,
+	HRESULT HRESULT
+	);
+
+GnssIgnoreInMmiMode(
+	NULL Count,
+	UNICODESTRING SymbolicLink
+	);
+
+GNSSPnPNotificationCallback(
+	UINT32 Action,
+	UNICODESTRING SymbolicLink,
+	BOOL32 isExternal
+	);
+
+FailureLogReport(
+	HRESULT HR,
+	UNICODESTRING CustomMessage,
+	ANSISTRING Function,
+	ANSISTRING CallingCode,
+	ANSISTRING Filename,
+	UINT32 Line
+	);
+
+FailureLogReport_Aggregate(
+	NULL Count,
+	HRESULT HR,
+	UNICODESTRING CustomMessage,
+	ANSISTRING Function,
+	ANSISTRING CallingCode,
+	ANSISTRING Filename,
+	UINT32 Line
+	);
+
+TlgAggregateSummary(
+	GUID Provider,
+	UINT64 NumFlushes,
+	UINT64 MaxEntriesStored,
+	UINT64 TotalEntriesFlushed,
+	UINT32 MaxEntriesFlushed,
+	UINT32 MinEntriesFlushed,
+	UINT32 NumBucketLimitReached,
+	UINT32 NumAllocationFailures,
+	UINT32 NumLargeEventFailures
+	);
+
+TileDestroyed(
+	UNICODESTRING reason,
+	UINT32 tileStorageSizeInKB,
+	UINT32 tileType,
+	FILETIME expirationDate,
+	UINT32 remainingTileListSizeInKB
+	);
+
+TileCreated(
+	UINT32 tileStorageSizeInKB,
+	UINT32 tileType,
+	FILETIME expirationDate
+	);
+
+ModernStandbyExit(
+	UINT32 powerInfo
+	);
+
+GeofenceForegroundReport_Aggregate(
+	NULL Count,
+	UNICODESTRING LocGeofenceAppId,
+	INT32 LastTriggeredState
+	);
+
+GfSubscriptions_FireEvents(
+	UINT32 AppId,
+	UINT32 triggerType,
+	UINT32 eventState
+	);
+
+ModernStandbyEnter(
+	UINT32 powerInfo
+	);
+
+GeofenceBackgroundReport_Aggregate(
+	NULL Count,
+	UNICODESTRING LocGeofenceAppId,
+	INT32 LastTriggeredState
+	);
+
+GeofenceBackgroundReport(
+	UNICODESTRING LocGeofenceAppId,
+	INT32 LastTriggeredState
+	);
+
+GfSubscriptions_ProcessGfChanges(
+	UINT32 AppId,
+	UINT32 GfId,
+	UINT32 removalReason,
+	UINT32 prevReportsSize,
+	UINT32 newReportsSize,
+	UINT32 reported,
+	UINT32 triggeredState
+	);
+
+GeofenceForegroundReport(
+	UNICODESTRING LocGeofenceAppId,
+	INT32 LastTriggeredState
+	);
+
+GF_TrackerStatusChange(
+	UINT32 trackerInstance,
+	UINT32 trackerStatus,
+	UINT32 activeTracker,
+	UINT32 enableDelayS,
+	UINT64 locEnvAvail,
+	UINT64 locEnv
+	);
+
+GF_TrackerEventTrigger(
+	UINT32 trackerInstance,
+	UINT32 appId,
+	UINT32 GfId,
+	UINT32 newStateInGf,
+	UINT32 timeSinceAddedToTrackerS,
+	DOUBLE distanceToEdgeOfGfM
+	);
+
+GeofenceRemoved_Aggregate(
+	NULL Count,
+	UNICODESTRING LocGeofenceAppId,
+	UNICODESTRING LocGeofenceConvergedAppId
+	);
+
+GeofenceClearedFromApplication_Aggregate(
+	NULL Count,
+	UNICODESTRING LocGeofenceAppId,
+	UNICODESTRING LocGeofenceConvergedAppId
+	);
+
+GeofenceAdded_Aggregate(
+	NULL Count,
+	UNICODESTRING LocGeofenceAppId,
+	UNICODESTRING LocGeofenceConvergedAppId,
+	DOUBLE LocGeofenceRadius
+	);
+
+GeofenceApplicationBeingTracked(
+	UNICODESTRING LocGeofenceAppId,
+	UINT32 LocGeofenceNumberOfGeoFences
+	);
+
+GeofenceApplicationBeingTracked_Aggregate(
+	NULL Count,
+	UNICODESTRING LocGeofenceAppId,
+	UINT32 LocGeofenceNumberOfGeoFences
+	);
+
+GeofenceDataFileAccess_Aggregate(
+	NULL Count,
+	UNICODESTRING AccessFunction,
+	HRESULT HResult
+	);
+
+GeofenceDataFileAccess(
+	UNICODESTRING AccessFunction,
+	HRESULT HResult
+	);
+
+CLocationAdapterCell::FinalConstruct(
+	VOID
+	);
+
+CellInvalidNeighbors(
+	NULL GSMInvalidNeighborCount,
+	NULL LTEInvalidNeighborCount,
+	NULL UMTSInvalidNeighborCount,
+	NULL TDSCDMAInvalidNeighborCount,
+	NULL CDMAInvalidNeighborCount,
+	UINT32 ServingCellType
+	);
+
+CellInvalidNeighbors(
+	UINT64 GSMInvalidNeighborCount,
+	UINT64 LTEInvalidNeighborCount,
+	UINT64 UMTSInvalidNeighborCount,
+	UINT64 TDSCDMAInvalidNeighborCount,
+	UINT64 CDMAInvalidNeighborCount,
+	UINT64 ServingCellType
+	);
+
+CLocationAdapterCell::SetServingCell(
+	VOID
+	);
+
+CLocationAdapterCell::RegisterSink(
+	VOID
+	);
+
+CLocationAdapterCell::RequestPositionInformation(
+	VOID
+	);
+
+CellularServingCellInfo(
+	UINT32 CDMANID,
+	UINT32 CDMASID,
+	UINT32 CDMABID
+	);
+
+CellularServingCellInfo(
+	UINT32 UMTSMCC,
+	UINT32 UMTSMNC,
+	UINT32 UMTSLAC
+	);
+
+CellularServingCellInfo(
+	UINT32 GSMMCC,
+	UINT32 GSMMNC,
+	UINT32 GSMLAC
+	);
+
+CellularServingCellInfo(
+	UINT32 LTEMCC,
+	UINT32 LTEMNC,
+	UINT32 LTETAC
+	);
+
+CellularServingCellInfo(
+	UINT32 TDSCDMAMCC,
+	UINT32 TDSCDMAMNC,
+	UINT32 TDSCDMALAC
+	);
+
+CS_ObservationDiscarded_Aggregate(
+	NULL Count,
+	UNICODESTRING DiscardReason
+	);
+
+CS_WifiScanSkipped_Aggregate(
+	NULL Count
+	);
+
+CrowdsourceObservation(
+	PKCS7_WITH_TYPE_INFO _pkcs7wti,
+	UNICODESTRING PartA_iKey
+	);
+
+CLocationCrowdsource::OnBluetoothBeaconInformationAvailable(
+	VOID
+	);
+
+CS_ObservationUploaded_Aggregate(
+	NULL Count,
+	ANSISTRING WifiBeaconsBucket,
+	ANSISTRING CellBeaconsBucket,
+	ANSISTRING BluetoothBeaconsBucket,
+	ANSISTRING AccuracyBucket,
+	ANSISTRING SpeedBucket,
+	BOOL32 HeadingValid
+	);
+
+(
+	127 ,
+	UNICODESTRING crowdsourcePayload
+	);
+
+OrionQuadKeyTelemetry(
+	UNICODESTRING quadKeyId,
+	UINT32 cellCount,
+	UINT32 wifiCount,
+	UINT32 venueCount,
+	UINT32 ipCount
+	);
+
+MD_ActivityDetectorThrottled(
+	VOID
+	);
+
+Budget_Depleted(
+	UINT32 locationComponentId,
+	UINT32 budgetDepletedTimeS,
+	UINT32 initialBudget,
+	UINT32 maxBudget,
+	UINT32 timeWindowS
+	);
+
+Budget_Set(
+	UINT32 locationComponentId,
+	UINT32 remainingBudget,
+	UINT32 maxBudget,
+	UINT32 timeWindowS
+	);
+
+MD_ActivityDetectorStarted(
+	VOID
+	);
+
+RegisterForMovementNotificationsFailed(
+	BOOL32 ActivityDetectionThrottled,
+	BOOL32 WifiThrottled,
+	BOOL32 CellThrottled,
+	BOOL32 ACThrottled
+	);
+
+Budget_Replenished(
+	UINT32 locationComponentId,
+	UINT32 timeElapsedS,
+	UINT32 remainingBudget,
+	UINT32 maxBudget,
+	UINT32 timeWindowS
+	);
+
+GnssHit(
+	VOID
+	);
+
+CPE_UnreliablePrimaryPositionDiscarded(
+	NULL Count,
+	UINT32 primaryAccBucket,
+	UINT32 primaryPE,
+	UINT32 reliableAccBucket,
+	UINT32 reliablePE
+	);
+
+GnssFailure(
+	VOID
+	);
+
+DefaultLocation_IsNeeded(
+	BOOL32 defaultNeeded,
+	UINT32 bestAccuracyM,
+	BOOL32 isPeInfoValid
+	);
+
+Cpe_IgnorePosition(
+	UINT32 sourcePe,
+	BOOLEAN deviceOverrideOn,
+	INT32 IsIntermediatePosition
+	);
+
+BudgetedDT_SkipCurrentPosition(
+	UINT32 acquireId,
+	BOOLEAN canSkip,
+	BOOLEAN hasClient,
+	BOOLEAN hasGf,
+	UINT32 timeElapsedS
+	);
+
+BudgetedDT_Event(
+	UINT32 acquireId,
+	UINT32 actualWaitS,
+	UINT32 expectedWaitS,
+	UNICODESTRING interruptedReason,
+	UINT32 distanceM,
+	BOOL32 mdUsed,
+	UINT32 currReqIndex,
+	UINT32 currRespTimeS,
+	UINT32 currRespStatus,
+	UINT32 distanceFromLastM,
+	UINT32 currRespAccM,
+	UINT32 currRespSource
+	);
+
+CPE_NativePrimaryAcquireCreateFailed(
+	VOID
+	);
+
+CPE_ExcludeSourcePe(
+	UINT32 RequestSourcePeName
+	);
+
+UseThisLocationSensor(
+	UNICODESTRING SymbolicLink,
+	UNICODESTRING SensorID_Retrived,
+	BOOL32 UseThisLocationSensor
+	);
+
+LegacyGNSSRemoval(
+	UNICODESTRING LegacySymbolicLinkRemoved,
+	UINT32 LocSensorCollectionSizeIs,
+	BOOL32 LegacyPEIsAvailable
+	);
+
+LegacyGNSSArrival(
+	UNICODESTRING LegacySymbolicLink,
+	BOOL32 LegacyPEIsAvailable,
+	UINT32 LocSensorCollectionSizeIs
+	);
+
+Permission_GetConsentByFamilyName(
+	UNICODESTRING userSid,
+	UNICODESTRING packageFamilyName,
+	BOOLEAN consentGranted
+	);
+
+Permission_GetConsentByProcess(
+	UNICODESTRING userSid,
+	UNICODESTRING appName,
+	UINT32 pid,
+	BOOLEAN consentGranted
+	);
+
+GeovisitBackgroundDisabled(
+	UNICODESTRING PackageName,
+	GUID EventId
+	);
+
+GeovisitBackgroundTriggerCreated(
+	UNICODESTRING PackageName,
+	UINT32 MonitoringScope
+	);
+
+GeovisitBackgroundTriggerCreatedWithEventId(
+	UNICODESTRING PackageName,
+	GUID EventId,
+	UINT32 MonitoringScope
+	);
+
+GeovisitBackgroundReadReportsWithEventId(
+	UNICODESTRING PackageName,
+	GUID EventId,
+	UINT64 ReportsCount
+	);
+
+GeovisitBackgroundReadReports(
+	UNICODESTRING PackageName,
+	UINT64 ReportsCount
+	);
+
+GeovisitBackgroundTriggerSignaled(
+	UNICODESTRING PackageName,
+	GUID EventId
+	);
+
+GeovisitBackgroundEnabled(
+	UNICODESTRING PackageName,
+	GUID EventId
+	);
+
+DataUsage_Aggregate(
+	NULL Count,
+	NULL start,
+	NULL finish,
+	NULL BytesSent,
+	NULL BytesReceived,
+	UINT32 RequestType,
+	UINT64 locEnvAvail,
+	UINT64 locEnv
+	);
+
+Impersonating user to get through authenticated proxy(
+	HEXINT64 User handle
+	);
+
+wlan_notification_acm_scan_list_refresh(
+	FILETIME scanFinishedTime
+	);
+
+WiFiBeacons_DetectedInvalid(
+	UINT32 totalBssids,
+	UINT32 invalidMacBssCount,
+	UINT32 staleTimeBssCount,
+	UINT64 staleTimeAvgInSecs,
+	BOOL32 isFilterStaleTimeBssOn,
+	UINT32 MaximumAllowableAgeForScanResults
+	);
+
+WiFiAdapter_ScanStart(
+	FILETIME scanInitiatedTime
+	);
+
+wlan_notification_acm_scan_fail: (
+	UNICODESTRING wlanReasonCode,
+	FILETIME scanFinishedTime
+	);
+
+SCM notification(
+	UNICODESTRING service name,
+	BOOL32 running
+	);
+
+Wifi_CoarseMovementDetection(
+	BOOL32 Stationary,
+	UINT32 ReferenceScanNumberOfBeacons,
+	UINT32 CurrentScanNumberOfBeacons,
+	UINT32 BeaconsIntersecting,
+	FLOAT beaconCarryForwardRatio,
+	UINT32 minutesSinceReferenceScan
+	);
+
+WifiStreamingMode(
+	BOOL32 Noninvasive
+	);
+
+WiFiAdapter_ScanDuringMiracast(
+	UINT32 scanError
+	);
+
+WifiCoarseMovement_Aggregate(
+	NULL Count,
+	ANSISTRING bucketedBeaconCarryForwardRatio,
+	ANSISTRING ReferenceScanNumberOfBeacons,
+	ANSISTRING minutesSinceReferenceScan,
+	UINT64 locEnvAvail,
+	UINT64 locEnv
+	);
+
+WifiAdapter_SinkNotified(
+	UINT32 MaximumAllowableAgeForScanResults,
+	HRESULT result
+	);
+
+WiFiAdapter_ScanInProgress(
+	BOOL32 scanInProgress,
+	FILETIME scanInitiatedTime
+	);
+
+RealtimeLocation(
+	PKCS7_WITH_TYPE_INFO _pkcs7wti,
+	UNICODESTRING PartA_UserSid,
+	UNICODESTRING PartA_iKey
+	);
+
+UP_FmdLastGaspUpload(
+	BOOLEAN uploadSucceeded
+	);
+
+UP_PositionDiscardedForNoBudget(
+	UINT32 uploadReason,
+	UINT32 uploadCost,
+	UINT32 costBudgetLeft,
+	UINT32 reasonBudgetLeft,
+	UINT32 uploadState,
+	BOOLEAN savedForLater
+	);
+
+UP_VisitSignificantChangeEvent(
+	UINT32 visitSummary,
+	UINT32 CurrentState,
+	BOOLEAN isFreeNetworkAvailable
+	);
+
+UP_RealtimeLocation(
+	XML locationInfo,
+	DOUBLE latitude,
+	DOUBLE longitude,
+	DOUBLE altitude,
+	UINT64 horizontalAccuracy,
+	DOUBLE heading,
+	BOOLEAN headingIsNull,
+	DOUBLE speed,
+	BOOLEAN speedIsNull,
+	UINT32 source,
+	FILETIME positionTimestamp,
+	UINT32 visitSummary,
+	BOOLEAN fmdInfo,
+	BOOLEAN fmdEnabled,
+	DOUBLE batteryLevel,
+	UNICODESTRING fmdAdminCids
+	);
+
+(
+	127 ,
+	XML locationInfo,
+	DOUBLE latitude,
+	DOUBLE longitude,
+	DOUBLE altitude,
+	UINT64 horizontalAccuracy,
+	DOUBLE heading,
+	BOOLEAN headingIsNull,
+	DOUBLE speed,
+	BOOLEAN speedIsNull,
+	UINT32 source,
+	FILETIME positionTimestamp,
+	UINT32 visitSummary,
+	BOOLEAN fmdInfo,
+	BOOLEAN fmdEnabled,
+	DOUBLE batteryLevel,
+	UNICODESTRING fmdAdminCids
+	);
+
+UP_FmdLastGaspArming(
+	VOID
+	);
+
+UP_InitialState(
+	UINT32 CurrentState
+	);
+
+UP_TimerTriggered(
+	UINT32 timerIntervalS,
+	UINT32 CurrentState,
+	BOOLEAN isOnFreeNetwork,
+	BOOLEAN isOnAC
+	);
+
+UP_FlushUtc(
+	HRESULT operationResult,
+	UINT32 internalResult
+	);
+
+UP_FmdLastGaspFiring(
+	VOID
+	);
+
+UP_PositionUploaded_Aggregate(
+	NULL Count,
+	UINT32 uploadReason,
+	UINT32 uploadCost,
+	UINT32 uploadState,
+	UINT32 userPresent,
+	BOOLEAN fmdPresent,
+	BOOLEAN uploadForced,
+	UNICODESTRING PartA_UserSid
+	);
+
+UP_StateChange(
+	UINT32 newState,
+	UINT32 prevState,
+	BOOLEAN primaryUserPresent,
+	BOOLEAN fmdIsOn,
+	UINT64 locEnvAvail,
+	UINT64 locEnv
+	);
+
+UP_PositionUploaded(
+	UINT32 uploadReason,
+	UINT32 uploadCost,
+	UINT32 costBudgetLeft,
+	UINT32 reasonBudgetLeft,
+	UINT32 uploadState
+	);
+
+UP_PositionDiscarded_Aggregate(
+	NULL Count,
+	UINT32 uploadReason,
+	UINT32 uploadCost,
+	BOOLEAN costBudgetHit,
+	BOOLEAN reasonBudgetHit,
+	UINT32 uploadState,
+	BOOLEAN savedForLater
+	);
+
+UP_OnFreeNetworkTransition(
+	UINT32 pendingUploadDataCount
+	);
+
+VE_ClientNotifiedAggregate(
+	NULL Count,
+	UINT32 visitSummaryType,
+	BOOLEAN hasPosition
+	);
+
+VE_UpdateMonitoringState(
+	BOOLEAN desiredMonitoringState,
+	BOOLEAN currMonitoringState,
+	INT32 globalPermissionOn,
+	UINT32 visitClientProfile,
+	UINT32 remainingChangeBudget,
+	BOOLEAN uploadOn,
+	BOOLEAN fmdOn,
+	BOOLEAN tzAutoupdateOn,
+	BOOLEAN testModeForceBudgetHighOn
+	);
+
+VE_RegisterClient(
+	HEXINT64 clientCorrelationId,
+	UINT32 Scope
+	);
+
+VE_OnClientsUpdated(
+	UINT32 aggScope,
+	UINT32 newClientProfile,
+	UINT32 currClientProfile,
+	UINT32 remainingClientChangeBudget,
+	UINT64 minWaitTimeToSpendMs
+	);
+
+VE_DeviceOverrideSet(
+	BOOLEAN overrideOn,
+	UINT32 suspectTimeoutMs,
+	UINT32 minTimeStatMs
+	);
+
+VE_Initialize(
+	VOID
+	);
+
+VE_ClientNotified(
+	UINT32 visitSummaryType,
+	FILETIME timeStamp,
+	UINT32 visitStateChange,
+	BOOLEAN hasPosition,
+	UINT32 clientsCount
+	);
+
+VE_OnPermissionChange(
+	INT32 newPermission,
+	INT32 oldPermission
+	);
+
+VC_GetLastReport(
+	HEXINT64 correlationId,
+	BOOLEAN IsReportAvailable
+	);
+
+VC_Register(
+	HEXINT64 correlationId,
+	UNICODESTRING clientName,
+	UINT32 scope
+	);
+
+VC_ReadReports(
+	HEXINT64 correlationId,
+	HEXINT32 hrPermission,
+	UINT32 reportsCount
+	);
+
+VC_OnPermissionsChange(
+	HEXINT64 correlationId,
+	BOOLEAN LastPermission,
+	BOOLEAN NewPermission
+	);
+
+VC_OnNewVisitAdded(
+	HEXINT64 correlationId,
+	UINT32 oldReportsCount,
+	UINT32 newReportStateChange,
+	UINT32 totalReportsCount
+	);
+
+VC_Unregister(
+	HEXINT64 correlationId
+	);
+
+VC_Report(
+	HEXINT64 correlationId,
+	UINT32 stateChange,
+	BOOLEAN posAvailable
+	);
+
+VE_RemainingTimeToAllowVisitDetection(
+	UINT32 score,
+	UINT32 timeSpentInMovingStateS,
+	UINT32 minTimeNeededInMovingS,
+	UINT32 timeElapsedSinceLastVisitS,
+	UINT32 minTimeSinceLastVisitS,
+	UINT32 remBudget,
+	UINT32 remainingTimeToAllowS
+	);
+
+VE_SetBudgetValues(
+	UINT32 minReservedVisits,
+	UINT32 maxReservedVisits,
+	UINT32 minGeneralVisits,
+	UINT32 maxGeneralVisits,
+	UINT32 minActiveOperations,
+	UINT32 maxActiveOperations,
+	UINT32 timeWindowMs
+	);
+
+VE_Suspect_OnEvent(
+	UINT32 ExternalEvent,
+	UINT32 timespentInSuspectMs,
+	BOOLEAN timerFired,
+	INT32 score,
+	UINT32 highInterestSignalCount,
+	UINT64 locEnvAvail,
+	UINT64 locEnv
+	);
+
+VE_Staying_GfTriggerReport(
+	UINT32 GfReportIndex,
+	UINT32 lastTriggeredState,
+	DOUBLE lat,
+	DOUBLE lon,
+	INT64 timeElapsedSinceGfAddMs
+	);
+
+VE_StayingGfEnterConfirmationFailed(
+	INT64 timeElapsedSinceGfAddMs
+	);
+
+VE_Staying_OnEvent(
+	UINT32 lastTriggeredState,
+	UINT32 ExternalEvent,
+	INT32 stayingScore,
+	UINT32 highInterestScore,
+	UINT64 locEnvAvail,
+	UINT64 locEnv
+	);
+
+VE_Suspect_OnExitTimerFired(
+	VOID
+	);
+
+VE_Staying_GfTriggeredWithNoReports(
+	INT64 timeElapsedSinceGfAddMs,
+	UINT32 waitResult
+	);
+
+VE_Moving_OnEvent(
+	UINT32 ExternalEvent,
+	BOOLEAN canDetectVisit,
+	UINT32 timeRemainingToAllowMs,
+	UINT32 timeElapsedSinceStartMs,
+	INT32 stayingScore,
+	UINT32 remBudget,
+	UINT64 locEnvAvail,
+	UINT64 locEnv
+	);
+
+VE_StateNotify(
+	UINT32 currState,
+	UINT32 nextState,
+	UINT32 visitEvent,
+	HEXINT32 OperationHr,
+	UINT32 timeSinceLastNotifyS,
+	DOUBLE lat,
+	DOUBLE lon,
+	UINT32 acc,
+	DOUBLE speedMps,
+	UINT32 stayScore,
+	UINT32 highInterestScore,
+	UINT32 budgetLeft,
+	UINT32 count,
+	UNICODESTRING availSignals
+	);
+
+VE_StateTransition_Aggregate(
+	NULL Count,
+	UINT32 currState,
+	UINT32 nextState,
+	HEXINT32 operationHr,
+	ANSISTRING durationInStateS,
+	UINT32 entryStatScore,
+	ANSISTRING entryHighInterestScore,
+	ANSISTRING entryBudgetLeft,
+	UINT32 entryStatorMovByPos,
+	UINT64 entryEnvAvail,
+	UINT64 entryEnv,
+	UINT32 entryVisitEvent,
+	UINT32 exitStatScore,
+	ANSISTRING exitHighInterestScore,
+	ANSISTRING exitBudgetLeft,
+	UINT32 exitStatOrMovByPos,
+	UINT64 exitEnvAvail,
+	UINT64 exitEnv,
+	UINT32 exitVisitEvent
+	);
+
+VE_Suspect_ExitTimer_PositionFailed(
+	HRESULT hrPos,
+	BOOLEAN posMeetsCritera
+	);
+
+CivicAddrAdapterResult(
+	UINT32 executorIndex,
+	ANSISTRING source,
+	HRESULT resultHR
+	);
+
+CivicAddrAdapterTracing(
+	ANSISTRING Tracing,
+	UINT32 executorIndex
+	);
+
+CivicAddrAdapterOnGeolocationRequest(
+	VOID
+	);
+
+CivicAddrAdapterBingRequest(
+	UINT32 bingRequestTotalTimeMs
+	);
+
+CivicAddrAdapterTracing(
+	UNICODESTRING Tracing
+	);
+
+CivicAddrAdapterTracing(
+	ANSISTRING Tracing
+	);
+
+CLocationAdapterBluetooth::scanComplete(
+	VOID
+	);
+
+CLocationAdapterBluetooth::RegisterSink(
+	VOID
+	);
+
+CLocationAdapterBluetooth::RequestScan(
+	VOID
+	);
+
+CLocationAdapterBluetooth::NotifyAllSinks(
+	VOID
+	);
+
+CLocationAdapterBluetooth::FinalConstruct(
+	VOID
+	);
+
+SpeedEstimator_SetNewConfig(
+	HEXINT64 correlation,
+	UINT32 maxAccM,
+	UINT32 minPosCount,
+	UINT32 minTimeBetPosMs,
+	UINT32 freshPosThresholdMs,
+	UINT32 obsPosThresholdMs
+	);
+
+SpeedEstimator_OnNewPosition(
+	HEXINT64 correlation,
+	HRESULT hr,
+	DOUBLE lat,
+	DOUBLE lon,
+	UINT32 currposCount,
+	UINT32 prevPosCount,
+	INT64 timeSinceLastPosMs,
+	UINT32 minTimeBetPosMs
+	);
+
+SpeedEstimator_NewSpeedValue(
+	HEXINT64 correlation,
+	DOUBLE newSpeedMps,
+	DOUBLE bearing,
+	DOUBLE oldSpeedMps,
+	UINT32 posCount,
+	UINT32 minTimeBetPosMs
+	);
+

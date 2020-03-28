@@ -1,0 +1,33 @@
+ProviderNames:
+	Microsoft.Windows.MediaFoundation.FlacDecoder
+	Microsoft.Windows.MediaFoundation.CallStack
+
+
+
+**** Events *****
+Source(
+	UINT16 V,
+	GUID MFMediaTelemetrySessionID,
+	UINT32 MFMediaTelemetrySessionInstance,
+	BOOL32 completed,
+	HRESULT openHr,
+	HRESULT streamHr,
+	UINT32 minblocksz,
+	UINT32 maxblocksz,
+	UINT32 minframesz,
+	UINT32 maxframesz,
+	UINT32 samplerate,
+	UINT32 nchannels,
+	UINT32 bitspersample,
+	UINT64 nsamples,
+	UINT8 MetadataContainsBm,
+	UINT8 MetadataSetBm,
+	UINT32 nSeekPoints
+	);
+
+TagData(
+	UINT16 V,
+	COUNTEDSTRING UTags,
+	HRESULT hr
+	);
+

@@ -1,0 +1,79 @@
+ProviderNames:
+	Microsoft.Windows.Media.Capture
+
+
+
+**** Events *****
+FallbackError(
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+FallbackError(
+	UINT64 PartA_PrivTags,
+	SIGNED wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+BcastDVR_LiveObjectTracker_PrintAll(
+	UINT32 object,
+	ANSISTRING className
+	);
+
+BcastDVR_LiveObjectTracker_NoMapEntry(
+	ANSISTRING className
+	);
+
+BcastDVR_Printf(
+	ANSISTRING pszFunction,
+	ANSISTRING pszFile,
+	INT32 iLine,
+	UNICODESTRING buffer
+	);
+
+BcastDVR_LogErrorEx(
+	HRESULT hr,
+	ANSISTRING pszFunction,
+	ANSISTRING pszFile,
+	INT32 iLine,
+	ANSISTRING pszErrorInfo,
+	ANSISTRING pszErrorData
+	);
+
+BcastDVR_LogError(
+	HRESULT hr,
+	ANSISTRING pszFunction,
+	ANSISTRING pszFile,
+	INT32 iLine
+	);
+

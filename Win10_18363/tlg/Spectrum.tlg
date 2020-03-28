@@ -1,0 +1,1941 @@
+ProviderNames:
+	Microsoft.Windows.Analog.Spectrum.Activity
+	Microsoft.Windows.Analog.Spectrum
+	Microsoft.Windows.Analog.SpectrumContinuous
+	Microsoft.Windows.Analog.Spectrum.TrackingDiagnostics
+	Microsoft.Windows.Holographic.MixedRealityMode
+	Microsoft.Windows.TlgAggregateInternal
+	Microsoft.Windows.Analog.SpatialJournal
+
+
+
+**** Events *****
+TelemetryServiceLifetimeStartState(
+	INT32 Mode,
+	BOOLEAN DeviceFamilyHolographic,
+	BOOLEAN HolographicDriverDetected,
+	BOOLEAN SimulationEnabled
+	);
+
+FailedToStartTracingSessions(
+	HEXINT32 Results
+	);
+
+Aggregate_WIL_Error(
+	NULL Count,
+	UINT32 Thread Id,
+	HEXINT64 Return Address,
+	INT32 Type,
+	HRESULT HR,
+	UINT32 Line Number,
+	UINT64 PartA_PrivTags
+	);
+
+WIL_Error(
+	UINT64 PartA_PrivTags,
+	SIGNED wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+FallbackError(
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+FallbackError(
+	UINT64 PartA_PrivTags,
+	SIGNED wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+TelemetryFailFastHresultLog(
+	INT32 Source,
+	UINT32 pid,
+	UNICODESTRING String,
+	INT32 HRESULT,
+	ANSISTRING Function,
+	ANSISTRING SourceFile,
+	UINT32 SourceLine
+	);
+
+ChangeState(
+	UINT32 ProcessId,
+	INT32 State
+	);
+
+Service_ServiceControlRegistrationCompleted(
+	HEXINT32 serviceStartReasonFlags
+	);
+
+PowerSettingInfo(
+	INT32 Source,
+	UNICODESTRING String,
+	GUID GUID,
+	UINT32 data
+	);
+
+ServiceOnStop_Stop(
+	VOID
+	);
+
+ServiceOnStop_Start(
+	VOID
+	);
+
+PowerInfoError(
+	INT32 Source,
+	UNICODESTRING String,
+	UINT32 errorCode
+	);
+
+PowerInfo(
+	INT32 Source,
+	UNICODESTRING String
+	);
+
+ServiceOnStart_Stop(
+	VOID
+	);
+
+Log_Information(
+	INT32 Source,
+	UNICODESTRING String
+	);
+
+TelemetryServiceLifetimeEnd(
+	UINT64 PartA_PrivTags,
+	UINT32 ProcessId,
+	BOOLEAN Restart
+	);
+
+TelemetryFailFastGetLastErrorLog(
+	INT32 Source,
+	UINT32 pid,
+	UNICODESTRING String,
+	UINT32 GetLastError,
+	ANSISTRING Function,
+	ANSISTRING SourceFile,
+	UINT32 SourceLine
+	);
+
+TelemetryServiceLifetimeBegin(
+	UINT32 ProcessId,
+	INT32 Mode,
+	UNICODESTRING timeAsString
+	);
+
+ServiceOnStart_Start(
+	VOID
+	);
+
+CapabilityDeniedBySystem(
+	INT32 Source,
+	UNICODESTRING capability,
+	UINT32 pid
+	);
+
+CapabilityDeniedByUser(
+	INT32 Source,
+	UNICODESTRING capability,
+	UINT32 pid
+	);
+
+CapabilityNotManifested(
+	INT32 Source,
+	UNICODESTRING capability,
+	UINT32 pid
+	);
+
+CapabilityNeedsRequestAccess(
+	INT32 Source,
+	UNICODESTRING capability,
+	UINT32 pid
+	);
+
+HolographicDeviceErrorStatusInfo(
+	UNICODESTRING message
+	);
+
+OnClientConnect(
+	UNICODESTRING component,
+	UNICODESTRING appId,
+	UINT32 processId
+	);
+
+DisplayHandlerPrimaryAdapterIdDifferent(
+	INT32 primaryAdapterId.HighPart,
+	UINT32 primaryAdapterId.LowPart,
+	INT32 clientLocalAdapterId.HighPart,
+	UINT32 clientLocalAdapterId.LowPart
+	);
+
+DisplayHandlerPrimaryAdapterIdSet(
+	INT32 primaryAdapterId.HighPart,
+	UINT32 primaryAdapterId.LowPart
+	);
+
+DisplayHandlerGetDisplays(
+	UINT64 rawDisplayCount,
+	UINT64 trackedDisplayCount
+	);
+
+TelemetryDisplayHandlerSpatialGraphDeviceNoLongerInUse(
+	GUID displayId,
+	UNICODESTRING spatialGraphDeviceInterfacePath,
+	GUID spatialGraphDynamicNodeId
+	);
+
+DisplayHandlerSkipDisplay(
+	GUID displayId,
+	UNICODESTRING deviceInterfacePath,
+	BOOLEAN displayBindingValid,
+	BOOLEAN displayHasDriverErrors,
+	BOOLEAN spatialGraphHasDriverErrors
+	);
+
+DisplayHandlerDriverError(
+	UNICODESTRING deviceInterfacePath,
+	UINT32 statusCode,
+	UINT32 subStatusCode
+	);
+
+TelemetryDisplayHandlerTrackedDisplayAdded(
+	GUID displayGuid,
+	UNICODESTRING displayCalibrationDeviceInterfacePath,
+	UNICODESTRING spatialGraphDeviceInterfacePath,
+	GUID nodeIdGuid
+	);
+
+GetRenderingMetadataSharedBufferForProcessResponseSent(
+	INT32 Source,
+	UINT32 clientProcessId,
+	UINT32 processId,
+	INT32 result,
+	UINT64 renderingMetadataFromAppFileMappingHandle,
+	UINT64 renderingMetadataFromAppMutexHandle
+	);
+
+GetRenderingMetadataSharedBufferForProcessRequestReceived(
+	INT32 Source,
+	UINT32 clientProcessId,
+	UINT32 processId
+	);
+
+GetDisplayComponentClientsRequestReceived(
+	INT32 Source,
+	UINT32 clientProcessId
+	);
+
+GetRenderingMetadataFromAppSharedBufferResponseSent(
+	INT32 Source,
+	UINT32 clientProcessId,
+	HEXINT64 fileMappingHandle,
+	HEXINT64 mutexHandle
+	);
+
+GetRenderingMetadataFromAppSharedBufferRequestReceived(
+	INT32 Source,
+	UINT32 clientProcessId
+	);
+
+EnvironmentManager_FinishDeletingEnvironment_Finished(
+	INT32 Source,
+	GUID SpaceId,
+	INT32 Result
+	);
+
+EnvironmentManager_FinishDeletingEnvironment_HeadTracker(
+	INT32 Source,
+	GUID SpaceId
+	);
+
+EnvironmentManager_FinishDeletingEnvironment_SurfaceReconstruction(
+	INT32 Source,
+	GUID SpaceId
+	);
+
+EnvironmentManager_DeleteEnvironmentCallback(
+	INT32 Source,
+	GUID Deleted SpaceId,
+	GUID CUrrent SpaceId
+	);
+
+EnvironmentHandler_EnvironmentCreated(
+	INT32 Source,
+	GUID spaceId
+	);
+
+EnvironmentHandler_EnvironmentsLoaded(
+	INT32 Source,
+	UINT64 count,
+	INT32 HRESULT
+	);
+
+FingersStartedPackingData(
+	VOID
+	);
+
+GesturesSentDataToMirage(
+	INT32 Gesture,
+	INT32 GestureSource
+	);
+
+GesturesStartedPackingData(
+	INT32 Gesture,
+	INT32 GestureSource
+	);
+
+HandTrackerDidNotSendDataToMirage(
+	VOID
+	);
+
+HandTrackerSentDataToMirage(
+	VOID
+	);
+
+HandTracked(
+	UINT32 handId,
+	BOOLEAN pressed
+	);
+
+SpatialDeviceHandler_SpatialDeviceTrackingDesiredAfterAppExit(
+	HEXINT64 spatialDeviceId,
+	UNICODESTRING exitingAppProcessName,
+	UINT32 exitingAppProcessId,
+	UNICODESTRING desireOrientationProcessNames,
+	UNICODESTRING desireOrientationProcessIds,
+	ANSISTRING desireOrientationRpcInterfaceTypes,
+	UNICODESTRING desirePositionProcessNames,
+	UNICODESTRING desirePositionProcessIds,
+	ANSISTRING desirePositionRpcInterfaceTypes
+	);
+
+SpatialDeviceHandler_ClientDesiredTrackingStateRequested(
+	UINT32 clientProcessId,
+	HEXINT64 spatialDeviceId,
+	STRING desiredTrackingState
+	);
+
+SpatialDeviceHandler_ForcePositionalTracking(
+	HEXINT64 spatialDeviceId
+	);
+
+SpatialDeviceHandler_ClientSetDesiredTrackingLevel(
+	UINT32 clientProcessId,
+	STRING rpcInterfaceType,
+	HEXINT64 id,
+	STRING desired
+	);
+
+SpatialDevice_PositionalTrackingInhibited(
+	HEXINT64 id
+	);
+
+SpatialDeviceHandler_SensorSignalClients(
+	VOID
+	);
+
+SpatialGraph_GetSpatialDeviceForRelatedDeviceFailed(
+	UNICODESTRING relatedDeviceInterfacePath,
+	UNICODESTRING spatialGraphDeviceInterfacePath,
+	GUID nodeId
+	);
+
+StageHandler_InvalidStageDetected(
+	ANSISTRING functionName,
+	FLOAT degreesFromDown,
+	FLOAT floorGravity,
+	FLOAT staticNodeGravity,
+	GUID staticNodeId,
+	FLOAT floorToStaticNode,
+	HEXINT64 locationRegistration,
+	GUID locationRegistrationId
+	);
+
+StageHandler_VerifyCurrentStage(
+	ANSISTRING functionName,
+	BOOLEAN wasAbleToVerify,
+	FLOAT degreesFromDown,
+	FLOAT floorGravity,
+	FLOAT staticNodeGravity,
+	GUID staticNodeId,
+	FLOAT floorToStaticNode,
+	BOOLEAN spatialDeviceGravityIsValid,
+	BOOLEAN staticNodeIsLocatable,
+	HEXINT64 locationRegistration,
+	GUID locationRegistrationId
+	);
+
+StageHandler_GetCurrent_Details(
+	GUID staticNodeId,
+	GUID spaceId,
+	GUID spatialAnchorId,
+	HEXINT64 locationRegistration,
+	GUID locationRegistrationId
+	);
+
+StageHandler_GetCurrent(
+	HEXINT64 locationRegistration
+	);
+
+StageHandler_ClearCurrent(
+	HEXINT64 oldLocationRegistration
+	);
+
+StageHandler_SetCurrent(
+	GUID staticNodeId,
+	FLOAT stageToStaticNode,
+	UINT32 boundsSize,
+	GUID spaceId,
+	HEXINT64 locationRegistration,
+	GUID locationRegistrationId
+	);
+
+SpeechStartedPackingData(
+	INT32 Phrase
+	);
+
+GetErrorStatus(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId
+	);
+
+HolographicDeviceProblemDetected(
+	UINT32 problemCode,
+	UNICODESTRING deviceInterfacePath
+	);
+
+HolographicDeviceErrorStatusUpdated(
+	UNICODESTRING callContext
+	);
+
+OutgoingErrorStatus(
+	UINT32 statusCode,
+	UINT32 subStatusCode,
+	UNICODESTRING deviceInterfacePath
+	);
+
+GetErrorStatus(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	SIGNED wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function,
+	UINT32 TotalErrorStatuses
+	);
+
+GetErrorStatus(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId,
+	UINT32 TotalErrorStatuses
+	);
+
+ActivityError(
+	UINT64 PartA_PrivTags,
+	SIGNED wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+GetErrorStatus(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	SIGNED wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+GetErrorStatus(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+ActivityStoppedAutomatically(
+	VOID
+	);
+
+SurfaceReconstruction_HandlerPackDataUpdateClient(
+	INT32 Source,
+	UINT32 NumVolumes
+	);
+
+SurfaceReconstructionHandlerPackDataStopPerf(
+	VOID
+	);
+
+SurfaceReconstructionHandlerPackDataStartPerf(
+	VOID
+	);
+
+TelemetrySpatialSurfaceObserverUsed(
+	BOOL32 UTCReplace_AppSessionGuid
+	);
+
+HeadTrackerHandler_GetStaticNodeForPoseHelper_DeviceReturnedNullStaticNode(
+	UNICODESTRING deviceInterfacePath,
+	GUID rootNodeId
+	);
+
+HeadTrackerHandler_GetStaticNodeForPoseHelper_GetStaticNodeForPoseFailed(
+	INT32 result,
+	UNICODESTRING deviceInterfacePath,
+	GUID rootNodeId
+	);
+
+HeadTrackerHandler_GetStaticNodeForPoseHelper_Result(
+	BOOLEAN isBestNodeUnknown,
+	GUID staticNodeId,
+	UINT32 staticNodePoseCount,
+	GUID rootNodeId,
+	UNICODESTRING deviceInterfacePath
+	);
+
+HeadTrackerHandler_GetStaticNodeForPoseHelper_DeviceNotFound(
+	UNICODESTRING deviceInterfacePath
+	);
+
+HeadTrackerHandler_InvalidStageDetected(
+	UINT32 failureCount,
+	UINT32 wasAbleToVerifyCount,
+	FLOAT degreesFromDown,
+	FLOAT floorGravity,
+	FLOAT staticNodeGravity,
+	GUID staticNodeId,
+	FLOAT floorToStaticNode
+	);
+
+HeadTrackerHandler_GetStaticNodePoses_Pose(
+	GUID staticNodeId,
+	UINT8 validity,
+	GUID rootNodeId,
+	FLOAT nodeToParent
+	);
+
+TelemetryHeTMapStatistics(
+	INT32 Source,
+	UINT32 pid,
+	UINT32 AnchorCount,
+	UINT32 LocationCount,
+	UINT32 UsedAnchorCount,
+	UINT32 MissingAnchorCount,
+	UINT32 MissingLocationCount,
+	UINT32 MapIdEpoch,
+	UINT32 MapIdMajor,
+	UINT32 MapIdMinor
+	);
+
+MissingHeTAnchor(
+	GUID hetAnchorId
+	);
+
+TelemetryAnchorStatistics(
+	INT32 Source,
+	UINT32 LowPriorityAnchorCount,
+	UINT32 MediumPriorityCount,
+	UINT32 HighPriorityAnchorCount,
+	UINT32 Clients,
+	UINT32 LocationCount,
+	UINT32 AvailabilityCount,
+	INT32 HRESULT
+	);
+
+HeadTrackerSystemProcessAnchorStartPerf(
+	VOID
+	);
+
+HeadTrackerUsingCachedGravity(
+	INT32 Source,
+	BOOLEAN Boolean
+	);
+
+TelemetryHeadTrackerPoseQualityModeChanged(
+	INT32 Source,
+	INT32 Previous Tracker Mode,
+	INT32 Current Tracker Mode,
+	FLOAT Pose Quality Rotation,
+	FLOAT Pose Quality Translation
+	);
+
+HeadGetInitialGravityVectorDelayed(
+	INT32 Source,
+	FLOAT Float
+	);
+
+HeadGetInitialGravityVector(
+	INT32 Source,
+	FLOAT Float
+	);
+
+TelemetryHeadInitialFrame(
+	INT32 Source,
+	UINT32 pid
+	);
+
+HeadTrackerHandler_UpdateStaticNodesRequired(
+	BOOLEAN updateRequired,
+	BOOLEAN initialFrameAcquired,
+	BOOLEAN initialGravityAcquired,
+	UINT32 lastStaticNodesGenerationId,
+	UINT32 staticNodesGenerationId,
+	FLOAT secondsSinceLastStaticNodesUpdate
+	);
+
+HeadTrackerFullUpdateStopPerf(
+	FLOAT UpdateTimeMilliseconds
+	);
+
+HeadTrackerFullUpdateStartPerf(
+	VOID
+	);
+
+HeadTrackerHandlerStopTracking(
+	INT32 Source,
+	UINT32 pid
+	);
+
+HeadTrackerHandlerStartTracking(
+	INT32 Source,
+	UINT32 pid
+	);
+
+TelemetryHeadTracker_RegisterLocationCallback_Stop(
+	GUID Token,
+	GUID Anchor,
+	GUID SpaceId
+	);
+
+TelemetryHeadTracker_RegisterLocationWhileLocalCoordinateFrameNotValid(
+	GUID Token,
+	GUID Anchor
+	);
+
+HeadTracker_RegisterLocationCallback_Start(
+	UINT32 ClientProcessId
+	);
+
+TelemetryHeadTracker_RegisterActiveLocationCallback(
+	GUID Token,
+	GUID Anchor,
+	GUID SpaceId,
+	UINT32 PersistedCount
+	);
+
+TraceLoggingInfo(
+	UNICODESTRING traceLoggingMessage
+	);
+
+AdaptiveBrightnessInfo(
+	INT32 Source,
+	UNICODESTRING message
+	);
+
+TelemetryApplyAdaptiveBrightness(
+	INT32 Source,
+	UINT32 pid,
+	UINT32 alsOffset,
+	FLOAT alsMean,
+	INT32 hr
+	);
+
+DisplayReactionUpdate(
+	INT32 Source,
+	UINT32 counter,
+	UINT32 lastAlsOffset,
+	UINT32 newAlsOffset,
+	FLOAT alsMean
+	);
+
+BrightnessSignificantlyChanged(
+	INT32 Source,
+	UINT32 minOfBin,
+	UINT32 maxOfBin,
+	UINT32 alsOffset,
+	FLOAT alsMean
+	);
+
+ALSUpdate(
+	FLOAT Clear,
+	FLOAT Red,
+	FLOAT Green,
+	FLOAT Blue,
+	FLOAT IR,
+	FLOAT Temp
+	);
+
+LocalCoordinateFrame_FindTransform(
+	HEXINT64 object,
+	GUID nodeId,
+	GUID localNodeId,
+	GUID rootNodeId,
+	UINT32 staticNodePoseCount
+	);
+
+LocalCoordinateFrame_StaticNodePose(
+	GUID id,
+	FLOAT nodeToParent
+	);
+
+LocalCoordinateFrame_Summary(
+	GUID localStaticNodeId,
+	FLOAT localToStationaryCoordinateFrame,
+	FLOAT localGravity,
+	UINT32 layoutVersion,
+	UINT32 staticNodePoseCount,
+	GUID rootNodeId,
+	FLOAT localToRoot
+	);
+
+LocalCoordinateFrame_SerializeLayout_SmoothFrame(
+	GUID id,
+	FLOAT layoutToAnchorTransform
+	);
+
+LocalCoordinateFrame_SerializeLayout_Frame(
+	GUID id,
+	FLOAT layoutToAnchorTransform
+	);
+
+LocalCoordinateFrame_SerializeLayout_Summary(
+	GUID currentLocalAnchor,
+	FLOAT layoutToSmoothedTransform,
+	FLOAT localGravity,
+	UINT32 layoutVersion,
+	UINT32 frameCount,
+	UINT32 smoothFrameCount
+	);
+
+SpectrumLocalCoordinateFrameUpdated(
+	BOOLEAN haveNewSmooth,
+	BOOLEAN haveNewBestLocal,
+	GUID newLocalAnchor,
+	UINT32 oldMapIdEpoch,
+	UINT32 oldMapIdMajor,
+	UINT32 oldMapIdMinor,
+	UINT32 oldStaticNodesGenerationId,
+	UINT32 newMapIdEpoch,
+	UINT32 newMapIdMajor,
+	UINT32 newMapIdMinor,
+	UINT32 newStaticNodesGenerationId,
+	FLOAT localGravity,
+	BOOLEAN gravityIsValid,
+	BOOLEAN gravityIsSynthetic
+	);
+
+HeadTracker_SpaceManagerOnSpaceChanged(
+	INT32 Source,
+	GUID spaceId,
+	GUID oldSpaceId
+	);
+
+TelemetryHeadTrackerHandlerStartTrackingResults(
+	INT32 Source,
+	INT32 HRESULT,
+	GUID SpaceId,
+	UINT32 SpatialAnchors,
+	UINT32 Anchors
+	);
+
+HeadTracker_SpaceChangedResult(
+	INT32 Source,
+	GUID returnedSpaceId,
+	INT32 lastMapLoadResult,
+	UNICODESTRING status
+	);
+
+TelemetryDestroyAnchorWhenClientRemoved(
+	INT32 Source,
+	GUID spaceId,
+	GUID locationId,
+	GUID anchorId
+	);
+
+TelemetryLocationRebased(
+	INT32 Source,
+	UINT32 pid,
+	GUID LocationId,
+	GUID OriginalAnchorId,
+	GUID NewAnchorId,
+	FLOAT DistanceToAnchorSquared,
+	BOOLEAN Ideal,
+	BOOLEAN InitialRebase,
+	INT32 HRESULT
+	);
+
+TelemetryAnchorPriorityManagerHighPriorityRemove(
+	INT32 Source,
+	GUID anchor,
+	UINT32 refCount
+	);
+
+TelemetryAnchorPriorityManagerRemoveError(
+	INT32 Source,
+	GUID anchor
+	);
+
+TelemetryAnchorPriorityManagerHighPriorityAdd(
+	INT32 Source,
+	GUID anchor,
+	UINT32 refCount
+	);
+
+TelemetryAnchorPriorityManagerInitialHighPriorityAnchorLoaded(
+	INT32 Source,
+	GUID anchor,
+	UINT32 refCount
+	);
+
+HeadTracker_RemoveDirectoryDurability(
+	UNICODESTRING fullPath,
+	BOOLEAN success
+	);
+
+HeadTracker_DeleteDurability(
+	UNICODESTRING fullPath
+	);
+
+TelemetrySetDurability(
+	GUID staticNodeIds,
+	UNICODESTRING durability
+	);
+
+HeadTrackerPosePublisher_Destroy(
+	HEXINT64 object
+	);
+
+HeadTrackerPosePublisher_Destroy(
+	HEXINT64 object
+	);
+
+HeadTrackerPosePublisher_PoseInserted(
+	HEXINT64 object,
+	INT64 poseTimestampQpc,
+	FLOAT poseTimestampMillis,
+	HEXINT32 poseValidity,
+	UINT32 queueSize,
+	INT64 oldestTimestampQpc,
+	FLOAT oldestTimestampMillis,
+	INT64 latestTimestampQpc,
+	FLOAT latestTimestampMillis
+	);
+
+HeadTrackerPosePublisher_LatestPoseUpdated(
+	HEXINT64 object,
+	INT64 poseTimestampQpc,
+	HEXINT32 poseValidity
+	);
+
+HeadTrackerPosePublisher_Created(
+	HEXINT64 object
+	);
+
+TelemetryHeadTrackerFusionModeSet(
+	INT32 Source,
+	UINT32 pid,
+	UINT32 UInt32
+	);
+
+AnchorPriorityManager_WriteTransientAnchors(
+	UINT32 clientProcessId,
+	GUID spaceId,
+	GUID staticNodes,
+	UNICODESTRING appId
+	);
+
+AnchorPriorityManager_WriteTransientAnchors(
+	UINT32 clientProcessId,
+	GUID spaceId,
+	UINT32 staticNodeCount
+	);
+
+HeadTrackerSystemAcquireMapSnapshotStopPerf(
+	VOID
+	);
+
+MapSnapshotCache_RefreshCurrentSnapshot_MapSmoothCoordinateFrame(
+	UINT32 mapIdEpoch,
+	UINT32 mapIdMajor,
+	UINT32 mapIdMinor,
+	UINT32 index,
+	GUID coordinateFrameId,
+	FLOAT mapToCoordinateFramePoseRotation,
+	FLOAT mapToCoordinateFramePoseTranslation
+	);
+
+MapSnapshotCache_RefreshCurrentSnapshot_MapCoordinateFrame(
+	UINT32 mapIdEpoch,
+	UINT32 mapIdMajor,
+	UINT32 mapIdMinor,
+	UINT32 index,
+	GUID coordinateFrameId,
+	FLOAT mapToCoordinateFramePoseRotation,
+	FLOAT mapToCoordinateFramePoseTranslation
+	);
+
+MapSnapshotCache_RefreshCurrentSnapshot_MapSummary(
+	GUID spaceId,
+	UINT32 mapIdEpoch,
+	UINT32 mapIdMajor,
+	UINT32 mapIdMinor,
+	FLOAT gravity,
+	UINT8 gravityValid,
+	FLOAT magneticField,
+	UINT8 magneticFieldValid,
+	UINT32 mapToCoordinateFramePoseCount,
+	UINT32 mapToSmoothCoordinateFramePoseCount,
+	UINT32 sceneDepthCount
+	);
+
+HeadTrackerSystemAcquireMapSnapshotStartPerf(
+	VOID
+	);
+
+SharedMemoryMappingFailed(
+	INT32 Result
+	);
+
+TelemetryHeadTrackingStateChange(
+	INT32 Source,
+	UINT32 pid,
+	BOOLEAN Boolean,
+	UINT32 Occurrence
+	);
+
+SpatialDeviceManager_SetDefault_Aggregated(
+	NULL Count,
+	NULL maxDeviceCount,
+	STRING module,
+	HEXINT64 newDefaultId,
+	HEXINT64 oldDefaultId
+	);
+
+SpatialDeviceManager_SetDefault(
+	STRING module,
+	HEXINT64 newDefaultId,
+	HEXINT64 oldDefaultId,
+	UINT32 deviceCount
+	);
+
+SpatialDeviceManager_DeviceRemoved(
+	STRING module,
+	HEXINT64 id,
+	UINT32 deviceCount
+	);
+
+SpatialDeviceManager_DeviceAdded(
+	STRING module,
+	HEXINT64 id,
+	UINT32 deviceCount
+	);
+
+SpatialDeviceManager_GetOrCreateForBindingRequirements_FullyQualifiedDynamicNode(
+	STRING module,
+	UNICODESTRING spatialGraphDevicePath,
+	GUID dynamicNodeId,
+	HEXINT64 id
+	);
+
+SpatialDeviceManager_GetOrCreateForBindingRequirements_DynamicNode(
+	STRING module,
+	GUID dynamicNodeId,
+	HEXINT64 id
+	);
+
+SpatialDeviceManager_GetOrCreateForBindingRequirements_RelatedDevice(
+	STRING module,
+	UNICODESTRING relatedDevicePath,
+	HEXINT64 id
+	);
+
+SpatialDevice_OrphanedDeviceUsed_Aggregated(
+	STRING module,
+	UINT32 instanceCount,
+	HEXINT64 id,
+	ANSISTRING lastCaller
+	);
+
+SpatialDevice_OrphanedDeviceUsed(
+	STRING module,
+	HEXINT64 id,
+	ANSISTRING caller
+	);
+
+SpatialDeviceManager_Destroyed(
+	STRING module
+	);
+
+SpatialDeviceManager_Initialized(
+	STRING module
+	);
+
+HeadComponent_GetGravityAlignedHeadToPose(
+	FLOAT headToRig,
+	FLOAT rigPoseToDeviceTransform,
+	FLOAT rigGravityInPoseSpace,
+	FLOAT gravityAlignedHeadToNonGravityAlignedHead
+	);
+
+SpatialDevice_UpdateGravityAlignedPointingToPose(
+	FLOAT gravityAlignedPointingToPose
+	);
+
+HeadComponent_UpdateLastKnownGravityAlignedHeadToPose_AdjustOriginalPoseToCurrentPose(
+	FLOAT lastKnownPoseToGravityAlignedHead,
+	FLOAT originalPoseToOldPose,
+	FLOAT originalPoseToCurrentPose
+	);
+
+SpatialDevice_InvokeDesiredTrackingExpiringCallbacks(
+	STRING module,
+	HEXINT64 id,
+	STRING desiredTracking
+	);
+
+SpatialDevice_InvokeTrackingStateChangedCallbacks(
+	STRING module,
+	HEXINT64 id,
+	STRING currentState,
+	STRING previouslyNotifiedState
+	);
+
+SpatialDevice_DesiredTrackingExpiring_Aggregated(
+	NULL Count,
+	NULL oneDesiredExpiring,
+	STRING module,
+	HEXINT64 id
+	);
+
+SpatialDevice_DesiredTrackingExpiring_FirstCall(
+	STRING module,
+	HEXINT64 id,
+	STRING desiredExpiring
+	);
+
+SpatialDevice_DesiredTrackingExpiring(
+	STRING module,
+	HEXINT64 id,
+	STRING desiredExpiring
+	);
+
+SpatialDevice_DesiredTrackingChanged_FirstCall(
+	STRING module,
+	HEXINT64 id,
+	STRING desiredTracking,
+	STRING prevDesiredTracking
+	);
+
+SpatialDevice_DesiredTrackingChanged_Aggregated(
+	NULL Count,
+	NULL oneDesiredTracking,
+	NULL onePrevDesiredTracking,
+	STRING module,
+	HEXINT64 id
+	);
+
+SpatialDevice_DesiredTrackingChanged(
+	STRING module,
+	HEXINT64 id,
+	STRING desiredTracking,
+	STRING prevDesiredTracking
+	);
+
+SpatialDevice_TrackingStateChanged(
+	STRING module,
+	HEXINT64 id,
+	STRING currentState,
+	STRING previousState,
+	STRING desired
+	);
+
+SpatialDevice_DesiredTrackingStatistics(
+	STRING module,
+	HEXINT64 id,
+	UINT32 totalCount,
+	UINT32 positionCount,
+	UINT32 orientationCount
+	);
+
+SpatialDevice_DesiredTrackingKeepAlive(
+	STRING module,
+	HEXINT64 spatialDeviceId,
+	STRING desired
+	);
+
+SpatialDevice_RecentPoseUpdated(
+	STRING module,
+	HEXINT64 id
+	);
+
+SpatialDevice_PoseStatistics(
+	STRING module,
+	HEXINT64 id,
+	UINT32 totalCount,
+	UINT32 fallbackCount,
+	UINT32 fallbackBlockedCount,
+	UINT32 deniedCount,
+	UINT32 validCount,
+	UINT32 positionCount,
+	UINT32 orientationCount,
+	UINT32 requestTrackingCount,
+	UINT32 requestRenderingCount
+	);
+
+SpatialDevice_GetPoseForTime(
+	STRING module,
+	HEXINT64 id,
+	HEXINT64 nodeReferenceAddress,
+	GUID nodeId,
+	STRING renderingBehavior,
+	STRING desiredTrackingBehavior,
+	INT64 targetTimestampQpc,
+	FLOAT targetTimestampMillis,
+	INT64 poseTimestampQpc,
+	UINT8 trackerMode,
+	UNICODESTRING processName
+	);
+
+SpatialDevice_PoseQueryAccessDenied(
+	STRING module,
+	HEXINT64 spatialDeviceId,
+	STRING desiredTrackingBehavior
+	);
+
+SpatialDevice_SynthesizedInvalidPoseDefaults(
+	STRING module,
+	HEXINT64 id,
+	BOOLEAN recentPoseValid,
+	GUID rootNodeId,
+	FLOAT rootToDevice,
+	FLOAT poseToDevice,
+	FLOAT gravityInPoseSpace,
+	FLOAT gravityInDeviceSpace
+	);
+
+SpatialDevice_ApplyDesiredTrackingLevelFailed(
+	STRING module,
+	HEXINT64 id,
+	STRING desiredTracking
+	);
+
+SpatialDevice_AppliedDesiredTrackingLevelAfterPreviousFailure(
+	STRING module,
+	HEXINT64 id,
+	STRING desiredTracking
+	);
+
+SpatialDevice_FailedToCreateNodeReference(
+	STRING module,
+	HEXINT64 id,
+	INT32 HRESULT
+	);
+
+SpatialDevice_ResetNodeReference(
+	STRING module,
+	HEXINT64 id,
+	UNICODESTRING spatialGraphDevicePath,
+	GUID spatialGraphDynamicNodeId,
+	HEXINT64 driverClientLifetimeId
+	);
+
+SpatialDevice_PropertiesUpdated(
+	STRING module,
+	HEXINT64 id,
+	BOOLEAN propertiesChanged,
+	UNICODESTRING newSpatialGraphDevicePath,
+	HEXINT64 newSpatialGraphDriverClientLifetimeId,
+	GUID newSpatialGraphDynamicNodeId,
+	HEXINT32 newPoseQueryFlags,
+	UNICODESTRING oldSpatialGraphDevicePath,
+	HEXINT64 oldSpatialGraphDriverClientLifetimeId,
+	GUID oldSpatialGraphDynamicNodeId,
+	HEXINT32 oldPoseQueryFlags
+	);
+
+SpatialDevice_Initialized_FullyQualifiedDynamicNode(
+	STRING module,
+	HEXINT64 id,
+	UNICODESTRING spatialGraphDeviceInterfacePath,
+	GUID dynamicNodeId
+	);
+
+SpatialDevice_Initialized_DynamicNodeId(
+	STRING module,
+	HEXINT64 id,
+	GUID dynamicNodeId
+	);
+
+SpatialDevice_Initialized_RelatedDeviceInterfacePath(
+	STRING module,
+	HEXINT64 id,
+	UNICODESTRING deviceInterfacePath
+	);
+
+SpatialDevice_Destroyed(
+	STRING module,
+	HEXINT64 id
+	);
+
+SpatialDevice_GetNodePoseForTimeHelper(
+	STRING module,
+	INT32 getPoseAtTimeResult,
+	INT64 posePredictionTimeInTicks,
+	BOOLEAN wantRenderingPose,
+	UINT32 validity,
+	GUID parentNodeId,
+	FLOAT nodeToParent,
+	INT64 predictionAmountInTicks,
+	INT32 predictionAmountValid,
+	UINT64 remotePoseId,
+	INT32 remotePoseValid
+	);
+
+LocationValidityChanged(
+	GUID id,
+	ANSISTRING reason,
+	BOOLEAN locationChanged,
+	BOOLEAN degreesFromDownChanged,
+	BOOLEAN originalGravityChanged,
+	GUID staticNodeId,
+	GUID prevStaticNodeId,
+	FLOAT locationToStaticNode,
+	FLOAT prevLocationToStaticNode,
+	FLOAT degreesFromDown,
+	FLOAT originalDegreesFromDown,
+	FLOAT locationGravity,
+	FLOAT originalLocationGravity,
+	FLOAT staticNodeGravity,
+	FLOAT originalStaticNodeGravity
+	);
+
+LocationValidityChanged(
+	GUID id,
+	ANSISTRING reason,
+	BOOLEAN locationChanged,
+	BOOLEAN degreesFromDownChanged,
+	BOOLEAN originalGravityChanged,
+	GUID staticNodeId,
+	GUID prevStaticNodeId,
+	FLOAT locationToStaticNode,
+	FLOAT prevLocationToStaticNode,
+	FLOAT degreesFromDown,
+	FLOAT originalDegreesFromDown,
+	FLOAT locationGravity,
+	FLOAT originalLocationGravity,
+	FLOAT staticNodeGravity,
+	FLOAT originalStaticNodeGravity
+	);
+
+SimpleSpatialGraphSnapshot_StaticNodePose(
+	GUID id,
+	FLOAT nodeToParent
+	);
+
+SimpleSpatialGraphSnapshot_Summary(
+	GUID rootNodeId,
+	UINT32 staticNodePoseCount
+	);
+
+ServerComponentManager_SpectrumStartReason(
+	UNICODESTRING firstSpectrumCall,
+	UNICODESTRING firstClientFilename,
+	GUID firstClientAppSessionGuid,
+	UINT32 firstClientSensorRefs,
+	BOOLEAN isEndToEndTest,
+	BOOLEAN isRpcTransport,
+	BOOLEAN isHolographicSimulationEnabled,
+	BOOLEAN isHolographicDevicePresent
+	);
+
+ServerComponentManager_Shutdown(
+	VOID
+	);
+
+ServerComponentManager_Shutdown(
+	VOID
+	);
+
+ActivityFailure(
+	UINT64 PartA_PrivTags,
+	HEX wilActivity,
+	UINT32 hresult,
+	UINT32 threadId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+ActivityFailure(
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+ActivityIntermediateStop(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+ActivityError(
+	UINT64 PartA_PrivTags,
+	SIGNED wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+ActivityStoppedAutomatically(
+	VOID
+	);
+
+ActivityError(
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+ServerComponentManager_OnSensorRefChanged(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId
+	);
+
+ServerComponentManager_OnSensorRefChanged(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+ServerComponentManager_OnSensorRefChanged(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	SIGNED wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+ServerComponentManager_OnClientDisconnect(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId
+	);
+
+ServerComponentManager_OnClientDisconnect(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+ServerComponentManager_OnClientDisconnect(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	SIGNED wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+ServerComponentManager_OnClientConnect(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId
+	);
+
+ServerComponentManager_OnClientConnect(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+ServerComponentManager_OnClientConnect(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	SIGNED wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+ServerComponentManager_OnDestroy(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId
+	);
+
+ServerComponentManager_OnDestroy(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+ServerComponentManager_OnDestroy(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	SIGNED wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+ServerComponentManager_OnStop(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId
+	);
+
+ServerComponentManager_OnStop(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+ServerComponentManager_OnStop(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	SIGNED wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+ServerComponentManager_OnStart(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId
+	);
+
+ServerComponentManager_OnStart(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+ServerComponentManager_OnStart(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	SIGNED wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+ServerComponentManager_OnCreate(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId
+	);
+
+ServerComponentManager_OnCreate(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+ServerComponentManager_OnCreate(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	SIGNED wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+UsingDevice(
+	INT32 Source,
+	GUID GUID
+	);
+
+HeTUpdateTrigger_WokeUp(
+	VOID
+	);
+
+HeTUpdateTriggerStandaloneTimerInfo(
+	INT32 Source,
+	FLOAT TimeSinceLastWake,
+	FLOAT TimeToWakeNext
+	);
+
+HeTUpdateTriggerTimerInfo(
+	FLOAT TimeSinceLastWake
+	);
+
+RegisterSupportService(
+	UINT32 PID,
+	UNICODESTRING Service
+	);
+
+NotEnoughCores(
+	UINT32 ProcessorCount
+	);
+
+RegisterProcessById(
+	UINT32 ProcessId,
+	NTSTATUS Status
+	);
+
+OpenService(
+	UINT32 Error
+	);
+
+InProcUnregisterProcess(
+	UINT32 ProcessId,
+	NTSTATUS Status
+	);
+
+OpenSCManager(
+	UINT32 Error
+	);
+
+InProcRegisterProcess(
+	UINT32 ProcessId,
+	NTSTATUS Status
+	);
+
+RegisterSupportServiceFailure(
+	UINT32 PID,
+	UNICODESTRING Service
+	);
+
+QueryServiceStatusEx(
+	UINT32 Error
+	);
+
+TlgAggregateSummary(
+	GUID Provider,
+	UINT64 NumFlushes,
+	UINT64 MaxEntriesStored,
+	UINT64 TotalEntriesFlushed,
+	UINT32 MaxEntriesFlushed,
+	UINT32 MinEntriesFlushed,
+	UINT32 NumBucketLimitReached,
+	UINT32 NumAllocationFailures,
+	UINT32 NumLargeEventFailures
+	);
+
+LogStaticUpdateEntries(
+	UINT8 data,
+	UINT32 sequenceId,
+	UINT32 version
+	);
+
+LogChangeEntries(
+	UINT8 data,
+	UINT32 sequenceId,
+	UINT32 version
+	);
+
+LogControlSignalEntries(
+	UINT8 data,
+	UINT32 sequenceId,
+	UINT32 version
+	);
+
+LogDynamicUpdateEntries(
+	UINT8 data,
+	UINT32 sequenceId,
+	UINT32 version
+	);
+
+PublicRPCActivity(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId
+	);
+
+PublicRPCActivity(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	SIGNED wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+PublicRPCActivity(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+ActivityScopeNotExplicitlyStopped(
+	UNICODESTRING activityType
+	);
+
+InternalRPCActivity(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId
+	);
+
+InternalRPCActivity(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	SIGNED wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+InternalRPCActivity(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+RenderingPoseRequested(
+	UNICODESTRING procName,
+	UINT32 procId
+	);
+
+CreateActiveRuntimeNull(
+	INT32 Source,
+	UINT32 Runtime
+	);
+
+CreateActiveRuntimeFailed(
+	INT32 Source,
+	UINT32 Runtime,
+	INT32 HRESULT
+	);
+
+DefaultExtensionFailed(
+	INT32 Source,
+	UINT32 Runtime,
+	INT32 HRESULT
+	);
+
+DefaultExtensionLoaded(
+	INT32 Source,
+	UINT32 Runtime
+	);
+
+ActiveExtensionHasChanged(
+	INT32 Source,
+	UNICODESTRING String1,
+	UNICODESTRING String2
+	);
+
+ExtensionInstanceLoaded(
+	INT32 Source,
+	UNICODESTRING String1,
+	UNICODESTRING String2
+	);
+
+ActiveExtensionHasChangedToNone(
+	INT32 Source,
+	UNICODESTRING String
+	);
+
+ActiveExtensionChangedToAggregate(
+	INT32 Source,
+	UNICODESTRING String1,
+	UNICODESTRING String2
+	);
+
+ExtensionInstanceMissingHardware(
+	INT32 Source,
+	UNICODESTRING InstanceName,
+	UNICODESTRING ExtensionName,
+	GUID DeviceInterfaceId
+	);
+
+ExtensionInstanceNotAdded(
+	INT32 Source,
+	UNICODESTRING Instance,
+	UNICODESTRING Extension
+	);
+
+ExtensionInstanceMissingCLSID(
+	INT32 Source,
+	UNICODESTRING String1,
+	UNICODESTRING String2
+	);
+
+ExtensionInstanceFailed(
+	INT32 Source,
+	UNICODESTRING Instance,
+	UNICODESTRING Extension,
+	INT32 HRESULT
+	);
+
+FailedToFindExtensionKey(
+	INT32 Source,
+	UNICODESTRING String
+	);
+
+FailedToFindExtensionsKey(
+	INT32 Source,
+	UNICODESTRING String
+	);
+

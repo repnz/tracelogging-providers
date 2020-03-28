@@ -1,0 +1,299 @@
+ProviderNames:
+	Microsoft.Beihai.Core.Canvas
+	SpectreTraceLoggingProvider
+
+
+
+**** Events *****
+CanvasInitialization(
+	ANSISTRING __TlgCV__,
+	BOOL32 UTCReplace_AppSessionGuid,
+	GUID canvasActivityID,
+	ANSISTRING result,
+	ANSISTRING exceptionDetails,
+	ANSISTRING architecture,
+	ANSISTRING packageVersion
+	);
+
+CanvasDestroyed(
+	ANSISTRING __TlgCV__,
+	BOOL32 UTCReplace_AppSessionGuid,
+	GUID canvasActivityID,
+	INT32 durationMS,
+	ANSISTRING exceptionDetails
+	);
+
+CanvasSuspended(
+	ANSISTRING __TlgCV__,
+	BOOL32 UTCReplace_AppSessionGuid,
+	GUID canvasActivityID,
+	INT32 durationMS,
+	ANSISTRING exceptionDetails
+	);
+
+Load3DModelStart(
+	ANSISTRING __TlgCV__,
+	BOOL32 UTCReplace_AppSessionGuid,
+	GUID canvasActivityID,
+	GUID loadActivityID,
+	ANSISTRING extension
+	);
+
+Load3DModelAbort(
+	ANSISTRING __TlgCV__,
+	BOOL32 UTCReplace_AppSessionGuid,
+	GUID canvasActivityID,
+	GUID loadActivityID,
+	ANSISTRING exceptionDetails
+	);
+
+Load3DModelEnd(
+	ANSISTRING __TlgCV__,
+	BOOL32 UTCReplace_AppSessionGuid,
+	GUID canvasActivityID,
+	GUID loadActivityID,
+	ANSISTRING result,
+	ANSISTRING exceptionDetails,
+	INT64 durationMS,
+	UINT32 nodeCount,
+	UINT32 meshInstanceCount,
+	UINT32 meshCount,
+	UINT32 materialCount,
+	UINT64 indexCount,
+	UINT64 vertexCount,
+	UINT64 textureCount,
+	UINT64 indexDataSize,
+	UINT64 vertexDataSize,
+	UINT64 textureDataSize,
+	UINT32 numAnimations,
+	UINT32 numBones,
+	UINT32 animationTypes,
+	FLOAT animationDuration
+	);
+
+SerializeModelSessionStart(
+	ANSISTRING __TlgCV__,
+	BOOL32 UTCReplace_AppSessionGuid,
+	GUID canvasActivityID,
+	GUID serializeActivityID,
+	ANSISTRING extension
+	);
+
+SerializeModelSessionEnd(
+	ANSISTRING __TlgCV__,
+	BOOL32 UTCReplace_AppSessionGuid,
+	GUID canvasActivityID,
+	GUID serializeActivityID,
+	ANSISTRING result,
+	ANSISTRING exceptionDetails,
+	INT64 durationMS,
+	UINT32 numAnimations,
+	UINT32 numBones,
+	UINT32 animationTypes,
+	FLOAT animationDuration
+	);
+
+SerializeModelSessionAbort(
+	ANSISTRING __TlgCV__,
+	BOOL32 UTCReplace_AppSessionGuid,
+	GUID canvasActivityID,
+	GUID serializeActivityID,
+	ANSISTRING exceptionDetails
+	);
+
+PerformanceUpdateSummary(
+	ANSISTRING __TlgCV__,
+	BOOL32 UTCReplace_AppSessionGuid,
+	GUID canvasActivityID,
+	GUID loadActivityID,
+	FLOAT frameRateCurrentMS,
+	FLOAT frameRateAverageMS,
+	FLOAT frameRateMaximumMS,
+	FLOAT frameRateMinimumMS,
+	UINT32 vertexCount,
+	UINT32 indexCount,
+	UINT32 textureCount,
+	INT64 vertexBufferMemory,
+	INT64 indexBufferMemory,
+	INT64 constantBufferMemory,
+	INT64 textureMemory,
+	INT64 renderTargetMemory,
+	INT64 shaderMemory,
+	UNICODESTRING videoAdapterName,
+	UINT64 videoAdapterMemoryMB,
+	UINT32 deviceID,
+	UINT32 vendorID,
+	UINT64 sharedAdapterMemoryMB,
+	ANSISTRING tag,
+	FLOAT cpuAverageMS,
+	FLOAT cpuMaximumMS,
+	FLOAT cpuMinimumMS,
+	FLOAT gpuAverageMS,
+	FLOAT gpuMaximumMS,
+	FLOAT gpuMinimumMS,
+	UINT32 gpuCount
+	);
+
+CanvasException(
+	ANSISTRING __TlgCV__,
+	BOOL32 UTCReplace_AppSessionGuid,
+	GUID canvasActivityID,
+	GUID loadActivityID,
+	ANSISTRING exceptionDetails
+	);
+
+TranscoderInitialization(
+	ANSISTRING __TlgCV__,
+	BOOL32 UTCReplace_AppSessionGuid,
+	GUID transcoderActivityID,
+	ANSISTRING result,
+	ANSISTRING exceptionDetails,
+	ANSISTRING architecture,
+	ANSISTRING packageVersion,
+	ANSISTRING transcoderVersion
+	);
+
+TranscoderDestroyed(
+	ANSISTRING __TlgCV__,
+	BOOL32 UTCReplace_AppSessionGuid,
+	GUID transcoderActivityID,
+	INT32 durationMS,
+	ANSISTRING exceptionDetails,
+	ANSISTRING transcoderVersion
+	);
+
+Import3DModelStart(
+	ANSISTRING __TlgCV__,
+	BOOL32 UTCReplace_AppSessionGuid,
+	GUID transcoderActivityID,
+	GUID importActivityID,
+	ANSISTRING originalModelExtensionType,
+	ANSISTRING destinationModelExtensionType,
+	ANSISTRING importOptions,
+	ANSISTRING transcoderVersion
+	);
+
+Import3DModelAbort(
+	ANSISTRING __TlgCV__,
+	BOOL32 UTCReplace_AppSessionGuid,
+	GUID transcoderActivityID,
+	GUID importActivityID,
+	ANSISTRING exceptionDetails,
+	UINT32 sizeInKB,
+	ANSISTRING transcoderVersion
+	);
+
+Import3DModelEnd(
+	ANSISTRING __TlgCV__,
+	BOOL32 UTCReplace_AppSessionGuid,
+	GUID transcoderActivityID,
+	GUID importActivityID,
+	ANSISTRING result,
+	ANSISTRING exceptionDetails,
+	INT32 durationMS,
+	ANSISTRING originalModelExtensionType,
+	ANSISTRING destinationModelExtensionType,
+	UINT64 vertexCount,
+	UINT64 indexCount,
+	UINT64 textureCount,
+	INT64 vertexBufferMemory,
+	INT64 indexBufferMemory,
+	INT64 textureMemory,
+	UINT32 numAnimations,
+	UINT32 numBones,
+	UINT32 animationTypes,
+	FLOAT animationDuration,
+	UINT32 sizeInKB,
+	ANSISTRING transcoderVersion
+	);
+
+Export3DModelStart(
+	ANSISTRING __TlgCV__,
+	BOOL32 UTCReplace_AppSessionGuid,
+	GUID transcoderActivityID,
+	GUID exportActivityID,
+	GUID importActivityID,
+	ANSISTRING originalModelExtensionType,
+	ANSISTRING destinationModelExtensionType,
+	ANSISTRING transcoderVersion
+	);
+
+Export3DModelAbort(
+	ANSISTRING __TlgCV__,
+	BOOL32 UTCReplace_AppSessionGuid,
+	GUID transcoderActivityID,
+	GUID exportActivityID,
+	GUID importActivityID,
+	ANSISTRING exceptionDetails,
+	ANSISTRING transcoderVersion
+	);
+
+Export3DModelEnd(
+	ANSISTRING __TlgCV__,
+	BOOL32 UTCReplace_AppSessionGuid,
+	GUID transcoderActivityID,
+	GUID exportActivityID,
+	GUID importActivityID,
+	ANSISTRING result,
+	ANSISTRING exceptionDetails,
+	INT32 durationMS,
+	ANSISTRING originalModelExtensionType,
+	ANSISTRING destinationModelExtensionType,
+	UINT64 vertexCount,
+	UINT64 indexCount,
+	UINT64 textureCount,
+	INT64 vertexBufferMemory,
+	INT64 indexBufferMemory,
+	INT64 textureMemory,
+	UINT32 numAnimations,
+	UINT32 numBones,
+	UINT32 animationTypes,
+	FLOAT animationDuration,
+	ANSISTRING transcoderVersion
+	);
+
+SpectreMarkEvent(
+	ANSISTRING EventName,
+	INT64 TimeOffset,
+	INT32 Value,
+	ANSISTRING FunctionName,
+	ANSISTRING FileName,
+	INT32 LineNumber
+	);
+
+SpectreMeasurementEvent(
+	ANSISTRING EventName,
+	INT64 TimeOffset,
+	DOUBLE Value,
+	ANSISTRING FunctionName,
+	ANSISTRING FileName,
+	INT32 LineNumber
+	);
+
+SpectreMeasurementEvent(
+	ANSISTRING EventName,
+	INT64 TimeOffset,
+	ANSISTRING Value,
+	ANSISTRING FunctionName,
+	ANSISTRING FileName,
+	INT32 LineNumber
+	);
+
+SpectreMeasurementEvent(
+	ANSISTRING EventName,
+	INT64 TimeOffset,
+	UINT64 Value,
+	ANSISTRING FunctionName,
+	ANSISTRING FileName,
+	INT32 LineNumber
+	);
+
+SpectreTimeSpanEvent(
+	ANSISTRING EventName,
+	INT64 TimeOffset,
+	INT64 StartTime,
+	ANSISTRING FunctionName,
+	ANSISTRING FileName,
+	INT32 LineNumber
+	);
+

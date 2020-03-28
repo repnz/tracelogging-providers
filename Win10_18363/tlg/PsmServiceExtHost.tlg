@@ -1,0 +1,2931 @@
+ProviderNames:
+	Microsoft.Windows.ResourceManager
+	Microsoft.Windows.HostActivityManager
+	Microsoft.Windows.CentralResourceManager
+	TelemetryAssert
+	TelemetryAssertDiagTrack
+
+
+
+**** Events *****
+PsmHostStateNotification(
+	UNICODESTRING psmKey,
+	SID userSid,
+	UINT32 sessionId,
+	UINT32 hostCount,
+	UINT32 firstHostType,
+	HEXINT64 firstHostId,
+	UINT32 psmHostState
+	);
+
+RmgrSrv.RmGetNotification(
+	HRESULT hresult,
+	UINT32 notificationType
+	);
+
+RmgrSrv.RmAccessCheck(
+	PID callerPid,
+	UINT32 requestingPid,
+	UINT32 resourceType
+	);
+
+RmgrSrv.RmReleaseResources(
+	HRESULT hresult
+	);
+
+RmgrSrv.RmAccessCheckOnCaller(
+	HRESULT hresult
+	);
+
+RmgrSrv.RmAccessCheck(
+	HRESULT hresult
+	);
+
+RmgrSrv.RegisterWithServer(
+	PID callerPid
+	);
+
+RmgrSrv.RmRegisterResource(
+	HRESULT hresult
+	);
+
+RmgrSrv.SetMemoryUsageLimitQueryCallerFailed(
+	NTSTATUS Status
+	);
+
+RmgrSrv.RmAvailabilityCheck(
+	PID callerPid,
+	PID requestingPid,
+	UINT32 requestCount,
+	UINT32 requestPriority
+	);
+
+RmgrSrv.RmAcquireResources(
+	HRESULT hresult,
+	HEXINT64 resourceHandle,
+	BOOL32 requestPending
+	);
+
+RmgrSrv.RmGetNotification(
+	HEXINT64 resourceHandle
+	);
+
+RmgrSrv.RmAcquireResources(
+	PID callerPid,
+	PID requestingPid,
+	UINT32 requestCount,
+	UINT32 requestPriority,
+	BOOL32 requestFlags,
+	UINT32 requestPendType
+	);
+
+RmgrSrv.RmRegisterResource(
+	UINT32 resourceType,
+	UINT32 resourceAmount,
+	BOOL32 resourceShareable
+	);
+
+RmgrSrv.RmAvailabilityCheck(
+	HRESULT hresult
+	);
+
+RmgrSrv.RmReleaseResources(
+	HEXINT64 resourceHandle
+	);
+
+RmgrSrv.RegisterWithServer(
+	HRESULT hresult
+	);
+
+RmgrSrv.RmAccessCheckOnCaller(
+	PID callerPid,
+	UINT32 resourceType
+	);
+
+ResourceManager.InitializeResourcePolicyFailed(
+	HRESULT hr
+	);
+
+ModernEnforcer.QueryPrivateCommitFailed(
+	NTSTATUS status,
+	HEXINT64 hostId
+	);
+
+ModernEnforcer.QuerySharedCommitFailed(
+	NTSTATUS status,
+	HEXINT64 hostId
+	);
+
+PsmCommitNotification(
+	NTSTATUS status,
+	HEXINT64 hostId
+	);
+
+ConvertStringSidToSidFailed(
+	WIN32ERROR errorCode
+	);
+
+CreateWellKnownSidFailed(
+	WIN32ERROR errorCode
+	);
+
+UsedDefaultRuntimeSettings(
+	NTSTATUS overrideStatus
+	);
+
+Rundown_ActivityHost(
+	UNICODESTRING PsmKey,
+	UINT32 JobType,
+	HEXINT64 HostId,
+	HEX AppliedSetDigest,
+	HEX AcquiredSetDigest,
+	UINT64 CommitUsageBytes
+	);
+
+LazyOfferDecommit_PeriodSummary(
+	UINT64 decommittedBytes,
+	UINT64 minDecommittedBytes,
+	UINT64 maxDecommittedBytes,
+	UINT64 runtime100Ns,
+	UINT32 decommittedHostCount,
+	UINT32 passCount,
+	UINT64 PartA_PrivTags
+	);
+
+RmGetNotification(
+	HRESULT hresult,
+	HEXINT64 resourceSetHandle,
+	UINT32 notification
+	);
+
+ActivityHost_ExitNotification(
+	UNICODESTRING psmKey,
+	UINT32 hostJobType,
+	UINT32 sessionId,
+	HEXINT64 hostId
+	);
+
+IoCounters.ReplenishPool(
+	UINT64 countersReturned,
+	UINT64 returnedToPool,
+	UINT64 debtRepaid,
+	UINT64 poolCounters,
+	UINT64 debtCounters
+	);
+
+RmAccessCheck(
+	HRESULT hresult,
+	PID requestingPid,
+	UINT32 resourceType
+	);
+
+RmAvailabilityCheck(
+	HRESULT hresult,
+	PID requestingPid,
+	UINT32 requestCount,
+	UINT32 priority
+	);
+
+RmAcquireResources(
+	HRESULT hresult,
+	HEXINT64 resourceSet,
+	UINT32 requestCount,
+	UINT32 priority,
+	PID requestingPid,
+	HEXINT32 flags,
+	UINT32 pendType,
+	BOOL32 applicationAcquired,
+	BOOL32 requestPending
+	);
+
+ExternalResources.ForceRelease(
+	PID pid
+	);
+
+RmReleaseResources(
+	HRESULT hresult,
+	HEXINT64 resourceSetHandle
+	);
+
+ActivityHost_ExitNotification(
+	VOID
+	);
+
+RmRegisterResource(
+	HRESULT hresult,
+	UINT32 resourceType,
+	UINT32 resourceAmount
+	);
+
+IoCounters.RemoveFromCirculation(
+	UINT64 countersRemoved,
+	UINT64 removedFromPool,
+	UINT64 debtIncurred,
+	UINT64 poolCounters,
+	UINT64 debtCounters
+	);
+
+Host_PublishCommitLimit(
+	NTSTATUS Status,
+	HEXINT64 HostId,
+	UINT64 OldCommitLimit,
+	UINT64 NewCommitLimit,
+	UINT64 ExpectedCommitLimit
+	);
+
+ResourceSet_Acquire(
+	HRESULT hresult,
+	HEXINT64 resourceSet,
+	UNICODESTRING psmKey,
+	UINT32 hostJobType,
+	HEXINT64 hostId,
+	BOOL32 requestPending,
+	INT32 underTargetPriority,
+	UINT64 commitRequested,
+	UINT64 ioCountersRequested,
+	HEX appModelPolicyFlags,
+	UINT64 commitTarget,
+	UINT32 resourceSetType,
+	BOOL32 supportsPending,
+	UINT32 sessionId
+	);
+
+CpuSet.AcquireCpuSetsForService(
+	VOID
+	);
+
+GameMode_RegisterProcess(
+	VOID
+	);
+
+GameMode.UnregisterProcess(
+	VOID
+	);
+
+GameMode.DisableForRegisteredProcess(
+	VOID
+	);
+
+Activator.SubscribeForNotifications(
+	NTSTATUS status,
+	PID pid,
+	HEXINT64 hostId,
+	HEXINT64 subscriptionHandle
+	);
+
+CpuSet.RegisterProcessWithAllocation(
+	NTSTATUS status,
+	HEXINT64 registrationId,
+	PID clientPid,
+	PID recipientPid,
+	HEXINT64 allocationId
+	);
+
+CpuSet.RegisterProcessWithAllocation(
+	VOID
+	);
+
+ResourceSet_Acquire_Verbose(
+	INT32 ExternalResourcePriorities,
+	SID userSid
+	);
+
+CpuSet.ReleaseProcessRegistration(
+	VOID
+	);
+
+GameMode.ReenableForRegisteredProcess(
+	VOID
+	);
+
+ResourceSet_Apply(
+	HRESULT hr,
+	HEXINT64 resourceSet
+	);
+
+ResourceSet_SetExternalResourcePriorities(
+	VOID
+	);
+
+CpuSet.ReleaseAllocation(
+	NTSTATUS status,
+	PID clientPid,
+	HEXINT64 allocationId
+	);
+
+GameMode.UnregisterProcess(
+	NTSTATUS status,
+	PID pid
+	);
+
+GameMode_RegisterPairedAuxiliaryProcess(
+	NTSTATUS Status,
+	PID Pid,
+	PID PrimaryPid,
+	UINT8 RequestedPriorityClass,
+	HEXINT32 RequestFlags,
+	HEXINT32 RequestCpuSetFlags,
+	UNICODESTRING ProcessName,
+	UNICODESTRING PrimaryProcessName,
+	UINT64 PartA_PrivTags
+	);
+
+CpuSet.CreateClientContext(
+	NTSTATUS status,
+	PID clientPid
+	);
+
+ResourceSet_ReleaseResources(
+	HRESULT hr,
+	HEXINT64 resourceSet
+	);
+
+Activator.UnsubscribeFromNotifications(
+	VOID
+	);
+
+Activator.SubscribeForNotifications(
+	VOID
+	);
+
+ResourceSet_Acquire(
+	VOID
+	);
+
+ResourceSet_Apply(
+	VOID
+	);
+
+GameMode.ReenableForRegisteredProcess(
+	NTSTATUS status,
+	PID pid
+	);
+
+CpuSet.ReleaseAllocation(
+	VOID
+	);
+
+GameMode.DisableForRegisteredProcess(
+	NTSTATUS status,
+	PID pid
+	);
+
+Activator.UnsubscribeFromNotifications(
+	NTSTATUS status,
+	PID pid,
+	HEXINT64 subscriptionHandle
+	);
+
+Host_TrySetCommitLimit(
+	VOID
+	);
+
+CpuSet.CreateClientContext(
+	VOID
+	);
+
+GameMode_RegisterProcess(
+	NTSTATUS Status,
+	PID Pid,
+	UINT32 RequestedCpuSetCount,
+	HEXINT64 RequestedCpuSetMask,
+	UINT32 RequestedGpuYieldPercentage,
+	UINT32 RequestedGpuGameMemoryBudgetPercentage,
+	UINT32 RequestedGpuDwmMemoryBudgetPercentage,
+	UINT8 RequestedPriorityClass,
+	HEXINT32 RequestFlags,
+	HEXINT32 RequestCpuSetFlags,
+	UNICODESTRING ProcessName,
+	UINT64 PartA_PrivTags
+	);
+
+Host_TrySetCommitLimit(
+	NTSTATUS Status,
+	UNICODESTRING PsmKey,
+	HEXINT64 HostId,
+	PID Pid,
+	UINT64 CommitLimitBytes,
+	UINT64 PartA_PrivTags
+	);
+
+GameMode_RegisterPairedAuxiliaryProcess(
+	VOID
+	);
+
+CpuSet.ReleaseProcessRegistration(
+	NTSTATUS status,
+	PID clientPid,
+	HEXINT64 registrationId
+	);
+
+ResourceSet_SetExternalResourcePriorities(
+	HRESULT hr,
+	HEXINT64 resourceSet
+	);
+
+GameMode.GetLargestValidResourceRequest(
+	NTSTATUS status,
+	UINT32 cpuSetCount,
+	HEXINT64 cpuSetMask,
+	UINT32 gpuYieldPercentage,
+	UINT32 gpuGameMemoryBudgetPercentage,
+	UINT32 gpuGameDwmMemoryBudgetPercentage
+	);
+
+GameMode.GetLargestValidResourceRequest(
+	VOID
+	);
+
+CpuSet.AcquireCpuSetsForService(
+	NTSTATUS status,
+	HEXINT64 allocationId,
+	PID clientPid,
+	HEXINT32 requiredPropertyFlags,
+	HEXINT32 preferredPropertyFlags,
+	UINT32 requestedSetCount
+	);
+
+ResourceSet_ReleaseResources(
+	VOID
+	);
+
+ResourceSet_DestroyPartitionClosed(
+	HEXINT64 resourceSet
+	);
+
+Activator_PublisHostFailed(
+	NTSTATUS status,
+	INT32 callbackType,
+	HEXINT64 hostId
+	);
+
+ActivityHost_DecommitOffereddMemory(
+	NTSTATUS status,
+	HEXINT64 hostId,
+	UINT64 decommittedBytes,
+	BOOLEAN repurposedOnly
+	);
+
+ActivityHost_CommitLevelChanged(
+	UNICODESTRING psmKey,
+	UINT32 hostJobType,
+	UINT8 commitLevel,
+	UINT64 commitUseBytes,
+	UINT64 commitTargetBytes,
+	UINT64 commitLimitBytes
+	);
+
+ActivityHost_CommitUseUpdate(
+	VOID
+	);
+
+ActivityHost_QueryCommit(
+	HEXINT64 hostId,
+	UNICODESTRING psmKey,
+	UINT32 hostJobType,
+	UINT64 effectiveCommitUsageBytes,
+	UINT64 privateCommitUsageBytes,
+	UINT64 sharedCommitUsageBytes,
+	UINT64 commitDebtBytes
+	);
+
+Process.DecommitOfferedCommitSaveMemory(
+	NTSTATUS Status,
+	HEXINT64 hostId,
+	PID pid
+	);
+
+ActivityHost_ImportanceChange(
+	HEXINT64 hostId,
+	BOOL32 originalIsValid,
+	BOOL32 isValid,
+	UINT16 originalPresentationClass,
+	UINT16 presentationClass,
+	UINT16 originalProximityClass,
+	UINT16 proximityClass,
+	BOOL32 originalReceivingInput,
+	BOOL32 receivingInput,
+	BOOL32 originalControlForegroundBoost,
+	BOOL32 controlForegroundBoost,
+	BOOL32 originalIsShellExperience,
+	BOOL32 isShellExperience,
+	BOOL32 originalXboxShellExperience,
+	BOOL32 xboxShellExperience,
+	BOOL32 originalIsShellExperienceInit,
+	BOOL32 isShellExperienceInit
+	);
+
+QueriedMemUtilMetrics(
+	HEXINT64 hostId,
+	PID pid,
+	HEXINT32 queryFlags,
+	HEXINT32 validMask,
+	UINT64 privateWorkingSetBytes,
+	UINT64 totalWorkingSetBytes,
+	UINT64 storeSizeBytes
+	);
+
+ActivityHost_CommitUseUpdate(
+	HEXINT64 hostId,
+	UINT64 commitUse
+	);
+
+Host_ApplySettings(
+	NTSTATUS Status,
+	HEXINT64 HostId,
+	UINT64 CommitLimitBytes,
+	UINT64 NotifyLowThresholdBytes,
+	UINT64 NotifyHighThresholdBytes,
+	UINT8 ExecutionSpeed,
+	BOOLEAN ControlFgBoost,
+	UINT8 BamState
+	);
+
+ActivityHost_EnforcementSettingsApplied(
+	NTSTATUS status,
+	UNICODESTRING psmKey,
+	SID userSid,
+	UINT32 sessionId,
+	UINT32 hostJobType,
+	HEXINT64 hostId,
+	UINT64 hardMemoryLimitBytes,
+	UINT64 notifyLowMemoryLimitBytes,
+	UINT64 notifyHighMemoryLimitBytes,
+	UINT8 executionSpeed,
+	BOOLEAN rmControlsForegroundBoost
+	);
+
+Enforcer.SetCommitSavings(
+	NTSTATUS status,
+	HEXINT64 hostId,
+	BOOLEAN enable,
+	PID pid
+	);
+
+QueryProcessListFailed(
+	NTSTATUS status
+	);
+
+Process.DecommitOfferedDxgMemory(
+	NTSTATUS Status,
+	HEXINT64 hostId,
+	PID pid,
+	UINT64 decommittedBytes
+	);
+
+ActivityHost_RevokeAllResourceSets(
+	HEXINT64 hostId,
+	UINT8 revokePolicy,
+	UINT32 reason,
+	UINT64 commitUsageBytes,
+	UINT32 priority
+	);
+
+ActivityHost_QueryOfferedCommit(
+	NTSTATUS status,
+	HEXINT64 hostId,
+	UINT64 offeredCommit,
+	BOOLEAN isCommitSaved
+	);
+
+CpuSetManager_PublishAllocationStateFailed(
+	NTSTATUS status
+	);
+
+CpuSet_ResetProcessAllowedMask(
+	NTSTATUS status,
+	PID pid
+	);
+
+CpuSetManager_ApplyWorkloadAllowedFailed(
+	NTSTATUS Status,
+	UINT32 WorkloadClass
+	);
+
+CpuSet_SetProcessAllowedMask(
+	NTSTATUS status,
+	PID pid,
+	HEXINT64 mask
+	);
+
+CpuSet_ResetSystemAllowedMask(
+	NTSTATUS status
+	);
+
+CpuSet_AudioCpuWnfCallback(
+	HEXINT32 newId,
+	HEXINT32 oldId
+	);
+
+CpuSet_ResetWorkloadAllowedMask(
+	NTSTATUS Status,
+	UINT32 WorkloadClass
+	);
+
+CpuSet_ResetManagerValidMask(
+	HEXINT64 mask
+	);
+
+CpuSet_CreateProcessRegistration(
+	NTSTATUS status,
+	HEXINT64 registrationId,
+	HEXINT64 allocationId,
+	PID pid
+	);
+
+CpuSetManager_ApplySystemAllowedFailed(
+	NTSTATUS Status
+	);
+
+CpuSet_SetSystemAllowedMask(
+	NTSTATUS status,
+	HEXINT64 mask
+	);
+
+CpuSet_SetWorkloadAllowedMask(
+	NTSTATUS Status,
+	UINT32 WorkloadClass,
+	HEXINT64 Mask
+	);
+
+GameMode.UnapplyExtensionPolicy(
+	PID pid
+	);
+
+GameMode_OpenProcessFailed(
+	NTSTATUS status,
+	UINT64 PartA_PrivTags
+	);
+
+GameMode.UnapplyPriorityClass(
+	NTSTATUS status,
+	PID pid,
+	BOOLEAN foreground,
+	UINT8 priorityClass
+	);
+
+GameMode_ProcessTerminated(
+	PID pid,
+	UINT64 PartA_PrivTags
+	);
+
+GameMode.TryApplyExtensionPolicy(
+	PID pid
+	);
+
+GameMode_UnapplyPowerProfile(
+	VOID
+	);
+
+GameMode.ReleaseCpuSets(
+	VOID
+	);
+
+GameMode.AcquireCpuSets(
+	NTSTATUS status,
+	PID pid,
+	UINT32 cpuSetCount,
+	HEXINT64 explicitMask
+	);
+
+GameMode_TryApplyPowerProfile(
+	NTSTATUS Status
+	);
+
+GameMode.ProcessTerminationCallback(
+	PID pid
+	);
+
+GameMode.TryApplyPriorityClass(
+	NTSTATUS status,
+	PID pid,
+	BOOLEAN foreground,
+	UINT8 priorityClass
+	);
+
+GameMode.DisallowSystemAllowedSets(
+	NTSTATUS status,
+	PID pid
+	);
+
+GameMode.UnapplyGraphicsPriority(
+	UINT32 gpuYieldPercentage,
+	UINT32 gpuFocusMemoryPercentage,
+	UINT32 gpuDwmMemoryPercentage
+	);
+
+GameMode.TryApplyGraphicsPriority(
+	NTSTATUS status,
+	UINT32 gpuYieldPercentage,
+	UINT32 gpuFocusMemoryPercentage,
+	UINT32 gpuDwmMemoryPercentage
+	);
+
+GameMode.PolicyWorker(
+	VOID
+	);
+
+GameMode.TryApplyCpuSets(
+	NTSTATUS status,
+	PID pid
+	);
+
+GameMode.SetProcessDefaultCpuSets(
+	NTSTATUS status,
+	PID pid,
+	HEXINT32 flags
+	);
+
+GameMode.ApplyCpuSetAllocation(
+	NTSTATUS status,
+	PID pid
+	);
+
+GameMode.UnapplyCpuSets(
+	PID pid
+	);
+
+GameMode.PolicyWorker(
+	VOID
+	);
+
+GameMode_AutoRemovedPairedAuxiliary(
+	PID Pid
+	);
+
+SystemState.PowerSettingChanged(
+	HEXINT32 oldSystemState,
+	HEXINT32 newSystemState
+	);
+
+SystemState_FocusChanged(
+	PID NewPid,
+	PID OldPid,
+	PID ShellFocusPid,
+	PID HoloFocusPid,
+	BOOLEAN HeadMountedDisplayActive
+	);
+
+Partition.Find(
+	NTSTATUS status,
+	HEXINT64 partitionId
+	);
+
+Partition.Destroy(
+	HEXINT64 id
+	);
+
+Partition.Create(
+	NTSTATUS status,
+	HEXINT64 partition
+	);
+
+Enforcer.WaitForEmpty(
+	HEXINT64 hostId,
+	BOOL32 waitCompleted
+	);
+
+Host_StateWorker(
+	HEXINT64 HostId,
+	HEXINT32 CurrentState
+	);
+
+Enforcer.EmptyHost(
+	HEXINT64 hostId
+	);
+
+Enforcer.WaitForEmpty(
+	HEXINT64 hostId
+	);
+
+Enforcer.EmptyHost(
+	HEXINT64 hostId,
+	HEXINT64 empties
+	);
+
+Host_EmptiedProcessWorkingSet(
+	WIN32ERROR ErrorCode,
+	UNICODESTRING PsmKey,
+	UINT32 JobType,
+	HEXINT64 HostId,
+	PID Pid,
+	HEXINT32 EmptyFlags
+	);
+
+Host_StateWorker(
+	HEXINT64 HostId,
+	HEXINT32 CurrentState
+	);
+
+Host_ComputedDesiredState(
+	HEXINT64 HostId,
+	HEXINT32 DesiredState
+	);
+
+Enforcer.EmptyTriggered(
+	HEXINT64 hostId,
+	HEXINT32 emptiesLeft
+	);
+
+ComputedUsageLimits(
+	UINT64 maximumCommitBytes,
+	UINT64 totalPhysicalBytes,
+	UINT64 commitThresholdsBytes,
+	UINT64 physicalThresholdsBytes,
+	UINT64 activeLowPriThresholdBytes,
+	UINT64 lazyEmptyThresholdBytes
+	);
+
+ProcessPendingList(
+	VOID
+	);
+
+ResourceRequest.Pending(
+	UINT64 requestedCommitBytes,
+	UINT64 commitDebtBytes,
+	UINT64 availableCommit,
+	UINT64 requestedIo,
+	UINT64 availableIo,
+	BOOLEAN partitionPending,
+	HEXINT64 resourceSet
+	);
+
+ResourceRequest.New.Disposition(
+	HRESULT hresult,
+	BOOLEAN poolPending,
+	BOOLEAN queryablePending,
+	BOOLEAN partitionPending,
+	UINT32 poolRevokeCount,
+	UINT32 queryableRevokeCount,
+	UINT8 poolRevocationPolicy,
+	UINT8 queryableRevocationPolicy
+	);
+
+Rundown_ResourceSet(
+	HEXINT64 setId,
+	UINT8 state,
+	UNICODESTRING appId,
+	HEXINT64 hostId,
+	UINT32 priority,
+	UINT32 resourceSetType,
+	HEX commonFlags,
+	UINT64 commitRequested,
+	UINT64 ioCountersRequested
+	);
+
+ResourceSet_Revoke(
+	HEXINT64 resourceSet,
+	UINT64 availablePhysicalMemoryBytes,
+	UINT64 availableCommitBytes,
+	UINT64 elapsedMs
+	);
+
+ResourceRequest.New(
+	HEXINT64 resourceSet,
+	UINT64 requestedCommitBytes,
+	UINT64 commitDebtBytes,
+	UINT64 availableCommit,
+	UINT64 requestedIo,
+	UINT64 availableIo
+	);
+
+ResourceSet_Revoke(
+	HEXINT64 resourceSet,
+	UINT8 priority,
+	UINT8 effectivePriority,
+	UINT8 revokerPriority,
+	HEXINT64 revokerSet,
+	UINT16 resourceSetType,
+	UINT16 revokingSetType,
+	UINT32 reason,
+	UINT8 action,
+	UINT64 availablePhysicalMemoryBytes,
+	UINT64 availableCommitBytes
+	);
+
+ResourceSet_PerformRelease(
+	HEXINT64 resourceSet
+	);
+
+ResourceSet_PendComplete(
+	HEXINT64 resourceSet,
+	UINT32 resourceSetType,
+	UINT64 availablePhysicalMemoryBytes,
+	UINT64 availableCommitBytes,
+	UINT32 resourcePendMs,
+	UINT32 hostStatePendMs,
+	UINT32 partitionPendMs
+	);
+
+ResourceSet_ImportanceChanging(
+	HEXINT64 resourceSet,
+	HEXINT32 oldImportance,
+	HEXINT32 newImportance
+	);
+
+ResourceSet_LimitsChanging(
+	HEXINT64 resourceSet,
+	HEXINT32 oldLimitFlags,
+	HEXINT32 newLimitFlags,
+	HEXINT64 newLimitsMask
+	);
+
+ResourceSet_Pended_WorkerSynchronize(
+	HEXINT64 hostId,
+	HEXINT64 resourceSet
+	);
+
+ResourceSet_DuplicateRevocation(
+	HEXINT64 resourceSet,
+	UNICODESTRING psmKey,
+	HEXINT64 hostId,
+	UINT32 reason,
+	UINT8 action
+	);
+
+ProcessPendingList(
+	VOID
+	);
+
+OfferLazyDecommit.Worker(
+	VOID
+	);
+
+OfferLazyDecommit.Worker(
+	UINT64 totalDecommitted,
+	UINT32 decommittedHostCount,
+	UINT64 duration100Ns
+	);
+
+OfferLazyDecommit.QueueWorker(
+	VOID
+	);
+
+Host_QuiesceSummary(
+	UNICODESTRING PsmKey,
+	HEXINT64 HostId,
+	UINT8 HostQuiesceState,
+	BOOLEAN QuiesceInterrupted,
+	UINT64 QuiesceTimeElapsedMs,
+	UINT64 PartA_PrivTags
+	);
+
+Enforcement.EmptySignalAbort(
+	HEXINT64 hostId
+	);
+
+ExternalResourceSet_TerminateForWatchdog(
+	UNICODESTRING psmKey,
+	GUID appSessionGuid,
+	UINT64 PartA_PrivTags
+	);
+
+ExternalResourceSet.WatchdogFired(
+	HEXINT64 resourceHandle,
+	UINT32 pid
+	);
+
+QueuedExternalResourceMessage(
+	UINT32 notificationType,
+	HEXINT64 resourceHandle
+	);
+
+ExternalResource.Acquire(
+	HRESULT hresult,
+	UINT32 requestCount,
+	UINT32 requestPriority,
+	UINT32 requestingPid,
+	BOOL32 requestPending,
+	UINT32 pendType
+	);
+
+RmgrSrv.RmQueryHostMemoryLimitValues(
+	NTSTATUS status,
+	UINT64 commitMemoryCapBytes,
+	INT32 commitMemoryLevel
+	);
+
+RmgrSrv.RmQueryHostMemoryLimitValues(
+	HEXINT64 hostId
+	);
+
+GpuMonitorEnabledForHost(
+	HEXINT64 hostId,
+	UINT64 interferenceCount,
+	UINT32 monitoredSetCount
+	);
+
+GpuMonitorDisabled(
+	VOID
+	);
+
+GpuMonitorDisabledForHost(
+	HEXINT64 hostId,
+	UINT64 monitoredSetCount
+	);
+
+GpuMonitorEnabled(
+	VOID
+	);
+
+GpuMonitor.HostFrozen(
+	HEXINT64 hostId
+	);
+
+GpuMonitor.HostResumed(
+	HEXINT64 hostId
+	);
+
+GpuMonitor.GpuUtilization(
+	NTSTATUS status,
+	UINT8 gpuUsePercent,
+	BOOLEAN isGpuBusy
+	);
+
+GpuMonitorInterferenceDetected(
+	HEXINT64 activityHost,
+	UINT64 oldInterference,
+	UINT64 newInterference
+	);
+
+GpuMonitorQueryGpuInterference(
+	VOID
+	);
+
+GpuMonitorUnscheduled(
+	VOID
+	);
+
+GpuMonitorQueryGpuInterference(
+	VOID
+	);
+
+MemoryMonitorPublishedUsageMetrics(
+	NTSTATUS status,
+	UINT32 oldCommitLevel,
+	UINT32 newCommitLevel,
+	UINT32 oldPhysicalLevel,
+	UINT32 newPhysicalLevel
+	);
+
+MemoryMonitorEmpty.TerminateHost(
+	HEXINT64 hostId,
+	UINT64 privateWorkingSetBytes,
+	UINT64 commitUsageBytes
+	);
+
+MemoryMonitorGeneratedRevokeList(
+	HEXINT64 revocableHostList
+	);
+
+MemoryMonitorRebootDebounced(
+	UINT64 commitUsageBytes
+	);
+
+MemoryMonitorRepurposeDecommitCheckQueue(
+	NTSTATUS status
+	);
+
+MemoryMonitorSpuriousWake(
+	VOID
+	);
+
+MemoryMonitorLazyEmpty(
+	UINT32 remediationStatus,
+	UINT64 physicalUsageBytes
+	);
+
+MemoryMonitorCurrentMetrics(
+	UINT64 commitUsageBytes,
+	UINT64 physicalUsageBytes
+	);
+
+MemoryMonitorRebootImminent(
+	UINT64 commitUsageBytes,
+	UINT64 commitPeakBytes,
+	UINT64 commitLimitBytes,
+	UINT64 sharedCommitUsageBytes,
+	UINT64 nonPagedPoolUsageBytes,
+	UINT64 pagedPoolUsageBytes,
+	BOOLEAN rebootEnabled
+	);
+
+MemoryMonitorActiveLowPri.NoEligibleTargets(
+	VOID
+	);
+
+MemoryMonitorRemediation(
+	UINT32 status,
+	UINT64 commitUsageBytes,
+	UINT64 physicalUsageBytes
+	);
+
+MemoryMonitorRemediation(
+	UINT32 action,
+	UINT32 targetMetric,
+	UINT64 commitUsageBytes,
+	UINT64 physicalUsageBytes,
+	UINT64 desiredCommitUsageBytes,
+	UINT64 desiredPhysicalUsageBytes
+	);
+
+MemoryMonitorEmpty.TrimCompressionProcess(
+	UINT32 status,
+	UINT64 physicalUsageBytes,
+	UINT64 desiredPhysicalUsageBytes,
+	UINT64 minimumTrimSizeBytes,
+	UINT64 compressionPrivateWorkingSetBytes,
+	UINT64 requestedTrimSizeBytes
+	);
+
+MemoryMonitorActiveLowPri.Remediating(
+	UINT64 activeLowPriCommitUsageBytes,
+	UINT64 desiredActiveLowPriCommitUsageBytes,
+	UINT32 activityHostCount
+	);
+
+MemoryMonitorEmptyActivityHost(
+	HEXINT64 hostId,
+	UINT64 reclaimedBytes,
+	BOOLEAN trimSystemWorkingSet
+	);
+
+MemoryMonitorEmpty.WaitTimedOut(
+	VOID
+	);
+
+MemoryMonitorActiveLowPri.PostRemediation(
+	UINT32 signaledEvent,
+	UINT64 oldCommitUsageBytes,
+	UINT64 newCommitUsageBytes
+	);
+
+MemoryMonitor.TimerStateChange(
+	UINT32 oldTimerState,
+	UINT32 newTimerState
+	);
+
+MemoryMonitorActiveLowPri.NoActionRequired(
+	UINT64 activeLowPriCommitUsageBytes,
+	UINT64 commitThresholdBytes,
+	UINT32 activityHostCount
+	);
+
+MemoryMonitorRevokeExtra.WaitTimedOut(
+	VOID
+	);
+
+MemoryMonitorEmpty.WaitingForTrim(
+	VOID
+	);
+
+MemoryMonitorRevokeAny.WaitTimedOut(
+	VOID
+	);
+
+MemoryMonitorWaitForEvents(
+	UINT32 eventIds,
+	UINT32 timeoutMs
+	);
+
+MemoryMonitorEmpty.CompressionTrimTooSmall(
+	UINT64 physicalUsageBytes,
+	UINT64 desiredPhysicalUsageBytes,
+	UINT64 minimumTrimSizeBytes,
+	UINT64 compressionPrivateWorkingSetBytes
+	);
+
+MemoryMonitorWaitForEvents(
+	UINT32 waitStatus,
+	UINT32 signaledEvent
+	);
+
+MemoryMonitorActiveLowPri.WaitTimedOut(
+	VOID
+	);
+
+ActivityHost_QoSChanged(
+	NTSTATUS status,
+	HEXINT64 hostId,
+	BOOLEAN enabled
+	);
+
+ActivityHost_QoSTimedOut(
+	HEXINT64 hostId
+	);
+
+Boost_CountedBoostApply(
+	NTSTATUS Status,
+	BOOLEAN Enable,
+	UINT64 StartTimeMs,
+	UINT64 LastEntryTimeMs,
+	UINT64 ActiveBoostCount,
+	BOOLEAN WatchdogScheduled,
+	BOOLEAN PowerBoostEnabled
+	);
+
+Boost_CountedBoostWatchdog(
+	BOOLEAN RemoveBoost,
+	UINT32 TotalBoostTimeMs
+	);
+
+Boost_TimedBoostWatchdog(
+	VOID
+	);
+
+Boost_TimedBoostStart(
+	NTSTATUS Status,
+	UINT64 ExpirationTimeMs
+	);
+
+Boost_CountedBoostWatchdog(
+	VOID
+	);
+
+Boost_TimedBoostWatchdog(
+	BOOLEAN BoostRemoved,
+	BOOLEAN BoostState,
+	UINT64 BoostExpirationMs
+	);
+
+GetMaximumProcessorGroupCountFailed(
+	WIN32ERROR errorCode
+	);
+
+Pdc_AcquireReference(
+	NTSTATUS Status,
+	UNICODESTRING Task,
+	UINT8 ActivityType,
+	UINT32 PdcErrorCode,
+	HEXINT64 ActivationHandle
+	);
+
+ActivityHost_DerefPsm(
+	HEXINT64 hostId,
+	HEXINT64 host
+	);
+
+QuerySerializationConfig(
+	NTSTATUS Status,
+	UINT8 SerializationConfig,
+	UINT8 DiskSpeed,
+	UINT64 PartA_PrivTags
+	);
+
+Process_ForegroundBoost(
+	NTSTATUS Status,
+	HEXINT64 HostId,
+	PID Pid,
+	BOOL32 Enable
+	);
+
+Ham_PdcNotificationClientRegister(
+	NTSTATUS Status,
+	HEXINT64 PdcHandle
+	);
+
+Activity_MessageDropped(
+	HEXINT64 Activity,
+	UINT32 Subject,
+	UINT64 PartA_PrivTags
+	);
+
+ActivityHost_RefPsm(
+	NTSTATUS Status,
+	HEXINT64 HostId,
+	HEXINT64 Host
+	);
+
+MemUtilQueryProcessMetricsFailed(
+	WIN32ERROR errorCode
+	);
+
+Ham_ReleasePdcReference(
+	NTSTATUS Status,
+	HEXINT64 ActivationHandle
+	);
+
+Process_SetHighStorePriority(
+	NTSTATUS Status,
+	PID Pid,
+	HEXINT64 HostId
+	);
+
+Host_Swap(
+	HEXINT64 HostId,
+	BOOL32 SwappedOut
+	);
+
+PublishGlobalGameModeStateFailed(
+	NTSTATUS status
+	);
+
+Ham_RenewPdcReference(
+	NTSTATUS Status,
+	HEXINT64 ActivationHandle,
+	UINT8 ErrorDetail
+	);
+
+ActivityHost_QueryCommitDebtFailed(
+	NTSTATUS status,
+	HEXINT64 hostId
+	);
+
+TrimCompressionProcessPrivateWorkingSet(
+	NTSTATUS status,
+	UINT64 trimSizeBytes
+	);
+
+Host_ChangeApplicationState(
+	NTSTATUS Status,
+	UNICODESTRING PsmKey,
+	HEXINT64 HostId,
+	UINT32 NewState
+	);
+
+Host_SetQuiesceCompleteEvents(
+	UNICODESTRING PsmKey,
+	HEXINT64 HostId
+	);
+
+EnableAsyncInswap(
+	NTSTATUS status
+	);
+
+SetProcessConstrainedCpuSets(
+	NTSTATUS status,
+	PID pid,
+	BOOLEAN enabled
+	);
+
+Process_SetBamState(
+	NTSTATUS Status,
+	PID Pid,
+	HEXINT64 HostId,
+	UINT8 BamState
+	);
+
+ActivityHost_SetPsmApplicationPriority(
+	NTSTATUS status,
+	HEXINT64 hostId,
+	UINT32 applicationPriority
+	);
+
+Ham_PdcNotificationClientUnregister(
+	NTSTATUS Status,
+	HEXINT64 PdcHandle
+	);
+
+Enforcer_FreezeHostJob(
+	NTSTATUS status,
+	BOOLEAN freeze,
+	UNICODESTRING psmKey,
+	HEXINT64 hostId
+	);
+
+Ham_PdcNotificationClientAck(
+	NTSTATUS Status,
+	HEXINT64 PdcHandle,
+	NTSTATUS AckStatus
+	);
+
+Host_RemoveProcessDependency(
+	NTSTATUS Status,
+	PID Caller,
+	PID SourceProcess,
+	PID TargetProcess
+	);
+
+Package_TerminateSync(
+	NTSTATUS Status,
+	HEXINT64 PackageHandle
+	);
+
+HostId_RetrieveDynamicId(
+	VOID
+	);
+
+Host_TerminateSelfOnProcessExit(
+	VOID
+	);
+
+Activity_Close(
+	NTSTATUS Status,
+	HEXINT64 ActivityId
+	);
+
+Host_QueryTaskCompletions(
+	VOID
+	);
+
+Srv_Connect(
+	PID ClientPid,
+	UINT8 ClientType,
+	HEXINT32 Id,
+	NTSTATUS Status
+	);
+
+Package_EnableDebugMode(
+	VOID
+	);
+
+Application_TerminateForBi(
+	NTSTATUS Status,
+	UNICODESTRING PsmKey,
+	UINT32 SessionId,
+	SID UserSid,
+	UINT8 Reason
+	);
+
+HostId_FindOrCreate(
+	NTSTATUS Status,
+	UNICODESTRING PsmKey,
+	UNICODESTRING ResourceGroup,
+	HEXINT64 HostId,
+	SID UserSid,
+	UINT32 SessionId
+	);
+
+Package_Suspend(
+	NTSTATUS Status,
+	HEXINT64 PackageHandle
+	);
+
+Srv_Disconnect(
+	VOID
+	);
+
+Activity_TerminateHost(
+	NTSTATUS Status,
+	HEXINT64 ActivityId,
+	UINT8 TerminateType,
+	HEXINT32 Reason,
+	HEXINT64 TaskCompletionsFilter,
+	HEXINT64 TaskCompletionsApplied,
+	UINT32 HungThreadId
+	);
+
+Host_QueryTaskCompletions(
+	NTSTATUS Status,
+	HEXINT64 RootHostId,
+	HEXINT64 TaskCompletions,
+	HEXINT64 CallerHostId,
+	PID CallerPid,
+	PID RootPid
+	);
+
+Host_AddProcessDependency(
+	VOID
+	);
+
+Srv_RemoveHostDependency(
+	NTSTATUS Status,
+	PID Caller,
+	HEXINT64 SourceHostId,
+	HEXINT64 TargetHostId
+	);
+
+SessionState_LogoffUser(
+	VOID
+	);
+
+Package_TerminateSync(
+	VOID
+	);
+
+Host_TerminateForBi(
+	NTSTATUS Status,
+	UNICODESTRING PsmKey,
+	HEXINT64 HostId,
+	UINT8 Reason
+	);
+
+Activity_Close(
+	VOID
+	);
+
+Host_IsBeingDebugged(
+	VOID
+	);
+
+Activity_SetExternalResourcePriority(
+	NTSTATUS Status,
+	HEXINT64 ActivityId,
+	UINT32 ExternalResourceType,
+	UINT32 Priority
+	);
+
+Package_TerminateForBi(
+	VOID
+	);
+
+Activity_Stop(
+	NTSTATUS Status,
+	HEXINT64 ActivityId
+	);
+
+Package_GetInterruptiveUI(
+	VOID
+	);
+
+Package_QueryState(
+	VOID
+	);
+
+Application_GetInterruptiveUIByAumid(
+	VOID
+	);
+
+Host_RemoveProcessDependency(
+	VOID
+	);
+
+Activity_Stop(
+	VOID
+	);
+
+Host_TerminateIfSuspended(
+	NTSTATUS Status,
+	UINT32 SessionId,
+	BOOLEAN WasHostTerminated
+	);
+
+Activity_TerminateHost(
+	VOID
+	);
+
+Package_TerminateForBi(
+	NTSTATUS Status,
+	UNICODESTRING Package,
+	UINT32 SessionId,
+	SID UserSid,
+	UINT8 Reason
+	);
+
+Application_GetInterruptiveUIByAumid(
+	NTSTATUS Status,
+	UNICODESTRING Aumid,
+	SID UserSid,
+	UINT32 SessionId,
+	BOOLEAN HasInterruptiveUIAccess
+	);
+
+Host_TerminateIfSuspended(
+	VOID
+	);
+
+Activity_UpdateProperties(
+	NTSTATUS Status,
+	HEXINT64 ActivityId,
+	HEXINT32 Flags,
+	HEXINT32 Importance
+	);
+
+Host_RegisterProcess(
+	VOID
+	);
+
+SessionState_LogoffSession(
+	VOID
+	);
+
+Package_EnableServicing(
+	NTSTATUS Status,
+	HEXINT64 PackageHandle
+	);
+
+Host_TerminateOnProcessExit(
+	VOID
+	);
+
+Host_AddDynamicDependency(
+	NTSTATUS Status,
+	PID Caller,
+	HEXINT64 SourceHostId,
+	HEXINT64 TargetHostId,
+	BOOLEAN CustomPropertiesSpecified,
+	HEXINT32 CustomPropertyFlags
+	);
+
+Activity_CreateWhileServicing(
+	UNICODESTRING PsmKey,
+	HEXINT64 HostId,
+	UINT64 PartA_PrivTags
+	);
+
+Application_GetInterruptiveUI(
+	NTSTATUS Status,
+	UNICODESTRING PsmKey,
+	SID UserSid,
+	UINT32 SessionId,
+	BOOLEAN HasInterruptiveUIAccess
+	);
+
+Activity_StartAsync(
+	NTSTATUS Status,
+	HEXINT64 ActivityId,
+	UINT32 DenyReason,
+	UINT64 CommitRequested,
+	UINT8 StartType
+	);
+
+Package_QueryActiveApps(
+	VOID
+	);
+
+HostId_RetrieveDynamicId(
+	NTSTATUS Status,
+	HEXINT64 HostId,
+	SID UserSid,
+	UINT32 SessionId,
+	GUID DynamicId
+	);
+
+Srv_Connect(
+	VOID
+	);
+
+Activity_SetExternalResourcePriority(
+	VOID
+	);
+
+HostId_FindOrCreate(
+	VOID
+	);
+
+Package_CloseHandle(
+	NTSTATUS Status,
+	HEXINT64 PackageHandle
+	);
+
+SessionState_LogoffUser(
+	NTSTATUS Status,
+	UINT32 SessionId,
+	SID UserSid
+	);
+
+Host_IsBeingDebugged(
+	NTSTATUS Status,
+	UNICODESTRING PsmKey,
+	UINT32 HostJobType,
+	HEXINT64 HostId,
+	BOOLEAN IsHostBeingDebugged
+	);
+
+SessionState_LogoffSession(
+	NTSTATUS Status,
+	UINT32 SessionId
+	);
+
+Activity_StartAsync(
+	VOID
+	);
+
+Package_CloseHandle(
+	VOID
+	);
+
+HostId_CreateSingleUse(
+	HEXINT64 HostId
+	);
+
+Host_AddProcessDependency(
+	NTSTATUS Status,
+	PID Caller,
+	PID SourceProcess,
+	PID TargetProcess
+	);
+
+Package_OpenHandle(
+	VOID
+	);
+
+Package_GetInterruptiveUI(
+	NTSTATUS Status,
+	UNICODESTRING PackageFamilyName,
+	SID UserSid,
+	UINT32 SessionId,
+	BOOLEAN HasInterruptiveUIAccess
+	);
+
+Host_RegisterProcess(
+	NTSTATUS Status,
+	PID Process,
+	UNICODESTRING PsmKey,
+	HEXINT64 HostId,
+	UINT32 SessionId,
+	SID Sid,
+	HEXINT32 ActivateFlags,
+	GUID AppSessionId,
+	HEXINT64 Generation,
+	UINT64 PartA_PrivTags
+	);
+
+Package_EnableDebugMode(
+	NTSTATUS Status,
+	HEXINT64 PackageHandle
+	);
+
+Srv_RemoveHostDependency(
+	VOID
+	);
+
+Activity_ResetExternalResourcePriority(
+	NTSTATUS Status,
+	HEXINT64 ActivityId,
+	UINT8 ExternalResourceType
+	);
+
+Activity_Create(
+	VOID
+	);
+
+Activity_ResetExternalResourcePriority(
+	VOID
+	);
+
+Host_TerminateSelf(
+	NTSTATUS Status,
+	PID Caller,
+	HEXINT64 HostId
+	);
+
+Application_GetState(
+	NTSTATUS Status,
+	UNICODESTRING PsmKey,
+	SID UserSid,
+	UINT32 SessionId,
+	UINT8 ApplicationState,
+	HEXINT32 TerminateReason
+	);
+
+Application_TerminateForBi(
+	VOID
+	);
+
+Package_GetDebugMode(
+	VOID
+	);
+
+Srv_Disconnect(
+	PID ClientPid,
+	UINT8 ClientType,
+	HEXINT32 Id
+	);
+
+Host_AddDynamicDependency(
+	VOID
+	);
+
+Package_QueryActiveApps(
+	NTSTATUS Status,
+	HEXINT64 PackageHandle,
+	HEXINT32 Flags,
+	UINT32 AppCount
+	);
+
+Host_TerminateForBi(
+	VOID
+	);
+
+Package_QueryState(
+	NTSTATUS Status,
+	HEXINT64 PackageHandle,
+	UINT8 PackageState
+	);
+
+Host_TerminateSelfOnProcessExit(
+	NTSTATUS Status,
+	HEXINT64 DependentHostId,
+	HEXINT64 DependentHostGeneration,
+	PID RequiredProcess,
+	HEXINT64 RequiredHostId,
+	HEXINT64 RequiredHostGeneration
+	);
+
+Application_GetState(
+	VOID
+	);
+
+Package_EnableServicing(
+	VOID
+	);
+
+Host_TerminateOnProcessExit(
+	NTSTATUS Status,
+	HEXINT64 DependentHostId,
+	HEXINT64 DependentHostGeneration,
+	PID RequiredProcess,
+	HEXINT64 RequiredHostId,
+	HEXINT64 RequiredHostGeneration
+	);
+
+Host_EstimateQuiesceTime(
+	NTSTATUS Status,
+	PID Caller,
+	HEXINT64 HostId,
+	UINT32 RemainingQuiesceTimeMs
+	);
+
+Activity_Create(
+	NTSTATUS Status,
+	HEXINT64 ActivityId,
+	UNICODESTRING PsmKey,
+	UINT32 HostJobType,
+	HEXINT64 HostId,
+	UNICODESTRING Description,
+	UNICODESTRING ResourcePolicyName,
+	HEXINT32 ActivityPropertyFlags,
+	HEXINT32 ClientId,
+	PID TargetProcess,
+	PID DonorProcess,
+	BOOLEAN SelfDonation,
+	SID UserSid
+	);
+
+Package_OpenHandle(
+	NTSTATUS Status,
+	HEXINT64 PackageHandle,
+	UNICODESTRING PackageFullName,
+	UINT32 SessionId,
+	SID Sid
+	);
+
+Application_GetInterruptiveUI(
+	VOID
+	);
+
+Package_Suspend(
+	VOID
+	);
+
+Package_GetDebugMode(
+	UNICODESTRING Package,
+	UINT32 SessionId,
+	SID UserSid,
+	BOOLEAN PackageDebugMode
+	);
+
+Host_TerminateSelf(
+	VOID
+	);
+
+Activity_UpdateProperties(
+	VOID
+	);
+
+Host_EstimateQuiesceTime(
+	VOID
+	);
+
+DplKeyStateChanged(
+	NTSTATUS Status,
+	UINT32 SessionId,
+	UINT32 DplKeysLocked
+	);
+
+OplockWatcherCallback(
+	VOID
+	);
+
+SystemStateChanged(
+	HEXINT32 NewSystemState
+	);
+
+DplKeyStateChanged(
+	VOID
+	);
+
+OplockWatcherCallback(
+	NTSTATUS Status
+	);
+
+TerminateIfSuspended_NotFound(
+	PID ProcessId,
+	UINT32 TerminateType,
+	HEXINT32 TerminateReason,
+	NTSTATUS Status
+	);
+
+SystemStateChanged(
+	VOID
+	);
+
+Thread_BoostPriority(
+	TID Tid
+	);
+
+Fail_PriorityBoost(
+	NTSTATUS Status
+	);
+
+Process_BoostPriority(
+	PID Pid,
+	UINT8 ProcessNewPriority
+	);
+
+Host_Rundown(
+	UNICODESTRING PsmKey,
+	HEXINT64 HostId,
+	UINT8 HostType,
+	UINT32 SessionId,
+	SID Sid,
+	HEXINT64 Generation
+	);
+
+Host_DuplicateTerminateRequest(
+	HEXINT64 HostId,
+	UINT8 RequestedTerminatedType,
+	UINT8 QueuedTerminateType
+	);
+
+Host_Terminated(
+	UNICODESTRING PsmKey,
+	HEXINT64 HostId,
+	UINT8 HostType,
+	UINT8 TerminateType,
+	HEXINT32 TerminateReason,
+	UINT32 TerminateQueueDurationMs,
+	UINT32 TerminateDurationMs,
+	UINT8 BasePriority,
+	HEXINT64 Generation,
+	UNICODESTRING Aumid,
+	UINT64 PartA_PrivTags
+	);
+
+Host_SuspendWaitChange(
+	HEXINT64 HostId,
+	BOOLEAN IsSuspendWaiter
+	);
+
+Host_TerminateWorker(
+	VOID
+	);
+
+Process_IsDebuggerAttached(
+	BOOL32 IsAttached,
+	PID ProcessId
+	);
+
+Host_ShouldDplPolicyApply(
+	UNICODESTRING PsmKey,
+	HEXINT64 HostId,
+	BOOLEAN ShouldPolicyApply,
+	UINT8 EdpReason,
+	UINT8 DplReason
+	);
+
+Host_TerminateRequest(
+	UNICODESTRING PsmKey,
+	HEXINT64 HostId,
+	UINT32 HostJobType,
+	PID RequestorPid,
+	UINT8 TerminateType,
+	HEXINT32 TerminateReason,
+	HEXINT64 Generation,
+	UINT64 PartA_PrivTags
+	);
+
+Host_CommitLevelChanged(
+	UNICODESTRING PsmKey,
+	UINT32 HostType,
+	HEXINT64 HostId,
+	UINT8 CommitLevel,
+	UINT64 CommitUseBytes,
+	UINT64 CommitTargetBytes,
+	UINT64 CommitLimitBytes
+	);
+
+Host_WaitQuiesceTurn(
+	HEXINT64 RmHamHostGetId(Host)
+	);
+
+Host_NoOpTerminate(
+	UNICODESTRING PsmKey,
+	HEXINT64 HostId,
+	UINT8 HostType,
+	UINT8 TerminateType,
+	HEXINT32 TerminateReason
+	);
+
+Rundown_Host(
+	UNICODESTRING PsmKey,
+	UINT32 JobType,
+	HEXINT64 HostId,
+	HEXINT32 CurrentState,
+	HEXINT32 InProgressState,
+	TID StateWorkerThread,
+	UINT8 TerminateReason,
+	HEXINT64 Generation
+	);
+
+Host_QueryTerminatingProcessCount(
+	UINT64 TerminatingProcessCount,
+	UINT64 TotalProcessCount
+	);
+
+Host_EnforcementDelayed(
+	HEXINT64 HostId,
+	UINT64 ReportedLimit,
+	UINT64 ReportedTarget,
+	UINT64 EnforcedLimit,
+	UINT64 EnforcedTarget
+	);
+
+Host_EnforcementTimer(
+	UNICODESTRING PsmKey,
+	UINT32 JobType,
+	HEXINT64 HostId
+	);
+
+Rundown_ProcessHost(
+	PID ProcessId,
+	HEXINT64 HostId
+	);
+
+Host_CacheTimer(
+	VOID
+	);
+
+Host_ExitedNotification(
+	VOID
+	);
+
+Activity_StartPended(
+	HEXINT64 ActivityId,
+	UINT32 StartResult
+	);
+
+Host_TerminateWorker(
+	HEXINT64 HostId,
+	BOOLEAN ReferenceSucceeded
+	);
+
+Host_ExitedNotification(
+	UNICODESTRING PsmKey,
+	HEXINT64 HostId,
+	UINT8 HostType
+	);
+
+Host_CacheTimer(
+	HEXINT64 HostId
+	);
+
+Host_TerminatingWhenTerminateRequested(
+	HEXINT64 HostId
+	);
+
+Host_RemovePpleCustomTarget(
+	NTSTATUS Status,
+	HEXINT64 PpleHost,
+	HEXINT64 DonorHost,
+	UINT64 DonorHighCommitEstimate
+	);
+
+Host_CollectErrorReport(
+	VOID
+	);
+
+Host_SwapPended(
+	HEXINT64 HostId,
+	HEXINT32 Importance,
+	UINT32 SwapCount
+	);
+
+HostTerminateIfSuspended(
+	UNICODESTRING PsmKey,
+	BOOL32 TerminationQueued,
+	UINT32 TerminateType,
+	HEXINT32 TerminateReason
+	);
+
+Host_UpdateQuiesceState(
+	UNICODESTRING PsmKey,
+	HEXINT64 HostId,
+	UINT8 OldQuiesceState,
+	UINT64 OldQuiesceSetTimeMs,
+	UINT64 OldQuiesceElapsedTimeMs,
+	UINT8 NewQuiesceState,
+	UINT64 QuiesceTimeSetMs,
+	UINT64 QuiesceTimeElapsedMs
+	);
+
+Host_DumpCollectionFailed(
+	NTSTATUS Status,
+	HEXINT32 FailurePoint,
+	UNICODESTRING PsmKey,
+	HEXINT64 HostId,
+	UINT8 HostType,
+	HEXINT32 TerminateReason,
+	UINT64 PartA_PrivTags
+	);
+
+Host_ForceTerminateForCs(
+	HEXINT64 OffenderActivityId,
+	UNICODESTRING OffenderActivityDescription,
+	UNICODESTRING PsmKey,
+	HEXINT64 HostId,
+	UINT64 PartA_PrivTags
+	);
+
+Host_NotifiedQuiesceComplete(
+	UNICODESTRING PsmKey,
+	HEXINT64 HostId
+	);
+
+Host_Created(
+	UNICODESTRING PsmKey,
+	HEXINT64 HostId,
+	UINT8 HostType,
+	UINT32 SessionId,
+	SID Sid
+	);
+
+Rundown_Activity(
+	HEXINT64 ActivityId,
+	UNICODESTRING BasePolicyName,
+	UNICODESTRING Description,
+	HEXINT32 Flags,
+	INT8 State,
+	INT8 PendState,
+	HEXINT32 Importance,
+	BOOLEAN IsChangeInProgress,
+	HEXINT64 DependentHost,
+	HEXINT64 Generation,
+	HEXINT64 ActiveSet,
+	HEXINT32 ClientId,
+	UINT64 IoRequest,
+	UINT64 CommitRequest
+	);
+
+Dependency_SuspendWaitCount(
+	HEXINT64 DependencyGroupId,
+	HEXINT32 WaitCount,
+	HEXINT64 ChangingHost,
+	BOOLEAN NewSuspendWaitState
+	);
+
+Host_EnforcementTimer(
+	VOID
+	);
+
+Host_CollectErrorReport(
+	HEXINT64 HostId,
+	HEXINT32 TerminateReason
+	);
+
+Dependency_Created(
+	HEXINT64 Activity,
+	HEXINT64 DependencyGroup,
+	HEXINT64 SourceHost,
+	HEXINT64 TargetHost,
+	UINT8 DependencyType
+	);
+
+Dependency_WorkerThread(
+	VOID
+	);
+
+Dependency_Removed(
+	HEXINT64 Activity,
+	HEXINT64 DependencyGroup
+	);
+
+Dependency_ChangeState(
+	HEXINT64 Activity,
+	UINT8 Action
+	);
+
+Dependency_WorkerIteration(
+	NTSTATUS Status,
+	HEXINT64 Id,
+	HEXINT64 ChangeStamp
+	);
+
+Dependency_WorkerThread(
+	HEXINT64 Id
+	);
+
+Dependency_WorkerIteration(
+	VOID
+	);
+
+Application_ReadTerminateFailed(
+	NTSTATUS Status,
+	UNICODESTRING PsmKey,
+	SID UserSid,
+	UINT64 PartA_PrivTags
+	);
+
+Application_PublishedInterruptiveUI(
+	UNICODESTRING PsmKey,
+	SID UserSid,
+	UINT32 SessionId,
+	BOOLEAN HasInterruptiveUIAccess
+	);
+
+Application_EnsureLicense(
+	NTSTATUS Status,
+	UNICODESTRING PsmKey,
+	HEXINT64 HostId
+	);
+
+Application_RundownLicense(
+	NTSTATUS Status,
+	UNICODESTRING PsmKey,
+	HEXINT64 HostId
+	);
+
+App_WaitForLicenseWorker(
+	UNICODESTRING PsmKey,
+	HEXINT64 HostId
+	);
+
+Application_BeginLicense(
+	NTSTATUS Status,
+	UNICODESTRING PsmKey,
+	HEXINT64 HostId,
+	UINT8 License
+	);
+
+Application_SaveTerminate(
+	NTSTATUS Status,
+	HEX TerminateReason,
+	UNICODESTRING PsmKey,
+	SID UserSid
+	);
+
+Application_LicenseSucceededOnRetry(
+	NTSTATUS Status,
+	UNICODESTRING PsmKey,
+	HEXINT64 HostId,
+	UINT8 License,
+	UINT32 RetryCount
+	);
+
+Application_SaveTerminateFailed(
+	NTSTATUS Status,
+	UNICODESTRING PsmKey,
+	SID UserSid,
+	UINT64 PartA_PrivTags
+	);
+
+Application_SuspendLicense(
+	NTSTATUS Status,
+	UNICODESTRING PsmKey,
+	HEXINT64 HostId
+	);
+
+Activity_ResourcesAcquired(
+	HEXINT64 Activity,
+	UINT8 StartResult,
+	UINT8 CurrentState,
+	UINT8 PendState,
+	HEXINT64 ContextSetId
+	);
+
+Activity_RmRequestStop(
+	NTSTATUS Status,
+	HEXINT64 ActivityId,
+	UINT8 CurrentState,
+	HEXINT64 SetId,
+	HEXINT64 ActiveSetId
+	);
+
+Activity_RmRequestStop(
+	VOID
+	);
+
+Activity_ResourcesAcquired(
+	VOID
+	);
+
+Package_StateWorker(
+	VOID
+	);
+
+Package_StateWorker(
+	UNICODESTRING FamilyName,
+	HEXINT32 StateSummary
+	);
+
+Connect_QueryClientInfoFailed(
+	NTSTATUS Status
+	);
+
+StateChangeConnect_QueryClientInfoFailed(
+	NTSTATUS Status
+	);
+
+EeConnect_QueryClientInfoFailed(
+	NTSTATUS Status
+	);
+
+Session_BackgroundAccessStateChanged(
+	VOID
+	);
+
+Package_BamRegistrationFailed(
+	HRESULT hr,
+	UNICODESTRING Package,
+	UINT32 SessionId,
+	SID UserSid
+	);
+
+Session_BackgroundAccessStateChanged(
+	HRESULT Hr,
+	UINT32 SessionId,
+	UNICODESTRING UserSid,
+	UNICODESTRING PackageName,
+	UINT32 NewState
+	);
+
+Activity_ExpirationTimerCallback(
+	VOID
+	);
+
+Activity_StateChanged(
+	HEXINT64 Activity,
+	UINT8 NewState,
+	UINT8 OldState
+	);
+
+Activity_ExpirationTimerSet(
+	HEXINT64 ActivityId,
+	UINT32 DelayMs
+	);
+
+Activity_StopRequest(
+	HEXINT64 ActivityId,
+	PID RequestorPid,
+	UINT8 StopRequestType,
+	UINT8 StopRequestReason
+	);
+
+Activity_StateChanged(
+	HEXINT64 Activity,
+	UINT8 NewState,
+	UINT8 OldState,
+	UINT8 PendState
+	);
+
+Activity_Expired(
+	HEXINT64 ActivityId
+	);
+
+Activity_DuplicateStop(
+	HEXINT64 ActivityId,
+	PID RequestorPid,
+	HEX StopRequestType
+	);
+
+Activity_Closed(
+	HEXINT64 ActivityId,
+	HEXINT64 HostId,
+	HEXINT64 HostGeneration,
+	UNICODESTRING Description,
+	UNICODESTRING BasePolicyName,
+	HEXINT32 Flags,
+	HEXINT64 DependentHost
+	);
+
+Activity_ExpirationTimerCallback(
+	HEXINT64 ActivityId
+	);
+
+Activity_ExpirationTimerAllocationFailed(
+	NTSTATUS Status,
+	HEXINT64 ActivityId
+	);
+
+Activity_Invalidated(
+	HEXINT64 ActivityId
+	);
+
+User_RefreshContextToken(
+	NTSTATUS Status,
+	UINT32 SessionId,
+	SID Sid,
+	HEXINT64 ContextToken,
+	HEXINT64 OldContextToken
+	);
+
+Dependency_ProcessExit(
+	VOID
+	);
+
+Dependency_ProcessExit(
+	PID SourceProcess,
+	PID TargetProcess,
+	HEXINT64 SourceHost,
+	HEXINT64 SourceHost
+	);
+
+HostId_Invalidated(
+	HEXINT64 HostId,
+	UNICODESTRING PsmKey,
+	UNICODESTRING ResourceGroup
+	);
+
+Wake_RunawayDetected(
+	HEXINT64 HostId,
+	UINT64 KernelCounter
+	);
+
+Wake_IgnoredSuspending(
+	HEXINT64 HostId
+	);
+
+Wake_DebounceExpired(
+	HEXINT64 HostId
+	);
+
+Pdc_Worker(
+	VOID
+	);
+
+Pdc_OnEnterExitPlmPhase(
+	NTSTATUS Status,
+	UINT32 PdcState
+	);
+
+Pdc_ControlCallback(
+	VOID
+	);
+
+Pdc_PlmPhaseSummary(
+	UINT32 ElapsedTimeMs,
+	UINT64 PartA_PrivTags
+	);
+
+Pdc_HostBlocking(
+	UNICODESTRING PsmKey,
+	UINT32 JobType,
+	HEXINT64 HostId,
+	UINT32 BlockType
+	);
+
+Pdc_UpdateState(
+	BOOLEAN IsBlocked,
+	UINT32 ElapsedTimeMs
+	);
+
+Pdc_OnEnterExitPlmPhase(
+	VOID
+	);
+
+Pdc_ControlCallback(
+	HEXINT32 ControlFlags
+	);
+
+Pdc_Worker(
+	VOID
+	);
+
+Pdc_HostLateSuspendBlock(
+	UNICODESTRING PsmKey,
+	UINT32 JobType,
+	HEXINT64 HostId,
+	UINT32 BlockType,
+	UINT32 ElapsedTimeMs,
+	UINT64 PartA_PrivTags
+	);
+
+SleepStudy_UuidCreationFailed(
+	HEXINT32 Status
+	);
+
+SleepStudy_BlockerEntryCreateFailed(
+	NTSTATUS Status
+	);
+
+Ar_HamCallback(
+	NTSTATUS Status,
+	HEXINT64 ArActivityId,
+	UINT8 NewState,
+	UINT8 OldState,
+	UINT32 Subject
+	);
+
+Ar_CsStateChangeCallback(
+	BOOL32 IsInCs
+	);
+
+Ar_ManagerRundown(
+	VOID
+	);
+
+Ar_HamCallback(
+	VOID
+	);
+
+Ar_StopStart(
+	NTSTATUS Status,
+	HEXINT64 ArActivityId
+	);
+
+Ar_ManagerRundown(
+	VOID
+	);
+
+Ar_ManagerRundown(
+	NTSTATUS Status,
+	HEXINT64 ArActivityId
+	);
+
+Ar_CsStateChangeCallback(
+	VOID
+	);
+
+ArActivity_Create(
+	NTSTATUS Status,
+	HEXINT64 ActivityId,
+	UNICODESTRING PsmKey,
+	UINT64 HostJobType,
+	HEXINT64 HostId
+	);
+
+ArActivity_Create(
+	VOID
+	);
+
+ActivityAllocate(
+	GUID SessionGuid,
+	UINT32 ClientId,
+	SID Sid,
+	UINT32 ActivityId,
+	UINT64 ActivityHandle,
+	UNICODESTRING SimpleActivityDescription,
+	NTSTATUS Status
+	);
+
+ActivityQueryWindowClosedReasons(
+	GUID SessionGuid
+	);
+
+SrvRegister(
+	GUID SessionGuid,
+	UINT32 ClientId,
+	SID Sid,
+	UNICODESTRING SimpleClientDescription,
+	NTSTATUS Status
+	);
+
+ActivityStop(
+	GUID SessionGuid,
+	UINT32 ClientId,
+	SID Sid,
+	UINT32 ActivityId,
+	UINT64 ActivityHandle,
+	UINT64 TimeSpentReady,
+	UINT64 TimeSpentNotReady,
+	UINT64 StartTime,
+	UINT64 CurrentTime,
+	UINT32 StartsCount,
+	UINT32 HighestStartReason,
+	UINT32 Flags,
+	UNICODESTRING SimpleTaskDescription,
+	UNICODESTRING SimpleSubTaskDescription,
+	NTSTATUS Status,
+	UINT64 PartA_PrivTags
+	);
+
+ActivityStop(
+	GUID SessionGuid
+	);
+
+ActivityQueryWindowClosedReasons(
+	GUID SessionGuid,
+	UINT32 ClientId,
+	SID Sid,
+	UINT32 ActivityId,
+	UINT64 ActivityHandle,
+	NTSTATUS Status,
+	UINT32 Reasons
+	);
+
+ActivityWindowClosedReasonUnsubscribe(
+	GUID SessionGuid,
+	UINT32 ClientId,
+	SID Sid,
+	UINT32 ActivityId,
+	UINT64 ActivityHandle,
+	NTSTATUS Status
+	);
+
+ActivityFree(
+	GUID SessionGuid
+	);
+
+RegistrationReadyQueueRemove(
+	GUID SessionGuid,
+	UINT64 RegistrationId
+	);
+
+ActivityStart(
+	GUID SessionGuid,
+	UINT32 ClientId,
+	SID Sid,
+	UINT32 ActivityId,
+	UINT64 ActivityHandle,
+	UNICODESTRING SimpleTaskDescription,
+	UNICODESTRING SimpleSubTaskDescription,
+	UINT32 Reason,
+	UINT32 FalseConditions,
+	UINT64 CurrentInterruptTime,
+	UINT64 CurrentUnbiasedTime,
+	UINT64 ReadyInterruptTime,
+	UINT64 ReadyUnbiasedTime,
+	NTSTATUS Status
+	);
+
+RegistrationReadyQueueAdd(
+	GUID SessionGuid,
+	UINT64 RegistrationId
+	);
+
+ActivityFree(
+	GUID SessionGuid,
+	UINT32 ClientId,
+	SID Sid,
+	UINT32 ActivityId,
+	UINT64 ActivityHandle,
+	NTSTATUS Status
+	);
+
+ActivityAllocate(
+	GUID SessionGuid
+	);
+
+SrvRegister(
+	GUID SessionGuid
+	);
+
+ActivityWindowClosedReasonSubscribe(
+	GUID SessionGuid,
+	UINT32 ClientId,
+	SID Sid,
+	UINT32 ActivityId,
+	UINT64 ActivityHandle,
+	NTSTATUS Status
+	);
+
+SrvUnregister(
+	GUID SessionGuid,
+	UINT32 ClientId,
+	SID Sid
+	);
+
+SrvUnregister(
+	GUID SessionGuid
+	);
+
+ActivityWindowClosedReasonSubscribe(
+	GUID SessionGuid
+	);
+
+ActivityStart(
+	GUID SessionGuid
+	);
+
+ActivityWindowClosedReasonUnsubscribe(
+	GUID SessionGuid
+	);
+
+ActivityCleanup(
+	GUID SessionGuid,
+	UINT64 ActivityHandle,
+	UINT32 PolicyId,
+	UINT32 OutstandingStartCount,
+	UINT32 Flags
+	);
+
+ActivityCreate(
+	GUID SessionGuid,
+	UINT64 ActivityHandle,
+	UINT32 PolicyId,
+	UINT64 RegistrationId,
+	NTSTATUS Status
+	);
+
+ActivityUpdate(
+	GUID SessionGuid,
+	UINT64 ActivityHandle,
+	UINT32 PolicyId,
+	UINT64 RegistrationId,
+	UINT32 State,
+	BOOLEAN OldStatus,
+	BOOLEAN NewStatus,
+	UINT32 DesiredStatesCount,
+	UINT32 OldSatisfiedCount,
+	UINT32 NewSatisfiedCount,
+	UINT64 LastLogTime,
+	UINT64 CurrentTime
+	);
+
+ActivityCleanup(
+	GUID SessionGuid,
+	UINT64 ActivityHandle,
+	UINT32 PolicyId,
+	UINT32 OutstandingStartCount,
+	UINT32 Flags,
+	UINT64 PartA_PrivTags
+	);
+
+RegistrationRundown(
+	GUID SessionGuid,
+	UINT64 RegistrationId
+	);
+
+RegistrationNotify(
+	GUID SessionGuid,
+	UINT64 RegistrationId,
+	BOOLEAN NotificationType,
+	NTSTATUS Status,
+	UINT64 PartA_PrivTags
+	);
+
+RegistrationRundown(
+	GUID SessionGuid,
+	UINT64 RegistrationId
+	);
+
+RegistrationStart(
+	GUID SessionGuid,
+	UINT64 RegistrationId,
+	NTSTATUS Status
+	);
+
+RegistrationRemoveActivity(
+	GUID SessionGuid,
+	UINT64 RegistrationId,
+	UINT32 PolicyId
+	);
+
+RegistrationNotify(
+	GUID SessionGuid,
+	UINT64 RegistrationId,
+	BOOLEAN NotificationType,
+	NTSTATUS Status
+	);
+
+RegistrationStop(
+	GUID SessionGuid,
+	UINT64 RegistrationId
+	);
+
+RegistrationNotifyWindowClosedReasonChange(
+	GUID SessionGuid,
+	UINT32 ClientId,
+	SID Sid,
+	UINT32 ActivityId,
+	UINT64 ActivityHandle,
+	HEXINT32 QuietModeData,
+	NTSTATUS Status
+	);
+
+RegistrationAddActivity(
+	GUID SessionGuid,
+	UINT64 RegistrationId,
+	UINT32 PolicyId
+	);
+
+StateMonitorStart(
+	GUID SessionGuid,
+	UINT32 State,
+	BINARY InitialState,
+	NTSTATUS Status
+	);
+
+StateMonitorActivityRemove(
+	GUID SessionGuid,
+	UINT32 State,
+	BOOLEAN LastListener
+	);
+
+StateMonitorStateRundown(
+	GUID SessionGuid,
+	UINT32 State,
+	BINARY PreviousState,
+	UINT64 LastLogTime,
+	BINARY NewState,
+	UINT64 CurrentTime,
+	UINT64 PartA_PrivTags
+	);
+
+StateMonitorStateRundown(
+	GUID SessionGuid,
+	UINT32 State,
+	BINARY PreviousState,
+	UINT64 LastLogTime,
+	BINARY NewState,
+	UINT64 CurrentTime
+	);
+
+StateMonitorStateSet(
+	GUID SessionGuid,
+	UINT32 State,
+	BINARY PreviousState,
+	UINT64 LastLogTime,
+	BINARY NewState,
+	UINT64 CurrentTime,
+	UINT64 PartA_PrivTags
+	);
+
+StateMonitorStop(
+	GUID SessionGuid,
+	UINT32 State,
+	BINARY PreviousState,
+	UINT64 LastLogTime,
+	BINARY NewState,
+	UINT64 CurrentTime,
+	UINT64 PartA_PrivTags
+	);
+
+StateMonitorStateSet(
+	GUID SessionGuid,
+	UINT32 State,
+	BINARY PreviousState,
+	UINT64 LastLogTime,
+	BINARY NewState,
+	UINT64 CurrentTime
+	);
+
+CrmStateMonitorSystemDiskUsageIndexGetFailure(
+	GUID SessionGuid,
+	NTSTATUS Status
+	);
+
+StateMonitorStop(
+	GUID SessionGuid,
+	UINT32 State,
+	BINARY PreviousState,
+	UINT64 LastLogTime,
+	BINARY NewState,
+	UINT64 CurrentTime
+	);
+
+CrmStateMonitorSystemDiskUsageIdleTimeGetFailure(
+	GUID SessionGuid,
+	NTSTATUS Status
+	);
+
+StateMonitorListenerAdd(
+	GUID SessionGuid,
+	UINT32 State
+	);
+
+StateChangeTriage(
+	NTSTATUS status,
+	UINT8 index,
+	UINT32 changeStamp
+	);
+
+SystemStateTrackerPublish(
+	NTSTATUS Status,
+	HEXINT32 systemState
+	);
+
+SystemStateTrackerStateChanged(
+	VOID
+	);
+
+SystemStateTrackerStateChanged(
+	UINT8 trackerState,
+	HEXINT32 oldSystemState,
+	HEXINT32 newSystemState
+	);
+
+SystemStateTrackerStart(
+	VOID
+	);
+
+SystemStateTrackerStart(
+	NTSTATUS status
+	);
+
+SystemStateTrackerCreate(
+	NTSTATUS status
+	);
+
+SystemStateTrackerCreate(
+	VOID
+	);
+
+Assert(
+	UINT32 assertVersion,
+	UINT32 rva,
+	UINT32 timestamp,
+	UINT32 imageSize,
+	ANSISTRING imageName,
+	UINT32 count,
+	UINT32 totalHits,
+	UINT32 ModuleCollection,
+	UINT32 GlobalCollection
+	);
+
+QueryClientInformationFailure(
+	GUID SessionGuid,
+	NTSTATUS Status
+	);
+

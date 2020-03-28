@@ -1,0 +1,127 @@
+ProviderNames:
+	Microsoft.Windows.ApplicationModel.Store.Telemetry
+	TelemetryAssert
+	TelemetryAssertDiagTrack
+
+
+
+**** Events *****
+PurchaseOperation(
+	ANSISTRING __TlgCV__,
+	UNICODESTRING PFN,
+	JSON Request,
+	JSON Response,
+	HRESULT HResultOfOperation
+	);
+
+Verbose(
+	UNICODESTRING ErrorMessage,
+	HRESULT ErrorCode,
+	ANSISTRING ErrorLocation,
+	UINT32 LineNumber,
+	ANSISTRING ErrorMethod
+	);
+
+OutgoingServiceRequest(
+	ANSISTRING __TlgCV__,
+	PID PartB_Ms.Qos.OutgoingServiceRequest,
+	UNICODESTRING targetUri,
+	INT32 latencyMs,
+	INT32 protocolStatusCode,
+	INT32 responseSizeBytes,
+	BOOLEAN succeeded
+	);
+
+Warning(
+	UNICODESTRING ErrorMessage,
+	HRESULT ErrorCode,
+	ANSISTRING ErrorLocation,
+	UINT32 LineNumber,
+	ANSISTRING ErrorMethod
+	);
+
+Info(
+	UNICODESTRING ErrorMessage,
+	HRESULT ErrorCode,
+	ANSISTRING ErrorLocation,
+	UINT32 LineNumber,
+	ANSISTRING ErrorMethod
+	);
+
+Error(
+	PID PartB_Ms.Telemetry.Error,
+	UNICODESTRING ErrorMessage,
+	HRESULT ErrorCode,
+	ANSISTRING ErrorLocation,
+	UINT32 LineNumber,
+	ANSISTRING ErrorMethod
+	);
+
+EndOperation(
+	ANSISTRING __TlgCV__,
+	ANSISTRING Op,
+	UNICODESTRING PFN,
+	ANSISTRING PN1,
+	UNICODESTRING P1,
+	ANSISTRING PN2,
+	UNICODESTRING P2,
+	ANSISTRING PN3,
+	UNICODESTRING P3,
+	ANSISTRING PN4,
+	UNICODESTRING P4,
+	HRESULT ErrorCode
+	);
+
+ApiInvoked(
+	ANSISTRING __TlgCV__,
+	ANSISTRING API,
+	UNICODESTRING PFN,
+	ANSISTRING PN1,
+	UNICODESTRING P1,
+	ANSISTRING PN2,
+	UNICODESTRING P2,
+	ANSISTRING PN3,
+	UNICODESTRING P3,
+	ANSISTRING PN4,
+	UNICODESTRING P4,
+	HRESULT ErrorCode
+	);
+
+BeginOperation(
+	ANSISTRING __TlgCV__,
+	ANSISTRING Op,
+	UNICODESTRING PFN,
+	ANSISTRING PN1,
+	UNICODESTRING P1,
+	ANSISTRING PN2,
+	UNICODESTRING P2,
+	ANSISTRING PN3,
+	UNICODESTRING P3,
+	ANSISTRING PN4,
+	UNICODESTRING P4
+	);
+
+WinstoreAuth_SendTokenRequestAndGetTickets_Failure(
+	HRESULT hr
+	);
+
+WinstoreAuth_UserAuthRequired(
+	HRESULT HRESULT_FROM_WIN32(1317L)
+	);
+
+WinstoreAuth_SLSFailure(
+	HRESULT GetLastError()
+	);
+
+Assert(
+	UINT32 assertVersion,
+	UINT32 rva,
+	UINT32 timestamp,
+	UINT32 imageSize,
+	ANSISTRING imageName,
+	UINT32 count,
+	UINT32 totalHits,
+	UINT32 ModuleCollection,
+	UINT32 GlobalCollection
+	);
+

@@ -1,0 +1,153 @@
+ProviderNames:
+	Microsoft.Windows.Upfc
+
+
+
+**** Events *****
+UpfcSetBaseCorrelationVectorFailed(
+	ANSISTRING baseCv,
+	HRESULT hResult
+	);
+
+UpfcIncrementCorrelationVectorFailed(
+	ANSISTRING baseCv,
+	HRESULT hResult
+	);
+
+UpfcExtendCorrelationVectorFailed(
+	ANSISTRING baseCv,
+	HRESULT hResult
+	);
+
+UpfcPersistedRootPathGetFailed(
+	UNICODESTRING persistedRootPath,
+	HRESULT hr,
+	ANSISTRING __TlgCV__
+	);
+
+UpfcUnexpectedPersistedStateLocation(
+	UNICODESTRING persistedRootPath,
+	ANSISTRING __TlgCV__
+	);
+
+UpfcRemediationEvent(
+	BOOL32 ranDetection,
+	BOOL32 ranRemediation,
+	BOOL32 isHealthy,
+	HRESULT hrDetection,
+	HRESULT hrRemediation,
+	UNICODESTRING detectionDetails,
+	UNICODESTRING remediationDetails,
+	FILETIME nextHealthCheckTime,
+	UINT32 remediationFailureCount,
+	ANSISTRING __TlgCV__
+	);
+
+UpfcGetWaasMedicSvcInfoFailed(
+	HRESULT hResult,
+	ANSISTRING failureDetail,
+	ANSISTRING __TlgCV__
+	);
+
+UpfcSetRemediationFailureCounterFailed(
+	INT32 newValue,
+	HRESULT hResult,
+	ANSISTRING __TlgCV__
+	);
+
+UpfcGetRemediationFailureCounterFailed(
+	HRESULT hResult,
+	ANSISTRING __TlgCV__
+	);
+
+UpfcWaasMedicBlockEvaluateError(
+	ANSISTRING blockName,
+	HRESULT hResult,
+	ANSISTRING __TlgCV__
+	);
+
+UpfcFlightingCheckFailed(
+	HRESULT hResult,
+	ANSISTRING __TlgCV__
+	);
+
+UpfcLastSihPeriodicLaunchTimeSetFailed(
+	HRESULT hResult,
+	ANSISTRING __TlgCV__
+	);
+
+UpfcWaasMedicCadenceBlockEndTimeSetFailed(
+	HRESULT hResult,
+	ANSISTRING __TlgCV__
+	);
+
+UpfcWaasMedicCadenceBlockStartTimeSetFailed(
+	HRESULT hResult,
+	ANSISTRING __TlgCV__
+	);
+
+UpfcWaasMedicBlackoutEndTimeSetFailed(
+	HRESULT hResult,
+	ANSISTRING __TlgCV__
+	);
+
+UpfcWaasMedicBlackoutStartTimeSetFailed(
+	HRESULT hResult,
+	ANSISTRING __TlgCV__
+	);
+
+UpfcReportAlreadyRunningFlag(
+	ANSISTRING __TlgCV__,
+	BOOL32 alreadyRunningFlag
+	);
+
+UpfcReportGetAlreadyRunningFlagFailed(
+	HRESULT hResult,
+	ANSISTRING __TlgCV__
+	);
+
+UpfcReportSetRunningFlagFailed(
+	HRESULT hResult,
+	ANSISTRING __TlgCV__
+	);
+
+UpfcLaunchResult(
+	ANSISTRING name,
+	HRESULT hResult,
+	ANSISTRING __TlgCV__
+	);
+
+UpfcCmdParsingResult(
+	UNICODESTRING launchtype,
+	HRESULT hResult,
+	ANSISTRING __TlgCV__
+	);
+
+UpfcCompleted(
+	UNICODESTRING launchtype,
+	BOOL32 isWaasMedicBlocked,
+	ANSISTRING waasMedicBlockReason,
+	BOOL32 waasMedicBlackoutTimeExists,
+	BOOL32 waasMedicBlackoutTimeExpired,
+	FILETIME waasMedicPreviousBlackoutStartTime,
+	FILETIME waasMedicNewBlackoutStartTime,
+	FILETIME waasMedicPreviousBlackoutEndTime,
+	FILETIME waasMedicNewBlackoutEndTime,
+	BOOL32 waasMedicCadenceBlockTimeExists,
+	BOOL32 waasMedicCadenceBlockTimeExpired,
+	FILETIME waasMedicPreviousCadenceBlockStartTime,
+	FILETIME waasMedicNewCadenceBlockStartTime,
+	FILETIME waasMedicPreviousCadenceBlockEndTime,
+	FILETIME waasMedicNewCadenceBlockEndTime,
+	HRESULT hrWaasMedicLaunch,
+	BOOL32 isSihBlocked,
+	ANSISTRING sihBlockReason,
+	HRESULT hrSihLaunch,
+	HRESULT hResult,
+	ANSISTRING __TlgCV__
+	);
+
+UpfcStarted(
+	ANSISTRING __TlgCV__
+	);
+

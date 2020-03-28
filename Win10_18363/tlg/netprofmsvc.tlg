@@ -1,0 +1,148 @@
+ProviderNames:
+	Microsoft.Windows.NetworkListManager
+	TelemetryAssert
+	TelemetryAssertDiagTrack
+	Microsoft.Windows.WiFiCloudStore
+
+
+
+**** Events *****
+Failure(
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+StartService(
+	VOID
+	);
+
+StopService(
+	VOID
+	);
+
+ServiceControlStop(
+	VOID
+	);
+
+ClientNotify(
+	UINT32 cookie,
+	UINT32 processId,
+	GUID eventIID
+	);
+
+NsiNetworkCategory(
+	GUID profileGuid,
+	GUID interfaceGuid,
+	UINT32 nsiNetworkCategory,
+	UINT32 nsiStatusIPv4,
+	UINT32 nsistatusv6,
+	ANSISTRING reason
+	);
+
+NsiInterfaceNotTracked(
+	UINT64 interfaceLuid
+	);
+
+NlmStoredNeededChange(
+	GUID ProfileGuid,
+	UINT32 NlmModificationType
+	);
+
+FallbackError(
+	UINT64 PartA_PrivTags,
+	SIGNED wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+FallbackError(
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+Assert(
+	UINT32 assertVersion,
+	UINT32 rva,
+	UINT32 timestamp,
+	UINT32 imageSize,
+	ANSISTRING imageName,
+	UINT32 count,
+	UINT32 totalHits,
+	UINT32 ModuleCollection,
+	UINT32 GlobalCollection
+	);
+
+ClientProcessConnected(
+	UINT32 processId
+	);
+
+ClientProcessAlreadyConnected(
+	UINT32 processId
+	);
+
+ClientProcessTerminated(
+	UINT32 processId
+	);
+
+ClientProcessDestructionTelemetry(
+	UINT64 PartA_PrivTags,
+	UINT64 InactiveTime
+	);
+
+ClientUnadvised(
+	UINT32 cookie,
+	UINT32 processId,
+	GUID eventIID,
+	HRESULT ReturnValue
+	);
+
+ClientAdvised(
+	UINT32 cookie,
+	UINT32 processId,
+	GUID eventIID
+	);
+

@@ -1,0 +1,74 @@
+ProviderNames:
+	Microsoft.Windows.AppMan.AppV
+
+
+
+**** Events *****
+ConfigurePackageGroupEvent(
+	BOOL32 UTCReplace_AppSessionGuid,
+	GUID etwActivityId,
+	GUID GroupID,
+	GUID GroupVersion
+	);
+
+PublishPackageGroupActivity(
+	VOID
+	);
+
+ConfigurePackageEvent(
+	BOOL32 UTCReplace_AppSessionGuid,
+	GUID etwActivityId,
+	GUID PackageID,
+	GUID PackageVersion,
+	UNICODESTRING PackageDisplayName
+	);
+
+ConfigurePackageActivity(
+	VOID
+	);
+
+AutoCleanupAttempted(
+	BOOL32 UTCReplace_AppSessionGuid,
+	GUID PackageID,
+	GUID PackageVersion,
+	UINT64 AppVError
+	);
+
+PublishPackageGroupEvent(
+	BOOL32 UTCReplace_AppSessionGuid,
+	GUID etwActivityId,
+	GUID GroupID,
+	GUID GroupVersion,
+	UINT64 NumberOfPackages,
+	GUID PackageList,
+	BOOL32 Global
+	);
+
+ActivityStoppedAutomatically(
+	VOID
+	);
+
+ConfigurePackageGroupActivity(
+	VOID
+	);
+
+PublishPackageEvent(
+	BOOL32 UTCReplace_AppSessionGuid,
+	GUID etwActivityId,
+	GUID PackageID,
+	GUID PackageVersion,
+	BOOL32 Global
+	);
+
+PublishPackageActivity(
+	VOID
+	);
+
+DebugMessage(
+	UINT32 LOGLEVEL,
+	UNICODESTRING MESSAGE,
+	UNICODESTRING FUNCTION,
+	UINT32 LINENO,
+	BOOL32 UTCReplace_AppSessionGuid
+	);
+

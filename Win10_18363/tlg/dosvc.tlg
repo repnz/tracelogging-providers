@@ -1,0 +1,435 @@
+ProviderNames:
+	TelemetryAssert
+	TelemetryAssertDiagTrack
+	domgmt
+	dosvc
+	Microsoft.OSG.DU.DeliveryOptClient
+	Microsoft.OSG.DU.DeliveryOptClient
+
+
+
+**** Events *****
+Assert(
+	UINT32 assertVersion,
+	UINT32 rva,
+	UINT32 timestamp,
+	UINT32 imageSize,
+	ANSISTRING imageName,
+	UINT32 count,
+	UINT32 totalHits,
+	UINT32 ModuleCollection,
+	UINT32 GlobalCollection
+	);
+
+AssertWithArgs(
+	UINT32 assertVersion,
+	UINT32 rva,
+	UINT32 timestamp,
+	UINT32 imageSize,
+	ANSISTRING imageName,
+	UINT32 count,
+	UINT32 totalHits,
+	ANSISTRING originatingBinary,
+	UINT32 bucketArgument1,
+	UINT32 bucketArgument2,
+	UINT32 ModuleCollection,
+	UINT32 GlobalCollection
+	);
+
+Verbose(
+	UNICODESTRING msg,
+	ANSISTRING func,
+	UINT32 line,
+	INT32 hr
+	);
+
+Info(
+	UNICODESTRING msg,
+	ANSISTRING func,
+	UINT32 line,
+	INT32 hr
+	);
+
+Warning(
+	UNICODESTRING msg,
+	ANSISTRING func,
+	UINT32 line,
+	INT32 hr
+	);
+
+Error(
+	UNICODESTRING msg,
+	ANSISTRING func,
+	UINT32 line,
+	INT32 hr
+	);
+
+Critical(
+	UNICODESTRING msg,
+	ANSISTRING func,
+	UINT32 line,
+	INT32 hr
+	);
+
+TraceRoute(
+	UINT32 experimentId,
+	UINT64 startTime,
+	UNICODESTRING networkType,
+	UNICODESTRING destIP,
+	BOOLEAN hopInfoList,
+	UNICODESTRING IP,
+	UINT32 RTT,
+	UINT16 hopNumber,
+	HEXINT32 deviceProfile
+	);
+
+Upload(
+	ANSISTRING __TlgCV__,
+	UINT32 experimentId,
+	UNICODESTRING eventType,
+	INT32 reasonCode,
+	GUID sessionID,
+	UNICODESTRING fileID,
+	UINT64 bytesAvailableInCache,
+	UINT64 bytesUploadedToLAN,
+	UINT64 bytesUploadedToLinkLocal,
+	UINT64 bytesUploadedToGroup,
+	UINT64 bytesUploadedToInternet,
+	BOOLEAN isPinned,
+	UINT64 expiresAt,
+	INT32 batterySeedingStatus,
+	UINT32 minBatteryPctForSeeding,
+	UINT32 batteryPct,
+	UINT32 numPeers,
+	UINT32 cdnConnectionCount,
+	UINT64 cacheServerConnectionCount,
+	UINT32 lanConnectionCount,
+	UINT32 groupConnectionCount,
+	UINT32 internetConnectionCount,
+	UINT32 linkLocalConnectionCount,
+	HEXINT32 deviceProfile
+	);
+
+PerfSnap(
+	UINT32 experimentId,
+	UINT32 downloadMode,
+	UINT32 swarmCount,
+	UINT64 cacheSizeBytes,
+	UINT64 diskTotalBytes,
+	UINT64 diskAvailableBytes,
+	UINT64 softReserveTotalBytes,
+	INT64 softReserveAvailableBytes,
+	UINT32 numPeers,
+	UINT32 cdnConnectionCount,
+	UINT64 cacheServerConnectionCount,
+	UINT32 lanConnectionCount,
+	UINT32 linkLocalConnectionCount,
+	UINT32 groupConnectionCount,
+	UINT32 internetConnectionCount,
+	UINT32 downlinkBps,
+	UINT32 uplinkBps,
+	UINT32 downlinkUsageBps,
+	UINT32 uplinkUsageBps,
+	UINT32 foregroundDownloadRatePct,
+	UINT32 backgroundDownloadRatePct,
+	UINT32 uploadRateLimitState,
+	UINT32 uploadRatePct,
+	UINT32 foregroundDownloadCount,
+	UINT32 foregroundDownloadsPending,
+	UINT32 backgroundDownloadCount,
+	UINT32 backgroundDownloadsPending,
+	UINT32 uploadCount,
+	UINT32 policy.maxPriorityDownloads,
+	UINT32 policy.maxNormalDownloads,
+	UINT32 policy.maxUploads,
+	UINT32 policy.maxDownloadRateBps,
+	UINT32 policy.maxUploadRateBps,
+	DOUBLE cpuPct,
+	UINT64 memCommitKB,
+	INT32 restrictedUpload,
+	UINT64 bytesUploadedToInternet,
+	UINT64 bytesUploadedToLAN,
+	UINT64 bytesFromIntPeers,
+	UINT64 bytesFromPeers,
+	UINT64 bytesFromCDN,
+	UINT64 downloadForegroundUsageBps,
+	UINT64 downloadBackgroundUsageBps,
+	HEXINT32 deviceProfile,
+	UNICODESTRING setConfigs
+	);
+
+FailurePeerSentInvalidData(
+	ANSISTRING __TlgCV__,
+	UINT32 experimentId,
+	UNICODESTRING fileID,
+	HRESULT errorCode,
+	UNICODESTRING errorMessage,
+	GUID sessionID,
+	UNICODESTRING peerIPAddr,
+	UNICODESTRING peerID,
+	UINT32 peerType
+	);
+
+FailureFileSystem(
+	ANSISTRING __TlgCV__,
+	UINT32 experimentId,
+	UNICODESTRING fileID,
+	HRESULT errorCode,
+	UNICODESTRING errorMessage,
+	GUID sessionID
+	);
+
+FailurePeerGeneric(
+	ANSISTRING __TlgCV__,
+	UINT32 experimentId,
+	UNICODESTRING fileID,
+	HRESULT errorCode,
+	UNICODESTRING errorMessage,
+	GUID sessionID,
+	UNICODESTRING peerIPAddr,
+	UNICODESTRING peerID,
+	UINT32 peerType
+	);
+
+FailurePeerConnect(
+	ANSISTRING __TlgCV__,
+	UINT32 experimentId,
+	UNICODESTRING fileID,
+	HRESULT errorCode,
+	UNICODESTRING errorMessage,
+	GUID sessionID,
+	UNICODESTRING peerIPAddr,
+	UNICODESTRING peerID,
+	UINT32 peerType
+	);
+
+FailureCdnCommunication(
+	ANSISTRING __TlgCV__,
+	UINT32 experimentId,
+	UNICODESTRING fileID,
+	HRESULT errorCode,
+	UINT32 httpStatusCode,
+	UINT32 errorCount,
+	GUID sessionID,
+	UNICODESTRING cdnUrl,
+	UNICODESTRING cdnIp,
+	UNICODESTRING cdnHeaders,
+	BOOL32 isHeadRequest,
+	UINT64 requestOffset,
+	UINT64 requestSize,
+	UINT64 responseSize,
+	UINT32 peerType
+	);
+
+FailureChunkHash(
+	ANSISTRING __TlgCV__,
+	UINT32 experimentId,
+	HRESULT errorCode,
+	GUID sessionID,
+	UNICODESTRING fileID,
+	UINT32 chunkIndex,
+	UNICODESTRING peerIPAddr,
+	UNICODESTRING cdnUrl,
+	UNICODESTRING cdnIp,
+	BOOLEAN isBanned,
+	BOOLEAN isCdn,
+	UINT32 peerType
+	);
+
+FailureServicesConnect(
+	ANSISTRING __TlgCV__,
+	UINT32 experimentId,
+	HRESULT errorCode,
+	UNICODESTRING errorMessage,
+	GUID sessionID,
+	INT32 serviceID,
+	UNICODESTRING peerIPAddr,
+	UNICODESTRING fileID,
+	UNICODESTRING serviceUrl,
+	UNICODESTRING requestContent
+	);
+
+AnnounceResponded(
+	ANSISTRING __TlgCV__,
+	UINT32 experimentId,
+	UNICODESTRING fileID,
+	GUID sessionID,
+	UINT32 numPeers,
+	INT32 restrictedUpload
+	);
+
+DownloadCanceled(
+	ANSISTRING __TlgCV__,
+	UINT32 experimentId,
+	HRESULT errorCode,
+	INT32 reasonCode,
+	GUID sessionID,
+	UNICODESTRING predefinedCallerName,
+	UNICODESTRING updateID,
+	GUID jobID,
+	UNICODESTRING fileID,
+	UNICODESTRING cdnUrl,
+	UNICODESTRING cdnIp,
+	UNICODESTRING routeToCacheServer,
+	UINT64 bytesFromCDN,
+	UINT64 bytesFromCacheServer,
+	UINT64 bytesFromPeers,
+	UINT64 bytesFromLinkLocalPeers,
+	UINT64 bytesFromGroupPeers,
+	UINT64 bytesFromIntPeers,
+	UINT64 bytesFromLocalCache,
+	UNICODESTRING dataSourcesTotal,
+	BOOL32 background,
+	INT32 cdnErrorCodes,
+	UINT16 cdnErrorCounts,
+	UINT32 isVpn
+	);
+
+DownloadHungItself(
+	ANSISTRING __TlgCV__,
+	UINT32 experimentId,
+	HRESULT errorCode,
+	GUID sessionID,
+	UNICODESTRING predefinedCallerName,
+	UNICODESTRING updateID,
+	GUID jobID,
+	UNICODESTRING fileID,
+	UNICODESTRING cdnUrl,
+	UNICODESTRING cdnIp,
+	UINT32 progressPercent,
+	BOOL32 background,
+	UINT32 isVpn
+	);
+
+DownloadPaused(
+	ANSISTRING __TlgCV__,
+	UINT32 experimentId,
+	HRESULT errorCode,
+	INT32 reasonCode,
+	GUID sessionID,
+	UNICODESTRING predefinedCallerName,
+	UNICODESTRING updateID,
+	GUID jobID,
+	UNICODESTRING fileID,
+	UNICODESTRING cdnUrl,
+	UNICODESTRING routeToCacheServer,
+	BOOL32 background,
+	UINT32 isVpn
+	);
+
+DownloadResumed(
+	ANSISTRING __TlgCV__,
+	UINT32 experimentId,
+	HRESULT errorCode,
+	GUID sessionID,
+	UNICODESTRING predefinedCallerName,
+	UNICODESTRING updateID,
+	GUID jobID,
+	UINT32 costFlags,
+	UNICODESTRING fileID,
+	UNICODESTRING cdnUrl,
+	BOOL32 background,
+	UINT32 downloadMode,
+	INT32 downloadModeSrc,
+	INT32 downloadModeReason,
+	UINT32 isVpn
+	);
+
+DownloadProgress(
+	ANSISTRING __TlgCV__,
+	UINT32 experimentId,
+	GUID sessionID,
+	UNICODESTRING predefinedCallerName,
+	UNICODESTRING updateID,
+	GUID jobID,
+	UNICODESTRING fileID,
+	UINT32 progressPercent,
+	UINT32 isVpn
+	);
+
+DownloadCompleted(
+	ANSISTRING __TlgCV__,
+	UINT32 experimentId,
+	GUID sessionID,
+	UNICODESTRING predefinedCallerName,
+	UNICODESTRING updateID,
+	GUID jobID,
+	UNICODESTRING fileID,
+	UINT64 bytesRequested,
+	UINT64 fileSize,
+	UINT64 bytesFromCDN,
+	UINT64 bytesFromCacheServer,
+	UINT64 bytesFromPeers,
+	UINT64 bytesFromLinkLocalPeers,
+	UINT64 bytesFromGroupPeers,
+	UINT64 bytesFromIntPeers,
+	UINT64 bytesFromLocalCache,
+	UNICODESTRING dataSourcesTotal,
+	UNICODESTRING cdnUrl,
+	UNICODESTRING cdnIp,
+	UNICODESTRING routeToCacheServer,
+	UINT32 numPeers,
+	UINT32 numPeersLocal,
+	UINT64 expiresAt,
+	UINT32 cdnConnectionCount,
+	UINT64 cacheServerConnectionCount,
+	UINT32 lanConnectionCount,
+	UINT32 linkLocalConnectionCount,
+	UINT32 groupConnectionCount,
+	UINT32 internetConnectionCount,
+	UINT32 downlinkBps,
+	UINT32 uplinkBps,
+	UINT32 downlinkUsageBps,
+	UINT32 uplinkUsageBps,
+	UINT64 totalTimeMs,
+	BOOL32 background,
+	INT32 restrictedUpload,
+	UINT32 downloadMode,
+	INT32 downloadModeSrc,
+	INT32 downloadModeReason,
+	INT32 cdnErrorCodes,
+	UINT16 cdnErrorCounts,
+	UINT32 isVpn,
+	BOOLEAN isEncrypted
+	);
+
+DownloadStarted(
+	ANSISTRING __TlgCV__,
+	UINT32 experimentId,
+	HRESULT errorCode,
+	UNICODESTRING peerID,
+	UNICODESTRING doClientVersion,
+	GUID jobID,
+	GUID sessionID,
+	UNICODESTRING predefinedCallerName,
+	UNICODESTRING updateID,
+	UINT32 costFlags,
+	UNICODESTRING fileID,
+	UINT64 fileSize,
+	UINT64 fileSizeCaller,
+	UINT64 bytesRequested,
+	UNICODESTRING cdnUrl,
+	UNICODESTRING routeToCacheServer,
+	UNICODESTRING filePath,
+	UNICODESTRING groupID,
+	BOOL32 background,
+	UINT32 downloadMode,
+	INT32 downloadModeSrc,
+	INT32 downloadModeReason,
+	DOUBLE diceRoll,
+	HEXINT32 deviceProfile,
+	UINT32 isVpn,
+	BOOLEAN isEncrypted,
+	UNICODESTRING setConfigs
+	);
+
+JobError(
+	ANSISTRING __TlgCV__,
+	UINT32 experimentId,
+	HRESULT errorCode,
+	HRESULT doErrorCode,
+	GUID jobID,
+	UNICODESTRING fileID,
+	UNICODESTRING cdnIp
+	);
+

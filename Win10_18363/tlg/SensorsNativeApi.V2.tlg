@@ -1,0 +1,82 @@
+ProviderNames:
+	Microsoft.Windows.Sensors.App.ReadingNotificationSession
+	TelemetryAssert
+	TelemetryAssertDiagTrack
+	Microsoft.Windows.TlgAggregateInternal
+
+
+
+**** Events *****
+ReadingNotificationSessionSummary(
+	UINT64 PartA_PrivTags,
+	NULL DurationMsSum,
+	NULL DurationMsMax,
+	NULL DurationMsMin,
+	NULL EventCountSum,
+	NULL EventCountMax,
+	NULL EventCountMin,
+	NULL FirstSampleDelayMsMax,
+	NULL FirstSampleDelayMsMin,
+	UINT16 Version,
+	HEXINT64 Context,
+	GUID Type,
+	GUID PersistentUniqueId,
+	UINT32 ReportIntervalMs,
+	BOOL32 IsStreaming,
+	BOOL32 IsMonitorOn
+	);
+
+ReadingNotificationShortSessionWithoutEventsSummary(
+	UINT64 PartA_PrivTags,
+	NULL DurationMsSum,
+	NULL DurationMsMax,
+	NULL DurationMsMin,
+	NULL NumShortSessionsWithoutEvents,
+	UINT16 Version,
+	HEXINT64 Context,
+	GUID Type,
+	GUID PersistentUniqueId,
+	UINT32 ReportIntervalMs,
+	BOOL32 IsStreaming,
+	BOOL32 IsMonitorOn
+	);
+
+Assert(
+	UINT32 assertVersion,
+	UINT32 rva,
+	UINT32 timestamp,
+	UINT32 imageSize,
+	ANSISTRING imageName,
+	UINT32 count,
+	UINT32 totalHits,
+	UINT32 ModuleCollection,
+	UINT32 GlobalCollection
+	);
+
+AssertWithArgs(
+	UINT32 assertVersion,
+	UINT32 rva,
+	UINT32 timestamp,
+	UINT32 imageSize,
+	ANSISTRING imageName,
+	UINT32 count,
+	UINT32 totalHits,
+	ANSISTRING originatingBinary,
+	UINT32 bucketArgument1,
+	UINT32 bucketArgument2,
+	UINT32 ModuleCollection,
+	UINT32 GlobalCollection
+	);
+
+TlgAggregateSummary(
+	GUID Provider,
+	UINT64 NumFlushes,
+	UINT64 MaxEntriesStored,
+	UINT64 TotalEntriesFlushed,
+	UINT32 MaxEntriesFlushed,
+	UINT32 MinEntriesFlushed,
+	UINT32 NumBucketLimitReached,
+	UINT32 NumAllocationFailures,
+	UINT32 NumLargeEventFailures
+	);
+

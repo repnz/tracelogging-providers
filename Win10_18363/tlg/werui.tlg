@@ -1,0 +1,59 @@
+ProviderNames:
+	Microsoft.Windows.WindowsErrorReporting
+	Microsoft.Windows.FaultReporting
+	TelemetryAssert
+	TelemetryAssertDiagTrack
+
+
+
+**** Events *****
+HangReportError(
+	UINT64 PartA_PrivTags,
+	UNICODESTRING EventName,
+	UNICODESTRING IntegratorReportId,
+	HRESULT hr,
+	ANSISTRING Message,
+	UNICODESTRING ReportId
+	);
+
+WERDumpCollectionStatus(
+	UINT64 PartA_PrivTags,
+	HRESULT hr,
+	UNICODESTRING CodeSite,
+	UNICODESTRING ReportId,
+	UINT32 DumpType
+	);
+
+Assert(
+	UINT32 assertVersion,
+	UINT32 rva,
+	UINT32 timestamp,
+	UINT32 imageSize,
+	ANSISTRING imageName,
+	UINT32 count,
+	UINT32 totalHits,
+	UINT32 ModuleCollection,
+	UINT32 GlobalCollection
+	);
+
+AssertWithArgs(
+	UINT32 assertVersion,
+	UINT32 rva,
+	UINT32 timestamp,
+	UINT32 imageSize,
+	ANSISTRING imageName,
+	UINT32 count,
+	UINT32 totalHits,
+	ANSISTRING originatingBinary,
+	UINT32 bucketArgument1,
+	UINT32 bucketArgument2,
+	UINT32 ModuleCollection,
+	UINT32 GlobalCollection
+	);
+
+WerVerticalDisabled(
+	UINT64 PartA_PrivTags,
+	UNICODESTRING Vertical,
+	INT32 Reason
+	);
+

@@ -1,0 +1,147 @@
+ProviderNames:
+	Microsoft.Windows.Graphics.GPM
+	Microsoft.Windows.Graphics.GPM
+
+
+
+**** Events *****
+FallbackError(
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+FallbackError(
+	UINT64 PartA_PrivTags,
+	SIGNED wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+FoundTarget(
+	GUID AppSessionGuid,
+	UINT32 ProcessId,
+	ANSISTRING ProcessName,
+	FLOAT HistogramFpsBuckets,
+	UINT32 HistogramBucketCount,
+	UINT32 SamplingPeriodSeconds,
+	UINT32 TimeoutIntervalSeconds
+	);
+
+TraceConsumerCounters(
+	UINT32 EventsProcessed,
+	UINT32 TargetProcessEventsProcessed,
+	UINT32 PresentsStarted
+	);
+
+FallbackError(
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+Diagnostic(
+	GUID AppSessionGuid,
+	UNICODESTRING Message
+	);
+
+StatSummary(
+	GUID AppSessionGuid,
+	UINT32 StatisticsSchema,
+	UINT64 DurationMean,
+	UINT64 DurationVariance,
+	UINT32 FpsHistogram,
+	UINT32 FlipInterval,
+	UINT32 FlipIntervalChanges,
+	UINT32 DestWidth,
+	UINT32 DestHeight,
+	UINT32 DestSizeChanges,
+	UINT64 CompositionSurfaceLuid
+	);
+
+ServiceHelpers_ParameterRead(
+	ANSISTRING ParameterName,
+	UINT32 Value
+	);
+
+ServiceHelpers_MemoryCounters(
+	UINT32 PageFaultCount,
+	UINT64 PeakWorkingSetSize,
+	UINT64 WorkingSetSize,
+	UINT64 QuotaPeakPagedPoolUsage,
+	UINT64 QuotaPagedPoolUsage,
+	UINT64 QuotaPeakNonPagedPoolUsage,
+	UINT64 QuotaNonPagedPoolUsage,
+	UINT64 PagefileUsage,
+	UINT64 PeakPagefileUsage,
+	UINT64 PrivateUsage
+	);
+
+ETWTraceSession_TraceProperties(
+	ANSISTRING Message,
+	UINT32 Win32Error,
+	UINT32 BufferSize,
+	UINT32 MinimumBuffers,
+	UINT32 MaximumBuffers,
+	UINT32 MaximumFileSize,
+	UINT32 LogFileMode,
+	UINT32 FlushTimer,
+	UINT32 EnableFlags,
+	INT32 AgeLimit,
+	UINT32 NumberOfBuffers,
+	UINT32 FreeBuffers,
+	UINT32 EventsLost,
+	UINT32 BuffersWritten,
+	UINT32 LogBuffersLost,
+	UINT32 RealTimeBuffersLost,
+	UINT32 LogFileNameOffset,
+	UINT32 LoggerNameOffset
+	);
+
+ETWTraceSession_TraceBufferCallback(
+	UINT32 BufferSize,
+	UINT32 Filled,
+	UINT32 EventsLost
+	);
+

@@ -1,0 +1,62 @@
+ProviderNames:
+	Microsoft.Windows.Appraiser.Instrumentation
+	Microsoft.Windows.Appraiser.Instrumentation
+	Microsoft.Windows.Appraiser.Instrumentation
+	Microsoft.Windows.Compatibility.Asl
+	TelemetryAssert
+	TelemetryAssertDiagTrack
+	Microsoft.Windows.Inventory.Core
+	Microsoft.Windows.Inventory.Core
+	Microsoft.Windows.Inventory.Core
+	Microsoft.Windows.Inventory.Core
+
+
+
+**** Events *****
+NonFatalError(
+	ANSISTRING __TlgCV__,
+	SYSTEMTIME Time,
+	ANSISTRING __TlgCV__,
+	UNICODESTRING PCFP,
+	UINT32 SourceLine,
+	ANSISTRING SourceFile,
+	ANSISTRING FunctionName,
+	HEXINT32 Hresult
+	);
+
+TelemetryClient(
+	UINT64 BinFileVersion,
+	ANSISTRING ChannelName,
+	ANSISTRING CorrelationVectors,
+	ANSISTRING Types,
+	ANSISTRING Names,
+	ANSISTRING Counts,
+	ANSISTRING Metrics,
+	UNICODESTRING Messages,
+	ANSISTRING ActivityResults
+	);
+
+Error(
+	ANSISTRING __TlgCV__,
+	SYSTEMTIME Time,
+	ANSISTRING __TlgCV__,
+	UNICODESTRING PCFP,
+	UINT32 SourceLine,
+	ANSISTRING SourceFile,
+	ANSISTRING FunctionName,
+	HEXINT32 Hresult,
+	ANSISTRING Message
+	);
+
+Assert(
+	UINT32 assertVersion,
+	UINT32 rva,
+	UINT32 timestamp,
+	UINT32 imageSize,
+	ANSISTRING imageName,
+	UINT32 count,
+	UINT32 totalHits,
+	UINT32 ModuleCollection,
+	UINT32 GlobalCollection
+	);
+

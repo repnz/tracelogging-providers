@@ -1,0 +1,87 @@
+ProviderNames:
+	Microsoft.Windows.Cellcore.LPA.Client
+
+
+
+**** Events *****
+LuiProcessDetach(
+	ANSISTRING Component,
+	ANSISTRING Location
+	);
+
+LuiProcessAttach(
+	ANSISTRING Component,
+	ANSISTRING Location
+	);
+
+LuiClientPipeDisconnect(
+	ANSISTRING Component,
+	ANSISTRING Location
+	);
+
+LuiClientPipeRead(
+	ANSISTRING Component,
+	ANSISTRING Location,
+	HRESULT hr
+	);
+
+LuiClientPipeRead(
+	ANSISTRING Component,
+	ANSISTRING Location,
+	UINT32 luicontext,
+	UINT32 dwCntBytesRead,
+	BOOL32 sync,
+	HRESULT hr
+	);
+
+LuiClientPipeRead(
+	ANSISTRING Component,
+	ANSISTRING Location,
+	UINT32 luicontext,
+	HEXINT64 pipe,
+	UINT32 dwCntBytesRead,
+	BOOL32 sync,
+	HRESULT hr
+	);
+
+LuiClientSendMessage(
+	ANSISTRING Component,
+	ANSISTRING Location,
+	UINT32 type,
+	UINT32 size
+	);
+
+AllocationFailure(
+	ANSISTRING Component,
+	ANSISTRING Location,
+	UINT32 size
+	);
+
+LuiClientIncreasingBuffer(
+	ANSISTRING Component,
+	ANSISTRING Location,
+	UINT32 size
+	);
+
+LuiClientPipeConnect(
+	ANSISTRING Component,
+	ANSISTRING Location,
+	UINT32 luicontext,
+	HEXINT64 pipe,
+	HRESULT hr
+	);
+
+LuiClientPipeConnect(
+	ANSISTRING Component,
+	ANSISTRING Location,
+	UINT32 luicontext,
+	HEXINT64 pipe,
+	HRESULT hr
+	);
+
+LuiClientPipeStopListen(
+	ANSISTRING Component,
+	ANSISTRING Location,
+	HEXINT64 this
+	);
+

@@ -1,0 +1,79 @@
+ProviderNames:
+	Microsoft.Windows.Shell.SystemSettings.Maps
+
+
+
+**** Events *****
+StorageMigrationPerfResultFailedMosHost(
+	BOOL32 newStorageIsSystemDrive,
+	UINT32 newStorageDeviceType,
+	UINT32 newBusType,
+	HRESULT HResult,
+	GUID mapSessionId
+	);
+
+StorageMigrationPerfResultMosHost(
+	BOOL32 perfTestPassed,
+	DOUBLE readRateMBps,
+	DOUBLE writeRateMBps,
+	BOOL32 newStorageIsSystemDrive,
+	UINT32 newStorageDeviceType,
+	UINT32 newBusType,
+	GUID mapSessionId
+	);
+
+StorageMigrationNoSpaceMosHost(
+	BOOL32 newStorageIsSystemDrive,
+	UINT32 newStorageDeviceType,
+	UINT32 newBusType,
+	GUID mapSessionId
+	);
+
+StorageMigrationValidationStartMosHost(
+	BOOL32 newStorageIsSystemDrive,
+	UINT32 newStorageDeviceType,
+	UINT32 newBusType,
+	GUID mapSessionId
+	);
+
+FallbackError(
+	UINT64 PartA_PrivTags,
+	SIGNED wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+FallbackError(
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+

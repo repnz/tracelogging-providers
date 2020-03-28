@@ -1,0 +1,225 @@
+ProviderNames:
+	Microsoft.Windows.Networking.NetSetup.Inf
+
+
+
+**** Events *****
+FallbackError(
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+FallbackError(
+	UINT64 PartA_PrivTags,
+	SIGNED wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+FunctionExit(
+	UNICODESTRING File,
+	UNICODESTRING Function
+	);
+
+FunctionEntry(
+	UNICODESTRING File,
+	UNICODESTRING Function
+	);
+
+ActivityStoppedAutomatically(
+	VOID
+	);
+
+Commit(
+	INT32 Result
+	);
+
+RemoveDriver(
+	GUID ObjectId,
+	UINT32 ObjectType,
+	UNICODESTRING Identifier
+	);
+
+AddDriver(
+	GUID ObjectId,
+	UINT32 ObjectType,
+	UNICODESTRING Identifier
+	);
+
+AddDriverFailed(
+	GUID ObjectId,
+	UINT32 ObjectType,
+	UNICODESTRING Identifier,
+	INT32 Result
+	);
+
+ActivityIntermediateStop(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+ActivityError(
+	UINT64 PartA_PrivTags,
+	SIGNED wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+ActivityError(
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+InstallActivity(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId
+	);
+
+InstallActivity(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+InstallActivity(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+ReadingDriverRegistrationFailed(
+	HRESULT result,
+	UINT32 objectType,
+	UNICODESTRING componentId
+	);
+
+ReadingDriverRegistration(
+	UINT32 objectType,
+	UNICODESTRING componentId
+	);
+
+FunctionEntryArgs(
+	UNICODESTRING File,
+	UNICODESTRING Function,
+	UINT32 objectType,
+	UNICODESTRING componentId
+	);
+
+ReadingProperty(
+	UNICODESTRING prop->DirectiveName,
+	GUID PropertyNamespace,
+	UINT32 PropertyId
+	);
+
+InfDirectiveFound(
+	UNICODESTRING prop.DirectiveName,
+	UNICODESTRING Value
+	);
+
+FunctionEntryArgs(
+	UNICODESTRING File,
+	UNICODESTRING Function,
+	UNICODESTRING componentId
+	);
+
+FunctionEntryArgs(
+	UNICODESTRING File,
+	UNICODESTRING Function,
+	GUID PropertyNamespace,
+	UINT32 PropertyId,
+	UNICODESTRING value
+	);
+
+FunctionEntryArgs(
+	UNICODESTRING File,
+	UNICODESTRING Function,
+	UNICODESTRING value
+	);
+
+FunctionEntryArgs(
+	UNICODESTRING File,
+	UNICODESTRING Function,
+	UNICODESTRING str
+	);
+
+InfValidationError(
+	HRESULT Result,
+	UINT32 ValidationResult
+	);
+

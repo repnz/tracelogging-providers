@@ -1,0 +1,2640 @@
+ProviderNames:
+	Microsoft.Windows.Kernel.Registry
+	Microsoft.Windows.Containers.RegistryVirtualization
+	IumTelemetryProvider
+	Microsoft.Windows.Kernel.LiveDump
+	Microsoft.Windows.Kernel.SysEnv
+	Microsoft.Windows.Kernel.DeviceConfig
+	Microsoft.Windows.Kernel.PnP
+	Microsoft.Windows.Kernel.PnP
+	Microsoft-Windows-Kernel-Mm
+	Microsoft.Windows.Kernel.Power
+	Microsoft.Windows.Kernel.Ttm
+	Microsoft.Windows.Kernel.Ttm
+	Microsoft.Windows.Kernel.ProcessSubsystem
+	Microsoft.Windows.Security.Capabilities
+	Microsoft.Windows.Kernel.Security
+	KernelGeneral
+	KernelProcess
+	MSTelCov
+	Microsoft.Windows.Kernel.BootEnvironment
+	WheaProvider
+	WheaProvider
+	Microsoft.Windows.TlgAggregateInternal
+
+
+
+**** Events *****
+CmpSaveBootControlSetFailed(
+	NTSTATUS status
+	);
+
+CmpSaveBootControlSetSucceeded(
+	UINT32 openKeysInvalidated
+	);
+
+HiveLoadFromFile(
+	NTSTATUS status
+	);
+
+HiveLoadFromFile(
+	COUNTEDSTRING filePath
+	);
+
+NtReplaceKeySucceeded(
+	VOID
+	);
+
+NtReplaceKeyFailed(
+	NTSTATUS Status
+	);
+
+CmLoadKeySucceeded(
+	NTSTATUS Status
+	);
+
+CmLoadKeyFailed(
+	NTSTATUS Status,
+	HEX HiveLoadFailure,
+	UINT16 UnrecoverableFailureCount,
+	UINT16 RecoverableFailureCount,
+	BOOLEAN UnrecoverableFailureLocations,
+	INT32 Type,
+	UINT32 Status,
+	UINT32 Point,
+	BOOLEAN RecoverableFailureLocations,
+	INT32 Type,
+	UINT32 Status,
+	UINT32 Point
+	);
+
+CmLoadAppKeySucceeded(Aggregate)(
+	NULL Count,
+	NTSTATUS Status,
+	BOOLEAN HiveAlreadyLoaded
+	);
+
+CmLoadAppKeyFailed(
+	NTSTATUS Status,
+	HEX HiveLoadFailure,
+	UINT16 UnrecoverableFailureCount,
+	UINT16 RecoverableFailureCount,
+	BOOLEAN UnrecoverableFailureLocations,
+	INT32 Type,
+	UINT32 Status,
+	UINT32 Point,
+	BOOLEAN RecoverableFailureLocations,
+	INT32 Type,
+	UINT32 Status,
+	UINT32 Point
+	);
+
+CmLoadAppKeyFailedNoInfo(Aggregate)(
+	NULL Count,
+	NTSTATUS Status
+	);
+
+SecurityDescriptorChanging(
+	COUNTEDSTRING KeyPath,
+	BINARY OriginalSD,
+	UINT32 InformationToChange,
+	BINARY ChangeSD,
+	BINARY ResultingSD
+	);
+
+HiveFlush(
+	NTSTATUS status
+	);
+
+HiveFlushControlDataGenerated(
+	UINT32 controlFlags,
+	UINT32 logFileStatus
+	);
+
+HiveFlush(
+	COUNTEDSTRING mountPoint,
+	COUNTEDSTRING filePath,
+	UINT32 flags
+	);
+
+HiveFlushPhase(
+	UINT8 phase,
+	NTSTATUS status
+	);
+
+HiveFlushPhase(
+	UINT8 phase
+	);
+
+CmpTransLightWeightRollback(
+	UINT32 UowCount
+	);
+
+CmpTransLightWeightRollback(
+	VOID
+	);
+
+CmpPrepareLightWeightTransaction(
+	VOID
+	);
+
+CmpPrepareLightWeightTransaction(
+	VOID
+	);
+
+CmpCommitPreparedLightWeightTransaction(
+	UINT32 UoW Count
+	);
+
+CmpCommitPreparedLightWeightTransaction(
+	VOID
+	);
+
+BounceBufferNeeded(
+	NULL Count,
+	UINT8 Reason,
+	UINT64 SizeBucket
+	);
+
+HiveSelfHealed(
+	NTSTATUS CheckRegistryReturnCode,
+	HEX HiveLoadFailure,
+	UINT16 UnrecoverableFailureCount,
+	UINT16 RecoverableFailureCount,
+	BOOLEAN UnrecoverableFailureLocations,
+	INT32 Type,
+	UINT32 Status,
+	UINT32 Point,
+	BOOLEAN RecoverableFailureLocations,
+	INT32 Type,
+	UINT32 Status,
+	UINT32 Point
+	);
+
+HiveReorganizationFailed(
+	NTSTATUS status
+	);
+
+HiveReorganized(
+	UINT64 lastReorganizeTime,
+	UINT32 oldSize,
+	UINT32 newSize
+	);
+
+HiveReorganizationResultedInDifferentKeyCount(
+	UINT32 oldKeyCount,
+	UINT32 newKeyCount
+	);
+
+HiveReorganizationValidationFailed(
+	NTSTATUS checkRegistryReturnCode,
+	HEX hiveLoadFailure,
+	UINT16 UnrecoverableFailureCount,
+	UINT16 RecoverableFailureCount,
+	BOOLEAN UnrecoverableFailureLocations,
+	INT32 Type,
+	UINT32 Status,
+	UINT32 Point,
+	BOOLEAN RecoverableFailureLocations,
+	INT32 Type,
+	UINT32 Status,
+	UINT32 Point
+	);
+
+TruncatedPrimaryHiveRecovered(
+	UINT32 hiveLengthFromHeader,
+	UINT32 hiveLengthOnDisk
+	);
+
+TransactionAborted(
+	COUNTEDSTRING keyPath,
+	UINT32 reason
+	);
+
+CmpTransMgrCommitUoW(
+	VOID
+	);
+
+CmpTransMgrCommitUoW(
+	VOID
+	);
+
+CmpTransMgrCommit(
+	UINT32 *UowCount
+	);
+
+CmpTransMgrCommit(
+	VOID
+	);
+
+UnsupportedOperation(
+	UINT32 Operation
+	);
+
+UnsupportedOperation(Aggregate)(
+	UINT32 Operation,
+	UINT32 Count
+	);
+
+HiveLoadFailedToQueryLogFileSize(
+	UINT8 fileType,
+	NTSTATUS status
+	);
+
+LogFileSwap(
+	UINT8 swapReason,
+	UINT32 hiveLength,
+	UINT32 volumeLogSizeCap,
+	UINT32 effectiveLogSizeCap,
+	UINT32 logDataLength,
+	UINT32 logFileSize,
+	UINT32 logEntries,
+	INT64 timeSinceLastSwap
+	);
+
+CmSaveMergedKeysAttemptToSaveMasterHive(
+	VOID
+	);
+
+Commit delete UOW failed(
+	NTSTATUS Status
+	);
+
+LogSequenceNumberGapDetected(
+	VOID
+	);
+
+HiveLoadLogsFound(
+	UINT8 validLogs,
+	UINT8 log1Type,
+	UINT8 log2Type,
+	UINT32 log1Sequence,
+	UINT32 log2Sequence
+	);
+
+HiveLoadLogMismatch(
+	VOID
+	);
+
+HiveLoadLogIneligible(
+	UINT8 logType,
+	UINT32 minimumSequence,
+	UINT32 sequence
+	);
+
+HiveLoadLogInvalid(
+	UINT8 logType,
+	UINT32 signature,
+	UINT32 sequence1,
+	UINT32 sequence2,
+	UINT64 timestamp,
+	UINT64 expectedTimestamp,
+	UINT32 type,
+	UINT32 length,
+	UINT32 checksum,
+	UINT32 expectedChecksum
+	);
+
+HiveLoadLogUnreadable(
+	UINT8 logType,
+	NTSTATUS status
+	);
+
+UnclassifiedReadError(
+	NULL Count,
+	NTSTATUS Status
+	);
+
+IOCTL Called from inside Container(
+	UINT32 IoControlCode
+	);
+
+DriverUnload(
+	VOID
+	);
+
+UnknownIoCtl(
+	UINT32 IoControlCode
+	);
+
+IoCtl(
+	UINT32 IoControlCode
+	);
+
+IoCtlComplete(
+	NTSTATUS Status
+	);
+
+FlushKey Bypassed(
+	VOID
+	);
+
+PostQueryKeyFailed(
+	COUNTEDSTRING ContainerPath,
+	NTSTATUS Status
+	);
+
+PostQueryKey(
+	HEXINT32 InformationClass,
+	COUNTEDSTRING ContainerPath
+	);
+
+PostOpenOrCreateReparseDetected(
+	COUNTEDSTRING HostPath,
+	NTSTATUS Status
+	);
+
+PreQueryKeyNameFailed(
+	COUNTEDSTRING ContainerPath,
+	NTSTATUS Status
+	);
+
+PreLoadKeyFailed(
+	NTSTATUS Status
+	);
+
+PreLoadKey(
+	COUNTEDSTRING AbsolutePath
+	);
+
+PreOpenOrCreateGlobalReparse(
+	COUNTEDSTRING NewPath,
+	NTSTATUS Status
+	);
+
+PreOpenOrCreateFailed(
+	COUNTEDSTRING Key,
+	NTSTATUS Status
+	);
+
+PostEnumerateKeyFailed(
+	HEXINT32 InformationClass,
+	COUNTEDSTRING EnumeratedKey_ContainerPath,
+	COUNTEDSTRING FullEnumeratedKey_ContainerPath,
+	NTSTATUS Status
+	);
+
+PostEnumerateKey(
+	HEXINT32 InformationClass,
+	COUNTEDSTRING EnumeratedKey_ContainerPath
+	);
+
+PostQueryKeyFinished(
+	COUNTEDSTRING ContainerPath,
+	HEXINT32 InformationClass,
+	NTSTATUS PostInfo->ReturnStatus
+	);
+
+PreLoadKeySuccess(
+	COUNTEDSTRING AbsolutePath,
+	COUNTEDSTRING HostMountPath,
+	NTSTATUS Status
+	);
+
+FlushKey Success(
+	VOID
+	);
+
+PreQueryKeyNameSuccess(
+	COUNTEDSTRING ContainerPath,
+	NTSTATUS Status
+	);
+
+PostOpenOrCreateFailed(
+	COUNTEDSTRING HostPath,
+	NTSTATUS Status
+	);
+
+PreQueryKeyName(
+	COUNTEDSTRING ContainerPath
+	);
+
+IumStatus(
+	BOOL32 IsRunning
+	);
+
+EfiRuntimeServices(
+	COUNTEDSTRING Version,
+	BOOL32 PageProtection
+	);
+
+WriteDeferredDumpDataEnded(
+	UINT64 totalBytes,
+	UINT64 writeDeferredDumpDataDuration_ms
+	);
+
+WriteDumpDataEnded(
+	UINT64 totalBytes,
+	UINT64 writeDumpDataDuration_ms
+	);
+
+CaptureDumpEnded(
+	NTSTATUS ntStatus,
+	BOOLEAN deferDumpFileWrite,
+	BOOLEAN abortIfMemoryPressure,
+	UINT64 totalDumpCreationDuration_ms
+	);
+
+CaptureDumpStarted(
+	VOID
+	);
+
+CaptureDumpMemoryAllocationEnded(
+	UINT64 memAllocDuration_ms
+	);
+
+CaptureDumpMemoryCaptureEnded(
+	UINT64 memCaptureDuration_ms
+	);
+
+QueryVariables(
+	UINT32 attributes,
+	UINT64 maximumVariableStorageSize,
+	UINT64 remainingVariableStorageSize,
+	UINT64 maximumVariableSize,
+	NTSTATUS status
+	);
+
+SetVariable(
+	UNICODESTRING variableName,
+	GUID vendorGuid,
+	UINT32 valueLength,
+	UINT32 attributes,
+	NTSTATUS status
+	);
+
+EnumerateVariables(
+	UINT32 informationClass,
+	UINT32 requiredLength,
+	NTSTATUS status,
+	BOOLEAN filterProvided
+	);
+
+GetVariable(
+	UNICODESTRING variableName,
+	GUID vendorGuid,
+	UINT32 valueLength,
+	UINT32 attributes,
+	NTSTATUS status
+	);
+
+OsloaderTime(
+	UINT64 StartTime,
+	UINT64 EndTime,
+	UINT64 PreloadEndTime,
+	UINT64 TcbLoaderStartTime,
+	UINT64 LoadVsmTime,
+	UINT64 LaunchVsmTime,
+	UINT64 LoadHypervisorTime,
+	UINT64 LaunchHypervisorTime,
+	UINT64 Frequency
+	);
+
+PnpCompareInterruptInformation(
+	ANSISTRING Reason,
+	UINT32 Size1,
+	UINT32 Size2,
+	COUNTEDSTRING DeviceInstanceId
+	);
+
+PnpCompareInterruptInformation(
+	ANSISTRING Reason,
+	UINT32 Size1,
+	UINT32 Size2,
+	COUNTEDSTRING DeviceInstanceId
+	);
+
+PnpCompareInterruptInformation(
+	ANSISTRING Reason,
+	COUNTEDSTRING DeviceInstanceId
+	);
+
+DmaGuardIommuDeviceProperties(
+	COUNTEDSTRING DeviceInstanceId,
+	UINT32 Properties
+	);
+
+AggregateInterruptConnection(
+	NULL Count,
+	BOOLEAN Connected,
+	UINT64 PartA_PrivTags
+	);
+
+DmaGuardSystemPolicy(
+	UINT32 Policy
+	);
+
+AggregateDmaGuardDevicePolicy(
+	NULL Count,
+	COUNTEDSTRING DeviceInstanceId,
+	UINT32 Policy,
+	UINT64 PartA_PrivTags
+	);
+
+DeviceRemovalForResetComplete(
+	COUNTEDSTRING DeviceInstanceId,
+	COUNTEDSTRING ServiceName,
+	UINT32 DevNodeState,
+	NTSTATUS Status,
+	UINT32 RetryCount,
+	INT64 RetryInterval,
+	UINT32 VetoType,
+	COUNTEDSTRING VetoName
+	);
+
+SecureDeviceEnumerated(
+	COUNTEDSTRING DeviceInstanceId,
+	UINT32 SecureDeviceState,
+	NTSTATUS UnprotectStatus
+	);
+
+DockDeviceEnumerated(
+	COUNTEDSTRING DeviceInstanceId,
+	UINT32 DockStatus,
+	NTSTATUS EnumerationResult
+	);
+
+RequestDeviceRemovalForReset(
+	COUNTEDSTRING DeviceInstanceId,
+	COUNTEDSTRING ServiceName,
+	UINT32 DevNodeState,
+	UINT32 Flags,
+	NTSTATUS Result
+	);
+
+DeviceRemoveProcessVeto(
+	COUNTEDSTRING DeviceInstanceId,
+	COUNTEDSTRING VetoedDeviceInstanceId,
+	COUNTEDSTRING ProcessName
+	);
+
+RebalanceResult(
+	COUNTEDSTRING DeviceInstanceId,
+	COUNTEDSTRING ServiceName,
+	UINT32 DeviceCount,
+	COUNTEDSTRING SubtreeRootInstanceId,
+	BOOLEAN SubtreeIncludesRoot,
+	BOOLEAN RebalanceDueToDynamicPartitioning,
+	UINT32 Reason,
+	UINT32 Failure,
+	UINT64 DurationInMs,
+	UINT64 EndTime
+	);
+
+AggregateSetDevNodeProblem(
+	NULL Count,
+	COUNTEDSTRING DeviceInstanceId,
+	COUNTEDSTRING ServiceName,
+	UINT32 Problem,
+	NTSTATUS ProblemStatus,
+	UINT32 LastProblem,
+	NTSTATUS LastProblemStatus
+	);
+
+DeviceConfig(
+	UINT64 PartA_PrivTags,
+	BOOL32 Legacy,
+	COUNTEDSTRING DeviceInstanceId,
+	COUNTEDSTRING DriverFlightIds,
+	UNICODESTRING FirstHardwareId,
+	UNICODESTRING LastCompatibleId,
+	UNICODESTRING ClassGuid,
+	UNICODESTRING DriverInfName,
+	UNICODESTRING DriverProvider,
+	UNICODESTRING DriverDate,
+	UNICODESTRING DriverVersion,
+	UNICODESTRING DriverSubmissionId,
+	UNICODESTRING ExtensionDrivers,
+	BOOLEAN InboxDriver,
+	BOOLEAN SetupMode,
+	BOOLEAN NeedReboot,
+	NTSTATUS StatusCode,
+	FILETIME InstallDate
+	);
+
+AggregateClearDevNodeProblem(
+	NULL Count,
+	COUNTEDSTRING DeviceInstanceId,
+	COUNTEDSTRING ServiceName,
+	UINT32 LastProblem,
+	NTSTATUS LastProblemStatus
+	);
+
+CommitSavedProcessInSwapTrigger(
+	ANSISTRING ImageFileName,
+	UINT32 Pid
+	);
+
+ProcessCommitReacquireSkip(
+	ANSISTRING ImageFileName,
+	UINT32 Pid,
+	UINT64 CommitPagesReleased
+	);
+
+ProcessCommitReacquireFail(
+	ANSISTRING ImageFileName,
+	UINT32 Pid,
+	UINT64 CommitPagesReleased
+	);
+
+ProcessResetPagesCommitRelease(
+	ANSISTRING ImageFileName,
+	UINT32 Pid,
+	UINT64 ResetPagesReleased,
+	UINT64 NewCommitDebt
+	);
+
+ProcessCommitReacquire(
+	ANSISTRING ImageFileName,
+	UINT32 Pid,
+	UINT64 CommitPagesReleased
+	);
+
+ProcessCommitRelease(
+	ANSISTRING ImageFileName,
+	UINT32 Pid,
+	UINT64 CommitPagesReleased,
+	UINT64 ResetPagesNotReleased
+	);
+
+ProcessReserveMemFailed(
+	GUID AppSessionGuid,
+	UINT64 SizeOfRangeBytes,
+	UINT64 VirtualSizeBytes,
+	UINT64 PeakVirtualSizeBytes,
+	UINT64 HighestUserAddress,
+	UINT64 Alignment,
+	UINT64 LowestStartingAddress,
+	UINT64 HighestEndingAddress
+	);
+
+ImageFileMapFailure(
+	ANSISTRING FailureReason,
+	COUNTEDSTRING FileName,
+	UINT32 Checksum,
+	UINT32 Timestamp
+	);
+
+HvciDriverLoadFail(
+	ANSISTRING FailureReason,
+	COUNTEDSTRING BaseName,
+	UINT32 Checksum,
+	UINT32 Timestamp
+	);
+
+HvciDriverLoadFail(
+	ANSISTRING Record->FailureReason,
+	COUNTEDSTRING BaseName,
+	UINT32 Checksum,
+	UINT32 Timestamp
+	);
+
+ContinueTrimPasses(
+	UINT32 NumPasses,
+	UINT64 PagesTrimmed,
+	UINT64 PagesToTrim,
+	UINT64 DesiredFreeGoal,
+	UINT64 AvailablePages
+	);
+
+WsTrim(
+	UINT8 WorkingSetType,
+	ANSISTRING ImageFileName,
+	UINT32 Key,
+	UINT64 NumberExamined,
+	UINT64 PagesTrimmed,
+	UINT64 AvailablePages,
+	UINT64 ModifiedPages,
+	UINT64 ModifiedPagefilePages,
+	UINT32 MinTrimAge,
+	UINT32 TrimFlags
+	);
+
+WsAging(
+	UINT8 WorkingSetType,
+	ANSISTRING ImageFileName,
+	UINT32 Key,
+	UINT64 NumberExamined,
+	UINT64 AgedCount,
+	UINT64 RemovedCount,
+	UINT64 ClearedCount,
+	UINT32 AgeFlags
+	);
+
+ProcessWorkingSets(
+	UINT8 TrimReason,
+	UINT16 AgePercent,
+	UINT32 WorkingSetRequestFlags,
+	UINT64 PagesToTrim,
+	UINT64 DesiredFreeGoal,
+	UINT64 AvailablePages,
+	UINT64 ModifiedPages,
+	UINT64 ModifiedPagefilePages
+	);
+
+ProcessWorkingSets(
+	UINT64 AvailablePages,
+	UINT64 ModifiedPages,
+	UINT64 ModifiedPagefilePages
+	);
+
+NonRetpolineSystemImageLoadedAggregate(
+	NULL Count,
+	COUNTEDSTRING BaseDllName,
+	UINT32 ImageCheckSum,
+	UINT32 ImageTimeDateStamp,
+	UINT64 PartA_PrivTags
+	);
+
+ActiveUserPatchRundown(
+	PID ProcessId,
+	ANSISTRING ProcessName,
+	HEXINT64 ImageKey,
+	HEXINT32 BaseCheckSum,
+	HEXINT32 BaseTimeDateStamp,
+	HEXINT32 PatchCheckSum,
+	HEXINT32 PatchTimeDateStamp,
+	COUNTEDSTRING PatchPath,
+	UINT32 PatchGeneration,
+	UINT32 HpatEntryCount
+	);
+
+ActiveSecureKernelPatchRundown(
+	HEXINT32 BaseCheckSum,
+	HEXINT32 BaseTimeDateStamp,
+	HEXINT32 PatchCheckSum,
+	HEXINT32 PatchTimeDateStamp,
+	UINT32 PatchMinSequenceNumber,
+	COUNTEDSTRING PatchPath
+	);
+
+ActiveKernelPatchRundown(
+	HEXINT32 BaseCheckSum,
+	HEXINT32 BaseTimeDateStamp,
+	HEXINT32 PatchCheckSum,
+	HEXINT32 PatchTimeDateStamp,
+	COUNTEDSTRING PatchPath
+	);
+
+RegisteredPatchRundown(
+	HEXINT32 BaseCheckSum,
+	HEXINT32 BaseTimeDateStamp,
+	COUNTEDSTRING PatchPath
+	);
+
+RegisteredUserSidPatchRundown(
+	HEXINT32 BaseCheckSum,
+	HEXINT32 BaseTimeDateStamp,
+	COUNTEDSTRING PatchPath,
+	SID UserSid
+	);
+
+ImageHotPatchLockedPagesFound(
+	PID ProcessId,
+	HEXINT64 StartVirtualAddress,
+	HEXINT64 LastVirtualAddress,
+	HEXINT32 ImageCheckSum,
+	HEXINT32 ImageTimeDateStamp,
+	UINT32 NumberOfLockedPages
+	);
+
+UnloadPatchForUser(
+	PID ProcessId,
+	NTSTATUS Status,
+	HEXINT32 BaseCheckSum,
+	HEXINT32 BaseTimeDateStamp,
+	SID UserSid
+	);
+
+LoadPatchForUser(
+	PID ProcessId,
+	NTSTATUS Status,
+	HEXINT32 BaseCheckSum,
+	HEXINT32 BaseTimeDateStamp,
+	COUNTEDSTRING PatchPath,
+	SID UserSid
+	);
+
+UnloadPatch(
+	PID ProcessId,
+	NTSTATUS Status,
+	HEXINT32 BaseCheckSum,
+	HEXINT32 BaseTimeDateStamp
+	);
+
+SecureKernelHotPatchOperationStatus(
+	NTSTATUS Status,
+	HEXINT32 BaseCheckSum,
+	HEXINT32 BaseTimeDateStamp,
+	COUNTEDSTRING PatchPath
+	);
+
+LoadPatch(
+	PID ProcessId,
+	NTSTATUS Status,
+	HEXINT32 BaseCheckSum,
+	HEXINT32 BaseTimeDateStamp,
+	COUNTEDSTRING PatchPath
+	);
+
+ImageHotPatchOperationStatus(
+	PID ProcessId,
+	ANSISTRING ProcessName,
+	NTSTATUS Status,
+	HEXINT32 BaseCheckSum,
+	HEXINT32 BaseTimeDateStamp,
+	COUNTEDSTRING PatchPath
+	);
+
+KernelHotPatchOperationStatus(
+	NTSTATUS Status,
+	HEXINT32 BaseCheckSum,
+	HEXINT32 BaseTimeDateStamp,
+	COUNTEDSTRING PatchPath
+	);
+
+ImageHotPatchOperation(
+	PID ProcessId,
+	ANSISTRING ProcessName,
+	NTSTATUS Status,
+	HEXINT64 ImageKey,
+	HEXINT32 BaseCheckSum,
+	HEXINT32 BaseTimeDateStamp,
+	UINT32 OldPatchGeneration,
+	HEXINT32 OldPatchCheckSum,
+	HEXINT32 OldPatchTimeDateStamp,
+	COUNTEDSTRING OldPatchPath,
+	UINT32 NewPatchGeneration,
+	HEXINT32 NewPatchCheckSum,
+	HEXINT32 NewPatchTimeDateStamp,
+	COUNTEDSTRING NewPatchPath,
+	UINT32 HpatEntryCount,
+	BOOL32 EntryDeleted
+	);
+
+ProcessCommitFailure(
+	GUID AppSessionGuid,
+	UINT64 FailedSizePages,
+	UINT32 Location,
+	UINT64 ProcessPageFileLimitPages,
+	UINT64 ProcessPageFileUsagePages,
+	UINT64 ProcessCommitLimitPages,
+	UINT64 ProcessCommitUsedPages,
+	UINT64 JobPrivateCommitLimitPages,
+	UINT64 JobTotalCommitLimitPages,
+	UINT64 JobPrivateCommitUsedPages,
+	UINT64 JobSharedCommitUsedPages,
+	UINT64 PartitionCommitLimitPages,
+	UINT64 PartitionCommitUsagePages
+	);
+
+StoreCorruptionFixed(
+	HEXINT64 SourcePointer,
+	HEXINT32 CompressedSize,
+	UINT32 TotalFixed,
+	UINT64 SourcePageFrame1,
+	UINT64 SourcePageFrame2
+	);
+
+StoreWriteIssueFailure(
+	NTSTATUS Status,
+	HEXINT64 ContainerKey,
+	HEXINT64 SubKeyAddress,
+	HEXINT32 StorePageFileOffset,
+	UINT32 RetryCount,
+	UINT32 WaitAllowed,
+	UINT32 TotalWriteFailures
+	);
+
+PageNotStoreCandidate(
+	NTSTATUS Status,
+	HEXINT32 StorePageFileOffset
+	);
+
+StoreWriteCompleteFailure(
+	NTSTATUS Status
+	);
+
+StoreWriteIssueRetry(
+	HEXINT64 ContainerKey,
+	HEXINT64 SubKeyAddress,
+	HEXINT32 StorePageFileOffset,
+	UINT32 RetryCount,
+	UINT32 WaitAllowed,
+	UINT32 TotalWriteFailures
+	);
+
+StoreWriteDisabled(
+	UINT32 DisableCount,
+	UINT32 PagesWritten
+	);
+
+StorePageFileFull(
+	VOID
+	);
+
+WsEmptyControl(
+	UINT8 WorkingSetType,
+	ANSISTRING ImageFileName,
+	UINT32 Key,
+	UINT32 ControlFlags
+	);
+
+PhysicalPowerButtonPressInfoAtBoot(
+	FILETIME LastPressTime,
+	UINT32 LastPressBootId,
+	UINT32 CumulativePressCount,
+	FILETIME LastReleaseTime,
+	UINT32 LastReleaseBootId,
+	UINT32 CumulativeReleaseCount,
+	UINT32 ErrorCount,
+	UINT32 LastPowerWatchdogStage,
+	UINT8 PowerWatchdogArmed,
+	UINT8 ShutdownInProgress
+	);
+
+PpmQosEnableDisableStats(
+	UINT32 elapsedTimeSeconds,
+	UINT32 enabledTimeSeconds,
+	UINT32 disableReasonTimesSeconds,
+	UINT64 PartA_PrivTags
+	);
+
+PreviousShutdownWasThermalShutdown(
+	UNICODESTRING thermalZone,
+	UINT32 temperature
+	);
+
+CompositeBatteryEnergyChange(
+	UINT64 energyCountermW,
+	ANSISTRING isEnergyCounterUnavailable,
+	ANSISTRING isCapacityRelative,
+	ANSISTRING isFccUnavailable,
+	ANSISTRING isCapacityUnavailable,
+	INT64 energyChangemW,
+	UINT32 activeBatteryCount,
+	ANSISTRING isPowerOnlineBatteryFlag,
+	ANSISTRING isDischargingBatteryFlag,
+	ANSISTRING isChargingBatteryFlag,
+	ANSISTRING isCriticalBatteryFlag,
+	ANSISTRING isBatteryChargeLimitingFlag,
+	UINT32 percentCapacity,
+	UINT32 milliPercentCapacity,
+	UINT32 stateOfCharge,
+	UINT32 fullChargedCapacity,
+	UINT32 instantaneousVoltage,
+	INT32 instantaneousRate
+	);
+
+WeakCharger(
+	BOOL32 isKernelDetectedWeakCharger,
+	UINT32 activeBatteryCount,
+	ANSISTRING isPowerOnlineBatteryFlag,
+	ANSISTRING isDischargingBatteryFlag,
+	ANSISTRING isChargingBatteryFlag,
+	ANSISTRING isCriticalBatteryFlag,
+	ANSISTRING isBatteryChargeLimitingFlag,
+	UINT32 percentCapacity,
+	UINT32 milliPercentCapacity,
+	UINT32 stateOfCharge,
+	UINT32 fullChargedCapacity,
+	UINT32 instantaneousVoltage,
+	INT32 instantaneousRate,
+	NTSTATUS wnfPublishStatus
+	);
+
+BatteryEnergyChange(
+	COUNTEDSTRING deviceName,
+	UINT64 energyCountermW,
+	ANSISTRING isEnergyCounterUnavailable,
+	ANSISTRING isCapacityRelative,
+	ANSISTRING isFccUnavailable,
+	ANSISTRING isCapacityUnavailable,
+	INT64 energyChangemW,
+	UINT32 lastStateOfCharge,
+	UINT32 lastStateOfChargeFccAdjusted,
+	UINT32 lastFullChargedCapacity,
+	UINT32 activeBatteryCount,
+	ANSISTRING isPowerOnlineBatteryFlag,
+	ANSISTRING isDischargingBatteryFlag,
+	ANSISTRING isChargingBatteryFlag,
+	ANSISTRING isCriticalBatteryFlag,
+	ANSISTRING isBatteryChargeLimitingFlag,
+	UINT32 percentCapacity,
+	UINT32 milliPercentCapacity,
+	UINT32 stateOfCharge,
+	UINT32 fullChargedCapacity,
+	UINT32 instantaneousVoltage,
+	INT32 instantaneousRate
+	);
+
+BatteryDischarging(
+	BOOL32 isKernelDetectedBatteryDischarging,
+	UINT32 activeBatteryCount,
+	ANSISTRING isPowerOnlineBatteryFlag,
+	ANSISTRING isDischargingBatteryFlag,
+	ANSISTRING isChargingBatteryFlag,
+	ANSISTRING isCriticalBatteryFlag,
+	ANSISTRING isBatteryChargeLimitingFlag,
+	UINT32 percentCapacity,
+	UINT32 milliPercentCapacity,
+	UINT32 stateOfCharge,
+	UINT32 fullChargedCapacity,
+	UINT32 instantaneousVoltage,
+	INT32 instantaneousRate,
+	NTSTATUS wnfPublishStatus
+	);
+
+BatteryChargePercentageChange(
+	UINT32 RemainingPercentage,
+	INT32 PercentageChange,
+	UINT32 AcDcState,
+	UINT32 ElapsedTimeMs
+	);
+
+SpoilBatteryEstimation(
+	BOOL32 isSpoiledIndefinate,
+	UINT32 spoilerType
+	);
+
+ChargeTimeEstimate(
+	UINT64 capacity,
+	UINT64 estimate,
+	UINT64 maxRate,
+	STRING path,
+	UINT64 rate,
+	UINT32 state
+	);
+
+BatteryChargeLimitingMode(
+	BOOLEAN IsBatteryChargeLimitingMode,
+	NTSTATUS wnfPublishStatus
+	);
+
+PowerStateChange(
+	NTSTATUS wnfPublishStatus
+	);
+
+CompositeBattery(
+	UINT32 activeBatteryCount,
+	ANSISTRING isPowerOnlineBatteryFlag,
+	ANSISTRING isDischargingBatteryFlag,
+	ANSISTRING isChargingBatteryFlag,
+	ANSISTRING isCriticalBatteryFlag,
+	ANSISTRING isBatteryChargeLimitingFlag,
+	UINT32 percentCapacity,
+	UINT32 milliPercentCapacity,
+	UINT32 stateOfCharge,
+	UINT32 fullChargedCapacity,
+	UINT32 instantaneousVoltage,
+	INT32 instantaneousRate,
+	UINT32 globalBatteryCount,
+	UINT32 activeBatteryCount,
+	ANSISTRING isCapacityRelativeBatteryFlag,
+	UINT32 designedCapacity,
+	NTSTATUS wnfPublishStatus
+	);
+
+BatteryStateNotification(
+	BOOL32 batteryLow,
+	UINT32 batteryLevel
+	);
+
+BatteryChargeLevel(
+	ANSISTRING batteryLevel,
+	NTSTATUS wnfPublishStatus
+	);
+
+ResiliencyPhaseExit(
+	UINT8 CsSessionId,
+	UINT32 Flags,
+	UINT32 EneryDrain,
+	INT64 EneryDrainV2Value,
+	INT64 EneryDrainV2Flags,
+	UINT64 TotalTimeInUs,
+	UINT64 TotalSwDripsTimeInUs,
+	UINT64 TotalHwDripsTimeInUs,
+	UINT32 MaxActivationConcurrency,
+	UINT64 MinActivationIntervalInUs,
+	UINT64 MaxActivationIntervalInUs,
+	UINT64 TotalActivationIntervalInUs,
+	UINT32 ActivationIntervalCount,
+	UINT64 MinDeviceConstraintIntervalInUs,
+	UINT64 MaxDeviceConstraintIntervalInUs,
+	UINT64 TotalDeviceConstraintIntervalInUs,
+	UINT32 DeviceConstraintIntervalCount,
+	UINT64 DeepSleepBlockerDurationsInUs
+	);
+
+InputSuppressionMonitorOnRequestUserInput(
+	UINT8 CsSessionId,
+	UINT32 MonitorRequestReason
+	);
+
+PoDripsWakeSource(
+	UINT8 CsSessionId,
+	UINT32 Type,
+	COUNTEDSTRING Reason1,
+	COUNTEDSTRING Reason2,
+	COUNTEDSTRING Reason3,
+	UINT32 Count,
+	UINT64 IdleMinDurationInUs,
+	UINT64 IdleMaxDurationInUs,
+	UINT64 IdleTotalDurationInUs,
+	STRING CpuWakeMasks,
+	UINT16 Group,
+	UINT64 Mask,
+	UINT64 IdleIntervalCountBucketLimitsInMs,
+	UINT64 IdleIntervalCountBuckets,
+	UINT64 PeriodIntervalCountBucketLimitsInMs,
+	UINT64 PeriodIntervalCountBuckets
+	);
+
+DirectedDripsCandidateDevice(
+	UINT8 CsSessionId,
+	CODE_POINTER DeviceObject,
+	COUNTEDSTRING InstancePath,
+	UINT32 CurrentPowerState
+	);
+
+InputSuppressionAction(
+	BOOLEAN isLidStateIgnored,
+	BOOLEAN isLidClosed,
+	BOOLEAN isPowerStateDc,
+	BOOLEAN isDisplayOff,
+	BOOLEAN isNoExternalMonitorPresent,
+	BOOLEAN isInputSuppressionOptedIn,
+	UINT32 inputSuppressionFinalAction,
+	UINT8 CsSessionId
+	);
+
+PoDirectedDripsInitialization(
+	UINT32 EnableResult,
+	NTSTATUS InitializationResult
+	);
+
+BatteryCommonStatusAtAlarmTrigger(
+	ANSISTRING action,
+	BOOLEAN isAcOnline,
+	UINT32 remainingMilliPercent,
+	UINT32 powerState,
+	BOOLEAN isPowerPolicyEnabled,
+	UINT32 powerPolicyBatteryLevel,
+	UINT32 powerPolicyMinSystemState,
+	UINT32 powerPolicyActionType,
+	HEXINT32 powerPolicyFlags,
+	UINT32 powerPolicyEventCode,
+	HEXINT32 triggerBatteryFlags,
+	UINT32 triggerBatteryLevel,
+	UINT32 triggerBatteryIgnoreStatus
+	);
+
+BatteryTriggerMet(
+	UINT32 dischargePolicyIndex,
+	UINT32 activeBatteryCount,
+	UINT32 remainingPercentage,
+	UINT32 remainingMilliPercent,
+	UINT32 isAcOnline,
+	UINT32 batteryActionInternalFlags,
+	UINT32 isPowerActionCallIgnored,
+	UINT32 isPowerPolicyEnabled,
+	UINT32 powerPolicyAction,
+	UINT32 powerPolicyBatteryLevel,
+	UINT32 powerPolicyEventCode,
+	UINT32 powerPolicyMinState
+	);
+
+BatteryTriggerFlagsUpdated(
+	ANSISTRING actionName,
+	BOOLEAN batteryTriggerSetFlag,
+	BOOLEAN batteryTriggerSystemFlag,
+	BOOLEAN batteryTriggerUserFlag,
+	BOOLEAN isAcOnline,
+	UINT32 remainingMilliPercent
+	);
+
+BatteryStatusAtAlarmTrigger(
+	ANSISTRING action,
+	UINT32 batteryNumber,
+	UINT32 fullChargeCapacity,
+	UINT32 currentCapacity,
+	UINT32 batteryMilliPercentCapacity,
+	UINT32 defaultAlert1
+	);
+
+RtcWakeInfo(
+	BOOL32 wokeSystem,
+	UINT8 rejectReason,
+	BOOL32 uncertain,
+	BOOL32 spurious,
+	UINT32 fixedWakeSource,
+	BOOL32 acAlarmSignaled,
+	BOOL32 dcAlarmSignaled,
+	BOOL32 rtcSignaled,
+	FILETIME acProgrammedTime,
+	FILETIME dcProgrammedTime,
+	BOOL32 usingAcTime,
+	FILETIME wakeTime,
+	FILETIME adjustedWakeTime,
+	BOOL32 fullWake
+	);
+
+MonitorOnWithLidClosed(
+	BOOLEAN lidState,
+	BOOLEAN externalMonitorConnectedState,
+	UINT32 monitorRequestReasonCode,
+	BOOLEAN isPowerSourceConnected,
+	UINT8 CsSessionId
+	);
+
+DozeToS4Deferral(
+	BOOL32 Deferred,
+	HEXINT32 DozeDeferralDeniedReasons,
+	HEXINT64 DozeDeferralStartTime,
+	HEXINT64 CurrentInterruptTime,
+	HEXINT64 EarliestWakeTimerDueTime,
+	UINT32 DozeDeferralMaxSeconds,
+	UNICODESTRING WakeTimerRequester,
+	UNICODESTRING WakeTimerReason,
+	UINT8 RtcWakePolicyAc,
+	UINT8 RtcWakePolicyDc,
+	INT8 PlatformRole,
+	BOOL32 IsAoac,
+	INT8 WakeAlarmPresent,
+	INT8 AcOnLineWakeCapability,
+	INT8 RtcWakeCapability
+	);
+
+displayBurstSuppressedWhenPowerSourceChange(
+	BOOLEAN lidOpen,
+	BOOLEAN externalMonitorConnected
+	);
+
+lidCloseDisplayOnWhenPowerSourceChange(
+	BOOLEAN lidOpen,
+	BOOLEAN externalMonitorConnected
+	);
+
+lidClosedSleepStsudySessionCreated(
+	BOOLEAN lidOpen
+	);
+
+WinloadFatalError(
+	UINT32 errorBootId,
+	UINT32 repeatCount,
+	UINT32 otherErrorCount,
+	UINT32 errorCode,
+	UINT64 errorStatus
+	);
+
+UserInitiatedDisplayBurstStatus(
+	BOOLEAN LidOpen,
+	BOOLEAN ExternalMonitorConnected,
+	BOOLEAN IsDisplayBurstSuppressed
+	);
+
+PopDiagTraceExternalDisplayState(
+	BOOLEAN IsExternalMonitorConnected
+	);
+
+SleepCheckpointInitFailed(
+	NTSTATUS Status
+	);
+
+BackgroundActivityPolicyUpdate(
+	UINT32 PreviousPolicy,
+	UINT32 NewPolicy
+	);
+
+ForceIdleResetReason(
+	UINT32 Reason
+	);
+
+ConnectivityInStandbyUpdate(
+	UINT32 State,
+	UINT32 Reason,
+	UINT64 PartA_PrivTags
+	);
+
+OSStateChange(
+	UINT16 StateTransition,
+	UINT16 StateTransitionSub,
+	UINT64 StateDurationMS,
+	UINT32 BootId,
+	FILETIME BootTimeUTC,
+	UINT64 UptimeDeltaMS,
+	UINT64 TotalDurationMS,
+	UINT64 TotalUptimeMS,
+	UINT16 LastStateTransition,
+	UINT16 LastStateTransitionSub,
+	UINT32 EventSequence,
+	UINT32 ActualTransitions,
+	UINT32 TransitionsToOn,
+	UINT32 BatteryCapacity,
+	UINT32 BatteryCharge,
+	INT64 EnergyChangeV2,
+	UINT32 EnergyChangeV2Flags,
+	BOOL32 AcPowerOnline,
+	BOOL32 BatteryDischarging,
+	UINT64 PartA_PrivTags
+	);
+
+ThermalRequestActiveActivity(
+	COUNTEDSTRING targetDeviceName,
+	UNICODESTRING policyDeviceService,
+	UINT32 totalTime,
+	UINT32 activeTime
+	);
+
+ThermalRequestPassiveHistogram(
+	COUNTEDSTRING targetDeviceName,
+	UNICODESTRING policyDeviceService,
+	UINT32 throttleHistogram,
+	UINT8 bucketThresholds
+	);
+
+ThermalStandbyComplete(
+	UINT32 completionReason,
+	UINT32 standbyTime,
+	BOOL32 firstThermalStandby
+	);
+
+ZoneCr3Mitigated(
+	UINT32 generationId,
+	UINT32 temperature,
+	UNICODESTRING zoneName
+	);
+
+ThermalZoneActiveActivity(
+	COUNTEDSTRING thermalZoneName,
+	UNICODESTRING zoneDescription,
+	UINT32 totalTime,
+	UINT32 activeTimes
+	);
+
+ThermalZonePassiveHistogram(
+	COUNTEDSTRING thermalZoneName,
+	UNICODESTRING zoneDescription,
+	UINT32 throttleHistogram,
+	UINT8 bucketThresholds
+	);
+
+SmbiosChange(
+	UINT64 OldTableAddr,
+	UINT32 OldTableLen,
+	UINT64 NewTableAddr,
+	UINT32 NewTableLen
+	);
+
+Cr3Mitigated(
+	UINT32 generationId
+	);
+
+ZoneCr3Tripped(
+	UINT32 generationId,
+	BOOLEAN policyDriver,
+	BOOLEAN passiveEngaged,
+	BOOLEAN activeEngaged,
+	UINT32 temperature,
+	UINT32 tripPointTemperature,
+	UNICODESTRING zoneName,
+	UNICODESTRING zoneDescription
+	);
+
+ThermalStandbyInitiated(
+	BOOL32 firstThermalStandby
+	);
+
+PoFxDefaultPepWorkerOrphaned(
+	UINT32 NumExtraDevices,
+	UINT64 PartA_PrivTags
+	);
+
+PoFxDefaultPepWorkerRecovered(
+	UINT32 NumExtraDevices
+	);
+
+Cr3Tripped(
+	UINT32 generationId
+	);
+
+PowerReconfigNotification(
+	FILETIME timeStampUTC,
+	UINT32 batteryCount,
+	UINT32 batteryCapacity,
+	UINT32 batteryCharge,
+	BOOL32 acPowerOnline,
+	BOOL32 weakCharger,
+	BOOL32 batteryDischarging
+	);
+
+EnergySaverEngagementChanged(
+	UINT32 engagementReason,
+	UINT64 duration,
+	INT32 batteryDelta,
+	BOOL32 acPowerOnline,
+	UINT32 energySaverMode,
+	UINT32 batteryThreshold,
+	BOOL32 userAway,
+	UINT64 PartA_PrivTags
+	);
+
+PopDiagFxGlobalDeviceAccounting(
+	UINT8 ScenarioId,
+	UINT64 CsActiveTime,
+	UINT64 CsActiveTimeBuckets,
+	UINT64 CsActiveTimePerBucket,
+	UINT64 CsUnattributedTime
+	);
+
+EnergySaverSettingChanged(
+	UINT32 energySaverMode,
+	UINT32 batteryThreshold,
+	BOOL32 userAway
+	);
+
+DripsHistogram(
+	UINT16 csSessionId,
+	UINT16 CsDurationInMinutes,
+	UINT8 DripsPercentage,
+	UINT8 Bucket2s,
+	UINT8 Bucket16s,
+	UINT8 Bucket1m,
+	UINT8 BucketMaxim
+	);
+
+CsExitReason(
+	UINT8 CsSessionId,
+	UINT32 EnergyDrain,
+	UINT64 ActiveResidency,
+	UINT64 NonDripsTimeActivated,
+	UINT64 FirstDripsEntry,
+	UINT64 DripsResidency,
+	UINT64 Duration,
+	UINT32 DripsTransitions,
+	UINT8 FullChargeCapacityRatio,
+	UINT32 AudioPlayed,
+	UINT32 MonitorRequestReason,
+	UINT64 AudioPlayback,
+	UINT64 NonActivatedCpuActivity,
+	UINT32 PowerStateAc,
+	UINT64 TotalHwDripsResidency,
+	UINT64 ExitLatency,
+	UINT32 DisconnectedStandby,
+	UINT32 AoAcCompliantNic,
+	UINT64 NonAttributedCpuActivity,
+	UINT32 LidOpenState,
+	UINT32 ExternalMonitorConnectedState,
+	UINT32 BatteryRemainingCapacityOnExit,
+	UINT32 BatteryFullChargeCapacityOnExit,
+	NTSTATUS EtwPoolAllocationStatus,
+	UINT32 InputSuppressionCount,
+	UINT64 NonResiliencyTime,
+	UINT64 ResiliencyDripsTime,
+	UINT64 ResiliencyHwDripsTime,
+	UINT64 GdiOnTime,
+	UINT64 DwiSyncFlushTime,
+	UINT64 MonitorPowerOnTime,
+	UINT8 AggregatorIntent,
+	UINT8 AggregatorAction
+	);
+
+PopDiagFxDeviceAccounting(
+	UINT8 ScenarioId,
+	COUNTEDSTRING InstancePath,
+	UINT64 CsActiveTime,
+	UINT64 CsActiveTimeBuckets,
+	UINT64 CsActiveTimePerBucket,
+	UINT64 CsActiveTimeUnattributed,
+	COUNTEDSTRING DeviceClassName,
+	COUNTEDSTRING DeviceClassGuid,
+	COUNTEDSTRING FriendlyName
+	);
+
+PopDiagFxComponentAccounting(
+	UINT8 ScenarioId,
+	COUNTEDSTRING InstancePath,
+	UINT32 Component,
+	UINT64 CsActiveTime,
+	UINT64 CsActiveTimeBuckets,
+	UINT64 CsActiveTimePerBucket,
+	UINT64 CsActiveTimeUnattributed,
+	COUNTEDSTRING DeviceClassName,
+	COUNTEDSTRING DeviceClassGuid,
+	COUNTEDSTRING FriendlyName
+	);
+
+CsEnterReason(
+	UINT8 CsSessionId,
+	UINT32 MonitorRequestReason,
+	UINT32 LidOpenState,
+	UINT32 ExternalMonitorConnectedState,
+	UINT32 BatteryRemainingCapacityOnEnter,
+	UINT32 BatteryFullCapacityOnEnter
+	);
+
+SpuriousManualPowerButtonBugcheck(
+	UINT32 Timeout,
+	UINT32 CumulativePressCount,
+	UINT32 CumulativeReleaseCount,
+	BOOLEAN SpuriousEvent,
+	UINT64 CummulativeLogger,
+	UINT32 ProcessedPressCount,
+	UINT32 ProcessedReleaseCount,
+	UINT64 ProcessedLogger,
+	UINT32 LidState,
+	BOOLEAN BugcheckEnabled,
+	UINT32 ManualBugcheckRegistryConfig,
+	UINT32 OneSettingBugcheckRegistryConfig
+	);
+
+ManualPowerButtonBugcheck(
+	UINT32 Timeout,
+	UINT32 CumulativePressCount,
+	UINT32 CumulativeReleaseCount,
+	BOOLEAN SpuriousEvent,
+	UINT64 CummulativeLogger,
+	UINT32 ProcessedPressCount,
+	UINT32 ProcessedReleaseCount,
+	UINT64 ProcessedLogger,
+	UINT32 LidState,
+	BOOLEAN BugcheckEnabled,
+	UINT32 ManualBugcheckRegistryConfig,
+	UINT32 OneSettingBugcheckRegistryConfig
+	);
+
+PoWaitWakeIrpFinish(
+	HEXINT32 SequenceID,
+	NTSTATUS Status,
+	BOOLEAN Cancel,
+	BOOLEAN SystemWake,
+	BOOLEAN BroadcastInProgress,
+	HEXINT32 PowerAction
+	);
+
+PoIrpFinish(
+	UINT32 ElapsedTime,
+	UINT64 StartTime,
+	UINT64 FinishTime,
+	UNICODESTRING Driver,
+	UINT32 WatchdogTimeout,
+	UINT32 PowerStateType,
+	UINT32 PowerState,
+	NTSTATUS IrpStatus,
+	UINT64 PartA_PrivTags
+	);
+
+PoWaitWakeIrpStart(
+	HEXINT32 SequenceID,
+	COUNTEDSTRING InstancePath,
+	COUNTEDSTRING ParentInstancePath,
+	HEXINT32 DeviceType,
+	BOOLEAN BroadcastInProgress,
+	HEXINT32 PowerAction,
+	UINT64 PartA_PrivTags
+	);
+
+LockDisplayTimeoutOverrideActive(
+	VOID
+	);
+
+PowerRequestStats(
+	ANSISTRING Action,
+	UNICODESTRING PowerRequesterName,
+	UINT64 AccruedTimeSec,
+	BOOL32 Running,
+	UINT8 ScenarioInstanceId
+	);
+
+PowerRequestStats(
+	ANSISTRING Action,
+	UNICODESTRING PowerRequester,
+	INT32 PowerRequestId,
+	UINT32 PowerRequesterType
+	);
+
+DirectedDripsDeviceDiagnostics(
+	UINT8 ScenarioId,
+	COUNTEDSTRING FriendlyName,
+	COUNTEDSTRING HardwareId,
+	COUNTEDSTRING DeviceClassName,
+	COUNTEDSTRING DeviceClassGuid,
+	UINT32 BroadcastTreeId,
+	UINT32 DfxTransitionCount,
+	UINT32 Ps4TransitionCount,
+	UINT32 Flags,
+	COUNTEDSTRING InstancePath,
+	UINT64 PartA_PrivTags
+	);
+
+DirectedDripsPnpActionQueueStates(
+	UINT64 TotalDisengageTime,
+	UINT64 TotalRequestBlockingTime,
+	UINT32 RequestCountsTotal,
+	UINT64 RequestBlockingTimes,
+	UINT64 PartA_PrivTags
+	);
+
+PlPowerPlaneDeviceProfile(
+	UINT16 MessageVersion,
+	COUNTEDSTRING DeviceId,
+	COUNTEDSTRING PowerPlaneId,
+	UINT32 ComponentCount,
+	INT32 PowerDrawMw,
+	STRING DxPower,
+	UINT32 ExclusivePowerMw,
+	UINT32 PeakPowerMw
+	);
+
+PlPowerPlaneProfile(
+	UINT16 MessageVersion,
+	COUNTEDSTRING PowerPlaneId,
+	UINT32 DeviceCount,
+	INT32 DevicePowerMw
+	);
+
+PlPowerPlaneComponentProfile(
+	UINT16 MessageVersion,
+	GUID ComponentGuid,
+	COUNTEDSTRING DeviceId,
+	COUNTEDSTRING PowerPlaneId,
+	STRING FxPower,
+	UINT32 ExclusivePowerMw,
+	UINT32 PeakPowerMw
+	);
+
+PlNotifyDeviceDState(
+	UINT16 MessageVersion,
+	COUNTEDSTRING DeviceId,
+	ANSISTRING TransactionState,
+	ANSISTRING DxState,
+	INT32 DevicePowerDeltaMw,
+	INT32 DevicePowerMw,
+	INT32 SystemPowerDeltaMw,
+	INT32 SystemPowerMw
+	);
+
+PlUnregisterComponent(
+	UINT16 MessageVersion,
+	GUID ComponentGuid
+	);
+
+PlPublishSystemPowerChange(
+	UINT16 MessageVersion,
+	COUNTEDSTRING PowerPlaneId,
+	INT32 SystemPowerDeltaMw,
+	INT32 SystemPowerMw
+	);
+
+PlNotifyDeviceFState(
+	UINT16 MessageVersion,
+	GUID ComponentGuid,
+	ANSISTRING TransactionState,
+	UINT32 FxState,
+	INT32 DevicePowerDeltaMw,
+	INT32 DevicePowerMw,
+	INT32 SystemPowerDeltaMw,
+	INT32 SystemPowerMw,
+	COUNTEDSTRING DeviceId
+	);
+
+PlRegisterDevice(
+	UINT16 MessageVersion,
+	COUNTEDSTRING DeviceId,
+	BOOL32 PowerProfileRegistered,
+	UINT32 ComponentCount
+	);
+
+PlRegisterUnregisteredFxDevice(
+	UINT16 MessageVersion,
+	COUNTEDSTRING DeviceId,
+	INT32 DevicePowerDeltaMw,
+	INT32 DevicePowerMw,
+	INT32 SystemPowerDeltaMw,
+	INT32 SystemPowerMw
+	);
+
+PlUnregisterDevice(
+	UINT16 MessageVersion,
+	COUNTEDSTRING DeviceId,
+	INT32 DevicePowerDeltaMw,
+	INT32 DevicePowerMw,
+	INT32 SystemPowerDeltaMw,
+	INT32 SystemPowerMw
+	);
+
+PlRegisterComponent(
+	UINT16 MessageVersion,
+	GUID ComponentGuid,
+	BOOL32 PowerProfileRegistered,
+	UINT32 IdleStateCount,
+	COUNTEDSTRING DeviceId
+	);
+
+PlRegisterFxDevice(
+	UINT16 MessageVersion,
+	COUNTEDSTRING DeviceId,
+	INT32 DevicePowerDeltaMw,
+	INT32 DevicePowerMw,
+	INT32 SystemPowerDeltaMw,
+	INT32 SystemPowerMw
+	);
+
+PlRegisterPowerPlaneStatus(
+	UINT16 MessageVersion,
+	NTSTATUS ParsingStatus
+	);
+
+ThermalZoneEnumeration(
+	UNICODESTRING deviceInstance,
+	UINT32 activeTripPoint0,
+	UINT32 activeTripPoint1,
+	UINT32 criticalTripPoint,
+	UINT32 passiveTripPoint,
+	UINT32 thermalstandbyTripPoint,
+	UINT32 s4TransitionTripPoint,
+	UINT32 samplingPeriod,
+	UINT32 thermalConstant1,
+	UINT32 thermalConstant2,
+	UNICODESTRING zoneDescription,
+	UINT32 suggestedPollingPeriod
+	);
+
+FanEnumerated(
+	VOID
+	);
+
+ThermalUsermodeEvent(
+	UINT32 tripPoint,
+	UINT32 temperature,
+	UINT32 mitigationType,
+	COUNTEDSTRING initiator
+	);
+
+ThermalCriticalEvent(
+	BOOLEAN policyDriver,
+	BOOLEAN passiveEngaged,
+	BOOLEAN activeEngaged,
+	UINT32 mitigationType,
+	UINT32 temperature,
+	UINT32 tripPointTemperature,
+	BOOLEAN temperatureAboveTripPoint,
+	UNICODESTRING zoneName,
+	UNICODESTRING zoneDescription
+	);
+
+TTM_DeviceFromTerminalRemoved(
+	UINT32 SessionId,
+	UINT32 TerminalId,
+	UINT32 Provider,
+	HEXINT64 Token,
+	UINT32 DeviceId
+	);
+
+TTM_ProximityBlockedRequest(
+	UINT32 SessionId,
+	BOOLEAN On,
+	UINT32 Reason,
+	COUNTEDANSISTRING PathTag
+	);
+
+TTM_SessionWorker(
+	UINT32 SessionId,
+	NTSTATUS Status
+	);
+
+TTM_TerminalDestroyed(
+	HEXINT64 Terminal
+	);
+
+TTM_QueueHandleClosed(
+	HEXINT64 Queue,
+	HEXINT64 ProcessId,
+	UINT64 SystemHandleCount
+	);
+
+TTM_SessionDisplayRequiredReference(
+	UINT32 SessionId,
+	UINT32 Count,
+	NTSTATUS Status
+	);
+
+TTM_DeviceEnumeratedTerminalEvent(
+	UINT32 SessionId,
+	UINT32 DeviceId,
+	UINT32 AssignedTerminalId,
+	UINT32 Provider,
+	UINT32 ProviderSpecificType,
+	UNICODESTRING Identity
+	);
+
+TTM_TerminalCleanup(
+	UINT32 SessionId,
+	UINT32 TerminalId,
+	HEXINT64 Terminal
+	);
+
+TTM_InitiateModernStandbyTransitionStart(
+	UINT32 SessionId,
+	BOOLEAN Enter,
+	UINT32 Reason
+	);
+
+TTM_QueueEventEnqueued(
+	HEXINT64 Queue,
+	HEXINT64 Event,
+	UINT32 Type
+	);
+
+TTM_SessionPowerControlStart(
+	UINT32 SessionId,
+	BOOLEAN On,
+	UINT32 Reason
+	);
+
+TTM_TerminalDisplayStateChangedEvent(
+	UINT32 SessionId,
+	UINT32 TerminalId,
+	UINT32 DisplayState,
+	UINT32 Reason
+	);
+
+TTM_DeviceArrivedTerminalEvent(
+	UINT32 SessionId,
+	UINT32 DeviceId,
+	UINT32 AssignedTerminalId,
+	UINT32 Provider,
+	UINT32 ProviderSpecificType,
+	UNICODESTRING Identity
+	);
+
+TTM_QueueHandleCreated(
+	HEXINT64 Queue,
+	HEXINT64 ProcessId,
+	UINT32 OpenReason
+	);
+
+TTM_TerminalStateMachine(
+	UINT32 SessionId,
+	UINT32 TerminalId,
+	UINT32 PreviousDisplayState,
+	UINT64 PreviousZeroTime,
+	UINT64 NowTime,
+	UINT64 DimTimeoutSpan,
+	UINT64 OffTimeoutSpan,
+	BOOLEAN DisplayRequestActive,
+	BOOLEAN DisplayRequestEnded,
+	UINT32 OnOffRequest,
+	UINT32 OnOffRequestReason,
+	UINT32 DisplayState,
+	BOOLEAN DisplayStateChanged,
+	UINT32 DisplayStateChangedReason,
+	UINT64 ZeroTime,
+	UINT64 NextEvaluationSpan
+	);
+
+TTM_DeviceArrived(
+	UINT32 SessionId,
+	UINT32 Provider,
+	HEXINT64 Token,
+	UINT32 DeviceId,
+	HEXINT32 ProviderDeviceType,
+	NTSTATUS StatusOut
+	);
+
+TTM_SessionCsExitComplete(
+	UINT32 SessionId
+	);
+
+TTM_DispatchApi(
+	UINT32 SessionId,
+	UINT32 Level
+	);
+
+TTM_DispatchApi(
+	UINT32 SessionId,
+	UINT32 Level,
+	NTSTATUS Status
+	);
+
+TTM_DeviceCalloutWatchdogCrashSkipped(
+	UINT32 SessionId,
+	UINT32 PowerAction,
+	UINT32 Code,
+	UINT64 Parameter1,
+	UINT64 Parameter2,
+	UINT64 Parameter3,
+	UINT64 Parameter4
+	);
+
+TTM_SessionDisplayRequiredDereference(
+	UINT32 SessionId,
+	UINT32 Count,
+	NTSTATUS Status
+	);
+
+TTM_QueueDestroyed(
+	HEXINT64 Queue
+	);
+
+TTM_Error(
+	UINT32 SessionId,
+	ANSISTRING Function,
+	UINT32 Line,
+	NTSTATUS StatusIn,
+	NTSTATUS StatusOut
+	);
+
+TTM_SessionDeactivate(
+	UINT32 SessionId
+	);
+
+TTM_TerminalRundown(
+	UINT32 SessionId,
+	UINT32 TerminalId,
+	UINT32 TerminalState,
+	UINT32 DisplayState,
+	UINT32 DisplayStateReason,
+	UINT32 FilteredInput,
+	UINT32 PendingOnOff,
+	UINT32 PendingOnOffReason,
+	UINT64 DimTimeoutSeconds,
+	UINT64 OffTimeoutSeconds,
+	UINT64 ZeroTime,
+	UINT64 PrxmSpanSinceLastPress,
+	UINT32 PrxmPowerPressCount,
+	UINT32 PrxmScenarioCount,
+	UINT32 PrxmEscapeCount,
+	UINT32 PrxmDisplayState,
+	UINT32 PrxmDisplayStateReason
+	);
+
+TTM_EnterProximity(
+	UINT32 SessionId,
+	UINT32 ScenarioCount
+	);
+
+TTM_TerminalCreated(
+	UINT32 SessionId,
+	UINT32 TerminalId,
+	HEXINT64 Terminal
+	);
+
+TTM_InitiateModernStandbyTransitionStop(
+	UINT32 SessionId,
+	NTSTATUS Status
+	);
+
+TTM_CleanupCurrentSession(
+	UINT32 SessionId
+	);
+
+TTM_DeviceAssignmentPolicySet(
+	UINT32 SessionId,
+	BOOLEAN AutoAssignToTerminal0
+	);
+
+TTM_SessionPowerRequestDeleted(
+	UINT32 SessionId,
+	INT32 PowerRequestId,
+	BOOLEAN WasValidEntry
+	);
+
+TTM_TerminalHandleCreated(
+	UINT32 SessionId,
+	UINT32 TerminalId,
+	HEXINT64 ProcessId,
+	UINT32 OpenReason
+	);
+
+TTM_DeviceCallout(
+	UINT32 SessionId,
+	UINT32 Provider,
+	HEXINT32 ProviderDeviceType,
+	HEXINT64 Token,
+	COUNTEDANSISTRING CalloutTag,
+	NTSTATUS Status,
+	UINT64 Duration
+	);
+
+TTM_ConsoleUserPresent(
+	UINT32 SessionId,
+	UINT32 Reason,
+	NTSTATUS Status
+	);
+
+TTM_SessionPowerRequestPresent(
+	UINT32 SessionId,
+	INT32 PowerRequestId,
+	UINT32 ProcessId,
+	HEXINT64 PowerRequestHandle,
+	HEXINT64 CoreWindowHandle,
+	UINT32 Count,
+	BOOLEAN Attributed,
+	BOOLEAN Tracking
+	);
+
+TTM_TerminalDisplayPowerRequest(
+	UINT32 SessionId,
+	UINT32 TerminalId,
+	INT32 RequestId,
+	BOOL32 Active,
+	NTSTATUS Status
+	);
+
+TTM_SessionWorkerPass(
+	UINT32 SessionId,
+	UINT32 WorkToDo,
+	UINT32 Iteration
+	);
+
+TTM_TerminalHandleClosed(
+	UINT32 SessionId,
+	UINT32 TerminalId,
+	HEXINT64 ProcessId,
+	UINT64 SystemHandleCount
+	);
+
+TTM_DeviceCallout(
+	UINT32 SessionId,
+	UINT32 Provider,
+	HEXINT32 ProviderDeviceType,
+	HEXINT64 Token,
+	COUNTEDANSISTRING CalloutTag,
+	NTSTATUS Status,
+	UINT64 Duration
+	);
+
+TTM_SessionActivate(
+	UINT32 SessionId
+	);
+
+TTM_QueueCreated(
+	UINT32 SessionId,
+	HEXINT64 Queue
+	);
+
+TTM_ExitProximity(
+	UINT32 SessionId,
+	UINT32 ScenarioCount,
+	UINT32 EscapeCount,
+	BOOLEAN Escaped
+	);
+
+TTM_ProximityPowerPress(
+	UINT32 SessionId,
+	BOOLEAN Escaped,
+	UINT64 SpanSinceLastPress,
+	UINT32 PowerPressCount,
+	UINT32 ScenarioCount,
+	UINT32 EscapeCount
+	);
+
+TTM_QueueEventDequeued(
+	HEXINT64 Queue,
+	HEXINT64 Event,
+	UINT32 Type
+	);
+
+TTM_DeviceDepartedTerminalEvent(
+	UINT32 SessionId,
+	UINT32 DeviceId
+	);
+
+TTM_DeviceToTerminalAssigned(
+	UINT32 SessionId,
+	UINT32 TerminalId,
+	UINT32 DeviceId
+	);
+
+TTM_SessionPowerRequestCreated(
+	UINT32 SessionId,
+	INT32 PowerRequestId,
+	BOOLEAN Tracking
+	);
+
+TTM_DeviceCallout(
+	UINT32 SessionId,
+	UINT32 Provider,
+	HEXINT64 Token,
+	COUNTEDANSISTRING CalloutTag,
+	UINT32 Data
+	);
+
+TTM_TerminalOnRequest(
+	UINT32 SessionId,
+	UINT32 TerminalId,
+	UINT32 Reason,
+	COUNTEDANSISTRING PathTag
+	);
+
+TTM_SessionPowerRequestUpdated(
+	UINT32 SessionId,
+	INT32 PowerRequestId,
+	BOOLEAN WasUpdateSuccessful
+	);
+
+TTM_InitCurrentSession(
+	UINT32 SessionId
+	);
+
+TTM_SessionPowerStateChange(
+	UINT32 SessionId,
+	BOOLEAN On
+	);
+
+TTM_DeviceDeparted(
+	UINT32 SessionId,
+	UINT32 Provider,
+	HEXINT64 Token,
+	BOOLEAN DeviceFound
+	);
+
+TTM_TerminalOffRequest(
+	UINT32 SessionId,
+	UINT32 TerminalId,
+	UINT32 Reason,
+	COUNTEDANSISTRING PathTag
+	);
+
+TTM_SessionRundown(
+	UINT32 SessionId,
+	UINT32 SessionState,
+	INT32 RefCnt,
+	UINT32 TerminalCnt,
+	UINT32 DeviceCnt,
+	UINT32 ActivateReason,
+	UINT32 DeactivateReason,
+	UINT32 DisplayCount,
+	UINT32 DisplayDimTimeout,
+	UINT32 DisplayOffTimeout
+	);
+
+TTM_DeviceInput(
+	UINT32 SessionId,
+	UINT32 Provider,
+	HEXINT64 Token,
+	UINT32 InputFlags,
+	BOOLEAN DeviceFound,
+	BOOLEAN WillEvaluate
+	);
+
+TTM_CleanupCurrentSession(
+	UINT32 SessionId
+	);
+
+TTM_SessionPowerControlStop(
+	UINT32 SessionId
+	);
+
+TTM_InitCurrentSession(
+	UINT32 SessionId,
+	NTSTATUS Status
+	);
+
+TTM_TerminalTimeouts(
+	UINT32 SessionId,
+	UINT32 TerminalId,
+	UINT32 DimTimeoutSeconds,
+	UINT32 OffTimeoutSeconds,
+	UINT64 SanitizedDimIntTime,
+	UINT64 SanitizedOffIntTime
+	);
+
+TTM_DeviceRundown(
+	UINT32 SessionId,
+	UINT32 TerminalId,
+	UINT32 Provider,
+	HEXINT64 Token,
+	UINT32 DeviceId,
+	HEXINT32 ProviderDeviceType,
+	UINT64 LastInputTime,
+	HEXINT32 DeviceState
+	);
+
+TTM_DeviceAssignedTerminalEvent(
+	UINT32 SessionId,
+	UINT32 DeviceId,
+	UINT32 AssignedTerminalId
+	);
+
+TTM_SessionWorker(
+	UINT32 SessionId
+	);
+
+TTM_SessionMonitorControl(
+	UINT32 SessionId,
+	UINT32 Reason,
+	UINT32 Type,
+	NTSTATUS Status
+	);
+
+ThreadOpenFailedForForcedAccessCheck(
+	UINT32 TargetThreadId,
+	UINT32 TargetProcessId,
+	HEXINT32 DesiredAccess,
+	HEXINT32 ObjectAttributes,
+	UINT8 ProbeMode,
+	UINT8 AccessMode,
+	UINT64 PartA_PrivTags
+	);
+
+ProcessOpenFailedForForcedAccessCheck(
+	UINT32 TargetProcessId,
+	HEXINT32 DesiredAccess,
+	HEXINT32 ObjectAttributes,
+	UINT8 ProbeMode,
+	UINT8 AccessMode,
+	UINT64 PartA_PrivTags
+	);
+
+RtlCapabilityCheckLatency(
+	INT64 Latency,
+	BOOLEAN IsAdmin,
+	BOOLEAN IsInteractiveUser,
+	BOOLEAN IsAdminCapability,
+	BOOLEAN HasCapability
+	);
+
+CriticalAceChanged(
+	COUNTEDSTRING Process
+	);
+
+LimitedToNonLimitedTokenSessionImpersonation(
+	UINT32 primaryTokenSessionFlags,
+	UINT32 impersonationTokenSessionFlags,
+	COUNTEDSTRING processPath,
+	COUNTEDSTRING processCommandLine
+	);
+
+CovSum(
+	UINT32 RoundId,
+	UINT32 FailuresInRound,
+	UINT32 SinceLastFlushMS,
+	UINT32 SinceLastResetMS,
+	ANSISTRING Entries
+	);
+
+Cov(
+	UINT32 RoundId,
+	UINT32 FailuresInRound,
+	UINT32 SinceLastFlushMS,
+	UINT32 SinceLastResetMS,
+	BOOL32 Recorded,
+	BOOL32 AlreadySet,
+	ANSISTRING CoverageId
+	);
+
+Cov(
+	UINT32 RoundId,
+	UINT32 FailuresInRound,
+	UINT32 SinceLastFlushMS,
+	UINT32 SinceLastResetMS,
+	BOOL32 Recorded,
+	BOOL32 AlreadySet,
+	ANSISTRING CoverageId
+	);
+
+CovNew(
+	UINT32 RoundId,
+	UINT32 FailuresInRound,
+	UINT32 SinceLastFlushMS,
+	UINT32 SinceLastResetMS,
+	ANSISTRING CoverageId
+	);
+
+SystemShutdown(
+	UINT32 StateEventType,
+	INT64 ShutdownTime
+	);
+
+HvInfo(
+	INT32 HypervisorLevel,
+	BOOLEAN CpuManager
+	);
+
+SystemTimeChange(
+	INT64 NewTime,
+	INT64 OldTime,
+	UINT32 ChangeReason,
+	COUNTEDSTRING Process,
+	UINT32 PID
+	);
+
+ProcessStarted(
+	INT64 InstanceStartTime,
+	UINT32 InstanceId,
+	UINT32 ParentPid,
+	UINT32 SessionId,
+	COUNTEDSTRING ImageFileName,
+	UINT64 ProcessStartKey,
+	UINT64 ProcessSequence,
+	UINT64 CreateInterruptTime,
+	UINT64 SessionCreateTime,
+	UINT32 ImageChecksum,
+	UINT32 ImageTimeDateStamp,
+	UNICODESTRING PackageName,
+	UNICODESTRING PRAID,
+	SID UserSid,
+	COUNTEDSTRING CommandLine
+	);
+
+SystemStart(
+	UINT32 MajorVersion,
+	UINT32 MinorVersion,
+	UINT32 BuildNumber,
+	UINT32 StateEventType,
+	UINT32 QFE,
+	UINT16 ServicePack,
+	UINT32 BootMode,
+	INT64 BootTime,
+	UINT32 InbvMode,
+	BOOLEAN MeasuredLaunch
+	);
+
+TimeZoneBiasChange(
+	INT32 NewBias,
+	INT32 OldBias
+	);
+
+LeapSecondDataParseFailed(
+	UINT32 FailureResult
+	);
+
+LeapSecondDataUpdate(
+	UINT32 UpdateReason,
+	UINT32 EnabledNew,
+	UINT32 CountNew,
+	UINT32 CountOld
+	);
+
+AppStateChangeSummary(
+	NULL LaunchCount,
+	NULL SuspendCount,
+	NULL ResumeCount,
+	NULL TerminateCount,
+	NULL CrashCount,
+	NULL HeartbeatCount,
+	NULL HeartbeatSuspendedCount,
+	NULL ProcessDurationMS_Sum,
+	NULL RunningDurationMS_Sum,
+	NULL HangCount_Sum,
+	NULL GhostCount_Sum,
+	NULL HandleCountAtExit_Sum,
+	NULL CommitChargeAtExit_Sum,
+	NULL CommitChargePeakAtExit_Sum,
+	NULL ReadCountAtExit_Sum,
+	NULL ReadSizeInKBAtExit_Sum,
+	NULL WriteCountAtExit_Sum,
+	NULL WriteSizeInKBAtExit_Sum,
+	NULL CycleCountAtExit_Sum,
+	NULL ExitStatusNegativeCount,
+	NULL ExitStatusZeroCount,
+	NULL ExitStatusOneCount,
+	NULL HitPrefilterUECount,
+	NULL HardFaultCountAtExit_Sum,
+	NULL UTCMetadata_ImageFileName,
+	NULL UTCMetadata_PackageName,
+	NULL UTCMetadata_PRAID,
+	NULL UTCMetadata_ImageChecksum,
+	NULL UTCMetadata_ImageTimeDateStamp,
+	NULL UTCMetadata_Commandline,
+	HEXINT64 ExtraInfoFlags,
+	UINT8 UTCReplace_TargetAppId_FromEventData,
+	UINT8 UTCReplace_TargetAppVer_FromEventData,
+	UINT8 UTCReplace_TargetAppType_FromEventData,
+	UINT8 UTCReplace_LicenseType_FromEventData,
+	UINT8 UTCReplace_CommandLineHash_FromEventData,
+	GUID ContainerId
+	);
+
+AppStateChange(
+	UINT8 AppStateChange,
+	UINT8 PreviousState,
+	GUID UTCReplace_TargetAppId,
+	UINT8 UTCReplace_TargetAppVer,
+	UINT8 UTCReplace_TargetAppType,
+	UINT8 UTCReplace_LicenseType,
+	GUID AppSessionGuid,
+	UINT32 TargetAsId,
+	UINT64 StateDurationMS,
+	UINT64 UptimeDeltaMS,
+	UINT64 TotalDurationMS,
+	UINT64 TotalUptimeMS,
+	UINT64 TotalSuspendedMS,
+	UINT8 UTCReplace_CommandLineHash,
+	UINT64 EventSequence,
+	UINT64 ProcessSequence,
+	UINT32 InstanceId,
+	UINT64 ProcessStartKey,
+	UINT32 ExitStatus,
+	UINT8 Crashed,
+	UINT8 HangCount,
+	UINT8 GhostCount,
+	UINT8 HitPrefilterUE,
+	UINT32 HandleCount,
+	UINT64 CommitCharge,
+	UINT64 CommitChargePeak,
+	UINT64 CPUCycleCount,
+	UINT32 ReadCount,
+	UINT32 WriteCount,
+	UINT32 ReadSizeInKB,
+	UINT32 WriteSizeInKB,
+	UINT32 HardFaultCount,
+	UINT64 SharedCommitCharge
+	);
+
+AppStateChange(
+	UINT8 AppStateChange,
+	UINT8 PreviousState,
+	GUID UTCReplace_TargetAppId,
+	UINT8 UTCReplace_TargetAppVer,
+	UINT8 UTCReplace_TargetAppType,
+	UINT8 UTCReplace_LicenseType,
+	GUID AppSessionGuid,
+	UINT32 TargetAsId,
+	UINT64 StateDurationMS,
+	UINT64 UptimeDeltaMS,
+	UINT64 TotalDurationMS,
+	UINT64 TotalUptimeMS,
+	UINT64 TotalSuspendedMS,
+	UINT8 UTCReplace_CommandLineHash,
+	UINT64 EventSequence,
+	UINT64 ProcessSequence
+	);
+
+EtwOutOfLoggerSlots(
+	UINT32 MaxLoggers
+	);
+
+ProhibitLowILImageMap(
+	UINT32 mode,
+	COUNTEDSTRING processPath,
+	COUNTEDSTRING processCommandLine,
+	HEXINT64 processStartKey,
+	COUNTEDSTRING imageName
+	);
+
+ProhibitChildProcessCreation(
+	UINT32 mode,
+	COUNTEDSTRING parentImagePathName,
+	COUNTEDSTRING parentCommandLine,
+	HEXINT64 parentProcessStartKey,
+	COUNTEDSTRING childImagePathName,
+	COUNTEDSTRING childCommandLine
+	);
+
+ProhibitNonMicrosoftBinaries(
+	UINT32 mode,
+	COUNTEDSTRING processPath,
+	COUNTEDSTRING processCommandLine,
+	HEXINT64 processStartKey,
+	COUNTEDSTRING imageName,
+	UINT8 requiredSignatureLevel,
+	UINT8 signatureLevel
+	);
+
+DeniedTokenCreation(
+	COUNTEDSTRING FullImageFileName,
+	COUNTEDSTRING ParentCommandLine,
+	COUNTEDSTRING ChildImagePathName,
+	COUNTEDSTRING ChildCommandLine
+	);
+
+GenericMitigationForProcess(
+	UINT32 mitigationId,
+	UINT32 mode,
+	COUNTEDSTRING processPath,
+	COUNTEDSTRING processCommandLine,
+	HEXINT64 processStartKey
+	);
+
+KernelCallbackTiming(
+	UINT64 PartA_PrivTags,
+	INT64 DurationInMS,
+	GUID ProviderGuid
+	);
+
+LinkedTokenQuery(
+	UINT32 mode,
+	COUNTEDSTRING fullProcessImageName,
+	UINT32 stackHash
+	);
+
+AdminAccessRequired(
+	UINT32 mode,
+	COUNTEDSTRING fullProcessImageName,
+	UINT32 stackHash
+	);
+
+AdminAccessMaxAllowedDiffers(
+	UINT32 mode,
+	COUNTEDSTRING fullProcessImageName,
+	UINT32 stackHash,
+	UINT32 adminlessAccessGranted
+	);
+
+FirmwareTableAccessDenied(
+	UINT32 ProviderSignature
+	);
+
+FirmwareBootData(
+	UINT64 ResetEnd,
+	UINT64 LoadImageStart,
+	UINT64 StartImageStart,
+	UINT64 ExitBootServicesEntry,
+	UINT64 ExitBootServicesExit
+	);
+
+WheaPFAPolicy(
+	UINT64 PartA_PrivTags,
+	UINT64 Registry keys present,
+	BOOL32 Disable offline,
+	BOOL32 Persist offline,
+	BOOL32 PFADisabled,
+	UINT64 PageCount,
+	UINT64 ErrorThreshold,
+	UINT64 Timeout
+	);
+
+WheaErrorRecord(
+	UINT64 PartA_PrivTags,
+	ANSISTRING timeStamp,
+	UINT64 errorFlags,
+	GUID platformId,
+	GUID partitionId,
+	GUID creatorId,
+	GUID notifyType,
+	UINT64 recordId,
+	GUID sectionTypes,
+	UINT64 sectionFlags,
+	UINT64 severityCount,
+	BINARY record
+	);
+
+WheaPFAMemoryMonitorRemoved(
+	UINT64 PartA_PrivTags,
+	UINT64 Page,
+	UINT64 TimeInList,
+	UINT64 ErrorCount,
+	ANSISTRING RemoveTrigger
+	);
+
+WheaErrorSourceAddRemove(
+	ANSISTRING Action,
+	NTSTATUS Status,
+	UINT32 Type,
+	UINT32 State,
+	UINT32 Flags,
+	UINT32 ErrorSourceId
+	);
+
+WheaOscCapabilities(
+	UINT64 PartA_PrivTags,
+	BOOL32 OscImplemented,
+	BOOL32 DebugChecked
+	);
+
+WheaPFAMemoryOfflined(
+	UINT64 PartA_PrivTags,
+	BOOL32 Immediate success,
+	UINT64 Page,
+	ANSISTRING DecisionType
+	);
+
+WheaInfo(
+	UINT64 PartA_PrivTags,
+	ANSISTRING Info
+	);
+
+WheaErrorInjected(
+	UINT64 PartA_PrivTags,
+	UINT64 ErrorType,
+	UINT64 Parameter1,
+	UINT64 Parameter2,
+	UINT64 Parameter3,
+	UINT64 Parameter4,
+	NTSTATUS Status,
+	BOOL32 InjectionAttempted,
+	BOOL32 InjectionByPlugin
+	);
+
+HiveLoadErrorDetected(
+	BOOLEAN isRecoverable,
+	UINT32 failureType,
+	NTSTATUS status,
+	UINT32 location
+	);
+
+TlgAggregateSummary(
+	GUID Provider,
+	UINT64 NumFlushes,
+	UINT64 MaxEntriesStored,
+	UINT64 TotalEntriesFlushed,
+	UINT32 MaxEntriesFlushed,
+	UINT32 MinEntriesFlushed,
+	UINT32 NumBucketLimitReached,
+	UINT32 NumAllocationFailures,
+	UINT32 NumLargeEventFailures
+	);
+

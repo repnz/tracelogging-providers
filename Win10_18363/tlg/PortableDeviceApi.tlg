@@ -1,0 +1,87 @@
+ProviderNames:
+	Microsoft.Windows.WpdMtp.Api
+
+
+
+**** Events *****
+TransferAttempted(
+	GUID DllSessionId,
+	UNICODESTRING EntryPoint,
+	UNICODESTRING Direction,
+	UNICODESTRING WpdDeviceId,
+	NULL ObjectId,
+	INT64 TotalDuration,
+	INT64 ReadDuration,
+	INT64 WriteDuration,
+	UINT64 BytesRead,
+	UINT64 BytesWritten,
+	INT32 DidCommit,
+	INT32 DidRevert,
+	INT32 DidSeek,
+	INT32 DidSeekInUnits,
+	INT32 IsDrmProtected,
+	GUID ContentType,
+	GUID Format,
+	INT32 InternalHResult,
+	UNICODESTRING DebugHint,
+	INT32 HResult
+	);
+
+FallbackError(
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+FallbackError(
+	UINT64 PartA_PrivTags,
+	SIGNED wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+DeviceOpened(
+	GUID DllSessionId,
+	UNICODESTRING WpdDeviceId,
+	UNICODESTRING ProcessName,
+	UNICODESTRING ClientName,
+	UNICODESTRING Manufacturer,
+	UNICODESTRING Model,
+	UNICODESTRING MtpVersion,
+	UNICODESTRING FirmwareVersion,
+	UNICODESTRING SerialNumber,
+	UINT32 DeviceType,
+	UINT32 TransportType,
+	INT64 Duration,
+	UNICODESTRING DebugHint,
+	INT32 HResult
+	);
+

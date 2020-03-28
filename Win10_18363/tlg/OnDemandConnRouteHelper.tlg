@@ -1,0 +1,43 @@
+ProviderNames:
+	Microsoft.Windows.ConnectionManager
+	TelemetryAssert
+	TelemetryAssertDiagTrack
+
+
+
+**** Events *****
+OnDemandUnRegisterNotification(
+	INT32 result
+	);
+
+OnDemandGetRoutingHint(
+	UNICODESTRING destinationHostName,
+	UINT32 interfaceIndex,
+	INT32 result
+	);
+
+OnDemandRemoveMatchingRoute(
+	UNICODESTRING hostName,
+	BOOL32 hostnameIsDnsSuffix,
+	INT32 result
+	);
+
+OnDemandAddRouteRequest(
+	UNICODESTRING hostName,
+	BOOL32 hostnameIsDnsSuffix,
+	UINT32 interfaceIndex,
+	INT32 result
+	);
+
+Assert(
+	UINT32 assertVersion,
+	UINT32 rva,
+	UINT32 timestamp,
+	UINT32 imageSize,
+	ANSISTRING imageName,
+	UINT32 count,
+	UINT32 totalHits,
+	UINT32 ModuleCollection,
+	UINT32 GlobalCollection
+	);
+

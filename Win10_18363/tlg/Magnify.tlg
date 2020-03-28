@@ -1,0 +1,107 @@
+ProviderNames:
+	Microsoft.Windows.Magnifier.Asimov
+	Microsoft.Windows.Settings.Accessibility
+
+
+
+**** Events *****
+MagnifyShutDown(
+	UINT64 PartA_PrivTags
+	);
+
+SessionTime(
+	UINT64 PartA_PrivTags,
+	UINT64 seconds
+	);
+
+MagnifyGetOption(
+	UINT64 PartA_PrivTags,
+	INT32 OptionValue,
+	UNICODESTRING OptionKeyName
+	);
+
+MagnifyLaunch(
+	UINT64 PartA_PrivTags
+	);
+
+MagnifyChangeZoomLevel(
+	UINT64 PartA_PrivTags,
+	FLOAT ZoomValue
+	);
+
+MagnifyHandledTouchZoom(
+	UINT64 PartA_PrivTags,
+	FLOAT ZoomValue
+	);
+
+MagnifyHandledTouchPan(
+	UINT64 PartA_PrivTags
+	);
+
+MagnifyChangeFocus(
+	UINT64 PartA_PrivTags,
+	UINT32 Left,
+	UINT32 Top,
+	UINT32 Right,
+	UINT32 Bottom
+	);
+
+MagnifySaveOption(
+	UINT64 PartA_PrivTags,
+	INT32 OptionValue,
+	UNICODESTRING OptionKeyName,
+	UINT8 RoamingSetting
+	);
+
+MagnifySetOption(
+	UINT64 PartA_PrivTags,
+	INT32 OptionValue,
+	UNICODESTRING OptionKeyName
+	);
+
+FallbackError(
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+ColorFilter(
+	UINT32 selectedFilter,
+	UINT64 PartA_PrivTags
+	);
+
+FallbackError(
+	UINT64 PartA_PrivTags,
+	SIGNED wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+

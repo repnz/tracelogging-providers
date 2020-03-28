@@ -1,0 +1,271 @@
+ProviderNames:
+	Microsoft.Windows.StateRepository.Upgrade
+	Microsoft.Windows.StateRepository.Service
+	Microsoft.Windows.StateRepository.Core
+	TelemetryAssert
+	TelemetryAssertDiagTrack
+
+
+
+**** Events *****
+Failure(
+	HEXINT32 HResult,
+	ANSISTRING File,
+	UINT32 LineNumber,
+	ANSISTRING Function,
+	UNICODESTRING Message,
+	ANSISTRING CallingContext,
+	ANSISTRING Module,
+	HEXINT64 Site,
+	ANSISTRING Code
+	);
+
+FallbackError(
+	UINT64 PartA_PrivTags,
+	SIGNED wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+FallbackError(
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+ActivityIntermediateStop(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+ActivityError(
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+ActivityError(
+	UINT64 PartA_PrivTags,
+	SIGNED wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+ActivityStoppedAutomatically(
+	VOID
+	);
+
+ActivityFailure(
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+ActivityFailure(
+	UINT64 PartA_PrivTags,
+	HEX wilActivity,
+	UINT32 hresult,
+	UINT32 threadId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+StateRepository.ResourcePriority.Inadequate(
+	HRESULT ErrorCode,
+	HEXINT64 DatabasePtr,
+	INT32 Partition,
+	INT64 WorkId,
+	INT32 CpuPriority,
+	INT32 IoPriority,
+	UINT32 MemoryPriority,
+	GUID TransactionCallerID,
+	ANSISTRING SQL
+	);
+
+StateRepository.Database.Statistics(
+	ANSISTRING Database,
+	INT32 StatementCache.Count,
+	INT64 StatementCache.Hits,
+	INT64 StatementCache.Misses,
+	UINT64 StatementCache.Lifespan,
+	INT32 CacheUsed,
+	INT32 CacheHit,
+	INT32 CacheMiss,
+	INT32 CacheWrite,
+	INT32 CacheSpill,
+	INT32 SchemaUsed,
+	INT32 StatementUsed,
+	INT32 LookasideUsed,
+	INT32 LookasideUsedPeak,
+	INT32 LookasideHitPeak,
+	INT32 LookasideMissSizePeak,
+	INT32 LookasideMissFullPeak,
+	HEXINT64 DatabasePtr,
+	INT32 Partition,
+	INT64 WorkId
+	);
+
+StateRepository.FailFastBusySnapshot.StatementInProgress(
+	HRESULT ErrorCode,
+	UINT32 Index,
+	HEXINT64 DatabasePtr,
+	HEXINT64 StatementPtr,
+	ANSISTRING SQL,
+	ANSISTRING ExpandedSQL
+	);
+
+StateRepository.FailFastBusySnapshot(
+	HRESULT ErrorCode,
+	UINT32 StatementCount,
+	UINT32 BusyCount,
+	HEXINT64 DatabasePtr,
+	ANSISTRING FirstBusySQL,
+	ANSISTRING ProcessingSQL
+	);
+
+SQLite.AutoIndexWarning(
+	INT32 ErrorCode,
+	ANSISTRING Message
+	);
+
+StateRepository.DatabaseCache.Statistics(
+	INT32 Cache.Count,
+	INT64 Cache.Hits,
+	INT64 Cache.Misses,
+	UINT64 DatabaseCache.Lifespan,
+	INT32 MemoryUsed,
+	INT32 MemoryUsedPeak,
+	INT32 PageCachePeak,
+	INT32 PageCacheUsed,
+	INT32 PageCacheUsedPeak,
+	INT32 PageCacheOverflow,
+	INT32 PageCacheOverflowPeak,
+	INT32 ScratchUsed,
+	INT32 ScratchUsedPeak,
+	INT32 ScratchOverflow,
+	INT32 ScratchOverflowPeak,
+	INT32 ScratchSizePeak,
+	INT32 MallocSizePeak,
+	INT32 MallocCount,
+	INT32 MallocCountPeak
+	);
+
+Clear(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId
+	);
+
+Clear(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	SIGNED wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+Clear(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+Assert(
+	UINT32 assertVersion,
+	UINT32 rva,
+	UINT32 timestamp,
+	UINT32 imageSize,
+	ANSISTRING imageName,
+	UINT32 count,
+	UINT32 totalHits,
+	UINT32 ModuleCollection,
+	UINT32 GlobalCollection
+	);
+

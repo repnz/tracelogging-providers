@@ -1,0 +1,178 @@
+ProviderNames:
+	Microsoft.Windows.Storage.Tiering.Telemetry
+
+
+
+**** Events *****
+NewTieredVolumeMount(
+	GUID tieredVolumeGuid,
+	COUNTEDSTRING tieredVolumeCsvGuidRootPath
+	);
+
+TieredVolumeMountHeatEventLoss(
+	GUID tieredVolumeGuid
+	);
+
+TieredVolumeArrival(
+	GUID tieredVolumeGuid
+	);
+
+StartTieringEngine(
+	INT32 numberOfActiveVolumes
+	);
+
+StopTieringEngine(
+	INT32 numberOfActiveVolumes
+	);
+
+TieredVolumeDismount(
+	COUNTEDSTRING tieredVolumeCsvGuidRootPath
+	);
+
+TieringJetError(
+	COUNTEDSTRING tieredVolumeCsvGuidRootPath,
+	UNICODESTRING jetPath,
+	INT32 jetError,
+	ANSISTRING functionName,
+	UINT32 operation,
+	HRESULT hResult
+	);
+
+TieringJetError(
+	COUNTEDSTRING tieredVolumeCsvGuidRootPath,
+	UNICODESTRING jetPath,
+	INT32 jetError,
+	ANSISTRING functionName,
+	UINT32 operation
+	);
+
+TieringJetError(
+	COUNTEDSTRING tieredVolumeCsvGuidRootPath,
+	UNICODESTRING jetPath,
+	UNICODESTRING jetInstanceName,
+	INT32 jetError,
+	INT32 hresult,
+	ANSISTRING functionName,
+	UINT32 operation
+	);
+
+TieringJetError(
+	COUNTEDSTRING tieredVolumeCsvGuidRootPath,
+	UNICODESTRING jetPath,
+	INT32 jetError,
+	ANSISTRING functionName,
+	UINT32 operation,
+	UINT32 paramId
+	);
+
+FailedMigratePinnedDbToDscAttrib(
+	COUNTEDSTRING tieredVolumeCsvGuidRootPath,
+	HRESULT hResult,
+	UINT8 lastSourceId,
+	UINT32 recordCount,
+	UINT32 failedMigrateCount,
+	STRING errors,
+	INT32 errorCode,
+	INT8 sourceId
+	);
+
+TierOptimizationReport(
+	COUNTEDSTRING tieredVolumeCsvGuidRootPath,
+	UINT32 tieredVolumeBytesPerCluster,
+	UINT64 approxBlockCountToMoveToFlash,
+	UINT64 approxBlockCountToMoveToDisk,
+	UINT64 blockCountToMovedToFlash,
+	UINT64 blockCountToMovedToDisk,
+	HRESULT processingResult,
+	UINT32 processTimeInMinutes,
+	UINT32 defragTimeInMinutes,
+	UINT64 requiredSsdBytes,
+	INT64 flashClustersFree,
+	INT64 diskClustersFree,
+	UINT64 currentSsdTierSize,
+	UINT64 currentHddTierSize,
+	UINT64 sizeOfFilesPinnedToSsdTier,
+	UINT64 sizeOfFilesPinnedToHddTier,
+	UINT64 numberOfFilesPinnedToSsdTier,
+	UINT64 numberOfFilesPinnedToHddTier,
+	UINT64 percentOfTotalIOsServedFromSsdTier,
+	UINT64 percentOfIOsFromPinnedFileOnSsd,
+	UINT64 percentOfIOsFromPinnedFileOnHdd
+	);
+
+InitiateTierProcessingStart(
+	UINT16 processingState,
+	UINT32 flags,
+	COUNTEDSTRING tieredVolumeCsvGuidRootPath
+	);
+
+HeatFileListForDiskOptimizer(
+	COUNTEDSTRING tieredVolumeCsvGuidRootPath,
+	UINT32 desiredStorageTierClass,
+	UINT32 recordCount,
+	BOOL32 continueRequired,
+	UINT32 resumeKeyPriority,
+	UINT64 resumeKeyFileIdHigh,
+	UINT64 resumeKeyFileIdLow,
+	INT64 resumeKeyLastFileOffset,
+	UNICODESTRING jetDBFileName
+	);
+
+PinnedFileListForDiskOptimizer(
+	COUNTEDSTRING tieredVolumeCsvGuidRootPath,
+	UINT32 desiredStorageTierClass,
+	UINT32 recordCount,
+	BOOL32 continueRequired,
+	UINT64 resumeKeyFileIdHigh,
+	UINT64 resumeKeyFileIdLow,
+	UNICODESTRING jetDBFileName
+	);
+
+FailedQueryPinnedFiles(
+	COUNTEDSTRING tieredVolumeCsvGuidRootPath,
+	UINT8 sourceId,
+	UINT64 numberOfEntries,
+	UINT64 failedPinRecord,
+	HRESULT hResult,
+	UINT32 pinRecordsError
+	);
+
+ProcessingPass3End(
+	COUNTEDSTRING tieredVolumeCsvGuidRoothPath,
+	UINT32 heatRecordsProcessed,
+	INT64 flashClustersFree,
+	INT64 diskClustersFree,
+	UINT64 totalFlashHeatClusters,
+	UINT64 totalDiskHeatClusters,
+	UINT32 priorityToPromote,
+	UINT32 priorityToDemote,
+	UINT32 priorityToRetain,
+	UINT32 averagePriorityOnFlash,
+	UINT32 averagePriorityOnDisk,
+	UINT64 totalIOsPinnedDiskCurrentlyFlash,
+	UINT64 totalIOsPinnedFlashCurrentlyDisk
+	);
+
+ProcessingPass3Start(
+	COUNTEDSTRING tieredVolumeCsvGuidRoothPath,
+	UINT16 maxHeatReplaceInPercentage,
+	UINT64 totalFlashClusters,
+	INT64 flashClustersFree,
+	INT64 diskClustersFree,
+	UINT32 largestPrioritySeen,
+	UINT32 numberOfHeatBuckets,
+	UINT32 prioritiesPerBucket,
+	UINT64 pinnedToFlashClusterCount,
+	UINT64 pinnedToDiskClusterCount
+	);
+
+ProcessVolumeTablesEnd(
+	UINT16 processingState,
+	COUNTEDSTRING tieredVolumeCsvGuidRootPath
+	);
+
+ProcessVolumeTablesStart(
+	UINT16 processingState,
+	COUNTEDSTRING tieredVolumeCsvGuidRootPath
+	);
+

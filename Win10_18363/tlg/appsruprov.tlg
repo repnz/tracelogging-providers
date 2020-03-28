@@ -1,0 +1,623 @@
+ProviderNames:
+	Microsoft.Windows.Memory
+	Microsoft.Windows.CpuTrigger
+	Microsoft.Windows.DiskTrigger
+	TelemetryAssert
+	TelemetryAssertDiagTrack
+
+
+
+**** Events *****
+NonPagedPoolMemory(
+	ANSISTRING Tag,
+	UINT32 NonPagedUsedB,
+	UINT32 Version,
+	UINT64 TelKeyword
+	);
+
+PagedPoolMemory(
+	ANSISTRING Tag,
+	UINT32 PagedUsedB,
+	UINT32 Version,
+	UINT64 TelKeyword
+	);
+
+PageCombine(
+	UINT32 CombineScanCount,
+	UINT32 CombinedBlocksInUse,
+	UINT32 SumCombinedBlocksReferenceCount,
+	UINT64 TelKeyword
+	);
+
+SystemMemory_v3(
+	UINT64 TotalMB,
+	UINT64 CommitMB,
+	UINT64 InUseMB,
+	UINT64 SharedCommitMB,
+	UINT64 PeakCommitMB,
+	UINT32 OSOverheadMB,
+	UINT64 SystemProcessCommitMB,
+	UINT64 NonPagedPoolMB,
+	UINT64 PagePoolMB,
+	UINT64 ModernAppFGCommitMB,
+	UINT64 ModernAppBGCommitMB,
+	UINT64 TotalProcessCommitMB,
+	UINT32 SystemProcessesVersion,
+	UINT64 TelKeyword
+	);
+
+ErrorEvent(
+	ANSISTRING Function,
+	INT32 Line,
+	HEXINT32 Error
+	);
+
+PageCombine(
+	UINT32 CombineScanCount,
+	UINT32 CombinedBlocksInUse,
+	UINT32 SumCombinedBlocksReferenceCount,
+	UINT64 TelKeyword
+	);
+
+SessionPoolMemory(
+	ANSISTRING Tag,
+	UINT32 TotalUsedB,
+	UINT32 NonPagedUsedB,
+	UINT32 PagedUsedB,
+	UINT32 Version,
+	UINT64 TelKeyword
+	);
+
+ProcessMemoryTotals(
+	UINT32 ProcessCount_ThreadCount,
+	UINT32 HandleCount_UNUSED,
+	UINT32 Version,
+	UINT64 TelKeyword
+	);
+
+SessionPoolMemory(
+	ANSISTRING Tag,
+	UINT32 TotalUsedB,
+	UINT32 NonPagedUsedB,
+	UINT32 PagedUsedB,
+	UINT32 Version,
+	UINT64 TelKeyword
+	);
+
+ProcessMemoryBatched_v1(
+	NTSTATUS ProcessData,
+	UNICODESTRING ProcessInfo,
+	UNICODESTRING ProcessExtraInfo,
+	UINT64 PeakCommitMB,
+	UINT64 PrivateCommitMB,
+	UINT64 PeakWorkingSetMB,
+	UINT64 PrivateWorkingSetMB,
+	UINT64 WorkingSetMB,
+	UINT16 State,
+	UINT32 HandleCount,
+	UINT32 ThreadCount,
+	UINT64 SharedCommitMB,
+	HEXINT64 ProcessId,
+	UINT64 TotalCommitMB,
+	UINT64 MillisecondsSinceProcessCreate,
+	UINT64 TelKeyword
+	);
+
+MemoryActivity(
+	VOID
+	);
+
+SystemMemory_v3(
+	UINT64 TotalMB,
+	UINT64 CommitMB,
+	UINT64 InUseMB,
+	UINT64 SharedCommitMB,
+	UINT64 PeakCommitMB,
+	UINT32 OSOverheadMB,
+	UINT64 SystemProcessCommitMB,
+	UINT64 NonPagedPoolMB,
+	UINT64 PagePoolMB,
+	UINT64 ModernAppFGCommitMB,
+	UINT64 ModernAppBGCommitMB,
+	UINT64 TotalProcessCommitMB,
+	UINT32 SystemProcessesVersion,
+	UINT64 TelKeyword
+	);
+
+NonPagedPoolMemory(
+	ANSISTRING Tag,
+	UINT32 NonPagedUsedB,
+	UINT32 Version,
+	UINT64 TelKeyword
+	);
+
+MemoryActivityStop(
+	VOID
+	);
+
+SystemMemory(
+	UINT32 CommitMB_InUseMB,
+	UINT32 SharedCommitMB_PeakCommitMB,
+	UINT32 OSOverheadMB_SystemProcessCommitMB,
+	UINT32 NonPagedPoolMB_PagePoolMB,
+	UINT32 ModernAppFGCommitMB_ModernAppBGCommitMB,
+	UINT32 OSOverheadMB,
+	UINT32 TotalProcessCommitMB,
+	UINT32 SystemProcessesVersion,
+	UINT32 Version,
+	UINT64 TelKeyword
+	);
+
+MemoryCompression(
+	BOOL32 MemoryCompressionEnabled,
+	UINT32 TotalUniqueDataCompressedMB,
+	UINT32 TotalDataCompressedMB,
+	UINT32 TotalCompressedSizeMB,
+	UINT32 WorkingSetSizeCompressionProcessMB,
+	UINT32 PhysicalTotalMB,
+	UINT32 PhysicalAvailableMB,
+	UINT32 DirtyPagesWriteCount,
+	UINT32 DirtyWriteIoCount,
+	UINT32 PageReadCount,
+	UINT32 PageReadIoCount,
+	UINT32 TotalPageFileSizeMB,
+	UINT32 TotalPageFileInUseMB,
+	UINT32 PeakPageFileUsageMB,
+	UINT32 MinimumPageFileSizeMB,
+	UINT32 MaximumPageFileSizeMB,
+	UINT64 TickCountInMs,
+	UINT64 TelKeyword
+	);
+
+ActivityStoppedAutomatically(
+	VOID
+	);
+
+SystemMemory_v3(
+	UINT64 TotalMB,
+	UINT64 CommitMB,
+	UINT64 InUseMB,
+	UINT64 SharedCommitMB,
+	UINT64 PeakCommitMB,
+	UINT32 OSOverheadMB,
+	UINT64 SystemProcessCommitMB,
+	UINT64 NonPagedPoolMB,
+	UINT64 PagePoolMB,
+	UINT64 ModernAppFGCommitMB,
+	UINT64 ModernAppBGCommitMB,
+	UINT64 TotalProcessCommitMB,
+	UINT32 SystemProcessesVersion,
+	UINT64 TelKeyword
+	);
+
+SystemMemory(
+	UINT32 CommitMB_InUseMB,
+	UINT32 SharedCommitMB_PeakCommitMB,
+	UINT32 OSOverheadMB_SystemProcessCommitMB,
+	UINT32 NonPagedPoolMB_PagePoolMB,
+	UINT32 ModernAppFGCommitMB_ModernAppBGCommitMB,
+	UINT32 OSOverheadMB,
+	UINT32 TotalProcessCommitMB,
+	UINT32 SystemProcessesVersion,
+	UINT32 Version,
+	UINT64 TelKeyword
+	);
+
+ProcessMemoryTotals(
+	UINT32 ProcessCount_ThreadCount,
+	UINT32 HandleCount_UNUSED,
+	UINT32 Version,
+	UINT64 TelKeyword
+	);
+
+SystemMemory(
+	UINT32 CommitMB_InUseMB,
+	UINT32 SharedCommitMB_PeakCommitMB,
+	UINT32 OSOverheadMB_SystemProcessCommitMB,
+	UINT32 NonPagedPoolMB_PagePoolMB,
+	UINT32 ModernAppFGCommitMB_ModernAppBGCommitMB,
+	UINT32 OSOverheadMB,
+	UINT32 TotalProcessCommitMB,
+	UINT32 SystemProcessesVersion,
+	UINT32 Version,
+	UINT64 TelKeyword
+	);
+
+ProcessMemoryTotals(
+	UINT32 ProcessCount_ThreadCount,
+	UINT32 HandleCount_UNUSED,
+	UINT32 Version,
+	UINT64 TelKeyword
+	);
+
+PagedPoolMemory(
+	ANSISTRING Tag,
+	UINT32 PagedUsedB,
+	UINT32 Version,
+	UINT64 TelKeyword
+	);
+
+ProcessMemoryBatched_v1(
+	NTSTATUS ProcessData,
+	UNICODESTRING ProcessInfo,
+	UNICODESTRING ProcessExtraInfo,
+	UINT64 PeakCommitMB,
+	UINT64 PrivateCommitMB,
+	UINT64 PeakWorkingSetMB,
+	UINT64 PrivateWorkingSetMB,
+	UINT64 WorkingSetMB,
+	UINT16 State,
+	UINT32 HandleCount,
+	UINT32 ThreadCount,
+	UINT64 SharedCommitMB,
+	HEXINT64 ProcessId,
+	UINT64 TotalCommitMB,
+	UINT64 MillisecondsSinceProcessCreate,
+	UINT64 TelKeyword
+	);
+
+MemoryCompression(
+	BOOL32 MemoryCompressionEnabled,
+	UINT32 TotalUniqueDataCompressedMB,
+	UINT32 TotalDataCompressedMB,
+	UINT32 TotalCompressedSizeMB,
+	UINT32 WorkingSetSizeCompressionProcessMB,
+	UINT32 PhysicalTotalMB,
+	UINT32 PhysicalAvailableMB,
+	UINT32 DirtyPagesWriteCount,
+	UINT32 DirtyWriteIoCount,
+	UINT32 PageReadCount,
+	UINT32 PageReadIoCount,
+	UINT32 TotalPageFileSizeMB,
+	UINT32 TotalPageFileInUseMB,
+	UINT32 PeakPageFileUsageMB,
+	UINT32 MinimumPageFileSizeMB,
+	UINT32 MaximumPageFileSizeMB,
+	UINT64 TickCountInMs,
+	UINT64 TelKeyword
+	);
+
+SessionPoolMemory(
+	ANSISTRING Tag,
+	UINT32 TotalUsedB,
+	UINT32 NonPagedUsedB,
+	UINT32 PagedUsedB,
+	UINT32 Version,
+	UINT64 TelKeyword
+	);
+
+PagedPoolMemory(
+	ANSISTRING Tag,
+	UINT32 PagedUsedB,
+	UINT32 Version,
+	UINT64 TelKeyword
+	);
+
+PageCombine(
+	UINT32 CombineScanCount,
+	UINT32 CombinedBlocksInUse,
+	UINT32 SumCombinedBlocksReferenceCount,
+	UINT64 TelKeyword
+	);
+
+MemoryCompression(
+	BOOL32 MemoryCompressionEnabled,
+	UINT32 TotalUniqueDataCompressedMB,
+	UINT32 TotalDataCompressedMB,
+	UINT32 TotalCompressedSizeMB,
+	UINT32 WorkingSetSizeCompressionProcessMB,
+	UINT32 PhysicalTotalMB,
+	UINT32 PhysicalAvailableMB,
+	UINT32 DirtyPagesWriteCount,
+	UINT32 DirtyWriteIoCount,
+	UINT32 PageReadCount,
+	UINT32 PageReadIoCount,
+	UINT32 TotalPageFileSizeMB,
+	UINT32 TotalPageFileInUseMB,
+	UINT32 PeakPageFileUsageMB,
+	UINT32 MinimumPageFileSizeMB,
+	UINT32 MaximumPageFileSizeMB,
+	UINT64 TickCountInMs,
+	UINT64 TelKeyword
+	);
+
+CommitMemoryEvent(
+	UINT32 CommitCondition_CommitMB,
+	UINT32 PeakCommitMB_SharedCommitMB,
+	UINT32 NonPagedPoolMB_PagePoolMB,
+	UNICODESTRING Process0,
+	UINT32 CommitMB0,
+	UNICODESTRING Process1,
+	UINT32 CommitMB1,
+	UNICODESTRING Process2,
+	UINT32 CommitMB2,
+	UNICODESTRING Process3,
+	UINT32 CommitMB3,
+	UNICODESTRING Process4,
+	UINT32 CommitMB4,
+	ANSISTRING NonPagedPoolTag0,
+	UINT32 NonPagedUsedMB0,
+	ANSISTRING NonPagedPoolTag1,
+	UINT32 NonPagedUsedMB1,
+	ANSISTRING PagedPoolTag0,
+	UINT32 PagedUsedMB0,
+	ANSISTRING PagedPoolTag1,
+	UINT32 PagedUsedMB1,
+	UINT32 Version
+	);
+
+NonPagedPoolMemory(
+	ANSISTRING Tag,
+	UINT32 NonPagedUsedB,
+	UINT32 Version,
+	UINT64 TelKeyword
+	);
+
+ProcessMemorySingle_v1(
+	UNICODESTRING ProcessInfo,
+	UNICODESTRING ProcessExtraInfo,
+	UINT64 PeakCommitMB,
+	UINT64 PrivateCommitMB,
+	UINT64 PeakWorkingSetMB,
+	UINT64 PrivateWorkingSetMB,
+	UINT64 WorkingSetMB,
+	UINT16 State,
+	UINT32 HandleCount,
+	UINT32 ThreadCount,
+	UINT64 SharedCommitMB,
+	HEXINT64 ProcessId,
+	UINT64 TotalCommitMB,
+	UINT64 MillisecondsSinceProcessCreate
+	);
+
+ProcessMemoryBatched_v1(
+	NTSTATUS ProcessData,
+	UNICODESTRING ProcessInfo,
+	UNICODESTRING ProcessExtraInfo,
+	UINT64 PeakCommitMB,
+	UINT64 PrivateCommitMB,
+	UINT64 PeakWorkingSetMB,
+	UINT64 PrivateWorkingSetMB,
+	UINT64 WorkingSetMB,
+	UINT16 State,
+	UINT32 HandleCount,
+	UINT32 ThreadCount,
+	UINT64 SharedCommitMB,
+	HEXINT64 ProcessId,
+	UINT64 TotalCommitMB,
+	UINT64 MillisecondsSinceProcessCreate,
+	UINT64 TelKeyword
+	);
+
+CpuUsageEvent(
+	UNICODESTRING ProcessInfo,
+	UNICODESTRING ImagePath,
+	UINT32 ProcessId,
+	UINT64 CycleTime,
+	INT64 KernelTimeInMs,
+	INT64 UserTimeInMs,
+	INT64 CpuTimeIncrementInMs,
+	INT32 ProcessBasePriority,
+	UINT64 TimeSinceLastCheckInMs,
+	UINT32 Version
+	);
+
+ErrorEvent(
+	ANSISTRING Function,
+	INT32 Line,
+	HEXINT32 Error
+	);
+
+CpuUsageThresholdEvent(
+	BOOL32 ExceedHighCpuThreshold,
+	BOOL32 IsFirstLog,
+	INT64 IdleTimeInMs,
+	UINT64 TotalElapseTimeAllProcessorsInMs,
+	UINT64 TimeSinceLastCheckInMs,
+	UINT32 TotalCpuUsagePercentageOneCore,
+	UINT32 TotalCpuUsagePercentageAllCore,
+	INT32 CpuTriggerThresholdOneCore,
+	INT32 CpuTriggerThresholdAllCore,
+	UINT32 Version
+	);
+
+CpuTriggerActivity(
+	VOID
+	);
+
+LongCpuUsageEvent(
+	UNICODESTRING ProcessInfo,
+	UNICODESTRING ImagePath,
+	ANSISTRING ImageVersion,
+	INT64 ProcessCpuTimeInMs,
+	UINT32 ProcessCpuPercentage,
+	UINT32 ProcessCpuPercentageSinceLastReport,
+	INT32 ProcessBasePriority,
+	UINT64 TimeSpinningInMs,
+	UINT64 StartSpinTimeInMs,
+	UINT64 TimeSinceLastPowerSourceChangeInMs,
+	BOOL32 IsInProgress,
+	UINT32 ReportedCount,
+	UINT32 ProcessId,
+	BOOL32 IsMonitorOn,
+	BOOL32 IsBatterySaverOn,
+	BOOL32 IsPowerOnAC,
+	BOOL32 IsUserPresent,
+	UINT32 Version
+	);
+
+HighCpuUsageEvent(
+	UINT32 TotalCpuUsagePercentageOneCore,
+	UINT32 TotalCpuUsagePercentageAllCore,
+	UINT32 ProcessCount,
+	UNICODESTRING ProcessInfo0,
+	UNICODESTRING ImagePath0,
+	UINT32 ProcessId0,
+	INT64 ProcessCpuTimeInMs0,
+	UINT32 ProcessCpuPercentage0,
+	INT32 ProcessBasePriority0,
+	UNICODESTRING ProcessInfo1,
+	UNICODESTRING ImagePath1,
+	UINT32 ProcessId1,
+	INT64 ProcessCpuTimeInMs1,
+	UINT32 ProcessCpuPercentage1,
+	INT32 ProcessBasePriority1,
+	UNICODESTRING ProcessInfo2,
+	UNICODESTRING ImagePath2,
+	UINT32 ProcessId2,
+	INT64 ProcessCpuTimeInMs2,
+	UINT32 ProcessCpuPercentage2,
+	INT32 ProcessBasePriority2,
+	UNICODESTRING ProcessInfo3,
+	UNICODESTRING ImagePath3,
+	UINT32 ProcessId3,
+	INT64 ProcessCpuTimeInMs3,
+	UINT32 ProcessCpuPercentage3,
+	INT32 ProcessBasePriority3,
+	UNICODESTRING ProcessInfo4,
+	UNICODESTRING ImagePath4,
+	UINT32 ProcessId4,
+	INT64 ProcessCpuTimeInMs4,
+	UINT32 ProcessCpuPercentage4,
+	INT32 ProcessBasePriority4,
+	UINT8 ProcessorFrequencyPercentages,
+	UINT64 TimeSinceLastCheckInMs,
+	BOOL32 IsMonitorOn,
+	BOOL32 IsBatterySaverOn,
+	BOOL32 IsPowerOnAC,
+	BOOL32 IsUserPresent,
+	UINT32 Version
+	);
+
+CpuTriggerActivityStop(
+	VOID
+	);
+
+DiskTriggerActivity(
+	VOID
+	);
+
+DiskTriggerActivityStop(
+	VOID
+	);
+
+DiskUsageEvent(
+	UNICODESTRING ProcessInfo,
+	UNICODESTRING ImagePath,
+	UINT32 ProcessId,
+	UINT64 ReadKB,
+	UINT64 WriteKB,
+	UINT64 ReadOperationCount,
+	UINT64 WriteOperationCount,
+	UINT64 FlushOperationCount,
+	UINT64 HardFaultCount,
+	UINT64 BytesReadSinceBoot,
+	UINT64 BytesWrittenSinceBoot,
+	UINT64 ReadOperationCountSinceBoot,
+	UINT64 WriteOperationCountSinceBoot,
+	UINT64 FlushOperationCountSinceBoot,
+	UINT32 HardFaultCountSinceBoot,
+	UINT64 TimeSinceLastCheckInMs,
+	UINT32 Version
+	);
+
+LongDiskUsageEvent(
+	UNICODESTRING ProcessInfo,
+	UNICODESTRING ImagePath,
+	UINT32 ProcessId,
+	UINT64 CumulativeReadKB,
+	UINT64 CumulativeWriteKB,
+	UINT64 CumulativeReadOperationCount,
+	UINT64 CumulativeWriteOperationCount,
+	UINT64 CumulativeFlushOperationCount,
+	UINT64 CumulativeHardFaultCount,
+	UINT64 TotalIoKBPerSecond,
+	UINT64 TotalReadIoKBPerSecond,
+	UINT64 TotalWriteIoKBPerSecond,
+	INT64 TotalIoCountPerSecond,
+	INT64 TotalReadIoCountPerSecond,
+	INT64 TotalWriteIoCountPerSecond,
+	INT64 TotalFlushIoCountPerSecond,
+	UINT64 TimeSpinningInMs,
+	UINT64 StartSpinTimeInMs,
+	UINT64 TimeSinceLastPowerSourceChangeInMs,
+	BOOL32 IsInProgress,
+	UINT32 ReportedCount,
+	BOOL32 IsMonitorOn,
+	BOOL32 IsBatterySaverOn,
+	BOOL32 IsPowerOnAC,
+	BOOL32 IsUserPresent,
+	UINT32 Version
+	);
+
+DiskUsageThresholdEvent(
+	BOOL32 ExceedHighDiskIoThreshold,
+	BOOL32 IsFirstLog,
+	UINT32 DiskUsagePercentageAllPri,
+	UINT32 DiskUsagePercentageNonLowPri,
+	INT64 IdleTimeAllPriInMS,
+	INT64 IdleTimeNonLowPriInMS,
+	INT64 ReadTimeAllPriInMS,
+	INT64 ReadTimeNoneLowPriInMS,
+	INT64 WriteTimeAllPriInMS,
+	INT64 WriteTimeNoneLowPriInMS,
+	INT64 FlushTimeAllPriInMS,
+	INT64 FlushTimeNoneLowPriInMS,
+	UINT32 DiskTriggerThresholdDiskIoPercentageAllPriority,
+	UINT32 DiskTriggerThresholdDiskIoPercentageNoneLowPriority,
+	INT64 TotalKBReadAllPri,
+	INT64 TotalKBReadNoneLowPri,
+	INT64 TotalKBWrittenAllPri,
+	INT64 TotalKBWrittenNoneLowPri,
+	UINT32 TotalReadCountAllPri,
+	UINT32 TotalReadCountNoneLowPri,
+	UINT32 TotalWriteCountAllPri,
+	UINT32 TotalWriteCountNoneLowPri,
+	UINT32 TotalFlushCountAllPri,
+	UINT32 TotalFlushCountNoneLowPri,
+	UINT32 PageReadIoCount,
+	UINT32 DirtyWriteIoCount,
+	UINT32 MappedWriteIoCount,
+	UINT32 CcReadAheadIos,
+	UINT32 CcLazyWriteIos,
+	UINT32 LowPriPagingReadOperations,
+	UINT32 LowPriPagingWriteOperations,
+	UINT64 TimeSinceLastCheckInMs,
+	UINT32 Version
+	);
+
+HighDiskUsageEvent(
+	UINT16 Rank,
+	UINT32 DiskUsagePercentageAllPri,
+	UINT32 DiskUsagePercentageNonLowPri,
+	UNICODESTRING ProcessInfo,
+	UNICODESTRING ImagePath,
+	UINT32 ProcessId,
+	UINT64 ProcessIoKBPerSecond,
+	UINT64 ProcessIoCountPerSecond,
+	UINT64 ReadKB,
+	UINT64 WriteKB,
+	UINT64 ReadOperationCount,
+	UINT64 WriteOperationCount,
+	UINT64 FlushOperationCount,
+	UINT64 HardFaultCount,
+	UINT64 TimeSinceLastCheckInMs,
+	BOOL32 IsMonitorOn,
+	BOOL32 IsBatterySaverOn,
+	BOOL32 IsPowerOnAC,
+	BOOL32 IsUserPresent,
+	UINT32 Version
+	);
+
+Assert(
+	UINT32 assertVersion,
+	UINT32 rva,
+	UINT32 timestamp,
+	UINT32 imageSize,
+	ANSISTRING imageName,
+	UINT32 count,
+	UINT32 totalHits,
+	UINT32 ModuleCollection,
+	UINT32 GlobalCollection
+	);
+

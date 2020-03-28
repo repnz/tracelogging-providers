@@ -1,0 +1,248 @@
+ProviderNames:
+	Microsoft-Windows-BITS-Client
+
+
+
+**** Events *****
+FallbackError(
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+ServiceStartup(
+	UNICODESTRING startupReason,
+	UNICODESTRING rawStartupType
+	);
+
+ServiceShutdown(
+	UNICODESTRING shutdownReason,
+	UNICODESTRING rawStartupTypeSetAtShutdown,
+	UINT64 serviceUpTimeInMilliseconds
+	);
+
+FallbackError(
+	UINT64 PartA_PrivTags,
+	SIGNED wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+AllowedObjectCountLimitExceeded(
+	UNICODESTRING jobName,
+	UNICODESTRING objectLimitType,
+	UINT32 currentCount,
+	UINT32 currentLimit
+	);
+
+BitsCalledDuringSystemSetup(
+	UNICODESTRING callerServiceName
+	);
+
+DatabaseCorruptionDetected(
+	HRESULT hresult,
+	UNICODESTRING serviceState
+	);
+
+JobCreated(
+	UNICODESTRING jobName,
+	UNICODESTRING processPath,
+	GUID jobId,
+	UNICODESTRING jobType,
+	UNICODESTRING appUserModelId
+	);
+
+NlmFinalReleaseHangDetected(
+	VOID
+	);
+
+NlmAPIFailure(
+	UNICODESTRING apiName,
+	HRESULT hresult
+	);
+
+UMgrApiNotAvailable(
+	UNICODESTRING apiName
+	);
+
+FileTransferStopped(
+	UNICODESTRING jobName,
+	UNICODESTRING processPath,
+	GUID jobId,
+	UNICODESTRING jobType,
+	GUID transferId,
+	UINT64 bytesToTransfer,
+	UINT64 bytesTransferred,
+	UNICODESTRING fileTransferResult,
+	HRESULT hresult,
+	UINT32 errorContext,
+	BOOLEAN isLowPriorityTcpEnabled,
+	UNICODESTRING appUserModelId,
+	UINT64 transferAttemptTimeInSeconds,
+	UINT32 proxyUsage,
+	UINT32 helperTokenFlags,
+	UINT32 potentialBadProxiesCount,
+	UINT32 proxyAuthChallengeCount,
+	BOOLEAN isPossibleProxyFailure,
+	BOOLEAN proxyListFound,
+	BOOLEAN proxyBypassListFound,
+	UNICODESTRING httpMethod,
+	BOOLEAN serverCertCallbackRequired,
+	UNICODESTRING jobOwnerServiceName
+	);
+
+FileTransferStartedOrResumed(
+	UNICODESTRING jobName,
+	UNICODESTRING processPath,
+	GUID jobId,
+	UNICODESTRING jobType,
+	GUID transferId,
+	UINT64 bytesToTransfer,
+	UINT64 bytesTransferred,
+	UNICODESTRING protocolType,
+	BOOLEAN isThrottled,
+	BOOLEAN isUsingBranchCache,
+	BOOLEAN isLowPriorityTcpEnabled,
+	UNICODESTRING appUserModelId
+	);
+
+PdcAPIFailure(
+	UNICODESTRING apiName,
+	NTSTATUS ntStatus,
+	INT32 errorDetail
+	);
+
+JobBlockedByPolicy(
+	UNICODESTRING jobName,
+	UNICODESTRING processPath,
+	GUID jobId,
+	UNICODESTRING jobType,
+	HRESULT hresult,
+	UINT32 transferPolicy,
+	UINT32 powerPolicy,
+	UINT32 mediaRestrictions,
+	UNICODESTRING jobPriority,
+	BOOL32 interruptiveUIState,
+	UNICODESTRING appUserModelId,
+	INT32 crmClientId,
+	INT32 crmActivityId,
+	UNICODESTRING smePolicyStatus,
+	HEXINT32 smePolicyBlockingReasons
+	);
+
+JobTransfersCompleted(
+	UNICODESTRING jobName,
+	UNICODESTRING processPath,
+	GUID jobId,
+	UNICODESTRING jobType,
+	UNICODESTRING appUserModelId
+	);
+
+JobCanceled(
+	UNICODESTRING jobName,
+	UNICODESTRING processPath,
+	GUID jobId,
+	UNICODESTRING jobType,
+	UINT32 proxyUsage,
+	UINT32 transferPolicy,
+	UINT32 powerPolicy,
+	UINT32 mediaRestrictions,
+	UNICODESTRING jobPriority,
+	UINT64 fileCount,
+	UINT64 succeededFilesCount,
+	UINT32 numRetries,
+	UINT64 bytesTransferred,
+	UINT64 bytesTransferredFromOriginServer,
+	UINT64 bytesTransferredFromPeers,
+	UNICODESTRING jobState,
+	HRESULT hresult,
+	UINT32 errorContext,
+	UNICODESTRING appUserModelId,
+	UINT32 helperTokenFlags,
+	UNICODESTRING httpMethod,
+	BOOLEAN serverCertCallbackRequired,
+	UNICODESTRING jobOwnerServiceName
+	);
+
+JobCompleted(
+	UNICODESTRING jobName,
+	UNICODESTRING processPath,
+	GUID jobId,
+	UNICODESTRING jobType,
+	UINT32 proxyUsage,
+	UINT32 transferPolicy,
+	UINT32 powerPolicy,
+	UINT32 mediaRestrictions,
+	UNICODESTRING jobPriority,
+	UINT64 fileCount,
+	UINT64 succeededFilesCount,
+	UINT32 numRetries,
+	UINT64 bytesTransferred,
+	UINT64 bytesTransferredFromOriginServer,
+	UINT64 bytesTransferredFromPeers,
+	UNICODESTRING jobState,
+	HRESULT hresult,
+	UINT32 errorContext,
+	UNICODESTRING appUserModelId,
+	UINT32 helperTokenFlags,
+	UNICODESTRING httpMethod,
+	BOOLEAN serverCertCallbackRequired,
+	UNICODESTRING jobOwnerServiceName
+	);
+
+JobPriorityChanged(
+	UNICODESTRING jobName,
+	UNICODESTRING processPath,
+	GUID jobId,
+	UNICODESTRING jobType,
+	UNICODESTRING oldJobPriority,
+	UNICODESTRING newJobPriority,
+	UNICODESTRING appUserModelId
+	);
+
+DatabaseFailure(
+	ANSISTRING functionName,
+	INT64 lineNumber,
+	HRESULT hresult,
+	UNICODESTRING serviceState
+	);
+
+OpenServiceFailure(
+	UINT64 PartA_PrivTags,
+	UNICODESTRING serviceName,
+	WIN32ERROR winError
+	);
+
+CrmAPIFailure(
+	UNICODESTRING apiName,
+	HRESULT hresult
+	);
+

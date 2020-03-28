@@ -1,0 +1,67 @@
+ProviderNames:
+	Microsoft.Windows.Diagnostics.Troubleshooter
+
+
+
+**** Events *****
+Error(
+	GUID sessionId,
+	UNICODESTRING packageId,
+	UINT32 errorSource,
+	UINT32 errorCode,
+	UINT32 userContext
+	);
+
+CustomTelemetry(
+	GUID sessionId,
+	UNICODESTRING packageId,
+	UNICODESTRING Property,
+	UNICODESTRING Value
+	);
+
+Exit(
+	GUID sessionId,
+	UNICODESTRING packageId,
+	UINT32 exitAction,
+	UNICODESTRING entryPoint,
+	UINT32 supportMode,
+	UINT32 numRootCausesFound,
+	UINT32 numRootCausesFixed,
+	UINT32 numRootCausesNotFixed,
+	UINT32 numRootCausesCheckedNotFound,
+	UINT32 timeOnLastPage,
+	UNICODESTRING lastInteractionId
+	);
+
+SupportMode(
+	GUID sessionId,
+	UNICODESTRING supportProvider,
+	UINT32 lastPageId,
+	BOOL32 stopRunningPackage
+	);
+
+Resolution(
+	GUID sessionId,
+	UNICODESTRING metaPackageId,
+	UNICODESTRING packageId,
+	UNICODESTRING rcid,
+	UNICODESTRING resolutionId,
+	UINT32 userContext,
+	UINT32 resolutionApplied,
+	BOOL32 resolveSucceeded,
+	BOOL32 fixedProblem,
+	UINT32 rerunNumber,
+	UINT32 supportMode
+	);
+
+RootCause(
+	GUID sessionId,
+	UNICODESTRING metaPackageId,
+	UNICODESTRING packageId,
+	UNICODESTRING rcid,
+	UINT32 rcStatus,
+	UINT32 userContext,
+	UINT32 userStatus,
+	UINT32 supportMode
+	);
+

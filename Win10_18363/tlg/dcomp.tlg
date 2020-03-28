@@ -1,0 +1,76 @@
+ProviderNames:
+	Microsoft.Windows.ApiTelemetry
+	InputCore
+	Microsoft.Windows.Dwm.DComp
+
+
+
+**** Events *****
+FallbackError(
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+FallbackError(
+	UINT64 PartA_PrivTags,
+	SIGNED wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+ApiCallCounts(
+	UNICODESTRING Namespace,
+	UNICODESTRING ApiDataList,
+	ANSISTRING CustomList,
+	UINT32 HitCounts,
+	BOOLEAN UTCReplace_AppSessionGuid
+	);
+
+ApiCallCountsWithDebuggerPresent(
+	UNICODESTRING Namespace,
+	UNICODESTRING ApiDataList,
+	ANSISTRING CustomList,
+	UINT32 HitCounts,
+	BOOLEAN UTCReplace_AppSessionGuid
+	);
+
+DComp::TryRedirectForManipulation(
+	UINT32 PointerId,
+	UINT64 PointerTimestamp
+	);
+
+WindowsUICompositionEffectGraphs(
+	INT32 EventVersionId,
+	ANSISTRING EffectGraphs,
+	INT32 EffectGraphCounts
+	);
+

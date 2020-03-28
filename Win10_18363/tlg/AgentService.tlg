@@ -1,0 +1,40 @@
+ProviderNames:
+	Microsoft.Windows.AppMan.UEV
+
+
+
+**** Events *****
+ServiceStopped(
+	BOOL32 UTCReplace_AppSessionGuid,
+	UINT32 Win32ErrorCode,
+	UINT32 ServiceSpecificExitCode
+	);
+
+ServiceStarted(
+	BOOL32 UTCReplace_AppSessionGuid,
+	HRESULT HRESULT,
+	UINT32 ServiceSpecificExitCode
+	);
+
+ServiceStarted(
+	BOOL32 UTCReplace_AppSessionGuid,
+	HRESULT HRESULT
+	);
+
+DebugMessage(
+	UINT32 LOGLEVEL,
+	UNICODESTRING MESSAGE,
+	BOOL32 UTCReplace_AppSessionGuid
+	);
+
+TemplateAction(
+	BOOL32 UTCReplace_AppSessionGuid,
+	INT32 ActionType,
+	UNICODESTRING TemplateName,
+	UNICODESTRING TemplateID,
+	INT32 TargetType,
+	UNICODESTRING TemplateGeneratorVersion,
+	UNICODESTRING FileName,
+	UNICODESTRING AppVersionRange
+	);
+

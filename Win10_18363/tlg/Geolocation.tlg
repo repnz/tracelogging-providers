@@ -1,0 +1,318 @@
+ProviderNames:
+	Microsoft.Geolocation.Service
+	Microsoft.Geolocation.Verbose
+	Microsoft.Geolocation.Api
+	Microsoft.Windows.TlgAggregateInternal
+
+
+
+**** Events *****
+FailureLogReport(
+	HRESULT HR,
+	UNICODESTRING CustomMessage,
+	ANSISTRING Function,
+	ANSISTRING CallingCode,
+	ANSISTRING Filename,
+	UINT32 Line
+	);
+
+FailureLogReport_Aggregate(
+	NULL Count,
+	HRESULT HR,
+	UNICODESTRING CustomMessage,
+	ANSISTRING Function,
+	ANSISTRING CallingCode,
+	ANSISTRING Filename,
+	UINT32 Line
+	);
+
+TlgAggregateSummary(
+	GUID Provider,
+	UINT64 NumFlushes,
+	UINT64 MaxEntriesStored,
+	UINT64 TotalEntriesFlushed,
+	UINT32 MaxEntriesFlushed,
+	UINT32 MinEntriesFlushed,
+	UINT32 NumBucketLimitReached,
+	UINT32 NumAllocationFailures,
+	UINT32 NumLargeEventFailures
+	);
+
+Geopoint(
+	ANSISTRING Tracing,
+	HEXINT32 geopointId,
+	DOUBLE Latitude,
+	DOUBLE Longitude,
+	DOUBLE Altitude
+	);
+
+ApiStarted(
+	UNICODESTRING api,
+	HEXINT32 hr,
+	HEXINT64 correlation,
+	UINT32 maximumAge,
+	UINT32 timeout
+	);
+
+Geolocator(
+	ANSISTRING Tracing,
+	BOOL32 quiescedState
+	);
+
+Geolocator(
+	ANSISTRING Tracing,
+	HEXINT32 resultHR,
+	BOOL32 isConsentLess,
+	BOOL32 isRegisteredWithPsm
+	);
+
+Geolocator(
+	ANSISTRING Tracing,
+	UINT32 desiredAccuracyInMeters
+	);
+
+ApiStarted(
+	UNICODESTRING api,
+	HEXINT32 hr,
+	HEXINT64 correlation
+	);
+
+DesiredAccuracyUsed(
+	ANSISTRING accuracyBucket,
+	UINT32 desiredAccuracyInMeter
+	);
+
+ApiStarted(
+	UNICODESTRING api,
+	HEXINT32 hr,
+	HEXINT64 correlation,
+	INT64 durationInput
+	);
+
+Geolocator(
+	ANSISTRING Tracing,
+	UINT32 delegateCount,
+	UINT32 statusChanged
+	);
+
+Geolocator(
+	ANSISTRING Tracing,
+	UINT32 reportIntervalInMs
+	);
+
+Geolocator(
+	ANSISTRING Tracing,
+	UINT32 delegateCount,
+	HEXINT32 geopositionId
+	);
+
+ApiCompleted(
+	UNICODESTRING api,
+	HEXINT32 hr,
+	INT64 correlation
+	);
+
+ApiStarted(
+	UNICODESTRING api,
+	HEXINT32 hr,
+	INT64 correlation
+	);
+
+Geolocator(
+	ANSISTRING Tracing,
+	HEXINT32 resultHR
+	);
+
+Geolocator(
+	ANSISTRING Tracing,
+	UINT32 desiredAccuracy
+	);
+
+Geolocator(
+	ANSISTRING Tracing,
+	DOUBLE movementThresholdInMeters
+	);
+
+ApiCompleted(
+	HEXINT32 hr,
+	HEXINT64 correlation
+	);
+
+GetGeopositionAsync(
+	ANSISTRING Tracing,
+	HEXINT32 resultHR,
+	BOOL32 isRegisteredWithPsm,
+	BOOL32 isPPLECaller
+	);
+
+GetGeopositionAsync(
+	ANSISTRING Tracing,
+	BOOL32 quiescedState
+	);
+
+GetGeopositionAsync(
+	ANSISTRING Tracing
+	);
+
+GetGeopositionAsync(
+	ANSISTRING Tracing,
+	HEXINT32 resultHR,
+	HEXINT32 geopositionId
+	);
+
+Geoposition(
+	ANSISTRING Tracing,
+	HEXINT32 resultHR,
+	HEXINT32 geopositionId,
+	BOOL32 isQuirkEnabled
+	);
+
+GeoCoordinate(
+	ANSISTRING Tracing,
+	HEXINT32 geopositionId,
+	HEXINT32 geocoordinateId,
+	HEXINT32 resultHR
+	);
+
+GeoCoordinate(
+	ANSISTRING Tracing,
+	HEXINT32 resultHR,
+	HEXINT32 geocoordinateId,
+	HEXINT32 geocoordinateSatelliteId
+	);
+
+GeoCoordinate(
+	ANSISTRING Tracing,
+	HEXINT32 resultHR,
+	HEXINT32 geocoordinateId,
+	DOUBLE Heading,
+	BOOL32 isQuirkEnabled,
+	BOOL32 isNullableType
+	);
+
+GeoCoordinate(
+	ANSISTRING Tracing,
+	HEXINT32 resultHR,
+	HEXINT32 geocoordinateId,
+	DOUBLE Altitude,
+	BOOL32 isQuirkEnabled,
+	BOOL32 isNullableType
+	);
+
+GeoCoordinate(
+	ANSISTRING Tracing,
+	HEXINT32 resultHR,
+	HEXINT32 geocoordinateId,
+	DOUBLE Speed,
+	BOOL32 isQuirkEnabled,
+	BOOL32 isNullableType
+	);
+
+GeoCoordinate(
+	ANSISTRING Tracing,
+	HEXINT32 resultHR,
+	HEXINT32 geocoordinateId,
+	DOUBLE altitudeAccuracy,
+	BOOL32 isNullableType
+	);
+
+GeoCoordinate(
+	ANSISTRING Tracing,
+	HEXINT32 resultHR,
+	HEXINT32 geocoordinateId,
+	DOUBLE Latitude
+	);
+
+GeoCoordinate(
+	ANSISTRING Tracing,
+	HEXINT32 resultHR,
+	HEXINT32 geocoordinateId,
+	DOUBLE Longitude
+	);
+
+GeoCoordinate(
+	ANSISTRING Tracing,
+	HEXINT32 resultHR,
+	HEXINT32 geocoordinateId,
+	BOOL32 isNullableType
+	);
+
+GeoCoordinate(
+	ANSISTRING Tracing,
+	HEXINT32 geocoordinateId,
+	HEXINT32 geopointId,
+	HEXINT32 resultHR
+	);
+
+GeocoordinateSatelliteData(
+	ANSISTRING Tracing,
+	HEXINT32 resultHR,
+	HEXINT32 geocoordinateSatelliteId,
+	DOUBLE horizontalDilutionOfPrecision,
+	BOOL32 isNullableType
+	);
+
+GeocoordinateSatelliteData(
+	ANSISTRING Tracing,
+	HEXINT32 resultHR,
+	HEXINT32 geocoordinateSatelliteId,
+	DOUBLE verticalDilutionOfPrecision,
+	BOOL32 isNullableType
+	);
+
+GeocoordinateSatelliteData(
+	ANSISTRING Tracing,
+	HEXINT32 resultHR,
+	HEXINT32 geocoordinateSatelliteId,
+	DOUBLE positionDilutionOfPrecision,
+	BOOL32 isNullableType
+	);
+
+ApiCompleted(
+	HEXINT32 hr,
+	INT64 correlation
+	);
+
+ApiStarted(
+	UNICODESTRING api,
+	HEXINT64 correlation
+	);
+
+GeovisitForegroundEventRemoved(
+	VOID
+	);
+
+GeovisitForegroundStarted(
+	UINT32 MonitoringScope
+	);
+
+GeovisitForegroundTrigger(
+	VOID
+	);
+
+GeovisitForegroundStartCalled(
+	UINT64 NumberOfSubscribedEvents
+	);
+
+GeovisitForegroundStopped(
+	VOID
+	);
+
+GeovisitGetLastAsync(
+	NULL Count,
+	UINT32 Visit
+	);
+
+ActivityStoppedAutomatically(
+	VOID
+	);
+
+GeovisitForegroundEventAdded(
+	VOID
+	);
+
+GeovisitGetLastAsync(
+	NULL Count,
+	INT32 Visit
+	);
+

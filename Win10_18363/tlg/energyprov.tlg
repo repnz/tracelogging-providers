@@ -1,0 +1,418 @@
+ProviderNames:
+	Microsoft.Windows.SRUM.Telemetry
+	TelemetryAssert
+	TelemetryAssertDiagTrack
+
+
+
+**** Events *****
+DcScreenOffAggregatedStateData(
+	UINT8 EventVersion,
+	UINT64 TimeStamp,
+	UINT32 JoulesConsumed,
+	UINT16 PowerRatioInMilliWatts,
+	UINT16 EstimatedBatteryLifeInMinutes,
+	UINT16 EnergyConsumptionTrackedDurationInMinutes,
+	UINT16 FullChargeCapacity,
+	UINT16 ChargeCapacityRatio,
+	BOOLEAN BatteryAccessDenied,
+	UINT16 BatteryDesignedCapacity,
+	UINT16 MinutesSinceLastIncident,
+	UINT8 FirstUploadSinceBoot,
+	UINT8 LongTermEventType,
+	GUID ActualOverlayGuidCurrent,
+	UINT32 ActualOverlayChangeCount
+	);
+
+DcScreenOnAggregatedStateData(
+	UINT8 EventVersion,
+	UINT64 TimeStamp,
+	UINT32 JoulesConsumed,
+	UINT16 PowerRatioInMilliWatts,
+	UINT16 EstimatedBatteryLifeInMinutes,
+	UINT16 EnergyConsumptionTrackedDurationInMinutes,
+	UINT16 FullChargeCapacity,
+	UINT16 ChargeCapacityRatio,
+	BOOLEAN BatteryAccessDenied,
+	UINT16 BatteryDesignedCapacity,
+	UINT16 MinutesSinceLastIncident,
+	UINT8 FirstUploadSinceBoot,
+	UINT8 LongTermEventType,
+	GUID ActualOverlayGuidCurrent,
+	UINT32 ActualOverlayChangeCount
+	);
+
+DisplayBrightnessHistogram(
+	FILETIME TimeStampUTC,
+	UINT32 BrightnessChangesCountHistogram,
+	UINT32 BrightnessDurationSumHistogram,
+	UINT32 TotalDuration,
+	UINT8 0%-25%,
+	UINT8 26%-50%,
+	UINT8 51%-75%,
+	UINT8 76%-90%,
+	UINT8 91%-99%,
+	UINT8 100%,
+	GUID screenOnSessionGuid
+	);
+
+EmiEnergyData(
+	UINT64 SequenceId,
+	UNICODESTRING ChannelName,
+	UINT8 LongtermTimer,
+	UINT8 LongTermEventType,
+	UINT8 MonitorOn,
+	UINT8 DC,
+	UINT8 EnergySaverOn,
+	UINT32 UsageTimeInSeconds,
+	UINT64 EnergyInMilliJoules,
+	UINT32 PowerRatioInMilliWatts,
+	GUID ActualOverlayGuidCurrent,
+	UINT32 ActualOverlayChangeCount
+	);
+
+BatteryCapacity(
+	FILETIME CurrentTime,
+	UINT32 EventStatus,
+	UINT32 EventCause,
+	UINT32 CycleDuration,
+	INT32 CurrentBatteryCapacity,
+	INT32 CurrentBatteryCapacityChange,
+	INT32 CycleState1,
+	INT32 CycleState2,
+	FLOAT CapacityRateOfChange1,
+	FLOAT CapacityRateOfChange2,
+	UINT32 BatteryCycleCount
+	);
+
+ScreenBrightnessChange(
+	INT8 CurrentBrightness,
+	INT8 PreviousBrightness,
+	UINT32 PreviousBrightnessDurationSeconds,
+	UINT8 OnACPower
+	);
+
+BatteryDrainStateData(
+	UINT8 EventVersion,
+	UINT64 SequenceId,
+	UINT64 TimeStamp,
+	UINT32 ChargeStartLevel,
+	UINT32 AggregationCount,
+	UINT32 StateHandleErrorCount,
+	UINT32 JoulesConsumed,
+	UINT16 PowerRatioInMilliWatts,
+	UINT16 EstimatedBatteryLifeInMinutes,
+	UINT16 MinutesSinceLastIncident,
+	UINT16 EnergyConsumptionTrackedDurationInMinutes,
+	UINT16 FullChargeCapacity,
+	UINT16 ChargeCapacityRatio,
+	BOOLEAN BatteryAccessDenied,
+	UINT16 TriggerConfigurations,
+	UINT16 Flag,
+	BOOLEAN IsLongterm,
+	BOOLEAN IsMonitorOn,
+	BOOLEAN IsDC,
+	BOOLEAN IsEnergySaverOn,
+	UINT16 ScreenOnPercentage,
+	UINT16 ScreenOffPercentage,
+	GUID ActualOverlayGuidCurrent
+	);
+
+ComponentEnergy(
+	UINT32 EventVersion,
+	FILETIME EventTime,
+	UINT64 SequenceId,
+	UINT32 AggregationCount,
+	UINT32 TrackedTimeInSeconds,
+	BOOLEAN IsLongterm,
+	UINT8 LongTermEventType,
+	BOOLEAN IsMonitorOn,
+	BOOLEAN IsDC,
+	BOOLEAN IsEnergySaverOn,
+	UINT32 LossEnergy,
+	UINT32 CpuEnergy,
+	UINT32 SocEnergy,
+	UINT32 DisplayEnergy,
+	UINT32 DiskEnergy,
+	UINT32 NetworkEnergy,
+	UINT32 MBBEnergy,
+	UINT32 OtherEnergy,
+	UINT32 CpuWorkOnBehalfEnergy,
+	UINT32 CpuAttributedEnergy,
+	UINT32 PackageEnergy,
+	UINT32 TotalEnergy,
+	UINT32 TotalPower,
+	GUID ActualOverlayGuidCurrent,
+	UINT32 ActualOverlayChangeCount,
+	UINT32 OverflowError
+	);
+
+EnergyEstimationUsageData(
+	UINT64 SequenceId,
+	UNICODESTRING AppName,
+	UNICODESTRING AppVersion,
+	UINT16 Flag,
+	BOOLEAN IsLongterm,
+	BOOLEAN IsMonitorOn,
+	BOOLEAN IsDC,
+	BOOLEAN IsEnergySaverOn,
+	UINT16 Rank,
+	UINT32 TrackedTimeInSeconds,
+	UINT32 EnergyRecordMeasured,
+	UINT32 FgCpuEnergy,
+	UINT32 BgCpuEnergy,
+	UINT32 FgSocEnergy,
+	UINT32 BgSocEnergy,
+	UINT32 FgDisplayEnergy,
+	UINT32 FgDiskEnergy,
+	UINT32 BgDiskEnergy,
+	UINT32 FgNetworkEnergy,
+	UINT32 BgNetworkEnergy,
+	UINT32 FgMBBEnergy,
+	UINT32 BgMBBEnergy,
+	UINT32 FgLossEnergy,
+	UINT32 BgLossEnergy,
+	UINT32 FgOtherEnergy,
+	UINT32 BgOtherEnergy,
+	UINT32 FgCpuWorkOnBehalfEnergy,
+	UINT32 BgCpuWorkOnBehalfEnergy,
+	UINT32 FgCpuAttributedEnergy,
+	UINT32 BgCpuAttributedEnergy,
+	UINT32 FgPowerRatioInMillWatts,
+	UINT32 BgPowerRatioInMillWatts,
+	UINT32 TotalPowerRatioInMillWatts,
+	FLOAT BatteryImpact,
+	GUID ActualOverlayGuidCurrent,
+	UINT32 ActualOverlayChangeCount
+	);
+
+AppTimelines(
+	UINT64 sequenceId,
+	GUID sessionGuid,
+	UINT8 longTermTimer,
+	UINT16 eventSeq,
+	UINT16 recCount,
+	UINT8 producerVerMin,
+	UINT8 producerVerMax,
+	FILETIME startTime,
+	UINT32 spanS,
+	UINT8 systemState,
+	30 records,
+	UNICODESTRING appId,
+	UNICODESTRING appVer,
+	UNICODESTRING tags,
+	UINT8 sysState,
+	UINT8 appState,
+	FILETIME startTime,
+	UINT32 spanS,
+	UINT32 totDurS,
+	UINT32 inFocusS,
+	UINT32 psmFgS,
+	UINT32 userInputS,
+	UINT32 compRendS,
+	UINT32 compDrtyS,
+	UINT32 compPropS,
+	UINT32 audioInS,
+	UINT32 audioOutS,
+	UINT32 dispReqS,
+	UINT32 cyclesG,
+	UINT32 cyclesAttrG,
+	UINT32 cyclesWOBG,
+	UINT64 cyclesBrk,
+	UINT64 cyclesAttrBrk,
+	UINT64 cyclesWOBBrk,
+	UINT32 diskRawM,
+	UINT32 netTailK,
+	UINT32 netKB,
+	UINT32 mbbTailK,
+	UINT32 mbbKB,
+	UINT16 recIndex,
+	HEX timelines,
+	ANSISTRING name,
+	FILETIME endTime,
+	UINT8 msShift,
+	ANSISTRING timeline
+	);
+
+EnergySaverChange(
+	UINT8 NewEnergySaverState,
+	UINT32 DurationSeconds
+	);
+
+EnergyEstimationUsageData(
+	UINT64 SequenceId,
+	UNICODESTRING AppName,
+	UNICODESTRING AppVersion,
+	UINT16 Flag,
+	BOOLEAN IsLongterm,
+	BOOLEAN IsMonitorOn,
+	BOOLEAN IsDC,
+	BOOLEAN IsEnergySaverOn,
+	UINT16 Rank,
+	UINT32 TrackedTimeInSeconds,
+	UINT32 EnergyRecordMeasured,
+	UINT32 FgCpuEnergy,
+	UINT32 BgCpuEnergy,
+	UINT32 FgSocEnergy,
+	UINT32 BgSocEnergy,
+	UINT32 FgDisplayEnergy,
+	UINT32 FgDiskEnergy,
+	UINT32 BgDiskEnergy,
+	UINT32 FgNetworkEnergy,
+	UINT32 BgNetworkEnergy,
+	UINT32 FgMBBEnergy,
+	UINT32 BgMBBEnergy,
+	UINT32 FgLossEnergy,
+	UINT32 BgLossEnergy,
+	UINT32 FgOtherEnergy,
+	UINT32 BgOtherEnergy,
+	UINT32 FgCpuWorkOnBehalfEnergy,
+	UINT32 BgCpuWorkOnBehalfEnergy,
+	UINT32 FgCpuAttributedEnergy,
+	UINT32 BgCpuAttributedEnergy,
+	UINT32 FgPowerRatioInMillWatts,
+	UINT32 BgPowerRatioInMillWatts,
+	UINT32 TotalPowerRatioInMillWatts,
+	FLOAT BatteryImpact,
+	GUID ActualOverlayGuidCurrent,
+	UINT32 ActualOverlayChangeCount
+	);
+
+ScreenTurnedOn(
+	FILETIME TimeStampUTC,
+	INT8 CurrentBrightness,
+	INT8 PreviousBrightness,
+	UINT32 PreviousBrightnessDurationSeconds,
+	UINT8 OnACPower
+	);
+
+ScreenTurnedOff(
+	FILETIME TimeStampUTC,
+	INT8 CurrentBrightness,
+	INT8 PreviousBrightness,
+	UINT32 PreviousBrightnessDurationSeconds,
+	UINT8 OnACPower
+	);
+
+StateData(
+	UINT8 EventVersion,
+	UINT64 SequenceId,
+	UINT64 TimeStamp,
+	UINT32 ChargeStartLevel,
+	UINT32 AggregationCount,
+	UINT32 StateHandleErrorCount,
+	UINT32 EMI_StateHandleErrorCount,
+	UINT32 JoulesConsumed,
+	UINT32 EMI_JoulesConsumed,
+	UINT16 PowerRatioInMilliWatts,
+	UINT16 EMI_PowerRatioInMilliWatts,
+	UINT16 EstimatedBatteryLifeInMinutes,
+	UINT16 EMI_EstimatedBatteryLifeInMinutes,
+	UINT16 MinutesSinceLastIncident,
+	UINT16 EnergyConsumptionTrackedDurationInMinutes,
+	UINT16 FullChargeCapacity,
+	UINT16 ChargeCapacityRatio,
+	BOOLEAN BatteryAccessDenied,
+	UINT16 TriggerConfigurations,
+	UINT16 Flag,
+	BOOLEAN IsLongterm,
+	BOOLEAN IsMonitorOn,
+	BOOLEAN IsDC,
+	BOOLEAN IsEnergySaverOn,
+	GUID ActualOverlayGuidCurrent,
+	UINT32 ActualOverlayChangeCount
+	);
+
+ScreenOnSessionGuid(
+	INT64 screenOnSessionStartTime,
+	INT64 screenOnSessionEndTime,
+	UINT32 screenOnSessionStartReason,
+	UINT32 screenOnSessionEndReason,
+	GUID screenOnSessionGuid
+	);
+
+AppTimelines(
+	UINT64 sequenceId,
+	GUID sessionGuid,
+	UINT8 longTermTimer,
+	UINT16 eventSeq,
+	UINT16 recCount,
+	UINT8 producerVerMin,
+	UINT8 producerVerMax,
+	FILETIME startTime,
+	UINT32 spanS,
+	UINT8 systemState,
+	30 records,
+	UNICODESTRING appId,
+	UNICODESTRING appVer,
+	UNICODESTRING tags,
+	UINT8 sysState,
+	UINT8 appState,
+	FILETIME startTime,
+	UINT32 spanS,
+	UINT32 totDurS,
+	UINT32 inFocusS,
+	UINT32 psmFgS,
+	UINT32 userInputS,
+	UINT32 compRendS,
+	UINT32 compDrtyS,
+	UINT32 compPropS,
+	UINT32 audioInS,
+	UINT32 audioOutS,
+	UINT32 dispReqS,
+	UINT32 cyclesG,
+	UINT32 cyclesAttrG,
+	UINT32 cyclesWOBG,
+	UINT64 cyclesBrk,
+	UINT64 cyclesAttrBrk,
+	UINT64 cyclesWOBBrk,
+	UINT32 diskRawM,
+	UINT32 netTailK,
+	UINT32 netKB,
+	UINT32 mbbTailK,
+	UINT32 mbbKB,
+	UINT16 recIndex,
+	HEX timelines,
+	ANSISTRING name,
+	FILETIME endTime,
+	UINT8 msShift,
+	ANSISTRING timeline
+	);
+
+LowRankEnergyEstimationUsageData(
+	UINT32 BlobVersion,
+	UINT32 BlobLengthInBytes,
+	UINT32 NumberOfRecords,
+	BINARY RecordsBlob,
+	UINT32 TrackedTimeInSeconds,
+	GUID ActualOverlayGuidCurrent,
+	UINT32 ActualOverlayChangeCount
+	);
+
+InAggregateFunction(
+	UINT32 EnergySaverOn,
+	UINT32 MonitorOn,
+	UINT32 OnAC,
+	UINT32 AggregationCount,
+	UINT32 JoulesConsumed,
+	UINT32 UsageJoulesConsumed,
+	UINT64 EnergyConsumptionTrackedDuration,
+	UINT64 UsageEnergyConsumptionTrackedDuration
+	);
+
+OnEvent(
+	UINT32 EventType
+	);
+
+Assert(
+	UINT32 assertVersion,
+	UINT32 rva,
+	UINT32 timestamp,
+	UINT32 imageSize,
+	ANSISTRING imageName,
+	UINT32 count,
+	UINT32 totalHits,
+	UINT32 ModuleCollection,
+	UINT32 GlobalCollection
+	);
+

@@ -1,0 +1,47 @@
+ProviderNames:
+	Microsoft.Windows.Web.HttpClient
+	Microsoft.Windows.TlgAggregateInternal
+
+
+
+**** Events *****
+Failure(
+	ANSISTRING Function,
+	INT32 Line,
+	HRESULT HRESULT
+	);
+
+SendRequestOperationFailed(Aggregate)(
+	NULL Count,
+	UNICODESTRING MethodName,
+	HRESULT HResult,
+	UINT64 PartA_PrivTags
+	);
+
+HttpClientMuaCreateForUserUsage(Aggregate)(
+	NULL Count,
+	BOOL32 IsMuaCapable,
+	HRESULT HResult,
+	UINT64 PartA_PrivTags
+	);
+
+HttpClientUsage(Aggregate)(
+	NULL Count,
+	UNICODESTRING MethodName,
+	UINT32 HttpVersion,
+	UINT32 StatusCode,
+	UINT64 PartA_PrivTags
+	);
+
+TlgAggregateSummary(
+	GUID Provider,
+	UINT64 NumFlushes,
+	UINT64 MaxEntriesStored,
+	UINT64 TotalEntriesFlushed,
+	UINT32 MaxEntriesFlushed,
+	UINT32 MinEntriesFlushed,
+	UINT32 NumBucketLimitReached,
+	UINT32 NumAllocationFailures,
+	UINT32 NumLargeEventFailures
+	);
+

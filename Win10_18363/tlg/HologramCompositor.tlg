@@ -1,0 +1,1554 @@
+ProviderNames:
+	Microsoft.Windows.Analog.HydrogenCompositor
+	Microsoft.Windows.ErrorHandling.Fallback
+	Microsoft.Windows.Analog.Compositor
+	Microsoft.DHD1.SequencedEventProcessor
+	Microsoft.Cognition.MixedRealityCompositor.MetadataGenerator
+	Microsoft.Windows.Analog.SpectrumContinuous
+	Microsoft.Windows.Analog.HolographicDriverClient
+	Microsoft.Windows.Analog.HolographicDriverClientContinuous
+	Microsoft.Windows.Holographic.MixedRealityMode
+
+
+
+**** Events *****
+InputPostProcessor_HitTestSharedWorld(
+	UINT64 PartA_PrivTags,
+	BOOLEAN hitTestSharedWorld
+	);
+
+GPUFinishedQPCTimeUpperBound(
+	UINT32 holographicFrameID,
+	UINT32 processID
+	);
+
+RequestNewProduceSequenceEventFailed(
+	UINT64 NumEventsInFlight
+	);
+
+RequestNewProduceSequenceEvent(
+	UINT64 NumEventsInFlight,
+	BOOLEAN ReusedEvent
+	);
+
+WaitTimeout(
+	UINT32 NumWaitHandles
+	);
+
+WaitFailed(
+	UINT32 NumWaitHandles,
+	UINT32 LastError,
+	UINT32 NumInvalidHandles
+	);
+
+WaitSignaled(
+	UINT32 NumWaitHandles,
+	INT32 SignaledIndex
+	);
+
+GraphicsSwapChain(
+	UINT64 PartA_PrivTags,
+	UINT32 Width,
+	UINT32 Height,
+	BOOLEAN Windowed,
+	UINT32 SwapChainEffect
+	);
+
+DwmOutput_Created(
+	UINT64 PartA_PrivTags
+	);
+
+DwmOutput_Destroyed(
+	UINT64 PartA_PrivTags
+	);
+
+DwmOutput_Initialized(
+	UINT64 PartA_PrivTags
+	);
+
+DwmOutput_SwapchainCreated(
+	UINT64 PartA_PrivTags
+	);
+
+DwmOutput_SetIdle(
+	UINT64 PartA_PrivTags,
+	BOOLEAN idle
+	);
+
+DwmOutput_MarkWorkaroundForBarabooResumeFromIdleDisplayCorruption(
+	UINT64 PartA_PrivTags
+	);
+
+ConfirmExclusiveFrame(
+	UINT64 PartA_PrivTags
+	);
+
+ActivateExclusiveView(
+	UINT64 PartA_PrivTags,
+	UINT32 ProcessId,
+	UINT32 ViewId
+	);
+
+DeactivateExclusiveView(
+	UINT64 PartA_PrivTags,
+	UINT32 ProcessId,
+	UINT32 ViewId
+	);
+
+ExclusiveUpdateArrived(
+	UINT64 PartA_PrivTags,
+	UINT32 ProcessId,
+	UINT32 PresentId
+	);
+
+ExclusiveUpdatesDeeplyQueued(
+	UINT64 PartA_PrivTags
+	);
+
+WaitForExclusiveFrame(
+	UINT64 PartA_PrivTags,
+	ANSISTRING EventType
+	);
+
+WaitForExclusiveFrame(
+	UINT64 PartA_PrivTags,
+	ANSISTRING EventType
+	);
+
+ProcessFrameUpdateActivity(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	SIGNED wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+ProcessFrameUpdateActivity(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+ProcessFrameUpdateActivity(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId
+	);
+
+HologramCompositor_OnHolographicCompositionCreate(
+	UINT64 PartA_PrivTags
+	);
+
+HologramCompositor_OnHolographicCompositionDestroy(
+	UINT64 PartA_PrivTags
+	);
+
+HologramCompositor_RestartComposition(
+	UINT64 PartA_PrivTags,
+	ANSISTRING reason
+	);
+
+HologramCompositor_ObtainHolographicDisplay_DisplayNotFound(
+	UINT64 PartA_PrivTags,
+	GUID displayId,
+	UINT64 whichAttempt
+	);
+
+HologramCompositor_OnHolographicCompositionCreate_GetDisplayFailure(
+	UINT64 PartA_PrivTags,
+	GUID displayId
+	);
+
+HologramCompositor_OnDisplayAdd(
+	UINT64 PartA_PrivTags,
+	UINT32 id,
+	GUID systemDisplayGuid
+	);
+
+HologramCompositor_OnDisplayRemove(
+	UINT64 PartA_PrivTags,
+	UINT32 id,
+	GUID systemDisplayGuid
+	);
+
+RaiseLowFramerateEventStart(
+	UINT64 PartA_PrivTags
+	);
+
+RaiseLowFramerateEventEnd(
+	UINT64 PartA_PrivTags
+	);
+
+RaiseExclusiveLowFramerateEventStart(
+	UINT64 PartA_PrivTags
+	);
+
+RaiseExclusiveLowFramerateEventEnd(
+	UINT64 PartA_PrivTags
+	);
+
+GraphicsAdapter(
+	UINT64 PartA_PrivTags,
+	UNICODESTRING AdapterDesc,
+	UINT32 DeviceId,
+	UINT32 VendorId,
+	UINT32 SubSysId
+	);
+
+LowFrameRate(
+	UINT64 PartA_PrivTags,
+	BOOL32 ExclusiveModeActive
+	);
+
+HolographicFrameScanout(
+	UINT64 PartA_PrivTags,
+	UINT32 holographicFrameID,
+	INT64 frameScanoutVBlankTimeTicks,
+	FLOAT frameScanoutVBlankRelativeTimeMilliseconds
+	);
+
+SharedWorldBeginFrame(
+	UINT64 PartA_PrivTags,
+	ANSISTRING EventType
+	);
+
+SharedWorldBeginFrame(
+	UINT64 PartA_PrivTags,
+	ANSISTRING EventType
+	);
+
+SharedWorldEndFrame(
+	UINT64 PartA_PrivTags,
+	ANSISTRING EventType
+	);
+
+SharedWorldEndFrame(
+	UINT64 PartA_PrivTags,
+	ANSISTRING EventType
+	);
+
+SharedWorldStepFrame(
+	UINT64 PartA_PrivTags,
+	ANSISTRING EventType
+	);
+
+SharedWorldStepFrame(
+	UINT64 PartA_PrivTags,
+	ANSISTRING EventType
+	);
+
+SharedWorldRenderFrame(
+	UINT64 PartA_PrivTags,
+	ANSISTRING EventType
+	);
+
+SharedWorldRenderFrame(
+	UINT64 PartA_PrivTags,
+	ANSISTRING EventType
+	);
+
+WaitForStandbyWakeup(
+	UINT64 PartA_PrivTags,
+	ANSISTRING EventType
+	);
+
+WaitForStandbyWakeup(
+	UINT64 PartA_PrivTags,
+	ANSISTRING EventType
+	);
+
+FrameStartCallback(
+	UINT64 PartA_PrivTags
+	);
+
+TryReleaseNextExclusiveFrame(
+	UINT64 PartA_PrivTags,
+	BOOLEAN IsAsync,
+	BOOLEAN IsImmediate
+	);
+
+HydrogenFrameSkipped(
+	UINT64 PartA_PrivTags,
+	UINT32 SkippedReason
+	);
+
+HydrogenFrameSkipped(
+	UINT64 PartA_PrivTags,
+	UINT32 SkippedReason
+	);
+
+HydrogenFrameSkipped(
+	UINT64 PartA_PrivTags,
+	UINT32 SkippedReason
+	);
+
+CompositorResponseTimeout(
+	UINT64 PartA_PrivTags,
+	FLOAT LastUpdateSec
+	);
+
+HologramCompositor_PauseSharedWorld(
+	UINT64 PartA_PrivTags
+	);
+
+HologramCompositor_ResumeSharedWorld(
+	UINT64 PartA_PrivTags
+	);
+
+HologramCompositor_CheckStandbyState(
+	UINT64 PartA_PrivTags,
+	UNICODESTRING standbyState,
+	BOOLEAN displayPowerOff,
+	BOOLEAN suspended,
+	BOOLEAN suspendedOverride,
+	BOOLEAN isIdleRequested,
+	BOOLEAN isDeepIdleRequested,
+	BOOLEAN waitForSpectrumReady,
+	BOOLEAN hasPrimary,
+	BOOLEAN hasSharedWorld
+	);
+
+ActivityError(
+	UINT64 PartA_PrivTags,
+	SIGNED wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+ActivityIntermediateStop(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+ActivityStoppedAutomatically(
+	VOID
+	);
+
+FramerateInfo(
+	DOUBLE Framerate,
+	DOUBLE CPU Time,
+	DOUBLE CPU Render Time,
+	DOUBLE GPU Time,
+	UINT32 TotalMissedVblanks,
+	UINT32 ConsecutiveMissedVblanks
+	);
+
+FramePresented(
+	UINT32 sourceProcessId,
+	UINT32 sourcePresentId,
+	INT64 targetTimestamp,
+	BOOLEAN wasDirectSubmit
+	);
+
+DisplayAddActivity(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+DisplayAddActivity(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+DisplayAddActivity(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId,
+	UINT32 displayId
+	);
+
+WaitForNextFrameReady(
+	UINT64 PartA_PrivTags,
+	BOOLEAN IsHydrogenWait,
+	ANSISTRING EventType
+	);
+
+WaitForNextFrameReady(
+	UINT64 PartA_PrivTags,
+	ANSISTRING EventType,
+	FLOAT DurationMs
+	);
+
+PresentOutputs(
+	UINT64 PartA_PrivTags
+	);
+
+PresentOutputs(
+	UINT64 PartA_PrivTags
+	);
+
+ActivityError(
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+ActivityError(
+	UINT64 PartA_PrivTags,
+	SIGNED wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+ActivityIntermediateStop(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+DisplayAddOutputInfo(
+	UINT32 outputKind,
+	BOOLEAN isVM
+	);
+
+CompositorDhdDeviceNotReadyFailure(
+	UINT64 PartA_PrivTags
+	);
+
+HolographicOutputAction(
+	UINT64 PartA_PrivTags,
+	BOOLEAN Indirect,
+	UINT32 Action,
+	DOUBLE Time,
+	UINT64 Frame,
+	HEXINT64 DataA,
+	HEXINT64 DataB
+	);
+
+SubmitFrame(
+	UINT64 PartA_PrivTags,
+	UINT32 PresentId
+	);
+
+HolographicDisplayOutput_SourceResolutionModeSelectionFailed(
+	UINT64 PartA_PrivTags,
+	UINT32 SourceWidth,
+	UINT32 SourceHeight
+	);
+
+HoloLens3DComposition_Initializing(
+	UINT64 PartA_PrivTags
+	);
+
+HoloLens3DComposition_OnDisplayAdded(
+	UINT64 PartA_PrivTags,
+	GUID displayId,
+	UNICODESTRING deviceId
+	);
+
+HoloLens3DComposition_OnDisplayRemoved(
+	UINT64 PartA_PrivTags,
+	GUID displayId,
+	UNICODESTRING deviceId
+	);
+
+InputPostProcessor_AttachCompositor(
+	UINT64 PartA_PrivTags,
+	BOOLEAN wasPreviouslyAttached,
+	BOOLEAN hasSharedWorldHitTester,
+	BOOLEAN hasSharedWorldCursorManager
+	);
+
+InputPostProcessor_DetachSharedWorld(
+	UINT64 PartA_PrivTags,
+	BOOLEAN hasRemotePostProcessor,
+	BOOLEAN hasHologramCompositor,
+	BOOLEAN hasSharedWorldHitTester,
+	BOOLEAN hasSharedWorldCursorManager
+	);
+
+InputPostProcessor_SetSharedWorldPaused(
+	UINT64 PartA_PrivTags,
+	BOOLEAN paused
+	);
+
+LatestKnownFrameGPUAvailableDwmOutput(
+	UINT64 PartA_PrivTags,
+	UINT32 holographicFrameID,
+	UINT32 processID,
+	UINT32 knownAvailableRefreshCount,
+	UINT32 currentRefreshCount,
+	UINT64 currentFenceValue,
+	UINT32 currentPresentCount
+	);
+
+NextFrameReadyDwmOutput(
+	UINT64 PartA_PrivTags,
+	UINT32 holographicFrameID,
+	UINT32 processID,
+	UINT32 willScanoutPresentCount,
+	UINT32 latestScanoutPresentCount,
+	BOOLEAN isPipelineMode,
+	BOOLEAN isAutoPipeline,
+	INT64 outputReadyCount,
+	INT64 outputPresentCount,
+	UINT32 swapChainPresentCount,
+	UINT32 pendingPipelinedSwapChainPresents
+	);
+
+GPUWorkCompletedReportNotConsumed(
+	UINT64 PartA_PrivTags,
+	UINT32 holographicFrameID,
+	UINT32 processID
+	);
+
+PresentDwmOutput(
+	UINT64 PartA_PrivTags,
+	UINT32 holographicFrameID,
+	UINT32 processID,
+	UINT32 willScanoutPresentCount,
+	UINT32 readyQueueCount,
+	FLOAT readiedTimeRelativeMillis,
+	INT32 presentHResult,
+	UINT32 neededSyncRefreshCount,
+	UINT32 currentSyncRefreshCount
+	);
+
+DelayPresent(
+	UINT64 PartA_PrivTags,
+	UINT32 holographicFrameID,
+	UINT32 processID,
+	UINT32 willScanoutPresentCount,
+	UINT32 readyQueueCount,
+	FLOAT readiedTimeRelativeMillis,
+	UINT32 neededSyncRefreshCount,
+	UINT32 currentSyncRefreshCount,
+	BOOLEAN isPipelineMode
+	);
+
+NextFrameReadyDwmOutputAfterWaitLoop(
+	UINT64 PartA_PrivTags,
+	UINT32 lastPresentCount,
+	UINT32 currentScanoutCount,
+	BOOLEAN isLateCPU,
+	FLOAT timeSinceLastDroppedFrameMillis
+	);
+
+WaitForFrameReadySemaphore(
+	UINT64 PartA_PrivTags
+	);
+
+WaitForFrameReadySemaphore(
+	UINT64 PartA_PrivTags
+	);
+
+HolographicFrameReady(
+	UINT64 PartA_PrivTags,
+	UINT32 holographicFrameID,
+	UINT32 processID,
+	FLOAT readiedTimeRelativeMillis
+	);
+
+HolographicFrameLatched(
+	UINT64 PartA_PrivTags,
+	UINT32 holographicFrameID,
+	UINT32 processID,
+	BOOLEAN IsCandidateFrameEarly,
+	BOOLEAN IsLatchedFrameLate,
+	BOOLEAN HasLatchedNewHolographicFrameForCurrentReprojectionFrame,
+	UINT32 PresentQueueSizeBeforeLatch,
+	UINT32 PresentQueueSizeAfterLatch
+	);
+
+TryReadyNextHolographicFrame(
+	UINT64 PartA_PrivTags,
+	UINT32 ExpectedMaxQueueSize,
+	UINT32 QueueSize,
+	BOOLEAN AllowedToReady,
+	BOOLEAN IsCurrentFramePresented,
+	BOOLEAN IsNextFrameManuallyUnlocked,
+	BOOLEAN IsNextFrameReadiedAlready,
+	BOOLEAN IsReadyRecovery,
+	UINT32 ReadyCount,
+	UINT32 PresentCount,
+	BOOLEAN HasLateOptimisticFrameRecently,
+	BOOLEAN RejectedForNoLateStartAllowed,
+	FLOAT HolographicFrameBudgetInVsyncs
+	);
+
+LateApplicationFrame(
+	UINT64 PartA_PrivTags,
+	BOOLEAN ReprojectionIsLate,
+	BOOLEAN FailedToLatchANewFrame,
+	BOOLEAN IsExemptFromBudgetReset
+	);
+
+UnexpectedLateFrame(
+	UINT64 PartA_PrivTags
+	);
+
+GPUWorkCompletedReportNotAvailable(
+	UINT64 PartA_PrivTags,
+	UINT32 holographicFrameID,
+	UINT32 processID
+	);
+
+GPUReprojectionScheduled(
+	UINT64 PartA_PrivTags,
+	UINT32 holographicFrameID,
+	UINT32 processID,
+	UINT32 PresentCountForReprojectionScanout,
+	UINT32 SyncRefreshCountForReprojectionScanout,
+	UINT32 PresentCount,
+	UINT32 SyncRefreshCount
+	);
+
+ScanoutStatisticsDropped(
+	UINT64 PartA_PrivTags,
+	UINT32 holographicFrameID,
+	UINT32 processID,
+	UINT32 scanoutStatsQueueSize
+	);
+
+ScanoutStatisticsDelayed(
+	UINT64 PartA_PrivTags,
+	UINT32 holographicFrameID,
+	UINT32 processID,
+	UINT32 scanoutStatsQueueSize
+	);
+
+FramerateTelemetry(
+	UINT64 PartA_PrivTags,
+	DOUBLE IntervalStartTime,
+	DOUBLE IntervalEndTime,
+	UINT16 IntervalVBlanks,
+	UINT16 IntervalPresents,
+	UINT64 TargetAsId,
+	UINT32 TotalVBlanks,
+	UINT32 MissedVBlanks,
+	UINT32 MaxConsecutiveMissedVBlanks,
+	UINT32 AverageFramerate,
+	FLOAT PrimaryDisplayRefreshRateMs,
+	UINT32 Flags
+	);
+
+ScreenshotCaptured(
+	UINT64 PartA_PrivTags
+	);
+
+RunCompositor_Start(
+	UINT64 PartA_PrivTags
+	);
+
+RunCompositor_Stop(
+	UINT64 PartA_PrivTags
+	);
+
+CompositorDisplayQueued(
+	UINT64 PartA_PrivTags,
+	GUID SessionID,
+	UINT32 DisplayID
+	);
+
+CompositorViewerAdded(
+	UINT64 PartA_PrivTags,
+	GUID SessionID,
+	UINT32 ViewerID
+	);
+
+CompositorViewerQueued(
+	UINT64 PartA_PrivTags,
+	GUID SessionID,
+	UINT32 ViewerID
+	);
+
+CompositorViewerAddFailure(
+	UINT64 PartA_PrivTags,
+	GUID SessionID,
+	UINT32 ViewerID,
+	UINT32 EventHistory,
+	UINT32 LastEvent,
+	UINT32 ExternalComponentState,
+	ANSISTRING FailureMsg
+	);
+
+CompositorDisplayRemoved(
+	UINT64 PartA_PrivTags,
+	GUID SessionID,
+	UINT32 DisplayID,
+	UINT32 EventHistory,
+	UINT32 LastEvent,
+	UINT32 ExternalComponentState
+	);
+
+CompositorSpaceInitialized(
+	UINT64 PartA_PrivTags,
+	GUID SessionID
+	);
+
+CompositorSharedWorldInitialized(
+	UINT64 PartA_PrivTags,
+	GUID SessionID,
+	INT32 RenderingAdapter.HighPart,
+	UINT32 RenderingAdapter.LowPart,
+	UINT32 AdapterRole
+	);
+
+CompositorSharedWorldDestroy(
+	UINT64 PartA_PrivTags,
+	GUID SessionID
+	);
+
+CompositorSharedWorldDestroyed(
+	UINT64 PartA_PrivTags,
+	GUID SessionID,
+	UINT32 EventHistory,
+	UINT32 LastEvent,
+	UINT32 ExternalComponentState
+	);
+
+ExclusiveMode_Enter(
+	UINT64 PartA_PrivTags,
+	GUID SessionID,
+	UINT64 TargetAsId,
+	UINT32 windowInstanceId
+	);
+
+ExclusiveMode_Entered(
+	UINT64 PartA_PrivTags,
+	GUID SessionID,
+	UINT64 TargetAsId,
+	UINT32 windowInstanceId
+	);
+
+ExclusiveMode_Leave(
+	UINT64 PartA_PrivTags,
+	GUID SessionID,
+	UINT64 TargetAsId,
+	UINT32 windowInstanceId,
+	UINT32 EventHistory,
+	UINT32 LastEvent,
+	UINT32 ExternalComponentState
+	);
+
+ExclusiveMode_Stalled(
+	UINT64 PartA_PrivTags,
+	GUID SessionID,
+	UINT64 TargetAsId,
+	UINT32 windowInstanceId
+	);
+
+ExclusiveMode_StallEnded(
+	UINT64 PartA_PrivTags,
+	GUID SessionID,
+	UINT64 TargetAsId,
+	UINT32 windowInstanceId
+	);
+
+CompositorFrameRendered(
+	UINT64 PartA_PrivTags,
+	GUID SessionID,
+	UINT32 EventHistory,
+	UINT32 LastEvent,
+	UINT32 ExternalComponentState
+	);
+
+CompositorExclusiveFrameRendered(
+	UINT64 PartA_PrivTags,
+	GUID SessionID,
+	UINT64 TargetAsId,
+	UINT32 windowInstanceId,
+	UINT32 EventHistory,
+	UINT32 LastEvent,
+	UINT32 ExternalComponentState
+	);
+
+StandbyStateChange(
+	UINT64 PartA_PrivTags,
+	UINT32 State
+	);
+
+StandbyEnterTimeout(
+	UINT64 PartA_PrivTags
+	);
+
+DisplayPowerStateChange(
+	UINT64 PartA_PrivTags,
+	BOOLEAN TurningDisplayOn
+	);
+
+CompositorFailFast(
+	UINT64 PartA_PrivTags,
+	HRESULT hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	UNICODESTRING message,
+	GUID SessionID,
+	UINT32 EventHistory,
+	UINT32 LastEvent,
+	UINT32 ExternalComponentState
+	);
+
+CompositorFallback(
+	UINT64 PartA_PrivTags,
+	HRESULT hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	UNICODESTRING message,
+	UINT32 EventHistory,
+	UINT32 LastEvent,
+	UINT32 ExternalComponentState
+	);
+
+MemoryStatistics(
+	UINT64 PartA_PrivTags,
+	FLOAT processWorkingSetSize,
+	FLOAT processCommitSize,
+	FLOAT processPrivateCommitSize,
+	FLOAT processSharedCommitSize,
+	FLOAT systemCommitSize,
+	FLOAT systemCommitLimit,
+	FLOAT physicalMemoryAvailable
+	);
+
+RenderQualityLevel(
+	UINT64 PartA_PrivTags,
+	UINT32 QualityLevel,
+	BOOLEAN UserOverride
+	);
+
+ShellOverlayDepthMergeProcessor_Update_NoDepthInformation(
+	UINT64 PartA_PrivTags
+	);
+
+ShellOverlayDepthMergeProcessor_Update_UsingDepthFromApplication(
+	UINT64 PartA_PrivTags
+	);
+
+ShellOverlayDepthMergeProcessor_Update_UsingDepthFromShell(
+	UINT64 PartA_PrivTags
+	);
+
+ShellOverlayDepthMergeProcessor_Update_MergingDepthFromShellAndApplication(
+	UINT64 PartA_PrivTags
+	);
+
+Input_FromFrameMetadata(
+	UINT64 PartA_PrivTags,
+	INT64 poseTimestampInQPCTicks,
+	FLOAT nearClippingPlane,
+	FLOAT farClippingPlane,
+	FLOAT referenceToOriginalDevice4x4,
+	FLOAT stabilizationPlane,
+	FLOAT stabilizationPlaneVelocity
+	);
+
+Input_FromDriver(
+	UINT64 PartA_PrivTags,
+	UINT32 mapIdEpoch,
+	UINT32 mapIdMajor,
+	UINT32 mapIdMinor,
+	UINT64 poseTimestampInDeviceTicks,
+	FLOAT mapToRoot_R,
+	FLOAT mapToRoot_t
+	);
+
+Input_FromCameraMetadata(
+	UINT64 PartA_PrivTags,
+	UINT32 eye,
+	FLOAT spatialDeviceToEye,
+	FLOAT viewToViewOverride
+	);
+
+Output_RenderTransform(
+	UINT64 PartA_PrivTags,
+	UINT32 eye,
+	UINT32 layer,
+	FLOAT R,
+	FLOAT t
+	);
+
+Status_GetLsrDataFailed(
+	UINT64 PartA_PrivTags,
+	INT32 hrGetLsrData
+	);
+
+Status_GetInputHistogramsFailed(
+	UINT64 PartA_PrivTags,
+	INT32 hrGetInputHistograms
+	);
+
+Status_GetOutputHistogramsFailed(
+	UINT64 PartA_PrivTags,
+	INT32 hrGetOutputHistograms
+	);
+
+Status_GetOutputHistogramBinCutoffsFailed(
+	UINT64 PartA_PrivTags,
+	INT32 hrGetOutputHistogramBinCutoffs,
+	UINT32 eye
+	);
+
+Status_InputHistogram(
+	UINT64 PartA_PrivTags,
+	UINT32 eye,
+	UINT32 channel,
+	UINT32 bin,
+	UINT8 cutoff
+	);
+
+Status_InputHistogram(
+	UINT64 PartA_PrivTags,
+	UINT32 eye,
+	UINT32 channel,
+	UINT16 max,
+	UINT32 tagged,
+	UINT32 bin,
+	UINT32 cutoff
+	);
+
+Status_HistogramSummary(
+	UINT64 PartA_PrivTags,
+	UINT32 eye,
+	UINT16 outputMaxValueR,
+	UINT16 outputMaxValueG,
+	UINT16 outputMaxValueB,
+	UINT32 inputBinCounts,
+	UINT32 outputBinCounts
+	);
+
+HolographicPresentationConsumer_ConfirmPresentationSource_Failed(
+	VOID
+	);
+
+HolographicPresentationConsumer_ConfirmPresentationSource(
+	HEXINT64 signalHandle
+	);
+
+HolographicPresentationConsumer_ProcessSourceOperation_AddSource(
+	HEXINT64 receivedHandle,
+	HEXINT64 duplicatedHandle
+	);
+
+HolographicPresentationConsumer_ReadHeader(
+	HEXINT64 receivedFrameSemaphore,
+	HEXINT64 duplicatedFrameSemaphore,
+	HEXINT64 receivedFrameSignal,
+	HEXINT64 duplicatedFrameSignal
+	);
+
+HolographicPresentationConsumer_ReleaseNextFrame(
+	HEXINT64 frameSemaphore
+	);
+
+HolographicPresentationConsumer_ReleaseNextFrame_NotAllowed(
+	VOID
+	);
+
+HolographicPresentationConsumer_Close(
+	VOID
+	);
+
+FallbackError(
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+FallbackError(
+	UINT64 PartA_PrivTags,
+	SIGNED wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+OpenHolographicDevice(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId,
+	ANSISTRING DriverType,
+	UNICODESTRING DeviceName,
+	GUID CorrelationGUID
+	);
+
+HolographicDriverHandleWrapper_DeviceIoControlFailed(
+	HEXINT64 pThis,
+	UINT32 error,
+	UINT32 dwIoControlCode,
+	HEXINT64 pThis,
+	GUID driverHandleCorrelationGuid
+	);
+
+GetPanelAreaVertices(
+	HEXINT64 pThis,
+	INT32 eyeId,
+	INT32 areaType,
+	UINT32 vertices.VertexCount
+	);
+
+TelemetryCloseHolographicDevice(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId,
+	ANSISTRING DriverType,
+	UNICODESTRING DeviceName,
+	GUID CorrelationGUID
+	);
+
+PrecachePropertiesElapsedTime(
+	ANSISTRING driverType,
+	GUID correlationGuid,
+	UINT64 elapsedMilliseconds
+	);
+
+EyePropertyCache_Cleared(
+	ANSISTRING driverType,
+	GUID correlationGuid,
+	INT32 eyeId
+	);
+
+GetIpdAdjustmentCapability(
+	INT32 static_cast<int>(value)
+	);
+
+OpenHolographicDevice(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	SIGNED wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+CloseHolographicDevice(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	SIGNED wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+GetMinIpdMillimeters(
+	HEXINT64 pThis,
+	FLOAT value
+	);
+
+DevicePropertyRequestAdded(
+	ANSISTRING driverType,
+	GUID driverHandleCorrelationGuid,
+	GUID propertyKey
+	);
+
+OpenHolographicDevice(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+TelemetryOpenHolographicDevice(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+GetVBlankToPhotonLatencyWithScanMode(
+	INT32 static_cast<int>(eyeId),
+	UINT32 monitorRefereshRate.Numerator,
+	UINT32 monitorRefereshRate.Denominator,
+	INT32 static_cast<int>(scanMode),
+	INT64 firstScanlineLatencyInNanoSeconds,
+	INT64 lastScanlineLatencyInNanoSeconds
+	);
+
+GetDefaultIpdMillimeters(
+	HEXINT64 pThis,
+	FLOAT value
+	);
+
+IoctlTimeout(
+	GUID correlationGuid,
+	HEXINT32 ioctlCode,
+	UINT32 timeoutMilliseconds,
+	GUID propertyKey,
+	GUID nodeId,
+	UNICODESTRING forDevice,
+	UINT64 PartA_PrivTags
+	);
+
+ActivityIntermediateStop(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+PrecachePropertiesRanLong(
+	ANSISTRING driverType,
+	GUID correlationGuid,
+	UINT64 elapsedMilliseconds,
+	UINT64 threshold,
+	UINT64 PartA_PrivTags
+	);
+
+TelemetryCloseHolographicDevice(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+GetPanelResolution(
+	HEXINT64 pThis,
+	UINT32 width,
+	UINT32 height
+	);
+
+DriverCompatibilityDetermined(
+	ANSISTRING driverType,
+	UINT32 platformSupportedDDILevels.EarliestSupported,
+	UINT32 platformSupportedDDILevels.LatestSupported,
+	UINT32 driverSupportedDDILevels.EarliestSupported,
+	UINT32 driverSupportedDDILevels.LatestSupported,
+	BOOLEAN isCompatible
+	);
+
+GetPanelOrientation(
+	INT32 value
+	);
+
+RegisterPropertiesUpdatedCallback(
+	ANSISTRING driverType,
+	HEXINT64 pThis,
+	HEXINT64 pCallback,
+	HEXINT64 pCallbackWeakRef
+	);
+
+GetMaxIpdMillimeters(
+	HEXINT64 pThis,
+	FLOAT value
+	);
+
+GetVBlankToPhotonLatencyTable(
+	INT32 eyeId,
+	STRING Latencies,
+	STRING RefreshRate,
+	UINT32 Numerator,
+	UINT32 Denominator,
+	INT64 LatencyInNanoseconds
+	);
+
+GetErrorStatuses(
+	ANSISTRING driverType,
+	UNICODESTRING deviceInterfacePath,
+	BOOLEAN Statuses,
+	UINT32 StatusCode,
+	UINT32 SubstatusCode,
+	FILETIME OriginatedTime,
+	UINT64 PartA_PrivTags
+	);
+
+EyePropertyCache_RemoveValue(
+	ANSISTRING driverType,
+	GUID correlationGuid,
+	INT32 eyeId,
+	GUID propertyKey
+	);
+
+EyePropertyCacheMiss(
+	GUID correlationGuid,
+	GUID propertyKey,
+	INT32 eyeId,
+	BOOL32 shouldDoIoctl
+	);
+
+GetPinholeCameraModel(
+	HEXINT64 pThis,
+	INT32 eyeId,
+	INT32 value.Viewport,
+	FLOAT value.FocalLength,
+	FLOAT value.PrincipalPoint,
+	FLOAT value.SkewFactor
+	);
+
+PropertyCache_SetValue(
+	ANSISTRING driverType,
+	GUID correlationGuid,
+	GUID propertyKey,
+	UINT64 valueSize
+	);
+
+CloseHolographicDevice(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId,
+	ANSISTRING DriverType,
+	UNICODESTRING DeviceName,
+	GUID CorrelationGUID
+	);
+
+ActivityIntermediateStop(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+TelemetryOpenHolographicDevice(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+TelemetryOpenHolographicDevice(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId,
+	ANSISTRING DriverType,
+	UNICODESTRING DeviceName,
+	GUID CorrelationGUID
+	);
+
+GetDistortion3KModel(
+	HEXINT64 pThis,
+	INT32 eyeId,
+	INT32 colorChannelId,
+	INT32 model.Viewport,
+	FLOAT model.K1,
+	FLOAT model.K2,
+	FLOAT model.K3,
+	FLOAT model.DistortionCenter
+	);
+
+ActivityStoppedAutomatically(
+	VOID
+	);
+
+IoctlRanLong(
+	GUID correlationGuid,
+	HEXINT32 ioctlCode,
+	HRESULT hresult,
+	FLOAT elapsedMilliseconds,
+	UINT32 thresholdMilliseconds,
+	UINT64 PartA_PrivTags
+	);
+
+EyePropertyCache_SetValue(
+	ANSISTRING driverType,
+	GUID correlationGuid,
+	INT32 eyeId,
+	GUID propertyKey,
+	UINT64 valueSize
+	);
+
+ActivityError(
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+SetDisplayIPDEstimation(
+	HEXINT64 pThis,
+	FLOAT valueInMillimeters
+	);
+
+PropertyCache_RemoveValue(
+	ANSISTRING driverType,
+	GUID correlationGuid,
+	GUID propertyKey
+	);
+
+TelemetryUserPresenceChanged(
+	BOOLEAN isPresent,
+	GUID correlationGuid
+	);
+
+ActivityError(
+	UINT64 PartA_PrivTags,
+	SIGNED wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+ContainsDevice(
+	HEXINT64 pThis,
+	UNICODESTRING deviceInterfacePath,
+	BOOLEAN value
+	);
+
+ActivityStoppedAutomatically(
+	VOID
+	);
+
+GetCurrentIpdMillimeters(
+	HEXINT64 pThis,
+	FLOAT value
+	);
+
+Log_Information(
+	UINT32 hr,
+	UNICODESTRING message
+	);
+
+Log_Error(
+	UINT32 hr,
+	UNICODESTRING message
+	);
+
+ActivityError(
+	UINT64 PartA_PrivTags,
+	SIGNED wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+CloseHolographicDevice(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+TelemetryCloseHolographicDevice(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+GetDynamicNodeToEye(
+	HEXINT64 pThis,
+	INT32 eyeId,
+	FLOAT value
+	);
+
+DevicePropertyRequestFailed(
+	ANSISTRING driverType,
+	GUID driverHandleCorrelationGuid,
+	GUID propertyKey,
+	HRESULT hr
+	);
+
+PropertyCache_Cleared(
+	ANSISTRING driverType,
+	GUID correlationGuid
+	);
+
+DevicePropertyCacheMiss(
+	ANSISTRING driverType,
+	GUID correlationGuid,
+	GUID propertyKey,
+	BOOL32 shouldDoIoctl
+	);
+
+InProcRegisterProcess(
+	UINT32 ProcessId,
+	NTSTATUS Status
+	);
+
+NotEnoughCores(
+	UINT32 ProcessorCount
+	);
+
+InProcUnregisterProcess(
+	UINT32 ProcessId,
+	NTSTATUS Status
+	);
+

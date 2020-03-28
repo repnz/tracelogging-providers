@@ -1,0 +1,285 @@
+ProviderNames:
+	Microsoft.Windows.Storage.VSSTraceLogProvider
+
+
+
+**** Events *****
+CVssRequestorActivity(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId,
+	UNICODESTRING phase,
+	TID CVssBackupComponents,
+	UINT32 State,
+	UNICODESTRING SessionId,
+	GUID SnapshotSetId,
+	UINT32 StateFlags,
+	HRESULT Context,
+	HRESULT HrCoordInit
+	);
+
+CVssRequestorActivity(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UNICODESTRING phase,
+	TID CVssBackupComponents,
+	UINT32 State,
+	UNICODESTRING SessionId,
+	GUID SnapshotSetId,
+	UINT32 StateFlags,
+	HRESULT Context,
+	HRESULT HrCoordInit
+	);
+
+WriterMetadata(
+	GUID IdInstance,
+	GUID IdWriter,
+	UNICODESTRING InstanceName,
+	UNICODESTRING WriterName,
+	UINT32 BackupSchema,
+	BOOL32 ExpressWriter,
+	BOOL32 WriterHasRestorePlan,
+	UINT32 Usage,
+	UINT32 Source,
+	UINT32 RestoreMethod,
+	UINT32 WriterRestore,
+	BOOL32 Reboot,
+	UINT32 MajorVersion,
+	UINT32 MinorVersion,
+	UINT32 TotalComponents,
+	UINT32 State,
+	HRESULT HrWriterFailure,
+	HRESULT HrApplication
+	);
+
+WriterMetadata(
+	GUID IdInstance,
+	GUID IdWriter,
+	UNICODESTRING InstanceName,
+	UNICODESTRING WriterName,
+	UINT32 BackupSchema,
+	BOOL32 ExpressWriter,
+	BOOL32 WriterHasRestorePlan,
+	UINT32 Usage,
+	UINT32 Source,
+	UINT32 RestoreMethod,
+	UINT32 WriterRestore,
+	BOOL32 Reboot,
+	UINT32 MajorVersion,
+	UINT32 MinorVersion,
+	UINT32 TotalComponents,
+	UINT32 State,
+	HRESULT HrWriterFailure,
+	HRESULT HrApplication,
+	UINT32 ComponentTypes,
+	UINT32 ComponentsPerType
+	);
+
+VSS_BackupComponents_OpResult(
+	TID CVssBackupComponents,
+	UINT32 State,
+	UNICODESTRING SessionId,
+	GUID SnapshotSetId,
+	UINT32 StateFlags,
+	HRESULT Context,
+	HRESULT HrCoordInit,
+	TID CVssFunctionTracer,
+	UNICODESTRING FunctionName,
+	UNICODESTRING FileAlias,
+	UNICODESTRING FileName,
+	UINT64 LineNumber,
+	UNICODESTRING CurrentContexts,
+	HRESULT HResult
+	);
+
+CVssRequestorActivity(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId
+	);
+
+CVssRequestorActivity(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+CVssRequestorActivity(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+FallbackError(
+	UINT64 PartA_PrivTags,
+	SIGNED wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+FallbackError(
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+ActivityStoppedAutomatically(
+	VOID
+	);
+
+VSS_BackupComponents_OpResult(
+	TID CVssBackupComponents,
+	UINT32 State,
+	UNICODESTRING SessionId,
+	GUID SnapshotSetId,
+	UINT32 StateFlags,
+	HRESULT Context,
+	HRESULT HrCoordInit,
+	TID CVssFunctionTracer,
+	UNICODESTRING FunctionName,
+	UNICODESTRING FileAlias,
+	UNICODESTRING FileName,
+	UINT64 LineNumber,
+	UNICODESTRING CurrentContexts,
+	HRESULT HResult,
+	GUID ExtraParam1
+	);
+
+VSS_BackupComponents_OpResult(
+	TID CVssBackupComponents,
+	UINT32 State,
+	UNICODESTRING SessionId,
+	GUID SnapshotSetId,
+	UINT32 StateFlags,
+	HRESULT Context,
+	HRESULT HrCoordInit,
+	TID CVssFunctionTracer,
+	UNICODESTRING FunctionName,
+	UNICODESTRING FileAlias,
+	UNICODESTRING FileName,
+	UINT64 LineNumber,
+	UNICODESTRING CurrentContexts,
+	HRESULT HResult,
+	INT32 ExtraParam1
+	);
+
+VSS_BackupComponents_OpResult(
+	TID CVssBackupComponents,
+	UINT32 State,
+	UNICODESTRING SessionId,
+	GUID SnapshotSetId,
+	UINT32 StateFlags,
+	HRESULT Context,
+	HRESULT HrCoordInit,
+	TID CVssFunctionTracer,
+	UNICODESTRING FunctionName,
+	UNICODESTRING FileAlias,
+	UNICODESTRING FileName,
+	UINT64 LineNumber,
+	UNICODESTRING CurrentContexts,
+	HRESULT HResult,
+	GUID ExtraParam1,
+	GUID ExtraParam2,
+	UINT32 ExtraParam3
+	);
+
+ActivityError(
+	UINT64 PartA_PrivTags,
+	SIGNED wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+ActivityError(
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+

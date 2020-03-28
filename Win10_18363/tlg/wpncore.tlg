@@ -1,0 +1,951 @@
+ProviderNames:
+	Microsoft.Windows.Notifications.WpnCore
+	TelemetryAssert
+	TelemetryAssertDiagTrack
+	Microsoft.Windows.Wil.FeatureLogging
+	Microsoft.Windows.Notifications.WnsCP
+
+
+
+**** Events *****
+FeatureError(
+	UINT32 featureId,
+	INT32 featureVersion,
+	INT32 featureBaseVersion,
+	INT16 featureStage,
+	HRESULT hr,
+	ANSISTRING file,
+	UINT16 lineNumber,
+	ANSISTRING module,
+	ANSISTRING process,
+	ANSISTRING originFile,
+	UINT16 originLineNumber,
+	ANSISTRING originModule,
+	ANSISTRING originName,
+	ANSISTRING message,
+	ANSISTRING callerModule,
+	UINT32 callerReturnAddressOffset,
+	ANSISTRING originCallerModule,
+	UINT32 originCallerReturnAddressOffset
+	);
+
+FeatureVariantUsage(
+	UINT32 featureId,
+	INT32 featureVersion,
+	INT32 featureBaseVersion,
+	INT16 featureStage,
+	BOOLEAN enabled,
+	UINT32 variantKind,
+	UINT8 variant,
+	UINT64 addend
+	);
+
+EnabledFeatureUsage(
+	UINT32 featureId,
+	INT32 featureVersion,
+	INT32 featureBaseVersion,
+	INT16 featureStage,
+	BOOLEAN enabled,
+	UINT32 kind,
+	UINT64 addend
+	);
+
+FeatureUsage(
+	UINT32 featureId,
+	INT32 featureVersion,
+	INT32 featureBaseVersion,
+	INT16 featureStage,
+	BOOLEAN enabled,
+	UINT32 kind,
+	UINT64 addend
+	);
+
+FallbackError(
+	UINT64 PartA_PrivTags,
+	SIGNED wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+FallbackError(
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+Assert(
+	UINT32 assertVersion,
+	UINT32 rva,
+	UINT32 timestamp,
+	UINT32 imageSize,
+	ANSISTRING imageName,
+	UINT32 count,
+	UINT32 totalHits,
+	UINT32 ModuleCollection,
+	UINT32 GlobalCollection
+	);
+
+ToastInteractedWith(
+	HEXINT32 OperationResult,
+	UNICODESTRING AppUserModelId,
+	UINT32 NotificationId,
+	UINT32 ReturnStatus,
+	INT32 ErrorCode
+	);
+
+CreateTileSession(
+	HEXINT32 OperationResult,
+	UNICODESTRING ProcessName,
+	UINT32 QueuedTileCloses,
+	UINT32 QueuedTileCleanups
+	);
+
+OwnerResetTimeout(
+	UINT64 ShareCount,
+	BOOL32 TimedOut
+	);
+
+OwnerResetStarted(
+	UINT64 ShareCount
+	);
+
+ChannelRequestedByPlatform(
+	BOOLEAN IsAppInTable,
+	BOOLEAN IsChannelCached,
+	HEXINT32 OperationResult,
+	UNICODESTRING AppUserModelId,
+	UNICODESTRING SecondaryChannelId
+	);
+
+AppEndpointInitializeError(
+	UNICODESTRING MethodName,
+	UNICODESTRING appUserModelId,
+	HEXINT32 HRESULT
+	);
+
+AppEndpointQuerySettingsError(
+	UNICODESTRING AppUserModelId,
+	UNICODESTRING PackageFullName,
+	UINT32 NotificationType,
+	BOOL32 Enabled,
+	UINT32 Reason,
+	HEXINT32 HRESULT
+	);
+
+CloseChannelAppRequest(
+	UNICODESTRING ChannelId,
+	UNICODESTRING AppUserModelId,
+	HEXINT32 OperationResult
+	);
+
+RecursiveCreateDirectoryError(
+	HEXINT32 OperationResult,
+	UINT32 PathLength,
+	UNICODESTRING ApiFailure
+	);
+
+PlatformInitialize(
+	HEXINT64 Address,
+	HEXINT32 OperationResult
+	);
+
+PlatformDestructor(
+	HEXINT64 Address
+	);
+
+RawBgTaskTriggered(
+	UNICODESTRING AppUserModelId,
+	UINT32 NotificationId,
+	GUID messageId,
+	ANSISTRING __TlgCV__,
+	GUID BiEventId,
+	HEXINT32 OperationResult
+	);
+
+ActivateRawWorkItem(
+	UNICODESTRING AppUserModelId,
+	UINT32 NotificationId,
+	GUID MessageId,
+	ANSISTRING __TlgCV__,
+	HEXINT32 OperationResult,
+	BOOLEAN IsSystemComponent,
+	BOOL32 ContainsWnf,
+	UINT64 PayloadLength,
+	UINT64 ProcessIntegrityLevel,
+	UINT64 AccountType,
+	BOOL32 IsAuthenticatedUser
+	);
+
+ScheduledToastTimerFiredTrigger(
+	HEXINT32 OperationResult,
+	UNICODESTRING AppUserModelId,
+	GUID TimerEventIdGuid,
+	INT64 DueTime,
+	BOOL32 IsFound,
+	BOOL32 IsExpired,
+	HEXINT32 OperationResultForTimerExpired
+	);
+
+RemoveAllScheduledToastUpdate(
+	HEXINT32 OperationResult,
+	UNICODESTRING AppUserModelId
+	);
+
+RemoveScheduledToastUpdate(
+	HEXINT32 OperationResult,
+	UNICODESTRING AppUserModelId,
+	GUID TimerEventId
+	);
+
+SetScheduledToastUpdate(
+	HEXINT32 OperationResult,
+	UNICODESTRING AppUserModelId,
+	GUID TimerEventId,
+	INT64 DueTime
+	);
+
+PushNotificationConsumedByLegacyApp(
+	UNICODESTRING AppUserModelId,
+	UINT32 NotificationId,
+	UNICODESTRING ChannelId,
+	GUID MessageId,
+	ANSISTRING __TlgCV__,
+	INT32 PopupSuppressed,
+	UINT32 NotificationType
+	);
+
+LocalNotificationDelivered(
+	UNICODESTRING AppUserModelId,
+	UINT32 NotificationId,
+	INT32 PopupSuppressed,
+	UINT32 NotificationType,
+	UNICODESTRING PayloadType,
+	HEXINT32 OperationResult,
+	GUID RecurrenceId,
+	GUID MessageId,
+	ANSISTRING __TlgCV__,
+	GUID TimerEventId,
+	BOOL32 IsPeriodic,
+	BOOL32 IsScheduled,
+	BOOL32 IsCollectionType
+	);
+
+RemoveActionCompleted(
+	UNICODESTRING AppUserModelId,
+	UINT32 NotificationId,
+	UNICODESTRING ChannelId,
+	GUID MessageIdGUID,
+	UINT64 MessageId,
+	ANSISTRING __TlgCV__,
+	HEXINT32 OperationResult
+	);
+
+ClearAllActionCompleted(
+	UNICODESTRING AppUserModelId,
+	UINT32 NotificationId,
+	UNICODESTRING ChannelId,
+	GUID MessageIdGUID,
+	UINT64 MessageId,
+	ANSISTRING __TlgCV__,
+	HEXINT32 OperationResult
+	);
+
+PushNotificationDelivered(
+	UNICODESTRING AppUserModelId,
+	UINT32 NotificationId,
+	UNICODESTRING ChannelId,
+	GUID MessageIdGUID,
+	UINT64 MessageId,
+	ANSISTRING __TlgCV__,
+	INT32 PopupSuppressed,
+	UINT32 AppSetting,
+	UINT32 NotificationType,
+	UNICODESTRING PayloadType,
+	HEXINT32 OperationResult,
+	GUID RecurrenceId,
+	FILETIME Timestamp,
+	BOOL32 IsCollectionType
+	);
+
+PushNotificationConsumedByApp(
+	UNICODESTRING AppUserModelId,
+	UINT32 NotificationId,
+	UNICODESTRING ChannelId,
+	GUID MessageIdGUID,
+	UINT64 MessageId,
+	ANSISTRING __TlgCV__,
+	INT32 PopupSuppressed,
+	UINT32 AppSetting,
+	UINT32 NotificationType
+	);
+
+CloseChannelAppUnregister(
+	UNICODESTRING AppUserModelId,
+	HEXINT32 OperationResult
+	);
+
+ActivityStoppedAutomatically(
+	VOID
+	);
+
+ActivityStoppedAutomatically(
+	VOID
+	);
+
+ActivityFailure(
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+ActivityFailure(
+	UINT64 PartA_PrivTags,
+	HEX wilActivity,
+	UINT32 hresult,
+	UINT32 threadId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+ActivityError(
+	UINT64 PartA_PrivTags,
+	SIGNED wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+ActivityIntermediateStop(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+ActivityError(
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+ActivityIntermediateStop(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+ActivityError(
+	UINT64 PartA_PrivTags,
+	SIGNED wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+ActivityError(
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+WnsCDPDismissActivityWork(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId
+	);
+
+WnsCDPDismissActivityWork(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+WnsCDPDismissActivityWork(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+WnsCDPOnCDPUserServiceReady(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId
+	);
+
+WnsCDPOnCDPUserServiceReady(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+WnsCDPOnCDPUserServiceReady(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	SIGNED wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+TimerFiredTrigger(
+	HEXINT32 OperationResult,
+	UNICODESTRING AppUserModelId,
+	GUID TimerEventIdGuid,
+	UNICODESTRING Url,
+	UINT32 NotificationType
+	);
+
+PostNotificationForPeriodicTrigger(
+	HEXINT32 OperationResult,
+	UNICODESTRING AppUserModelId,
+	GUID TimerEventIdGuid,
+	UNICODESTRING Url,
+	UNICODESTRING Expiry,
+	UINT32 NotificationType,
+	BOOL32 InvalidExpiry
+	);
+
+ResetPeriodicUpdate(
+	HEXINT32 OperationResult,
+	UNICODESTRING AppUserModelId,
+	UINT32 NotificationType,
+	UNICODESTRING DeletedTimerEventIds
+	);
+
+SetPeriodicUpdate(
+	HEXINT32 OperationResult,
+	UNICODESTRING AppUserModelId,
+	GUID TimerEventIdGuid,
+	UINT32 NotificationType,
+	UINT32 RecurrenceInMinutes,
+	UNICODESTRING DeletedTimerEventIds
+	);
+
+ScheduledTileTimerFiredTrigger(
+	HEXINT32 OperationResult,
+	UNICODESTRING AppUserModelId,
+	GUID TimerEventIdGuid,
+	INT64 DueTime
+	);
+
+RemoveScheduledTileUpdate(
+	HEXINT32 OperationResult,
+	UNICODESTRING AppUserModelId,
+	GUID TimerEventId
+	);
+
+RemoveAllScheduledTileUpdate(
+	HEXINT32 OperationResult,
+	UNICODESTRING AppUserModelId
+	);
+
+SetScheduledTileUpdate(
+	HEXINT32 OperationResult,
+	UNICODESTRING AppUserModelId,
+	GUID TimerEventId,
+	INT64 DueTime
+	);
+
+ThrottledEventSummary(
+	UNICODESTRING EventName,
+	UNICODESTRING AppName,
+	UNICODESTRING NotificationType,
+	UINT32 EventsCount
+	);
+
+DebuggerSupportManagerIdentifyInstanceType(
+	UINT32 InstanceType,
+	UINT32 SessionType
+	);
+
+DebuggerSupportManagerCloseFileHandle(
+	UINT32 InstanceType,
+	UINT32 InstancePrivilege,
+	HEXINT64 FileHandle
+	);
+
+WnsPlatCMRefresh(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId
+	);
+
+WnsPlatCMRefresh(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+WnsPlatCMRefresh(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	SIGNED wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+WnsPlatNotificationPdcActivated(
+	UINT64 messageId,
+	ANSISTRING correlationVector
+	);
+
+WnsPlatNotificationDelivered(
+	UINT64 messageId,
+	ANSISTRING correlationVector
+	);
+
+WnsPlatNotificationReceived(
+	UNICODESTRING channelId,
+	UINT64 messageId,
+	ANSISTRING correlationVector,
+	UINT32 type,
+	UINT32 action
+	);
+
+NotificationReceived(
+	HEXINT32 OperationResult,
+	HEXINT32 ChannelToAumidResult,
+	UNICODESTRING ChannelId,
+	UINT64 MessageId,
+	ANSISTRING __TlgCV__,
+	UNICODESTRING AppUserModelId,
+	UINT32 NotificationId,
+	INT32 NotificationType,
+	INT32 PayloadType,
+	INT32 Action,
+	INT32 AckStatus
+	);
+
+OnChannelReceived(
+	HEXINT32 OperationResult,
+	UNICODESTRING ChannelId,
+	SYSTEMTIME Expiry
+	);
+
+ConnectionStatusChanged(
+	HEXINT32 OperationResult,
+	UINT32 ConnectionStatus
+	);
+
+RefreshEnergySaverAllowList(
+	UNICODESTRING AppUserModelIds,
+	UINT64 Count
+	);
+
+PowerSaverUpdate(
+	HEXINT32 OperationResult,
+	UINT32 PowerState
+	);
+
+databaseTotalled(
+	GUID corruptionId
+	);
+
+databaseCorruptionDetail(
+	GUID corruptionId,
+	ANSISTRING statement
+	);
+
+databaseRepairFailure(
+	UINT32 repairStep,
+	HRESULT result
+	);
+
+DatabaseVersioningFailure(
+	INT32 sourceVersion,
+	INT32 destinationVersion
+	);
+
+ThreadPoolCoInitFailed(
+	INT32 Error
+	);
+
+ThreadPoolDetailedSummary(
+	UINT64 lastTelemetry,
+	UNICODESTRING WorkItemType,
+	INT32 TotalSubmitted
+	);
+
+ThreadPoolSummary(
+	UINT32 TotalSubmitted,
+	UINT32 TotalInvoked,
+	UINT32 MaxConcurrent,
+	UINT32 MinConcurrent
+	);
+
+WnsMuxShutdown(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId
+	);
+
+WnsMuxShutdown(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+WnsMuxShutdown(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	SIGNED wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+LookupChannelHashEntryNotFound(
+	VOID
+	);
+
+TqmRegisterApplication(
+	HEXINT32 OperationResult,
+	UNICODESTRING AppUserModelId,
+	HEXINT32 InitialSetting
+	);
+
+TqmUpdateApplication(
+	HEXINT32 OperationResult,
+	UNICODESTRING AppUserModelId,
+	HEXINT32 InitialSetting,
+	HEXINT32 UpdatedSetting
+	);
+
+QueryPackageFullNameError(
+	HEXINT32 StateRepoHr,
+	UNICODESTRING AppUserModelId
+	);
+
+DatabaseProcessNewNotification(
+	UNICODESTRING AppUserModelId,
+	HEXINT32 OperationResult
+	);
+
+WnsCDPDismissActivityWork(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId,
+	GUID activityId,
+	INT32 Result
+	);
+
+WnsCDPDismissActivityWork(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	GUID activityId,
+	INT32 Result
+	);
+
+WnsCDPDismissActivities(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId
+	);
+
+WnsCDPDismissActivities(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+WnsCDPDismissActivities(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+LogDismissActivityInfo(
+	BOOLEAN isLocalNotification,
+	INT32 dismissReason,
+	GUID activityId,
+	INT32 Result
+	);
+
+TileRaiseImgDwnPolicyExit(
+	UNICODESTRING SinkAppUserModelId,
+	UNICODESTRING SinkProcessName,
+	HEXINT32 OperationResult,
+	HEXINT32 TileSessionUpdateResult
+	);
+
+TileRaiseImgDwnPolicyEnter(
+	UNICODESTRING SinkAppUserModelId,
+	UNICODESTRING SinkProcessName
+	);
+
+TileRaiseClearExit(
+	UNICODESTRING SinkAppUserModelId,
+	UNICODESTRING SinkProcessName,
+	HEXINT32 OperationResult,
+	HEXINT32 TileSessionUpdateResult
+	);
+
+TileRaiseClearEnter(
+	UNICODESTRING SinkAppUserModelId,
+	UNICODESTRING SinkProcessName
+	);
+
+ShowTileEnter(
+	UNICODESTRING AppUserModelId,
+	UINT32 NotificationId,
+	UNICODESTRING SinkAppUserModelId,
+	UNICODESTRING SinkProcessName
+	);
+
+ShowTile(
+	HEXINT32 OperationResult,
+	HEXINT32 TileSessionUpdateResult,
+	UNICODESTRING AppUserModelId,
+	UINT32 NotificationId,
+	UINT32 SinkAppUserModelId,
+	UNICODESTRING SinkProcessName,
+	FILETIME Timestamp
+	);
+
+ToastRqstComplEnter(
+	UNICODESTRING SinkAppUserModelId,
+	UNICODESTRING SinkProcessName
+	);
+
+ToastRqstComplExit(
+	UNICODESTRING SinkAppUserModelId,
+	UNICODESTRING SinkProcessName
+	);
+
+ToastRolloverClrExit(
+	UNICODESTRING SinkAppUserModelId,
+	UNICODESTRING SinkProcessName
+	);
+
+ToastRolloverClrEnter(
+	UNICODESTRING SinkAppUserModelId,
+	UNICODESTRING SinkProcessName
+	);
+
+ToastRaiseClearEnter(
+	UNICODESTRING SinkAppUserModelId,
+	UNICODESTRING SinkProcessName
+	);
+
+ToastRaiseClearExit(
+	UNICODESTRING SinkAppUserModelId,
+	UNICODESTRING SinkProcessName
+	);
+
+ToastCancelExit(
+	UNICODESTRING SinkAppUserModelId,
+	UNICODESTRING SinkProcessName
+	);
+
+ToastCancelEnter(
+	UNICODESTRING SinkAppUserModelId,
+	UNICODESTRING SinkProcessName
+	);
+
+ShowToast(
+	HEXINT32 OperationResult,
+	HEXINT32 ToastSessionUpdateResult,
+	UNICODESTRING AppUserModelId,
+	UINT32 NotificationId,
+	INT32 PopupSuppressed,
+	UNICODESTRING SinkAppUserModelId,
+	UNICODESTRING SinkProcessName,
+	GUID RecurrenceId,
+	BOOL32 IsCollectionType
+	);
+
+ToastHistoryChangeExecuteBkgTask(
+	UNICODESTRING AppUserModelId,
+	UINT32 ChangeType,
+	UINT32 Count,
+	HEXINT32 OperationResult
+	);
+

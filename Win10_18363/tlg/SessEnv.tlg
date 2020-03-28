@@ -1,0 +1,208 @@
+ProviderNames:
+	SessionEnv
+	Microsoft.Windows.RemoteDesktop.CertManager
+	Microsoft.Windows.RemoteDesktop.SessionConfig
+	Microsoft.Windows.RemoteDesktop.SessionHost
+	Microsoft.Windows.RemoteDesktop.RDSHFarm.UVhd
+	RDP
+	TelemetryAssert
+	TelemetryAssertDiagTrack
+
+
+
+**** Events *****
+Licensing(
+	ANSISTRING msg
+	);
+
+Licensing(
+	ANSISTRING msg,
+	INT32 regReturnValue
+	);
+
+Licensing(
+	ANSISTRING msg,
+	UINT32 regValueExisting,
+	UINT32 regValueNew
+	);
+
+Licensing(
+	ANSISTRING msg,
+	UINT32 regValueExisting
+	);
+
+Licensing(
+	ANSISTRING msg,
+	BOOL32 bAllowAADLicensing,
+	HRESULT hr
+	);
+
+Logging(
+	ANSISTRING msg,
+	UNICODESTRING LoggerName,
+	HRESULT hr,
+	UNICODESTRING szpLogFilename,
+	UINT64 m_hTrace,
+	UINT64 MaximumFileSize
+	);
+
+Logging(
+	ANSISTRING msg,
+	ANSISTRING Failed,
+	HRESULT Result,
+	ANSISTRING Function
+	);
+
+Logging(
+	ANSISTRING msg,
+	UINT64 this->m_LogFileSize,
+	UNICODESTRING m_szLoggerName
+	);
+
+Logging(
+	ANSISTRING msg,
+	UNICODESTRING m_szLoggerName,
+	UINT64 dwRet
+	);
+
+Logging(
+	ANSISTRING msg,
+	UINT64 this->m_LogFileSize
+	);
+
+Logging(
+	ANSISTRING msg,
+	HRESULT hr,
+	UNICODESTRING szKey
+	);
+
+Logging(
+	ANSISTRING msg
+	);
+
+GenericTrace(
+	ANSISTRING szOutput
+	);
+
+GenericTrace(
+	ANSISTRING szOutput
+	);
+
+GenericTrace(
+	ANSISTRING szOutput
+	);
+
+GenericTrace(
+	ANSISTRING szOutput
+	);
+
+GenericTrace(
+	ANSISTRING szOutput
+	);
+
+AppCompat(
+	ANSISTRING msg,
+	BOOL32 bIsAppServer
+	);
+
+AppCompat(
+	ANSISTRING msg,
+	HRESULT lReturn,
+	BOOL32 bIsAppServer,
+	UNICODESTRING REG_TERMSRV_APPCOMPAT
+	);
+
+AppCompat(
+	ANSISTRING msg,
+	HRESULT lReturn
+	);
+
+FindTemplate(
+	INT32 Hr,
+	UINT32 ColumnType
+	);
+
+InstallAppServer(
+	UINT32 HR,
+	UINT32 Enable
+	);
+
+ConfigureSecurity(
+	UINT32 HR,
+	UINT32 Template
+	);
+
+Reboot(
+	UINT32 HR,
+	UINT32 AutoReboot,
+	UINT32 Timeout,
+	UINT32 ForceShutdown
+	);
+
+RDSHLicensing(
+	UNICODESTRING DeploymentId,
+	UNICODESTRING CollectionId,
+	UINT32 LicensingMode,
+	UINT32 LicensingServerCount,
+	UNICODESTRING LicensingServerStatus,
+	INT32 LicensingGraceDaysLeft
+	);
+
+RDSHSessionCounts(
+	UNICODESTRING DeploymentId,
+	UNICODESTRING CollectionId,
+	UINT32 SessionEvent,
+	UINT32 BrokerStatus,
+	UINT32 LicensingMode,
+	UINT32 CurrentSessionCount,
+	UINT32 ActiveSessionCount,
+	UINT32 DisconnectedSessionCount,
+	UINT32 MaximumSessionCount
+	);
+
+FailedUnloadUVHDProfile(
+	UNICODESTRING DeploymentId,
+	UNICODESTRING CollectionId,
+	INT32 ErrorCode
+	);
+
+FailedLoadUVHDProfile(
+	UNICODESTRING DeploymentId,
+	UNICODESTRING CollectionId,
+	INT32 ErrorCode
+	);
+
+RDPShadow(
+	UINT32 HRESULT,
+	UINT32 RequestControl,
+	UINT32 RequestPermission,
+	UINT32 Response
+	);
+
+Assert(
+	UINT32 assertVersion,
+	UINT32 rva,
+	UINT32 timestamp,
+	UINT32 imageSize,
+	ANSISTRING imageName,
+	UINT32 count,
+	UINT32 totalHits,
+	UINT32 ModuleCollection,
+	UINT32 GlobalCollection
+	);
+
+AssertWithArgs(
+	UINT32 assertVersion,
+	UINT32 rva,
+	UINT32 timestamp,
+	UINT32 imageSize,
+	ANSISTRING imageName,
+	UINT32 count,
+	UINT32 totalHits,
+	ANSISTRING originatingBinary,
+	UINT32 bucketArgument1,
+	UINT32 bucketArgument2,
+	UINT32 ModuleCollection,
+	UINT32 GlobalCollection
+	);
+

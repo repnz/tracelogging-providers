@@ -1,0 +1,1176 @@
+ProviderNames:
+	Microsoft.Windows.Media.Audio.AudioGraph
+	Microsoft.Windows.Audio.XAudio2.81
+
+
+
+**** Events *****
+XAudioPerfData(
+	HEXINT64 This,
+	UINT64 AudioCyclesSinceLastQuery,
+	UINT64 TotalCyclesSinceLastQuery,
+	UINT32 MinimumCyclesPerQuantum,
+	UINT32 MaximumCyclesPerQuantum,
+	UINT32 MemoryUsageInBytes,
+	UINT32 CurrentLatencyInSamples,
+	UINT32 GlitchesSinceEngineStarted,
+	UINT32 ActiveSourceVoiceCount,
+	UINT32 ActiveSourceVoiceCountMax,
+	UINT32 TotalSourceVoiceCount,
+	UINT32 ActiveSubmixVoiceCount,
+	UINT32 ActiveSubmixVoiceCountMax,
+	UINT32 ActiveResamplerCount,
+	UINT32 ActiveMatrixMixCount,
+	UINT32 ActiveXmaSourceVoices,
+	UINT32 ActiveXmaStreams,
+	UINT32 EmitterCount,
+	UINT32 EmitterCountMax,
+	UINT32 ListenerCount,
+	UINT32 ListenerCountMax,
+	UINT32 ActiveSpatialVoiceCount,
+	UINT32 ActiveSpatialVoiceCountMax,
+	UINT32 TotalSpatialVoiceCount,
+	UINT32 TotalSpatialVoiceCountMax,
+	UINT32 ActiveX3DSpatialVoiceCount,
+	UINT32 ActiveX3DSpatialVoiceCountMax,
+	UINT32 TotalX3DSpatialVoiceCount,
+	UINT32 TotalX3DSpatialVoiceCountMax,
+	UINT32 ActiveDopplerVoiceCount,
+	UINT32 ActiveDopplerVoiceCountMax
+	);
+
+XAudioPerfData(
+	INT32 TelemetryVersion,
+	HEXINT64 This,
+	GUID MFMediaTelemetrySessionID,
+	UINT32 MFMediaTelemetrySessionInstance,
+	UINT64 AudioCyclesSinceLastQuery,
+	UINT64 TotalCyclesSinceLastQuery,
+	UINT32 MinimumCyclesPerQuantum,
+	UINT32 MaximumCyclesPerQuantum,
+	UINT32 MemoryUsageInBytes,
+	UINT32 CurrentLatencyInSamples,
+	UINT32 GlitchesSinceEngineStarted,
+	UINT32 ActiveSourceVoiceCount,
+	UINT32 ActiveSourceVoiceCountMax,
+	UINT32 TotalSourceVoiceCount,
+	UINT32 ActiveSubmixVoiceCount,
+	UINT32 ActiveSubmixVoiceCountMax,
+	UINT32 ActiveResamplerCount,
+	UINT32 ActiveMatrixMixCount,
+	UINT32 ActiveXmaSourceVoices,
+	UINT32 ActiveXmaStreams,
+	UINT32 EmitterCount,
+	UINT32 EmitterCountMax,
+	UINT32 ListenerCount,
+	UINT32 ListenerCountMax,
+	UINT32 ActiveSpatialVoiceCount,
+	UINT32 ActiveSpatialVoiceCountMax,
+	UINT32 TotalSpatialVoiceCount,
+	UINT32 TotalSpatialVoiceCountMax,
+	UINT32 ActiveX3DSpatialVoiceCount,
+	UINT32 ActiveX3DSpatialVoiceCountMax,
+	UINT32 TotalX3DSpatialVoiceCount,
+	UINT32 TotalX3DSpatialVoiceCountMax,
+	UINT32 ActiveDopplerVoiceCount,
+	UINT32 ActiveDopplerVoiceCountMax
+	);
+
+DoOfflineWork(
+	VOID
+	);
+
+AudioGraph::StopDoingOfflineWork(
+	HEXINT64 This
+	);
+
+AudioGraph::ProcessFileOutputNodes(
+	HRESULT HResult
+	);
+
+AudioGraph::ProcessFileOutputNodes(
+	UINT32 Num OutputNodes
+	);
+
+AudioGraph::OnCriticalError(
+	HRESULT ErrorCode,
+	HRESULT HResult
+	);
+
+AudioGraph::OnProcessingPassEnd(
+	HRESULT HResult
+	);
+
+AudioGraph::OnProcessingPassEnd(
+	VOID
+	);
+
+AudioGraph::OnProcessingPassStart(
+	HRESULT HResult
+	);
+
+AudioGraph::OnProcessingPassStart(
+	VOID
+	);
+
+AudioGraph::CreateFrameOutputNodeWithFormat(
+	HEXINT64 This,
+	HRESULT HResult
+	);
+
+AudioGraph::CreateFrameOutputNodeWithFormat(
+	HEXINT64 This
+	);
+
+AudioGraph::CreateDeviceInputNodeWithFormatOnDeviceAsync(
+	HEXINT64 This,
+	HRESULT HResult
+	);
+
+AudioGraph::CreateDeviceInputNodeWithFormatOnDeviceAsync(
+	HEXINT64 This
+	);
+
+AudioGraph::Close(
+	HEXINT64 This,
+	HRESULT HResult
+	);
+
+AudioGraph::Stop(
+	HRESULT HResult
+	);
+
+AudioGraph::Start(
+	HRESULT HResult
+	);
+
+AudioGraph::Start(
+	INT32 m_EngineStartFlags
+	);
+
+AudioGraph::CreateSubmixNodeWithFormat(
+	HEXINT64 This,
+	HRESULT HResult
+	);
+
+AudioGraph::CreateSubmixNodeWithFormat(
+	HEXINT64 This
+	);
+
+AudioGraph::ContinueCreateFileOutputNodeWithNodeFormatAndFileFormatAsync(
+	HEXINT64 This,
+	HRESULT HResult
+	);
+
+AudioGraph::CreateFileOutputNodeWithFileProfileAsync(
+	HEXINT64 This,
+	HRESULT HResult
+	);
+
+AudioGraph::CreateFileOutputNodeWithFileProfileAsync(
+	HEXINT64 This
+	);
+
+AudioGraph::ContinueCreateMediaSourceAudioInputNodeInternalAsync(
+	HEXINT64 This,
+	HRESULT HResult
+	);
+
+AudioGraph::ContinueCreateMediaSourceAudioInputNodeInternalAsync(
+	HEXINT64 This
+	);
+
+AudioGraph::CreateMediaSourceAudioInputNodeAsync(
+	HEXINT64 This,
+	HRESULT HResult
+	);
+
+AudioGraph::CreateMediaSourceAudioInputNodeAsync(
+	HEXINT64 This
+	);
+
+AudioGraph::ContinueCreateFileInputNodeInternalAsync(
+	HEXINT64 This,
+	HRESULT HResult
+	);
+
+AudioGraph::ContinueCreateFileInputNodeInternalAsync(
+	HEXINT64 This
+	);
+
+AudioGraph::CreateFileInputNodeAsync(
+	HEXINT64 This,
+	HRESULT HResult
+	);
+
+AudioGraph::CreateFileInputNodeAsync(
+	HEXINT64 This
+	);
+
+AudioGraph::CreateDeviceOutputNodeAsync(
+	HEXINT64 This,
+	HRESULT HResult
+	);
+
+AudioGraph::CreateDeviceOutputNodeAsync(
+	HEXINT64 This
+	);
+
+AudioGraph::CreateFrameInputNodeWithFormat(
+	HEXINT64 This,
+	HRESULT HResult
+	);
+
+AudioGraph::CreateFrameInputNodeWithFormat(
+	HEXINT64 This
+	);
+
+AudioGraph::RuntimeClassInitialize(
+	INT32 TelemetryVersion,
+	GUID MFMediaTelemetrySessionID,
+	UINT32 MFMediaTelemetrySessionInstance,
+	UINT32 Channels,
+	UINT32 SampleRate,
+	UINT32 Flags,
+	UINT32 RequestedQuantumSize,
+	HEXINT64 This,
+	HRESULT HResult
+	);
+
+AudioGraph::RuntimeClassInitialize_GraphDefaultFormatUsed(
+	HEXINT64 This,
+	UINT16 wFormatTag,
+	UINT16 nChannels,
+	UINT32 nSamplesPerSec,
+	UINT32 nAvgBytesPerSec,
+	UINT16 nBlockAlign,
+	UINT16 wBitsPerSample,
+	UINT16 cbSize
+	);
+
+AudioGraph::ConsumeSettings(
+	HRESULT HResult
+	);
+
+AudioGraph::ConsumeSettings_info(
+	UINT32 qsMode,
+	UINT32 m_mvQuantumRequest,
+	UINT32 m_RenderDeviceAudioProcessing,
+	UINT32 m_mvXAudioFlags
+	);
+
+AudioGraph::ConsumeSettings_format2(
+	UINT32 m_mvSampleRate,
+	UINT32 m_mvChannels,
+	UINT32 bitsPerSample
+	);
+
+AudioGraph::ConsumeSettings_format1(
+	UNICODESTRING MediaType,
+	UNICODESTRING Subtype
+	);
+
+AudioGraph::Destructor Entry(
+	HEXINT64 This
+	);
+
+~EqualizerEffectDefinition(
+	HRESULT HResult
+	);
+
+CaptureUIThread(
+	UINT32 View Count,
+	HEXINT64 spCoreWindow,
+	HEXINT64 spCoreDispatcher,
+	HRESULT HResult
+	);
+
+AudioGraph_CaptureUIThread(
+	HRESULT HResult
+	);
+
+AudioGraphActivity(
+	INT32 TelemetryVersion,
+	GUID MFMediaTelemetrySessionID,
+	UINT32 MFMediaTelemetrySessionInstance,
+	ANSISTRING EventType,
+	ANSISTRING Events
+	);
+
+AudioFrameInputNode::OnVoiceProcessingPassStart(
+	INT32 BytesRequired,
+	HEXINT64 This
+	);
+
+AudioFrameInputNode::OnVoiceProcessingPassStart(
+	INT32 samplesRequired,
+	HEXINT64 This
+	);
+
+AudioFrameInputNode::AddFrame(
+	HEXINT64 This
+	);
+
+AudioFrameInputNode::AddFrame(
+	HEXINT64 This
+	);
+
+SourceReaderInputNode::FlushXAudioAndWaitForComplete_Error(
+	HEXINT64 This,
+	HRESULT HResult
+	);
+
+SourceReaderInputNode::FlushXAudioAndWaitForComplete(
+	HEXINT64 This
+	);
+
+SourceReaderInputNode::FlushXAudioAndWaitForComplete_TimeOut(
+	HEXINT64 This
+	);
+
+SourceReaderInputNode::FlushMFAndWaitForComplete_TimeOut(
+	HEXINT64 This
+	);
+
+SourceReaderInputNode::FlushMFAndWaitForComplete_Error(
+	HEXINT64 This,
+	HRESULT HResult
+	);
+
+SourceReaderInputNode::FlushMFAndWaitForComplete(
+	HEXINT64 This
+	);
+
+SourceReaderInputNode::RequestMoreSamples_bPrerolling(
+	HEXINT64 This
+	);
+
+SourceReaderInputNode::RequestSample_Error(
+	HEXINT64 This,
+	HRESULT HResult
+	);
+
+SourceReaderInputNode::SubmitDataToSourceVoice_LastBufferSubmitted(
+	HEXINT64 This,
+	INT32 m_u64SentXAudio2BufferCount,
+	INT32 m_u64XAudio2BufferCompleted,
+	INT64 m_u64QueuedSampleCount
+	);
+
+SourceReaderInputNode::SubmitDataToSourceVoice_Error(
+	HEXINT64 This,
+	HRESULT HResult
+	);
+
+SourceReaderInputNode::SubmitDataToSourceVoice_SubmitSourceBuffer(
+	HEXINT64 This,
+	INT32 bufferSizeSubmitted,
+	INT64 Timestamp,
+	INT32 m_u64SentXAudio2BufferCount,
+	INT32 m_u64XAudio2BufferCompleted,
+	INT32 playBufferFlags
+	);
+
+AudioFileInputNode::SubmitDataToSourceVoice_QueuedSamplesCount(
+	HEXINT64 This,
+	INT32 QueuedXAudio2BufferCount,
+	INT32 m_u64QueuedSampleCount
+	);
+
+SourceReaderInputNode::SubmitDataToSourceVoice_endTime(
+	HEXINT64 This,
+	INT64 hnsResultingPlayPosition,
+	INT64 endTime
+	);
+
+SourceReaderInputNode::SubmitDataToSourceVoice_Glitch(
+	HEXINT64 This
+	);
+
+SourceReaderInputNode::SubmitDataToSourceVoice(
+	HEXINT64 This,
+	INT32 sampleQueueSize,
+	BOOL32 IsLooping
+	);
+
+SourceReaderInputNode::SubmitDataToSourceVoice_MFSampleQueueEmpty(
+	HEXINT64 This
+	);
+
+SourceReaderInputNode::PrerollSamples(
+	HEXINT64 This,
+	HRESULT HResult
+	);
+
+SourceReaderInputNode::SubmitDataToSourceVoice_FlushingOrSeeking(
+	HEXINT64 This
+	);
+
+AudioFileInputNode::PrerollSamples_Timeout(
+	HEXINT64 This,
+	INT32 dwResult
+	);
+
+SourceReaderInputNode_InitializeXA2SourceVoiceAndFormat(
+	HEXINT64 This,
+	HRESULT HResult
+	);
+
+SourceReaderInputNode::PrerollSamples(
+	HEXINT64 This
+	);
+
+SourceReaderInputNode_InitializeXA2SourceVoiceAndFormat(
+	HEXINT64 This
+	);
+
+SourceReaderInputNode_InitializeXA2SourceVoiceAndFormat_Info(
+	HEXINT64 This,
+	UINT16 wFormatTag,
+	UINT16 nChannels,
+	UINT32 nSamplesPerSec,
+	UINT32 nAvgBytesPerSec,
+	UINT16 nBlockAlign,
+	UINT16 wBitsPerSample,
+	UINT16 cbSize
+	);
+
+SourceReaderInputNode::OnFlush(
+	HEXINT64 This
+	);
+
+SourceReaderInputNode::OnReadSample_EndPrerolling(
+	HEXINT64 This,
+	INT32 m_uPrerolledSampleCount,
+	INT32 dwStreamFlags
+	);
+
+SourceReaderInputNode::OnReadSample_Error(
+	HEXINT64 This,
+	INT32 hrStatus,
+	HRESULT HResult
+	);
+
+SourceReaderInputNode::OnReadSample_Skip(
+	HEXINT64 This,
+	ANSISTRING SourceReader,
+	INT64 m_u64MFSamplesRequested,
+	INT64 m_u64MFSamplesReceived,
+	HRESULT HResult,
+	INT64 dwStreamIndex,
+	INT64 dwStreamFlags,
+	INT64 llTimestamp,
+	HEXINT64 this,
+	HEXINT64 pSample,
+	INT64 hnsSampleDuration,
+	INT64 hnsSampleTime
+	);
+
+SourceReaderInputNode::OnReadSample_Info(
+	HEXINT64 This,
+	ANSISTRING SourceReader,
+	INT64 m_u64MFSamplesRequested,
+	INT64 m_u64MFSamplesReceived,
+	HRESULT HResult,
+	INT64 dwStreamIndex,
+	INT64 dwStreamFlags,
+	INT64 llTimestamp,
+	HEXINT64 this,
+	HEXINT64 pSample,
+	INT64 hnsSampleDuration,
+	INT64 hnsSampleTime
+	);
+
+SourceReaderInputNode::OnReadSample_MF_SOURCE_READERF_ERROR(
+	HEXINT64 This,
+	INT32 dwStreamFlags
+	);
+
+SourceReaderInputNode::OnReadSample_EndOfFile(
+	HEXINT64 This,
+	INT32 sampleQueueSize
+	);
+
+SourceReaderInputNode::OnReadSample(
+	HEXINT64 This,
+	HEXINT64 pSample,
+	INT32 hrStatus,
+	INT32 m_uPrerolledSampleCount,
+	INT32 dwStreamFlags
+	);
+
+SourceReaderInputNode::OnBufferStart+End(
+	HEXINT64 This,
+	ANSISTRING XAudio2,
+	INT32 m_u64XAudio2BufferCompleted,
+	BOOL32 bEndOfStream
+	);
+
+SourceReaderInputNode::OnBufferStart+End(
+	HEXINT64 This,
+	ANSISTRING XAudio,
+	INT32 m_u64XAudio2BufferCompleted,
+	INT32 m_u64QueuedSampleCount,
+	BOOL32 bEndOfStream,
+	BOOL32 m_FlushingXAudio,
+	BOOL32 m_IgnoreBufferCompletions
+	);
+
+SourceReaderInputNode_FileComplete(
+	HEXINT64 This,
+	BOOL32 bEndOfStream
+	);
+
+SourceReaderInputNode::OnVoiceProcessingPassEnd(
+	HEXINT64 This,
+	FLOAT quantumSize,
+	DOUBLE CurrentPlayPositionInFrames
+	);
+
+SourceReaderInputNode::OnVoiceProcessingPassStart(
+	HEXINT64 This,
+	HRESULT HResult
+	);
+
+SourceReaderInputNode::OnVoiceProcessingPassEnd(
+	HEXINT64 This
+	);
+
+SourceReaderInputNode::OnVoiceProcessingPassStart(
+	INT32 BytesRequired,
+	INT32 m_u64QueuedSampleCount,
+	HEXINT64 This
+	);
+
+SourceReaderInputNode::OnVoiceProcessingPassStart_Closing(
+	HEXINT64 This
+	);
+
+SourceReaderInputNode::InternalSeek(
+	HEXINT64 This,
+	INT64 position,
+	BOOL32 bCanSeek
+	);
+
+SourceReaderInputNode::Seek_m_spEndTime(
+	HEXINT64 This,
+	INT64 m_spEndTime
+	);
+
+SourceReaderInputNode::Seek(
+	HEXINT64 This,
+	HRESULT HResult
+	);
+
+SourceReaderInputNode::Seek(
+	HEXINT64 This,
+	INT64 position
+	);
+
+SourceReaderInputNode::Seek_m_spStartTime(
+	HEXINT64 This,
+	INT64 m_spStartTime
+	);
+
+SourceReaderInputNode::Reset(
+	HEXINT64 This
+	);
+
+SourceReaderInputNode::Reset(
+	HEXINT64 This,
+	HRESULT HResult
+	);
+
+SourceReaderInputNode_Init(
+	HEXINT64 This,
+	HRESULT HResult
+	);
+
+SourceReaderInputNode::RuntimeClassInitialize(
+	HEXINT64 AudioGraph,
+	HEXINT64 This,
+	HRESULT HResult
+	);
+
+SourceReaderInputNode::Close_Error(
+	HEXINT64 This,
+	HRESULT HResult
+	);
+
+~SourceReaderInputNode(
+	HEXINT64 This
+	);
+
+SourceReaderInputNode::Close(
+	HEXINT64 This
+	);
+
+AudioFileInputNode::OpenRandomAccessStream(
+	HEXINT64 This,
+	HRESULT HResult
+	);
+
+AudioFileInputNode::OpenRandomAccessStream(
+	HEXINT64 This
+	);
+
+AudioFileInputNode::CreateAsynchronousSourceReader(
+	HEXINT64 This,
+	HRESULT HResult
+	);
+
+AudioFileInputNode_Init(
+	HEXINT64 This,
+	HRESULT HResult
+	);
+
+AudioFileInputNode::RuntimeClassInitialize(
+	HEXINT64 AudioGraph,
+	HEXINT64 This,
+	HRESULT HResult
+	);
+
+~AudioFileInputNode(
+	HEXINT64 This
+	);
+
+AudioInputNodeBase::Stop(
+	HEXINT64 This
+	);
+
+AudioInputNodeBase::Stop(
+	HEXINT64 This,
+	HRESULT HResult
+	);
+
+AudioInputNodeBase::Start(
+	HEXINT64 This,
+	HRESULT HResult
+	);
+
+AudioInputNodeBase::Start(
+	HEXINT64 This
+	);
+
+AudioInputNodeBase::StartXA2SourceVoice(
+	HEXINT64 This,
+	HRESULT HResult
+	);
+
+MediaSourceAudioInputNode::OpenMediaSource(
+	HEXINT64 This,
+	HRESULT HResult
+	);
+
+MediaSourceAudioInputNode::OpenMediaSource(
+	HEXINT64 This
+	);
+
+MediaSourceAudioInputNode::CreateAsynchronousSourceReader(
+	HEXINT64 This,
+	HRESULT HResult
+	);
+
+MediaSourceAudioInputNode_Init(
+	HEXINT64 This,
+	HRESULT HResult
+	);
+
+~MediaSourceAudioInputNode(
+	HEXINT64 This
+	);
+
+MediaSourceAudioInputNode::RuntimeClassInitialize(
+	HEXINT64 AudioGraph,
+	HEXINT64 This,
+	HRESULT HResult
+	);
+
+AudioDeviceOutputNode::Close(
+	HEXINT64 This,
+	HRESULT HResult
+	);
+
+AudioFileOutputNode::InternalClose flush timeout(
+	HEXINT64 This
+	);
+
+FileOutputNode_Reset(
+	HRESULT HResult
+	);
+
+FileOutputNode_Close(
+	HRESULT HResult
+	);
+
+FileOutputNode_Stop(
+	HRESULT HResult
+	);
+
+FileOutputNode_Start(
+	HRESULT HResult
+	);
+
+AudioFileOutputNode::Stop(
+	HEXINT64 This,
+	BOOL32 m_bNodeStarted
+	);
+
+AudioFileOutputNode::Start(
+	HEXINT64 This,
+	BOOL32 m_bNodeStarted
+	);
+
+FileOutputNode_DoWriteDataToSink(
+	HRESULT HResult
+	);
+
+AudioFileOutputNode::put_ConsumeInput(
+	HEXINT64 This,
+	BOOL32 value,
+	BOOL32 m_bNodeStarted
+	);
+
+FileOutputNode_DoWriteDataToSink(
+	INT32 qwNumSamplesReceived,
+	INT32 qwNumSamplesEncoded,
+	INT32 qwNumSamplesProcessed,
+	INT32 dwNumOutstandingSinkSampleRequests
+	);
+
+FileOutputNode_WriteSample(
+	INT32 inputBufferSize,
+	INT32 hnsDuration,
+	INT32 m_hnsCurrentMFTime
+	);
+
+FileOutputNode_WriteDataToSink(
+	HRESULT HResult
+	);
+
+FileOutputNode_DoBufferCapture(
+	UINT32 ReadBufferSize,
+	HRESULT HResult
+	);
+
+FileOutputNode_FinalizeAsync_TimeOut(
+	HEXINT64 This
+	);
+
+AudioFileOutputNode::FinalizeAsync(
+	HEXINT64 This,
+	BOOL32 m_bNodeStarted
+	);
+
+FileOutputNode_FinalizeAsync(
+	HRESULT HResult
+	);
+
+FileOutputNode_get_FileEncodingProfile(
+	HRESULT HResult
+	);
+
+FileOutputNode_get_EncodingProperties(
+	HRESULT HResult
+	);
+
+FileOutputNode_get_File(
+	HRESULT HResult
+	);
+
+FileOutputNode_put_OutgoingGain(
+	HRESULT HResult
+	);
+
+FileOutputNode_CreateTargetAudioMediaType(
+	HRESULT HResult
+	);
+
+FileOutputNode_OnFinalize(
+	HEXINT64 This,
+	HRESULT HResult
+	);
+
+FileOutputNode_CreateTargetAudioMediaType_AvgBytesPerSec(
+	GUID guidSubtype,
+	UINT32 uSampleRateRequested,
+	UINT32 uBlockAlign,
+	UINT32 uAvgBytesPerSecRequested
+	);
+
+FileOutputNode_GetContainerGuidFromEncodingProperties(
+	HRESULT HResult
+	);
+
+FileOutputNode_DetermineContainerType(
+	GUID ContainerType
+	);
+
+FileOutputNode_DetermineContainerType(
+	HRESULT HResult
+	);
+
+FileOutputNode_InitializeMFWriter(
+	HRESULT HResult
+	);
+
+AudioFileOutputNode::InitializeMFWriter_SinkWriterInputMediaType(
+	GUID subType,
+	UINT32 uNumChannelsRequested,
+	UINT32 uSampleRateRequested,
+	UINT32 uBlockAlign,
+	UINT32 uBitsPerSample,
+	UINT32 uBytesPerSec
+	);
+
+AudioFileOutputNode::InitializeMFWriter_SinkWriterOutputMediaType(
+	GUID subType,
+	UINT32 uNumChannelsRequested,
+	UINT32 uSampleRateRequested,
+	UINT32 uBlockAlign,
+	UINT32 uBitsPerSample
+	);
+
+FileOutputNode_SetupXAudioVoicesAndRequiredXApos(
+	HRESULT HResult
+	);
+
+FileOutputNode_RuntimeClassInitialize(
+	HRESULT HResult
+	);
+
+AudioFileOutputNode::RuntimeClassInitialize_InputEncodingProperties(
+	UINT16 wFormatTag,
+	UINT16 nChannels,
+	UINT32 nSamplesPerSec,
+	UINT32 nAvgBytesPerSec,
+	UINT16 nBlockAlign,
+	UINT16 wBitsPerSample,
+	UINT16 cbSize
+	);
+
+AudioSubmixNode::AddOutgoingConnectionWithGain(
+	HEXINT64 This,
+	HRESULT HResult
+	);
+
+AudioSubmixNode::AddOutgoingConnectionWithGain(
+	HEXINT64 This,
+	HEXINT64 output,
+	DOUBLE gain
+	);
+
+DeviceInputNode_CriticalError(
+	HEXINT64 This,
+	HRESULT HResult
+	);
+
+AudioDeviceInputNode::Close(
+	HEXINT64 This,
+	HRESULT HResult
+	);
+
+AudioFrameOutputNode_GetFrame(
+	UINT32 cap,
+	UINT64 hnsDuration,
+	HRESULT HResult
+	);
+
+AudioNodeBase_RemoveInput(
+	HRESULT HResult
+	);
+
+AudioNodeBase_get_Effects(
+	HRESULT HResult
+	);
+
+EnableXapoFailed(
+	HEXINT64 XA2VoicePointer,
+	UINT32 EffectIndex,
+	HRESULT HResult
+	);
+
+DisableXapoFailed(
+	HEXINT64 XA2VoicePointer,
+	UINT32 EffectIndex,
+	HRESULT HResult
+	);
+
+XAudio2BufferSink::Process_SILENCE(
+	UINT32 _bufferSize,
+	UINT32 _blockAlign,
+	UINT32 ValidFrameCount,
+	HEXINT64 This
+	);
+
+XAudio2BufferSink::GetBytesAvailable(
+	UINT32 BytesAvailable,
+	HEXINT64 This
+	);
+
+XAudio2BufferSink::LockForProcess(
+	UINT32 _bufferSize,
+	HEXINT64 _buffer,
+	UINT32 MaxFrameCount,
+	UINT16 nBlockAlign
+	);
+
+IsFormatSupported(
+	HEXINT64 This,
+	HRESULT HResult
+	);
+
+XAUDIO::Engine::OnUpdatePerformanceData(
+	HEXINT64 This,
+	UINT32 minimumCyclesPerQuantum,
+	UINT32 maximumCyclesPerQuantum,
+	UINT32 glitchesSinceEngineStarted,
+	FLOAT cpuUsage,
+	UINT32 latencyInSamples,
+	UINT32 totalMemoryUsage,
+	UINT32 m_uActiveSourceVoices,
+	UINT32 numSourceVoices,
+	UINT32 m_uActiveSubmixVoices,
+	UINT32 m_uActiveResamplerCount,
+	UINT32 m_uActiveMatrixMixerCount
+	);
+
+XAUDIO::Engine::OnCriticalError(
+	HEXINT64 This,
+	HRESULT hrError
+	);
+
+XAUDIO::Engine::ChooseClockProviderAndStartEngine(
+	HEXINT64 This
+	);
+
+XAUDIO::Engine::StopEngine(
+	HEXINT64 This
+	);
+
+XAUDIO::Engine::CreateMasteringVoice_MasteringVoiceCreated(
+	HEXINT64 This,
+	HEXINT64 pOutputVoice,
+	UINT32 uInputChannels,
+	UINT32 uInputSampleRate,
+	UNICODESTRING szRendererId
+	);
+
+XAUDIO::Engine::CreateMasteringVoice_MasteringSampleRateAdjusted(
+	HEXINT64 This,
+	UINT32 uInputSampleRate,
+	UINT32 uNewInputSampleRate,
+	UINT32 quantumDenominator
+	);
+
+XAUDIO::Engine::CreateSubmixVoice_SubmixVoiceCreated(
+	HEXINT64 This,
+	HEXINT64 pSubmixVoice,
+	UINT32 uProcessingStage,
+	UINT32 uInputChannels,
+	UINT32 uInputSampleRate
+	);
+
+XAUDIO::Engine::CreateSubmixVoice_SubmixSampleRateAdjusted(
+	HEXINT64 This,
+	UINT32 uInputSampleRate,
+	UINT32 uNewInputSampleRate,
+	UINT32 denominator
+	);
+
+XAUDIO::Engine::Initialize(
+	HEXINT64 This,
+	UINT32 eXAudioProcessor
+	);
+
+XAUDIO::Engine::~Engine_CleanedUpVoices(
+	HEXINT64 This,
+	UINT32 uLeakedSourceVoices,
+	UINT32 uLeakedSubmixes,
+	UINT32 uLeakedOutputVoices
+	);
+
+XAUDIO::Engine::~Engine(
+	HEXINT64 This
+	);
+
+CaptureXAPO::FillOutputBuffer_Glitch(
+	UINT32 captureFramesToCopy,
+	UINT32 _outputBufferFrames,
+	UINT32 isSRCNeeded
+	);
+
+CaptureXAPO::FindCapturePeriodicity_WASAPI(
+	UINT32 fundamentalPeriodicity,
+	UINT32 defaultPeriodicity,
+	UINT32 minPeriodicity,
+	UINT32 maxPeriodicity,
+	UINT32 _bufferSize in frames
+	);
+
+CaptureXAPO::FillOutputBuffer_Glitch(
+	UINT32 outputFrames,
+	UINT32 _outputBufferFrames,
+	UINT32 isSRCNeeded
+	);
+
+CaptureXAPO::CaptureFromWasapi_Exit(
+	UINT32 _captureBufferCurrentStart,
+	UINT32 _channelCount,
+	UINT32 _sampleRate
+	);
+
+CaptureXAPO::CaptureFromWasapi_Flags_Possible_Glitch(
+	UINT32 _captureBufferCurrentStart,
+	UINT32 flags
+	);
+
+CaptureXAPO::CaptureFromWasapi_ThrowAway(
+	UINT32 _captureBufferCurrentStart,
+	UINT32 framesAvailable
+	);
+
+CaptureXAPO::CaptureFromWasapi_Enter(
+	UINT32 _captureBufferCurrentStart,
+	UINT32 packetSize in frames,
+	UINT32 _sampleRate
+	);
+
+CaptureXAPO::Process_Exit(
+	UINT32 _captureBufferCurrentStart,
+	UINT32 framesRendered
+	);
+
+CaptureXAPO::Process_Reset_bNeedReset(
+	UINT32 _captureBufferCurrentStart
+	);
+
+CaptureXAPO::Process_Enter(
+	UINT32 _captureBufferCurrentStart,
+	UINT32 isEnabled,
+	UINT32 BufferFlags
+	);
+
+CaptureXAPO::LockForProcess(
+	UINT32 _captureBufferCurrentStart,
+	UINT32 _framesInCrossProcessBuffer,
+	UINT32 _channelCount,
+	UINT32 _outputChannelCount,
+	UINT32 _outputBufferFrames,
+	UINT32 _captureBufferSize,
+	UINT32 _outputSampleRate
+	);
+
+CaptureXAPO::Process_Reset(
+	UINT32 _captureBufferCurrentStart
+	);
+
+XAUDIO::OutputVoice::Initialize_MasteringVoiceConnected(
+	HEXINT64 This,
+	UINT32 numChannels,
+	UINT32 OutputRate,
+	UNICODESTRING szDeviceId
+	);
+
+LEAPCORE::CMakeEndpointID::CMakeEndpointID(
+	HEXINT64 This,
+	UNICODESTRING pszDeviceID,
+	UNICODESTRING convertedEndpointID
+	);
+
+LEAPCORE::CGraphManager::UpdatePerformanceData(
+	HEXINT64 This,
+	FLOAT msSpentProcessing
+	);
+
+XAudio3Latency(
+	GUID leapId,
+	UINT32 streamCategory,
+	DOUBLE latencyInSeconds
+	);
+
+CIsacRendererConnection::CheckSoundLevel(
+	GUID leapId,
+	HRESULT hrOutput
+	);
+
+SpatialAudioStreamActivationFailure(
+	UINT64 PartA_PrivTags,
+	GUID leapId,
+	UINT32 trialIndex,
+	HRESULT hrOutput,
+	HRESULT hrInput,
+	UINT32 _onDefaultDeviceChangedCount
+	);
+
+DefaultDeviceChangedCount(
+	GUID leapId,
+	HRESULT hrClient
+	);
+
+ReactivateSpatialAudioStream(
+	GUID leapId,
+	UINT32 TrialIndex,
+	HRESULT hrStream,
+	HRESULT hrInput
+	);
+
+ISpatialAudioObjectRenderStream::ReleaseBuffer(
+	GUID leapId,
+	HRESULT hr
+	);
+
+CIsacRendererConnection::CheckSoundLevel(
+	GUID leapId,
+	HRESULT hrInput
+	);
+
+ISpatialAudioObjectRenderStream::GetBuffer(
+	GUID leapId,
+	HRESULT hr
+	);
+
+ISpatialAudioObjectRenderStream::StopStreaming(
+	GUID leapId,
+	HRESULT hr
+	);
+
+ISpatialAudioObjectRenderStream::GetLatency(
+	GUID leapId,
+	HRESULT hr
+	);
+
+ISpatialAudioObjectRenderStream::StartStreaming(
+	GUID leapId,
+	HRESULT hr
+	);
+
+ISpatialAudioClient::ActivateSpatialAudioStream with dynamic objects(
+	GUID leapId,
+	HRESULT hr
+	);
+
+CEngineRendererConnection::CheckSoundLevel(
+	HEXINT64 This,
+	HRESULT hrRet
+	);
+
+CEngineRendererConnection::CheckSoundLevel(
+	HEXINT64 This,
+	HRESULT hr
+	);
+
+CEngineRendererConnection::CheckSoundLevel(
+	HEXINT64 This,
+	UINT32 SoundLevel
+	);
+
+LEAPCORE::CSWVoice::PrepareNextPacketForProcessing_VoiceStarved(
+	HEXINT64 This
+	);
+
+LEAPCORE::CSWOutput::ReportGlitch(
+	HEXINT64 This,
+	UINT32 m_uTotalFramesDelivered
+	);
+

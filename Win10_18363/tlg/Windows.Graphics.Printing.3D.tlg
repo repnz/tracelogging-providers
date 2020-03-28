@@ -1,0 +1,292 @@
+ProviderNames:
+	Microsoft.Windows.Print.MS3DPrintAPI
+	Microsoft.Windows.Print.MS3DPrintAPI
+
+
+
+**** Events *****
+ActivityStoppedAutomatically(
+	VOID
+	);
+
+Completed(
+	HEXINT32 HResult
+	);
+
+Submitting(
+	HEXINT32 HResult
+	);
+
+SourceChanged(
+	HEXINT32 HResult
+	);
+
+TaskRequested(
+	HEXINT32 HResult
+	);
+
+ShowPrintUIAsyncStop(
+	HEXINT32 HResult
+	);
+
+ShowPrintUIAsyncStart(
+	VOID
+	);
+
+SetSource(
+	HEXINT32 HResult
+	);
+
+CreateTask(
+	HEXINT32 HResult
+	);
+
+SaveAsyncStop(
+	HEXINT32 HResult
+	);
+
+SaveAsyncStart(
+	VOID
+	);
+
+LoadModelAsyncStop(
+	HEXINT32 HResult
+	);
+
+LoadModelAsyncStart(
+	VOID
+	);
+
+LoadAsyncStop(
+	HEXINT32 HResult
+	);
+
+LoadAsyncStart(
+	VOID
+	);
+
+ReduceTrianglesStop(
+	HEXINT32 HResult
+	);
+
+ReduceTrianglesStart(
+	VOID
+	);
+
+RepairModelStop(
+	HEXINT32 HResult
+	);
+
+ModelActivateInstance(
+	HEXINT32 HResult
+	);
+
+RepairModelStart(
+	VOID
+	);
+
+ReduceTrianglesInSingleMesh(
+	UINT32 triangleCountBefore,
+	UINT32 triangleCountAfter,
+	UINT64 duration
+	);
+
+RepairModelInfoAfter(
+	UINT32 nodeCount,
+	UINT32 edgeCount,
+	UINT32 faceCount,
+	UINT32 orphanedEdgeCount,
+	UINT32 openEdgeCount,
+	UINT32 twoManifoldEdgesCount,
+	UINT32 unorientedEdgeCount,
+	BOOLEAN isClosed,
+	BOOLEAN isOriented
+	);
+
+RepairModelRemoveTinyShells(
+	UINT32 duration
+	);
+
+RepairModelPrepareForExport(
+	UINT32 duration
+	);
+
+RepairModelWrap(
+	UINT32 duration
+	);
+
+RepairModelRemoveDegeneratedFaces(
+	UINT32 duration
+	);
+
+RepairModelFixFlippedTriangles2(
+	UINT32 duration
+	);
+
+RepairModelCloseAllHoles(
+	UINT32 duration
+	);
+
+RepairModelCloseTrivialHoles2(
+	UINT32 duration
+	);
+
+RepairModelStitchTriangles2(
+	UINT32 duration
+	);
+
+RepairModelRemoveDoubleTriangles(
+	UINT32 duration
+	);
+
+RepairModelFixFlippedTriangles1(
+	UINT32 duration
+	);
+
+RepairModelStitchTriangles1(
+	UINT32 duration
+	);
+
+RepairModelCloseTrivialHoles1(
+	UINT32 duration
+	);
+
+RepairModelInfoBefore(
+	UINT32 nodeCount,
+	UINT32 edgeCount,
+	UINT32 faceCount,
+	UINT32 orphanedEdgeCount,
+	UINT32 openEdgeCount,
+	UINT32 twoManifoldEdgesCount,
+	UINT32 unorientedEdgeCount,
+	BOOLEAN isClosed,
+	BOOLEAN isOriented
+	);
+
+Scan3dApiActivity(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId
+	);
+
+Scan3dApiObtain3mf(
+	GUID ActivityId,
+	UINT32 hresult
+	);
+
+ActivityIntermediateStop(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+ActivityError(
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+ActivityError(
+	UINT64 PartA_PrivTags,
+	SIGNED wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+Scan3dApiActivity(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+Scan3dApiActivity(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+FallbackError(
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+FallbackError(
+	UINT64 PartA_PrivTags,
+	SIGNED wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+

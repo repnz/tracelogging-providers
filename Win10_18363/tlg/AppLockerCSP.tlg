@@ -1,0 +1,180 @@
+ProviderNames:
+	Microsoft.Windows.Security.AppLockerCSP
+	Microsoft.Windows.Security.AppLockerCSP
+	Microsoft.Windows.Security.EDPPolicyMgrApplockerTask
+	TelemetryAssert
+	TelemetryAssertDiagTrack
+
+
+
+**** Events *****
+ActivityStoppedAutomatically(
+	VOID
+	);
+
+AddStop(
+	HRESULT hr
+	);
+
+AddStart(
+	VOID
+	);
+
+AddParams(
+	UNICODESTRING uri,
+	UNICODESTRING child
+	);
+
+HResultException(
+	UINT32 line,
+	ANSISTRING file,
+	ANSISTRING function,
+	HRESULT hr
+	);
+
+IsDependencySatisfiedStop(
+	HRESULT hr,
+	HRESULT internalHr,
+	UINT32 edpActive
+	);
+
+IsDependencySatisfiedStart(
+	VOID
+	);
+
+IsDependencySatisfiedParams(
+	UNICODESTRING accountId,
+	UNICODESTRING enterpriseIds,
+	UINT32 enforcementLevel
+	);
+
+TryRemediateMissingPolicies(
+	UNICODESTRING uri
+	);
+
+EnumPolicies(
+	UNICODESTRING uri
+	);
+
+CAppLockerCSP::Rollback(
+	UINT64 txId,
+	UINT64 oldId
+	);
+
+CAppLockerCSP::Commit(
+	UINT64 txId,
+	UINT64 oldId
+	);
+
+CreateNodeInstanceStop(
+	HRESULT hr
+	);
+
+CreateNodeInstanceStart(
+	VOID
+	);
+
+CreateNodeInstanceParams(
+	UINT32 NodeId,
+	UNICODESTRING uri,
+	UINT32 nodeOps
+	);
+
+ClearStop(
+	HRESULT hr
+	);
+
+ClearStart(
+	VOID
+	);
+
+ClearParams(
+	UNICODESTRING uri
+	);
+
+CSPConvertPolicyWrite(
+	HRESULT hr,
+	UINT32 RuleCount,
+	UINT32 EnforcementMode,
+	UINT32 ServiceEnforcementMode,
+	UINT32 EdpExempt,
+	UNICODESTRING PolicyName
+	);
+
+DeleteChildStop(
+	HRESULT hr
+	);
+
+DeleteChildStart(
+	VOID
+	);
+
+DeleteChildParams(
+	UNICODESTRING uri,
+	UNICODESTRING child
+	);
+
+EDPPolicyManagerPolicyUpdateTrigger(
+	BOOL32 PolicyUpdate,
+	BOOL32 PolicyRebootRequired,
+	UINT32 EDPEnforcementLevel,
+	UINT32 EnterpriseIdCount,
+	UNICODESTRING EnterpriseIDString
+	);
+
+GetChildNodeNamesStop(
+	HRESULT hr,
+	UINT32 count,
+	UNICODESTRING child[0]
+	);
+
+GetChildNodeNamesParams(
+	UNICODESTRING uri
+	);
+
+GetChildNodeNamesStart(
+	VOID
+	);
+
+GetLatestId(
+	UINT64 id,
+	UINT64 dirId
+	);
+
+SetValueStop(
+	HRESULT hr
+	);
+
+SetValueStart(
+	VOID
+	);
+
+CSPConvertPolicySuccess(
+	HRESULT ((HRESULT)0L),
+	UINT32 dwNodeId,
+	UNICODESTRING szTokenName,
+	UINT32 dwNodeLevel,
+	UINT32 grfOperations
+	);
+
+CSPConvertPolicyError(
+	HRESULT hr
+	);
+
+SetValueParams(
+	UNICODESTRING uri,
+	UINT32 dataLength
+	);
+
+Assert(
+	UINT32 assertVersion,
+	UINT32 rva,
+	UINT32 timestamp,
+	UINT32 imageSize,
+	ANSISTRING imageName,
+	UINT32 count,
+	UINT32 totalHits,
+	UINT32 ModuleCollection,
+	UINT32 GlobalCollection
+	);
+

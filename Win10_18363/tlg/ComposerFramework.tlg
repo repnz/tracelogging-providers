@@ -1,0 +1,557 @@
+ProviderNames:
+	Microsoft.Windows.ComposableShell.Framework.Composer
+	Microsoft.Windows.ComposableShell.Framework.Composer.DragDrop
+
+
+
+**** Events *****
+ResultLoggingCallback(
+	UINT64 PartA_PrivTags,
+	ANSISTRING file,
+	UINT32 lineNumber,
+	UINT32 failureType,
+	INT32 failureCount,
+	UINT32 threadId,
+	HEXINT32 hr,
+	UNICODESTRING message,
+	ANSISTRING code,
+	ANSISTRING function
+	);
+
+ActivityStoppedAutomatically(
+	VOID
+	);
+
+DragOperationAlreadyRunning(
+	INT32 count
+	);
+
+ActivityError(
+	UINT64 PartA_PrivTags,
+	SIGNED wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+ActivityError(
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+Info(
+	UINT64 PartA_PrivTags,
+	ANSISTRING message,
+	UINT32 pointerId
+	);
+
+Verbose(
+	UINT64 PartA_PrivTags,
+	ANSISTRING message
+	);
+
+DragAsyncActivity(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId,
+	INT32 dragOperationResult
+	);
+
+DragAsyncActivity(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	INT32 dragOperationResult
+	);
+
+DragAsyncActivity(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId
+	);
+
+DragAsyncActivity(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+DragAsyncActivity(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+FallbackError(
+	UINT64 PartA_PrivTags,
+	SIGNED wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+FallbackError(
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+ActivityIntermediateStop(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+Info(
+	UINT64 PartA_PrivTags,
+	ANSISTRING message,
+	UINT32 m_pointerId
+	);
+
+Info(
+	UINT64 PartA_PrivTags,
+	ANSISTRING message,
+	STRING size,
+	INT32 cx,
+	INT32 cy,
+	STRING anchorPoint,
+	INT32 x,
+	INT32 y
+	);
+
+Info(
+	UINT64 PartA_PrivTags,
+	ANSISTRING message,
+	UINT32 m_pointerId,
+	UINT32 dropTargetPid
+	);
+
+Verbose(
+	UINT64 PartA_PrivTags,
+	ANSISTRING message,
+	UINT32 m_pointerId,
+	HEXINT32 static_cast<unsigned int>(changedEvent)
+	);
+
+Verbose(
+	UINT64 PartA_PrivTags,
+	ANSISTRING message,
+	UINT32 m_pointerId
+	);
+
+Verbose(
+	UINT64 PartA_PrivTags,
+	ANSISTRING message,
+	UINT32 m_pointerId,
+	UINT32 feedback
+	);
+
+Info(
+	UINT64 PartA_PrivTags,
+	ANSISTRING message,
+	INT32 dragResult,
+	INT32 m_allowedOperations,
+	UINT32 m_pointerId,
+	INT32 m_dragResult
+	);
+
+Info(
+	UINT64 PartA_PrivTags,
+	ANSISTRING message,
+	UINT32 m_pointerId,
+	BOOLEAN cancelledByApp,
+	BOOLEAN dragSourceDied
+	);
+
+Info(
+	UINT64 PartA_PrivTags,
+	ANSISTRING message,
+	UINT32 m_pointerId,
+	INT32 m_dragResult
+	);
+
+Info(
+	UINT64 PartA_PrivTags,
+	ANSISTRING message,
+	UINT32 m_pointerId,
+	STRING ptScreen,
+	INT32 x,
+	INT32 y,
+	UINT64 coreInputId,
+	STRING ptCoreInput,
+	INT32 x,
+	INT32 y,
+	UINT64 coreWindowId,
+	STRING ptCoreWindow,
+	INT32 x,
+	INT32 y
+	);
+
+Info(
+	UINT64 PartA_PrivTags,
+	ANSISTRING message,
+	UINT32 m_pointerId,
+	STRING ptScreen,
+	INT32 x,
+	INT32 y,
+	UINT32 keyState,
+	UINT64 coreInputId,
+	STRING ptCoreInput,
+	INT32 x,
+	INT32 y,
+	UINT64 coreWindowId,
+	STRING ptCoreWindow,
+	INT32 x,
+	INT32 y
+	);
+
+Info(
+	UINT64 PartA_PrivTags,
+	ANSISTRING message,
+	UINT32 m_pointerId,
+	UINT64 coreWindowId
+	);
+
+Verbose(
+	UINT64 PartA_PrivTags,
+	ANSISTRING message,
+	UINT32 m_pointerId,
+	UINT64 coreWindowId
+	);
+
+Info(
+	UINT64 PartA_PrivTags,
+	ANSISTRING message,
+	UINT32 m_pointerId,
+	UINT64 currentWindowId
+	);
+
+Info(
+	UINT64 PartA_PrivTags,
+	ANSISTRING message,
+	UINT32 m_pointerId,
+	UINT64 currentWindowId,
+	UINT64 coreWindowId
+	);
+
+Verbose(
+	UINT64 PartA_PrivTags,
+	ANSISTRING message,
+	UINT32 m_pointerId,
+	STRING ptScreen,
+	INT32 x,
+	INT32 y,
+	UINT32 keyState,
+	UINT64 coreInputId,
+	STRING ptCoreInput,
+	INT32 x,
+	INT32 y,
+	UINT64 coreWindowId,
+	STRING ptCoreWindow,
+	INT32 x,
+	INT32 y
+	);
+
+Info(
+	UINT64 PartA_PrivTags,
+	ANSISTRING message,
+	INT32 hr
+	);
+
+Info(
+	UINT64 PartA_PrivTags,
+	ANSISTRING message,
+	UINT64 coreWindowId,
+	UINT64 coreInputId
+	);
+
+Info(
+	UINT64 PartA_PrivTags,
+	ANSISTRING message,
+	UINT32 m_pointerId,
+	STRING size,
+	INT32 cx,
+	INT32 cy,
+	STRING anchorPoint,
+	INT32 x,
+	INT32 y
+	);
+
+Info(
+	UINT64 PartA_PrivTags,
+	ANSISTRING message,
+	UINT32 m_pointerId,
+	UINT64 dragSourceVisualHandle,
+	UINT64 dragTargetVisualHandle
+	);
+
+Info(
+	UINT64 PartA_PrivTags,
+	ANSISTRING message,
+	UINT64 visualHandle,
+	UINT32 processId
+	);
+
+Info(
+	UINT64 PartA_PrivTags,
+	ANSISTRING message,
+	UINT32 processId
+	);
+
+Info(
+	UINT64 PartA_PrivTags,
+	ANSISTRING message,
+	UINT32 m_pointerId,
+	UINT32 allowedOperations,
+	INT32 hasContent,
+	STRING contentSize,
+	INT32 cx,
+	INT32 cy
+	);
+
+Info(
+	UINT64 PartA_PrivTags,
+	ANSISTRING message,
+	UINT32 m_dragSourcePid
+	);
+
+Info(
+	UINT64 PartA_PrivTags,
+	ANSISTRING message
+	);
+
+EDPPolicyChanged(
+	GUID correlationId,
+	BOOLEAN isBlocked
+	);
+
+TargetAppId(
+	GUID correlationId,
+	UNICODESTRING targetAppId
+	);
+
+SourceAppId(
+	GUID correlationId,
+	UNICODESTRING sourceAppId,
+	UINT32 allowedOperations,
+	BOOLEAN hasContent,
+	INT32 contentSize.cx,
+	INT32 contentSize.cy,
+	UNICODESTRING contentType
+	);
+
+DragDropResult(
+	GUID correlationId,
+	UINT32 result,
+	INT32 genericResult
+	);
+
+DragEnded(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId
+	);
+
+DragEnded(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+DragEnded(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+Info(
+	UINT64 PartA_PrivTags,
+	ANSISTRING message,
+	UINT32 targetViewId,
+	INT32 model
+	);
+
+Info(
+	UINT64 PartA_PrivTags,
+	ANSISTRING message,
+	FILETIME now,
+	FILETIME m_targetResponseTimeOutDate
+	);
+
+Info(
+	UINT64 PartA_PrivTags,
+	ANSISTRING message,
+	UINT64 m_windowId
+	);
+
+Verbose(
+	UINT64 PartA_PrivTags,
+	ANSISTRING message,
+	UINT64 m_windowId
+	);
+
+Info(
+	UINT64 PartA_PrivTags,
+	ANSISTRING message,
+	STRING client,
+	INT32 x,
+	INT32 y,
+	UINT32 keyState,
+	UINT64 m_windowId
+	);
+
+Info(
+	UINT64 PartA_PrivTags,
+	ANSISTRING message,
+	UINT32 m_dropTargetPid
+	);
+
+Info(
+	UINT64 PartA_PrivTags,
+	ANSISTRING message,
+	UINT32 timeout
+	);
+
+HotKeyModifier(
+	GUID correlationId,
+	UINT32 keyState
+	);
+
+EDPPolicyConsentRequired(
+	GUID correlationId
+	);
+
+TargetDrop(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId
+	);
+
+TargetDrop(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+TargetDrop(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+

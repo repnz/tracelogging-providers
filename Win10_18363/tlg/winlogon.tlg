@@ -1,0 +1,771 @@
+ProviderNames:
+	Microsoft.Windows.Wil.FeatureLogging
+	Microsoft.Windows.Security.Winlogon
+	Microsoft.Windows.Desktop.Shell.OOBEHealth
+	Microsoft.Windows.Security.Winlogon
+	Microsoft.Windows.Security.Winlogon
+	TelemetryAssert
+	TelemetryAssertDiagTrack
+	Microsoft.Windows.Security.CandidateAccountManagerPolicy
+
+
+
+**** Events *****
+FallbackError(
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+FeatureUsage(
+	UINT32 featureId,
+	INT32 featureVersion,
+	INT32 featureBaseVersion,
+	INT16 featureStage,
+	BOOLEAN enabled,
+	UINT32 kind,
+	UINT64 addend
+	);
+
+FeatureError(
+	UINT32 featureId,
+	INT32 featureVersion,
+	INT32 featureBaseVersion,
+	INT16 featureStage,
+	HRESULT hr,
+	ANSISTRING file,
+	UINT16 lineNumber,
+	ANSISTRING module,
+	ANSISTRING process,
+	ANSISTRING originFile,
+	UINT16 originLineNumber,
+	ANSISTRING originModule,
+	ANSISTRING originName,
+	ANSISTRING message,
+	ANSISTRING callerModule,
+	UINT32 callerReturnAddressOffset,
+	ANSISTRING originCallerModule,
+	UINT32 originCallerReturnAddressOffset
+	);
+
+FallbackError(
+	UINT64 PartA_PrivTags,
+	SIGNED wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+FeatureVariantUsage(
+	UINT32 featureId,
+	INT32 featureVersion,
+	INT32 featureBaseVersion,
+	INT16 featureStage,
+	BOOLEAN enabled,
+	UINT32 variantKind,
+	UINT8 variant,
+	UINT64 addend
+	);
+
+EnabledFeatureUsage(
+	UINT32 featureId,
+	INT32 featureVersion,
+	INT32 featureBaseVersion,
+	INT16 featureStage,
+	BOOLEAN enabled,
+	UINT32 kind,
+	UINT64 addend
+	);
+
+AccessibilityOnCtrlWinEnter(
+	UINT64 PartA_PrivTags
+	);
+
+AccessibilityOnWinVolumeUp(
+	UINT64 PartA_PrivTags
+	);
+
+WluiRequestCredentials(
+	UINT32 wluiRequestReason,
+	UINT32 wluiRequestFlags,
+	UINT32 dwRet,
+	UINT64 PartA_PrivTags
+	);
+
+ActivityStoppedAutomatically(
+	VOID
+	);
+
+WinLogonActivityActivityError(
+	UINT32 SessionId,
+	ANSISTRING Error,
+	UINT64 PartA_PrivTags
+	);
+
+WinLogonActivityStop(
+	UINT64 PartA_PrivTags,
+	UINT32 sessionId,
+	UINT8 reason,
+	UINT8 logonType,
+	BOOL32 remoteSession,
+	BOOL32 firstLogon,
+	BOOL32 alreadyOnDesktop,
+	UINT32 forcedSwitchToDesktopError,
+	INT32 onShellReady
+	);
+
+WinLogonActivityStart(
+	UINT64 PartA_PrivTags,
+	UINT32 sessionId,
+	UINT8 winLogonActivityType
+	);
+
+WluiSecureDelayLocked_WaitForDismiss(
+	UINT32 dwRet,
+	UINT64 PartA_PrivTags
+	);
+
+WluiSecureDelayLocked(
+	UINT32 unlockFlags,
+	UINT32 dwRet,
+	UINT64 PartA_PrivTags
+	);
+
+WluiDelayLocked_WaitForDismiss(
+	UINT32 dwRet,
+	UINT64 PartA_PrivTags
+	);
+
+WluiDelayLocked(
+	UINT32 unlockFlags,
+	UINT32 dwRet,
+	UINT64 PartA_PrivTags
+	);
+
+ConsumeCacheSessionFailed(
+	UINT32 dwRet,
+	UINT64 PartA_PrivTags
+	);
+
+ConnectCandidateUser(
+	BOOLEAN isAutoAadConnectEnabled,
+	BOOLEAN isCandidateUser,
+	BOOLEAN isNotAdmin,
+	BOOLEAN isNotMultiUserAssignedAccessEnabled,
+	UINT32 dwRet,
+	UINT64 PartA_PrivTags
+	);
+
+WluiSecureDisplayLocked_WaitForDismiss(
+	UINT32 dwRet,
+	UINT64 PartA_PrivTags
+	);
+
+WluiSecureDisplayLocked(
+	UINT8 lockScreenType,
+	UINT32 flags,
+	UINT32 dwRet,
+	UINT64 PartA_PrivTags
+	);
+
+WluiDisplayLocked_WaitForDismiss(
+	UINT32 dwRet,
+	UINT64 PartA_PrivTags
+	);
+
+WluiDisplayLocked(
+	UINT8 lockScreenType,
+	UINT32 unlockFlags,
+	UINT32 dwRet,
+	UINT64 PartA_PrivTags
+	);
+
+DelayLock(
+	UINT64 PartA_PrivTags,
+	UINT32 dwRet,
+	UINT32 dwRetLockScreenInit,
+	UINT32 dwRetLockScreenDismiss,
+	INT32 lockScreenDisabled,
+	BOOLEAN lockScreenOnApplicationDesktop,
+	BOOLEAN lockScreenInitialize,
+	INT32 forceLock,
+	BOOLEAN dismissed,
+	BOOLEAN timedOut
+	);
+
+AuthenticationActivityAccountType(
+	UINT64 PartA_PrivTags,
+	UINT32 SessionId,
+	BOOLEAN AccountType,
+	UNICODESTRING Domain
+	);
+
+InitiateLock(
+	UINT64 PartA_PrivTags,
+	UINT32 result,
+	BOOLEAN lockSucceeded,
+	UINT32 sessionId,
+	BOOLEAN isLockDisabled,
+	BOOLEAN disconnectInstead,
+	UINT32 lockReason,
+	UINT32 lockSubReason,
+	UINT64 idleDuration
+	);
+
+ShowUserLockScreenOnShellReady(
+	UINT64 PartA_PrivTags
+	);
+
+WluiGetShutdownResolverInfo(
+	INT32 isCancelled,
+	INT32 isResolverShown,
+	INT32 isUserClicked,
+	UINT32 resolverWaitTime,
+	UINT32 dwRet,
+	UINT64 PartA_PrivTags
+	);
+
+AuthenticateUser(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId
+	);
+
+ShellRestart(
+	UINT32 sessionId,
+	UINT32 dwRet,
+	UINT64 PartA_PrivTags
+	);
+
+OOBEHealthMetric(
+	UINT8 dataVersion,
+	UINT64 healthStateFlags,
+	UINT64 censusFlags,
+	UINT64 secondsSinceBoot,
+	UNICODESTRING imageIdentifier,
+	UNICODESTRING trackingInfo
+	);
+
+OOBEHealthNonCriticalMetric(
+	UINT8 dataVersion,
+	UINT64 healthStateFlags,
+	UINT64 censusFlags,
+	UINT64 secondsSinceBoot,
+	UNICODESTRING imageIdentifier,
+	UNICODESTRING trackingInfo
+	);
+
+UMgrSetShellInformation(
+	UINT64 PartA_PrivTags,
+	UINT32 sessionId,
+	UINT32 result,
+	UNICODESTRING processName
+	);
+
+NTLMIsDisabledReminder(
+	UINT64 PartA_PrivTags,
+	UINT32 hresult
+	);
+
+CloudPasswordExpiredReminder(
+	UINT64 PartA_PrivTags,
+	UINT32 result
+	);
+
+CredsAreStaleReminder(
+	UINT64 PartA_PrivTags,
+	UINT32 hresult
+	);
+
+AADChangePasswordInvoked(
+	UINT64 PartA_PrivTags,
+	WIN32ERROR retVal
+	);
+
+ShellStartupActivityStop(
+	UINT64 PartA_PrivTags,
+	UINT32 SessionId,
+	UINT32 Result
+	);
+
+ShellStartupActivityStart(
+	UINT64 PartA_PrivTags,
+	INT32 Status,
+	BOOLEAN LockOnLogon,
+	BOOLEAN ShellReadyAlreadyCompleteOrAvoided,
+	BOOLEAN AutoLockOnLogon,
+	UINT32 SessionId
+	);
+
+UMgrLaunchShellInfrastructureHost(
+	UINT64 PartA_PrivTags,
+	UINT32 SessionId,
+	UINT32 Result
+	);
+
+WinLogonActivityUMgrInformUserLogon(
+	UINT64 PartA_PrivTags,
+	UINT32 SessionId,
+	UINT32 Result
+	);
+
+WinLogonActivityNotifyLogonSubscribersStop(
+	UINT64 PartA_PrivTags,
+	INT32 IsNotifyLogonSuccess,
+	INT32 IsAdmin,
+	UNICODESTRING FailedSubscriber,
+	UINT32 SessionId,
+	UINT32 Result
+	);
+
+WinLogonActivityNotifyLogonSubscribersStart(
+	UINT64 PartA_PrivTags
+	);
+
+ArsoAuthResult(
+	UINT64 PartA_PrivTags,
+	UINT32 authResult,
+	UINT8 reason,
+	UINT32 sessionId
+	);
+
+AuthenticateUser(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT64 PartA_PrivTags,
+	INT32 status,
+	INT32 subStatus
+	);
+
+AuthenticateUser(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId,
+	UINT64 PartA_PrivTags,
+	INT32 status,
+	INT32 subStatus
+	);
+
+AuthenticationActivityStop(
+	UINT64 PartA_PrivTags,
+	UINT32 SessionId,
+	UINT32 Result
+	);
+
+AuthenticationActivityLogonResult(
+	UINT64 PartA_PrivTags,
+	UINT32 SessionId,
+	BOOLEAN LogonResult,
+	INT32 LogonSubResult
+	);
+
+ActivityStoppedAutomatically(
+	VOID
+	);
+
+ActivityError(
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+ActivityError(
+	UINT64 PartA_PrivTags,
+	SIGNED wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+AuthenticateUser(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+AuthenticateUser(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+AuthenticationActivityStart(
+	UINT64 PartA_PrivTags,
+	UINT32 SessionId,
+	UINT32 LogonType
+	);
+
+ShellStartupWaitStopReason(
+	UINT8 reason,
+	UINT32 dwRet,
+	UINT64 PartA_PrivTags
+	);
+
+ResilientSwitchDesktopWithFade(
+	UINT32 activeDesktopId,
+	UINT32 dwRet,
+	UINT64 PartA_PrivTags
+	);
+
+WaitForUserSwitchLogonInfoCollectedSyncEvent(
+	UINT32 dwWaitReturn,
+	UINT32 dwRet,
+	UINT64 PartA_PrivTags
+	);
+
+AutoLockComplete(
+	UINT64 PartA_PrivTags,
+	UINT8 reason,
+	UINT32 sessionId,
+	UINT32 otherSessionId
+	);
+
+AutoLockSet(
+	UINT64 PartA_PrivTags,
+	UINT8 reason,
+	UINT8 type,
+	UINT32 sessionId
+	);
+
+CreateUserSwitchLogonInfoCollectedSyncEventWasWaiting(
+	UINT64 PartA_PrivTags
+	);
+
+ActivityStoppedAutomatically(
+	VOID
+	);
+
+Goodbye.IsAllowed(
+	UINT64 PartA_PrivTags,
+	BOOLEAN enabled,
+	BOOLEAN lockWorkstationDisabled,
+	BOOLEAN policySet
+	);
+
+Goodbye.UserPresenceRuleStateChange(
+	UINT64 PartA_PrivTags,
+	UINT32 ruleCount,
+	BOOLEAN displayRequestActive,
+	BOOLEAN userStillActive,
+	BOOLEAN isLockInitiated,
+	BOOLEAN isLockIntant,
+	INT64 ruleId
+	);
+
+UPMon.StartUserPresencePolling(
+	UINT64 PartA_PrivTags,
+	BOOLEAN isAlreadyStarted,
+	UINT32 sessionId,
+	BOOLEAN isConsoleTerminal,
+	BOOL32 isUserPresenceMonitoringEnabled,
+	UINT64 initialDelay,
+	BOOL32 isDelayIncremented,
+	NTSTATUS errorStatus
+	);
+
+UPMon.StartUserPresencePollingActivity(
+	VOID
+	);
+
+UPMon.StopUserPresencePollingActivity(
+	UINT64 PartA_PrivTags,
+	HRESULT hResult
+	);
+
+UPMon.UserPresenceCallback(
+	UINT64 PartA_PrivTags,
+	UINT64 initialDelay,
+	UINT32 currentIteration,
+	UINT64 timeSinceLastInput,
+	BOOLEAN resetTimer,
+	BOOLEAN forceEvaluated,
+	UINT64 delayUntilNextPoll,
+	NTSTATUS errorStatus
+	);
+
+PwdExpiryWarningTriggered(
+	UINT64 PartA_PrivTags
+	);
+
+PwdExpiryWarningNotShown(
+	UINT64 PartA_PrivTags,
+	UNICODESTRING reason,
+	UINT32 result
+	);
+
+DwmpNotifyUserLogon(
+	INT32 hr,
+	UINT64 PartA_PrivTags
+	);
+
+DwmpTerminateSessionProcess(
+	INT32 hr,
+	UINT64 PartA_PrivTags
+	);
+
+DwmpCreateSessionProcess(
+	INT32 isRestart,
+	INT32 hr,
+	UINT64 PartA_PrivTags
+	);
+
+WluiDisplayWelcome_WaitForDismiss(
+	UINT32 dwRet,
+	UINT64 PartA_PrivTags
+	);
+
+WluiDisplayWelcome(
+	UINT8 lockScreenType,
+	UINT32 flags,
+	UINT32 dwRet,
+	UINT64 PartA_PrivTags
+	);
+
+ShouldShutdownAfterUpdate(
+	UINT64 PartA_PrivTags,
+	HEXINT32 hr,
+	BOOL32 shouldShutDown
+	);
+
+SystemBootStop(
+	UINT64 PartA_PrivTags,
+	UINT64 ticksSinceBoot
+	);
+
+UserSwitchRecievedLsmEvent(
+	UINT64 PartA_PrivTags
+	);
+
+UserSwitchReturnedToWelcomeLockscreen(
+	UINT64 PartA_PrivTags
+	);
+
+LogoffTrigger(
+	UINT64 PartA_PrivTags,
+	UINT32 logoffFlags,
+	UINT32 logoffTimeInMs,
+	BOOL32 bsdrShown,
+	UINT32 bsdrTimeInMs
+	);
+
+ExecuteSetup(
+	UINT32 dwRet,
+	UINT64 PartA_PrivTags
+	);
+
+RecordedLastLogOffEndTimePerfCounter(
+	UINT64 PartA_PrivTags
+	);
+
+ShouldLogoffOtherUsers(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId
+	);
+
+NotifyKernelOnUserPresenceOnDesktopForDMAProtection(
+	INT32 isUserPresentOnDesktop,
+	UINT64 PartA_PrivTags
+	);
+
+WinStationIsBoundToCacheTerminal(
+	UINT32 dwRet,
+	UINT64 PartA_PrivTags
+	);
+
+WinStationGetRestrictedLogonInfo(
+	UINT32 dwRet,
+	UINT64 PartA_PrivTags
+	);
+
+GetSwitchUserCredentials(
+	BOOLEAN getCred,
+	UINT32 dwRet,
+	UINT64 PartA_PrivTags
+	);
+
+ShouldLogoffOtherUsers(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT64 PartA_PrivTags,
+	BOOLEAN shouldLogoffOtherUsers
+	);
+
+ShouldLogoffOtherUsers(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId,
+	UINT64 PartA_PrivTags,
+	BOOLEAN shouldLogoffOtherUsers
+	);
+
+ShouldLogoffOtherUsers(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+ShouldLogoffOtherUsers(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+SetupCompleteLogon(
+	UINT64 PartA_PrivTags
+	);
+
+LogonUIPowerButton(
+	UINT64 PartA_PrivTags,
+	UINT8 source,
+	BOOLEAN configuredForArso,
+	UINT32 shutdownFlags
+	);
+
+PolicyEnabled(
+	UNICODESTRING policy
+	);
+
+Assert(
+	UINT32 assertVersion,
+	UINT32 rva,
+	UINT32 timestamp,
+	UINT32 imageSize,
+	ANSISTRING imageName,
+	UINT32 count,
+	UINT32 totalHits,
+	UINT32 ModuleCollection,
+	UINT32 GlobalCollection
+	);
+
+AssertWithArgs(
+	UINT32 assertVersion,
+	UINT32 rva,
+	UINT32 timestamp,
+	UINT32 imageSize,
+	ANSISTRING imageName,
+	UINT32 count,
+	UINT32 totalHits,
+	ANSISTRING originatingBinary,
+	UINT32 bucketArgument1,
+	UINT32 bucketArgument2,
+	UINT32 ModuleCollection,
+	UINT32 GlobalCollection
+	);
+

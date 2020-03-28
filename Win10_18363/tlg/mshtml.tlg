@@ -1,0 +1,680 @@
+ProviderNames:
+	Microsoft.Web.Platform
+	Microsoft.Windows.Shell.StreamLib
+	Microsoft.Windows.TextInput.SpellCheckerEngine
+	Microsoft.Windows.TextInput.LinguisticData
+
+
+
+**** Events *****
+IsEDPContentProcess(
+	INT32 isProcessTokenValid,
+	HRESULT hrGetEnterpriseId,
+	BOOL32 hasEnterpriseId
+	);
+
+ProcessDetached(
+	VOID
+	);
+
+SmartScreenDomEvaluationStart(
+	GUID evalId,
+	HRESULT result,
+	INT32 isSpartan,
+	INT32 isEdgeHtml,
+	GUID sessionID,
+	GUID userInputID
+	);
+
+SmartScreenUrlEvaluationStart(
+	GUID evalId,
+	HRESULT result,
+	INT32 isSpartan,
+	INT32 isEdgeHtml,
+	GUID sessionID,
+	GUID userInputID
+	);
+
+ShowSmartScreenWarningPage(
+	UNICODESTRING urlMarkedAsUnsafe,
+	BOOL32 pageShowed,
+	HRESULT result,
+	GUID sessionID,
+	GUID userInputID
+	);
+
+SmartScreenEvaluationResult(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	GUID evalId,
+	UINT32 evalType,
+	INT32 foundInDAT,
+	UINT32 threats,
+	BOOLEAN canceled,
+	HRESULT result
+	);
+
+DXDeviceReset(
+	HEXINT32 deviceResetReason
+	);
+
+UpdateTravelLog(
+	UINT32 virtualTabId,
+	UNICODESTRING url,
+	GUID sessionID,
+	GUID userInputID
+	);
+
+NavigateComplete(
+	BOOLEAN isPrerendered,
+	UNICODESTRING url,
+	INT32 isEdgeHtml,
+	UINT32 virtualTabId,
+	GUID sessionID,
+	GUID userInputID
+	);
+
+ReadyStateComplete(
+	BOOLEAN isPrerendered,
+	INT32 isEdgeHtml,
+	UINT32 virtualTabId,
+	GUID sessionID,
+	GUID userInputID
+	);
+
+ReadyStateInteractive(
+	BOOLEAN isPrerendered,
+	INT32 isEdgeHtml,
+	UINT32 virtualTabId,
+	GUID sessionID,
+	GUID userInputID
+	);
+
+PageLoadEnd(
+	BOOLEAN isPrerendered,
+	INT32 isEdgeHtml,
+	UINT32 virtualTabId,
+	GUID sessionID,
+	GUID userInputID
+	);
+
+ActivityStoppedAutomatically(
+	VOID
+	);
+
+OMSMarkupDataInternet(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	UINT32 docMode,
+	INT32 layoutMode,
+	UINT32 browserStateReason,
+	INT32 docModeReason,
+	BOOL32 emieNavigation,
+	UNICODESTRING url,
+	UNICODESTRING domain,
+	UINT32 secZone
+	);
+
+OMSMarkupDataIntranet(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	UINT32 docMode,
+	INT32 layoutMode,
+	UINT32 browserStateReason,
+	INT32 docModeReason,
+	BOOL32 emieNavigation,
+	UNICODESTRING url,
+	UNICODESTRING domain,
+	UINT32 secZone
+	);
+
+DocumentAndLayoutModeInfo(
+	UINT32 docMode,
+	INT32 layoutMode,
+	UINT32 browserStateReason,
+	INT32 docModeReason,
+	BOOL32 emieNavigation
+	);
+
+SecurityZone(
+	UINT32 secZone,
+	GUID sessionID,
+	GUID userInputID
+	);
+
+GainedFocus(
+	VOID
+	);
+
+LostFocus(
+	VOID
+	);
+
+SetUri(
+	UNICODESTRING url,
+	UNICODESTRING domain,
+	UNICODESTRING originalUrl,
+	BOOLEAN hadRedirect,
+	BOOLEAN IsHvsiEnabled,
+	GUID sessionID,
+	GUID userInputID
+	);
+
+MarkupActivityStarted(
+	VOID
+	);
+
+NoUriAvailable(
+	VOID
+	);
+
+NavigateError(
+	INT32 errorCode,
+	UINT32 isRefresh,
+	UNICODESTRING errorUrl,
+	UNICODESTRING redirectedUrl,
+	UINT32 virtualTabId,
+	GUID sessionID,
+	GUID userInputID
+	);
+
+MarkupDestroyed(
+	VOID
+	);
+
+NavigateToNeedEdgeErrorPage(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	UNICODESTRING errorUrl,
+	HRESULT navigateToErrorPageResult
+	);
+
+RedirectHVSI(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	HRESULT HResult
+	);
+
+DialogLoopProtection(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	UNICODESTRING currentUrl,
+	UNICODESTRING previousUrl,
+	UINT32 dialogType
+	);
+
+window.showModalDialog(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	UNICODESTRING Domain,
+	BOOLEAN isEdgeHtml
+	);
+
+window.showModelessDialog(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	UNICODESTRING Domain,
+	BOOLEAN isEdgeHtml
+	);
+
+LocalLinkNavigation(
+	UNICODESTRING urlAction,
+	UNICODESTRING urlContext,
+	GUID sessionID,
+	GUID userInputID
+	);
+
+ClickedLinkOnSmartScreenWarningPage(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	ANSISTRING target,
+	UNICODESTRING urlOverriddenFromWarning
+	);
+
+BeforeNavigate(
+	BOOLEAN isPrerendered,
+	UNICODESTRING sourceUrl,
+	UNICODESTRING destinationUrl,
+	INT32 isEdgeHtml,
+	UINT32 virtualTabId,
+	GUID sessionID,
+	GUID userInputID
+	);
+
+VisibilityStateUpdated(
+	UNICODESTRING state,
+	GUID sessionID,
+	GUID userInputID
+	);
+
+DragDropOnDrop(
+	HEXINT32 dropEffect,
+	BOOLEAN isHTMLSource
+	);
+
+VBScriptExecuted(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	UINT64 PartA_PrivTags,
+	UNICODESTRING url,
+	UINT32 secZone,
+	GUID CLSID,
+	UINT32 UseCount
+	);
+
+JScriptDLLExecuted(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	UNICODESTRING url,
+	UINT32 secZone,
+	GUID CLSID,
+	UINT32 UseCount
+	);
+
+VBScriptAllowedByFCK(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	UINT64 PartA_PrivTags,
+	UNICODESTRING url
+	);
+
+VBScriptDisabled(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	UNICODESTRING domain
+	);
+
+NavigationMetaRefresh(
+	INT32 isRedirect,
+	UNICODESTRING refreshUrl,
+	UINT32 virtualTabId,
+	GUID sessionID,
+	GUID userInputID
+	);
+
+AppCacheManifestResourceQuotaCheck(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	UINT32 appCacheResourceListAllowedLength,
+	UINT32 appCacheResourceListActualLength,
+	UNICODESTRING domainName
+	);
+
+ClickedLinkOnSmartScreenWarningPage(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	ANSISTRING target
+	);
+
+LinkNavigationStart(
+	BOOLEAN useNewTab,
+	INT32 useNewWindow,
+	INT32 isSpartan,
+	UINT64 fhlFlags,
+	INT32 isEdgeHtml,
+	GUID sessionID,
+	GUID userInputID
+	);
+
+ClickedLinkOnSmartScreenWarningPage(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid
+	);
+
+LinkNavigationStart(
+	INT32 useNewTab,
+	INT32 useNewWindow,
+	INT32 isSpartan,
+	UINT64 fhlFlags,
+	INT32 isEdgeHtml,
+	GUID sessionID,
+	GUID userInputID
+	);
+
+CStorageDeleteEdpStorage(
+	HRESULT hresult
+	);
+
+CStorageInitPersistentStorage(
+	HRESULT hresult,
+	HRESULT hresultEnsureCacheContainer,
+	INT64 durationMicroseconds
+	);
+
+InetProtBindMarkupDownload(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	UNICODESTRING Url,
+	BOOLEAN IsEdgeHtml
+	);
+
+DXDeviceCreate(
+	HEXINT32 deviceCreateTime,
+	HEXINT32 createDecision,
+	HEXINT32 createForced
+	);
+
+DXAdapterDesc(
+	HEXINT32 vendorId,
+	HEXINT32 deviceId,
+	HEXINT32 subSysId,
+	HEXINT32 revision,
+	HEXINT32 dedicatedVideoMemory,
+	HEXINT32 dedicatedSystemMemory,
+	HEXINT32 sharedSystemMemory,
+	HEXINT32 graphicsDriverMajorVersion,
+	HEXINT32 graphicsDriverMinorVersion
+	);
+
+DXNoAdapterDesc(
+	VOID
+	);
+
+FallbackError(
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+FallbackError(
+	UINT64 PartA_PrivTags,
+	SIGNED wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+PauseTaskEnabled(
+	UINT32 callbacksPerSecond,
+	UINT32 callbackRateThreshold,
+	BOOL32 PauseTaskFeatureStatus
+	);
+
+PauseTaskDisabled(
+	UINT64 goodBuckets,
+	UINT64 restoreThreshold
+	);
+
+ZoomViaAccelerator(
+	GUID sessionID,
+	GUID userInputID
+	);
+
+ResetContentZoomViaAccelerator(
+	GUID sessionID,
+	GUID userInputID
+	);
+
+SetZoomFactor(
+	UINT32 zoomFactor,
+	UINT32 lastZoomFactor,
+	GUID sessionID,
+	GUID userInputID
+	);
+
+ZoomViaMouseWheel(
+	INT32 zoomScroll,
+	GUID sessionID,
+	GUID userInputID
+	);
+
+PageAvailable(
+	UINT32 hostPaintUpdateContext,
+	INT32 isEdgeHtml,
+	UINT32 virtualTabId,
+	GUID sessionID,
+	GUID userInputID
+	);
+
+PrintInfoDisclosureFCKEnabled(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid
+	);
+
+ActiveXControlObjectActivated(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	ANSISTRING type,
+	GUID clsid
+	);
+
+ActivityStoppedAutomatically(
+	VOID
+	);
+
+MediaError(
+	UNICODESTRING currentMediaSource,
+	UNICODESTRING mimeType,
+	UINT16 code,
+	HEXINT32 extendedCode
+	);
+
+UnknownMediaError(
+	HEXINT32 hresult
+	);
+
+MediaElementPlaying(
+	GUID sessionID,
+	GUID userInputID
+	);
+
+MediaElementPause(
+	GUID sessionID,
+	GUID userInputID
+	);
+
+MediaElementEnded(
+	GUID sessionID,
+	GUID userInputID
+	);
+
+MediaElementInitialized(
+	UNICODESTRING tagName
+	);
+
+MediaElementDestroyed(
+	VOID
+	);
+
+FormSubmitNavigationStart(
+	INT32 isSpartan,
+	INT32 isEdgeHtml,
+	GUID sessionID,
+	GUID userInputID
+	);
+
+TravelLogTravelToEntry(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	UNICODESTRING tlogUrl,
+	BOOLEAN requiresVTabSwitch,
+	BOOLEAN isBFCacheNavigation,
+	INT32 journeyOffsetNew,
+	BOOLEAN isLocalAnchorNavigation,
+	INT32 isTravelLogPrerendered,
+	INT32 isFlipAhead
+	);
+
+ProcessAttachedWithoutMetadata(
+	HEXINT32 getProcessTimesError,
+	BOOLEAN isEdgeHosted,
+	BOOLEAN UTCReplace_AppSessionGuid
+	);
+
+ProcessAttached(
+	UINT64 processCreateTime,
+	UINT32 pid,
+	BOOLEAN isEdgeHosted,
+	BOOLEAN UTCReplace_AppSessionGuid
+	);
+
+EDP_PastePromptGrantedAccess(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	BOOLEAN AccessGranted
+	);
+
+InitializeProtectionFeature(
+	UINT32 protectionMode
+	);
+
+WdagUnclassifiedProtocol(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	UNICODESTRING protocol,
+	UINT32 usesNetwork,
+	INT32 hr
+	);
+
+HVSIUntrustedUnexpected(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	ANSISTRING Function,
+	INT32 HVSIUntrustedReason
+	);
+
+SpellerMultilingual(
+	UNICODESTRING CorrectLang,
+	UINT32 CorrectLangOrder,
+	UNICODESTRING CurrentLang
+	);
+
+SpellerSettings(
+	INT32 Autocorrection,
+	INT32 SpellChecking,
+	UNICODESTRING KeyboardsInstalled
+	);
+
+SpellerAutocorrectionSupressed(
+	GUID editId,
+	UNICODESTRING Word,
+	UNICODESTRING Autocorrection,
+	UNICODESTRING CurrentLang,
+	UNICODESTRING SupressLang,
+	ANSISTRING Source
+	);
+
+SpellerRedSquiggle(
+	GUID editId,
+	UNICODESTRING Word,
+	UNICODESTRING CurrentLang,
+	UNICODESTRING MultiLangList,
+	UNICODESTRING Keyboard,
+	UNICODESTRING PreviousWord_First,
+	UNICODESTRING PreviousWord_Second
+	);
+
+SpellerAutocorrection(
+	GUID editId,
+	UNICODESTRING Word,
+	UNICODESTRING Autocorrection,
+	UNICODESTRING CurrentLang,
+	UNICODESTRING MultiLangList,
+	UNICODESTRING PreviousWord_First,
+	UNICODESTRING PreviousWord_Second
+	);
+
+SpellerUndoAutocorrection(
+	GUID editId,
+	UNICODESTRING UndoWord,
+	UNICODESTRING Autocorrection,
+	UNICODESTRING CurrentLang,
+	UNICODESTRING MultiLangList
+	);
+
+SpellerSessionStatistics(
+	INT32 RemainingCount,
+	INT32 TotalInSession,
+	INT32 EditedCount,
+	INT32 AddCount,
+	INT32 AlternatesCount,
+	INT32 IgnoreCount,
+	INT32 AutocorrectionCount,
+	INT32 AutocorrectionUndoCount,
+	INT32 ContextDismissCount
+	);
+
+SpellerReplaceWithAlternate(
+	GUID editId,
+	UNICODESTRING Original,
+	UNICODESTRING New,
+	UNICODESTRING Lang
+	);
+
+SpellerContextMenuDismissed(
+	GUID editId,
+	UNICODESTRING Original,
+	UNICODESTRING Alternates,
+	UNICODESTRING Lang,
+	UNICODESTRING Source
+	);
+
+SpellerIgnoreWord(
+	GUID editId,
+	UNICODESTRING IgnoreWord,
+	UNICODESTRING Lang
+	);
+
+SpellerAddedWord(
+	GUID editId,
+	UNICODESTRING AddedWord,
+	UNICODESTRING Lang
+	);
+
+ClearActivityHistoryByUrl(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	UNICODESTRING AppName
+	);
+

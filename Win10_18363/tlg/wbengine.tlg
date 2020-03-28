@@ -1,0 +1,25 @@
+ProviderNames:
+	Microsoft.Windows.SystemImageBackup.Engine
+
+
+
+**** Events *****
+SystemImageBackupComplete(
+	HEXINT32 OverallHR,
+	HEXINT32 DetailedHR,
+	INT32 ScheduledTargetType,
+	INT32 TargetType,
+	UINT32 TotalBackupTimeSeconds,
+	UINT32 TotalBackupSizeMB,
+	INT32 ClientLaunchType,
+	UINT32 NoOfAppsInBackup,
+	UINT32 NoOfComponentsInBackup,
+	UINT32 NoOfVolumesPartiallyBackedUp,
+	UINT32 NoOfVolumesFullyBackedUp,
+	UINT32 NoOfVolumesWithBadClusters
+	);
+
+SystemImageBackupTwoTBWarning(
+	VOID
+	);
+

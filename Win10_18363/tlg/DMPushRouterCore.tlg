@@ -1,0 +1,207 @@
+ProviderNames:
+	Microsoft.Windows.DeviceManagement.PushRouterAuth
+	Microsoft.Windows.DeviceManagement.PushRouterCore
+	Microsoft.Windows.EMPS.Enrollment
+	Microsoft.Windows.EnterpriseManagement.Enrollment
+	Microsoft.Windows.DeviceManagement.ConfigManager2LockService
+
+
+
+**** Events *****
+PushRouterSubmitPushLocalSucceeded(
+	UNICODESTRING Sender,
+	UNICODESTRING ContentType,
+	UNICODESTRING AppId
+	);
+
+PushRouterSubmitPushLocalFailed(
+	HEXINT32 HResult,
+	UNICODESTRING Sender,
+	UNICODESTRING ContentType,
+	UNICODESTRING AppId
+	);
+
+PushRouterOpenSucceeded(
+	HEXINT64 RpcHandle,
+	HEXINT32 HResult,
+	UNICODESTRING ContentType,
+	UNICODESTRING AppId
+	);
+
+PushRouterOpenFailed(
+	HEXINT64 RpcHandle,
+	HEXINT32 HResult,
+	UNICODESTRING ContentType,
+	UNICODESTRING AppId
+	);
+
+ActivityStoppedAutomatically(
+	VOID
+	);
+
+PushRouterRoutingEnd(
+	VOID
+	);
+
+PushRouterRoutingStart(
+	VOID
+	);
+
+PushRouterRoutingSucceeded(
+	UNICODESTRING ContentType,
+	UNICODESTRING AppId,
+	UNICODESTRING Sender,
+	UNICODESTRING ClientId,
+	UNICODESTRING QueueId
+	);
+
+PushRouterRoutingFailed(
+	HEXINT32 HResult,
+	UNICODESTRING ContentType,
+	UNICODESTRING AppId,
+	UNICODESTRING Sender,
+	UNICODESTRING ClientId,
+	UNICODESTRING QueueId
+	);
+
+ProcessPersistedMessagesStart(
+	VOID
+	);
+
+PushClientGetMessageSucceeded(
+	HEXINT64 ClientHandle,
+	INT32 MsgOrigin,
+	UNICODESTRING ContentType,
+	UNICODESTRING AppId,
+	UNICODESTRING Sender,
+	UNICODESTRING ClientId,
+	UNICODESTRING SecurityAccount
+	);
+
+PushClientGetMessageFailed(
+	HEXINT32 HResult,
+	HEXINT64 ClientHandle,
+	INT32 MsgOrigin,
+	UNICODESTRING ContentType,
+	UNICODESTRING AppId,
+	UNICODESTRING Sender,
+	UNICODESTRING ClientId
+	);
+
+PushClientCloseSucceeded(
+	HEXINT64 ClientHandle,
+	UNICODESTRING ClientId
+	);
+
+PushClientCloseFailed(
+	HEXINT32 HResult,
+	HEXINT64 ClientHandle,
+	UNICODESTRING ClientId
+	);
+
+PushRouterAuthenticationAuthProviderResult(
+	HEXINT32 HResult,
+	UINT32 Roles,
+	UNICODESTRING Provider,
+	UNICODESTRING Account,
+	UNICODESTRING MsgHeaders,
+	UNICODESTRING SenderAddress
+	);
+
+PushRouterAuthenticationCreateAuthProviderFailed(
+	HEXINT32 HResult,
+	UNICODESTRING CLSID
+	);
+
+SVC(
+	ANSISTRING Op,
+	HEXINT32 Hresult
+	);
+
+API(
+	ANSISTRING Op,
+	UNICODESTRING Path,
+	HEXINT32 Hresult
+	);
+
+API(
+	ANSISTRING Op
+	);
+
+API(
+	ANSISTRING Op,
+	HEXINT32 Hresult
+	);
+
+PushRouterRoutingThreadCloseFailed(
+	UINT32 ExitResult,
+	ANSISTRING __TlgCV__
+	);
+
+PushRouterRouteNewMessagesStart(
+	VOID
+	);
+
+PushRouterRouteNewMessagesSucceeded(
+	VOID
+	);
+
+PushRouterRouteNewMessagesEnd(
+	VOID
+	);
+
+PushRouterRouteNewMessagesFailed(
+	HEXINT32 HResult,
+	ANSISTRING __TlgCV__
+	);
+
+DMPollAuxiliaryScheduleSetupFail(
+	UINT32 Result,
+	ANSISTRING __TlgCV__
+	);
+
+EnrollManualCertRenewScheduleFailed(
+	UINT32 Result,
+	ANSISTRING __TlgCV__
+	);
+
+EnrollDMPollTaskSchedulerFail(
+	UINT32 Result,
+	ANSISTRING Function,
+	ANSISTRING __TlgCV__
+	);
+
+DMPollScheduleSetupFail(
+	UINT32 Result,
+	ANSISTRING __TlgCV__
+	);
+
+OsEditionUpgradeScheduleSetupFail(
+	UINT32 Result,
+	ANSISTRING __TlgCV__
+	);
+
+Win10SModeScheduleSetupFail(
+	UINT32 Result,
+	ANSISTRING __TlgCV__
+	);
+
+DMAllUsersPollOnFirstLoginSetupSuccess(
+	ANSISTRING __TlgCV__
+	);
+
+DMPollLoginSetupFail(
+	UINT32 Result,
+	ANSISTRING __TlgCV__
+	);
+
+DMAllUsersPollOnFirstLoginSetupFail(
+	UINT32 Result,
+	ANSISTRING __TlgCV__
+	);
+
+DMPollSecondAuxiliaryScheduleSetupFail(
+	UINT32 Result,
+	ANSISTRING __TlgCV__
+	);
+

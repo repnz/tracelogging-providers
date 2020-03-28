@@ -1,0 +1,305 @@
+ProviderNames:
+	Microsoft.OSG.Web.WinInet
+	Microsoft.Windows.TlgAggregateInternal
+	TelemetryAssert
+	TelemetryAssertDiagTrack
+
+
+
+**** Events *****
+TlsFallback(
+	UNICODESTRING Requested URL,
+	UINT32 Tls Protocols Failed,
+	BOOL32 Tls Protocol Alpn Failed,
+	UINT32 Tls Fallback Protocols Succeeded
+	);
+
+SameSiteSetCookie(
+	NULL SameSite_SetCookie_Cookie_Count,
+	BOOL32 SameSite_SetCookie_Strict,
+	UNICODESTRING SameSite_SetCookie_Minimized_RDomain,
+	BOOL32 SameSite_SetCookie_From_Api
+	);
+
+EdgeUnknownSameSiteLevel(
+	NULL Edge_Unknown_SameSite_Level_Count,
+	UNICODESTRING Edge_Unknown_SameSite_Level_Module_Name
+	);
+
+SameSiteBlockedCookies(
+	NULL SameSite_Blocked_Cookie_Count,
+	UNICODESTRING SameSite_Blocked_Minimized_RDomain,
+	UINT32 SameSite_Blocked_Reason
+	);
+
+HttpPreConnect unnecessary(
+	NULL PreConnect_Request_Count,
+	UINT32 PreConnectType
+	);
+
+HttpPreConnect succeeded(
+	NULL PreConnect_Request_Count,
+	NULL PreConnect_Connection_Required,
+	NULL PreConnect_Connection_Created,
+	NULL PreConnect_Connection_Required_Min,
+	NULL PreConnect_Connection_Required_Max,
+	NULL PreConnect_Connection_Created_Min,
+	NULL PreConnect_Connection_Created_Max,
+	UINT32 PreConnectType
+	);
+
+Http2CoalescedRequestConnectionTime(
+	NULL CoalescedRequest_ConnectionTimeCount,
+	NULL CoalescedRequest_ConnectionTime,
+	NULL CoalescedRequest_ConnectionTimeMin,
+	NULL CoalescedRequest_ConnectionTimeMax,
+	BOOL32 CertMulitipleAltName
+	);
+
+Http2CoalescedRequestNewSocketConnectionTime(
+	NULL CoalescedRequest_NewSocket_ConnectionTimeCount,
+	NULL CoalescedRequest_NewSocket_ConnectionTime,
+	NULL CoalescedRequest_NewSocket_ConnectionTimeMin,
+	NULL CoalescedRequest_NewSocket_ConnectionTimeMax,
+	BOOL32 CertMulitipleAltName
+	);
+
+Http2NotCoalescedRequestConnectionTime(
+	NULL NotCoalescedRequest_ConnectionTimeCount,
+	NULL NotCoalescedRequest_ConnectionTime,
+	NULL NotCoalescedRequest_ConnectionTimeMin,
+	NULL NotCoalescedRequest_ConnectionTimeMax,
+	BOOL32 CertMulitipleAltName
+	);
+
+Http2NotCoalescedRequestNewSocketConnectionTime(
+	NULL NotCoalescedRequest_NewSocket_ConnectionTimeCount,
+	NULL NotCoalescedRequest_NewSocket_ConnectionTime,
+	NULL NotCoalescedRequest_NewSocket_ConnectionTimeMin,
+	NULL NotCoalescedRequest_NewSocket_ConnectionTimeMax,
+	BOOL32 CertMulitipleAltName
+	);
+
+Http2ConnectionSharingResend(
+	NULL SharedConnectionResend,
+	NULL ResendOn400,
+	NULL ResendOn403,
+	NULL ResendOn404,
+	NULL ResendOn421,
+	NULL ResendOn502,
+	NULL ResendOn503
+	);
+
+Http2ConnectionSharingResend(
+	BOOL32 ConnectionCoalescingDisabledByRegKey,
+	BOOL32 ConnectionCoalescingDisabledByVelocity,
+	BOOL32 ConnectionCoalescingDisabledByEDP,
+	BOOL32 ConnectionCoalescingDisabledBySpartanFlags
+	);
+
+PLTandLinkedWininetTelemetry(
+	GUID ActivityID,
+	UINT64 PageLoadTime,
+	BOOL32 IsPageLoadComplete,
+	BOOL32 IsPostingFileIOtoBackgroundThreadsEnabled,
+	BOOL32 IsNetworkCacheEnabled,
+	BOOL32 IsConnectionCoalescingEnabledByCV,
+	BOOL32 IsConnectioCoalescingDisabledByRegKey,
+	BOOL32 IsConnectionCoalescingDisabledByEDP,
+	BOOL32 IsConnectionCoalescingDisabledBySpartanFlags,
+	BOOL32 IsPreConnectEnabled,
+	BOOL32 IsPreConnectInitiated,
+	UINT64 FileIOTimeTicksOnUIThreadForInternet,
+	UINT64 FileIOTimeTicksOnUIThreadForIntranet,
+	UINT64 FileIOTimeTicksMivedOffUIThreadForInternet,
+	UINT64 FileIOTimeTicksMivedOffUIThreadForIntranet,
+	UINT64 ConnectionCoalescingTimeTicksForInternet,
+	UINT32 ConnectionCoalescingNumInstancesForInternet,
+	UINT32 SameSiteBlockedCookieReasonNumInstances,
+	UINT32 SameSiteSetCookieTypeNumInstances,
+	UINT64 PerformanceCounterFrequency,
+	UINT32 RequestCount
+	);
+
+CacheFileIO(
+	NULL EventCount,
+	NULL Duration,
+	NULL Max,
+	UINT32 FileOperation,
+	UINT32 ClientType,
+	UINT32 ThreadInfoType,
+	BOOL32 IsSync
+	);
+
+CacheCleanupStats(
+	UINT32 ContainerType,
+	UINT64 EffectiveContainerLimitBytes,
+	UINT64 EffectiveContainerTargetBytes,
+	UINT32 CleanupReason,
+	UINT64 CleanupDuration,
+	UINT64 TotalSizeBeforeCleanup,
+	UINT64 InitSizesBytes,
+	UINT64 InDemandItemsSizesBytes,
+	UINT64 TotalItemCountBeforeCleanup,
+	UINT64 InitCounts,
+	UINT64 InDemandItemsCounts,
+	UINT64 SizeOfScavengedItemsBytes,
+	UINT64 ScavengedSizesBytes,
+	UINT64 ScavengedItemCount,
+	UINT64 ScavengedCounts,
+	UINT32 SizeBasedUsedCountHistogram,
+	UINT32 SizeBasedTotalCountHistogram,
+	UINT64 ProtectedItemSizeBytes,
+	UINT64 ProtectedItemCount,
+	UINT64 ScavengedUnexpiredSizeBytes
+	);
+
+WininetCacheScavengeAttempt(
+	UNICODESTRING Attempted URL,
+	UINT64 Last modified time,
+	ANSISTRING ETag,
+	UINT64 Expiration time,
+	UINT64 Last accessed time,
+	UINT64 Creation time,
+	UINT32 Number of accesses,
+	UINT32 Cache entry type,
+	UINT64 Size on disk,
+	ANSISTRING Content type,
+	ANSISTRING Content range,
+	UNICODESTRING Extension,
+	UINT64 Score,
+	BOOL32 No-store,
+	BOOL32 No-cache,
+	BOOL32 Is header data valid,
+	UINT32 Container type,
+	UINT32 Outcome
+	);
+
+CacheAccessStatsAggregate(
+	NULL Count,
+	UINT32 Container,
+	UINT32 Outcome
+	);
+
+WininetCacheHit(
+	ANSISTRING Requested URL,
+	UNICODESTRING Navigation context,
+	ANSISTRING Verb,
+	UINT32 Cache entry type,
+	ANSISTRING ETag,
+	BOOL32 No-store,
+	BOOL32 No-cache,
+	ANSISTRING Vary,
+	ANSISTRING Content type,
+	ANSISTRING Content accept encoding,
+	ANSISTRING Content encoding,
+	ANSISTRING Content range,
+	UINT64 Last modified time,
+	UINT64 ExpirationTime,
+	UINT32 Number of accesses,
+	UINT64 Size on disk,
+	INT32 Priority,
+	UINT32 Cache flags,
+	UINT32 Status code,
+	UINT32 Cache usage,
+	UINT32 Cache container client type
+	);
+
+WininetCacheMiss(
+	ANSISTRING Requested URL,
+	UNICODESTRING Navigation context,
+	ANSISTRING Verb,
+	UINT32 Cache entry type,
+	ANSISTRING ETag,
+	BOOL32 No-store,
+	BOOL32 No-cache,
+	ANSISTRING Vary,
+	ANSISTRING Content type,
+	ANSISTRING Content accept encoding,
+	ANSISTRING Content encoding,
+	ANSISTRING Range,
+	INT32 Priority,
+	UINT32 Cache flags,
+	UINT32 Status code,
+	UINT32 Cache usage,
+	UINT32 Cache container client type
+	);
+
+CliAuthAcquireCertContexts(
+	VOID
+	);
+
+InternetErrDlg(
+	UNICODESTRING moduleName,
+	UINT32 isCallerAppContainer,
+	UINT32 windowHandleState,
+	UINT32 originalError,
+	UINT32 error,
+	UINT32 flags,
+	UINT32 returnedError
+	);
+
+Http2RstStreamReceived(
+	ANSISTRING hostName,
+	UINT32 resetCode
+	);
+
+Http2ParseFailed(
+	HRESULT hresult,
+	ANSISTRING hostName,
+	BINARY frameData
+	);
+
+TLSHandshakeFailed(
+	GUID activityID,
+	ANSISTRING hostName,
+	HEXINT32 error
+	);
+
+TLSHandshakeSucceeded(
+	GUID activityID,
+	ANSISTRING hostName,
+	HEXINT32 protocol,
+	HEXINT32 cipher,
+	BOOL32 isHttp2
+	);
+
+TlgAggregateSummary(
+	GUID Provider,
+	UINT64 NumFlushes,
+	UINT64 MaxEntriesStored,
+	UINT64 TotalEntriesFlushed,
+	UINT32 MaxEntriesFlushed,
+	UINT32 MinEntriesFlushed,
+	UINT32 NumBucketLimitReached,
+	UINT32 NumAllocationFailures,
+	UINT32 NumLargeEventFailures
+	);
+
+Assert(
+	UINT32 assertVersion,
+	UINT32 rva,
+	UINT32 timestamp,
+	UINT32 imageSize,
+	ANSISTRING imageName,
+	UINT32 count,
+	UINT32 totalHits,
+	UINT32 ModuleCollection,
+	UINT32 GlobalCollection
+	);
+
+AssertWithArgs(
+	UINT32 assertVersion,
+	UINT32 rva,
+	UINT32 timestamp,
+	UINT32 imageSize,
+	ANSISTRING imageName,
+	UINT32 count,
+	UINT32 totalHits,
+	ANSISTRING originatingBinary,
+	UINT32 bucketArgument1,
+	UINT32 bucketArgument2,
+	UINT32 ModuleCollection,
+	UINT32 GlobalCollection
+	);
+

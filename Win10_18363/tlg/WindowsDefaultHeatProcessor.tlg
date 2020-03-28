@@ -1,0 +1,285 @@
+ProviderNames:
+	Microsoft.Windows.Wil.FeatureLogging
+	Microsoft.Windows.Heat.HeatCore.Test
+	Microsoft.Windows.Heat.HeatCore
+	Microsoft.Windows.CapImg
+
+
+
+**** Events *****
+FallbackError(
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+FeatureUsage(
+	UINT32 featureId,
+	INT32 featureVersion,
+	INT32 featureBaseVersion,
+	INT16 featureStage,
+	BOOLEAN enabled,
+	UINT32 kind,
+	UINT64 addend
+	);
+
+FeatureError(
+	UINT32 featureId,
+	INT32 featureVersion,
+	INT32 featureBaseVersion,
+	INT16 featureStage,
+	HRESULT hr,
+	ANSISTRING file,
+	UINT16 lineNumber,
+	ANSISTRING module,
+	ANSISTRING process,
+	ANSISTRING originFile,
+	UINT16 originLineNumber,
+	ANSISTRING originModule,
+	ANSISTRING originName,
+	ANSISTRING message,
+	ANSISTRING callerModule,
+	UINT32 callerReturnAddressOffset,
+	ANSISTRING originCallerModule,
+	UINT32 originCallerReturnAddressOffset
+	);
+
+FallbackError(
+	UINT64 PartA_PrivTags,
+	SIGNED wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+FeatureVariantUsage(
+	UINT32 featureId,
+	INT32 featureVersion,
+	INT32 featureBaseVersion,
+	INT16 featureStage,
+	BOOLEAN enabled,
+	UINT32 variantKind,
+	UINT8 variant,
+	UINT64 addend
+	);
+
+EnabledFeatureUsage(
+	UINT32 featureId,
+	INT32 featureVersion,
+	INT32 featureBaseVersion,
+	INT16 featureStage,
+	BOOLEAN enabled,
+	UINT32 kind,
+	UINT64 addend
+	);
+
+DebugVerbose(
+	ANSISTRING LineInfo,
+	UNICODESTRING Message
+	);
+
+DebugInfo(
+	ANSISTRING LineInfo,
+	UNICODESTRING Message
+	);
+
+DebugWarning(
+	ANSISTRING LineInfo,
+	UNICODESTRING Message
+	);
+
+DebugError(
+	ANSISTRING LineInfo,
+	UNICODESTRING Message
+	);
+
+DebugCritical(
+	ANSISTRING LineInfo,
+	UNICODESTRING Message
+	);
+
+CheckResultError(
+	ANSISTRING FileName,
+	UINT32 LineNumber,
+	ANSISTRING FunctionName,
+	UNICODESTRING Message,
+	HRESULT Result
+	);
+
+ProcessCallback(
+	NTSTATUS Status
+	);
+
+ProcessCallback(
+	VOID
+	);
+
+ProcessorEvent(
+	UNICODESTRING EventName,
+	NTSTATUS status
+	);
+
+ProcessorEvent(
+	UNICODESTRING L"CallbackRegistered",
+	NTSTATUS Status,
+	UINT32 RegisteredCallbacks
+	);
+
+ProcessFrame(
+	NTSTATUS status,
+	UINT16 BlobCount
+	);
+
+ProcessFrame(
+	VOID
+	);
+
+ProcessorEvent(
+	UNICODESTRING EventName
+	);
+
+ProcessorEvent(
+	UNICODESTRING EventName,
+	NTSTATUS Status,
+	SOCKETADDRESS RawDeviceProperties,
+	UINT32 SensorRowCount,
+	UINT32 SensorColumnCount,
+	INT32 HimetricWidth,
+	INT32 HimetricHeight,
+	UINT8 ChargeDirection,
+	FLOAT SensorToHimetricTransform,
+	FLOAT DCBaseline,
+	FLOAT ACBaseline,
+	FLOAT TouchSignal,
+	FLOAT HoverSignal,
+	SOCKETADDRESS NormalizedDeviceProperties,
+	UINT32 SensorRowCount,
+	UINT32 SensorColumnCount,
+	INT32 HimetricWidth,
+	INT32 HimetricHeight,
+	UINT8 ChargeDirection,
+	FLOAT SensorToHimetricTransform,
+	FLOAT DCBaseline,
+	FLOAT ACBaseline,
+	FLOAT TouchSignal,
+	FLOAT HoverSignal
+	);
+
+ProcessorDataUpdate(
+	NTSTATUS Status
+	);
+
+ProcessorDataUpdate(
+	VOID
+	);
+
+ImageNormalizer(
+	UNICODESTRING ComponentName,
+	BOOL32 EnableSensorPitchNormalization,
+	BOOL32 EnableAdaptiveBaseline
+	);
+
+ImageNormalizer(
+	UNICODESTRING ComponentName,
+	NTSTATUS Status
+	);
+
+ImageNormalizer(
+	UNICODESTRING ComponentName
+	);
+
+ComponentExecution(
+	UNICODESTRING ComponentName,
+	NTSTATUS Status
+	);
+
+BlobDetector(
+	UNICODESTRING ComponentName
+	);
+
+BlobDetector(
+	UNICODESTRING ComponentName,
+	NTSTATUS Status
+	);
+
+RegionalUpsampling(
+	NTSTATUS Status
+	);
+
+RegionalUpsampling(
+	VOID
+	);
+
+BlobDetector(
+	UNICODESTRING ComponentName
+	);
+
+ContactTracker(
+	UNICODESTRING ComponentName
+	);
+
+ContactTracker(
+	UNICODESTRING ComponentName,
+	NTSTATUS Status
+	);
+
+ContactTracker(
+	UNICODESTRING ComponentName
+	);
+
+ContactClassifier(
+	UNICODESTRING ComponentName
+	);
+
+ContactClassifier(
+	UNICODESTRING ComponentName,
+	NTSTATUS Status
+	);
+
+ContactClassifier(
+	UNICODESTRING ComponentName
+	);
+
+PalmClassifierLoaded(
+	UNICODESTRING ComponentName,
+	PID PalmClassifier,
+	INT32 NumFeatures,
+	INT32 NumTrees,
+	FLOAT CalibrationBias,
+	FLOAT CalibrationWeight,
+	UNICODESTRING Features
+	);
+
+UnexpectedError(
+	UNICODESTRING L"TouchContact",
+	UNICODESTRING L"_UpdateGeometryAndFilter",
+	UNICODESTRING L"Attempted to generate contact geometry,                     with invalid blob moments. (m00 == 0)"
+	);
+

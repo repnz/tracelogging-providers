@@ -1,0 +1,322 @@
+ProviderNames:
+	Microsoft.Windows.Mirage.MixedRealityCapture
+
+
+
+**** Events *****
+ActivityStoppedAutomatically(
+	VOID
+	);
+
+ActivityError(
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+ActivityError(
+	UINT64 PartA_PrivTags,
+	SIGNED wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+MacroError(
+	HRESULT HRESULT,
+	ANSISTRING File,
+	UINT32 LineNumber,
+	ANSISTRING Code
+	);
+
+FallbackError(
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+FallbackError(
+	UINT64 PartA_PrivTags,
+	SIGNED wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+MRCVideoRecordingActivity(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+MRCVideoRecordingActivity(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+TraceETWError(
+	ANSISTRING Function,
+	INT32 Line,
+	HRESULT HResult
+	);
+
+TraceETWMessage(
+	ANSISTRING Function,
+	UNICODESTRING Message
+	);
+
+MRCVideoTransform_ProcessOutput(
+	HRESULT HResult
+	);
+
+PoseMovementLog(
+	UINT64 ExposureTime (hns),
+	FLOAT Movement_11,
+	FLOAT Movement_12,
+	FLOAT Movement_13,
+	FLOAT Movement_14,
+	FLOAT Movement_21,
+	FLOAT Movement_22,
+	FLOAT Movement_23,
+	FLOAT Movement_24,
+	FLOAT Movement_31,
+	FLOAT Movement_32,
+	FLOAT Movement_33,
+	FLOAT Movement_34,
+	FLOAT Movement_41,
+	FLOAT Movement_42,
+	FLOAT Movement_43,
+	FLOAT Movement_44
+	);
+
+MRCVideoTransform_ProcessOutput(
+	VOID
+	);
+
+MRCVideoTransform_ProcessInput(
+	HRESULT HResult
+	);
+
+MRCVideoTransform_ProcessInput(
+	VOID
+	);
+
+MRCVideoTransform_ProcessMessage(
+	UINT32 ProcessMessage
+	);
+
+MRCVideoTransform_Initialize(
+	VOID
+	);
+
+ActivityIntermediateStop(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+MRCVideoTransform_OnEndStreaming(
+	DOUBLE MrcEndLocalTime
+	);
+
+MRCVideoTransformConfiguration(
+	BOOL32 VideoStabilizationEnable,
+	UINT32 StabilizerBuffer,
+	BOOL32 CompositionEnabled,
+	BOOL32 AntiAliasingEnabled,
+	UINT32 FirstFrameISO,
+	UINT64 FirstFrameExposureTime
+	);
+
+MRCVideoTransformAverageLatencyPerFrame(
+	INT64 FrameCount,
+	INT64 Duration,
+	INT64 AvgMsPerFrame,
+	UINT32 FpsNumerator,
+	UINT32 FpsDenominator
+	);
+
+MRCVideoTransform_OnBeginStreaming(
+	DOUBLE MrcStartLocalTime
+	);
+
+MRCVideoTransformOutputTypeChanged(
+	GUID MajorType,
+	GUID SubType,
+	UINT32 FrameWidth,
+	UINT32 FrameHeight
+	);
+
+MRCVideoTransformInputTypeChanged(
+	GUID MajorType,
+	GUID SubType,
+	UINT32 FrameWidth,
+	UINT32 FrameHeight
+	);
+
+MRCVideoRecordingActivity(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId
+	);
+
+MRCAudioTransform_Configuration(
+	BOOL32 AppAudioEnabled,
+	BOOL32 MicAudioEnabled,
+	FLOAT AppAudioVolume
+	);
+
+MRCAudioTransform_ProcessOutput(
+	HRESULT HResult
+	);
+
+MRCAudioTransform_ProcessOutput(
+	VOID
+	);
+
+MRCAudioTransform_ProcessInput(
+	HRESULT HResult
+	);
+
+MRCAudioTransform_ProcessInput(
+	VOID
+	);
+
+MRCAudioTransform_ProcessMessage(
+	UINT32 ProcessMessage
+	);
+
+MRCAudioTransform_Initialize(
+	VOID
+	);
+
+TextureDropQueue_IgnoreOldTick(
+	INT64 NewTick,
+	INT64 PreviousTick
+	);
+
+SharedTextureScreenDuplicator_OnRunSharedTextureScreenCapture(
+	VOID
+	);
+
+SharedTextureScreenDuplicator_OnRunSharedTextureScreenCapture_Error(
+	HRESULT errorCode,
+	HRESULT suppressedError
+	);
+
+HolographicViewer_DropPendingFrame(
+	VOID
+	);
+
+SharedTextureScreenDuplicator_OnRunSharedTextureScreenCapture(
+	VOID
+	);
+
+SharedTextureScreenDuplicator_StopStream(
+	VOID
+	);
+
+SharedTextureScreenDuplicator_StopStream(
+	VOID
+	);
+
+SharedTextureScreenDuplicator_StartStream(
+	VOID
+	);
+
+SharedTextureScreenDuplicator_StartStream(
+	VOID
+	);
+
+CreateFenceError(
+	HRESULT HResult,
+	BOOLEAN isVM
+	);
+
+SharedTextureScreenDuplicator_Initialize(
+	VOID
+	);
+
+SharedTextureScreenDuplicator_Initialize(
+	VOID
+	);
+
+MixedRealityCaptureVideoCompositor_GetFrameTimeout(
+	BOOL32 IsFakeCam
+	);
+
+MixedRealityCaptureVideoCompositor_GetFrameDelayWorked(
+	VOID
+	);
+

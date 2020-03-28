@@ -1,0 +1,107 @@
+ProviderNames:
+	Microsoft.Windows.Networking.VpnCsp
+	TelemetryAssert
+	TelemetryAssertDiagTrack
+
+
+
+**** Events *****
+NodeError(
+	ANSISTRING nodeCommand,
+	INT32 nodeId,
+	UNICODESTRING profileName,
+	UNICODESTRING nodeUri,
+	HRESULT nodeHresult,
+	BOOL32 createFlag
+	);
+
+NodeCreate(
+	INT32 nodeId,
+	UNICODESTRING nodeUri,
+	BOOL32 createFlag,
+	HRESULT nodeHresult
+	);
+
+NodeError(
+	ANSISTRING nodeCommand,
+	INT32 nodeId,
+	UNICODESTRING profileName,
+	UNICODESTRING nodeUri,
+	HRESULT nodeHresult
+	);
+
+NodeGetChildNodeNames(
+	INT32 nodeId,
+	UNICODESTRING nodeUri,
+	HRESULT nodeHresult
+	);
+
+NodeError(
+	ANSISTRING nodeCommand,
+	INT32 nodeId,
+	UNICODESTRING profileName,
+	UNICODESTRING nodeUri,
+	HRESULT nodeHresult,
+	UNICODESTRING nodeData
+	);
+
+NodeAdd(
+	INT32 nodeId,
+	UNICODESTRING nodeUri,
+	HRESULT nodeHresult,
+	UNICODESTRING nodeData
+	);
+
+NodeDeleteChild(
+	INT32 nodeId,
+	HRESULT nodeHresult
+	);
+
+NodeClear(
+	INT32 nodeId,
+	UNICODESTRING nodeUri,
+	HRESULT nodeHresult
+	);
+
+NodeGetValue(
+	INT32 nodeId,
+	UNICODESTRING nodeUri,
+	HRESULT nodeHresult,
+	UNICODESTRING nodeData
+	);
+
+NodeSetValue(
+	INT32 nodeId,
+	UNICODESTRING nodeUri,
+	HRESULT nodeHresult,
+	UNICODESTRING nodeData
+	);
+
+RasCommit(
+	UNICODESTRING profileName,
+	UINT32 state,
+	HEXINT32 result
+	);
+
+RasInfo(
+	UNICODESTRING description,
+	HEXINT32 returnValue
+	);
+
+RasError(
+	UNICODESTRING description,
+	HEXINT32 returnValue
+	);
+
+Assert(
+	UINT32 assertVersion,
+	UINT32 rva,
+	UINT32 timestamp,
+	UINT32 imageSize,
+	ANSISTRING imageName,
+	UINT32 count,
+	UINT32 totalHits,
+	UINT32 ModuleCollection,
+	UINT32 GlobalCollection
+	);
+

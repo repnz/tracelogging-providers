@@ -1,0 +1,1080 @@
+ProviderNames:
+	Microsoft.Windows.Storage.StorageService
+	Microsoft.Windows.Storage.StorageHealth
+	Microsoft.Windows.Storage.StorageDiskMonitor
+	Microsoft.Windows.Storage.StorageReserve
+	Microsoft.Windows.Storage.Cleanup
+
+
+
+**** Events *****
+ServiceInit(
+	HRESULT hr,
+	GUID systemVolumeStableGuid,
+	GUID dataVolumeStableGuid
+	);
+
+OpenVolumeHandle failed(
+	HRESULT result
+	);
+
+StorageNotify::PublishState(
+	NTSTATUS Status
+	);
+
+StorageNotify::Init(
+	NTSTATUS Status
+	);
+
+CleanUpDifferentPairedDevice(
+	UNICODESTRING PathName,
+	HRESULT result
+	);
+
+Attempting to create new package volume(
+	UNICODESTRING szSISPath
+	);
+
+DetermineFormatState(
+	UINT32 StorageDeviceType,
+	UINT32 DeviceInstance,
+	BOOL32 IsFormatted,
+	UINT32 FileSystemType,
+	HRESULT result
+	);
+
+WaitForMountVolume(
+	UNICODESTRING VolumeName
+	);
+
+SetWriteAccess failed(
+	UINT32 StorageDeviceType,
+	UINT32 DeviceInstance,
+	UINT32 Value,
+	HRESULT result
+	);
+
+Attempting to revert default package volume to system drive post-offline(
+	VOID
+	);
+
+StorageService::RemoveAppxPackagesForLoggedOnUsers(
+	UINT32 NumberOfUsersOnSystem,
+	HRESULT ResultForOtherQueries,
+	HRESULT ResultForRemovingVolume
+	);
+
+StorageReserveStatistics(
+	UINT64 PartA_PrivTags,
+	HRESULT GetDriveLetterResult,
+	HRESULT QuerySRResult,
+	UINT64 TotalBytes,
+	UINT64 FreeBytes,
+	INT64 StorageReserveStats
+	);
+
+RemoveAppxVolume(
+	GUID storageId,
+	UINT32 storageDeviceType,
+	UINT32 busType,
+	UINT32 FileSystemType,
+	HRESULT hr
+	);
+
+CompleteInit(
+	HRESULT result
+	);
+
+Attempting to set default package volume(
+	VOID
+	);
+
+SurpriseRemoval(
+	GUID storageId,
+	UINT32 storageDeviceType,
+	UINT32 busType,
+	UINT32 dismountReason
+	);
+
+SetStorageCardMetadata failed(
+	UINT32 StorageDeviceType,
+	UINT32 DeviceInstance,
+	HRESULT result
+	);
+
+RegisterMountVolumeHandler failed(
+	UINT32 CONFIGRET
+	);
+
+UpdateAppPairingState(
+	VOID
+	);
+
+FormatVolume(
+	GUID storageId,
+	UINT32 storageDeviceType,
+	UINT32 busType,
+	UINT32 FileSystemType,
+	UINT64 time_100ns,
+	UINT64 Alltime_100ns,
+	BOOLEAN appsPaired,
+	HRESULT hr
+	);
+
+Failed to CreateStorageCardDirectory - SetFileAttributes(
+	UINT32 StorageDeviceType,
+	UINT32 DeviceInstance,
+	UNICODESTRING DirectoryPath,
+	UINT32 Attributes,
+	HRESULT result
+	);
+
+PairStorageCardForApps - failed to attach filecrypt(
+	UNICODESTRING PathName,
+	HRESULT result
+	);
+
+Failed to dismount volume(
+	VOID
+	);
+
+Failed to CreateStorageCardDirectory(
+	UINT32 StorageDeviceType,
+	UINT32 DeviceInstance,
+	UNICODESTRING DirectoryPath,
+	HRESULT result
+	);
+
+DismountVolume(
+	GUID storageId,
+	UINT32 storageDeviceType,
+	UINT32 busType,
+	UINT32 dismountReason,
+	UINT32 volumeStatus,
+	HRESULT hr
+	);
+
+SetStorageCardAppMetadata failed(
+	UINT32 StorageDeviceType,
+	UINT32 DeviceInstance,
+	GUID pAppPairingId,
+	HRESULT result
+	);
+
+ProcessVolumeChange(
+	HRESULT hr
+	);
+
+DetermineDisabledState(
+	UINT32 StorageDeviceType,
+	UINT32 DeviceInstance,
+	HRESULT result
+	);
+
+RegisterHostControllerHandler failed(
+	UINT32 CONFIGRET
+	);
+
+Failed to bring volume online(
+	VOID
+	);
+
+SetStorageSettings(
+	UINT32 storageType,
+	UINT32 deviceInstance
+	);
+
+ScanVolume(
+	UINT32 storageType,
+	UINT32 deviceInstance
+	);
+
+ProcessVolumeChange(
+	VOID
+	);
+
+ProcessVolumeChange(
+	INT32 MediaState,
+	INT32 StorageType,
+	INT32 DeviceInstance,
+	UNICODESTRING VolumeName
+	);
+
+Attempting to offline package volume(
+	VOID
+	);
+
+StorageService::RemoveAppxPackagesForCurrentUser(
+	UINT32 NumberOfPackagesOnVolume,
+	HRESULT HRESULT
+	);
+
+SetStorageCardDisabled failed(
+	UINT32 StorageDeviceType,
+	UINT32 DeviceInstance,
+	UINT32 IsDisabled,
+	HRESULT result
+	);
+
+Attempting to online package volume(
+	VOID
+	);
+
+FinalizeVolume(
+	UINT32 StorageDeviceType,
+	UINT32 DeviceInstance,
+	HRESULT result
+	);
+
+RemovePackage(
+	UNICODESTRING FullPackageName,
+	HRESULT HRESULT
+	);
+
+SetStorageCardPowerPolicy failed(
+	UINT32 StorageDeviceType,
+	UINT32 DeviceInstance,
+	HRESULT result
+	);
+
+DiskStandardInformation(
+	UINT64 PartA_PrivTags,
+	INT32 Epoch,
+	UINT32 DiskIndex,
+	UINT32 TotalDisks,
+	INT32 DiskNumber,
+	ANSISTRING VendorId,
+	ANSISTRING ProductId,
+	ANSISTRING ProductRevision,
+	ANSISTRING SerialNumber,
+	UNICODESTRING ParentId,
+	UNICODESTRING FileSystem,
+	INT32 BusType,
+	INT32 PartitionStyle,
+	INT32 VolumeCount,
+	INT32 ContainsRawVolumes,
+	INT64 Size
+	);
+
+UpdateAppPairingState(
+	INT32 StorageDeviceType,
+	INT32 DeviceInstance,
+	INT32 OperationFlags,
+	HRESULT hr
+	);
+
+ProcessHostControllerChange(
+	HRESULT result
+	);
+
+MountVolume(
+	UINT32 StorageDeviceType,
+	UINT32 DeviceInstance,
+	UINT32 Flags,
+	HRESULT result
+	);
+
+UsbDiskArrival(
+	INT32 DiskNumber,
+	ANSISTRING VendorId,
+	ANSISTRING ProductId,
+	ANSISTRING ProductRevision,
+	ANSISTRING SerialNumber,
+	UNICODESTRING ParentId,
+	UNICODESTRING FileSystem,
+	INT32 BusType,
+	INT32 PartitionStyle,
+	INT32 VolumeCount,
+	INT32 ContainsRawVolumes,
+	INT64 Size
+	);
+
+DismountVolume(
+	UINT32 storageDeviceType,
+	UINT32 deviceInstance
+	);
+
+ProvisionForAppInstall - failed to attach filecrypt(
+	UNICODESTRING PathName,
+	HRESULT result
+	);
+
+ProcessNewStorageCard(
+	UINT32 StorageDeviceType,
+	UINT32 DeviceInstance,
+	UNICODESTRING VolumePath,
+	UNICODESTRING VolumeName,
+	HRESULT result
+	);
+
+In progress - WaitForMountVolume(
+	UINT32 WaitResult
+	);
+
+StorageService::UpdateMountState(
+	UINT32 StorageDeviceType,
+	UINT32 DeviceInstance,
+	HRESULT hr,
+	HRESULT hrDeployment
+	);
+
+FormatVolume(
+	UINT32 storageDeviceType,
+	UINT32 DeviceInstance
+	);
+
+DetermineNewCardState(
+	UINT32 StorageDeviceType,
+	UINT32 DeviceInstance,
+	HRESULT result
+	);
+
+Failed to find package volume(
+	HRESULT hrPackageFound
+	);
+
+StorageStatistics(
+	UINT64 PartA_PrivTags,
+	INT32 Epoch,
+	INT32 TotalDiskCount,
+	INT32 TotalHealthyDiskCount,
+	INT32 TotalNoVolumeDiskCount,
+	INT32 TotalRawVolumeDiskCount,
+	INT32 SataDiskCount,
+	INT32 SataHealthyDiskCount,
+	INT32 SataNoVolumeDiskCount,
+	INT32 SataRawVolumeDiskCount,
+	INT32 NvmeDiskCount,
+	INT32 NvmeHealthyDiskCount,
+	INT32 NvmeNoVolumeDiskCount,
+	INT32 NvmeRawVolumeDiskCount,
+	INT32 VhdDiskCount,
+	INT32 VhdHealthyDiskCount,
+	INT32 VhdNoVolumeDiskCount,
+	INT32 VhdRawVolumeDiskCount,
+	INT32 UsbDiskCount,
+	INT32 UsbHealthyDiskCount,
+	INT32 UsbNoVolumeDiskCount,
+	INT32 UsbRawVolumeDiskCount,
+	INT32 SdDiskCount,
+	INT32 SdHealthyDiskCount,
+	INT32 SdNoVolumeDiskCount,
+	INT32 SdRawVolumeDiskCount,
+	INT32 OtherDiskCount,
+	INT32 OtherHealthyDiskCount,
+	INT32 OtherNoVolumeDiskCount,
+	INT32 OtherRawVolumeDiskCount,
+	INT32 CumulativeTotalDiskCount,
+	INT32 CumulativeTotalHealthyDiskCount,
+	INT32 CumulativeTotalNoVolumeDiskCount,
+	INT32 CumulativeTotalRawVolumeDiskCount,
+	INT32 CumulativeSataDiskCount,
+	INT32 CumulativeSataHealthyDiskCount,
+	INT32 CumulativeSataNoVolumeDiskCount,
+	INT32 CumulativeSataRawVolumeDiskCount,
+	INT32 CumulativeNvmeDiskCount,
+	INT32 CumulativeNvmeHealthyDiskCount,
+	INT32 CumulativeNvmeNoVolumeDiskCount,
+	INT32 CumulativeNvmeRawVolumeDiskCount,
+	INT32 CumulativeVhdDiskCount,
+	INT32 CumulativeVhdHealthyDiskCount,
+	INT32 CumulativeVhdNoVolumeDiskCount,
+	INT32 CumulativeVhdRawVolumeDiskCount,
+	INT32 CumulativeUsbDiskCount,
+	INT32 CumulativeUsbHealthyDiskCount,
+	INT32 CumulativeUsbNoVolumeDiskCount,
+	INT32 CumulativeUsbRawVolumeDiskCount,
+	INT32 CumulativeUsbDiskCount,
+	INT32 CumulativeSdHealthyDiskCount,
+	INT32 CumulativeSdNoVolumeDiskCount,
+	INT32 CumulativeSdRawVolumeDiskCount,
+	INT32 CumulativeOtherDiskCount,
+	INT32 CumulativeOtherHealthyDiskCount,
+	INT32 CumulativeOtherNoVolumeDiskCount,
+	INT32 CumulativeOtherRawVolumeDiskCount
+	);
+
+Failed to take volume offline(
+	VOID
+	);
+
+Attempting to set up mutable packages(
+	VOID
+	);
+
+UpdateDismountState(
+	UINT32 StorageDeviceType,
+	UINT32 DeviceInstance,
+	UINT32 DismountReason,
+	HRESULT result
+	);
+
+ActivityStoppedAutomatically(
+	VOID
+	);
+
+StorageServiceTriggerStorageCleanup(
+	INT32 storageType,
+	INT32 deviceInstance,
+	INT32 cleanupLevel,
+	INT32 cleanupType,
+	INT32 cleanupTaskTimeout,
+	UINT64 totalBytes,
+	UINT64 freeBytesBefore,
+	UINT64 freeBytesAfter,
+	INT64 storageReserveBefore,
+	INT64 storageReserveAfter,
+	HRESULT hResult,
+	UINT64 PartA_PrivTags
+	);
+
+SdCardStatus(
+	GUID StorageId,
+	UINT32 DeviceInstance,
+	UINT32 storageDeviceType,
+	UINT32 BusType,
+	BOOLEAN STORAGE_STATUS_DISABLED,
+	BOOLEAN STORAGE_STATUS_UNFORMATTED,
+	BOOLEAN STORAGE_APP_PAIRING_DIFFERENT_DEVICE,
+	BOOLEAN STORAGE_STATUS_READ_ONLY,
+	BOOLEAN STORAGE_STATUS_DIRTY,
+	UNICODESTRING VolumePath,
+	UNICODESTRING VolumeName,
+	HRESULT result
+	);
+
+SetLibraries(
+	UNICODESTRING szVolumePath,
+	HRESULT result
+	);
+
+ProcessNewStorageCard - failed to check crash dump settings(
+	UINT32 StorageDeviceType,
+	UINT32 DeviceInstance,
+	UNICODESTRING VolumePath,
+	UNICODESTRING VolumeName,
+	HRESULT result
+	);
+
+WaitForMountVolume(
+	UNICODESTRING VolumeName,
+	HRESULT hr
+	);
+
+InitStorageCardSlot(
+	UINT32 SlotCount,
+	HRESULT result
+	);
+
+SetStorageSettings(
+	GUID storageId,
+	UINT32 busType,
+	UINT32 fileSystemType,
+	UINT32 storageType,
+	UINT32 deviceInstance,
+	UINT32 storageSetting,
+	UINT32 value,
+	HRESULT hr
+	);
+
+ProvisionStorageCardForUser failed(
+	UINT32 StorageDeviceType,
+	UINT32 DeviceInstance,
+	UNICODESTRING szFolderName,
+	UNICODESTRING szInternalUserFolder,
+	HRESULT result
+	);
+
+ScanVolume(
+	GUID storageId,
+	UINT32 storageDeviceType,
+	UINT32 busType,
+	UNICODESTRING fileSystemName,
+	UINT64 time_100ns,
+	BOOLEAN fixErrors,
+	BOOLEAN fixSuccessful,
+	HRESULT hr
+	);
+
+IsRemovable check failed(
+	UNICODESTRING VolumeName,
+	UNICODESTRING VolumePath,
+	HRESULT result
+	);
+
+RegisterVolumeHandler failed(
+	UINT32 CONFIGRET
+	);
+
+StorageService::TriggerStoragePolicies - CleanupItem()(
+	UINT32 Type,
+	UNICODESTRING Target,
+	UINT64 Size
+	);
+
+WinOldPolicy::CleanupItem - STORAGE_CLEANUP_TYPE_PASTINSTALL size freed(
+	UNICODESTRING Target,
+	UINT64 ulFreeBytesBefore,
+	UINT64 ulFreeBytesAfter
+	);
+
+StoragePolicyCloudProvider(
+	UNICODESTRING displayName,
+	BOOL32 enabled,
+	UINT32 policyThreshold,
+	UINT32 dehydrationReason
+	);
+
+TemporaryFilePolicy::CleanupItem - TriggerStorageCleanup size freed(
+	UNICODESTRING Target,
+	UINT64 ulFreeBytesBefore,
+	UINT64 ulFreeBytesAfter
+	);
+
+WinOldPolicy::CleanupItem - WinOld(
+	UNICODESTRING Target,
+	HRESULT result
+	);
+
+StoragePolicyItemFailed(
+	UINT32 Type,
+	HRESULT hr
+	);
+
+TriggerStoragePoliciesV2(
+	VOID
+	);
+
+StoragePolicyItemCloudFile(
+	ANSISTRING __TlgCV__,
+	HRESULT Hresult,
+	UINT32 Timeout,
+	UINT64 Size,
+	UINT32 DehydrationReason
+	);
+
+ActivityStoppedAutomatically(
+	VOID
+	);
+
+TriggerStoragePoliciesV2(
+	UINT32 policiesEnabled,
+	UINT32 policyParamsArraySize,
+	UINT32 storageType,
+	UINT32 deviceIndex,
+	UINT32 flags,
+	GUID storageId,
+	UINT32 volumeStatus,
+	UINT32 targetSizeMB,
+	UINT64 cleanedBytes,
+	UINT32 cleanupSucceeded,
+	UINT32 cleanupFailed,
+	UINT64 totalBytes,
+	UINT64 freeBytesBefore,
+	UINT64 freeBytesAfter,
+	INT64 storageReserveBefore,
+	INT64 storageReserveAfter,
+	HRESULT hr,
+	HRESULT hrReserveInit,
+	BOOL32 isLowStorage,
+	UINT64 PartA_PrivTags
+	);
+
+FileChangeEnableTimerCallback - FindNextChangeNotification failed(
+	HRESULT result
+	);
+
+CompleteTempDirectoryCleanup(
+	HRESULT result
+	);
+
+FileChangeEnableTimerCallback - CheckFreeSpace failed(
+	HRESULT result
+	);
+
+StorageCleanup::Init(
+	UNICODESTRING m_RootPath,
+	BOOL32 m_initCleanupCallbackEnvironment,
+	HRESULT result
+	);
+
+TriggerStorageCleanup(
+	INT32 storageType,
+	INT32 deviceInstance,
+	INT32 cleanupLevel,
+	INT32 cleanupType,
+	UINT64 totalBytes,
+	UINT64 freeBytesBefore,
+	UINT64 freeBytesAfter,
+	INT64 storageReserveBefore,
+	INT64 storageReserveAfter,
+	HRESULT hResult,
+	UINT64 PartA_PrivTags
+	);
+
+End - CompleteTempDirectoryCleanup(
+	VOID
+	);
+
+StorageCleanup::CleanupKnownPaths - DeleteDirectoryTree failed(
+	UNICODESTRING Path,
+	HRESULT hr
+	);
+
+WerStorePurgeFailed(
+	HRESULT hr
+	);
+
+StorageService::TriggerStorageCleanupThreadProc(
+	UNICODESTRING m_RootPath,
+	HRESULT result
+	);
+
+StorageCleanup::CleanupKnownPaths - GetPath failed(
+	UNICODESTRING Path,
+	HRESULT hr
+	);
+
+TriggerStorageCleanup(
+	VOID
+	);
+
+Begin - CompleteTempDirectoryCleanup(
+	VOID
+	);
+
+PartialResultReturned(
+	UINT32 Node,
+	UINT64 PartialSize,
+	HRESULT result
+	);
+
+CalculateStorageType failed(
+	UINT32 Node,
+	HRESULT result
+	);
+
+Delete callback failed(
+	UINT32 scanState,
+	UNICODESTRING pszPath,
+	HRESULT hr
+	);
+
+DriveStatistics(
+	STRING driveLetter,
+	UINT32 numFoundFolders,
+	UINT32 numPhotos,
+	UINT32 numPictures,
+	UINT32 numMusic,
+	UINT32 numVideos,
+	UINT32 numDocuments
+	);
+
+FolderStatistics(
+	STRING driveLetter,
+	UNICODESTRING folderLocation,
+	UNICODESTRING libraryType,
+	UINT32 numPhotos,
+	UINT32 numPictures,
+	UINT32 numMusic,
+	UINT32 numVideos,
+	UINT32 numDocuments,
+	UINT32 numOther,
+	UINT32 maxDepth,
+	UINT32 rate
+	);
+
+GetBootDiskTelemetry(
+	UNICODESTRING bootDiskGuid,
+	ANSISTRING getBootDiskStatus,
+	HRESULT hResult
+	);
+
+ScoresAndData(
+	UNICODESTRING diskGuid,
+	DOUBLE healthScore,
+	BOOLEAN isBootDisk,
+	BOOLEAN isHardDisk,
+	BOOLEAN isScoreValid,
+	UINT64 numOfSignalDays,
+	DOUBLE storageHealthWarningThreshold
+	);
+
+EvaluationActivity(
+	VOID
+	);
+
+EvaluateHealthExceptionThrown(
+	ANSISTRING e.what()
+	);
+
+EvaluationActivity(
+	ANSISTRING evaluateHealthStatus,
+	UINT64 maxDaysOfSignals,
+	UINT64 reqDaysOfSignals,
+	UINT64 numOfDisks,
+	UNICODESTRING bootDiskGuid,
+	BOOLEAN isBootDiskHdd,
+	HRESULT hResultEvaluateHealth
+	);
+
+BadMemoryAllocation(
+	VOID
+	);
+
+ScoresAndData(
+	UNICODESTRING diskGuid,
+	DOUBLE healthScore,
+	BOOLEAN isBootDisk,
+	BOOLEAN isHardDisk,
+	BOOLEAN isScoreValid,
+	UINT64 numOfSignalDays,
+	DOUBLE storageHealthWarningThreshold
+	);
+
+SettingsGetTelemetry(
+	ANSISTRING storageSettingName,
+	ANSISTRING storageSettingGetStatus,
+	UINT64 majorModelVersion,
+	UINT64 oldMinorModelVersion,
+	UINT64 newMinorModelVersion,
+	HRESULT hResult
+	);
+
+SettingsGetTelemetry(
+	UNICODESTRING regSubKey,
+	UNICODESTRING storageSettingName,
+	UINT64 storageSettingRegValue,
+	ANSISTRING storageSettingGetStatus,
+	HRESULT hResult
+	);
+
+SignalAggregation(
+	HRESULT hr,
+	HRESULT hrSerialize,
+	HRESULT hrDeserialize
+	);
+
+PredctorMLModelParametersInfo(
+	ANSISTRING modelType,
+	UNICODESTRING modelLocation,
+	HRESULT hResultReadModel
+	);
+
+SignalArchiveDeserializationFailed(
+	UNICODESTRING archivePath,
+	HRESULT hResultDeserialize
+	);
+
+SignalArchiveSerializationFailed(
+	UNICODESTRING archivePath,
+	UINT64 maxArchiveSize,
+	HRESULT hResultSerialize
+	);
+
+CompressAndWriteModel(
+	UNICODESTRING modelFilePath,
+	UINT64 uncompressedModelSize,
+	UINT64 compressedModelSize,
+	BOOL32 fDeleteModelFile,
+	BOOL32 fDeleteModelFileSuccess,
+	HRESULT hr
+	);
+
+ReadAndDecompressModel(
+	UNICODESTRING modelFilePath,
+	UINT64 compressedModelSize,
+	UINT64 decompressedModelSize,
+	HRESULT hr
+	);
+
+SignalDaysNotEnoughForFeatureGeneration(
+	INT32 requiredNumOfSignalDays,
+	UINT64 actualNumOfSignalDays
+	);
+
+ActivityFailure(
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+ActivityFailure(
+	UINT64 PartA_PrivTags,
+	HEX wilActivity,
+	UINT32 hresult,
+	UINT32 threadId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+ActivityError(
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+ActivityIntermediateStop(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+ActivityError(
+	UINT64 PartA_PrivTags,
+	SIGNED wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+QueryStorageReserve(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId
+	);
+
+QueryStorageReserve(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+QueryStorageReserve(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	SIGNED wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+FallbackError(
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+FallbackError(
+	UINT64 PartA_PrivTags,
+	SIGNED wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+DiskInfo::DetectProperties:VolumeInformation(
+	UNICODESTRING VolumeLabel,
+	UNICODESTRING FileSystemName
+	);
+
+DiskInfo::DetectProperties:DeviceDescriptor(
+	INT32 RemovableMedia,
+	INT32 BusType,
+	ANSISTRING VendorId,
+	ANSISTRING ProductId,
+	ANSISTRING ProductRevision,
+	ANSISTRING SerialNumber
+	);
+
+VolumeInfo::DetectProperties(
+	UNICODESTRING TmpVolumeName
+	);
+
+DiskMonitor::DeviceNotifyCallback(
+	HEXINT64 Context,
+	INT32 Action,
+	INT32 EventDataSize
+	);
+
+DiskInfo::DetectProperties:DeviceGeometry(
+	INT32 MediaType,
+	INT32 BytesPerSector,
+	UINT64 DiskSize,
+	INT32 PartitionStyle,
+	INT32 Detectiontype
+	);
+
+DeviceInterfaceLink(
+	UNICODESTRING Link
+	);
+
+VolumeInfo::DetectProperties: Skipping Cdrom Device(
+	VOID
+	);
+
+DiskInfo::DetectProperties:VolumeFreeSpace(
+	UINT64 TotalNumberOfBytes,
+	UINT64 TotalNumberOfFreeBytes
+	);
+
+VolumeInfo::DetectProperties(
+	UNICODESTRING DeviceName
+	);
+
+DiskInfo::DetectProperties(
+	UNICODESTRING DiskInterfaceName
+	);
+
+VolumeInfo::DetectProperties(
+	UNICODESTRING Name
+	);
+
+DiskMonitor::DeviceNotifyCallback:UnknownEvent(
+	VOID
+	);
+
+DiskInfo::DetectProperties:DeviceAttributes(
+	UINT64 Attributes
+	);
+
+DiskInfo::DetectProperties:DeviceNumber(
+	INT32 DeviceNumber
+	);
+
+VolumeInfo::DetectProperties: Skipping Floppy Device(
+	VOID
+	);
+
+DiskInfo::DetectProperties:DeviceLayout(
+	INT32 PartitionStyle,
+	INT32 PartitionCount
+	);
+
+VolumeInfo::DetectProperties:DiskNumber(
+	INT32 DiskNumber,
+	INT32 NumberOfDiskExtents
+	);
+
+DiskMonitor::EnumerateExistingDisks()(
+	VOID
+	);
+
+DiskInfo::DetectProperties:ParentId(
+	UNICODESTRING ParentId
+	);
+
+DiskInfo::DetectProperties:DeviceAlignment(
+	INT32 BytesPerLogicalSector,
+	INT32 BytesPerPhysicalSector
+	);
+
+DiskInfo::DetectProperties:DiskExtentQueryFailed(
+	INT32 Error
+	);
+
+StorageCleanupActivity(
+	VOID
+	);
+
+ClientPurge(
+	GUID clsid,
+	UINT64 purgeTimeMs,
+	UINT64 beforeBytes,
+	UINT64 afterBytes,
+	UINT64 requestedBytes,
+	UINT64 totalBytes,
+	UINT64 freeBytesBefore,
+	UINT64 freeBytesAfter,
+	INT64 storageReserveBefore,
+	INT64 storageReserveAfter,
+	HRESULT hresult,
+	UINT64 PartA_PrivTags
+	);
+
+InitClients(
+	GUID clsid,
+	UNICODESTRING subkeyname,
+	UINT32 index,
+	UINT32 flags,
+	HRESULT hresult,
+	UNICODESTRING DrivePath
+	);
+
+StorageCleanupActivity(
+	VOID
+	);
+

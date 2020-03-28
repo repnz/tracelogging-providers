@@ -1,0 +1,113 @@
+ProviderNames:
+	Microsoft.Notepad
+
+
+
+**** Events *****
+EncodingSelection(
+	GUID SessionId,
+	UINT64 SequenceNumber,
+	UINT32 Encoding
+	);
+
+PageSetupUpdated(
+	GUID SessionId,
+	UINT64 SequenceNumber,
+	BOOL32 HasHeaderOrFooter
+	);
+
+ViewHelp(
+	GUID SessionId,
+	UINT64 SequenceNumber
+	);
+
+TimeDateInvoked(
+	GUID SessionId,
+	UINT64 SequenceNumber,
+	BOOL32 IsLogEntry
+	);
+
+SearchBingInvoked(
+	GUID SessionId,
+	UINT64 SequenceNumber,
+	UNICODESTRING entrypoint,
+	BOOL32 hasQueryText
+	);
+
+FreshWindow(
+	GUID SessionId,
+	UINT64 SequenceNumber,
+	BOOL32 IsAdminMode
+	);
+
+AppExit(
+	GUID SessionId,
+	UINT64 SequenceNumber,
+	UINT16 FileNewCount,
+	UINT16 FileSaveCount,
+	UINT16 FileSaveAsCount,
+	UINT16 FilePrintCount,
+	UINT16 EditUndoCount,
+	UINT16 EditCutCount,
+	UINT16 EditCopyCount,
+	UINT16 EditPasteCount,
+	UINT16 EditDeleteCount,
+	UINT16 EditFindCount,
+	UINT16 EditReplaceCount,
+	UINT16 EditGotoCount,
+	UINT16 FormatFontCount,
+	UINT16 EdpFileOpenCount,
+	UINT16 EdpFileSaveCount,
+	UINT16 EdpPasteToNoContextCount,
+	UINT16 EdpFileOpenAttemptFailCount,
+	UINT32 FileSize,
+	BOOL32 IsWordWrap,
+	BOOL32 StatusBarVisibility
+	);
+
+SaveComplete(
+	GUID SessionId,
+	UINT64 SequenceNumber
+	);
+
+SaveComplete(
+	GUID SessionId,
+	UINT64 SequenceNumber,
+	UNICODESTRING ContentType,
+	UNICODESTRING FileExtension,
+	UINT64 FileSize,
+	BOOL32 IsNetworkPath,
+	UINT32 Encoding
+	);
+
+SaveStart(
+	GUID SessionId,
+	UINT64 SequenceNumber
+	);
+
+FileOpenComplete(
+	GUID SessionId,
+	UINT64 SequenceNumber,
+	UNICODESTRING ContentType,
+	UNICODESTRING FileExtension,
+	UINT64 FileSize,
+	BOOL32 IsNetworkPath,
+	UINT32 Encoding
+	);
+
+FileOpenStart(
+	GUID SessionId,
+	UINT64 SequenceNumber
+	);
+
+LaunchNotepadComplete(
+	GUID SessionId,
+	UINT64 SequenceNumber,
+	BOOL32 IsAdminMode
+	);
+
+LaunchNotepadStart(
+	GUID SessionId,
+	UINT64 SequenceNumber
+	);
+

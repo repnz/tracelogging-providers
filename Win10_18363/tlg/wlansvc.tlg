@@ -1,0 +1,749 @@
+ProviderNames:
+	Wlansvc
+	Microsoft.Windows.WiFi.Diag
+	TelemetryAssert
+	TelemetryAssertDiagTrack
+	Microsoft.Windows.Wil.FeatureLogging
+	Microsoft.Windows.WiFiCloudStore
+
+
+
+**** Events *****
+HotSpot2OsuNetworkInfo(
+	UNICODESTRING SSID,
+	STRING HESSID,
+	UINT16 OSUServersCount
+	);
+
+MDMPolicyAllowManualWifiConfiguration(
+	BOOL32 AllowManualWifiConfiguration
+	);
+
+MDMPolicyAllowWifiAlreadyTurnedOff(
+	BOOL32 AllowWifi
+	);
+
+MDMPolicyAllowWifi(
+	BOOL32 AllowWifi
+	);
+
+WfdStartUsingGroupRequestStarted(
+	UINT32 ErrorCode,
+	UINT32 RequestID
+	);
+
+WfdStartUsingGroupRequestCompleted(
+	UINT32 ErrorCode,
+	UINT32 RequestID
+	);
+
+WlanLimitConnectivityAction(
+	GUID InterFaceGuid,
+	UINT32 ChangeReason,
+	UINT32 IPVersion,
+	UINT32 PortType,
+	UINT32 RecoveryAttempted,
+	HEXINT32 dwError,
+	HEXINT32 dwErrorOid,
+	BOOL32 bDisableResetRecoveryOid,
+	BOOL32 bDisableRestartDevice,
+	BOOL32 bDisableNonWdiRestartDevice,
+	BOOL32 bDisableDisconnect
+	);
+
+UpdateConnectToken(
+	GUID InterfaceGuid,
+	INT32 WLANINTERFACESTATE,
+	INT32 wlanconnectionmode,
+	UINT32 DOT11OPERATIONMODE,
+	UINT32 AutoConnectProfileCount,
+	UINT32 ManualConnectProfileCount,
+	UINT32 WLANINTFPROFILELISTTRISTATEAUTO,
+	UINT32 WLANINTFPROFILELISTTRISTATEMANUAL,
+	BOOL32 AutoConnectEnabled,
+	BOOL32 ManualConnectEnabled,
+	BOOL32 PlapMode,
+	BOOL32 TimelyMode,
+	BOOL32 IsDisconnectPending
+	);
+
+InterfaceMalfunction(
+	GUID InterfaceGuid
+	);
+
+WlanCsNloDelayExpired(
+	GUID interfaceGuid,
+	UNICODESTRING profileName
+	);
+
+InitializingInterface(
+	GUID InterfaceGuid,
+	UNICODESTRING InterfaceDescription,
+	UNICODESTRING DeviceInstanceId,
+	UNICODESTRING DriverVersion,
+	UNICODESTRING DriverService,
+	UNICODESTRING DeviceMfg,
+	SYSTEMTIME DriverDate,
+	UNICODESTRING DriverFile,
+	UINT32 DOT11OPERATIONMODE,
+	BOOL32 IsClientSku,
+	BOOL32 AutoConnectEnabled,
+	BOOL32 ManualConnectEnabled,
+	UINT32 NumberOfPhys,
+	UINT32 MaxCommonFrequency,
+	UINT32 MaxDesiredSsidListSize,
+	UINT32 MaxDesiredBssidListSize,
+	BOOL32 APModeCapable,
+	BOOL32 MacRandomizationSupported,
+	UINT32 IhvWdiVersion,
+	UINT32 WindowsWdiVersion,
+	UNICODESTRING IhvWdiVersionString,
+	UNICODESTRING WindowsWdiVersionString,
+	ANSISTRING FirmwareVersion,
+	UINT32 OpModesSupported,
+	UINT32 uNumRxSpatialStreams,
+	UINT32 uNumTxSpatialStreams,
+	UINT32 uNumConcurrentChannelOperations,
+	UINT32 uP2PConcurrentGOPortsCount,
+	UINT32 uP2PConcurrentClientPortsCount,
+	UINT32 uP2PMaxMobileAPClientsAllowed,
+	UINT8 BluetoothCoexistenceSupport,
+	UINT32 BandCount,
+	UNICODESTRING FiveGhzBandDetails,
+	UNICODESTRING TwoGhzBandDetails,
+	UNICODESTRING SixtyGhzBandDetails,
+	UNICODESTRING VwifiCombinations,
+	UNICODESTRING WlanTriStateCollection,
+	UNICODESTRING SystemCapabilitiesCollection,
+	UNICODESTRING BinaryVersion,
+	UNICODESTRING AuthCipher
+	);
+
+WlanExitingDisconnectedStandby(
+	GUID InterfaceGuid,
+	BOOL32 WasInConnectedStandby,
+	UNICODESTRING ProfileName
+	);
+
+WlanEnteringDisconnectedStandby(
+	GUID InterfaceGuid,
+	BOOL32 WasInConnectedStandby,
+	UNICODESTRING ProfileName
+	);
+
+WlanCsNloDelayCreateTimer(
+	GUID interfaceGuid,
+	UNICODESTRING profile,
+	UINT32 NloDelayTimeInMinutes
+	);
+
+WlanCsNloTimerFired(
+	GUID interfaceGuid
+	);
+
+MDMPolicyAllowWifiRadioTurnedON(
+	BOOL32 AllowWifi
+	);
+
+WlanCsNloDelayExcessiveRoam(
+	GUID interfaceGuid,
+	UNICODESTRING profile,
+	UINT32 ReasonCode,
+	UINT32 NloDelayTimeInMinutes
+	);
+
+WlanUpdateProfileStatusUnblockFailure(
+	GUID interfaceGuid,
+	UNICODESTRING profile,
+	UINT32 FailedSsidCount,
+	UINT32 BlockedSsidCount,
+	UINT32 DynamicFlags,
+	BOOLEAN MovedToFailedList
+	);
+
+WlanCsNloExcessiveConnect(
+	GUID interfaceGuid,
+	UNICODESTRING profile,
+	UINT32 NloDelayTimeInMinutes
+	);
+
+WlanDisconnect(
+	GUID InterfaceGuid,
+	UNICODESTRING InterfaceDescription,
+	UINT32 ConnectionMode,
+	UNICODESTRING ProfileName,
+	UNICODESTRING SSID,
+	UNICODESTRING BSSID,
+	UNICODESTRING BSSType,
+	UINT32 ReasonCode,
+	UINT32 LastAssocCompleteStatusCode,
+	UINT32 LastDisassocReason,
+	UINT32 AuthAlgo,
+	UINT32 CipherAlgo,
+	UINT32 Dot11PhyIndex,
+	UINT32 SignalQualityPercentage,
+	UINT32 RxRate,
+	UINT32 TxRate,
+	UINT64 ClockTimeInMs,
+	UINT64 PortUpTimeInMs,
+	UINT32 PortDownCount
+	);
+
+WfdProvisionDiscoveryStarted(
+	UINT32 ErrorCode,
+	BOOL32 FollowOn,
+	UINT32 ConfigMethod
+	);
+
+WfdProvisionDiscoveryCompleted(
+	UINT32 ErrorCode
+	);
+
+WfdInvitationCompleted(
+	UINT32 ErrorCode
+	);
+
+WfdInvitationStarted(
+	UINT32 ErrorCode,
+	BOOL32 IsLocalGO,
+	BOOL32 IsReinvoke
+	);
+
+WfdExternalListenStateChanged(
+	UINT32 ErrorCode,
+	BOOL32 ListenEnabled
+	);
+
+WfdDiscoverDevicesStopRequested(
+	UINT32 ErrorCode
+	);
+
+WfdDiscoverDevicesStarted(
+	UINT32 ErrorCode,
+	UINT32 SearchTimeoutMs,
+	UINT32 RequestID,
+	UNICODESTRING Interface
+	);
+
+WfdDiscoverDevicesCompleted(
+	UINT32 ErrorCode,
+	UINT32 DiscoveredDevicesCount,
+	UINT32 RequestID
+	);
+
+WfdGONegotiationCompleted(
+	UINT32 ErrorCode
+	);
+
+WfdGONegotiationStarted(
+	UINT32 ErrorCode,
+	UINT8 GroupOwnerIntent,
+	UINT8 MinimumGOTimeout,
+	UINT8 MinimumClientTimeout,
+	UINT8 GroupCapability
+	);
+
+WfdPairingStateTransition(
+	BOOL32 SuccessfulTransition,
+	ANSISTRING OldState,
+	ANSISTRING NewState
+	);
+
+ConfigureFirewallCompleted(
+	UINT32 ErrorCode,
+	GUID InterfaceGUID,
+	UNICODESTRING LocalClientName
+	);
+
+ConfigureFirewallStarted(
+	GUID InterfaceGUID,
+	UNICODESTRING LocalClientName
+	);
+
+IPAddressRetrievingCompleted(
+	UINT32 ErrorCode,
+	BOOLEAN AddressesReceivedFromEapol,
+	GUID InterfaceGuidPort,
+	ANSISTRING PortType,
+	ANSISTRING LocalIPAddress,
+	ANSISTRING RemoteIPAddress
+	);
+
+IPAddressRetrievingStarted(
+	GUID InterfaceGuidPort,
+	ANSISTRING PortType
+	);
+
+ANQPQueryCompleted(
+	UINT32 ErrorCode,
+	UINT32 RequestID
+	);
+
+ANQPQueryStarted(
+	VOID
+	);
+
+WFDMgrNotifyPeerStateChanged(
+	UINT32 ErrorCode,
+	UINT32 NewState
+	);
+
+WfdGOWpsModeChanged(
+	UINT32 ErrorCode,
+	BOOL32 WPSEnabled
+	);
+
+WfdGOOperatingChannel(
+	UINT8 OperatingClass,
+	UINT8 ChannelNumber
+	);
+
+WfdGOPeerDisconnected(
+	UINT32 ErrorCode
+	);
+
+WfdGOPeerConnected(
+	UINT32 ErrorCode
+	);
+
+WfdClientDisconnected(
+	UINT32 ErrorCode,
+	GUID InterfaceGUID
+	);
+
+WfdClientConnected(
+	UINT32 ErrorCode,
+	GUID InterfaceGUID
+	);
+
+WDiagQueryDeviceInfo_Fail(
+	ANSISTRING Description,
+	HEXINT32 ErrorCode
+	);
+
+WDiagQueryDeviceInfo_Fail(
+	ANSISTRING Description,
+	GUID InterfaceGuid,
+	UNICODESTRING NetCfgInstanceId
+	);
+
+WDiagQueryDeviceInfo_Fail(
+	ANSISTRING Description,
+	HEXINT32 ErrorCode
+	);
+
+WDiagQueryDeviceInfo_Fail(
+	ANSISTRING Description,
+	UNICODESTRING DriverService,
+	HEXINT32 ErrorCode
+	);
+
+WDiagQueryDeviceInfo_Fail(
+	ANSISTRING Description,
+	UNICODESTRING DriverService,
+	HEXINT32 ErrorCode
+	);
+
+WDiagQueryDeviceInfo_Fail(
+	ANSISTRING Description,
+	HEXINT32 ErrorCode
+	);
+
+WDiagQueryDeviceInfo_Fail(
+	ANSISTRING Description,
+	UINT32 DeviceIndex,
+	HEXINT32 ErrorCode,
+	GUID InterfaceGuid
+	);
+
+WDiagQueryDeviceInfo_Fail(
+	ANSISTRING Description,
+	UINT32 DeviceIndex,
+	HEXINT32 ErrorCode,
+	GUID InterfaceGuid
+	);
+
+WDiagQueryDeviceInfo_Fail(
+	ANSISTRING Description,
+	UINT32 DeviceIndex,
+	HEXINT32 ErrorCode,
+	GUID InterfaceGuid
+	);
+
+WDiagQueryDeviceInfo_Fail(
+	ANSISTRING Description,
+	HEXINT32 ErrorCode
+	);
+
+WDiagQueryDeviceInfo_Fail(
+	ANSISTRING Description
+	);
+
+WDiagQueryDeviceInfo_Fail(
+	ANSISTRING Description,
+	HEXINT32 ErrorCode,
+	GUID InterfaceGuid
+	);
+
+WDiagQueryDeviceInfo_Fail(
+	ANSISTRING Description,
+	HEXINT32 ErrorCode,
+	GUID InterfaceGuid
+	);
+
+WDiagQueryDeviceInfo_Fail(
+	ANSISTRING Description,
+	UINT32 DeviceIndex,
+	HEXINT32 ErrorCode,
+	GUID InterfaceGuid
+	);
+
+LongRunningWlanRpcQueryInterfaceCompleted(
+	GUID InterfaceGuid,
+	UINT64 QueryPendingTimeMs,
+	UINT32 OpCode,
+	UINT32 ReturnCode
+	);
+
+LongRunningWlanRpcQueryInterface(
+	UINT64 QueryPendingTimeMs,
+	UINT32 TrackedOpCode
+	);
+
+WlanProfileCleanUp(
+	UINT64 PartA_PrivTags,
+	INT32 ProfileCount,
+	INT32 RemovedProfileCount,
+	BOOLEAN HasRunBefore
+	);
+
+FallbackError(
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+FeatureUsage(
+	UINT32 featureId,
+	INT32 featureVersion,
+	INT32 featureBaseVersion,
+	INT16 featureStage,
+	BOOLEAN enabled,
+	UINT32 kind,
+	UINT64 addend
+	);
+
+FeatureError(
+	UINT32 featureId,
+	INT32 featureVersion,
+	INT32 featureBaseVersion,
+	INT16 featureStage,
+	HRESULT hr,
+	ANSISTRING file,
+	UINT16 lineNumber,
+	ANSISTRING module,
+	ANSISTRING process,
+	ANSISTRING originFile,
+	UINT16 originLineNumber,
+	ANSISTRING originModule,
+	ANSISTRING originName,
+	ANSISTRING message,
+	ANSISTRING callerModule,
+	UINT32 callerReturnAddressOffset,
+	ANSISTRING originCallerModule,
+	UINT32 originCallerReturnAddressOffset
+	);
+
+FallbackError(
+	UINT64 PartA_PrivTags,
+	SIGNED wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+ConnectDiagnosticInfo(
+	UINT64 PartA_PrivTags,
+	UINT32 Version,
+	UNICODESTRING EventType,
+	GUID InterfaceGuid,
+	UNICODESTRING InterfaceDescription,
+	UINT32 ConnectionMode,
+	UNICODESTRING SSID,
+	UINT32 BSSType,
+	UINT32 AuthAlgo,
+	HEXINT32 CipherAlgo,
+	BOOL32 OnexEnabled,
+	HEXINT32 IHVBitmap,
+	BOOL32 IsHidden,
+	UNICODESTRING BSSID,
+	UNICODESTRING FirstBSSID,
+	UINT32 WLANStatusCode,
+	UINT32 DetailedStatusCode,
+	UINT32 FirstDetailedStatusCode,
+	UINT32 AssocDuration,
+	UINT32 AssociationCount,
+	UINT32 AssocRestartCount,
+	UINT32 AuthDuration,
+	UINT32 AuthRestartCount,
+	UNICODESTRING DeviceInstanceId,
+	UNICODESTRING BinaryVersion,
+	UNICODESTRING DriverVersion,
+	UNICODESTRING DriverService,
+	UNICODESTRING DriverFile,
+	INT32 RSSI,
+	INT32 SignalQualityPercentage,
+	UINT32 ChannelFrequency,
+	UINT32 ChannelNumber,
+	UINT32 InterferingAPCount,
+	UINT32 TotalVisibleAPCount,
+	UINT32 APCountOnSSID,
+	UNICODESTRING APPhyType,
+	UINT32 APMaxChannelWidth,
+	ANSISTRING APDescription,
+	ANSISTRING APManufacturer,
+	ANSISTRING APModelName,
+	ANSISTRING APModelNum,
+	BOOL32 IsHighestLinkQuality,
+	UINT32 DetailedStatusCodeOnRoam,
+	UINT32 RxRate,
+	UINT32 TxRate,
+	UINT16 DTIMPeriod,
+	UINT16 BeaconPeriod,
+	UINT32 EAPType,
+	UNICODESTRING OneXAuthMode,
+	BOOL32 HotSpot20IEPresent,
+	UNICODESTRING DeviceMfg,
+	UINT32 ProfileTypeUsed,
+	UINT32 SystemRandomizationStatus,
+	UINT32 ProfileRandomizationStatus,
+	SYSTEMTIME DriverDate,
+	BOOL32 IsMSConnectivity,
+	BOOL32 IsIHVConnectivity,
+	BOOL32 IsMSSecurity,
+	BOOL32 IsIHVSecurity,
+	BOOL32 IsWDI,
+	BOOL32 IsMSTethering,
+	BOOL32 IsCosted,
+	BOOL32 IsFIPS,
+	BOOL32 IsAUserLoggedIn
+	);
+
+WdiagBadConnectivityRecoveryAction(
+	UINT64 PartA_PrivTags,
+	GUID InterfaceGuid,
+	UINT32 RecoveryAction,
+	UINT32 ConnectivityTriggers,
+	BOOL32 GoodConnectivityPreviouslyAchieved,
+	UINT32 CurrentConnectionTimeInBadStateMs,
+	UINT32 TimeInBadConnectivityStateMs,
+	UINT32 TimeSpentInPreviousRecoveryAction,
+	UINT32 CurrentSignalQuality,
+	UINT32 CurrentRxRate,
+	UINT32 CurrentTxRate,
+	BOOL32 BssidChanged,
+	UINT32 RecoverySessionId
+	);
+
+FeatureVariantUsage(
+	UINT32 featureId,
+	INT32 featureVersion,
+	INT32 featureBaseVersion,
+	INT16 featureStage,
+	BOOLEAN enabled,
+	UINT32 variantKind,
+	UINT8 variant,
+	UINT64 addend
+	);
+
+WdiagInterfaceRecoveryStateChanging(
+	UINT64 PartA_PrivTags,
+	GUID InterfaceGuid,
+	UINT32 NewState,
+	UINT32 PreviousState,
+	UINT32 TimeSpentInPreviousState,
+	BOOL32 GoodConnectivityPreviouslyAchieved,
+	UINT32 BadConnectivityTriggers,
+	UINT32 RecoveryActionTriggered,
+	UINT32 TimeSpentInRecoveryAction,
+	UINT32 ConnectionMode,
+	UINT32 Dot11BssType,
+	UINT32 CurrentSignalQuality,
+	UINT32 CurrentRxRate,
+	UINT32 CurrentTxRate,
+	BOOL32 BssidChanged,
+	BOOL32 SsidChanged,
+	BOOL32 SuppressRecovery,
+	UINT32 EventResultCode,
+	UINT32 RecoverySessionId
+	);
+
+EnabledFeatureUsage(
+	UINT32 featureId,
+	INT32 featureVersion,
+	INT32 featureBaseVersion,
+	INT16 featureStage,
+	BOOLEAN enabled,
+	UINT32 kind,
+	UINT64 addend
+	);
+
+VirtualizationManagerConflictResolver(
+	UINT32 incomingScenarioProtocol,
+	UINT32 incomingScenarioType,
+	UINT32 conflictingResourceIds,
+	UINT32 terminatedScenarioProtocol,
+	UINT32 terminatedScenarioType,
+	BOOL32 conflictResolution
+	);
+
+WfdVirtualInterfaceRemoved(
+	GUID PrimaryInterfaceGuid,
+	GUID VirtualInterfaceGuid,
+	UNICODESTRING HardwareId,
+	UNICODESTRING FriendlyName,
+	UNICODESTRING DriverVersion,
+	UNICODESTRING DriverDate,
+	ANSISTRING WfdVirtualInterfaceType,
+	UINT32 TimeoutPeriod_ms
+	);
+
+WfdVirtualInterfaceDidNotArrive(
+	GUID PrimaryInterfaceGuid,
+	UNICODESTRING HardwareId,
+	UNICODESTRING FriendlyName,
+	UNICODESTRING DriverVersion,
+	UNICODESTRING DriverDate,
+	ANSISTRING WfdVirtualInterfaceType,
+	UINT32 TimeoutPeriod_ms
+	);
+
+PrimaryInteraceNotReportedToWfd(
+	GUID InterfaceGuid,
+	UNICODESTRING HardwareId,
+	UNICODESTRING FriendlyName,
+	UNICODESTRING DriverVersion,
+	UNICODESTRING DriverDate,
+	UINT32 TimeoutPeriod_ms
+	);
+
+WdiDriverWithNoP2PSupport(
+	GUID InterfaceGuid,
+	UNICODESTRING HardwareId,
+	UNICODESTRING FriendlyName,
+	UNICODESTRING DriverVersion,
+	UNICODESTRING DriverDate
+	);
+
+BeginPendingSession(
+	UINT32 IncomingType,
+	UNICODESTRING PeerAddress
+	);
+
+ConnectionComplete(
+	UINT64 StartTickCount,
+	UINT32 TargetedDiscoveryDuration,
+	UINT32 TargetedDiscoveryRole,
+	UINT32 TargetedDiscovery2Duration,
+	UINT32 TargetedDiscovery2Role,
+	UINT32 ProvDiscDuration,
+	UINT8 ProvDiscStatusCode,
+	UINT16 ProvDiscConfigMethod,
+	UINT8 ProvDiscWfdsConnectionCap,
+	BOOL32 ProvDiscWfdsPersistent,
+	UINT32 InvitDuration,
+	UINT8 InvitStatusCode,
+	UINT32 GoNegDuration,
+	UINT8 GoNegStatusCode,
+	UINT8 GoNegLocalDecision,
+	UINT32 FindRolePortInfo,
+	UINT32 FindRolePortDuration,
+	UINT32 StartGoDuration,
+	UINT32 WfdRole,
+	UINT32 ConnectToGoDuration,
+	UINT32 WpsExchangeDuration,
+	UINT32 WpsExchangeState,
+	UINT32 WpsExchangeSendRetry,
+	UINT32 WpsExchangeRecvRetry,
+	UINT32 WpsExchangeReason,
+	HRESULT WpsExchangeFailureCode,
+	UINT32 IpAddrAssignmentDuration,
+	UINT32 AspcpDuration,
+	UINT32 CheckFirewallConfigDuration,
+	UINT32 PreconfigFirewallDuration,
+	BOOL32 WfdsvcForgottenPairing,
+	BOOL32 Transient,
+	UINT32 IpAddrAllocType,
+	UINT32 PairState,
+	UINT32 GoPeerState,
+	UINT32 ClientState,
+	UINT32 AspSessionState,
+	UINT32 RecvGoNeg,
+	UINT32 IncomingType,
+	UINT32 PendingState,
+	UINT32 ErrorCode,
+	UINT32 FinalState,
+	UINT64 FinalTickCount
+	);
+
+WiFiMovementDetected(
+	UINT64 StartTickCount,
+	UINT32 Config,
+	UINT64 FinalTickCount,
+	UINT32 Reason,
+	UINT32 UniqueConnectedNetworks,
+	UINT32 RoamingCount,
+	BOOLEAN HasBaselineRssi,
+	DOUBLE BaselineRssi,
+	DOUBLE BaselineStdDevRssi,
+	BOOLEAN HasMeanRssi,
+	DOUBLE MeanRssi
+	);
+
+Assert(
+	UINT32 assertVersion,
+	UINT32 rva,
+	UINT32 timestamp,
+	UINT32 imageSize,
+	ANSISTRING imageName,
+	UINT32 count,
+	UINT32 totalHits,
+	UINT32 ModuleCollection,
+	UINT32 GlobalCollection
+	);
+
+WlanStoredNeededChange(
+	UNICODESTRING ProfileName,
+	GUID InterfaceGuid,
+	UINT64 LocalModifiedTime,
+	UINT32 ActionTaken,
+	UNICODESTRING User
+	);
+

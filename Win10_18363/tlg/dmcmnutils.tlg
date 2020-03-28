@@ -1,0 +1,64 @@
+ProviderNames:
+	Microsoft.Windows.DeviceManagement.DmCmnUtils
+	Microsoft.Windows.DeviceManagement.SessionManagement
+	Microsoft.Windows.EnterpriseManagement.Enrollment
+	Microsoft.Windows.EnterpriseManagement.PolicyManager
+	Microsoft.Windows.DeviceManagement.OmaDmApiProvider
+	Microsoft.Windows.EnterpriseManagement.ResourceManager
+	Microsoft.Windows.DeviceManagement.OmaDmClient
+	Microsoft.Windows.DeviceManagement.ConfigManager2
+	Microsoft.Windows.EnterpriseManagement.DeclaredConfiguration
+	Microsoft.Windows.DeviceManagement.DevDetailCsp
+	Microsoft.Windows.DeviceManagement.OMADMPRC
+	Microsoft.Windows.EnterpriseManagement.ResourceManagerUnenrollHook
+	Microsoft.Windows.DeviceManagement.SecurityPolicyCsp
+	Microsoft.Windows.DeviceManagement.DmAccCsp
+	Microsoft.Windows.DeviceManagement.DevInfo
+	Microsoft.Windows.EnterpriseManagement.ConfigManagerHook
+	Microsoft-Windows-DeviceManagement-W7NodeProcessor
+	Microsoft.Windows.EMPS.Enrollment
+
+
+
+**** Events *****
+QueryPolicy(
+	UINT32 dwPolicyId,
+	UINT32 *pdwPolicyValue,
+	HRESULT hr
+	);
+
+SetPolicy(
+	UINT32 dwPolicyId,
+	UINT32 dwValue,
+	HRESULT hr
+	);
+
+DmGetAadUserTokenFailureErrorMessage(
+	UNICODESTRING ErrorMessage
+	);
+
+DmGetAadUserTokenFailure(
+	UINT8 Interactive,
+	UINT8 Device,
+	HRESULT Hresult,
+	UINT32 RequestStatus,
+	UINT32 ErrorCode,
+	ANSISTRING __TlgCV__
+	);
+
+DmGetAadUserTokenRetryOnExpiration(
+	UINT8 Interactive,
+	UINT8 Device,
+	HRESULT Hresult,
+	FILETIME ExpirationTime,
+	FILETIME CurrentTime,
+	ANSISTRING __TlgCV__
+	);
+
+DmGetAadUserTokenFailure(
+	UINT8 Interactive,
+	UINT8 Device,
+	HRESULT Hresult,
+	ANSISTRING __TlgCV__
+	);
+

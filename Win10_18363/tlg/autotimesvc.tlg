@@ -1,0 +1,549 @@
+ProviderNames:
+	Microsoft.Windows.AutoTime.Service
+
+
+
+**** Events *****
+DoTimeSyncStop(
+	UINT32 result,
+	UINT32 queued
+	);
+
+NlmStateChange(
+	UINT32 state
+	);
+
+ReadSettingsStop(
+	BOOLEAN updated
+	);
+
+NlmSubscribed(
+	VOID
+	);
+
+UnRegisteringWnf(
+	VOID
+	);
+
+ProcessNtpStop(
+	UINT32 result
+	);
+
+DoApplySettingsStart(
+	VOID
+	);
+
+ProcessMessageStop(
+	VOID
+	);
+
+NlmServiceStateSubscribed(
+	VOID
+	);
+
+DoTimeSyncStart(
+	VOID
+	);
+
+NoNetwork(
+	VOID
+	);
+
+RegisteringForWnf(
+	BOOLEAN startSync,
+	FILETIME currTime
+	);
+
+EnablingNtpProcessing(
+	VOID
+	);
+
+DoApplySettingsStop(
+	BOOLEAN ntpEnabled,
+	BOOLEAN ntpAllowed,
+	HRESULT result
+	);
+
+ActivityStoppedAutomatically(
+	VOID
+	);
+
+UnRegisteredWnf(
+	VOID
+	);
+
+RegisteredForWnf(
+	VOID
+	);
+
+ConnectivityChange(
+	HEXINT32 connectivity
+	);
+
+NitzStart(
+	VOID
+	);
+
+ProcessMessageNotRunning(
+	VOID
+	);
+
+RegisterForWnfAlreadyRan(
+	VOID
+	);
+
+ProcessNtpStart(
+	VOID
+	);
+
+ProcessMessageStart(
+	HEXINT32 type
+	);
+
+InactivityCheck(
+	BOOLEAN queueEmpty,
+	BOOLEAN ntpQueueEmpty
+	);
+
+NitzStop(
+	UINT32 result
+	);
+
+NlmServiceStateLag(
+	VOID
+	);
+
+SettingsChanged(
+	BOOLEAN enabled,
+	BOOLEAN ntpEnabled,
+	UNICODESTRING ntpServers
+	);
+
+NlmNotificationError(
+	WIN32ERROR error
+	);
+
+DisablingNtpProcessing(
+	BOOLEAN emptyQueue
+	);
+
+ReadSettingsStart(
+	VOID
+	);
+
+NotRunning(
+	VOID
+	);
+
+NlmStateRegistrationFailed(
+	WIN32ERROR error
+	);
+
+UnknownArg(
+	UNICODESTRING arg
+	);
+
+ComSecurityInitiazedBySvchost(
+	VOID
+	);
+
+AdjustTokenPrivilegesFailed(
+	WIN32ERROR error
+	);
+
+TriggerStarted(
+	VOID
+	);
+
+ServiceStateFailed(
+	INT32 logPoint,
+	HRESULT result
+	);
+
+ServiceState(
+	INT32 logPoint,
+	HRESULT result
+	);
+
+ComSecurityInitFailed(
+	HRESULT error
+	);
+
+ComSecurityNotInitiazedBySvchost(
+	VOID
+	);
+
+OpenProcessTokenFailed(
+	WIN32ERROR error
+	);
+
+QueueNotInitialized(
+	HEXINT32 type
+	);
+
+QueuedAction(
+	HEXINT32 type,
+	HEXINT32 oldValue,
+	HEXINT32 newValue
+	);
+
+QueueState(
+	HEXINT32 value,
+	BOOLEAN workSubmitted
+	);
+
+WnfUnsubscribed(
+	HEXINT64 name
+	);
+
+WnfSubscribed(
+	HEXINT64 name
+	);
+
+WnfSubscribtionFailed(
+	HEXINT64 name,
+	BOOLEAN optional
+	);
+
+WnfStateSizeInvalid(
+	HEXINT64 name,
+	UINT32 stamp,
+	UINT32 size
+	);
+
+WnfNotificationSkipped(
+	HEXINT64 name,
+	UINT32 stamp,
+	UINT32 size
+	);
+
+WnfStateNotification(
+	HEXINT64 name,
+	UINT32 size,
+	UINT32 stamp,
+	HEXINT32 action
+	);
+
+InvalidNitz(
+	SYSTEMTIME time,
+	UINT64 tick,
+	UINT64 currTick,
+	UINT32 buildYear
+	);
+
+NetworkTimeSyncInitialized(
+	UINT32 updateThresholdInSec,
+	UINT32 minYear
+	);
+
+PublishedLastSyncInfo(
+	UINT32 provider,
+	SYSTEMTIME syncTime,
+	UINT64 syncTimeStamp
+	);
+
+InvalidNewTime(
+	FILETIME time,
+	WIN32ERROR error
+	);
+
+InvalidLastSyncInfo(
+	UINT32 provider,
+	SYSTEMTIME syncTime,
+	UINT64 syncTimeStamp
+	);
+
+LastSyncInfoNotSet(
+	VOID
+	);
+
+ThresholdNotReached(
+	UINT64 deltaIn100Ns,
+	UINT32 thresholdInSec
+	);
+
+InvalidSavedTime(
+	SYSTEMTIME lastSyncTime,
+	UINT64 lastSyncTick,
+	WIN32ERROR error
+	);
+
+CalculatedNewTime(
+	FILETIME newTime,
+	UINT64 newTimeValue,
+	UINT64 currTimeValue,
+	UINT64 currTick,
+	UINT64 lastSyncTick
+	);
+
+SetTime(
+	SYSTEMTIME newTime
+	);
+
+SetTimeFailed(
+	SYSTEMTIME time,
+	WIN32ERROR error
+	);
+
+PublishLastSyncInfoFailed(
+	HRESULT error
+	);
+
+CurrSysTime(
+	FILETIME time
+	);
+
+NotifyClockFailed(
+	HRESULT error
+	);
+
+LastSyncInfo(
+	UINT32 provider,
+	SYSTEMTIME syncTime,
+	UINT64 syncTimeStamp
+	);
+
+NtpTimeSyncCheck(
+	UINT64 syncDeltaInMs,
+	UINT64 syncIntervalInMs
+	);
+
+WpW32TimeSyncNow(
+	UINT32 retry,
+	BOOLEAN force
+	);
+
+WpW32TimeSyncNowStop(
+	HRESULT result
+	);
+
+RetryingNtpTimeSync(
+	HRESULT result
+	);
+
+WpW32TimeSyncNowStart(
+	UNICODESTRING servers
+	);
+
+NtpSyncStart(
+	VOID
+	);
+
+NtpTimeSyncCanceled(
+	VOID
+	);
+
+NtpTimeSyncRetryDelay(
+	HRESULT result,
+	UINT32 delayInMs
+	);
+
+NtpSync(
+	VOID
+	);
+
+NtpSyncStop(
+	HRESULT result
+	);
+
+Error(
+	UINT64 PartA_PrivTags,
+	SIGNED wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+RegDwordValue(
+	UNICODESTRING valueName,
+	BOOLEAN persistentKey,
+	UINT32 value
+	);
+
+InvalidRegMultiStringValue(
+	UNICODESTRING valueName,
+	BOOLEAN persistentKey
+	);
+
+QueryRegDwordValueFailed(
+	UNICODESTRING valueName,
+	BOOLEAN persistentKey,
+	WIN32ERROR error
+	);
+
+SetRegStringValue(
+	UNICODESTRING valueName,
+	BOOLEAN persistentKey,
+	UNICODESTRING value
+	);
+
+SetRegValueFailed(
+	UNICODESTRING valueName,
+	BOOLEAN persistentKey,
+	UINT32 type,
+	WIN32ERROR error
+	);
+
+RegMultiStringValue2(
+	UNICODESTRING valueName,
+	BOOLEAN persistentKey,
+	UNICODESTRING value
+	);
+
+DelRegValue(
+	UNICODESTRING valueName,
+	BOOLEAN persistentKey,
+	BOOLEAN deleted
+	);
+
+SetRegDwordValue(
+	UNICODESTRING valueName,
+	BOOLEAN persistentKey,
+	UINT32 value
+	);
+
+RegStringStringValue(
+	UNICODESTRING valueName,
+	BOOLEAN persistentKey,
+	UNICODESTRING value
+	);
+
+PersistentRegKey(
+	UNICODESTRING sourceId,
+	UNICODESTRING path
+	);
+
+DelRegValueFailed(
+	UNICODESTRING valueName,
+	BOOLEAN persistentKey,
+	WIN32ERROR error
+	);
+
+QueryRegStringOrMultiStringValueFailed(
+	UNICODESTRING valueName,
+	BOOLEAN persistentKey,
+	WIN32ERROR error
+	);
+
+CreatePersistentRegKeyFailed(
+	UNICODESTRING sourceId,
+	UNICODESTRING path,
+	WIN32ERROR error
+	);
+
+InvalidRegKey(
+	UNICODESTRING path
+	);
+
+RegStringOrMultiStringValueMissing(
+	UNICODESTRING valueName
+	);
+
+GetPersistentRegKeyFailed(
+	UNICODESTRING sourceId,
+	UNICODESTRING path,
+	WIN32ERROR error
+	);
+
+RegMultiStringValue(
+	UNICODESTRING valueName,
+	BOOLEAN persistentKey,
+	UNICODESTRING value
+	);
+
+CeateRegKeyFailed(
+	UNICODESTRING path,
+	WIN32ERROR error
+	);
+
+RegDwordValueMissing(
+	UNICODESTRING valueName
+	);
+
+StateSeparation(
+	BOOLEAN enabled
+	);
+
+NtpServers(
+	UNICODESTRING ntpServers
+	);
+
+ReleasedPdcRef(
+	VOID
+	);
+
+W32TimeStopped(
+	VOID
+	);
+
+W32TimeNotRunning(
+	VOID
+	);
+
+W32TimeSyncResult(
+	HEXINT32 flags,
+	UINT32 result
+	);
+
+W32TimeStartFailed(
+	UINT32 state
+	);
+
+W32TimeAlreadyRunning(
+	VOID
+	);
+
+AcquiredPdcRef(
+	VOID
+	);
+
+W32TimeStopFailed(
+	UINT32 state
+	);
+
+W32TimeIsDisabled(
+	VOID
+	);
+
+DisablingW32TimeLogging(
+	VOID
+	);
+
+EnablingW32TimeLogging(
+	VOID
+	);
+
+StoppingW32Time(
+	BOOLEAN disable
+	);
+
+SettingW32TimeStartType(
+	UINT32 startType
+	);
+
+StartingW32Time(
+	VOID
+	);
+
+W32TimeUnexpectedStop(
+	VOID
+	);
+
+W32TimeStopFailed2(
+	UINT32 state
+	);
+

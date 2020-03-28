@@ -1,0 +1,986 @@
+ProviderNames:
+	Microsoft.Windows.Analog.Spectrum
+	Microsoft.Windows.Analog.SpectrumContinuous
+	Microsoft.Windows.Analog.HolographicDriverClient
+	Microsoft.Windows.Analog.HolographicDriverClientContinuous
+
+
+
+**** Events *****
+UnexpectedFailure(
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UNICODESTRING message
+	);
+
+UnexpectedFailure(
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UNICODESTRING message
+	);
+
+ExpectedFailure(
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UNICODESTRING message
+	);
+
+FallbackError(
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+FallbackError(
+	UINT64 PartA_PrivTags,
+	SIGNED wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+HolographicDeviceEnumerationCompleted(
+	UNICODESTRING deviceAqsString
+	);
+
+TelemetryHolographicDeviceAdded(
+	UNICODESTRING DeviceInterfaceId,
+	UNICODESTRING DeviceName,
+	GUID ClassGuid,
+	UNICODESTRING Manufacturer,
+	UNICODESTRING ModelName,
+	UNICODESTRING FirmwareVersion,
+	UNICODESTRING DriverVersion,
+	UNICODESTRING SerialNumber
+	);
+
+HolographicDeviceUpdated(
+	UNICODESTRING DeviceInterfaceId,
+	GUID ClassGuid,
+	UNICODESTRING Manufacturer,
+	UNICODESTRING ModelName,
+	UNICODESTRING FirmwareVersion,
+	UNICODESTRING DriverVersion
+	);
+
+TelemetryHolographicDeviceRemoved(
+	UNICODESTRING DeviceInterfaceId
+	);
+
+HolographicDeviceWatcherInitialized(
+	HEXINT64 Watcher,
+	UNICODESTRING DeviceAqsString
+	);
+
+HolographicRuntime_GetVBlankToPhotonsTime(
+	UINT32 timeInMicroseconds
+	);
+
+ErrorStatusUpdated(
+	UINT32 statusCode,
+	UINT32 subStatusCode,
+	UNICODESTRING deviceInterfacePath
+	);
+
+Log_Information(
+	INT32 Source,
+	UNICODESTRING String
+	);
+
+OnDisplayPropertiesUpdated(
+	UNICODESTRING deviceName,
+	INT32 updatedProperties
+	);
+
+HolographicRuntime_DeviceLifetimeEvent(
+	UNICODESTRING deviceInterfacePath,
+	UNICODESTRING eventName
+	);
+
+TelemetryHolographicVirtualDisplay_Added(
+	GUID displayGuid,
+	UNICODESTRING displayCalibrationDeviceInterfacePath,
+	UNICODESTRING friendlyName
+	);
+
+TelemetryHolographicDisplayMonitor_Bound(
+	GUID displayGuid,
+	UNICODESTRING displayCalibrationDeviceInterfacePath,
+	UNICODESTRING monitorDevicePath,
+	UNICODESTRING monitorFriendlyName,
+	UINT32 monitorTargetId
+	);
+
+TelemetryHolographicDisplayMonitor_Unbound(
+	GUID displayGuid,
+	UNICODESTRING displayCalibrationDeviceInterfacePath,
+	UNICODESTRING monitorDevicePath,
+	UNICODESTRING monitorFriendlyName,
+	UINT32 monitorTargetId
+	);
+
+TelemetryHolographicDisplayMonitor_Added(
+	UNICODESTRING monitorDevicePath,
+	UNICODESTRING monitorFriendlyName,
+	UINT32 monitorTargetId
+	);
+
+SetMonitors_MonitorInfo(
+	ANSISTRING action,
+	UNICODESTRING deviceInterfacePath,
+	UNICODESTRING friendlyName,
+	UINT32 targetId,
+	INT32 isHmd
+	);
+
+SetMonitors(
+	UINT32 monitorCount
+	);
+
+HolographicDeviceWatcherDestroyed(
+	HEXINT64 Watcher
+	);
+
+TraceLoggingInfo(
+	UNICODESTRING traceLoggingMessage
+	);
+
+OnSpatialGraphPropertiesUpdated(
+	UNICODESTRING deviceName,
+	INT32 updatedProperties
+	);
+
+TrimDurableStaticNodes(
+	INT32 hr,
+	UNICODESTRING deviceInterfacePath,
+	UINT32 nodeCount
+	);
+
+Log_Warning(
+	INT32 Source,
+	UNICODESTRING String
+	);
+
+SpatialGraphRuntime_TryGetDriverClient_DriverClientExists(
+	UNICODESTRING deviceInterfacePath
+	);
+
+SurfaceReconstructionDriverClient_RootObjectRemoved(
+	HEXINT64 Instance,
+	GUID objectId
+	);
+
+SurfaceReconstructionDriverClient_RootObjectAdded(
+	HEXINT64 Instance,
+	GUID objectId
+	);
+
+SurfaceReconstructionDriverClient_MetadataCollectionUpdated(
+	HEXINT64 Instance
+	);
+
+SurfaceReconstructionDriverClient_Created(
+	HEXINT64 Instance
+	);
+
+OpenHolographicDevice(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId,
+	ANSISTRING DriverType,
+	UNICODESTRING DeviceName,
+	GUID CorrelationGUID
+	);
+
+HolographicDriverHandleWrapper_DeviceIoControlFailed(
+	HEXINT64 pThis,
+	UINT32 error,
+	UINT32 dwIoControlCode,
+	HEXINT64 pThis,
+	GUID driverHandleCorrelationGuid
+	);
+
+GetPanelAreaVertices(
+	HEXINT64 pThis,
+	INT32 eyeId,
+	INT32 areaType,
+	UINT32 vertices.VertexCount
+	);
+
+TelemetryCloseHolographicDevice(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId,
+	ANSISTRING DriverType,
+	UNICODESTRING DeviceName,
+	GUID CorrelationGUID
+	);
+
+PrecachePropertiesElapsedTime(
+	ANSISTRING driverType,
+	GUID correlationGuid,
+	UINT64 elapsedMilliseconds
+	);
+
+EyePropertyCache_Cleared(
+	ANSISTRING driverType,
+	GUID correlationGuid,
+	INT32 eyeId
+	);
+
+GetIpdAdjustmentCapability(
+	INT32 static_cast<int>(value)
+	);
+
+OpenHolographicDevice(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	SIGNED wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+CloseHolographicDevice(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	SIGNED wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+GetMinIpdMillimeters(
+	HEXINT64 pThis,
+	FLOAT value
+	);
+
+DevicePropertyRequestAdded(
+	ANSISTRING driverType,
+	GUID driverHandleCorrelationGuid,
+	GUID propertyKey
+	);
+
+OpenHolographicDevice(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+TelemetryOpenHolographicDevice(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+GetVBlankToPhotonLatencyWithScanMode(
+	INT32 static_cast<int>(eyeId),
+	UINT32 monitorRefereshRate.Numerator,
+	UINT32 monitorRefereshRate.Denominator,
+	INT32 static_cast<int>(scanMode),
+	INT64 firstScanlineLatencyInNanoSeconds,
+	INT64 lastScanlineLatencyInNanoSeconds
+	);
+
+GetDefaultIpdMillimeters(
+	HEXINT64 pThis,
+	FLOAT value
+	);
+
+IoctlTimeout(
+	GUID correlationGuid,
+	HEXINT32 ioctlCode,
+	UINT32 timeoutMilliseconds,
+	GUID propertyKey,
+	GUID nodeId,
+	UNICODESTRING forDevice,
+	UINT64 PartA_PrivTags
+	);
+
+ActivityIntermediateStop(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+PrecachePropertiesRanLong(
+	ANSISTRING driverType,
+	GUID correlationGuid,
+	UINT64 elapsedMilliseconds,
+	UINT64 threshold,
+	UINT64 PartA_PrivTags
+	);
+
+TelemetryCloseHolographicDevice(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+GetPanelResolution(
+	HEXINT64 pThis,
+	UINT32 width,
+	UINT32 height
+	);
+
+DriverCompatibilityDetermined(
+	ANSISTRING driverType,
+	UINT32 platformSupportedDDILevels.EarliestSupported,
+	UINT32 platformSupportedDDILevels.LatestSupported,
+	UINT32 driverSupportedDDILevels.EarliestSupported,
+	UINT32 driverSupportedDDILevels.LatestSupported,
+	BOOLEAN isCompatible
+	);
+
+GetPanelOrientation(
+	INT32 value
+	);
+
+RegisterPropertiesUpdatedCallback(
+	ANSISTRING driverType,
+	HEXINT64 pThis,
+	HEXINT64 pCallback,
+	HEXINT64 pCallbackWeakRef
+	);
+
+GetMaxIpdMillimeters(
+	HEXINT64 pThis,
+	FLOAT value
+	);
+
+GetVBlankToPhotonLatencyTable(
+	INT32 eyeId,
+	STRING Latencies,
+	STRING RefreshRate,
+	UINT32 Numerator,
+	UINT32 Denominator,
+	INT64 LatencyInNanoseconds
+	);
+
+GetErrorStatuses(
+	ANSISTRING driverType,
+	UNICODESTRING deviceInterfacePath,
+	BOOLEAN Statuses,
+	UINT32 StatusCode,
+	UINT32 SubstatusCode,
+	FILETIME OriginatedTime,
+	UINT64 PartA_PrivTags
+	);
+
+EyePropertyCache_RemoveValue(
+	ANSISTRING driverType,
+	GUID correlationGuid,
+	INT32 eyeId,
+	GUID propertyKey
+	);
+
+EyePropertyCacheMiss(
+	GUID correlationGuid,
+	GUID propertyKey,
+	INT32 eyeId,
+	BOOL32 shouldDoIoctl
+	);
+
+PropertyCache_SetValue(
+	ANSISTRING driverType,
+	GUID correlationGuid,
+	GUID propertyKey,
+	UINT64 valueSize
+	);
+
+GetPinholeCameraModel(
+	HEXINT64 pThis,
+	INT32 eyeId,
+	INT32 value.Viewport,
+	FLOAT value.FocalLength,
+	FLOAT value.PrincipalPoint,
+	FLOAT value.SkewFactor
+	);
+
+CloseHolographicDevice(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId,
+	ANSISTRING DriverType,
+	UNICODESTRING DeviceName,
+	GUID CorrelationGUID
+	);
+
+ActivityIntermediateStop(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+TelemetryOpenHolographicDevice(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+TelemetryOpenHolographicDevice(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId,
+	ANSISTRING DriverType,
+	UNICODESTRING DeviceName,
+	GUID CorrelationGUID
+	);
+
+GetDistortion3KModel(
+	HEXINT64 pThis,
+	INT32 eyeId,
+	INT32 colorChannelId,
+	INT32 model.Viewport,
+	FLOAT model.K1,
+	FLOAT model.K2,
+	FLOAT model.K3,
+	FLOAT model.DistortionCenter
+	);
+
+ActivityStoppedAutomatically(
+	VOID
+	);
+
+EyePropertyCache_SetValue(
+	ANSISTRING driverType,
+	GUID correlationGuid,
+	INT32 eyeId,
+	GUID propertyKey,
+	UINT64 valueSize
+	);
+
+IoctlRanLong(
+	GUID correlationGuid,
+	HEXINT32 ioctlCode,
+	HRESULT hresult,
+	FLOAT elapsedMilliseconds,
+	UINT32 thresholdMilliseconds,
+	UINT64 PartA_PrivTags
+	);
+
+ActivityError(
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+SetDisplayIPDEstimation(
+	HEXINT64 pThis,
+	FLOAT valueInMillimeters
+	);
+
+PropertyCache_RemoveValue(
+	ANSISTRING driverType,
+	GUID correlationGuid,
+	GUID propertyKey
+	);
+
+TelemetryUserPresenceChanged(
+	BOOLEAN isPresent,
+	GUID correlationGuid
+	);
+
+ActivityError(
+	UINT64 PartA_PrivTags,
+	SIGNED wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+ContainsDevice(
+	HEXINT64 pThis,
+	UNICODESTRING deviceInterfacePath,
+	BOOLEAN value
+	);
+
+ActivityStoppedAutomatically(
+	VOID
+	);
+
+GetCurrentIpdMillimeters(
+	HEXINT64 pThis,
+	FLOAT value
+	);
+
+Log_Information(
+	UINT32 hr,
+	UNICODESTRING message
+	);
+
+Log_Error(
+	UINT32 hr,
+	UNICODESTRING message
+	);
+
+ActivityError(
+	UINT64 PartA_PrivTags,
+	SIGNED wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+CloseHolographicDevice(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+TelemetryCloseHolographicDevice(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+GetDynamicNodeToEye(
+	HEXINT64 pThis,
+	INT32 eyeId,
+	FLOAT value
+	);
+
+DevicePropertyRequestFailed(
+	ANSISTRING driverType,
+	GUID driverHandleCorrelationGuid,
+	GUID propertyKey,
+	HRESULT hr
+	);
+
+PropertyCache_Cleared(
+	ANSISTRING driverType,
+	GUID correlationGuid
+	);
+
+DevicePropertyCacheMiss(
+	ANSISTRING driverType,
+	GUID correlationGuid,
+	GUID propertyKey,
+	BOOL32 shouldDoIoctl
+	);
+
+GetPoseAtTime_TranslationInvalid(
+	UINT64 PartA_PrivTags
+	);
+
+GetDynamicNodeButtonLatency(
+	HEXINT64 pThis,
+	GUID driverHandleCorrelationGuid,
+	GUID nodeId,
+	INT32 latencyMicroSeconds
+	);
+
+GetPoseAtTime_NotEnoughPosesToInterpolate(
+	UINT64 PartA_PrivTags
+	);
+
+GetDynamicNodeHapticsOutputPeriodMicroseconds(
+	HEXINT64 pThis,
+	GUID driverHandleCorrelationGuid,
+	GUID nodeId,
+	INT32 outputPeriodMicroseconds
+	);
+
+NodePropertyRequestAdded(
+	GUID driverHandleCorrelationGuid,
+	GUID nodeId,
+	GUID propertyKey
+	);
+
+GetDynamicNodeHapticsIntensityLevels(
+	HEXINT64 pThis,
+	GUID driverHandleCorrelationGuid,
+	GUID nodeId,
+	INT32 intensityLevels
+	);
+
+DestroySpatialGraphNodeReference(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	SIGNED wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+NodePropertyCache_SetValue(
+	GUID correlationGuid,
+	GUID nodeId,
+	GUID propertyKey,
+	UINT64 valueSize
+	);
+
+DestroySpatialGraphNodeReference(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+TrackingStateChanged(
+	GUID correlationGuid,
+	GUID nodeId,
+	ANSISTRING oldState,
+	ANSISTRING newState,
+	INT64 qpf
+	);
+
+GetPoseAtTime_NotEnoughPosesToExtrapolate(
+	UINT64 PartA_PrivTags
+	);
+
+CreateSpatialGraphNodeReference(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+NodePropertyCallbackCleanedUp(
+	GUID correlationGuid,
+	GUID nodeId
+	);
+
+NodePropertyCacheMiss(
+	GUID correlationGuid,
+	GUID propertyKey,
+	GUID nodeId,
+	BOOL32 shouldDoIoctl
+	);
+
+GetSittingStandingOnly(
+	HEXINT64 pThis,
+	GUID driverHandleCorrelationGuid,
+	BOOLEAN value
+	);
+
+GetPoseAtTime_OrientationInvalid(
+	UINT64 PartA_PrivTags
+	);
+
+GetPoseAtTime_PredictFromPoses(
+	UINT64 PartA_PrivTags,
+	INT32 hrPredictFromPoses,
+	INT64 poseTimestampInQpcCounts,
+	INT64 availableTimestampInQpcCounts,
+	UINT32 validity,
+	FLOAT nodeToParent
+	);
+
+CreateSpatialGraphNodeReference(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	SIGNED wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+TelemetrySetStaticNodeDurability(
+	HEXINT64 pThis,
+	GUID driverHandleCorrelationGuid,
+	GUID nodeId,
+	INT32 durability,
+	UINT64 PartA_PrivTags
+	);
+
+NodePropertyCallbackUnregistered(
+	GUID correlationGuid,
+	GUID nodeId
+	);
+
+GetStaticNodePoses(
+	HEXINT64 pSpatialGraphDriverClient,
+	GUID driverHandleCorrelationGuid,
+	GUID parentNodeId,
+	GUID pNodeIds
+	);
+
+NodePropertyCallbackRegistered(
+	GUID correlationGuid,
+	GUID nodeId
+	);
+
+GetForwardOnly(
+	HEXINT64 pThis,
+	GUID driverHandleCorrelationGuid,
+	BOOLEAN value
+	);
+
+DeleteStaticNodes(
+	HEXINT64 pThis,
+	GUID driverHandleCorrelationGuid,
+	INT32 operation,
+	GUID AsPtr<const GUID>(pNodeIds)
+	);
+
+DestroySpatialGraphNodeReference(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId,
+	GUID driverHandleCorrelationGuid,
+	GUID nodeId
+	);
+
+CreateSpatialGraphNodeReference(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId,
+	GUID driverHandleCorrelationGuid,
+	GUID nodeId,
+	INT32 requestedTrackingLevel
+	);
+
+NodePropertyCache_RemoveNode(
+	GUID correlationGuid,
+	GUID nodeId
+	);
+
+GetDynamicNodeTrackingCapabilities(
+	HEXINT64 pThis,
+	GUID driverHandleCorrelationGuid,
+	GUID nodeId,
+	HEXINT32 value
+	);
+
+GetDynamicNodeForDevice(
+	HEXINT64 pThis,
+	GUID driverHandleCorrelationGuid,
+	UNICODESTRING deviceInterfacePath,
+	GUID NodeId,
+	HEXINT32 TrackingCapabilities,
+	UINT64 PartA_PrivTags
+	);
+
+NoPoseReceivedYet(
+	GUID nodeId,
+	INT32 hr
+	);
+
+NodePropertyRequestFailed(
+	GUID driverHandleCorrelationGuid,
+	GUID nodeId,
+	GUID propertyKey,
+	HRESULT hr
+	);
+
+StartTracking(
+	GUID correlationGuid,
+	GUID nodeId,
+	ANSISTRING newState,
+	INT64 qpf
+	);
+
+GetStaticNodeForPose(
+	HEXINT64 pThis,
+	GUID driverHandleCorrelationGuid,
+	GUID rootNodeId,
+	FLOAT pose,
+	GUID value
+	);
+
+GetPoseAtTime_LatestPoseFromDriver(
+	UINT64 PartA_PrivTags,
+	UINT32 retrievedPoseIndex,
+	UINT32 numPosesReturned,
+	INT64 poseTimestampInQpcCounts,
+	INT64 availableTimestampInQpcCounts,
+	UINT32 validity,
+	FLOAT nodeToParent
+	);
+
+GetPoseAtTime(
+	GUID threadActivityId,
+	HEXINT64 pNodeRef,
+	GUID nodeId,
+	INT64 targetTimestamp,
+	INT64 basePoseSensorTimestamp,
+	INT64 availableTimestamp,
+	INT64 executionTimeInMicroSecs,
+	INT64 deltaNowMinusSensorInMicroSecs,
+	INT64 deltaToMinusNowInMicroSecs,
+	INT64 deltaToMinusSensorInMicroSecs,
+	INT64 poseRequestToAvailableInMicroSecs,
+	INT64 motionToFilterDriverLatencyInMicroSecs,
+	INT32 static_cast<int>(predictionType),
+	INT64 value.PoseTimestampInQpcCounts,
+	INT64 value.AvailableTimestampInQpcCounts,
+	FLOAT value.NodeToParent.OrientationAndPosition,
+	FLOAT value.LinearVelocity,
+	FLOAT value.AngularVelocity,
+	FLOAT value.LinearAccel,
+	FLOAT value.AngularAccel,
+	HEXINT32 value.Validity,
+	BOOLEAN positionApproximated,
+	HEXINT32 changedValidityFlags
+	);
+
+NodePropertyCallbackFailedToResolve(
+	GUID correlationGuid,
+	GUID nodeId
+	);
+

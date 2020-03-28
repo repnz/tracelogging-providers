@@ -1,0 +1,181 @@
+ProviderNames:
+	Microsoft.Windows.Graphics.D3D12WARP
+	TelemetryAssert
+	TelemetryAssertDiagTrack
+
+
+
+**** Events *****
+DispatcherReturnServerInfo(
+	BOOL32 UTCReplace_AppSessionGuid,
+	UINT8 SchemaVersion,
+	UINT32 NumberOfConnections
+	);
+
+DispatcherBeforeAppContainerProfile(
+	BOOL32 UTCReplace_AppSessionGuid,
+	UINT8 SchemaVersion
+	);
+
+DispatcherAfterAppContainerProfile(
+	BOOL32 UTCReplace_AppSessionGuid,
+	UINT8 SchemaVersion,
+	UINT32 CreateAppProfileTimeMS
+	);
+
+ServerHighConnectionCount(
+	BOOL32 UTCReplace_AppSessionGuid,
+	UINT8 SchemaVersion,
+	UINT32 pid
+	);
+
+DispatcherStart(
+	BOOL32 UTCReplace_AppSessionGuid,
+	UINT8 SchemaVersion
+	);
+
+DispatcherBeginShutdown(
+	BOOL32 UTCReplace_AppSessionGuid,
+	UINT8 SchemaVersion
+	);
+
+DispatcherStop(
+	BOOL32 UTCReplace_AppSessionGuid,
+	UINT8 SchemaVersion
+	);
+
+ClientStopService(
+	BOOL32 UTCReplace_AppSessionGuid,
+	UINT8 SchemaVersion,
+	HEXINT64 deviceId
+	);
+
+ServerStart(
+	BOOL32 UTCReplace_AppSessionGuid,
+	UINT8 SchemaVersion
+	);
+
+ServerBeginShutdown(
+	BOOL32 UTCReplace_AppSessionGuid,
+	UINT8 SchemaVersion
+	);
+
+ServerStop(
+	BOOL32 UTCReplace_AppSessionGuid,
+	UINT8 SchemaVersion
+	);
+
+ClientConnectToDispatcher(
+	BOOL32 UTCReplace_AppSessionGuid,
+	UINT8 SchemaVersion,
+	HEXINT64 deviceId
+	);
+
+ClientConnectToServer(
+	BOOL32 UTCReplace_AppSessionGuid,
+	UINT8 SchemaVersion,
+	HEXINT64 deviceId
+	);
+
+ClientStartSendJitMessage(
+	BOOL32 UTCReplace_AppSessionGuid,
+	UINT8 SchemaVersion,
+	HEXINT64 deviceId,
+	UINT32 messageId,
+	UINT32 messageSize
+	);
+
+ClientEndSendJitMessage(
+	BOOL32 UTCReplace_AppSessionGuid,
+	UINT8 SchemaVersion,
+	HEXINT64 deviceId,
+	UINT32 messageId,
+	UINT32 messageSize
+	);
+
+JitServiceClientStatus(
+	BOOL32 UTCReplace_AppSessionGuid,
+	UINT8 SchemaVersion,
+	ANSISTRING telemetryType,
+	INT32 totalLifetimeMS,
+	INT32 totalJitLifetimeMs,
+	INT32 numConnections,
+	INT32 totalDevices,
+	INT32 totalDeviceRemoved,
+	INT32 totalJitFunctionFailures,
+	INT32 firstDispatcherBindDuration,
+	INT32 firstGetUUIDDuration,
+	INT32 firstServerBindDuration,
+	INT32 firstConnectionAttempts,
+	HEXINT32 firstConnectionHr,
+	INT32 firstStartJitDuration,
+	INT32 numStartJitCalls,
+	INT32 numStartJitFailures,
+	HEXINT32 firstStartJitHr,
+	INT32 numSendMessageCalls,
+	INT32 numSendMessageFailures,
+	HEXINT32 firstSendMessageFailHr,
+	INT32 numIsValidConnectionCalls,
+	INT32 numIsValidConnectionFailures,
+	INT32 firstCompleteHr,
+	INT32 dispatcherRevision
+	);
+
+ClientStartService(
+	BOOL32 UTCReplace_AppSessionGuid,
+	UINT8 SchemaVersion,
+	HEXINT64 deviceId
+	);
+
+ClientConnectBegin(
+	BOOL32 UTCReplace_AppSessionGuid,
+	UINT8 SchemaVersion,
+	HEXINT64 deviceId
+	);
+
+JitServiceConnect(
+	BOOL32 UTCReplace_AppSessionGuid,
+	UINT8 SchemaVersion,
+	INT32 BindToDispatcherTimeMS,
+	INT32 GetServerTimeMS,
+	INT32 BindToServerTimeMS,
+	INT32 Attempts,
+	HEXINT32 HRESULT
+	);
+
+JitServiceDispatch(
+	BOOL32 UTCReplace_AppSessionGuid,
+	UINT8 SchemaVersion,
+	INT32 CreateAppProfileTimeMS,
+	INT32 DispatchServerCreationTimeMS
+	);
+
+JitServiceFailure(
+	BOOL32 UTCReplace_AppSessionGuid,
+	UINT8 SchemaVersion,
+	ANSISTRING Function,
+	INT32 LineNumber,
+	INT32 Mode,
+	HEXINT32 HRESULT
+	);
+
+TelemetryThrottled(
+	BOOL32 UTCReplace_AppSessionGuid,
+	UINT32 Bucket,
+	UINT32 IntervalEventCount,
+	FLOAT IntervalDuration,
+	FLOAT IntervalStartTime
+	);
+
+Assert(
+	UINT32 assertVersion,
+	UINT32 rva,
+	UINT32 timestamp,
+	UINT32 imageSize,
+	ANSISTRING imageName,
+	UINT32 count,
+	UINT32 totalHits,
+	UINT32 ModuleCollection,
+	UINT32 GlobalCollection
+	);
+

@@ -1,0 +1,88 @@
+ProviderNames:
+	Microsoft.Windows.Bluetooth
+	TelemetryAssert
+	TelemetryAssertDiagTrack
+
+
+
+**** Events *****
+GattServerReadRequestCanceledViaDeferral(
+	VOID
+	);
+
+FallbackError(
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+FallbackError(
+	UINT64 PartA_PrivTags,
+	SIGNED wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+GattServerWriteRequestCanceledViaDeferral(
+	VOID
+	);
+
+BthLESwMonitorAdvPattern(
+	GUID AdvPatternGuid,
+	UINT8 PatternLength,
+	UINT8 AdvType,
+	UINT8 PatternOffset
+	);
+
+BthLESwMonitorRssiPattern(
+	GUID AdvPatternGuid,
+	UINT8 RSSILow,
+	UINT8 RSSIHigh,
+	UINT8 SamplingPeriod,
+	UINT8 LowTimeInterval
+	);
+
+BthLESwAdvertiseRequestId(
+	GUID LEAdvertiseReqId
+	);
+
+Assert(
+	UINT32 assertVersion,
+	UINT32 rva,
+	UINT32 timestamp,
+	UINT32 imageSize,
+	ANSISTRING imageName,
+	UINT32 count,
+	UINT32 totalHits,
+	UINT32 ModuleCollection,
+	UINT32 GlobalCollection
+	);
+

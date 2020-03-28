@@ -1,0 +1,113 @@
+ProviderNames:
+	Microsoft.Windows.DeviceDirectoryClient
+
+
+
+**** Events *****
+TraceDeviceUnlockedEventResult(
+	UINT32 PrefixParsed,
+	UINT32 ContextParsed,
+	UINT32 RequestId,
+	UINT32 FmdDisabledByPolicy,
+	UINT32 HttpStatus,
+	INT32 HRESULT
+	);
+
+TraceUpdateStatusRetryResult(
+	UINT32 PrefixParsed,
+	UINT32 ContextParsed,
+	UINT32 RequestId,
+	UINT32 Retries,
+	UINT32 CommandTooOld,
+	UINT32 FmdDisabledByPolicy,
+	UINT32 HttpStatus,
+	INT32 HRESULT
+	);
+
+TraceCommandResult(
+	UINT32 PdcClientActivated,
+	UINT32 RequestId,
+	UINT32 CommandType,
+	UINT32 CommandChannelType,
+	INT32 CommandResult,
+	UINT32 HttpStatus,
+	INT32 HRESULT
+	);
+
+TraceLocateCommandRetryResult(
+	UINT32 PrefixParsed,
+	UINT32 RequestId,
+	UINT32 Retries,
+	UINT32 CommandTooOld,
+	UINT32 FmdDisabledByPolicy,
+	INT32 HRESULT
+	);
+
+TraceLocateCommandResult(
+	UINT32 PdcClientActivated,
+	UINT32 RequestId,
+	UINT32 CommandChannelType,
+	UINT32 DeviceLocationEnabled,
+	UINT32 LocationSyncEnabled,
+	UINT32 EnableMasterLocation,
+	UINT32 MasterLocationEnabledByClient,
+	UINT32 Retries,
+	INT32 QuickFixResult,
+	INT32 FirstUpdateStatusResult,
+	UINT32 FirstUpdateStatusHttpResult,
+	INT32 AccurateFixResult,
+	INT32 SecondUpdateStatusResult,
+	UINT32 SecondUpdateStatusHttpResult,
+	INT32 HRESULT
+	);
+
+TraceHandleCommandResult(
+	UINT32 PrefixParsed,
+	UINT32 RequestId,
+	UINT32 CommandId,
+	UINT32 CommandChannelType,
+	INT32 HRESULT
+	);
+
+TraceHandleSmsCommandResult(
+	UINT32 CurrentSecretId,
+	UINT32 UpdatingSecretId,
+	UINT32 ProfileId,
+	UINT32 RequestId,
+	INT32 HRESULT
+	);
+
+TraceHandleWnsCommandResult(
+	UINT32 ProfileId,
+	UINT32 RequestId,
+	INT32 HRESULT
+	);
+
+TraceRegisterUserDeviceResult(
+	UINT32 TaskStopped,
+	UINT32 PdcClientActivated,
+	UINT32 Trigger,
+	UINT32 UserDeviceRegistered,
+	UINT32 MsaStatus,
+	UINT32 TicketObtained,
+	UINT32 NoPrimaryMsa,
+	UINT32 FmdDisabledByPolicy,
+	INT32 HRESULT,
+	UINT32 HttpStatus
+	);
+
+TraceRegisterDeviceResult(
+	UINT32 TaskStopped,
+	UINT32 PdcClientActivated,
+	UINT32 Trigger,
+	UINT32 AnotherInstanceRunning,
+	UINT32 AdminsCount,
+	UINT32 DeviceOwnersCount,
+	UINT32 StandardUsersCount,
+	UINT32 LastAccountRemoved,
+	UINT32 NotOnFreeNetwork,
+	UINT32 FmdDisabledByPolicy,
+	INT32 HRESULT,
+	UINT32 HttpStatus
+	);
+

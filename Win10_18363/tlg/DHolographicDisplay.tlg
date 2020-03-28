@@ -1,0 +1,1266 @@
+ProviderNames:
+	Microsoft.DHD1
+	Microsoft.DHD1.SequencedEventProcessor
+	Microsoft.Windows.Analog.HolographicDriverClient
+	Microsoft.Windows.Analog.HolographicDriverClientContinuous
+
+
+
+**** Events *****
+FallbackError(
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+OnConnectEvent(
+	INT64 performanceFrequency
+	);
+
+LogInformation(
+	UNICODESTRING msg
+	);
+
+UnlockNextFrame(
+	VOID
+	);
+
+UnlockNextFrame(
+	VOID
+	);
+
+FailedToCreateDDisplayOutput(
+	UINT32 AdapterCount,
+	UINT32 DisplayCount,
+	UINT32 AdapterLuidLowPart,
+	INT32 AdapterLuidHighPart
+	);
+
+MissingHMDDevicePresentFlag(
+	UINT16 SchemaVersion,
+	STRING AdapterLuid,
+	UINT32 HighPart,
+	UINT32 LowPart,
+	UINT32 VidPnTargetId,
+	FLOAT NativeRefreshRate,
+	UINT32 NativeHeight,
+	UINT32 NativeWidth,
+	BOOL32 ignoreMissingHmdDevicePresentFlag
+	);
+
+DDPassthroughOutput(
+	ANSISTRING EventType,
+	HEXINT64 thisPtr,
+	STRING Luid,
+	INT32 HighPart,
+	UINT32 LowPart,
+	STRING AdapterLuid,
+	INT32 HighPart,
+	UINT32 LowPart,
+	INT32 NativeDisplayHeight,
+	FLOAT NativeDisplayRefreshRate,
+	INT32 NativeDisplayWidth,
+	UINT32 VidPnTargetId,
+	BOOL32 HasDisplayPath
+	);
+
+GPUFinishedQPCTimeUpperBound(
+	UINT32 holographicFrameID,
+	UINT32 processID
+	);
+
+PresentationGroupQueued(
+	UINT32 PresentId,
+	UINT32 HolographicFrameId,
+	UINT32 ProcessId,
+	INT64 FrameReleaseTimestampQpc,
+	UINT64 ReleaseTimestampQueueSize,
+	FLOAT PresentTimestampRelativeMillis,
+	FLOAT FrameReleaseTimestampRelativeMillis,
+	FLOAT AppPresentLatencyMillis,
+	FLOAT ProcessingThreadLockDurationMillis,
+	FLOAT WakeupSelectorLockDurationMillis,
+	HEXINT64 SourcePtr
+	);
+
+WaitForNextFrameReady(
+	ANSISTRING EventType,
+	BOOLEAN NeedsWaitForNextFrame,
+	INT64 WaitCount,
+	INT64 SubmitCount,
+	INT64 ReleaseCount
+	);
+
+WaitForNextFrameReady(
+	ANSISTRING EventType,
+	BOOLEAN DidWait,
+	INT64 WaitCount,
+	INT64 SubmitCount,
+	INT64 ReleaseCount,
+	FLOAT DurationMs,
+	UINT32 Result
+	);
+
+DDPassthroughPresentationContext(
+	ANSISTRING EventType,
+	HEXINT64 thisPtr,
+	STRING Luid,
+	INT32 HighPart,
+	UINT32 LowPart,
+	STRING ParentOutputLuid,
+	INT32 HighPart,
+	UINT32 LowPart,
+	UINT32 TransferFlags,
+	HEXINT64 ExternalD3D11Device,
+	HEXINT64 ExternalD3D11DeviceContext,
+	HEXINT64 IntRenderingD3D12Device,
+	HEXINT64 IntRenderingD3D12CommandQueue,
+	HEXINT64 IntTransferD3D12CommandQueue,
+	HEXINT64 IntPresentationD3D12Device,
+	HEXINT64 IntPresentationD3D12CommandQueue
+	);
+
+HardwareProtectionChange(
+	BOOLEAN OldValue,
+	BOOLEAN NewValue
+	);
+
+DDPassthroughPresentationContext_GranularPresentationData(
+	UINT16 SchemaVersion,
+	GUID SessionGuid,
+	GUID SettableGuid,
+	UINT32 SequenceNumber,
+	UINT32 CompleteSecondCount,
+	UINT32 LayoutIdentifier,
+	23 PerSecondArrays,
+	FLOAT OffsetFromSessionStartInMs,
+	UINT32 TotalDisplayVsyncCount,
+	UINT8 TotalNewSourcePresentedFramesCount,
+	UINT8 TotalNewSourcePresentationMissCount,
+	UINT8 TotalReprojectedPresentedFramesCount,
+	UINT8 TotalReprojectedPresentationMissCount,
+	UINT8 TotalConsecutiveMissedFramesCount,
+	FLOAT TotalAppPoseSampleToPhotonTimeInMs,
+	FLOAT TotalAppPoseTimeToPhotonMispredictionInMs,
+	FLOAT TotalInputLatchToGpuSubmissionInMs,
+	FLOAT TotalGpuSubmissionToGpuStartInMs,
+	FLOAT TotalGpuStartToGpuStopInMs,
+	FLOAT TotalGpuStopToVsyncInMs,
+	FLOAT MaxInputLatchToGpuSubmissionInMs,
+	FLOAT MaxGpuSubmissionToGpuStartInMs,
+	FLOAT MaxGpuStartToGpuStopInMs,
+	FLOAT MaxAppPresentLatencyInMs,
+	FLOAT MaxAbsoluteWakeupErrorInMs,
+	FLOAT MaxPresentDelayInMs,
+	INT32 MinThreadPriority,
+	BOOL32 IsAutoFrameTiming,
+	FLOAT MaxLSRLatencyInMs,
+	FLOAT MaxFrameReadyLatencyInMs
+	);
+
+RequestNewProduceSequenceEventFailed(
+	UINT64 NumEventsInFlight
+	);
+
+RequestNewProduceSequenceEvent(
+	UINT64 NumEventsInFlight,
+	BOOLEAN ReusedEvent
+	);
+
+WaitTimeout(
+	UINT32 NumWaitHandles
+	);
+
+WaitFailed(
+	UINT32 NumWaitHandles,
+	UINT32 LastError,
+	UINT32 NumInvalidHandles
+	);
+
+WaitSignaled(
+	UINT32 NumWaitHandles,
+	INT32 SignaledIndex
+	);
+
+ReportReprojection(
+	FLOAT targetVsyncRelativeMillis,
+	BOOLEAN reprojectionHitTarget,
+	BOOLEAN frameSubmittedOnSchedule,
+	BOOLEAN copyTimestampsAvailable,
+	FLOAT reprojectionWakeupToLatestKnownGPUTimestampMillis,
+	FLOAT wakeupErrorMillis,
+	FLOAT unknownCrossAdapterCopyTimeEstimateMillis,
+	FLOAT paddingMillis,
+	FLOAT presentDelayEstimateMillis
+	);
+
+GetReprojectionWakeupTimeRelativeToNextVsync(
+	FLOAT maxReprojectionMeasurementMillis,
+	FLOAT maxWakeupErrorMillis,
+	FLOAT paddingMillis,
+	FLOAT maxPresentDelayMillis,
+	FLOAT wakeupOffsetMillis
+	);
+
+LsrThread_WakeupAdjustmentChange(
+	FLOAT CurrentWakeupAdjustmentInMs,
+	FLOAT NewWakeupAdjustmentInMs
+	);
+
+LsrThread_WakeupAdjustmentChange(
+	FLOAT CurrentWakeupAdjustmentInMs,
+	FLOAT NewWakeupAdjustmentInMs
+	);
+
+ReportIdealFrameReadyOffset(
+	FLOAT idealFrameReadyOffsetMillis,
+	FLOAT cpuLatencyFractionOfDHDFrame
+	);
+
+MissedFrame(
+	UINT32 PresentCount
+	);
+
+NewFrame(
+	UINT32 PresentCount
+	);
+
+LsrThread_NoSourcesBound(
+	VOID
+	);
+
+SetMmThreadCharacteristics_Failure(
+	UINT16 SchemaVersion,
+	GUID SessionGuid,
+	UINT32 gle
+	);
+
+LsrThread_SuspendingByRequest(
+	VOID
+	);
+
+LsrThread_DoneSuspendingByRequest(
+	VOID
+	);
+
+LsrThread_WaitForVBlank(
+	UINT32 TargetPresentCount,
+	FLOAT TimeUntilTargetSyncMs,
+	ANSISTRING EventType,
+	BOOLEAN AlreadyPastVBlank
+	);
+
+LsrThread_WaitForVBlank(
+	ANSISTRING EventType,
+	FLOAT DurationMs,
+	FLOAT ExpectedDurationMs,
+	INT32 HRESULT,
+	BOOLEAN WaitedForVBlank
+	);
+
+LsrThread_UnaccountedForVsyncsBetweenStatGathering(
+	UINT32 unaccountedForVsyncsBetweenStatGathering
+	);
+
+LsrThread_UnevenVsync(
+	FLOAT DifferenceFraction
+	);
+
+LatchSource_PresentIncrementTimeout(
+	FLOAT deltaTime
+	);
+
+LsrThread_InvertedVsyncTimingDelta(
+	UINT16 SchemaVersion,
+	GUID SessionGuid,
+	GUID SettableGuid,
+	BOOL32 IsHybrid,
+	UINT32 PresentedFrames,
+	FLOAT VsyncTimingDeltaInMs
+	);
+
+OnTimePresentationTiming(
+	ANSISTRING EventType,
+	HEXINT64 thisPtr,
+	STRING ParentPresentationContextLuid,
+	INT32 HighPart,
+	UINT32 LowPart,
+	BOOLEAN frameSubmittedOnSchedule,
+	UINT32 failedWaitsDuringFrame,
+	UINT32 waitsDuringFrame,
+	FLOAT totalWakeupErrorMs,
+	UINT32 PresentCount,
+	UINT32 PresentRefreshCount,
+	INT64 LastVsyncQpcTicks,
+	FLOAT startLatchToCpuRenderFrameStartInMs,
+	FLOAT cpuRenderFrameStartToHeadPoseCallbackStartInMs,
+	FLOAT headPoseCallbackDurationInMs,
+	FLOAT headPoseCallbackEndToInputLatchInMs,
+	FLOAT inputLatchToGpuSubmissionInMs,
+	FLOAT gpuSubmissionToCpuScanoutEndInMs,
+	FLOAT gpuSubmissionToGpuStartInMs,
+	FLOAT gpuStartToGpuStopInMs,
+	FLOAT gpuStopToCopyStartInMs,
+	FLOAT copyStartToCopyStopInMs,
+	FLOAT copyStopToVsyncInMs,
+	UINT32 PresentId,
+	UINT32 HolographicFrameId
+	);
+
+LatePresentationTiming(
+	ANSISTRING EventType,
+	HEXINT64 thisPtr,
+	STRING ParentPresentationContextLuid,
+	INT32 HighPart,
+	UINT32 LowPart,
+	BOOLEAN frameSubmittedOnSchedule,
+	UINT32 failedWaitsDuringFrame,
+	UINT32 waitsDuringFrame,
+	FLOAT totalWakeupErrorMs,
+	UINT32 PresentCount,
+	UINT32 PresentRefreshCount,
+	INT64 LastVsyncQpcTicks,
+	FLOAT startLatchToCpuRenderFrameStartInMs,
+	FLOAT cpuRenderFrameStartToHeadPoseCallbackStartInMs,
+	FLOAT headPoseCallbackDurationInMs,
+	FLOAT headPoseCallbackEndToInputLatchInMs,
+	FLOAT inputLatchToGpuSubmissionInMs,
+	FLOAT gpuSubmissionToCpuScanoutEndInMs,
+	FLOAT gpuSubmissionToGpuStartInMs,
+	FLOAT gpuStartToGpuStopInMs,
+	FLOAT gpuStopToCopyStartInMs,
+	FLOAT copyStartToCopyStopInMs,
+	FLOAT copyStopToVsyncInMs,
+	UINT32 PresentId,
+	UINT32 HolographicFrameId
+	);
+
+WakeupOffsetsForFrame(
+	FLOAT LSRLatchOffsetInPastFromVBlankMs,
+	FLOAT ReleaseOffsetInPastFromVBlankMs,
+	FLOAT ReleaseOffsetInPastFromLSRLatchMs
+	);
+
+LsrThread_SkippingWaitUntilVBlankRelativeOffset(
+	FLOAT WakeupOffsetFromVBlankMs,
+	INT64 expectedWakeupQpc,
+	FLOAT timeUntilWakeupTargetMs
+	);
+
+LsrThread_FailedToSetEventOnCompletion(
+	INT32 SetEventResult
+	);
+
+LsrThread_WaitUntilVBlankRelativeOffset(
+	FLOAT WakeupOffsetFromVBlankMs,
+	INT64 expectedWakeupQpc,
+	FLOAT timeUntilWakeupTargetMs,
+	ANSISTRING EventType
+	);
+
+LsrThread_FailedToCreateHighResolutionWaitTimer(
+	UINT32 LastError
+	);
+
+LsrThread_FailedToCreateWaitTimer(
+	UINT32 LastError
+	);
+
+LsrThread_WaitUntilVBlankRelativeOffset(
+	ANSISTRING EventType,
+	FLOAT DurationMs,
+	UINT32 WaitResult,
+	UINT32 FenceIndex,
+	UINT32 WakeupStrategyUsed,
+	FLOAT wakeupErrorMs
+	);
+
+LsrThread_LatchSourceSucceeded(
+	UINT32 NewlyActivePresentId,
+	HEXINT64 NewlyActiveSourcePtr,
+	UINT32 NowRetiredPresentId,
+	HEXINT64 NowRetiredSourcePtr
+	);
+
+LsrThread_LatchNewPresentationSourceIfAvailableWithExplicitFrameTiming_AvailableFrameStats(
+	INT64 appRequestedLatchQPC,
+	FLOAT latchDifferenceMs,
+	INT32 frameLatchClassification
+	);
+
+LsrThread_LatchNewPresentationSourceIfAvailableWithExplicitFrameTiming(
+	UINT64 numAvailableFrames,
+	UINT64 numEarlyFrames,
+	UINT64 numLateFrames,
+	UINT64 numOnTimeFrames,
+	UINT64 numIncompleteFrames
+	);
+
+LsrThread_LatchNewPresentationSourceIfAvailableWithExplicitFrameTiming_SkipEarlyFrame(
+	VOID
+	);
+
+LsrThread_LatchNewPresentationSourceIfAvailableWithExplicitFrameTiming_SkipFrame(
+	VOID
+	);
+
+LsrThread_LatchSourceSucceeded(
+	UINT32 NewlyActivePresentId,
+	HEXINT64 NewlyActiveSourcePtr,
+	UINT32 NowRetiredPresentId,
+	HEXINT64 NowRetiredSourcePtr
+	);
+
+LsrThread_LatchSourceFailed(
+	VOID
+	);
+
+LsrThread_GroupLatchTimeout(
+	FLOAT SecondsStuckOnQueue
+	);
+
+LsrThread_FrameQueuingStarted(
+	FLOAT TimeNotQueuingMS
+	);
+
+LsrThread_FrameQueuingStopped(
+	FLOAT TimeQueuingMS
+	);
+
+LsrThread_ReleaseFrameSemaphoreFailure(
+	UINT64 QueueSize,
+	INT64 ReleaseCount,
+	INT64 SubmitCount
+	);
+
+LsrThread_ReleaseFrameSemaphore(
+	UINT32 ExpectedMaxQueueSize,
+	UINT64 QueueSize,
+	BOOLEAN IsCurrentFrameSubmitted,
+	BOOLEAN IsNextFrameManuallyUnlocked,
+	BOOLEAN IsNextFrameReleasedAlready,
+	BOOLEAN IsOptimisticReleaseAllowed,
+	INT64 ReleaseCountBeforeRelease,
+	INT64 SubmitCountBeforeRelease,
+	INT64 SubmitCountBeforeRelease
+	);
+
+LsrThread_SkippingReleaseFrameSemaphore(
+	UINT32 ExpectedMaxQueueSize,
+	UINT64 QueueSize,
+	BOOLEAN AllowedToRelease,
+	BOOLEAN IsCurrentFrameSubmitted,
+	BOOLEAN IsNextFrameManuallyUnlocked,
+	BOOLEAN IsNextFrameReleasedAlready,
+	BOOLEAN IsReleaseRecovery,
+	INT64 ReleaseCount,
+	INT64 SubmitCount
+	);
+
+LsrThread_BeginLsrProcessing(
+	UINT32 HolographicFrameId,
+	UINT32 PresentId,
+	UINT32 LatchedFrameProcessId,
+	HEXINT64 SourcePtr,
+	UINT32 LayoutIdentifier,
+	BOOLEAN NewSourceLatched,
+	UINT64 QueueSize,
+	INT64 CurrentTimeQpc,
+	FLOAT VBlankToPhotonTopMs,
+	FLOAT VBlankToPhotonBottomMs,
+	FLOAT vblankToPhotonsMidMs,
+	INT64 TargetVBlankQPC,
+	INT64 PredictionTargetTimeMiddleQpc,
+	FLOAT TimeUntilVblankMs,
+	FLOAT TimeUntilPhotonsMiddleMs,
+	FLOAT PredictionSampleTimeToPhotonsVisibleMs,
+	FLOAT MispredictionMs,
+	FLOAT GpuTimeMs
+	);
+
+LsrThread_LatchedInput(
+	UINT32 PresentId,
+	INT32 Result,
+	INT64 CurrentTimeQpc,
+	INT64 PredictionTargetTimeTopQpc,
+	INT64 PredictionTargetTimeBottomQpc,
+	FLOAT TimeUntilTopPhotonsMs,
+	FLOAT TimeUntilBottomPhotonsMs
+	);
+
+LsrThread_ReprojectionFailedAggregated(
+	UINT32 ConsecutiveReprojectionFailures,
+	UINT32 ConsecutiveHeadPoseCallbackFailures,
+	GUID SessionGuid
+	);
+
+LsrThread_ExecutingDDisplayPresentTask(
+	VOID
+	);
+
+LsrThread_BeginShutdown(
+	HEXINT64 thisPtr,
+	STRING ParentPresentationContextLuid,
+	INT32 HighPart,
+	UINT32 LowPart
+	);
+
+BackgroundThreadShutdown_HResult(
+	INT32 HRESULT
+	);
+
+MissedPresentation(
+	HEXINT64 thisPtr,
+	STRING ParentPresentationContextLuid,
+	INT32 HighPart,
+	UINT32 LowPart,
+	INT64 CurrentTimeQpc,
+	UINT32 reason
+	);
+
+DDPassthroughPresentationContext_BeginSession(
+	UINT16 SchemaVersion,
+	GUID SessionGuid
+	);
+
+DDPassthroughPresentationContext_FailedShutdown(
+	UINT16 SchemaVersion,
+	GUID SessionGuid
+	);
+
+DDPassthroughPresentationContext_EndSession(
+	UINT16 SchemaVersion,
+	GUID SessionGuid,
+	UINT32 GranularPresentationDataFlushCount,
+	IPV4 Configuration,
+	UINT32 PresentationQueuePriority,
+	UINT16 PresentationQueueType,
+	BOOL32 attachedDebuggerDetected,
+	IPV4 Display,
+	UINT32 VidPnTargetId,
+	UINT32 VidPnSourceId,
+	UINT32 PreferredModeHeight,
+	UINT32 PreferredModeWidth,
+	FLOAT ActualMeasuredRefreshRate,
+	FLOAT VBlankToPhotonTopInMs,
+	FLOAT VBlankToPhotonBottomInMs,
+	UINT64 RenderSourceAdapterLuid,
+	UINT64 PresentationAdapterLuid,
+	BOOL32 CrossAdapterTransferNeeded,
+	BOOL32 CrossAdapterTimestampQueriesUsed
+	);
+
+DDPassthroughPresentationContext_EndSession_RuntimeStats(
+	UINT16 SchemaVersion,
+	GUID SessionGuid,
+	UINT32 MissedPresentations,
+	UINT32 CreationFlags,
+	IPV6 RuntimeCounters,
+	UINT32 TotalDisplayVsyncCount,
+	UINT32 TotalNewSourcePresentedFramesCount,
+	UINT32 TotalNewSourcePresentationMissCount,
+	UINT32 TotalReprojectedPresentedFramesCount,
+	UINT32 TotalReprojectedPresentationMissCount,
+	UINT32 TotalConsecutiveMissedFramesCount,
+	UINT32 TotalSourceFrameCount,
+	FLOAT TimePresentationSuspendedInMs,
+	BOOLEAN SourceStatistics,
+	FLOAT AveragePresentationSourceRenderingCpuTimeInMs,
+	FLOAT AveragePresentationSourceCpuRenderingToPresentationTimeInMs,
+	FLOAT AveragePresentationSourceGpuRenderingToPresentationTimeInMs,
+	JSON OnTimeFrameStatistics,
+	FLOAT AverageAppPoseSampleToPhotonTimeInMs,
+	FLOAT AverageAppPoseTimeToPhotonMispredictionInMs,
+	FLOAT AverageTooEarlyWakeupErrorInMs,
+	FLOAT AverageTooLateWakeupErrorInMs,
+	FLOAT AverageStartLatchToHeadPoseCallbackStartInMs,
+	FLOAT AverageHeadPoseCallbackStartToInputLatchInMs,
+	FLOAT AverageInputLatchToGpuSubmissionInMs,
+	FLOAT AverageGpuSubmissionToGpuStartInMs,
+	FLOAT AverageGpuStartToGpuStopInMs,
+	FLOAT AverageGpuStopToCopyStartInMs,
+	FLOAT AverageCopyStartToCopyStopInMs,
+	FLOAT AverageCopyStopToVsyncInMs,
+	JSON LateFrameStatistics,
+	FLOAT AverageAppPoseSampleToPhotonTimeInMs,
+	FLOAT AverageAppPoseTimeToPhotonMispredictionInMs,
+	FLOAT AverageTooEarlyWakeupErrorInMs,
+	FLOAT AverageTooLateWakeupErrorInMs,
+	FLOAT AverageStartLatchToHeadPoseCallbackStartInMs,
+	FLOAT AverageHeadPoseCallbackStartToInputLatchInMs,
+	FLOAT AverageInputLatchToGpuSubmissionInMs,
+	FLOAT AverageGpuSubmissionToGpuStartInMs,
+	FLOAT AverageGpuStartToGpuStopInMs,
+	FLOAT AverageGpuStopToCopyStartInMs,
+	FLOAT AverageCopyStartToCopyStopInMs,
+	FLOAT AverageVsyncTimingDeltaInMs
+	);
+
+DDPassthroughPresentationContext_EndSession_FrameDetails(
+	UINT16 SchemaVersion,
+	GUID SessionGuid,
+	SOCKETADDRESS AllFrameDetailedStatistics,
+	BOOLEAN AverageAppPoseSampleToPhotonTimeInMs,
+	FLOAT BottomTwentyPercentAverage,
+	FLOAT TopTwentyPercentAverage,
+	FLOAT TopFivePercentAverage,
+	BOOLEAN AverageAppPoseTimeToPhotonMispredictionInMs,
+	FLOAT BottomTwentyPercentAverage,
+	FLOAT TopTwentyPercentAverage,
+	FLOAT TopFivePercentAverage,
+	BOOLEAN TooLateWakeupErrorInMs,
+	FLOAT BottomTwentyPercentAverage,
+	FLOAT TopTwentyPercentAverage,
+	FLOAT TopFivePercentAverage,
+	BOOLEAN HeadPoseCallbackStartToInputLatchInMs,
+	FLOAT BottomTwentyPercentAverage,
+	FLOAT TopTwentyPercentAverage,
+	FLOAT TopFivePercentAverage,
+	BOOLEAN InputLatchToGpuSubmissionInMs,
+	FLOAT BottomTwentyPercentAverage,
+	FLOAT TopTwentyPercentAverage,
+	FLOAT TopFivePercentAverage,
+	BOOLEAN GpuSubmissionToGpuStartInMs,
+	FLOAT BottomTwentyPercentAverage,
+	FLOAT TopTwentyPercentAverage,
+	FLOAT TopFivePercentAverage,
+	BOOLEAN GpuStartToGpuStopInMs,
+	FLOAT BottomTwentyPercentAverage,
+	FLOAT TopTwentyPercentAverage,
+	FLOAT TopFivePercentAverage,
+	BOOLEAN GpuStopToCopyStartInMs,
+	FLOAT BottomTwentyPercentAverage,
+	FLOAT TopTwentyPercentAverage,
+	FLOAT TopFivePercentAverage,
+	BOOLEAN CopyStartToCopyStopInMs,
+	FLOAT BottomTwentyPercentAverage,
+	FLOAT TopTwentyPercentAverage,
+	FLOAT TopFivePercentAverage,
+	BOOLEAN CopyStopToVsyncInMs,
+	FLOAT BottomTwentyPercentAverage,
+	FLOAT TopTwentyPercentAverage,
+	FLOAT TopFivePercentAverage,
+	NOPRINT LateFrameDetailedStatistics,
+	BOOLEAN AverageVsyncTimingDeltaInMs,
+	FLOAT BottomTwentyPercentAverage,
+	FLOAT TopTwentyPercentAverage,
+	FLOAT TopFivePercentAverage
+	);
+
+OasisPresentationContextBackgroundProcessor(
+	ANSISTRING EventType,
+	HEXINT64 thisPtr,
+	STRING ParentPresentationContextLuid,
+	INT32 HighPart,
+	UINT32 LowPart
+	);
+
+LsrThread_SystemInterferenceEvent(
+	VOID
+	);
+
+AcquireForPresentation(
+	HEXINT64 thisPtr,
+	UINT64 RenderingFenceValue,
+	UINT64 PresentationFenceValue,
+	BOOLEAN IsAvailableOnGpuForPresentation
+	);
+
+ReleaseFromPresentation(
+	HEXINT64 thisPtr,
+	UINT64 RenderingFenceValue,
+	UINT64 PresentationFenceValue,
+	BOOLEAN IsAvailableOnGpuForPresentation
+	);
+
+AcquireForRendering(
+	HEXINT64 thisPtr,
+	UINT64 RenderingFenceValue,
+	UINT64 PresentationFenceValue,
+	BOOLEAN IsAvailableOnGpuForPresentation
+	);
+
+ReleaseFromRendering(
+	HEXINT64 thisPtr,
+	UINT64 RenderingFenceValue,
+	UINT64 PresentationFenceValue,
+	BOOLEAN IsAvailableOnGpuForPresentation
+	);
+
+OasisPresentationSource(
+	ANSISTRING EventType,
+	HEXINT64 thisPtr,
+	STRING Luid,
+	INT32 HighPart,
+	UINT32 LowPart,
+	STRING ParentPresentationContextLuid,
+	INT32 HighPart,
+	UINT32 LowPart,
+	UINT32 PresentationSourceState,
+	UINT64 RenderingFenceValue,
+	UINT64 PresentationFenceValue,
+	BOOLEAN IsAvailableOnGpuForPresentation
+	);
+
+FailedToCreateSimpleScanoutForProtectedContent(
+	UINT64 PartA_PrivTags,
+	INT32 hrCreateSimpleScanout
+	);
+
+FailedToCreateSimpleScanout(
+	UINT64 PartA_PrivTags,
+	INT32 hrCreateSimpleScanout
+	);
+
+PrimePresentationQueue_Succeeded(
+	UINT32 occludedCount,
+	DOUBLE deltaTimeMs
+	);
+
+SetMode_Failure(
+	UINT16 SchemaVersion,
+	INT32 ReturnedHr,
+	FLOAT AttemptedModeRefreshRate,
+	UINT32 AttemptedModeHeight,
+	UINT32 AttemptedModeWidth,
+	STRING AdapterLuid,
+	UINT32 HighPart,
+	UINT32 LowPart,
+	UINT32 VidPnTargetId,
+	BOOL32 CustomDisplay,
+	BOOL32 HasDisplayPath
+	);
+
+GetPanelAreaVertices(
+	HEXINT64 pThis,
+	INT32 eyeId,
+	INT32 areaType,
+	UINT32 vertices.VertexCount
+	);
+
+TelemetryCloseHolographicDevice(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId,
+	ANSISTRING DriverType,
+	UNICODESTRING DeviceName,
+	GUID CorrelationGUID
+	);
+
+PrecachePropertiesElapsedTime(
+	ANSISTRING driverType,
+	GUID correlationGuid,
+	UINT64 elapsedMilliseconds
+	);
+
+EyePropertyCache_Cleared(
+	ANSISTRING driverType,
+	GUID correlationGuid,
+	INT32 eyeId
+	);
+
+GetIpdAdjustmentCapability(
+	INT32 static_cast<int>(value)
+	);
+
+OpenHolographicDevice(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	SIGNED wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+CloseHolographicDevice(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	SIGNED wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+GetMinIpdMillimeters(
+	HEXINT64 pThis,
+	FLOAT value
+	);
+
+DevicePropertyRequestAdded(
+	ANSISTRING driverType,
+	GUID driverHandleCorrelationGuid,
+	GUID propertyKey
+	);
+
+OpenHolographicDevice(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+TelemetryOpenHolographicDevice(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+GetVBlankToPhotonLatencyWithScanMode(
+	INT32 static_cast<int>(eyeId),
+	UINT32 monitorRefereshRate.Numerator,
+	UINT32 monitorRefereshRate.Denominator,
+	INT32 static_cast<int>(scanMode),
+	INT64 firstScanlineLatencyInNanoSeconds,
+	INT64 lastScanlineLatencyInNanoSeconds
+	);
+
+GetDefaultIpdMillimeters(
+	HEXINT64 pThis,
+	FLOAT value
+	);
+
+IoctlTimeout(
+	GUID correlationGuid,
+	HEXINT32 ioctlCode,
+	UINT32 timeoutMilliseconds,
+	GUID propertyKey,
+	GUID nodeId,
+	UNICODESTRING forDevice,
+	UINT64 PartA_PrivTags
+	);
+
+ActivityIntermediateStop(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+PrecachePropertiesRanLong(
+	ANSISTRING driverType,
+	GUID correlationGuid,
+	UINT64 elapsedMilliseconds,
+	UINT64 threshold,
+	UINT64 PartA_PrivTags
+	);
+
+TelemetryCloseHolographicDevice(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+GetPanelResolution(
+	HEXINT64 pThis,
+	UINT32 width,
+	UINT32 height
+	);
+
+DriverCompatibilityDetermined(
+	ANSISTRING driverType,
+	UINT32 platformSupportedDDILevels.EarliestSupported,
+	UINT32 platformSupportedDDILevels.LatestSupported,
+	UINT32 driverSupportedDDILevels.EarliestSupported,
+	UINT32 driverSupportedDDILevels.LatestSupported,
+	BOOLEAN isCompatible
+	);
+
+GetPanelOrientation(
+	INT32 value
+	);
+
+RegisterPropertiesUpdatedCallback(
+	ANSISTRING driverType,
+	HEXINT64 pThis,
+	HEXINT64 pCallback,
+	HEXINT64 pCallbackWeakRef
+	);
+
+GetMaxIpdMillimeters(
+	HEXINT64 pThis,
+	FLOAT value
+	);
+
+GetVBlankToPhotonLatencyTable(
+	INT32 eyeId,
+	STRING Latencies,
+	STRING RefreshRate,
+	UINT32 Numerator,
+	UINT32 Denominator,
+	INT64 LatencyInNanoseconds
+	);
+
+GetErrorStatuses(
+	ANSISTRING driverType,
+	UNICODESTRING deviceInterfacePath,
+	BOOLEAN Statuses,
+	UINT32 StatusCode,
+	UINT32 SubstatusCode,
+	FILETIME OriginatedTime,
+	UINT64 PartA_PrivTags
+	);
+
+FallbackError(
+	UINT64 PartA_PrivTags,
+	SIGNED wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+EyePropertyCache_RemoveValue(
+	ANSISTRING driverType,
+	GUID correlationGuid,
+	INT32 eyeId,
+	GUID propertyKey
+	);
+
+EyePropertyCacheMiss(
+	GUID correlationGuid,
+	GUID propertyKey,
+	INT32 eyeId,
+	BOOL32 shouldDoIoctl
+	);
+
+PropertyCache_SetValue(
+	ANSISTRING driverType,
+	GUID correlationGuid,
+	GUID propertyKey,
+	UINT64 valueSize
+	);
+
+GetPinholeCameraModel(
+	HEXINT64 pThis,
+	INT32 eyeId,
+	INT32 value.Viewport,
+	FLOAT value.FocalLength,
+	FLOAT value.PrincipalPoint,
+	FLOAT value.SkewFactor
+	);
+
+CloseHolographicDevice(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId,
+	ANSISTRING DriverType,
+	UNICODESTRING DeviceName,
+	GUID CorrelationGUID
+	);
+
+ActivityIntermediateStop(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+TelemetryOpenHolographicDevice(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+TelemetryOpenHolographicDevice(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId,
+	ANSISTRING DriverType,
+	UNICODESTRING DeviceName,
+	GUID CorrelationGUID
+	);
+
+GetDistortion3KModel(
+	HEXINT64 pThis,
+	INT32 eyeId,
+	INT32 colorChannelId,
+	INT32 model.Viewport,
+	FLOAT model.K1,
+	FLOAT model.K2,
+	FLOAT model.K3,
+	FLOAT model.DistortionCenter
+	);
+
+ActivityStoppedAutomatically(
+	VOID
+	);
+
+EyePropertyCache_SetValue(
+	ANSISTRING driverType,
+	GUID correlationGuid,
+	INT32 eyeId,
+	GUID propertyKey,
+	UINT64 valueSize
+	);
+
+IoctlRanLong(
+	GUID correlationGuid,
+	HEXINT32 ioctlCode,
+	HRESULT hresult,
+	FLOAT elapsedMilliseconds,
+	UINT32 thresholdMilliseconds,
+	UINT64 PartA_PrivTags
+	);
+
+ActivityError(
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+SetDisplayIPDEstimation(
+	HEXINT64 pThis,
+	FLOAT valueInMillimeters
+	);
+
+PropertyCache_RemoveValue(
+	ANSISTRING driverType,
+	GUID correlationGuid,
+	GUID propertyKey
+	);
+
+TelemetryUserPresenceChanged(
+	BOOLEAN isPresent,
+	GUID correlationGuid
+	);
+
+ActivityError(
+	UINT64 PartA_PrivTags,
+	SIGNED wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+ContainsDevice(
+	HEXINT64 pThis,
+	UNICODESTRING deviceInterfacePath,
+	BOOLEAN value
+	);
+
+ActivityStoppedAutomatically(
+	VOID
+	);
+
+GetCurrentIpdMillimeters(
+	HEXINT64 pThis,
+	FLOAT value
+	);
+
+Log_Information(
+	UINT32 hr,
+	UNICODESTRING message
+	);
+
+Log_Error(
+	UINT32 hr,
+	UNICODESTRING message
+	);
+
+ActivityError(
+	UINT64 PartA_PrivTags,
+	SIGNED wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+CloseHolographicDevice(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+TelemetryCloseHolographicDevice(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+GetDynamicNodeToEye(
+	HEXINT64 pThis,
+	INT32 eyeId,
+	FLOAT value
+	);
+
+DevicePropertyRequestFailed(
+	ANSISTRING driverType,
+	GUID driverHandleCorrelationGuid,
+	GUID propertyKey,
+	HRESULT hr
+	);
+
+PropertyCache_Cleared(
+	ANSISTRING driverType,
+	GUID correlationGuid
+	);
+
+DevicePropertyCacheMiss(
+	ANSISTRING driverType,
+	GUID correlationGuid,
+	GUID propertyKey,
+	BOOL32 shouldDoIoctl
+	);
+
+OpenHolographicDevice(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId,
+	ANSISTRING DriverType,
+	UNICODESTRING DeviceName,
+	GUID CorrelationGUID
+	);
+
+HolographicDriverHandleWrapper_DeviceIoControlFailed(
+	HEXINT64 pThis,
+	UINT32 error,
+	UINT32 dwIoControlCode,
+	HEXINT64 pThis,
+	GUID driverHandleCorrelationGuid
+	);
+
+FallbackError(
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+

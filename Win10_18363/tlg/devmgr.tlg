@@ -1,0 +1,158 @@
+ProviderNames:
+	Microsoft.Windows.PNP.DeviceManager
+
+
+
+**** Events *****
+ProcessDetach(
+	VOID
+	);
+
+ShowAdvancedProperties(
+	GUID ClassGUID,
+	UNICODESTRING DevMgrDeviceId,
+	UNICODESTRING DriverDate,
+	UNICODESTRING DriverVersion,
+	UNICODESTRING DeviceInfName,
+	UNICODESTRING DriverSubmissionId,
+	UNICODESTRING DeviceName,
+	FILETIME InstallDate,
+	BOOL32 IsDisabled,
+	HEXINT32 DiFlags,
+	HEXINT32 DiFlagsEx,
+	HEXINT32 PageAddedFlags,
+	BOOL32 ShutdownEnabled,
+	BOOL32 WakeEnabled,
+	UNICODESTRING Caption,
+	UINT32 PropertyPages
+	);
+
+DeviceDisable(
+	GUID ClassGUID,
+	UNICODESTRING DevMgrDeviceId,
+	UNICODESTRING DriverDate,
+	UNICODESTRING DriverVersion,
+	UNICODESTRING DeviceInfName,
+	UNICODESTRING DriverSubmissionId,
+	UNICODESTRING DeviceName,
+	FILETIME InstallDate,
+	BOOL32 IsDisabled,
+	HEXINT32 RestartFlags,
+	HEXINT32 Status,
+	UINT32 Problem,
+	INT32 RestartPromptResult
+	);
+
+DeviceEnable(
+	GUID ClassGUID,
+	UNICODESTRING DevMgrDeviceId,
+	UNICODESTRING DriverDate,
+	UNICODESTRING DriverVersion,
+	UNICODESTRING DeviceInfName,
+	UNICODESTRING DriverSubmissionId,
+	UNICODESTRING DeviceName,
+	FILETIME InstallDate,
+	BOOL32 IsDisabled,
+	HEXINT32 RestartFlags,
+	HEXINT32 Status,
+	UINT32 Problem,
+	INT32 RestartPromptResult
+	);
+
+UpdateDriver(
+	GUID ClassGUID,
+	UNICODESTRING DevMgrDeviceId,
+	UNICODESTRING DriverDate,
+	UNICODESTRING DriverVersion,
+	UNICODESTRING DeviceInfName,
+	UNICODESTRING DriverSubmissionId,
+	UNICODESTRING DeviceName,
+	FILETIME InstallDate,
+	BOOL32 InstallSucceeded,
+	UINT32 UpdateResult,
+	UNICODESTRING UpdatedDriverDate,
+	UNICODESTRING UpdatedDriverVersion,
+	UNICODESTRING UpdatedDeviceInfName,
+	FILETIME UpdatedInstallDate,
+	UNICODESTRING UpdatedDriverSubmissionId,
+	UNICODESTRING UpdatedDeviceName,
+	BOOL32 NeedRestart,
+	BOOL32 IsDisabled,
+	HEXINT32 Status,
+	UINT32 Problem,
+	INT32 RestartPromptResult
+	);
+
+OnShow(
+	BOOL32 Show,
+	BOOL32 IsAdmin,
+	BOOL32 IsLocal,
+	UINT32 ViewType,
+	BOOL32 ShowHiddenDevices,
+	UINT64 ChildCount,
+	UINT32 HResult
+	);
+
+SelectView(
+	UINT32 ViewType,
+	UINT32 PreviousViewType,
+	BOOL32 ShowHiddenDevices,
+	UINT64 ChildCount
+	);
+
+ActivityStoppedAutomatically(
+	VOID
+	);
+
+DriverRollbackComplete(
+	UNICODESTRING DeviceInstanceId,
+	UNICODESTRING AfterRollbackDriverOriginalInfName,
+	UINT32 AfterRollbackGetOriginalInfError,
+	UNICODESTRING AfterRollbackDriverDate,
+	UNICODESTRING AfterRollbackDriverVersion,
+	UNICODESTRING AfterRollbackSubmissionId,
+	FILETIME AfterRollbackInstallDate,
+	UNICODESTRING AfterRollbackDriverProvider,
+	BOOL32 AfterRollbackDriverInbox,
+	UNICODESTRING AfterRollbackInfSectionName,
+	BOOL32 NeedReboot,
+	UINT32 RollbackDriverResult,
+	HEXINT32 Status,
+	UINT32 Problem
+	);
+
+DriverRollbackUserCancelled(
+	UNICODESTRING DeviceInstanceId,
+	FILETIME InstallDate
+	);
+
+DriverRollbackStart(
+	GUID ClassGUID,
+	UNICODESTRING DeviceInstanceId,
+	UNICODESTRING BeforeRollbackDriverOriginalInfName,
+	UINT32 BeforeRollbackGetOriginalInfError,
+	UNICODESTRING BeforeRollbackDriverDate,
+	UNICODESTRING BeforeRollbackDriverVersion,
+	UNICODESTRING BeforeRollbackSubmissionId,
+	FILETIME BeforeRollbackInstallDate,
+	UNICODESTRING BeforeRollbackDriverProvider,
+	BOOL32 BeforeRollbackDriverInbox,
+	UNICODESTRING BeforeRollbackInfSectionName,
+	UNICODESTRING BeforeRollbackDeviceName
+	);
+
+RemoveDevice(
+	GUID ClassGUID,
+	UNICODESTRING DeviceInstanceId,
+	UNICODESTRING DriverDate,
+	UNICODESTRING DriverVersion,
+	UNICODESTRING DeviceInfName,
+	UNICODESTRING DriverSubmissionId,
+	UNICODESTRING DeviceName,
+	FILETIME InstallDate,
+	BOOL32 IsDisabled,
+	BOOL32 ForceDeletePackage,
+	BOOL32 ForceDeletePackageResult,
+	HEXINT32 RemoveResult
+	);
+

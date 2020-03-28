@@ -1,0 +1,73 @@
+ProviderNames:
+	Microsoft.Windows.DeviceManagement.PushRouterCore
+	Microsoft.Windows.DeviceManagement.PushRouterAuth
+
+
+
+**** Events *****
+ActivityStoppedAutomatically(
+	VOID
+	);
+
+WapAuthenticateEnd(
+	HEXINT32 HResult,
+	UINT32 SecParam,
+	UINT32 PolicyVal,
+	UINT32 RoleAssigned
+	);
+
+WapAuthenticateStart(
+	VOID
+	);
+
+SyncMLValidateWithDefaultNonceTriggerAuthentication(
+	INT32 fAuthenticated,
+	UNICODESTRING ServerID,
+	UINT32 TriggerBytes,
+	HEX Trigger
+	);
+
+SyncMLValidateWithSecondaryNonceNonceNotFound(
+	VOID
+	);
+
+SyncMLValidateWithSecondaryNonceProblemRetrievingNonce(
+	HEXINT32 HResult
+	);
+
+SyncMLValidateWithRegularNonceTriggerAuthentication(
+	INT32 fAuthenticated,
+	UNICODESTRING ServerID,
+	UNICODESTRING ServerPW,
+	UINT32 NonceBytes,
+	HEX Nonce,
+	UINT32 TriggerBytes,
+	HEX Trigger,
+	HEX CalculatedDigest,
+	HEX MessageDigest
+	);
+
+SyncMLAuthenticate(
+	VOID
+	);
+
+SyncMLAuthenticate(
+	VOID
+	);
+
+SyncMLAuthenticateSucceeded(
+	VOID
+	);
+
+SyncMLAuthenticateFailed(
+	HEXINT32 HResult
+	);
+
+SyncMLAuthenticateFailed(
+	HEXINT32 HResult,
+	UNICODESTRING Headers,
+	UINT32 Bytes,
+	HEX Message,
+	ANSISTRING __TlgCV__
+	);
+

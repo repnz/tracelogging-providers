@@ -1,0 +1,290 @@
+ProviderNames:
+	Microsoft.Windows.UserDataAccess.UserDataService
+	Microsoft.Windows.Messaging.Service
+	TelemetryAssert
+	TelemetryAssertDiagTrack
+
+
+
+**** Events *****
+FallbackError(
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+PublishUserDataSvcInitialize(
+	INT32 initialized
+	);
+
+FallbackError(
+	UINT64 PartA_PrivTags,
+	SIGNED wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+EmailBackgroundNotification(
+	UINT32 ErrorCode,
+	UINT32 ChangeCount,
+	UINT32 CoalesceCount,
+	UINT32 MessageAdd,
+	UINT32 MessageModify,
+	UINT32 MessageDelete,
+	UINT32 MessageMove,
+	UINT32 MessageCopy,
+	UINT32 FolderAdd,
+	UINT32 FolderModify,
+	UINT32 FolderDelete,
+	UINT32 FolderMove,
+	UINT32 StoreAdd,
+	UINT32 StoreModify,
+	UINT32 StoreDelete,
+	UINT32 LostChange
+	);
+
+FallbackError(
+	UINT64 PartA_PrivTags,
+	SIGNED wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+EdpCheckAccessDenied(
+	UNICODESTRING PackageFamilyName,
+	UNICODESTRING EnterpriseId,
+	UINT32 Type,
+	UINT32 Id
+	);
+
+RcsServiceManager::Initialize(
+	UINT32 waitResult,
+	UINT32 Error
+	);
+
+ContactBackgroundNotification(
+	UINT32 ErrorCode,
+	UINT32 ChangeCount,
+	UINT32 CoalesceCount,
+	UINT32 ContactAdd,
+	UINT32 ContactModify,
+	UINT32 ContactDelete,
+	UINT32 ContactMove,
+	UINT32 ContactCopy,
+	UINT32 StoreAdd,
+	UINT32 StoreModify,
+	UINT32 StoreDelete,
+	UINT32 LostChange
+	);
+
+AppointmentBackgroundNotification(
+	UINT32 ErrorCode,
+	UINT32 ChangeCount,
+	UINT32 CoalesceCount,
+	UINT32 appointmentAdd,
+	UINT32 appointmentModify,
+	UINT32 appointmentDelete,
+	UINT32 appointmentMove,
+	UINT32 appointmentCopy,
+	UINT32 calendarAdd,
+	UINT32 calendarModify,
+	UINT32 calendarDelete,
+	UINT32 calendarMove,
+	UINT32 calendarCopy,
+	UINT32 StoreAdd,
+	UINT32 StoreModify,
+	UINT32 StoreDelete,
+	UINT32 LostChange
+	);
+
+AppointmentCount(
+	UNICODESTRING owner,
+	UINT32 storeId,
+	UINT32 appointmentCount,
+	UINT32 storeGroupingId
+	);
+
+ContactCount(
+	UNICODESTRING owner,
+	UINT32 storeId,
+	UINT32 contactCount,
+	UINT32 storeGroupingId
+	);
+
+CleanupStaleData(
+	INT32 acPower
+	);
+
+MailboxSyncStatus(
+	GUID partnerGUID,
+	UINT32 udmStatus,
+	INT32 lastSyncResult
+	);
+
+SyncOneSyncAccount(
+	INT32 syncAccountAsyncHr,
+	GUID partnershipId,
+	UNICODESTRING processFilename
+	);
+
+SkippedSuppressedStore(
+	UINT32 StoreId,
+	UINT32 GroupingId
+	);
+
+ChatOperationContext::GetFilePropertyPath(
+	ANSISTRING Comment,
+	UNICODESTRING Path
+	);
+
+ChatOperationContext::GetFilePropertyPath(
+	ANSISTRING Comment
+	);
+
+NotifyChatApp.DefaultChatApp(
+	UNICODESTRING PackageFamilyName
+	);
+
+NotifyChatApp.DefaultMessagingAppNotFound(
+	UINT32 actions,
+	UNICODESTRING messageId
+	);
+
+NotifyChatApp.GetDefaultMessagingAppFailure(
+	INT32 errorCode,
+	UNICODESTRING messageId
+	);
+
+ChangeTrackingLost(
+	UINT32 StoreId,
+	UINT32 TrackingAppSetId,
+	UNICODESTRING PackageFamilyName
+	);
+
+RcsSettingsWatcher::_HandleRcsSettingsChanged(
+	UNICODESTRING Comment,
+	INT32 simSettingsInitialized,
+	INT32 rcsEnabled
+	);
+
+RcsSettingsWatcher::_HandleRcsSettingsChanged(
+	UNICODESTRING Comment
+	);
+
+RcsSettingsWatcher::IsRcsEnabled(
+	INT32 rcsEnabled,
+	INT32 simSettingsInitialized
+	);
+
+TraceLoggingInfo(
+	UNICODESTRING traceLoggingMessage
+	);
+
+ValidateSendRestriction(
+	ANSISTRING Comment
+	);
+
+[Error] Propagate(
+	HRESULT HResult,
+	ANSISTRING Location,
+	UINT32 Line Number
+	);
+
+Error Propagated(
+	INT32 HRESULT,
+	ANSISTRING Location,
+	UINT32 Line Number
+	);
+
+[Error] Originate(
+	HRESULT HResult,
+	ANSISTRING Location,
+	UINT32 Line Number
+	);
+
+Error(
+	INT32 HRESULT,
+	ANSISTRING Location,
+	UINT32 Line Number
+	);
+
+[Error] Assert(
+	HRESULT HResult,
+	ANSISTRING Location,
+	UINT32 Line Number
+	);
+
+SignalChatMessageReceivedNotificationEvent(
+	ANSISTRING Comment,
+	UNICODESTRING PackageFamilyName,
+	GUID InstanceId
+	);
+
+SignalChatMessageNotificationEvent(
+	ANSISTRING Comment,
+	UNICODESTRING PackageFamilyName,
+	UINT32 Actions,
+	UNICODESTRING MessageId,
+	GUID InstanceId
+	);
+
+Assert(
+	UINT32 assertVersion,
+	UINT32 rva,
+	UINT32 timestamp,
+	UINT32 imageSize,
+	ANSISTRING imageName,
+	UINT32 count,
+	UINT32 totalHits,
+	UINT32 ModuleCollection,
+	UINT32 GlobalCollection
+	);
+
+GetAppointmentEnum(
+	FILETIME StartUtc,
+	FILETIME EndUtc
+	);
+

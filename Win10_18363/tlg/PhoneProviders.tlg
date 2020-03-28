@@ -1,0 +1,2850 @@
+ProviderNames:
+	Microsoft.Windows.Apps.PhoneProviders
+	Microsoft-Windows-Telephony-PhoneProviders
+	TelemetryAssert
+	TelemetryAssertDiagTrack
+
+
+
+**** Events *****
+[Error] Assert(
+	HRESULT HResult,
+	ANSISTRING Location,
+	UINT32 Line Number
+	);
+
+[Error] Propagate(
+	HRESULT HResult,
+	ANSISTRING Location,
+	UINT32 Line Number
+	);
+
+[Error] Originate(
+	HRESULT HResult,
+	ANSISTRING Location,
+	UINT32 Line Number
+	);
+
+VOIPLINEFACTORY_APPTOVP_CANCELVOIPCALLRESOURCERESERVATION(
+	ANSISTRING details,
+	HEXINT64 line
+	);
+
+VOIPLINEFACTORY_APPTOVP_RESERVEVOIPCALLRESOURCES_ONEPROCESSVOIP(
+	ANSISTRING details,
+	HEXINT64 line,
+	HEXINT64 data
+	);
+
+VOIPLINEFACTORY_APPTOVP_RESERVEVOIPCALLRESOURCES(
+	ANSISTRING details,
+	HEXINT64 line,
+	HEXINT64 data,
+	UNICODESTRING taskEntryPoint
+	);
+
+VOIPLINEFACTORY_APPTOVP_CANCELUPGRADE(
+	ANSISTRING details,
+	HEXINT64 line
+	);
+
+VOIPLINEFACTORY_APPTOVP_ENDUPGRADEORIGINATIONCALL(
+	ANSISTRING details,
+	HEXINT64 line
+	);
+
+VOIPLINEFACTORY_APPTOVP_OPERATION_COMPLETE(
+	ANSISTRING details,
+	HEXINT64 line,
+	UINT32 operationId,
+	BOOL32 operationSucceeded,
+	UINT32 callUpgradeSupportLevel
+	);
+
+VOIPLINEFACTORY_APPTOVP_GETNEXTOPERATION(
+	ANSISTRING details,
+	HEXINT64 line
+	);
+
+VOIPLINEFACTORY_APPTOVP_UPDATECALLATTRIBUTES(
+	ANSISTRING details,
+	HEXINT64 line,
+	UINT32 ProcallIdp_UINT,
+	UINT32 attributes
+	);
+
+VOIPLINEFACTORY_APPTOVP_GETCALLSTARTTIME(
+	ANSISTRING details,
+	HEXINT64 line,
+	UINT32 callId
+	);
+
+VOIPLINEFACTORY_APPTOVP_UPDATECALLSTARTTIME(
+	ANSISTRING details,
+	HEXINT64 line,
+	UINT32 callId
+	);
+
+VOIPLINEFACTORY_APPTOVP_UPDATECALLCONTACTNAME(
+	ANSISTRING details,
+	HEXINT64 line,
+	UINT32 callId
+	);
+
+VOIPLINEFACTORY_APPTOVP_SETMUTESTATE(
+	ANSISTRING details,
+	HEXINT64 line,
+	BOOL32 muted
+	);
+
+VOIPLINEFACTORY_APPTOVP_SHOWAPPUI(
+	ANSISTRING details,
+	HEXINT64 line,
+	UINT32 activeCall
+	);
+
+VOIPLINEFACTORY_APPTOVP_CALLENDED(
+	ANSISTRING details,
+	HEXINT64 line,
+	UINT32 endedCall
+	);
+
+VOIPLINEFACTORY_APPTOVP_CALLHELD(
+	ANSISTRING details,
+	HEXINT64 line,
+	UINT32 heldCall
+	);
+
+VOIPLINEFACTORY_APPTOVP_CALLREADY(
+	ANSISTRING details,
+	HEXINT64 line,
+	UINT32 activeCall
+	);
+
+VOIPLINEFACTORY_APPTOVP_CALLACTIVE(
+	ANSISTRING details,
+	HEXINT64 line,
+	UINT32 activeCall
+	);
+
+VOIPLINEFACTORY_APPTOVP_CALLACCEPTED(
+	ANSISTRING details,
+	HEXINT64 line,
+	UINT32 acceptedCall,
+	UINT32 attributes
+	);
+
+VOIPLINEFACTORY_APPTOVP_NEW_OUTGOING_UPGRADE_CALL(
+	ANSISTRING details,
+	HEXINT64 line,
+	UINT32 callId,
+	GUID callUpgradeGuid
+	);
+
+VOIPLINEFACTORY_APPTOVP_NEWOUTGOINGCALL(
+	ANSISTRING details,
+	HEXINT64 line,
+	UINT32 callId
+	);
+
+VOIPLINEFACTORY_APPTOVP_NEW_INCOMING_UPGRADE_CALL(
+	ANSISTRING details,
+	HEXINT64 line,
+	UINT32 callId
+	);
+
+VOIPLINEFACTORY_APPTOVP_NEWINCOMINGCALL(
+	ANSISTRING details,
+	HEXINT64 line,
+	UINT32 callId
+	);
+
+VOIPLINEFACTORY_APPTOVP_NEWAPPINITIATEDCALL(
+	ANSISTRING details,
+	HEXINT64 line,
+	UINT32 newCallId
+	);
+
+VOIPLINEFACTORY_APPTOVP_NEWACCEPTEDCALL(
+	ANSISTRING details,
+	HEXINT64 LinePointer,
+	UINT32 NewCallId
+	);
+
+VOIPLINEFACTORY_APPTOVP_INITIALIZECONNECTIONTOAPPHOST(
+	ANSISTRING details,
+	HEXINT64 Handle,
+	HEXINT64 VoipLine,
+	UINT32 AgentProcessId,
+	GUID ContextId
+	);
+
+VOIPLINEFACTORY_VOIPAPPHOSTHANDLE_RUNDOWN(
+	ANSISTRING details,
+	HEXINT64 line
+	);
+
+OneProcessVoipCapabilityCheckFailed(
+	ANSISTRING lineType,
+	HEXINT32 HResult,
+	GUID lineId
+	);
+
+VOIPLINEFACTORY_APPTOVP_ONEPROCESSVOIPRESTRICTEDCAPABILITYCHECKFAILED(
+	ANSISTRING details,
+	HEXINT32 HResult,
+	GUID lineId
+	);
+
+BackgroundVoipCapabilityCheckFailed(
+	ANSISTRING lineType
+	);
+
+VOIPLINEFACTORY_APPTOVP_BACKGROUNDVOIPRESTRICTEDCAPABILITYCHECKFAILED(
+	ANSISTRING details,
+	UINT32 newCallId
+	);
+
+BackgroundVoipCapabilityCheckAccessDenied(
+	ANSISTRING lineType
+	);
+
+VOIPLINEFACTORY_APPTOVP_BACKGROUNDVOIPRESTRICTEDCAPABILITYCHECKACCESSDENIED(
+	ANSISTRING details,
+	UINT32 newCallId
+	);
+
+PackageFamilyNameTooLong(
+	ANSISTRING details,
+	UNICODESTRING packageFamilyName
+	);
+
+ModemOrSlotIndexOutOfBounds(
+	ANSISTRING details,
+	UINT32 ModemIndex,
+	UINT32 SlotIndex,
+	HEXINT64 SlotPointer
+	);
+
+UnknownSlotRemoved(
+	ANSISTRING details
+	);
+
+RemoveSlotFromUnknownModem(
+	ANSISTRING details
+	);
+
+DuplicateSlotAdded(
+	ANSISTRING details
+	);
+
+AddSlotToUnknownModem(
+	ANSISTRING details
+	);
+
+UnknownModemRemoved(
+	ANSISTRING details
+	);
+
+DuplicateModemAdded(
+	ANSISTRING details
+	);
+
+BluetoothHandsFreeProvider::LineFactory::OnDeviceRemoved(
+	GUID PhoneLineId,
+	HEXINT64 BluetoothAddress
+	);
+
+UnknownBluetoothHandsFreeDeviceRemoved(
+	ANSISTRING details
+	);
+
+BluetoothHandsFreeProvider::LineFactory::OnDeviceAdded(
+	GUID PhoneLineId,
+	HEXINT64 BluetoothAddress
+	);
+
+DuplicateBluetoothHandsFreeDeviceAdded(
+	ANSISTRING details
+	);
+
+BluetoothHandsFreeProvider::LineFactory::_HandleBluetoothServiceReboot(
+	ANSISTRING details
+	);
+
+BluetoothHandsFreeProvider::LineFactory::_RegisterBluetoothServiceRebootWnf(
+	ANSISTRING details
+	);
+
+OnMtsiOperationCompleted(
+	ANSISTRING Component,
+	ANSISTRING Location
+	);
+
+OnCallProgress(
+	ANSISTRING Component,
+	ANSISTRING Location,
+	UINT32 mtsiCallState,
+	UNICODESTRING pCallId
+	);
+
+OnNewCall(
+	ANSISTRING Component,
+	ANSISTRING Location,
+	UNICODESTRING pCallId
+	);
+
+IMS_LINE_STATUS_CHANGED(
+	ANSISTRING "ImsLine: ImsServiceStatusChangeNotification started"
+	);
+
+OnServiceStatusChanged(
+	ANSISTRING Component,
+	ANSISTRING Location,
+	BOOL32 isRegistered
+	);
+
+DropActiveAcceptHeld(
+	ANSISTRING Component,
+	ANSISTRING Location,
+	UINT32 (DWORD)activeCallToDrop,
+	UINT32 (DWORD)incomingOrHeldCallToAccept,
+	UINT32 (DWORD)acceptedCallMedia
+	);
+
+DropActiveAcceptHeld(
+	ANSISTRING Component,
+	ANSISTRING Location,
+	HRESULT hr
+	);
+
+Swap(
+	ANSISTRING Component,
+	ANSISTRING Location,
+	UINT32 (DWORD)callToHold,
+	UINT32 (DWORD)callToUnhold
+	);
+
+Swap(
+	ANSISTRING Component,
+	ANSISTRING Location,
+	HRESULT hr
+	);
+
+Private(
+	ANSISTRING Component,
+	ANSISTRING Location,
+	UINT32 callToRemoveFromConference
+	);
+
+Private(
+	ANSISTRING Component,
+	ANSISTRING Location,
+	HRESULT hr
+	);
+
+ImsConference(
+	ANSISTRING Component,
+	ANSISTRING Location,
+	UINT32 (DWORD)firstCallToConference,
+	UINT32 (DWORD)secondCallToConference
+	);
+
+ImsConference(
+	ANSISTRING Component,
+	ANSISTRING Location,
+	HRESULT hr
+	);
+
+StopDtmf(
+	ANSISTRING Component,
+	ANSISTRING Location,
+	UINT32 dtmfDigitToStop
+	);
+
+StopDtmf(
+	ANSISTRING Component,
+	ANSISTRING Location,
+	HRESULT hr
+	);
+
+StartDtmf(
+	ANSISTRING Component,
+	ANSISTRING Location,
+	UINT32 dtmfDigitToStart
+	);
+
+StartDtmf(
+	ANSISTRING Component,
+	ANSISTRING Location,
+	HRESULT hr
+	);
+
+SendDtmf(
+	ANSISTRING Component,
+	ANSISTRING Location,
+	UNICODESTRING pDtmfDigitsToSend
+	);
+
+SendDtmf(
+	ANSISTRING Component,
+	ANSISTRING Location,
+	HRESULT hr
+	);
+
+UnHold(
+	ANSISTRING Component,
+	ANSISTRING Location,
+	UINT32 (DWORD)callToUnhold
+	);
+
+UnHold(
+	ANSISTRING Component,
+	ANSISTRING Location,
+	HRESULT hr
+	);
+
+Hold(
+	ANSISTRING Component,
+	ANSISTRING Location,
+	UINT32 (DWORD)callToHold
+	);
+
+Hold(
+	ANSISTRING Component,
+	ANSISTRING Location,
+	HRESULT hr
+	);
+
+End(
+	ANSISTRING Component,
+	ANSISTRING Location,
+	UINT32 (DWORD)callToEnd,
+	BOOL32 suppressAutoUnhold
+	);
+
+End(
+	ANSISTRING Component,
+	ANSISTRING Location,
+	HRESULT hr
+	);
+
+Dial(
+	ANSISTRING Component,
+	ANSISTRING Location,
+	UINT32 callToDial,
+	UINT32 callMedia,
+	UINT32 callerIdOption,
+	UNICODESTRING pDialString
+	);
+
+Dial(
+	ANSISTRING Component,
+	ANSISTRING Location,
+	HRESULT hr
+	);
+
+IMS_LINE_ACCEPT_INCOMING(
+	ANSISTRING details,
+	UINT32 callToAccept,
+	UINT32 completionContext
+	);
+
+UnMute(
+	ANSISTRING Component,
+	ANSISTRING Location
+	);
+
+UnMute(
+	ANSISTRING Component,
+	ANSISTRING Location,
+	HRESULT hr
+	);
+
+Mute(
+	ANSISTRING Component,
+	ANSISTRING Location
+	);
+
+Mute(
+	ANSISTRING Component,
+	ANSISTRING Location,
+	HRESULT hr
+	);
+
+NewAppInitiatedCallBegin(
+	ANSISTRING lineType
+	);
+
+NewAcceptedCallBegin(
+	ANSISTRING lineType
+	);
+
+IncomingCallBegin(
+	ANSISTRING lineType
+	);
+
+VOIPLINE_VPTOAPP_MUTEUNMUTERPCCALL(
+	ANSISTRING details,
+	UINT32 RpcCallType,
+	HEXINT64 Line
+	);
+
+VOIPAPP_LAUNCH(
+	ANSISTRING details,
+	UNICODESTRING URI
+	);
+
+VOIPLINE_VPTOAPP_RPCCALL(
+	ANSISTRING details,
+	UINT32 RpcCallType,
+	HEXINT64 Line,
+	UINT32 ControllerCallId,
+	UINT32 VoipAppCallId
+	);
+
+CallUnHold(
+	ANSISTRING lineType
+	);
+
+CallHold(
+	ANSISTRING lineType
+	);
+
+VOIPLINE_VPTOAPP_ENDCALLRPCCALL(
+	ANSISTRING details,
+	UINT32 RpcCallType,
+	HEXINT64 Line,
+	UINT32 VoipAppCallId
+	);
+
+VOIPAPP_LAUNCH_SHOWUI(
+	ANSISTRING details,
+	UINT32 activeCall,
+	UINT32 callId
+	);
+
+VOIPAPP_REMOTEID_REQUEST_COMPLETE(
+	ANSISTRING details,
+	HEXINT32 context,
+	HEXINT32 remoteIdEists
+	);
+
+PHPERF_VOIP_ANSWER_INCOMINGCALL_END(
+	VOID
+	);
+
+VOIPLINE_HAS_ABOVELOCK_EXTENSION(
+	ANSISTRING details,
+	GUID lineId,
+	BOOL32 supportsLaunchAboveLock
+	);
+
+VOIPLINE_CANCELVOIPRTCTASK(
+	ANSISTRING details,
+	HEXINT64 line,
+	UINT32 voipAppProcessId
+	);
+
+VOIPLINE_LAUNCHVOIPRTCTASKFORONEPROCESSAPPMODEL(
+	ANSISTRING details,
+	HEXINT64 line,
+	HEXINT64 data,
+	UINT32 voipAppProcessId
+	);
+
+VOIPLINE_LAUNCHVOIPRTCTASK(
+	ANSISTRING details,
+	HEXINT64 line,
+	HEXINT64 data,
+	UINT32 voipAppProcessId,
+	UNICODESTRING taskEntryPoint
+	);
+
+VOIPLINE_TASKMANAGER_ONINCOMINGCALLDIALOGDISMISSED(
+	ANSISTRING details,
+	GUID m_voipAppProductId
+	);
+
+VOIPLINE_TASKMANAGER_ONINCOMINGCALLDIALOGDISPLAYED(
+	ANSISTRING details,
+	GUID voipAppProductId
+	);
+
+VOIPLINE_TASKMANAGER_UNHOLDACTIVECALL(
+	ANSISTRING details,
+	GUID voipAppProductId
+	);
+
+VOIPLINE_TASKMANAGER_HOLDACTIVECALL(
+	ANSISTRING details,
+	GUID voipAppProductId
+	);
+
+VOIPLINE_TASKMANAGER_CANCELCALLQUERYAGENT(
+	ANSISTRING details,
+	GUID voipAppProductId
+	);
+
+VOIPLINE_TASKMANAGER_LAUNCHCALLQUERYCALLAGENT(
+	ANSISTRING details,
+	GUID voipAppProductId
+	);
+
+VOIPLINE_NOTIFYVOIPACTIVITYCOMPLETED(
+	ANSISTRING details,
+	HEXINT64 line,
+	UINT32 voipAppProcessId
+	);
+
+VOIPLINE_TASKMANAGER_CANCELACTIVECALLAGENT(
+	ANSISTRING details,
+	GUID voipAppProductId
+	);
+
+VOIPLINE_COMPUTECANCELACTIVECALLAGENT(
+	ANSISTRING details,
+	GUID voipAppProductId,
+	BOOL32 isForcedShutdown,
+	BOOL32 isActiveCallAgentRunning
+	);
+
+VOIPLINE_TASKMANAGER_LAUNCHACTIVECALLAGENT(
+	ANSISTRING details,
+	GUID voipAppProductId
+	);
+
+VOIPLINE_PENDINGRPCCALLCOMPLETED(
+	ANSISTRING details,
+	HEXINT64 line,
+	UINT32 callId,
+	UINT32 callType,
+	BOOL32 rpcCallCompletedOnTime
+	);
+
+TERMINATING_CALL_QUERY_AGENT_FOR_TIMEOUT(
+	ANSISTRING details,
+	UNICODESTRING voipLineIdentifier
+	);
+
+TERMINATING_ACTIVE_CALL_AGENT_FOR_RPC_TIMEOUT(
+	ANSISTRING details,
+	UNICODESTRING lineId
+	);
+
+TIMEDOUT_PENDING_RPC_CALL(
+	ANSISTRING details,
+	HEXINT64 line,
+	UINT32 callId,
+	UINT32 callType
+	);
+
+REMOVE_STALE_PENDING_RPC_CALL(
+	ANSISTRING details,
+	HEXINT64 line,
+	UINT32 callId,
+	UINT32 callType
+	);
+
+CLEANUP_VOIP_APP_CONNECTION_STATE(
+	ANSISTRING details,
+	HEXINT64 line,
+	UINT32 pendingRPCalls,
+	UINT32 voipAppProcessId
+	);
+
+RESET_CONNECTION_TO_APP(
+	ANSISTRING details,
+	HEXINT64 line
+	);
+
+EMERGENCY_CALL_FAILED_OVER(
+	ANSISTRING details,
+	HEXINT32 callId
+	);
+
+RADIO_CONFIG_CHANGED(
+	ANSISTRING details,
+	UINT32 RadioConfigType
+	);
+
+SET_CAN_FOCUS_RESULT(
+	ANSISTRING details,
+	HEXINT32 result
+	);
+
+SET_CAN_FOCUS_REQUEST(
+	ANSISTRING details,
+	GUID canId
+	);
+
+CellularLineOnMWISummaryChanged(
+	ANSISTRING details,
+	UINT32 referenceNumber,
+	UINT32 totalNewMessages
+	);
+
+RilImsFailureErrorString_MissingOrEmpty(
+	ANSISTRING details
+	);
+
+WiFiConnectionStatus(
+	ANSISTRING details,
+	BOOL32 connectionStatus
+	);
+
+WiFiCallingUpsellSuppressed(
+	ANSISTRING details,
+	BOOL32 upSellSuppressed
+	);
+
+WiFiCallingSettingEnabled(
+	ANSISTRING details,
+	BOOL32 settingsAvailable
+	);
+
+UpdateVideoCapabilitySharingSettings(
+	ANSISTRING details,
+	GUID LineId,
+	BOOL32 PerSimConfigAvailable,
+	BOOL32 IsCapabilitySharingEnabled,
+	HEXINT32 Timestamp
+	);
+
+QueryVideoCapabilitySharingSettings(
+	ANSISTRING details,
+	GUID LineId,
+	BOOL32 PerSimConfigAvailable,
+	BOOL32 IsCapabilitySharingEnabled,
+	HEXINT32 LastModified
+	);
+
+SIM_PIN_OPERATION_COMPLETE(
+	ANSISTRING details,
+	ANSISTRING "Unlock PIN",
+	HEXINT32 context,
+	HEXINT32 result
+	);
+
+SIM_PIN_OPERATION_COMPLETE(
+	ANSISTRING details,
+	ANSISTRING "Unblock PIN",
+	HEXINT32 context,
+	HEXINT32 result
+	);
+
+SIM_PIN_OPERATION_COMPLETE(
+	ANSISTRING details,
+	ANSISTRING "Enable/Disable PIN",
+	HEXINT32 context,
+	HEXINT32 result
+	);
+
+SIM_PIN_OPERATION_COMPLETE(
+	ANSISTRING details,
+	ANSISTRING "Change PIN",
+	HEXINT32 context,
+	HEXINT32 result
+	);
+
+DetermineLineSystemType(
+	ANSISTRING details,
+	BOOL32 imsVoiceSupported,
+	UINT32 registration0SystemType,
+	UINT32 registration0VoiceDomain,
+	UINT32 callPresence
+	);
+
+LINE_TYPE_CHANGE_SUPPRESS_SUPSVC_RESET(
+	ANSISTRING details
+	);
+
+UpdateLineSystemType(
+	ANSISTRING details,
+	UINT32 currentLineSystemType,
+	UINT32 newLineSystemType
+	);
+
+PersoGetDeactivationState(
+	ANSISTRING details,
+	HEXINT32 Result,
+	UINT32 Params,
+	UINT32 State,
+	UINT32 LockAttempts,
+	UINT32 PUKAttempts,
+	UINT32 Feature
+	);
+
+CallerIdBlockingPrefixesUpdated(
+	ANSISTRING details,
+	UNICODESTRING callerIdBlockingPrefixListString.
+	);
+
+IgnoreCallerIdBlockingPrefixesUpdated(
+	ANSISTRING details,
+	BOOL32 ignoreCallerIdBlockingPrefix
+	);
+
+CALL_FORWARDING_STATE_READ_FROM_REGISTRY(
+	ANSISTRING details,
+	HEXINT32 callForwardingState,
+	UNICODESTRING callForwardingAddress
+	);
+
+UpdateUICCInfo(
+	ANSISTRING details
+	);
+
+HandleUICCPersoCheckStatusChange(
+	ANSISTRING details,
+	UINT32 dwParams,
+	UINT32 dwPersoFeature,
+	UINT32 dwPersoCheckState
+	);
+
+HandleUICCPinLockStateChange(
+	ANSISTRING details,
+	UINT32 dwParams,
+	UINT32 dwLockState
+	);
+
+SIM_LOCKSTATE_CHANGE(
+	ANSISTRING details,
+	HEXINT32 LockState
+	);
+
+VOICEMAIL_DEFAULT_NUMBER_SOURCE(
+	ANSISTRING details,
+	UINT32 VoicemailSource
+	);
+
+CELLVOICE_VOICEMAIL_NUMBER_FAILURE(
+	ANSISTRING details,
+	HEXINT32 result
+	);
+
+CELLVOICE_SUBSCRIBER_NUMBER_FAILURE(
+	ANSISTRING details,
+	HEXINT32 result
+	);
+
+SUBSCRIBER_NUMBER_MISSING_OR_EMPTY(
+	ANSISTRING details
+	);
+
+SUBSCRIBER_NUMBER_N(
+	ANSISTRING details,
+	UINT32 Ordinal,
+	UINT32 Kind,
+	UINT32 Service
+	);
+
+RETRIEVED_SUBSCRIBER_NUMBERS(
+	ANSISTRING details,
+	UINT32 NumSubscribers
+	);
+
+SubscriberNumbersChange(
+	ANSISTRING details,
+	HEXINT32 result
+	);
+
+ApplyVideoCallingSetting(
+	ANSISTRING details
+	);
+
+UpdatedLineSpecificDataHomeMcc(
+	ANSISTRING details,
+	GUID LineId,
+	UINT32 HomeMcc
+	);
+
+CELLVOICE_IMSI_FAILURE(
+	ANSISTRING details,
+	HEXINT32 result
+	);
+
+POWER_STATE_CHANGED(
+	ANSISTRING details,
+	UINT32 PowerState
+	);
+
+SIGNAL_STRENGTH_SYSTEMTYPE(
+	ANSISTRING details,
+	UINT32 usedSystemType,
+	UINT32 signalStrengthBars
+	);
+
+READ_CALLFORWARDING_NUMBER_FROM_SIM(
+	ANSISTRING details,
+	HEXINT32 result
+	);
+
+READ_CALLFORWARDING_STATUS_FROM_SIM(
+	ANSISTRING details,
+	HEXINT32 result,
+	HEXINT32 status
+	);
+
+UICC_LINE_SET(
+	ANSISTRING details,
+	INT32 simSwapPending,
+	UNICODESTRING cellcoreLineId,
+	UNICODESTRING cellcoreLineId
+	);
+
+EmergencyModeChanged(
+	ANSISTRING details,
+	GUID affectedCanId,
+	BOOL32 entered
+	);
+
+VIDEO_STATE_PUBLISH(
+	ANSISTRING details,
+	UNICODESTRING SubscriberNumber,
+	BOOL32 videocapable
+	);
+
+IMS_SYSTEM_TYPE_CHANGED(
+	ANSISTRING details,
+	UINT32 ImsSystemType1,
+	UINT32 ImsSystemType2
+	);
+
+OnImsStatusChangeVideoChanged(
+	ANSISTRING details,
+	BOOL32 imsVoiceAvailable,
+	BOOL32 imsVideoAvailable,
+	BOOL32 videoCallingEnabled
+	);
+
+OnImsStatusChangeVoiceChanged(
+	ANSISTRING details,
+	BOOL32 imsVoiceAvailable,
+	BOOL32 imsVideoAvailable,
+	BOOL32 videoCallingEnabled
+	);
+
+IR94FeatureDisabledSetVideoCallingSetting(
+	ANSISTRING details
+	);
+
+REGISTRATION_NETWORKCODE(
+	ANSISTRING details,
+	UINT32 ParamsMask,
+	UINT32 MCC,
+	UINT32 MNC
+	);
+
+REGISTRATION_OPERATORNAMES(
+	ANSISTRING details,
+	UINT32 ParamsMask,
+	UNICODESTRING LongName,
+	UNICODESTRING ShortName,
+	UNICODESTRING NumericName,
+	UNICODESTRING CountryCode
+	);
+
+REGISTRATION_SYSTEMTYPE(
+	ANSISTRING details,
+	UINT32 systemType,
+	UINT32 voiceDomain,
+	UINT32 registrationStatus
+	);
+
+LTE_SYSTEM_TYPE_WITH_NO_REGISTRATION_NO_VOICE_DOMAIN(
+	ANSISTRING details
+	);
+
+REGISTRATION_SGLTE_NO_RF(
+	ANSISTRING details
+	);
+
+REGISTRATION_USED_DATA_REGISTRATION(
+	ANSISTRING details
+	);
+
+CanDataAffinityChange(
+	ANSISTRING details,
+	GUID lineId,
+	UINT32 dataCanIndex
+	);
+
+SwitchCellularAudioProvider(
+	ANSISTRING details,
+	UINT32 ExecutorIndex,
+	UINT32 oldType,
+	UINT32 newType
+	);
+
+ENQUEUE_VERB_NO_PARAM(
+	ANSISTRING details,
+	ANSISTRING verb,
+	HEXINT32 completionContext
+	);
+
+ENQUEUE_VERB_SET_VIDEO_PAUSED(
+	ANSISTRING details,
+	HEXINT32 callId,
+	BOOL32 Paused,
+	HEXINT32 completionContext
+	);
+
+ENQUEUE_VERB_ONE_CALLID(
+	ANSISTRING details,
+	ANSISTRING verb,
+	HEXINT32 callId,
+	HEXINT32 completionContext
+	);
+
+MarkAsConferenceParticipant(
+	ANSISTRING details,
+	UINT32 supSvcCode,
+	HEXINT32 callId
+	);
+
+WRITE_CALLFORWARDING_NUMBER_TO_SIM(
+	ANSISTRING details,
+	HEXINT32 result
+	);
+
+WRITE_CALLFORWARDING_STATUS_TO_SIM(
+	ANSISTRING details,
+	HEXINT32 result
+	);
+
+XCAP_SHOW_CALLERID(
+	ANSISTRING details
+	);
+
+CALL_FORWARDING_STATE_CHANGED(
+	ANSISTRING details,
+	UINT32 supSvcCode,
+	INT32 enable,
+	HEXINT32 callForwardingState
+	);
+
+SUP_SERVICE_CALLBACK_RECEIVED(
+	ANSISTRING details,
+	HRESULT ExecutionResult,
+	UINT32 SvcCode,
+	UINT32 Action
+	);
+
+PersoDeactivationComplete(
+	ANSISTRING details,
+	HEXINT32 Result,
+	UINT32 Params,
+	UINT32 State,
+	UINT32 LockAttempts,
+	UINT32 PUKAttempts,
+	UINT32 Feature,
+	HEXINT32 Context
+	);
+
+InitiatingDeperso(
+	ANSISTRING details,
+	UINT32 Feature,
+	HEXINT32 Context
+	);
+
+InitiatingSimPinOperation(
+	ANSISTRING details,
+	UINT32 Feature,
+	HEXINT32 Context
+	);
+
+DialingECall(
+	ANSISTRING details,
+	HEXINT32 callToDial
+	);
+
+SET_VIDEO_CALLING_SETTING(
+	ANSISTRING details,
+	BOOL32 CurrentVideoCallingEnabled,
+	UINT32 VideoCallingSetting,
+	BOOL32 CacheVideoCallingSetting,
+	BOOL32 PerSimConfigAvailable,
+	BOOL32 TargetVideoCallingEnabled
+	);
+
+IR94FeatureDisabledBlockVideoCallingSetting(
+	ANSISTRING details
+	);
+
+CachedVidoeCallingSettingUnavailable(
+	ANSISTRING details
+	);
+
+ENQUEUE_VERB_DIAL(
+	ANSISTRING details,
+	HEXINT32 callToDial,
+	UINT32 callMedia,
+	UINT32 callerIdOption,
+	HEXINT32 completionContext
+	);
+
+ENQUEUE_VERB_TWO_CALLIDS(
+	ANSISTRING details,
+	ANSISTRING verb,
+	HEXINT32 callId1,
+	HEXINT32 CallId2,
+	HEXINT32 completionContext
+	);
+
+ENQUEUE_VERB_ACCEPT_INCOMING(
+	ANSISTRING details,
+	HEXINT32 callToAccept,
+	UINT32 acceptedCallMedia,
+	HEXINT32 completionContext
+	);
+
+_RefreshLineCalls(
+	UINT32 callListSize
+	);
+
+_RefreshDynamicLineProperties(
+	UINT32 supportedFeatures,
+	UNICODESTRING accountFriendlyName,
+	UINT32 indicatorSize
+	);
+
+BluetoothHFPSuppressedCallUpdate(
+	ANSISTRING details
+	);
+
+_PrepareAndSendUpdatesForAllCalls(
+	ANSISTRING details,
+	UINT32 ActiveCount,
+	UINT32 HeldCount,
+	UINT32 WaitingCount
+	);
+
+_EndIntermediateStateCall(
+	ANSISTRING details
+	);
+
+_CreateIntermediateStateCall(
+	ANSISTRING details,
+	UINT32 ActiveCount,
+	UINT32 HeldCount,
+	UINT32 WaitingCount,
+	UNICODESTRING callDirection
+	);
+
+_CreateCallForIntermediateStateOrSurpriseNotification(
+	ANSISTRING details,
+	UINT32 Phone Controller CallID
+	);
+
+BluetoothHandsFreeLine::_OnPhoneCallStateChanged(
+	ANSISTRING "HFPDevice triggered new Call state changed, but we found it's a noisy notification, ignored",
+	UINT32 HfpHandsFreeCallId,
+	UNICODESTRING HandsFreeCallState,
+	UINT32 MappedPhoneCallState
+	);
+
+BluetoothHandsFreeLine::_OnPhoneCallEnded(
+	ANSISTRING "HFPDevice triggered call end notification, but we found it's a noisy notification, ignored",
+	UINT32 HfpHandsFreeCallId
+	);
+
+BluetoothHandsFreeLine::_OnPhoneCallAdded(
+	ANSISTRING "HFPDevice triggered new Call added, but we found it's a noisy notification, ignored",
+	UINT32 HfpHandsFreeCallId,
+	UNICODESTRING HandsFreeCallState
+	);
+
+BluetoothHandsFreeLine::OnPhoneCallStateChanged-Debugging(
+	ANSISTRING "HFPDevice triggered Line::OnPhoneCallStateChanged-Debugging",
+	UINT32 HfpHandsFreeCallId,
+	UNICODESTRING HandsFreeCallState
+	);
+
+BluetoothHandsFreeLine::OnPhoneCallStateChanged(
+	UINT64 PartA_PrivTags,
+	ANSISTRING "HFPDevice triggered Line::OnPhoneCallStateChanged",
+	UINT32 HfpHandsFreeCallId,
+	UNICODESTRING HandsFreeCallState,
+	HRESULT hresult
+	);
+
+BluetoothHandsFreeLine::OnPhoneCallRemoved-Debugging(
+	ANSISTRING "HFPDevice triggered Line::OnPhoneCallRemoved",
+	UINT32 HfpHandsFreeCallId
+	);
+
+BluetoothHandsFreeLine::OnPhoneCallRemoved(
+	UINT64 PartA_PrivTags,
+	ANSISTRING "HFPDevice triggered Line::OnPhoneCallRemoved",
+	UINT32 HfpHandsFreeCallId,
+	HRESULT hresult
+	);
+
+BluetoothHandsFreeLine::OnPhoneCallAdded-Debugging(
+	ANSISTRING "HFPDevice triggered Line::OnPhoneCallAdded",
+	UINT32 HfpHandsFreeCallId,
+	UNICODESTRING HandsFreeCallState
+	);
+
+BluetoothHandsFreeLine::OnPhoneCallAdded(
+	UINT64 PartA_PrivTags,
+	ANSISTRING "HFPDevice triggered Line::OnPhoneCallAdded",
+	UINT32 HfpHandsFreeCallId,
+	UNICODESTRING HandsFreeCallState
+	);
+
+BluetoothHandsFreeProvider::Line::OnIndicatorValueChanged(
+	UNICODESTRING HfpHandsFreeIndicator.Type,
+	UINT8 HfpHandsFreeIndicator.Value
+	);
+
+BluetoothHandsFreeLine::Dial(
+	UINT64 PartA_PrivTags,
+	UINT32 HfpHandsFreeCallId,
+	HRESULT hresult
+	);
+
+BluetoothHandsFreeLine::SendDtmf(
+	UINT64 PartA_PrivTags,
+	UINT32 HfpHandsFreeCallId,
+	HRESULT hresult
+	);
+
+BluetoothHandsFreeLine::Unhold(
+	UINT64 PartA_PrivTags,
+	UINT32 HfpHandsFreeCallId,
+	HRESULT hresult
+	);
+
+BluetoothHandsFreeLine::RejectIncoming(
+	UINT64 PartA_PrivTags,
+	UINT32 HfpHandsFreeCallId,
+	HRESULT hresult
+	);
+
+BluetoothHandsFreeLine::Hold(
+	UINT64 PartA_PrivTags,
+	UINT32 HfpHandsFreeCallId,
+	HRESULT hresult
+	);
+
+BluetoothHandsFreeLine::End(
+	UINT64 PartA_PrivTags,
+	UINT32 HfpHandsFreeCallId,
+	HRESULT hresult
+	);
+
+BluetoothHandsFreeLine::AcceptIncoming(
+	UINT64 PartA_PrivTags,
+	UINT32 HfpHandsFreeCallId,
+	HRESULT hresult
+	);
+
+BluetoothHandsFreeLine::AudioTransfer(
+	UINT64 PartA_PrivTags,
+	BOOL32 audioVerb,
+	HRESULT hresult
+	);
+
+BluetoothHandsFreeLine::Unmute(
+	UINT64 PartA_PrivTags,
+	HRESULT hresult
+	);
+
+BluetoothHandsFreeLine::Mute(
+	UINT64 PartA_PrivTags,
+	HRESULT hresult
+	);
+
+OnPSMediaPreferencesDataComplete(
+	ANSISTRING details,
+	UINT32 homeConfigIndex,
+	UINT32 dwServiceType,
+	UINT32 dwMediaPreference
+	);
+
+ImsFailureChanged_Notification(
+	ANSISTRING details,
+	UINT32 ImsFailureMessageType
+	);
+
+ImsHandoverAttempt(
+	ANSISTRING details,
+	HRESULT hrHandOverResult,
+	UINT32 dwOldSystemType,
+	UINT32 dwNewSystemType
+	);
+
+LEGACY_VOICEMAIL_MESSAGE_RECEIVED(
+	ANSISTRING details,
+	UNICODESTRING body ? body : L"",
+	UINT32 messageCount
+	);
+
+ImsStatusChanged(
+	ANSISTRING details,
+	UINT32 Params,
+	UINT32 Services
+	);
+
+CELLBROADCASTLISTENER_TURNING_OFF(
+	VOID
+	);
+
+CELLBROADCASTLISTENER_TURNING_ON(
+	VOID
+	);
+
+CELLBROADCASTLISTENER_RESET(
+	VOID
+	);
+
+VoicemailRegistryChangeCallback(
+	ANSISTRING details
+	);
+
+VoicemailConfigChangeCallback(
+	ANSISTRING details,
+	BOOL32 isChangePending
+	);
+
+VoicemailOneShotTimerFired(
+	ANSISTRING details
+	);
+
+RESETTING_VVM(
+	ANSISTRING details,
+	UINT32 oldMcc,
+	UINT32 oldMnc,
+	UNICODESTRING oldNameDifferentiator
+	);
+
+SET_VVM_PROVISIONING_STATE(
+	ANSISTRING details,
+	UINT32 state
+	);
+
+LEGACY_VOICEMAIL_MESSAGE_IGNORED(
+	ANSISTRING details
+	);
+
+WROTE_VOICEMAIL_COUNT_TO_SIM(
+	ANSISTRING details,
+	HEXINT32 result,
+	HEXINT32 context
+	);
+
+READ_VOICEMAIL_COUNT_FROM_SIM(
+	ANSISTRING details,
+	HEXINT32 result,
+	HEXINT32 count
+	);
+
+StopVvmInvoked(
+	ANSISTRING details,
+	UINT32 reason
+	);
+
+StartVvmInvoked(
+	ANSISTRING details,
+	UINT32 lastStopReason
+	);
+
+VVM_ACTION_NOT_SUPPORTED_ON_LINE(
+	ANSISTRING details,
+	ANSISTRING activate ? "activate" : "deactivate"
+	);
+
+VOICEMAIL_COUNT_EXPLICITLY_CLEARED(
+	ANSISTRING details
+	);
+
+VVM_ACTION_NOT_SUPPORTED_ON_LINE(
+	ANSISTRING details,
+	ANSISTRING "save-password"
+	);
+
+VVM_ACTION_NOT_SUPPORTED_ON_LINE(
+	ANSISTRING details,
+	ANSISTRING "start-sync"
+	);
+
+NO_VVM_PROVIDER_LOADED(
+	ANSISTRING details,
+	UINT32 homeMcc,
+	UINT32 homeMnc
+	);
+
+VoicemailConfigureVisualVoicemail(
+	ANSISTRING details,
+	UINT32 homeMcc,
+	UINT32 homeMnc,
+	BOOL32 dataAffinityExists
+	);
+
+FORCED_SIM_SWAP_MCCMNC(
+	ANSISTRING details,
+	UINT32 oldMcc,
+	UINT32 oldMnc,
+	UINT32 homeMcc,
+	UINT32 homeMnc
+	);
+
+GOT_HOME_MCC_MNC(
+	ANSISTRING details,
+	UINT32 homeMcc,
+	UINT32 homeMnc
+	);
+
+Voicemail: _UserLoginCallback(
+	ANSISTRING details,
+	UINT32 homeMcc,
+	UINT32 homeMnc,
+	BOOL32 dataAffinityExists
+	);
+
+Voicemail::_Initialize(
+	ANSISTRING details
+	);
+
+DEQUEUE_VERB_ONE_CALLID(
+	ANSISTRING details,
+	ANSISTRING verb,
+	HEXINT32 callId,
+	HEXINT32 completionContext
+	);
+
+DEQUEUE_VERB_NO_PARAM(
+	ANSISTRING details,
+	ANSISTRING verb,
+	HEXINT32 completionContext
+	);
+
+DEQUEUE_VERB_SET_VIDEO_PAUSED(
+	ANSISTRING details,
+	HEXINT32 callId,
+	BOOL32 Paused,
+	HEXINT32 Prop_CompletionContext
+	);
+
+DEQUEUE_VERB_TWO_CALLIDS(
+	ANSISTRING details,
+	ANSISTRING verb,
+	HEXINT32 callId1,
+	HEXINT32 callId2,
+	HEXINT32 completionContext
+	);
+
+DEQUEUE_VERB_DIAL(
+	ANSISTRING details,
+	HEXINT32 callId,
+	UINT32 callType,
+	UINT32 callerIdOption,
+	HEXINT32 completionContext
+	);
+
+DEQUEUE_VERB_ACCEPT_INCOMING(
+	ANSISTRING details,
+	HEXINT32 CallId,
+	UINT32 CallType,
+	HEXINT32 CompletionContext
+	);
+
+LINENOTIFICATIONWORKITEM_CANCEL(
+	ANSISTRING details,
+	UINT32 SerialNumber,
+	UINT32 Kind
+	);
+
+LINENOTIFICATIONWORKITEM_PROCESS(
+	ANSISTRING details,
+	UINT32 SerialNumber,
+	UINT32 Kind
+	);
+
+LINENOTIFICATIONWORKITEM_COMPLETE(
+	ANSISTRING details,
+	UINT32 SerialNumber,
+	UINT32 Kind
+	);
+
+LINENOTIFICATIONWORKITEM_INSTANTIATE(
+	ANSISTRING details,
+	UINT32 SerialNumber,
+	UINT32 Kind
+	);
+
+CallDisconnected(
+	ANSISTRING ccpfEventCANId,
+	UINT32 disconnectCellCallId,
+	UNICODESTRING callType,
+	UNICODESTRING callDirection,
+	UNICODESTRING disconnectInitiator,
+	UNICODESTRING disconnectReason,
+	UNICODESTRING disconnectGroup,
+	UNICODESTRING callDisconnectError,
+	UINT32 disconnectCauseLocation,
+	UINT32 disconnectCauseValue
+	);
+
+CallDisconnected(
+	ANSISTRING ccpfEventCANId,
+	UNICODESTRING ccpfCan0SimMcc,
+	UNICODESTRING ccpfCan0SimMnc,
+	UNICODESTRING ccpfCan0NWMcc,
+	UNICODESTRING ccpfCan0NWMnc,
+	UNICODESTRING ccpfCan0NWRegStatus,
+	UNICODESTRING ccpfCan0NWRegRAT,
+	UNICODESTRING ccpfCan0IMSSystemType,
+	UNICODESTRING ccpfCan0IMSSvcList,
+	UNICODESTRING ccpfCan1SimMcc,
+	UNICODESTRING ccpfCan1SimMnc,
+	UNICODESTRING ccpfCan1NWMcc,
+	UNICODESTRING ccpfCan1NWMnc,
+	UNICODESTRING ccpfCan1NWRegStatus,
+	UNICODESTRING ccpfCan1NWRegRAT,
+	UNICODESTRING ccpfCan1IMSSystemType,
+	UNICODESTRING ccpfCan1IMSSvcList,
+	UINT32 disconnectCellCallId,
+	UNICODESTRING callType,
+	UNICODESTRING callDirection,
+	UNICODESTRING disconnectInitiator,
+	UNICODESTRING disconnectReason,
+	UNICODESTRING disconnectGroup,
+	UNICODESTRING callDisconnectError,
+	UINT32 disconnectCauseLocation,
+	UINT32 disconnectCauseValue
+	);
+
+CALLMANAGER_INVOKED_CALLMODEL(
+	ANSISTRING details,
+	ANSISTRING Op,
+	HEXINT32 asyncRequestId
+	);
+
+CALLMANAGER_INVOKED_CALLMODEL_WITHNUMBER(
+	ANSISTRING details,
+	ANSISTRING Op,
+	HEXINT32 asyncRequestId,
+	UNICODESTRING maskedDialString
+	);
+
+CALLMANAGER_INVOKING_CALLMODEL(
+	ANSISTRING details,
+	ANSISTRING Op,
+	HEXINT32 asyncRequestId
+	);
+
+CALLMANAGER_INVOKED_CALLMODEL_WITHNUMBER(
+	ANSISTRING details,
+	ANSISTRING Op,
+	HEXINT32 asyncRequestId,
+	UNICODESTRING maskedFlashNumber
+	);
+
+ON_DISPLAY_TEXT_CHANGED(
+	ANSISTRING details,
+	UINT32 ParamsMask,
+	UINT32 InfoType,
+	UINT32 InfoTag,
+	UINT32 MessageLength
+	);
+
+CALLMANAGER_INVOKED_CALLMODEL(
+	ANSISTRING details,
+	ANSISTRING Op
+	);
+
+ON_TONE_SIGNAL_CHANGED(
+	ANSISTRING details,
+	UINT32 Params,
+	UINT32 GPPTone,
+	UINT32 GPP2Tone,
+	UINT32 GPP2IsdnAlerting
+	);
+
+VERB_STOPPED_TRACKING_ASYNC(
+	ANSISTRING details,
+	HEXINT32 asyncRequestId,
+	HEXINT32 completionContext
+	);
+
+VERB_STARTED_TRACKING_ASYNC(
+	ANSISTRING details,
+	HEXINT32 asyncRequestId,
+	HEXINT32 completionContext
+	);
+
+MODEM_ILLEGAL_CPI(
+	ANSISTRING details,
+	UINT32 status
+	);
+
+IncomingCallBegin(
+	ANSISTRING ccpfEventCANId,
+	ANSISTRING lineType
+	);
+
+IncomingCallBegin(
+	ANSISTRING ccpfEventCANId,
+	UNICODESTRING ccpfCan0SimMcc,
+	UNICODESTRING ccpfCan0SimMnc,
+	UNICODESTRING ccpfCan0NWMcc,
+	UNICODESTRING ccpfCan0NWMnc,
+	UNICODESTRING ccpfCan0NWRegStatus,
+	UNICODESTRING ccpfCan0NWRegRAT,
+	UNICODESTRING ccpfCan0IMSSystemType,
+	UNICODESTRING ccpfCan0IMSSvcList,
+	UNICODESTRING ccpfCan1SimMcc,
+	UNICODESTRING ccpfCan1SimMnc,
+	UNICODESTRING ccpfCan1NWMcc,
+	UNICODESTRING ccpfCan1NWMnc,
+	UNICODESTRING ccpfCan1NWRegStatus,
+	UNICODESTRING ccpfCan1NWRegRAT,
+	UNICODESTRING ccpfCan1IMSSystemType,
+	UNICODESTRING ccpfCan1IMSSvcList,
+	ANSISTRING lineType
+	);
+
+PHPERF_CELLULAR_INCOMINGCALL_BEGIN(
+	VOID
+	);
+
+CELLVOICE_NEW_INCOMING(
+	ANSISTRING details,
+	UNICODESTRING maskedDialString
+	);
+
+CELLVOICE_DISCONNECT_NOTIFICATION(
+	ANSISTRING details,
+	HEXINT32 CellVoiceCallId,
+	UINT32 DisconnectInitiator,
+	UINT32 DisconnectReason,
+	UINT32 DisconnectDetailsGroup,
+	HEXINT32 DisconnectDetailsGppLocation,
+	HEXINT32 DisconnectDetailsGppCause
+	);
+
+CELLVOICE_CALL_NOTIFICATION(
+	ANSISTRING details,
+	HEXINT32 CellVoiceCallId,
+	UINT32 Status,
+	UINT32 Direction,
+	UINT32 NumberPres,
+	UINT32 NamePres,
+	UINT32 Multiparty,
+	UINT32 Flags,
+	UINT32 Type,
+	UINT32 ParamsMask
+	);
+
+VERB_COMPLETED(
+	ANSISTRING details,
+	HEXINT32 translatedResult,
+	HEXINT32 completionContext
+	);
+
+MODEM_DIAL_FAILURE_AFTER_CPI(
+	ANSISTRING details,
+	HEXINT32 result,
+	UINT32 state
+	);
+
+VERB_COMPLETED_NO_NOTIFY(
+	ANSISTRING details,
+	HEXINT32 HResult,
+	HEXINT32 completionContext
+	);
+
+VERB_DEQUEUED_ASYNC_COMPLETION(
+	ANSISTRING details,
+	HEXINT32 context,
+	HEXINT32 result
+	);
+
+VERB_ENQUEUED_ASYNC_COMPLETION(
+	ANSISTRING details,
+	HEXINT32 context,
+	HEXINT32 HResult
+	);
+
+CallExplicitCallTransfer(
+	ANSISTRING ccpfEventCANId,
+	ANSISTRING lineType
+	);
+
+CallExplicitCallTransfer(
+	ANSISTRING ccpfEventCANId,
+	UNICODESTRING ccpfCan0SimMcc,
+	UNICODESTRING ccpfCan0SimMnc,
+	UNICODESTRING ccpfCan0NWMcc,
+	UNICODESTRING ccpfCan0NWMnc,
+	UNICODESTRING ccpfCan0NWRegStatus,
+	UNICODESTRING ccpfCan0NWRegRAT,
+	UNICODESTRING ccpfCan0IMSSystemType,
+	UNICODESTRING ccpfCan0IMSSvcList,
+	UNICODESTRING ccpfCan1SimMcc,
+	UNICODESTRING ccpfCan1SimMnc,
+	UNICODESTRING ccpfCan1NWMcc,
+	UNICODESTRING ccpfCan1NWMnc,
+	UNICODESTRING ccpfCan1NWRegStatus,
+	UNICODESTRING ccpfCan1NWRegRAT,
+	UNICODESTRING ccpfCan1IMSSystemType,
+	UNICODESTRING ccpfCan1IMSSvcList,
+	ANSISTRING lineType
+	);
+
+CallSetVideoPause(
+	ANSISTRING ccpfEventCANId,
+	ANSISTRING lineType
+	);
+
+CallSetVideoPause(
+	ANSISTRING ccpfEventCANId,
+	UNICODESTRING ccpfCan0SimMcc,
+	UNICODESTRING ccpfCan0SimMnc,
+	UNICODESTRING ccpfCan0NWMcc,
+	UNICODESTRING ccpfCan0NWMnc,
+	UNICODESTRING ccpfCan0NWRegStatus,
+	UNICODESTRING ccpfCan0NWRegRAT,
+	UNICODESTRING ccpfCan0IMSSystemType,
+	UNICODESTRING ccpfCan0IMSSvcList,
+	UNICODESTRING ccpfCan1SimMcc,
+	UNICODESTRING ccpfCan1SimMnc,
+	UNICODESTRING ccpfCan1NWMcc,
+	UNICODESTRING ccpfCan1NWMnc,
+	UNICODESTRING ccpfCan1NWRegStatus,
+	UNICODESTRING ccpfCan1NWRegRAT,
+	UNICODESTRING ccpfCan1IMSSystemType,
+	UNICODESTRING ccpfCan1IMSSvcList,
+	ANSISTRING lineType
+	);
+
+CallRejectVideo(
+	ANSISTRING ccpfEventCANId,
+	ANSISTRING lineType
+	);
+
+CallRejectVideo(
+	ANSISTRING ccpfEventCANId,
+	UNICODESTRING ccpfCan0SimMcc,
+	UNICODESTRING ccpfCan0SimMnc,
+	UNICODESTRING ccpfCan0NWMcc,
+	UNICODESTRING ccpfCan0NWMnc,
+	UNICODESTRING ccpfCan0NWRegStatus,
+	UNICODESTRING ccpfCan0NWRegRAT,
+	UNICODESTRING ccpfCan0IMSSystemType,
+	UNICODESTRING ccpfCan0IMSSvcList,
+	UNICODESTRING ccpfCan1SimMcc,
+	UNICODESTRING ccpfCan1SimMnc,
+	UNICODESTRING ccpfCan1NWMcc,
+	UNICODESTRING ccpfCan1NWMnc,
+	UNICODESTRING ccpfCan1NWRegStatus,
+	UNICODESTRING ccpfCan1NWRegRAT,
+	UNICODESTRING ccpfCan1IMSSystemType,
+	UNICODESTRING ccpfCan1IMSSvcList,
+	ANSISTRING lineType
+	);
+
+CallAcceptVideo(
+	ANSISTRING ccpfEventCANId,
+	ANSISTRING lineType
+	);
+
+CallAcceptVideo(
+	ANSISTRING ccpfEventCANId,
+	UNICODESTRING ccpfCan0SimMcc,
+	UNICODESTRING ccpfCan0SimMnc,
+	UNICODESTRING ccpfCan0NWMcc,
+	UNICODESTRING ccpfCan0NWMnc,
+	UNICODESTRING ccpfCan0NWRegStatus,
+	UNICODESTRING ccpfCan0NWRegRAT,
+	UNICODESTRING ccpfCan0IMSSystemType,
+	UNICODESTRING ccpfCan0IMSSvcList,
+	UNICODESTRING ccpfCan1SimMcc,
+	UNICODESTRING ccpfCan1SimMnc,
+	UNICODESTRING ccpfCan1NWMcc,
+	UNICODESTRING ccpfCan1NWMnc,
+	UNICODESTRING ccpfCan1NWRegStatus,
+	UNICODESTRING ccpfCan1NWRegRAT,
+	UNICODESTRING ccpfCan1IMSSystemType,
+	UNICODESTRING ccpfCan1IMSSvcList,
+	ANSISTRING lineType
+	);
+
+CallDropVideo(
+	ANSISTRING ccpfEventCANId,
+	ANSISTRING lineType
+	);
+
+CallDropVideo(
+	ANSISTRING ccpfEventCANId,
+	UNICODESTRING ccpfCan0SimMcc,
+	UNICODESTRING ccpfCan0SimMnc,
+	UNICODESTRING ccpfCan0NWMcc,
+	UNICODESTRING ccpfCan0NWMnc,
+	UNICODESTRING ccpfCan0NWRegStatus,
+	UNICODESTRING ccpfCan0NWRegRAT,
+	UNICODESTRING ccpfCan0IMSSystemType,
+	UNICODESTRING ccpfCan0IMSSvcList,
+	UNICODESTRING ccpfCan1SimMcc,
+	UNICODESTRING ccpfCan1SimMnc,
+	UNICODESTRING ccpfCan1NWMcc,
+	UNICODESTRING ccpfCan1NWMnc,
+	UNICODESTRING ccpfCan1NWRegStatus,
+	UNICODESTRING ccpfCan1NWRegRAT,
+	UNICODESTRING ccpfCan1IMSSystemType,
+	UNICODESTRING ccpfCan1IMSSvcList,
+	ANSISTRING lineType
+	);
+
+CallAddVideo(
+	ANSISTRING ccpfEventCANId,
+	ANSISTRING lineType
+	);
+
+CallAddVideo(
+	ANSISTRING ccpfEventCANId,
+	UNICODESTRING ccpfCan0SimMcc,
+	UNICODESTRING ccpfCan0SimMnc,
+	UNICODESTRING ccpfCan0NWMcc,
+	UNICODESTRING ccpfCan0NWMnc,
+	UNICODESTRING ccpfCan0NWRegStatus,
+	UNICODESTRING ccpfCan0NWRegRAT,
+	UNICODESTRING ccpfCan0IMSSystemType,
+	UNICODESTRING ccpfCan0IMSSvcList,
+	UNICODESTRING ccpfCan1SimMcc,
+	UNICODESTRING ccpfCan1SimMnc,
+	UNICODESTRING ccpfCan1NWMcc,
+	UNICODESTRING ccpfCan1NWMnc,
+	UNICODESTRING ccpfCan1NWRegStatus,
+	UNICODESTRING ccpfCan1NWRegRAT,
+	UNICODESTRING ccpfCan1IMSSystemType,
+	UNICODESTRING ccpfCan1IMSSvcList,
+	ANSISTRING lineType
+	);
+
+CallEnableLocalVideo(
+	ANSISTRING ccpfEventCANId,
+	ANSISTRING lineType
+	);
+
+CallEnableLocalVideo(
+	ANSISTRING ccpfEventCANId,
+	UNICODESTRING ccpfCan0SimMcc,
+	UNICODESTRING ccpfCan0SimMnc,
+	UNICODESTRING ccpfCan0NWMcc,
+	UNICODESTRING ccpfCan0NWMnc,
+	UNICODESTRING ccpfCan0NWRegStatus,
+	UNICODESTRING ccpfCan0NWRegRAT,
+	UNICODESTRING ccpfCan0IMSSystemType,
+	UNICODESTRING ccpfCan0IMSSvcList,
+	UNICODESTRING ccpfCan1SimMcc,
+	UNICODESTRING ccpfCan1SimMnc,
+	UNICODESTRING ccpfCan1NWMcc,
+	UNICODESTRING ccpfCan1NWMnc,
+	UNICODESTRING ccpfCan1NWRegStatus,
+	UNICODESTRING ccpfCan1NWRegRAT,
+	UNICODESTRING ccpfCan1IMSSystemType,
+	UNICODESTRING ccpfCan1IMSSvcList,
+	ANSISTRING lineType
+	);
+
+CallDisableLocalVideo(
+	ANSISTRING ccpfEventCANId,
+	ANSISTRING lineType
+	);
+
+CallDisableLocalVideo(
+	ANSISTRING ccpfEventCANId,
+	UNICODESTRING ccpfCan0SimMcc,
+	UNICODESTRING ccpfCan0SimMnc,
+	UNICODESTRING ccpfCan0NWMcc,
+	UNICODESTRING ccpfCan0NWMnc,
+	UNICODESTRING ccpfCan0NWRegStatus,
+	UNICODESTRING ccpfCan0NWRegRAT,
+	UNICODESTRING ccpfCan0IMSSystemType,
+	UNICODESTRING ccpfCan0IMSSvcList,
+	UNICODESTRING ccpfCan1SimMcc,
+	UNICODESTRING ccpfCan1SimMnc,
+	UNICODESTRING ccpfCan1NWMcc,
+	UNICODESTRING ccpfCan1NWMnc,
+	UNICODESTRING ccpfCan1NWRegStatus,
+	UNICODESTRING ccpfCan1NWRegRAT,
+	UNICODESTRING ccpfCan1IMSSystemType,
+	UNICODESTRING ccpfCan1IMSSvcList,
+	ANSISTRING lineType
+	);
+
+CallUnHold(
+	ANSISTRING ccpfEventCANId,
+	ANSISTRING lineType
+	);
+
+CallUnHold(
+	ANSISTRING ccpfEventCANId,
+	UNICODESTRING ccpfCan0SimMcc,
+	UNICODESTRING ccpfCan0SimMnc,
+	UNICODESTRING ccpfCan0NWMcc,
+	UNICODESTRING ccpfCan0NWMnc,
+	UNICODESTRING ccpfCan0NWRegStatus,
+	UNICODESTRING ccpfCan0NWRegRAT,
+	UNICODESTRING ccpfCan0IMSSystemType,
+	UNICODESTRING ccpfCan0IMSSvcList,
+	UNICODESTRING ccpfCan1SimMcc,
+	UNICODESTRING ccpfCan1SimMnc,
+	UNICODESTRING ccpfCan1NWMcc,
+	UNICODESTRING ccpfCan1NWMnc,
+	UNICODESTRING ccpfCan1NWRegStatus,
+	UNICODESTRING ccpfCan1NWRegRAT,
+	UNICODESTRING ccpfCan1IMSSystemType,
+	UNICODESTRING ccpfCan1IMSSvcList,
+	ANSISTRING lineType
+	);
+
+CallSwap(
+	ANSISTRING ccpfEventCANId
+	);
+
+CallSwap(
+	ANSISTRING ccpfEventCANId,
+	UNICODESTRING ccpfCan0SimMcc,
+	UNICODESTRING ccpfCan0SimMnc,
+	UNICODESTRING ccpfCan0NWMcc,
+	UNICODESTRING ccpfCan0NWMnc,
+	UNICODESTRING ccpfCan0NWRegStatus,
+	UNICODESTRING ccpfCan0NWRegRAT,
+	UNICODESTRING ccpfCan0IMSSystemType,
+	UNICODESTRING ccpfCan0IMSSvcList,
+	UNICODESTRING ccpfCan1SimMcc,
+	UNICODESTRING ccpfCan1SimMnc,
+	UNICODESTRING ccpfCan1NWMcc,
+	UNICODESTRING ccpfCan1NWMnc,
+	UNICODESTRING ccpfCan1NWRegStatus,
+	UNICODESTRING ccpfCan1NWRegRAT,
+	UNICODESTRING ccpfCan1IMSSystemType,
+	UNICODESTRING ccpfCan1IMSSvcList
+	);
+
+CallHold(
+	ANSISTRING ccpfEventCANId,
+	ANSISTRING lineType
+	);
+
+CallHold(
+	ANSISTRING ccpfEventCANId,
+	UNICODESTRING ccpfCan0SimMcc,
+	UNICODESTRING ccpfCan0SimMnc,
+	UNICODESTRING ccpfCan0NWMcc,
+	UNICODESTRING ccpfCan0NWMnc,
+	UNICODESTRING ccpfCan0NWRegStatus,
+	UNICODESTRING ccpfCan0NWRegRAT,
+	UNICODESTRING ccpfCan0IMSSystemType,
+	UNICODESTRING ccpfCan0IMSSvcList,
+	UNICODESTRING ccpfCan1SimMcc,
+	UNICODESTRING ccpfCan1SimMnc,
+	UNICODESTRING ccpfCan1NWMcc,
+	UNICODESTRING ccpfCan1NWMnc,
+	UNICODESTRING ccpfCan1NWRegStatus,
+	UNICODESTRING ccpfCan1NWRegRAT,
+	UNICODESTRING ccpfCan1IMSSystemType,
+	UNICODESTRING ccpfCan1IMSSvcList,
+	ANSISTRING lineType
+	);
+
+UpdateRadioAccessTechnologySwitchCallModel(
+	ANSISTRING details,
+	BOOL32 To3GPP
+	);
+
+UpdateRadioAccessTechnology(
+	ANSISTRING details,
+	UINT32 radioAccessTechnology,
+	BOOL32 toIms,
+	BOOL32 toGsm,
+	BOOL32 toCdma,
+	BOOL32 fromIms,
+	BOOL32 fromGsm,
+	BOOL32 fromCdma
+	);
+
+TRACE_STRING(
+	ANSISTRING details
+	);
+
+BluetoothHandsFreeCallStorage::AppendWaiting(
+	ANSISTRING "BluetoothHandsFreeCallStorage::AppendWaiting",
+	UINT32 PhoneCallID,
+	UINT32 HfpHandsFreeCallId
+	);
+
+BluetoothHandsFreeCallStorage::AppendHeld(
+	ANSISTRING "BluetoothHandsFreeCallStorage::AppendHeld",
+	UINT32 PhoneCallID,
+	UINT32 HfpHandsFreeCallId
+	);
+
+BluetoothHandsFreeCallStorage::AppendActive(
+	ANSISTRING "BluetoothHandsFreeCallStorage::AppendActive",
+	UINT32 PhoneCallID,
+	UINT32 HfpHandsFreeCallId
+	);
+
+[Bt-HFP]VerbWorkItem::_NotifyCommandComplete(
+	HEXINT32 completionContext,
+	HRESULT result
+	);
+
+[Bt-HFP]VerbWorkItem::_OnHandsFreeCommandComplete(
+	HEXINT32 completionContext,
+	UNICODESTRING AsyncStatus,
+	HRESULT mappedResult
+	);
+
+[Bt-HFP]VerbWorkItem::DEQUEUE_VERB(
+	UNICODESTRING CallVerb,
+	HEXINT32 completionContext,
+	BOOL32 dispathedByAsyncApi,
+	HRESULT Results
+	);
+
+[BT-HFP]LINENOTIFICATIONWORKITEM_COMPLETE(
+	ANSISTRING details,
+	UINT32 SerialNumber,
+	UNICODESTRING Kind
+	);
+
+[BT-HFP]LINENOTIFICATIONWORKITEM_PROCESS(
+	ANSISTRING details,
+	UINT32 SerialNumber,
+	UNICODESTRING Kind
+	);
+
+[BT-HFP]LINENOTIFICATIONWORKITEM_INSTANTIATE(
+	ANSISTRING details,
+	UINT32 SerialNumber,
+	UNICODESTRING Kind
+	);
+
+SupSvcsHandleMwiSummaryChanged(
+	ANSISTRING details,
+	UINT32 dwMwiType,
+	UINT32 dwNumberOfNewMessages,
+	UINT32 dwNumberOfOldMessages,
+	UINT32 dwNumberOfNewUrgentMessages,
+	UINT32 dwNumberOfOldUrgentMessages
+	);
+
+SupSvcsManagerOnMWIDetailsChanged(
+	ANSISTRING details,
+	UINT32 dwExecutor,
+	UINT32 dwParams,
+	UINT32 dwReferenceNumber,
+	UINT32 dwNumberOfDetailItems
+	);
+
+SupSvcsManagerOnMWISummaryChanged(
+	ANSISTRING details,
+	UINT32 dwExecutor,
+	UINT32 dwParams,
+	UINT32 dwReferenceNumber,
+	UINT32 dwTotalNumberOfDetailItems,
+	UINT32 dwNumberOfSummaryItems
+	);
+
+CELLVOICE_RESPONSE(
+	ANSISTRING details,
+	ANSISTRING "OnFinished",
+	HEXINT32 result
+	);
+
+CELLVOICE_USSD_NEW_SESSION(
+	ANSISTRING details
+	);
+
+CELLVOICE_USSD_SESSION_TERMINATED(
+	ANSISTRING details
+	);
+
+CELLVOICE_USSD_DATA_STATUS(
+	ANSISTRING details,
+	HEXINT32 dwStatus
+	);
+
+CELLVOICE_RESPONSE_PARAMS(
+	ANSISTRING details,
+	HEXINT32 dwParams,
+	HEXINT32 dwNetworkSSErrorCause,
+	HEXINT32 dwNetworkCCErrorCause,
+	HEXINT32 dwVendorErrorCause
+	);
+
+CELLVOICE_RESPONSE(
+	ANSISTRING details,
+	ANSISTRING "OnNotify",
+	HEXINT32 ((HRESULT)0L)
+	);
+
+USSD_USER_RESPONSE_DATA_TRUNCATED(
+	ANSISTRING details
+	);
+
+UNSOLICITED_SUPSVC_ADDRESS(
+	ANSISTRING details,
+	UINT32 code,
+	UNICODESTRING maskedAddress
+	);
+
+UNSOLICITED_SUPSVC_NOTIFICATION_RECEIVED(
+	ANSISTRING details,
+	UINT32 code,
+	HEXINT32 callId
+	);
+
+CELLVOICE_RESPONSE(
+	ANSISTRING details,
+	ANSISTRING "OnGetInfoCompletion",
+	HEXINT32 result
+	);
+
+CELLVOICE_CLIP_SETTINGS(
+	ANSISTRING details,
+	HEXINT32 dwParams,
+	HEXINT32 dwStatus,
+	HEXINT32 dwProvisioning
+	);
+
+CELLVOICE_RESPONSE(
+	ANSISTRING details,
+	ANSISTRING "OnCallerIdSettingsCompletion",
+	HEXINT32 result
+	);
+
+CELLVOICE_COLR_SETTINGS(
+	ANSISTRING details,
+	HEXINT32 dwParams,
+	HEXINT32 dwStatus,
+	HEXINT32 dwProvisioning
+	);
+
+CELLVOICE_RESPONSE(
+	ANSISTRING details,
+	ANSISTRING "OnGetHideConnectedIdSettingsCompletion",
+	HEXINT32 result
+	);
+
+CELLVOICE_COLP_SETTINGS(
+	ANSISTRING details,
+	HEXINT32 dwParams,
+	HEXINT32 dwStatus,
+	HEXINT32 dwProvisioning
+	);
+
+CELLVOICE_RESPONSE(
+	ANSISTRING details,
+	ANSISTRING "OnGetDialedIdSettingsCompletion",
+	HEXINT32 result
+	);
+
+CELLVOICE_RESPONSE(
+	ANSISTRING details,
+	ANSISTRING "OnUnblockPinCompletion",
+	HEXINT32 result
+	);
+
+CELLVOICE_RESPONSE(
+	ANSISTRING details,
+	ANSISTRING "OnChangePinCompletion",
+	HEXINT32 result
+	);
+
+CELLVOICE_HIDE_ID_SETTINGS(
+	ANSISTRING details,
+	HEXINT32 dwParams,
+	HEXINT32 dwStatus,
+	HEXINT32 dwProvisioning
+	);
+
+CELLVOICE_RESPONSE(
+	ANSISTRING details,
+	ANSISTRING "OnGetHideIdSettingsCompletion",
+	HEXINT32 result
+	);
+
+CELLVOICE_RESPONSE_INFO_CLASSES(
+	ANSISTRING details,
+	HEXINT32 infoClasses
+	);
+
+CELLVOICE_RESPONSE(
+	ANSISTRING details,
+	ANSISTRING "OnCallWaitingSettingsCompletion",
+	HEXINT32 result
+	);
+
+CELLVOICE_RESPONSE(
+	ANSISTRING details,
+	ANSISTRING "OnCallBarringStatusCompletion",
+	HEXINT32 result
+	);
+
+InterpretInvalidRemoteUriAsDisabled(
+	ANSISTRING details
+	);
+
+CELLVOICE_CALL_FORWARDING_SETTINGS(
+	ANSISTRING details,
+	HEXINT32 dwParams,
+	HEXINT32 dwInfoClasses,
+	HEXINT32 dwDelayTime,
+	HEXINT32 dwStatus
+	);
+
+CELLVOICE_RESPONSE(
+	ANSISTRING details,
+	ANSISTRING "OnGetCallForwardingSettingsCompletion",
+	HEXINT32 result
+	);
+
+DEFAULT_CALL_FORWARD_DELAY_TIME(
+	ANSISTRING details
+	);
+
+INVALID_CALL_FORWARD_DELAY_TIME_PARAMETER(
+	ANSISTRING details,
+	UNICODESTRING params
+	);
+
+ABOUT_TO_EXECUTE_SUPSVC(
+	ANSISTRING details,
+	HEXINT32 Code,
+	UINT32 Action
+	);
+
+CELLBROADCASTLISTENER_RECEIVED_MSG(
+	ANSISTRING details,
+	UNICODESTRING body
+	);
+
+WiFiCallDisconnectOccured(
+	ANSISTRING details,
+	UNICODESTRING ErrorMessage
+	);
+
+CallTransferSuccessful(
+	ANSISTRING ccpfEventCANId
+	);
+
+CallTransferSuccessful(
+	ANSISTRING ccpfEventCANId,
+	UNICODESTRING ccpfCan0SimMcc,
+	UNICODESTRING ccpfCan0SimMnc,
+	UNICODESTRING ccpfCan0NWMcc,
+	UNICODESTRING ccpfCan0NWMnc,
+	UNICODESTRING ccpfCan0NWRegStatus,
+	UNICODESTRING ccpfCan0NWRegRAT,
+	UNICODESTRING ccpfCan0IMSSystemType,
+	UNICODESTRING ccpfCan0IMSSvcList,
+	UNICODESTRING ccpfCan1SimMcc,
+	UNICODESTRING ccpfCan1SimMnc,
+	UNICODESTRING ccpfCan1NWMcc,
+	UNICODESTRING ccpfCan1NWMnc,
+	UNICODESTRING ccpfCan1NWRegStatus,
+	UNICODESTRING ccpfCan1NWRegRAT,
+	UNICODESTRING ccpfCan1IMSSystemType,
+	UNICODESTRING ccpfCan1IMSSvcList
+	);
+
+CallModelSetImsOnWiFi(
+	ANSISTRING details,
+	BOOL32 imsOnWiFi,
+	BOOL32 onWiFi
+	);
+
+ProcessReceivedRealTimeText(
+	ANSISTRING details,
+	UINT32 CallId,
+	UINT32 SequenceNumberReceivedRealTimeText,
+	UINT32 Count of ReceivedRTTData
+	);
+
+CallModelChangedBetweenGsmAndIms(
+	ANSISTRING details,
+	BOOL32 ims,
+	BOOL32 imsOnWiFi
+	);
+
+EMERGENCY_CALL_DISABLE_ENABLE_AUDIO_3GPP(
+	ANSISTRING details,
+	HEXINT32 CallId
+	);
+
+CallModel3GPPUpdateAudio(
+	ANSISTRING details,
+	UINT32 audioType,
+	BOOL32 audioActive,
+	BOOL32 anyCallNeedsAudio,
+	BOOL32 anyCallNeedsAudioActive,
+	BOOL32 localHoldSupported
+	);
+
+GSM_CALLED_CELLVOICE_ONE_CALLID(
+	ANSISTRING details,
+	ANSISTRING verb == CallVerb_EnableLocalVideo ? "OfferMedia-EnableLocalVideo" : "OfferMedia-DisableLocalVideo",
+	HEXINT32 asyncRequestId,
+	HEXINT32 callId,
+	HEXINT32 cellVoiceCallId
+	);
+
+PROCESS_CALL_PROGRESS_UPDATE(
+	ANSISTRING details,
+	HEXINT32 cellVoiceId,
+	HEXINT32 callId
+	);
+
+CallTransferFailed(
+	ANSISTRING ccpfEventCANId,
+	HRESULT CallTransferFailedValue
+	);
+
+CallTransferFailed(
+	ANSISTRING ccpfEventCANId,
+	UNICODESTRING ccpfCan0SimMcc,
+	UNICODESTRING ccpfCan0SimMnc,
+	UNICODESTRING ccpfCan0NWMcc,
+	UNICODESTRING ccpfCan0NWMnc,
+	UNICODESTRING ccpfCan0NWRegStatus,
+	UNICODESTRING ccpfCan0NWRegRAT,
+	UNICODESTRING ccpfCan0IMSSystemType,
+	UNICODESTRING ccpfCan0IMSSvcList,
+	UNICODESTRING ccpfCan1SimMcc,
+	UNICODESTRING ccpfCan1SimMnc,
+	UNICODESTRING ccpfCan1NWMcc,
+	UNICODESTRING ccpfCan1NWMnc,
+	UNICODESTRING ccpfCan1NWRegStatus,
+	UNICODESTRING ccpfCan1NWRegRAT,
+	UNICODESTRING ccpfCan1IMSSystemType,
+	UNICODESTRING ccpfCan1IMSSvcList,
+	HRESULT CallTransferFailedValue
+	);
+
+ECallFailoverOccured(
+	ANSISTRING details
+	);
+
+DISCONNECTING_DIALED_CALL_FOR_INCOMING_CALL(
+	ANSISTRING details,
+	HEXINT32 CallId
+	);
+
+GsmSuppressedCallUpdate(
+	ANSISTRING details
+	);
+
+INITIATE_EXPLICIT_CALL_TRANSFER(
+	ANSISTRING details,
+	HEXINT32 asyncRequestId
+	);
+
+GSM_SET_VIDEO_PAUSED(
+	ANSISTRING details,
+	HEXINT32 callToSetVideoPaused,
+	BOOL32 Paused,
+	HEXINT32 asyncRequestId
+	);
+
+GSM_CALLED_CELLVOICE_ONE_CALLID(
+	ANSISTRING details,
+	ANSISTRING Op,
+	HEXINT32 asyncRequestId,
+	HEXINT32 callId,
+	HEXINT32 cellVoiceCallId
+	);
+
+GSM_CALLED_CELLVOICE_TWO_CALLIDS(
+	ANSISTRING details,
+	ANSISTRING Op,
+	HEXINT32 asyncRequestId,
+	HEXINT32 callId1,
+	HEXINT32 callId2
+	);
+
+GSM_CALLED_CELLVOICE_DIAL(
+	ANSISTRING details,
+	HEXINT32 asyncRequestId,
+	HEXINT32 callId,
+	UINT32 callType
+	);
+
+GSM_CALLED_CELLVOICE_DIAL_FOR_RTT_REQUEST_FOR_NOIMS(
+	ANSISTRING details,
+	HEXINT32 callId,
+	UINT32 callType
+	);
+
+GSM_CALLED_CELLVOICE_ACCEPT_INCOMING(
+	ANSISTRING details,
+	HEXINT32 RequestId,
+	HEXINT32 CallId,
+	UINT32 CallType,
+	HEXINT32 CellVoiceCallId
+	);
+
+CallModel3GPP2UpdateAudio(
+	ANSISTRING details,
+	UINT32 audioType,
+	BOOL32 shouldEnableAudio,
+	BOOL32 audioAllowed
+	);
+
+CDMA_CALLWAITINGTIMER_PROCESSED(
+	VOID
+	);
+
+CDMA_CALLWAITINGTIMER_FIREDCANCELLED(
+	VOID
+	);
+
+CDMA_CALLWAITINGTIMER_FIRED(
+	VOID
+	);
+
+CDMA_CALLWAITINGTIMER_CANCELLED(
+	VOID
+	);
+
+CDMA_CALLWAITINGTIMER_STARTED(
+	VOID
+	);
+
+CDMA_CELLVOICE_DIALIDNOTIFICATION(
+	ANSISTRING details,
+	HEXINT32 CellVoiceCallId,
+	UINT32 ParamsMask,
+	UINT32 NumberPres,
+	UINT32 NamePres
+	);
+
+MODEM_ILLEGAL_3GPP2CALLWAITING(
+	ANSISTRING details
+	);
+
+CDMA_CELLVOICE_CALLWAITINGNOTIFICATION(
+	ANSISTRING details,
+	HEXINT32 CellVoiceCallId,
+	UINT32 ParamsMask,
+	UINT32 NumberPres,
+	UINT32 NamePres
+	);
+
+CdmaIgnoredDisconnectedCall(
+	ANSISTRING details,
+	HEXINT32 cellVoiceId,
+	HEXINT32 callId
+	);
+
+CdmaIgnoredAlienCall(
+	ANSISTRING details,
+	HEXINT32 cellVoiceID,
+	HEXINT32 callId
+	);
+
+CDMA_UNEXPECTED_CPI(
+	ANSISTRING details,
+	HEXINT32 cellVoiceId,
+	HEXINT32 cellVoiceId2
+	);
+
+CDMA_PROCESS_CALLMODEL_COMPLETE(
+	ANSISTRING details,
+	HEXINT32 asyncRequestId,
+	HEXINT32 HResult,
+	UINT32 VerbName,
+	HEXINT32 CallId1,
+	HEXINT32 context
+	);
+
+CDMA_VERB_ONE_CALLID(
+	ANSISTRING details,
+	ANSISTRING Op,
+	HEXINT32 CallId,
+	HEXINT32 RequestId
+	);
+
+CDMA_SET_VIDEO_PAUSED(
+	ANSISTRING details,
+	HEXINT32 callToSetVideoPaused,
+	BOOL32 Paused,
+	HEXINT32 completionContext
+	);
+
+CDMA_VERB_TWO_CALLIDS(
+	ANSISTRING details,
+	ANSISTRING Op,
+	HEXINT32 callToHold,
+	HEXINT32 callToUnhold,
+	HEXINT32 completeContext
+	);
+
+CDMA_VERB_TWO_CALLIDS(
+	ANSISTRING details,
+	ANSISTRING Op,
+	HEXINT32 activeCallToDrop,
+	HEXINT32 incomingOrHeldCallToAccept,
+	HEXINT32 completeContext
+	);
+
+CDMA_VERB_TWO_CALLIDS(
+	ANSISTRING details,
+	ANSISTRING Op,
+	HEXINT32 firstCallToConference,
+	HEXINT32 secondCallToConference,
+	HEXINT32 completeContext
+	);
+
+ResetHandoverState(
+	ANSISTRING details
+	);
+
+UpdateAudioForHandover(
+	ANSISTRING details,
+	BOOL32 inProgress,
+	BOOL32 isHandoverNotification,
+	UINT32 phase,
+	UINT32 oldType,
+	UINT32 newType
+	);
+
+ProcessHandoverNotification(
+	ANSISTRING details,
+	UINT32 callInfoParams,
+	UINT32 phase,
+	UINT32 handoverStateParams,
+	UINT32 oldType,
+	UINT32 newType,
+	BOOL32 inProgress
+	);
+
+IMS_SIP_CAUSE(
+	ANSISTRING details,
+	UINT32 imsErrorCode,
+	UINT32 reason
+	);
+
+UpdateCallPresence(
+	ANSISTRING details,
+	UINT32 currentPresence,
+	UINT32 aggregatePresence,
+	BOOL32 allSameType
+	);
+
+VIDEO_DIRECTION_MULTITASKING_OVERRIDE(
+	ANSISTRING details,
+	BOOL32 DesiredVideoTransmitState
+	);
+
+UpdateCallVideoDetailsConferenceState(
+	ANSISTRING details,
+	HEXINT32 CallId,
+	HEXINT32 CellVoiceCallId,
+	HEXINT32 ContextId,
+	HEXINT32 ConferenceContextId,
+	UINT32 PreviousState,
+	UINT32 UpdatedState
+	);
+
+MEDIA_UPDATE_CELLULAR_CALL(
+	ANSISTRING details,
+	ANSISTRING "AVPF Retry",
+	HEXINT32 asyncRequestId,
+	HEXINT32 callId,
+	HEXINT32 cellVoiceCallId
+	);
+
+MEDIA_UPDATE_CELLULAR_CALL(
+	ANSISTRING details,
+	ANSISTRING "Reject Video - TTY Enabled",
+	HEXINT32 asyncRequestId,
+	HEXINT32 callId,
+	HEXINT32 cellVoiceCallId
+	);
+
+CELLULAR_VIDEO_STATE_UPDATE(
+	ANSISTRING details,
+	UINT32 dwParams,
+	UINT32 dwMediaAction,
+	UINT32 dwDirection,
+	UINT32 ValidStateParams,
+	UINT32 dwPeerCapabilities,
+	UINT32 dwFlags,
+	HEXINT32 dwContextID
+	);
+
+CELLVOICE_CALL_TYPE_CHANGE(
+	ANSISTRING details,
+	HEXINT32 CallId,
+	UINT32 CallType,
+	HEXINT32 VideoCallContext
+	);
+
+AUDIO_QUALITY_MAPPING(
+	ANSISTRING details,
+	HEXINT32 dwAudioQuality,
+	UINT32 AudioQuality,
+	HEXINT32 CallId
+	);
+
+VIDEO_MEDIA_OFFER_ANSWER(
+	ANSISTRING details,
+	UINT32 ValidParams,
+	UINT32 Action,
+	UINT32 Direction,
+	UINT32 ValidStateParams,
+	UINT32 PeerCapabilities,
+	UINT32 Flags,
+	HEXINT32 ContextID
+	);
+
+CallerIdPrefixUpdated(
+	ANSISTRING details,
+	UNICODESTRING maskedCallerIdNumber
+	);
+
+MEDIA_UPDATE_CELLULAR_CALL(
+	ANSISTRING details,
+	ANSISTRING "Auto-Accept Video",
+	HEXINT32 asyncRequestId,
+	HEXINT32 callId,
+	HEXINT32 cellVoiceCallId
+	);
+
+_MapRilDisconnectToPhoneReason(
+	ANSISTRING details,
+	INT32 PH_CALLSTATEREASON,
+	INT32 RILCALLINFODISCONNECTREASON
+	);
+
+RoamingOverrideNumberSubstituted(
+	ANSISTRING details,
+	UNICODESTRING pOverrideNumber,
+	UNICODESTRING maskedsubscriberNumber
+	);
+
+RoamingOverrideNumberNotSubstituted(
+	ANSISTRING details,
+	UNICODESTRING pOverrideNumber,
+	UNICODESTRING maskedsubscriberNumber
+	);
+
+SurpriseOutgoingECallNotification(
+	ANSISTRING details,
+	HEXINT32 CallId,
+	BOOL32 CallIsOwnedByOtherLine
+	);
+
+MODEM_MISMATCHED_DIRECTION_FIELDS(
+	ANSISTRING details,
+	UINT32 Direction,
+	UINT32 Status
+	);
+
+RoamingOverrideNumberDialed(
+	ANSISTRING details,
+	UNICODESTRING maskedOverrideNumber
+	);
+
+CDMA_VERB_TRACKING_NOT_FOUND(
+	ANSISTRING details,
+	HEXINT32 asyncRequestId
+	);
+
+CDMA_VERB_STOPPED_TRACKING_ASYNC(
+	ANSISTRING details,
+	UINT32 VerbName,
+	HEXINT32 requestId,
+	HEXINT32 completionContext
+	);
+
+CDMA_VERB_STARTED_TRACKING_ASYNC(
+	ANSISTRING details,
+	UINT32 VerbName,
+	HEXINT32 requestId,
+	HEXINT32 completionContext
+	);
+
+CDMA_HEURISTICS_ABORT(
+	VOID
+	);
+
+CDMA_HEURISTICS_SHUTDOWN(
+	VOID
+	);
+
+CDMA_HEURISTICS_RESET(
+	VOID
+	);
+
+CDMA_HEURISTICS_CALLED_TWO_CALLIDS(
+	ANSISTRING details,
+	ANSISTRING "Swap",
+	HEXINT32 CallId,
+	HEXINT32 CallId2,
+	HEXINT32 AsyncId,
+	HEXINT32 Context
+	);
+
+CDMA_HEURISTICS_CALLED_ONE_CALLID(
+	ANSISTRING details,
+	ANSISTRING "RejectIncoming",
+	HEXINT32 callToReject,
+	HEXINT32 asyncRequestId,
+	HEXINT32 completionContext
+	);
+
+CdmaHeuristicsSetLocalHold(
+	ANSISTRING details,
+	BOOL32 enabled
+	);
+
+CDMA_HEURISTICS_CALLED_ONE_CALLID(
+	ANSISTRING details,
+	ANSISTRING "Flash",
+	HEXINT32 callToFlash,
+	HEXINT32 asyncRequestId,
+	HEXINT32 completionContext
+	);
+
+CDMA_HEURISTICS_CALLED_ONE_CALLID(
+	ANSISTRING details,
+	ANSISTRING "End",
+	HEXINT32 callToEnd,
+	HEXINT32 asyncRequestId,
+	HEXINT32 completionContext
+	);
+
+CDMA_HEURISTICS_CALLED_ONE_CALLID(
+	ANSISTRING details,
+	ANSISTRING "Dial",
+	HEXINT32 callToDial,
+	HEXINT32 asyncRequestId,
+	HEXINT32 completionContext
+	);
+
+CDMA_HEURISTICS_CALLED_TWO_CALLIDS(
+	ANSISTRING details,
+	ANSISTRING "Conference",
+	HEXINT32 CallId,
+	HEXINT32 CallId2,
+	HEXINT32 AsyncId,
+	HEXINT32 Context
+	);
+
+CDMA_HEURISTICS_CALLED_ONE_CALLID(
+	ANSISTRING details,
+	ANSISTRING "AcceptIncoming",
+	HEXINT32 callToAccept,
+	HEXINT32 asyncRequestId,
+	HEXINT32 completionContext
+	);
+
+CDMA_HEURISTICS_VERB_COMPLETED(
+	ANSISTRING details,
+	HEXINT32 asyncRequestId,
+	HEXINT32 HResult,
+	UINT32 VerbName,
+	HEXINT32 CallId1,
+	HEXINT32 context
+	);
+
+CDMA_HEURISTICS_VERB_COMPLETED_NOREQUEST(
+	ANSISTRING details,
+	HEXINT32 result,
+	HEXINT32 completionContext
+	);
+
+SUBSCRIPTION_UPDATE_OMADM_SESSION_INITIATED(
+	ANSISTRING details,
+	UNICODESTRING serverId,
+	HEXINT32 HResult
+	);
+
+IMS_CLIENT_REMOVED_HANDLER_UNREGISTERED(
+	ANSISTRING details
+	);
+
+IMS_CLIENT_REMOVED(
+	ANSISTRING details,
+	HEXINT64 imsClient
+	);
+
+IMS_CLIENT_REMOVED_HANDLER_REGISTERED(
+	ANSISTRING details
+	);
+
+IMS_CLIENT_ADDED(
+	ANSISTRING details,
+	HEXINT64 imsClient
+	);
+
+IMS_CLIENT_ADDED_HANDLER_REGISTERED(
+	ANSISTRING details
+	);
+
+IMS_CLIENT_ADDED_HANDLER_UNREGISTERED(
+	ANSISTRING details
+	);
+
+IMS_SERVICE_REGISTRATION_STATE(
+	ANSISTRING details,
+	BOOL32 isServiceRegisteredNow
+	);
+
+IMSVOICE_CALL_NOTIFICATION(
+	ANSISTRING details,
+	UNICODESTRING CallId,
+	UINT32 Status,
+	UINT32 Direction,
+	BOOL32 isConf
+	);
+
+MTSI_NEW_CALL_HANDLER_UNREGISTERED(
+	ANSISTRING details
+	);
+
+MTSI_NEW_CALL_HANDLER_REGISTERED(
+	ANSISTRING details
+	);
+
+Calling_MTSI_InitiateOutgoingCallAsync(
+	UNICODESTRING pDialString
+	);
+
+IMSVOICE_CALL_NOTIFICATION(
+	ANSISTRING details,
+	UNICODESTRING SipCallId,
+	UINT32 Status,
+	UINT32 Direction,
+	BOOL32 isConference
+	);
+
+MTSI_CALL_STATE_HANDLER_UNREGISTERED(
+	ANSISTRING details
+	);
+
+MTSI_CALL_STATE_HANDLER_REGISTERED(
+	ANSISTRING details
+	);
+
+Assert(
+	UINT32 assertVersion,
+	UINT32 rva,
+	UINT32 timestamp,
+	UINT32 imageSize,
+	ANSISTRING imageName,
+	UINT32 count,
+	UINT32 totalHits,
+	UINT32 ModuleCollection,
+	UINT32 GlobalCollection
+	);
+

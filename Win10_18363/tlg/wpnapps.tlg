@@ -1,0 +1,300 @@
+ProviderNames:
+	Microsoft.Windows.Wil.FeatureLogging
+	Microsoft.Windows.Notifications.WpnApps
+	TelemetryAssert
+	TelemetryAssertDiagTrack
+	Microsoft.Windows.Notifications.WpnApis
+	Microsoft.Windows.TileDeveloperAPIsTelemetry
+
+
+
+**** Events *****
+FallbackError(
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+FeatureUsage(
+	UINT32 featureId,
+	INT32 featureVersion,
+	INT32 featureBaseVersion,
+	INT16 featureStage,
+	BOOLEAN enabled,
+	UINT32 kind,
+	UINT64 addend
+	);
+
+FeatureError(
+	UINT32 featureId,
+	INT32 featureVersion,
+	INT32 featureBaseVersion,
+	INT16 featureStage,
+	HRESULT hr,
+	ANSISTRING file,
+	UINT16 lineNumber,
+	ANSISTRING module,
+	ANSISTRING process,
+	ANSISTRING originFile,
+	UINT16 originLineNumber,
+	ANSISTRING originModule,
+	ANSISTRING originName,
+	ANSISTRING message,
+	ANSISTRING callerModule,
+	UINT32 callerReturnAddressOffset,
+	ANSISTRING originCallerModule,
+	UINT32 originCallerReturnAddressOffset
+	);
+
+FallbackError(
+	UINT64 PartA_PrivTags,
+	SIGNED wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+FeatureVariantUsage(
+	UINT32 featureId,
+	INT32 featureVersion,
+	INT32 featureBaseVersion,
+	INT16 featureStage,
+	BOOLEAN enabled,
+	UINT32 variantKind,
+	UINT8 variant,
+	UINT64 addend
+	);
+
+EnabledFeatureUsage(
+	UINT32 featureId,
+	INT32 featureVersion,
+	INT32 featureBaseVersion,
+	INT16 featureStage,
+	BOOLEAN enabled,
+	UINT32 kind,
+	UINT64 addend
+	);
+
+ToastNotifierShow(
+	UNICODESTRING AppUserModelId,
+	UNICODESTRING CorrelationVector,
+	BOOL32 ToastCollectionType,
+	HRESULT Hr
+	);
+
+CreateToastNotifierWithId(
+	UNICODESTRING AppUserModelId,
+	HRESULT Hr
+	);
+
+CreateToastNotifier(
+	UNICODESTRING AppUserModelId,
+	HRESULT Hr
+	);
+
+StopPeriodicUpdate(
+	UNICODESTRING AppUserModelId,
+	HRESULT Hr
+	);
+
+StartPeriodicUpdateBatchAtTime(
+	UNICODESTRING AppUserModelId,
+	HRESULT Hr,
+	UINT32 Count,
+	INT64 StartTime,
+	UINT32 Recurrence
+	);
+
+StartPeriodicUpdateBatch(
+	UNICODESTRING AppUserModelId,
+	HRESULT Hr,
+	UINT32 Count,
+	UINT32 Recurrence
+	);
+
+StartPeriodicUpdateAtTime(
+	UNICODESTRING AppUserModelId,
+	HRESULT Hr,
+	INT64 StartTime,
+	UINT32 Recurrence
+	);
+
+StartPeriodicUpdate(
+	UNICODESTRING AppUserModelId,
+	HRESULT Hr,
+	UINT32 Recurrence
+	);
+
+GetScheduledTileNotifications(
+	UNICODESTRING AppUserModelId,
+	HRESULT Hr,
+	UINT32 Count
+	);
+
+RemoveFromSchedule(
+	UNICODESTRING AppUserModelId,
+	HRESULT Hr
+	);
+
+AddToSchedule(
+	UNICODESTRING AppUserModelId,
+	HRESULT Hr,
+	INT64 DueTime,
+	UINT64 ExpirationTime
+	);
+
+get_Setting(
+	UNICODESTRING AppUserModelId,
+	HRESULT Hr,
+	UINT32 State
+	);
+
+EnableNotificationQueueForSquare310x310(
+	UNICODESTRING AppUserModelId,
+	HRESULT Hr,
+	BOOL32 Square310x310Enabled
+	);
+
+EnableNotificationQueueForWide310x150(
+	UNICODESTRING AppUserModelId,
+	HRESULT Hr,
+	BOOL32 Wide310x150Enabled
+	);
+
+EnableNotificationQueueForSquare150x150(
+	UNICODESTRING AppUserModelId,
+	HRESULT Hr,
+	BOOL32 Square150x150Enabled
+	);
+
+EnableNotificationQueue(
+	UNICODESTRING AppUserModelId,
+	HRESULT Hr,
+	BOOL32 Enabled
+	);
+
+Clear(
+	UNICODESTRING AppUserModelId,
+	HRESULT Hr
+	);
+
+Update(
+	UNICODESTRING AppUserModelId,
+	HRESULT Hr
+	);
+
+CreateTileUpdaterForApplication(
+	UNICODESTRING AppUserModelId,
+	HRESULT Hr
+	);
+
+RawPushNotificationTriggerRegistered(
+	HEXINT32 OperationResult,
+	UNICODESTRING PackageName,
+	UNICODESTRING AppUserModelId
+	);
+
+ChannelRequestedByApi(
+	HEXINT32 OperationResult,
+	ANSISTRING PackageName,
+	ANSISTRING AppUserModelId,
+	BOOL32 AppIdProvided
+	);
+
+ChannelRequestedByApi(
+	HEXINT32 OperationResult,
+	UNICODESTRING PackageName,
+	UNICODESTRING AppUserModelId,
+	BOOL32 AppIdProvided
+	);
+
+ChannelClosedByApi(
+	HEXINT32 OperationResult,
+	ANSISTRING PackageName,
+	ANSISTRING AppUserModelId,
+	BOOL32 AppIdNull
+	);
+
+ChannelClosedByApi(
+	HEXINT32 OperationResult,
+	UNICODESTRING PackageName,
+	UNICODESTRING AppUserModelId,
+	BOOL32 AppIdNull
+	);
+
+DoChannelRequest(
+	HEXINT32 OperationResult,
+	BOOL32 IsCallbackError,
+	UNICODESTRING PackageName,
+	UNICODESTRING AppUserModelId,
+	UINT32 ChannelRequestType,
+	UINT32 ElapsedTimeInMilliseconds
+	);
+
+GetAppEndpointError(
+	HEXINT32 OperationResult,
+	UNICODESTRING AppUserModelId,
+	UNICODESTRING MethodName,
+	BOOL32 UserNull
+	);
+
+ToastHistoryChangedTriggerRegistered(
+	HEXINT32 OperationResult,
+	UNICODESTRING PackageName,
+	UNICODESTRING AppUserModelId
+	);
+
+ToastActionTriggerRegistered(
+	HEXINT32 OperationResult,
+	UNICODESTRING PackageName,
+	UNICODESTRING AppUserModelId
+	);
+
+Assert(
+	UINT32 assertVersion,
+	UINT32 rva,
+	UINT32 timestamp,
+	UINT32 imageSize,
+	ANSISTRING imageName,
+	UINT32 count,
+	UINT32 totalHits,
+	UINT32 ModuleCollection,
+	UINT32 GlobalCollection
+	);
+
+RequestAddAppListEntryAsync(
+	UNICODESTRING aumid,
+	UNICODESTRING tileId,
+	BOOLEAN hasStartScreenManagementCapability,
+	BOOLEAN pinConfirmationDialogShown,
+	BOOLEAN pinConfirmationDialogAccepted,
+	BOOLEAN pinSucceeded
+	);
+

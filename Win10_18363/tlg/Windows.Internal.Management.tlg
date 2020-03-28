@@ -1,0 +1,834 @@
+ProviderNames:
+	Microsoft.Windows.DeviceManagement.dmEnrollment
+	Microsoft.Windows.DeviceManagement.OmaDmApiProvider
+	Microsoft.Windows.DeviceManagement.SessionManagement
+	Microsoft.Windows.DeviceManagement.OmaDmClient
+	Microsoft.Windows.DeviceManagement.OMADMPRC
+	Microsoft.Windows.EnterpriseManagement.ResourceManager
+	Microsoft.Windows.EnterpriseManagement.ResourceManagerUnenrollHook
+	Microsoft.Windows.DeviceManagement.DmAccCsp
+	Microsoft.Windows.DeviceManagement.DevInfo
+	Microsoft.Windows.DeviceManagement.DevDetailCsp
+	Microsoft-Windows-DeviceManagement-W7NodeProcessor
+	Microsoft.Windows.DeviceManagement.SecurityPolicyCsp
+	Microsoft.Windows.EnterpriseManagement.DeclaredConfiguration
+	Microsoft.Windows.EnterpriseManagement.PolicyManager
+	Microsoft.Windows.EnterpriseManagement.ConfigManagerHook
+	Microsoft.Windows.DeviceManagement.ConfigManager2
+	Microsoft.Windows.EMPS.Enrollment
+	Microsoft.Windows.EnterpriseManagement.Enrollment
+	Microsoft-Windows-Provisioning-API
+	TelemetryAssert
+	TelemetryAssertDiagTrack
+	Microsoft.Windows.Management.ConfigurationSession
+	Microsoft.Windows.Management.MdmSync
+	Microsoft.Windows.EnterpriseManagement.FirstSyncStatus
+
+
+
+**** Events *****
+Success(
+	UNICODESTRING FunctionName,
+	INT32 hr
+	);
+
+FallbackError(
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+FallbackError(
+	UINT64 PartA_PrivTags,
+	SIGNED wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+Failure(
+	UNICODESTRING FunctionName,
+	INT32 hr
+	);
+
+EnrollmentStatusTrackingTelemetry(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId,
+	UINT32 resourceType,
+	UINT64 PartA_PrivTags
+	);
+
+ForceRunDeviceRegistrationScheduledTask(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId
+	);
+
+RecreateEnrollmentTasks(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId
+	);
+
+DiscoverEndpoints(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId
+	);
+
+FindDiscoveryService(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId
+	);
+
+ForceRunDeviceRegistrationScheduledTask(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	SIGNED wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+ForceRunDeviceRegistrationScheduledTask(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+ActivityIntermediateStop(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+ActivityError(
+	UINT64 PartA_PrivTags,
+	SIGNED wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+RecreateEnrollmentTasks(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	SIGNED wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+RecreateEnrollmentTasks(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+ActivityStoppedAutomatically(
+	VOID
+	);
+
+EnrollmentStatusTrackingTelemetry(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	BOOL32 policiesCreated,
+	UINT32 trackedCount,
+	UINT32 completedCount,
+	BOOL32 rebootRequired,
+	UINT64 PartA_PrivTags
+	);
+
+EnrollmentStatusTrackingTelemetry(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId,
+	BOOL32 policiesCreated,
+	UINT32 trackedCount,
+	UINT32 completedCount,
+	BOOL32 rebootRequired,
+	UINT64 PartA_PrivTags
+	);
+
+EnrollmentStatusTrackingTelemetry(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+EnrollmentStatusTrackingTelemetry(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+DiscoverEndpoints(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+DiscoverEndpoints(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+ActivityIntermediateStop(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+ActivityError(
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+ActivityError(
+	UINT64 PartA_PrivTags,
+	SIGNED wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+FindDiscoveryService(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+FindDiscoveryService(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+ActivityStoppedAutomatically(
+	VOID
+	);
+
+EnrollAsyncImpl(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId
+	);
+
+EnrollAsync(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId
+	);
+
+ReflectedEnrollAsync(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId
+	);
+
+EnrollAsyncImpl(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	SIGNED wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+EnrollAsyncImpl(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+ReflectedEnrollAsync(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	SIGNED wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+ReflectedEnrollAsync(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+EnrollAsync(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+EnrollAsync(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+SetPolicyAsyncFailed(
+	ANSISTRING apiContext,
+	INT32 resultValue,
+	UNICODESTRING userSid,
+	UNICODESTRING accountId,
+	UNICODESTRING area,
+	UNICODESTRING policyName
+	);
+
+SetPolicyAsyncResult(
+	ANSISTRING apiContext,
+	INT32 resultValue,
+	UNICODESTRING userSid,
+	UNICODESTRING accountId,
+	UNICODESTRING area,
+	UNICODESTRING policyName
+	);
+
+SetPolicyAsyncPreCheckFailed(
+	ANSISTRING apiContext,
+	INT32 resultValue,
+	BOOLEAN fUser,
+	UNICODESTRING accountId,
+	UNICODESTRING area,
+	UNICODESTRING policyName
+	);
+
+PendingProvxmlInfoNotFound(
+	UINT32 RetryCount
+	);
+
+ReceivedAsyncAlert(
+	VOID
+	);
+
+ProcessingAsyncAlert(
+	UNICODESTRING PackageId,
+	UNICODESTRING NodePath,
+	UNICODESTRING Result
+	);
+
+AutoEnrollGetAsyncResultsFailure(
+	UINT32 Result,
+	ANSISTRING __TlgCV__
+	);
+
+EnrollManualCertRenewScheduleFailed(
+	UINT32 Result,
+	ANSISTRING __TlgCV__
+	);
+
+AutoMDMEnrollAttempt(
+	UINT32 Result,
+	BOOL32 UseDeviceCredential,
+	ANSISTRING __TlgCV__
+	);
+
+EnrollmentAccessCheckFailed(
+	UINT32 Result,
+	UINT32 EnrollmentType,
+	UNICODESTRING CapabilityName,
+	ANSISTRING __TlgCV__
+	);
+
+CheckForDomainControllerConnectivity(
+	INT32 Result,
+	UINT32 Ticks,
+	UINT64 PartA_PrivTags,
+	ANSISTRING __TlgCV__
+	);
+
+LocalEnrollmentResult(
+	UINT32 Result,
+	UINT32 EnrollmentType,
+	UNICODESTRING PartnerOpaqueId,
+	GUID EnrollmentId,
+	ANSISTRING __TlgCV__
+	);
+
+EnrollDMPollTaskSchedulerFail(
+	UINT32 Result,
+	ANSISTRING Function,
+	ANSISTRING __TlgCV__
+	);
+
+CompleteMAMToMDMUpgrade(
+	BOOL32 RolledBack,
+	ANSISTRING __TlgCV__
+	);
+
+AutoEnrollWaitForCompletiongNoThrowFailure(
+	UINT32 Result,
+	ANSISTRING __TlgCV__
+	);
+
+LocalEnrollmentQueryResult(
+	UINT32 Result,
+	UINT32 EnrollmentType,
+	UNICODESTRING PartnerOpaqueId,
+	UNICODESTRING EnrollmentId,
+	ANSISTRING __TlgCV__
+	);
+
+AutoMDMEnrollImpersonateFailure(
+	UINT32 Result,
+	ANSISTRING __TlgCV__
+	);
+
+OsEditionUpgradeScheduleSetupFail(
+	UINT32 Result,
+	ANSISTRING __TlgCV__
+	);
+
+AutoEnrollDmRequestAadUserTokenFailure(
+	UINT32 Result,
+	ANSISTRING __TlgCV__
+	);
+
+Win10SModeScheduleSetupFail(
+	UINT32 Result,
+	ANSISTRING __TlgCV__
+	);
+
+LocalUnenrollmentResult(
+	UINT32 Result,
+	UINT32 EnrollmentType,
+	GUID EnrollmentId,
+	ANSISTRING __TlgCV__
+	);
+
+AutoEnrollAADEnrollAsyncFailure(
+	UINT32 Result,
+	ANSISTRING __TlgCV__
+	);
+
+AutoEnrollDmRaiseToastNotificationAndWaitFailure(
+	UINT32 Result,
+	ANSISTRING __TlgCV__
+	);
+
+AutoMDMEnrollAttemptRetryOnFailure(
+	UINT32 Result,
+	ANSISTRING __TlgCV__
+	);
+
+SessionEnumFailed(
+	INT32 resultValue,
+	ANSISTRING apiContext
+	);
+
+GetAccountFailed(
+	INT32 resultValue,
+	ANSISTRING apiContext
+	);
+
+OmaDmSessionManagementInitiateAsyncStart(
+	UINT32 UiMode,
+	UINT32 Origin,
+	ANSISTRING __TlgCV__
+	);
+
+OmaDmSessionManagementInitiateAsyncTriggered(
+	HRESULT HResult,
+	ANSISTRING __TlgCV__
+	);
+
+OmaDmSessionManagementInitiateAsyncEnd(
+	HRESULT HResult,
+	UINT32 SessionState,
+	HRESULT SessionResult,
+	ANSISTRING __TlgCV__
+	);
+
+FirstSyncStatusEnd(
+	UNICODESTRING enrollId,
+	INT32 StatusCode,
+	BOOLEAN FromServer,
+	BOOLEAN TimedOut,
+	FILETIME StartedTime,
+	ANSISTRING __TlgCV__
+	);
+
+RegistryResults::Parse.FailedPhaseRegOpen(
+	UNICODESTRING subKey,
+	UNICODESTRING phase
+	);
+
+RegistryResults::Parse.FailedRegOpen(
+	UNICODESTRING subKey
+	);
+
+RegistryResults::ParseCommandResult.FailedRegGetValue(
+	UNICODESTRING name,
+	WIN32ERROR lResult
+	);
+
+RegistryResults::ParsePackageResults.ParsingCommand(
+	UNICODESTRING name
+	);
+
+RegistryResults::ParseCommandResult(
+	UNICODESTRING name,
+	UINT32 state
+	);
+
+RegistryResults::Parse.FailedPackageRegOpen(
+	UNICODESTRING packageId
+	);
+
+RegistryResults::ParsePackageResults.FailedRegOpen(
+	UNICODESTRING name
+	);
+
+RegistryResults::ParseCommandResult(
+	UNICODESTRING name,
+	UINT32 result
+	);
+
+ProvAsyncResult(
+	UNICODESTRING Session,
+	UNICODESTRING PackageId,
+	INT32 HResult,
+	UNICODESTRING NodePath
+	);
+
+PackageCollectorSearchDone(
+	VOID
+	);
+
+PackageCollectorPackageFound(
+	UNICODESTRING Path,
+	UNICODESTRING FileName
+	);
+
+PackageCollectorPathCchCombineFullName(
+	UNICODESTRING Path,
+	UNICODESTRING FileName,
+	INT32 HResult
+	);
+
+PackageCollectorPathCchCombine(
+	UNICODESTRING Path,
+	INT32 HResult
+	);
+
+PackageCollectorFindError(
+	UNICODESTRING Path,
+	UINT32 LastError
+	);
+
+PackageCollectorFileNotFound(
+	UNICODESTRING Path
+	);
+
+InvalidPackageExtension(
+	UNICODESTRING Path,
+	UNICODESTRING Name,
+	INT32 HResult
+	);
+
+InvalidPath(
+	UNICODESTRING Path
+	);
+
+NonPpkgDefaultPathFile(
+	UNICODESTRING Path,
+	UNICODESTRING Name
+	);
+
+PackageCollectorPathAdd(
+	UNICODESTRING Path,
+	INT32 HResult
+	);
+
+PackageCollectorSkippingPackagePath(
+	UNICODESTRING Path
+	);
+
+PackageCollectorInit(
+	VOID
+	);
+
+PackageCollectorPathAdd(
+	UNICODESTRING Path
+	);
+
+PackageCollectorDeinit(
+	VOID
+	);
+
+GetNextElementTooMany(
+	INT32 HResult
+	);
+
+GetNextElementFailed(
+	INT32 HResult
+	);
+
+RemoveProvPackagePackageFail(
+	UNICODESTRING Path,
+	UINT32 LastError
+	);
+
+RemoveProvPackage(
+	UNICODESTRING Path
+	);
+
+EnumerateElementsFailed(
+	INT32 HResult
+	);
+
+NonProvisioningPackage(
+	UNICODESTRING PackageId,
+	UNICODESTRING PackagePath
+	);
+
+GetProvisionPackageNameFailed(
+	INT32 HResult
+	);
+
+ProvPackageNotOpened(
+	VOID
+	);
+
+ProvPackageOpened(
+	UNICODESTRING PackageName,
+	INT32 HResult
+	);
+
+ProvPackageIsEmpty(
+	VOID
+	);
+
+TryCreateProvisioningFileManagerOnPPKGFailed(
+	UNICODESTRING Path
+	);
+
+OpenProvisioningPackageFailed(
+	UNICODESTRING Path,
+	INT32 HResult
+	);
+
+OpeningProvPackage(
+	UNICODESTRING Path
+	);
+
+CreateCategoryReaderFromPath(
+	UNICODESTRING Path
+	);
+
+AutoDeleteFileStreamFailed(
+	UNICODESTRING Path
+	);
+

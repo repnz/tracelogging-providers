@@ -1,0 +1,566 @@
+ProviderNames:
+	Microsoft.Windows.Unistack.FailureTrigger
+	Microsoft.Windows.OneSync.DiagWarning
+	Microsoft.Windows.OneSync.DiagError
+	Microsoft.Windows.OneSync.DiagTrace
+	Microsoft.Windows.OneSync.InternetMailEngine
+	Microsoft.Windows.OneSync.DiagCritical
+
+
+
+**** Events *****
+FailureTrigger(
+	INT32 errorCode,
+	ANSISTRING expression,
+	ANSISTRING file,
+	INT32 line
+	);
+
+Warning(
+	HRESULT hr,
+	ANSISTRING file,
+	UINT32 line
+	);
+
+Error(
+	HRESULT hr,
+	ANSISTRING file,
+	UINT32 line
+	);
+
+FallbackError(
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+FallbackError(
+	UINT64 PartA_PrivTags,
+	SIGNED wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+ActivityStoppedAutomatically(
+	VOID
+	);
+
+ActivityError(
+	UINT64 PartA_PrivTags,
+	SIGNED wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+ActivityError(
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+ImapIdle_ProcessingQueuedUpdates(
+	HEXINT32 partnerId,
+	UINT32 messageUpdateCount
+	);
+
+ImapIdle_ProcessingFlags(
+	HEXINT32 partnerId
+	);
+
+ImapIdle_ProcessingExpunge(
+	HEXINT32 partnerId
+	);
+
+ImapIdle_ProcessNewMessages(
+	HEXINT32 partnerId
+	);
+
+ImapIdle_IdleTerminated(
+	HEXINT32 partnerId
+	);
+
+ImapIdle_UpdateReceivedFlags(
+	HEXINT32 partnerId,
+	HEXINT64 messageParam,
+	BOOL32 isSeen
+	);
+
+ImapIdle_UpdateReceivedExpunge(
+	HEXINT32 partnerId,
+	HEXINT64 messageParam
+	);
+
+ImapIdle_UpdateReceivedExists(
+	HEXINT32 partnerId,
+	HEXINT64 messageParam
+	);
+
+ImapIdle_UpdateReceivedError(
+	HEXINT32 partnerId
+	);
+
+ImapIdle_UpdateReceivedOK(
+	HEXINT32 partnerId
+	);
+
+ImapIdle_DoneSent(
+	HEXINT32 partnerId
+	);
+
+ImapIdle_IdleEntered(
+	HEXINT32 partnerId
+	);
+
+ImapIdle_IdleSent(
+	HEXINT32 partnerId
+	);
+
+ImapIdle_CancelRequested(
+	HEXINT32 partnerId
+	);
+
+ImapIdle_IdleTerminatedSuccessfully(
+	HEXINT32 partnerId,
+	BOOL32 cancelRequested
+	);
+
+ImapIdle_IdleTerminatedWithError(
+	HEXINT32 partnerId,
+	HRESULT lastResult
+	);
+
+ImapIdle_ExecuteWorkEntered(
+	HEXINT32 partnerId
+	);
+
+ImapIdle_ResetSyncHandler(
+	HEXINT32 partnerId
+	);
+
+SyncImapIdleStartEvent(
+	GUID partnerGuid,
+	INT32 heartbeat,
+	HRESULT hrImapIdleStart
+	);
+
+SyncImapIdleStopEvent(
+	GUID partnerGuid,
+	UINT32 returnReason,
+	INT64 expungeCount,
+	INT64 flagUpdateCount,
+	INT64 syncSessionReceivedMailCount,
+	INT64 syncSessionSentMailCount,
+	HRESULT hrImapIdleStop
+	);
+
+IncomingAccountProperties(
+	GUID partnerGUID,
+	UNICODESTRING emailDomain,
+	UNICODESTRING accountType,
+	UNICODESTRING incomingServerName,
+	UNICODESTRING outgoingServerName,
+	UINT32 syncSchedule,
+	HEXINT32 lastSyncResult,
+	FILETIME lastSyncSuccessTime,
+	FILETIME lastSyncAttemptTime,
+	INT64 sentMailCount,
+	INT64 receivedMailCount,
+	INT64 deletedMailCount,
+	INT64 updatedMailCount,
+	UINT32 throttleCount,
+	UINT32 interactiveSyncCount,
+	UINT32 delayedSyncCount,
+	HEXINT32 userDataAccountId,
+	FILETIME accountCreateTime,
+	HEXINT32 userInputSettings
+	);
+
+IncomingMailEngineSyncEnd(
+	GUID partnerGUID,
+	HRESULT syncHResult,
+	INT64 syncSessionReceivedMailCount,
+	INT64 syncSessionDeletedMailCount,
+	INT64 syncSessionUpdatedMailCount,
+	INT64 syncSessionSentMailCount,
+	UINT32 syncProtocolType,
+	INT64 syncFolderCount,
+	INT64 folderErrorCount,
+	INT64 itemErrorCount
+	);
+
+IncomingMailEngineActivity(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId,
+	UNICODESTRING phase,
+	GUID partnerGUID,
+	HRESULT syncHResult,
+	INT64 syncSessionReceivedMailCount,
+	INT64 syncSessionDeletedMailCount,
+	INT64 syncSessionUpdatedMailCount,
+	INT64 syncSessionSentMailCount,
+	UINT32 syncProtocolType,
+	INT64 syncFolderCount,
+	INT64 folderErrorCount,
+	INT64 itemErrorCount
+	);
+
+IncomingMailEngineActivity(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UNICODESTRING phase,
+	GUID partnerGUID,
+	HRESULT syncHResult,
+	INT64 syncSessionReceivedMailCount,
+	INT64 syncSessionDeletedMailCount,
+	INT64 syncSessionUpdatedMailCount,
+	INT64 syncSessionSentMailCount,
+	UINT32 syncProtocolType,
+	INT64 syncFolderCount,
+	INT64 folderErrorCount,
+	INT64 itemErrorCount
+	);
+
+IncomingMailEngineActivity(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId,
+	UNICODESTRING phase,
+	GUID partnerGUID,
+	UNICODESTRING protocol,
+	BOOL32 userInteractive,
+	BOOL32 isIdleSync,
+	BOOL32 isInitialSync
+	);
+
+IncomingMailEngineActivity(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+IncomingMailEngineActivity(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+Assert(
+	HRESULT hr,
+	ANSISTRING file,
+	UINT32 line
+	);
+
+AutoConfig_Start_WebProvider(
+	UNICODESTRING email
+	);
+
+AutoConfig_Start_OemProvider(
+	UNICODESTRING email
+	);
+
+AutoConfig_Cancel(
+	VOID
+	);
+
+AutoConfig_Start(
+	UNICODESTRING email
+	);
+
+QueryESSEvent(
+	HRESULT hrQueryESSResult,
+	UNICODESTRING inputDomain,
+	UNICODESTRING outputDomain,
+	UINT32 protocolType,
+	UNICODESTRING incomingServerUrl,
+	UINT32 incomingServerPort,
+	BOOL32 incomingServerUseSsl,
+	UINT32 incomingServerUserNameFormat,
+	UNICODESTRING outgoingServerUrl,
+	UINT32 outgoingServerPort,
+	BOOL32 outgoingServerUseSsl,
+	UINT32 outgoingServerUserNameFormat,
+	BOOL32 outgoingServerAuthRequired
+	);
+
+AutoConfig_ProviderResult(
+	HRESULT result
+	);
+
+PurgeEvent(
+	GUID partnerGuid,
+	UINT32 reason
+	);
+
+SyncCancelEvent(
+	GUID partnerGUID,
+	UINT32 engineType
+	);
+
+OutgoingAccountProperties(
+	GUID partnerGUID,
+	UNICODESTRING emailDomain,
+	UNICODESTRING accountType,
+	UNICODESTRING incomingServerName,
+	UNICODESTRING outgoingServerName,
+	UINT32 syncSchedule,
+	HEXINT32 lastSyncResult,
+	FILETIME lastSyncSuccessTime,
+	FILETIME lastSyncAttemptTime,
+	INT64 sentMailCount,
+	INT64 receivedMailCount,
+	INT64 deletedMailCount,
+	INT64 updatedMailCount,
+	UINT32 throttleCount,
+	UINT32 interactiveSyncCount,
+	UINT32 delayedSyncCount,
+	HEXINT32 userDataAccountId,
+	FILETIME accountCreateTime,
+	HEXINT32 userInputSettings
+	);
+
+OutgoingMailEngineActivity(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId,
+	UNICODESTRING phase,
+	GUID partnerGUID,
+	HRESULT syncHResult,
+	INT64 syncSessionSentMailCount
+	);
+
+OutgoingMailEngineActivity(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UNICODESTRING phase,
+	GUID partnerGUID,
+	HRESULT syncHResult,
+	INT64 syncSessionSentMailCount
+	);
+
+OutgoingMailEngineActivity(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId,
+	UNICODESTRING phase,
+	GUID partnerGUID,
+	BOOL32 userInteractive
+	);
+
+OutgoingMailEngineActivity(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+OutgoingMailEngineActivity(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+LogPerItemError(
+	GUID partnerGuid,
+	INT32 syncDirection,
+	INT32 syncCommandType,
+	INT32 syncItemResult
+	);
+
+POP3_AuthenticationFailed(
+	GUID accountId,
+	ANSISTRING mechanism
+	);
+
+HandleSentMail(
+	GUID partnerGuid,
+	INT32 retryCount,
+	INT64 messageSize,
+	INT64 messageSizeLimit,
+	BOOL32 isMessageSizeLimitObtainedFromServer,
+	INT32 syncSentMailResult
+	);
+
+MoveFailedSentMailToDraft(
+	GUID partnerGuid,
+	INT32 retryCount,
+	INT64 messageSize,
+	INT64 messageSizeLimit,
+	BOOL32 isMessageSizeLimitObtainedFromServer,
+	INT32 syncSentMailResult,
+	INT32 hrDraftNDR
+	);
+
+SyncFolderError(
+	GUID partnerGuid,
+	UNICODESTRING folderID,
+	INT32 folderType,
+	FILETIME lastSuccessfulSyncTime,
+	INT32 syncFolderResult
+	);
+
+AttachmentDownloadSize(
+	GUID partnerGUID,
+	UNICODESTRING messageId,
+	INT64 expectedAttachmentSize,
+	INT64 commitedAttachmentSize,
+	UINT32 downloadCommitResult
+	);
+
+InternetMail_Message_Skip_Fetching(
+	UINT64 messageUid
+	);
+
+InternetMail_Folder_Validity_Updated(
+	HEXINT32 partnerId,
+	UINT64 folderUidValidity
+	);
+
+IMAP_Failed_Fetching(
+	ANSISTRING details,
+	HEXINT32 partnerId,
+	HRESULT hr,
+	HEXINT32 uid
+	);
+
+IMAP_SelectFolderFailed(
+	HRESULT hr,
+	ANSISTRING folderName,
+	ANSISTRING response
+	);
+
+IMAP_InvalidServerResponse(
+	ANSISTRING details,
+	ANSISTRING pResponse
+	);
+
+InternetMail_GoogleImapEnableOnServer(
+	HRESULT hr
+	);
+
+IMAP_AuthenticationFailed(
+	GUID accountId,
+	ANSISTRING mechanism
+	);
+
+IMAP_SocketCancel(
+	ANSISTRING details
+	);
+

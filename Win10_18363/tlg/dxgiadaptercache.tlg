@@ -1,0 +1,81 @@
+ProviderNames:
+	Microsoft.Windows.Graphics.DirectXDatabaseUpdater
+	Microsoft.Windows.Graphics.DirectXDatabaseHelper
+
+
+
+**** Events *****
+FallbackError(
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+DxDbHealthHeartbeat(
+	UINT64 PartA_PrivTags,
+	UINT8 schemaVersion,
+	UNICODESTRING DxDbJsonVersion,
+	HRESULT DxDbJsonVersionHR,
+	UNICODESTRING DxDbVersion,
+	HRESULT DxDbVersionHR,
+	UNICODESTRING UpdaterStartLastRan,
+	HRESULT UpdaterStartLastHR,
+	UNICODESTRING UpdaterCallbackLastRan,
+	HRESULT UpdaterCallbackLastHR,
+	UINT32 UsingDxDbForReparenting
+	);
+
+FallbackError(
+	UINT64 PartA_PrivTags,
+	SIGNED wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+DirectXDatabaseConfigAccessError(
+	BOOLEAN UTCReplace_AppSessionGuid,
+	UINT8 schemaVersion,
+	UINT32 HResult,
+	UINT32 ConfigQueryType,
+	UINT32 DxDbSourceType,
+	UINT64 PartA_PrivTags
+	);
+
+DuplicateAppEntryInDatabase(
+	BOOLEAN UTCReplace_AppSessionGuid,
+	UINT8 schemaVersion,
+	UNICODESTRING processName,
+	UINT32 numDuplicates,
+	UNICODESTRING DxDbVersion,
+	UINT32 DxDbSourceType,
+	UINT64 PartA_PrivTags
+	);
+

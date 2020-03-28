@@ -1,0 +1,104 @@
+ProviderNames:
+	Microsoft.Windows.AppxPackaging
+	Microsoft.Windows.AppxDeploymentFallback
+
+
+
+**** Events *****
+FallbackError(
+	UINT64 PartA_PrivTags,
+	SIGNED wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+FallbackError(
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+Failure(
+	HEXINT32 HResult,
+	ANSISTRING File,
+	UINT32 LineNumber,
+	ANSISTRING Function,
+	UNICODESTRING Message,
+	ANSISTRING CallingContext,
+	ANSISTRING Module,
+	HEXINT64 Site,
+	ANSISTRING Code
+	);
+
+AppxBundleSipVerifyIndirectData(
+	UNICODESTRING SipType,
+	INT32 PacakgeType
+	);
+
+AppxBundleSipPutSignedDataMsg(
+	UNICODESTRING SipType,
+	INT32 PacakgeType
+	);
+
+AppxSipVerifyIndirectData(
+	UNICODESTRING SipType,
+	INT32 PacakgeType
+	);
+
+AppxSipPutSignedDataMsg(
+	UNICODESTRING SipType,
+	INT32 PacakgeType
+	);
+
+EappxBundleSipVerifyIndirectData(
+	UNICODESTRING SipType,
+	INT32 PacakgeType
+	);
+
+EappxBundleSipPutSignedDataMsg(
+	UNICODESTRING SipType,
+	INT32 PacakgeType
+	);
+
+EappxSipVerifyIndirectData(
+	UNICODESTRING SipType,
+	INT32 PacakgeType
+	);
+
+EappxSipPutSignedDataMsg(
+	UNICODESTRING SipType,
+	INT32 PacakgeType
+	);
+
+GetAppXLogMessageFromDataFailure(
+	HRESULT result
+	);
+

@@ -1,0 +1,36 @@
+ProviderNames:
+	Microsoft.Windows.DeviceSetupManager
+
+
+
+**** Events *****
+UsageStats(
+	UINT32 Time,
+	UINT32 RetryCycles,
+	UINT32 ServiceUpTime,
+	UINT32 WorkingTime,
+	UINT32 PausedTime,
+	UINT32 RetryTime,
+	UINT32 IdleTime,
+	BOOL32 OOBE,
+	BOOL32 Offline,
+	BOOL32 WUSoftErrors,
+	BOOL32 RunningTimeOverflow,
+	UINT32 WorkCycles,
+	UINT32 SessionNumber
+	);
+
+DeviceSetupEvent(
+	UINT32 DeviceCategory,
+	UINT32 Transport,
+	UINT32 BitFieldGroup1,
+	UINT32 BitFieldGroup2,
+	HRESULT SetupIncomplete,
+	UINT32 DeployDriverTime,
+	UINT32 DeployMetadataTime,
+	UINT32 ElementCount,
+	UNICODESTRING DeviceId,
+	UNICODESTRING ModelId,
+	UNICODESTRING HardwareId
+	);
+

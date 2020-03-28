@@ -1,0 +1,123 @@
+ProviderNames:
+	Microsoft.Windows.HyperV.Hypervisor.Diagnostics
+
+
+
+**** Events *****
+Resumed from Hibernation(
+	VOID
+	);
+
+Resumed from Sleep(
+	VOID
+	);
+
+Device Attached To Domain(
+	UINT32 DeviceType,
+	HEXINT64 Device,
+	ANSISTRING DevicePath,
+	HEXINT64 Domain
+	);
+
+Device Attached To Default Domain(
+	UINT32 DeviceType,
+	HEXINT64 Device,
+	ANSISTRING DevicePath
+	);
+
+Device Attached To NULL Domain(
+	UINT32 DeviceType,
+	HEXINT64 Device,
+	ANSISTRING DevicePath
+	);
+
+Device Domain Deleted(
+	HEXINT64 DomainId,
+	UINT8 Vtl
+	);
+
+Device Domain Created(
+	HEXINT64 DomainId,
+	UINT8 Vtl
+	);
+
+Failed to detach device from domain(
+	UINT32 DeviceType,
+	HEXINT64 Device,
+	ANSISTRING DevicePath,
+	HEX status,
+	UINT16 Line
+	);
+
+Failed to detach device(
+	UINT64 Partition,
+	UINT32 DeviceType,
+	HEXINT64 Device,
+	ANSISTRING DevicePath,
+	HEX status,
+	UINT16 Line
+	);
+
+Device Detached(
+	UINT64 Partition,
+	UINT32 DeviceType,
+	HEXINT64 Device,
+	ANSISTRING DevicePath
+	);
+
+Failed to attach device to domain(
+	UINT32 DeviceType,
+	HEXINT64 Device,
+	ANSISTRING DevicePath,
+	UINT8 TargetVtl,
+	HEX status,
+	UINT16 Line
+	);
+
+Failed to attach device(
+	UINT64 Partition,
+	UINT32 DeviceType,
+	HEXINT64 Device,
+	ANSISTRING DevicePath,
+	UINT32 Flags,
+	UINT64 LogicalId,
+	HEX status,
+	UINT16 Line
+	);
+
+Device Attached(
+	UINT64 Partition,
+	UINT32 DeviceType,
+	HEXINT64 Device,
+	ANSISTRING DevicePath,
+	UINT32 Flags,
+	UINT64 LogicalId
+	);
+
+Device implicitly Attached(
+	UINT32 DeviceType,
+	HEXINT64 Device
+	);
+
+Failed to create shared device(
+	HEXINT64 ((RootDeviceId)->DeviceType == EXT_IOMMU_DEVICE_TYPE_PCI) ? (RootDeviceId)->Pci.AsUINT64 : ((RootDeviceId)->DeviceType == EXT_IOMMU_DEVICE_TYPE_LOGICAL) ? (RootDeviceId)->LogicalId : ((RootDeviceId)->DeviceType == EXT_IOMMU_DEVICE_TYPE_IOAPIC) ? (RootDeviceId)->IoApicId : 0,
+	HEX status,
+	UINT16 Line
+	);
+
+Failed to modify VTL protections(
+	UINT64 Gpa,
+	UINT32 PermissionMask,
+	HEX Status,
+	UINT16 Line
+	);
+
+Failed to map device domain page(
+	UINT8 TargetVtl,
+	UINT64 Gpa,
+	UINT64 Va,
+	UINT32 MapFlags,
+	HEX status,
+	UINT16 Line
+	);
+

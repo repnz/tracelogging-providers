@@ -1,0 +1,88 @@
+ProviderNames:
+	OneCoreDisplayManager
+
+
+
+**** Events *****
+FallbackError(
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+FallbackError(
+	UINT64 PartA_PrivTags,
+	SIGNED wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+DisplayEnumeration(
+	UINT32 trigger,
+	UINT32 displayCount,
+	UINT32 connectedCount,
+	UINT32 disconnectedCount,
+	UINT32 changedCount,
+	INT32 forceUpdate
+	);
+
+DisplayPropertyChanged(
+	UINT32 changedProperty
+	);
+
+DisplayManagerInit(
+	INT32 altSource,
+	INT32 autoUpdate,
+	UINT32 displayCount
+	);
+
+TraceMsg(
+	ANSISTRING msg
+	);
+
+DisplayData2(
+	INT32 DisplayId,
+	UNICODESTRING InstanceId
+	);
+
+DisplayData(
+	UINT32 VolatileId,
+	UINT64 hMonitor,
+	UINT32 Attributes,
+	INT32 rectWidth,
+	INT32 rectHeight,
+	INT32 horizSizeMM,
+	INT32 vertSizeMM,
+	UNICODESTRING friendlyName,
+	UNICODESTRING devicePath,
+	UINT64 displayInstanceIdsCount
+	);
+

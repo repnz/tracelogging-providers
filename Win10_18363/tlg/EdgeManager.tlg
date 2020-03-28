@@ -1,0 +1,59 @@
+ProviderNames:
+	Microsoft.Web.Platform
+	F12ToolsProvider
+	TelemetryAssert
+	TelemetryAssertDiagTrack
+
+
+
+**** Events *****
+Win32CoreWebViewCreation(
+	GUID targetAppSessionGuid,
+	UINT32 webViewId,
+	BOOL32 isWin32,
+	UINT32 createDurationMs,
+	UINT32 createDurationNoSleepTimeMs,
+	UINT32 partitionType
+	);
+
+CoreWebViewCreation(
+	GUID targetAppSessionGuid,
+	UINT32 webViewId,
+	BOOL32 isWin32,
+	UINT32 createDurationMs,
+	UINT32 createDurationNoSleepTimeMs,
+	UINT32 partitionType
+	);
+
+Win32WebViewInitiation(
+	GUID targetAppSessionGuid,
+	UINT32 webViewId
+	);
+
+Assert(
+	UINT32 assertVersion,
+	UINT32 rva,
+	UINT32 timestamp,
+	UINT32 imageSize,
+	ANSISTRING imageName,
+	UINT32 count,
+	UINT32 totalHits,
+	UINT32 ModuleCollection,
+	UINT32 GlobalCollection
+	);
+
+AssertWithArgs(
+	UINT32 assertVersion,
+	UINT32 rva,
+	UINT32 timestamp,
+	UINT32 imageSize,
+	ANSISTRING imageName,
+	UINT32 count,
+	UINT32 totalHits,
+	ANSISTRING originatingBinary,
+	UINT32 bucketArgument1,
+	UINT32 bucketArgument2,
+	UINT32 ModuleCollection,
+	UINT32 GlobalCollection
+	);
+

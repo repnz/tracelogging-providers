@@ -1,0 +1,192 @@
+ProviderNames:
+	Microsoft.Windows.Networking.RAS.MediaManager
+	Microsoft.Windows.Networking.RAS.Manager
+	Microsoft.Windows.Networking.VPNPlugin
+	Microsoft.Windows.Networking.RAS.Dialer
+	Microsoft.Windows.Networking.VPNPlugin.Manager
+
+
+
+**** Events *****
+PhonebookEntryLog(
+	UNICODESTRING PbkEntryOp,
+	HRESULT PbkEntryOpHr,
+	UNICODESTRING ProfileName,
+	UINT32 ConnectionType,
+	UINT32 DialMode,
+	UINT32 OverridePreference,
+	UINT32 RedialAttempts,
+	UINT32 RedialSeconds,
+	INT32 IdleDisconnectSeconds,
+	BOOL32 RedialOnLinkFailure,
+	UINT32 AuthRestrictions,
+	UINT32 VpnStrategy,
+	UINT32 DataEncryption,
+	BOOL32 AutoLogOn,
+	BOOL32 UseRasCredentials,
+	UINT32 ExcludedProtocols,
+	BOOL32 LcpExtensions,
+	BOOL32 SwCompression,
+	BOOL32 NegotiateMultilinkAlways,
+	UINT32 CallbackMode,
+	GUID ProfileGuid,
+	BOOL32 BypassProxyForLocal,
+	UINT32 NumCustomIPSECPolicies,
+	UINT32 NumConfiguredEKUs,
+	UINT32 NumServers,
+	UINT32 NumRoutes,
+	UINT32 NumNrptRules,
+	BOOL32 AutoTriggerCapable,
+	UINT32 NumClassicAppIds,
+	UINT32 NumAppIds,
+	UINT32 NumDnsSearchSuffixes,
+	BOOL32 IsPowerShellCreated,
+	BOOL32 DisableDefaultDnsSuffixes,
+	UINT32 NumTrustedNetworks,
+	BOOL32 ProxySettingsModified,
+	UINT32 NumPerAppTrafficFilters,
+	BOOL32 AlwaysOnCapable,
+	BOOL32 IsDeviceComplianceEnabled,
+	BOOL32 IsDeviceComplianceSSOEnabled,
+	BOOL32 IsDeviceComplianceSSOEKUConfigured,
+	BOOL32 IsDeviceComplianceSSOIssuerHashConfigured,
+	UNICODESTRING ApnProviderId,
+	UNICODESTRING ApnAccessPointName,
+	BOOL32 ApnIsCompressionEnabled,
+	UNICODESTRING CustomRasDialDll,
+	UNICODESTRING DestinationServer,
+	BOOLEAN BitmapProfileProperties
+	);
+
+StateError(
+	UINT64 PartA_PrivTags,
+	UNICODESTRING ProfileName,
+	UNICODESTRING ProfileEpoch,
+	GUID SessionId,
+	SID PluginId,
+	GUID InterfaceId,
+	UINT32 InterfaceIndex,
+	UINT8 State,
+	UINT32 ErrorCode,
+	UINT32 ExtendedErrorCode,
+	UNICODESTRING ErrorMessage,
+	UINT32 EstablishedCount,
+	UINT32 ReconnectReason,
+	UINT32 DisconnectReason,
+	UNICODESTRING PackageFullName
+	);
+
+NetworkNegotiation(
+	UINT64 PartA_PrivTags,
+	UNICODESTRING ProfileName,
+	UNICODESTRING ProfileEpoch,
+	GUID SessionId,
+	SID PluginId,
+	GUID InterfaceId,
+	UINT32 InterfaceIndex,
+	UINT32 EstablishedCount,
+	UINT32 ReconnectReason
+	);
+
+StateChange(
+	UINT64 PartA_PrivTags,
+	UNICODESTRING ProfileName,
+	UNICODESTRING ProfileEpoch,
+	GUID SessionId,
+	SID PluginId,
+	GUID InterfaceId,
+	UINT32 InterfaceIndex,
+	UINT8 State,
+	UINT32 EstablishedCount,
+	UINT32 ReconnectReason,
+	UINT32 DisconnectReason,
+	UNICODESTRING PackageFullName,
+	HEXINT64 ConnectionHandle,
+	BOOL32 IsConnectAfterDestroyInterface
+	);
+
+Abort(
+	UINT64 PartA_PrivTags,
+	UNICODESTRING ProfileName,
+	UNICODESTRING ProfileEpoch,
+	GUID SessionId,
+	SID PluginId,
+	GUID InterfaceId,
+	UINT32 InterfaceIndex,
+	UINT32 EstablishedCount,
+	UINT32 ReconnectReason,
+	UINT32 DisconnectReason,
+	UNICODESTRING PackageFullName
+	);
+
+CredentialsRequest(
+	UINT64 PartA_PrivTags,
+	UNICODESTRING ProfileName,
+	UNICODESTRING ProfileEpoch,
+	GUID SessionId,
+	SID PluginId,
+	GUID InterfaceId,
+	UINT32 InterfaceIndex,
+	UINT8 CredentialType,
+	UINT32 EstablishedCount,
+	UINT32 ReconnectReason
+	);
+
+BackgroundTaskInvokeFailed(
+	UINT64 PartA_PrivTags,
+	UNICODESTRING ProfileName,
+	GUID SessionId,
+	HEXINT64 ConnectionHandle,
+	UNICODESTRING PackageFullName,
+	UINT32 BIMessageType,
+	UINT32 ErrorCode
+	);
+
+WatchdogFired(
+	UINT64 PartA_PrivTags,
+	UNICODESTRING ProfileName,
+	GUID SessionId,
+	SID PluginId,
+	UINT8 State,
+	UNICODESTRING PackageFullName
+	);
+
+CustomUIRequest(
+	UINT64 PartA_PrivTags,
+	UNICODESTRING ProfileName,
+	UNICODESTRING ProfileEpoch,
+	GUID SessionId,
+	SID PluginId,
+	UINT32 EditBoxTotal,
+	UINT32 ComboBoxTotal,
+	UINT32 TextBoxTotal,
+	UINT32 CheckBoxTotal,
+	UINT32 ErrorBoxTotal,
+	UINT32 EstablishedCount,
+	UINT32 ReconnectReason
+	);
+
+ProfileGet(
+	UINT64 PartA_PrivTags,
+	UNICODESTRING ProfileName,
+	UNICODESTRING ProfileEpoch,
+	SID PluginId,
+	GUID ConnectionGuid,
+	UNICODESTRING ServerName,
+	UINT32 ServerPort,
+	UNICODESTRING CustomSettings,
+	UINT32 KeepAliveInSeconds,
+	UINT32 IdleTimeOutInSeconds,
+	BOOL32 ProvisionedByPowerShell,
+	BOOL32 RememberPassword,
+	BOOL32 UseWinLogOnCredentials,
+	BOOL32 IsAutoTriggerEnabled,
+	BOOL32 IsSplitTunnel,
+	BOOL32 IsPrivateNetwork,
+	BOOL32 AreRoutesProvisioned,
+	BOOL32 IsSuffixListConfigured,
+	BOOL32 AreProxySettingsConfigured,
+	UNICODESTRING PackageName,
+	HEXINT64 ConnectionHandle
+	);
+

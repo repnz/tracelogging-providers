@@ -1,0 +1,159 @@
+ProviderNames:
+	Microsoft.Windows.Audio.HrtfApo
+	Microsoft.Windows.Audio.Spatial.Audio3D
+
+
+
+**** Events *****
+FallbackError(
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+FallbackError(
+	UINT64 PartA_PrivTags,
+	SIGNED wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+AggregatedData(
+	UINT32 HrtfApoCreationAttempts,
+	UINT32 SuccessfulHrtfApoCreations,
+	UINT32 NumDefaultDatasetType,
+	UINT32 NumPlatformSpecificDatasetType,
+	UINT32 NumStaticEnvModelsOnlyDatasetType,
+	UINT32 NumSmallRooms,
+	UINT32 NumMediumRooms,
+	UINT32 NumLargeRooms,
+	UINT32 NumOutdoorRooms,
+	UINT32 NumAverageRooms,
+	UINT32 NumActiveInstances,
+	UINT32 NumLockedForProcess,
+	UINT32 NumOmnidirectional,
+	UINT32 NumCardioid,
+	UINT32 NumCone,
+	UINT32 NumDistanceDecayNatural,
+	UINT32 NumDistanceDecayCustom,
+	GUID InstanceIdentifier
+	);
+
+MultiSourceEngineCreation(
+	GUID DspId,
+	UINT32 MaxSources,
+	UINT32 HrtfDatasetType,
+	HRESULT HResult,
+	GUID InstanceIdentifier
+	);
+
+CreateHrtfApoFailed(
+	UINT32 Directivity,
+	UINT32 DistanceDecayType,
+	UINT32 HrtfDatasetType,
+	HRESULT HResult,
+	GUID InstanceIdentifier
+	);
+
+CreateHrtfApo(
+	UINT32 DirectivityType,
+	UINT32 DistanceDecayType,
+	UINT32 HrtfDatasetType,
+	HRESULT HResult
+	);
+
+HrtfDspSourceParams(
+	UINT32 sourceIndex,
+	BOOLEAN Source is active,
+	FLOAT primaryArrivalDirection X,
+	FLOAT primaryArrivalDirection Y,
+	FLOAT primaryArrivalDirection Z,
+	FLOAT primaryDirectPathGain,
+	FLOAT secondaryArrivalDirection X,
+	FLOAT secondaryArrivalDirection Y,
+	FLOAT secondaryArrivalDirection Z,
+	FLOAT secondaryDirectPathGain,
+	FLOAT sourceDistance,
+	FLOAT earlyReflectionGains[0],
+	FLOAT earlyReflectionGains[1],
+	FLOAT earlyReflectionGains[2],
+	FLOAT earlyReflectionGains[3],
+	FLOAT earlyReflectionGains[4],
+	FLOAT earlyReflectionGains[5],
+	FLOAT earlyReflectionGains[6],
+	FLOAT earlyReflectionGains[7],
+	FLOAT lateReverberationGains[0],
+	FLOAT lateReverberationGains[1],
+	FLOAT lateReverberationGains[2],
+	FLOAT lateReverberationGains[3],
+	FLOAT lateReverberationGains[4],
+	FLOAT lateReverberationGains[5],
+	FLOAT lateReverberationGains[6],
+	FLOAT lateReverberationGains[7]
+	);
+
+HrtfAcousticParameters(
+	FLOAT PrimaryArrivalDirection X,
+	FLOAT PrimaryArrivalDirection Y,
+	FLOAT PrimaryArrivalDirection Z,
+	FLOAT PrimaryArrivalGeometryPowerDb,
+	FLOAT PrimaryArrivalSourceDistance,
+	FLOAT SecondaryArrivalDirection X,
+	FLOAT SecondaryArrivalDirection Y,
+	FLOAT SecondaryArrivalDirection Z,
+	FLOAT SecondaryArrivalSourceDistance,
+	FLOAT DistanceOfUnityGain,
+	FLOAT DistanceOfMaximumGain,
+	FLOAT MaxGainDb,
+	FLOAT EarlyReflectionsPowerDb,
+	FLOAT EarlyReflections60DbDecaySeconds,
+	FLOAT LateReverb60DbDecaySeconds
+	);
+
+HrtfGeometricParameters(
+	FLOAT SourceLocation X,
+	FLOAT SourceLocation Y,
+	FLOAT SourceLocation Z,
+	FLOAT HopLocation X,
+	FLOAT HopLocation Y,
+	FLOAT HopLocation Z,
+	BOOLEAN GainType is NaturalGain,
+	BOOLEAN IsOccluded,
+	FLOAT TotalPathDistance,
+	FLOAT SourceGainDb,
+	FLOAT MinGainDb,
+	FLOAT MaxGainDb,
+	FLOAT UnityGainDistance,
+	UINT32 EnvironmentFilter,
+	BOOLEAN EnableEnvironmentFilter,
+	BOOLEAN EnableLateReverberation
+	);
+

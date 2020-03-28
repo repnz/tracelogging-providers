@@ -1,0 +1,108 @@
+ProviderNames:
+	Microsoft.Windows.WindowsErrorReporting
+	Microsoft.Windows.FaultReporting
+	Microsoft.Windows.FaultReporting
+	TelemetryAssert
+	TelemetryAssertDiagTrack
+
+
+
+**** Events *****
+WER_Spew(
+	UINT64 PartA_PrivTags,
+	INT32 HRESULT,
+	ANSISTRING File,
+	UINT32 LineNumber,
+	ANSISTRING FailingCode,
+	ANSISTRING FailingFunction,
+	UNICODESTRING UserMessage
+	);
+
+Assert(
+	UINT32 assertVersion,
+	UINT32 rva,
+	UINT32 timestamp,
+	UINT32 imageSize,
+	ANSISTRING imageName,
+	UINT32 count,
+	UINT32 totalHits,
+	UINT32 ModuleCollection,
+	UINT32 GlobalCollection
+	);
+
+AssertWithArgs(
+	UINT32 assertVersion,
+	UINT32 rva,
+	UINT32 timestamp,
+	UINT32 imageSize,
+	ANSISTRING imageName,
+	UINT32 count,
+	UINT32 totalHits,
+	ANSISTRING originatingBinary,
+	UINT32 bucketArgument1,
+	UINT32 bucketArgument2,
+	UINT32 ModuleCollection,
+	UINT32 GlobalCollection
+	);
+
+WerReportFailed(
+	UNICODESTRING ReportId,
+	UNICODESTRING IntegratorReportId,
+	HRESULT exceptionCode,
+	UINT32 ReportStatus
+	);
+
+AppCrashEvent(
+	UINT64 PartA_PrivTags,
+	UINT32 ProcessId,
+	FILETIME ProcessCreateTime,
+	UINT32 ExceptionCode,
+	UINT64 ExceptionOffset,
+	UNICODESTRING AppName,
+	UINT64 AppVersion,
+	UINT32 AppTimeStamp,
+	UNICODESTRING ModName,
+	UINT64 ModVersion,
+	UINT32 ModTimeStamp,
+	UNICODESTRING PackageFullName,
+	UNICODESTRING PackageRelativeAppId,
+	UINT16 ProcessArchitecture,
+	UNICODESTRING ReportId,
+	HEXINT32 Flags,
+	GUID AppSessionGuid,
+	UNICODESTRING TargetAppId,
+	UNICODESTRING TargetAppVer,
+	UINT64 TargetAsId,
+	UNICODESTRING FriendlyAppName,
+	BOOL32 IsFatal
+	);
+
+LocalDumpGenerated(
+	UINT64 PartA_PrivTags,
+	HRESULT HResult,
+	UNICODESTRING DumpFile,
+	UNICODESTRING ProcessName
+	);
+
+WERDumpCollectionStatus(
+	UINT64 PartA_PrivTags,
+	HRESULT hr,
+	UNICODESTRING CodeSite,
+	UNICODESTRING ReportId,
+	UINT32 DumpType
+	);
+
+WerHamActivityCallback(
+	UINT64 PartA_PrivTags,
+	PID Pid,
+	UINT32 Type,
+	UINT32 Reason,
+	HEXINT32 TerminateReason
+	);
+
+WERDumpCollectionFailed(
+	UINT64 PartA_PrivTags,
+	HRESULT hr,
+	INT32 DumpCollectionStatus
+	);
+

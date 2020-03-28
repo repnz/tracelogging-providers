@@ -1,0 +1,250 @@
+ProviderNames:
+	Microsoft.Windows.DirectToUpdate
+
+
+
+**** Events *****
+FallbackError(
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+FallbackError(
+	UINT64 PartA_PrivTags,
+	SIGNED wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+Information(
+	UNICODESTRING Message,
+	INT32 HResult
+	);
+
+Information(
+	UNICODESTRING Message
+	);
+
+Verbose(
+	UNICODESTRING Message,
+	INT32 HResult
+	);
+
+Verbose(
+	UNICODESTRING Message
+	);
+
+Error(
+	UNICODESTRING Message,
+	INT32 HResult
+	);
+
+Error(
+	UNICODESTRING Message
+	);
+
+DTUHandlerCommitGenericFailure(
+	ANSISTRING CV,
+	UNICODESTRING ClientID,
+	UNICODESTRING CampaignID,
+	UNICODESTRING CoordinatorVersion,
+	INT32 hResult,
+	ANSISTRING CV_new
+	);
+
+DTUHandlerCommitSuccess(
+	ANSISTRING CV,
+	UNICODESTRING ClientID,
+	UNICODESTRING CampaignID,
+	UNICODESTRING CoordinatorVersion,
+	ANSISTRING CV_new
+	);
+
+DTUHandlerCheckApplicabilityInternalGenericFailure(
+	ANSISTRING CV,
+	UNICODESTRING ClientID,
+	UNICODESTRING CampaignID,
+	UNICODESTRING CoordinatorVersion,
+	INT32 hResult
+	);
+
+DTUHandlerCheckApplicabilityInternalSuccess(
+	ANSISTRING CV,
+	UNICODESTRING ClientID,
+	UNICODESTRING CampaignID,
+	UNICODESTRING CoordinatorVersion,
+	UNICODESTRING ApplicabilityResult
+	);
+
+DTUHandlerSetCommitReadyGenericFailure(
+	ANSISTRING CV,
+	UNICODESTRING ClientID,
+	UNICODESTRING CampaignID,
+	UNICODESTRING CoordinatorVersion,
+	INT32 hResult
+	);
+
+DTUHandlerSetCommitReadySuccess(
+	ANSISTRING CV,
+	UNICODESTRING ClientID,
+	UNICODESTRING CampaignID,
+	UNICODESTRING CoordinatorVersion
+	);
+
+DTUHandlerCheckIfCoordinatorMinApplicableVersionGenericFailure(
+	ANSISTRING CV,
+	UNICODESTRING ClientID,
+	UNICODESTRING CampaignID,
+	UNICODESTRING CoordinatorVersion,
+	INT32 hResult
+	);
+
+DTUHandlerCheckIfCoordinatorMinApplicableVersionSuccess(
+	ANSISTRING CV,
+	UNICODESTRING ClientID,
+	UNICODESTRING CampaignID,
+	UNICODESTRING CoordinatorVersion,
+	UNICODESTRING CheckIfCoordinatorMinApplicableVersionResult
+	);
+
+DTUHandlerCheckApplicabilityGenericFailure(
+	ANSISTRING CV,
+	UNICODESTRING ClientID,
+	UNICODESTRING CampaignID,
+	UNICODESTRING CoordinatorVersion,
+	INT32 hResult,
+	ANSISTRING CV_new
+	);
+
+DTUHandlerCheckApplicabilitySuccess(
+	ANSISTRING CV,
+	UNICODESTRING ClientID,
+	UNICODESTRING CampaignID,
+	UNICODESTRING CoordinatorVersion,
+	UNICODESTRING ApplicabilityResult,
+	ANSISTRING CV_new
+	);
+
+DTUHandlerDownloadAndExtractCabFailure(
+	ANSISTRING CV,
+	UNICODESTRING ClientID,
+	UNICODESTRING CampaignID,
+	UNICODESTRING CoordinatorVersion,
+	INT32 hResult,
+	UNICODESTRING DownloadAndExtractCabFunction_failureReason
+	);
+
+DTUHandlerDownloadAndExtractCabAlreadyDownloaded(
+	ANSISTRING CV,
+	UNICODESTRING ClientID,
+	UNICODESTRING CampaignID,
+	UNICODESTRING CoordinatorVersion
+	);
+
+DTUHandlerDownloadAndExtractCabSuccess(
+	ANSISTRING CV,
+	UNICODESTRING ClientID,
+	UNICODESTRING CampaignID,
+	UNICODESTRING CoordinatorVersion
+	);
+
+DTUHandlerWaitForRebootUiGenericFailure(
+	ANSISTRING CV,
+	UNICODESTRING ClientID,
+	UNICODESTRING CampaignID,
+	UNICODESTRING CoordinatorVersion,
+	INT32 hResult
+	);
+
+DTUHandlerWaitForRebootUiSuccess(
+	ANSISTRING CV,
+	UNICODESTRING ClientID,
+	UNICODESTRING CampaignID,
+	UNICODESTRING CoordinatorVersion
+	);
+
+DTUHandlerInstallGenericFailure(
+	ANSISTRING CV,
+	UNICODESTRING ClientID,
+	UNICODESTRING CampaignID,
+	UNICODESTRING CoordinatorVersion,
+	INT32 hResult
+	);
+
+DTUHandlerInstallSuccess(
+	ANSISTRING CV,
+	UNICODESTRING ClientID,
+	UNICODESTRING CampaignID,
+	UNICODESTRING CoordinatorVersion
+	);
+
+DTUHandlerDownloadGenericFailure(
+	ANSISTRING CV,
+	UNICODESTRING ClientID,
+	UNICODESTRING CampaignID,
+	UNICODESTRING CoordinatorVersion,
+	INT32 hResult
+	);
+
+DTUHandlerDownloadSuccess(
+	ANSISTRING CV,
+	UNICODESTRING ClientID,
+	UNICODESTRING CampaignID,
+	UNICODESTRING CoordinatorVersion
+	);
+
+DTUHandlerInitializeGenericFailure(
+	ANSISTRING CV,
+	UNICODESTRING ClientID,
+	UNICODESTRING CampaignID,
+	UNICODESTRING CoordinatorVersion,
+	INT32 DownloadAndExtractCabFunction_hResult,
+	INT32 hResult
+	);
+
+DTUHandlerInitializeSuccess(
+	ANSISTRING CV,
+	UNICODESTRING ClientID,
+	UNICODESTRING CampaignID,
+	UNICODESTRING CoordinatorVersion,
+	INT32 DownloadAndExtractCabFunction_hResult
+	);
+
+Warning(
+	UNICODESTRING Message,
+	INT32 HResult
+	);
+
+Warning(
+	UNICODESTRING Message
+	);
+

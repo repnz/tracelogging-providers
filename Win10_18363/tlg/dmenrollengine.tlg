@@ -1,0 +1,627 @@
+ProviderNames:
+	Microsoft.Windows.DeviceManagement.OmaDmApiProvider
+	Microsoft.Windows.DeviceManagement.SessionManagement
+	Microsoft.Windows.DeviceManagement.OmaDmClient
+	Microsoft.Windows.DeviceManagement.OMADMPRC
+	Microsoft.Windows.EnterpriseManagement.ResourceManager
+	Microsoft.Windows.EnterpriseManagement.ResourceManagerUnenrollHook
+	Microsoft.Windows.DeviceManagement.DmAccCsp
+	Microsoft.Windows.DeviceManagement.DevInfo
+	Microsoft.Windows.DeviceManagement.DevDetailCsp
+	Microsoft-Windows-DeviceManagement-W7NodeProcessor
+	Microsoft.Windows.DeviceManagement.SecurityPolicyCsp
+	Microsoft.Windows.EnterpriseManagement.DeclaredConfiguration
+	Microsoft.Windows.EnterpriseManagement.PolicyManager
+	Microsoft.Windows.EnterpriseManagement.ConfigManagerHook
+	Microsoft.Windows.DeviceManagement.ConfigManager2
+	Microsoft.Windows.EMPS.Enrollment
+	Microsoft.Windows.EnterpriseManagement.Enrollment
+	Microsoft.Windows.HVSI.PolicyEvaluator
+	TelemetryAssert
+	TelemetryAssertDiagTrack
+	Microsoft.Windows.Security.DeviceGuard
+
+
+
+**** Events *****
+CreateEnrollRequest(
+	GUID EnrollmentId,
+	UINT32 HRESULT
+	);
+
+CreateUnenrollRequest(
+	GUID EnrollmentId,
+	UINT32 HRESULT
+	);
+
+BeginAADEnrollDuplicate(
+	GUID EnrollmentId
+	);
+
+NullUser(
+	VOID
+	);
+
+NullEnrollmentURL(
+	VOID
+	);
+
+NullSecret(
+	VOID
+	);
+
+NullSID(
+	VOID
+	);
+
+BeginEnrollDuplicate(
+	GUID EnrollmentId
+	);
+
+FallbackError(
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+ActivityError(
+	UINT64 PartA_PrivTags,
+	SIGNED wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+ActivityIntermediateStop(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+MdmUnenroll(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+MdmUnenroll(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+FallbackError(
+	UINT64 PartA_PrivTags,
+	SIGNED wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+ActivityError(
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+MdmUnenroll(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId
+	);
+
+ActivityStoppedAutomatically(
+	VOID
+	);
+
+UnenrollOmadmAccountFail(
+	UINT32 Result,
+	GUID EnrollmentId,
+	ANSISTRING __TlgCV__
+	);
+
+DMPollAuxiliaryScheduleSetupFail(
+	UINT32 Result,
+	ANSISTRING __TlgCV__
+	);
+
+EnrollGenerateCertRequestFail(
+	UINT32 Result,
+	UNICODESTRING HashAlgorithm,
+	UNICODESTRING PrivateAlgorthum,
+	UINT32 Flags,
+	ANSISTRING __TlgCV__
+	);
+
+ServerMessageParsingError(
+	ANSISTRING Function,
+	UINT32 Result,
+	ANSISTRING __TlgCV__
+	);
+
+BindCertsFailed(
+	UINT32 Result,
+	ANSISTRING __TlgCV__
+	);
+
+StopEnrollmentActivityEvent(
+	UNICODESTRING EnrollmentId,
+	UNICODESTRING EnrollmentMode,
+	UNICODESTRING EnrollmentActivity,
+	HEXINT32 EnrollmentResult,
+	ANSISTRING __TlgCV__
+	);
+
+EnrollManualCertRenewScheduleFailed(
+	UINT32 Result,
+	ANSISTRING __TlgCV__
+	);
+
+UnenrollDmSessionActionsFail(
+	UINT32 Result,
+	GUID EnrollmentId,
+	ANSISTRING __TlgCV__
+	);
+
+ConfigMgrUnknownCSPFailure(
+	UNICODESTRING CSP,
+	ANSISTRING __TlgCV__
+	);
+
+UserDeleteUnenrollStarted(
+	UNICODESTRING EnrollmentId,
+	ANSISTRING __TlgCV__
+	);
+
+ExceptionExecutingActivity(
+	ANSISTRING Exception,
+	ANSISTRING __TlgCV__
+	);
+
+StartEnrollmentActivityEvent(
+	UNICODESTRING EnrollmentId,
+	UNICODESTRING EnrollmentMode,
+	UNICODESTRING EnrollmentActivity,
+	ANSISTRING __TlgCV__
+	);
+
+StopBeginUnenrollUser(
+	GUID EnrollmentId,
+	HEXINT32 Result,
+	ANSISTRING __TlgCV__
+	);
+
+UnenrollDeleteVscFail(
+	UINT32 Result,
+	GUID EnrollmentId,
+	ANSISTRING __TlgCV__
+	);
+
+UnenrollMyCertStoreFail(
+	UINT32 Result,
+	GUID EnrollmentId,
+	ANSISTRING __TlgCV__
+	);
+
+UnenrollAbortAllSessionsFail(
+	UINT32 Result,
+	GUID EnrollmentId,
+	ANSISTRING __TlgCV__
+	);
+
+StartBeginUnenrollUser(
+	GUID EnrollmentId,
+	ANSISTRING __TlgCV__
+	);
+
+EnrollProvisioningXMLError(
+	UNICODESTRING Node,
+	ANSISTRING __TlgCV__
+	);
+
+UnenrollEnterpriseDataProtectionFailedToReleaseString(
+	UINT32 Result,
+	UNICODESTRING EnrollmentId,
+	ANSISTRING __TlgCV__
+	);
+
+EnrollDMPollTaskSchedulerFail(
+	UINT32 Result,
+	ANSISTRING Function,
+	ANSISTRING __TlgCV__
+	);
+
+DMPollScheduleSetupFail(
+	UINT32 Result,
+	ANSISTRING __TlgCV__
+	);
+
+UnenrollEnterpriseDataProtectionFailRevoke(
+	UINT32 Result,
+	UNICODESTRING EnrollmentId,
+	ANSISTRING __TlgCV__
+	);
+
+ServerMessageParsingFound(
+	UNICODESTRING Symbol,
+	UINT32 Result,
+	ANSISTRING __TlgCV__
+	);
+
+UnenrollDmClientFail(
+	UINT32 Result,
+	GUID EnrollmentId,
+	ANSISTRING __TlgCV__
+	);
+
+ResourceManagerFail(
+	UINT32 Result,
+	ANSISTRING __TlgCV__
+	);
+
+UnenrollNodeCacheFail(
+	UINT32 Result,
+	GUID EnrollmentId,
+	ANSISTRING __TlgCV__
+	);
+
+EnrollProvisioningFail(
+	UINT32 Result,
+	ANSISTRING __TlgCV__
+	);
+
+UnenrollEnterpriseDataProtectionFailDelete(
+	UINT32 Result,
+	UNICODESTRING EnrollmentId,
+	ANSISTRING __TlgCV__
+	);
+
+StopNonEnrollmentEvent(
+	UNICODESTRING EnrollmentId,
+	UNICODESTRING EnrollmentMode,
+	BOOL32 SuccessfulEnrollment,
+	HEXINT32 EnrollmentResult,
+	ANSISTRING __TlgCV__
+	);
+
+EnrollProvisioningBadXMLError(
+	ANSISTRING Function,
+	ANSISTRING __TlgCV__
+	);
+
+StopEnrollmentEvent(
+	UNICODESTRING EnrollmentId,
+	UNICODESTRING EnrollmentMode,
+	BOOL32 SuccessfulEnrollment,
+	HEXINT32 EnrollmentResult,
+	ANSISTRING __TlgCV__
+	);
+
+UserDeleteUnenrollFinished(
+	UINT32 Result,
+	UNICODESTRING EnrollmentId,
+	ANSISTRING __TlgCV__
+	);
+
+OsEditionUpgradeScheduleSetupFail(
+	UINT32 Result,
+	ANSISTRING __TlgCV__
+	);
+
+UnenrollEnterpriseDataProtection(
+	UINT32 Result,
+	UNICODESTRING Message,
+	ANSISTRING __TlgCV__
+	);
+
+BeginScope(
+	GUID EnrollmentId,
+	UINT32 Type,
+	ANSISTRING __TlgCV__
+	);
+
+Win10SModeScheduleSetupFail(
+	UINT32 Result,
+	ANSISTRING __TlgCV__
+	);
+
+EnrollInstallClientCertificateFail(
+	UINT32 Result,
+	UNICODESTRING Checkpoint,
+	ANSISTRING __TlgCV__
+	);
+
+StartEnrollmentEvent(
+	UNICODESTRING EnrollmentId,
+	UNICODESTRING EnrollmentMode,
+	HEXINT32 Type,
+	ANSISTRING __TlgCV__
+	);
+
+FailedEnrollmentActivityEvent(
+	UNICODESTRING EnrollmentActivity,
+	HEXINT32 EnrollmentResult,
+	ANSISTRING __TlgCV__
+	);
+
+RenewalEvent(
+	UNICODESTRING EnrollmentId,
+	UNICODESTRING ProviderId,
+	ANSISTRING __TlgCV__
+	);
+
+UnenrollEnrollmentCertificatesFail(
+	UINT32 Result,
+	GUID EnrollmentId,
+	ANSISTRING __TlgCV__
+	);
+
+WSSecurityFault(
+	UNICODESTRING ServerFaultCodeSubcode,
+	UNICODESTRING ServerFaultReasonText,
+	UINT32 Result,
+	ANSISTRING __TlgCV__
+	);
+
+UnenrollIntermediateCertStoreFail(
+	UINT32 Result,
+	GUID EnrollmentId,
+	ANSISTRING __TlgCV__
+	);
+
+UnenrollWaitForAlertFail(
+	BOOL32 fSessionCompleted,
+	ANSISTRING __TlgCV__
+	);
+
+UnenrollEnterpriseDataProtectionFailedToReadEnterpriseIDs(
+	UINT32 Result,
+	UNICODESTRING EnrollmentId,
+	ANSISTRING __TlgCV__
+	);
+
+UnenrollEnrollmentDataStoreFail(
+	UINT32 Result,
+	GUID EnrollmentId,
+	ANSISTRING __TlgCV__
+	);
+
+DMAllUsersPollOnFirstLoginSetupSuccess(
+	ANSISTRING __TlgCV__
+	);
+
+EnrollCertPolicyResponseFail(
+	UINT32 Result,
+	ANSISTRING __TlgCV__
+	);
+
+UnenrollRootCertStoreFail(
+	UINT32 Result,
+	GUID EnrollmentId,
+	ANSISTRING __TlgCV__
+	);
+
+ProvisioningEvent(
+	UNICODESTRING EnrollmentId,
+	UINT32 AuthPolicy,
+	UNICODESTRING DiscoveryService,
+	UNICODESTRING EnrollmentService,
+	UNICODESTRING ProviderId,
+	HEXINT32 Type,
+	ANSISTRING __TlgCV__
+	);
+
+DMPollLoginSetupFail(
+	UINT32 Result,
+	ANSISTRING __TlgCV__
+	);
+
+EnrollCertificateRenewFailed(
+	UINT32 Result,
+	ANSISTRING __TlgCV__
+	);
+
+UnenrollAlertSendFail(
+	UINT32 Result,
+	ANSISTRING __TlgCV__
+	);
+
+UnenrollEnterpriseDataProtectionFailedToGetEnterpriseIDs(
+	UINT32 Result,
+	UNICODESTRING EnrollmentId,
+	ANSISTRING __TlgCV__
+	);
+
+UnenrollPolicyManagerFail(
+	UINT32 Result,
+	GUID EnrollmentId,
+	ANSISTRING __TlgCV__
+	);
+
+UnparsedWSSecurityFault(
+	ANSISTRING __TlgCV__
+	);
+
+EnrollCertificateRequestSendFail(
+	UINT32 Result,
+	ANSISTRING __TlgCV__
+	);
+
+EnrollCertPolicyRequestSendFail(
+	UINT32 Result,
+	ANSISTRING __TlgCV__
+	);
+
+UnenrollBitLockerNoEnrollmentIDSaved(
+	GUID EnrollmentId,
+	ANSISTRING __TlgCV__
+	);
+
+EnrollCertificateResponseFail(
+	UINT32 Result,
+	ANSISTRING __TlgCV__
+	);
+
+CreateEDPCleanupProcessAndWaitFail(
+	HRESULT Result,
+	GUID EnrollmentId,
+	INT32 edpCommandType,
+	ANSISTRING __TlgCV__
+	);
+
+DMAllUsersPollOnFirstLoginSetupFail(
+	UINT32 Result,
+	ANSISTRING __TlgCV__
+	);
+
+EnrollCertAuthFail(
+	UINT32 Result,
+	ANSISTRING __TlgCV__
+	);
+
+UnenrollUnActivateLOBAppManagementFail(
+	INT32 Result,
+	GUID EnrollmentId,
+	ANSISTRING __TlgCV__
+	);
+
+EnrollDMPollScheduleSetupFail(
+	UINT32 Result,
+	ANSISTRING __TlgCV__
+	);
+
+CreateProcessAsUserFail(
+	HRESULT Result,
+	GUID EnrollmentId,
+	INT32 EDPCommandType,
+	ANSISTRING __TlgCV__
+	);
+
+EnrollOMADMClientConfigFail(
+	UINT32 Result,
+	UINT32 RAWResult,
+	ANSISTRING __TlgCV__
+	);
+
+DMPollSecondAuxiliaryScheduleSetupFail(
+	UINT32 Result,
+	ANSISTRING __TlgCV__
+	);
+
+UnenrollOMADM_ACCT_ACCTUNENROLLSTARTEDFail(
+	UINT32 Result,
+	GUID EnrollmentId,
+	ANSISTRING __TlgCV__
+	);
+
+UnenrollDelcaredConfigurationFail(
+	UINT32 Result,
+	GUID EnrollmentId,
+	ANSISTRING __TlgCV__
+	);
+
+UnenrollBitLockerUnenroll(
+	UINT32 Result,
+	GUID EnrollmentId,
+	ANSISTRING __TlgCV__
+	);
+
+UnenrollEnterpriseDataProtectionFailedToAppendSelectiveWipeIDs(
+	UINT32 Result,
+	UNICODESTRING EnrollmentId,
+	ANSISTRING __TlgCV__
+	);
+
+EnrollOMADMClientConfigSuccess(
+	ANSISTRING __TlgCV__
+	);
+
+DeleteTask(
+	UNICODESTRING ProviderId,
+	HRESULT ProviderIdHResult,
+	HRESULT TaskFolderHResult,
+	HRESULT HResult
+	);
+
+Assert(
+	UINT32 assertVersion,
+	UINT32 rva,
+	UINT32 timestamp,
+	UINT32 imageSize,
+	ANSISTRING imageName,
+	UINT32 count,
+	UINT32 totalHits,
+	UINT32 ModuleCollection,
+	UINT32 GlobalCollection
+	);
+

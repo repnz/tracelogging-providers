@@ -1,0 +1,125 @@
+ProviderNames:
+	Microsoft.Windows.Cast.MiracastLogging
+	Microsoft.Windows.Cast.Miracast
+	Microsoft.Windows.MediaFoundation.CallStack
+
+
+
+**** Events *****
+UpdateProfileInfo(
+	UINT32 resolutionWidth,
+	UINT32 resolutionHeight,
+	FLOAT resolutionFramerate,
+	UINT32 profile,
+	UINT32 level,
+	UNICODESTRING microsoftVideoFormat,
+	GUID audioCodecs,
+	BOOL32 connecting
+	);
+
+UpdateDevicesInfo(
+	UNICODESTRING sourceModelName,
+	UNICODESTRING sourceOSVersion,
+	UNICODESTRING sinkModelName,
+	UNICODESTRING sinkOSVersion,
+	BOOL32 diagnosticCapability,
+	BOOL32 formatChangeCapability,
+	BOOL32 latencyManagement,
+	BOOL32 idrRequestCapability,
+	BOOL32 rtcpCapability,
+	UINT32 clientRTPPort0,
+	UINT32 clientRTPPort1,
+	UNICODESTRING teardownReason
+	);
+
+SetLatencyMode2(
+	GUID sessionID,
+	UINT32 latencyTimeInMs,
+	INT32 hresult
+	);
+
+ModeChange(
+	GUID sessionID,
+	UNICODESTRING rtspSessionID,
+	GUID videoSubtype,
+	UINT32 videoWidth,
+	UINT32 videoHeight,
+	UINT32 videoRefreshRate,
+	UINT32 videoCodecLevel,
+	UINT32 videoBitrate,
+	GUID audioSubtype,
+	UINT32 audioSampleRate,
+	UINT32 audioBitsPerSample,
+	UINT32 audioChannelCount,
+	UINT32 audioByteRate,
+	INT32 ErrorCode
+	);
+
+SessionEnd(
+	GUID sessionID,
+	UINT32 miracastState,
+	UNICODESTRING rtspSessionID,
+	UINT32 teardownErrorCode,
+	UNICODESTRING teardownErrorReason,
+	BOOL32 supportsWiDi,
+	BOOL32 supportsLatencyManagement,
+	BOOL32 supportsFormatChange,
+	GUID videoSubtype,
+	UINT32 videoWidth,
+	UINT32 videoHeight,
+	UINT32 videoRefreshRate,
+	UINT32 videoCodecLevel,
+	UINT32 videoBitrate,
+	GUID audioSubtype,
+	UINT32 audioSampleRate,
+	UINT32 audioBitsPerSample,
+	UINT32 audioChannelCount,
+	UINT32 audioByteRate,
+	UINT64 lowestDataRate,
+	UINT64 highestDataRate,
+	UINT64 averageDataRate
+	);
+
+SessionEndBeforeM7(
+	GUID sessionID,
+	UINT32 miracastState
+	);
+
+SetFrameRate(
+	GUID sessionID,
+	UINT32 framesPerSecond,
+	INT32 hresult
+	);
+
+SetLatencyMode(
+	GUID sessionID,
+	UINT32 latencyMode,
+	INT32 hresult
+	);
+
+IDRRequestReceived(
+	VOID
+	);
+
+UpdateBitrate(
+	UINT32 newBitrate,
+	UINT64 newMaxBitrate
+	);
+
+UpdateBitrate(
+	UINT64 newBitrate,
+	UINT64 newMaxBitrate
+	);
+
+LongRunning(
+	HEXINT64 Object,
+	INT32 WorkQueue,
+	BOOL32 State
+	);
+
+LongRunning(
+	HEXINT64 Object,
+	INT32 WorkQueue,
+	BOOL32 State
+	);
+

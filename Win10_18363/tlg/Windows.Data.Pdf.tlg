@@ -1,0 +1,824 @@
+ProviderNames:
+	Windows.PdfApi
+	Microsoft.Windows.Fonts.FontSubsetting
+
+
+
+**** Events *****
+PdfCoreRenderTileCancelled(
+	UINT64 PageIndex,
+	FLOAT ZoomFactorX,
+	FLOAT ZoomFactorY,
+	FLOAT Rect.Left,
+	FLOAT Rect.Top,
+	FLOAT Rect.Right,
+	FLOAT Rect.Bottom
+	);
+
+RectSetForLinkInHighContrastMode(
+	VOID
+	);
+
+PdfCoreRenderTileStop(
+	UINT64 PageIndex,
+	FLOAT ZoomFactorX,
+	FLOAT ZoomFactorY,
+	FLOAT Rect.Left,
+	FLOAT Rect.Top,
+	FLOAT Rect.Right,
+	FLOAT Rect.Bottom
+	);
+
+PdfCoreRenderTileStart(
+	UINT64 PageIndex,
+	FLOAT ZoomFactorX,
+	FLOAT ZoomFactorY,
+	FLOAT Rect.Left,
+	FLOAT Rect.Top,
+	FLOAT Rect.Right,
+	FLOAT Rect.Bottom
+	);
+
+PageBuildStart(
+	INT32 EventID,
+	UINT64 PageIndex
+	);
+
+PageBuildStop(
+	INT32 EventID,
+	UINT64 PageIndex
+	);
+
+FileLoadStart(
+	INT32 EventID
+	);
+
+PdfLoadFile(
+	INT32 EventID
+	);
+
+FileLoadStop(
+	INT32 EventID
+	);
+
+PDF_UNSUPPORTED_FEATURE(
+	UNICODESTRING ExceptionDescription,
+	INT32 EventID
+	);
+
+PDF_EXCEPTION_UNHANDLED(
+	INT32 HResult,
+	INT32 EventID
+	);
+
+PDF_EXCEPTION_HANDLEDGRACEFULLY(
+	INT32 ErrorCode,
+	INT32 EventID
+	);
+
+PDF_EXCEPTION(
+	INT32 ErrorCode,
+	INT32 EventID
+	);
+
+FileSession(
+	UINT64 pdfSessionId,
+	ANSISTRING Feature,
+	ANSISTRING Value
+	);
+
+PdfDataTypeOnSaveFailure(
+	UINT64 pdfSessionId,
+	BOOLEAN SaveDirtyDataTypeFlags
+	);
+
+Pdf_HighlightActionInvoked(
+	UINT64 pdfSessionId,
+	UNICODESTRING actionType,
+	BOOLEAN isHighlightMode,
+	INT32 pointerType,
+	UNICODESTRING color
+	);
+
+Pdf_NoteActionInvoked(
+	UINT64 pdfSessionId,
+	UNICODESTRING actionType
+	);
+
+Pdf_EraseHighlightsInvoked(
+	UINT64 pdfSessionId,
+	UINT32 numberOfHighlights
+	);
+
+PeakWorkingSet(
+	UINT64 pdfSession,
+	INT32 Delta,
+	UINT32 TileCacheVariant
+	);
+
+CoreRenderOutlier(
+	UINT64 pdfSessionId,
+	ANSISTRING DataPoint,
+	UINT32 TimeDiffMSec,
+	UINT64 PageIndex,
+	FLOAT ZoomFactorX,
+	FLOAT ZoomFactorY,
+	FLOAT Rect.Left,
+	FLOAT Rect.Top,
+	FLOAT Rect.Right,
+	FLOAT Rect.Bottom
+	);
+
+TileRenderOutlier(
+	UINT64 pdfSessionId,
+	UINT32 MaxQueueSize
+	);
+
+TileRenderOutlier(
+	UINT64 pdfSessionId,
+	UINT32 MaxTileCount
+	);
+
+TaggedPdfInfo(
+	UINT64 pdfSessionId,
+	UINT64 PartialTaggedPageCount,
+	UINT64 FullyTaggedPageCount,
+	UINT64 UntaggedPageCount,
+	UINT64 NumberOfTextRuns,
+	UINT64 NumberOfUntaggedTextRuns,
+	UINT64 NumberOfActualUntaggedTextRuns
+	);
+
+TagsCountInfo(
+	UINT64 pdfSessionId,
+	UINT64 Paragraph,
+	UINT64 Link,
+	UINT64 Figure,
+	UINT64 List,
+	UINT64 Heading,
+	UINT64 Table,
+	UINT64 Annotation,
+	UINT64 Caption,
+	UINT64 Index,
+	UINT64 Reference,
+	UINT64 TOC,
+	UINT64 TOCI,
+	UINT64 Form
+	);
+
+PdfSaveInfo(
+	UINT64 pdfSessionId,
+	UINT64 SaveAsTriggeredCount,
+	UINT32 FirstSaveAsTimeDiff,
+	UINT64 SaveTriggeredCount,
+	UINT32 FirstSaveTimeDiff,
+	UINT64 RecoveryTriggeredCount,
+	UINT32 FirstRecoveryTimeDiff
+	);
+
+PdfFormInfo(
+	UINT64 pdfSessionId,
+	UINT64 FieldCount,
+	UINT64 FieldsWithAltText
+	);
+
+Pdf_InkRoamingLog(
+	UINT64 pdfSessionId,
+	UINT32 annotCount,
+	UINT32 maxTime,
+	UINT32 maxAnnotCount,
+	UINT32 totalTime,
+	UINT32 addOrUpdateCount,
+	UINT32 addCount,
+	UINT32 updateCount,
+	UINT32 removeCount
+	);
+
+Pdf_MarkupRoamingLog(
+	UINT64 pdfSessionId,
+	UINT32 annotCount,
+	UINT32 maxTime,
+	UINT32 maxAnnotCount,
+	UINT32 totalTime,
+	UINT32 addOrUpdateCount,
+	UINT32 addCount,
+	UINT32 updateCount,
+	UINT32 removeCount,
+	UINT32 markupPositionDataWithFallBackCount,
+	UINT32 markupPositionDataCount
+	);
+
+PdfRecoverySaveInfo(
+	UINT64 pdfSessionId,
+	UINT64 RecoverySaveTriggeredCount,
+	UINT64 RecoverySaveFailedCount
+	);
+
+Pdf_DragInfo(
+	UINT64 pdfSessionId,
+	UINT64 LinkDragCount,
+	UINT64 SelectionDragCount
+	);
+
+Pdf_AnnotationModeEntered(
+	UINT64 pdfSessionId,
+	UINT32 AnnotationMode,
+	UINT32 AnnotationSessionIndex
+	);
+
+Pdf_InkAnnotationData(
+	UINT64 pdfSessionId,
+	UINT32 InkAnnotationAdded,
+	UINT32 InkAnnotationDeleted,
+	UINT32 AnnotationSessionIndex,
+	UINT32 InkStrokesEraseIncompatible,
+	UINT32 InkAnnotationEraseIncompatible
+	);
+
+Pdf_AnnotationModeExited(
+	UINT64 pdfSessionId,
+	UINT32 AnnotationSessionIndex
+	);
+
+Pdf_TouchWritingInvoked(
+	UINT64 pdfSessionId,
+	BOOLEAN TouchWritingState,
+	UINT32 AnnotationSessionIndex
+	);
+
+Pdf_NavigateToInvalidURL(
+	UINT64 pdfSessionId,
+	UNICODESTRING url,
+	HRESULT HResult
+	);
+
+FileSession(
+	UINT64 pdfSessionId,
+	ANSISTRING Feature,
+	UINT32 Value
+	);
+
+Critical DocLoadWatcher Error(
+	UINT64 pdfSessionId
+	);
+
+PdfLoadRecoveryDataFailed(
+	UINT64 pdfSessionId,
+	HRESULT HResult
+	);
+
+FileSessionHistory(
+	UINT64 pdfSessionId,
+	INT32 ScenarioType,
+	UNICODESTRING FileSessionData
+	);
+
+FileSessionHistory(
+	UINT64 pdfSessionId,
+	INT32 ScenarioType,
+	UNICODESTRING FileSessionData
+	);
+
+PdfSaveInvalidByteStream(
+	UINT64 pdfSessionId,
+	INT32 SourceStreamSize,
+	INT32 DestinationStreamSize
+	);
+
+PdfFileByteStreamError(
+	UINT64 pdfSessionId,
+	INT32 FileByteStreamMode,
+	HRESULT HResult
+	);
+
+PdfPrintPreviewAvailable(
+	UINT64 pdfSessionId,
+	UINT32 previewGenerationTime,
+	INT32 printScalingMode,
+	BOOLEAN autoOrientation,
+	HRESULT HResult
+	);
+
+FileSession(
+	UINT64 pdfSessionId,
+	INT32 BeginSession
+	);
+
+PDF_EXCEPTION(
+	ANSISTRING ExceptionDescription,
+	INT32 ErrorCode,
+	INT32 EventID
+	);
+
+PDF_EXCEPTION_HANDLEDGRACEFULLY(
+	ANSISTRING ExceptionDescription,
+	INT32 ErrorCode,
+	INT32 EventID
+	);
+
+PDF_UNSUPPORTEDFEATURE(
+	ANSISTRING ExceptionDescription,
+	INT32 EventID
+	);
+
+PDF_EXCEPTION_UNHANDLED(
+	INT32 HResult,
+	ANSISTRING ExceptionDescription,
+	INT32 EventID
+	);
+
+Global(
+	ANSISTRING Feature,
+	ANSISTRING Value,
+	UINT64 pdfSessionId
+	);
+
+Global(
+	ANSISTRING Feature,
+	BOOLEAN Value,
+	UINT64 pdfSessionId
+	);
+
+Failure in invoking progresshandler(
+	UINT32 Result
+	);
+
+LoadDocumentFailed(
+	UINT64 pdfSessionId,
+	HRESULT HResult
+	);
+
+PdfDocument_ApplyOverrideDocumentRestrictions(
+	VOID
+	);
+
+AsyncStageCancel(
+	UINT64 pdfSessionId,
+	INT32 AsyncStage
+	);
+
+PdfDocumentLoadFailed(
+	UINT64 pdfSessionId,
+	UINT32 hresult
+	);
+
+MakeStagedAsyncOperation(
+	UINT64 pdfSessionId,
+	HRESULT HResult
+	);
+
+PdfDocumentLoadFailed(
+	UINT32 hresult
+	);
+
+PdfDocumentLoadSuccess(
+	VOID
+	);
+
+LoadFromStreamWithPasswordAsyncFail(
+	UINT64 pdfSessionId,
+	HRESULT HResult
+	);
+
+LoadPDFDocumentHelperFail(
+	UINT64 pdfSessionId,
+	HRESULT HResult
+	);
+
+RetryingLoadWithSecondAttemptStream(
+	VOID
+	);
+
+OriginalStreamClosed(
+	VOID
+	);
+
+RetryingLoadWithOriginalStream(
+	VOID
+	);
+
+SecondAttemptStreamCreationSucceeded(
+	VOID
+	);
+
+StreamCreationFailedInPdfStreamWrapper(
+	UINT64 pdfSessionId,
+	HRESULT HResult
+	);
+
+TryGetStreamFromSecondDownloadAttemptCreatedInHost(
+	UINT64 pdfSessionId,
+	HRESULT HResult
+	);
+
+LocalStreamCreationFailed(
+	UINT64 pdfSessionId,
+	HRESULT HResult
+	);
+
+TryGetStreamFromSecondDownloadAttemptCreatedLocally(
+	UINT64 pdfSessionId,
+	HRESULT HResult
+	);
+
+LocalSecondAttemptStreamCreationSucceeded(
+	VOID
+	);
+
+SecondAttemptSyncDownloadSucceeded(
+	VOID
+	);
+
+TryGetStreamFromOriginalStreamFailed(
+	UINT64 pdfSessionId,
+	HRESULT HResult
+	);
+
+OriginalStreamCreationSucceeded(
+	VOID
+	);
+
+Failure on invoking progressHandler returned failure(
+	UINT32 Result
+	);
+
+StreamFromStorageFileCreationSucceeded(
+	VOID
+	);
+
+CreateAndInitializePdfByteStreamFailed(
+	UINT64 pdfSessionId,
+	HRESULT HResult
+	);
+
+Failure on calling Windows::Data::Pdf::GetStringFromPdfIStream(
+	UINT64 pdfSessionId,
+	UINT32 Result
+	);
+
+DrawSelectionStop(
+	VOID
+	);
+
+CreatePageRenderer(
+	BOOLEAN isCachingEnabled
+	);
+
+CoreRendererBegin(
+	UINT64 pdfSessionId
+	);
+
+PdfControlRenderPageRequestStop(
+	UINT32 PageIndex
+	);
+
+PdfControlRenderPageRequestStart(
+	UINT32 PageIndex
+	);
+
+InMemoryCachingEnabled(
+	VOID
+	);
+
+DiskCachingEnabled(
+	VOID
+	);
+
+PdfStreamWrapperDestructorCallCompleted(
+	VOID
+	);
+
+PdfStreamWrapperDestructorCallFailed(
+	UINT32 hresult
+	);
+
+ZoomChanged(
+	FLOAT OldZoomX,
+	FLOAT OldZoomY,
+	FLOAT CurrentZoomX,
+	FLOAT CurrentZoomY
+	);
+
+PdfControlRenderTileRequested(
+	UINT32 PageIndex,
+	FLOAT ZoomFactorX,
+	FLOAT ZoomFactorY,
+	INT32 Rect.Left,
+	INT32 Rect.Top,
+	UINT32 Rect.Right,
+	UINT32 Rect.Bottom
+	);
+
+PdfControlRenderPageRequestRects(
+	UINT32 PageIndex,
+	FLOAT ZoomFactorX,
+	FLOAT ZoomFactorY,
+	FLOAT Rect.Left,
+	FLOAT Rect.Top,
+	FLOAT Rect.Right,
+	FLOAT Rect.Bottom
+	);
+
+All tiles cancelled on view state changed(
+	VOID
+	);
+
+PageRect(
+	UINT32 PageIndex,
+	FLOAT Rect.Left,
+	FLOAT Rect.Top,
+	FLOAT Rect.Right,
+	FLOAT Rect.Bottom
+	);
+
+RenderStateRects(
+	FLOAT Viewport.Left,
+	FLOAT Viewport.Top,
+	FLOAT Viewport.Right,
+	FLOAT Viewport.Bottom,
+	FLOAT BufferRect.Left,
+	FLOAT BufferRect.Top,
+	FLOAT BufferRect.Right,
+	FLOAT BufferRect.Bottom
+	);
+
+InvalidatePageRect(
+	UINT32 PageIndex,
+	FLOAT Rect.Left,
+	FLOAT Rect.Top,
+	FLOAT Rect.Right,
+	FLOAT Rect.Bottom
+	);
+
+PdfControlRenderTileDraw(
+	UINT32 PageIndex,
+	FLOAT ZoomFactorX,
+	FLOAT ZoomFactorY,
+	INT32 Rect.Left,
+	INT32 Rect.Top,
+	INT32 Rect.Right,
+	INT32 Rect.Bottom
+	);
+
+CoreRendererEnd(
+	UINT64 pdfSessionId
+	);
+
+OnPageSizeChanged-Failed(
+	VOID
+	);
+
+NavigatedToInternalLink(
+	VOID
+	);
+
+DrawCaretStop(
+	VOID
+	);
+
+PdfComponentLoadAsync Failed! Null input Stream or null Host(
+	VOID
+	);
+
+PdfAppSessionGuid(
+	UINT64 pdfSessionId,
+	GUID AppSessionGuid
+	);
+
+PdfComponentLoadAsync Failed! View state already exists or view state is not Agile(
+	VOID
+	);
+
+DocViewRetrievalFromCoreAppViewEnded(
+	UINT64 pdfSessionId,
+	HRESULT HResult
+	);
+
+DocViewRetrievalFromCoreAppViewStarted(
+	UINT64 pdfSessionId
+	);
+
+PdfComponentDestructorCalled(
+	VOID
+	);
+
+CoreRendererBegin(
+	UINT32 PageIndex
+	);
+
+CoreRendererBegin(
+	UINT64 PageIndex
+	);
+
+CoreRendererEnd(
+	UINT64 PageIndex
+	);
+
+DocViewModel.PdfCopySelectionSuccessful(
+	VOID
+	);
+
+PdfDocViewModelDestructorCalled(
+	VOID
+	);
+
+PdfDocViewModel Uninitialize called(
+	VOID
+	);
+
+CommandHandlerUninitializeCalled(
+	VOID
+	);
+
+ZoomChanged(
+	VOID
+	);
+
+ScrollViewChanged(
+	UINT32 PageIndex
+	);
+
+PageViewModel.PageInteractiveDataLoaded(
+	VOID
+	);
+
+PdfDragStarted(
+	ANSISTRING Type,
+	UNICODESTRING LinkText,
+	UNICODESTRING LinkDestination
+	);
+
+PdfDragStarted(
+	ANSISTRING Type
+	);
+
+CompDocViewHostDestructorCalled(
+	VOID
+	);
+
+PdfPageProperties(
+	UINT64 PageIndex,
+	INT32 Rotation,
+	FLOAT PageSize.Width,
+	FLOAT PageSize.Height
+	);
+
+PdfDocumentDestructorCalled(
+	VOID
+	);
+
+PdfDocumentInitialized(
+	VOID
+	);
+
+SelectWordComplete(
+	VOID
+	);
+
+EndSelection(
+	VOID
+	);
+
+CreatePDFParser(
+	VOID
+	);
+
+CopyTextComplete(
+	VOID
+	);
+
+CreateFontPackage(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId
+	);
+
+FallbackError(
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+CreateFontPackage(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId,
+	UINT32 retCode
+	);
+
+ActivityError(
+	UINT64 PartA_PrivTags,
+	SIGNED wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+CreateFontPackage(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+FallbackError(
+	UINT64 PartA_PrivTags,
+	SIGNED wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+CreateFontPackage(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	SIGNED wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function,
+	UINT32 retCode
+	);
+
+ActivityStoppedAutomatically(
+	VOID
+	);
+
+CreateFontPackage(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	SIGNED wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+

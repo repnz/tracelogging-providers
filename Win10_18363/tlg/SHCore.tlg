@@ -1,0 +1,128 @@
+ProviderNames:
+	Microsoft.Windows.Shell.SHCore
+	Microsoft.Windows.Shell.StreamLib
+	Microsoft.Windows.Shell.ScalingCompat
+	TelemetryAssert
+	TelemetryAssertDiagTrack
+
+
+
+**** Events *****
+FallbackError(
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+FallbackError(
+	UINT64 PartA_PrivTags,
+	SIGNED wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+SHRemoveWindowSubclassResult(
+	INT32 result,
+	UINT64 PartA_PrivTags
+	);
+
+SHSetWindowSubclass(
+	HEXINT64 hwnd,
+	HEXINT64 pfnSubclass,
+	UINT32 uIdSubclass,
+	UINT32 dwRefData,
+	UINT64 PartA_PrivTags
+	);
+
+SHRemoveWindowSubclass(
+	HEXINT64 hwnd,
+	HEXINT64 pfnSubclass,
+	UINT32 uIdSubclass,
+	UINT64 PartA_PrivTags
+	);
+
+SHGetWindowSubclassDataResult(
+	INT32 result,
+	UINT64 PartA_PrivTags
+	);
+
+MasterSubclassProcFatalError(
+	UNICODESTRING errorMessage,
+	HEXINT64 hwnd,
+	UINT32 uMsg,
+	UINT64 PartA_PrivTags
+	);
+
+SHGetWindowSubclassData(
+	HEXINT64 hwnd,
+	HEXINT64 pfnSubclass,
+	UINT32 uIdSubclass,
+	UINT64 PartA_PrivTags
+	);
+
+SHSetWindowSubclassResult(
+	INT32 result,
+	UINT64 PartA_PrivTags
+	);
+
+ScalingCompatCalulationInvoked(
+	UINT32 AppType,
+	UINT32 ActualDeviceScaleFactor,
+	UINT32 ExpectedDeviceScaleFactor
+	);
+
+Assert(
+	UINT32 assertVersion,
+	UINT32 rva,
+	UINT32 timestamp,
+	UINT32 imageSize,
+	ANSISTRING imageName,
+	UINT32 count,
+	UINT32 totalHits,
+	UINT32 ModuleCollection,
+	UINT32 GlobalCollection
+	);
+
+AssertWithArgs(
+	UINT32 assertVersion,
+	UINT32 rva,
+	UINT32 timestamp,
+	UINT32 imageSize,
+	ANSISTRING imageName,
+	UINT32 count,
+	UINT32 totalHits,
+	ANSISTRING originatingBinary,
+	UINT32 bucketArgument1,
+	UINT32 bucketArgument2,
+	UINT32 ModuleCollection,
+	UINT32 GlobalCollection
+	);
+

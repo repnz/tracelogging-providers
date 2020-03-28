@@ -1,0 +1,666 @@
+ProviderNames:
+	Microsoft.Windows.BackupAndRoaming.WilProvider
+	Microsoft.Windows.BackupAndRoaming.Diagnostics
+	Microsoft.Windows.BackupAndRoaming.SyncEngine
+	Microsoft.Windows.TlgAggregateInternal
+	TelemetryAssert
+	TelemetryAssertDiagTrack
+	Microsoft.Windows.Shell.SyncOperation
+
+
+
+**** Events *****
+FallbackError(
+	UINT64 PartA_PrivTags,
+	SIGNED wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+FallbackError(
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+EnsureNoEdgeDataLossSuccess(
+	UINT64 Count,
+	UINT64 PreviousCount,
+	BOOL32 PreviousCountFound
+	);
+
+ExcessiveFileChangeNotifications(
+	UNICODESTRING CollectionId
+	);
+
+DeviceTrustRefreshed(
+	UNICODESTRING CallingOperation,
+	BOOL32 PreviousState,
+	BOOL32 NewState,
+	HEXINT32 HResult
+	);
+
+ClearAbortUploadsStartedTime(
+	UNICODESTRING CollectionId,
+	BOOL32 IsBackup,
+	HEXINT32 HResult
+	);
+
+SetAbortUploadsStartedTime(
+	UNICODESTRING CollectionId,
+	BOOL32 IsBackup,
+	FILETIME AbortUploadsStartedTime
+	);
+
+GetAbortUploadsStartedTime(
+	UNICODESTRING CollectionId,
+	BOOL32 IsBackup,
+	FILETIME AbortUploadsStartedTime
+	);
+
+ApplyUnitInvalidModifiedTime(Aggregate)(
+	NULL Count,
+	UNICODESTRING SettingUnitId,
+	INT64 DateModified
+	);
+
+CheckCollectionThrottlingFailed(Aggregate)(
+	NULL Count,
+	UNICODESTRING CollectionId,
+	HEXINT32 HResult
+	);
+
+GracePeriodStarted(
+	VOID
+	);
+
+PdcRevocation(
+	HEXINT64 PDCHandle,
+	HEXINT64 PDCActivationHandle
+	);
+
+PdcDeactivationFailed(
+	HEXINT32 HResult,
+	HEXINT64 PDCHandle,
+	HEXINT64 PDCActivationHandle
+	);
+
+PdcClientUnregistrationFailed(
+	HEXINT32 HResult,
+	HEXINT64 PDCHandle
+	);
+
+PdcClientRegistrationFailed(
+	HEXINT32 HResult
+	);
+
+LogCollectionThrottledForUpload(Aggregate)(
+	NULL Count,
+	UNICODESTRING CollectionId
+	);
+
+SettingUnitMetadataFiletime(
+	UNICODESTRING ContextMessage,
+	UNICODESTRING CollectionId,
+	UNICODESTRING SettingUnitId,
+	FILETIME CurrentTime,
+	FILETIME SettingUnitModifiedTime,
+	FILETIME MetadataModifiedTime,
+	INT64 SettingUnitModifiedTimeInt64,
+	INT64 MetadataModifiedTimeInt64
+	);
+
+ModifiedTimeFromMetadataStoreEmpty(
+	UNICODESTRING FullyQualifiedCollectionId,
+	UNICODESTRING SettingUnitId,
+	HEXINT32 HResult,
+	UNICODESTRING CallingMethod
+	);
+
+NewMetadataItemCreated(
+	UNICODESTRING CollectionId,
+	UNICODESTRING UnitId,
+	UINT64 SyncGIDPrefix,
+	GUID SyncGIDUniqueId,
+	UNICODESTRING CallingMethod
+	);
+
+SettingUnitConflictResolution(
+	UNICODESTRING CollectionId,
+	UNICODESTRING SettingUnitId,
+	UNICODESTRING direction,
+	UNICODESTRING resolution,
+	HEXINT32 hrResult
+	);
+
+NotifySyncBecauseOfEncryptionKeyChange(
+	FILETIME ModifiedTime,
+	UNICODESTRING CollectionId,
+	BOOL32 IsSyncingWithMSA
+	);
+
+OnKeyChanged(
+	VOID
+	);
+
+DbStateAtStartup(
+	BOOL32 IsRemote,
+	UINT32 DbState
+	);
+
+GetBackupStateFromRegistryFailed(
+	UNICODESTRING CollectionId,
+	HEXINT32 HResult
+	);
+
+GetBackupEligibilityFromStateManagerFailed(
+	UNICODESTRING CollectionId,
+	HEXINT32 HResult
+	);
+
+GetSettingHandlerInstanceFromFullyQualifiedCollectionIdFailed(
+	UNICODESTRING CallingMethod,
+	UNICODESTRING CollectionId,
+	HEXINT32 HResult
+	);
+
+SaveKnowledgeSetLocalTickCountFailed(
+	UNICODESTRING fullyQualifiedCollectionId,
+	FILETIME lastSuccess
+	);
+
+SpecificSyncUnitErrorHit(
+	UNICODESTRING CollectionId,
+	UNICODESTRING UnitId,
+	HEXINT32 ErrorCode,
+	UINT32 ProviderOperation,
+	UINT32 SyncOperation
+	);
+
+GetEffectiveProviderResult(
+	HEXINT32 defaultAccountResult,
+	HEXINT32 providerForAccountResult
+	);
+
+CompositeHandlerDelete(
+	UINT32 NumberOfDeletes,
+	UNICODESTRING CollectionName,
+	UNICODESTRING UnitName
+	);
+
+ModifiedTimeGreaterThanCurrentTime(
+	FILETIME ModifiedTime,
+	FILETIME OriginalModifiedTime,
+	INT64 ModifiedTimeInt64,
+	INT64 OriginalModifiedTimeInt64,
+	UNICODESTRING CollectionId,
+	UNICODESTRING SettingUnitId,
+	UNICODESTRING Operation
+	);
+
+ModifiedTimeSetToZero(
+	UNICODESTRING SettingUnitId
+	);
+
+LocalSettingPerformBackgroundUploads(
+	UINT8 BackgroundUploadReason,
+	UINT8 LocalSettingChangeFlag
+	);
+
+NotifySettingChange(
+	UNICODESTRING CollectionId,
+	BOOL32 WillQueueTask,
+	BOOL32 ForceImmediateSync,
+	UINT8 ChangeType
+	);
+
+ActivityStoppedAutomatically(
+	VOID
+	);
+
+ActivityFailure(
+	UINT64 PartA_PrivTags,
+	HEX wilActivity,
+	UINT32 hresult,
+	UINT32 threadId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+ActivityFailure(
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+ActivityIntermediateStop(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+ActivityError(
+	UINT64 PartA_PrivTags,
+	SIGNED wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+ActivityError(
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+InitializeESEMetadataStore(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId
+	);
+
+InitializeESEMetadataStore(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+InitializeESEMetadataStore(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	SIGNED wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+ApplySettingUnit(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId,
+	UNICODESTRING CollectionId
+	);
+
+GetSettingUnits(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId,
+	UNICODESTRING CollectionId
+	);
+
+GetSettingHandler(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId,
+	UNICODESTRING CollectionId
+	);
+
+ApplySettingUnit(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	SIGNED wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function,
+	UNICODESTRING UnitId,
+	UINT64 UnitSize
+	);
+
+ApplySettingUnit(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId,
+	UNICODESTRING UnitId,
+	UINT64 UnitSize
+	);
+
+ApplySettingUnit(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	SIGNED wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+ApplySettingUnit(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+GetSettingUnits(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	SIGNED wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+GetSettingUnits(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+GetSettingHandler(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	SIGNED wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+GetSettingHandler(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+RoamingCompositesettingHandler_PartialApply(
+	UNICODESTRING SettingUnitId
+	);
+
+LogFileNotifyInformation(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId
+	);
+
+LogFileInfo(
+	UNICODESTRING collectionId,
+	UINT32 action,
+	UNICODESTRING fileExtension,
+	UNICODESTRING encodedFileNameHash,
+	INT32 getAttributesError,
+	UINT32 fileAttributes,
+	UINT32 fileSizeHigh,
+	UINT32 fileSizeLow,
+	UINT64 createdTime,
+	UINT64 lastWriteTime
+	);
+
+LogFileNotifyInformation(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	SIGNED wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+LogFileNotifyInformation(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+SettingSyncReporting(
+	BOOL32 LoggedFromStart,
+	BOOL32 IsSettingSyncEnabled,
+	UINT32 SettingSyncReasonCode,
+	BOOL32 IsRoamingEnabled,
+	UINT32 RoamingReasonCode,
+	BOOL32 IsBackupEnabled,
+	UINT32 BackupReasonCode,
+	BOOL32 IsAppBackupEnabled,
+	UINT32 AppBackupReasonCode,
+	GUID ProviderId,
+	UINT32 SyncPolicy,
+	UINT64 MinutesSinceAttemptedBackup,
+	UINT64 MinutesSinceSuccessfulBackup,
+	UINT64 MinutesSinceLastBackup,
+	UINT32 LocalMetadataStoreVersion,
+	UINT32 RemoteMetadataStoreVersion,
+	BOOL32 IsBackupDisabledByUser
+	);
+
+SettingSyncReportingError(
+	HEXINT32 HResult
+	);
+
+TlgAggregateSummary(
+	GUID Provider,
+	UINT64 NumFlushes,
+	UINT64 MaxEntriesStored,
+	UINT64 TotalEntriesFlushed,
+	UINT32 MaxEntriesFlushed,
+	UINT32 MinEntriesFlushed,
+	UINT32 NumBucketLimitReached,
+	UINT32 NumAllocationFailures,
+	UINT32 NumLargeEventFailures
+	);
+
+DetectEdgeDataLossActivity(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId
+	);
+
+DetectEdgeDataLossActivity(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	SIGNED wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+DetectEdgeDataLossActivity(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+PerformPdcActivation(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId
+	);
+
+PerformPdcActivation(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+PerformPdcActivation(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	SIGNED wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+

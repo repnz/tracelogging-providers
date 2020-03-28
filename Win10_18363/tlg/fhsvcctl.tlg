@@ -1,0 +1,25 @@
+ProviderNames:
+	Microsoft.Windows.FileHistory.ApiUsage
+	Microsoft.Windows.TlgAggregateInternal
+
+
+
+**** Events *****
+FHApiUsage(Aggregate)(
+	NULL Count,
+	UNICODESTRING ProcessName,
+	UINT8 ApiId
+	);
+
+TlgAggregateSummary(
+	GUID Provider,
+	UINT64 NumFlushes,
+	UINT64 MaxEntriesStored,
+	UINT64 TotalEntriesFlushed,
+	UINT32 MaxEntriesFlushed,
+	UINT32 MinEntriesFlushed,
+	UINT32 NumBucketLimitReached,
+	UINT32 NumAllocationFailures,
+	UINT32 NumLargeEventFailures
+	);
+

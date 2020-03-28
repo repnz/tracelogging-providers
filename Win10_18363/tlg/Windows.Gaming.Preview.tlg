@@ -1,0 +1,25 @@
+ProviderNames:
+	Microsoft.Windows.Gaming.Preview.GamesEnumeration
+
+
+
+**** Events *****
+SaveGameModeConfig(
+	UNICODESTRING GameId,
+	UNICODESTRING Args,
+	UNICODESTRING WorkingDirectory,
+	UNICODESTRING ExeParentDirectory,
+	BOOL32 AutoGameModeEnabled,
+	BOOL32 AffinitizeToExclusiveCpus,
+	UINT64 CpuProfile,
+	UINT32 GameGpuTime,
+	UINT32 PercentGpuMemoryAllocatedToGame,
+	UINT32 PercentGpuMemoryAllocatedToDWM,
+	UINT32 PercentGpuMemoryAllocatedToOther,
+	STRING RelatedProcesses
+	);
+
+SaveGameModeUserConfig(
+	STRING UserGlobalRelatedProcesses
+	);
+

@@ -1,0 +1,842 @@
+ProviderNames:
+	Microsoft.Windows.Provisioning.Engine
+	TelemetryAssert
+	TelemetryAssertDiagTrack
+
+
+
+**** Events *****
+ProvEngineExceptionFailure(
+	HEXINT32 HResult,
+	ANSISTRING File,
+	UINT32 LineNumber,
+	ANSISTRING Function,
+	UNICODESTRING Message,
+	ANSISTRING CallingContext
+	);
+
+CreateNewSessionIdStart(
+	VOID
+	);
+
+FailedToStringToCV(
+	HRESULT HResult
+	);
+
+LoadSessionStart(
+	VOID
+	);
+
+FoundSessionToLoad(
+	UNICODESTRING SessionId
+	);
+
+FailedToGetSessionCount(
+	HRESULT HResult
+	);
+
+CreateNewSessionIdSaveSession(
+	VOID
+	);
+
+FailedToConvertCVToString(
+	HRESULT HResult
+	);
+
+ResumeSessionStart(
+	VOID
+	);
+
+CreateNewSessionIdAssignCV(
+	VOID
+	);
+
+FailedToSaveSessionIdToRegistry(
+	HRESULT HResult
+	);
+
+FailedToCreateCV(
+	HRESULT HResult
+	);
+
+CannotResumeSession_InvalidSessionStateInRegistry(
+	UNICODESTRING SessionId,
+	UINT32 SessionState,
+	INT32 Error
+	);
+
+FailedToCreateGuid(
+	HRESULT HResult
+	);
+
+FailedToGetCVOnLoad(
+	UNICODESTRING SessionId
+	);
+
+LoadSessionRegistryStart(
+	VOID
+	);
+
+FailedToMapSessionToString(
+	UINT32 SessionState
+	);
+
+SaveSessionStart(
+	VOID
+	);
+
+CreateNewSessionIdConvertCV(
+	VOID
+	);
+
+UseGuidAsSessionIdStart(
+	VOID
+	);
+
+FailedToDeleteSessionKey(
+	HRESULT HResult
+	);
+
+CreateSession(
+	UNICODESTRING source
+	);
+
+SequenceMetadataFailedToLoad(
+	VOID
+	);
+
+RetrieveKeysFailed(
+	INT32 HResult
+	);
+
+SetOneTimeProvisioningComplete(
+	INT32 HResult
+	);
+
+HandleStatesInternal(
+	VOID
+	);
+
+EnrollForPackageEnded(
+	UNICODESTRING PackageName,
+	UNICODESTRING PackageId,
+	UNICODESTRING PackageVer,
+	UNICODESTRING PackageNotes,
+	INT32 HResult
+	);
+
+FailedToCoCreateMVHandler(
+	GUID Handler,
+	INT32 HResult
+	);
+
+ProvEngineSkippingProgramDataPath(
+	VOID
+	);
+
+FailedValidatePackageMetadata(
+	VOID
+	);
+
+FailedToCopyTheDataStoreRegPath(
+	INT32 HResult
+	);
+
+FailedToHandleKeySet(
+	UINT32 KeySetIndex,
+	INT32 HResult
+	);
+
+FailedValidatePackageMetadata(
+	UNICODESTRING PackageId,
+	INT32 HResult
+	);
+
+ProvDevicePreProcessEnded(
+	UINT32 HandlerIndex,
+	INT32 HResult
+	);
+
+FailedToCopyTheHandlerStringPath(
+	INT32 HResult
+	);
+
+HandleStatesForPackages(
+	VOID
+	);
+
+ProcessConfigXmlEnd(
+	UNICODESTRING PackageName,
+	UNICODESTRING PackageId,
+	UNICODESTRING PackageVer,
+	UNICODESTRING PackageNotes,
+	UNICODESTRING SettingsGroup,
+	UNICODESTRING ProductId,
+	INT32 HResult,
+	UNICODESTRING FailingNodePath,
+	UNICODESTRING DMSession,
+	ANSISTRING __TlgCV__
+	);
+
+SequenceMetadataFileNotFound(
+	VOID
+	);
+
+FailedPackageInfoEraseOldPackageApplicationMetadata(
+	UNICODESTRING PackageId,
+	INT32 HResult
+	);
+
+OneTimeProvisioningCheckFailed(
+	INT32 HResult
+	);
+
+SequenceMetadataFileCopyFailed(
+	INT32 HResult
+	);
+
+PublishedWNF_DEVM_PROVISIONING_COMPLETE(
+	INT32 HResult
+	);
+
+FailedToInitializeMVHandler(
+	GUID Handler,
+	INT32 HResult
+	);
+
+InitializeMasterDataStoreFailed(
+	INT32 HResult
+	);
+
+GetProvisioningSession:SessionNotInited(
+	VOID
+	);
+
+ShutdownInProgressDuringProvisioning(
+	UNICODESTRING pEngine->m_currentPackage->GetPackageId().c_str(),
+	UINT32 ShutdownRequestType
+	);
+
+FailedToGetSubKeyFromRegistry(
+	INT32 HResult
+	);
+
+FailedToQueryHandlerRegKey(
+	INT32 HResult
+	);
+
+FailedPackageInfoRemoveOldPackageMetadata(
+	UNICODESTRING PackageId,
+	INT32 HResult
+	);
+
+SequenceLevelNotFound(
+	UNICODESTRING SequenceKey
+	);
+
+HandleStatesInternal(
+	INT32 HResult
+	);
+
+SetPrimaryAppProvisioningComplete(
+	INT32 HResult
+	);
+
+FailedToGetTheHandlerStringLength(
+	INT32 HResult
+	);
+
+HandlingPackage(
+	UNICODESTRING PackagePath
+	);
+
+CoCreateInstanceMasterDataStoreFailed(
+	INT32 HResult
+	);
+
+SetLanguageProvisioningComplete(
+	INT32 HResult
+	);
+
+InvalidNumberOfStates(
+	INT32 States,
+	INT32 HResult
+	);
+
+SucceededHandleStatesInternal(
+	UINT32 CountPackages
+	);
+
+LanguageProvisioningCheckFailed(
+	INT32 HResult
+	);
+
+DetectedOutOfBandRebootRequests(
+	VOID
+	);
+
+SetAnyUiccPresent(
+	INT32 HResult
+	);
+
+HandleProvisionStateResult(
+	UINT32 ProvisionState,
+	INT32 HandlesThisEvent,
+	INT32 HResult
+	);
+
+GetProvisioningSession:Session is already initiated.(
+	VOID
+	);
+
+HandleStatesForPackages(
+	INT32 HResult
+	);
+
+RetrieveHandlers_CreateInstance(
+	GUID Handler,
+	INT32 HResult
+	);
+
+ProcessXmlFromMVProvDataFailures(
+	UINT32 FailedRunCount
+	);
+
+ActivityStoppedAutomatically(
+	VOID
+	);
+
+RetrieveHandlersFailed(
+	INT32 HResult
+	);
+
+AbortingProvisioningDueToHandlerRequest(
+	VOID
+	);
+
+FailedToCreateProvStateContext(
+	INT32 HResult
+	);
+
+ProvEngineUninit(
+	VOID
+	);
+
+GetProvisioningSession:CoCreateInstanceSucceeded(
+	VOID
+	);
+
+ApplyMVProvisionData(
+	UNICODESTRING ProvxmlID,
+	UINT32 SequenceLevel,
+	UNICODESTRING PackageName,
+	UNICODESTRING PackageId,
+	UNICODESTRING PackageVer,
+	UNICODESTRING PackageNotes
+	);
+
+HandleStatesForPackagesInternal(
+	VOID
+	);
+
+WillRetryPendingResults(
+	VOID
+	);
+
+RetrieveProvDataFailed(
+	UNICODESTRING PackageName,
+	UNICODESTRING PackageId,
+	UNICODESTRING PackageVer,
+	UINT32 State,
+	INT32 HResult
+	);
+
+FailedToGetKeysFromHandler(
+	UINT32 KeySetIndex,
+	INT32 HResult
+	);
+
+FailedForProvisionDataNotProvxml(
+	INT32 HResult
+	);
+
+FailedToOpenHandlerRegKey(
+	UNICODESTRING KeyPath,
+	INT32 HResult
+	);
+
+FailedToConfigureBootTask(
+	VOID
+	);
+
+IsBackupCheckFailed(
+	INT32 HResult
+	);
+
+ProvUserProfileLangStart(
+	VOID
+	);
+
+HandleStates(
+	VOID
+	);
+
+ProvisionDevice(
+	INT32 HResult
+	);
+
+HandlePackageState(
+	VOID
+	);
+
+NoProvisionData(
+	VOID
+	);
+
+MvLoadXmlFile(
+	UNICODESTRING ProvisionData,
+	INT32 HResult
+	);
+
+PrimaryAppProvisioningFailed(
+	INT32 HResult
+	);
+
+SequenceHiveCleanupFailed(
+	UNICODESTRING Path,
+	INT32 HResult
+	);
+
+HandleStatesForPackagesInternal(
+	INT32 HResult
+	);
+
+ProvEngineInit(
+	VOID
+	);
+
+ProvDevicePostProcessEnded(
+	UINT32 HandlerIndex,
+	INT32 HResult
+	);
+
+RetrieveHandlerDataFailed(
+	INT32 HResult
+	);
+
+GetProvisioningSession:Validate_CV_FAIL(
+	ANSISTRING CV
+	);
+
+FailedToQueryRecordsForState(
+	INT32 HResult
+	);
+
+FailedToGetTheDataStoreRegPathLength(
+	INT32 HResult
+	);
+
+RunProvisioningCommands.CreateProcessGetExitCodeFailed(
+	UNICODESTRING commandName,
+	UNICODESTRING phaseName,
+	UINT32 LastError
+	);
+
+FailedToConvertCLSIDFromString(
+	INT32 HResult
+	);
+
+FailedToRegisterForCspAlerts(
+	GUID EnrollmentId,
+	INT32 HResult
+	);
+
+ActivityStoppedAutomatically(
+	VOID
+	);
+
+HandleStates(
+	INT32 HResult
+	);
+
+ConfiguredBootTask(
+	VOID
+	);
+
+ProvUserProfileLangStop(
+	VOID
+	);
+
+FailedToEnumHandlerList(
+	INT32 HResult
+	);
+
+ProvEngineInit(
+	INT32 HResult
+	);
+
+FailedPackageInfoRemoveDeletedForPackage(
+	UNICODESTRING PackageId,
+	INT32 HResult
+	);
+
+FailedProcessConfigXml(
+	UNICODESTRING ResultsXml,
+	INT32 HResult
+	);
+
+FailedHandleStatesForPackagesInternal(
+	HRESULT HResult
+	);
+
+ProcessConfigXmlEnd(
+	UNICODESTRING PackageName,
+	UNICODESTRING PackageId,
+	UNICODESTRING PackageVer,
+	UNICODESTRING PackageNotes,
+	UNICODESTRING SettingsGroup,
+	UNICODESTRING ProductId,
+	INT32 HResult,
+	UNICODESTRING FailingNodePath,
+	UNICODESTRING DMSession,
+	UNICODESTRING Null CV
+	);
+
+HandlePackageState(
+	UINT32 State
+	);
+
+FailedHandleStatesInternal(
+	HRESULT HResult
+	);
+
+RegionFromIccidMatchFound(
+	UNICODESTRING Region
+	);
+
+SIMBLDDisabled(
+	VOID
+	);
+
+IccidToRegionTablePath(
+	UNICODESTRING Path
+	);
+
+MatchedIccidDigits(
+	UNICODESTRING Digits
+	);
+
+LanguageExcluded(
+	UNICODESTRING SIMLanguage
+	);
+
+ProvisionLanguage(
+	UNICODESTRING SIMLanguages,
+	UNICODESTRING UserPreferredLanguages
+	);
+
+ProvisionLanguage_Result(
+	UNICODESTRING NewLanguage,
+	INT32 HResult
+	);
+
+IccidRegionOverride(
+	UNICODESTRING Region
+	);
+
+UnsupportedRegion(
+	UNICODESTRING RegionCode
+	);
+
+ProvisionRegion_Result(
+	UNICODESTRING CountryCode,
+	INT32 GeoID,
+	INT32 HResult
+	);
+
+ProfileSuppressedByAfterMarketProfile(
+	UNICODESTRING ProfileId
+	);
+
+ProfileReplacementNotMatched(
+	UNICODESTRING ProfileId,
+	UNICODESTRING ProvisionData
+	);
+
+ProfileConfigurationReplaced(
+	UNICODESTRING ProfileId,
+	UNICODESTRING ProvisionData
+	);
+
+ProcessConfigXml_Failed(
+	UINT32 Attempt,
+	INT32 HResult
+	);
+
+GetCachedSettingRegPathFailed(
+	INT32 HResult
+	);
+
+FailedToGetStringFromProvisionState(
+	INT32 HResult
+	);
+
+DeleteCrcsForSettingsGroup(
+	UNICODESTRING SettingsGroup,
+	INT32 HResult
+	);
+
+FailedToGetRegValue(
+	INT32 HResult
+	);
+
+CannotRetriveCache(
+	VOID
+	);
+
+FailedToGetMvGetContextSubKeyPath(
+	UNICODESTRING KeyPath,
+	INT32 HResult
+	);
+
+DeleteCrcsForSettingsGroup(
+	UNICODESTRING SettingsGroup,
+	INT32 HResult
+	);
+
+FailedToGetCacheXmlCrcPath(
+	INT32 HResult
+	);
+
+FailedToUnregisterCspAlerts(
+	GUID EnrollmentID,
+	INT32 HResult
+	);
+
+FailedToGetEnrollmentIdFromPackageContext(
+	INT32 HResult
+	);
+
+PackageCollectorSearchDone(
+	VOID
+	);
+
+PackageCollectorPathCchCombineFullName(
+	UNICODESTRING Path,
+	UNICODESTRING FileName,
+	INT32 HResult
+	);
+
+PackageCollectorPackageFound(
+	UNICODESTRING Path,
+	UNICODESTRING FileName
+	);
+
+PackageCollectorFileNotFound(
+	UNICODESTRING Path
+	);
+
+PackageCollectorFindError(
+	UNICODESTRING Path,
+	UINT32 LastError
+	);
+
+PackageCollectorPathCchCombine(
+	UNICODESTRING Path,
+	INT32 HResult
+	);
+
+InvalidPackageExtension(
+	UNICODESTRING Path,
+	UNICODESTRING Name,
+	INT32 HResult
+	);
+
+NonPpkgDefaultPathFile(
+	UNICODESTRING Path,
+	UNICODESTRING Name
+	);
+
+InvalidPath(
+	UNICODESTRING Path
+	);
+
+PackageCollectorSkippingPackagePath(
+	UNICODESTRING Path
+	);
+
+PackageCollectorPathAdd(
+	UNICODESTRING Path
+	);
+
+PackageCollectorPathAdd(
+	UNICODESTRING Path,
+	INT32 HResult
+	);
+
+PackageCollectorDeinit(
+	VOID
+	);
+
+PackageCollectorInit(
+	VOID
+	);
+
+ProvMutexCreateComplete(
+	VOID
+	);
+
+TurnMutexCreateComplete(
+	VOID
+	);
+
+GetFileAttributesFailed(
+	UNICODESTRING FullPackagePath,
+	INT32 HResult
+	);
+
+SetFileAttributesFailed(
+	UNICODESTRING FullPackagePath,
+	INT32 HResult
+	);
+
+CopyFile2Failed(
+	UNICODESTRING FullSourcePath,
+	UNICODESTRING FullDestinationPath,
+	INT32 HResult
+	);
+
+CopyingDirectoriesIsNotSupported(
+	UNICODESTRING SourcePath
+	);
+
+PackageCopierDestructor(
+	VOID
+	);
+
+PackageCopierConstructor(
+	VOID
+	);
+
+EnrollmentCreatedForPackage(
+	UNICODESTRING PackageId
+	);
+
+CreateCategoryReaderFromPath(
+	UNICODESTRING Path
+	);
+
+FailedToEnumPackageInfoIds(
+	INT32 HResult
+	);
+
+PackageInfoNotAdded(
+	UNICODESTRING Id,
+	UNICODESTRING NewPackageVersion,
+	UNICODESTRING InstalledPackageVersion
+	);
+
+PkgVersionInvalid(
+	UNICODESTRING Id,
+	UNICODESTRING NewVersion,
+	UNICODESTRING InstalledVersion
+	);
+
+NoPackageInfo(
+	UNICODESTRING PackageId
+	);
+
+PackageInfoRemoved(
+	UNICODESTRING PackageId
+	);
+
+PackageInfoAdded(
+	UNICODESTRING PackageId,
+	UNICODESTRING PackageVersion
+	);
+
+RemoveProvPackagePackageFail(
+	UNICODESTRING Path,
+	UINT32 LastError
+	);
+
+GetNextElementTooMany(
+	INT32 HResult
+	);
+
+RemoveProvPackage(
+	UNICODESTRING Path
+	);
+
+NonProvisioningPackage(
+	UNICODESTRING PackageId,
+	UNICODESTRING PackagePath
+	);
+
+GetNextElementFailed(
+	INT32 HResult
+	);
+
+EnumerateElementsFailed(
+	INT32 HResult
+	);
+
+ProvPackageNotOpened(
+	VOID
+	);
+
+GetProvisionPackageNameFailed(
+	INT32 HResult
+	);
+
+ProvPackageOpened(
+	UNICODESTRING PackageName,
+	INT32 HResult
+	);
+
+TryCreateProvisioningFileManagerOnPPKGFailed(
+	UNICODESTRING Path
+	);
+
+ProvPackageIsEmpty(
+	VOID
+	);
+
+OpenProvisioningPackageFailed(
+	UNICODESTRING Path,
+	INT32 HResult
+	);
+
+OpeningProvPackage(
+	UNICODESTRING Path
+	);
+
+ProvSource_ImpersonateFailed(
+	UNICODESTRING Path,
+	INT32 HResult
+	);
+
+ProvSource_GetUserPackageTempDir(
+	UNICODESTRING Path
+	);
+
+ProvSource_ImpersonateAPIMissing(
+	VOID
+	);
+
+AutoDeleteFileStreamFailed(
+	UNICODESTRING Path
+	);
+
+Assert(
+	UINT32 assertVersion,
+	UINT32 rva,
+	UINT32 timestamp,
+	UINT32 imageSize,
+	ANSISTRING imageName,
+	UINT32 count,
+	UINT32 totalHits,
+	UINT32 ModuleCollection,
+	UINT32 GlobalCollection
+	);
+

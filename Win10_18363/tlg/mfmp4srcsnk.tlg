@@ -1,0 +1,40 @@
+ProviderNames:
+	Microsoft.Windows.MediaFoundation.HEIFReader
+	Microsoft.Windows.MediaFoundation.MPEG4Source
+	Microsoft.Windows.MediaFoundation.CallStack
+
+
+
+**** Events *****
+MP4FailedParse(
+	GUID MFMediaTelemetrySessionID,
+	UINT32 MFMediaTelemetrySessionInstance,
+	UNICODESTRING Function,
+	HRESULT hr,
+	BOOL32 bMovieModeIsHEIF
+	);
+
+MP4Information(
+	GUID MFMediaTelemetrySessionID,
+	UINT32 MFMediaTelemetrySessionInstance,
+	UINT32 ContentDurationSec,
+	UNICODESTRING TrackInfo,
+	UNICODESTRING UnsupportedMP4Boxes,
+	BOOL32 bFragment,
+	BOOL32 bProtected,
+	BOOL32 bGameDVR,
+	BOOL32 bMovieModeIsHEIF
+	);
+
+MP4EditListWrite(
+	INT32 Edit List playback rate numerator,
+	INT32 Edit List playback rate denominator
+	);
+
+MP4FailedParse(
+	GUID MFMediaTelemetrySessionID,
+	UINT32 MFMediaTelemetrySessionInstance,
+	UNICODESTRING Function,
+	HRESULT hr
+	);
+

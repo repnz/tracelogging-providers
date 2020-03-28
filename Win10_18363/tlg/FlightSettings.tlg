@@ -1,0 +1,1306 @@
+ProviderNames:
+	WindowsFlightingSettings
+	Microsoft.Windows.CTAC
+	TelemetryAssert
+	TelemetryAssertDiagTrack
+
+
+
+**** Events *****
+ServiceWNSUnregister(
+	INT32 hr,
+	GUID SessionId
+	);
+
+ServiceWNSUnregister(
+	INT32 hr,
+	GUID SessionId
+	);
+
+ServiceControlHandler(
+	UINT32 OPCode,
+	UINT32 error,
+	GUID SessionId
+	);
+
+ServiceWNSRegister(
+	INT32 hr,
+	GUID SessionId
+	);
+
+ServiceWNSRegister(
+	INT32 hr,
+	GUID SessionId
+	);
+
+ServiceWNSChangeStamp(
+	UINT32 changeStamp,
+	GUID SessionId
+	);
+
+ServiceWNSChangeStampReadFromRegFailed(
+	INT32 hr,
+	GUID SessionId
+	);
+
+ServiceWNSChangeStampDelete(
+	INT32 hr,
+	GUID SessionId
+	);
+
+ServiceWNSValidateCalledRegDelete(
+	INT32 hr,
+	GUID SessionId
+	);
+
+ServiceWNSUriTimeStampIsCurrentAndValidateCalled(
+	INT32 hr,
+	GUID SessionId
+	);
+
+ServiceWNSUriSyncValidateCallReadFailed(
+	INT32 hr,
+	GUID SessionId
+	);
+
+ServiceWNSRegisterWNFSucceeded(
+	INT32 hr,
+	GUID SessionId
+	);
+
+ServiceWNSRegisterWNFFailed(
+	UNICODESTRING message,
+	INT32 hr,
+	GUID SessionId
+	);
+
+WNSChannelUriExpirationInDaysWriteFailed(
+	INT32 hr,
+	GUID SessionId
+	);
+
+WNSChannelUriTimestampWriteFailed(
+	INT32 hr,
+	GUID SessionId
+	);
+
+ServiceWNSChannelGetUriSucceeded(
+	INT32 hr,
+	GUID SessionId
+	);
+
+ServiceWNSChannelGetUriFailed(
+	INT32 hr,
+	GUID SessionId
+	);
+
+ServiceWNSCreateChannelWaitFailed(
+	INT32 hr,
+	GUID SessionId
+	);
+
+ServiceWNSCreateChannelFailed(
+	INT32 hr,
+	GUID SessionId
+	);
+
+ServiceWNSChannelManagerFailed(
+	INT32 hr,
+	GUID SessionId
+	);
+
+WNSChannelUriGettingNewUri(
+	INT32 hr,
+	GUID SessionId
+	);
+
+WNSChannelUriExpired(
+	INT32 hr,
+	GUID SessionId
+	);
+
+WNSChannelUriIsCurrent(
+	INT32 hr,
+	GUID SessionId
+	);
+
+WNSChannelUriIsCurrent(
+	INT32 hr,
+	GUID SessionId
+	);
+
+WNSChannelUriTimestampReadFailed(
+	INT32 hr,
+	GUID SessionId
+	);
+
+WNSChannelUriTimestampReadHr(
+	INT32 hr,
+	GUID SessionId
+	);
+
+WNSChannelUriTimestampDiffWithCurrentDays(
+	UINT64 days,
+	GUID SessionId
+	);
+
+WNSChannelUriTimestampDiffWithCurrent(
+	UINT64 milliseconds,
+	GUID SessionId
+	);
+
+ServiceWNSGetExpirationTimeFailed(
+	INT32 hr,
+	GUID SessionId
+	);
+
+ServiceWNSAsyncValidationSucceeded(
+	INT32 hr,
+	GUID SessionId
+	);
+
+ServiceWNSAsyncValidationFailed(
+	INT32 hr,
+	GUID SessionId
+	);
+
+ServiceMain(
+	INT32 hr,
+	UINT32 error,
+	GUID SessionId
+	);
+
+WNSCallbackValidateFlightSettingsSucceeded(
+	INT32 hr,
+	GUID SessionId
+	);
+
+WNSCallbackValidateFlightSettingsSucceeded(
+	INT32 hr,
+	GUID SessionId
+	);
+
+WNSCallbackValidateFlightSettingsFailed(
+	INT32 hr,
+	GUID SessionId
+	);
+
+WNSCallbackCreateInstanceFailed(
+	INT32 hr,
+	GUID SessionId
+	);
+
+WNSCallbackCoGetClassObjectFailed(
+	INT32 hr,
+	GUID SessionId
+	);
+
+WNSCallbackBehaviorOptions(
+	INT32 behaviorOptions,
+	GUID SessionId
+	);
+
+WNSCallbackBuffer(
+	INT64 value,
+	GUID SessionId
+	);
+
+WNSCallbackBufferLength(
+	UINT32 length,
+	GUID SessionId
+	);
+
+WNSCallbackChangeStampWriteFailed(
+	INT32 hr,
+	GUID SessionId
+	);
+
+CoDisconnectContextFailed(
+	INT32 hr,
+	GUID SessionId
+	);
+
+FallbackError(
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+FallbackError(
+	UINT64 PartA_PrivTags,
+	SIGNED wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+ClassFactoryCreateInstance(
+	BOOLEAN isServiceFactory,
+	GUID comInterface,
+	GUID SessionId
+	);
+
+ActivityRemoveSubscription(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId,
+	BOOLEAN Override
+	);
+
+ActivitySubscribeFlightIdsChangeNotification(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId,
+	BOOLEAN Override
+	);
+
+ActivityGetFlightsInfo(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId,
+	BOOLEAN Override
+	);
+
+UserOnFlightIdsChangeError(
+	INT32 hr,
+	GUID SessionId
+	);
+
+UserOnFlightIdsChangeError(
+	INT32 hr,
+	GUID SessionId
+	);
+
+WNFCallbackError(
+	UINT32 length,
+	HEXINT64 callbackContext,
+	GUID SessionId
+	);
+
+WNFCallbackError(
+	UINT32 length,
+	HEXINT64 callbackContext,
+	GUID SessionId
+	);
+
+ActivitySubscribeFlightIdsChangeNotification(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+ActivitySubscribeFlightIdsChangeNotification(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+ActivitySubscribeFlightIdsChangeNotification(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	INT32 hresult
+	);
+
+ActivitySubscribeFlightIdsChangeNotification(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId,
+	INT32 hresult
+	);
+
+ActivityRemoveSubscription(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+ActivityRemoveSubscription(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+ActivityRemoveSubscription(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	INT32 hresult
+	);
+
+ActivityRemoveSubscription(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId,
+	INT32 hresult
+	);
+
+ActivityError(
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+ActivityError(
+	UINT64 PartA_PrivTags,
+	SIGNED wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+ActivityGetFlightsInfo(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+ActivityGetFlightsInfo(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+ActivityStoppedAutomatically(
+	VOID
+	);
+
+ActivityGetFlightsInfo(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	INT32 hresult
+	);
+
+ActivityGetFlightsInfo(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId,
+	INT32 hresult
+	);
+
+ActivityNotifyFlightStateChange(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId,
+	BOOLEAN Override,
+	HEXINT64 FlightType,
+	INT32 FlightId,
+	INT32 NewState,
+	HEXINT64 Metadata
+	);
+
+ErrorRemovingAppData(
+	UNICODESTRING pfn,
+	INT32 hr,
+	GUID SessionId
+	);
+
+ErrorRemovingAppData(
+	UNICODESTRING pfn,
+	INT32 hr,
+	GUID SessionId
+	);
+
+ErrorUpdatingAppData(
+	UNICODESTRING pfn,
+	INT32 hr,
+	GUID SessionId
+	);
+
+ErrorUpdatingAppData(
+	UNICODESTRING pfn,
+	INT32 hr,
+	GUID SessionId
+	);
+
+ActivityNotifyFlightStateChange(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+ActivityNotifyFlightStateChange(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+activityName(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	INT32 hresult
+	);
+
+activityName(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId,
+	INT32 hresult
+	);
+
+ErrorReadingStoreFlight(
+	BOOLEAN Override,
+	INT32 hr,
+	GUID SessionId
+	);
+
+ErrorReadingStoreFlight(
+	BOOLEAN Override,
+	INT32 hr,
+	GUID SessionId
+	);
+
+FlightDeletedDuringEnumeration(
+	BOOLEAN Override,
+	GUID SessionId
+	);
+
+FlightDeletedDuringEnumeration(
+	BOOLEAN Override,
+	GUID SessionId
+	);
+
+ErrorEnumeratingStoreFlights(
+	BOOLEAN Override,
+	INT32 hr,
+	GUID SessionId
+	);
+
+ErrorEnumeratingStoreFlights(
+	BOOLEAN Override,
+	INT32 hr,
+	GUID SessionId
+	);
+
+ErrorCountingStoreFlights(
+	BOOLEAN Override,
+	INT32 hr,
+	GUID SessionId
+	);
+
+ErrorCountingStoreFlights(
+	BOOLEAN Override,
+	INT32 hr,
+	GUID SessionId
+	);
+
+ErrorEnumeratingBuildFlight(
+	INT32 hr,
+	GUID SessionId
+	);
+
+ErrorEnumeratingBuildFlight(
+	INT32 hr,
+	GUID SessionId
+	);
+
+UMgrGetSessionActiveShellUserTokenFailed(
+	INT32 hr,
+	GUID SessionId
+	);
+
+ErrorBuildFlightIdMissingStagedId(
+	INT32 hr,
+	GUID SessionId
+	);
+
+ErrorBuildFlightIdMissingStagedId(
+	INT32 hr,
+	GUID SessionId
+	);
+
+ErrorBuildFlightIdCannotCreateKeyForStagedId(
+	INT32 hr,
+	GUID SessionId
+	);
+
+ErrorBuildFlightIdCannotCreateKeyForStagedId(
+	INT32 hr,
+	GUID SessionId
+	);
+
+GetClientAttributesForApp(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId,
+	UNICODESTRING appId,
+	UNICODESTRING appVer
+	);
+
+ClientAttrErrors(
+	UNICODESTRING appId,
+	UNICODESTRING appVer,
+	UNICODESTRING errors
+	);
+
+ActivityIntermediateStop(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+GetClientAttributesForApp(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+GetClientAttributesForApp(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+RequiredClientAttrError(
+	UNICODESTRING attrName,
+	INT32 error
+	);
+
+Assert(
+	UINT32 assertVersion,
+	UINT32 rva,
+	UINT32 timestamp,
+	UINT32 imageSize,
+	ANSISTRING imageName,
+	UINT32 count,
+	UINT32 totalHits,
+	UINT32 ModuleCollection,
+	UINT32 GlobalCollection
+	);
+
+GetPropertyValueFromJsonValueFailed(
+	INT32 hr,
+	UNICODESTRING PropertyName,
+	GUID SessionId
+	);
+
+PreviewBuildsManagerSyncAsync(
+	INT32 hr,
+	GUID SessionId
+	);
+
+PreviewBuildsManagerSyncAsync(
+	INT32 hr,
+	GUID SessionId
+	);
+
+ServiceWNSServiceChannelUriReadFailed(
+	INT32 hr,
+	GUID SessionId
+	);
+
+ServiceWNSClientChannelUriReadFailed(
+	INT32 hr,
+	GUID SessionId
+	);
+
+FSStatus(
+	UNICODESTRING GetBranchNameAlloc1,
+	UNICODESTRING GetRingNameAlloc1,
+	UINT32 GetRingId1,
+	BOOLEAN IsRetail1,
+	UINT32 ServiceVersion1,
+	BOOLEAN IsFlightingEnabled1,
+	INT32 ControllableState1,
+	INT32 PilotInfoRing1,
+	INT32 PilotErrorState1,
+	UINT32 DialogConsent1,
+	INT32 MsaUserTicketHr1,
+	INT32 MsaDeviceTicketHr1,
+	INT32 LastHr1,
+	INT32 Hr1,
+	UNICODESTRING GetBranchNameAlloc,
+	UNICODESTRING GetRingNameAlloc,
+	UINT32 GetRingId,
+	BOOLEAN IsRetail,
+	UINT32 ServiceVersion,
+	BOOLEAN IsFlightingEnabled,
+	INT32 ControllableState,
+	INT32 PilotInfoRing,
+	INT32 PilotErrorState,
+	UINT32 DialogConsent,
+	INT32 MsaUserTicketHr,
+	INT32 MsaDeviceTicketHr,
+	INT32 LastHr,
+	INT32 Hr,
+	UNICODESTRING Locale,
+	INT32 HttpStatus,
+	UNICODESTRING FlightSettingsServiceUrl,
+	UINT32 ClientVersion,
+	UINT32 SigningInfo,
+	UINT64 TransactionTime,
+	INT32 BehaviorOptions,
+	INT32 ValidateHr,
+	UNICODESTRING ServiceInstanceId,
+	GUID SessionId
+	);
+
+FSStatus(
+	UNICODESTRING GetBranchNameAlloc1,
+	UNICODESTRING GetRingNameAlloc1,
+	UINT32 GetRingId1,
+	BOOLEAN IsRetail1,
+	UINT32 ServiceVersion1,
+	BOOLEAN IsFlightingEnabled1,
+	INT32 ControllableState1,
+	INT32 PilotInfoRing1,
+	INT32 PilotErrorState1,
+	UINT32 DialogConsent1,
+	INT32 MsaUserTicketHr1,
+	INT32 MsaDeviceTicketHr1,
+	INT32 LastHr1,
+	INT32 Hr1,
+	UNICODESTRING GetBranchNameAlloc,
+	UNICODESTRING GetRingNameAlloc,
+	UINT32 GetRingId,
+	BOOLEAN IsRetail,
+	UINT32 ServiceVersion,
+	BOOLEAN IsFlightingEnabled,
+	INT32 ControllableState,
+	INT32 PilotInfoRing,
+	INT32 PilotErrorState,
+	UINT32 DialogConsent,
+	INT32 MsaUserTicketHr,
+	INT32 MsaDeviceTicketHr,
+	INT32 LastHr,
+	INT32 Hr,
+	UNICODESTRING Locale,
+	INT32 HttpStatus,
+	UNICODESTRING FlightSettingsServiceUrl,
+	UINT32 ClientVersion,
+	UINT32 SigningInfo,
+	UINT64 TransactionTime,
+	INT32 BehaviorOptions,
+	INT32 ValidateHr,
+	UNICODESTRING ServiceInstanceId,
+	GUID SessionId
+	);
+
+ImpersonateActiveUserFailed(
+	INT32 hr,
+	GUID SessionId
+	);
+
+ImpersonateCallingProcessFailed(
+	INT32 hr,
+	GUID SessionId
+	);
+
+ScheduledAsyncTaskRan(
+	INT32 hr,
+	GUID SessionId
+	);
+
+ScheduledAsyncTaskRan(
+	INT32 hr,
+	GUID SessionId
+	);
+
+AsyncServiceCallScheduled(
+	INT32 waitTime,
+	GUID SessionId
+	);
+
+AsyncServiceCallScheduled(
+	INT32 waitTime,
+	GUID SessionId
+	);
+
+FSValidateFlightSettings(
+	BOOLEAN ValidateOnline,
+	INT32 BehaviorOptions,
+	INT32 hr,
+	GUID SessionId
+	);
+
+FSValidateFlightSettings(
+	BOOLEAN ValidateOnline,
+	INT32 BehaviorOptions,
+	INT32 hr,
+	GUID SessionId
+	);
+
+OnActionErrorRestRequest(
+	INT32 hr,
+	GUID SessionId
+	);
+
+OnActionErrorRestRequest(
+	INT32 hr,
+	GUID SessionId
+	);
+
+DoAdditionalSyncValidationFailed(
+	INT32 hr,
+	GUID SessionId
+	);
+
+TransactionIdCheckFailed(
+	INT32 hr,
+	UNICODESTRING ExpectedValue,
+	UNICODESTRING ServiceValue,
+	GUID SessionId
+	);
+
+FSPerformServiceDrivenActions(
+	INT32 hr,
+	UNICODESTRING ServiceInstanceId,
+	GUID SessionId
+	);
+
+FSPerformServiceDrivenActions(
+	INT32 hr,
+	UNICODESTRING ServiceInstanceId,
+	GUID SessionId
+	);
+
+GetFlightingAccountId(
+	UINT32 Status,
+	INT32 hr,
+	GUID SessionId
+	);
+
+GetPilotInfo(
+	INT32 hr,
+	INT32 PilotRing,
+	INT32 PilotErrorState,
+	GUID SessionId
+	);
+
+IsWaasEnabled(
+	INT32 hr,
+	INT32 FlightingType,
+	INT32 Timeout,
+	GUID SessionId
+	);
+
+SetBcdFailed(
+	UNICODESTRING bootMgrFaliure,
+	UNICODESTRING osInstanceFailure,
+	INT32 hr,
+	GUID SessionId
+	);
+
+CtacOneSettingsDownloadValidationFailed(
+	INT32 hr,
+	UNICODESTRING data,
+	GUID SessionId
+	);
+
+FlightingUserTicketRequest(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId
+	);
+
+FlightingDeviceTicketRequest(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId
+	);
+
+GetAccountsBlobFailed(
+	INT32 hr,
+	GUID SessionId
+	);
+
+InvalidateWAMCache(
+	INT32 hr,
+	GUID SessionId
+	);
+
+InvalidateWAMCache(
+	INT32 hr,
+	GUID SessionId
+	);
+
+FlightingAccountDefaulted(
+	UNICODESTRING accountType,
+	GUID SessionId
+	);
+
+FlightingAccountDefaulted(
+	UNICODESTRING accountType,
+	GUID SessionId
+	);
+
+CComTemporaryRevertToSelfFailed(
+	INT32 hr,
+	GUID SessionId
+	);
+
+EnableCOMMarshallingFailed(
+	INT32 hr,
+	GUID SessionId
+	);
+
+ImpersonationFailed(
+	INT32 hr,
+	GUID SessionId
+	);
+
+FlightingUserTicketRequest(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+FlightingUserTicketRequest(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+FlightingDeviceTicketRequest(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+FlightingDeviceTicketRequest(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+FSRestRequestActionsList(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId
+	);
+
+HttpDecompressionFailed(
+	INT32 hr,
+	GUID SessionId
+	);
+
+FSPropertyBagFailed(
+	INT32 hr,
+	GUID SessionId
+	);
+
+FSRestRequestActionsList(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+FSRestRequestActionsList(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+WritingMsaDeviceTicketHrFailed(
+	INT32 hr,
+	GUID SessionId
+	);
+
+DeletingUserTicketHrFailed(
+	INT32 hr,
+	GUID SessionId
+	);
+
+WritingUserTicketHrFailed(
+	INT32 hr,
+	GUID SessionId
+	);
+
+ServiceDrivenActionInitialize(
+	INT32 hr,
+	INT32 actionId,
+	UNICODESTRING actionAsString,
+	GUID SessionId
+	);
+
+MountEFIESPFailed(
+	INT32 hr,
+	GUID SessionId
+	);
+
+MountEFIESPFailed(
+	INT32 hr,
+	GUID SessionId
+	);
+
+DismountEFIESPFailed(
+	INT32 hr,
+	GUID SessionId
+	);
+
+DismountEFIESPFailed(
+	INT32 hr,
+	GUID SessionId
+	);
+
+FlushEFIESPFailed(
+	INT32 hr,
+	GUID SessionId
+	);
+
+FlushEFIESPFailed(
+	INT32 hr,
+	GUID SessionId
+	);
+
+MDMPolicyEnforcementSuccess(
+	INT32 hr,
+	GUID SessionId
+	);
+
+PolicyError(
+	UNICODESTRING Message,
+	INT32 Result,
+	GUID SessionId
+	);
+
+PolicyError(
+	UNICODESTRING Message,
+	INT32 Result,
+	GUID SessionId
+	);
+
+PolicyError(
+	UNICODESTRING Message,
+	INT32 Result,
+	GUID SessionId
+	);
+
+PrivilegedActionFailed(
+	INT32 hr,
+	GUID SessionId
+	);
+
+LaunchExePrivilegedActionFailed(
+	INT32 hr,
+	GUID SessionId
+	);
+
+FlightingHttpRequestActivity(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId
+	);
+
+FlightingHttpRequestCancelled(
+	UINT32 trustError,
+	UINT32 trustInfo,
+	UINT32 statusError,
+	GUID SessionId
+	);
+
+FlightingHttpRequestCancelled(
+	UINT32 trustError,
+	UINT32 trustInfo,
+	UINT32 statusError,
+	GUID SessionId
+	);
+
+FlightingHTTPRequest(
+	UINT32 HTTPStatusCode,
+	GUID SessionId
+	);
+
+FlightingHttpRequestActivity(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+FlightingHttpRequestActivity(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+AddNetworkingSpecificPropertiesFailed(
+	INT32 hr,
+	GUID SessionId
+	);
+
+AddMUSESpecificPropertiesFailed(
+	INT32 hr,
+	GUID SessionId
+	);
+
+AddMobileSpecificPropertiesFailed(
+	INT32 hr,
+	GUID SessionId
+	);
+
+AuthenticateCabSignatureFailed(
+	INT32 hr,
+	BOOLEAN isMicrosoftSigned,
+	UNICODESTRING CertName,
+	GUID SessionId
+	);
+
+SaveToastSuppressionInfoFailed(
+	INT32 hr,
+	GUID SessionId
+	);
+
+ToastNotification(
+	INT32 display,
+	INT32 hr,
+	GUID SessionId
+	);
+
+ToastNotification(
+	INT32 display,
+	INT32 hr,
+	GUID SessionId
+	);
+

@@ -1,0 +1,54 @@
+ProviderNames:
+	Microsoft.Windows.Bluetooth
+
+
+
+**** Events *****
+EventData(
+	ANSISTRING EventOccurrenceName,
+	UINT32 EventData,
+	UNICODESTRING BTDeviceAddress
+	);
+
+RpalEventOccurrence(
+	ANSISTRING EventOccurrenceName
+	);
+
+EventOccurrence(
+	ANSISTRING EventOccurrenceName,
+	UINT32 EventOccurrenceResult,
+	UNICODESTRING BTDeviceAddress
+	);
+
+BluetoothFingerprint(
+	UINT64 PartA_PrivTags,
+	UINT32 FingerprintVersion,
+	UNICODESTRING BTDeviceAddress,
+	UINT32 LMPVersion,
+	UINT32 MfgId,
+	UINT32 LMPSubVersion,
+	UINT64 LMPFeatureMask,
+	UINT32 COD,
+	ANSISTRING FriendlyName,
+	ANSISTRING ProfileList,
+	UINT32 ProfileCount,
+	UINT64 ProfileListHash,
+	UINT16 DIDVendorIDSource,
+	UINT32 DIDVendorID,
+	UINT32 DIDProductID,
+	UINT32 DIDVersion,
+	UINT32 LEFlags,
+	UINT32 LEManufacturerId,
+	UINT32 LEAppearance,
+	UINT32 LERole,
+	UINT64 LEFeatures,
+	UINT64 LECustomServiceUuidHash,
+	UNICODESTRING FingerprintCompatString
+	);
+
+BluetoothFingerprintFailed(
+	UINT64 PartA_PrivTags,
+	UNICODESTRING FingerprintFailedReason,
+	UINT64 BTDeviceAddress
+	);
+

@@ -1,0 +1,55 @@
+ProviderNames:
+	Microsoft.SnippingTool
+
+
+
+**** Events *****
+CopyToClipboardClick(
+	BOOL32 UTCReplace_AppSessionGuid,
+	UNICODESTRING snipId,
+	BOOL32 succeeded
+	);
+
+EmailSent(
+	BOOL32 UTCReplace_AppSessionGuid,
+	UNICODESTRING snipId,
+	BOOL32 isInline,
+	BOOL32 succeeded
+	);
+
+SnipSaved(
+	BOOL32 UTCReplace_AppSessionGuid,
+	UNICODESTRING snipId
+	);
+
+SnipAnnotated(
+	BOOL32 UTCReplace_AppSessionGuid,
+	UNICODESTRING snipId,
+	UNICODESTRING penType
+	);
+
+CtrlPrtScnUsed(
+	BOOL32 UTCReplace_AppSessionGuid,
+	UNICODESTRING snipId
+	);
+
+SnipTaken(
+	BOOL32 UTCReplace_AppSessionGuid,
+	UNICODESTRING snipId,
+	UNICODESTRING mode,
+	BOOL32 isHotKeyLaunched,
+	BOOL32 isCtrlPrtScnUpdated,
+	BOOL32 isFramed,
+	INT32 delaySeconds
+	);
+
+EditWithPaint3DClicked(
+	BOOL32 UTCReplace_AppSessionGuid
+	);
+
+Launched(
+	BOOL32 UTCReplace_AppSessionGuid,
+	BOOL32 isWinShiftSLaunched,
+	BOOL32 wasAlreadyRunning
+	);
+

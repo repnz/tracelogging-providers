@@ -1,0 +1,1665 @@
+ProviderNames:
+	Microsoft.Windows.Holographic.OasisBenchmark
+	Microsoft.Windows.Analog.HoloSI
+	TelemetryAssert
+	TelemetryAssertDiagTrack
+
+
+
+**** Events *****
+BenchmarkDeterminedQualityLevel(
+	UINT32 QualityLevel,
+	UINT32 VendorId,
+	UINT32 DeviceId,
+	UINT32 HMDRefreshRate,
+	BOOL32 IsThrottled
+	);
+
+BenchmarkQueryEnumValueFailed(
+	VOID
+	);
+
+BenchmarkGetQualityOverrideLevel(
+	UINT32 QualityLevel
+	);
+
+BenchmarkDeterminedQualityLevel(
+	UINT32 QualityLevel,
+	UINT32 VendorId,
+	UINT32 DeviceId,
+	UINT32 HMDRefreshRate,
+	BOOL32 IsThrottled
+	);
+
+HoloSILifetime_SetSuspendStateRequestDropped(
+	BOOLEAN isInStandby,
+	BOOLEAN shouldSuspend,
+	INT32 shellState,
+	UINT64 PartA_PrivTags
+	);
+
+HoloSILoader::Stop: Stopping HoloSILoader...(
+	VOID
+	);
+
+HoloSILoader::Run: Running HoloSILoader...(
+	VOID
+	);
+
+HoloSILifetime_HoloSILoaderDestroyed(
+	UINT64 PartA_PrivTags
+	);
+
+HoloSILifetime_UnexpectedStart(
+	UINT64 PartA_PrivTags
+	);
+
+CatchAllError(
+	HRESULT hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	UNICODESTRING message,
+	UINT64 PartA_PrivTags
+	);
+
+FallbackError(
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+FallbackError(
+	UINT64 PartA_PrivTags,
+	SIGNED wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+HoloSILifetime_CoreShellProductExtensionDestroyed(
+	UINT64 PartA_PrivTags
+	);
+
+ReportFocusReleased(
+	UINT32 priority,
+	UINT64 PartA_PrivTags
+	);
+
+ReportFocusAcquired(
+	UINT32 priority,
+	UINT64 PartA_PrivTags
+	);
+
+AppLifecycle_ViewDeactivated(
+	UINT32 viewInstanceId
+	);
+
+AnalogViewManager::SetStartViewState(
+	UNICODESTRING currentState,
+	UNICODESTRING newState
+	);
+
+AnalogViewManager::OnShellResumed(
+	VOID
+	);
+
+AnalogViewManager::TryBack(
+	HEXINT32 viewInstanceId
+	);
+
+AnalogViewManager::GetViewPropertyAsInt(
+	HEXINT32 viewInstanceId,
+	UNICODESTRING propName
+	);
+
+AnalogViewManager::GetViewPropertyAsBool(
+	HEXINT32 viewInstanceId,
+	UNICODESTRING propName
+	);
+
+AnalogViewManager::ConfirmShutdown(
+	VOID
+	);
+
+AnalogViewManager::SetInteractiveCarryView(
+	HEXINT32 viewInstanceId
+	);
+
+AnalogViewManager::SetAudioVisibilityForApp(
+	UNICODESTRING appId
+	);
+
+AnalogViewManager::ConsolidateView(
+	HEXINT32 viewInstanceId,
+	BOOLEAN userInitiated
+	);
+
+AnalogViewManager::ActivateShell(
+	VOID
+	);
+
+AnalogViewManager::ActivateView(
+	HEXINT32 viewInstanceId
+	);
+
+AnalogViewManager::SetGazedView(
+	HEXINT32 viewInstanceId
+	);
+
+AnalogViewManager::CloseApplication(
+	UNICODESTRING appId
+	);
+
+AnalogViewManager::SetViewState(
+	HEXINT32 viewInstanceId,
+	UNICODESTRING state
+	);
+
+AnalogViewManager::UnregisterListener(
+	HEXINT64 pListener
+	);
+
+AnalogViewManager::RegisterListener(
+	HEXINT64 pListener,
+	BOOLEAN isShell
+	);
+
+AnalogViewManager::SetExclusiveWindowSize(
+	HEXINT32 windowInstanceId,
+	UINT32 width,
+	UINT32 height
+	);
+
+AnalogViewManager::UnsubscribeFromServices(
+	VOID
+	);
+
+AnalogViewManager::RuntimeClassInitialize(
+	VOID
+	);
+
+AnalogViewManager_ViewClosed(
+	HEXINT32 viewInstanceId,
+	UINT64 PartA_PrivTags
+	);
+
+AnalogViewManager_ViewDeactivated(
+	HEXINT32 viewInstanceId,
+	UINT64 PartA_PrivTags
+	);
+
+AnalogViewManager_ViewPresented(
+	HEXINT32 viewInstanceId,
+	HEXINT32 windowInstanceId,
+	UINT32 processId,
+	BOOLEAN active,
+	UINT64 PartA_PrivTags
+	);
+
+AnalogViewManager_ViewNavigated(
+	HEXINT32 viewInstanceId,
+	UNICODESTRING pAppId,
+	UINT32 viewType,
+	UINT64 PartA_PrivTags
+	);
+
+AnalogViewManager_Listening(
+	UINT64 PartA_PrivTags
+	);
+
+ModalExperience_SlateToNewFVTSwitch(
+	UINT32 ViewInstanceId,
+	UINT32 FrameworkViewType,
+	UINT64 PartA_PrivTags
+	);
+
+AnalogViewManagerEventAdapter::OnFrameworkViewTypeSet(
+	HEXINT32 viewId,
+	UNICODESTRING frameworkViewType
+	);
+
+AnalogViewManagerEventAdapter::OnViewTitleBarChanged(
+	HEXINT32 viewId
+	);
+
+AnalogViewManagerEventAdapter::OnViewHostItemViewModeChanged(
+	HEXINT32 viewId,
+	BOOLEAN fullScreenMode
+	);
+
+AnalogViewManagerEventAdapter::OnClientWindowReadyForPresentationChanged - Ignored because shell is shutting down.(
+	HEXINT32 uniqueId
+	);
+
+AnalogViewManagerEventAdapter::OnClientWindowPrepareForPresentationChanged(
+	HEXINT32 uniqueId,
+	UINT8 preparing
+	);
+
+AnalogViewManagerEventAdapter::OnClientWindowPrepareForPresentationChanged::<lambda> BeginPresentView(FALSE)(
+	VOID
+	);
+
+AnalogViewManagerEventAdapter::NotifyViewNavigated(
+	UNICODESTRING instanceId
+	);
+
+AnalogViewManagerEventAdapter::TryNotifyViewNavigated(
+	HEXINT32 uniqueId,
+	UINT8 isVisible,
+	UNICODESTRING frameworkViewType
+	);
+
+AnalogViewManagerEventAdapter::HandleViewModeChangedForView(
+	HEXINT32 viewId,
+	BOOLEAN isFullscreen
+	);
+
+AnalogViewManagerEventAdapter::UnsubscribeFromServices(
+	VOID
+	);
+
+PresentView(
+	HEXINT32 applicationViewId,
+	BOOLEAN present,
+	UINT64 PartA_PrivTags
+	);
+
+NavigatedAwayFromView(
+	HEXINT32 applicationViewId,
+	INT32 navigationLevel,
+	UINT64 PartA_PrivTags
+	);
+
+ApplicationViewRemoved(
+	HEXINT32 applicationViewId,
+	UNICODESTRING appId,
+	UINT64 PartA_PrivTags
+	);
+
+HoloSILifetime_AllViewsClosedTimeoutContinued(
+	UINT32 totalCloseTime,
+	UINT64 PartA_PrivTags
+	);
+
+HoloSILifetime_AllViewsClosedSucceeded(
+	UINT32 totalCloseTime,
+	UINT64 PartA_PrivTags
+	);
+
+ShellManager::CloseAllViews - Wait failed(
+	UINT32 waitValue
+	);
+
+ShellManager::CloseAllViews - Wait succeeded(
+	VOID
+	);
+
+ShellManager::CloseAllViews - Waiting for close events(
+	VOID
+	);
+
+OnForegroundChanged(
+	UINT32 NewUniqueId,
+	UINT32 PreviousUniqueId
+	);
+
+AppView_ChangeViewBounds(
+	UINT32 ViewInstanceId,
+	UINT32 Width,
+	UINT32 Height,
+	BOOLEAN ReadyToPresent
+	);
+
+HoloSILifetime_CompositorAvailabilityChange(
+	UINT32 available,
+	UINT64 PartA_PrivTags
+	);
+
+ExclusiveAppFunnel_ViewPresented(
+	UINT32 uniqueId,
+	UINT32 compositionId,
+	UINT32 coreWindowId,
+	UINT32 processId,
+	BOOLEAN active
+	);
+
+AppLifecycle_ApplicationViewSwitch(
+	UINT32 windowId,
+	UINT32 applicationViewId,
+	UINT32 inputViewId,
+	INT32 applicationViewType,
+	UNICODESTRING appId,
+	INT32 width,
+	INT32 height,
+	FLOAT displayScale
+	);
+
+AppView_ShowClientWindow(
+	UINT32 ViewInstanceId,
+	UINT32 WindowInstanceId,
+	BOOLEAN Show
+	);
+
+HoloSILifetime_ShellManagerDestroyed(
+	UINT64 PartA_PrivTags
+	);
+
+ShellManager::OnViewHidden(
+	HEXINT32 viewInstanceId
+	);
+
+ShellManager::OnViewShown(
+	HEXINT32 viewInstanceId
+	);
+
+ShellManager::NotifyViewSizePreferencesChanged(
+	HEXINT32 viewInstanceId,
+	FLOAT size.Width,
+	FLOAT size.Height
+	);
+
+ShellManager::NotifyViewPropertyChanged(
+	HEXINT32 viewInstanceId,
+	UNICODESTRING propertyName
+	);
+
+ShellManager::NotifyViewClosed(
+	HEXINT32 viewInstanceId
+	);
+
+ShellManager::NotifyViewDeactivated(
+	HEXINT32 viewInstanceId
+	);
+
+ShellManager::NotifyViewPresented(
+	HEXINT32 viewInstanceId,
+	HEXINT32 windowInstanceId,
+	UINT32 pid,
+	BOOLEAN active
+	);
+
+ShellManager::NotifyViewPresented: invalid windowInstanceId(
+	VOID
+	);
+
+ShellManager::NotifyViewNavigated(
+	HEXINT32 viewInstanceId,
+	UNICODESTRING frameworkViewType,
+	UNICODESTRING appId
+	);
+
+ShellManager::SetViewState - No state change(
+	HEXINT32 viewInstanceId,
+	UNICODESTRING ShellViewStateName(state)
+	);
+
+ShellManager::SetExclusiveWindowSize called when not yet initialized(
+	UINT32 callerPid
+	);
+
+ShellManager::SetExclusiveWindowSize(
+	HEXINT32 windowInstanceId,
+	UINT32 width,
+	UINT32 height
+	);
+
+ShellManager::SetGazedView(
+	HEXINT32 viewInstanceId
+	);
+
+ShellManager::ActivateShell(
+	VOID
+	);
+
+ShellManager::ActivateView(
+	HEXINT32 viewInstanceId,
+	BOOLEAN suspended
+	);
+
+ShellManager::TryLaunchShellApp(
+	BOOLEAN m_initialized,
+	BOOLEAN m_allViewsClosed,
+	BOOLEAN m_compositorAvailable,
+	BOOLEAN shouldLaunch
+	);
+
+ShellManager::StartShutdown(
+	VOID
+	);
+
+ForegroundTelemetry_TakeForegroundForHolographic_DefaultShell(
+	VOID
+	);
+
+ForegroundTelemetry_TakeForegroundForHolographic(
+	VOID
+	);
+
+ShellManager::HandleConnectedStandbyEvent(
+	BOOLEAN suspended
+	);
+
+ShellManager::PrepareViewForNavigateToActive(
+	UINT32 uniqueId,
+	UINT32 compositionId
+	);
+
+ShellManager::CloseApplication(
+	UNICODESTRING appId
+	);
+
+ShellManager::CloseAllViews(
+	VOID
+	);
+
+HoloSILifetime_Initialized(
+	UINT64 PartA_PrivTags
+	);
+
+ShellManager::ShowStartView(
+	VOID
+	);
+
+ShellManager::RuntimeClassInitialize: hconEnabled(
+	BOOLEAN hconEnabled
+	);
+
+ShellManager::RuntimeClassInitialize(
+	UINT32 m_coreUIThreadId
+	);
+
+ShellManager::RuntimeClassInitialize(
+	VOID
+	);
+
+SetViewState(
+	HEXINT32 applicationViewId,
+	UINT32 state,
+	UINT64 PartA_PrivTags
+	);
+
+ApplicationViewSwitch(
+	HEXINT32 windowId,
+	HEXINT32 applicationViewId,
+	INT32 applicationViewType,
+	UNICODESTRING appId,
+	INT32 width,
+	INT32 height,
+	UINT64 PartA_PrivTags
+	);
+
+HoloSILifetime_ShellFatal(
+	UINT32 fatalErrorHResult,
+	UINT64 PartA_PrivTags
+	);
+
+StartViewHandler_TryNavigateToApp_LaunchingCallback(
+	UNICODESTRING appId,
+	UNICODESTRING appState,
+	INT32 activationHr
+	);
+
+StartViewHandler_TryNavigateToApp(
+	UNICODESTRING appId,
+	UNICODESTRING appState,
+	BOOLEAN suspended,
+	BOOLEAN shuttingDown,
+	UNICODESTRING StartViewState,
+	BOOLEAN outOfBandShutdown
+	);
+
+StartViewHandler_CloseApp(
+	UNICODESTRING appId
+	);
+
+StartViewHandler_AppConnectedStandbyEvent(
+	BOOLEAN suspended,
+	UINT32 uniqueId,
+	BOOLEAN currentVisible,
+	BOOLEAN currentActive,
+	BOOLEAN currentKeepAlive,
+	BOOLEAN nextVisible,
+	BOOLEAN nextActive,
+	BOOLEAN nextKeepAlive
+	);
+
+StartViewHandler_SuspendResumeApp(
+	UNICODESTRING appId,
+	BOOLEAN suspend
+	);
+
+StartViewHandler_UpdateViewState(
+	UINT32 uniqueId,
+	BOOLEAN visible,
+	BOOLEAN active,
+	BOOLEAN keepAlive
+	);
+
+StartViewHandler_SetForeground(
+	UNICODESTRING appId
+	);
+
+StartViewHandler_ViewNavigatedAway(
+	UINT32 uniqueId,
+	UNICODESTRING appId
+	);
+
+StartViewHandler_ViewNavigated(
+	BOOLEAN suspended,
+	UINT32 uniqueId,
+	UNICODESTRING appId,
+	UNICODESTRING appState
+	);
+
+StartViewHandler_ViewLost_Unregistering(
+	UNICODESTRING appId
+	);
+
+HoloSILifetime_ShellAutoRestart(
+	UINT32 shellAutoRestartDelayInMilliseconds,
+	UINT32 lastShellActivationResult,
+	UINT64 PartA_PrivTags
+	);
+
+StartViewHandler_ViewLost(
+	UINT32 uniqueId,
+	UNICODESTRING appId
+	);
+
+HoloSILifetime_StartViewRunning(
+	UNICODESTRING AppId,
+	UINT32 ViewInstanceId,
+	UINT64 PartA_PrivTags
+	);
+
+StartViewHandler_ViewCreated(
+	UINT32 uniqueId,
+	UNICODESTRING appId
+	);
+
+StartViewHandler_ActivateView(
+	UINT32 uniqueId,
+	UNICODESTRING appId
+	);
+
+StartViewHandler_HandleConnectedStandbyEvent(
+	BOOLEAN suspended,
+	UNICODESTRING viewState
+	);
+
+StartViewHandler_ShowStartViewApp(
+	BOOLEAN OOBECompleted,
+	BOOLEAN suspended
+	);
+
+HoloSILifetime_SignalAllViewsClosed(
+	UNICODESTRING ViewHandler,
+	UINT64 PartA_PrivTags
+	);
+
+HoloSILifetime_InitializeCloseAllViews(
+	UNICODESTRING ViewHandler,
+	UINT64 PartA_PrivTags
+	);
+
+StartViewHandler::RegisterForViewEvents(
+	UNICODESTRING appId
+	);
+
+StartViewHandler::OnFocusReleased(
+	UNICODESTRING appId,
+	BOOLEAN isActive
+	);
+
+StartViewHandler::ActivateShell Shell not active(
+	VOID
+	);
+
+StartViewHandler::ActivateShell Is in standby(
+	VOID
+	);
+
+StartViewHandler::ActivateShell(
+	VOID
+	);
+
+StartViewHandler_BloomDetected(
+	VOID
+	);
+
+StartViewHandler_TryNavigateToApp_Launching(
+	VOID
+	);
+
+StartViewHandler_LaunchingIpApp(
+	VOID
+	);
+
+ModalExperienceViewHandler_MovedForegroundForClosing(
+	UINT32 UniqueId,
+	UINT32 ParentUniqueId,
+	UINT64 PartA_PrivTags
+	);
+
+ModalExperienceViewHandler_NodePendingClose(
+	UINT32 UniqueId,
+	UINT64 PartA_PrivTags
+	);
+
+ModalExperienceViewHandler_ClosedPeerView(
+	UINT32 ChildUniqueId,
+	UINT32 ParentUniqueId,
+	UINT64 PartA_PrivTags
+	);
+
+ModalExperienceViewHandler_NodeRequestedNav(
+	UINT32 UniqueId,
+	UINT32 ParentUniqueId,
+	UINT64 PartA_PrivTags
+	);
+
+ModalExperienceViewHandler_NodeRemoved(
+	UINT32 UniqueId,
+	UINT64 PartA_PrivTags
+	);
+
+ModalExperienceViewHandler_NodeAdded(
+	UINT32 UniqueId,
+	UINT64 PartA_PrivTags
+	);
+
+ModalExperienceViewHandler_NodeRemoved_TakeForeground(
+	UINT64 PartA_PrivTags
+	);
+
+ModalExperienceViewHandler::ActivateView(
+	HEXINT32 viewInstanceId
+	);
+
+ModalExperienceViewHandler::HandleConnectedStandbyEvent(
+	BOOLEAN suspended
+	);
+
+SimpleSEVH_ShouldLaunchSkip_Policy(
+	UNICODESTRING appId,
+	BOOLEAN shouldLaunchByPolicy,
+	INT32 launchReason,
+	UINT64 PartA_PrivTags
+	);
+
+SimpleSEVH_ShouldLaunchSkip_Shutdown(
+	UNICODESTRING appId,
+	BOOLEAN shuttingDown,
+	UINT64 PartA_PrivTags
+	);
+
+SimpleSEVH_ShouldLaunchSkip_StartViewState(
+	UNICODESTRING appId,
+	BOOLEAN launchAllowed,
+	UINT64 PartA_PrivTags
+	);
+
+SimpleSEVH_ShouldLaunchSkip_Standby(
+	UNICODESTRING appId,
+	BOOLEAN suspended,
+	UINT64 PartA_PrivTags
+	);
+
+SimpleSEVH_ShouldLaunchSkip_ShellUI(
+	UNICODESTRING appId,
+	UINT64 PartA_PrivTags
+	);
+
+HoloSILifetime_ApplicationLaunched(
+	UNICODESTRING AppId,
+	UINT64 PartA_PrivTags
+	);
+
+SimpleSEVH_LaunchOrResumeApplication(
+	UNICODESTRING appId,
+	BOOLEAN currentlyObscured,
+	UINT64 PartA_PrivTags
+	);
+
+SimpleSEVH_HandleViewLost(
+	UINT32 uniqueId,
+	UNICODESTRING appId,
+	UINT64 PartA_PrivTags
+	);
+
+SimpleSEVH_HandleViewNavigatedAway(
+	UINT32 uniqueId,
+	UNICODESTRING appId,
+	UINT64 PartA_PrivTags
+	);
+
+SimpleSEVH_HandleViewNavigated(
+	UINT32 uniqueId,
+	UNICODESTRING appId,
+	UINT64 PartA_PrivTags
+	);
+
+SimpleSEVH_HandleViewAdded(
+	UINT32 uniqueId,
+	UNICODESTRING appId,
+	UINT64 PartA_PrivTags
+	);
+
+AppLifecycle_SystemAppUnobscured(
+	UINT32 viewId,
+	UNICODESTRING appId
+	);
+
+AppLifecycle_SystemAppObscured(
+	UINT32 viewId,
+	UNICODESTRING appId
+	);
+
+SimpleSEVH_Start(
+	UNICODESTRING appId,
+	UINT64 PartA_PrivTags
+	);
+
+SimpleSEVH_ClosingView(
+	UINT32 uniqueId,
+	UNICODESTRING appId
+	);
+
+SimpleSEVH_HandleConnectedStandbySuspending(
+	UINT32 uniqueId,
+	UNICODESTRING appId,
+	BOOLEAN isSuspending,
+	BOOLEAN currentlyObscured,
+	UINT64 PartA_PrivTags
+	);
+
+SimpleSEVH_HandleConnectedStandbyEvent(
+	UNICODESTRING appId,
+	BOOLEAN isSuspending,
+	UINT64 PartA_PrivTags
+	);
+
+ApplicationStateManager::SetLocationForApp(
+	UINT32 uniqueId,
+	UINT32 windowId,
+	UINT32 processId,
+	UNICODESTRING appUserModelId,
+	BOOL32 appRunning
+	);
+
+ApplicationStateManager::SetSpeechFocus(
+	UNICODESTRING appId,
+	HEXINT32 uniqueId,
+	HEXINT32 viewInstanceId
+	);
+
+ApplicationStateManager::SetIsExclusiveModeActive(
+	BOOL32 m_isExclusiveModeActive
+	);
+
+ApplicationStateManager::SetAudioForApplication(
+	UNICODESTRING appId,
+	UINT32 uniqueId,
+	BOOLEAN enabled,
+	UINT32 size
+	);
+
+AudioSrvUtil_NotifyApplicationStateChanged(
+	UNICODESTRING appId,
+	BOOLEAN interactive,
+	UINT64 PartA_PrivTags
+	);
+
+ForegroundTelemetry_SetForegroundOnView(
+	UINT32 UniqueId,
+	UNICODESTRING Result
+	);
+
+ForegroundTelemetry_SetForegroundOnViewToLeaf(
+	UINT32 UniqueId,
+	UINT32 LeafUniqueId
+	);
+
+CloseApplicationWithPLM::CloseApplicationFlags(
+	UINT32 static_cast<UINT>(flags)
+	);
+
+CloseApplication(
+	UNICODESTRING appId,
+	UINT64 userToken,
+	UINT64 PartA_PrivTags
+	);
+
+CoreExperienceExecutor_CloseConnectionOnShellStateChange(
+	INT32 shellState
+	);
+
+CoreExperienceExecutor_SetExperienceToForeground(
+	UINT32 windowInstanceId
+	);
+
+CoreExperienceExecutor_ClientIsNotConnectedToShell(
+	VOID
+	);
+
+CoreExperienceExecutor_ClientIsAlreadyConnectedToShell(
+	VOID
+	);
+
+CoreExperienceExecutor_ShutdownServicesRequested(
+	VOID
+	);
+
+SystemApplicationsManager_OnCortanaHidden(
+	UNICODESTRING AppId,
+	UINT32 ViewId
+	);
+
+SystemApplicationsManager_HandleConnectedStandbyEvent(
+	BOOLEAN Suspended
+	);
+
+SystemApplicationsManager_ActivateView(
+	UNICODESTRING AppId,
+	UINT32 ViewId
+	);
+
+SystemApplicationsManager_LaunchApplication(
+	UNICODESTRING AppId,
+	UINT32 AppState,
+	BOOLEAN Suspended,
+	BOOLEAN LaunchAllowed
+	);
+
+SystemApplicationsManager_HandleNavigateAwayFromView_AppNotFound(
+	UNICODESTRING AppId,
+	UINT32 ViewId
+	);
+
+SystemApplicationsManager_HandleViewPropertyChanged(
+	UNICODESTRING AppId,
+	UINT32 ViewId,
+	UNICODESTRING PropertyName
+	);
+
+SystemApplicationsManager_IgnoredMismatchedNavigateAway(
+	UNICODESTRING AppId,
+	UINT32 ViewId
+	);
+
+SystemApplicationsManager_HandleNavigateAwayFromView(
+	UNICODESTRING AppId,
+	UINT32 ViewId,
+	BOOLEAN Visible
+	);
+
+SystemApplicationsManager_HandleRequestNavigateToViewForCortana(
+	UINT32 ViewId,
+	BOOLEAN BackgroundActivation,
+	BOOLEAN ShouldBeVisible
+	);
+
+SystemApplicationsManager_HandleRequestNavigateToView_AppNotFound(
+	UNICODESTRING AppId,
+	UINT32 ViewId
+	);
+
+SystemApplicationsManager_IgnoredMismatchedViewDestroyed(
+	UNICODESTRING AppId,
+	UINT32 ViewId
+	);
+
+SystemApplicationsManager_HandleRequestNavigateToView(
+	UNICODESTRING AppId,
+	UINT32 ViewId,
+	UINT32 AppState
+	);
+
+SystemApplicationsManager_HandleViewAdded(
+	UNICODESTRING AppId,
+	UINT32 ViewId
+	);
+
+SystemApplicationsManager_HandleViewDestroyed(
+	UNICODESTRING AppId,
+	UINT32 ViewId
+	);
+
+SystemApplicationsManager::OnFocusReleased(
+	VOID
+	);
+
+SystemApplicationsManager::HandleConnectedStandbyEvent(
+	BOOLEAN suspended,
+	HEXINT32 uniqueId
+	);
+
+SystemApplicationsManager::LaunchApplication:Launching(
+	VOID
+	);
+
+SystemApplicationsManager::HandleRequestNavigateToView(
+	HEXINT32 viewInstanceId,
+	UNICODESTRING state,
+	BOOLEAN suspended,
+	BOOLEAN shuttingDown,
+	BOOLEAN launchAllowed,
+	UNICODESTRING startViewState
+	);
+
+SystemApplicationsManager::HandleViewAdded(
+	UINT64 previousAppViewCount
+	);
+
+SystemApplicationsManager::ShouldLaunchApplication: skipping app due to (app.AppState != AppState::NotRunning)(
+	UNICODESTRING appId,
+	UNICODESTRING state
+	);
+
+SystemApplicationsManager::ShouldLaunchApplication: skipping app due to (!app.IsLifetimeManaged)(
+	UNICODESTRING appId
+	);
+
+SystemApplicationsManager::ShouldLaunchApplication: skipping app due to (!app.AutoStart)(
+	UNICODESTRING appId
+	);
+
+SystemApplicationsManager::ShouldLaunchApplication: skipping app due to (!app.IsInstalled)(
+	UNICODESTRING appId
+	);
+
+SystemApplicationsManager::Start(
+	VOID
+	);
+
+SystemApplicationsManager::UnsubscribeFromServices(
+	VOID
+	);
+
+SystemApplicationsManager::RuntimeClassInitialize(
+	VOID
+	);
+
+KioskModeEnabled(
+	UINT32 lockedDownAppCount,
+	UINT64 PartA_PrivTags
+	);
+
+ProductModel_Created(
+	UINT32 composerId
+	);
+
+SelectTargetForActivation(
+	UNICODESTRING experienceId,
+	UNICODESTRING appId
+	);
+
+SelectTargetForActivation_SpecifiedComposer(
+	UNICODESTRING experienceId,
+	UNICODESTRING appId,
+	UINT32 composerId
+	);
+
+SelectTargetsForProjection(
+	UINT32 requestingViewID,
+	UINT32 anchorViewID
+	);
+
+ValidateTarget(
+	UINT32 requestingViewID
+	);
+
+SelectTargetForActivation(
+	UINT32 requestingViewID,
+	UNICODESTRING appId
+	);
+
+SelectTargetForShowAsStandalone(
+	UINT32 requestingViewID,
+	UINT32 anchorViewID
+	);
+
+ProductModel_ShellExperienceViewRoutingRequested(
+	VOID
+	);
+
+ProductModel_TopLevelAppViewRoutingRequested(
+	VOID
+	);
+
+ForegroundTelemetry_PresentationReadyPendingForeground(
+	UINT32 UniqueId
+	);
+
+AppView_FrameworkViewTypeSet(
+	UINT32 ViewId,
+	UINT32 FrameworkViewType
+	);
+
+ComposableViewBackedViewHostItem::put_Visibility -- Ignored change(
+	HEXINT32 viewId
+	);
+
+AppView_SurpressPresentationReady(
+	UINT32 UniqueId
+	);
+
+AppView_ViewRemoved(
+	UINT32 ViewId,
+	UNICODESTRING AppId
+	);
+
+AppView_VisibilityChanged(
+	UINT32 ViewId,
+	BOOLEAN Visible
+	);
+
+AppView_ViewCreated(
+	UINT32 ViewId,
+	UNICODESTRING AppId
+	);
+
+ComposableViewBackedViewHostItem::NotifySplashScreenDismissed(
+	VOID
+	);
+
+ComposableViewBackedViewHostItem::Activate(
+	VOID
+	);
+
+ComposableViewBackedViewHostItem::TryBack(
+	HEXINT32 m_viewId
+	);
+
+ComposableViewBackedViewHostItem::TryBack::<callback>(
+	HEXINT32 localId
+	);
+
+ComposableViewBackedViewHostItem::put_KeepAlive(
+	HEXINT32 viewId,
+	UINT8 value
+	);
+
+ComposableViewBackedViewHostItem::put_Visibility(
+	HEXINT32 viewId,
+	UINT8 value
+	);
+
+ApplicationViewCreated(
+	HEXINT32 applicationViewId,
+	UNICODESTRING appId,
+	UINT64 PartA_PrivTags
+	);
+
+ViewWrapperHostItem_TakeForeground(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId,
+	UINT32 uniqueId
+	);
+
+ViewWrapperHostItem_TakeForeground(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	SIGNED wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function,
+	INT32 result
+	);
+
+ViewWrapperHostItem_TakeForeground(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId,
+	INT32 result
+	);
+
+ActivityError(
+	UINT64 PartA_PrivTags,
+	SIGNED wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+ViewWrapperHostItem_TakeForeground(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	SIGNED wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+ViewWrapperHostItem_TakeForeground(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+ActivityStoppedAutomatically(
+	VOID
+	);
+
+ViewWrapperHostItem::put_KeepAlive(
+	HEXINT32 viewId,
+	BOOLEAN value
+	);
+
+ViewWrapperHostItem::get_KeepAlive(
+	HEXINT32 viewId,
+	BOOLEAN value
+	);
+
+ViewWrapperHostItem::Activate(
+	VOID
+	);
+
+ViewWrapperHostItem::TryBack::<callback>(
+	HEXINT32 localId
+	);
+
+ViewWrapperHostItem::TryBack(
+	HEXINT32 m_viewId
+	);
+
+ViewWrapperHostItem::put_Visibility(
+	HEXINT32 viewId,
+	BOOLEAN visible,
+	UNICODESTRING NavigationLevelName(level)
+	);
+
+ViewWrapperHostItem::get_Visibility(
+	HEXINT32 viewId,
+	BOOLEAN visible
+	);
+
+NavigateView(
+	HEXINT32 applicationViewId,
+	INT32 navigationLevel,
+	UINT64 PartA_PrivTags
+	);
+
+DesktopManager::InitializeForShellLaunch(
+	VOID
+	);
+
+DesktopManager::ShutdownServices(
+	VOID
+	);
+
+DesktopManager::NotifyShellReadyStateChanged(
+	UINT32 NewState,
+	UINT32 PreviousState,
+	BOOLEAN ShellManager,
+	BOOLEAN IsInStandby
+	);
+
+DesktopManager::PrepareViewForNavigateToActive(
+	UINT32 compositionId
+	);
+
+DesktopManager::RuntimeClassInitialize(
+	VOID
+	);
+
+HoloSILifetime_DeviceCoreManagerDestroyed(
+	UINT64 PartA_PrivTags
+	);
+
+ExclusiveAppFunnel_ClearActiveExclusiveView(
+	UINT32 formerActiveId
+	);
+
+ExclusiveAppFunnel_SetActiveExclusiveView(
+	UINT32 uniqueId,
+	UINT32 coreWindowId
+	);
+
+DesktopVisualManager::SetActiveExclusiveView(
+	HEXINT32 viewId
+	);
+
+DesktopVisualManager::ClearActiveExclusiveView(
+	UINT32 m_activeExclusiveViewId
+	);
+
+DesktopVisualManager::HideWindow(
+	HEXINT32 viewId,
+	HEXINT32 windowId,
+	UNICODESTRING frameworkViewType
+	);
+
+DesktopVisualManager::UpdateWindowSize(
+	HEXINT32 windowId,
+	INT32 size.cx,
+	INT32 size.cy
+	);
+
+DesktopVisualManager::ShowWindow::ModalWindow(
+	HEXINT32 activeExclusiveViewId,
+	HEXINT32 modalOwnerViewId,
+	UNICODESTRING modalOwnerFrameworkViewType
+	);
+
+DesktopVisualManager::ShowWindow(
+	HEXINT32 viewId,
+	HEXINT32 inputViewId,
+	HEXINT32 windowId,
+	UNICODESTRING frameworkViewType
+	);
+
+DesktopTopLevelApplicationsManager::ClearVisibleViewListForExclusive(
+	HEXINT32 viewId,
+	UNICODESTRING appId
+	);
+
+DesktopTopLevelApplicationsManager::TraceVisibleViews(
+	INT32 index,
+	HEXINT32 viewId,
+	UNICODESTRING appId
+	);
+
+DesktopTopLevelApplicationsManager::TrimVisibleViewList(
+	HEXINT32 viewId,
+	UNICODESTRING appId,
+	UINT32 frameworkViewType
+	);
+
+DesktopTopLevelApplicationsManager::AddToVisibleViewList(
+	HEXINT32 viewId
+	);
+
+DesktopTopLevelApplicationsManager::UpdateVisibleViewList(
+	VOID
+	);
+
+DesktopTopLevelApplicationsManager::ClearVisibleViewListForExclusive::CloseExclusive(
+	HEXINT32 viewId,
+	UNICODESTRING appId
+	);
+
+DesktopTopLevelApplicationsManager::HandleNavigateToViewHelper(
+	HEXINT32 viewId,
+	INT32 navigateType,
+	UINT8 multiViewPolicy
+	);
+
+DesktopTopLevelApplicationsManager::ShowView(
+	HEXINT32 viewId,
+	INT32 navigateType,
+	BOOLEAN giveForeground,
+	UNICODESTRING appId
+	);
+
+DesktopTopLevelApplicationsManager::HandleViewPropertyChanged(
+	HEXINT32 uniqueId,
+	UNICODESTRING propertyName
+	);
+
+DesktopTopLevelApplicationsManager::HandleFocusLostForView(
+	HEXINT32 uniqueId
+	);
+
+DesktopTopLevelApplicationsManager::HandleFocusGainedForView(
+	HEXINT32 uniqueId
+	);
+
+DesktopTopLevelApplicationsManager::HandleRequestNavigateToView(
+	HEXINT32 uniqueId
+	);
+
+DesktopTopLevelApplicationsManager::HandleViewAdded(
+	HEXINT32 uniqueId,
+	UNICODESTRING appId
+	);
+
+DesktopTopLevelApplicationsManager::HandleViewDestroyed(
+	HEXINT32 uniqueId,
+	UNICODESTRING appId
+	);
+
+DesktopTopLevelApplicationsManager::OnFocusReleased(
+	VOID
+	);
+
+DesktopTopLevelApplicationsManager::OnFocusAcquired(
+	INT32 priority
+	);
+
+DesktopTopLevelApplicationsManager::HandleConnectedStandbyEvent
+(
+	VOID
+	);
+
+DesktopTopLevelApplicationsManager::HideView(
+	HEXINT32 uniqueId,
+	UNICODESTRING appId
+	);
+
+DesktopTopLevelApplicationsManager::SetInteractiveCarryView(
+	HEXINT32 uniqueId,
+	UNICODESTRING appId
+	);
+
+DesktopTopLevelApplicationsManager::CloseAllViews
+(
+	VOID
+	);
+
+DesktopTopLevelApplicationsManager::ActivateView(
+	HEXINT32 viewId,
+	UNICODESTRING appId
+	);
+
+DesktopViewLauncherDenied(
+	UNICODESTRING Reason
+	);
+
+DesktopViewLauncher::PerformDelayedInitialization(
+	VOID
+	);
+
+DesktopViewLauncher::UnsubscribeFromServices(
+	VOID
+	);
+
+DesktopViewLauncher::SubscribeToServices(
+	VOID
+	);
+
+DesktopViewLaunchDisabledByPreference(
+	VOID
+	);
+
+DesktopViewLauncherApproved(
+	UNICODESTRING applicationId,
+	UINT64 currentForegroundHwnd,
+	UNICODESTRING processName
+	);
+
+DesktopViewLauncher(
+	UNICODESTRING applicationId,
+	UNICODESTRING launchParameters
+	);
+
+HoloAudio_Subscription(
+	UNICODESTRING Subscription
+	);
+
+AudioRoutingManager.SubscribeToHolographicDisplayChanged.FailedToResolveAudioRoutingManager(
+	VOID
+	);
+
+DesktopCortanaViewEventDispatcher_OnViewWrapperCreated(
+	UINT32 ViewInstanceId
+	);
+
+DesktopCortanaViewEventDispatcher_CleanupViewWrapper(
+	UINT32 ViewInstanceId
+	);
+
+DesktopCortanaViewEventDispatcher_OnViewActivated(
+	BOOLEAN BackgroundActivation
+	);
+
+DesktopCortanaViewEventDispatcher::OnShellExperienceViewChanged(
+	UINT32 type
+	);
+
+DesktopCortanaViewEventDispatcher::RegisterCallbacks(
+	VOID
+	);
+
+DesktopCortanaViewEventDispatcher::RuntimeClassInitialize(
+	VOID
+	);
+
+DesktopCortanaViewEventDispatcher_OnControlGained(
+	VOID
+	);
+
+DesktopCortanaViewEventDispatcher_OnControlLost(
+	VOID
+	);
+
+HoloAudio_RouteAudio_Activate(
+	UNICODESTRING DeviceId,
+	BOOLEAN HmdPreferred,
+	BOOLEAN ShellIsRunning
+	);
+
+HoloAudio_RouteAudio_Deactivate(
+	UNICODESTRING DeviceId,
+	BOOLEAN HmdPreferred,
+	BOOLEAN ShellIsRunning
+	);
+
+HoloAudio_SetDefaultEndpoint(
+	UNICODESTRING DeviceId
+	);
+
+HoloAudio_DeactivateDevice(
+	UNICODESTRING DeviceId
+	);
+
+HoloAudio_ActivateDevice(
+	UNICODESTRING DeviceId,
+	UNICODESTRING DataFlow
+	);
+
+HoloAudio_IsHolographicAudioDevice(
+	UNICODESTRING DeviceId,
+	UNICODESTRING ConnectedDevicePath,
+	BOOLEAN IsHolographic
+	);
+
+HoloAudio_SetDefaultVolume(
+	UNICODESTRING DeviceId,
+	BOOLEAN OobeCompleted
+	);
+
+HoloAudio_FindAudioDevices(
+	UNICODESTRING DeviceId,
+	UNICODESTRING DataFlow
+	);
+
+HoloAudio_EndHoloAudioSession(
+	UINT64 SessionTimeInMs
+	);
+
+HoloAudio_ShellStateChanged(
+	BOOLEAN ShellIsRunning
+	);
+
+HoloAudio_OnPreferedAudioDeviceChanged(
+	BOOLEAN HmdMicPreferred,
+	BOOLEAN HmdSpeakerPreferred
+	);
+
+HoloAudio_OnDeviceStateChanged(
+	UNICODESTRING DeviceId,
+	UINT32 NewState
+	);
+
+HoloAudio_RemoveAudioDevice(
+	UNICODESTRING DeviceId,
+	UNICODESTRING DataFlow
+	);
+
+HoloAudio_AddAudioDevice(
+	UNICODESTRING DeviceId,
+	UNICODESTRING DataFlow
+	);
+
+HolographicAudioDevice.IsDefault.FailedToGetDefaultEndpoint(
+	UINT16 DataFlow,
+	UINT16 Role,
+	HRESULT HRESULT
+	);
+
+HolographicAudioDevice.IsDefault.FailedToGetMMDeviceInterfaceIDOfDefaultDevice(
+	HRESULT HRESULT
+	);
+
+HolographicAudioDevice.DeactivateAudioDevice.EndpointNotFound(
+	HRESULT HRESULT,
+	UNICODESTRING DeviceId
+	);
+
+HolographicAudioDevice.SetHolographicSpeakerToDefaultVolumeIfNecessary.ErrorAccessingRegistry(
+	HRESULT HRESULT,
+	UNICODESTRING DeviceId,
+	UNICODESTRING Key,
+	UNICODESTRING SubKey,
+	UNICODESTRING Value
+	);
+
+HolographicAudioDevice.ActivateAudioDevice.EndpointNotFound(
+	HRESULT HRESULT,
+	UNICODESTRING DeviceId
+	);
+
+HolographicAudioDevice::FindAudioDevices: Invalid DataFlow(
+	UNICODESTRING endpointId.get()
+	);
+
+HolographicAudioDevice.SubscribeToHoloShellStateChange.FailedToSubscribeToWNF_HOLO_SHELL_STATE(
+	VOID
+	);
+
+HolographicAudioDevice.SubscribeToHoloShellStateChange.FailedToResolveHolographicAudioDevice(
+	VOID
+	);
+
+CoreExperienceClient_DisconnectToShell(
+	INT32 hr
+	);
+
+CoreExperienceClient_ViewMessageSent(
+	INT32 hr,
+	INT32 viewType,
+	UNICODESTRING experienceId,
+	UINT32 windowInstanceId,
+	UINT32 viewInstanceId,
+	DOUBLE width,
+	DOUBLE height
+	);
+
+CoreExperienceClient_ConnectToShell(
+	INT32 hr
+	);
+
+CoreExperienceClient_ClosedClientConnection(
+	VOID
+	);
+
+CoreExperienceClient_ClientConnectionOpenedAck(
+	VOID
+	);
+
+HoloSISettings::IsHconEnabled(
+	WIN32ERROR err,
+	HEXINT32 hconEnabled
+	);
+
+HoloSISettings::IsRunningOnXDE(
+	WIN32ERROR err,
+	HEXINT32 mouseDisabled
+	);
+
+HoloSISettings::IsIpAppEnabled(
+	WIN32ERROR err,
+	HEXINT32 ipAppEnabled
+	);
+
+HoloSISettings::IsShellUIEnabled(
+	WIN32ERROR err,
+	HEXINT32 shellUIDisabled
+	);
+
+Assert(
+	UINT32 assertVersion,
+	UINT32 rva,
+	UINT32 timestamp,
+	UINT32 imageSize,
+	ANSISTRING imageName,
+	UINT32 count,
+	UINT32 totalHits,
+	UINT32 ModuleCollection,
+	UINT32 GlobalCollection
+	);
+

@@ -1,0 +1,117 @@
+ProviderNames:
+	WlanMSM
+
+
+
+**** Events *****
+WirelessSetOffloadNetworks(
+	GUID InterfaceGuid,
+	UINT32 ErrorCode,
+	UINT32 Flag,
+	UINT32 FastScanPeriod,
+	UINT32 FastScanIterations,
+	UINT32 SlowScanPeriod,
+	UINT32 OffLoadListCount,
+	UINT32 Version,
+	UNICODESTRING OffLoadList
+	);
+
+WlanSsidToWideStringFailed(
+	GUID InterfaceGuid,
+	UINT32 ErrorCode,
+	UINT32 CharacterCount,
+	UINT8 SSID
+	);
+
+SetRadioState(
+	GUID InterfaceGuid,
+	BOOL32 RequestedState,
+	UINT64 msSinceLastSet
+	);
+
+WirelessScanResultError(
+	GUID InterfaceGuid,
+	UINT32 ErrorCode,
+	UINT64 ScanDurationMs,
+	UINT32 Version
+	);
+
+WirelessScanResults(
+	GUID InterfaceGuid,
+	UINT32 ErrorCode,
+	UINT64 ScanDurationMs,
+	UINT32 Version,
+	UINT32 ScanItemCount,
+	UNICODESTRING ScanResults
+	);
+
+WirelessScanResultsThrottled(
+	GUID InterfaceGuid,
+	UINT64 ScanDurationMs,
+	HEXINT32 ScanItemCount,
+	ANSISTRING ErrorString
+	);
+
+dot11BSSIDCountOverflow(
+	GUID InterfaceGuid,
+	UINT32 NumberOfBSSIDs,
+	UINT32 MaxBSSIDs,
+	ANSISTRING ErrorString
+	);
+
+dot11BSSTypeSizeOverflow(
+	GUID InterfaceGuid,
+	ANSISTRING ErrorString
+	);
+
+ParseUTF8SSIDFailed(
+	GUID InterfaceGuid,
+	UINT32 ErrorCode,
+	UINT32 CharacterCount,
+	UINT8 SSID
+	);
+
+WlanSsidToWideStringFailed(
+	GUID InterfaceGuid,
+	UINT32 ErrorCode,
+	UINT32 CharacterCount,
+	UINT8 SSID
+	);
+
+WirelessScanGetScanResultsError(
+	GUID InterfaceGuid,
+	UINT64 ScanDurationMs,
+	HEXINT32 ErrorCode
+	);
+
+WirelessScanUniqueSSIDCount(
+	GUID InterfaceGuid,
+	UINT64 ScanDurationMs,
+	HEXINT32 ErrorCode,
+	HEXINT32 UniqueSSIDCount
+	);
+
+LinkQuality(
+	GUID InterfaceGuid,
+	UINT8 Quality,
+	ANSISTRING PeerMAC,
+	UINT64 LastTxSpeed,
+	UINT64 LastRxSpeed
+	);
+
+WirelessIhvSecurityFailure(
+	UNICODESTRING Adapter,
+	GUID DeviceGuid,
+	UNICODESTRING SSID,
+	UNICODESTRING BSSType,
+	UNICODESTRING PeerMac,
+	HEXINT32 IhvReasonCode,
+	UINT32 IhvDataLength,
+	UINT8 IhvData
+	);
+
+GODisconnectionReceived(
+	UINT32 ErrorCode,
+	GUID AdapterGuid
+	);
+

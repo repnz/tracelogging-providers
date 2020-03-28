@@ -1,0 +1,745 @@
+ProviderNames:
+	Microsoft.Windows.OneSync.DiagWarning
+	Microsoft.Windows.OneSync.DiagError
+	Microsoft.Windows.OneSync.DiagCritical
+	Microsoft.Windows.Unistack.FailureTrigger
+	Microsoft.Windows.OneSync.SyncController
+	Microsoft.Windows.OneSync.DiagTrace
+
+
+
+**** Events *****
+FailureTrigger(
+	INT32 errorCode,
+	ANSISTRING expression,
+	ANSISTRING file,
+	INT32 line
+	);
+
+Warning(
+	HRESULT hr,
+	ANSISTRING file,
+	UINT32 line
+	);
+
+Error(
+	HRESULT hr,
+	ANSISTRING file,
+	UINT32 line
+	);
+
+Assert(
+	HRESULT hr,
+	ANSISTRING file,
+	UINT32 line
+	);
+
+FallbackError(
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+FallbackError(
+	UINT64 PartA_PrivTags,
+	SIGNED wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+CreateAccountControllerEvent(
+	GUID partnerGuid,
+	HRESULT result
+	);
+
+HandleServiceStartEvent(
+	HRESULT result
+	);
+
+ActivityStoppedAutomatically(
+	VOID
+	);
+
+AccountAccessorSaveFailedEvent(
+	INT32 hr
+	);
+
+DeleteAccountDueToPolicy(
+	INT32 hr
+	);
+
+SetAllowMailSyncFALSE(
+	INT32 hr
+	);
+
+SetAllowMailSyncTRUE(
+	INT32 hr
+	);
+
+SetDataProtectionPropertyForStoreEvent(
+	GUID partnerGuid
+	);
+
+SetDataProtectionPropertyForStoreErrorEvent(
+	INT32 hrSetDataProtection,
+	GUID partnerGuid
+	);
+
+HandleSyncRequestEvent(
+	INT32 hrSyncResult,
+	GUID partnerGuid
+	);
+
+SyncMgrPurgeProviderStoreCalendarErrorEvent(
+	INT32 hrCalendarPurge,
+	GUID partnerGuid
+	);
+
+SyncMgrPurgeProviderStoreContactsErrorEvent(
+	INT32 hrContactsPurge,
+	GUID partnerGuid
+	);
+
+SyncMgrPurgeProviderStoreMailErrorEvent(
+	INT32 hrMailPurge,
+	GUID partnerGuid
+	);
+
+PurgeNeeded(
+	INT32 shouldAccountBeProtected,
+	GUID partnerGuid
+	);
+
+SetDplPropertyForStoreErrorEvent(
+	INT32 hrSetDpl,
+	GUID partnerGuid
+	);
+
+SetDplStateForAccount(
+	INT32 isDplPolicyEnabled,
+	GUID partnerGuid
+	);
+
+IsDomainInDelimitedListErrorEvent(
+	INT32 hrDomainInDelimitedList,
+	GUID partnerGuid
+	);
+
+GetAccountDomainForAccountAccessorErrorEvent(
+	INT32 hrName,
+	GUID partnerGuid
+	);
+
+GetDplPropertyForStoreErrorEvent(
+	INT32 hrDplPropertyForStore,
+	GUID partnerGuid
+	);
+
+GetDataProtectionPropertyForStoreErrorEvent(
+	INT32 hrAccountProtected,
+	GUID partnerGuid
+	);
+
+GetSyncStoreTypeErrorEvent(
+	INT32 hrStoreType,
+	GUID partnerGuid
+	);
+
+GetIStoreForAccountGuidErrorEvent(
+	INT32 hrStoreForAccountGuid,
+	GUID partnerGuid
+	);
+
+GetProtectedDomainListErrorEvent(
+	INT32 hrProtectedDomain
+	);
+
+GetProtectionPolicyStateErrorEvent(
+	INT32 hrPolicyState
+	);
+
+EnumDataSourcesExErrorEvent(
+	INT32 hrEnumExDataSources
+	);
+
+ActivityIntermediateStop(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+ActivityError(
+	UINT64 PartA_PrivTags,
+	SIGNED wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+ActivityError(
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+SyncController_UpgradingAccountToCurrentVersion(
+	HEXINT32 partnerId,
+	INT32 accountVersion,
+	INT32 currentVersion
+	);
+
+SyncController_AccountSyncController_DeleteSyncController(
+	HEXINT32 partnerId
+	);
+
+SyncController_AccountSyncController_Added(
+	HEXINT32 partnerId
+	);
+
+SyncController_AccountSyncController_AddChildSyncController(
+	HEXINT32 partnerId,
+	HEXINT32 engineId
+	);
+
+SyncController_AccountSyncController_AddSyncController(
+	HEXINT32 partnerId
+	);
+
+SyncController_IgnoringAccountWithNonCurrentVersion(
+	HEXINT32 partnerId,
+	INT32 accountVersion,
+	INT32 currentVersion
+	);
+
+UnknownDeleteAccountStoreType(
+	GUID accountId,
+	UINT32 storeType
+	);
+
+SyncController_SyncWnfError(
+	GUID accountId,
+	HRESULT hr,
+	UNICODESTRING textMessage
+	);
+
+SyncDomainsPolicyActivity(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId
+	);
+
+SyncDomainsPolicyActivity(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+SyncDomainsPolicyActivity(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+DataProtectionPolicyActivity(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId
+	);
+
+DataProtectionPolicyActivity(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+DataProtectionPolicyActivity(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+BootstrappingAccountEvent(
+	GUID partnerGuid,
+	UINT32 result
+	);
+
+EnumAccountsActivity(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId
+	);
+
+EnumAccountsActivity(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+EnumAccountsActivity(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+SyncController_CredUtil_DeletePasswordCalledFromActiveSyncServer_DeletePassword(
+	HEXINT32 partnerId
+	);
+
+MailServerActionEvent(
+	UNICODESTRING serverAction,
+	GUID partnerGuid,
+	HRESULT result,
+	UINT64 duration_ms
+	);
+
+SyncController_StartUpdateContentTypesWork(
+	HEXINT32 partnerId
+	);
+
+SyncController_EndUpdateContentTypesWork(
+	HEXINT32 partnerId,
+	HRESULT hr
+	);
+
+SyncController_StartSetFolderSyncStateWork(
+	HEXINT32 partnerId
+	);
+
+SyncController_EndSetFolderSyncStateWork(
+	HEXINT32 partnerId,
+	HRESULT hr
+	);
+
+SyncController_StartFlushAccountSettingsWork(
+	HEXINT32 partnerId
+	);
+
+SyncController_EndFlushAccountSettingsWork(
+	HEXINT32 partnerId,
+	HRESULT hr
+	);
+
+SyncController_EndAddMeetingResponseForCalendarWork(
+	HEXINT32 partnerId,
+	HRESULT hr
+	);
+
+SyncController_StartAddMeetingResponseForCalendarWork(
+	HEXINT32 partnerId
+	);
+
+SyncController_EndAddMeetingResponseForMessageWork(
+	HEXINT32 partnerId,
+	HRESULT hr
+	);
+
+SyncController_StartAddMeetingResponseForMessageWork(
+	HEXINT32 partnerId
+	);
+
+SyncController_StartDownloadSharePointDocumentWork(
+	HEXINT32 partnerId
+	);
+
+SyncController_EndDownloadSharePointDocumentWork(
+	HEXINT32 partnerId,
+	HRESULT hr
+	);
+
+AccountSyncStatusEvent(
+	GUID partnerGuid,
+	UNICODESTRING server,
+	UINT32 storeType,
+	UINT32 syncSchedule,
+	UNICODESTRING airSyncProtocolVersion,
+	BOOL32 notSupposedToSync,
+	BOOL32 isBeingDeleted,
+	UINT32 accountVersion,
+	INT32 lastSyncResult,
+	FILETIME lastSynchSuccessTime,
+	FILETIME lastSyncAttemptTime,
+	FILETIME accountCreationTime,
+	FILETIME accountDeleteTime,
+	UNICODESTRING accountType,
+	UNICODESTRING emailDomain,
+	INT32 emailEnabled,
+	INT32 calendarEnabled,
+	INT32 contactsEnabled,
+	INT32 outgoingMessageSizeLimit
+	);
+
+AccountStatusCheckActivity(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId,
+	GUID partnerGUID,
+	HRESULT statusCheckResult
+	);
+
+AccountStatusCheckActivity(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	GUID partnerGUID,
+	HRESULT statusCheckResult
+	);
+
+AccountStatusCheckActivity(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId
+	);
+
+AccountStatusCheckActivity(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+AccountStatusCheckActivity(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+ThermalSaverStateChanged(
+	BOOL32 newState
+	);
+
+DataSaverStateChanged(
+	BOOL32 newState
+	);
+
+BatterySaverStateChanged(
+	BOOL32 newState
+	);
+
+SyncController_ConversationSync_SetConversationSyncEnabled_SetValue(
+	BOOL32 isEnabled,
+	BOOL32 isCurrentlyEnabled
+	);
+
+SyncController_ConversationSync_SetConversationSyncEnabled_SetDelayed(
+	BOOL32 isEnabled
+	);
+
+SyncController_CredUtil_DeletePasswordCalledFromPurgeActiveSyncAccount(
+	HEXINT32 partnerId
+	);
+
+AccountVerifier_InvalidStoreDefault(
+	UINT32 storeIndex
+	);
+
+AccountVerifier_InvalidStoreDelete(
+	HEXINT32 storeId0,
+	HEXINT32 storeId1,
+	HEXINT32 storeId2,
+	UINT32 storeIndex
+	);
+
+AccountVerifier_InvalidRegistryDelete(
+	GUID accountId
+	);
+
+AccountVerifier_InvalidRegistryFound(
+	HEXINT32 partnerId,
+	UINT32 reason
+	);
+
+AccountVerifier_InvalidStoreFound(
+	HEXINT32 partnerId,
+	HEXINT32 storeId0,
+	HEXINT32 storeId1,
+	HEXINT32 storeId2,
+	UINT32 reason
+	);
+
+AccountControllerInfoEvent(
+	GUID partnerGuid,
+	UNICODESTRING userDataAccountObjectId,
+	UINT32 throttleCount,
+	UINT32 syncSchedule,
+	FILETIME lastSynchSuccessTime,
+	FILETIME lastSyncAttemptTime,
+	UNICODESTRING accountType,
+	UNICODESTRING emailDomain
+	);
+
+AccountFailedToLoadEvent(
+	HRESULT hr,
+	GUID partnerGuid
+	);
+
+SyncController_StartPurgeDeletedAccountWork(
+	HEXINT32 partnerId
+	);
+
+SyncController_EndPurgeDeletedAccountWork(
+	HEXINT32 partnerId
+	);
+
+PurgeAccountEvent(
+	GUID partnerGuid,
+	HRESULT result
+	);
+
+PurgeAccountActivity(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId
+	);
+
+PurgeAccountActivity(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+PurgeAccountActivity(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+SyncController_EndPurgeDeletedAccountsWork(
+	VOID
+	);
+
+SyncController_StartPurgeDeletedAccountsWork(
+	VOID
+	);
+
+AccountSyncController_SubmitAutdWork(
+	HEXINT32 partnerId,
+	HEXINT32 engineId
+	);
+
+AccountSyncController_DelayingSyncDueToPreviousFailure(
+	GUID accountId
+	);
+
+SyncController_AccountSyncController_ContentChange(
+	HEXINT32 partnerId,
+	HEXINT32 engineId
+	);
+
+SyncController_AccountSyncController_LoginInfoChange(
+	HEXINT32 partnerId,
+	HEXINT32 engineId
+	);
+
+SyncController_AccountSyncController_ServerChange(
+	HEXINT32 partnerId,
+	HEXINT32 engineId
+	);
+
+SyncController_AccountSyncController_ScheduleChange(
+	HEXINT32 partnerId,
+	UINT32 period,
+	UINT32 periodInMins,
+	HEXINT32 engineId
+	);
+
+SyncScheduleInfoEvent(
+	GUID partnerGuid,
+	HEXINT32 storeID,
+	HRESULT result,
+	BOOL32 executorAUTD,
+	BOOL32 canStartAUTD,
+	BOOL32 queueEmpty,
+	UINT32 saverMode
+	);
+
+WnfEventNotFound(
+	UNICODESTRING stateName
+	);
+
+AccountConfigurationWork_Executing(
+	HEXINT32 partnerId,
+	HEXINT32 enginId,
+	UINT32 workType
+	);
+
+TokenBucket_Throttled(
+	HEXINT32 partnerId
+	);
+
+TokenBucket_ThrottleSkippedDueToScreenOn(
+	HEXINT32 partnerId
+	);
+
+OutOfBandSyncEvent(
+	GUID partnerGuid,
+	FILETIME currentTime
+	);
+
+SyncController_ExponentialActivitySchedule_ScreenOn(
+	HEXINT32 partnerId
+	);
+
+ActiveSyncControllerExponentialSchedule_ExitDelay(
+	HEXINT32 partnerId
+	);
+
+ExponentialActivitySchedule_Triggered(
+	HEXINT32 partnerId,
+	GUID scheduleGuid,
+	UINT32 periodInMinutes,
+	UINT32 basePeriodInMinutes,
+	UINT32 failureCount,
+	UINT32 triggerRequirements,
+	HEXINT32 engineId
+	);
+
+ActiveSyncControllerExponentialSchedule_SetTriggerRequirement(
+	HEXINT32 partnerId,
+	UINT32 triggerRequirementFlag
+	);
+

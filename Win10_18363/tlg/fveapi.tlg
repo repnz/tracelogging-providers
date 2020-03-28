@@ -1,0 +1,227 @@
+ProviderNames:
+	FveAPILoggingProvider
+	Microsoft.Windows.Security.BitLocker.CSP.State.Update
+	Microsoft.Windows.Security.BitLocker.EncryptionDelay
+	Microsoft.Windows.Security.BitLocker.BcdUpdate
+	TelemetryAssert
+	TelemetryAssertDiagTrack
+	Microsoft.Windows.Security.BitLocker.KeyRolling.Engine
+
+
+
+**** Events *****
+Bitlocker.FveApi.Wipe.Resumed(
+	GUID FveID,
+	UINT32 PrevWipeState,
+	INT32 ConvState,
+	INT32 ExitCode
+	);
+
+Bitlocker.FveApi.Conversion.Resumed(
+	GUID FveID,
+	UINT32 PrevState,
+	INT32 ExitCode
+	);
+
+Bitlocker.FveApi.Wipe.Paused(
+	GUID FveID,
+	UINT32 PrevWipeState,
+	INT32 ConvState,
+	INT32 ExitCode
+	);
+
+Bitlocker.FveApi.Conversion.Paused(
+	GUID FveID,
+	UINT32 PrevState,
+	INT32 ExitCode
+	);
+
+Bitlocker.FveApi.Wipe.Stopped(
+	GUID FveID,
+	UINT32 PrevWipeState,
+	INT32 ConvState,
+	INT32 ExitCode
+	);
+
+Bitlocker.FveApi.Conversion.Stopped(
+	GUID FveID,
+	UINT32 PrevState,
+	INT32 ExitCode
+	);
+
+Bitlocker.FveApi.Set.BackupInfo(
+	GUID FveID,
+	UINT16 BackupType,
+	UINT16 SetFlag,
+	UINT16 ClearFlag,
+	HRESULT hr,
+	UINT64 PartA_PrivTags
+	);
+
+BitLocker.CFveApi.TcgLogOnSeal(
+	UINT32 TcgLogSize,
+	BINARY TcgLog
+	);
+
+BitLocker.FveApi.PCR.Values(
+	UINT32 EventID,
+	UINT32 PcrValuesSize,
+	BINARY PCRValues,
+	UINT32 PcrBitMapSource,
+	UINT32 PcrBitMap
+	);
+
+BitLocker.FveApi.Lib.Base.Log(
+	UINT16 EventID,
+	INT32 hr,
+	GUID FveID
+	);
+
+BitLocker.CfveApi.UnlockVolume(
+	UINT32 ProtectorType,
+	GUID FveID,
+	GUID ProtectorID,
+	INT32 ExitCode,
+	INT32 KeyRotationAttempted,
+	INT32 hrKeyRotation,
+	INT32 ReadOnlyMount,
+	UINT8 FipsComplaintRP
+	);
+
+BitLocker.FveApi.FvekeyType(
+	GUID FveID,
+	UINT16 FveKType,
+	BOOLEAN IsEdrive,
+	INT32 ExitCode
+	);
+
+BitLocker.CfveApi.StartEncryptionAfterReboot(
+	GUID FveID,
+	UINT32 EncryptionFlags,
+	INT32 ExitCode
+	);
+
+BitLocker.CFveApi.StartEncryption(
+	GUID FveId,
+	UINT32 ConversionStatus,
+	UINT32 EncryptionFlags,
+	INT32 ExitCode
+	);
+
+BitLocker.CFveApi.StartEncryption.Wipe(
+	GUID FveId,
+	UINT32 ConversionStatus,
+	UINT32 EncryptionFlags,
+	UINT32 PrevWipeState,
+	INT32 ExitCode
+	);
+
+BitLocker.FveApi.KeyProtectorTypeAddEvent(
+	GUID FveID,
+	UINT32 ProtectorType,
+	UINT32 Status,
+	INT32 ExitCode
+	);
+
+BitLocker.CfveApi.Check_DE_PreReq(
+	UINT32 SupportFlags,
+	INT32 SupportStatus,
+	INT32 ExitCode
+	);
+
+BitLocker.FveApi.FveInit(
+	GUID FveID,
+	UINT64 VolumeSize,
+	BOOL32 WCOSDevice,
+	BOOL32 WCOSDeviceRO,
+	BOOL32 WCOSOSData,
+	BOOL32 WCOSPreInstalled,
+	BOOL32 WCOSUserData,
+	BOOL32 WCOSBSP,
+	BOOL32 EOW,
+	BOOL32 AutoDE,
+	BOOL32 DataOnly,
+	BOOL32 DiscoveryVolume,
+	BOOL32 NoICE,
+	BOOL32 FreshInstall,
+	INT32 ExitCode
+	);
+
+Microsoft.BitLocker.CFveApi.AttemptADBackup(
+	GUID FveID,
+	HRESULT ExitCode
+	);
+
+Bitlocker.FveApi.Set.BackupInfo(
+	GUID FveID,
+	INT32 BackupType,
+	INT32 SetFlag,
+	INT32 ClearFlag,
+	UINT64 PartA_PrivTags,
+	HRESULT hr
+	);
+
+Bitlocker.FveApi.Set.BackupInfo(
+	GUID FveID,
+	INT32 BackupType,
+	INT32 SetFlag,
+	INT32 ClearFlag,
+	HRESULT hr,
+	UINT64 PartA_PrivTags
+	);
+
+BitLocker.FveApi.Lib.LogServiceName(
+	UNICODESTRING ServiceName
+	);
+
+BitLocker.FveApi.Lib.Log(
+	UINT16 EventID,
+	INT32 hr,
+	GUID FveID,
+	UNICODESTRING SBVariable,
+	UNICODESTRING AppPath,
+	UINT32 ChangedBcdSetting
+	);
+
+BitLocker.OOBE.Complete(
+	BOOLEAN IsEulaManuallyAccepted,
+	BOOLEAN WasEulaDisplayedBySetup,
+	BOOLEAN IsUserLoggedOnPostOobe,
+	BOOLEAN WasEulaDisplayedAndMachineOobeCompleted,
+	BOOLEAN IsAutoPilotScenario,
+	BOOLEAN IsProvisioningComplete,
+	INT32 Status of Autopilot scenario resolution,
+	INT32 Failed to query WNF state data for EULA accepted,
+	INT32 Failed to query WNF state data for user logon completed post oobe,
+	INT32 Failed to query WNF state data for completion of machine oobe,
+	INT32 IsOOBEComplete,
+	INT32 hr_FveIsOOBECompleted
+	);
+
+BitLocker.AutoPilot.Scenario(
+	INT32 trackhr,
+	BOOLEAN IsAutoPilotScenario,
+	INT32 IsAutoPilotLocalProfileAvailable
+	);
+
+Assert(
+	UINT32 assertVersion,
+	UINT32 rva,
+	UINT32 timestamp,
+	UINT32 imageSize,
+	ANSISTRING imageName,
+	UINT32 count,
+	UINT32 totalHits,
+	UINT32 ModuleCollection,
+	UINT32 GlobalCollection
+	);
+
+Password.Roll(
+	INT32 hr,
+	BOOLEAN RotationSuccess,
+	INT32 DeleteRequest,
+	UINT32 numKeysToRoll,
+	UINT32 numKeyDeleteAttempts,
+	UINT64 PartA_PrivTags
+	);
+

@@ -1,0 +1,667 @@
+ProviderNames:
+	Microsoft.Windows.Media.Capture
+	Microsoft.Windows.BcastDVR
+
+
+
+**** Events *****
+BcastDVR_BcastDVRUserService_ServiceStopped(
+	VOID
+	);
+
+BcastDVR_BcastDVRUserService_ServiceStarted(
+	VOID
+	);
+
+BcastDVR_LiveObjectTracker_PrintAll(
+	UINT32 object,
+	ANSISTRING className
+	);
+
+FallbackError(
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+FallbackError(
+	UINT64 PartA_PrivTags,
+	SIGNED wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+BcastDVR_BcastDVRUserService_OnServiceStarting(
+	UINT32 servicePid
+	);
+
+BcastDVR_LiveObjectTracker_NoMapEntry(
+	ANSISTRING className
+	);
+
+BcastDVR_SystemManager_Stop(
+	VOID
+	);
+
+BcastDVR_SystemManager_Start(
+	UNICODESTRING version
+	);
+
+BcastDVR_SystemManager_DisplayState_Transition(
+	UNICODESTRING state
+	);
+
+BcastDVR_SystemManager_PowerState_Transition(
+	UNICODESTRING toBattery
+	);
+
+BcastDVR_DebugFlagHelper_Registry(
+	UNICODESTRING value,
+	UINT32 IsEnabled
+	);
+
+BcastDVR_DebugFlagHelper_File(
+	UNICODESTRING filePath,
+	UINT32 IsEnabled
+	);
+
+BcastDVR_AppCapture_put_FullScreenBehavior(
+	UINT32 oldFSEBehavior,
+	UINT32 newFSEBehavior,
+	UNICODESTRING gpuDetails,
+	UNICODESTRING cpuDetails,
+	UNICODESTRING encodersDetails
+	);
+
+BcastDVR_GameBarManager_AddRemoveGame(
+	HRESULT hr,
+	HEXINT64 hWnd,
+	UINT32 followThroughshellNotification,
+	BOOLEAN fAdd
+	);
+
+BcastDVR_AppBroadcastBackgroundClientInternal_FireHeartbeatRequestedEvent(
+	VOID
+	);
+
+BcastDVR_AppBroadcastBackgroundClientInternal_TerminateBroadcast(
+	HRESULT hr,
+	UINT32 reason,
+	UINT32 providerSpecificReason
+	);
+
+BcastDVR_CaptureManager_RestartEncoderTopology_Settings(
+	UINT8 fCaptureAudio,
+	UINT8 fCaptureMic,
+	UINT8 fHistoricalCaptureEnabeled,
+	UINT64 maxRecordLength
+	);
+
+BcastDVR_CaptureManager_RestartEncoderTopology_BufferInfo(
+	INT32 videoBufferLengthUnit,
+	UINT32 videoBufferLength
+	);
+
+BcastDVR_CaptureManager_ShutdownOnIdle(
+	VOID
+	);
+
+BcastDVR_BroadcastManager_SetAudioCodec(
+	UNICODESTRING audioCodec
+	);
+
+BcastDVR_BroadcastManager_StopPreview(
+	HRESULT hr
+	);
+
+BcastDVR_BroadcastManager_StartPreview(
+	HRESULT hr
+	);
+
+BcastDVR_BroadcastManager_ExitBroadcastMode(
+	HRESULT hrProviderSpecificReason,
+	INT32 hrReason
+	);
+
+BcastDVR_BroadcastManager_TopologyEvent(
+	UNICODESTRING event
+	);
+
+BcastDVR_BroadcastManager_TopologyEventError(
+	HRESULT hr,
+	UINT32 hrTerminate,
+	UNICODESTRING event
+	);
+
+BcastDVR_BroadcastManager_ProcessShellNotification(
+	UNICODESTRING desc,
+	HEXINT64 hWindow
+	);
+
+Screenshot(
+	UINT32 appType,
+	UNICODESTRING appId,
+	UNICODESTRING gameDvrGuid,
+	UINT32 videoMode,
+	UINT32 width,
+	UINT32 height,
+	DOUBLE fileSizeKB,
+	UNICODESTRING sourceColor,
+	UNICODESTRING encodingColor
+	);
+
+AddRemoveGame(
+	ANSISTRING __TlgCV__,
+	UINT32 changeType,
+	UNICODESTRING appId,
+	UNICODESTRING processName,
+	UNICODESTRING processPath,
+	UNICODESTRING processWorkingDirectory,
+	UINT32 errorCode
+	);
+
+PublicAPICalled(
+	UNICODESTRING callerAppId,
+	UNICODESTRING gameDvrGuid,
+	ANSISTRING ApiCalled,
+	UNICODESTRING Parameters,
+	UINT32 ReturnCode,
+	UINT32 DroppedEvents
+	);
+
+EncodingEnd(
+	ANSISTRING __TlgCV__,
+	DOUBLE duration,
+	UNICODESTRING appId,
+	UNICODESTRING gpuDetails,
+	UNICODESTRING cpuDetails,
+	UNICODESTRING memoryDetails,
+	UNICODESTRING encodersDetails,
+	UNICODESTRING encoderUsed,
+	UNICODESTRING gpuUsed,
+	UINT32 historicalCaptureEnabled,
+	UINT32 videoBitrate,
+	UINT32 videoBufferSize,
+	UINT32 bcastDVRMode,
+	UINT32 userDesiredFPS,
+	UNICODESTRING sourceColor,
+	UNICODESTRING encodingColor,
+	UINT32 encodingFormatUsed
+	);
+
+Broadcast(
+	ANSISTRING __TlgCV__,
+	UINT32 audioBitrate,
+	UINT32 videoBitrate,
+	UINT32 videoWidth,
+	UINT32 videoHeight,
+	UINT32 appType,
+	UNICODESTRING appId,
+	UNICODESTRING gameDvrGuid,
+	UINT32 videoMode,
+	UINT32 lengthBroadcastSeconds,
+	UINT32 windowWidth,
+	UINT32 windowHeight,
+	UNICODESTRING gpuDetails,
+	UNICODESTRING cpuDetails,
+	UNICODESTRING memoryDetails,
+	UNICODESTRING encodersDetails,
+	UNICODESTRING encoderUsed,
+	UNICODESTRING gpuUsed,
+	BOOLEAN audioCaptured,
+	BOOLEAN micCaptured,
+	BOOLEAN echoCancellation,
+	BOOLEAN cameraCaptured,
+	INT32 cameraPositionX,
+	INT32 cameraPositionY,
+	UINT32 cameraVideoWidth,
+	UINT32 cameraVideoHeight,
+	UNICODESTRING cameraHardwareUsed,
+	UNICODESTRING microphoneHardwareUsed,
+	DOUBLE microphoneGain,
+	DOUBLE systemAudioGain,
+	UNICODESTRING broadcastProviderId,
+	BOOLEAN broadcastStarted,
+	UINT32 broadcastExitErrorCode,
+	BOOLEAN applicationLoopbackUsed,
+	UNICODESTRING sourceColor,
+	UNICODESTRING encodingColor,
+	BOOLEAN dolbySilence,
+	UNICODESTRING beamSessionId,
+	UINT32 broadcastProviderExitErrorCode
+	);
+
+Record(
+	ANSISTRING __TlgCV__,
+	UINT32 recordingType,
+	UINT32 audioBitrate,
+	UINT32 videoBitrate,
+	UINT32 videoWidth,
+	UINT32 videoHeight,
+	UINT32 appType,
+	UNICODESTRING appId,
+	UNICODESTRING gameDvrGuid,
+	UINT32 videoMode,
+	UINT32 lengthActualMS,
+	UINT32 lengthIntendedMS,
+	DOUBLE fileSizeKB,
+	UINT32 windowWidth,
+	UINT32 windowHeight,
+	DOUBLE writeDurationMS,
+	UNICODESTRING gpuDetails,
+	UNICODESTRING cpuDetails,
+	UNICODESTRING memoryDetails,
+	UNICODESTRING encodersDetails,
+	UNICODESTRING encoderUsed,
+	UNICODESTRING gpuUsed,
+	UINT32 audioCaptured,
+	UINT32 micCaptured,
+	UINT32 echoCancellation,
+	UNICODESTRING microphoneHardwareUsed,
+	DOUBLE microphoneGain,
+	DOUBLE systemAudioGain,
+	UINT32 userDesiredFPS,
+	DOUBLE actualFPS,
+	BOOLEAN applicationLoopbackUsed,
+	UNICODESTRING sourceColor,
+	UNICODESTRING encodingColor,
+	BOOLEAN DolbySilence,
+	UINT32 encodingFormatUsed
+	);
+
+Error(
+	ANSISTRING __TlgCV__,
+	UINT32 errorID,
+	UINT32 errorCode,
+	UNICODESTRING errorName,
+	UNICODESTRING appId,
+	UNICODESTRING gameDvrGuid,
+	UNICODESTRING gpuDetails,
+	UNICODESTRING cpuDetails,
+	UNICODESTRING memoryDetails,
+	UNICODESTRING encodersDetails,
+	UNICODESTRING encoderUsed,
+	UNICODESTRING gpuUsed,
+	UNICODESTRING errorHistory,
+	UINT32 errorCount,
+	UINT32 consecErrorCount,
+	UNICODESTRING broadcastProviderId,
+	UINT32 bcastDVRMode
+	);
+
+BcastDVR_LogErrorHistory(
+	UNICODESTRING errorHistory,
+	UINT32 count
+	);
+
+BcastDVR_AppCaptureExecutive_OnEvent(
+	INT32 eventType,
+	INT32 numClients
+	);
+
+BcastDVR_AppCaptureExecutive_OnCaptureStartedEvent(
+	INT32 numClients
+	);
+
+BcastDVR_ServicesManagerBase_OnEvent(
+	INT32 eventType,
+	INT32 numClients
+	);
+
+BcastDVR_RecordingManager_RecordTimeDuration(
+	UNICODESTRING start,
+	UNICODESTRING end
+	);
+
+BcastDVR_RecordingManager_StartRecord(
+	UNICODESTRING startTime
+	);
+
+BcastDVR_RecordingManager_DoWork_NoAudio(
+	UINT64 secondsElapsed
+	);
+
+BcastDVR_RecordingManager_DoWork_NoVideo(
+	UINT64 secondsElapsed
+	);
+
+BcastDVR_BaseStateManager_QueueEncoderShutdown(
+	VOID
+	);
+
+BcastDVR_BaseStateManager_QueueEncoderRestart(
+	VOID
+	);
+
+BcastDVR_BaseStateManager_TopologyEventUnknown(
+	UINT32 eventType
+	);
+
+BcastDVR_BaseStateManager_TopologyEventAudioEncoder(
+	UNICODESTRING format,
+	UINT32 audioChannels,
+	UINT32 audioBitrate,
+	UINT32 audioFrequency
+	);
+
+BcastDVR_BaseStateManager_TopologyEventVideoEncoder(
+	UNICODESTRING encoder,
+	UNICODESTRING encoderGuid
+	);
+
+BcastDVR_BaseStateManager_TopologyEventError(
+	HRESULT hr,
+	UNICODESTRING event
+	);
+
+BcastDVR_BaseStateManager_TopologyEvent(
+	UNICODESTRING event
+	);
+
+BcastDVR_BaseStateManager_OnSuccessfulEncoderStart(
+	VOID
+	);
+
+BcastDVR_BaseStateManager_ProcessShellNotification_Error(
+	UNICODESTRING desc,
+	UINT32 notification,
+	HEXINT64 hWindow
+	);
+
+BcastDVR_BaseStateManager_ProcessShellNotification(
+	UNICODESTRING desc,
+	HEXINT64 hWindow
+	);
+
+BcastDVR_BaseStateManager_ShuttingDownEncoderTopology(
+	HEXINT64 hwnd
+	);
+
+BcastDVR_BaseStateManager_RestartEncoderTopology_Audio(
+	BOOLEAN fHasEchoCancellation,
+	BOOLEAN fHasApplicationLoopback,
+	DOUBLE dSystemAudioGain,
+	DOUBLE dMicrophoneGain
+	);
+
+BcastDVR_BaseStateManager_RestartEncoderTopology_AppInfo(
+	UNICODESTRING appId,
+	UNICODESTRING mode,
+	HEXINT64 hwndTarget,
+	INT32 windowWidth,
+	INT32 windowHeight
+	);
+
+BcastDVR_BaseStateManager_RestartEncoderTopology_MachineInfo(
+	UNICODESTRING gpuData,
+	UNICODESTRING cpuData,
+	UNICODESTRING memoryData,
+	UNICODESTRING encodersData,
+	UNICODESTRING gpuUsedData,
+	BOOLEAN isHdr
+	);
+
+BcastDVR_BaseStateManager_RestartEncoderTopology_BufferSize(
+	UINT32 videoBufSize,
+	UINT32 audioBufSize
+	);
+
+BcastDVR_BaseStateManager_DesktopCapture(
+	HEXINT64 hwndRoot
+	);
+
+BcastDVR_BaseStateManager_RestartingEncoderTopology(
+	VOID
+	);
+
+BcastDVR_CaptureTargetInfo_InitializeFromTarget_NotAGame(
+	HEXINT64 hwnd,
+	UNICODESTRING appId
+	);
+
+BcastDVR_CaptureTargetInfo_InitializeFromTarget_IsGame(
+	UNICODESTRING appId,
+	UNICODESTRING gameDVRGuid,
+	UNICODESTRING title,
+	UNICODESTRING liveTitleId,
+	HEXINT64 hwnd
+	);
+
+BcastDVR_EnterBroadcastModeAsyncOperation_EnterBroadcastModeCompleted(
+	HRESULT hr
+	);
+
+BcastDVR_EnterBroadcastModeAsyncOperation_DoWorkLaunch(
+	UNICODESTRING sebEventId,
+	UNICODESTRING packageFullName
+	);
+
+BcastDVR_EnterBroadcastModeAsyncOperation_EnterBroadcastModeStarted(
+	VOID
+	);
+
+BcastDVR_CaptureHelpers_GetCaptureWindowInfo(
+	UNICODESTRING mode
+	);
+
+BcastDVR_CaptureHelpers_GetCaptureWindowInfoD3dErrNotAvailable(
+	HRESULT hr
+	);
+
+BcastDVR_CaptureHelpers_GetEncoderSettings2(
+	INT32 videoEncodingFrameRateMode,
+	INT32 dwFrameRateMultiplier
+	);
+
+BcastDVR_CaptureHelpers_GetEncoderSettings(
+	INT32 videoEncResMode,
+	INT32 capVideoWidth,
+	INT32 capVideoHeight,
+	INT32 finalVideoWidth,
+	INT32 finalVideoHeight,
+	INT32 vidEncBitrateMode,
+	INT32 videoBitrate,
+	INT32 audioBitrate,
+	UINT8 forceSoftwareMFT
+	);
+
+BcastDVR_CaptureHelpers_AppLoopbackSettings(
+	HRESULT hr,
+	HEXINT64 hwnd,
+	BOOLEAN fAppLoopbackEnabled,
+	BOOLEAN fIsStoreApp,
+	BOOLEAN fCaptureProcessTree,
+	UINT32 pid,
+	UINT32 parentPid,
+	UNICODESTRING appId
+	);
+
+BcastDVR_BroadcastingAsync_ProcessPreviewSampleCallbackFPS(
+	UINT64 fps
+	);
+
+BcastDVR_BroadcastingAsync_Cancelled(
+	VOID
+	);
+
+BcastDVR_RecordingAsync_Cancelled(
+	VOID
+	);
+
+BcastDVR_RecordingAsync_RecordingDone(
+	UNICODESTRING startTime,
+	UNICODESTRING duration
+	);
+
+BcastDVR_VideoRecordingManager_ResetBuffer(
+	VOID
+	);
+
+BcastDVR_AudioRecordingManager_ResetBuffer(
+	VOID
+	);
+
+BcastDVR_AVMux_DoWorkInternal_Done(
+	UINT64 totalVideoBytesWritten,
+	UINT64 totalAudioBytesWritten
+	);
+
+BcastDVR_BufferManager_FindLastFrameAudio(
+	HRESULT hr,
+	UNICODESTRING bufferBegin,
+	UNICODESTRING bufferEnd
+	);
+
+BcastDVR_BufferManager_FindLastFrameVideo(
+	HRESULT hr,
+	UNICODESTRING bufferBegin,
+	UNICODESTRING bufferEnd
+	);
+
+BcastDVR_BufferManager_FindFirstFrameAudio(
+	HRESULT hr,
+	UNICODESTRING requestedStart,
+	UNICODESTRING requestedEnd,
+	UNICODESTRING bufferBegin,
+	UNICODESTRING bufferEnd
+	);
+
+BcastDVR_BufferManager_FindFirstFrameVideo(
+	HRESULT hr,
+	UNICODESTRING requestedStart,
+	UNICODESTRING requestedEnd,
+	UNICODESTRING bufferBegin,
+	UNICODESTRING bufferEnd
+	);
+
+BcastDVR_AudioCapture_CaptureThread_Done(
+	HRESULT hr
+	);
+
+BcastDVR_AudioCapture_StartCapture(
+	HRESULT hr
+	);
+
+BcastDVR_AudioCapture_StartMicrophoneCapture_ExcessSilence(
+	UINT32 excessSilenceFrames
+	);
+
+BcastDVR_VideoCapture_CaptureThread_Done(
+	HRESULT hr
+	);
+
+BcastDVR_VideoCapture_CaptureThread_Stats(
+	INT32 capturedFrames,
+	DOUBLE captureFPS,
+	INT32 rawFrames,
+	DOUBLE rawFramesFPS,
+	INT32 duplicateFrames,
+	INT32 totalRawFrames,
+	INT32 compressedFrames,
+	DOUBLE compressedFramesFPS,
+	INT32 droppedFrames,
+	INT32 droppedDuplicatedFrames,
+	INT32 totalDroppedFrames
+	);
+
+BcastDVR_VideoCapture_CaptureThread_Processor(
+	UNICODESTRING videoProcessor
+	);
+
+BcastDVR_ConvertQPCTime_BadTimeStamp(
+	UINT64 qpcStartTime,
+	UINT64 qpcFrequency,
+	UINT64 startFileTime,
+	UINT64 newTime
+	);
+
+BcastDVR_EncodeDeviceSelector_MFTVendor(
+	UNICODESTRING vendor,
+	UNICODESTRING vendorId
+	);
+
+BcastDVR_EncodeDeviceSelector_D3DVendor(
+	UNICODESTRING vendor,
+	UINT32 vendorId
+	);
+
+BcastDVR_CAsyncMFTProcessor_RunAsyncThread(
+	HRESULT hr,
+	UINT8 fAsync
+	);
+
+BcastDVR_AudioDevice_OnDefaultDeviceChanged(
+	UNICODESTRING type,
+	UNICODESTRING state,
+	UNICODESTRING oldDevice,
+	UNICODESTRING newDevice
+	);
+
+BcastDVR_AudioDevice_OnDefaultDeviceChanged(
+	UNICODESTRING type,
+	UNICODESTRING state,
+	UNICODESTRING oldDevice
+	);
+
+BcastDVR_AudioLimiterAPO_InitializeLimiter(
+	HRESULT hr
+	);
+
+BcastDVR_PauseVideo_StopPauseVideo(
+	VOID
+	);
+
+BcastDVR_PauseVideo_StartPauseVideo(
+	UNICODESTRING type
+	);
+
+BcastDVR_PauseVideo_StartPauseVideo_Failed(
+	HRESULT hr
+	);
+
+BcastDVR_PreviewVideo_StopPreview(
+	VOID
+	);
+
+BcastDVR_PreviewVideo_StartPreview(
+	HRESULT hr,
+	UINT32 videoWidth,
+	UINT32 videoHeight
+	);
+
+BcastDVR_VNRCapture_Initialize(
+	HRESULT hr
+	);
+
+BcastDVR_VNRCapture_Initialize_RegSwapChainError(
+	HRESULT hr
+	);
+

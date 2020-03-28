@@ -1,0 +1,35 @@
+ProviderNames:
+	Microsoft.Windows.Base.Win32.Client
+	Microsoft.Windows.Base.Win32.Job
+	Microsoft.Windows.NTVDM
+
+
+
+**** Events *****
+Launch(
+	UNICODESTRING AppBaseFileName,
+	UNICODESTRING ProgId,
+	UNICODESTRING FileId,
+	INT32 Policies,
+	INT32 Architecture,
+	INT32 BinaryType,
+	HEXINT32 CorruptionStatus,
+	HEXINT32 CorruptionErrorOrSignature
+	);
+
+UMS(
+	INT64 Status
+	);
+
+SetIoRateControlInformationJobObject(
+	INT64 MaxIops,
+	INT64 MaxBandwidth,
+	INT64 ReservationIops,
+	UINT32 BaseIoSize,
+	UINT16 VolumeNameLength
+	);
+
+QueryIoRateControlInformationJobObject(
+	BOOL32 VolumeNamePresent
+	);
+

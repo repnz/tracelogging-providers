@@ -1,0 +1,261 @@
+ProviderNames:
+	Microsoft.AAD.CloudAp.Provider
+
+
+
+**** Events *****
+ActivityStoppedAutomatically(
+	VOID
+	);
+
+DoLookupIdentityFromSID_Stop(
+	INT32 status
+	);
+
+DoLookupIdentityFromSID_Info(
+	UNICODESTRING correlationID
+	);
+
+DoLookupIdentityFromSID_Start(
+	VOID
+	);
+
+DoLookupSIDFromIdentity_Stop(
+	INT32 status
+	);
+
+DoLookupSIDFromIdentity_Info(
+	UNICODESTRING correlationID
+	);
+
+DoLookupSIDFromIdentity_Start(
+	VOID
+	);
+
+DoPostLogonProcessing_Stop(
+	INT32 status
+	);
+
+DoPostLogonProcessing_Info(
+	FILETIME expiryTime
+	);
+
+DoPostLogonProcessing_Start(
+	VOID
+	);
+
+DoDisassembleOpaqueData_Stop(
+	INT32 status
+	);
+
+DoDisassembleOpaqueData_Start(
+	VOID
+	);
+
+DoAssembleOpaqueData_Stop(
+	INT32 status
+	);
+
+DoAssembleOpaqueData_Start(
+	VOID
+	);
+
+DoRenewCertificate_Stop(
+	INT32 status
+	);
+
+DoRenewCertificate_Start(
+	VOID
+	);
+
+DoAcceptPeerCertificate_Stop(
+	INT32 status
+	);
+
+DoAcceptPeerCertificate_Start(
+	VOID
+	);
+
+DoGetCertificateFromCred_Stop(
+	INT32 status
+	);
+
+DoGetCertificateFromCred_Info(
+	UNICODESTRING correlationID,
+	UINT32 credentialType
+	);
+
+DoGetCertificateFromCred_Start(
+	VOID
+	);
+
+DoDeviceP2PCertificateUpdate_Stop(
+	INT32 status
+	);
+
+DoDeviceP2PCertificateUpdate_Start(
+	VOID
+	);
+
+DoGetUnlockKey_Stop(
+	INT32 status
+	);
+
+DoGetUnlockKey_Start(
+	VOID
+	);
+
+DoGetKeys_Stop(
+	INT32 status
+	);
+
+DoGetKeys_Info(
+	UNICODESTRING correlationID
+	);
+
+DoGetKeys_Error(
+	INT32 status,
+	ANSISTRING error
+	);
+
+DoGetKeys_Start(
+	VOID
+	);
+
+DoGenericCallPkg_Stop(
+	INT32 status
+	);
+
+DoGenericCallPkg_Info(
+	UNICODESTRING correlationID,
+	UINT32 genericCallPackageCallType,
+	UNICODESTRING callingPackageSID
+	);
+
+DoGenericCallPkg_Start(
+	VOID
+	);
+
+DoValidateUserInfo_Stop(
+	INT32 status
+	);
+
+DoValidateUserInfo_Error(
+	INT32 status,
+	ANSISTRING error
+	);
+
+DoValidateUserInfo_Start(
+	VOID
+	);
+
+DoRefreshToken_Stop(
+	INT32 status,
+	BOOL32 refreshEnterpriseSTSToken
+	);
+
+DoRefreshToken_Error(
+	INT32 status,
+	ANSISTRING error
+	);
+
+DoRefreshToken_Info(
+	UNICODESTRING correlationID
+	);
+
+DoRefreshToken_Start(
+	VOID
+	);
+
+DoGetEnterpriseOnlyToken_Stop(
+	INT32 status
+	);
+
+DoGetEnterpriseOnlyToken_Error(
+	INT32 status,
+	ANSISTRING error
+	);
+
+DoGetEnterpriseOnlyToken_Info(
+	UNICODESTRING correlationID,
+	UINT32 credentialType
+	);
+
+DoGetEnterpriseOnlyToken_Start(
+	VOID
+	);
+
+DoGetToken_Stop(
+	INT32 status
+	);
+
+DoGetToken_Info(
+	BOOLEAN passwordChangeUriFound
+	);
+
+DoGetToken_Info(
+	FILETIME expiryTime,
+	BOOLEAN adfsPasswordChange,
+	BOOLEAN isDefault
+	);
+
+DoGetToken_Info(
+	UNICODESTRING correlationID,
+	NTSTATUS rbacStatus
+	);
+
+DoGetToken_Error(
+	INT32 status,
+	ANSISTRING error
+	);
+
+DoGetToken_Error(
+	INT32 hr,
+	ANSISTRING error
+	);
+
+DoGetToken_Info(
+	UNICODESTRING correlationID,
+	UINT32 credentialType
+	);
+
+DoGetToken_Start(
+	VOID
+	);
+
+PluginInitialize_Stop(
+	INT32 status
+	);
+
+PluginInitialize_Error(
+	INT32 status,
+	ANSISTRING error
+	);
+
+PluginInitialize_Start(
+	VOID
+	);
+
+EnterpriseSTSHelper::LogonAsPrimary_Stop(
+	INT32 status,
+	UNICODESTRING correlationID,
+	BOOL32 nonceSuccess
+	);
+
+EnterpriseSTSHelper::LogonAsPrimary_Start(
+	VOID
+	);
+
+EnterpriseSTSHelper::LogonAsSecondary_Stop(
+	INT32 status,
+	UNICODESTRING correlationID,
+	BOOL32 tokenEnabled,
+	BOOL32 oauthInfoSuccess,
+	BOOL32 prtSupported,
+	BOOL32 nonceSuccess
+	);
+
+EnterpriseSTSHelper::LogonAsSecondary_Start(
+	VOID
+	);
+

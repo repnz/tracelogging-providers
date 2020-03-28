@@ -1,0 +1,646 @@
+ProviderNames:
+	Microsoft.Windows.Shell.SystemSettings.Maps
+
+
+
+**** Events *****
+ClientTrackerRemoveClient(
+	INT32 mapClientType,
+	INT32 callingProcessId,
+	GUID mapSessionId
+	);
+
+ClientTrackerAddClient(
+	INT32 mapClientType,
+	INT32 callingProcessId,
+	GUID mapSessionId
+	);
+
+FallbackError(
+	UINT64 PartA_PrivTags,
+	SIGNED wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+FallbackError(
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+StorageMigrationDeleteOldDataFailedMosHost(
+	BOOL32 oldStorageIsSystemDrive,
+	UINT32 oldstorageDeviceType,
+	BOOL32 newStorageIsSystemDrive,
+	UINT32 newStorageDeviceType,
+	UINT32 oldBusType,
+	UINT32 newBusType,
+	HRESULT HResult,
+	GUID mapSessionId
+	);
+
+StorageMigrationDeleteNewDataFailedMosHost(
+	BOOL32 oldStorageIsSystemDrive,
+	UINT32 oldstorageDeviceType,
+	BOOL32 newStorageIsSystemDrive,
+	UINT32 newStorageDeviceType,
+	UINT32 oldBusType,
+	UINT32 newBusType,
+	HRESULT HResult,
+	GUID mapSessionId
+	);
+
+StorageMigrationCompleteMosHost(
+	BOOL32 oldStorageIsSystemDrive,
+	UINT32 oldstorageDeviceType,
+	BOOL32 newStorageIsSystemDrive,
+	UINT32 newStorageDeviceType,
+	UINT32 oldBusType,
+	UINT32 newBusType,
+	UINT32 migrationState,
+	GUID mapSessionId
+	);
+
+StorageMigrationSuspendedMosHost(
+	BOOL32 oldStorageIsSystemDrive,
+	UINT32 oldstorageDeviceType,
+	BOOL32 newStorageIsSystemDrive,
+	UINT32 newStorageDeviceType,
+	UINT32 oldBusType,
+	UINT32 newBusType,
+	UINT32 migrationState,
+	GUID mapSessionId
+	);
+
+StorageMigrationCanceledMosHost(
+	BOOL32 oldStorageIsSystemDrive,
+	UINT32 oldstorageDeviceType,
+	BOOL32 newStorageIsSystemDrive,
+	UINT32 newStorageDeviceType,
+	UINT32 oldBusType,
+	UINT32 newBusType,
+	UINT32 migrationState,
+	GUID mapSessionId
+	);
+
+StorageMigrationFailedMosHost(
+	BOOL32 oldStorageIsSystemDrive,
+	UINT32 oldstorageDeviceType,
+	BOOL32 newStorageIsSystemDrive,
+	UINT32 newStorageDeviceType,
+	UINT32 oldBusType,
+	UINT32 newBusType,
+	HRESULT HResult,
+	UINT32 subState,
+	UINT32 migrationState,
+	GUID mapSessionId
+	);
+
+StorageMigrationCommitFailedMosHost(
+	BOOL32 oldStorageIsSystemDrive,
+	UINT32 oldstorageDeviceType,
+	BOOL32 newStorageIsSystemDrive,
+	UINT32 newStorageDeviceType,
+	UINT32 oldBusType,
+	UINT32 newBusType,
+	HRESULT HResult,
+	UINT32 subState,
+	GUID mapSessionId
+	);
+
+StorageMigrationCopyFailedMosHost(
+	BOOL32 oldStorageIsSystemDrive,
+	UINT32 oldstorageDeviceType,
+	BOOL32 newStorageIsSystemDrive,
+	UINT32 newStorageDeviceType,
+	UINT32 oldBusType,
+	UINT32 newBusType,
+	HRESULT HResult,
+	UINT32 subState,
+	GUID mapSessionId
+	);
+
+StorageMigrationStartMosHost(
+	BOOL32 oldStorageIsSystemDrive,
+	UINT32 oldstorageDeviceType,
+	BOOL32 newStorageIsSystemDrive,
+	UINT32 newStorageDeviceType,
+	UINT32 oldBusType,
+	UINT32 newBusType,
+	GUID mapSessionId
+	);
+
+MapsStoreInitialized(
+	INT32 stackMode,
+	GUID mapSessionId,
+	HRESULT HResult
+	);
+
+OfflineMapsUpgradeCheck(
+	BOOL32 currentStorageIsSystemDrive,
+	UINT32 currentStorageDeviceType,
+	UINT32 currentBusType,
+	GUID mapSessionId,
+	BOOL32 isChinaVariant,
+	HRESULT HResult
+	);
+
+OfflineMapsAttemptRepair(
+	BOOL32 currentStorageIsSystemDrive,
+	UINT32 currentStorageDeviceType,
+	UINT32 currentBusType,
+	GUID mapSessionId,
+	UINT32 mapsInstalled,
+	HRESULT HResult
+	);
+
+OfflineDeleteAllFailedToDetachDeleteAllClient(
+	BOOL32 currentStorageIsSystemDrive,
+	UINT32 currentStorageDeviceType,
+	UINT32 currentBusType,
+	GUID mapSessionId,
+	HRESULT HResult
+	);
+
+OfflineDeleteAllFailedClearData(
+	BOOL32 currentStorageIsSystemDrive,
+	UINT32 currentStorageDeviceType,
+	UINT32 currentBusType,
+	GUID mapSessionId,
+	HRESULT HResult
+	);
+
+OfflineDeleteAllFailedToAttachDeleteAllClient(
+	BOOL32 currentStorageIsSystemDrive,
+	UINT32 currentStorageDeviceType,
+	UINT32 currentBusType,
+	GUID mapSessionId,
+	HRESULT HResult
+	);
+
+OfflineDeleteAllComplete(
+	BOOL32 currentStorageIsSystemDrive,
+	UINT32 currentStorageDeviceType,
+	UINT32 currentBusType,
+	GUID mapSessionId
+	);
+
+OfflineDeleteAllStart(
+	BOOL32 currentStorageIsSystemDrive,
+	UINT32 currentStorageDeviceType,
+	UINT32 currentBusType,
+	GUID mapSessionId
+	);
+
+OfflineDeleteCanceledUser(
+	UINT32 downloadedRegionId,
+	UINT32 downloadedRegionSizeInKB,
+	INT32 operationInfo,
+	INT32 operationTrigger,
+	FILETIME operationStartTime,
+	UINT64 operationActiveTime,
+	BOOL32 currentStorageIsSystemDrive,
+	UINT32 currentStorageDeviceType,
+	UINT32 currentBusType,
+	GUID mapSessionId
+	);
+
+OfflineDeleteCanceledSuspended(
+	UINT32 downloadedRegionId,
+	UINT32 downloadedRegionSizeInKB,
+	INT32 operationInfo,
+	INT32 operationTrigger,
+	FILETIME operationStartTime,
+	UINT64 operationActiveTime,
+	BOOL32 currentStorageIsSystemDrive,
+	UINT32 currentStorageDeviceType,
+	UINT32 currentBusType,
+	GUID mapSessionId
+	);
+
+OfflineDeleteCanceledPaused(
+	UINT32 downloadedRegionId,
+	UINT32 downloadedRegionSizeInKB,
+	INT32 operationInfo,
+	INT32 operationTrigger,
+	FILETIME operationStartTime,
+	UINT64 operationActiveTime,
+	BOOL32 currentStorageIsSystemDrive,
+	UINT32 currentStorageDeviceType,
+	UINT32 currentBusType,
+	GUID mapSessionId
+	);
+
+OfflineDeleteFailed(
+	UINT32 downloadedRegionId,
+	UINT32 downloadedRegionSizeInKB,
+	INT32 operationInfo,
+	INT32 operationTrigger,
+	FILETIME operationStartTime,
+	UINT64 operationActiveTime,
+	BOOL32 currentStorageIsSystemDrive,
+	UINT32 currentStorageDeviceType,
+	UINT32 currentBusType,
+	GUID mapSessionId,
+	HRESULT HResult
+	);
+
+OfflineDeleteFailedBing(
+	UINT32 downloadedRegionId,
+	UINT32 downloadedRegionSizeInKB,
+	INT32 operationInfo,
+	INT32 operationTrigger,
+	FILETIME operationStartTime,
+	UINT64 operationActiveTime,
+	BOOL32 currentStorageIsSystemDrive,
+	UINT32 currentStorageDeviceType,
+	UINT32 currentBusType,
+	GUID mapSessionId,
+	HRESULT HResult
+	);
+
+OfflineDeleteFailedMos(
+	UINT32 downloadedRegionId,
+	UINT32 downloadedRegionSizeInKB,
+	INT32 operationInfo,
+	INT32 operationTrigger,
+	FILETIME operationStartTime,
+	UINT64 operationActiveTime,
+	BOOL32 currentStorageIsSystemDrive,
+	UINT32 currentStorageDeviceType,
+	UINT32 currentBusType,
+	GUID mapSessionId,
+	HRESULT HResult
+	);
+
+OfflineDeleteComplete(
+	UINT32 downloadedRegionId,
+	UINT32 downloadedRegionSizeInKB,
+	INT32 operationInfo,
+	INT32 operationTrigger,
+	FILETIME operationStartTime,
+	UINT64 operationActiveTime,
+	BOOL32 currentStorageIsSystemDrive,
+	UINT32 currentStorageDeviceType,
+	UINT32 currentBusType,
+	GUID mapSessionId
+	);
+
+OfflineDeleteStart(
+	UINT32 downloadedRegionId,
+	UINT32 downloadedRegionSizeInKB,
+	INT32 operationInfo,
+	INT32 operationTrigger,
+	FILETIME operationStartTime,
+	UINT64 operationActiveTime,
+	BOOL32 currentStorageIsSystemDrive,
+	UINT32 currentStorageDeviceType,
+	UINT32 currentBusType,
+	GUID mapSessionId
+	);
+
+UserProxyConfiguration(
+	GUID mapSessionId,
+	INT32 proxyState,
+	HRESULT HResult
+	);
+
+ClientProxyResolverRequested(
+	GUID mapSessionId,
+	BOOLEAN isTokenAvailable
+	);
+
+MapsCacheAccessDenied(
+	GUID mapSessionId,
+	HRESULT accessDeniedFailureHRESULT
+	);
+
+TraceChinaVariantKey(
+	BOOL32 chinaVariantRegKey,
+	BOOL32 oemChinaVariantWin10
+	);
+
+OfflineMapCheckForUpdatesFailed(
+	UINT32 downloadedRegionId,
+	UINT32 downloadedRegionSizeInKB,
+	INT32 operationInfo,
+	INT32 operationTrigger,
+	FILETIME operationStartTime,
+	UINT64 operationActiveTime,
+	BOOL32 currentStorageIsSystemDrive,
+	UINT32 currentStorageDeviceType,
+	UINT32 currentBusType,
+	GUID mapSessionId,
+	HRESULT updateFailureHRESULT
+	);
+
+OfflineMapUpdateCanceledUser(
+	FILETIME operationStartTime,
+	UINT64 operationActiveTime,
+	BOOL32 currentStorageIsSystemDrive,
+	UINT32 currentStorageDeviceType,
+	UINT32 currentBusType,
+	GUID mapSessionId,
+	FILETIME operationStopTime
+	);
+
+OfflineMapUpdateCanceledSuspended(
+	FILETIME operationStartTime,
+	UINT64 operationActiveTime,
+	BOOL32 currentStorageIsSystemDrive,
+	UINT32 currentStorageDeviceType,
+	UINT32 currentBusType,
+	GUID mapSessionId
+	);
+
+OfflineMapUpdateCanceledPaused(
+	FILETIME operationStartTime,
+	UINT64 operationActiveTime,
+	BOOL32 currentStorageIsSystemDrive,
+	UINT32 currentStorageDeviceType,
+	UINT32 currentBusType,
+	GUID mapSessionId
+	);
+
+OfflineUpdateFailed(
+	FILETIME operationStartTime,
+	UINT64 operationActiveTime,
+	BOOL32 currentStorageIsSystemDrive,
+	UINT32 currentStorageDeviceType,
+	UINT32 currentBusType,
+	GUID mapSessionId,
+	INT32 tokenAvailable,
+	FILETIME operationStopTime,
+	HRESULT updateFailureHRESULT
+	);
+
+OfflineUpdateFailedBing(
+	FILETIME operationStartTime,
+	UINT64 operationActiveTime,
+	BOOL32 currentStorageIsSystemDrive,
+	UINT32 currentStorageDeviceType,
+	UINT32 currentBusType,
+	GUID mapSessionId,
+	INT32 tokenAvailable,
+	FILETIME operationStopTime,
+	HRESULT updateFailureHRESULT
+	);
+
+OfflineUpdateFailedMos(
+	FILETIME operationStartTime,
+	UINT64 operationActiveTime,
+	BOOL32 currentStorageIsSystemDrive,
+	UINT32 currentStorageDeviceType,
+	UINT32 currentBusType,
+	GUID mapSessionId,
+	INT32 tokenAvailable,
+	FILETIME operationStopTime,
+	HRESULT updateFailureHRESULT
+	);
+
+OfflineUpdateComplete(
+	FILETIME operationStartTime,
+	UINT64 operationActiveTime,
+	BOOL32 currentStorageIsSystemDrive,
+	UINT32 currentStorageDeviceType,
+	UINT32 currentBusType,
+	GUID mapSessionId,
+	INT32 tokenAvailable,
+	FILETIME operationStopTime
+	);
+
+OfflineMapUpdateStart(
+	FILETIME operationStartTime,
+	UINT64 operationActiveTime,
+	BOOL32 currentStorageIsSystemDrive,
+	UINT32 currentStorageDeviceType,
+	UINT32 currentBusType,
+	GUID mapSessionId
+	);
+
+OfflineTransferSpeed(
+	UINT32 kbitsPerSecond,
+	FILETIME operationStartTime,
+	UINT64 operationActiveTime,
+	BOOL32 currentStorageIsSystemDrive,
+	UINT32 currentStorageDeviceType,
+	UINT32 currentBusType,
+	GUID mapSessionId
+	);
+
+OfflineDownloadCanceledUser(
+	UINT32 downloadedRegionId,
+	UINT32 downloadedRegionSizeInKB,
+	INT32 operationInfo,
+	INT32 operationTrigger,
+	FILETIME operationStartTime,
+	UINT64 operationActiveTime,
+	BOOL32 currentStorageIsSystemDrive,
+	UINT32 currentStorageDeviceType,
+	UINT32 currentBusType,
+	GUID mapSessionId,
+	FILETIME operationStopTime
+	);
+
+OfflineDownloadCanceledSuspended(
+	UINT32 downloadedRegionId,
+	UINT32 downloadedRegionSizeInKB,
+	INT32 operationInfo,
+	INT32 operationTrigger,
+	FILETIME operationStartTime,
+	UINT64 operationActiveTime,
+	BOOL32 currentStorageIsSystemDrive,
+	UINT32 currentStorageDeviceType,
+	UINT32 currentBusType,
+	GUID mapSessionId
+	);
+
+OfflineDownloadCanceledPaused(
+	UINT32 downloadedRegionId,
+	UINT32 downloadedRegionSizeInKB,
+	INT32 operationInfo,
+	INT32 operationTrigger,
+	FILETIME operationStartTime,
+	UINT64 operationActiveTime,
+	BOOL32 currentStorageIsSystemDrive,
+	UINT32 currentStorageDeviceType,
+	UINT32 currentBusType,
+	GUID mapSessionId
+	);
+
+OfflineDownloadFailed(
+	UINT32 downloadedRegionId,
+	UINT32 downloadedRegionSizeInKB,
+	INT32 operationInfo,
+	INT32 operationTrigger,
+	FILETIME operationStartTime,
+	UINT64 operationActiveTime,
+	BOOL32 currentStorageIsSystemDrive,
+	UINT32 currentStorageDeviceType,
+	UINT32 currentBusType,
+	GUID mapSessionId,
+	INT32 tokenAvailable,
+	FILETIME operationStopTime,
+	HRESULT downloadFailureHRESULT
+	);
+
+OfflineDownloadFailedBing(
+	UINT32 downloadedRegionId,
+	UINT32 downloadedRegionSizeInKB,
+	INT32 operationInfo,
+	INT32 operationTrigger,
+	FILETIME operationStartTime,
+	UINT64 operationActiveTime,
+	BOOL32 currentStorageIsSystemDrive,
+	UINT32 currentStorageDeviceType,
+	UINT32 currentBusType,
+	GUID mapSessionId,
+	INT32 tokenAvailable,
+	FILETIME operationStopTime,
+	HRESULT downloadFailureHRESULT
+	);
+
+OfflineDownloadFailedMos(
+	UINT32 downloadedRegionId,
+	UINT32 downloadedRegionSizeInKB,
+	INT32 operationInfo,
+	INT32 operationTrigger,
+	FILETIME operationStartTime,
+	UINT64 operationActiveTime,
+	BOOL32 currentStorageIsSystemDrive,
+	UINT32 currentStorageDeviceType,
+	UINT32 currentBusType,
+	GUID mapSessionId,
+	INT32 tokenAvailable,
+	FILETIME operationStopTime,
+	HRESULT downloadFailureHRESULT
+	);
+
+OfflineDownloadStop(
+	UINT32 downloadedRegionId,
+	UINT32 downloadedRegionSizeInKB,
+	INT32 operationInfo,
+	INT32 operationTrigger,
+	FILETIME operationStartTime,
+	UINT64 operationActiveTime,
+	BOOL32 currentStorageIsSystemDrive,
+	UINT32 currentStorageDeviceType,
+	UINT32 currentBusType,
+	GUID mapSessionId,
+	INT32 tokenAvailable,
+	FILETIME operationStopTime
+	);
+
+OfflineMapDownloadStartPaused(
+	UINT32 downloadedRegionId,
+	UINT32 downloadedRegionSizeInKB,
+	INT32 operationInfo,
+	INT32 operationTrigger,
+	FILETIME operationStartTime,
+	UINT64 operationActiveTime,
+	BOOL32 currentStorageIsSystemDrive,
+	UINT32 currentStorageDeviceType,
+	UINT32 currentBusType,
+	GUID mapSessionId
+	);
+
+OfflineMapDownloadStart(
+	UINT32 downloadedRegionId,
+	UINT32 downloadedRegionSizeInKB,
+	INT32 operationInfo,
+	INT32 operationTrigger,
+	FILETIME operationStartTime,
+	UINT64 operationActiveTime,
+	BOOL32 currentStorageIsSystemDrive,
+	UINT32 currentStorageDeviceType,
+	UINT32 currentBusType,
+	GUID mapSessionId
+	);
+
+OfflineMapDownloadedMapUsage(
+	BOOL32 currentStorageIsSystemDrive,
+	UINT32 currentStorageDeviceType,
+	UINT32 currentBusType,
+	GUID mapSessionId,
+	UNICODESTRING mapClientPackageFamilyName,
+	INT32 downloadedMapCount,
+	INT32 gridsNetwork,
+	INT32 gridsBrowse_NetworkAvail,
+	INT32 gridsOffline_NetworkAvail,
+	INT32 gridsBrowse_NoNetworkAvail,
+	INT32 gridsOffline_NoNetworkAvail,
+	INT32 gridsFailedToLoad
+	);
+
+OfflineMapLoaderInitialized(
+	BOOL32 currentStorageIsSystemDrive,
+	UINT32 currentStorageDeviceType,
+	UINT32 currentBusType,
+	GUID mapSessionId,
+	HRESULT HResult
+	);
+
+MapsBrokerServiceInitialized(
+	INT32 stackMode,
+	GUID mapSessionId
+	);
+
+MapsBrokerServiceCrash(
+	NTSTATUS exceptionCode,
+	GUID mapSessionId
+	);
+
+MapsBrokerServiceShutdown(
+	GUID mapSessionId
+	);
+
+MapsBrokerServiceSetUp(
+	BOOL32 useMosStack,
+	BOOL32 isChinaVariant,
+	GUID mapSessionId
+	);
+
+MapsBrokerServiceWatchdogTimeout(
+	BOOL32 currentStorageIsSystemDrive,
+	UINT32 currentStorageDeviceType,
+	UINT32 currentBusType,
+	GUID mapSessionId,
+	GUID mapSessionId,
+	BOOL32 didCrash,
+	BOOL32 hasMosHostClient,
+	BOOL32 hasOdmlClient,
+	BOOL32 hasMapsStorageClient,
+	INT32 restartReason,
+	FILETIME operationStartTime,
+	HRESULT HResult
+	);
+

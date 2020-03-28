@@ -1,0 +1,127 @@
+ProviderNames:
+	Microsoft.Windows.Audio.Effects
+	Microsoft.Windows.Audio.Spatial.Metadata
+
+
+
+**** Events *****
+GetAudioCaptureEffects(
+	UNICODESTRING AudioEndpoint,
+	UINT32 MediaCategory,
+	UINT32 AudioProcessing,
+	BOOLEAN Other,
+	BOOLEAN AcousticEchoCancellation,
+	BOOLEAN NoiseSuppression,
+	BOOLEAN AutomaticGainControl,
+	BOOLEAN BeamForming,
+	BOOLEAN ConstantToneRemoval,
+	BOOLEAN Equalizer,
+	BOOLEAN LoudnessEqualizer,
+	BOOLEAN BassBoost,
+	BOOLEAN VirtualSurround,
+	BOOLEAN VirtualHeadphones,
+	BOOLEAN SpeakerFill,
+	BOOLEAN RoomCorrection,
+	BOOLEAN BassManagement,
+	BOOLEAN EnvironmentalEffects,
+	BOOLEAN SpeakerProtection,
+	BOOLEAN SpeakerCompensation,
+	BOOLEAN DynamicRangeCompression
+	);
+
+GetAudioRenderEffects(
+	UNICODESTRING AudioEndpoint,
+	UINT32 AudioRenderCategory,
+	UINT32 AudioProcessing,
+	BOOLEAN Other,
+	BOOLEAN AcousticEchoCancellation,
+	BOOLEAN NoiseSuppression,
+	BOOLEAN AutomaticGainControl,
+	BOOLEAN BeamForming,
+	BOOLEAN ConstantToneRemoval,
+	BOOLEAN Equalizer,
+	BOOLEAN LoudnessEqualizer,
+	BOOLEAN BassBoost,
+	BOOLEAN VirtualSurround,
+	BOOLEAN VirtualHeadphones,
+	BOOLEAN SpeakerFill,
+	BOOLEAN RoomCorrection,
+	BOOLEAN BassManagement,
+	BOOLEAN EnvironmentalEffects,
+	BOOLEAN SpeakerProtection,
+	BOOLEAN SpeakerCompensation,
+	BOOLEAN DynamicRangeCompression
+	);
+
+FallbackError(
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+FallbackError(
+	UINT64 PartA_PrivTags,
+	SIGNED wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+Failure(
+	ANSISTRING Function,
+	INT32 LineNumber,
+	HRESULT hr
+	);
+
+AssertFailure(
+	ANSISTRING Function,
+	INT32 Line,
+	HRESULT ResultCode
+	);
+
+Error(
+	ANSISTRING Function,
+	INT32 Line,
+	HRESULT ResultCode
+	);
+
+Unknown SpatialAudioEncoderId(
+	ANSISTRING Function,
+	INT32 Line,
+	HRESULT ResultCode
+	);
+
+SpatialAudioMetadataDictionary::RuntimeClassInitialize(
+	HEXINT64 this,
+	HRESULT HResult,
+	GUID FormatId,
+	UNICODESTRING EndPointId
+	);
+

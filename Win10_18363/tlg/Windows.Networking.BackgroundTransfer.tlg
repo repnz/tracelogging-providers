@@ -1,0 +1,1053 @@
+ProviderNames:
+	Microsoft-Windows-Networking-BackgroundTransfer
+
+
+
+**** Events *****
+LegacyGroupUsage(
+	UINT64 PartA_PrivTags,
+	UNICODESTRING groupName
+	);
+
+FallbackError(
+	UINT64 PartA_PrivTags,
+	SIGNED wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+FallbackError(
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+ActivityStoppedAutomatically(
+	VOID
+	);
+
+ActivityIntermediateStop(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+ActivityError(
+	UINT64 PartA_PrivTags,
+	SIGNED wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+ActivityError(
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+CompletionGroupEnableActivity(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId
+	);
+
+CompletionGroupEnableActivity(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+CompletionGroupEnableActivity(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+ReachedTransferGroupLimit(
+	UINT64 PartA_PrivTags
+	);
+
+BackgroundTransferRangesDownloadedEventArgsImpl::InvokeCompleteHandler(
+	GUID operationId
+	);
+
+BackgroundTransferRangesDownloadedEventArgsImpl::WaitForAllOutstandingDeferrals(
+	GUID operationId,
+	UNICODESTRING action
+	);
+
+BackgroundTransferRangesDownloadedEventArgsImpl::get_AddedRanges(
+	GUID operationId
+	);
+
+BackgroundTransferRangesDownloadedEventArgsImpl::get_WasDownloadRestarted(
+	GUID operationId,
+	UINT8 wasDownloadRestarted
+	);
+
+BackgroundTransferRangesDownloadedEventArgsImpl::RuntimeClassInitialize(
+	GUID operationId,
+	UINT8 wasDownloadRestarted,
+	UNICODESTRING addedRanges
+	);
+
+BackgroundTransferRangesDownloadedMonitor::CalculateDownloadedRangesDiff - final result(
+	GUID operationId,
+	UINT32 oldSnapshotRangesCount,
+	UINT32 newSnapshotRangesCount,
+	UINT32 diffRangesCount
+	);
+
+BackgroundTransferRangesDownloadedMonitor::CalculateDownloadedRangesDiff(
+	GUID operationId,
+	UNICODESTRING action
+	);
+
+BackgroundTransferRangesDownloadedMonitor::InvokeRangesDownloadedEventAndWaitForDeferrals(
+	GUID operationId,
+	UNICODESTRING action
+	);
+
+BackgroundTransferRangesDownloadedMonitor::AsyncProgressWorker(
+	GUID operationId,
+	UNICODESTRING action
+	);
+
+BackgroundTransferRangesDownloadedMonitor::AsyncProgressWorker - failure(
+	GUID operationId,
+	INT32 hr
+	);
+
+BackgroundTransferRangesDownloadedMonitor::OnDownloadRestarted(
+	GUID operationId
+	);
+
+BackgroundTransferRangesDownloadedMonitor::OnProgress failure(
+	GUID operationId,
+	INT32 hr
+	);
+
+BackgroundTransferRangesDownloadedMonitor::OnProgress(
+	GUID operationId
+	);
+
+BitsBackedRandomAccessStream::IsReadOpDataAvailable(
+	GUID operationId,
+	GUID streamId,
+	UINT32 count,
+	UNICODESTRING options,
+	UINT64 readPosition,
+	UINT64 endOfFile,
+	UINT64 bytesAvailable,
+	BOOLEAN isReadOpDataAvailable
+	);
+
+BitsBackedRandomAccessStream::ExecuteRead - final result(
+	GUID operationId,
+	GUID streamId,
+	UINT32 count,
+	UNICODESTRING options,
+	UINT64 readPosition,
+	UINT32 bytesRead,
+	UINT64 newStreamPosition
+	);
+
+BitsBackedRandomAccessStream::ExecuteRead(
+	GUID operationId,
+	GUID streamId,
+	UINT32 count,
+	UNICODESTRING options,
+	UINT64 readPosition,
+	ANSISTRING action
+	);
+
+BitsBackedRandomAccessStream::ReadAsync(
+	GUID operationId,
+	GUID streamId,
+	UINT32 count,
+	UNICODESTRING options,
+	UINT64 readPosition,
+	BOOLEAN inAsyncRead
+	);
+
+BitsBackedRandomAccessStream::FlushAsync(
+	GUID operationId,
+	GUID streamId
+	);
+
+BitsBackedRandomAccessStream::WriteAsync(
+	GUID operationId,
+	GUID streamId
+	);
+
+BitsBackedRandomAccessStream::get_CanWrite(
+	GUID operationId,
+	GUID streamId
+	);
+
+BitsBackedRandomAccessStream::get_CanRead(
+	GUID operationId,
+	GUID streamId
+	);
+
+BitsBackedRandomAccessStream::CloneStream(
+	GUID operationId,
+	GUID streamId
+	);
+
+BitsBackedRandomAccessStream::Seek(
+	GUID operationId,
+	GUID streamId,
+	UINT64 oldStreamPosition,
+	UINT64 newStreamPosition
+	);
+
+BitsBackedRandomAccessStream::get_Position(
+	GUID operationId,
+	GUID streamId,
+	UINT64 streamPosition
+	);
+
+BitsBackedRandomAccessStream::GetOutputStreamAt(
+	GUID operationId,
+	GUID streamId
+	);
+
+BitsBackedRandomAccessStream::GetInputStreamAt(
+	GUID operationId,
+	GUID streamId
+	);
+
+BitsBackedRandomAccessStream::put_Size(
+	GUID operationId,
+	GUID streamId
+	);
+
+BitsBackedRandomAccessStream::get_Size(
+	GUID operationId,
+	GUID streamId,
+	UINT64 size
+	);
+
+BitsBackedRandomAccessStream::get_ContentType(
+	GUID operationId,
+	GUID streamId
+	);
+
+BitsBackedRandomAccessStream::OnProgress(
+	GUID operationId,
+	GUID streamId
+	);
+
+BitsBackedRandomAccessStream::OnClose(
+	GUID operationId,
+	GUID streamId
+	);
+
+BitsBackedRandomAccessStream::RuntimeClassInitialize(
+	GUID operationId,
+	GUID streamId,
+	UINT64 streamPosition
+	);
+
+BitsBackedTransferMonitor::GetInputStreamAt(
+	GUID operationId,
+	UINT64 position
+	);
+
+BitsBackedTransferMonitor::OpenReadAsync(
+	GUID operationId
+	);
+
+BitsBackedTransferMonitor::SeekDownload(
+	GUID operationId,
+	UINT64 position,
+	ANSISTRING action
+	);
+
+BitsBackedTransferMonitor::SeekandReadFromFile(
+	GUID operationId,
+	UINT64 position,
+	UINT32 bytesToRead,
+	UINT64 fileSizeInBytes
+	);
+
+BitsBackedTransferMonitor::LongestDownloadedRangeFrom(
+	GUID operationId,
+	UINT64 offset,
+	UINT64 fileSizeInBytes,
+	ANSISTRING action
+	);
+
+BitsBackedTransferMonitor::get_ContentType(
+	GUID operationId,
+	UNICODESTRING contentType
+	);
+
+BitsBackedTransferMonitor::LongestDownloadedRangeFrom - final result(
+	GUID operationId,
+	UINT64 offset,
+	UINT64 fileSizeInBytes,
+	UINT64 rangeInitialOffset,
+	UINT64 rangeLength
+	);
+
+BitsBackedTransferMonitor::GetFilledRanges(
+	GUID operationId,
+	UINT32 rangeCount
+	);
+
+BitsBackedTransferMonitor::RemoveTransferProgressListener(
+	GUID operationId,
+	GUID listenerId
+	);
+
+BitsBackedTransferMonitor::SignalProgressListeners(
+	GUID operationId,
+	INT32 failureHR
+	);
+
+BitsBackedTransferMonitor::AddTransferProgressListener(
+	GUID operationId,
+	GUID listenerId
+	);
+
+BitsBackedTransferMonitor::SetContentType(
+	GUID operationId,
+	UNICODESTRING contentType
+	);
+
+BitsBackedTransferMonitor::OnCompleted(
+	GUID operationId,
+	INT32 failureHR,
+	INT32 finalHR
+	);
+
+BitsBackedTransferMonitor::OnTransferRestart(
+	GUID operationId,
+	INT32 failureHR
+	);
+
+BitsBackedTransferMonitor::UpdateCachedProgressFromWIHostEntry(
+	GUID operationId,
+	UINT64 fileSizeInBytes,
+	UNICODESTRING cachedFilledRanges
+	);
+
+BitsBackedTransferMonitor::OnProgress(
+	GUID operationId,
+	INT32 failureHR
+	);
+
+BitsBackedTransferMonitor::UpdateCachedProgressFromBits(
+	GUID operationId,
+	UINT64 fileSizeInBytes,
+	UNICODESTRING cachedFilledRanges
+	);
+
+BitsBackedTransferMonitor::OpenFinalFileHandle(
+	GUID operationId,
+	BOOLEAN hasResponseBodyFile,
+	UNICODESTRING filePath
+	);
+
+BitsBackedTransferMonitor::OpenTempFileHandle(
+	GUID operationId,
+	BOOLEAN hasResponseBodyFile,
+	UNICODESTRING filePath
+	);
+
+BitsBackedTransferMonitor::LoadTransferState(
+	GUID operationId,
+	BOOLEAN hasResponseBodyFile,
+	ANSISTRING action
+	);
+
+BitsBackedTransferMonitor::TryLoadTransferState(
+	GUID operationId,
+	BOOLEAN hasResponseBodyFile,
+	BOOLEAN transferStateLoaded,
+	INT32 failureHR
+	);
+
+BitsBackedTransferMonitor::Initialize(
+	GUID operationId,
+	BOOLEAN hasResponseBodyFile
+	);
+
+BackgroundTransferOperation::UpdateAppEntryDataIfRecoverableWebErrorStatusesChanged(
+	GUID operationId,
+	UNICODESTRING currentRecoverableWebErrorStatusesString,
+	UNICODESTRING loadedRecoverableWebErrorStatuses
+	);
+
+BackgroundTransferOperation::ChangePriority(
+	GUID operationId,
+	UNICODESTRING currentPriority,
+	UNICODESTRING newPriority,
+	UNICODESTRING appTransferStatus
+	);
+
+BackgroundTransferOperation::PauseInternal(
+	GUID operationId,
+	UNICODESTRING appTransferStatus,
+	UNICODESTRING wiHostStatus
+	);
+
+BackgroundTransferOperation::ResumeInternal(
+	GUID operationId,
+	UNICODESTRING appTransferStatus,
+	UNICODESTRING wiHostStatus
+	);
+
+BackgroundTransferOperation::SetRequestedUri(
+	GUID operationId,
+	UNICODESTRING appTransferStatus,
+	UNICODESTRING wiHostStatus
+	);
+
+BackgroundTransferOperation::GetCurrentWebErrorStatus(
+	GUID operationId,
+	INT32 wiHostEntryCompletionResult,
+	INT32 operationResult
+	);
+
+MakeCurrentInTransferGroup(
+	UINT64 PartA_PrivTags,
+	GUID operationId,
+	UNICODESTRING groupName
+	);
+
+CostPolicyChangedForActiveTransfer(
+	UINT64 PartA_PrivTags,
+	GUID operationId,
+	UNICODESTRING newCostPolicy
+	);
+
+TransferPausedDueToCost(
+	UINT64 PartA_PrivTags,
+	GUID operationId,
+	GUID bitsJobId
+	);
+
+TransferFailedInBackgroundTransferHost(
+	UINT64 PartA_PrivTags,
+	GUID operationId,
+	UNICODESTRING transferType,
+	HEXINT32 result,
+	UNICODESTRING wiHostStatus,
+	UINT8 retryCount,
+	BOOL32 isRandomAccessRequired
+	);
+
+TransferFailedInApp(
+	UINT64 PartA_PrivTags,
+	GUID operationId,
+	UNICODESTRING transferType,
+	HEXINT32 result,
+	UINT8 retryCount,
+	BOOL32 isRandomAccessRequired
+	);
+
+TransferCanceledByApp(
+	UINT64 PartA_PrivTags,
+	GUID operationId,
+	UNICODESTRING transferType,
+	HEXINT32 result,
+	UNICODESTRING wiHostStatus,
+	UINT8 retryCount,
+	BOOL32 isRandomAccessRequired
+	);
+
+TransferFailedWithHttpStatus(
+	UINT64 PartA_PrivTags,
+	GUID operationId,
+	UNICODESTRING transferType,
+	UINT32 totalRuntimeSeconds,
+	UINT32 totalKB,
+	UINT32 statusCode,
+	UINT8 retryCount,
+	BOOL32 isRandomAccessRequired
+	);
+
+TransferSucceeded(
+	UINT64 PartA_PrivTags,
+	GUID operationId,
+	UNICODESTRING transferType,
+	UINT32 totalTimeSeconds,
+	UINT32 totalKB,
+	BOOL32 wasUnconstrained,
+	UINT8 retryCount,
+	BOOL32 isRandomAccessRequired
+	);
+
+TransferStarted(
+	UINT64 PartA_PrivTags,
+	GUID operationId,
+	UNICODESTRING transferType,
+	UNICODESTRING method,
+	UNICODESTRING scheme,
+	UNICODESTRING costPolicy,
+	BOOL32 isUnconstrained,
+	HRESULT hrStart,
+	BOOL32 isRandomAccessRequired
+	);
+
+GetCurrentDownloadsAsyncFailed(
+	UINT64 PartA_PrivTags,
+	HEXINT32 hr,
+	UNICODESTRING hint
+	);
+
+AppEntryData::Initialize(
+	GUID operationId,
+	UNICODESTRING method,
+	UNICODESTRING uri,
+	UNICODESTRING group,
+	UNICODESTRING requestHeaders,
+	UNICODESTRING enterpriseId,
+	UNICODESTRING recoverableWebErrorStatuses,
+	UNICODESTRING additionalHeaders
+	);
+
+BackgroundTaskEventHandler - Completion(
+	UNICODESTRING priority,
+	UINT32 notificationBucket,
+	GUID taskInstanceId,
+	BOOLEAN eventDropDetected,
+	BOOLEAN broadcast,
+	UINT64 previousCompletionCount,
+	UINT64 currentCompletionCount
+	);
+
+BackgroundTaskEventHandler - Progress(
+	UNICODESTRING priority,
+	UINT32 notificationBucket,
+	GUID taskInstanceId
+	);
+
+Failure(
+	ANSISTRING Function,
+	INT32 Line,
+	HRESULT HRESULT
+	);
+
+BrokerFramework::IsSystemEventValid - Legacy event detected(
+	GUID eventId,
+	UINT32 SebiEventType
+	);
+
+EntryStore::UpdateAppEntryData(
+	GUID operationId,
+	UNICODESTRING method,
+	UNICODESTRING uri,
+	UNICODESTRING group,
+	UNICODESTRING requestHeaders,
+	UNICODESTRING enterpriseId,
+	UNICODESTRING recoverableWebErrorStatuses,
+	UNICODESTRING additionalHeaders
+	);
+
+EntryStore::DeleteOperationAndResponseFileFromStore(
+	GUID operationId,
+	UINT8 isRelatedOperationPresent,
+	INT32 removeResponseFileHR,
+	INT32 removeTempFileHR
+	);
+
+EntryStore::SaveAppEntryData(
+	GUID operationId,
+	UNICODESTRING method,
+	UNICODESTRING uri,
+	UNICODESTRING group,
+	UNICODESTRING requestHeaders,
+	UNICODESTRING enterpriseId,
+	UNICODESTRING recoverableWebErrorStatuses,
+	BOOLEAN preserveMetadataBodyFileContents
+	);
+
+EntryStore::DeleteOperation(
+	GUID operationId
+	);
+
+WIHostEntryWinBlueConverted(
+	UINT64 PartA_PrivTags
+	);
+
+AppEntryWin10TH1Converted(
+	UINT64 PartA_PrivTags
+	);
+
+GroupEntryWin10RS3Converted(
+	UINT64 PartA_PrivTags
+	);
+
+NotificationCoordinator::RemoveHandler(
+	GUID operationId,
+	UINT32 bucket,
+	UINT32 bucketHandlersCount,
+	UINT32 totalHandlerCount
+	);
+
+NotificationCoordinator::AddHandler(
+	GUID operationId,
+	UINT32 bucket,
+	UINT32 bucketHandlersCount,
+	UINT32 totalHandlerCount
+	);
+
+UnexpectedNotificationCoordinatorBucketSize(
+	UINT64 PartA_PrivTags,
+	UINT32 bucketSize,
+	UINT32 totalHandlerCount,
+	UINT32 notificationBucket
+	);
+
+SignalCoordinator::SignalPriorityChangeTask(
+	GUID operationId
+	);
+
+SignalCoordinator::SignalTransferTask(
+	GUID operationId,
+	UNICODESTRING priority
+	);
+
+SignalCoordinator::EnsureSystemEntryInitialized(
+	UINT32 validEventsCount,
+	UINT32 totalEventsCount
+	);
+
+SignalCoordinator::SignalSpecialTask(
+	UNICODESTRING taskType
+	);
+
+SystemAppEntry19H1Upgrade(
+	UINT64 PartA_PrivTags,
+	UINT32 deletedSebEventCount
+	);
+
+EnsureSystemEntryInitializedFailure(
+	UINT64 PartA_PrivTags,
+	HRESULT hr
+	);
+
+BackgroundTransferStateBase::NotifyProgress(
+	GUID taskInstanceId,
+	GUID operationId
+	);
+
+BackgroundTransferStateBase::CompleteOperation - recoverable error logic(
+	GUID taskInstanceId,
+	GUID operationId,
+	GUID bitsJobId,
+	INT32 effectiveResult,
+	UINT32 currentWebErrorStatus,
+	UINT8 isRecoverableWebErrorStatus
+	);
+
+BackgroundTransferStateBase::CompleteOperation(
+	GUID taskInstanceId,
+	GUID operationId,
+	GUID bitsJobId,
+	INT32 resultHr,
+	BOOLEAN isHttpScheme,
+	UINT32 httpStatusCode
+	);
+
+ExecuteTransfer - Transfer Priority Changed(
+	GUID taskInstanceId,
+	GUID operationId,
+	GUID currentTaskRegistrationId,
+	GUID expectedTaskRegistrationId
+	);
+
+ExecuteTransferCore result(
+	GUID taskInstanceId,
+	GUID operationId,
+	INT32 hr
+	);
+
+PrepareExecution result(
+	GUID taskInstanceId,
+	GUID operationId,
+	INT32 hr,
+	UINT8 completed,
+	UINT8 operationExists
+	);
+
+BackgroundTransferStateBase::ProcessPriorityChange(
+	GUID taskInstanceId,
+	GUID operationId
+	);
+
+BackgroundTransferTaskImpl::RunCore(
+	UNICODESTRING taskType,
+	GUID operationId,
+	GUID taskInstanceId
+	);
+
+BackgroundTaskFailure(
+	UINT64 PartA_PrivTags,
+	HRESULT BackgroundTaskHR,
+	ANSISTRING LatestLocalFailureFunctionName,
+	INT32 LatestLocalFailureLineNumber,
+	HRESULT LatestLocalFailureHR
+	);
+
+BitsBackedBackgroundTransferState::HandleNewInternetConnectionProfile(
+	GUID taskInstanceId,
+	GUID operationId
+	);
+
+BitsBackedBackgroundTransferState::HandleAppInitiatedCancelation(
+	GUID taskInstanceId,
+	GUID operationId,
+	GUID bitsJobId
+	);
+
+BitsBackedBackgroundTransferState::HandleBICancelation(
+	GUID taskInstanceId,
+	GUID operationId,
+	GUID bitsJobId,
+	UINT8 isAppBeingUninstalled
+	);
+
+BitsBackedBackgroundTransferState::SimpleProgressUpdate(
+	GUID taskInstanceId,
+	GUID operationId,
+	GUID bitsJobId,
+	UINT64 bytesReceived,
+	UINT64 totalBytesToReceive
+	);
+
+BitsBackedBackgroundTransferState::UpdateServerResponseAndProgress(
+	GUID taskInstanceId,
+	GUID operationId,
+	GUID bitsJobId,
+	UINT64 bytesReceived,
+	UINT64 totalBytesToReceive
+	);
+
+BitsBackedBackgroundTransferState::OnSuspendedNotification(
+	GUID taskInstanceId,
+	GUID operationId,
+	GUID bitsJobId,
+	UNICODESTRING appTransferStatus,
+	UNICODESTRING wiHostStatus
+	);
+
+BitsBackedBackgroundTransferState - Transient Error Retry Counts(
+	GUID taskInstanceId,
+	GUID operationId,
+	GUID bitsJobId,
+	UINT32 initialRetryCount,
+	UINT32 currentRetryCount
+	);
+
+BitsBackedBackgroundTransferState::OnAcknowledgedNotification(
+	GUID taskInstanceId,
+	GUID operationId,
+	GUID bitsJobId
+	);
+
+BitsBackedBackgroundTransferState::OnCanceledNotification(
+	GUID taskInstanceId,
+	GUID operationId,
+	GUID bitsJobId
+	);
+
+BitsBackedBackgroundTransferState::MapBitsTransientErrorToWIHostStatus(
+	INT32 transientErrorHr,
+	UNICODESTRING newStatus
+	);
+
+BitsBackedBackgroundTransferState::OnTransferredNotification - final outcome(
+	GUID taskInstanceId,
+	GUID operationId,
+	INT32 jobCompleteHR,
+	INT32 saveWIHostEntryHR,
+	INT32 removeResponseFileFromAccessListHR
+	);
+
+BitsBackedBackgroundTransferState::OnTransientErrorNotification(
+	GUID taskInstanceId,
+	GUID operationId,
+	GUID bitsJobId
+	);
+
+BitsBackedBackgroundTransferState::OnFatalErrorNotification(
+	GUID taskInstanceId,
+	GUID operationId,
+	GUID bitsJobId
+	);
+
+BitsBackedBackgroundTransferState::OnTransferredNotification(
+	GUID taskInstanceId,
+	GUID operationId,
+	GUID bitsJobId
+	);
+
+BitsBackedBackgroundTransferState::OnQueuedNotification(
+	GUID taskInstanceId,
+	GUID operationId,
+	GUID bitsJobId
+	);
+
+BitsBackedBackgroundTransferState::OnTransferringNotification(
+	GUID taskInstanceId,
+	GUID operationId,
+	GUID bitsJobId
+	);
+
+BitsBackedBackgroundTransferState::OnConnectingNotification(
+	GUID taskInstanceId,
+	GUID operationId,
+	GUID bitsJobId
+	);
+
+BitsBackedBackgroundTransferState::DisconnectAndWaitForPendingNotifications(
+	GUID taskInstanceId,
+	GUID operationId
+	);
+
+BitsBackedBackgroundTransferState::StartMonitoringBitsJob(
+	GUID taskInstanceId,
+	GUID operationId,
+	GUID bitsJobId
+	);
+
+BitsBackedBackgroundTransferState::ProcessBitsNotificationCore failure(
+	GUID taskInstanceId,
+	GUID operationId,
+	GUID bitsJobId,
+	INT32 hr
+	);
+
+BitsBackedBackgroundTransferState::RetrieveBitsJob(
+	GUID taskInstanceId,
+	GUID operationId,
+	GUID bitsJobId
+	);
+
+BitsBackedBackgroundTransferState::ReconfigureBitsJobIfNeeded(
+	GUID taskInstanceId,
+	GUID operationId,
+	GUID bitsJobId,
+	UNICODESTRING costPolicy,
+	UNICODESTRING requestedUri,
+	UNICODESTRING priority
+	);
+
+BitsBackedBackgroundTransferState::CreateBitsJob(
+	GUID taskInstanceId,
+	GUID operationId
+	);
+
+BitsBackedBackgroundTransferState::PauseDataTransfer(
+	GUID taskInstanceId,
+	GUID operationId,
+	GUID bitsJobId
+	);
+
+BitsBackedBackgroundTransferState::StartTransferAttempt(
+	GUID taskInstanceId,
+	GUID operationId
+	);
+
+BitsBackedBackgroundTransferState::OnCallbackImplDestroyed(
+	GUID taskInstanceId,
+	GUID operationId
+	);
+
+BitsBackedBackgroundTransferState::AbortDataTransfer(
+	GUID taskInstanceId,
+	GUID operationId,
+	GUID bitsJobId
+	);
+
+BitsBackedBackgroundTransferState::DeletePartiallyDownloadedContents(
+	GUID taskInstanceId,
+	GUID operationId,
+	GUID bitsJobId
+	);
+
+BitsBackedBackgroundTransferState::AbortDataTransfer - final outcome(
+	GUID taskInstanceId,
+	GUID operationId,
+	BOOLEAN bitsJobRetrieved,
+	BOOLEAN bitsFileRetrieved,
+	INT32 jobCancelHR,
+	INT32 fileDeletionHR,
+	INT32 saveWIHostEntryHR,
+	INT32 removeResponseFileFromAccessListHR
+	);
+
+BitsBackedBackgroundTransferState::ExecuteTransferCore(
+	GUID taskInstanceId,
+	GUID operationId,
+	UNICODESTRING URI
+	);
+
+BitsBackedBackgroundTransferState - Transfer attempt finished(
+	GUID taskInstanceId,
+	GUID operationId,
+	GUID bitsJobId
+	);
+
+BitsBackedBackgroundTransferState - Control event signaled(
+	GUID taskInstanceId,
+	GUID operationId,
+	GUID bitsJobId
+	);
+
+BitsBackedBackgroundTransferState::RuntimeClassInitialize(
+	GUID operationId
+	);
+
+TransferBitsJobCreated(
+	UINT64 PartA_PrivTags,
+	GUID operationId,
+	GUID bitsJobId
+	);
+
+TransferRestarted(
+	UINT64 PartA_PrivTags,
+	GUID operationId,
+	BOOLEAN isResumable,
+	GUID bitsJobId
+	);
+
+CompletionGroupManagerEntry::CopyOperationResponseFile - Deep copy fallback(
+	GUID operationId,
+	GUID operationCopyId,
+	UINT32 hardLinkError
+	);
+
+CompletionGroupManagerEntry::CopyOperationResponseFile - Creating hard link(
+	GUID operationId,
+	GUID operationCopyId,
+	UNICODESTRING originalTempResponsePath,
+	UNICODESTRING operationCopyTempResponsePath
+	);
+
+NetworkStateChangeMonitor::ProcessNetworkStateChange(
+	UINT8 hasNewInternetConnectionProfile,
+	UNICODESTRING notificationType,
+	UINT32 ongoingTransferCount,
+	BOOLEAN listeningToWnf
+	);
+
+NetworkStateChangeMonitor::NotifyTransferAttemptStop(
+	GUID operationId,
+	UINT32 previousOngoingTransferCount
+	);
+
+NetworkStateChangeMonitor::NotifyTransferAttemptStart(
+	GUID operationId,
+	UINT32 previousOngoingTransferCount
+	);
+
+PlaceholderBackgroundTransferState::RuntimeClassInitialize(
+	GUID operationId
+	);
+
+URLMonBackedBackgroundTransferState::HandleAppInitiatedCancelation(
+	GUID taskInstanceId,
+	GUID operationId
+	);
+
+URLMonBackedBackgroundTransferState::HandleBICancelation(
+	GUID taskInstanceId,
+	GUID operationId,
+	UINT8 isAppBeingUninstalled
+	);
+
+URLMonBackedBackgroundTransferState::PauseOperation(
+	GUID this->operationId,
+	UNICODESTRING newStatus
+	);
+
+URLMonBackedBackgroundTransferState::RuntimeClassInitialize(
+	GUID operationId
+	);
+
+TransferIncludedInGroup(
+	UINT64 PartA_PrivTags,
+	GUID operationId,
+	UNICODESTRING transferType,
+	UNICODESTRING groupName,
+	UNICODESTRING transferBehavior
+	);
+

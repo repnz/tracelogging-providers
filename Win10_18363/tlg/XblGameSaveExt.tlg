@@ -1,0 +1,455 @@
+ProviderNames:
+	Microsoft.Xbox.WinHttp
+	Microsoft.Xbox.NetworkTransferManager
+
+
+
+**** Events *****
+HttpRequestFailure(
+	NTSTATUS PartB_Ms.Qos.OutgoingServiceRequest,
+	UNICODESTRING operationName,
+	UNICODESTRING targetUri,
+	INT32 latencyMs,
+	INT32 serviceErrorCode,
+	BOOLEAN succeeded,
+	UNICODESTRING requestMethod,
+	UNICODESTRING responseContentType,
+	UNICODESTRING protocol,
+	UNICODESTRING protocolStatusCode,
+	UNICODESTRING dependencyOperationName,
+	UNICODESTRING dependencyOperationVersion,
+	UNICODESTRING dependencyName,
+	UNICODESTRING dependencyType,
+	INT32 responseSizeBytes,
+	UNICODESTRING __TlgCV__,
+	UINT32 InternetConnectionState,
+	UNICODESTRING Version,
+	UNICODESTRING Headers,
+	UINT32 SecureFailureFlags
+	);
+
+InternalFailureSummary(
+	UNICODESTRING OperationName,
+	UNICODESTRING TargetHostName,
+	UINT32 ServiceErrorCode,
+	UINT64 TotalLatencyMs,
+	UINT64 MinLatencyMs,
+	UINT32 ErrorCount,
+	UNICODESTRING Version
+	);
+
+OutgoingServiceRequestSummary(
+	UNICODESTRING OperationName,
+	UNICODESTRING TargetHostName,
+	UNICODESTRING RequestMethod,
+	UNICODESTRING ResponseCodeGrouping,
+	UINT16 GroupResponseCount,
+	UINT64 TotalGroupLatencyMs,
+	UINT64 MinimumGroupLatencyMs,
+	UINT64 MaximumGroupLatencyMs,
+	UNICODESTRING SampleCorrelationVector,
+	UNICODESTRING Protocol,
+	BOOL32 Succeeded,
+	UNICODESTRING Version
+	);
+
+ValidateUpdateTransferArgsFailure(
+	GUID TransferId,
+	UINT64 UpdateFlags,
+	UINT16 Priority
+	);
+
+ValidateScheduleXxxArgsFailure(
+	ANSISTRING Function,
+	GUID Type,
+	UINT8 UrlCount,
+	UINT32 RequestDataByteCount,
+	UINT64 UncompressedResourceByteCount,
+	UINT32 Flags,
+	UINT16 Priority,
+	UINT32 BlockByteCount,
+	BOOL32 IsCompletionEventHandleValue,
+	BOOL32 IsCompletionEventName,
+	BOOL32 IsTransferRangeArray,
+	UINT16 TransferRangeCount,
+	BOOL32 IsPath
+	);
+
+ValidateGetTransferStatusArgsFailure(
+	GUID TransferId,
+	UINT64 Flags
+	);
+
+ValidateGetTransferScheduleDataArgsFailure(
+	VOID
+	);
+
+ValidateConstrainBandwidthConsumptionArgsFailure(
+	UINT32 Mask,
+	UINT32 Flags
+	);
+
+ValidateCompleteTransferArgsFailure(
+	GUID TransferId,
+	UINT64 Flags
+	);
+
+StreamReadFailure(
+	UINT32 HRESULT,
+	UINT32 ByteCount
+	);
+
+StreamStatFailure(
+	UINT32 HRESULT
+	);
+
+StreamSeekFailure(
+	UINT32 HRESULT,
+	UINT64 ByteOffset
+	);
+
+StreamSetSizeFailure(
+	UINT32 HRESULT,
+	UINT64 ByteCount
+	);
+
+StreamWriteFailure(
+	UINT32 HRESULT,
+	UINT32 ByteCount
+	);
+
+EndDONotifyIdle(
+	BOOL32 BeginIsActiveState,
+	UINT16 BeginState,
+	BOOL32 EndIsActiveState,
+	UINT16 EndState
+	);
+
+BeginDONotifyIdle(
+	VOID
+	);
+
+EndDONotifyUsage(
+	UINT32 HRESULT,
+	UINT16 BeginState,
+	UINT16 EndState
+	);
+
+BeginDONotifyUsage(
+	UINT32 PriorityDownloadCount,
+	UINT32 PriorityDownloadPendingCount,
+	UINT32 NormalDownloadCount,
+	UINT32 NormalDownloadPendingCount,
+	UINT32 UploadCount,
+	UINT32 UsageBps
+	);
+
+EndDORemoveTransfer(
+	GUID TransferId,
+	UINT32 HRESULT,
+	UINT8 State
+	);
+
+BeginDORemoveTransfer(
+	GUID TransferId,
+	UINT8 State
+	);
+
+EndDOSetUsagePolicy(
+	UINT32 HRESULT
+	);
+
+BeginDOSetUsagePolicy(
+	UINT32 PriorityDownloadCountMax,
+	UINT32 NormalDownloadCountMax,
+	UINT32 UploadCountMax,
+	UINT32 DownloadBpsMax,
+	UINT32 UploadBpsMax
+	);
+
+EndDOUnadviseNotify(
+	UINT32 HRESULT
+	);
+
+BeginDOUnadviseNotify(
+	VOID
+	);
+
+EndDOInsertTransfer(
+	UINT8 State,
+	GUID TransferId,
+	UINT32 HRESULT
+	);
+
+BeginDOInsertTransfer(
+	UINT8 State,
+	UINT8 TargetState
+	);
+
+EndDOTransferThreadStatusChange(
+	GUID TransferId,
+	UINT32 HRESULT,
+	UINT8 BeginState,
+	UINT8 EndState,
+	UINT64 ElapsedWaitMilliseconds,
+	UINT64 ElapsedRunMilliseconds
+	);
+
+HeartbeatDOTransferThreadStatusChange(
+	GUID TransferId,
+	UINT64 ElapsedWaitMilliseconds,
+	UINT64 ElapsedRunMilliseconds
+	);
+
+BeginDOTransferThreadStatusChange(
+	GUID TransferId,
+	BOOL32 IsStarting
+	);
+
+EndRunDeliveryOptimization(
+	GUID TransferId,
+	UINT32 HRESULT,
+	UINT64 ElapsedRunMilliseconds
+	);
+
+HeartbeatRunDeliveryOptimization(
+	GUID TransferId,
+	UINT64 ElapsedRunMilliseconds
+	);
+
+BeginRunDeliveryOptimization(
+	GUID TransferId
+	);
+
+InternetConnectivityChange(
+	UINT32 OldConnectivityLevel,
+	UINT32 NewConnectivityLevel
+	);
+
+MixerStreamingStateChange(
+	BOOL32 To
+	);
+
+GameStreamingStateChange(
+	BOOL32 To
+	);
+
+EraRunningStateChange(
+	BOOL32 To
+	);
+
+EndSubtransferRunFailure(
+	GUID TransferId,
+	UINT32 SubtransferIndex,
+	UINT32 SubtransferCount,
+	UINT32 TransferType,
+	BOOL32 IsPersisted,
+	BOOL32 IsRehydrated,
+	GUID Type,
+	FILETIME CreateTime,
+	UINT32 UrlIndex,
+	UINT32 UrlCount,
+	UINT32 Flags,
+	UINT32 State,
+	UINT16 Priority,
+	UINT32 BlockByteCount,
+	UINT16 RunCount,
+	BOOL32 IsAborted,
+	BOOL32 IsComplete,
+	UINT32 HRESULT,
+	UINT16 HttpStatusCode,
+	UINT64 RangeSourceByteOffset,
+	UINT64 RangeDestinationByteOffset,
+	UINT64 RangeByteCount,
+	UINT64 TotalTransferredByteCount,
+	UINT64 IndividualTransferredByteOffset,
+	UINT64 IndividualTransferredByteCount,
+	UINT64 IndividualTransferredByteCountElapsedTime,
+	UINT64 AccumulatedSleepTimeInMilliseconds,
+	UNICODESTRING RemoteAddress,
+	UNICODESTRING Url,
+	UNICODESTRING RawHttpRequestHeaders,
+	UNICODESTRING RawHttpResponseHeaders,
+	UINT32 ContentSnapshot_len,
+	BINARY ContentSnapshot,
+	UINT8 ThreadIndex,
+	BOOL32 IsCachedConnection,
+	UNICODESTRING DnsQueryIpAddress,
+	UNICODESTRING HttpRedirectUrl
+	);
+
+TransferScavenged(
+	GUID TransferId,
+	GUID Type,
+	FILETIME CreateTime,
+	UINT64 TransferredByteCount,
+	GUID ScavengerTransferId,
+	GUID ScavengerType
+	);
+
+TransferCompleted(
+	GUID TransferId
+	);
+
+SpeculativeUploadThreadCountChange(
+	UINT32 OldCount,
+	UINT32 NewCount
+	);
+
+PersistedTransferRehydrationFailure(
+	UINT32 HRESULT
+	);
+
+EndUpdateTransfer(
+	GUID TransferId,
+	UINT32 HRESULT
+	);
+
+EndTransferThread(
+	UINT8 ThreadIndex,
+	UINT32 HRESULT
+	);
+
+EndSubtransferRun(
+	GUID TransferId,
+	UINT32 SubtransferIndex,
+	UINT32 SubtransferCount,
+	UINT32 TransferType,
+	BOOL32 IsPersisted,
+	BOOL32 IsRehydrated,
+	GUID Type,
+	FILETIME CreateTime,
+	UINT32 UrlIndex,
+	UINT32 UrlCount,
+	UINT32 Flags,
+	UINT32 State,
+	UINT16 Priority,
+	UINT32 BlockByteCount,
+	UINT16 RunCount,
+	BOOL32 IsAborted,
+	BOOL32 IsComplete,
+	UINT32 HRESULT,
+	UINT16 HttpStatusCode,
+	UINT64 RangeSourceByteOffset,
+	UINT64 RangeDestinationByteOffset,
+	UINT64 RangeByteCount,
+	UINT64 TotalTransferredByteCount,
+	UINT64 IndividualTransferredByteOffset,
+	UINT64 IndividualTransferredByteCount,
+	UINT64 IndividualTransferredByteCountElapsedTime,
+	UINT64 AccumulatedSleepTimeInMilliseconds,
+	UNICODESTRING RemoteAddress,
+	UNICODESTRING Url,
+	UNICODESTRING RawHttpRequestHeaders,
+	UNICODESTRING RawHttpResponseHeaders,
+	BINARY ContentSnapshot,
+	UINT8 ThreadIndex,
+	BOOL32 IsCachedConnection,
+	UNICODESTRING DnsQueryIpAddress,
+	UNICODESTRING HttpRedirectUrl
+	);
+
+EndServiceThread(
+	UINT32 HRESULT
+	);
+
+EndScheduleTransfer(
+	GUID TransferId,
+	UINT32 HRESULT
+	);
+
+GetTransferStatusFailure(
+	GUID TransferId,
+	UINT32 HRESULT
+	);
+
+EndGetTransferScheduleData(
+	GUID TransferId,
+	UINT32 HRESULT
+	);
+
+EndGetScheduledTransfers(
+	GUID Type,
+	UINT32 HRESULT,
+	UINT16 Count
+	);
+
+EndConstrainBandwidthConsumption(
+	UINT32 HRESULT,
+	UINT32 ConstrainByTroubleshooter
+	);
+
+EndCompleteTransfer(
+	GUID TransferId,
+	UINT32 HRESULT
+	);
+
+EndCancelTransfer(
+	GUID TransferId,
+	UINT32 HRESULT
+	);
+
+EndAuthManagerGetAccessToken(
+	GUID TransferId,
+	UINT32 SubtransferIndex,
+	UINT32 HRESULT
+	);
+
+BeginUpdateTransfer(
+	GUID TransferId,
+	UINT64 Flags
+	);
+
+BeginTransferRun(
+	UINT8 ThreadIndex
+	);
+
+BeginSubtransferRun(
+	GUID TransferId,
+	UINT32 SubtransferIndex,
+	UINT32 UrlIndex,
+	UINT8 ThreadIndex
+	);
+
+BeginServiceThread(
+	VOID
+	);
+
+BeginScheduleTransfer(
+	UINT32 TransferType,
+	BOOL32 IsPersisted,
+	GUID Type,
+	UINT32 UrlCount,
+	UINT32 Flags,
+	UINT16 Priority,
+	UINT32 BlockByteCount,
+	UINT16 TransferRangeCount
+	);
+
+BeginGetTransferScheduleData(
+	GUID TransferId
+	);
+
+BeginGetScheduledTransfers(
+	GUID Type
+	);
+
+BeginConstrainBandwidthConsumption(
+	BOOL32 Download,
+	BOOL32 Upload,
+	BOOL32 ConstrainByTroubleshooter
+	);
+
+BeginCompleteTransfer(
+	GUID TransferId
+	);
+
+BeginCancelTransfer(
+	GUID TransferId
+	);
+
+BeginAuthManagerGetAccessToken(
+	GUID TransferId,
+	UINT32 SubtransferIndex
+	);
+

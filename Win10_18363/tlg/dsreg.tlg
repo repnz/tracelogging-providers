@@ -1,0 +1,386 @@
+ProviderNames:
+	Microsoft.CAndE.ADFabric.CDJ
+
+
+
+**** Events *****
+BeginDiscoverStop(
+	VOID
+	);
+
+BeginDiscoverEnterpriseStop(
+	VOID
+	);
+
+BeginDiscoverStart(
+	VOID
+	);
+
+BeginDiscoverEnterpriseStart(
+	VOID
+	);
+
+CDJDiscoveryEntErrorEvent(
+	INT32 Error
+	);
+
+CDJDiscoveryErrorEvent(
+	INT32 Error
+	);
+
+CDJDiscoveryInvalidEnterpriseDrsNameEvent(
+	INT32 Error
+	);
+
+ActivityStoppedAutomatically(
+	VOID
+	);
+
+MsaDeviceTicketRequestStop(
+	INT32 hr
+	);
+
+CDJWriteGetJoinResponseCallbackErrorEvent(
+	INT32 returnCode,
+	INT32 httpStatus,
+	UNICODESTRING requestId,
+	UNICODESTRING responseBuffer,
+	INT32 joinType,
+	UNICODESTRING tenantId
+	);
+
+ActivityStoppedAutomatically(
+	VOID
+	);
+
+MsaDeviceTicketRequestStart(
+	VOID
+	);
+
+CDJLocalUnjoinStart(
+	VOID
+	);
+
+CDJAsyncJoinStart(
+	VOID
+	);
+
+CDJLocalUnjoinStop(
+	INT32 returnCode,
+	INT32 joinType,
+	BOOL32 isRecovery,
+	INT32 joinMode
+	);
+
+CDJCompleteJoinStop(
+	INT32 returnCode,
+	INT32 joinType,
+	INT32 joinMode,
+	INT32 tpmVersion,
+	INT32 keyPolicy,
+	BOOL32 deviceKeySoftwareKspFallback,
+	BOOL32 raKeySoftwareKspFallback
+	);
+
+CDJCompleteJoinStart(
+	VOID
+	);
+
+ActivityStoppedAutomatically(
+	VOID
+	);
+
+CDJAsyncJoinStop(
+	INT32 returnCode,
+	INT32 joinType,
+	UNICODESTRING tenantId,
+	INT32 joinMode,
+	UNICODESTRING requestId,
+	UNICODESTRING serverTime
+	);
+
+DeviceBeginUpdateAttributeStop(
+	INT32 returnCode,
+	UNICODESTRING attribute,
+	UNICODESTRING tenantId,
+	INT32 joinType,
+	UNICODESTRING requestId
+	);
+
+DeviceUpdateCallbackStart(
+	VOID
+	);
+
+DeviceUpdateCallbackStop(
+	INT32 returnCode,
+	UNICODESTRING attribute,
+	UNICODESTRING tenantId,
+	INT32 joinType,
+	UNICODESTRING requestId,
+	UINT32 httpStatus,
+	UNICODESTRING time,
+	UNICODESTRING serverMessage,
+	UNICODESTRING responseBody
+	);
+
+DeviceBeginUpdateAttributeStart(
+	UNICODESTRING attribute,
+	UNICODESTRING tenantId,
+	INT32 joinType
+	);
+
+NGCDeleteTransportKeyStart(
+	VOID
+	);
+
+NGCCreateTransportKeyStop(
+	VOID
+	);
+
+NGCCreateUserKeyStart(
+	VOID
+	);
+
+NGCBadContainerStatus(
+	INT32 containerStatus,
+	UNICODESTRING keyName,
+	UNICODESTRING idpDomain,
+	UNICODESTRING tenantId,
+	GUID keyId,
+	UINT32 keyType,
+	UINT32 attestationLevel
+	);
+
+NGCMissingKey(
+	UNICODESTRING keyName,
+	UNICODESTRING idpDomain,
+	UNICODESTRING tenantId,
+	GUID keyId,
+	UINT32 keyType,
+	UINT32 attestationLevel
+	);
+
+NGCCreateTransportKeySuccessEvent(
+	VOID
+	);
+
+NGCCreateTransportKeyFailEvent(
+	INT32 Error
+	);
+
+NGCDeleteTransportKeySuccessEvent(
+	VOID
+	);
+
+NGCDeleteUserKeySuccessEvent(
+	VOID
+	);
+
+NGCDeleteUserKeyFailEvent(
+	INT32 Error
+	);
+
+NGCCreateUserKeySuccessEvent(
+	VOID
+	);
+
+NGCCreateUserKeyStop(
+	VOID
+	);
+
+NGCDeleteTransportKeyFailEvent(
+	INT32 Error
+	);
+
+NGCDeleteTransportKeyStop(
+	VOID
+	);
+
+NGCCreateTransportKeyStart(
+	VOID
+	);
+
+NGCGetUserKeyAttestationStop(
+	VOID
+	);
+
+NGCDeleteUserKeyStart(
+	VOID
+	);
+
+NGCGetUserKeyAttestationFailEvent(
+	INT32 Error,
+	INT32 KeyStatus
+	);
+
+NGCGetUserKeyAttestationStart(
+	VOID
+	);
+
+NGCGetUserKeyAttestationSuccessEvent(
+	INT32 KeyStatus
+	);
+
+NGCDeleteUserKeyStop(
+	VOID
+	);
+
+NGCMismatchedKey(
+	UNICODESTRING savedKeyName,
+	UNICODESTRING savedIdpDomain,
+	UNICODESTRING savedTenantId,
+	GUID savedKeyId,
+	UINT32 savedKeyType,
+	UINT32 savedAttestationLevel,
+	UNICODESTRING realKeyName,
+	UNICODESTRING realIdpDomain,
+	UNICODESTRING realTenantId
+	);
+
+NGCCreateUserKeyFailEvent(
+	INT32 Error
+	);
+
+NGCRegisterKeyEvent(
+	INT32 returnCode
+	);
+
+NGCDeregisterKeyEvent(
+	INT32 returnCode
+	);
+
+NGCSetupPostCheckContainerPolicyFail(
+	INT32 returnCode
+	);
+
+NGCSetupPostContainerDeletionFail(
+	INT32 returnCode
+	);
+
+NGCSetupPostRequestStop(
+	INT32 returnCode,
+	INT32 keyType
+	);
+
+NGCRegBeginStart(
+	VOID
+	);
+
+NGCSetupPostContainerCreationFail(
+	INT32 returnCode
+	);
+
+NGCRegBeginStop(
+	INT32 returnCode
+	);
+
+NGCSetupPostRequestStart(
+	VOID
+	);
+
+NGCInitializeStart(
+	VOID
+	);
+
+NGCAsyncRespCallbackStart(
+	VOID
+	);
+
+NGCInitializeStop(
+	INT32 returnCode
+	);
+
+NGCAsyncRespCallbackStop(
+	INT32 returnCode,
+	UNICODESTRING clientId,
+	UNICODESTRING serverRequestId,
+	UINT32 httpStatus,
+	UNICODESTRING responseError,
+	UNICODESTRING serverErrorMessage,
+	UNICODESTRING clientResponse,
+	UNICODESTRING responseBody
+	);
+
+NGCSaveStatusStop(
+	INT32 keyType,
+	INT32 attestationLevel,
+	INT32 aikCertStatus,
+	INT32 returnCode,
+	UNICODESTRING errorCode
+	);
+
+NGCSaveStatusStart(
+	VOID
+	);
+
+NgcPolicyCheckError(
+	UNICODESTRING cid,
+	UNICODESTRING ngcMethod,
+	UNICODESTRING failMethod,
+	HRESULT hr
+	);
+
+NgcPolicyCheck(
+	UNICODESTRING cid,
+	UINT8 deviceIsJoined,
+	UINT8 userIsAdOrAad,
+	UINT8 certEnrollmentRequired,
+	UINT8 scepReady,
+	UINT8 sessionIsNotRemote,
+	UINT8 ngcPolicyEnabled,
+	UINT8 ngcPostLogonProvisioningEnabled,
+	UINT8 machineMeetsNgcPolicy,
+	UINT8 enterpriseAccountHasPrt,
+	UINT8 rAIsReady,
+	UINT8 certEnrollmentMethod,
+	UINT8 rATemplateStatusCode,
+	UINT8 rATemplateIsReady,
+	UINT64 elapsed
+	);
+
+FIDORegBeginStart(
+	VOID
+	);
+
+FIDORegisterKeyEvent(
+	INT32 returnCode
+	);
+
+FIDORegBeginStop(
+	INT32 returnCode
+	);
+
+FIDODeregisterKeyEvent(
+	INT32 returnCode
+	);
+
+FIDOAsyncRespCallbackStop(
+	INT32 returnCode,
+	UNICODESTRING requestId,
+	UINT32 httpStatus,
+	UNICODESTRING errorCode,
+	UNICODESTRING errorSubCode,
+	UNICODESTRING serverMessage,
+	UNICODESTRING responseBody
+	);
+
+FIDOAsyncRespCallbackStart(
+	VOID
+	);
+
+FIDOCreateUserKeyStop(
+	VOID
+	);
+
+FIDOCreateUserKeyFailEvent(
+	INT32 Error
+	);
+
+FIDOCreateUserKeyStart(
+	VOID
+	);
+
+FIDOCreateUserKeySuccessEvent(
+	VOID
+	);
+

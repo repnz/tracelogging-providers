@@ -1,0 +1,50 @@
+ProviderNames:
+	Microsoft.Windows.Networking.Wlan.Wfdprov
+
+
+
+**** Events *****
+ConfigureDeviceCompleted(
+	UINT32 ErrorCode,
+	ANSISTRING ExecutionType,
+	ANSISTRING WFDRole,
+	UINT32 WPSPasswordID,
+	UINT32 OOBDevicePasswordID
+	);
+
+ConfigureDeviceCompleted(
+	UINT32 ErrorCode
+	);
+
+ConfigureDeviceStart(
+	ANSISTRING WFDRole,
+	UINT32 WPSPasswordID,
+	UINT32 OOBDevicePasswordID
+	);
+
+WPSExchangeSucceeded(
+	UINT32 ErrorCode
+	);
+
+ConfigureAndProvisionDeviceCompleted(
+	UINT32 ErrorCode,
+	ANSISTRING WFDRole,
+	UINT32 WPSPasswordID,
+	UINT32 OOBDevicePasswordID
+	);
+
+WCNSearchCompleted(
+	UINT32 ErrorCode,
+	ANSISTRING ExecutionType
+	);
+
+WCNSearchStart(
+	ANSISTRING WFDRole
+	);
+
+ConfigureAndProvisionDeviceStart(
+	ANSISTRING WFDRole,
+	UINT32 WPSPasswordID,
+	UINT32 OOBDevicePasswordID
+	);
+

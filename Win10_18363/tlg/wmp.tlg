@@ -1,0 +1,252 @@
+ProviderNames:
+	Microsoft.Windows.WindowsMediaPlayer
+	Microsoft.Windows.MediaFoundation.CallStack
+
+
+
+**** Events *****
+WMPDllUsage(
+	UNICODESTRING ProcessName,
+	ANSISTRING CurrentWMPArch
+	);
+
+FileCounts(
+	UINT32 NumberOfDRMFiles,
+	UINT32 NumberOfTracksWithUserRatings
+	);
+
+PluginCounts(
+	UINT32 NumberOfVisualizations,
+	UINT32 NumberOfDisplayPlugins,
+	UINT32 NumberOfSettingsPlugins,
+	UINT32 NumberOfMetadataPlugins,
+	UINT32 NumberOfWindowedPlugins,
+	UINT32 NumberOfBackgroundPlugins,
+	UINT32 NumberOfVideoDSPPlugins,
+	UINT32 NumberOfAudioDSPPlugins,
+	UINT32 NumberOfOtherDSPPlugins,
+	UINT32 NumberOfRenderingPlugins
+	);
+
+MTCData(
+	UINT32 FastPlayCount,
+	UINT32 SlowPlayCount,
+	UINT32 NormalPlayCount,
+	UINT32 FastForwardCount,
+	UINT32 RewindCount
+	);
+
+PlayVDCDVDAudio(
+	VOID
+	);
+
+ViewFileMarker(
+	VOID
+	);
+
+TurnOnMediaStreaming(
+	VOID
+	);
+
+AllowInternetToAccessHomeMedia(
+	VOID
+	);
+
+AllowRemoteControlOfMyPlayer(
+	UINT32 nButtonPressed
+	);
+
+ChangeRippingFormat(
+	UINT8 RippingFormat
+	);
+
+FileCreateAutoPlayList(
+	HRESULT hr
+	);
+
+WMPHelp(
+	UNICODESTRING HelpString
+	);
+
+ToolsDownloadSkins(
+	VOID
+	);
+
+ToolsDownloadPlugins(
+	VOID
+	);
+
+ToolsDownloadVisualizations(
+	VOID
+	);
+
+ToolsRestoreDeletedItems(
+	VOID
+	);
+
+ToolsRestoreMediaLibrary(
+	VOID
+	);
+
+ViewStatistics(
+	VOID
+	);
+
+SkinChooser(
+	VOID
+	);
+
+FileWorkOffline(
+	VOID
+	);
+
+FileSaveNowPlaylistAs(
+	VOID
+	);
+
+FileOpenUrl(
+	HRESULT hr
+	);
+
+ToolsPluginsOptions(
+	VOID
+	);
+
+Enhancements(
+	UNICODESTRING strSetting
+	);
+
+ApplySkin(
+	VOID
+	);
+
+MTVPromo_UnexpectedDialogClose(
+	UINT32 NumTimesShown,
+	HRESULT HRESULT
+	);
+
+MTVPromo_MakeDefaultClicked(
+	UINT32 NumTimesShown,
+	HRESULT HRESULT
+	);
+
+MTVPromo_OpenClicked(
+	UINT32 NumTimesShown,
+	HRESULT HRESULT
+	);
+
+MTVPromo_Cancelled(
+	UINT32 NumTimesShown,
+	HRESULT HRESULT
+	);
+
+MTVPromo_NotNowClicked(
+	UINT32 NumTimesShown,
+	HRESULT HRESULT
+	);
+
+MTVPromo_NoThanksClicked(
+	UINT32 NumTimesShown,
+	HRESULT HRESULT
+	);
+
+MTVPromo_DefaultApp(
+	UNICODESTRING ProgId
+	);
+
+MTVPromo_Failed(
+	UINT32 NumTimesShown,
+	HRESULT HRESULT
+	);
+
+MTVPromo_FollowUpDialogShown(
+	UINT32 NumTimesShown,
+	HRESULT HRESULT
+	);
+
+MTVPromo_MainDialogShown(
+	UINT32 NumTimesShown,
+	HRESULT HRESULT
+	);
+
+RenderGraph(
+	GUID guidApplicationId,
+	UINT32 uiPreferredRuntime,
+	UINT32 uiGraphTypeChosen,
+	UNICODESTRING pswzFileExtension,
+	UINT32 dwRenderCount,
+	UINT32 DriveType,
+	BOOL32 IsOcx,
+	HRESULT hr
+	);
+
+StartRipping(
+	UNICODESTRING strRippingFormat,
+	HRESULT hr
+	);
+
+WMPMetadataQuery(
+	UINT32 Provider,
+	UNICODESTRING Type,
+	BOOL32 Success
+	);
+
+InvalidMetadataError(
+	UINT32 Provider,
+	UNICODESTRING SearchID,
+	UNICODESTRING Type,
+	HRESULT hr
+	);
+
+ServerError(
+	UINT32 Provider,
+	UNICODESTRING SearchID,
+	UNICODESTRING Type,
+	UINT32 Code,
+	HRESULT hr
+	);
+
+NetworkError(
+	UINT32 Provider,
+	UNICODESTRING SearchID,
+	UNICODESTRING Type,
+	HRESULT hr
+	);
+
+FingerprintingSuccessRate(
+	UINT32 Provider,
+	BOOL32 IsMatchSuccess
+	);
+
+LargeAlbumArtMissing(
+	UINT32 Provider,
+	UNICODESTRING SearchID,
+	UNICODESTRING Type
+	);
+
+WMPBrowserNavigateError(
+	UNICODESTRING URL,
+	INT32 StatusCode
+	);
+
+TunerConfig(
+	HRESULT hr
+	);
+
+FindAlbumInfoDialogLaunched(
+	VOID
+	);
+
+SyncComplete(
+	VOID
+	);
+
+StartBurn(
+	VOID
+	);
+
+PluginName(
+	UNICODESTRING Category,
+	UNICODESTRING Name
+	);
+

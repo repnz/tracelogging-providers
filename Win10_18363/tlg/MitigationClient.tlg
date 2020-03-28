@@ -1,0 +1,609 @@
+ProviderNames:
+	Microsoft.Windows.RecommendedTroubleshootingService
+	TelemetryAssert
+	TelemetryAssertDiagTrack
+
+
+
+**** Events *****
+ClassFactoryCreateInstance(
+	BOOLEAN isServiceFactory,
+	GUID comInterface,
+	GUID SessionId,
+	UINT64 PartA_PrivTags
+	);
+
+FallbackError(
+	UINT64 PartA_PrivTags,
+	SIGNED wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+FallbackError(
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+ActivityStoppedAutomatically(
+	VOID
+	);
+
+ActivityError(
+	UINT64 PartA_PrivTags,
+	SIGNED wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+ActivityError(
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+DeviceState(
+	BOOLEAN isFeatureApplicableAndEnabled,
+	INT32 mitigationPreference,
+	BOOLEAN isManaged,
+	GUID SessionId,
+	UINT64 PartA_PrivTags
+	);
+
+MitigationStatusSetForRetry(
+	UNICODESTRING mitigationId,
+	GUID SessionId,
+	UINT64 PartA_PrivTags
+	);
+
+InitializationActivity(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+InitializationActivity(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+InitializationActivity(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId
+	);
+
+RunServiceDrivenActionsActivity(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+RunServiceDrivenActionsActivity(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+RunServiceDrivenActionsActivity(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId
+	);
+
+GetMitigationsActivity(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+GetMitigationsActivity(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+GetMitigationsActivity(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId
+	);
+
+ApplyMitigationsActivity(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+ApplyMitigationsActivity(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+ApplyMitigationsActivity(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId
+	);
+
+ScanForMitigationsActivity(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+ScanForMitigationsActivity(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+ScanForMitigationsActivity(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId
+	);
+
+MitigationFileDownloadActivity(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId,
+	UNICODESTRING downloadURL
+	);
+
+MitigationHttpRequestActivity(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId
+	);
+
+MitigationHttpServerTrustFailure(
+	UNICODESTRING mitigationId,
+	UNICODESTRING mitigationVersion,
+	UINT32 trustError,
+	UINT32 trustInfo,
+	UINT32 statusError,
+	INT32 certChainPolicyType,
+	GUID SessionId,
+	UINT64 PartA_PrivTags
+	);
+
+MitigationHTTPRequest(
+	UINT32 HTTPStatusCode,
+	GUID SessionId,
+	UINT64 PartA_PrivTags
+	);
+
+ActivityIntermediateStop(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+MitigationFileDownloadActivity(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+MitigationFileDownloadActivity(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+MitigationHttpRequestActivity(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+MitigationHttpRequestActivity(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+ToastDisplayed(
+	UINT32 toastType,
+	UNICODESTRING toastInfo,
+	GUID SessionId,
+	UINT64 PartA_PrivTags
+	);
+
+ToastScheduled(
+	UINT32 toastType,
+	UNICODESTRING toastInfo,
+	GUID SessionId,
+	UINT64 PartA_PrivTags
+	);
+
+ServiceDrivenActionInitialize(
+	INT32 hr,
+	INT32 actionId,
+	UNICODESTRING actionAsString,
+	GUID SessionId,
+	UINT64 PartA_PrivTags
+	);
+
+AuthenticateCabSignatureFailed(
+	INT32 hr,
+	BOOLEAN isMicrosoftSigned,
+	UNICODESTRING CertName,
+	GUID SessionId,
+	UINT64 PartA_PrivTags
+	);
+
+MitigationSetUserPreference(
+	INT32 currentUserPreference,
+	INT32 newUserPreference,
+	GUID SessionId,
+	UINT64 PartA_PrivTags
+	);
+
+GetAvailableMitigationsFromOneSettigsJsonActivity(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+GetAvailableMitigationsFromOneSettigsJsonActivity(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+GetAvailableMitigationsFromOneSettigsJsonActivity(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId
+	);
+
+MitigationFailed(
+	UNICODESTRING mitigationId,
+	UNICODESTRING mitigationVersion,
+	INT32 hr,
+	INT32 subType,
+	UNICODESTRING description,
+	UINT64 mitigationProcessCycleTime,
+	INT64 totalUserTime,
+	INT64 totalKernelTime,
+	INT32 totalProcesses,
+	INT32 activeProcesses,
+	INT32 totalTerminatedProcesses,
+	UINT32 experimentFeatureId,
+	UINT32 experimentFeatureState,
+	UNICODESTRING oneSettingsSchemaVersion,
+	BOOLEAN oneSettingsMetadataParsed,
+	BOOLEAN mitigationRequestWithCompressionFailed,
+	BOOLEAN mitigationServiceResultFetched,
+	INT32 exitCode,
+	INT32 executionHR,
+	BOOLEAN isReApply,
+	INT32 executionPreference,
+	INT32 countDownloadedPayload,
+	BOOLEAN isActiveSessionPresent,
+	BOOLEAN parsedOneSettingsFile,
+	BOOLEAN isFilteringSuccessful,
+	BOOLEAN isCriticalMitigationAvailable,
+	BOOLEAN atleastOneMitigationSucceeded,
+	BOOLEAN onlyNoOptMitigationsPresent,
+	UINT64 totalNumberOfApplicableMitigations,
+	INT32 devicePreference,
+	GUID SessionId,
+	UINT64 PartA_PrivTags
+	);
+
+MitigationSucceeded(
+	UNICODESTRING mitigationId,
+	UNICODESTRING mitigationVersion,
+	UINT64 mitigationProcessCycleTime,
+	INT64 totalUserTime,
+	INT64 totalKernelTime,
+	INT32 totalProcesses,
+	INT32 activeProcesses,
+	INT32 totalTerminatedProcesses,
+	UINT32 experimentFeatureId,
+	UINT32 experimentFeatureState,
+	INT32 executionPreference,
+	INT32 devicePreference,
+	GUID SessionId,
+	UINT64 PartA_PrivTags
+	);
+
+MitigationRejected(
+	UNICODESTRING mitigationId,
+	UNICODESTRING mitigationVersion,
+	INT32 subType,
+	UNICODESTRING description,
+	GUID SessionId,
+	UINT64 PartA_PrivTags
+	);
+
+MitigationReceived(
+	UNICODESTRING mitigationId,
+	UNICODESTRING mitigationVersion,
+	INT32 mitigationType,
+	GUID SessionId,
+	UINT64 PartA_PrivTags
+	);
+
+MitigationStarted(
+	UNICODESTRING mitigationId,
+	UINT32 experimentFeatureId,
+	UNICODESTRING localeName,
+	INT32 localeSource,
+	INT32 mitigationType,
+	INT32 executionPreference,
+	GUID SessionId,
+	UINT64 PartA_PrivTags
+	);
+
+MitigationError(
+	UNICODESTRING mitigationId,
+	UNICODESTRING mitigationVersion,
+	INT32 subType,
+	UNICODESTRING description,
+	INT32 hr,
+	GUID SessionId,
+	UINT64 PartA_PrivTags
+	);
+
+Assert(
+	UINT32 assertVersion,
+	UINT32 rva,
+	UINT32 timestamp,
+	UINT32 imageSize,
+	ANSISTRING imageName,
+	UINT32 count,
+	UINT32 totalHits,
+	UINT32 ModuleCollection,
+	UINT32 GlobalCollection
+	);
+
+OneSettingsHandlerInitialize(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+OneSettingsHandlerInitialize(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+OneSettingsHandlerInitialize(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId
+	);
+
+ReadOneSettigsJsonActivity(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+ReadOneSettigsJsonActivity(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+ReadOneSettigsJsonActivity(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId
+	);
+

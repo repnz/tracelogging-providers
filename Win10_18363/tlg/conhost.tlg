@@ -1,0 +1,809 @@
+ProviderNames:
+	Microsoft.Windows.Console.Host
+	Microsoft.Windows.Console.Launcher
+	Microsoft.Windows.Console.VirtualTerminal.Parser
+	Microsoft.Windows.Console.Render.VtEngine
+	Microsoft.Windows.Wil.FeatureLogging
+
+
+
+**** Events *****
+ActivityStoppedAutomatically(
+	VOID
+	);
+
+RipMessage(
+	ANSISTRING Message
+	);
+
+ApiAnsiUsed(
+	UINT32 AddConsoleAlias,
+	UINT32 FillConsoleOutputCharacter,
+	UINT32 GetConsoleAlias,
+	UINT32 GetConsoleAliases,
+	UINT32 GetConsoleAliasesLength,
+	UINT32 GetConsoleAliasExes,
+	UINT32 GetConsoleAliasExesLength,
+	UINT32 GetConsoleOriginalTitle,
+	UINT32 GetConsoleTitle,
+	UINT32 PeekConsoleInput,
+	UINT32 ReadConsole,
+	UINT32 ReadConsoleInput,
+	UINT32 ReadConsoleOutput,
+	UINT32 ReadConsoleOutputCharacter,
+	UINT32 SetConsoleTitle,
+	UINT32 WriteConsole,
+	UINT32 WriteConsoleInput,
+	UINT32 WriteConsoleOutput,
+	UINT32 WriteConsoleOutputCharacter,
+	UINT64 PartA_PrivTags
+	);
+
+ApiUsed(
+	UINT32 AddConsoleAlias,
+	UINT32 AllocConsole,
+	UINT32 AttachConsole,
+	UINT32 CreateConsoleScreenBuffer,
+	UINT32 GenerateConsoleCtrlEvent,
+	UINT32 FillConsoleOutputAttribute,
+	UINT32 FillConsoleOutputCharacter,
+	UINT32 FlushConsoleInputBuffer,
+	UINT32 FreeConsole,
+	UINT32 GetConsoleAlias,
+	UINT32 GetConsoleAliases,
+	UINT32 GetConsoleAliasExesLength,
+	UINT32 GetConsoleAliasesLength,
+	UINT32 GetConsoleAliasExes,
+	UINT32 GetConsoleCP,
+	UINT32 GetConsoleCursorInfo,
+	UINT32 GetConsoleDisplayMode,
+	UINT32 GetConsoleFontSize,
+	UINT32 GetConsoleHistoryInfo,
+	UINT32 GetConsoleLangId,
+	UINT32 GetConsoleMode,
+	UINT32 GetConsoleOriginalTitle,
+	UINT32 GetConsoleOutputCP,
+	UINT32 GetConsoleProcessList,
+	UINT32 GetConsoleScreenBufferInfoEx,
+	UINT32 GetConsoleSelectionInfo,
+	UINT32 GetConsoleTitle,
+	UINT32 GetConsoleWindow,
+	UINT32 GetCurrentConsoleFontEx,
+	UINT32 GetLargestConsoleWindowSize,
+	UINT32 GetNumberOfConsoleInputEvents,
+	UINT32 GetNumberOfConsoleMouseButtons,
+	UINT32 PeekConsoleInput,
+	UINT32 ReadConsole,
+	UINT32 ReadConsoleInput,
+	UINT32 ReadConsoleOutput,
+	UINT32 ReadConsoleOutputAttribute,
+	UINT32 ReadConsoleOutputCharacter,
+	UINT32 ScrollConsoleScreenBuffer,
+	UINT32 SetConsoleActiveScreenBuffer,
+	UINT32 SetConsoleCP,
+	UINT32 SetConsoleCursorInfo,
+	UINT32 SetConsoleCursorPosition,
+	UINT32 SetConsoleDisplayMode,
+	UINT32 SetConsoleHistoryInfo,
+	UINT32 SetConsoleMode,
+	UINT32 SetConsoleOutputCP,
+	UINT32 SetConsoleScreenBufferInfoEx,
+	UINT32 SetConsoleScreenBufferSize,
+	UINT32 SetConsoleTextAttribute,
+	UINT32 SetConsoleTitle,
+	UINT32 SetConsoleWindowInfo,
+	UINT32 SetCurrentConsoleFontEx,
+	UINT32 WriteConsole,
+	UINT32 WriteConsoleInput,
+	UINT32 WriteConsoleOutput,
+	UINT32 WriteConsoleOutputAttribute,
+	UINT32 WriteConsoleOutputCharacter,
+	UINT64 PartA_PrivTags
+	);
+
+Settings(
+	BOOL32 AutoPosition,
+	BOOL32 HistoryNoDuplicates,
+	BOOL32 InsertMode,
+	BOOL32 LineSelection,
+	BOOL32 QuickEdit,
+	UINT8 WindowAlpha,
+	BOOL32 WrapText,
+	UINT32 ColorTable,
+	UINT32 CodePageInput,
+	UINT32 CodePageOutput,
+	INT16 FontSizeX,
+	INT16 FontSizeY,
+	UINT32 HotKey,
+	INT16 ScreenBufferSizeX,
+	INT16 ScreenBufferSizeY,
+	UINT32 StartupFlags,
+	UINT32 VirtualTerminalLevel,
+	INT16 WindowSizeX,
+	INT16 WindowSizeY,
+	INT16 WindowOriginX,
+	INT16 WindowOriginY,
+	UNICODESTRING FontName,
+	BOOL32 AllowAltF4Close,
+	BOOL32 ControlKeyShortcutsDisabled,
+	BOOL32 EnabledColorSelection,
+	BOOL32 FilterOnPaste,
+	BOOL32 TrimLeadingZeros,
+	UNICODESTRING LaunchFontName,
+	UINT64 CommandHistoriesNumber,
+	UINT32 CodePage,
+	UINT32 CursorSize,
+	UINT32 FontFamily,
+	UINT32 FontWeight,
+	UINT32 HistoryBufferSize,
+	UINT32 HistoryBuffersNumber,
+	UINT32 ScrollScale,
+	UINT16 FillAttribute,
+	UINT16 PopupFillAttribute,
+	UINT16 ShowWindow,
+	UINT64 PartA_PrivTags
+	);
+
+SessionEnding(
+	BOOL32 BashUsed,
+	BOOL32 CtrlPgUpPgDnUsed,
+	BOOL32 KeyboardTextEditingUsed,
+	BOOL32 KeyboardTextSelectionUsed,
+	UINT32 CtrlShiftCProcUsed,
+	UINT32 CtrlShiftCRawUsed,
+	UINT32 CtrlShiftVProcUsed,
+	UINT32 CtrlShiftVRawUsed,
+	UINT32 QuickEditCopyProcUsed,
+	UINT32 QuickEditCopyRawUsed,
+	UINT32 QuickEditPasteProcUsed,
+	UINT32 QuickEditPasteRawUsed,
+	BOOL32 LaunchedFromShortcut,
+	UNICODESTRING ProcessesConnected,
+	UINT32 ProcessesConnectedCount,
+	UINT32 ProcessesConnectedCodesCount,
+	UINT32 ProcessesConnectedFailedCodesCount,
+	UINT32 ProcessesConnectedFailedOutsideCount,
+	INT32 StartedUsingAtSeconds,
+	INT32 EndedUsingAtSeconds,
+	UINT32 ColorSelectionUsed,
+	UINT64 PartA_PrivTags
+	);
+
+FindDialogUsed(
+	FLOAT StringLengthAverage,
+	FLOAT DirectionDownAverage,
+	FLOAT MatchCaseAverage,
+	UINT32 FindNextButtonClickedTotal,
+	UINT64 PartA_PrivTags
+	);
+
+ActivityStop(
+	VOID
+	);
+
+ActivityStart(
+	VOID
+	);
+
+WindowUiaProvider::GetFocus(
+	VOID
+	);
+
+WindowUiaProvider::ElementProviderFromPoint(
+	VOID
+	);
+
+WindowUiaProvider::GetFragmentRoot(
+	VOID
+	);
+
+WindowUiaProvider::SetFocus(
+	VOID
+	);
+
+WindowUiaProvider::GetEmbeddedFragmentRoots(
+	VOID
+	);
+
+WindowUiaProvider::GetBoundingRectangle(
+	VOID
+	);
+
+WindowUiaProvider::GetRuntimeId(
+	VOID
+	);
+
+WindowUiaProvider::Navigate(
+	UNICODESTRING direction
+	);
+
+WindowUiaProvider::GetHostRawElementProvider(
+	VOID
+	);
+
+WindowUiaProvider::GetPropertyValue(
+	VOID
+	);
+
+WindowUiaProvider::GetPatternProvider(
+	VOID
+	);
+
+WindowUiaProvider::GetProviderOptions(
+	VOID
+	);
+
+WindowUiaProvider::QueryInterface(
+	VOID
+	);
+
+WindowUiaProvider::Release(
+	VOID
+	);
+
+WindowUiaProvider::AddRef(
+	VOID
+	);
+
+WindowUiaProvider::Signal(
+	INT32 Signal,
+	UNICODESTRING Signal Name
+	);
+
+WindowUiaProvider::Create(
+	VOID
+	);
+
+ScreenInfoUiaProvider::GetSupportedTextSelection(
+	VOID
+	);
+
+ScreenInfoUiaProvider::GetDocumentRange(
+	VOID
+	);
+
+ScreenInfoUiaProvider::RangeFromPoint(
+	VOID
+	);
+
+ScreenInfoUiaProvider::RangeFromChild(
+	VOID
+	);
+
+ScreenInfoUiaProvider::GetVisibleRanges(
+	VOID
+	);
+
+ScreenInfoUiaProvider::GetSelection(
+	VOID
+	);
+
+ScreenInfoUiaProvider::GetFragmentRoot(
+	VOID
+	);
+
+ScreenInfoUiaProvider::SetFocus(
+	VOID
+	);
+
+ScreenInfoUiaProvider::GetEmbeddedFragmentRoots(
+	VOID
+	);
+
+ScreenInfoUiaProvider::GetBoundingRectangles(
+	VOID
+	);
+
+ScreenInfoUiaProvider::GetRuntimeId(
+	VOID
+	);
+
+ScreenInfoUiaProvider::Navigate(
+	UNICODESTRING direction
+	);
+
+ScreenInfoUiaProvider::GetHostRawElementProvider(
+	VOID
+	);
+
+ScreenInfoUiaProvider::GetPropertyValue(
+	VOID
+	);
+
+ScreenInfoUiaProvider::GetPatternProvider(
+	VOID
+	);
+
+ScreenInfoUiaProvider::GetProviderOptions(
+	VOID
+	);
+
+ScreenInfoUiaProvider::QueryInterface(
+	VOID
+	);
+
+ScreenInfoUiaProvider::Release(
+	VOID
+	);
+
+ScreenInfoUiaProvider::AddRef(
+	VOID
+	);
+
+ScreenInfoUiaProvider::Signal(
+	INT32 msg->Signal,
+	UNICODESTRING Event Name
+	);
+
+ScreenInfoUiaProvider::Constructor(
+	VOID
+	);
+
+UiaTextRange::GetChildren(
+	UINT64 _id,
+	UINT32 _start,
+	UINT32 _end,
+	BOOLEAN _degenerate
+	);
+
+UiaTextRange::ScrollIntoView(
+	UINT64 _id,
+	UINT32 _start,
+	UINT32 _end,
+	BOOLEAN _degenerate,
+	BOOLEAN alignToTop
+	);
+
+UiaTextRange::RemoveFromSelection(
+	UINT64 _id,
+	UINT32 _start,
+	UINT32 _end,
+	BOOLEAN _degenerate
+	);
+
+UiaTextRange::AddToSelection(
+	UINT64 _id,
+	UINT32 _start,
+	UINT32 _end,
+	BOOLEAN _degenerate
+	);
+
+UiaTextRange::Select(
+	UINT64 _id,
+	UINT32 _start,
+	UINT32 _end,
+	BOOLEAN _degenerate
+	);
+
+UiaTextRange::MoveEndpointByRange(
+	UINT64 _id,
+	UINT32 _start,
+	UINT32 _end,
+	BOOLEAN _degenerate,
+	UINT32 Original Start,
+	UINT32 Original End,
+	UNICODESTRING endpoint,
+	UNICODESTRING targetEndpoint,
+	UINT64 Other's _id
+	);
+
+UiaTextRange::MoveEndpointByUnit(
+	UINT64 _id,
+	UINT32 _start,
+	UINT32 _end,
+	BOOLEAN _degenerate,
+	UINT32 Original Start,
+	UINT32 Original End,
+	UNICODESTRING endpoint,
+	UNICODESTRING unit,
+	INT32 Requested Count,
+	INT32 Moved Count
+	);
+
+UiaTextRange::Move(
+	UINT64 _id,
+	UINT32 _start,
+	UINT32 _end,
+	BOOLEAN _degenerate,
+	UINT32 Original Start,
+	UINT32 Original End,
+	UNICODESTRING unit,
+	INT32 Requested Count,
+	INT32 Moved Count
+	);
+
+UiaTextRange::GetText(
+	UINT64 _id,
+	UINT32 _start,
+	UINT32 _end,
+	BOOLEAN _degenerate,
+	UNICODESTRING Text
+	);
+
+UiaTextRange::GetEnclosingElement(
+	UINT64 _id,
+	UINT32 _start,
+	UINT32 _end,
+	BOOLEAN _degenerate
+	);
+
+UiaTextRange::GetBoundingRectangles(
+	UINT64 _id,
+	UINT32 _start,
+	UINT32 _end,
+	BOOLEAN _degenerate
+	);
+
+UiaTextRange::GetAttributeValue(
+	UINT64 _id,
+	UINT32 _start,
+	UINT32 _end,
+	BOOLEAN _degenerate
+	);
+
+UiaTextRange::FindText(
+	UINT64 _id,
+	UINT32 _start,
+	UINT32 _end,
+	BOOLEAN _degenerate
+	);
+
+UiaTextRange::FindAttribute(
+	UINT64 _id,
+	UINT32 _start,
+	UINT32 _end,
+	BOOLEAN _degenerate
+	);
+
+UiaTextRange::ExpandToEnclosingUnit(
+	UINT64 _id,
+	UINT32 _start,
+	UINT32 _end,
+	BOOLEAN _degenerate,
+	UNICODESTRING Unit,
+	UINT32 Original Start,
+	UINT32 Original End
+	);
+
+UiaTextRange::CompareEndpoints(
+	UINT64 _id,
+	UINT32 _start,
+	UINT32 _end,
+	BOOLEAN _degenerate,
+	UINT64 Other's Id,
+	UNICODESTRING endpoint,
+	UNICODESTRING targetEndpoint,
+	INT32 Result
+	);
+
+UiaTextRange::Compare(
+	UINT64 _id,
+	UINT32 _start,
+	UINT32 _end,
+	BOOLEAN _degenerate,
+	UINT64 Other's Id,
+	BOOLEAN Equal
+	);
+
+UiaTextRange::Clone(
+	UINT64 _id,
+	UINT32 _start,
+	UINT32 _end,
+	BOOLEAN _degenerate,
+	UINT64 clone's _id
+	);
+
+UiaTextRange::QueryInterface(
+	UINT64 _id,
+	UINT32 _start,
+	UINT32 _end,
+	BOOLEAN _degenerate
+	);
+
+UiaTextRange::Release(
+	UINT64 _id,
+	UINT32 _start,
+	UINT32 _end,
+	BOOLEAN _degenerate
+	);
+
+UiaTextRange::AddRef(
+	UINT64 _id,
+	UINT32 _start,
+	UINT32 _end,
+	BOOLEAN _degenerate
+	);
+
+UiaTextRange::Constructor(
+	UINT64 _id
+	);
+
+Failure(
+	HEXINT32 HResult,
+	ANSISTRING File,
+	UINT32 LineNumber,
+	ANSISTRING Function,
+	UNICODESTRING Message,
+	ANSISTRING CallingContext,
+	ANSISTRING Module,
+	HEXINT64 Site,
+	ANSISTRING Code
+	);
+
+WindowViewport(
+	INT32 ViewHeight,
+	INT32 ViewWidth,
+	INT32 OriginTop,
+	INT32 OriginLeft
+	);
+
+API_WriteConsoleOutput(
+	INT16 WriteCoord.X,
+	INT16 WriteCoord.Y,
+	HEXINT32 StringType,
+	UINT32 NumRecords
+	);
+
+API_SetConsoleTextAttribute(
+	HEX Attributes
+	);
+
+API_GetConsoleMode(
+	HEXINT32 Mode,
+	UNICODESTRING Handle type
+	);
+
+API_GetConsoleScreenBufferInfo(
+	INT16 Size.X,
+	INT16 Size.Y,
+	INT16 CursorPosition.X,
+	INT16 CursorPosition.Y,
+	INT16 ScrollPosition.X,
+	INT16 ScrollPosition.Y,
+	HEX Attributes,
+	INT16 CurrentWindowSize.X,
+	INT16 CurrentWindowSize.Y,
+	INT16 MaximumWindowSize.X,
+	INT16 MaximumWindowSize.Y,
+	HEX PopupAttributes,
+	BOOLEAN FullscreenSupported,
+	HEXINT32 ColorTable
+	);
+
+API_WriteConsole(
+	BOOLEAN Unicode,
+	UINT32 NumBytes,
+	COUNTEDANSISTRING input buffer
+	);
+
+API_WriteConsole(
+	BOOLEAN Unicode,
+	UINT32 NumBytes,
+	COUNTEDSTRING input buffer
+	);
+
+FeatureError(
+	UINT32 featureId,
+	INT32 featureVersion,
+	INT32 featureBaseVersion,
+	INT16 featureStage,
+	HRESULT hr,
+	ANSISTRING file,
+	UINT16 lineNumber,
+	ANSISTRING module,
+	ANSISTRING process,
+	ANSISTRING originFile,
+	UINT16 originLineNumber,
+	ANSISTRING originModule,
+	ANSISTRING originName,
+	ANSISTRING message,
+	ANSISTRING callerModule,
+	UINT32 callerReturnAddressOffset,
+	ANSISTRING originCallerModule,
+	UINT32 originCallerReturnAddressOffset
+	);
+
+FeatureVariantUsage(
+	UINT32 featureId,
+	INT32 featureVersion,
+	INT32 featureBaseVersion,
+	INT16 featureStage,
+	BOOLEAN enabled,
+	UINT32 variantKind,
+	UINT8 variant,
+	UINT64 addend
+	);
+
+EnabledFeatureUsage(
+	UINT32 featureId,
+	INT32 featureVersion,
+	INT32 featureBaseVersion,
+	INT16 featureStage,
+	BOOLEAN enabled,
+	UINT32 kind,
+	UINT64 addend
+	);
+
+FeatureUsage(
+	UINT32 featureId,
+	INT32 featureVersion,
+	INT32 featureBaseVersion,
+	INT16 featureStage,
+	BOOLEAN enabled,
+	UINT32 kind,
+	UINT64 addend
+	);
+
+FallbackError(
+	UINT64 PartA_PrivTags,
+	SIGNED wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+FallbackError(
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+IsLegacyLoaded(
+	BOOL32 ConsoleLegacy
+	);
+
+StateMachine_PrintRun(
+	UNICODESTRING str,
+	UINT64 strLen
+	);
+
+StateMachine_PrintRun(
+	STRING wch,
+	HEX sch
+	);
+
+StateMachine_Sequence_FAIL(
+	UNICODESTRING _rgwchSequenceTrace
+	);
+
+StateMachine_Sequence_OK(
+	UNICODESTRING _rgwchSequenceTrace
+	);
+
+StateMachine_NewChar(
+	STRING wch,
+	HEX sch
+	);
+
+StateMachine_Event(
+	UNICODESTRING pwszName
+	);
+
+StateMachine_ExecuteFromEscape(
+	STRING wch,
+	HEX sch
+	);
+
+StateMachine_Execute(
+	STRING wch,
+	HEX sch
+	);
+
+StateMachine_Action(
+	UNICODESTRING pwszName
+	);
+
+StateMachine_EnterState(
+	UNICODESTRING pwszName
+	);
+
+ControlCodesUsed(
+	UINT32 CUU,
+	UINT32 CUD,
+	UINT32 CUF,
+	UINT32 CUB,
+	UINT32 CNL,
+	UINT32 CPL,
+	UINT32 CHA,
+	UINT32 CUP,
+	UINT32 ED,
+	UINT32 EL,
+	UINT32 SGR,
+	UINT32 DECSC,
+	UINT32 DECRC,
+	UINT32 DECSET,
+	UINT32 DECRST,
+	UINT32 DECKPAM,
+	UINT32 DECKPNM,
+	UINT32 DSR,
+	UINT32 DA,
+	UINT32 VPA,
+	UINT32 ICH,
+	UINT32 DCH,
+	UINT32 IL,
+	UINT32 DL,
+	UINT32 SU,
+	UINT32 SD,
+	UINT32 ANSISYSSC,
+	UINT32 ANSISYSRC,
+	UINT32 DECSTBM,
+	UINT32 RI,
+	UINT32 OscWindowTitle,
+	UINT32 HTS,
+	UINT32 CHT,
+	UINT32 CBT,
+	UINT32 TBC,
+	UINT32 ECH,
+	UINT32 DesignateG0,
+	UINT32 DesignateG1,
+	UINT32 DesignateG2,
+	UINT32 DesignateG3,
+	UINT32 HVP,
+	UINT32 DECSTR,
+	UINT32 RIS,
+	UINT32 DECSCUSR,
+	UINT32 DTTERM_WM,
+	UINT32 OscColorTable,
+	UINT32 OscSetCursorColor,
+	UINT32 OscResetCursorColor,
+	UINT32 REP,
+	UINT32 Failed,
+	UINT32 FailedOutsideRange
+	);
+
+VtEngine_TraceLastText(
+	ANSISTRING lastText
+	);
+
+VtEngine_TraceStartPaint(
+	BOOL32 quickReturn,
+	BOOL32 invalidRectUsed,
+	ANSISTRING invalidated,
+	ANSISTRING lastView,
+	ANSISTRING scrollDelta,
+	BOOL32 cursorMoved
+	);
+
+VtEngine_TraceEndPaint(
+	VOID
+	);
+
+VtEngine_TraceInvalidateAll(
+	ANSISTRING invalidatedAll
+	);
+
+VtEngine_TraceInvalidate(
+	ANSISTRING invalidated
+	);
+
+VtEngine_TraceString(
+	ANSISTRING seq
+	);
+

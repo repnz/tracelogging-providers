@@ -1,0 +1,69 @@
+ProviderNames:
+	Microsoft.Windows.Security.WSC
+
+
+
+**** Events *****
+WscDpaRegister(
+	UNICODESTRING productName,
+	UNICODESTRING callerExe,
+	HRESULT HResult
+	);
+
+WscDpaCleanup(
+	UNICODESTRING callerExe,
+	HRESULT HResult,
+	HRESULT HResult2
+	);
+
+WscDpaUnregister(
+	UNICODESTRING callerExe,
+	HRESULT HResult
+	);
+
+WscCbpCleanup(
+	UNICODESTRING callerExe,
+	HRESULT HResult,
+	HRESULT HResult2
+	);
+
+WscCbpRegister(
+	UNICODESTRING productName,
+	UNICODESTRING callerExe,
+	HRESULT HResult
+	);
+
+WscCbpUnregister(
+	UNICODESTRING callerExe,
+	HRESULT HResult
+	);
+
+GetCallerViaWdsp(
+	UNICODESTRING callerExe
+	);
+
+WscSecurityAppUnregister(
+	UINT32 forcefieldtype,
+	UNICODESTRING callerExe,
+	HRESULT HResult
+	);
+
+WscSecurityAppRegister(
+	UINT32 forcefieldtype,
+	UNICODESTRING productName,
+	UNICODESTRING callerExe,
+	HRESULT HResult
+	);
+
+WscSecurityAppUpdate(
+	UINT32 forcefieldtype,
+	UNICODESTRING callerExe,
+	HRESULT HResult
+	);
+
+WscSecurityAppCleanup(
+	UINT32 forcefieldtype,
+	UNICODESTRING callerExe,
+	HRESULT HResult
+	);
+

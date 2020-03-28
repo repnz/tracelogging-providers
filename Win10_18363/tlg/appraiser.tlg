@@ -1,0 +1,926 @@
+ProviderNames:
+	Microsoft.Windows.Appraiser.Instrumentation
+	Microsoft.Windows.Appraiser.Instrumentation
+	Microsoft.Windows.Appraiser.Instrumentation
+	Microsoft.Windows.Appraiser.General
+	Microsoft.Windows.Appraiser.General
+	Microsoft.Windows.Appraiser.General
+	Microsoft.Windows.Appraiser.General
+	Microsoft.Windows.Compatibility.Asl
+	Microsoft.Windows.Inventory.Indicators
+	Microsoft.Windows.Inventory.Indicators
+	Microsoft.Windows.Inventory.Indicators
+	Microsoft.Windows.Inventory.Indicators
+	Microsoft.Windows.Inventory.Core
+	Microsoft.Windows.Inventory.Core
+	Microsoft.Windows.Inventory.Core
+	Microsoft.Windows.Inventory.Core
+
+
+
+**** Events *****
+TelemetryClient(
+	UINT64 BinFileVersion,
+	ANSISTRING ChannelName,
+	ANSISTRING CorrelationVectors,
+	ANSISTRING Types,
+	ANSISTRING Names,
+	ANSISTRING Counts,
+	ANSISTRING Metrics,
+	UNICODESTRING Messages,
+	ANSISTRING ActivityResults
+	);
+
+CtacReadVersionResults(
+	ANSISTRING __TlgCV__,
+	SYSTEMTIME Time,
+	ANSISTRING __TlgCV__,
+	UNICODESTRING PCFP,
+	UNICODESTRING ReadVersionResults
+	);
+
+NonFatalError(
+	ANSISTRING __TlgCV__,
+	SYSTEMTIME Time,
+	ANSISTRING __TlgCV__,
+	UNICODESTRING PCFP,
+	UINT32 SourceLine,
+	ANSISTRING SourceFile,
+	ANSISTRING FunctionName,
+	HEXINT32 Hresult
+	);
+
+CtacPropertyQuery(
+	ANSISTRING __TlgCV__,
+	SYSTEMTIME Time,
+	ANSISTRING __TlgCV__,
+	UNICODESTRING PCFP,
+	UINT32 ReturnedCount,
+	UNICODESTRING NotFoundList
+	);
+
+ComponentFailure(
+	ANSISTRING __TlgCV__,
+	SYSTEMTIME Time,
+	ANSISTRING __TlgCV__,
+	UNICODESTRING PCFP,
+	UNICODESTRING ComponentType,
+	BOOL32 IsFatal,
+	HEXINT32 Hresult
+	);
+
+RunEndEngine(
+	ANSISTRING __TlgCV__,
+	SYSTEMTIME Time,
+	ANSISTRING __TlgCV__,
+	UNICODESTRING PCFP
+	);
+
+ProcessingDoneDecisionAggregators(
+	ANSISTRING __TlgCV__,
+	SYSTEMTIME Time,
+	ANSISTRING __TlgCV__,
+	UNICODESTRING PCFP
+	);
+
+ProcessingDoneDecisionMakers(
+	ANSISTRING __TlgCV__,
+	SYSTEMTIME Time,
+	ANSISTRING __TlgCV__,
+	UNICODESTRING PCFP
+	);
+
+ProcessingDoneDataSources(
+	ANSISTRING __TlgCV__,
+	SYSTEMTIME Time,
+	ANSISTRING __TlgCV__,
+	UNICODESTRING PCFP
+	);
+
+ProcessingDoneInventory(
+	ANSISTRING __TlgCV__,
+	SYSTEMTIME Time,
+	ANSISTRING __TlgCV__,
+	UNICODESTRING PCFP
+	);
+
+RunStartEngine(
+	ANSISTRING __TlgCV__,
+	SYSTEMTIME Time,
+	ANSISTRING __TlgCV__,
+	UNICODESTRING PCFP,
+	UINT32 InventoryComponentCount,
+	UINT32 DataSourceComponentCount,
+	UINT32 DecisionMakerComponentCount,
+	UINT32 DecisionAggregatorComponentCount,
+	UINT32 OutputterComponentCount
+	);
+
+Error(
+	ANSISTRING __TlgCV__,
+	SYSTEMTIME Time,
+	ANSISTRING __TlgCV__,
+	UNICODESTRING PCFP,
+	UINT32 SourceLine,
+	ANSISTRING SourceFile,
+	ANSISTRING FunctionName,
+	HEXINT32 Hresult,
+	ANSISTRING Message
+	);
+
+ProcessTerminationError(
+	ANSISTRING __TlgCV__,
+	SYSTEMTIME Time,
+	ANSISTRING __TlgCV__,
+	UNICODESTRING PCFP,
+	UINT32 SourceLine,
+	ANSISTRING SourceFile,
+	ANSISTRING FunctionName,
+	HEXINT32 Hresult
+	);
+
+SendRequestRetrySucceeded(
+	ANSISTRING __TlgCV__,
+	SYSTEMTIME Time,
+	ANSISTRING __TlgCV__,
+	UNICODESTRING PCFP,
+	UINT32 RetriesNeeded
+	);
+
+StartScanDone(
+	ANSISTRING __TlgCV__,
+	SYSTEMTIME Time,
+	ANSISTRING __TlgCV__,
+	UNICODESTRING PCFP
+	);
+
+StartScanCalled(
+	ANSISTRING __TlgCV__,
+	SYSTEMTIME Time,
+	ANSISTRING __TlgCV__,
+	UNICODESTRING PCFP
+	);
+
+SetupInfo(
+	ANSISTRING __TlgCV__,
+	SYSTEMTIME Time,
+	ANSISTRING __TlgCV__,
+	UNICODESTRING PCFP,
+	UINT16 setupScenario
+	);
+
+RunContext(
+	ANSISTRING __TlgCV__,
+	SYSTEMTIME Time,
+	ANSISTRING __TlgCV__,
+	UNICODESTRING PCFP,
+	UNICODESTRING AppraiserVersion,
+	UNICODESTRING AppraiserBranch,
+	UNICODESTRING AppraiserProcess,
+	UNICODESTRING Context,
+	UNICODESTRING Subcontext
+	);
+
+SetupAdlStatus(
+	ANSISTRING __TlgCV__,
+	SYSTEMTIME Time,
+	ANSISTRING __TlgCV__,
+	UNICODESTRING PCFP,
+	HRESULT Result,
+	BOOL32 OneSettingsInitialized,
+	UNICODESTRING Url,
+	BOOL32 UsingAlternateData
+	);
+
+ResolveDone(
+	ANSISTRING __TlgCV__,
+	SYSTEMTIME Time,
+	ANSISTRING __TlgCV__,
+	UNICODESTRING PCFP
+	);
+
+ResolveCalled(
+	ANSISTRING __TlgCV__,
+	SYSTEMTIME Time,
+	ANSISTRING __TlgCV__,
+	UNICODESTRING PCFP,
+	UNICODESTRING Action
+	);
+
+StartRescanDone(
+	ANSISTRING __TlgCV__,
+	SYSTEMTIME Time,
+	ANSISTRING __TlgCV__,
+	UNICODESTRING PCFP
+	);
+
+StartRescanCalled(
+	ANSISTRING __TlgCV__,
+	SYSTEMTIME Time,
+	ANSISTRING __TlgCV__,
+	UNICODESTRING PCFP
+	);
+
+SetupWouldBeFatal(
+	ANSISTRING __TlgCV__,
+	SYSTEMTIME Time,
+	ANSISTRING __TlgCV__,
+	UNICODESTRING PCFP,
+	HEXINT32 Hresult
+	);
+
+SetupGatedScanInitialState(
+	ANSISTRING __TlgCV__,
+	SYSTEMTIME Time,
+	ANSISTRING __TlgCV__,
+	UNICODESTRING PCFP,
+	HRESULT GatedEvaluationResult,
+	BOOL32 GatedStateSet,
+	BOOL32 GatedStateTrusted,
+	BOOL32 MachineIsGated,
+	BOOL32 NewScanWouldBeImprovement,
+	BOOL32 NewScanWouldBeTrusted
+	);
+
+TelemetryRunSkuNotListed(
+	ANSISTRING __TlgCV__,
+	SYSTEMTIME Time,
+	ANSISTRING __TlgCV__,
+	UNICODESTRING PCFP,
+	UNICODESTRING Sku,
+	UINT32 DataFileVersion
+	);
+
+TelemetryRunHealth(
+	ANSISTRING __TlgCV__,
+	SYSTEMTIME Time,
+	ANSISTRING __TlgCV__,
+	UNICODESTRING PCFP,
+	UNICODESTRING AppraiserVersion,
+	UNICODESTRING AppraiserBranch,
+	UNICODESTRING AppraiserProcess,
+	UINT64 DeadlineDate,
+	UINT64 RunDate,
+	UINT32 AppraiserDataVersion,
+	UINT32 InboxDataVersion,
+	BOOL32 RunAppraiser,
+	BOOL32 RunGeneralTel,
+	BOOL32 VerboseMode,
+	BOOL32 EnterpriseRun,
+	BOOL32 SendingUtc,
+	BOOL32 ThrottlingUtc,
+	BOOL32 PerfBackoff,
+	BOOL32 PerfBackoffInsurance,
+	BOOL32 StoreHandleIsNotNull,
+	BOOL32 AuxInitial,
+	BOOL32 AuxFinal,
+	BOOL32 TelementrySent,
+	BOOL32 IndicatorsWritten,
+	BOOL32 RunOnline,
+	BOOL32 FullSync,
+	BOOL32 InventoryFullSync,
+	UNICODESTRING WhyFullSyncWithoutTablePrefix,
+	HRESULT RunResult,
+	UINT32 ScheduledUploadDay
+	);
+
+TelemetryRunNotAllowed(
+	ANSISTRING __TlgCV__,
+	SYSTEMTIME Time,
+	ANSISTRING __TlgCV__,
+	UNICODESTRING PCFP,
+	BOOL32 SufficientBattery,
+	BOOL32 ExceededMaxFailedAttempts,
+	BOOL32 VersionsTooLow
+	);
+
+XmlRunDone(
+	ANSISTRING __TlgCV__,
+	SYSTEMTIME Time,
+	ANSISTRING __TlgCV__,
+	UNICODESTRING PCFP
+	);
+
+XmlRunCalled(
+	ANSISTRING __TlgCV__,
+	SYSTEMTIME Time,
+	ANSISTRING __TlgCV__,
+	UNICODESTRING PCFP
+	);
+
+IndicatorMissing(
+	ANSISTRING __TlgCV__,
+	SYSTEMTIME Time,
+	ANSISTRING __TlgCV__,
+	UNICODESTRING PCFP,
+	UNICODESTRING Name
+	);
+
+MarkerWrite(
+	ANSISTRING __TlgCV__,
+	SYSTEMTIME Time,
+	ANSISTRING __TlgCV__,
+	UNICODESTRING PCFP,
+	UNICODESTRING TargetVersion,
+	BOOL32 NewAppraiserDataSufficient,
+	BOOL32 GeneralTelMarkersUsable,
+	BOOL32 OldAppraiserMarkersUsable,
+	BOOL32 AttemptedToWriteMarkers,
+	BOOL32 AttemptedToWriteIndicators,
+	HRESULT DoOutputResult,
+	HRESULT MarkerWriteResult,
+	HRESULT IndicatorWriteResult,
+	BOOL32 NewAppraiserDataHadPrerequisiteSucceed,
+	BOOL32 NewAppraiserDataHadPrerequisiteFail,
+	BOOL32 GeneralTelMarkersMissing,
+	BOOL32 GeneralTelMarkersChecksumInvalid,
+	BOOL32 GeneralTelMarkersVersionInsufficient,
+	BOOL32 GeneralTelMarkersNotNew,
+	BOOL32 GeneralTelMarkersTooOld,
+	BOOL32 OldAppraiserMarkersMissing,
+	BOOL32 OldAppraiserMarkersChecksumInvalid,
+	BOOL32 OldAppraiserMarkersVersionInsufficient,
+	BOOL32 OldAppraiserMarkersTooOld
+	);
+
+IsOnlineTelemetryOutputter(
+	ANSISTRING __TlgCV__,
+	SYSTEMTIME Time,
+	ANSISTRING __TlgCV__,
+	UNICODESTRING PCFP,
+	BOOL32 IsOnlineRun
+	);
+
+RunEndSetupStatusOutputter(
+	ANSISTRING __TlgCV__,
+	SYSTEMTIME Time,
+	ANSISTRING __TlgCV__,
+	UNICODESTRING PCFP,
+	BOOL32 SystemWasHardBlocked,
+	BOOL32 DeviceWasHardBlocked,
+	BOOL32 AppWasHardBlocked
+	);
+
+RunStartSetupStatusOutputter(
+	ANSISTRING __TlgCV__,
+	SYSTEMTIME Time,
+	ANSISTRING __TlgCV__,
+	UNICODESTRING PCFP
+	);
+
+RunEndIconOutputter(
+	ANSISTRING __TlgCV__,
+	SYSTEMTIME Time,
+	ANSISTRING __TlgCV__,
+	UNICODESTRING PCFP
+	);
+
+RunStartIconOutputter(
+	ANSISTRING __TlgCV__,
+	SYSTEMTIME Time,
+	ANSISTRING __TlgCV__,
+	UNICODESTRING PCFP
+	);
+
+RunEndSetupXmlOutputter(
+	ANSISTRING __TlgCV__,
+	SYSTEMTIME Time,
+	ANSISTRING __TlgCV__,
+	UNICODESTRING PCFP
+	);
+
+ProcessingDoneSetupXmlOutputterData(
+	ANSISTRING __TlgCV__,
+	SYSTEMTIME Time,
+	ANSISTRING __TlgCV__,
+	UNICODESTRING PCFP,
+	BOOL32 MigXmlFileNecessary
+	);
+
+RunStartSetupXmlOutputter(
+	ANSISTRING __TlgCV__,
+	SYSTEMTIME Time,
+	ANSISTRING __TlgCV__,
+	UNICODESTRING PCFP
+	);
+
+RunEndDataMigrationOutputter(
+	ANSISTRING __TlgCV__,
+	SYSTEMTIME Time,
+	ANSISTRING __TlgCV__,
+	UNICODESTRING PCFP,
+	UINT32 NumReinstallFiles,
+	UINT32 NumInstallFiles,
+	UINT32 NumMigNotifyFiles,
+	UINT32 NumMultiFileApps
+	);
+
+RunStartDataMigrationOutputter(
+	ANSISTRING __TlgCV__,
+	SYSTEMTIME Time,
+	ANSISTRING __TlgCV__,
+	UNICODESTRING PCFP
+	);
+
+RunEndAuxJsonOutputter(
+	ANSISTRING __TlgCV__,
+	SYSTEMTIME Time,
+	ANSISTRING __TlgCV__,
+	UNICODESTRING PCFP
+	);
+
+AuxJsonBucketData(
+	ANSISTRING __TlgCV__,
+	SYSTEMTIME Time,
+	ANSISTRING __TlgCV__,
+	UNICODESTRING PCFP,
+	UINT32 BucketId,
+	UINT32 AssetCount
+	);
+
+RunStartAuxJsonOutputter(
+	ANSISTRING __TlgCV__,
+	SYSTEMTIME Time,
+	ANSISTRING __TlgCV__,
+	UNICODESTRING PCFP
+	);
+
+GatedRegChange(
+	ANSISTRING __TlgCV__,
+	SYSTEMTIME Time,
+	ANSISTRING __TlgCV__,
+	UNICODESTRING PCFP,
+	UNICODESTRING RegKey,
+	UNICODESTRING RegValue,
+	UNICODESTRING OldData,
+	UNICODESTRING NewData
+	);
+
+GatedSetupOutputStatistics(
+	ANSISTRING __TlgCV__,
+	SYSTEMTIME Time,
+	ANSISTRING __TlgCV__,
+	UNICODESTRING PCFP,
+	BOOL32 BackupGatedDefaultUsed,
+	BOOL32 BackupUnknownDefaultUsed,
+	UINT32 TraditionalGatedAssetCount
+	);
+
+ActionWroteDismiss(
+	ANSISTRING __TlgCV__,
+	SYSTEMTIME Time,
+	ANSISTRING __TlgCV__,
+	UNICODESTRING PCFP,
+	UNICODESTRING ProgramId
+	);
+
+ActionWroteManualUninstall(
+	ANSISTRING __TlgCV__,
+	SYSTEMTIME Time,
+	ANSISTRING __TlgCV__,
+	UNICODESTRING PCFP,
+	UNICODESTRING ProgramId
+	);
+
+ActionWroteAutoUninstall(
+	ANSISTRING __TlgCV__,
+	SYSTEMTIME Time,
+	ANSISTRING __TlgCV__,
+	UNICODESTRING PCFP,
+	UNICODESTRING ProgramId
+	);
+
+StartUtcJsonTrace(
+	UINT64 PartA_PrivTags
+	);
+
+StopUtcJsonTrace(
+	UINT64 PartA_PrivTags
+	);
+
+Checksum(
+	ANSISTRING __TlgCV__,
+	UNICODESTRING PCFP,
+	STRING ChecksumDictionary,
+	COUNTEDSTRING Key,
+	UNICODESTRING Value
+	);
+
+InventoryMiscellaneousUexIndicatorRemove(
+	ANSISTRING __TlgCV__,
+	PID PartB_Ms.Device.DeviceInventoryChange,
+	INT32 action,
+	UNICODESTRING objectType,
+	UNICODESTRING objectInstanceId,
+	UNICODESTRING syncId,
+	UNICODESTRING inventoryId
+	);
+
+InventoryMiscellaneousUexIndicatorStartSync(
+	ANSISTRING __TlgCV__,
+	PID PartB_Ms.Device.DeviceInventoryChange,
+	INT32 action,
+	UNICODESTRING objectType,
+	UNICODESTRING objectInstanceId,
+	UNICODESTRING syncId,
+	UNICODESTRING inventoryId
+	);
+
+InventoryMiscellaneousUexIndicatorAdd(
+	ANSISTRING __TlgCV__,
+	UNICODESTRING IndicatorValue,
+	PID PartB_Ms.Device.DeviceInventoryChange,
+	INT32 action,
+	UNICODESTRING objectType,
+	UNICODESTRING objectInstanceId,
+	UNICODESTRING syncId,
+	UNICODESTRING inventoryId
+	);
+
+ProcessingDoneSystemInventoryLAHFSAHF(
+	ANSISTRING __TlgCV__,
+	SYSTEMTIME Time,
+	ANSISTRING __TlgCV__,
+	UNICODESTRING PCFP,
+	UNICODESTRING LAHFSAHFSupported
+	);
+
+ProcessingDoneSystemInventoryPrefetch(
+	ANSISTRING __TlgCV__,
+	SYSTEMTIME Time,
+	ANSISTRING __TlgCV__,
+	UNICODESTRING PCFP,
+	UNICODESTRING PrefetchSupported
+	);
+
+ProcessingDoneSystemInventoryCompareExchange(
+	ANSISTRING __TlgCV__,
+	SYSTEMTIME Time,
+	ANSISTRING __TlgCV__,
+	UNICODESTRING PCFP,
+	UNICODESTRING CompareExchange128Supported
+	);
+
+NxDriverNeeded(
+	ANSISTRING __TlgCV__,
+	SYSTEMTIME Time,
+	ANSISTRING __TlgCV__,
+	UNICODESTRING PCFP
+	);
+
+ProcessingDoneSystemInventoryNX(
+	ANSISTRING __TlgCV__,
+	SYSTEMTIME Time,
+	ANSISTRING __TlgCV__,
+	UNICODESTRING PCFP,
+	UNICODESTRING NxProcessorSupported,
+	UNICODESTRING NxDriverResult
+	);
+
+ProcessingDoneSystemInventorySse2(
+	ANSISTRING __TlgCV__,
+	SYSTEMTIME Time,
+	ANSISTRING __TlgCV__,
+	UNICODESTRING PCFP,
+	UNICODESTRING Sse2Supported
+	);
+
+RunStartSystemInventory(
+	ANSISTRING __TlgCV__,
+	SYSTEMTIME Time,
+	ANSISTRING __TlgCV__,
+	UNICODESTRING PCFP
+	);
+
+RunEndSystemInventory(
+	ANSISTRING __TlgCV__,
+	SYSTEMTIME Time,
+	ANSISTRING __TlgCV__,
+	UNICODESTRING PCFP
+	);
+
+RunEndInboxComponentInventory(
+	ANSISTRING __TlgCV__,
+	SYSTEMTIME Time,
+	ANSISTRING __TlgCV__,
+	UNICODESTRING PCFP
+	);
+
+RunStartInboxComponentInventory(
+	ANSISTRING __TlgCV__,
+	SYSTEMTIME Time,
+	ANSISTRING __TlgCV__,
+	UNICODESTRING PCFP
+	);
+
+RunEndMatchingInfoInventory(
+	ANSISTRING __TlgCV__,
+	SYSTEMTIME Time,
+	ANSISTRING __TlgCV__,
+	UNICODESTRING PCFP
+	);
+
+RunStartMatchingInfoInventory(
+	ANSISTRING __TlgCV__,
+	SYSTEMTIME Time,
+	ANSISTRING __TlgCV__,
+	UNICODESTRING PCFP
+	);
+
+RunEndDriverInventory(
+	ANSISTRING __TlgCV__,
+	SYSTEMTIME Time,
+	ANSISTRING __TlgCV__,
+	UNICODESTRING PCFP
+	);
+
+RunStartDriverInventory(
+	ANSISTRING __TlgCV__,
+	SYSTEMTIME Time,
+	ANSISTRING __TlgCV__,
+	UNICODESTRING PCFP
+	);
+
+RunEndDeviceInventory(
+	ANSISTRING __TlgCV__,
+	SYSTEMTIME Time,
+	ANSISTRING __TlgCV__,
+	UNICODESTRING PCFP,
+	UINT32 NumDevicesFound
+	);
+
+FileCreatedDeviceInventoryXML(
+	ANSISTRING __TlgCV__,
+	SYSTEMTIME Time,
+	ANSISTRING __TlgCV__,
+	UNICODESTRING PCFP,
+	UNICODESTRING DevInvVersion
+	);
+
+RunStartDeviceInventory(
+	ANSISTRING __TlgCV__,
+	SYSTEMTIME Time,
+	ANSISTRING __TlgCV__,
+	UNICODESTRING PCFP
+	);
+
+RunEndApplicationInventory(
+	ANSISTRING __TlgCV__,
+	SYSTEMTIME Time,
+	ANSISTRING __TlgCV__,
+	UNICODESTRING PCFP,
+	UINT32 NumAppsFound,
+	UINT32 NumFilesFound
+	);
+
+FileCreatedApplicationInventoryXML(
+	ANSISTRING __TlgCV__,
+	SYSTEMTIME Time,
+	ANSISTRING __TlgCV__,
+	UNICODESTRING PCFP,
+	UNICODESTRING AeInvVersion
+	);
+
+RunStartApplicationInventory(
+	ANSISTRING __TlgCV__,
+	SYSTEMTIME Time,
+	ANSISTRING __TlgCV__,
+	UNICODESTRING PCFP
+	);
+
+RunEndGeneralTelInventory(
+	ANSISTRING __TlgCV__,
+	SYSTEMTIME Time,
+	ANSISTRING __TlgCV__,
+	UNICODESTRING PCFP
+	);
+
+RunStartGeneralTelInventory(
+	ANSISTRING __TlgCV__,
+	SYSTEMTIME Time,
+	ANSISTRING __TlgCV__,
+	UNICODESTRING PCFP
+	);
+
+RunEndWuDriverCacheInventory(
+	ANSISTRING __TlgCV__,
+	SYSTEMTIME Time,
+	ANSISTRING __TlgCV__,
+	UNICODESTRING PCFP
+	);
+
+RunStartWuDriverCacheInventory(
+	ANSISTRING __TlgCV__,
+	SYSTEMTIME Time,
+	ANSISTRING __TlgCV__,
+	UNICODESTRING PCFP
+	);
+
+VerificationPropertyWrong(
+	ANSISTRING __TlgCV__,
+	SYSTEMTIME Time,
+	ANSISTRING __TlgCV__,
+	UNICODESTRING PCFP,
+	UNICODESTRING AssetType,
+	UNICODESTRING UniqueId,
+	UNICODESTRING SubTableName,
+	UNICODESTRING FailedConstraint,
+	UINT32 NumActualProperties
+	);
+
+VerificationTableFailed(
+	ANSISTRING __TlgCV__,
+	SYSTEMTIME Time,
+	ANSISTRING __TlgCV__,
+	UNICODESTRING PCFP,
+	UNICODESTRING AssetType,
+	UNICODESTRING UniqueId,
+	UNICODESTRING TableName
+	);
+
+ALOTVerificationTableFailed(
+	ANSISTRING __TlgCV__,
+	SYSTEMTIME Time,
+	ANSISTRING __TlgCV__,
+	UNICODESTRING PCFP,
+	UNICODESTRING TableName
+	);
+
+RunEndWuDriverDatasource(
+	ANSISTRING __TlgCV__,
+	SYSTEMTIME Time,
+	ANSISTRING __TlgCV__,
+	UNICODESTRING PCFP
+	);
+
+IsOnlineWuDriverDataSource(
+	ANSISTRING __TlgCV__,
+	SYSTEMTIME Time,
+	ANSISTRING __TlgCV__,
+	UNICODESTRING PCFP,
+	BOOL32 IsOnlineRun,
+	UNICODESTRING TargetVersion,
+	BOOL32 AssumedEmpty
+	);
+
+PrefetchDoneWuDriverDatasource(
+	ANSISTRING __TlgCV__,
+	SYSTEMTIME Time,
+	ANSISTRING __TlgCV__,
+	UNICODESTRING PCFP,
+	UINT32 NumWuHardwareIdsRetrieved,
+	BOOL32 UsedCache
+	);
+
+RunStartWuDriverDatasource(
+	ANSISTRING __TlgCV__,
+	SYSTEMTIME Time,
+	ANSISTRING __TlgCV__,
+	UNICODESTRING PCFP
+	);
+
+WuSessionFailedInitializeWuDriverDatasource(
+	ANSISTRING __TlgCV__,
+	SYSTEMTIME Time,
+	ANSISTRING __TlgCV__,
+	UNICODESTRING PCFP,
+	UINT32 ErrorCode
+	);
+
+RunEndSdbRelatedDatasource(
+	ANSISTRING __TlgCV__,
+	SYSTEMTIME Time,
+	ANSISTRING __TlgCV__,
+	UNICODESTRING PCFP,
+	UNICODESTRING Identifier,
+	UINT32 ApphelpHard,
+	UINT32 ApphelpSoft,
+	UINT32 Bios,
+	UINT32 BlockUpgrade,
+	UINT32 BlockUpgradeCanReinstall,
+	UINT32 BlockUpgradeUntilUpdate,
+	UINT32 BootCritical,
+	UINT32 Driver,
+	UINT32 InboxApphelpHard,
+	UINT32 InboxApphelpSoft,
+	UINT32 MigName,
+	UINT32 MigType,
+	UINT32 MigValue,
+	UINT32 MachineBlock,
+	UINT32 ReinstallAfterUpgrade,
+	UINT32 ReinstallAfterUpgradeInfo,
+	UINT32 ReinstallAfterUpgradeWarn,
+	UINT32 ReinstallUpgradeMessage
+	);
+
+RunStartSdbRelatedDatasource(
+	ANSISTRING __TlgCV__,
+	SYSTEMTIME Time,
+	ANSISTRING __TlgCV__,
+	UNICODESTRING PCFP,
+	UNICODESTRING Identifier
+	);
+
+PrefetchDoneNetworkConnectivityDatasource(
+	ANSISTRING __TlgCV__,
+	SYSTEMTIME Time,
+	ANSISTRING __TlgCV__,
+	UNICODESTRING PCFP
+	);
+
+RunEndNetworkConnectivityDatasource(
+	ANSISTRING __TlgCV__,
+	SYSTEMTIME Time,
+	ANSISTRING __TlgCV__,
+	UNICODESTRING PCFP,
+	UINT32 NumConnections,
+	UINT32 NumActiveConnections
+	);
+
+RunStartNetworkConnectivityDatasource(
+	ANSISTRING __TlgCV__,
+	SYSTEMTIME Time,
+	ANSISTRING __TlgCV__,
+	UNICODESTRING PCFP
+	);
+
+RunEndBootCriticalDatasource(
+	ANSISTRING __TlgCV__,
+	SYSTEMTIME Time,
+	ANSISTRING __TlgCV__,
+	UNICODESTRING PCFP,
+	UINT32 NumBootServiceDevices,
+	UINT32 NumBootCriticalDevices
+	);
+
+RunStartBootCriticalDatasource(
+	ANSISTRING __TlgCV__,
+	SYSTEMTIME Time,
+	ANSISTRING __TlgCV__,
+	UNICODESTRING PCFP
+	);
+
+SdbInfo(
+	ANSISTRING __TlgCV__,
+	SYSTEMTIME Time,
+	ANSISTRING __TlgCV__,
+	UNICODESTRING PCFP,
+	UNICODESTRING SdbIdentifier
+	);
+
+RunStartCitDatasource(
+	ANSISTRING __TlgCV__,
+	SYSTEMTIME Time,
+	ANSISTRING __TlgCV__,
+	UNICODESTRING PCFP
+	);
+
+RunEndCitDatasource(
+	ANSISTRING __TlgCV__,
+	SYSTEMTIME Time,
+	ANSISTRING __TlgCV__,
+	UNICODESTRING PCFP
+	);
+
+RunEndFileInfoAggregator(
+	ANSISTRING __TlgCV__,
+	SYSTEMTIME Time,
+	ANSISTRING __TlgCV__,
+	UNICODESTRING PCFP
+	);
+
+RunStartFileInfoAggregator(
+	ANSISTRING __TlgCV__,
+	SYSTEMTIME Time,
+	ANSISTRING __TlgCV__,
+	UNICODESTRING PCFP
+	);
+
+RunEndAppFileAggregator(
+	ANSISTRING __TlgCV__,
+	SYSTEMTIME Time,
+	ANSISTRING __TlgCV__,
+	UNICODESTRING PCFP
+	);
+
+RunStartAppFileAggregator(
+	ANSISTRING __TlgCV__,
+	SYSTEMTIME Time,
+	ANSISTRING __TlgCV__,
+	UNICODESTRING PCFP
+	);
+
+RunEndDeviceDriverAggregator(
+	ANSISTRING __TlgCV__,
+	SYSTEMTIME Time,
+	ANSISTRING __TlgCV__,
+	UNICODESTRING PCFP
+	);
+
+RunStartDeviceDriverAggregator(
+	ANSISTRING __TlgCV__,
+	SYSTEMTIME Time,
+	ANSISTRING __TlgCV__,
+	UNICODESTRING PCFP
+	);
+

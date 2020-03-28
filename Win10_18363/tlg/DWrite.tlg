@@ -1,0 +1,83 @@
+ProviderNames:
+	Microsoft.Windows.Graphics.DirectWrite
+
+
+
+**** Events *****
+FontStreamingClientSide(
+	GUID sessionId,
+	UINT8 version,
+	UINT32 bufferSize,
+	BINARY clientSide
+	);
+
+FontStreamingServerSide(
+	GUID sessionId,
+	UINT8 version,
+	UINT32 bufferSize,
+	BINARY serverSide
+	);
+
+DWriteFontEndDownload(
+	GUID DownloadID,
+	INT32 DownloadResult
+	);
+
+DWriteHttpFontDownload(
+	GUID DownloadID,
+	UNICODESTRING HostURL,
+	UINT32 ContentLength,
+	UINT32 BytesRead,
+	UINT32 ContainerType,
+	UINT32 Duration,
+	INT32 DownloadResult
+	);
+
+DWriteFontBeginDownload(
+	GUID DownloadID
+	);
+
+DWriteClientError(
+	UINT32 LineNumber,
+	UINT64 TaskID,
+	INT32 HRESULT,
+	COUNTEDANSISTRING Params
+	);
+
+DWriteFontCacheLogNewClientCacheInstance(
+	UINT32 UserDefaultLCID,
+	UINT32 newCacheReason,
+	UINT32 currentCacheElementCount,
+	UINT32 previousCacheElementCount,
+	UINT32 commonCacheElementCount
+	);
+
+DWriteFontCacheLogCloseFontCacheClient(
+	UINT32 UserDefaultLCID,
+	UINT32 cacheGeneration,
+	UINT32 clientCacheSize,
+	UINT32 cacheLookupCount,
+	UINT32 addClientElementCount
+	);
+
+DWriteMissingFont(
+	UINT32 PropertyId,
+	UNICODESTRING FontName
+	);
+
+DWriteNewFonts(
+	UINT32 SourceType,
+	UNICODESTRING FullNames
+	);
+
+DWriteFontCacheLogGlyphRunFont(
+	UNICODESTRING FontFamilyName,
+	UNICODESTRING FullFaceName,
+	BOOLEAN IsVariationFace,
+	UINT32 AxisKeyCoordinates,
+	UINT32 CanonicalAxisKeyCoordinates,
+	UINT32 FontAxisRanges,
+	UINT16 AxisCount,
+	UINT32 GlyphImageFormats
+	);
+

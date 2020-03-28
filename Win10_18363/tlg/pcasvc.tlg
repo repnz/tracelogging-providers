@@ -1,0 +1,230 @@
+ProviderNames:
+	Microsoft.Windows.Compatibility.PCA
+	Microsoft.Windows.PCA.Siuf
+	Microsoft.Windows.PCA.PushApphelp
+	Microsoft.Windows.Compatibility.Encapsulation
+	Microsoft.Windows.Compatibility.Asl
+	Microsoft.Windows.Inventory.Core
+	Microsoft.Windows.Inventory.Core
+	Microsoft.Windows.Inventory.Core
+	Microsoft.Windows.Inventory.Core
+	WindowsFlightingSettings
+
+
+
+**** Events *****
+DetectorsShimLog_Applied(
+	UINT64 PartA_PrivTags,
+	UNICODESTRING ExeName
+	);
+
+InstallerProcess(
+	GUID InstanceGuid,
+	UNICODESTRING Executable,
+	BOOL32 AbnormalExit,
+	UINT32 ExitCode,
+	BOOL32 ExitCodeValid,
+	BOOL32 TooManyFiles,
+	BOOL32 TooManyArps,
+	UNICODESTRING Files,
+	UNICODESTRING Arps
+	);
+
+Installer(
+	GUID InstanceGuid,
+	ANSISTRING InstallerType,
+	UINT32 ConcurrentInstallers,
+	UINT32 ProcessListCount,
+	UINT32 FileListCount,
+	UINT32 ArpKeyListCount,
+	UINT32 TraceFileListCount,
+	UINT32 MonitorArpKeyListCount,
+	UNICODESTRING MonitorArpKeys,
+	UNICODESTRING RootExe,
+	BOOL32 TracerActive,
+	BOOL32 Orphan,
+	BOOL32 IsInstaller,
+	BOOL32 IsUninstaller,
+	BOOL32 MsiDetected,
+	BOOL32 LegacyInstaller,
+	BOOL32 CancelClicked,
+	UINT32 ArpChanged,
+	UINT32 ArpDiffed,
+	BOOL32 ArpDeleted,
+	BOOL32 Failed,
+	INT16 ExeType,
+	UNICODESTRING Attributes
+	);
+
+ProgramRun(
+	UINT32 ClientDataVersion,
+	UINT64 Genome,
+	UINT64 Environment,
+	UINT32 RuntimeBefore,
+	UINT64 CompatStateBefore,
+	UINT32 RuntimeAfter,
+	UINT64 CompatStateAfter,
+	UNICODESTRING PinnedDllName,
+	BOOL32 RunInfoDone,
+	UNICODESTRING ProgramId,
+	UNICODESTRING FileId,
+	UNICODESTRING AppName,
+	UNICODESTRING AppVersion,
+	UNICODESTRING AppPublisher,
+	UINT32 AppLanguage,
+	BOOL32 ProgramInfoDone,
+	GUID DialogUniqueId,
+	BOOL32 DialogInfoDone,
+	UINT64 Flags,
+	UNICODESTRING ExeName,
+	UNICODESTRING AltName,
+	UINT32 FileSize,
+	UINT32 CheckSum,
+	UINT64 BinFileVersion,
+	UINT32 PeCheckSum,
+	BOOL32 HasBinFileVersion,
+	BOOL32 HasPeCheckSum
+	);
+
+PcaSiufTelemetry(
+	UINT32 Version,
+	UINT32 Scenario,
+	UINT32 ChainLength,
+	UNICODESTRING TelecommandStudyId,
+	UINT32 TelecommandEventIndex,
+	GUID SdbId,
+	UNICODESTRING ProgramId,
+	UNICODESTRING FileId,
+	UNICODESTRING AppName,
+	UNICODESTRING AppVersion,
+	UNICODESTRING AppPublisher,
+	UNICODESTRING DisplayName,
+	UINT32 AppLanguage,
+	UINT64 AppRuntime,
+	UINT64 AskedAnsweredTime,
+	BOOL32 AskedAnsweredSameSession,
+	UNICODESTRING QuestionType,
+	UINT32 QuestionValue,
+	UNICODESTRING FollowupValue
+	);
+
+PcaPushApphelpTelemetry(
+	UINT32 Version,
+	UNICODESTRING ProgramId,
+	UNICODESTRING FileId,
+	UNICODESTRING AppName,
+	UNICODESTRING AppVersion,
+	UNICODESTRING AppPublisher,
+	UNICODESTRING DisplayName,
+	UINT32 AppLanguage
+	);
+
+InventoryApplicationDriverStartSync(
+	ANSISTRING __TlgCV__,
+	UNICODESTRING InventoryVersion,
+	PID PartB_Ms.Device.DeviceInventoryChange,
+	INT32 action,
+	UNICODESTRING objectType,
+	UNICODESTRING objectInstanceId,
+	UNICODESTRING syncId,
+	UNICODESTRING inventoryId
+	);
+
+InventoryApplicationDriverRemove(
+	ANSISTRING __TlgCV__,
+	UNICODESTRING InventoryVersion,
+	PID PartB_Ms.Device.DeviceInventoryChange,
+	INT32 action,
+	UNICODESTRING objectType,
+	UNICODESTRING objectInstanceId,
+	UNICODESTRING syncId,
+	UNICODESTRING inventoryId
+	);
+
+InventoryApplicationDriverAdd(
+	ANSISTRING __TlgCV__,
+	UNICODESTRING InventoryVersion,
+	UNICODESTRING ProgramIds,
+	PID PartB_Ms.Device.DeviceInventoryChange,
+	INT32 action,
+	UNICODESTRING objectType,
+	UNICODESTRING objectInstanceId,
+	UNICODESTRING syncId,
+	UNICODESTRING inventoryId
+	);
+
+TelemetryClient(
+	UINT64 BinFileVersion,
+	ANSISTRING ChannelName,
+	ANSISTRING CorrelationVectors,
+	ANSISTRING Types,
+	ANSISTRING Names,
+	ANSISTRING Counts,
+	ANSISTRING Metrics,
+	UNICODESTRING Messages,
+	ANSISTRING ActivityResults
+	);
+
+StaticLibCoCreateInstanceFailed(
+	INT32 hr,
+	GUID SessionId
+	);
+
+StaticLibAsyncValidationFailed(
+	INT32 hr,
+	GUID SessionId
+	);
+
+FallbackError(
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+FallbackError(
+	UINT64 PartA_PrivTags,
+	SIGNED wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+GetRingName(
+	INT32 hr,
+	UNICODESTRING ringName,
+	GUID SessionId
+	);
+
+GetRingName(
+	INT32 hr,
+	UNICODESTRING ringName,
+	GUID SessionId
+	);
+

@@ -1,0 +1,730 @@
+ProviderNames:
+	Microsoft.OneCore.WindowManagement
+
+
+
+**** Events *****
+FallbackError(
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+FallbackError(
+	UINT64 PartA_PrivTags,
+	SIGNED wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+WindowManagement_DllDetach(
+	VOID
+	);
+
+WindowManagement_DllAttach(
+	VOID
+	);
+
+WindowManagement_ShutdownServices_Stop(
+	VOID
+	);
+
+WindowManagement_ShutdownServices_Start(
+	VOID
+	);
+
+WindowManagement_UnsubscribeFromServices_Stop(
+	VOID
+	);
+
+WindowManagement_UnsubscribeFromServices_Start(
+	VOID
+	);
+
+WindowManagement_PerformDelayedInitialization_Stop(
+	VOID
+	);
+
+WindowManagement_PerformDelayedInitialization_Start(
+	VOID
+	);
+
+WindowManagement_SubscribeToServices_Stop(
+	VOID
+	);
+
+WindowManagement_SubscribeToServices_Start(
+	VOID
+	);
+
+WindowManagement_PublishServices_Stop(
+	VOID
+	);
+
+WindowManagement_PublishServices_Start(
+	VOID
+	);
+
+WindowingEnvironment_TryApplyConfigurationAsync(
+	VOID
+	);
+
+WindowingEnvironmentModel_DetachDisplayRegion(
+	UINT32 DisplayRegionModelId
+	);
+
+WindowingEnvironmentModel_AttachDisplayRegion(
+	UINT32 DisplayRegionModelId
+	);
+
+WindowingEnvironmentModel_Attach(
+	UINT8 Enabled
+	);
+
+WindowingEnvironmentModelStatics_SetDefault(
+	UINT32 WindowingEnvironmentModelId
+	);
+
+WindowingEnvironmentModelStatics_Detach(
+	UINT32 WindowingEnvironmentModelId
+	);
+
+WindowingEnvironmentModelStatics_Attach(
+	UINT32 WindowingEnvironmentModelId
+	);
+
+WindowingEnvironmentModelBatch_End(
+	VOID
+	);
+
+WindowingEnvironmentModelBatch_ShellRestartDetected(
+	UINT32 OldContext,
+	UINT32 NewContext
+	);
+
+WindowingEnvironmentModelBatchStatics_Create(
+	VOID
+	);
+
+DisplayRegionModel_DetachDisplayMonitor_Run(
+	UNICODESTRING displayMonitor
+	);
+
+DisplayRegionModel_DetachDisplayMonitor_Start(
+	UNICODESTRING displayMonitor
+	);
+
+DisplayRegionModel_AttachDisplayMonitor_Run(
+	UNICODESTRING displayMonitorId,
+	UINT64 adapterId,
+	UINT64 sourceId
+	);
+
+DisplayRegionModel_AttachDisplayMonitor_Start(
+	UNICODESTRING displayMonitorId,
+	UINT64 adapterId,
+	UINT64 sourceId
+	);
+
+DisplayRegionModel_put_Visible_Run(
+	BOOLEAN Visible
+	);
+
+DisplayRegionModel_put_Visible_Start(
+	BOOLEAN Visible
+	);
+
+DisplayRegionModel_SetDesignatedDisplayMonitor_Run(
+	UNICODESTRING displayMonitorId
+	);
+
+DisplayRegionModel_put_HiMetricScale_Run(
+	FLOAT Scale
+	);
+
+DisplayRegionModel_put_HiMetricScale_Start(
+	FLOAT Scale
+	);
+
+DisplayRegionModel_put_DefaultFullscreenSize_Run(
+	FLOAT Size.Width,
+	FLOAT Size.Height
+	);
+
+DisplayRegionModel_put_DefaultFullscreenSize_Start(
+	FLOAT Size.Width,
+	FLOAT Size.Height
+	);
+
+DisplayRegionModel_put_Rect_Run(
+	FLOAT Rect.X,
+	FLOAT Rect.Y,
+	FLOAT Rect.Width,
+	FLOAT Rect.Height
+	);
+
+DisplayRegionModel_put_Rect_Start(
+	FLOAT Rect.X,
+	FLOAT Rect.Y,
+	FLOAT Rect.Width,
+	FLOAT Rect.Height
+	);
+
+DisplayRegionModel_RuntimeClassInitialize(
+	UINT32 DisplayRegionId
+	);
+
+Window_put_Occlusion(
+	UINT32 WindowId,
+	UNICODESTRING WindowOcclusion
+	);
+
+WindowStatics_SetPointerActivatedForegroundGlobalBehavior(
+	UNICODESTRING IsForeground
+	);
+
+WindowStatics_SetPointerActivatedForegroundBehavior(
+	UINT32 WindowId,
+	UNICODESTRING IsForeground
+	);
+
+WindowStatics_RemoveWindow(
+	UINT32 WindowId,
+	HEXINT64 WindowPtr
+	);
+
+WindowStatics_AddWindow(
+	UINT32 WindowId,
+	HEXINT64 WindowPtr,
+	UINT32 AppViewId,
+	HEXINT64 AppViewPtr
+	);
+
+WindowStatics_DestroyWindowAsync(
+	UINT32 WindowId
+	);
+
+WindowStatics_SetWindowVisibilityAsync(
+	UINT32 WindowId,
+	UNICODESTRING Visibility
+	);
+
+WindowStatics_SetForegroundWindowAsync(
+	UINT32 WindowId
+	);
+
+Window_DisplayRegionNotFound(
+	UINT32 WindowId,
+	UINT32 DisplayRegionId
+	);
+
+Window_put_IsInputEnabled(
+	UINT32 WindowId,
+	UINT8 IsInputEnabled
+	);
+
+Window_put_DisplayId(
+	UINT32 WindowId,
+	UINT32 DisplayId
+	);
+
+ActivityIntermediateStop(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+ActivityError(
+	UINT64 PartA_PrivTags,
+	SIGNED wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+Window_put_Occlusion(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	SIGNED wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+Window_put_Occlusion(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+ActivityStoppedAutomatically(
+	VOID
+	);
+
+AppViewStatics_SetVisibilityHiddenForegroundGlobalBehavior(
+	UNICODESTRING IsForeground
+	);
+
+AppViewStatics_SetVisibilityHiddenForegroundBehavior(
+	UINT32 AppViewId,
+	UNICODESTRING IsForeground
+	);
+
+AppViewStatics_SetVisibilityHiddenExecutionStateGlobalBehavior(
+	UNICODESTRING ExecutionState
+	);
+
+AppViewStatics_SetVisibilityHiddenExecutionStateBehavior(
+	UINT32 AppViewId,
+	UNICODESTRING ExecutionState
+	);
+
+AppViewStatics_SetInputStateDeactivatedVisibilityGlobalBehavior(
+	UNICODESTRING Visibility
+	);
+
+AppViewStatics_SetInputStateDeactivatedVisibilityBehavior(
+	UINT32 AppViewId,
+	UNICODESTRING Visibility
+	);
+
+AppViewStatics_SetActivationRequestedVisibilityGlobalBehavior(
+	UNICODESTRING Visibility
+	);
+
+AppViewStatics_SetActivationRequestedVisibilityBehavior(
+	UINT32 AppViewId,
+	UNICODESTRING Visibility
+	);
+
+AppViewStatics_RemoveAppView(
+	UINT32 AppViewId,
+	HEXINT64 AppViewPtr
+	);
+
+AppViewStatics_AddAppView(
+	UINT32 AppViewId,
+	HEXINT64 AppViewPtr
+	);
+
+AppViewStatics_TerminateAllWithUserContextAsync(
+	UINT64 UserContextToken
+	);
+
+AppViewStatics_TerminateAllAsync(
+	VOID
+	);
+
+AppViewStatics_TerminateAppAsync(
+	UINT32 AppViewId
+	);
+
+AppViewStatics_SetAppViewVisibilityAsync(
+	UINT32 AppViewId,
+	UNICODESTRING Visibility
+	);
+
+AppView_CalculateTargetNavigationLevel(
+	UINT32 AppViewId,
+	UNICODESTRING TargetExecutionState,
+	UNICODESTRING TargetVisibility,
+	UNICODESTRING TargetInputState
+	);
+
+AppView_put_Visibility(
+	UINT32 AppViewId,
+	UNICODESTRING Visibility
+	);
+
+AppView_put_InputState(
+	UINT32 AppViewId,
+	UNICODESTRING InputState
+	);
+
+AppView_put_ExecutionState(
+	UINT32 AppViewId,
+	UNICODESTRING ExecutionState
+	);
+
+AppView_put_DehydrationEligibility(
+	UINT32 AppViewId,
+	UNICODESTRING DehydrationEligibility
+	);
+
+ComponentUIBroker_TrySetVisibilityForWin32HostedComponent(
+	UINT32 appViewId,
+	BOOLEAN show
+	);
+
+ComponentUIBroker_HamActivityRelease(
+	UINT32 pid,
+	UINT64 activity
+	);
+
+ComponentUIBroker_HamActivityStartFailed(
+	UINT32 pid,
+	UINT64 activity
+	);
+
+ComponentUIBroker_ReleaseHamActivityInternal(
+	UINT32 pid
+	);
+
+ComponentUIBroker_HamActivityAborted(
+	UINT32 pid,
+	UINT64 activity
+	);
+
+ComponentUIBroker_HamActivityTimeOut(
+	UINT32 pid,
+	UINT64 activity
+	);
+
+ComponentUIBroker_HamActivityCreated(
+	UINT32 pid,
+	UINT64 activity
+	);
+
+ComponentUIBroker_HamActivityTaken(
+	UINT32 pid,
+	UINT64 activity
+	);
+
+ComponentUIBroker_TakeHamActivityInternal(
+	UINT32 pid
+	);
+
+ComponentUIBroker_HamActivityAddRef(
+	UINT32 pid,
+	UINT64 activity
+	);
+
+ComponentUIBroker_HostActivityManagerCallback(
+	UINT32 pid,
+	UINT64 activity,
+	UINT32 subject
+	);
+
+ComponentUIBroker_HamActivityClosed(
+	UINT32 pid,
+	UINT64 activity
+	);
+
+ComponentUIBroker_IsHostGrantedRightsOverComponent(
+	UINT32 HostViewId,
+	UINT32 ComponentViewId,
+	UINT32 HostRightFlags
+	);
+
+ComponentUIBroker_ShowWin32HostedComponents(
+	BOOLEAN show
+	);
+
+ComponentUIBroker_TakeHamActivityByViewId(
+	UINT32 appViewId
+	);
+
+ComponentUIBroker_TakeFocusFromComponent(
+	UINT32 HostViewId
+	);
+
+ComponentUIBroker_ConfigureHostRightsForComponent(
+	UINT32 ComponentViewId,
+	UINT32 HostRightFlagsMask,
+	UINT32 HostRightFlags
+	);
+
+ComponentUIBroker_SetIsModalDialogEnabled(
+	UINT32 ComponentViewId,
+	UINT8 IsEnabled
+	);
+
+ComponentUIBroker_RegisterComponentForHost(
+	UINT32 ComponentViewId,
+	UINT32 HostViewId,
+	UINT32 HostProcessId
+	);
+
+ComponentUIBroker_RemoveComponent(
+	UINT32 ComponentViewId
+	);
+
+ComponentUIBroker_SetComponentPointerActivationPolicy(
+	UINT32 ComponentViewId,
+	UNICODESTRING ComponentPointerActivationPolicy
+	);
+
+ComponentUIBroker_SetComponentViewStateToSuspendable(
+	UINT32 ComponentViewId,
+	UINT8 IsSuspendable
+	);
+
+ComponentUIBroker_RequestBackNavigation(
+	UINT32 ComponentViewId
+	);
+
+ComponentUIBroker_RequestActivation(
+	UINT32 ComponentViewId
+	);
+
+ComponentUIBroker_SetScreenBoundsComponent(
+	UINT32 ComponentViewId,
+	FLOAT X,
+	FLOAT Y,
+	FLOAT Width,
+	FLOAT Height
+	);
+
+ComponentUIBroker_SetBoundsComponent(
+	UINT32 ComponentViewId,
+	FLOAT Width,
+	FLOAT Height
+	);
+
+ComponentUIBroker_CloseComponent(
+	UINT32 ComponentViewId
+	);
+
+ComponentUIBroker_HideComponent(
+	UINT32 ComponentViewId
+	);
+
+ComponentUIBroker_ShowComponent(
+	UINT32 ComponentViewId
+	);
+
+ComponentUIPopupBroker_DecrementPopupCount(
+	UINT32 ViewId
+	);
+
+ComponentUIPopupBroker_IncrementPopupCount(
+	UINT32 ViewId
+	);
+
+VisualIDBroker_GetLuidInputSinkHandle(
+	UINT64 luid,
+	UINT64 handle
+	);
+
+VisualIDBroker_AddInputSinkHandle(
+	UINT64 luid,
+	UINT64 handle
+	);
+
+WindowingEnvironment_ApplyConfigurationAsync(
+	UINT64 luid,
+	UINT64 handle
+	);
+
+WindowingEnvironment_ApplyConfigurationAsync(
+	UINT64 luid
+	);
+
+WindowingEnvironment_ApplyConfigurationAsync(
+	UINT64 handle
+	);
+
+SupportedSettings_put_Maximized_Run(
+	BOOLEAN Maximized
+	);
+
+SupportedSettings_put_Maximized_Start(
+	BOOLEAN Maximized
+	);
+
+SupportedSettings_put_CompactOverlay_Run(
+	BOOLEAN CompactOverlay
+	);
+
+SupportedSettings_put_CompactOverlay_Start(
+	BOOLEAN CompactOverlay
+	);
+
+SupportedSettings_put_Projection_Run(
+	BOOLEAN Projection
+	);
+
+SupportedSettings_put_Projection_Start(
+	BOOLEAN Projection
+	);
+
+SupportedSettings_put_Spanning_Run(
+	BOOLEAN Spanning
+	);
+
+SupportedSettings_put_Spanning_Start(
+	BOOLEAN Spanning
+	);
+
+SupportedSettings_put_SpanningFullscreen_Run(
+	BOOLEAN SpanningFullscreen
+	);
+
+SupportedSettings_put_SpanningFullscreen_Start(
+	BOOLEAN SpanningFullscreen
+	);
+
+SupportedSettings_put_Fullscreen_Run(
+	BOOLEAN Fullscreen
+	);
+
+SupportedSettings_put_Fullscreen_Start(
+	BOOLEAN Fullscreen
+	);
+
+OverlappedPositioner_SetPreferredTopMost(
+	UINT32 applicationViewId
+	);
+
+OverlappedPositioner_SetPreferredRelativeZOrder(
+	UINT32 applicationViewId,
+	UINT32 relativeZOrderBeneathViewId
+	);
+
+OverlappedPositioner_SetSize(
+	UINT32 applicationViewId,
+	FLOAT size_Width,
+	FLOAT size_Height
+	);
+
+OverlappedPositioner_SetViewRelativePosition(
+	UINT32 applicationViewId,
+	FLOAT offset_X,
+	FLOAT offset_Y,
+	UINT32 anchorViewId
+	);
+
+OverlappedPositioner_SetViewRelativePositionWithPreferences(
+	UINT32 applicationViewId,
+	FLOAT offset_X,
+	FLOAT offset_Y,
+	UINT32 anchorViewId,
+	UNICODESTRING viewRelativePositionPreferences_constrainToSingleDisplayRegion,
+	UNICODESTRING viewRelativePositionPreferences_boundsPreference,
+	UNICODESTRING viewRelativePositionPreferences_keepAspectRatio,
+	UNICODESTRING viewRelativePositionPreferences_includeWindowDecorations
+	);
+
+Positioner_SetWindowingEnvironment(
+	UINT32 applicationViewId
+	);
+
+Behaviors_ApplyVisibilityHiddenForegroundBehavior(
+	UINT32 AppViewId,
+	UINT32 WindowId,
+	UINT8 Foreground
+	);
+
+Behaviors_ApplyPointerActivatedForegroundBehavior(
+	UINT32 WindowId,
+	UINT8 Foreground
+	);
+
+Behaviors_ApplyVisibilityHiddenExecutionStateBehavior(
+	UINT32 AppViewId,
+	UNICODESTRING ExecutionState
+	);
+
+Behaviors_ApplyInputStateDeactivatedVisibilityBehavior(
+	UINT32 AppViewId,
+	UNICODESTRING Visibility
+	);
+
+Behaviors_ApplyActivationRequestedVisibilityBehavior(
+	UINT32 AppViewId,
+	UNICODESTRING Visibility
+	);
+
+CRS_UnregisteredComponent(
+	UINT32 componentVid,
+	UINT32 hostIdType,
+	UINT32 hostVid,
+	UINT32 hostPid
+	);
+
+CRS_UnregisteringComponent(
+	UINT32 componentVid
+	);
+
+CRS_RegisteredComponent(
+	UINT32 pidHost,
+	UINT32 componentVid,
+	UINT32 hostIdType,
+	UINT32 hostVid,
+	UINT32 hostPid
+	);
+
+UniversalBatch_End(
+	UNICODESTRING UniversalBatchKind,
+	HEXINT64 UniversalBatchPtr
+	);
+
+UniversalAppModel_GetBatch(
+	UINT32 AppViewId,
+	UNICODESTRING UniversalBatchKind,
+	HEXINT64 UniversalBatchPtr
+	);
+
+Positioner2D_SetDisplayRegions(
+	UINT32 applicationViewId,
+	UNICODESTRING DisplayRegionIds
+	);
+

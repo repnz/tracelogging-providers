@@ -1,0 +1,308 @@
+ProviderNames:
+	Microsoft.Windows.InputStateManager
+	Microsoft.OneCore.MinInput
+	InputCore
+	Microsoft.Windows.OneCore.MinInput
+
+
+
+**** Events *****
+MPCInputObject_InputEventProcessed_AfterEvent(
+	UINT32 id
+	);
+
+MPCInputObject_InputEventProcessed_BeforeEvent(
+	UINT32 id
+	);
+
+FallbackError(
+	UINT64 PartA_PrivTags,
+	SIGNED wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+FallbackError(
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+DragNDrop/DragOperation/InitializeForAnimation(
+	UINT64 pointerId,
+	UINT64 dataProviderId,
+	UINT64 dataSourceId,
+	BOOL32 readerFlag
+	);
+
+DragNDrop/DragOperation/DragInProgressLegacyReceived(
+	UINT64 PointerId,
+	UINT64 Screen.X,
+	UINT64 Screen.Y,
+	HEXINT64 CoreInputId,
+	UINT64 CoreInput.X,
+	UINT64 CoreInput.Y,
+	HEXINT64 CoreWindowId,
+	UINT64 CoreWindow.X,
+	UINT64 CoreWindow.Y,
+	UINT64 VirtualKeyModifier
+	);
+
+DragNDrop/DragOperation/StartDrag(
+	UINT64 PointerId
+	);
+
+DragNDrop/DragOperation/DragEndedLegacyReceived(
+	UINT64 PointerId,
+	UINT64 Screen.X,
+	UINT64 Screen.Y,
+	HEXINT64 CoreInputId,
+	UINT64 CoreInput.X,
+	UINT64 CoreInput.Y,
+	HEXINT64 CoreWindowId,
+	UINT64 CoreWindow.X,
+	UINT64 CoreWindow.Y,
+	UINT64 VirtualKeyModifier
+	);
+
+DragNDrop/DragOperation/StartDragFailedLegacyReceived(
+	UINT64 PointerId
+	);
+
+DragNDrop/DragOperation/DragCancelledLegacyReceived(
+	UINT64 PointerId,
+	UINT64 Screen.X,
+	UINT64 Screen.Y,
+	HEXINT64 CoreInputId,
+	UINT64 CoreInput.X,
+	UINT64 CoreInput.Y,
+	HEXINT64 CoreWindowId,
+	UINT64 CoreWindow.X,
+	UINT64 CoreWindow.Y,
+	UINT64 VirtualKeyModifier
+	);
+
+DragNDrop/DragOperation/CancelDrag(
+	UINT64 PointerId
+	);
+
+DragNDrop/DragOperation/DragStartedLegacyReceived(
+	UINT64 PointerId,
+	UINT64 Screen.X,
+	UINT64 Screen.Y,
+	HEXINT64 CoreInputId,
+	UINT64 CoreInput.X,
+	UINT64 CoreInput.Y,
+	HEXINT64 CoreWindowId,
+	UINT64 CoreWindow.X,
+	UINT64 CoreWindow.Y,
+	UINT64 VirtualKeyModifier
+	);
+
+SystemButtonEventController(
+	UINT64 PartA_PrivTags
+	);
+
+SystemButtonEventControllerPrincipal/SystemButtonEvent(
+	UINT64 qpcTime,
+	UINT32 EventType,
+	BOOL32 EventValue
+	);
+
+GenericInputHost_Create(
+	HEXINT64 pOwner
+	);
+
+GenericInputHost_OnInputReport_LogMPC(
+	HEXINT64 pOwner,
+	UINT32 InputType,
+	UINT32 DeviceId,
+	UINT32 InputTimestamp,
+	UINT32 MPC Report Id,
+	UINT32 MPCGestureType,
+	UINT32 MPCAugmentedGestureType
+	);
+
+GenericInputHost_HandlesAllInputFromDevices(
+	HEXINT64 pOwner,
+	UINT32 dwDeviceTypes
+	);
+
+GenericInputHost_OnSystemInputReconnect(
+	HEXINT64 pOwner
+	);
+
+GenericInputHost_HandlesAnyInputOfTypes(
+	HEXINT64 pOwner,
+	UINT32 dwInputTypes
+	);
+
+GenericInputHost_OnDeviceAttach(
+	HEXINT64 pOwner,
+	UINT32 Device ID,
+	UINT32 Device Type
+	);
+
+GenericInputHost_Destroy(
+	HEXINT64 pOwner
+	);
+
+GenericInputHost_OnSystemInputDisconnect(
+	HEXINT64 pOwner
+	);
+
+GenericInputHost_OnDeviceRemoval(
+	HEXINT64 pOwner,
+	UINT32 Device ID,
+	UINT32 Device Type
+	);
+
+Cursor::SetVisibility(
+	UINT32 DeviceId,
+	UINT64 ClientOwner,
+	BOOL32 Visible
+	);
+
+Cursor::SetGlyph(
+	UINT32 DeviceId,
+	UINT64 ClientOwner,
+	HEXINT64 ShapeId,
+	ANSISTRING Name,
+	UINT32 ProcessId
+	);
+
+Cursor::CreateCustomCursor(
+	HEXINT64 ShapeId,
+	ANSISTRING Name,
+	UINT32 ProcessId
+	);
+
+Cursor::SetLocked(
+	UINT32 DeviceId,
+	UINT64 ClientOwner,
+	BOOL32 Locked
+	);
+
+Cursor::DestroyCustomCursor(
+	HEXINT64 ShapeId,
+	ANSISTRING Name,
+	UINT32 ProcessId
+	);
+
+Cursor::CreateBitmapCursor(
+	HEXINT64 ShapeId,
+	ANSISTRING Name,
+	UINT32 ProcessId
+	);
+
+Cursor::SetSystemCursor(
+	UINT64 DeviceId,
+	HEXINT64 ShapeId,
+	ANSISTRING Name,
+	UINT32 ProcessId,
+	UNICODESTRING FileName
+	);
+
+InputDeviceWatcher_OnDeviceUpdate(
+	HEXINT64 pOwner,
+	UINT32 Device ID,
+	UINT32 Device Type
+	);
+
+InputDeviceWatcher_OnDeviceRemoval(
+	HEXINT64 pOwner,
+	UINT32 Device ID,
+	UINT32 Device Type
+	);
+
+InputDeviceWatcher_OnServerDisconnect(
+	HEXINT64 pOwner
+	);
+
+InputDeviceWatcher_SendCommandToInputDevice(
+	HEXINT64 pOwner,
+	UINT32 dwDeviceId,
+	UINT32 deviceCommand
+	);
+
+InputDeviceWatcher_Create(
+	HEXINT64 pOwner,
+	UINT32 dwDeviceTypes
+	);
+
+InputDeviceWatcher_Destroy(
+	HEXINT64 pOwner
+	);
+
+InputDeviceWatcher_OnDeviceArrival(
+	HEXINT64 pOwner,
+	UINT32 Device ID,
+	UINT32 Device Type
+	);
+
+UIAHitTest/HitTestForEndpointId(
+	UINT32 PositionX,
+	UINT32 PositionY
+	);
+
+UIAHitTest/UIAHitTestResponse(
+	GUID ReceivedUIAEndpointId,
+	BOOL32 EndpointIdNotSet,
+	BOOL32 WaitingForEndpointId
+	);
+
+UIAHitTest/ResetUIAHitTestProxy(
+	BOOL32 EndpointIdNotSet,
+	BOOL32 WaitingForEndpointId,
+	ANSISTRING "DWM Crashes"
+	);
+
+InputHost/ReceivedInputReport/Latency(
+	UINT64 Latency
+	);
+
+InputHost/ReceivedInputReport(
+	UINT64 DeviceId,
+	UINT64 InputType,
+	UINT32 Timestamp,
+	UINT64 QPC
+	);
+
+InputHost/ReceivedDeviceAttach(
+	UINT64 DeviceId,
+	UINT64 InputType
+	);
+
+InputHost/ReceivedDeviceRemoval(
+	UINT64 DeviceId,
+	UINT64 InputType
+	);
+

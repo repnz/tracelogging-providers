@@ -1,0 +1,26 @@
+ProviderNames:
+	Windows.System.Diagnostics.Telemetry.PlatformTelemetryClient
+
+
+
+**** Events *****
+DllMain_Unregister(
+	VOID
+	);
+
+DllMain_Register(
+	VOID
+	);
+
+ResultMacro_LogError(
+	ANSISTRING File,
+	UINT32 LineNumber,
+	UINT32 FailureType,
+	INT32 FailureCount,
+	UINT32 ThreadId,
+	INT32 HRESULT,
+	UNICODESTRING UserMessage,
+	ANSISTRING FailingCode,
+	ANSISTRING FailingFunction
+	);
+

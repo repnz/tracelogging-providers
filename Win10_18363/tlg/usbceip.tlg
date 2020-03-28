@@ -1,0 +1,181 @@
+ProviderNames:
+	Microsoft.Windows.WindowsToGo
+	MicrosoftUsbHidCeipProvider
+
+
+
+**** Events *****
+HostControllerSummaryDatapointEvent(
+	UINT32 TotalControllerCount,
+	UINT32 XhciControllerCount
+	);
+
+HostControllerPartCEvent(
+	UNICODESTRING VendorId,
+	UNICODESTRING ProductId,
+	UNICODESTRING RevisionId,
+	UINT32 ControllerType,
+	UINT32 RequiresResetOnResume,
+	UINT32 InterfaceVersion,
+	UINT32 RecoveryCount,
+	UINT32 RestoreStateFailureCount,
+	UINT64 FirmwareVersion
+	);
+
+DeviceSummaryDatapointEvent(
+	UINT32 ConnectedDeviceCount,
+	UINT32 TransientDeviceCount,
+	UINT32 CompositeDeviceCount,
+	UINT32 XhciDeviceCount,
+	UINT32 MaximumHubDepth
+	);
+
+DevicePartCEvent(
+	UNICODESTRING DeviceVendorId,
+	UNICODESTRING DeviceProductId,
+	UNICODESTRING DeviceRevisionId,
+	UINT32 DeviceCategory,
+	UINT32 IsOSDescriptorSupported,
+	UINT32 WasSelectiveSuspended,
+	UINT32 RequiresResetOnResume,
+	UINT32 HangsOnMSOSDescriptorQuery,
+	UINT32 GetTroubleshooterRootCause,
+	UINT32 NewInterfaceUsageInformation,
+	UINT32 MsOs20DescriptorUsage,
+	UINT32 PropertiesCount,
+	UINT32 AdditionalPropsCount,
+	UINT32 PnpProblemCode,
+	UINT32 EnumerationFailureCode,
+	UINT32 GetDescriptorValidationInfo0,
+	UINT32 GetDescriptorValidationInfo1,
+	UINT32 GetDescriptorValidationInfo2,
+	UINT32 GetDescriptorValidationInfo3,
+	UINT32 GetDescriptorValidationInfo4,
+	UINT32 GetDescriptorValidationInfo5,
+	UINT32 GetDescriptorValidationInfo6,
+	UINT32 IsComposite,
+	UINT32 DeviceSpeed,
+	UINT32 DeviceClass,
+	UINT32 DeviceSubClass,
+	UINT32 DeviceProtocol,
+	ANSISTRING ParentVendorId,
+	ANSISTRING ParentProductId,
+	ANSISTRING ParentRevisionId,
+	UINT32 InterfaceAssociationDescriptorCount,
+	UINT32 USBVersion,
+	UINT32 EnumerationRetryCount,
+	UINT32 InterconnectType
+	);
+
+HubSummaryDatapointEvent(
+	UINT32 HubCount
+	);
+
+HubPartCEvent(
+	UNICODESTRING VendorId,
+	UNICODESTRING ProductId,
+	UNICODESTRING RevisionId,
+	UINT32 HubSpeed,
+	UINT32 TTType,
+	UINT32 IsSelfPowered,
+	UINT32 IsExternal,
+	UINT32 PortCount,
+	UINT32 IsCompound,
+	UINT32 HardResetCount,
+	UINT32 HubProperties,
+	UINT32 HubId,
+	UINT32 LastHubResetPortSatus,
+	UINT32 OvercurrentDetected
+	);
+
+WinUsbPartCEvent(
+	UINT32 VendorId,
+	UINT32 ProductId,
+	UINT32 Properties,
+	ANSISTRING DriverName,
+	UINT32 DriverTypes
+	);
+
+GenericUsbSummaryDatapointEvent(
+	UINT32 DisableSelectiveSuspend,
+	UINT32 HubIgnoreSerialNumber,
+	UINT32 ApiUsage,
+	UINT32 UsbInformation
+	);
+
+HidSessionSummaryDatapointEvent(
+	UINT32 ConsumerControlUsage,
+	UINT32 HidApiUsage
+	);
+
+HidSummaryDatapointEvent(
+	UINT32 ConnectedDeviceCount,
+	UINT32 TransientDeviceCount,
+	UINT32 TotalCollectionCount
+	);
+
+HidDeviceDataPartCEvent(
+	UINT32 VendorId,
+	UINT32 ProductId,
+	UINT32 Version,
+	UINT32 IsReadOnlyDevice,
+	UINT32 CollectionCount,
+	UINT32 PnpProblemCode,
+	UINT32 ParserErrorCode,
+	ANSISTRING MiniportName,
+	UINT32 Properties
+	);
+
+HidCollectionPartCEvent(
+	UINT32 UsagePage,
+	UINT32 UsageId,
+	UINT32 VendorId,
+	UINT32 ProductId,
+	UINT32 Version,
+	UINT32 IsRestricted,
+	ANSISTRING DriverName,
+	UINT32 DriverType
+	);
+
+DiskConnectionSpeed(
+	UINT32 USBDiskSpeed
+	);
+
+EncryptionStatus(
+	UINT32 EncryptionStatus
+	);
+
+DeviceDetail(
+	UINT32 DiskType,
+	UINT32 PortType,
+	UINT32 ControllerType
+	);
+
+MachineRoamingCount(
+	UINT32 MachineCount
+	);
+
+SurpriseRemoval(
+	UINT32 SurpriseRemovalCount
+	);
+
+USBSerSummaryPartCEvent(
+	UINT32 ConnectedDeviceCount,
+	UINT32 TransientDeviceCount,
+	UINT32 TotalCollectionCount
+	);
+
+USBSerDevicePartCEvent(
+	ANSISTRING Connected,
+	ANSISTRING Service,
+	ANSISTRING LowerFilter,
+	ANSISTRING UpperFilter,
+	ANSISTRING DeviceName,
+	ANSISTRING InfFile,
+	ANSISTRING MatchingID,
+	ANSISTRING Provider,
+	ANSISTRING Version,
+	UINT32 ProblemCode,
+	UINT8 GenericDriverInstalled
+	);
+

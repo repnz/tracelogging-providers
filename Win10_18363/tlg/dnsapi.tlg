@@ -1,0 +1,56 @@
+ProviderNames:
+	Microsoft.Windows.Networking.DNS
+
+
+
+**** Events *****
+DnsServerConfig(
+	GUID InterfaceGuid,
+	UINT64 InterfaceType,
+	UNICODESTRING DnsServers
+	);
+
+AllDnsServersTimeoutStatistics(
+	UINT32 AllDnsServersTimeoutCount
+	);
+
+DnsServerStatistics(
+	GUID InterfaceGuid,
+	UINT64 InterfaceType,
+	UNICODESTRING DnsServerAddress,
+	UINT32 DnsServerAddressFamily,
+	UINT32 DnsServerOrder,
+	UINT32 QueryCount,
+	UINT32 SuccessfulQueryCount,
+	UINT32 FailedQueryCount,
+	UINT32 TimeoutCount,
+	UINT64 SumTimeouts,
+	UINT32 MaxTimeout,
+	UINT32 MinTimeout,
+	UINT64 TimeoutsSquaresSum,
+	UINT64 SumSuccessRoundTripTime,
+	UINT64 SumFailedRoundTripTime,
+	UINT32 MaxSuccessRoundTripTime,
+	UINT32 MinSuccessRoundTripTime,
+	UINT64 MaxFailedRoundTripTime,
+	UINT64 MinFailedRoundTripTime,
+	UINT64 SuccessRoundTripTimeSquaresSum,
+	UINT64 FailedRoundTripTimeSquaresSum
+	);
+
+DnsServerFailureStats(
+	GUID InterfaceGuid,
+	UINT32 InterfaceType,
+	UNICODESTRING DnsServerAddress,
+	UINT32 DnsServerAddressFamily,
+	UINT32 DnsServerOrder,
+	HEXINT32 Status,
+	UINT32 Count
+	);
+
+DnsQueryStats(
+	UINT32 NetBiosSuccessfulQueryCount,
+	UINT32 OnlyNetBiosSuccessfulQueryCount,
+	UINT32 NetBiosQueryCount
+	);
+

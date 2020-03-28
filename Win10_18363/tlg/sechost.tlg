@@ -1,0 +1,77 @@
+ProviderNames:
+	Microsoft.Windows.Security.MitigationPolicy
+	Microsoft.Windows.Security.IsolationApi
+
+
+
+**** Events *****
+IsolationApiXmlConfigFormatError(
+	UNICODESTRING operation,
+	UNICODESTRING parentTag,
+	UNICODESTRING tag,
+	UNICODESTRING attr,
+	UNICODESTRING attrValue,
+	UNICODESTRING elementType
+	);
+
+IsolationApiCreateIsolatedProcessSuccess(
+	VOID
+	);
+
+IsolationApiAcProcessCreationFailure(
+	HRESULT result
+	);
+
+IsolationApiInternalParserError(
+	HRESULT result
+	);
+
+IsolationApiRacProcessCreationFailure(
+	UNICODESTRING error context,
+	HRESULT result
+	);
+
+IsolationApiUiRacProcessCreationFailure(
+	UNICODESTRING error context,
+	HRESULT result
+	);
+
+IsolationApiIsolatedProcessTokenCreationError(
+	UNICODESTRING error context,
+	HRESULT result
+	);
+
+IsolationApiAttributeListGenerationError(
+	UNICODESTRING error context,
+	HRESULT result
+	);
+
+IsolationApiContainerNotFoundError(
+	UNICODESTRING containerName
+	);
+
+IsolationApiCreateNormalProcessError(
+	HRESULT result
+	);
+
+IsolationApiDeleteIsolatedContainerSuccess(
+	VOID
+	);
+
+IsolationApiAppContainerCreationError(
+	HRESULT result
+	);
+
+IsolationApiRestrictedAppContainerCreationError(
+	UNICODESTRING error context,
+	HRESULT result
+	);
+
+IsolationApiCreateIsolationContainerSuccess(
+	VOID
+	);
+
+IsolationApiDeleteContainerError(
+	HRESULT result
+	);
+

@@ -1,0 +1,75 @@
+ProviderNames:
+	Microsoft.Windows.FileSystem.Chkdsk
+	Microsoft.Windows.FileSystem.Chkdsk
+
+
+
+**** Events *****
+ChkdskVerbEncountered(
+	UINT32 chkdskVerb,
+	UINT32 chkdskVerbSourceId,
+	BOOL32 chkdskResult,
+	UINT64 chkdskVerbDuration
+	);
+
+ChkdskCompleted(
+	GUID chkdskVolumeGuid,
+	UNICODESTRING chkdskFileSystemName,
+	INT32 chkdskAutocheck,
+	INT32 chkdskFixLevel,
+	UINT32 chkdskExitStatus,
+	UINT32 chkdskSourceTag,
+	BOOL32 chkdskResult,
+	BOOL32 chkdskAborted,
+	UINT64 chkdskDuration,
+	UINT32 chkdskSequenceNumber,
+	BOOL32 chkdskVolumeIsDirty
+	);
+
+ChkdskRunInfo(
+	UINT64 ClusterSize,
+	UINT64 ClusterCount,
+	UINT32 SectorSize,
+	UINT64 chkdskVolumeSize,
+	UINT64 SystemClusters,
+	UINT64 DirClusters,
+	UINT64 FileClusters,
+	UINT64 BadClusters,
+	UINT64 FreeClusters,
+	GUID chkdskVolumeGuid,
+	UINT64 HiddenClusters,
+	UINT64 EaSize
+	);
+
+ChkdskStageEntered(
+	UINT16 chkdskStage
+	);
+
+ChkdskStarting(
+	GUID chkdskVolumeGuid,
+	UNICODESTRING chkdskFileSystemName,
+	INT32 chkdskAutocheck,
+	INT32 chkdskFixLevel
+	);
+
+ChkdskRunInfo(
+	UNICODESTRING chkdskProgramName,
+	INT64 chkdskVolumeSize,
+	HEXINT64 chkdskHouseKeepingBitmask,
+	HEXINT64 chkdskArgumentsBitmask,
+	GUID chkdskVolumeGuid,
+	INT64 chkdskNumberUserFiles,
+	UNICODESTRING chkdskDuration
+	);
+
+ChkdskVerbEncountered(
+	UINT32 chkdskVerb,
+	UINT32 chkdskVerbOutcome,
+	UINT32 chkdskVerbOutcomeStatus,
+	HEXINT32 chkdskVerbHeaderFlags,
+	UINT32 chkdskVerbSourceId,
+	UINT64 chkdskVerbSignature,
+	UINT64 chkdskVerbObjectId,
+	UINT64 chkdskVerbDuration
+	);
+

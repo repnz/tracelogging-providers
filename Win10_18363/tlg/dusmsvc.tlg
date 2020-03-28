@@ -1,0 +1,1090 @@
+ProviderNames:
+	Microsoft.Windows.DusmSvc
+
+
+
+**** Events *****
+EXCEPTION::CATCH::OTHER(
+	WIN32ERROR err,
+	HRESULT hr
+	);
+
+EXCEPTION::CATCH::DUSM(
+	WIN32ERROR err,
+	HRESULT hr,
+	ANSISTRING file,
+	UINT32 line,
+	UNICODESTRING message
+	);
+
+DusmRpcSetOperatorCost::leave(
+	UINT32 xid,
+	FLOAT seconds
+	);
+
+DusmRpcSetOperatorCostTimeout(
+	FLOAT duration
+	);
+
+DusmRpcSetOperatorCost::leave::accessDenied(
+	UINT32 xid
+	);
+
+DusmRpcSetOperatorCost::enter(
+	UINT32 xid
+	);
+
+DusmRpcSetUserCost::leave(
+	UINT32 xid,
+	FLOAT seconds
+	);
+
+DusmRpcSetUserCostTimeout(
+	FLOAT duration
+	);
+
+DusmRpcSetUserCost::leave::accessDenied(
+	UINT32 xid
+	);
+
+DusmRpcSetUserCost::enter(
+	UINT32 xid
+	);
+
+DusmRpcQueryOperatorCost::leave(
+	UINT32 xid,
+	FLOAT seconds,
+	GUID interfaceGuid,
+	UNICODESTRING profileName,
+	BOOL32 isFound,
+	UINT32 cost,
+	UINT32 costSource
+	);
+
+DusmRpcQueryOperatorCostTimeout(
+	FLOAT duration
+	);
+
+DusmRpcQueryOperatorCost::enter(
+	UINT32 xid
+	);
+
+DusmRpcQueryUserCost::leave(
+	UINT32 xid,
+	FLOAT seconds,
+	GUID interfaceGuid,
+	UNICODESTRING profileName,
+	BOOL32 isFound,
+	UINT32 cost,
+	UINT32 costSource
+	);
+
+DusmRpcQueryUserCostTimeout(
+	FLOAT duration
+	);
+
+DusmRpcQueryUserCost::enter(
+	UINT32 xid
+	);
+
+DusmRpcQueryCost::leave(
+	UINT32 xid,
+	FLOAT seconds,
+	GUID interfaceGuid,
+	UNICODESTRING profileName,
+	BOOL32 isFound,
+	UINT32 cost,
+	UINT32 costSource
+	);
+
+DusmRpcQueryCostTimeout(
+	FLOAT duration
+	);
+
+DusmRpcQueryCost::enter(
+	UINT32 xid
+	);
+
+DusmRpcQueryConnectionProperties(
+	GUID interfaceGuid,
+	UNICODESTRING mediaType,
+	UNICODESTRING dpuState,
+	BOOL32 isNearLimit,
+	BOOL32 isBackgroundRestricted,
+	BOOL32 isActive
+	);
+
+DusmRpcEnumProfileList(
+	GUID interfaceGuid,
+	UINT32 cProfiles
+	);
+
+DusmRpcEnumConnectionList(
+	UINT32 cConnections
+	);
+
+FallbackError(
+	UINT64 PartA_PrivTags,
+	SIGNED wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+FallbackError(
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+DusmSvc::Uninitialize(
+	VOID
+	);
+
+DusmSvc::Initialize(
+	VOID
+	);
+
+DusmSvc::StopRpcServer(
+	VOID
+	);
+
+DusmSvc::StartRpcServer(
+	VOID
+	);
+
+EXCEPTION::CATCH::MAIN(
+	WIN32ERROR err,
+	HRESULT hr
+	);
+
+ServiceMain finish(
+	FLOAT duration
+	);
+
+ServiceMain start(
+	VOID
+	);
+
+DusmMain::Uninitialize(
+	VOID
+	);
+
+DusmMain::Initialize(
+	VOID
+	);
+
+DusmMain::NotifyCurrentState::SetServiceStatus::failed(
+	WIN32ERROR err
+	);
+
+DusmConnection::SignalBackgroundTrigger::SebSignalSyncEvent(
+	HRESULT hr,
+	UINT32 activationStatus
+	);
+
+DusmConnection::SignalBackgroundTrigger::SebQueryEventPackage(
+	HRESULT hr,
+	UINT32 iEventId,
+	UNICODESTRING packageId
+	);
+
+DusmConnection::SignalBackgroundTrigger::SebEnumerateEventsByType(
+	HRESULT hr,
+	GUID interfaceGuid,
+	UNICODESTRING mediaType,
+	UINT32 cEventIds,
+	HEXINT64 pEventIdArray
+	);
+
+DusmConnection::PublishMbaeNotification(
+	NTSTATUS ntStatus,
+	GUID interfaceGuid,
+	UNICODESTRING mediaType,
+	UINT32 messageType
+	);
+
+DusmConnection::InitializeMbae::GetWnfStateNameFromMbaeMetaData(
+	HRESULT hr,
+	BOOL32 isOperatorNotificationEnabled,
+	BOOL32 isMbaeNotificationEnabled
+	);
+
+DusmConnection::GetWnfStateNameFromMbaeMetaData::DevGetObjectProperties(DevObjectTypeDeviceInterface) values invalid(
+	HRESULT hResult
+	);
+
+DusmConnection::GetWnfStateNameFromMbaeMetaData::DevGetObjectProperties(DevObjectTypeDeviceContainer) values invalid(
+	HRESULT hResult
+	);
+
+DusmConnection::GetWnfStateNameFromMbaeMetaData::DevGetObjectProperties(DevObjectTypeDeviceContainer)(
+	HRESULT hResult
+	);
+
+DusmConnection::GetWnfStateNameFromMbaeMetaData::DevGetObjectProperties(DevObjectTypeDeviceInterface)(
+	HRESULT hResult
+	);
+
+DusmConnection::GetWnfStateNameFromMbaeMetaData::GetNetworkAccountBindingDeviceInterfacePath(
+	HRESULT hResult
+	);
+
+DusmConnection::GetWnfStateNameFromMbaeMetaData::GetNetworkAccountIdBoundToInterfaceId(
+	HRESULT hResult
+	);
+
+DusmConnection::EvaluateConnection::completed(
+	GUID interfaceGuid,
+	UNICODESTRING profileName,
+	UNICODESTRING dpuState,
+	BOOL32 isBackgroundRestricted,
+	BOOL32 hasDataPlan
+	);
+
+DusmConnection::EvaluateConnection::publishIsBgRestrictedToWcm(
+	WIN32ERROR err,
+	BOOL32 isBackgroundRestricted
+	);
+
+DusmConnection::EvaluateConnection::publishDpuStateToWcm(
+	WIN32ERROR err,
+	UNICODESTRING dpuState
+	);
+
+DusmConnection::SetBackgroundRestriction::publishIsBgRestrictedToWcm(
+	WIN32ERROR err,
+	BOOL32 isBackgroundRestricted
+	);
+
+DusmConnection::SetSource(
+	GUID interfaceGuid,
+	UNICODESTRING profileName,
+	UINT32 cost,
+	UINT32 priorSource,
+	UINT32 newSource
+	);
+
+DusmConnection::SetOperatorCycleData(
+	GUID interfaceGuid,
+	UNICODESTRING profileName,
+	BOOL32 hasDataPlan,
+	UINT32 daysInCycle,
+	UINT32 daysIntoCycle
+	);
+
+DusmConnection::SetDataPlan(
+	GUID interfaceGuid,
+	UNICODESTRING profileName,
+	UINT32 cost,
+	UINT32 source,
+	UINT32 usageInMegabytes,
+	FILETIME lastSyncTime,
+	UINT32 dataLimitInMegabytes,
+	FILETIME startDate,
+	UINT16 days,
+	UINT32 reset
+	);
+
+DusmConnection::SetCost(
+	GUID interfaceGuid,
+	UNICODESTRING profileName,
+	UNICODESTRING mediaType,
+	UINT32 priorCost,
+	UINT32 newCost
+	);
+
+DusmConnection::IsBackgroundRestricted(
+	GUID interfaceGuid,
+	UNICODESTRING profileName,
+	UNICODESTRING mediaType,
+	UINT32 backgroundRestriction,
+	UINT32 isNearLimit,
+	UINT32 roamingState,
+	UINT32 isBackgroundRestricted
+	);
+
+DusmConnection::UpdateNduTracker::TrackerStateChanged(
+	BOOL32 isNduTrackerNeeded,
+	BOOL32 isDataplanSet,
+	BOOL32 isMbaeNotificationEnabled
+	);
+
+DusmConnection::IsNduTrackerStateDifferent(
+	GUID interfaceGuid,
+	UINT32 newState,
+	UINT32 oldState
+	);
+
+DataPlan(
+	GUID InterfaceGuid,
+	UNICODESTRING ProfileName,
+	UNICODESTRING MediaType,
+	UNICODESTRING Source,
+	UNICODESTRING LimitType,
+	UINT32 ResetDay,
+	UINT32 DataLimit,
+	UINT32 Cost
+	);
+
+DataPlanEndOfCycle(
+	UNICODESTRING MediaType,
+	UNICODESTRING Source,
+	UNICODESTRING LimitType,
+	UINT32 ResetDay,
+	UINT32 DataLimit,
+	UNICODESTRING DpuState
+	);
+
+DataPlanDeleted(
+	UNICODESTRING ProfileName,
+	UNICODESTRING MediaType,
+	UNICODESTRING Source,
+	UNICODESTRING DpuState
+	);
+
+DataPlanSet(
+	GUID InterfaceGuid,
+	UNICODESTRING ProfileName,
+	UNICODESTRING MediaType,
+	UNICODESTRING Source,
+	UNICODESTRING LimitType,
+	UINT32 ResetDay,
+	UINT32 DataLimit,
+	UNICODESTRING DpuState,
+	UINT32 Cost
+	);
+
+BackgroundRestrictionSet(
+	GUID InterfaceGuid,
+	UNICODESTRING ProfileName,
+	UNICODESTRING MediaType,
+	UINT32 Restriction
+	);
+
+BackgroundRestriction(
+	UNICODESTRING ProfileName,
+	UNICODESTRING MediaType,
+	UINT32 Restriction,
+	BOOL32 IsRestricted
+	);
+
+DusmCache::QueryDataPlan::invalidDataPlan(
+	GUID interfaceGuid,
+	UNICODESTRING profileName,
+	UNICODESTRING mediaType,
+	UNICODESTRING iccid
+	);
+
+DusmCache::QueryCost - QueryCostAsync found the profile(
+	GUID interfaceGuid,
+	UNICODESTRING profileName,
+	UINT32 cost,
+	UINT32 source
+	);
+
+DusmCache::QueryCost - querying from Wwan Metered UI(
+	VOID
+	);
+
+DusmCache::Uninitialize(
+	VOID
+	);
+
+DusmCache::Initialize(
+	VOID
+	);
+
+DusmCache::FlushCostCache(
+	UINT64 cCached
+	);
+
+DusmCache::SetCostSync(
+	GUID interfaceGuid,
+	UNICODESTRING profileName,
+	UNICODESTRING mediaType,
+	UINT32 source,
+	UINT32 cost,
+	UINT32 costSource
+	);
+
+DusmCache::QueryCostAsync::completed(
+	GUID interfaceGuid,
+	UNICODESTRING profileName,
+	UNICODESTRING mediaType,
+	UINT32 source,
+	WIN32ERROR err,
+	BOOL32 isCached,
+	BOOL32 isFound,
+	UINT32 cost,
+	UINT32 costSource
+	);
+
+DusmCache::QueryCostAsync::timedOut(
+	GUID interfaceGuid,
+	UNICODESTRING profileName,
+	UNICODESTRING mediaType,
+	UINT32 source,
+	WIN32ERROR err,
+	UINT32 timeout
+	);
+
+DusmCache::QueryCostAsync::cacheHit(
+	GUID interfaceGuid,
+	UNICODESTRING profileName,
+	UNICODESTRING mediaType,
+	UINT32 source,
+	BOOL32 isCached,
+	BOOL32 isFound,
+	UINT32 cost,
+	UINT32 costSource
+	);
+
+DusmCache::SetCostCache(
+	GUID interfaceGuid,
+	UNICODESTRING profileName,
+	UNICODESTRING mediaType,
+	UINT32 source,
+	UINT32 cost,
+	UINT32 costSource,
+	BOOL32 isDeleteCost,
+	BOOL32 isFromSet
+	);
+
+DusmCache::QueryCostCache::not_found(
+	GUID interfaceGuid,
+	UNICODESTRING profileName,
+	UNICODESTRING mediaType,
+	UINT32 source
+	);
+
+DusmCore::Uninitialize(
+	VOID
+	);
+
+DusmCore::Initialize(
+	VOID
+	);
+
+DusmCore::AddProfileIndex(
+	GUID interfaceGuid,
+	UNICODESTRING profileName,
+	HEXINT32 profileIndex
+	);
+
+DusmCore::LoadDataPlan(
+	GUID interfaceGuid,
+	UNICODESTRING profileName,
+	UNICODESTRING mediaType,
+	FILETIME resetTime
+	);
+
+DusmCore::SetIccid(
+	GUID interfaceGuid,
+	UNICODESTRING profileName,
+	UNICODESTRING iccid,
+	FILETIME resetTime
+	);
+
+DusmCore::GetConnectionList(
+	UINT64 cConnections
+	);
+
+DusmCore::SetBackgroundRestriction(
+	GUID interfaceGuid,
+	UNICODESTRING profileName,
+	UINT32 restriction
+	);
+
+DusmCore::SetSource(
+	GUID interfaceGuid,
+	UNICODESTRING profileName,
+	UINT32 source
+	);
+
+DusmCore::AddConnection(
+	GUID interfaceGuid,
+	UNICODESTRING profileName,
+	UNICODESTRING mediaType,
+	FILETIME resetTime
+	);
+
+DusmCore::IsCellularBackgroundRestricted(
+	BOOL32 isBackgroundRestricted
+	);
+
+DusmCore::CalculateGlobalDpuState(
+	UNICODESTRING globalDpuState
+	);
+
+DusmCore::GetAndSetDataPlanAndCost::invalidDataPlan(
+	GUID interfaceGuid,
+	UNICODESTRING iccid
+	);
+
+DusmGetProviderNetworkUsageImpl(
+	GUID interfaceGuid,
+	UNICODESTRING profileName,
+	UNICODESTRING mediaType,
+	SYSTEMTIME beginTime,
+	SYSTEMTIME endTime,
+	UINT64 bytesTotal,
+	UNICODESTRING providerId
+	);
+
+DusmGetNetworkUsageImpl(
+	GUID interfaceGuid,
+	UNICODESTRING profileName,
+	UNICODESTRING mediaType,
+	SYSTEMTIME beginTime,
+	SYSTEMTIME endTime,
+	UINT64 bytesTotal,
+	FILETIME intervalStartTime,
+	FILETIME intervalEndTime
+	);
+
+DusmGetAttributedNetworkUsageImpl(
+	GUID interfaceGuid,
+	UNICODESTRING profileName,
+	BOOL32 isProfile,
+	UNICODESTRING mediaType,
+	SYSTEMTIME beginTime,
+	SYSTEMTIME endTime,
+	UINT64 bytesTotal,
+	UNICODESTRING appId
+	);
+
+DusmGetConnectionListNetworkUsageImpl(
+	GUID interfaceGuid,
+	UNICODESTRING mediaType,
+	SYSTEMTIME beginTime,
+	SYSTEMTIME endTime,
+	UINT64 bytesTotal
+	);
+
+DusmGetTotalUsageForProfileIndexList(
+	GUID interfaceGuid,
+	UNICODESTRING mediaType,
+	SYSTEMTIME beginTime,
+	SYSTEMTIME endTime,
+	UINT64 usageInBytes
+	);
+
+ApplyAttributionMapping::GetModuleHandleExW(
+	WIN32ERROR err
+	);
+
+GetEmailAccountStr::LoadStringW(
+	WIN32ERROR err
+	);
+
+DusmStore::QueryEnableSetDataPlanToast::RegGetValueW(
+	WIN32ERROR err,
+	UNICODESTRING iccidPath,
+	HEXINT64 iccidKey
+	);
+
+DusmStore::QueryEnableSetDataPlanToast::RegOpenKeyExW(
+	WIN32ERROR err,
+	UNICODESTRING iccidPath,
+	HEXINT64 iccidKey
+	);
+
+DusmStore::QueryEnableSetPreferCellularToast::RegGetValueW(
+	WIN32ERROR err,
+	UNICODESTRING iccidPath,
+	HEXINT64 iccidKey
+	);
+
+DusmStore::QueryEnableSetPreferCellularToast::RegOpenKeyExW(
+	WIN32ERROR err,
+	UNICODESTRING iccidPath,
+	HEXINT64 iccidKey
+	);
+
+DusmStore::QueryEnableOperatorToast::RegGetValueW(
+	WIN32ERROR err,
+	UNICODESTRING iccidPath,
+	HEXINT64 iccidKey
+	);
+
+DusmStore::QueryEnableOperatorToast::RegOpenKeyExW(
+	WIN32ERROR err,
+	UNICODESTRING iccidPath,
+	HEXINT64 iccidKey
+	);
+
+DusmStore::QueryResetTime::RegGetValueW(
+	WIN32ERROR err,
+	UNICODESTRING iccidOrSettingsPath,
+	HEXINT64 iccidOrSettingsKey
+	);
+
+DusmStore::QueryResetTime::RegOpenKeyExW(
+	WIN32ERROR err,
+	UNICODESTRING iccidOrSettingsPath,
+	HEXINT64 iccidOrSettingsKey
+	);
+
+DusmStore::QueryResetTime(
+	GUID interfaceGuid,
+	UNICODESTRING mediaType
+	);
+
+DusmStore::Uninitialize(
+	VOID
+	);
+
+DusmStore::Initialize(
+	VOID
+	);
+
+DusmStore::SetProfileIndexList(
+	UNICODESTRING iccid,
+	UINT64 cProfileIndexes,
+	UNICODESTRING profileIndexList
+	);
+
+DusmStore::QueryProfileIndexList(
+	UNICODESTRING iccid,
+	UINT64 cProfileIndexes,
+	UNICODESTRING szProfileIndexList
+	);
+
+DusmStore::QueryProfileIndexList::RegGetValueW::2(
+	WIN32ERROR err,
+	UINT32 cbProfileIndexList
+	);
+
+DusmStore::QueryProfileIndexList::RegGetValueW::1(
+	WIN32ERROR err,
+	UINT32 cbProfileIndexList
+	);
+
+DusmStore::QueryProfileIndexList::RegOpenKeyExW(
+	WIN32ERROR err
+	);
+
+DusmStore::QueryAllowListFromStore::failed(
+	HRESULT hr,
+	UNICODESTRING entryName,
+	UNICODESTRING resourceString
+	);
+
+DusmStore::QuerySource::RegGetValueW(
+	UNICODESTRING iccid
+	);
+
+DusmStore::QuerySource::RegOpenKeyExW(
+	UNICODESTRING iccid
+	);
+
+DusmAsync::Uninitialize(
+	VOID
+	);
+
+DusmAsync::Initialize(
+	VOID
+	);
+
+DusmAsync::SubmitOrderedWorkToThreadpool::bigQueue(
+	UINT64 cOrderedWork
+	);
+
+DusmAsync::SubmitWorkToThreadpool::bigQueue(
+	UINT64 cWork
+	);
+
+DusmAsync::OrderedWorkThread::bigQueue(
+	UINT64 cOrderedWork
+	);
+
+DusmAsync::WorkThread::bigQueue(
+	UINT64 cWork
+	);
+
+DusmNla::QueryAndPublishPublicCost::DusmEthernet::QueryCost(
+	WIN32ERROR reason
+	);
+
+DusmNla::QueryAndPublishPublicCost::DusmWlan::QueryCost(
+	WIN32ERROR reason
+	);
+
+DusmNla::QueryAndPublishPublicCost::DusmWwan::QueryCost(
+	WIN32ERROR reason
+	);
+
+DusmNla::Uninitialize(
+	VOID
+	);
+
+DusmNla::Initialize(
+	VOID
+	);
+
+DusmNla::Initialize::RegisterServiceNotification(
+	WIN32ERROR err
+	);
+
+DusmNla::NotificationCallback(
+	UINT32 notify
+	);
+
+DusmEthernet::Uninitialize(
+	VOID
+	);
+
+DusmEthernet::Initialize(
+	VOID
+	);
+
+DusmEthernet::InitializeConnectionList::NdisEnumerateInterfaces::failed(
+	WIN32ERROR err
+	);
+
+DusmEthernet::EthernetCallback::operStatusChange(
+	GUID interfaceGuid,
+	BOOL32 isConnected
+	);
+
+DusmEthernet::EthernetCallback::arrivalChange(
+	GUID interfaceGuid,
+	BOOL32 isAdapterArrived,
+	BOOL32 isAdapterRemoved
+	);
+
+DusmEthernet::DeviceNameToAdapterGuid::failed(
+	UNICODESTRING szGuid
+	);
+
+DusmWlan::QueryCost - WlanGetProfileMetadata returned cost(
+	UINT32 ConnectionCost,
+	UINT32 CostSource
+	);
+
+DusmWlan::QueryCost - WlanGetProfileMetadata returned nullptr(
+	VOID
+	);
+
+DusmWlan::QueryCost - calling WlanGetProfileMetadata(
+	GUID InterfaceGuid,
+	UNICODESTRING ProfileName
+	);
+
+DusmWlan::QueryCost - DusmStore::QueryGpCost returned cost(
+	UINT32 ConnectionCost,
+	UINT32 CostSource
+	);
+
+DusmWlan::Uninitialize(
+	VOID
+	);
+
+DusmWlan::Initialize(
+	VOID
+	);
+
+DusmWlan::Initialize::RegisterServiceNotifications::failed(
+	WIN32ERROR err
+	);
+
+DusmWlan::UpdateConnectionList::WlanQueryInterface::failed(
+	WIN32ERROR err
+	);
+
+DusmWlan::WlanCallback::profileDisconnected(
+	GUID interfaceGuid,
+	ANSISTRING notificationCode
+	);
+
+DusmWlan::WlanCallback::profileConnected(
+	GUID interfaceGuid,
+	ANSISTRING notificationCode
+	);
+
+DusmWlan::WlanCallback::profileDeleted(
+	GUID interfaceGuid,
+	ANSISTRING notificationCode
+	);
+
+DusmWlan::WlanCallback::interfaceRemoval(
+	GUID interfaceGuid,
+	ANSISTRING notificationCode
+	);
+
+DusmWlan::WlanCallback::interfaceArrival(
+	GUID interfaceGuid,
+	ANSISTRING notificationCode
+	);
+
+DusmWwan::QueryCost - WwanGetProfileMetaData returned cost(
+	UINT32 ConnectionCost,
+	UINT32 CostSource
+	);
+
+DusmWwan::QueryCost - WwanGetProfileMetaData returned nullptr(
+	VOID
+	);
+
+DusmWwan::QueryCost - calling WwanGetProfileMetaData(
+	GUID InterfaceGuid,
+	UNICODESTRING ProfileName
+	);
+
+DusmWwan::QueryCost - DusmStore::QueryGpCost returned cost(
+	UINT32 ConnectionCost,
+	UINT32 CostSource
+	);
+
+DusmWwan::Uninitialize(
+	VOID
+	);
+
+DusmWwan::Initialize(
+	VOID
+	);
+
+DusmWwan::Initialize::RegisterServiceNotifications::failed(
+	WIN32ERROR err
+	);
+
+DusmWwan::Start::success(
+	VOID
+	);
+
+DusmWwan::SCNotificationCallback::begin(
+	UINT32 notify
+	);
+
+DusmWwan::RegisterServiceNotifications::QueryServiceStatus(
+	UINT32 currentState
+	);
+
+DusmWwan::RegisterServiceNotifications::SubscribeServiceChangeNotifications(
+	WIN32ERROR err
+	);
+
+DusmWwan::RegisterServiceNotifications::OpenService::success(
+	HEXINT64 serviceHandle
+	);
+
+DusmWwan::RegisterServiceNotifications::OpenSCManager::success(
+	HEXINT64 managerHandle
+	);
+
+DusmWwan::RegisterNotification::WwanRegisterNotification::success(
+	VOID
+	);
+
+DusmWwan::UpdateConnectionList::WwanGetProfileList::failed(
+	WIN32ERROR err
+	);
+
+DusmWwan::UpdateConnectionList::addConnection::begin(
+	GUID interfaceGuid
+	);
+
+DusmWwan::UpdateConnectionList::simInserted::skip(
+	VOID
+	);
+
+DusmWwan::UpdateConnectionList::pdpContext::skip(
+	VOID
+	);
+
+DusmWwan::UpdateConnectionList::WwanEnumerateInterfaces::success(
+	UINT32 count
+	);
+
+DusmWwan::UpdateConnectionList::addConnection::success(
+	GUID interfaceGuid
+	);
+
+DusmWwan::IsWwanSimInserted(
+	GUID interfaceGuid,
+	WIN32ERROR err,
+	BOOL32 isInserted
+	);
+
+DusmWwan::OpenHandle::WwanOpenHandle::success(
+	VOID
+	);
+
+DusmWwan::WwanCallback::interfaceRemoval(
+	GUID interfaceGuid,
+	ANSISTRING notificationCode
+	);
+
+DusmWwan::WwanCallback::interfaceArrival(
+	GUID interfaceGuid,
+	ANSISTRING notificationCode
+	);
+
+DusmWwan::WwanCallback::subscriberInfo(
+	GUID interfaceGuid,
+	ANSISTRING notificationCode
+	);
+
+DusmWwan::WwanCallback::profileDeleted(
+	GUID interfaceGuid,
+	ANSISTRING notificationCode
+	);
+
+DusmWwan::WwanCallback::profileCreated(
+	GUID interfaceGuid,
+	ANSISTRING notificationCode
+	);
+
+DusmWwan::WwanCallback::connectionChanged(
+	GUID interfaceGuid,
+	UINT32 notificationCode,
+	ANSISTRING notificationSource
+	);
+
+DusmGp::Uninitialize(
+	VOID
+	);
+
+DusmGp::Initialize(
+	VOID
+	);
+
+DusmGp::RegisterNotification::RegisterGPNotification::failed(
+	WIN32ERROR err
+	);
+
+DusmNduTracker::TrackAdditionalProfile(
+	GUID interfaceGuid,
+	UINT32 isTracking,
+	HEXINT32 profileIndex
+	);
+
+DusmNduTracker::UpdateThreshold(
+	GUID interfaceGuid,
+	UINT32 isTracking,
+	UINT64 thresholdInBytes
+	);
+
+DusmNduTracker::StopTracking(
+	UINT64 interfaceLuid
+	);
+
+DusmNduTracker::BeginTracking(
+	GUID interfaceGuid
+	);
+
+DusmDataPlan::UpdateDataplanTraits(
+	HEXINT64 dataplan,
+	UINT32 cost,
+	UNICODESTRING planType
+	);
+
+DusmDataPlan::EvaluateUsageState(
+	FILETIME startDate,
+	FILETIME nextBillingCycle,
+	UINT64 dataLimitInBytes,
+	UINT64 dataUsageInBytes,
+	UINT32 isPlanExpired,
+	UINT64 onTrackTargetInBytes,
+	UNICODESTRING dpuState,
+	UINT32 isNearLimit,
+	BOOL32 isPlanReset
+	);
+
+ResetNotificationThrottler(
+	UNICODESTRING mediaType
+	);
+
+ShowNotification::toastShownDetails(
+	FILETIME isWwanUserOverLimitShownUntil,
+	FILETIME isWwanUserNearLimitShownUntil,
+	FILETIME isWwanOperatorOverLimitShownUntil,
+	FILETIME isWwanOperatorNearLimitShownUntil,
+	FILETIME isWlanUserOverLimitShownUntil,
+	FILETIME isWlanUserNearLimitShownUntil,
+	FILETIME isEthernetUserOverLimitShownUntil,
+	FILETIME isEthernetUserNearLimitShownUntil
+	);
+
+ShowNotification::toastShown(
+	UNICODESTRING mediaType,
+	UNICODESTRING dpuState,
+	UINT32 isNearLimit,
+	UINT32 isOperator,
+	FILETIME currentTime
+	);
+
+ShowNotification::skip(
+	UINT32 isOperator,
+	UINT32 isEnableOperatorToast
+	);
+
+DusmInterfaceFilter::DusmInterfaceFilter(
+	WIN32ERROR err
+	);
+
+DusmLocalQuery::QueryDataUsageInBytes(
+	FILETIME beginTime,
+	FILETIME endTime
+	);
+
+EthernetPluginRegister::CommonPluginRegister::failed(
+	VOID
+	);
+
+WlanPluginRegister::CommonPluginRegister::failed(
+	VOID
+	);
+
+WwanPluginRegister::CommonPluginRegister::failed(
+	VOID
+	);
+
+CommonPluginPublishPublicCost::NlaplgCommit(
+	WIN32ERROR err
+	);
+
+CommonPluginPublishPublicCost::NlaplgAddRow(
+	WIN32ERROR err
+	);
+
+CommonPluginPublishPublicCost::NlaplgRegister(
+	WIN32ERROR err
+	);
+
+CommonPluginPublishPublicCost::StringFromGUID2(
+	VOID
+	);
+
+CommonPluginRegister::NlaplgRegister(
+	WIN32ERROR err
+	);
+

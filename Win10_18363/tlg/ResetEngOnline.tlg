@@ -1,0 +1,29 @@
+ProviderNames:
+	Microsoft.Windows.SystemReset
+
+
+
+**** Events *****
+EsimWipeResult(
+	GUID sessionID,
+	INT32 errorCode
+	);
+
+EsimPresentCheck(
+	GUID sessionID,
+	INT32 errorCode,
+	INT32 esimPresent
+	);
+
+RepairNeeded(
+	GUID sessionID,
+	UNICODESTRING repairNeeded
+	);
+
+PBRCorruptionRepairOption(
+	GUID sessionID,
+	INT32 errorCode,
+	UINT32 cbsSessionOption,
+	INT32 meteredConnection
+	);
+

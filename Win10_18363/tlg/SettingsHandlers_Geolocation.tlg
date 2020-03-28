@@ -1,0 +1,38 @@
+ProviderNames:
+	Microsoft.Geolocation.Verbose
+	Microsoft.Geolocation.Service
+	Microsoft.Windows.TlgAggregateInternal
+
+
+
+**** Events *****
+FailureLogReport_Aggregate(
+	NULL Count,
+	HRESULT HR,
+	UNICODESTRING CustomMessage,
+	ANSISTRING Function,
+	ANSISTRING CallingCode,
+	ANSISTRING Filename,
+	UINT32 Line
+	);
+
+LocationSettings_HistoryClearInvoked(
+	VOID
+	);
+
+LocationSettings_ShowIconUpdated(
+	BOOL32 locationShowIconValue
+	);
+
+TlgAggregateSummary(
+	GUID Provider,
+	UINT64 NumFlushes,
+	UINT64 MaxEntriesStored,
+	UINT64 TotalEntriesFlushed,
+	UINT32 MaxEntriesFlushed,
+	UINT32 MinEntriesFlushed,
+	UINT32 NumBucketLimitReached,
+	UINT32 NumAllocationFailures,
+	UINT32 NumLargeEventFailures
+	);
+

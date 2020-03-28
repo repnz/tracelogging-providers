@@ -1,0 +1,885 @@
+ProviderNames:
+	Microsoft.Windows.Print.Workflow.API
+	Microsoft.Windows.Print.WorkFlowRT
+
+
+
+**** Events *****
+Error(
+	UINT64 PartA_PrivTags,
+	SIGNED wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+PrintWorkflowTriggerDetailsFactory::CreateEventDetailsInstance(
+	VOID
+	);
+
+WorkflowTriggerDetailsImpl::RuntimeClassInitialize - created session managers(
+	VOID
+	);
+
+WorkflowTriggerDetailsImpl::RuntimeClassInitialize(
+	VOID
+	);
+
+WorkflowTriggerDetailsImpl::get_PrintWorkflowSession(
+	VOID
+	);
+
+WorkflowTriggerDetailsImpl::~WorkflowTriggerDetailsImpl(
+	VOID
+	);
+
+ActivityStoppedAutomatically(
+	VOID
+	);
+
+ActivityError(
+	UINT64 PartA_PrivTags,
+	SIGNED wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+ActivityError(
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+PrintWorkflowBackgroundSessionImpl::GetGenerator - got XPS generator(
+	HEXINT64 m_xpsGenerator.get()
+	);
+
+PrintWorkflowBackgroundSessionImpl::InvokeAppEventHandlersFromMTAThread - failed to initialize runtime(
+	HRESULT hr
+	);
+
+PrintWorkflowBackgroundSessionImpl::InvokeAppEventHandlersFromMTAThread(
+	VOID
+	);
+
+PrintWorkflowBackgroundSessionImpl::InvokeAppEventHandlersFromMTAThread Invoke Background Submitted Handlers(
+	VOID
+	);
+
+PrintWorkflowBackgroundSessionImpl::InvokeAppEventHandlersFromMTAThread Invoke Foreground XpsDataAvailable Handlers(
+	VOID
+	);
+
+PrintWorkflowBackgroundSessionImpl::InvokeAppEventHandlersFromMTAThread Invoke Foreground Setup Handlers(
+	VOID
+	);
+
+PrintWorkflowBackgroundSessionImpl::InvokeAppEventHandlersFromMTAThread Ask Broker to launch Foreground UI(
+	VOID
+	);
+
+PrintWorkflowBackgroundSessionImpl::InvokeAppEventHandlersFromMTAThread Invoke Background Setup Handlers(
+	VOID
+	);
+
+PrintWorkflowBackgroundSessionImpl::InvokeAppEventHandlersFromMTAThread InvokePrintSetupEventHandlers - set event failed, probably because the event was closed (meaning we timed out to get here) so just exit(
+	VOID
+	);
+
+PrintWorkflowBackgroundSessionImpl::Start - event source thread failed to start(
+	UINT32 result
+	);
+
+PrintTaskSubmittedBackground(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId,
+	UINT64 Deferrals
+	);
+
+PrintTaskSubmittedBackground(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT64 Deferrals
+	);
+
+PrintTaskSubmittedBackground(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId,
+	UINT32 SessionId
+	);
+
+PrintTaskSubmittedBackground(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+PrintTaskSubmittedBackground(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+PrintTaskSetupBackground(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId,
+	INT32 RequiresUI,
+	UINT64 Deferrals
+	);
+
+PrintTaskSetupBackground(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	INT32 RequiresUI,
+	UINT64 Deferrals
+	);
+
+PrintTaskSetupBackground(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId,
+	UINT32 SessionId
+	);
+
+PrintTaskSetupBackground(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+PrintTaskSetupBackground(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+FallbackError(
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+FallbackError(
+	UINT64 PartA_PrivTags,
+	SIGNED wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+XPSDataAvailable(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId,
+	UINT64 Deferrals
+	);
+
+XPSDataAvailable(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT64 Deferrals
+	);
+
+XPSDataAvailable(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId,
+	UINT32 SessionId
+	);
+
+XPSDataAvailable(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+XPSDataAvailable(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+PrintTaskSetupForeground(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId,
+	UINT64 Deferrals
+	);
+
+PrintTaskSetupForeground(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT64 Deferrals
+	);
+
+PrintTaskSetupForeground(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId,
+	UINT32 SessionId
+	);
+
+PrintTaskSetupForeground(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+PrintTaskSetupForeground(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+ComObjectWrapperMapHelper::GetItem(
+	VOID
+	);
+
+ComObjectWrapperMapHelper::GetItemByKeyName(
+	VOID
+	);
+
+WorkflowPrintTicketImpl::DoValidationOperation(
+	VOID
+	);
+
+WorkflowPrintTicketImpl::RuntimeClassInitialize(
+	VOID
+	);
+
+WorkflowPrintTicketImpl::GetParameterInitializerInternal(
+	VOID
+	);
+
+WorkflowPrintTicketImpl::InitializeComPrintTicket - Print Queue was null terminated or has embedded null characters(
+	UNICODESTRING szPrintQueueName,
+	UINT32 length
+	);
+
+WorkflowPrintTicketImpl::RuntimeClassInitialize - szPrintQueueName was not null terminated(
+	VOID
+	);
+
+WorkflowPrintTicketImpl::InitializeComPrintTicket(
+	VOID
+	);
+
+WorkflowPrintTicketImpl::get_XmlNode(
+	VOID
+	);
+
+WorkflowPrintTicketImpl::get_XmlNamespace(
+	VOID
+	);
+
+WorkflowPrintTicketImpl::get_Name(
+	VOID
+	);
+
+WorkflowPrintTicketImpl::MergeAndValidateTicket(
+	VOID
+	);
+
+WorkflowPrintTicketImpl::CreateStringParameterInitializer(
+	VOID
+	);
+
+WorkflowPrintTicketImpl::CreateIntegerParameterInitializer(
+	VOID
+	);
+
+WorkflowPrintTicketImpl::CreateParameterInitializerOfType(
+	VOID
+	);
+
+WorkflowPrintTicketImpl::VerifyParameterInitializerIsOfType(
+	VOID
+	);
+
+WorkflowPrintTicketImpl::GetParameterInitializer(
+	VOID
+	);
+
+WorkflowPrintTicketImpl::ValidateAsync(
+	VOID
+	);
+
+WorkflowPrintTicketImpl::NotifyXmlChanged(
+	VOID
+	);
+
+WorkflowPrintTicketImpl::GetFeature(
+	VOID
+	);
+
+WorkflowPrintTicketImpl::GetCapabilities(
+	VOID
+	);
+
+PrintWorkflowSubmittedOperationImpl::Complete, submissionStatus (
+	UINT32 static_cast<UINT32>(submissionStatus)
+	);
+
+XmlHelpers::EnsureNodeName - not a match(
+	UNICODESTRING ExpectedValue,
+	UNICODESTRING ActualValue
+	);
+
+XmlHelpers::EnsureNodeNamespaceUri - not a match(
+	UNICODESTRING ExpectedValue,
+	UNICODESTRING ActualValue
+	);
+
+XmlHelpers::FindPrefixForNamespaceInElement - asked for a namespace and thought we'd find a colon but it's missing(
+	UNICODESTRING strAttributeName.get()
+	);
+
+ProtectedMap::AddItemToCache(
+	VOID
+	);
+
+ProtectedMap::GetItemFromCache(
+	VOID
+	);
+
+ProtectedMap::GetWstringFromHstrings(
+	VOID
+	);
+
+PrintTicketFeatureImpl::GetWrappedObjectForOption(
+	VOID
+	);
+
+PrintTicketFeatureImpl::RuntimeClassInitialize(
+	VOID
+	);
+
+PrintTicketFeatureImpl::get_XmlNode(
+	VOID
+	);
+
+PrintTicketFeatureImpl::get_XmlNamespace(
+	VOID
+	);
+
+PrintTicketFeatureImpl::get_Name(
+	VOID
+	);
+
+PrintTicketFeatureImpl::get_DisplayName(
+	VOID
+	);
+
+PrintTicketFeatureImpl::get_SelectionType - unexpected selection type returned from COM(
+	UINT32 PrintSchemaSelectionType
+	);
+
+PrintTicketFeatureImpl::get_SelectionType(
+	VOID
+	);
+
+PrintTicketFeatureImpl::SetSelectedOption(
+	VOID
+	);
+
+PrintTicketFeatureImpl::GetSelectedOption(
+	VOID
+	);
+
+PrintTicketFeatureImpl::GetOption(
+	VOID
+	);
+
+PrintTicketParameterInitializerImpl::RuntimeClassInitialize(
+	VOID
+	);
+
+PrintTicketParameterInitializerImpl::get_XmlNode(
+	VOID
+	);
+
+PrintTicketParameterInitializerImpl::get_XmlNamespace(
+	VOID
+	);
+
+PrintTicketParameterInitializerImpl::get_Name(
+	VOID
+	);
+
+PrintTicketParameterInitializerImpl::get_Value(
+	VOID
+	);
+
+PrintTicketParameterInitializerImpl::put_Value(
+	VOID
+	);
+
+PrintTicketCapabilitiesImpl::RuntimeClassInitialize(
+	VOID
+	);
+
+PrintTicketCapabilitiesImpl::get_XmlNode(
+	VOID
+	);
+
+PrintTicketCapabilitiesImpl::get_XmlNamespace(
+	VOID
+	);
+
+PrintTicketCapabilitiesImpl::get_Name(
+	VOID
+	);
+
+PrintTicketCapabilitiesImpl::GetParameterDefinition(
+	VOID
+	);
+
+PrintTicketCapabilitiesImpl::GetFeature(
+	VOID
+	);
+
+PrintWorkflowStreamTargetImpl::SetPrintTicket - Job Print Ticket successfully set!(
+	UINT32 bytesWritten
+	);
+
+PrintWorkflowStreamTargetImpl::GetOutputStream - getting output stream(
+	VOID
+	);
+
+PrintWorkflowStreamTargetImpl::GetOutputStream - Load library of XpsPrint.dll succeeded(
+	VOID
+	);
+
+XpsObjectModelTargetPackageImpl::GetDocumentPackageTarget - Package Target returned successfully(
+	VOID
+	);
+
+XpsObjectModelTargetPackageImpl::GetDocumentPackageTarget - Print Ticket's IStream got written successfully(
+	UINT32 bytesWritten
+	);
+
+SourceContentImpl::GetSourceSpoolDataAsStreamContent - getting IPrintWorkflowSpoolStreamContent(
+	HRESULT hr
+	);
+
+PrintTicketOptionImpl::InternalGetPropertyValue(
+	VOID
+	);
+
+PrintTicketOptionImpl::InternalGetPropertyContainer - got wrapper(
+	VOID
+	);
+
+PrintTicketOptionImpl::InternalGetPropertyContainer(
+	VOID
+	);
+
+PrintTicketOptionImpl::RuntimeClassInitialize(
+	VOID
+	);
+
+PrintTicketOptionImpl::get_XmlNode(
+	VOID
+	);
+
+PrintTicketOptionImpl::get_XmlNamespace(
+	VOID
+	);
+
+PrintTicketOptionImpl::get_Name(
+	VOID
+	);
+
+PrintTicketOptionImpl::get_DisplayName(
+	VOID
+	);
+
+PrintTicketOptionImpl::GetScoredPropertyValue(
+	VOID
+	);
+
+PrintTicketOptionImpl::GetPropertyValue(
+	VOID
+	);
+
+PrintTicketOptionImpl::GetScoredPropertyNode(
+	VOID
+	);
+
+PrintTicketOptionImpl::GetPropertyNode(
+	VOID
+	);
+
+PrintTicketValueImpl::EnsureValueNodeTypeAndValueIsDiscovered(
+	VOID
+	);
+
+PrintTicketValueImpl::DiscoverValueNodeStringValue(
+	VOID
+	);
+
+PrintTicketValueImpl::DiscoverValueNodeIntegerValue(
+	VOID
+	);
+
+PrintTicketValueImpl::DiscoverValueNodeType - invalid variant type(
+	UNICODESTRING wstrTypeValue.c_str()
+	);
+
+PrintTicketValueImpl::DiscoverValueNodeType - invalid type value - prefix check(
+	UNICODESTRING wstrTypeValue.c_str()
+	);
+
+PrintTicketValueImpl::DiscoverValueNodeType(
+	VOID
+	);
+
+PrintTicketValueImpl::EnsureParamInitTypeAndValueIsDiscovered - invalid variant type(
+	UINT32 varValue.vt
+	);
+
+PrintTicketValueImpl::EnsureParamInitTypeAndValueIsDiscovered(
+	VOID
+	);
+
+PrintTicketValueImpl::EnsureTypeAndValueIsDiscovered(
+	VOID
+	);
+
+PrintTicketValueImpl::RuntimeClassInitialize - xml node(
+	VOID
+	);
+
+PrintTicketValueImpl::RuntimeClassInitialize - param init(
+	VOID
+	);
+
+PrintTicketValueImpl::get_StringValue(
+	VOID
+	);
+
+PrintTicketValueImpl::get_IntegerValue(
+	VOID
+	);
+
+PrintTicketValueImpl::get_Type(
+	VOID
+	);
+
+SharedCapabilitiesImpl::RuntimeClassInitialize(
+	VOID
+	);
+
+SharedCapabilitiesImpl::EnsureCapabilities(
+	VOID
+	);
+
+SharedCapabilitiesImpl::Invalidate(
+	VOID
+	);
+
+PrintTicketParameterDefinitionImpl::RuntimeClassInitialize(
+	VOID
+	);
+
+PrintTicketParameterDefinitionImpl::get_XmlNode(
+	VOID
+	);
+
+PrintTicketParameterDefinitionImpl::get_XmlNamespace(
+	VOID
+	);
+
+PrintTicketParameterDefinitionImpl::get_Name(
+	VOID
+	);
+
+PrintTicketParameterDefinitionImpl::get_RangeMax(
+	VOID
+	);
+
+PrintTicketParameterDefinitionImpl::get_RangeMin(
+	VOID
+	);
+
+PrintTicketParameterDefinitionImpl::get_UnitType(
+	VOID
+	);
+
+PrintTicketParameterDefinitionImpl::get_DataType - unexpected data type returned by COM(
+	UINT32 PrintSchemaParameterDataType
+	);
+
+PrintTicketParameterDefinitionImpl::get_DataType(
+	VOID
+	);
+
+XpsPrintJobStreamAsIOutputStream::FlushAsync(
+	VOID
+	);
+
+XpsPrintJobStreamAsIOutputStream::WriteAsync - Wrote bytes to IXpsPrintJobStream(
+	UINT64 bytesWritten
+	);
+
+CWorkflowStreamReceiver::GetSequentialStream - copying m_inputIstream to the output readonlyInputIStream(
+	VOID
+	);
+
+CWorkflowStreamReceiver::GetSequentialStream - failed whilst waiting for m_gotSequentialStreamEvent(
+	VOID
+	);
+
+CWorkflowStreamReceiver::SetSequentialStream - m_inputIstream set and event signalled(
+	VOID
+	);
+
+CWorkflowXpsReceiver::AddPage - Adding page data(
+	UINT32 Doc id
+	);
+
+CXpsGenerator::GenerateXpsOMRandomAccess- pages found inside the document:(
+	UINT32 DocumentId,
+	UINT32 Pages
+	);
+
+CXpsGenerator::GenerateXpsOMRandomAccess - Found Print Ticket for the document:(
+	UINT32 DocumentId
+	);
+
+CXpsGenerator::GenerateXpsOMRandomAccess- Documents found inside the package:(
+	UINT32 docCount
+	);
+
+CXpsGenerator::GenerateXpsOMRandomAccess- XpsOM Package generation succeeded!(
+	UINT64 TimeOut
+	);
+
+CXpsGenerator::GenerateXpsOMRandomAccess- XpsOM generation failed!(
+	UINT64 TimeOut
+	);
+
+CXpsGenerator::GenerateXpsOMRandomAccess(
+	VOID
+	);
+
+CXpsGenerator::GenerateXpsOM - thread failed to start(
+	UINT32 result
+	);
+
+CXpsGenerator::GetPrintTicketAsStreamFromBroker(
+	UINT32 nPrintTicketSize
+	);
+
+CSequentialSpoolFileReader::Read - Bytes read:(
+	UINT32 *pcbRead
+	);
+
+CSequentialSpoolFileReader::Read - Spooling Complete!(
+	VOID
+	);
+
+CSequentialSpoolFileReader::Read - Requested bytes:(
+	UINT32 cb
+	);
+
+CXpsObjectGeneratorRandomAccess::GetXpsOMPackage called before spooling is complete, so OM generation failed(
+	VOID
+	);
+

@@ -1,0 +1,60 @@
+ProviderNames:
+	Microsoft.Windows.Networking.Wlan.Msmsec
+
+
+
+**** Events *****
+KeyMgr4WayExchangeM3Sent(
+	UINT32 ErrorCode,
+	UINT64 TimeoutCounter
+	);
+
+KeyMgr4WayExchangeWaitForM4Timedout(
+	UINT32 ErrorCode,
+	UINT64 TimeoutCounter
+	);
+
+KeyMgr4WayExchangeM1Sent(
+	UINT32 ErrorCode,
+	UINT64 TimeoutCounter
+	);
+
+KeyMgr4WayExchangeWaitForM2Timedout(
+	UINT32 ErrorCode,
+	UINT64 TimeoutCounter
+	);
+
+KeyMgr4WayExchangeM4Received(
+	UINT32 ErrorCode
+	);
+
+KeyMgr4WayExchangeM2Received(
+	UINT32 ErrorCode
+	);
+
+WlansecOneXFailure(
+	UNICODESTRING Adapter,
+	GUID DeviceGuid,
+	UNICODESTRING SSID,
+	UNICODESTRING BSSType,
+	UNICODESTRING PeerMac,
+	UNICODESTRING ReasonText,
+	HEXINT32 ReasonCode,
+	HEXINT32 ErrorCode,
+	HEXINT32 EAPReasonCode,
+	UNICODESTRING EAPRootCauseString,
+	HEXINT32 EAPErrorCode,
+	HEXINT64 ConnectionId,
+	BOOL32 ExplicitCredentials
+	);
+
+IpAllocationMgrRelease(
+	ANSISTRING IPv4Address,
+	UINT32 ErrorCode
+	);
+
+IpAllocationMgrAllocate(
+	ANSISTRING IPv4Address,
+	UINT32 ErrorCode
+	);
+

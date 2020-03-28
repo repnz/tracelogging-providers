@@ -1,0 +1,427 @@
+ProviderNames:
+	Microsoft.Windows.Mirage.Capture.Pipeline
+
+
+
+**** Events *****
+Capture_Capture_InvalidStateTransitionRequested(
+	INT32 TargetStatus,
+	INT32 CaptureStatus,
+	INT32 PhotoStatus
+	);
+
+Capture_MediaCapture_LongRunningPhotoOpDetected(
+	VOID
+	);
+
+Capture_NotFinalized_MinimumTimeLimitNotReached(
+	VOID
+	);
+
+CapturePipeline_StopCaptureInternalAsync_MediaCaptureNull(
+	VOID
+	);
+
+CapturePipeline_TakePhotoInternalAsync_MediaCaptureNull(
+	VOID
+	);
+
+Capture_MediaCapture_Restarting(
+	VOID
+	);
+
+Capture_MediaCapture_RestartingPreemptively(
+	VOID
+	);
+
+CapturePipeline_StartCaptureInternalAsync_MediaCaptureNull(
+	VOID
+	);
+
+CapturePipeline_InitializeCapture(
+	VOID
+	);
+
+CapturePipeline_NotifyOfStatusChange(
+	INT32 PipelineStatus
+	);
+
+Capture_MediaCapture_Restart(
+	INT32 PipelineStatus
+	);
+
+CapturePipeline_ThermalLimiterStateChanged_StoppingCapture(
+	VOID
+	);
+
+CapturePipeline_ConnectedStandbyStateChanged_StoppingCapture(
+	VOID
+	);
+
+Capture_CaptureVideoTimer_TimeLimitReached(
+	VOID
+	);
+
+Capture_CaptureVideoTimer_MinimumTimeLimitReached(
+	VOID
+	);
+
+Capture_CaptureVideoTimers(
+	INT64 MinDuration,
+	INT64 MaxDuration
+	);
+
+Capture_CaptureVideoTimers(
+	VOID
+	);
+
+CapturePipeline_ExitPhotoModeAsync(
+	VOID
+	);
+
+CapturePipeline_EnterPhotoModeInternalAsync(
+	VOID
+	);
+
+CapturePipeline_EnterPhotoMode(
+	VOID
+	);
+
+Capture_TakePhoto_Error(
+	HRESULT HRESULT
+	);
+
+Capture_TakePhoto(
+	INT32 PhotoEntryPoint
+	);
+
+Capture_Delay(
+	INT32 VideoEntryPoint
+	);
+
+Capture_Delay(
+	VOID
+	);
+
+Capture_CaptureVideo(
+	INT32 VideoEntryPoint
+	);
+
+MacroError(
+	HRESULT HRESULT,
+	ANSISTRING File,
+	UINT32 LineNumber,
+	ANSISTRING Code
+	);
+
+FallbackError(
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+FallbackError(
+	UINT64 PartA_PrivTags,
+	SIGNED wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+Capture_MediaCapture_StateChange(
+	INT32 MediaState
+	);
+
+Capture_CaptureVideo(
+	VOID
+	);
+
+Capture_TakePhoto(
+	VOID
+	);
+
+Capture_MoveContentFromTempToFinal(
+	VOID
+	);
+
+Capture_MoveContentFromTempToFinal_Error(
+	HRESULT HRESULT,
+	BOOL32 isThumbnail
+	);
+
+Capture_MoveContentFromTempToFinal(
+	VOID
+	);
+
+Capture_MediaCapture_AddAudioStreamError(
+	HRESULT HRESULT
+	);
+
+Capture_MediaCapture_DoNextOperation(
+	INT32 OperationType
+	);
+
+Capture_MediaCapture_OnHardwareResourceEvent(
+	INT64 resourceEvent
+	);
+
+Capture_MediaCapture_OpError(
+	GUID EventGuid,
+	HRESULT HRESULT
+	);
+
+Capture_MediaCapture_FocusChanged(
+	UINT32 FocusState
+	);
+
+Capture_MediaCapture_EventNotificationSuppressed(
+	INT32 FallbackStatus
+	);
+
+Capture_MediaCapture_OnResourceFallback(
+	BOOL32 fallbackSet,
+	INT32 fallbackStatus
+	);
+
+Capture_MediaCapture_UsingDefaultMediaType(
+	VOID
+	);
+
+Capture_MediaCapture_DisableMFT0PhotoThumbnails(
+	VOID
+	);
+
+Capture_MediaCapture_DisablePhotoConfirmation(
+	VOID
+	);
+
+Capture_MediaCapture_SetAutoExposureMode(
+	VOID
+	);
+
+Capture_MediaCapture_SetPreemptable(
+	VOID
+	);
+
+Capture_MediaCapture_StartPreviewSinkless(
+	VOID
+	);
+
+Capture_MediaCapture_StartPreview(
+	VOID
+	);
+
+Capture_MediaCapture_ConfigurePhotoStream(
+	VOID
+	);
+
+Capture_MediaCapture_WaitForFocus(
+	BOOLEAN HasFocus,
+	UINT32 FocusState
+	);
+
+Capture_MediaCapture_TakePhoto(
+	VOID
+	);
+
+Capture_MediaCapture_RemoveEffect(
+	VOID
+	);
+
+Capture_MediaCapture_AddEffect(
+	VOID
+	);
+
+Capture_MediaCapture_AddAudioEffect(
+	VOID
+	);
+
+Capture_MediaCapture_RemoveCompositor(
+	VOID
+	);
+
+Capture_MediaCapture_AddCompositor(
+	VOID
+	);
+
+Capture_MediaCapture_GetCurrentAudioDeviceError(
+	HRESULT HRESULT
+	);
+
+Capture_MediaCapture_PrepareRecord(
+	VOID
+	);
+
+Capture_MediaCapture_StartRecord(
+	VOID
+	);
+
+Capture_MediaCapture_PreviewInternalAsync(
+	VOID
+	);
+
+Capture_MediaCapture_StopPreviewAsync(
+	VOID
+	);
+
+Capture_MediaCapture_PreviewInternalAsync(
+	VOID
+	);
+
+Capture_MediaCapture_RecordInternalAsync(
+	VOID
+	);
+
+Capture_MediaCapture_RecordInternalAsync(
+	VOID
+	);
+
+Capture_MediaCapture_PrepareRecordInternalAsync(
+	VOID
+	);
+
+Capture_MediaCapture_CreateCaptureEngine(
+	BOOL32 Shared,
+	INT32 CameraControlType
+	);
+
+Capture_MediaCapture(
+	VOID
+	);
+
+Capture_MediaCapture(
+	VOID
+	);
+
+MediaCameraSource_PreemptiveCameraAccessDenied(
+	HRESULT HRESULT
+	);
+
+MediaCameraSource_Configuration(
+	INT32 cameraType,
+	UINT32 videoFrameWidth,
+	UINT32 videoFrameHeight,
+	UINT32 fps,
+	INT32 videoBinningMode,
+	UINT32 photoFrameWidth,
+	UINT32 photoFrameHeight,
+	INT32 photoBinningMode,
+	GUID videoTargetFormat,
+	GUID photoTargetFormat,
+	BOOL32 preemptible,
+	BOOL32 FrameServerSupported,
+	INT32 CameraControlType
+	);
+
+MediaCameraSource_ReloadConfigurations(
+	INT32 cameraType
+	);
+
+Capture_MediaCameraSource_IsFakeCam(
+	VOID
+	);
+
+PreemptiveResourcesManager_AsyncWaitFor_ThreadFailure(
+	HRESULT HRESULT
+	);
+
+PreemptiveResourcesManager_AsyncWaitFor_ThreadExit(
+	VOID
+	);
+
+PreemptiveResourcesManager_AsyncWaitFor(
+	INT32 resourcesEvent
+	);
+
+PreemptiveResourcesManager_CameraSensorAvailable(
+	BOOL32 Available
+	);
+
+PreemptiveResourcesManager_StopResourceListening(
+	VOID
+	);
+
+PreemptiveResourcesManager_EnsureResourceListening(
+	VOID
+	);
+
+Capture_PhotoSink_SaveThumbnailToDDS(
+	VOID
+	);
+
+Capture_PhotoSink_SaveThumbnailToDDS(
+	VOID
+	);
+
+Capture_PhotoSink_EXIFBlobSize(
+	UINT32 cbBlobSize
+	);
+
+Capture_PhotoSink_OnSample(
+	VOID
+	);
+
+AudioEndpoint_DeviceRemoved(
+	UNICODESTRING Id
+	);
+
+AudioEndpoint_DeviceAdded(
+	UNICODESTRING Id
+	);
+
+AudioEndpoint_DeviceStateChanged(
+	UNICODESTRING Id,
+	INT32 State
+	);
+
+AudioEndpoint_GetAudioDeviceOfFormFactor_Success(
+	UNICODESTRING Id
+	);
+
+AudioEndpoint_GetAudioDeviceOfFormFactor_Error(
+	HRESULT HRESULT
+	);
+
+CapturePipeline_ConnectedStandbyStateChanged(
+	BOOL32 suspended
+	);
+
+CapturePipeline_ThermalLimiterStateChanged(
+	VOID
+	);
+
+Capture_PhotoSink_ConvertFormat_Start(
+	VOID
+	);
+
+Capture_PhotoSink_ConvertFormat_Stop(
+	VOID
+	);
+

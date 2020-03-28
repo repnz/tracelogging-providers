@@ -1,0 +1,464 @@
+ProviderNames:
+	Microsoft.Windows.Provisioning.CSP
+	TelemetryAssert
+	TelemetryAssertDiagTrack
+	Microsoft.Windows.Autopilot.ForcedNetworkValue
+
+
+
+**** Events *****
+FallbackError(
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+CspSetValue(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+CspGetValue(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+ActivityError(
+	UINT64 PartA_PrivTags,
+	SIGNED wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+CspGetChildNodeNames(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId
+	);
+
+CspGetChildNodeNames(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+FallbackError(
+	UINT64 PartA_PrivTags,
+	SIGNED wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+CspGetChildNodeNames(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+ActivityIntermediateStop(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+CspSetValue(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId
+	);
+
+ActivityStoppedAutomatically(
+	VOID
+	);
+
+ActivityError(
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+CspGetValue(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId
+	);
+
+CspSetValue(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+CspGetValue(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+NoComputerNameSpecified(
+	VOID
+	);
+
+CannotJoinMultipleDomains(
+	VOID
+	);
+
+WrongAccountNameFormat(
+	UNICODESTRING AccountName
+	);
+
+AssetFileDeploymentPackageNotFound(
+	UNICODESTRING packageId
+	);
+
+EnrollAsyncOperationFailed(
+	HRESULT Hresult
+	);
+
+pszSecretCreateStringFailed(
+	HRESULT Hresult
+	);
+
+DiscoverEndpointExExecuted(
+	HRESULT Hresult
+	);
+
+pszDiscoveryServiceCreateStringFailed(
+	HRESULT Hresult
+	);
+
+EnrollAsyncFailed(
+	HRESULT Hresult
+	);
+
+EnrollmentAPIActivateInstanceFailed(
+	HRESULT Hresult
+	);
+
+GetEnrollmentResultsFailed(
+	HRESULT Hresult
+	);
+
+FindDiscoveryServiceExecuted(
+	HRESULT Hresult
+	);
+
+EnrollmentFailedWithError(
+	HRESULT Hresult
+	);
+
+pszEnrollmentServiceFinalCreateStringFailed(
+	HRESULT Hresult
+	);
+
+pszUpnCreateStringFailed(
+	HRESULT Hresult
+	);
+
+EnrollAsyncStarted(
+	HRESULT Hresult
+	);
+
+EnrollmentServiceFullURLNullError(
+	HRESULT Hresult
+	);
+
+get_EnrollmentGUIDAsStringFailed(
+	HRESULT Hresult
+	);
+
+EnrollmentAPIInstanceNull(
+	HRESULT Hresult
+	);
+
+pszCurrentUserSidCreateStringFailed(
+	HRESULT Hresult
+	);
+
+IAsyncOperationInstanceNull(
+	HRESULT Hresult
+	);
+
+pszPolicyServiceFinalCreateStringFailed(
+	HRESULT Hresult
+	);
+
+pszDomainUsernameCreateStringFailed(
+	HRESULT Hresult
+	);
+
+GetEnrollmentInternalErrorFailed(
+	HRESULT Hresult
+	);
+
+FailedLaunchAddPackage(
+	UINT32 Result
+	);
+
+AssetFileDeploymentWpxInfoNotFound(
+	UNICODESTRING wpxSettingPath
+	);
+
+AssetFileDeploymentElementNotFound(
+	UNICODESTRING packageId,
+	UNICODESTRING elementName
+	);
+
+AssetFileDeploymentPayloadNotFound(
+	UNICODESTRING assetName
+	);
+
+AssetFileDeploymentFileExistsFailed(
+	UNICODESTRING destPath,
+	HRESULT HResult
+	);
+
+Assert(
+	UINT32 assertVersion,
+	UINT32 rva,
+	UINT32 timestamp,
+	UINT32 imageSize,
+	ANSISTRING imageName,
+	UINT32 count,
+	UINT32 totalHits,
+	UINT32 ModuleCollection,
+	UINT32 GlobalCollection
+	);
+
+PackageCollectorSearchDone(
+	VOID
+	);
+
+PackageCollectorPathCchCombineFullName(
+	UNICODESTRING Path,
+	UNICODESTRING FileName,
+	INT32 HResult
+	);
+
+PackageCollectorPackageFound(
+	UNICODESTRING Path,
+	UNICODESTRING FileName
+	);
+
+PackageCollectorFileNotFound(
+	UNICODESTRING Path
+	);
+
+PackageCollectorFindError(
+	UNICODESTRING Path,
+	UINT32 LastError
+	);
+
+PackageCollectorPathCchCombine(
+	UNICODESTRING Path,
+	INT32 HResult
+	);
+
+InvalidPackageExtension(
+	UNICODESTRING Path,
+	UNICODESTRING Name,
+	INT32 HResult
+	);
+
+NonPpkgDefaultPathFile(
+	UNICODESTRING Path,
+	UNICODESTRING Name
+	);
+
+InvalidPath(
+	UNICODESTRING Path
+	);
+
+PackageCollectorSkippingPackagePath(
+	UNICODESTRING Path
+	);
+
+PackageCollectorPathAdd(
+	UNICODESTRING Path,
+	INT32 HResult
+	);
+
+PackageCollectorPathAdd(
+	UNICODESTRING Path
+	);
+
+PackageCollectorInit(
+	VOID
+	);
+
+PackageCollectorDeinit(
+	VOID
+	);
+
+ProvMutexCreateComplete(
+	VOID
+	);
+
+TurnMutexCreateComplete(
+	VOID
+	);
+
+RemoveProvPackagePackageFail(
+	UNICODESTRING Path,
+	UINT32 LastError
+	);
+
+GetNextElementTooMany(
+	INT32 HResult
+	);
+
+RemoveProvPackage(
+	UNICODESTRING Path
+	);
+
+GetNextElementFailed(
+	INT32 HResult
+	);
+
+EnumerateElementsFailed(
+	INT32 HResult
+	);
+
+NonProvisioningPackage(
+	UNICODESTRING PackageId,
+	UNICODESTRING PackagePath
+	);
+
+ProvPackageNotOpened(
+	VOID
+	);
+
+GetProvisionPackageNameFailed(
+	INT32 HResult
+	);
+
+ProvPackageOpened(
+	UNICODESTRING PackageName,
+	INT32 HResult
+	);
+
+TryCreateProvisioningFileManagerOnPPKGFailed(
+	UNICODESTRING Path
+	);
+
+ProvPackageIsEmpty(
+	VOID
+	);
+
+OpenProvisioningPackageFailed(
+	UNICODESTRING Path,
+	INT32 HResult
+	);
+
+OpeningProvPackage(
+	UNICODESTRING Path
+	);
+
+AutoDeleteFileStreamFailed(
+	UNICODESTRING Path
+	);
+

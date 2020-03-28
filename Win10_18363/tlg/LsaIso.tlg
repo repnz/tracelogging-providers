@@ -1,0 +1,73 @@
+ProviderNames:
+	LsaIso TraceLogging Provider
+	Microsoft.Windows.Security.BCryptIum
+	Microsoft.Windows.Security.Kerberos
+	Microsoft.Windows.Security.Ntlm
+
+
+
+**** Events *****
+SignalLsaIsoReadyOpenEventFailed(
+	INT32 Status
+	);
+
+LsaIsoRpcWaitFailure(
+	INT32 RpcStatus
+	);
+
+LsaIsoInvalidArgumentsFailure(
+	INT32 ((HRESULT)0x80090027L)
+	);
+
+LsaIsoExit(
+	UINT32 ExitCode
+	);
+
+LsaIsoRpcRegistrationFailure(
+	INT32 RpcStatus
+	);
+
+LsaIsoRpcServerListenFailure(
+	INT32 RpcStatus
+	);
+
+LsaIsoStartup(
+	VOID
+	);
+
+LsaIsoBeginRpcWait(
+	VOID
+	);
+
+SignalLsaIsoReadySetEventFailed(
+	INT32 Status
+	);
+
+NtQuerySystemInformationFailure(
+	INT32 NtStatus
+	);
+
+BCryptIumRpcInit(
+	VOID
+	);
+
+BCryptIumRpcInitStatus(
+	HEXINT32 RpcStatus
+	);
+
+KerbIumRpcInit(
+	VOID
+	);
+
+KerbIumRpcInitStatus(
+	HEXINT32 RpcStatus
+	);
+
+NtlmIumRpcCleanup(
+	VOID
+	);
+
+NtlmIumRpcInit(
+	VOID
+	);
+

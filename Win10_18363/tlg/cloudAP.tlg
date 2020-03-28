@@ -1,0 +1,87 @@
+ProviderNames:
+	Microsoft.Windows.Security.CloudAp.Critical
+	Microsoft.Windows.Security.CloudAp
+
+
+
+**** Events *****
+CloudApSurrogateLogonSucceed(
+	UNICODESTRING providerName
+	);
+
+CloudApSurrogateLogonFailed(
+	UNICODESTRING providerName,
+	INT32 status
+	);
+
+AddStaleUserCacheEntry(
+	UINT64 PartA_PrivTags
+	);
+
+FreeUserCacheEntryBuffer(
+	UINT64 PartA_PrivTags,
+	INT32 isCompleteRelease
+	);
+
+ActivityStoppedAutomatically(
+	VOID
+	);
+
+CloudApLogonUserNoKey(
+	GUID keyId
+	);
+
+CloudApLogonUserStop(
+	UNICODESTRING providerName,
+	BOOLEAN isWinlogon,
+	BOOLEAN isCachedLogon,
+	INT32 status
+	);
+
+CloudApLogonUserUpdateAcctInfoComplete(
+	VOID
+	);
+
+PasswordAuthBufferUsed(
+	UNICODESTRING L"Password auth buffer used on password-less device"
+	);
+
+CloudApLogonUserStart(
+	INT32 logonType
+	);
+
+CloudApLogonUserKeyLost(
+	UNICODESTRING credKeyId
+	);
+
+DetectAlias(
+	UINT64 PartA_PrivTags
+	);
+
+MoveFileW(
+	UINT64 PartA_PrivTags,
+	WIN32ERROR dwError
+	);
+
+DetectNameChange(
+	UINT64 PartA_PrivTags
+	);
+
+FindUserInCacheBySid(
+	UINT64 PartA_PrivTags,
+	NTSTATUS status
+	);
+
+CloudApFIDOCredReplay(
+	VOID
+	);
+
+CloudApDPAPICredHistZero(
+	VOID
+	);
+
+CloudApAcceptCreds(
+	INT32 Status,
+	UINT32 CredType
+	);
+

@@ -1,0 +1,129 @@
+ProviderNames:
+	Microsoft.Windows.Security.CertEnroll
+
+
+
+**** Events *****
+SCEPCertEnrollSucceeded(
+	UNICODESTRING platformType,
+	UINT32 versionMajor,
+	UINT32 versionMinor,
+	UNICODESTRING ekCAId,
+	UNICODESTRING ekIssuer,
+	UNICODESTRING ekSan,
+	UNICODESTRING url,
+	UNICODESTRING x-ms-client-request-id,
+	UNICODESTRING enrollStage,
+	UINT32 enrollStageEnum,
+	UINT32 ms1GetCACaps,
+	UINT32 ms2GetCACert,
+	UINT32 ms3aCreateRequest,
+	UINT32 ms3bSubmitRequest,
+	UINT32 ms3cProcessResponse1,
+	UINT32 ms3dSubmitChallengeAnswer,
+	UINT32 ms3eProcessResponse2,
+	UINT32 ms3SumEnroll,
+	UINT32 msTotal,
+	UNICODESTRING hashAlgorithm,
+	UNICODESTRING encryptionAlgorithm,
+	UNICODESTRING resultMessage,
+	UNICODESTRING providerName,
+	UNICODESTRING keyAlgorithm,
+	UNICODESTRING keyName
+	);
+
+SCEPCertEnrollFailed(
+	UNICODESTRING platformType,
+	UINT32 versionMajor,
+	UINT32 versionMinor,
+	UNICODESTRING ekCAId,
+	UNICODESTRING ekIssuer,
+	UNICODESTRING ekSan,
+	UNICODESTRING url,
+	UNICODESTRING x-ms-client-request-id,
+	UNICODESTRING enrollStage,
+	UINT32 enrollStageEnum,
+	UINT32 ms1GetCACaps,
+	UINT32 ms2GetCACert,
+	UINT32 ms3aCreateRequest,
+	UINT32 ms3bSubmitRequest,
+	UINT32 ms3cProcessResponse1,
+	UINT32 ms3dSubmitChallengeAnswer,
+	UINT32 ms3eProcessResponse2,
+	UINT32 ms3SumEnroll,
+	UINT32 msTotal,
+	UNICODESTRING hashAlgorithm,
+	UNICODESTRING encryptionAlgorithm,
+	UNICODESTRING resultMessage,
+	UNICODESTRING errorCodeSymbol,
+	UNICODESTRING providerName,
+	UNICODESTRING keyAlgorithm,
+	UNICODESTRING keyName,
+	INT32 retVal
+	);
+
+SCEPInitializationFailed(
+	UNICODESTRING platformType,
+	UINT32 versionMajor,
+	UINT32 versionMinor,
+	UNICODESTRING ekCAId,
+	UNICODESTRING ekIssuer,
+	UNICODESTRING ekSan,
+	UNICODESTRING url,
+	UNICODESTRING x-ms-client-request-id,
+	UNICODESTRING enrollStage,
+	UINT32 enrollStageEnum,
+	UINT32 ms1GetCACaps,
+	UINT32 ms2GetCACert,
+	UINT32 ms3aCreateRequest,
+	UINT32 ms3bSubmitRequest,
+	UINT32 ms3cProcessResponse1,
+	UINT32 ms3dSubmitChallengeAnswer,
+	UINT32 ms3eProcessResponse2,
+	UINT32 ms3SumEnroll,
+	UINT32 msTotal,
+	UNICODESTRING hashAlgorithm,
+	UNICODESTRING encryptionAlgorithm,
+	UNICODESTRING resultMessage,
+	UNICODESTRING errorCodeSymbol,
+	UNICODESTRING providerName,
+	UNICODESTRING keyAlgorithm,
+	UNICODESTRING keyName,
+	INT32 retVal
+	);
+
+InstallLogonCertificateResponse(
+	UNICODESTRING requestThumbprint,
+	UNICODESTRING thumbprint,
+	UNICODESTRING messageText,
+	HRESULT retVal
+	);
+
+CreateLogonCertificateRequest(
+	UNICODESTRING keyName,
+	UNICODESTRING requestThumbprint,
+	UNICODESTRING messageText,
+	HRESULT retVal
+	);
+
+FindLogonCertificateTemplate(
+	UNICODESTRING state,
+	UNICODESTRING template,
+	HRESULT retVal
+	);
+
+DeleteLogonCertificateRequest(
+	UNICODESTRING requestThumbprint,
+	HRESULT retVal,
+	HRESULT retValEnrollment
+	);
+
+AutoEnrollNgcLogonCertificate(
+	HRESULT retVal
+	);
+
+Suppress Consent UI for SmartCard/NGC KSP(
+	UNICODESTRING App Name,
+	UNICODESTRING Ksp Name
+	);
+

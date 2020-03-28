@@ -1,0 +1,358 @@
+ProviderNames:
+	Microsoft.Windows.Cast.Dial
+
+
+
+**** Events *****
+ExecuteRequest(
+	HRESULT HRESULT
+	);
+
+Finished collecting properties(
+	UINT32 cDevProperties,
+	UINT32 cDevInterfaces
+	);
+
+ExecuteRequest(
+	VOID
+	);
+
+_FreeDevProperty(
+	VOID
+	);
+
+_FreeDevProperty(
+	INT32 ulCount,
+	HEXINT64 pDevProperties
+	);
+
+_SetGuid(
+	HRESULT HRESULT
+	);
+
+_SetGuid(
+	HEXINT64 pDevProperty,
+	GUID guidValue
+	);
+
+_SetUInt64(
+	HRESULT HRESULT
+	);
+
+_SetUInt64(
+	HEXINT64 pDevProperty,
+	INT64 unValue
+	);
+
+_SetString(
+	HRESULT HRESULT
+	);
+
+_SetString(
+	HEXINT64 pDevProperty,
+	UNICODESTRING Value
+	);
+
+_SetStringList(
+	HRESULT HRESULT
+	);
+
+_SetStringList(
+	HEXINT64 pDevProperty
+	);
+
+_GetUDN(
+	HRESULT HRESULT
+	);
+
+_GetUDN(
+	HEXINT64 pDevProperty
+	);
+
+Cancel(
+	HRESULT HRESULT
+	);
+
+Start(
+	HRESULT HRESULT
+	);
+
+Start(
+	UNICODESTRING pwszAepId,
+	HEXINT64 pUPnPDevice,
+	HEXINT64 pCallback,
+	UINT32 cProperties,
+	HEXINT64 pProperties
+	);
+
+CDIALMetadataRequest::~CDIALMetadataRequest()(
+	VOID
+	);
+
+CDIALMetadataRequest::~CDIALMetadataRequest()(
+	VOID
+	);
+
+CDIALMetadataRequest::CDIALMetadataRequest()(
+	VOID
+	);
+
+CancelAepPropertyEnumeration(
+	HRESULT HRESULT
+	);
+
+CancelAepPropertyEnumeration(
+	UINT64 ullRequestHandle
+	);
+
+StartAepPropertyEnumeration(
+	HRESULT HRESULT
+	);
+
+StartAepPropertyEnumeration(
+	UNICODESTRING pwszAepId,
+	HEXINT64 pUPnPDevice,
+	HEXINT64 pCallback,
+	HEXINT64 pullRequestHandle,
+	UINT32 cProperties,
+	HEXINT64 pProperties
+	);
+
+CDIALMetadataProvider::~CDIALMetadataProvider()(
+	VOID
+	);
+
+CDIALMetadataProvider::CDIALMetadataProvider()(
+	VOID
+	);
+
+SendRequestAsyncOperation::ReceiveResponse()(
+	INT32 HRESULT
+	);
+
+RetrieveBodyLength()(
+	UINT32 _contentLength,
+	HRESULT HRESULT
+	);
+
+RetrieveLocation()(
+	UNICODESTRING Location,
+	HRESULT HRESULT
+	);
+
+RetrieveHeader()(
+	UINT32 StatusCode,
+	HRESULT HRESULT
+	);
+
+ParseXmlResponse(
+	UNICODESTRING Name,
+	UNICODESTRING State,
+	UNICODESTRING Rel,
+	UNICODESTRING Href,
+	UNICODESTRING AllowStop,
+	HRESULT HRESULT
+	);
+
+RetrieveBody()(
+	HRESULT HRESULT
+	);
+
+ProcessResponse()(
+	UINT32 state
+	);
+
+ApplicationRequestResult(
+	UINT32 requestMethod,
+	UINT32 statusResponseReceived,
+	UINT32 responseLength,
+	HRESULT HRESULT
+	);
+
+SendRequestAsyncOperation::StopQuery()(
+	VOID
+	);
+
+SendRequestAsyncOperation::StopQuery()(
+	VOID
+	);
+
+SendRequestAsyncOperation::SendRequest()(
+	UNICODESTRING MethodType,
+	INT32 HRESULT
+	);
+
+SendRequestAsyncOperation::SendRequest()(
+	UNICODESTRING RequestUrlPath
+	);
+
+InternetStatusCallback(
+	BOOL32 isRelease,
+	INT32 HRESULT
+	);
+
+InternetStatus(
+	UINT32 InternetStatus
+	);
+
+SendRequestAsyncOperation::InitRequestBody()(
+	INT32 bodyLength,
+	INT32 HRESULT
+	);
+
+DevQueryCallback(
+	BOOL32 continueListening,
+	BOOL32 isRelease,
+	HRESULT HRESULT
+	);
+
+DEV_QUERY_RESULT_ACTION(
+	UINT32 Action
+	);
+
+FromIdAsyncOperation::StopQuery()(
+	VOID
+	);
+
+SendRequestAsyncOperation::SendRequestAsyncOperation()(
+	VOID
+	);
+
+SendRequestAsyncOperation::~SendRequestAsyncOperation()(
+	VOID
+	);
+
+SendRequestAsyncOperation::RuntimeClassInitialize(
+	INT32 HRESULT
+	);
+
+SendRequestAsyncOperation::GetResults() Delete(
+	INT32 HRESULT
+	);
+
+SendRequestAsyncOperation::GetResults() Post(
+	INT32 HRESULT
+	);
+
+SendRequestAsyncOperation::GetResults() Get(
+	INT32 HRESULT
+	);
+
+SendRequestAsyncOperation::OnStart()(
+	INT32 HRESULT
+	);
+
+SendRequestAsyncOperation::OnStart()(
+	VOID
+	);
+
+SendRequestAsyncOperation::OnClose()(
+	VOID
+	);
+
+SendRequestAsyncOperation::OnCancel()(
+	VOID
+	);
+
+FromIdAsyncOperation::FromIdAsyncOperation()(
+	VOID
+	);
+
+FromIdAsyncOperation::~FromIdAsyncOperation()(
+	VOID
+	);
+
+FromIdAsyncOperation::RuntimeClassInitialize(
+	HRESULT HRESULT
+	);
+
+DeviceIdResult(
+	UNICODESTRING applicationUrl,
+	UNICODESTRING deviceId,
+	HRESULT HRESULT
+	);
+
+FromIdAsyncOperation::GetResults() Check(
+	HRESULT HRESULT
+	);
+
+FromIdAsyncOperation::OnStart()(
+	HRESULT HRESULT
+	);
+
+FromIdAsyncOperation::OnStart()(
+	GUID AepContainerGuid
+	);
+
+FromIdAsyncOperation::OnStart()(
+	VOID
+	);
+
+FromIdAsyncOperation::OnClose()(
+	VOID
+	);
+
+FromIdAsyncOperation::OnCancel()(
+	VOID
+	);
+
+ApplicationTerminateRequested(
+	UNICODESTRING applicationName,
+	UNICODESTRING restServiceUrl,
+	HRESULT HRESULT
+	);
+
+ApplicationStateRequested(
+	UNICODESTRING applicationName,
+	UNICODESTRING restServiceUrl,
+	HRESULT HRESULT
+	);
+
+ApplicationLaunchRequested(
+	UNICODESTRING applicationName,
+	UNICODESTRING restServiceUrl,
+	UINT32 launchArgumentsLength,
+	HRESULT HRESULT
+	);
+
+DialApp::InitializeApplicationName(
+	UNICODESTRING ApplicationName,
+	HRESULT HRESULT
+	);
+
+DialApp::~DialApp()(
+	VOID
+	);
+
+DialApp::DialApp()(
+	VOID
+	);
+
+DialDeviceStatics::DeviceInfoSupportsDialAsync(
+	HRESULT HRESULT
+	);
+
+DeviceIdRequested(
+	UNICODESTRING deviceId,
+	HRESULT HRESULT
+	);
+
+DialReceiverApp::_ClearRegValues(
+	HRESULT HRESULT
+	);
+
+DialReceiverApp::_PutRegistryValuesInMap(
+	HRESULT HRESULT,
+	UNICODESTRING name.get(),
+	UNICODESTRING value.get()
+	);
+
+DialReceiverApp::_ValidateAdditionalData(
+	HRESULT HRESULT
+	);
+
+DialReceiverApp::_GetDIALAppName(
+	HRESULT HRESULT,
+	UNICODESTRING *appName
+	);
+

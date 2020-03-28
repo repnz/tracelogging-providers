@@ -1,0 +1,178 @@
+ProviderNames:
+	Microsoft.Windows.MediaFoundation.OTA
+	Microsoft.Windows.MediaFoundation.SVR
+	Microsoft.Windows.MediaFoundation.CallStack
+	TelemetryAssert
+	TelemetryAssertDiagTrack
+
+
+
+**** Events *****
+HDCPSet(
+	UINT32 status,
+	HRESULT hr
+	);
+
+HDCPQuery(
+	HRESULT Status,
+	BOOL32 Pending
+	);
+
+HDCPQueryPending(
+	INT32 Status,
+	INT32 CallbackStatus
+	);
+
+HDCPQueryEnforcementStatusChanged(
+	INT32 Status
+	);
+
+ProcessOPMStatus(
+	GUID MFMediaTelemetrySessionID,
+	UINT32 MFMediaTelemetrySessionInstance,
+	BOOL32 PolicyReport,
+	UINT32 Status
+	);
+
+UpdateOTA(
+	INT32 v,
+	GUID MFMediaTelemetrySessionID,
+	UINT32 MFMediaTelemetrySessionInstance,
+	ANSISTRING Connectors,
+	UINT32 Exception,
+	BOOL32 Sync
+	);
+
+SetPolicy(
+	GUID MFMediaTelemetrySessionID,
+	UINT32 MFMediaTelemetrySessionInstance,
+	HRESULT OPMStatus,
+	BOOL32 NoOPMEnforcement,
+	HRESULT Result,
+	BOOL32 Exception,
+	UINT64 Timems
+	);
+
+IsActualConfigLessSecure(
+	GUID MFMediaTelemetrySessionID,
+	UINT32 MFMediaTelemetrySessionInstance,
+	ANSISTRING Failure,
+	UNICODESTRING Connector,
+	UNICODESTRING Protection
+	);
+
+ShutdownV2(
+	GUID MFMediaTelemetrySessionID,
+	UINT32 MFMediaTelemetrySessionInstance,
+	GUID MediaCorrelationID,
+	ANSISTRING Operation,
+	UINT32 IntialPagefileUsageBytes,
+	UINT32 IntialWorkingSetSize,
+	UINT32 AvgDWMFreq,
+	UINT32 AvgEstFreq,
+	UINT32 AvgContentFreq,
+	ANSISTRING CompositionMode,
+	ANSISTRING FrequencyDWMCount,
+	ANSISTRING FrequencyVSyncCount,
+	ANSISTRING FrequencyContentCount,
+	ANSISTRING RotationFrameCount,
+	UINT64 RampUpGlitchDurationSum,
+	UINT64 RampUpGlitchDurationMax,
+	UINT32 RampUpGlitchCount,
+	UINT32 RampUpFramesDropped,
+	UINT16 TVersion,
+	UINT32 NumberofSwapChainEvents,
+	ANSISTRING EventsArrayString,
+	UINT32 NumberofFullScreenTransition,
+	ANSISTRING FullScreenArrayString,
+	UINT32 AcProfileSet,
+	UINT32 DcProfileSet
+	);
+
+PeriodicUpdate(
+	GUID MFMediaTelemetrySessionID,
+	UINT32 MFMediaTelemetrySessionInstance,
+	GUID MediaCorrelationID,
+	ANSISTRING Operation,
+	UINT32 PSVTTotalFramesCount,
+	UINT32 TimeInQueue,
+	UINT32 MinTimeInQueue,
+	UINT32 MaxTimeInQueue,
+	UINT32 DropedFrameRecovery,
+	UINT32 SameVSyncDroppedFrameCount,
+	UINT32 VideoGlitchCount,
+	UINT32 VideoGlitchFSCount,
+	INT64 VideoGlitchDurationSum,
+	INT64 VideoGlitchDurationMax,
+	UINT64 FramesRendered,
+	UINT32 FramesDropped,
+	UINT32 MaxConsecutiveFramesDropped,
+	UINT64 StdDevTimeBwFrames,
+	UINT64 AvgTimeBwFrames,
+	UINT64 MinTimeBwFrames,
+	UINT64 MaxTimeBwFrames,
+	UINT32 FramesFullScreen,
+	UINT32 AvgDWMFreq,
+	UINT32 AvgEstFreq,
+	UINT32 AvgContentFreq,
+	ANSISTRING CompositionMode,
+	ANSISTRING FrequencyDWMCount,
+	ANSISTRING FrequencyVSyncCount,
+	ANSISTRING FrequencyContentCount,
+	ANSISTRING RotationFrameCount,
+	ANSISTRING DisplayInfoString,
+	ANSISTRING TargetWindowString,
+	UINT16 TVersion,
+	UINT32 NumberofSwapChainEvents,
+	ANSISTRING EventsArrayString,
+	UINT32 NumberofFullScreenTransition,
+	ANSISTRING FullScreenArrayString,
+	BOOL32 HMDMode,
+	UINT32 FramesInHDR,
+	UINT32 FramesInEDR,
+	UINT32 MaxDisplayLuminance,
+	UINT32 EDRStateChangeCount,
+	UINT8 EDRCapability,
+	BOOL32 HDRMode,
+	BOOL32 EDRCapable
+	);
+
+VideoPlaybackRandomSampleSIUFEvent(
+	GUID MFMediaTelemetrySessionID,
+	UINT32 MFMediaTelemetrySessionInstance,
+	UINT64 FramesRendered,
+	UINT32 FramesDropped,
+	UINT32 MaxConsecutiveFramesDropped,
+	UINT32 VideoGlitchCount,
+	INT64 VideoGlitchDurationMax
+	);
+
+VideoPlaybackQualityImpactedSIUFEvent(
+	GUID MFMediaTelemetrySessionID,
+	UINT32 MFMediaTelemetrySessionInstance,
+	UINT64 FramesRendered,
+	UINT32 FramesDropped,
+	UINT32 MaxConsecutiveFramesDropped,
+	UINT32 VideoGlitchCount,
+	INT64 VideoGlitchDurationMax
+	);
+
+UpdtOTAResult(
+	GUID MFMediaTelemetrySessionID,
+	UINT32 MFMediaTelemetrySessionInstance,
+	HRESULT Result,
+	BOOL32 IgnoreFailure
+	);
+
+Assert(
+	UINT32 assertVersion,
+	UINT32 rva,
+	UINT32 timestamp,
+	UINT32 imageSize,
+	ANSISTRING imageName,
+	UINT32 count,
+	UINT32 totalHits,
+	UINT32 ModuleCollection,
+	UINT32 GlobalCollection
+	);
+

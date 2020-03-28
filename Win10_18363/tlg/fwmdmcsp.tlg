@@ -1,0 +1,131 @@
+ProviderNames:
+	Microsoft.Windows.Networking.DefenderFirewall.CSP(Aggregate)
+	TelemetryAssert
+	TelemetryAssertDiagTrack
+	Microsoft.Windows.TlgAggregateInternal
+
+
+
+**** Events *****
+NodeError(
+	NULL count,
+	ANSISTRING nodeCommand,
+	INT32 nodeId,
+	UNICODESTRING profileName,
+	UNICODESTRING nodeUri,
+	HRESULT nodeHresult,
+	BOOL32 createFlag
+	);
+
+NodeCreate(
+	NULL count,
+	INT32 nodeId,
+	UNICODESTRING nodeUri,
+	BOOL32 createFlag,
+	HRESULT nodeHresult
+	);
+
+NodeError(
+	NULL count,
+	ANSISTRING nodeCommand,
+	INT32 nodeId,
+	UNICODESTRING profileName,
+	UNICODESTRING nodeUri,
+	HRESULT nodeHresult
+	);
+
+NodeGetChildNodeNames(
+	NULL count,
+	INT32 nodeId,
+	UNICODESTRING nodeUri,
+	HRESULT nodeHresult
+	);
+
+NodeAdd(
+	NULL count,
+	INT32 nodeId,
+	UNICODESTRING nodeUri,
+	HRESULT nodeHresult
+	);
+
+NodeDeleteChild(
+	NULL count,
+	INT32 nodeId,
+	HRESULT nodeHresult
+	);
+
+NodeClear(
+	NULL count,
+	INT32 nodeId,
+	UNICODESTRING nodeUri,
+	HRESULT nodeHresult
+	);
+
+NodeError(
+	NULL count,
+	ANSISTRING nodeCommand,
+	INT32 nodeId,
+	UNICODESTRING profileName,
+	UNICODESTRING nodeUri,
+	HRESULT nodeHresult,
+	UNICODESTRING nodeData
+	);
+
+NodeGetValue(
+	NULL count,
+	INT32 nodeId,
+	UNICODESTRING nodeUri,
+	HRESULT nodeHresult
+	);
+
+NodeSetValue(
+	NULL count,
+	INT32 nodeId,
+	UNICODESTRING nodeUri,
+	HRESULT nodeHresult
+	);
+
+FirewallCommit(
+	NULL count,
+	UNICODESTRING ruleId,
+	UNICODESTRING name,
+	UINT32 state,
+	HEXINT32 result
+	);
+
+FirewallInfo(
+	NULL count,
+	UNICODESTRING description,
+	HEXINT32 returnValue
+	);
+
+FirewallError(
+	NULL count,
+	UNICODESTRING description,
+	HEXINT32 returnValue
+	);
+
+Assert(
+	UINT32 assertVersion,
+	UINT32 rva,
+	UINT32 timestamp,
+	UINT32 imageSize,
+	ANSISTRING imageName,
+	UINT32 count,
+	UINT32 totalHits,
+	UINT32 ModuleCollection,
+	UINT32 GlobalCollection
+	);
+
+TlgAggregateSummary(
+	GUID Provider,
+	UINT64 NumFlushes,
+	UINT64 MaxEntriesStored,
+	UINT64 TotalEntriesFlushed,
+	UINT32 MaxEntriesFlushed,
+	UINT32 MinEntriesFlushed,
+	UINT32 NumBucketLimitReached,
+	UINT32 NumAllocationFailures,
+	UINT32 NumLargeEventFailures
+	);
+

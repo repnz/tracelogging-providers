@@ -1,0 +1,155 @@
+ProviderNames:
+	Microsoft.Windows.MediaFoundation.SourceResolver
+	Microsoft.Windows.MediaFoundation.ContentProtectionDevice
+	Microsoft.Windows.MediaFoundation.CodecAppSvc
+	Microsoft.Windows.MediaFoundation.TelemetrySession
+	Microsoft.Windows.MediaFoundation.CallStack
+
+
+
+**** Events *****
+MFCallstackStatistics(
+	GUID MFMediaTelemetrySessionID,
+	UINT32 MFMediaTelemetrySessionInstance,
+	ANSISTRING ver,
+	UINT32 totalErrorCount,
+	UINT32 nullIdCount,
+	UINT32 evictionCount
+	);
+
+MFCallstackFull(
+	GUID MFMediaTelemetrySessionID,
+	UINT32 MFMediaTelemetrySessionInstance,
+	ANSISTRING ver,
+	ANSISTRING component,
+	ANSISTRING hash,
+	HRESULT res,
+	HEXINT64 errTime,
+	UINT32 errCount,
+	ANSISTRING modules,
+	ANSISTRING functions,
+	ANSISTRING func,
+	UINT32 line,
+	UINT32 errIndex
+	);
+
+MFCallstackTruncated(
+	GUID MFMediaTelemetrySessionID,
+	UINT32 MFMediaTelemetrySessionInstance,
+	ANSISTRING ver,
+	ANSISTRING component,
+	ANSISTRING hash,
+	HRESULT res,
+	HEXINT64 errTime,
+	UINT32 errCount,
+	ANSISTRING modules,
+	ANSISTRING functions,
+	ANSISTRING func,
+	UINT32 line,
+	UINT32 errIndex
+	);
+
+MFCallstackFull(
+	GUID MFMediaTelemetrySessionID,
+	UINT32 MFMediaTelemetrySessionInstance,
+	ANSISTRING ver,
+	ANSISTRING component,
+	ANSISTRING hash,
+	HRESULT res,
+	HEXINT64 errTime,
+	ANSISTRING modules,
+	ANSISTRING functions,
+	ANSISTRING func,
+	UINT32 line,
+	UINT32 errIndex
+	);
+
+MFCallstackTruncated(
+	GUID MFMediaTelemetrySessionID,
+	UINT32 MFMediaTelemetrySessionInstance,
+	ANSISTRING ver,
+	ANSISTRING component,
+	ANSISTRING hash,
+	HRESULT res,
+	HEXINT64 errTime,
+	ANSISTRING modules,
+	ANSISTRING functions,
+	ANSISTRING func,
+	UINT32 line,
+	UINT32 errIndex
+	);
+
+OnMediaSrcAppSvcByteStreamCreate(
+	GUID MFMediaTelemetrySessionID,
+	UINT32 MFMediaTelemetrySessionInstance,
+	GUID InstanceId,
+	UNICODESTRING AppServiceName,
+	UNICODESTRING PackageFamilyName,
+	UNICODESTRING PackageFullName,
+	ANSISTRING LogReason,
+	HRESULT ErrorCode
+	);
+
+OnAppSvcActivate(
+	GUID MFMediaTelemetrySessionID,
+	UINT32 MFMediaTelemetrySessionInstance,
+	GUID InstanceId,
+	HRESULT ErrorCode,
+	UNICODESTRING AppServiceName,
+	UNICODESTRING PackageFamilyName,
+	UNICODESTRING PackageFullName,
+	UINT32 ActivateTimeInMs
+	);
+
+OnInProcActivate(
+	GUID MFMediaTelemetrySessionID,
+	UINT32 MFMediaTelemetrySessionInstance,
+	GUID InstanceId,
+	HRESULT ErrorCode,
+	UNICODESTRING ActivatableClassId,
+	UNICODESTRING PackageFamilyName,
+	UNICODESTRING PackageFullName,
+	UINT32 ActivateTimeInMs
+	);
+
+ResolutionCompleteV2(
+	UINT32 ver,
+	GUID MFMediaTelemetrySessionID,
+	UINT32 MFMediaTelemetrySessionInstance,
+	HEXINT32 ErrorCode,
+	UINT32 ResolutionFlags,
+	UINT32 uiResolutionAttempts,
+	UINT32 uiUnexpectedResolutionFailures,
+	UINT32 uiByteStreamCapabilities,
+	UINT64 uiByteStreamLength,
+	UNICODESTRING wsMIMEType,
+	UNICODESTRING wsFileExtension,
+	ANSISTRING sFileSignature,
+	BOOL32 fBlankFile,
+	GUID clsidPreferredSchemeHandler,
+	GUID clsidSuccessfulSchemeHandler,
+	UNICODESTRING wsSuccessfulSchemeHandlerInfo,
+	GUID clsidPreferredByteStreamHandler,
+	GUID clsidSuccessfulByteStreamHandler,
+	UNICODESTRING wsSuccessfulByteStreamHandlerInfo,
+	BOOL32 bIsCancelled,
+	BOOL32 bTriedNonMatchingByteStreamHandlers
+	);
+
+CryptoSessionSupportCheckTimeout(
+	UINT32 VendorId,
+	UINT64 DriverVersion,
+	HRESULT DriverDetailsResult
+	);
+
+CryptoSessionSupportCheckWarning(
+	UINT32 DurationMs
+	);
+
+SessionInstantiationExceededLimit(
+	UINT64 Span,
+	UINT64 Count,
+	GUID ProcessId,
+	GUID CounterInstanceId
+	);
+

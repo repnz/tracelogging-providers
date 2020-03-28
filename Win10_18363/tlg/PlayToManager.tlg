@@ -1,0 +1,26 @@
+ProviderNames:
+	Microsoft.Windows.Cast.Source
+
+
+
+**** Events *****
+PlayToApiCalled(
+	VOID
+	);
+
+CreateCastingEngine(
+	INT32 HRESULT,
+	UNICODESTRING DeviceInstanceId
+	);
+
+RequestStartCastingAsync(
+	INT32 HRESULT,
+	UINT32 castingConnectionErrorStatus,
+	UNICODESTRING castingSourceRawUri,
+	UNICODESTRING castingDeviceFriendlyName,
+	UNICODESTRING castingDeviceId,
+	UINT32 supportedProtocol,
+	UINT32 supportedPlaybackType,
+	UINT32 connectionState
+	);
+

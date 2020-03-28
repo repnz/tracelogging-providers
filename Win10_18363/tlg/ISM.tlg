@@ -1,0 +1,3014 @@
+ProviderNames:
+	Microsoft.Windows.Wil.FeatureLogging
+	Microsoft.Windows.InputStateManager
+	Microsoft.Windows.OneCore.MinInput
+	TextInput
+	Microsoft.OneCore.MinInput
+	Microsoft.Windows.Input.ControllerProcessor
+	InputCore
+	Microsoft.Windows.Analog.RawInputProviders
+	Microsoft.Windows.Analog.RawInputProvidersContinuous
+	Microsoft.Windows.Input.RawInputProviders
+	Microsoft.Windows.Analog.SpatialInteraction
+	Microsoft.Windows.Analog.SpatialInteractionContinuous
+	Microsoft.Windows.Analog.HolographicDriverClient
+	Microsoft.Windows.Analog.HolographicDriverClientContinuous
+
+
+
+**** Events *****
+FallbackError(
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+FeatureUsage(
+	UINT32 featureId,
+	INT32 featureVersion,
+	INT32 featureBaseVersion,
+	INT16 featureStage,
+	BOOLEAN enabled,
+	UINT32 kind,
+	UINT64 addend
+	);
+
+FeatureError(
+	UINT32 featureId,
+	INT32 featureVersion,
+	INT32 featureBaseVersion,
+	INT16 featureStage,
+	HRESULT hr,
+	ANSISTRING file,
+	UINT16 lineNumber,
+	ANSISTRING module,
+	ANSISTRING process,
+	ANSISTRING originFile,
+	UINT16 originLineNumber,
+	ANSISTRING originModule,
+	ANSISTRING originName,
+	ANSISTRING message,
+	ANSISTRING callerModule,
+	UINT32 callerReturnAddressOffset,
+	ANSISTRING originCallerModule,
+	UINT32 originCallerReturnAddressOffset
+	);
+
+FallbackError(
+	UINT64 PartA_PrivTags,
+	SIGNED wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+FeatureVariantUsage(
+	UINT32 featureId,
+	INT32 featureVersion,
+	INT32 featureBaseVersion,
+	INT16 featureStage,
+	BOOLEAN enabled,
+	UINT32 variantKind,
+	UINT8 variant,
+	UINT64 addend
+	);
+
+EnabledFeatureUsage(
+	UINT32 featureId,
+	INT32 featureVersion,
+	INT32 featureBaseVersion,
+	INT16 featureStage,
+	BOOLEAN enabled,
+	UINT32 kind,
+	UINT64 addend
+	);
+
+MPCInputRouter_Update3DFocusWNF(
+	UINT64 windowId,
+	UINT64 topMostWindowId,
+	UINT32 systemProcessId,
+	UINT32 threadId,
+	UINT32 viewId,
+	UINT32 spatialInputProcessId
+	);
+
+MPCInputRouter_OnExclusiveModeStateChangedInputThread(
+	BOOLEAN isExclusiveModeActive,
+	UINT32 exclusiveModeProcessId,
+	UINT64 exclusiveModeWindowId
+	);
+
+MPCInputRouter_Set3DFocusTarget(
+	HEXINT64 pOldMPCFocusTarget,
+	UINT32 OldTargetPID,
+	UNICODESTRING OldTargetType,
+	HEXINT64 pNewMPCFocusTarget,
+	UINT32 NewTargetPID,
+	UNICODESTRING NewTargetType
+	);
+
+MPCInputRouter_SupportedInputUpdatedForTarget(
+	UINT32 supportedInputTypes,
+	UINT32 pid,
+	UINT32 vid
+	);
+
+MPCInputRouter_IsTargetHolographic(
+	BOOLEAN isTargetHolographic,
+	UINT32 viewId,
+	UINT64 windowId,
+	UINT32 procId
+	);
+
+MPCInputRouter_GetFrameworkViewTypeFromFocusTarget(
+	HEXINT64 pFocusInputTarget,
+	UINT32 pid,
+	UINT32 viewId,
+	UNICODESTRING frameworkViewType,
+	UINT64 windowId
+	);
+
+MPCInputRouter_UpdateFocusedInputTarget3D(
+	BOOLEAN isSameAsFocusedTarget,
+	HEXINT64 pMPCFocusedInputTarget,
+	BOOLEAN inExclusiveMode,
+	UINT32 pid,
+	UINT64 wid
+	);
+
+MPCInputRouter_UpdateFocusedInputTarget(
+	BOOLEAN is3DReady,
+	HEXINT64 pNewDWMInputTarget,
+	HEXINT64 pMPCPostProcessor,
+	UINT32 pid,
+	UINT64 wid,
+	UINT32 dvid,
+	UINT32 vid
+	);
+
+MPCTarget_DeliverInput(
+	HEXINT64 pMPCTarget,
+	UINT32 ProcessId,
+	UNICODESTRING TargetType,
+	UINT32 InputType,
+	UINT32 DeviceId,
+	UINT32 InputTimestamp,
+	UINT32 MPC Report Id,
+	UINT32 MPCGestureType,
+	UINT32 MPCAugmentedGestureType,
+	BOOLEAN ToAppOnly,
+	INT32 hr
+	);
+
+MPCTarget_Create(
+	UINT32 PID,
+	UNICODESTRING TargetType,
+	UINT64 WindowId
+	);
+
+DragNDrop/DragOperation/InitializeForAnimation(
+	UINT64 pointerId,
+	UINT64 dataProviderId,
+	UINT64 dataSourceId
+	);
+
+DragNDrop/DragNDropProcessor/FeedAnimationDataIfNeeded(
+	UINT64 pointerId,
+	UINT64 dataProviderId,
+	UINT64 dataSourceId,
+	UINT64 XPosition,
+	UINT64 YPosition
+	);
+
+DragNDrop/DragNDropProcessor/DropTargetChanged(
+	UINT64 PointerId,
+	UINT64 Manager.X,
+	UINT64 Manager.Y,
+	UINT64 Target.X,
+	UINT64 Target.Y,
+	UINT64 Source.X,
+	UINT64 Source.Y,
+	HEXINT64 TargetId,
+	UINT64 VirtualKeyModifier
+	);
+
+DragNDrop/DragNDropProcessor/DragCancelled(
+	UINT64 PointerId,
+	UINT64 Manager.X,
+	UINT64 Manager.Y,
+	UINT64 Target.X,
+	UINT64 Target.Y,
+	UINT64 Source.X,
+	UINT64 Source.Y,
+	HEXINT64 TargetId,
+	UINT64 VirtualKeyModifier
+	);
+
+DragNDrop/DragNDropProcessor/DragStarted(
+	UINT64 PointerId,
+	UINT64 Manager.X,
+	UINT64 Manager.Y,
+	UINT64 Target.X,
+	UINT64 Target.Y,
+	UINT64 Source.X,
+	UINT64 Source.Y,
+	HEXINT64 TargetId,
+	UINT64 VirtualKeyModifier
+	);
+
+DragNDrop/DragNDropProcessor/DragEnded(
+	UINT64 PointerId,
+	UINT64 Manager.X,
+	UINT64 Manager.Y,
+	UINT64 Target.X,
+	UINT64 Target.Y,
+	UINT64 Source.X,
+	UINT64 Source.Y,
+	HEXINT64 TargetId,
+	UINT64 VirtualKeyModifier
+	);
+
+DragNDrop/DragNDropProcessor/DragInProgress(
+	UINT64 PointerId,
+	UINT64 Manager.X,
+	UINT64 Manager.Y,
+	UINT64 Target.X,
+	UINT64 Target.Y,
+	UINT64 Source.X,
+	UINT64 Source.Y,
+	HEXINT64 TargetId,
+	UINT64 VirtualKeyModifier
+	);
+
+SystemButtonEventController/ContinueProcessing(
+	UINT64 qpcTime,
+	UINT32 EventType,
+	BOOL32 EventValue,
+	BOOL32 handled
+	);
+
+ControllerNavigationManager/ClientStateChanged(
+	UINT64 ProcessId,
+	UINT64 Bounds.Top,
+	UINT64 Bounds.Left,
+	UINT64 Bounds.Bottom,
+	UINT64 Bounds.Right,
+	UINT64 StartPosition.X,
+	UINT64 StartPosition.Y
+	);
+
+ControllerNavigationManager/RegisterClient(
+	UINT64 ProcessId,
+	UINT64 Bounds.Top,
+	UINT64 Bounds.Left,
+	UINT64 Bounds.Bottom,
+	UINT64 Bounds.Right,
+	UINT64 StartPosition.X,
+	UINT64 StartPosition.Y
+	);
+
+ControllerNavigationManager/PointerCrossedOverrideBounds(
+	UINT64 ProcessId,
+	UINT64 Position.X,
+	UINT64 Position.Y
+	);
+
+ControllerNavigationManager/PointerCrossedClientBounds(
+	UINT64 ProcessId,
+	UINT64 Position.X,
+	UINT64 Position.Y
+	);
+
+ControllerNavigationManager/NavigationDisabled(
+	VOID
+	);
+
+ControllerNavigationManager/NavigationEnabled(
+	UINT64 Bounds.Top,
+	UINT64 Bounds.Left,
+	UINT64 Bounds.Bottom,
+	UINT64 Bounds.Right,
+	UINT64 StartPosition.X,
+	UINT64 StartPosition.Y
+	);
+
+ControllerNavigationManager/NavigationResumed(
+	UINT64 Bounds.Top,
+	UINT64 Bounds.Left,
+	UINT64 Bounds.Bottom,
+	UINT64 Bounds.Right,
+	UINT64 ResumePosition.X,
+	UINT64 ResumePosition.Y
+	);
+
+ControllerNavigationManager/NavigationPaused(
+	VOID
+	);
+
+TaskSwitcherUnexpectedState(
+	UINT32 UnexpectedTaskSwitcherStateMachineState
+	);
+
+TaskSwitcherState(
+	UINT32 TaskSwitcherState,
+	BOOL32 IsViewPressed,
+	BOOL32 IsMenuPressed
+	);
+
+TaskSwitcherInvoked(
+	UINT32 ChordedKeyCurrentState
+	);
+
+PenEvents::CreatePenEventsClientProxy(
+	VOID
+	);
+
+PenEvents::SetButtonRoutingPolicy(
+	ANSISTRING Policy
+	);
+
+PenEvents::SetDockRoutingPolicy(
+	ANSISTRING Policy
+	);
+
+PenEvents::OnPenEventsClientProxyDisconnected(
+	VOID
+	);
+
+PenEvents::ReceiveKernelMessage(
+	ANSISTRING Message
+	);
+
+MPC3DStateHelper_FireEventsOnInputThread(
+	BOOLEAN is3DCompositorRunning,
+	BOOLEAN is3DHitTestingEnabled
+	);
+
+MPCManager_SendHomeGesture(
+	UINT64 PartA_PrivTags,
+	UINT32 inputType,
+	UINT32 deviceId,
+	UINT64 qpcTime,
+	UINT32 mirageId
+	);
+
+MPCManager_SendHomeGestureReadyChanged(
+	UINT64 PartA_PrivTags,
+	BOOLEAN isReady,
+	UINT32 inputType,
+	UINT32 deviceId,
+	UINT64 qpcTime,
+	UINT32 mirageId,
+	UINT32 gestureStage
+	);
+
+MPCManager_OnMouseSnappedToGaze(
+	UINT32 DeviceId
+	);
+
+MPCManager_InitializationFailed(
+	INT32 NTSTATUS
+	);
+
+MPCHolographicInputManager_FocusedAppDisabled3DGamepad(
+	BOOLEAN focusedAppDisabled3DGamepad
+	);
+
+MPCHolographicInputManager_SetProviderPrimary(
+	UINT32 deviceId,
+	UINT64 primaryProviderIndex,
+	UNICODESTRING Type,
+	UINT32 LastType
+	);
+
+MPCHolographicInputManager_UpdateDoubleClickValues(
+	BOOLEAN isOverridingDoubleClickValues,
+	INT32 newDoubleClickWidth,
+	INT32 newDoubleClickHeight
+	);
+
+MPCHolographicInputManager_FocusedAppDisabled3DMouse(
+	BOOLEAN focusedAppDisabled3DMouse
+	);
+
+MPCHolographicInputManager_DisplayContextChanged(
+	BOOLEAN isDisplayContextHMD
+	);
+
+MPCHolographicInputManager_InputDisableFlagsChanged(
+	BOOLEAN isMouseDisabled,
+	BOOLEAN isGamepadDisabled
+	);
+
+MPCHolographicInputManager_RequestForegroundChange(
+	UINT64 windowId,
+	UINT64 lastWindowId,
+	UINT32 viewId,
+	UINT32 deviceId,
+	BOOLEAN isDesktopSlate
+	);
+
+MPCHolographicInputManager_PrepAndStabilizeTargetingRay_InHeadSpace(
+	UINT32 DeviceId,
+	FLOAT originX,
+	FLOAT originY,
+	FLOAT originZ,
+	FLOAT directionX,
+	FLOAT directionY,
+	FLOAT directionZ
+	);
+
+MPCHolographicInputManager_ForcedPrimary(
+	UINT32 newPrimaryType
+	);
+
+MPCHolographicInputManager_PrepAndStabilizeTargetingRay_PreStabilization(
+	UINT32 DeviceId,
+	FLOAT originX,
+	FLOAT originY,
+	FLOAT originZ,
+	FLOAT directionX,
+	FLOAT directionY,
+	FLOAT directionZ
+	);
+
+MPCHolographicInputManager_PrepAndStabilizeTargetingRay_PostStabilization(
+	UINT32 DeviceId,
+	FLOAT originX,
+	FLOAT originY,
+	FLOAT originZ,
+	FLOAT directionX,
+	FLOAT directionY,
+	FLOAT directionZ
+	);
+
+MPCHolographicInputManager_SendPoints(
+	UINT64 PointsSize,
+	UINT32 inputType
+	);
+
+MPCHolographicInputManager_CaptureStarted(
+	UINT32 deviceId,
+	UNICODESTRING Type,
+	BOOLEAN hasCaptureStarted,
+	UINT32 TargetPID,
+	UNICODESTRING TargetType
+	);
+
+MPCHolographicInputManager_Process3DInput_HitTestResult(
+	UINT32 DeviceId,
+	FLOAT originX,
+	FLOAT originY,
+	FLOAT originZ,
+	FLOAT directionX,
+	FLOAT directionY,
+	FLOAT directionZ,
+	UINT8 downlevelTo2D,
+	UINT8 ignoreFocusChangeOnHit,
+	UINT8 gazeAndCommitOverride,
+	FLOAT screenX,
+	FLOAT screenY,
+	INT32 gestureMode2D,
+	UINT32 workspaceId,
+	FLOAT hitDistance,
+	UINT8 hasHit,
+	UINT32 viewId,
+	UINT8 gameMode,
+	UINT8 noHover,
+	UINT8 injectInput,
+	UINT8 disableNexusButton
+	);
+
+MPCGamepadInputHelper_UpdateGamepadFocus(
+	BOOLEAN overrideWGI,
+	UINT32 processId,
+	BOOLEAN hmdInUse,
+	BOOLEAN is3DGamepadDisabled,
+	BOOLEAN focusTargetHasDelegateView,
+	BOOLEAN isOnlyMixedWorldRouting,
+	BOOLEAN focusedSlateWants2DGamepad,
+	BOOLEAN focusTargetIsExclusive,
+	BOOLEAN isHittingMixedWorldObject,
+	BOOLEAN focusedAppWantsWGIFocus
+	);
+
+MPCCursorManager_MouseInterceptUpdate(
+	BOOLEAN isInterceptEnabled,
+	BOOLEAN isHMDInUse,
+	BOOLEAN is3DMouseEnabled
+	);
+
+MPCCursorManager_Update2DCursor(
+	BOOLEAN show2DCursor
+	);
+
+MPCGestureHandler_PointerUpdated(
+	INT32 X Coordinate,
+	INT32 Y Coordinate,
+	UINT32 Pointer ID,
+	UINT32 Pointer flags,
+	UINT32 Device ID,
+	UINT32 Workspace ID,
+	UINT32 type
+	);
+
+MPCGestureHandler_PointerDown(
+	UINT32 Pointer ID,
+	INT32 X Coordinate,
+	INT32 Y Coordinate,
+	UINT32 Device ID,
+	UINT32 Workspace ID
+	);
+
+MPCGestureHandler_PointerUp(
+	UINT32 Pointer ID,
+	INT32 X Coordinate,
+	INT32 Y Coordinate,
+	UINT32 Device ID,
+	UINT32 Workspace ID
+	);
+
+MPCGestureHandler_InjectRelease(
+	INT32 X Coordinate,
+	INT32 Y Coordinate,
+	UINT32 Device ID,
+	UINT32 Workspace ID
+	);
+
+MPCGestureHandler_StartScroll(
+	INT32 X Coordinate,
+	INT32 Y Coordinate,
+	UINT32 Device ID,
+	UINT32 Workspace ID
+	);
+
+MPCGestureHandler_StartZoom(
+	INT32 X Coordinate,
+	INT32 Y Coordinate,
+	UINT32 Device ID,
+	UINT32 Workspace ID
+	);
+
+MPCGestureHandler_InjectPress(
+	INT32 X Coordinate,
+	INT32 Y Coordinate,
+	UINT32 Device ID,
+	UINT32 Workspace ID
+	);
+
+GestureRecognizer_GestureDetected(
+	UNICODESTRING GestureType
+	);
+
+InputStateManager/OnDeviceRemoval(
+	UINT64 DeviceId,
+	UINT64 InputType
+	);
+
+ISM::ReceiveInput(
+	INT64 InputQPC,
+	ANSISTRING Type,
+	HEXINT32 DeviceId
+	);
+
+InputStateManager/OnInputReport(
+	UINT64 DeviceId,
+	UINT64 InputType,
+	UINT32 Timestamp,
+	UINT64 QPC
+	);
+
+InputStateManager/OnDeviceAttach(
+	UINT64 DeviceId,
+	UINT64 InputType
+	);
+
+MPCRawInputReport(
+	UINT32 InputType,
+	UINT32 DeviceId,
+	UINT32 InputTimestamp,
+	UINT32 MPC Report Id,
+	UINT32 MPCGestureType,
+	UINT32 MPCAugmentedGestureType
+	);
+
+MPCRawInputReport(
+	UINT32 InputType,
+	UINT32 DeviceId,
+	UINT32 InputTimestamp,
+	UINT32 MPC Report Id,
+	UINT32 MPCGestureType,
+	UINT32 MPCAugmentedGestureType
+	);
+
+MPCLastHeadYawMovement(
+	UINT64 PartA_PrivTags,
+	UINT32 LastYawMovement
+	);
+
+SpeechRuntimeListenerFunct(
+	UNICODESTRING msg
+	);
+
+AugmentedInputDevice_DeviceRemoved(
+	UINT32 inputId
+	);
+
+AugmentedInputDevice_DeviceAttached(
+	UINT32 inputId,
+	BOOLEAN gesturesDisabled
+	);
+
+ActivityStoppedAutomatically(
+	VOID
+	);
+
+ActivityError(
+	UINT64 PartA_PrivTags,
+	SIGNED wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+ActivityError(
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+HandInputReportProcessed(
+	UINT32 DeviceId,
+	UINT32 Id,
+	UINT32 GestureType,
+	UINT32 HandId,
+	INT64 TimestampQPC,
+	UINT8 HasOrientation,
+	FLOAT GuidanceScore,
+	UINT32 Gesture,
+	UINT32 Locatability,
+	GUID HandNodeId
+	);
+
+InputReportIgnored(
+	UINT32 DeviceId,
+	UNICODESTRING Reason
+	);
+
+InputReportReceived(
+	UINT32 DeviceId,
+	UINT32 Length
+	);
+
+InputReportProcessed(
+	UINT32 DeviceId,
+	UINT32 Id,
+	UINT32 AugmentedInputGestureType,
+	UINT32 GestureType,
+	UINT8 IsSpatialController,
+	UINT8 IsPrimaryPressed,
+	UINT32 ButtonsPressed,
+	UINT8 TriggerValid,
+	FLOAT TriggerReading,
+	UINT8 ThumbstickValid,
+	FLOAT Thumbstick.X,
+	FLOAT Thumbstick.Y,
+	UINT8 TouchpadValid,
+	FLOAT Touchpad.X,
+	FLOAT Touchpad.Y,
+	UINT8 PositionValid,
+	FLOAT PositionX,
+	UINT8 OrientationValid,
+	FLOAT OrientationX
+	);
+
+InputReportProcessed_Failed(
+	UINT32 DeviceId,
+	INT32 HR
+	);
+
+HeadEventHandlerEnabled(
+	INT32 hr
+	);
+
+HeadEventHandlerDisabled(
+	VOID
+	);
+
+TelemetryDdiDevice_Added(
+	UINT64 PartA_PrivTags,
+	UINT32 DeviceId,
+	UINT32 DeviceType,
+	UNICODESTRING DevicePath
+	);
+
+FailedToStartTracingSession(
+	INT32 hr
+	);
+
+TelemetryDdiDevice_Removed(
+	UINT64 PartA_PrivTags,
+	UINT32 deviceId
+	);
+
+ControllerDeviceUpdate(
+	INT32 hr,
+	UINT32 DeviceId
+	);
+
+ControllerDeviceUpdate(
+	INT32 hr,
+	UINT32 DeviceId,
+	BOOLEAN HasNodeInfo,
+	GUID NodeId,
+	BOOLEAN IsTracking,
+	UINT8 BatteryLevel
+	);
+
+DeviceAttached(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	INT32 HR,
+	UINT32 InputDeviceId
+	);
+
+DeviceAttached(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId,
+	INT32 HR,
+	UINT32 InputDeviceId
+	);
+
+DeviceAttached(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId,
+	UINT32 DeviceId
+	);
+
+SpatialInputControllerCollection_Released(
+	VOID
+	);
+
+DeviceAttached(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+DeviceAttached(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+InputExtensibilityDeviceRemoved(
+	UINT64 DeviceType,
+	UINT16 VendorID,
+	UINT16 ProductID,
+	UINT16 ProductVersion
+	);
+
+InputExtensibilityDeviceAttached(
+	UINT64 DeviceType,
+	UINT16 VendorID,
+	UINT16 ProductID,
+	UINT16 ProductVersion
+	);
+
+ReadFeatureReport(
+	INT32 hr,
+	UINT32 deviceId,
+	UINT8 reportId
+	);
+
+WGIRawInputProvider_SetInputFocusProcess(
+	UINT32 processId
+	);
+
+LampArrayRawInputProvider::OnTargetWithFocusChanged(
+	ANSISTRING Description,
+	UINT32 Previous PID,
+	UINT32 New PID
+	);
+
+LampArrayRawInputProvider::Create(
+	ANSISTRING Description
+	);
+
+PnpDeviceWatcher::StartDeviceObject(
+	ANSISTRING Description,
+	UNICODESTRING DeviceId
+	);
+
+PnpDeviceWatcher::ProcessDeviceNotifications(
+	ANSISTRING Description,
+	UNICODESTRING DeviceId,
+	UINT8 RetriesRemaining
+	);
+
+PnpDeviceWatcher::ProcessDeviceNotifications(
+	ANSISTRING Description,
+	UNICODESTRING DeviceId
+	);
+
+ActivityStoppedAutomatically(
+	VOID
+	);
+
+LampArrayDevice::ProcessLampState(
+	ANSISTRING Description,
+	UNICODESTRING PID
+	);
+
+LampArrayDevice::ProcessLampState(
+	ANSISTRING Description,
+	UINT32 PID
+	);
+
+ProcessLampStateActivityStart(
+	VOID
+	);
+
+ConsumerControlNexusDevice::ProcessInput(
+	ANSISTRING Description,
+	BOOLEAN isNexusButtonPressed
+	);
+
+UnexpectedUsage(
+	UINT16 page,
+	UINT16 id
+	);
+
+LampArrayDeviceAdded(
+	UNICODESTRING DeviceId,
+	UINT16 VendorId,
+	UINT16 ProductId,
+	UINT16 HardwareVersion,
+	INT32 LampCount,
+	INT32 BoundingBoxWidthInMicrometers,
+	INT32 BoundingBoxHeightInMicrometers,
+	INT32 BoundingBoxDepthInMicrometers,
+	INT32 LampArrayKind,
+	INT32 MinUpdateInternalInMicroseconds
+	);
+
+PnPDeviceInfo(
+	UNICODESTRING deviceHardwareString,
+	UINT16 VendorId,
+	UINT16 ProductId,
+	UINT16 hidUsagePage,
+	UINT16 hidUsageId
+	);
+
+HidLampArrayDevice::SendLampArrayControlReport(
+	ANSISTRING Description,
+	UNICODESTRING DeviceId
+	);
+
+HidLampArrayDevice::ReceiveVendorReport(
+	ANSISTRING Description,
+	UNICODESTRING DeviceId
+	);
+
+HidLampArrayDevice::SendLampArrayControlReport(
+	ANSISTRING Description,
+	UNICODESTRING DeviceId,
+	BOOLEAN AutonomousMode
+	);
+
+HidLampArrayDevice::SendLampRangeUpdateReport(
+	ANSISTRING Description,
+	UNICODESTRING DeviceId
+	);
+
+HidLampArrayDevice::SendVendorReport(
+	ANSISTRING Description,
+	UNICODESTRING DeviceId
+	);
+
+HidLampArrayDevice::SendLampMultiUpdateReport(
+	ANSISTRING Description,
+	UNICODESTRING DeviceId
+	);
+
+HidLampArrayDevice::Initialize(
+	ANSISTRING Description,
+	UNICODESTRING DeviceId
+	);
+
+HidLampArrayDevice::~HidLampArrayDevice(
+	ANSISTRING Description,
+	UNICODESTRING DeviceId
+	);
+
+ISM::ReceivePointerFrame(
+	INT64 InputQPC,
+	INT64 KernelInputReadQPC,
+	INT64 HostInputSendQPC,
+	INT64 ContainerInputReceiveQPC,
+	INT64 HostPerformanceFrequency,
+	UINT32 FrameId,
+	UINT32 PointerCount
+	);
+
+ISM::ReceiveCursorPos(
+	INT64 InputQPC,
+	STRING CursorPos,
+	INT32 X,
+	INT32 Y
+	);
+
+Perf::ISM(
+	UNICODESTRING Name
+	);
+
+Perf::ISM(
+	UNICODESTRING Name
+	);
+
+ISM::ReceiveMouseInput(
+	INT64 InputQPC,
+	INT64 Message
+	);
+
+Win32kInterop/ProcessDeviceArrival(
+	UINT64 DeviceId
+	);
+
+Win32kInterop/ReceivedCursorPosMessage(
+	UINT64 DeviceId
+	);
+
+ContextualProcessing::ReceiveInput(
+	INT64 InputQPC,
+	ANSISTRING Type,
+	HEXINT32 DeviceId
+	);
+
+ISM::DropMouseInput(
+	INT64 InputQPC,
+	INT64 Message
+	);
+
+Win32kInterop/ReceivedInputMessage(
+	UINT64 DeviceId
+	);
+
+Win32kInterop/ReceivedRawInputMessage(
+	UINT64 DeviceId
+	);
+
+ISM::ReceiveKeyboardInput(
+	BOOL32 KeyDown,
+	HEXINT64 DeviceId
+	);
+
+Win32kInterop/ProcessDeviceRemoval(
+	UINT64 DeviceId
+	);
+
+ISM::DropKeyboardInput(
+	BOOL32 KeyDown,
+	HEXINT64 DeviceId
+	);
+
+Win32kInterop/ReceivedInterceptMessage(
+	UINT64 DeviceId
+	);
+
+ISM::ReceiveInterceptMessage(
+	INT64 InputQPC
+	);
+
+Cursor::ReceiveKernelMessage(
+	ANSISTRING Message
+	);
+
+Cursor::UpdateDisplayOrientation(
+	UINT64 DeviceId,
+	DOUBLE Orientation
+	);
+
+UIAHitTest/RequestUIAHitTest(
+	UINT32 PositionX,
+	UINT32 PositionY,
+	GUID UIAEndpointId
+	);
+
+InputRouter/OnFocusChanged(
+	UINT64 ProcessId,
+	UINT64 ThreadId,
+	HEXINT64 ViewId
+	);
+
+InputTarget/DeliverDeviceAttach(
+	UINT64 DeviceId,
+	UINT64 InputType
+	);
+
+ISM::DeliverInput(
+	INT64 InputQPC,
+	ANSISTRING Type,
+	HEXINT32 DeviceId,
+	HEXINT64 WindowHandle
+	);
+
+InputTarget/DeliverDeviceRemoval(
+	UINT64 DeviceId,
+	UINT64 InputType
+	);
+
+InputTarget/DeliverInputReport(
+	UINT64 DeviceId,
+	UINT64 InputType,
+	UINT32 Timestamp,
+	UINT64 QPC
+	);
+
+InputTarget/DeliverInputReport/Latency(
+	UINT64 Latency
+	);
+
+Cursor::AddShapeToCursor(
+	HEXINT64 SystemCursor,
+	HEXINT64 ShapeId,
+	ANSISTRING Name,
+	UINT32 ProcessId
+	);
+
+Cursor::SetCursorImage(
+	HEXINT64 ShapeId,
+	ANSISTRING Name,
+	UINT32 ProcessId,
+	BOOL32 Visible
+	);
+
+Cursor::CreateCursorForDevice(
+	UINT64 DeviceId,
+	HEXINT64 SystemCursor
+	);
+
+TelemetrySpatialInputControllerAdded(
+	UINT32 DeviceId,
+	UNICODESTRING DevicePath,
+	UINT16 VendorId,
+	UINT16 ProductId,
+	UINT16 ProductVersion
+	);
+
+DeviceRemoved(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+DeviceRemoved(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	SIGNED wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+FinalizeControllerInitialization(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+OnHolographicDisplayChanged(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	SIGNED wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function,
+	UNICODESTRING deviceName,
+	BOOLEAN wasDisplayAdded,
+	BOOLEAN NoDefault,
+	INT32 HR
+	);
+
+ActivityIntermediateStop(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+DeviceRemoved(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId,
+	UINT32 DeviceId,
+	UINT32 InputDeviceId
+	);
+
+SpatialGraphDriver(
+	UNICODESTRING deviceName
+	);
+
+OnHolographicDisplayChanged(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId
+	);
+
+ControllerNodeTrackingSkipped(
+	UINT32 DeviceId
+	);
+
+ActivityStoppedAutomatically(
+	VOID
+	);
+
+TelemetrySpatialInputControllerRemoved(
+	UINT32 DeviceId,
+	UNICODESTRING DevicePath
+	);
+
+OnHolographicDisplayChanged(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+TrackingHeartbeat(
+	UNICODESTRING DeviceName,
+	UINT32 DeviceId,
+	UINT32 InputId,
+	UINT32 Handedness,
+	BOOLEAN CanSendPoses,
+	BOOLEAN HasNodeInfo,
+	UNICODESTRING SpatialGraphDeviceInterfacePath,
+	GUID NodeId,
+	UINT32 TrackingCapabilities,
+	UNICODESTRING HoldingPoseOffset,
+	UNICODESTRING PointingPoseOffset
+	);
+
+FinalizeControllerInitialization(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+ActivityIntermediateStop(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+OnHolographicDisplayChanged(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId,
+	UNICODESTRING deviceName,
+	BOOLEAN wasDisplayAdded,
+	BOOLEAN NoDefault,
+	INT32 HR
+	);
+
+ActivityError(
+	UINT64 PartA_PrivTags,
+	SIGNED wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+HolographicDisplayDriver(
+	UNICODESTRING deviceName
+	);
+
+OnHolographicDisplayChanged(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	SIGNED wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+FinalizeControllerInitialization(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId,
+	UINT32 DeviceId
+	);
+
+SpatialObjectDeviceStopListeningToSpatialObjects(
+	UNICODESTRING DeviceInterfacePath,
+	INT32 hr
+	);
+
+SpatialObjectDeviceStartListeningToSpatialObjects(
+	UNICODESTRING DeviceInterfacePath,
+	INT32 hr
+	);
+
+DdiSource_InputThreadInit(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+SpatialObjectStoppedTracking(
+	GUID objectId,
+	UINT32 reason
+	);
+
+DdiSource_BackgroundInit(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId,
+	UNICODESTRING DeviceInterfacePath,
+	GUID objectId
+	);
+
+DdiSource_InputThreadInit(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId,
+	GUID objectId
+	);
+
+SpatialObjectDeviceInitializationDone(
+	UNICODESTRING DeviceInterfacePath,
+	INT32 hr
+	);
+
+InitializeSpatialObjectDeviceSupport(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	SIGNED wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+DdiSource_InputThreadRemoval(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId,
+	UNICODESTRING DeviceInterfacePath,
+	GUID objectId
+	);
+
+DdiSource_InputThreadRemoval(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+SpatialObjectEnsureDynamicNodeInfo(
+	GUID objectId,
+	GUID nodeId
+	);
+
+DdiSource_BackgroundInit(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	SIGNED wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+SpatialObjectDeviceRemoved(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+SpatialObjectStateStatistics(
+	GUID objectId,
+	UINT32 statesRead,
+	UINT32 failedStateReadCalls
+	);
+
+SpatialObjectDeviceAdded(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	SIGNED wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+SpatialObjectSubscribeToStateStream(
+	GUID objectId,
+	INT32 hr
+	);
+
+SpatialObjectDeviceAdded(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId,
+	UNICODESTRING DeviceInterfacePath
+	);
+
+SpatialObjectDeviceAdded(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+DdiSource_BackgroundInit(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+DdiSource_InputThreadRemoval(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	SIGNED wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+InitializeSpatialObjectDeviceSupport(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+SpatialObjectDeviceRemoved(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	SIGNED wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+SpatialObjectStartTracking(
+	GUID objectId,
+	INT32 hr,
+	UINT32 RequestedTrackingState,
+	UINT32 TrackingCapabilities,
+	GUID NodeId
+	);
+
+SpatialObjectDeviceRemoved(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId,
+	UNICODESTRING DeviceInterfacePath
+	);
+
+InitializeSpatialObjectDeviceSupport(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId
+	);
+
+DdiSource_InputThreadInit(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	SIGNED wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+SpatialObjectEnsureDynamicNodeInfoFailed(
+	GUID objectId,
+	INT32 hr
+	);
+
+SpatialInteractionEyeGazeObjectDevice_Added(
+	VOID
+	);
+
+EyeGazeStateReaderInitialized(
+	GUID objectId,
+	BOOLEAN supportsCalibrationEvents
+	);
+
+SpatialObjectReadNextStateError(
+	GUID objectId,
+	INT64 timestampQPC,
+	INT32 hr
+	);
+
+SpatialInteractionEyeGaze_CombinedGaze(
+	FLOAT originX,
+	FLOAT originY,
+	FLOAT originZ,
+	FLOAT directionX,
+	FLOAT directionY,
+	FLOAT directionZ
+	);
+
+HandReportIgnored(
+	GUID ObjectId,
+	INT64 TimestampQPC,
+	INT32 CurrentState,
+	INT32 PreviousState,
+	BOOLEAN IsTracked,
+	BOOLEAN WasTracked
+	);
+
+HandSpatialObjectAdded(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	SIGNED wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+HandStateRead(
+	GUID ObjectId,
+	INT64 InputTimestampInQpc,
+	BOOLEAN HandPressed,
+	BOOLEAN Bloom,
+	INT32 SystemReadyState,
+	BOOLEAN SystemGestureCompleted,
+	BOOLEAN GraspPressed
+	);
+
+OnHandSpatialObjectRemoved(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId,
+	UNICODESTRING DeviceInterfacePath,
+	GUID objectId
+	);
+
+HandStateIgnored(
+	GUID ObjectId,
+	INT64 LastTimestampInQpc,
+	INT32 CurrentState,
+	INT32 PreviousState
+	);
+
+Log_Error(
+	INT32 hr,
+	UNICODESTRING message
+	);
+
+HandSpatialObjectAdded(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId,
+	UNICODESTRING DeviceInterfacePath,
+	GUID objectId
+	);
+
+AddDefaultHandReport(
+	GUID ObjectId,
+	INT64 TimestampInQpc,
+	INT32 CurrentState
+	);
+
+OnHandSpatialObjectRemoved(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	SIGNED wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+HandSpatialObjectAdded(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+OnHandSpatialObjectRemoved(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+HandStateReaderInitialized(
+	GUID objectId,
+	BOOLEAN supportsPointingOffset,
+	BOOLEAN supportsHoldingOffset,
+	BOOLEAN twoStepsSystemGesture,
+	BOOLEAN supportsGrasp,
+	BOOLEAN isHomeGestureDisabled
+	);
+
+ContextualProcessing/ProcessorRegistered(
+	UNICODESTRING processorName
+	);
+
+ContextualProcessing::OnHitTest(
+	INT64 InputQPC,
+	ANSISTRING Type,
+	HEXINT32 DeviceId,
+	UNICODESTRING Processor,
+	ANSISTRING State
+	);
+
+ContextualProcessing/OnFocusRequest(
+	UNICODESTRING Processor
+	);
+
+ContextualProcessing/OnHitTest(
+	UNICODESTRING Processor
+	);
+
+ContextualProcessing::OnFocusRequest(
+	UNICODESTRING Processor,
+	ANSISTRING State
+	);
+
+ContextualProcessing::OnInput(
+	INT64 InputQPC,
+	ANSISTRING Type,
+	HEXINT32 DeviceId,
+	UNICODESTRING Processor,
+	ANSISTRING Decision,
+	HEXINT64 Target,
+	INT32 Result
+	);
+
+ContextualProcessing::RouteInput(
+	INT64 InputQPC,
+	ANSISTRING Type,
+	HEXINT32 DeviceId,
+	ANSISTRING Decision,
+	UNICODESTRING Processor
+	);
+
+ContextualProcessing/OnInput(
+	UNICODESTRING Processor,
+	HEXINT64 Target,
+	INT32 Result
+	);
+
+DragNDrop/DragNDropProcessor/DragStartedLegacy(
+	UINT64 PointerId,
+	UINT64 Screen.X,
+	UINT64 Screen.Y,
+	HEXINT64 CoreInputId,
+	UINT64 CoreInput.X,
+	UINT64 CoreInput.Y,
+	HEXINT64 CoreWindowId,
+	UINT64 CoreWindow.X,
+	UINT64 CoreWindow.Y,
+	UINT64 VirtualKeyModifier
+	);
+
+DragNDrop/DragNDropProcessor/StartDragFailedLegacy(
+	UINT64 PointerId
+	);
+
+DragNDrop/DragNDropProcessor/DragCancelledLegacy(
+	UINT64 PointerId,
+	UINT64 Screen.X,
+	UINT64 Screen.Y,
+	HEXINT64 CoreInputId,
+	UINT64 CoreInput.X,
+	UINT64 CoreInput.Y,
+	HEXINT64 CoreWindowId,
+	UINT64 CoreWindow.X,
+	UINT64 CoreWindow.Y,
+	UINT64 VirtualKeyModifier
+	);
+
+DragNDrop/DragNDropProcessor/DragEndedLegacy(
+	UINT64 PointerId,
+	UINT64 Screen.X,
+	UINT64 Screen.Y,
+	HEXINT64 CoreInputId,
+	UINT64 CoreInput.X,
+	UINT64 CoreInput.Y,
+	HEXINT64 CoreWindowId,
+	UINT64 CoreWindow.X,
+	UINT64 CoreWindow.Y,
+	UINT64 VirtualKeyModifier
+	);
+
+DragNDrop/DragNDropProcessor/DragInProgressLegacy(
+	UINT64 PointerId,
+	UINT64 Screen.X,
+	UINT64 Screen.Y,
+	HEXINT64 CoreInputId,
+	UINT64 CoreInput.X,
+	UINT64 CoreInput.Y,
+	HEXINT64 CoreWindowId,
+	UINT64 CoreWindow.X,
+	UINT64 CoreWindow.Y,
+	UINT64 VirtualKeyModifier
+	);
+
+Keyboard::DeliverToInputService(
+	BOOL32 KeyDown,
+	HEXINT32 DeviceId
+	);
+
+SystemButtonProcessor/ButtonEvent(
+	UINT32 ButtonType,
+	BOOL32 ButtonValue
+	);
+
+ButtonProcessor/ButtonEvent(
+	UINT32 Button,
+	BOOLEAN IsPressed
+	);
+
+HdwrKeyboardKeyPressedEvent(
+	UINT32 keyCount
+	);
+
+MPCSixDofProcessor_HomeButtonIgnored(
+	UINT64 PartA_PrivTags
+	);
+
+MPCSixDofProcessor_HomeEventTuneablesChanged(
+	UINT64 PartA_PrivTags,
+	FLOAT angularVelocityX,
+	FLOAT angularVelocityY,
+	FLOAT angularVelocityZ,
+	FLOAT linearVelocityX,
+	FLOAT linearVelocityY,
+	FLOAT linearVelocityZ,
+	FLOAT angularAccelerationX,
+	FLOAT angularAccelerationY,
+	FLOAT angularAccelerationZ,
+	FLOAT linearAccelerationX,
+	FLOAT linearAccelerationY,
+	FLOAT linearAccelerationZ,
+	FLOAT weightedDistanceX,
+	FLOAT weightedDistanceY,
+	FLOAT weightedDistanceZ,
+	FLOAT homeDistanceWeight,
+	FLOAT homeAllowTimeBetweenClicksInSec,
+	FLOAT homeSecondClickLinearMultiplier,
+	FLOAT homeSecondClickAngularMultiplier,
+	UINT32 homeCancelExceedThresholdMaxCount
+	);
+
+MPCSixDofProcessor_HomeEvent(
+	UINT64 PartA_PrivTags,
+	UINT32 deviceId,
+	BOOLEAN wasSent,
+	BOOLEAN wasHold,
+	BOOLEAN wereOtherButtonsPressed,
+	UINT32 buttonsPressed,
+	BOOLEAN wasHoldCanceled,
+	FLOAT pressDuration,
+	BOOLEAN wasExclusiveFocused
+	);
+
+MPCSixDofProcessor_HomePressedEvent(
+	UINT32 deviceId,
+	BOOLEAN wasHoldCanceled,
+	UINT32 holdCancelCount,
+	FLOAT angularVelocityX,
+	FLOAT angularVelocityY,
+	FLOAT angularVelocityZ,
+	FLOAT linearVelocityX,
+	FLOAT linearVelocityY,
+	FLOAT linearVelocityZ,
+	FLOAT angularAccelerationX,
+	FLOAT angularAccelerationY,
+	FLOAT angularAccelerationZ,
+	FLOAT linearAccelerationX,
+	FLOAT linearAccelerationY,
+	FLOAT linearAccelerationZ,
+	FLOAT positionDeltaX,
+	FLOAT positionDeltaY,
+	FLOAT positionDeltaZ,
+	FLOAT distanceWeightedAverageX,
+	FLOAT distanceWeightedAverageY,
+	FLOAT distanceWeightedAverageZ,
+	UINT32 buttonState
+	);
+
+MPCSixDofProcessor_HomeEventUpdate(
+	UINT64 PartA_PrivTags,
+	UINT32 DeviceId,
+	UINT32 ButtonState
+	);
+
+MPCHandProcessor_UseGazeForTargetingChange(
+	UINT32 DeviceId,
+	UINT32 HandId,
+	BOOLEAN UseGazeForTargeting,
+	BOOLEAN UseCollideablePointsForHitTesting,
+	UINT8 HandSupportsPointing,
+	UINT8 PositionValid,
+	UINT8 OrientationValid
+	);
+
+MPCHandProcessor_PointDataChanged(
+	UINT32 deviceId,
+	UINT32 pressed
+	);
+
+MPCMouseProcessor_InjectRelease(
+	INT32 X Coordinate,
+	INT32 Y Coordinate,
+	UINT32 Device ID,
+	UINT32 Button Flags,
+	UINT32 Workspace ID
+	);
+
+MPCMouseProcessor_InjectPress(
+	INT32 X Coordinate,
+	INT32 Y Coordinate,
+	UINT32 Device ID,
+	UINT32 Button Flags,
+	UINT32 Workspace ID
+	);
+
+MPCMouseProcessor_PopulateTargetingDataForMouseDelta(
+	UINT32 deviceId,
+	INT32 deltaX,
+	INT32 deltaY,
+	INT32 numDeltaSamples,
+	INT32 cumDeltaX,
+	INT32 cumDeltaY,
+	FLOAT rotateByRadiansX,
+	FLOAT rotateByRadiansY
+	);
+
+MPCInputProviderBase_SendSourceDetectedFailed(
+	HEXINT64 pTarget,
+	UINT32 TargetPID,
+	UINT32 InputType,
+	UINT32 DeviceId,
+	UINT32 InputTimestamp,
+	UINT32 MPC Report Id,
+	UINT32 Id,
+	INT32 HRESULT
+	);
+
+MPCEyeGazeProcessor_DeviceDetached(
+	UINT32 deviceId
+	);
+
+MPCInputProviderSourceDetectedLost(
+	HEXINT64 pMPCTarget,
+	UINT32 TargetPID,
+	UNICODESTRING InputType,
+	UINT32 DeviceId,
+	UINT32 InputTimestamp,
+	UINT32 MPC Report Id,
+	BOOLEAN SourceDetected,
+	UINT32 Id
+	);
+
+MPCInputProviderBase_Destroy(
+	UINT32 Device ID,
+	UINT32 Device Type
+	);
+
+MPCGenericInputReport(
+	UINT32 InputType,
+	UINT32 DeviceId,
+	UINT32 InputTimestamp,
+	BOOLEAN perform3DProcessing,
+	UINT32 MPC Report Id,
+	UINT32 MPCGestureType,
+	UINT32 MPCAugmentedGestureType
+	);
+
+MPCEyeGazeProcessor_DeviceAttached(
+	UINT32 deviceId
+	);
+
+MPCInputProviderBase_Create(
+	UINT32 Device ID,
+	UINT32 Device Type
+	);
+
+MPCHandInputReport(
+	UINT32 InputType,
+	UINT32 DeviceId,
+	UINT32 InputTimestamp,
+	BOOLEAN perform3DProcessing,
+	UINT32 MPC Report Id,
+	UINT32 MPCGestureType,
+	UINT32 MPCAugmentedGestureType,
+	UINT32 Tracked,
+	UINT32 HandId,
+	ANSISTRING Position,
+	UINT32 State,
+	ANSISTRING Velocity,
+	ANSISTRING GuidanceDirection,
+	FLOAT GuidanceScore,
+	UINT32 Gesture
+	);
+
+MPCVoiceInputReport(
+	UINT32 InputType,
+	UINT32 DeviceId,
+	UINT32 InputTimestamp,
+	BOOLEAN perform3DProcessing,
+	UINT32 MPC Report Id,
+	UINT32 MPCGestureType,
+	UINT32 MPCAugmentedGestureType,
+	UINT32 Phrase
+	);
+
+MPCHandInputReport(
+	UINT32 InputType,
+	UINT32 DeviceId,
+	UINT32 InputTimestamp,
+	BOOLEAN perform3DProcessing,
+	UINT32 MPC Report Id,
+	UINT32 MPCGestureType,
+	UINT32 MPCAugmentedGestureType,
+	UINT32 Tracked,
+	UINT32 HandId,
+	ANSISTRING Position,
+	UINT32 State,
+	ANSISTRING Velocity,
+	ANSISTRING GuidanceDirection,
+	FLOAT GuidanceScore,
+	UINT32 Gesture
+	);
+
+MPCSpatialControllerInputReport(
+	UINT32 InputType,
+	UINT32 DeviceId,
+	UINT32 InputTimestamp,
+	BOOLEAN perform3DProcessing,
+	UINT32 MPC Report Id,
+	UINT32 MPCAugmentedGestureType
+	);
+
+MPCSpatialControllerInputReport(
+	UINT32 InputType,
+	UINT32 DeviceId,
+	UINT32 InputTimestamp,
+	BOOLEAN perform3DProcessing,
+	UINT32 MPC Report Id,
+	UINT32 MPCAugmentedGestureType
+	);
+
+MPCClickerInputReport(
+	UINT32 InputType,
+	UINT32 DeviceId,
+	UINT32 InputTimestamp,
+	BOOLEAN perform3DProcessing,
+	UINT32 MPC Report Id,
+	UINT32 MPCAugmentedGestureType
+	);
+
+MPCClickerInputReport(
+	UINT32 InputType,
+	UINT32 DeviceId,
+	UINT32 InputTimestamp,
+	BOOLEAN perform3DProcessing,
+	UINT32 MPC Report Id,
+	UINT32 MPCAugmentedGestureType
+	);
+
+MPCEyeGazeProcessor_UnexpectedSecondEyeGazeProcessor(
+	UINT32 newDeviceId,
+	UINT32 currentDeviceId
+	);
+
+MPCPerfCounter_ReportPerf(
+	UINT32 deviceId,
+	UNICODESTRING type,
+	FLOAT avgReportsPerSec
+	);
+
+Cursor::UpdateDpiScale(
+	UINT64 DeviceId,
+	INT32 Dpi
+	);
+
+Cursor::UpdateClientOwner(
+	UINT32 DeviceId,
+	UINT64 ClientOwner
+	);
+
+Cursor::SetPosition(
+	UINT64 DeviceId,
+	STRING CursorPos,
+	INT32 X,
+	INT32 Y
+	);
+
+InputService!HotKeyProcessor::RegisterHotKey(
+	ANSISTRING "RegisterHotKey failed because the HotKey is already registered.",
+	UINT32 ID,
+	UINT32 fsModifiers,
+	UINT32 vk,
+	BOOLEAN fIsRemotable
+	);
+
+InputService!HotKeyProcessor::FindEnabledHotKey(
+	ANSISTRING "Registered HotKey was found, but was ignored because of KeyProcessingFlag_NoHotkeys flag.",
+	UINT32 fsModifiers,
+	UINT32 vk
+	);
+
+InputService!HotKeyProcessor::DetectAndProcessHotKey(
+	ANSISTRING "Called OnHotKeyDetected",
+	UINT32 phk->id,
+	UINT32 phk->fsModifiers,
+	UINT32 phk->vk,
+	UINT64 m_setKeysDown.size(),
+	UINT64 m_mapHotKeys.size()
+	);
+
+InputService!HotKeyProcessor::UnregisterHotKey(
+	ANSISTRING "UnregisterHotKey failed because the HotKey was not registered.",
+	UINT32 fsModifiers,
+	UINT32 vk
+	);
+
+InputService!HotKeyProcessor::UnregisterHotKey(
+	UINT32 fsModifiers,
+	UINT32 vk
+	);
+
+InputService!HotKeyProcessor::RegisterHotKey(
+	UINT32 ID,
+	UINT32 fsModifiers,
+	UINT32 vk,
+	BOOLEAN fIsRemotable
+	);
+
+InputService!HotKeyProcessor::DetectAndProcessHotKey(
+	ANSISTRING "Enabled hotkey found",
+	UINT32 vk,
+	BOOLEAN fKeyUp,
+	UINT32 m_uiModifiers,
+	UINT64 m_setKeysDown.size(),
+	UINT64 m_mapHotKeys.size()
+	);
+
+InputService!HotKeyProcessor vkey down(
+	UINT32 vk
+	);
+
+InputService!HotKeyProcessor::DetectAndProcessHotKey(
+	UINT32 vk,
+	BOOLEAN fKeyUp,
+	UINT32 m_uiModifiers,
+	UINT64 m_setKeysDown.size(),
+	UINT64 m_mapHotKeys.size()
+	);
+
+InputService!HotKeyProcessor::DetectAndProcessHotKey(
+	ANSISTRING "Called OnHotKeyAllKeysUp",
+	UINT32 pPreviousHotKey->id,
+	UINT32 pPreviousHotKey->fsModifiers,
+	UINT32 pPreviousHotKey->vk
+	);
+
+InputService!HotKeyProcessor::DetectAndProcessHotKey(
+	ANSISTRING "Checking hotkey for all keys up",
+	UINT32 pPreviousHotKey->id,
+	UINT32 pPreviousHotKey->fsModifiers,
+	UINT32 pPreviousHotKey->vk
+	);
+
+InputService!HotKeyProcessor::OnHotKeyAcknowledged(
+	VOID
+	);
+
+InputService!HotKeyProcessor::FindHotKey(
+	ANSISTRING "Searching for hotkey",
+	UINT32 vk,
+	UINT32 fsModifiers,
+	UINT64 m_setKeysDown.size(),
+	UINT64 m_mapHotKeys.size()
+	);
+
+InputService!HotKeyProcessor::DetectAndProcessHotKey(
+	ANSISTRING "Registered hotkey found",
+	UINT32 vk,
+	UINT32 fsModifiers,
+	UINT64 m_setKeysDown.size(),
+	UINT64 m_mapHotKeys.size()
+	);
+
+InputService!HotKeyProcessor::DetectAndProcessHotKey(
+	UINT32 m_uiModifiers,
+	UINT64 m_setKeysDown.size()
+	);
+
+OpenHolographicDevice(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId,
+	ANSISTRING DriverType,
+	UNICODESTRING DeviceName,
+	GUID CorrelationGUID
+	);
+
+GetPoseAtTime_TranslationInvalid(
+	UINT64 PartA_PrivTags
+	);
+
+GetPoseAtTime_NotEnoughPosesToInterpolate(
+	UINT64 PartA_PrivTags
+	);
+
+GetDynamicNodeButtonLatency(
+	HEXINT64 pThis,
+	GUID driverHandleCorrelationGuid,
+	GUID nodeId,
+	INT32 latencyMicroSeconds
+	);
+
+HolographicDriverHandleWrapper_DeviceIoControlFailed(
+	HEXINT64 pThis,
+	UINT32 error,
+	UINT32 dwIoControlCode,
+	HEXINT64 pThis,
+	GUID driverHandleCorrelationGuid
+	);
+
+GetDynamicNodeHapticsOutputPeriodMicroseconds(
+	HEXINT64 pThis,
+	GUID driverHandleCorrelationGuid,
+	GUID nodeId,
+	INT32 outputPeriodMicroseconds
+	);
+
+NodePropertyRequestAdded(
+	GUID driverHandleCorrelationGuid,
+	GUID nodeId,
+	GUID propertyKey
+	);
+
+GetDynamicNodeHapticsIntensityLevels(
+	HEXINT64 pThis,
+	GUID driverHandleCorrelationGuid,
+	GUID nodeId,
+	INT32 intensityLevels
+	);
+
+TelemetryCloseHolographicDevice(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId,
+	ANSISTRING DriverType,
+	UNICODESTRING DeviceName,
+	GUID CorrelationGUID
+	);
+
+NodePropertyCache_SetValue(
+	GUID correlationGuid,
+	GUID nodeId,
+	GUID propertyKey,
+	UINT64 valueSize
+	);
+
+TrackingStateChanged(
+	GUID correlationGuid,
+	GUID nodeId,
+	ANSISTRING oldState,
+	ANSISTRING newState,
+	INT64 qpf
+	);
+
+DestroySpatialGraphNodeReference(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+DestroySpatialGraphNodeReference(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	SIGNED wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+GetPoseAtTime_NotEnoughPosesToExtrapolate(
+	UINT64 PartA_PrivTags
+	);
+
+PrecachePropertiesElapsedTime(
+	ANSISTRING driverType,
+	GUID correlationGuid,
+	UINT64 elapsedMilliseconds
+	);
+
+CreateSpatialGraphNodeReference(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+OpenHolographicDevice(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	SIGNED wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+NodePropertyCacheMiss(
+	GUID correlationGuid,
+	GUID propertyKey,
+	GUID nodeId,
+	BOOL32 shouldDoIoctl
+	);
+
+CloseHolographicDevice(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	SIGNED wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+NodePropertyCallbackCleanedUp(
+	GUID correlationGuid,
+	GUID nodeId
+	);
+
+DevicePropertyRequestAdded(
+	ANSISTRING driverType,
+	GUID driverHandleCorrelationGuid,
+	GUID propertyKey
+	);
+
+GetSittingStandingOnly(
+	HEXINT64 pThis,
+	GUID driverHandleCorrelationGuid,
+	BOOLEAN value
+	);
+
+TelemetryOpenHolographicDevice(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+OpenHolographicDevice(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+IoctlTimeout(
+	GUID correlationGuid,
+	HEXINT32 ioctlCode,
+	UINT32 timeoutMilliseconds,
+	GUID propertyKey,
+	GUID nodeId,
+	UNICODESTRING forDevice,
+	UINT64 PartA_PrivTags
+	);
+
+PrecachePropertiesRanLong(
+	ANSISTRING driverType,
+	GUID correlationGuid,
+	UINT64 elapsedMilliseconds,
+	UINT64 threshold,
+	UINT64 PartA_PrivTags
+	);
+
+GetPoseAtTime_OrientationInvalid(
+	UINT64 PartA_PrivTags
+	);
+
+SpatialGraphNodeReferenceFactoryDestroyed(
+	HEXINT64 pFactory
+	);
+
+CreateSpatialGraphNodeReference(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	SIGNED wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+GetPoseAtTime_PredictFromPoses(
+	UINT64 PartA_PrivTags,
+	INT32 hrPredictFromPoses,
+	INT64 poseTimestampInQpcCounts,
+	INT64 availableTimestampInQpcCounts,
+	UINT32 validity,
+	FLOAT nodeToParent
+	);
+
+TelemetryCloseHolographicDevice(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+DriverCompatibilityDetermined(
+	ANSISTRING driverType,
+	UINT32 platformSupportedDDILevels.EarliestSupported,
+	UINT32 platformSupportedDDILevels.LatestSupported,
+	UINT32 driverSupportedDDILevels.EarliestSupported,
+	UINT32 driverSupportedDDILevels.LatestSupported,
+	BOOLEAN isCompatible
+	);
+
+TelemetrySetStaticNodeDurability(
+	HEXINT64 pThis,
+	GUID driverHandleCorrelationGuid,
+	GUID nodeId,
+	INT32 durability,
+	UINT64 PartA_PrivTags
+	);
+
+NodePropertyCallbackUnregistered(
+	GUID correlationGuid,
+	GUID nodeId
+	);
+
+GetStaticNodePoses(
+	HEXINT64 pSpatialGraphDriverClient,
+	GUID driverHandleCorrelationGuid,
+	GUID parentNodeId,
+	GUID pNodeIds
+	);
+
+RegisterPropertiesUpdatedCallback(
+	ANSISTRING driverType,
+	HEXINT64 pThis,
+	HEXINT64 pCallback,
+	HEXINT64 pCallbackWeakRef
+	);
+
+GetForwardOnly(
+	HEXINT64 pThis,
+	GUID driverHandleCorrelationGuid,
+	BOOLEAN value
+	);
+
+NodePropertyCallbackRegistered(
+	GUID correlationGuid,
+	GUID nodeId
+	);
+
+DestroySpatialGraphNodeReference(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId,
+	GUID driverHandleCorrelationGuid,
+	GUID nodeId
+	);
+
+DeleteStaticNodes(
+	HEXINT64 pThis,
+	GUID driverHandleCorrelationGuid,
+	INT32 operation,
+	GUID AsPtr<const GUID>(pNodeIds)
+	);
+
+GetErrorStatuses(
+	ANSISTRING driverType,
+	UNICODESTRING deviceInterfacePath,
+	BOOLEAN Statuses,
+	UINT32 StatusCode,
+	UINT32 SubstatusCode,
+	FILETIME OriginatedTime,
+	UINT64 PartA_PrivTags
+	);
+
+SpatialGraphNodeReferenceFactoryCreated(
+	HEXINT64 pFactory
+	);
+
+CreateSpatialGraphNodeReference(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId,
+	GUID driverHandleCorrelationGuid,
+	GUID nodeId,
+	INT32 requestedTrackingLevel
+	);
+
+PropertyCache_SetValue(
+	ANSISTRING driverType,
+	GUID correlationGuid,
+	GUID propertyKey,
+	UINT64 valueSize
+	);
+
+NodePropertyCache_RemoveNode(
+	GUID correlationGuid,
+	GUID nodeId
+	);
+
+CloseHolographicDevice(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId,
+	ANSISTRING DriverType,
+	UNICODESTRING DeviceName,
+	GUID CorrelationGUID
+	);
+
+NoPoseReceivedYet(
+	GUID nodeId,
+	INT32 hr
+	);
+
+GetDynamicNodeTrackingCapabilities(
+	HEXINT64 pThis,
+	GUID driverHandleCorrelationGuid,
+	GUID nodeId,
+	HEXINT32 value
+	);
+
+TelemetryOpenHolographicDevice(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+GetDynamicNodeForDevice(
+	HEXINT64 pThis,
+	GUID driverHandleCorrelationGuid,
+	UNICODESTRING deviceInterfacePath,
+	GUID NodeId,
+	HEXINT32 TrackingCapabilities,
+	UINT64 PartA_PrivTags
+	);
+
+StartTracking(
+	GUID correlationGuid,
+	GUID nodeId,
+	ANSISTRING newState,
+	INT64 qpf
+	);
+
+NodePropertyRequestFailed(
+	GUID driverHandleCorrelationGuid,
+	GUID nodeId,
+	GUID propertyKey,
+	HRESULT hr
+	);
+
+TelemetryOpenHolographicDevice(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId,
+	ANSISTRING DriverType,
+	UNICODESTRING DeviceName,
+	GUID CorrelationGUID
+	);
+
+ActivityStoppedAutomatically(
+	VOID
+	);
+
+IoctlRanLong(
+	GUID correlationGuid,
+	HEXINT32 ioctlCode,
+	HRESULT hresult,
+	FLOAT elapsedMilliseconds,
+	UINT32 thresholdMilliseconds,
+	UINT64 PartA_PrivTags
+	);
+
+GetStaticNodeForPose(
+	HEXINT64 pThis,
+	GUID driverHandleCorrelationGuid,
+	GUID rootNodeId,
+	FLOAT pose,
+	GUID value
+	);
+
+GetPoseAtTime_LatestPoseFromDriver(
+	UINT64 PartA_PrivTags,
+	UINT32 retrievedPoseIndex,
+	UINT32 numPosesReturned,
+	INT64 poseTimestampInQpcCounts,
+	INT64 availableTimestampInQpcCounts,
+	UINT32 validity,
+	FLOAT nodeToParent
+	);
+
+PropertyCache_RemoveValue(
+	ANSISTRING driverType,
+	GUID correlationGuid,
+	GUID propertyKey
+	);
+
+GetPoseAtTime(
+	GUID threadActivityId,
+	HEXINT64 pNodeRef,
+	GUID nodeId,
+	INT64 targetTimestamp,
+	INT64 basePoseSensorTimestamp,
+	INT64 availableTimestamp,
+	INT64 executionTimeInMicroSecs,
+	INT64 deltaNowMinusSensorInMicroSecs,
+	INT64 deltaToMinusNowInMicroSecs,
+	INT64 deltaToMinusSensorInMicroSecs,
+	INT64 poseRequestToAvailableInMicroSecs,
+	INT64 motionToFilterDriverLatencyInMicroSecs,
+	INT32 static_cast<int>(predictionType),
+	INT64 value.PoseTimestampInQpcCounts,
+	INT64 value.AvailableTimestampInQpcCounts,
+	FLOAT value.NodeToParent.OrientationAndPosition,
+	FLOAT value.LinearVelocity,
+	FLOAT value.AngularVelocity,
+	FLOAT value.LinearAccel,
+	FLOAT value.AngularAccel,
+	HEXINT32 value.Validity,
+	BOOLEAN positionApproximated,
+	HEXINT32 changedValidityFlags
+	);
+
+Log_Error(
+	UINT32 hr,
+	UNICODESTRING message
+	);
+
+Log_Information(
+	UINT32 hr,
+	UNICODESTRING message
+	);
+
+NodePropertyCallbackFailedToResolve(
+	GUID correlationGuid,
+	GUID nodeId
+	);
+
+DevicePropertyRequestFailed(
+	ANSISTRING driverType,
+	GUID driverHandleCorrelationGuid,
+	GUID propertyKey,
+	HRESULT hr
+	);
+
+CloseHolographicDevice(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+TelemetryCloseHolographicDevice(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+DevicePropertyCacheMiss(
+	ANSISTRING driverType,
+	GUID correlationGuid,
+	GUID propertyKey,
+	BOOL32 shouldDoIoctl
+	);
+
+PropertyCache_Cleared(
+	ANSISTRING driverType,
+	GUID correlationGuid
+	);
+
+SpatialGraphDeviceNotUsable(
+	UNICODESTRING deviceInterfacePath
+	);
+
+ControllerIsFarFromHeadChanged(
+	UINT32 DeviceId,
+	UINT32 InputId,
+	BOOLEAN IsControllerFarFromHead
+	);
+
+SpatialInteractionHeartbeat_ButtonCounters(
+	GUID sessionGuid,
+	UINT16 productId,
+	UINT16 vendorId,
+	UINT16 versionNumber,
+	UINT32 totalReportCount,
+	HEXINT32 buttonFlags,
+	UINT32 buttonCounters
+	);
+
+ParsingInitialized(
+	INT32 hr,
+	UINT32 DeviceId,
+	UINT32 InputId,
+	UNICODESTRING InstancePath,
+	UINT16 VendorId,
+	UINT16 ProductId,
+	UINT16 ProductVersion,
+	UINT16 Usage,
+	UINT16 UsagePage,
+	BOOLEAN SupportsHaptics,
+	BOOLEAN IsSimulation,
+	BOOLEAN HasAnalogTrigger,
+	UINT32 Buttons,
+	UINT8 Handedness,
+	UINT32 ReadAttempts,
+	UNICODESTRING HoldingPosition,
+	UNICODESTRING HoldingOrientation,
+	UNICODESTRING PointerPosition,
+	UNICODESTRING PointerOrientation
+	);
+
+ControllerNodeStartTracking(
+	INT32 hr,
+	UINT32 DeviceId,
+	UINT32 InputId,
+	BOOLEAN IsSixDofController,
+	UINT32 RequestedTrackingState,
+	UINT32 TrackingCapabilities,
+	GUID NodeId,
+	UINT32 NodeInfoFailureCount
+	);
+
+NodeStatusOK(
+	UINT32 DeviceId
+	);
+
+StopHapticsFeedback(
+	UINT32 DeviceId,
+	UINT32 InputId
+	);
+
+EffectiveHapticsFeedback(
+	INT32 hr,
+	UINT32 DeviceId,
+	UINT32 InputId,
+	UINT8 Intensity
+	);
+
+ControllerNodeButtonLatencySet(
+	UINT32 DeviceId,
+	UINT32 InputId,
+	INT32 ButtonLatencyMicroSec
+	);
+
+NodeStatusError(
+	UINT32 DeviceId,
+	UINT64 TotalErrors,
+	UINT32 ReportedStatusCode,
+	UINT32 ReportedSubstatusCode
+	);
+
+ResetReportDueToFirmwareUpdate(
+	UINT32 DeviceId,
+	UINT32 InputId
+	);
+
+UpdatePoseError(
+	INT32 hr,
+	UINT32 DeviceId,
+	UNICODESTRING Detail
+	);
+
+TelemetryFeaturesRead(
+	UNICODESTRING DeviceName,
+	INT32 LastHR,
+	UINT32 FailuresCount
+	);
+
+ControllerGetDynamicNodeFailed(
+	INT32 hr,
+	UINT32 DeviceId
+	);
+
+EnsureDynamicNodeForDeviceFailed(
+	INT32 hr,
+	UINT32 DeviceId
+	);
+
+ControllerNodeStoppedTracking(
+	UINT32 DeviceId,
+	UINT32 StoppedReason
+	);
+
+TimestampClampedDueToLatency(
+	UINT32 DeviceId,
+	UINT32 InputId,
+	INT64 PreviousTimestamp,
+	INT64 EstimatedTimestamp
+	);
+
+IgnoredError(
+	UINT32 DeviceId,
+	INT32 hr,
+	UNICODESTRING Operation
+	);
+
+SetHapticsFeedback(
+	INT32 hr,
+	UINT32 DeviceId,
+	UINT32 InputId,
+	UINT16 Waveform,
+	UINT8 Intensity,
+	UINT16 DurationMS
+	);
+
+HapticsIntensityLevelsSet(
+	UINT32 DeviceId,
+	UINT32 InputId,
+	UINT8 IntensityLevels
+	);
+
+InitializeHapticsEngine(
+	BOOLEAN directCommands,
+	INT64 outputReportPeriodMicroseconds,
+	UINT8 intensityLevels,
+	BOOLEAN initialKick,
+	BOOLEAN halfDurationFirstInterval
+	);
+
+ButtonsStateChanged(
+	UINT32 DeviceId,
+	UINT32 InputId,
+	UINT32 Buttons
+	);
+
+HapticsOutputReportPeriodMicrosecondsSet(
+	UINT32 DeviceId,
+	UINT32 InputId,
+	UINT32 OutputReportPeriodMicroseconds
+	);
+
+ControllerHapticsStatistics(
+	UINT32 DeviceId,
+	INT32 CommandsWithoutDurationCount,
+	INT32 CommandsWithDurationCount,
+	DOUBLE AverageCommandDurationMilliseconds
+	);
+

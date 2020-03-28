@@ -1,0 +1,4823 @@
+ProviderNames:
+	Microsoft.Windows.Utc.WatchdogProvider
+	Microsoft.Windows.Utc.ManagedHost
+	Microsoft.Windows.DiagTrack.XML
+	Microsoft.Windows.TelemetryViewer
+	Microsoft.Windows.DiagTrack
+	Microsoft.Windows.Sentinels
+
+
+
+**** Events *****
+ServiceMain_HandleStopEvent(
+	VOID
+	);
+
+ServiceMain_DllMain_Unregister(
+	VOID
+	);
+
+ServiceMain_DllMain_Register(
+	VOID
+	);
+
+Utils_SetRegistryKey(
+	INT32 HKEY,
+	UINT32 DataType,
+	COUNTEDSTRING KeyName,
+	COUNTEDSTRING ValueName,
+	UINT64 Value,
+	INT32 HRESULT
+	);
+
+SevilleBandwidthMonitor_DailyUploadQuotaPublish(
+	UINT64 BytesUploadedSoFar,
+	UINT64 BytesAllowed,
+	UINT32 PercentageUsed,
+	UINT32 NewTier,
+	UINT32 OldTier
+	);
+
+Utils_SetRegistryKey(
+	INT32 hKey,
+	UINT32 DataType,
+	COUNTEDSTRING KeyName,
+	COUNTEDSTRING ValueName,
+	BINARY Value,
+	UINT32 ValueSize,
+	INT32 HRESULT
+	);
+
+BandwidthMonitor_ReportingSucessfulUpload(
+	UINT64 StartOfDay,
+	UINT32 LastUploadedIndex,
+	UINT64 UploadSize
+	);
+
+BandwidthMonitor_CanUpload(
+	UINT64 StartOfDay,
+	UINT32 LastUploadedIndex,
+	UINT64 BytesAllowed,
+	UINT64 BytesUploadedSoFar,
+	UINT64 UploadRequestSizeInBytes,
+	BOOLEAN CanUpload
+	);
+
+BandwidthMonitor_UpdateMovingWindowToCurrentDay(
+	UINT64 StartOfDay,
+	UINT32 LastUploadIndex,
+	UINT64 CurrentTime
+	);
+
+BandwidthMonitor_BytesUploadedSoFar(
+	UINT64 StartOfDay,
+	UINT32 LastUploadedIndex,
+	UINT64 BytesUploadedSoFar
+	);
+
+BandwidthMonitor_UpdateMovingWindowToCurrentDay(
+	UINT64 StartOfDay,
+	UINT32 LastUploadIndex,
+	UINT64 CurrentTime
+	);
+
+AsimovEndpointConfig_UpdatedEndpointTypeStates(
+	UNICODESTRING Region
+	);
+
+AsimovEndpointConfig_EndpointRegionChanged_FromNoRegion(
+	COUNTEDSTRING NewRegion,
+	COUNTEDSTRING NewNormalUrl
+	);
+
+AsimovEndpointConfig_EndpointRegionChanged(
+	COUNTEDSTRING OldRegion,
+	COUNTEDSTRING OldNormalUrl,
+	COUNTEDSTRING NewRegion,
+	COUNTEDSTRING NewNormalUrl
+	);
+
+AsimovEndpointConfig_NewRegionNotConfigured(
+	COUNTEDSTRING OldRegion,
+	COUNTEDSTRING NewRegion
+	);
+
+AsimovEndpointConfig_EndpointRegionChanged_M365(
+	BOOLEAN OldCommercialIdSet,
+	BOOLEAN NewCommercialIdSet,
+	UNICODESTRING OldCustomUrlPrefix,
+	UNICODESTRING NewCustomUrlPrefix
+	);
+
+Utils_CannotReadTestHookDueToPpl(
+	VOID
+	);
+
+Utils_GetRegistryKey(
+	INT32 HKEY,
+	UINT32 DataType,
+	COUNTEDSTRING KeyName,
+	COUNTEDSTRING ValueName,
+	UINT32 Value,
+	INT32 HRESULT
+	);
+
+Utils_GetRegistryKey(
+	INT32 HKEY,
+	UINT32 DataType,
+	COUNTEDSTRING KeyName,
+	COUNTEDSTRING ValueName,
+	UINT64 Value,
+	INT32 HRESULT
+	);
+
+Utils_GetRegistryKey(
+	INT32 HKEY,
+	UINT32 DataType,
+	COUNTEDSTRING KeyName,
+	COUNTEDSTRING ValueName,
+	BINARY Value,
+	UINT32 ValueSize,
+	INT32 HRESULT
+	);
+
+AsimovUploadQueue_ForceUpload_CreatingForceWork(
+	INT8 WorkDefLatency,
+	COUNTEDSTRING TenantIKey,
+	UINT64 PTP_WORK,
+	UINT64 AsimovUploadWorkItemAddr
+	);
+
+AsimovUploadQueue_ArmTimersIfStorageBuffersHaveData(
+	INT8 Latency,
+	UINT32 DesiredLatencyOrIntMax
+	);
+
+AsimovUploadQueue_WorkItemCompleted(
+	INT8 WorkDefLatency,
+	INT16 Result,
+	BOOLEAN IsPreempting,
+	BOOLEAN IsShuttingDown,
+	BOOLEAN IsForcing
+	);
+
+AsimovUploadQueue_SkippingPreemptionBecausePriorityNotHighEnough(
+	INT8 OutstandingLatency,
+	INT8 QueuedLatency
+	);
+
+AsimovUploadQueue_Preempting(
+	INT8 OutstandingLatency,
+	INT8 QueuedLatency
+	);
+
+AsimovUploadQueue_CreatingWork(
+	INT8 WorkDefLatency,
+	UINT64 PTP_WORK,
+	UINT64 AsimovUploadWorkItemAddr
+	);
+
+AsimovUploadQueue_ServiceQueue_EmptyWorkQueue(
+	VOID
+	);
+
+AsimovUploadQueue_ServiceQueue_ReleasingNetworkResources(
+	VOID
+	);
+
+AsimovUploadQueue_ServiceQueue_UploadsDisallowed(
+	VOID
+	);
+
+AsimovUploadQueue_AddWork(
+	INT8 Latency
+	);
+
+AsimovUploader_PersistEvent(
+	ANSISTRING EventPayload,
+	INT8 EventLatency,
+	INT8 EventPersistence,
+	GUID GroupId,
+	GUID ProviderId,
+	UINT64 Categories,
+	BOOLEAN IsCore,
+	UINT32 ProcessId
+	);
+
+AsimovUploader_PersistEvent(
+	ANSISTRING EventPayload,
+	INT8 EventLatency,
+	INT8 EventPersistence,
+	GUID GroupId,
+	GUID ProviderId,
+	UINT64 Categories,
+	BOOLEAN IsCore,
+	UINT32 ProcessId,
+	UINT8 StorageBufferType
+	);
+
+AsimovUploader_RejectEventForExceedingSizeLimit(
+	UNICODESTRING EventName,
+	ANSISTRING PortionOfEventString,
+	UINT64 Length
+	);
+
+AsimovEventSerializer_SyntheticKilled(
+	COUNTEDSTRING EventName,
+	COUNTEDSTRING TenantToken,
+	INT8 Persistence
+	);
+
+AsimovUploader_UploadScenario(
+	GUID ScenarioId,
+	GUID ScenarioInstanceId,
+	UINT32 HRESULT
+	);
+
+AsimovEventSerializer_TriggerKilled(
+	COUNTEDSTRING EventName,
+	COUNTEDSTRING TenantToken,
+	INT8 Persistence
+	);
+
+Utils_GetRegistryKey(
+	INT32 HKEY,
+	UINT32 DataType,
+	COUNTEDSTRING KeyName,
+	COUNTEDSTRING ValueName,
+	COUNTEDSTRING Value,
+	INT32 HRESULT
+	);
+
+KillSwitchManager_SetKillRequest(
+	UNICODESTRING Token,
+	UINT8 Mode,
+	UINT64 DurationMillis
+	);
+
+AsimovUploader_SelectedDataByLatency(
+	INT8 Latency,
+	BOOLEAN ForceUpload,
+	UNICODESTRING IKey,
+	UINT8 Type,
+	UINT32 EventCount
+	);
+
+AsimovUploader_RejectedEvent(
+	COUNTEDSTRING Name,
+	ANSISTRING Reason,
+	COUNTEDANSISTRING FullText,
+	BOOLEAN AllRejected
+	);
+
+AsimovUploadWorkItem_DeletingBufferForTooManyUploadFailures(
+	UINT32 EventCount,
+	UINT64 BufferSize
+	);
+
+AsimovUploader_AcceptedAndRejectedEvents(
+	UINT32 AcceptedNumberOfEvents,
+	UINT32 RejecetedNumberOfEvents
+	);
+
+AsimovUploadWorkItem_NonRetriableFailure(
+	UINT32 WinhttpStatus,
+	UINT32 RejectedNumberOfEvents
+	);
+
+AsimovUploader_VortexUploadNetworkSuccess_0(
+	UNICODESTRING Url,
+	UINT32 HttpStatus,
+	UNICODESTRING ResponseHeaders
+	);
+
+AsimovUploadWorkItem_HandleNetworkError(
+	INT32 Result
+	);
+
+AsimovUploader_DeviceTicketExpired(
+	UINT64 LastQueryFiletime,
+	INT32 LastQueryResult,
+	UINT64 CurrentFileTime,
+	UINT64 TicketExpiryTime
+	);
+
+AsimovUploader_FailedDeviceTicketQuery(
+	INT32 LastQueryResult
+	);
+
+Utils_SetRegistryKey(
+	UINT32 DataType,
+	INT32 HKEY,
+	COUNTEDSTRING KeyName,
+	COUNTEDSTRING ValueName,
+	UINT32 Value,
+	INT32 HRESULT
+	);
+
+AsimovUploadWorkItem_UploadBuffer_MsaServiceInactive(
+	VOID
+	);
+
+AsimovUploadWorkItem_OnWorkItemStarted(
+	INT8 WorkDef_Latency,
+	BOOLEAN WorkDef_Force,
+	UNICODESTRING WorkDef_ForceTenant
+	);
+
+AsimovUploader_CostDeferredUploadSucceeded(
+	VOID
+	);
+
+AsimovUploader_RealtimeUploadSucceeded(
+	VOID
+	);
+
+AsimovUploadWorkItem_IsCostDeferredAllowedOverCosted(
+	BOOLEAN IsOldEnough,
+	BOOLEAN HasBandwidthSpace
+	);
+
+AsimovUploader_NormalUploadSucceeded(
+	VOID
+	);
+
+AsimovUploader_ResponseLog(
+	UNICODESTRING RequestHeaders,
+	UINT32 StatusCode,
+	UNICODESTRING ResponseHeaders,
+	ANSISTRING ResponseText,
+	UINT32 NumEvents,
+	INT32 HRESULT
+	);
+
+Utils_FileTimeToMillisecond8601Failed(
+	INT64 FileTime,
+	UINT16 Year,
+	UINT16 Month,
+	UINT16 Day,
+	UINT16 Hour,
+	UINT16 Minute,
+	UINT16 Second,
+	UINT32 SecondDecimal,
+	UINT32 LocaleId
+	);
+
+AsimovUploader_UploadEventBuffer(
+	VOID
+	);
+
+AsimovSharedPartAState_FailedToUpdateWcosProductId(
+	VOID
+	);
+
+AsimovSharedPartAState_UpdateWcosProductId(
+	UINT32 WCOSProductId
+	);
+
+Utils_GetWcosProductId(
+	UINT32 WcosProductId
+	);
+
+AsimovSharedPartAState_UpdateProductType(
+	UINT8 ProductType
+	);
+
+AsimovSharedPartAState_UnlicensedProductType(
+	VOID
+	);
+
+AsimovSharedPartAState_ProductTypeTooLarge(
+	UINT32 ProductType
+	);
+
+Utils_OpenKey(
+	INT32 HKEY,
+	COUNTEDSTRING InputKeyName,
+	UNICODESTRING ExpandedKeyName,
+	INT32 ResultHandle
+	);
+
+Utils_OpenKeyFailed(
+	INT32 HKEY,
+	COUNTEDSTRING InputKeyName,
+	UNICODESTRING ExpandedKeyName,
+	UINT32 Error
+	);
+
+Utils_ServerLevelsEnum(
+	COUNTEDSTRING Key,
+	UINT32 Value
+	);
+
+AsimovSharedPartAState_UpdateIsEducationEnvironment(
+	UINT8 IsEducationEnvironment
+	);
+
+Utils_SetRegistryKey(
+	INT32 HKEY,
+	UINT32 DataType,
+	COUNTEDSTRING KeyName,
+	COUNTEDSTRING ValueName,
+	COUNTEDSTRING Value,
+	INT32 HRESULT
+	);
+
+AsimovSharedPartAState_EducationEnvironmentRegistryKeyChangeNotificationReceived(
+	VOID
+	);
+
+AsimovSharedPartAState_OsEditionChangeNotificationReceived(
+	VOID
+	);
+
+IAsimovEvent_UnexpectedBootIdValue(
+	INT16 DataType,
+	UINT32 DataSize
+	);
+
+ProxyConfig_Update_ResetNonOverrideFailures(
+	UINT32 OverrideFailureCount,
+	COUNTEDSTRING OverrideProxyServer
+	);
+
+ProxyConfig_Update_ResetOverrideFailures(
+	UINT32 NonOverrideFailureCount,
+	COUNTEDSTRING OverrideProxyServer
+	);
+
+ProxyConfig_AutodetectedProxySelected(
+	UINT32 OverrideFailureCount,
+	UINT32 NonOverrideFailureCount,
+	UNICODESTRING OverrideProxyServer
+	);
+
+ProxyConfig_TelemetryProxyUpdated(
+	UNICODESTRING ProxyOverrideServer
+	);
+
+ProxyConfig_TelemetryProxySelected(
+	UINT32 OverrideFailureCount,
+	UINT32 NonOverrideFailureCount,
+	UNICODESTRING OverrideProxyServer
+	);
+
+LifetimeManager_UpdateCommonSchemaVersion(
+	COUNTEDSTRING NewCsVersion,
+	BOOLEAN ShouldUploadToOneCollector
+	);
+
+DiagTrack_Rundown(
+	VOID
+	);
+
+DiagTrack_Rundown_NoRemoteAggregatorManager(
+	VOID
+	);
+
+DiagTrack_Rundown_NoUserManager(
+	VOID
+	);
+
+DiagTrack_Rundown_NoScenarioObjectStorage(
+	VOID
+	);
+
+DiagTrack_Rundown_NoAgentETWConsumer(
+	VOID
+	);
+
+DiagTrack_Rundown_NoTriggerListener(
+	VOID
+	);
+
+DiagTrack_Rundown_NoETWConsumer(
+	VOID
+	);
+
+DiagTrack_Rundown_TestHooks(
+	VOID
+	);
+
+DiagTrack_Rundown_TestHooks_AllTestHooksDisabledDueToPpl(
+	VOID
+	);
+
+DiagTrack_Rundown_TestHooks(
+	VOID
+	);
+
+DiagTrack_Rundown_NoTraceManager(
+	VOID
+	);
+
+DiagTrack_Rundown_NoUsageAnalyzer(
+	VOID
+	);
+
+DiagTrack_Rundown_NoScenarioManager(
+	VOID
+	);
+
+DiagTrack_Rundown_LifetimeManager_Authorization(
+	UINT32 CurrentAuthorization
+	);
+
+DiagTrack_Rundown(
+	VOID
+	);
+
+DiagTrack_Rundown_NoSettingsManager(
+	VOID
+	);
+
+DiagTrack_Rundown_TestHooks_HooksInfo(
+	COUNTEDSTRING Key,
+	COUNTEDSTRING Value,
+	UNICODESTRING Data
+	);
+
+LifetimeManager_ClearEventStore(
+	VOID
+	);
+
+Utils_FailedToWriteFile(
+	UNICODESTRING FileName,
+	INT32 HRESULT
+	);
+
+CLifetimeManager_KeepPreviousBootState(
+	ANSISTRING CurrentOsVer,
+	ANSISTRING PreviousOsVer
+	);
+
+CLifetimeManager_CleanPreviousOsState(
+	ANSISTRING CurrentOsVer,
+	ANSISTRING PreviousOsVer
+	);
+
+Utils_RecursiveFileDelete(
+	UNICODESTRING Path,
+	UNICODESTRING FileName,
+	INT32 HRESULT
+	);
+
+Utils_ExpandAndCreateDirectoryFailed(
+	COUNTEDSTRING InputPath,
+	UNICODESTRING CurrentExpandedPath,
+	UINT32 Error
+	);
+
+Utils_ExpandAndCreateDirectory_SkippingDiskRootPath(
+	COUNTEDSTRING InputPath,
+	UNICODESTRING ExpandedPath,
+	UINT64 CurrentPathIndex
+	);
+
+Utils_ExpandAndCreateDirectoryFailed(
+	COUNTEDSTRING InputPath,
+	UNICODESTRING ExpandedPath,
+	UINT32 Error
+	);
+
+Utils_CreateRegistryKeyFailed(
+	INT32 HKEY,
+	COUNTEDSTRING InputKeyName,
+	UNICODESTRING ExpandedKeyName,
+	UINT32 Error
+	);
+
+Utils_CreateRegistryKey(
+	INT32 HKEY,
+	COUNTEDSTRING InputKeyName,
+	UNICODESTRING ExpandedKeyName,
+	INT32 ResultHandle
+	);
+
+LifetimeManager_InitialCommonSchemaVersion(
+	UNICODESTRING LastCsVersion,
+	BOOLEAN ShouldUploadToOneCollector
+	);
+
+ResultMacro_LogError(
+	ANSISTRING File,
+	UINT32 LineNumber,
+	UINT32 FailureType,
+	INT32 FailureCount,
+	UINT32 ThreadId,
+	INT32 HRESULT,
+	UNICODESTRING UserMessage,
+	ANSISTRING FailingCode,
+	ANSISTRING FailingFunction
+	);
+
+SettingsManager_DumpDefinedProviderGroups(
+	ANSISTRING GroupId,
+	UNICODESTRING GroupName,
+	UNICODESTRING GroupShortName,
+	UNICODESTRING TenantToken
+	);
+
+SettingsManager_UtcSettingReceivedFromHost(
+	COUNTEDSTRING Name,
+	COUNTEDSTRING Value
+	);
+
+SettingsManager_DumpSettings(
+	UNICODESTRING Name,
+	UNICODESTRING Value
+	);
+
+SettingsManager_OneSettingsWnfUpdate_Finished(
+	VOID
+	);
+
+SettingsManager_OneSettingsWnfUpdate_Namespace(
+	UNICODESTRING Name,
+	UINT64 Hash,
+	UINT64 Time
+	);
+
+DiagTrack_Rundown_SettingsManager(
+	VOID
+	);
+
+DiagTrack_Rundown_SettingsManager(
+	VOID
+	);
+
+DiagTrack_Rundown_SettingsManager_SettingsInfo(
+	COUNTEDSTRING Namespace,
+	COUNTEDSTRING Key,
+	UNICODESTRING Value
+	);
+
+SettingsEndpoint_MillisToNextDownload(
+	UNICODESTRING Partner,
+	UNICODESTRING Feature,
+	UINT32 PolicyDelay,
+	UINT32 EffectivePolicyDelay,
+	UINT32 MillisToNextDownload
+	);
+
+SettingsManager_DeleteCorruptEndpointKey(
+	UNICODESTRING corruptKey,
+	INT32 hr
+	);
+
+UnregisterSettingsEndpoint_InvalidName(
+	COUNTEDSTRING endpoint
+	);
+
+SettingsManager_UnregisterSettingsEndpoint(
+	COUNTEDSTRING endpoint
+	);
+
+UnregisterSettingsEndpoint_InvalidPartnerFeature(
+	COUNTEDSTRING partner,
+	COUNTEDSTRING feature
+	);
+
+RegisterSettingsEndpoint_InvalidPartnerFeature(
+	COUNTEDSTRING partner,
+	COUNTEDSTRING feature
+	);
+
+RegisterSettingsEndpoint_InvalidName(
+	COUNTEDSTRING endpoint
+	);
+
+SettingsManager_ParsedInvalidUploadEndpoint_TooManyUrlDelimiters(
+	COUNTEDSTRING UrlString
+	);
+
+SettingsManager_ParsedInvalidUploadEndpoint_MissingUrlDelimiter(
+	COUNTEDSTRING UrlString
+	);
+
+SettingsManager_ParsedInvalidUploadEndpoint_InvalidEndpointType(
+	COUNTEDSTRING TypeRegionString
+	);
+
+SettingsManager_ParsedInvalidUploadEndpoint_TooManyDelimiters(
+	COUNTEDSTRING TypeRegionString
+	);
+
+SettingsManager_ParsedInvalidUploadEndpoint_MissingDelimiter(
+	COUNTEDSTRING TypeRegionString
+	);
+
+SettingsManager_ParsedInvalidEndpointPriority(
+	COUNTEDSTRING PriorityString
+	);
+
+SettingsManager_ParsedInvalidEndpointType(
+	COUNTEDSTRING EndpointDefinitionString
+	);
+
+SettingsManager_ReusingExistingDynamicSettingsEndpoint(
+	UNICODESTRING Endpoint,
+	UINT32 OldPriority,
+	UINT32 NewPriority
+	);
+
+SettingsManager_RecreatingDynamicSettingsEndpointWithChangedType(
+	UNICODESTRING Endpoint,
+	UINT32 OldType,
+	UINT32 NewType
+	);
+
+SettingsManager_RegisteringNewDynamicSettingsEndpoint(
+	UNICODESTRING Endpoint,
+	UINT32 Type,
+	UINT32 Priority
+	);
+
+SettingsManager_SettingNamespacePersisted(
+	COUNTEDSTRING Partner,
+	COUNTEDSTRING Feature,
+	COUNTEDSTRING ClientETag,
+	UNICODESTRING ServerETag
+	);
+
+SettingsManager_UnregisteringSettingsEndpoint_NoContentAvailable(
+	VOID
+	);
+
+SettingsManager_DownloadAborted(
+	VOID
+	);
+
+SettingsManager_SettingNamespaceDownloaded(
+	INT32 ErrorCode,
+	COUNTEDSTRING Partner,
+	COUNTEDSTRING Feature,
+	UNICODESTRING Parameters,
+	COUNTEDSTRING ClientETag,
+	UNICODESTRING ServerETag,
+	UINT32 RefreshIntervalFromHeader,
+	UNICODESTRING Headers,
+	INT32 Changed,
+	UINT32 StatusCode,
+	UINT32 Version
+	);
+
+SettingsManager_UnregisteringSettingsEndpoint_NamespaceTooLong(
+	VOID
+	);
+
+SettingsManager_SkippingDownload_NoNewEventsPersisted(
+	COUNTEDSTRING Partner,
+	COUNTEDSTRING Feature,
+	UINT64 LastDownloadTime,
+	UINT64 LastPersistedEventTime
+	);
+
+LoadSettingsFromFile(
+	UNICODESTRING FileName
+	);
+
+Utils_SetRegistryKey(
+	INT32 HKEY,
+	UINT32 DataType,
+	COUNTEDSTRING KeyName,
+	COUNTEDSTRING ValueName,
+	UINT32 ValueCount,
+	INT32 HRESULT
+	);
+
+SettingsManager_RegisteredNewRegion(
+	UINT32 Type,
+	UNICODESTRING Region,
+	UNICODESTRING ServerUrl,
+	UNICODESTRING TicketUrl,
+	BOOLEAN IsOneCollector
+	);
+
+SkippingOnDemandNoRequestSettingsFile(
+	UNICODESTRING File
+	);
+
+SkippingNonTelemetrySettingsFile(
+	UNICODESTRING File
+	);
+
+SettingsManager_UnregisterSettingsReceiver(
+	HEXINT64 Unregistrant
+	);
+
+SettingsManager_RegisterSettingsReceiver(
+	HEXINT64 Registrant
+	);
+
+SettingsManager_DownloadLoopAborted_TimeoutEncountered(
+	VOID
+	);
+
+SettingsManager_DownloadLoopAborted_CancelEventSet(
+	VOID
+	);
+
+SettingsManager_SkippingWnfPublish_NoSettingsChanged(
+	VOID
+	);
+
+SettingsManager_DownloadLoopAborted_MaxAllowedErrorsReached(
+	VOID
+	);
+
+SettingsManager_DownloadSettingsEndpointFailed(
+	INT32 ErrorCode,
+	UINT8 DownloadLoopErrorCount
+	);
+
+AttemptingDownload(
+	UNICODESTRING Endpoint
+	);
+
+SkippingDownloadDueToScenarioOptInStatus(
+	UNICODESTRING Endpoint
+	);
+
+SettingsManager_AllowSiufDownloadBelowFull(
+	VOID
+	);
+
+SettingsManager_AllowUifDownloadBelowFull(
+	VOID
+	);
+
+SkippingDownloadDueToPowerPolicy(
+	UNICODESTRING Endpoint
+	);
+
+DownloadNotScheduled(
+	UNICODESTRING Endpoint
+	);
+
+SkippingDownloadDueToNetworkPolicy(
+	UNICODESTRING Endpoint
+	);
+
+SettingsManager_DownloadsNotEnabled(
+	VOID
+	);
+
+SettingsManager_DownloadLatestSettingsApi_DownloadFailedInboxContentApplied(
+	INT32 request.OutResult
+	);
+
+SettingsManager_DownloadLatestSettingsApi_DownloadSucceededNoChange(
+	VOID
+	);
+
+SettingsManager_OobeCompleteCallback(
+	VOID
+	);
+
+SettingsManager_DownloadLatestSettingsApiUpdateRules(
+	VOID
+	);
+
+UtcApiManager_UnregisteringSettingsEndpoint(
+	VOID
+	);
+
+SettingsManager_DownloadLatestSettingsApi_DownloadFailedNoChange(
+	INT32 request.OutResult
+	);
+
+SettingsManager_RegisteringSettingsEndpoint(
+	VOID
+	);
+
+SettingsManager_ApiDownloadSettingsWorkCallback_InvalidPartnerFeature(
+	COUNTEDSTRING partner,
+	COUNTEDSTRING feature
+	);
+
+SettingsManager_ApiDownloadSettingsWorkCallbackStart(
+	UNICODESTRING Partner,
+	UNICODESTRING Feature,
+	BOOL32 AllowWinHttpCostedNetworkUse,
+	BOOL32 IsScenarioNameSpace
+	);
+
+SettingsManager_SettingUpdateRulesEvent(
+	BOOLEAN SettingsChanged,
+	BOOLEAN CampaignsChanged
+	);
+
+SettingsManager_DownloadSettingsWorkCallback(
+	VOID
+	);
+
+SettingsManager_OobeCompleteAtStartup(
+	VOID
+	);
+
+SettingsManager_OobeCompletionSubscriptionFailed(
+	INT32 ErrorCode
+	);
+
+SettingsManager_OobeCompleteQueryFailed(
+	INT32 ErrorCode
+	);
+
+SettingsManager_OobeNotCompleteAtStartup(
+	VOID
+	);
+
+SystemStateManager_WldpNotPresent(
+	VOID
+	);
+
+SystemStateManager_SModeQueryFailure(
+	INT32 HRESULT
+	);
+
+SystemStateManager_TimerWake(
+	COUNTEDSTRING Name
+	);
+
+SystemStateManager_NoXboxWnfNotification(
+	VOID
+	);
+
+SystemStateManager_FailedPowerSettingRegisterNotification_LowPower(
+	UINT32 Win32Error
+	);
+
+SystemStateManager_FailedPowerSettingRegisterNotification_UserPresence(
+	UINT32 Win32Error
+	);
+
+SystemStateManager_SModeSwitched(
+	BOOLEAN Previous S Mode value,
+	BOOLEAN Current S Mode value
+	);
+
+SystemStateManager_XboxMaintenancePeriod(
+	ANSISTRING Disposition
+	);
+
+SystemStateManager_WnfStateChangeCallback_FreeNetworkPresent(
+	UINT32 Level
+	);
+
+SystemStateManager_WnfStateChangeCallback_InternetPresent(
+	UINT32 Level
+	);
+
+AsimovUploader_NotifyInternetPresentUpdate(
+	VOID
+	);
+
+SystemStateManager_WnfStateChangeCallback_RmQuietMode(
+	UINT32 Flags
+	);
+
+SystemStateManager_WnfStateChangeCallback_ACCharging(
+	UINT32 Level
+	);
+
+SystemStateManager_WnfStateChangeCallback_BatteryChargeLevel(
+	UINT32 Level
+	);
+
+SystemStateManager_SModeTrialMode(
+	VOID
+	);
+
+SystemStateManager_UserPresenceTransition(
+	BOOL32 UserWasPreviouslyPresent,
+	BOOL32 UserPresent
+	);
+
+SystemStateManager_ConnectedStandbyTransition(
+	ANSISTRING Disposition
+	);
+
+Agent_ForwardEventToHost(
+	COUNTEDSTRING EventName
+	);
+
+HostDisconnectSignalReceived(
+	INT32 HostErrorCode
+	);
+
+Agent_TransportError(
+	INT32 ErrorCode
+	);
+
+Agent_SetLocalTelemetryLevelInRegistry(
+	UINT8 TelemetryLevel
+	);
+
+Agent_InvalidHostVersion(
+	UINT8 HostVersion,
+	UINT8 AgentVersion
+	);
+
+Agent_AcceptedHostVersion(
+	UINT8 HostVersion,
+	UINT8 AgentVersion
+	);
+
+Agent_ReceivedMessageFromHost(
+	INT8 MessageType
+	);
+
+Agent_SignalShutdownOnMessageReceivedFailure(
+	VOID
+	);
+
+Agent_ConnectedToHost(
+	VOID
+	);
+
+Agent_Reset(
+	VOID
+	);
+
+Agent_SignalReset(
+	UINT32 WaitMillis
+	);
+
+Agent_ResetAgentEventSet(
+	VOID
+	);
+
+Agent_StopEventSet(
+	VOID
+	);
+
+Agent_ShutdownAgentEventSet(
+	VOID
+	);
+
+LifetimeManager_SignalShutdown(
+	HEXINT64 StopEventHandle
+	);
+
+Agent_SignalShutdown(
+	VOID
+	);
+
+DynamicConfig_CannotReadTestHookDueToPpl(
+	VOID
+	);
+
+AuthorizationInfo_RetailOs_CoCreateInstanceFailed(
+	INT32 HRESULT
+	);
+
+AuthorizationInfo_PopulateFromOs(
+	BOOLEAN CanCollectAnyTelemetry,
+	BOOLEAN CanCollectHeartbeats,
+	BOOLEAN CanCollectCoreTelemetry,
+	BOOLEAN CanCollectOsTelemetry,
+	BOOLEAN CanReportScenarios,
+	BOOLEAN CanAddMsaToMsTelemetry,
+	BOOLEAN CanPerformDiagnosticEscalations,
+	BOOLEAN CanReportUifEscalations,
+	BOOLEAN CanCollectWindowsAnalyticsEvents,
+	BOOLEAN CanPerformSiufEscalations
+	);
+
+LifetimeManager_AuthProxyUsageDisabled(
+	VOID
+	);
+
+AuthorizationInfo_RingAuthorization_CoCreateInstanceFailed(
+	INT32 HRESULT
+	);
+
+LifetimeManager_PolicyMan_DisableEnterpriseAuthProxyRetrievalTypeError(
+	UINT32 TypeRetrieved
+	);
+
+LifetimeManager_PolicyMan_DisableEnterpriseAuthProxy(
+	UINT32 IsAuthProxyDisabled
+	);
+
+LifetimeManager_EscalationsDisabled(
+	VOID
+	);
+
+LifetimeManager_OsTelemetryDisabled(
+	VOID
+	);
+
+ServiceMain_Disabled(
+	VOID
+	);
+
+LifetimeManager_MsaUserIdProhibited_ProcessorMode(
+	VOID
+	);
+
+LifetimeManager_CoreAndHeartBeatsDisabled(
+	VOID
+	);
+
+AuthorizationInfo_TelemetryPermissionAPIResult(
+	UINT32 AllowedTelemetry
+	);
+
+UtcWatchdog_ThreadExitCode(
+	COUNTEDSTRING ThreadName,
+	UINT32 ExitCode,
+	BOOLEAN GetExitCodeSucceeded,
+	UINT32 GetExitCodeLastError
+	);
+
+UtcWatchdogPoke(
+	VOID
+	);
+
+ConditionalTimer_GetTimeToWakeup_Timeout(
+	UNICODESTRING TimerName,
+	BOOLEAN OnBattery,
+	BOOLEAN OnCostedNetwork,
+	BOOLEAN OnConnectedStandby,
+	BOOLEAN InGeneralQuietMode
+	);
+
+ETWConsumer_EventBlockedNoData_Core(
+	COUNTEDSTRING EventName
+	);
+
+ETWConsumer_EventBlocked_Core(
+	COUNTEDSTRING EventName
+	);
+
+ETWConsumer_EventBlockedNoData(
+	UINT64 InCodeTags,
+	COUNTEDSTRING EventName
+	);
+
+ETWConsumer_EventAllowedByTag(
+	COUNTEDSTRING EventName
+	);
+
+ETWConsumer_EventCoreBlocked(
+	COUNTEDSTRING EventName
+	);
+
+ETWConsumer_EventBlockedNoCoreDataApproval(
+	BOOLEAN IsCoreData,
+	COUNTEDSTRING EventName
+	);
+
+ETWConsumer_EventBlocked(
+	COUNTEDSTRING EventName
+	);
+
+ETWConsumer_EventBlocked_UnapprovedInCodeTags(
+	COUNTEDSTRING EventName,
+	UINT64 InCodeTags,
+	UINT64 UnapprovedTags
+	);
+
+ETWConsumer_EventAllowedBecauseAllowListsEmpty(
+	COUNTEDSTRING EventName
+	);
+
+HeartBeatManager_NextHeartBeatFireTime_LessThan_currentTime(
+	VOID
+	);
+
+HeartBeatManager_HeartBeatIntervalMs_GreaterThan_30mins(
+	UINT32 heartBeatIntervalMs
+	);
+
+HeartBeatManager_nextTimeToFireHeartBeat(
+	UINT32 heartBeatIntervalMs,
+	UINT64 currentTime
+	);
+
+HeartBeatManager_ResettingHeartBeatNextFireTimeWithTenant(
+	UNICODESTRING tenant,
+	UINT64 minTimeToFireNextHeartbeat
+	);
+
+HeartBeatManager_TenantNeedsToFire(
+	UNICODESTRING tenant
+	);
+
+MetadataEngine_EventThreadWaitFailed(
+	INT32 WaitResult
+	);
+
+MetadataEngine_StartEventThread(
+	VOID
+	);
+
+MetadataEngine_RegistryThreadWaitFailed(
+	INT32 WaitResult
+	);
+
+MetadataEngine_StartRegistryThread(
+	VOID
+	);
+
+MetadataEngine_InitializeMetadata(
+	COUNTEDSTRING MetaDataTypeName,
+	INT32 HRESULT
+	);
+
+PdcNetworkActivation_Callback(
+	COUNTEDSTRING Name,
+	UINT64 Start,
+	UINT64 Duration,
+	UINT64 Renewals,
+	INT32 Reason
+	);
+
+PdcNetworkActivation_Deactivate(
+	UNICODESTRING Name,
+	INT32 NtStatus,
+	UINT64 Duration,
+	UINT64 Renewals,
+	INT32 Reason
+	);
+
+PdcNetworkActivation_Activate(
+	UNICODESTRING Name,
+	INT32 NtStatus,
+	INT32 PdcResult
+	);
+
+DiagTrack_Rundown_BlackBox_StringEventDump(
+	COUNTEDSTRING LogName,
+	UINT64 Time,
+	UNICODESTRING Data
+	);
+
+DiagTrack_Rundown_BlackBox(
+	VOID
+	);
+
+DiagTrack_Rundown_BlackBox(
+	VOID
+	);
+
+DiagTrack_Rundown_UserManager_InteractiveSessionId(
+	UINT32 InteractiveSessionId
+	);
+
+DiagTrack_Rundown_UserManager_SessionUser(
+	UINT32 SessionId,
+	UNICODESTRING UserSid,
+	UINT32 NumGuests,
+	UNICODESTRING Xuid,
+	UINT64 UserContextToken
+	);
+
+DiagTrack_Rundown_UserManager(
+	VOID
+	);
+
+DiagTrack_Rundown_UserManager(
+	VOID
+	);
+
+UserManager_OnUserAuthStatusChanged(
+	UINT32 SessionId,
+	UINT64 UserContext,
+	UNICODESTRING Xuid
+	);
+
+UserManager_GetXuidForUserContext(
+	UINT64 UserContext,
+	UNICODESTRING Xuid
+	);
+
+UserManager_FoundInteractiveSessionOnStartup(
+	UINT32 SessionId
+	);
+
+AgentManager_SetAgentOwner(
+	COUNTEDSTRING Agent,
+	COUNTEDSTRING Owner
+	);
+
+AgentManager_ContainerNotificationCallback(
+	UINT8 Notification,
+	GUID ContainerId
+	);
+
+AgentManager_SendingScenarioObject(
+	UINT16 ObjectType,
+	UINT64 ObjectHash,
+	UINT64 SerializedObjectSize
+	);
+
+ScenarioObjectCache_LoadingSerializedObjectFromSql(
+	UINT64 ObjectHash,
+	ANSISTRING ScenarioDbObjectType
+	);
+
+ScenarioObjectCache_UsingCachedSerializedObject(
+	UINT64 ObjectHash,
+	ANSISTRING ScenarioDbObjectType
+	);
+
+AgentManager_ScenarioObjectRequestReceived(
+	UINT16 ObjectType,
+	UINT64 ObjectHash
+	);
+
+AgentManager_CopyAgentDiagnostics(
+	UNICODESTRING EscalationDataPath,
+	UINT32 BytesRemaining,
+	UINT32 BytesWritten
+	);
+
+AgentManager_SetEscalationSyncEvent(
+	HEXINT64 EscalationSyncEvent
+	);
+
+AgentManager_CreateAgentDiagnosticsFile(
+	UNICODESTRING EscalationDataPath
+	);
+
+AgentManager_RegisterEscalationDataRequest(
+	UNICODESTRING RequestId
+	);
+
+AgentManager_EscalationPayloadReceived(
+	GUID ScenarioInstanceId,
+	COUNTEDSTRING AgentId,
+	INT32 AgentEscalationResult,
+	UINT64 EscalationDataSize
+	);
+
+AgentManager_UnregisterEscalationDataRequest(
+	UNICODESTRING RequestId
+	);
+
+AgentManager_GetAllConnectedAgentIds_UnmatchedAgent(
+	COUNTEDSTRING RequestedOwner,
+	COUNTEDSTRING AgentId,
+	COUNTEDSTRING AgentOwner
+	);
+
+AgentManager_GetAllConnectedAgentIds_MatchedAgent(
+	COUNTEDSTRING RequestedOwner,
+	COUNTEDSTRING AgentId,
+	COUNTEDSTRING AgentOwner
+	);
+
+AgentManager_ResolveContainerId(
+	UNICODESTRING HvsiContainerId,
+	UNICODESTRING CommandLine
+	);
+
+AgentManager_AgentIsActive(
+	COUNTEDSTRING AgentId,
+	UINT64 MillisSinceLastMessageReceived
+	);
+
+AgentManager_AgentAlreadyIdle(
+	COUNTEDSTRING AgentId,
+	UINT64 MillisSinceLastActive
+	);
+
+AgentManager_LogIdleAgentSynthetics_AgentNotFullyInitialized(
+	COUNTEDSTRING AgentId
+	);
+
+AgentManager_AgentIdleStateChange(
+	COUNTEDSTRING AgentId,
+	BOOLEAN IsIdle,
+	UINT64 IdleDurationMillis
+	);
+
+AgentManager_SignalAgentRemoval(
+	UINT64 AgentSocket,
+	INT32 ErrorCode
+	);
+
+AgentManager_AgentDisconnectSignalReceived(
+	UINT64 AgentSocket,
+	INT32 AgentErrorCode
+	);
+
+AgentManager_TransportError(
+	INT32 ErrorCode,
+	UINT64 AgentSocket
+	);
+
+AgentManager_AcceptedAgentVersion(
+	UINT64 AgentSocket,
+	UINT8 HostVersion,
+	UINT8 AgentVersion
+	);
+
+AgentManager_InvalidAgentVersion(
+	UINT64 AgentSocket,
+	UINT8 HostVersion,
+	UINT8 AgentVersion
+	);
+
+AgentManager_AddAgent(
+	UINT64 AgentSocket
+	);
+
+AgentManager_RemoveAgent(
+	UINT64 AgentSocket,
+	INT32 ErrorCode
+	);
+
+AgentManager_StopEventSet(
+	VOID
+	);
+
+UtcApiManager_MetaPropertyFound_SessionId(
+	UNICODESTRING SessionIdKey,
+	UNICODESTRING SessionIdValue
+	);
+
+UtcApiManager_MetaPropertyFound_MutexTimeoutMs(
+	INT32 MutexTimeoutMsValue
+	);
+
+UtcApiManager_MetaPropertyFound_EnableCourtesyEngineCallback(
+	BOOLEAN EnableCourtesyEngineCallbackValue
+	);
+
+UtcApiManager_MetaPropertyFound_CollectWerEtwLogs(
+	BOOLEAN CollectWerEtwLogsValue
+	);
+
+UtcApiManager_MetaPropertyFound_InstanceId(
+	GUID InstanceIdValue
+	);
+
+UtcApiManager_TenantForceUpload(
+	UNICODESTRING IKey,
+	UINT8 Latency,
+	INT32 UploadOverCosted,
+	INT32 UploadOverBattery
+	);
+
+UtcApiManager_ForceUploadTimingInfo(
+	UINT64 RuntimeFileTime
+	);
+
+UtcApiManager_TenantForceUpload(
+	VOID
+	);
+
+UtcApiManager_TenantFailedPplCheck(
+	UNICODESTRING IKey,
+	BOOLEAN IsCallerPpl,
+	BOOLEAN IsUtcPpl
+	);
+
+UtcApiManager_SnapCustomTrace(
+	UNICODESTRING outputDirectory
+	);
+
+UtcApiManager_StopCustomTrace(
+	VOID
+	);
+
+UtcApiManager_StopCustomTrace(
+	UINT64 ProfileHash
+	);
+
+UtcApiManager_SnapCustomTrace_OutputDirectoryAlreadyExists(
+	VOID
+	);
+
+UtcApiManager_SnapCustomTrace(
+	UNICODESTRING outputDirectory
+	);
+
+UtcApiManager_StartCustomTrace(
+	UINT64 CustomTraceHash,
+	UINT64 CustomTraceMaxDuration
+	);
+
+UtcApiManager_StartCustomTrace_StoppingRunningCustomTrace(
+	UINT64 CustomTraceHash
+	);
+
+UtcApiManager_StartCustomTrace_FailedToReadCustomProfile(
+	UNICODESTRING CustomProfilePath,
+	INT32 HRESULT
+	);
+
+UtcApiManager_StartCustomTrace(
+	GUID CustomTraceInstanceId,
+	UINT64 CustomTraceHash,
+	UINT64 CustomTraceMaxDuration
+	);
+
+UtcApiManager_GetCustomTraceList(
+	UNICODESTRING CustomProfileRootDirectory
+	);
+
+UtcApiManager_GetNextScheduledFireTime(
+	VOID
+	);
+
+UtcApiManager_ReloadSettings(
+	VOID
+	);
+
+UtcApiManager_DownloadLatestSettings(
+	INT32 DownloadOverCostedNetwork,
+	INT32 DownloadOverBattery
+	);
+
+UtcApiManager_GetTimerConfiguration(
+	UNICODESTRING TimerName
+	);
+
+UtcApiManager_ClearTimerConfiguration(
+	UNICODESTRING TimerName
+	);
+
+UtcApiManager_UpdateTimerConfiguration(
+	UNICODESTRING TimerName
+	);
+
+UtcApiManager_ResetUsageMetrics(
+	VOID
+	);
+
+UtcApiManager_ReloadSettingsCompletionEvent(
+	VOID
+	);
+
+UtcApiManager_ForceUpload(
+	VOID
+	);
+
+UtcApiManager_GetKnownTraceList(
+	VOID
+	);
+
+UtcApiManager_ForceUpload(
+	UINT8 Latency,
+	INT32 UploadOverCosted,
+	INT32 UploadOverBattery
+	);
+
+UtcApiManager_GetKnownTraceList(
+	VOID
+	);
+
+UtcApiManager_GetActiveTraceRuntime(
+	VOID
+	);
+
+UtcApiManager_GetActiveTraceRuntime(
+	VOID
+	);
+
+UtcApiManager_IsTraceRunning(
+	VOID
+	);
+
+UtcApiManager_IsTraceRunning(
+	VOID
+	);
+
+UtcApiManager_GetActiveScenarioList(
+	VOID
+	);
+
+UtcApiManager_GetActiveScenarioList(
+	VOID
+	);
+
+UtcApiManager_DownloadLatestSettingsForNamespace(
+	UNICODESTRING Partner,
+	UNICODESTRING Feature,
+	INT32 DownloadOverCostedNetwork,
+	INT32 DownloadOverBattery,
+	INT32 IsAsync
+	);
+
+UtcApiManager_DownloadLatestSettingsForNamespace(
+	VOID
+	);
+
+UtcApiManager_IsEscalationRunning(
+	GUID ScenarioId
+	);
+
+UtcApiManager_EscalateScenarioPathAsyncEscalationFailure(
+	UINT32 ScenariosFailedToStart,
+	UINT64 ScenariosRequested
+	);
+
+UtcApiManager_EscalateScenarioPathSuccess(
+	UINT32 EscalationsCompleted
+	);
+
+UtcApiManager_IsEscalationRunning(
+	GUID ScenarioId,
+	INT32 IsRunning
+	);
+
+UtcApiManager_EscalateScenarioPathAsyncSuccess(
+	UINT64 EscalationsStarted
+	);
+
+UtcApiManager_EscalateScenarioPathNoScenariosEscalated(
+	VOID
+	);
+
+UtcApiManager_EscalateScenarioPathEscalationFailure(
+	UINT32 EscalationsCompleted,
+	UINT32 EscalationsExpected,
+	UINT32 ScenariosFailedToStart,
+	UINT64 ScenariosRequested
+	);
+
+UtcApiManager_EscalateScenarioPathEscalationsStillPending(
+	UINT32 EscalationsCompleted,
+	UINT32 EscalationsExpected,
+	UINT32 ScenariosFailedToStart,
+	UINT64 ScenariosRequested
+	);
+
+UtcApiManager_EscalateScenarioOnCompleteLambdaCount(
+	UINT32 EscalationsCompleted,
+	UINT32 EscalationsExpected,
+	INT32 HRESULT,
+	GUID ScenarioId,
+	GUID InstanceId
+	);
+
+UtcApiManager_EscalateScenarioOnCompleteLambda(
+	VOID
+	);
+
+MatchEngine_ScenarioApiCompleted_4(
+	GUID ScenarioId,
+	GUID ScenarioInstanceId,
+	COUNTEDSTRING ScenarioName,
+	UINT32 CurrentCompletionReports,
+	UINT32 MaxCompletionReports,
+	UINT32 CurrentCancelReports,
+	UINT32 MaxCancelReports,
+	UINT32 CurrentFailureReports,
+	UINT32 MaxFailureReports,
+	UINT32 CurrentCompletionEscalations,
+	UINT32 MaxCompletionEscalations,
+	UINT32 CurrentFailureEscalations,
+	UINT32 MaxFailureEscalations,
+	UINT8 SinkStateOrdinal,
+	COUNTEDSTRING PerfTrackScenarioName,
+	COUNTEDSTRING PerfTrackDurationField,
+	UNICODESTRING Metadata_TimeSinceOsInstall,
+	UNICODESTRING Metadata_LastBootTime,
+	UNICODESTRING Metadata_IsAcOn,
+	UNICODESTRING Metadata_IsEscalationInProgress,
+	UNICODESTRING Metadata_IsKernelDebuggerPresent,
+	UNICODESTRING Metadata_LastPowerSourceChangeTime,
+	UNICODESTRING Metadata_LastAbnormalShutdownTime,
+	UNICODESTRING Metadata_LastSuccessfulRefreshTime,
+	UNICODESTRING Metadata_LastApplicationInstallTime,
+	UNICODESTRING Metadata_LastUnlockTime,
+	UNICODESTRING Metadata_LastLogonTime,
+	UNICODESTRING Metadata_LastDeviceArrivalTime,
+	UNICODESTRING Metadata_LastResumeFromHibernateTime,
+	UNICODESTRING Metadata_LastResumeFromStandbyTime,
+	UNICODESTRING Metadata_IsContinuumSessionActive,
+	PORT TriggerInfo,
+	UNICODESTRING Producer,
+	UNICODESTRING identifyingInfo,
+	UINT64 TimeStamp,
+	UINT32 PID,
+	UINT32 TID,
+	GUID AID,
+	UINT64 EventKey,
+	STRING SelectField,
+	UNICODESTRING Spec,
+	UNICODESTRING Value
+	);
+
+UtcApiManager_EscalateScenarioImpl(
+	GUID ScenarioId,
+	BOOLEAN IsAsync
+	);
+
+UtcApiManager_EscalateScenarioImpl(
+	GUID ScenarioId
+	);
+
+UtcApiManager_IsScenarioActive(
+	GUID ScenarioId
+	);
+
+UtcApiManager_IsScenarioActive(
+	GUID ScenarioId,
+	INT32 IsActive
+	);
+
+UtcApiManager_SnapMiniTrace(
+	UNICODESTRING outputDirectory
+	);
+
+UtcApiManager_SnapMiniTrace_OutputDirectoryAlreadyExists(
+	VOID
+	);
+
+UtcApiManager_SnapMiniTrace(
+	UNICODESTRING outputDirectory
+	);
+
+SettingsDownloader_SnapRingInfo(
+	INT32 OverallHr,
+	UNICODESTRING RingName,
+	INT32 RingNameHr,
+	UINT32 RingId,
+	INT32 RingIdHr
+	);
+
+Utils_UrlEscapeStringFailed(
+	UNICODESTRING sourceString,
+	INT32 hresult
+	);
+
+Utils_UrlEscapeStringSucceeded(
+	UNICODESTRING sourceString,
+	UNICODESTRING escapedString
+	);
+
+SettingsDownloader_FinishDownload(
+	UNICODESTRING Url,
+	UNICODESTRING Headers,
+	INT32 ErrorCode,
+	UINT64 DownloadDurationMs,
+	INT64 OnDiskFileSizeBytes
+	);
+
+SettingsManager_SkipETagSinceQueryParametersChanged(
+	COUNTEDSTRING partner,
+	COUNTEDSTRING feature
+	);
+
+AgentTransport_ThreadpoolIoCompleted(
+	HEXINT64 OverlappedAddress,
+	UINT32 IoResult,
+	UINT64 BytesTransferred
+	);
+
+AgentTransport_IgnoreIoCallbackWhenDisconnecting(
+	HEXINT64 OverlappedAddress,
+	UINT32 IoResult,
+	UINT64 BytesTransferred
+	);
+
+AgentTransport_IgnoreReceiveRequestWhenDisconnecting(
+	VOID
+	);
+
+AgentTransport_IgnoreAcceptRequestWhenDisconnecting(
+	VOID
+	);
+
+AgentTransport_IgnoreSendRequestWhenDisconnecting(
+	VOID
+	);
+
+AgentTransport_SocketListening(
+	UINT64 SocketHandle
+	);
+
+AgentTransport_ThreadpoolIoStarted(
+	HEXINT64 OverlappedAddress,
+	UINT64 Socket,
+	UINT8 IoRequestType
+	);
+
+AgentTransport_ThreadpoolIoCancelled(
+	HEXINT64 OverlappedAddress
+	);
+
+HttpRequest_NotAuthorizedToUseAuthenticatedProxy(
+	VOID
+	);
+
+WinHttpCompletionCallback_End(
+	HEXINT64 HttpRequestPointer,
+	UINT32 ActiveCallbackCount,
+	HEXINT64 RequestHandle,
+	HEXINT32 StatusCode,
+	HEXINT64 StatusBufferPointer,
+	INT64 StatusBufferSizeInBytes
+	);
+
+WinHttpCompletionCallback_Start(
+	HEXINT64 HttpRequestPointer,
+	UINT32 ActiveCallbackCount,
+	HEXINT64 RequestHandle,
+	HEXINT32 StatusCode,
+	HEXINT64 StatusBufferPointer,
+	INT64 StatusBufferSizeInBytes
+	);
+
+ManagedAggregatorManager_DrainStatistics(
+	UINT64 RemainingEvents,
+	UINT32 DrainCounter,
+	UINT32 DrainTimeoutMillis,
+	UINT64 DrainTimeMillis,
+	BOOLEAN DrainCancelled
+	);
+
+ManagedAggregatorManager_TimeoutFlushingBuffers_0(
+	UINT64 PartA_PrivTags,
+	UINT64 RemainingEvents,
+	UINT32 EventsProcessedDuringDrain
+	);
+
+ManagedAggregatorManager_Start(
+	VOID
+	);
+
+DiagTrack_Rundown_RemoteAggregatorManager(
+	VOID
+	);
+
+DiagTrack_Rundown_RemoteAggregatorManager(
+	VOID
+	);
+
+RemoteAggregatorManager_LogRegisteredForwarder(
+	UNICODESTRING ForwarderId,
+	UINT64 Keywords,
+	UINT8 Level
+	);
+
+RemoteAggregatorManager_UnmatchedTrigger(
+	GUID ProviderId,
+	COUNTEDSTRING TriggerName,
+	UINT64 RegisteredKeywords,
+	UINT8 RegisteredLevel,
+	UINT64 TriggerKeywords,
+	UINT8 TriggerLevel
+	);
+
+RemoteAggregatorManager_MatchedTrigger(
+	GUID ProviderId,
+	COUNTEDSTRING TriggerName
+	);
+
+RemoteAggregatorManager_InvalidTriggerCriteriaEntry(
+	UNICODESTRING Entry
+	);
+
+RemoteAggregatorManager_RegisteredTriggerProperties(
+	UNICODESTRING AggregatorName,
+	GUID ProviderId,
+	UINT64 Keywords,
+	UINT8 Level
+	);
+
+RemoteAggregatorManager_IgnoreDisabledAggregatorTriggerCriteriaEntry(
+	UNICODESTRING Entry
+	);
+
+UtcManaged_CorruptEvent(
+	COUNTEDANSISTRING Json
+	);
+
+WerUploadTimesMetadata_Update(
+	UINT64 TickCount
+	);
+
+MetadataFactory_CreateMetadata(
+	COUNTEDSTRING Type
+	);
+
+LastBootTimeMetadata_Update(
+	UINT64 LastBootTime
+	);
+
+LastBootTimeMetadata_Query(
+	UINT64 LastBootTime
+	);
+
+IsACOnMetadata_Update(
+	UINT8 IsACOn
+	);
+
+IsACOnMetadata_Query(
+	UINT8 IsACOn
+	);
+
+IsEscalationInProgressMetadata_Update(
+	BOOLEAN IsEscalationInProgress
+	);
+
+IsEscalationInProgressMetadata_Query(
+	BOOLEAN IsEscalationInProgress
+	);
+
+IsKernelDebuggerPresentMetadata_Update(
+	BOOLEAN IsKernelDebuggerPresent
+	);
+
+IsKernelDebuggerPresentMetadata_Query(
+	BOOLEAN IsKernelDebuggerPresent
+	);
+
+LastPowerSourceChangeTimeMetadata_Update(
+	UINT64 LastPowerSourceChangeTime,
+	UNICODESTRING IsLastPowerSourceAC
+	);
+
+LastPowerSourceChanceTimeMetadata_Query(
+	UINT64 LastPowerSourceChangeTime,
+	UNICODESTRING IsLastPowerSourceAC
+	);
+
+BuildStringMetadata_Update(
+	UNICODESTRING BuildString
+	);
+
+BuildStringMetadata_Query(
+	UNICODESTRING BuildString
+	);
+
+TimeSinceOSInstallMetadata_Query(
+	UINT64 TimeSinceOSInstall
+	);
+
+TimeSinceOSInstallMetadata_Update(
+	UINT64 TimeSinceOSInstall
+	);
+
+LastSuccessfulRefreshTimeMetadata_Update(
+	UINT64 LastSuccessfulRefreshTime
+	);
+
+LastSuccessfulRefreshTimeMetadata_Query(
+	UINT64 LastSuccessfulRefreshTime
+	);
+
+LastApplicationInstallTimeMetadata_Update(
+	UINT64 LastApplicationInstallTime
+	);
+
+LastApplicationInstallTimeMetadata_Query(
+	UINT64 LastApplicationInstallTime
+	);
+
+LastUnlockTimeMetadata_Update(
+	UINT64 LastUnlockTime
+	);
+
+LastUnlockTimeMetadata_Query(
+	UINT64 LastUnlockTime
+	);
+
+LastLogonTimeMetadata_Update(
+	UINT64 LastLogonTime
+	);
+
+LastLogonTimeMetadata_Query(
+	UINT64 LastLogonTime
+	);
+
+LastDeviceArrivalTimeMetadata_Update(
+	UINT64 LastDeviceArrivalRemovalTime
+	);
+
+LastDeviceArrivalTimeMetadata_Query(
+	UINT64 LastDeviceArrivalRemovalTime
+	);
+
+LastResumeFromHibernateTimeMetadata_Update(
+	UINT64 LastResumeFromHibernateTime
+	);
+
+LastResumeFromHibernateTimeMetadata_Query(
+	UINT64 LastResumeFromHibernateTime
+	);
+
+LastResumeFromStandbyTimeMetadata_Update(
+	UINT64 LastResumeFromStandbyTime
+	);
+
+LastResumeFromStandbyTimeMetadata_Query(
+	UINT64 LastResumeFromStandbyTime
+	);
+
+IsContinuumSessionActiveMetadata_Update(
+	BOOLEAN IsContinuumActive
+	);
+
+IsContinuumSessionActiveMetadata_Query(
+	BOOLEAN IsContinuumActive
+	);
+
+ScenarioStateModel_SkipAnachronisticTrigger(
+	COUNTEDSTRING EventName,
+	COUNTEDSTRING TransitionName,
+	BOOLEAN IsAgentEvent,
+	UINT64 TriggerTime,
+	UINT64 PreviousHostTriggerTime,
+	UINT64 PreviousAgentTriggerTime
+	);
+
+SnapTrace_SnappingScenarioInformation(
+	GUID ScenarioId,
+	UINT64 Duration,
+	BOOLEAN DurationIsQuestionable,
+	PORT TriggerInfo,
+	UNICODESTRING Producer,
+	UNICODESTRING identifyingInfo,
+	UINT64 TimeStamp,
+	UINT32 PID,
+	UINT32 TID,
+	GUID AID,
+	UINT64 EventKey,
+	GUID ScenarioInstanceId
+	);
+
+Utils_EscalationReasonETWTrigger(
+	GUID ProviderId,
+	UINT64 Timestamp,
+	UINT32 EventId,
+	UINT32 EventVersion
+	);
+
+ScenarioInst_TraceSnapEventAlreadySerialized(
+	VOID
+	);
+
+InFlightScenario_UnmatchedTrigger(
+	GUID ScenarioId,
+	GUID ScenarioInstanceId,
+	UNICODESTRING Trigger,
+	ANSISTRING TriggerValues
+	);
+
+InFlightScenario_InSinkState(
+	GUID ScenarioId,
+	GUID ScenarioInstanceId,
+	UINT64 CompletedTime
+	);
+
+InFlightScenario_TransitionTaken(
+	COUNTEDSTRING TransitionName,
+	UINT8 SourceState,
+	UINT8 NewState,
+	GUID ScenarioId,
+	GUID ScenarioInstanceId
+	);
+
+InFlightScenario_MatchedTrigger(
+	GUID ScenarioId,
+	GUID ScenarioInstanceId,
+	UNICODESTRING Trigger,
+	ANSISTRING TriggerValues
+	);
+
+InFlightScenario_ExpandPropertyIdentifier_ExpandingIdentifier(
+	COUNTEDANSISTRING TransitionName,
+	COUNTEDANSISTRING PropertyName,
+	UNICODESTRING Value
+	);
+
+InFlightScenario_ExpandPropertyIdentifier(
+	COUNTEDANSISTRING OriginalString,
+	UNICODESTRING ExpandedString
+	);
+
+InFlightScenario_ExpandPropertyIdentifier_ExpandingCustomIdentifier(
+	UNICODESTRING Key,
+	UNICODESTRING Value
+	);
+
+MatchEngine_ManifestUpdatePruneScenarioList(
+	GUID ScenarioId
+	);
+
+MatchEngine_CompletedManifestUpdate(
+	VOID
+	);
+
+MatchEngine_ManifestUpdateMaintainScenarioList(
+	GUID ScenarioId
+	);
+
+MatchEngine_StartManifestUpdate(
+	VOID
+	);
+
+MatchEngine_Start(
+	VOID
+	);
+
+MatchEngine_DrainStatistics(
+	UINT64 RemainingEvents,
+	UINT32 DrainCounter,
+	UINT64 DrainTimeoutMillis,
+	UINT64 DrainTimeMillis,
+	BOOLEAN DrainCancelled
+	);
+
+MatchEngine_ScenarioCompleted_4(
+	GUID ScenarioId,
+	GUID ScenarioInstanceId,
+	COUNTEDSTRING ScenarioName,
+	UINT64 ScenarioDurationMs,
+	UINT64 IsDurationQuestionable,
+	UINT32 CurrentCompletionReports,
+	UINT32 MaxCompletionReports,
+	UINT32 CurrentCancelReports,
+	UINT32 MaxCancelReports,
+	UINT32 CurrentFailureReports,
+	UINT32 MaxFailureReports,
+	UINT32 CurrentCompletionEscalations,
+	UINT32 MaxCompletionEscalations,
+	UINT32 CurrentFailureEscalations,
+	UINT32 MaxFailureEscalations,
+	UINT8 SinkStateOrdinal,
+	COUNTEDSTRING PerfTrackScenarioName,
+	COUNTEDSTRING PerfTrackDurationField,
+	UNICODESTRING Metadata_TimeSinceOsInstall,
+	UNICODESTRING Metadata_LastBootTime,
+	UNICODESTRING Metadata_IsAcOn,
+	UNICODESTRING Metadata_IsEscalationInProgress,
+	UNICODESTRING Metadata_IsKernelDebuggerPresent,
+	UNICODESTRING Metadata_LastPowerSourceChangeTime,
+	UNICODESTRING Metadata_LastAbnormalShutdownTime,
+	UNICODESTRING Metadata_LastSuccessfulRefreshTime,
+	UNICODESTRING Metadata_LastApplicationInstallTime,
+	UNICODESTRING Metadata_LastUnlockTime,
+	UNICODESTRING Metadata_LastLogonTime,
+	UNICODESTRING Metadata_LastDeviceArrivalTime,
+	UNICODESTRING Metadata_LastResumeFromHibernateTime,
+	UNICODESTRING Metadata_LastResumeFromStandbyTime,
+	UNICODESTRING Metadata_IsContinuumSessionActive,
+	PORT TriggerInfo,
+	UNICODESTRING Producer,
+	UNICODESTRING identifyingInfo,
+	UINT64 TimeStamp,
+	UINT32 PID,
+	UINT32 TID,
+	GUID AID,
+	UINT64 EventKey,
+	STRING SelectField,
+	UNICODESTRING Spec,
+	UNICODESTRING Value
+	);
+
+MatchEngine_ScenarioCycled(
+	GUID ScenarioId,
+	COUNTEDSTRING ScenarioName,
+	GUID ScenarioInstanceId
+	);
+
+EscalationEngine_ExecuteDenied(
+	GUID ScenarioId,
+	GUID ScenarioInstanceId,
+	UINT32 HRESULT
+	);
+
+MatchEngine_ScenarioAgeOut(
+	GUID ScenarioId,
+	GUID ScenarioInstanceId,
+	INT32 Reason,
+	UINT32 MaxDurationMs
+	);
+
+MatchEngine_ScenarioInstanceIdFromTrigger(
+	GUID ScenarioId,
+	UNICODESTRING InstanceIdValue,
+	INT32 HRESULT
+	);
+
+MatchEngine_ProcessEvent(
+	UNICODESTRING TriggerToString
+	);
+
+ScenarioManager_AuthorizationUpdateRules(
+	VOID
+	);
+
+ScenarioManager_DumpTriggerSettings(
+	UNICODESTRING Namespace,
+	UINT64 Category,
+	DOUBLE SampleRate,
+	INT8 Latency,
+	INT8 Persistence,
+	UINT64 CloudCategory,
+	BOOLEAN RemoveCoreDataAttribute
+	);
+
+AppIdMetadata_HasAccountPrefix_LsaUnknownType(
+	COUNTEDSTRING SID
+	);
+
+AppIdMetadata_HasAccountPrefix_PrefixUnknownType(
+	COUNTEDSTRING SID
+	);
+
+AppIdMetadata_HasAccountPrefix_LsaKnownType(
+	COUNTEDSTRING SID,
+	UINT32 AccountType
+	);
+
+AppIdMetadata_HasAccountPrefix_PrefixKnownType(
+	COUNTEDSTRING SID
+	);
+
+DiagTrack_Rundown_ScenarioManager(
+	VOID
+	);
+
+DiagTrack_Rundown_ScenarioManager_KnownScenarios(
+	GUID ScenarioId,
+	UNICODESTRING ScenarioName,
+	UINT8 State
+	);
+
+DiagTrack_Rundown_ScenarioManager(
+	VOID
+	);
+
+ScenarioManager_FailedToReadParseStateFile(
+	VOID
+	);
+
+Filter_FilterEvaulated(
+	UNICODESTRING FilterRepresentation,
+	UINT32 IsSatisfied,
+	COUNTEDSTRING FilterName,
+	UINT32 HRESULT,
+	UINT32 FromCache
+	);
+
+ScenarioManager_RejectScenario(
+	GUID ScenarioId,
+	COUNTEDSTRING ScenarioName,
+	UINT32 Reason
+	);
+
+ScenarioManager_UpdateSettingsTimer(
+	UINT32 DefaultTimeoutMillis,
+	UINT32 OnBatteryTimeoutMillis,
+	UINT32 OnCostedNetworkTimeoutMillis,
+	UINT32 InConnectedStandbyTimeoutMillis
+	);
+
+ScenarioManager_UpdateSettingsTimer_InitialConfiguration(
+	UINT32 InitialDelay
+	);
+
+ScenarioManager_UpdateSettingsTimer_CoreTelemetryDisabled(
+	UINT32 CoreTelOptedOutMillis
+	);
+
+ScenarioManager_SoftLandingSignatureValidationSucceeded(
+	COUNTEDSTRING FileName
+	);
+
+ScenarioManager_SoftLandingSignatureValidationFailed(
+	COUNTEDSTRING FileName
+	);
+
+ScenarioManager_SoftLandingSignatureValidationSkipped(
+	COUNTEDSTRING FileName
+	);
+
+ScenarioManager_AcceptScenario(
+	GUID ScenarioId,
+	COUNTEDSTRING ScenarioName,
+	ANSISTRING SSVVersion
+	);
+
+ScenarioManager_InvalidScenario(
+	GUID ScenarioId,
+	UINT32 HRESULT
+	);
+
+ScenarioManager_AcceptProviderSetting(
+	UNICODESTRING SettingTargetNamespace,
+	UINT64 Category
+	);
+
+ScenarioManager_SkippingProviderForwarder_OptedOut(
+	UNICODESTRING SettingTargetNamespace,
+	UINT64 Keyword
+	);
+
+ScenarioManager_AcceptProviderSettingFromGroup(
+	UNICODESTRING SettingTargetNamespace,
+	UINT64 Category
+	);
+
+ScenarioManager_SkippingProviderSettingFromGroup_OptedOut(
+	UNICODESTRING SettingTargetNamespace,
+	UINT64 Category
+	);
+
+ScenarioManager_SkippingProviderForwarder_ProviderAndGroupIdConflict(
+	UNICODESTRING SettingTargetNamespace,
+	GUID ConflictingProviderId
+	);
+
+ScenarioManager_AcceptGroupSetting(
+	UNICODESTRING SettingTargetNamespace,
+	UINT64 Category
+	);
+
+ScenarioManager_SkippingProviderGroupForwarder_OptedOut(
+	GUID GroupId,
+	UINT64 Keyword
+	);
+
+ScenarioManager_SkippingIndividualEventSetting_ProviderAndGroupIdConflict(
+	UNICODESTRING SettingTargetNamespace,
+	GUID ConflictingProviderId
+	);
+
+ScenarioManager_SkippingIndividualEventSetting_InvalidProviderName(
+	UNICODESTRING ProviderName
+	);
+
+ScenarioManager_AcceptIndividualEventSetting(
+	UNICODESTRING SettingTargetNamespace,
+	UINT64 Category
+	);
+
+ScenarioManager_SkippingIndividualEventSetting_SampledOut(
+	UNICODESTRING SettingTargetNamespace,
+	DOUBLE EventSampleRate,
+	DOUBLE EffectiveSampleRate,
+	DOUBLE MachineSampleNumber
+	);
+
+ScenarioManager_SkippingIndividualEventSetting_OptedOut(
+	UNICODESTRING SettingTargetNamespace,
+	UINT64 Keyword
+	);
+
+ScenarioManager_SkippingIndividualEventSetting_NoProviderSpecified(
+	UNICODESTRING SettingTargetNamespace
+	);
+
+ScenarioManager_ProviderGroupOptedOutForAllData(
+	GUID GroupId,
+	UNICODESTRING SettingTargetNamespace
+	);
+
+ScenarioManager_SkippingIndividualEventSetting_InvalidCategory(
+	UNICODESTRING SettingTargetNamespace
+	);
+
+ScenarioManager_SkippingIndividualEventSetting_InvalidCategorySize(
+	UNICODESTRING SettingTargetNamespace,
+	UINT64 NumCategories
+	);
+
+ScenarioManager_DisableSoftLanding_SkippingSoftLandingDirectory(
+	VOID
+	);
+
+ScenarioManager_OtherScenarioTypes_NotAuthorized(
+	VOID
+	);
+
+ScenarioManager_SkipLoadingOneSettingsScenarios_NotAuthorized(
+	UNICODESTRING Endpoint
+	);
+
+ScenarioManager_InvalidScenarioFileName(
+	UNICODESTRING fileName
+	);
+
+ScenarioManager_LoadSiufScenariosBelowFull(
+	VOID
+	);
+
+ScenarioManager_LoadUifScenariosBelowFull(
+	VOID
+	);
+
+ScenarioManager_LoadingScenarioFileStop(
+	COUNTEDSTRING FileName,
+	INT32 HRESULT
+	);
+
+ScenarioManager_GetActionableScenariosByTrigger_UnmatchedTriggerSource(
+	COUNTEDANSISTRING TriggerName,
+	BOOLEAN TriggerIsAgentEvent,
+	GUID ScenarioId
+	);
+
+ScenarioManager_RefreshUpdateRules(
+	VOID
+	);
+
+ScenarioManager_SoftLandingCampaignChangeUpdateRules(
+	VOID
+	);
+
+ScenarioManager_ApiUpdateRules(
+	VOID
+	);
+
+ScenarioManager_NewUserUpdateRules(
+	VOID
+	);
+
+ScenarioManager_SideloadUpdateRules(
+	VOID
+	);
+
+ScenarioManager_InitialTraceSetup(
+	VOID
+	);
+
+ScenarioManager_RuleUpdateThreadWaitingForChanges(
+	VOID
+	);
+
+ScenarioManager_ActiveSideloadFiles(
+	UNICODESTRING Files
+	);
+
+ScenarioManager_InitialUpdateRules(
+	VOID
+	);
+
+AsimovUploader_ForceRegionRefresh(
+	VOID
+	);
+
+ScenarioManager_FinishUpdateRules(
+	VOID
+	);
+
+ScenarioManager_LoadingScenariosStop(
+	VOID
+	);
+
+ScenarioManager_LoadingScenariosStart(
+	VOID
+	);
+
+ScenarioManager_SkipEnablingForwardersFromSettings(
+	VOID
+	);
+
+ScenarioManager_ClearRules(
+	VOID
+	);
+
+EscalationEngine_Execute(
+	GUID ScenarioId,
+	GUID ScenarioInstanceId,
+	UINT8 ActionType
+	);
+
+EscalationEngine_ScenarioEscalationRunningAtShutdown(
+	GUID ScenarioId,
+	GUID ScenarioInstanceId
+	);
+
+EscalationEngine_FinishAllPendingWork(
+	VOID
+	);
+
+FailedSQLiteOperation_sqlite3_close(
+	INT32 ErrorCode,
+	ANSISTRING ErrorCodeStr
+	);
+
+DiagTrack_Rundown_ScenariosSqliteTable(
+	VOID
+	);
+
+DiagTrack_Rundown_ScenariosSqliteTable_SqlScenarioObject(
+	UINT64 Hash,
+	ANSISTRING Type,
+	COUNTEDANSISTRING Json
+	);
+
+DiagTrack_Rundown_ScenariosSqliteTable(
+	VOID
+	);
+
+SQLiteConnection_Vacuum(
+	VOID
+	);
+
+Sqlite_CommitIfTransactionStarted(
+	ANSISTRING ErrorMessage
+	);
+
+Sqlite_TryBeginTransaction(
+	ANSISTRING ErrorMessage
+	);
+
+ScenariosSqliteTable_DeletingObjectFromSql(
+	UINT16 Type,
+	UINT64 Hash
+	);
+
+ScenariosSqliteTable_BeginReset(
+	ANSISTRING ResetType
+	);
+
+FailedSQLiteOperation_sqlite3_finalize(
+	INT32 ErrorCode,
+	ANSISTRING ErrorCodeStr
+	);
+
+FailedSQLiteOperation(
+	INT32 ErrorCode,
+	ANSISTRING ErrorCodeStr,
+	COUNTEDSTRING StatementText
+	);
+
+ScenarioObjectCache_SerializeObject(
+	UINT64 ObjectHash,
+	ANSISTRING ScenarioDbObjectType
+	);
+
+ScenarioObjectCache_LoadingObjectFromCache(
+	UINT64 ObjectHash,
+	UINT16 ScenarioDbObjectType
+	);
+
+ScenarioObjectCache_LoadingObjectFromSql(
+	UINT64 ObjectHash,
+	UINT16 ScenarioDbObjectType
+	);
+
+ScenarioStorageSql_SkipLoadingObjectForParse(
+	UINT16 Type,
+	UINT64 Hash
+	);
+
+ScenarioStorageSql_RemoveRefScenarioObject(
+	GUID ScenarioId,
+	UINT64 ScenarioIdHash,
+	ANSISTRING ScenarioObjectType,
+	UINT64 ScenaroObjectHash
+	);
+
+ScenarioStorageSql_RemoveScenarioByHash(
+	GUID ScenarioId,
+	UINT64 NumScenarioObjects,
+	UINT64 ScenarioIdHash
+	);
+
+ScenarioStorageSql_DeleteSelfDiagTrace(
+	ANSISTRING ScenarioObjectType,
+	UINT64 ScenaroObjectHash
+	);
+
+ScenarioStorageSql_DeleteMiniSlotTrace(
+	ANSISTRING ScenarioObjectType,
+	UINT64 ScenaroObjectHash
+	);
+
+ScenarioStorageSql_IgnoringScenarioFromOtherFile(
+	COUNTEDSTRING Partner,
+	COUNTEDSTRING Feature,
+	UINT64 ScenarioIdHash,
+	UINT64 NamespaceHash,
+	BOOLEAN IsSideload,
+	BOOLEAN IsSoftLanding
+	);
+
+ScenarioStorageSql_LoadScenarioFromSql(
+	COUNTEDSTRING Partner,
+	COUNTEDSTRING Feature,
+	GUID ScenarioId,
+	UINT64 NamespaceHash
+	);
+
+ScenarioStorageSql_ProcessScenariosFromSqlOnly(
+	COUNTEDSTRING Partner,
+	COUNTEDSTRING Feature,
+	COUNTEDSTRING FileName,
+	UINT64 NamespaceHash,
+	UINT64 ExistingScenarioObjectsInSql
+	);
+
+ScenarioStorageSql_ProcessScenariosFromXmlAndSql(
+	COUNTEDSTRING Partner,
+	COUNTEDSTRING Feature,
+	COUNTEDSTRING FileName,
+	UINT64 NamespaceHash,
+	UINT64 ExistingScenarioObjectsInSql
+	);
+
+TraceProfileFactory_CreateEscalationAction(
+	ANSISTRING Type
+	);
+
+EscalationWorkItem_SendEscalationDataToHost(
+	GUID ScenarioId,
+	UINT32 EscalationDataSize
+	);
+
+EscalationWorkItem_SendEscalationDataToHost(
+	GUID ScenarioId,
+	UINT32 EscalationDataSize
+	);
+
+EscalationWorkItem_SendEscalationDataChunkToHost(
+	GUID ScenarioId,
+	UINT32 BytesRemaining,
+	UINT32 ChunkSize
+	);
+
+EscalationWorkItem_FailedToSendEscalationRequestToAgent(
+	UNICODESTRING AgentId,
+	GUID ScenarioId,
+	GUID ScenarioInstanceId,
+	BOOLEAN IgnoreFailure,
+	INT32 ErrorCode
+	);
+
+EscalationWorkItem_SendEscalationRequestToAgent(
+	UNICODESTRING AgentId,
+	GUID ScenarioId,
+	GUID ScenarioInstanceId
+	);
+
+EscalationWorkItem_FailedToSerializeAgentAction(
+	COUNTEDANSISTRING ActionName,
+	BOOLEAN IgnoreFailure
+	);
+
+EscalationWorkItem_ActionDestinationAgent(
+	GUID ScenarioInstanceId,
+	COUNTEDSTRING ActionName,
+	UNICODESTRING AgentId
+	);
+
+EscalationWorkItem_NoTargetAgentsFound(
+	GUID ScenarioInstanceId,
+	COUNTEDSTRING ActionName,
+	UINT8 ActionDestination,
+	COUNTEDSTRING ActionDestinationId
+	);
+
+EscalationWorkItem_ActionTargetsAgent(
+	GUID ScenarioInstanceId,
+	COUNTEDSTRING ActionName,
+	UINT8 ActionDestination,
+	COUNTEDSTRING ActionDestinationId
+	);
+
+EscalationWorkItem_AgentEscalationRequestAction(
+	COUNTEDSTRING ActionName,
+	ANSISTRING ActionType,
+	UNICODESTRING ActionInfo
+	);
+
+EscalationWorkItem_AgentEscalationRequestDetails(
+	GUID ScenarioId,
+	GUID ScenarioInstanceId,
+	UINT64 MaxRuntimeMills
+	);
+
+EscalationWorkItem_EscalationSelfDiagnosisSucceeded(
+	VOID
+	);
+
+EscalationWorkItem_NoSelfDiagnosisCabUpload(
+	GUID ScenarioId,
+	BOOLEAN DisableCabUploadByTestHook
+	);
+
+EscalationWorkItem_AttemptingScenarioSelfDiagnosis(
+	VOID
+	);
+
+EscalationWorkItem_RpcImpersonateAndAcl(
+	VOID
+	);
+
+EscalationWorkItem_MoveDirectory(
+	UNICODESTRING SrcPath,
+	UNICODESTRING DestPath
+	);
+
+EscalationWorkItem_NoImpersonationForCopyOutputDirectory(
+	COUNTEDSTRING RpcClientSid,
+	BOOLEAN MayImpersonate
+	);
+
+EscalationWorkItem_CopyOutputDirectoryPath(
+	UNICODESTRING Path
+	);
+
+EscalationWorkItem_CopyOutputDirectoryAlreadyExists(
+	VOID
+	);
+
+EscalationWorkItem_SkippingCopyOutputDirectory(
+	VOID
+	);
+
+EscalationWorkItem_SkippingPreescalationChecksDueToIgnoreFailure(
+	COUNTEDSTRING ActionName
+	);
+
+EscalationWorkItem_RunningPreescalationChecks(
+	COUNTEDSTRING ActionName
+	);
+
+EscalationWorkItem_ExecutedAction(
+	GUID ScenarioId,
+	GUID ScenarioInstanceId,
+	COUNTEDSTRING ActionName,
+	UINT32 HRESULT,
+	UNICODESTRING ActionString
+	);
+
+EscalationWorkItem_SkippingActionWithUnmatchedDestination(
+	GUID ScenarioId,
+	GUID ScenarioInstanceId,
+	COUNTEDANSISTRING ActionName,
+	BOOLEAN IsAgent,
+	ANSISTRING ActionDestination
+	);
+
+EscalationWorkItem_NoCabUpload(
+	GUID ScenarioId,
+	BOOLEAN ScenarioRequstedCabUpload,
+	UINT8 OverrideQuerySetting
+	);
+
+WorkItem_MarkComplete(
+	GUID ScenarioId
+	);
+
+EscalationWorkItem_EscalationCompleted(
+	GUID ScenarioId,
+	GUID ScenarioInstanceId,
+	UINT32 HRESULT,
+	BOOLEAN FailedDuringPreEscalationChecks,
+	UNICODESTRING FailedActionName,
+	BOOLEAN IsAgentEscalation
+	);
+
+Transition_UnmatchedTriggerSource(
+	UNICODESTRING TransitionName,
+	UINT8 TransitionTriggerSource,
+	BOOLEAN TriggerIsAgentEvent
+	);
+
+TimeTriggerScheduler_FailedToAddTrigger_BufferFull(
+	VOID
+	);
+
+TimeTriggerScheduler_AddingTriggerToBuffer(
+	UNICODESTRING TriggerToString
+	);
+
+TimeTriggerScheduler_SchedulingWakeup(
+	UINT32 earliestUsefulWakeTimeMillis,
+	UINT32 NextWakeupWindow,
+	UINT64 WakeUpTimeRelative,
+	FILETIME WakeupTimeAbsolute
+	);
+
+TimeTriggerScheduler_ProcessingTriggersOnWake(
+	VOID
+	);
+
+TimeTriggerScheduler_NoWakeUpNeeded(
+	VOID
+	);
+
+TimeTriggerScheduler_ImmediateWakeup(
+	VOID
+	);
+
+TimeTriggerScheduler_Unschedule(
+	UNICODESTRING TriggerToString
+	);
+
+TimeTriggerScheduler_Schedule(
+	UNICODESTRING TriggerToString
+	);
+
+ScenarioDef_FailedToCreateFilter(
+	VOID
+	);
+
+ScenarioDef_FailedToCreateEscalationAction(
+	VOID
+	);
+
+ScenarioDef_FailedToCreateTrigger(
+	VOID
+	);
+
+ScenarioDependencyResolver_DependencyNotYetSatisfied(
+	GUID ScenarioId,
+	GUID DependencyScenarioId
+	);
+
+ScenarioDependencyResolver_DependencyNotSatisfiable(
+	GUID ScenarioId,
+	GUID DependencyScenarioId
+	);
+
+ScenarioDependencyResolver_FinishedResolvingDependenciesForScenario(
+	GUID ScenarioId
+	);
+
+ScenarioDependencyResolver_ResolvingDependency(
+	GUID ScenarioId,
+	GUID DependencyScenarioId
+	);
+
+ScenarioDependencyResolver_AddingNewEntryToIsland(
+	GUID ScenarioId
+	);
+
+ScenarioDependencyResolver_DependencyAlreadySatisfied_NoDependency(
+	GUID ScenarioId,
+	GUID DependencyScenarioId
+	);
+
+ScenarioDependencyResolver_DependencyAlreadySatisfied_InIsland(
+	GUID ScenarioId,
+	GUID DependencyScenarioId
+	);
+
+ScenarioDependencyResolver_FinishAddingDependentWaitingScenario(
+	VOID
+	);
+
+ScenarioDependencyResolver_AddingEdge(
+	GUID ScenarioId,
+	GUID CurrentDependency
+	);
+
+ScenarioDependencyResolver_StartingNewIsland(
+	GUID ScenarioId
+	);
+
+ScenarioDependencyResolver_StartAddingDependentWaitingScenario(
+	GUID ScenarioId
+	);
+
+ScenarioDependencyResolver_AddingAcceptedScenario(
+	GUID ScenarioId
+	);
+
+ScenarioStorage_ParsingScenario(
+	UNICODESTRING ScenarioId,
+	UNICODESTRING StableId
+	);
+
+ScenarioManager_MismatchedScenarioSchemaVersion(
+	GUID ScenarioId
+	);
+
+ScenarioStorage_KnownScenario_SkippingParse(
+	UNICODESTRING ScenarioId,
+	UNICODESTRING StableId
+	);
+
+ScenarioManager_LoadingScenarioFileStart(
+	COUNTEDSTRING FileName
+	);
+
+IActionDef_CreateAgentAction(
+	ANSISTRING Type
+	);
+
+ActionFactory_CreateEscalationAction(
+	COUNTEDSTRING Type
+	);
+
+FilterFactory_CreateFilter(
+	COUNTEDSTRING Type
+	);
+
+Filter_FilterEvaulated(
+	UNICODESTRING FilterRepresentation,
+	UNICODESTRING LeftProperty,
+	UNICODESTRING RightProperty,
+	UINT32 IsSatisfied,
+	COUNTEDSTRING FilterName,
+	UINT32 HRESULT,
+	UINT32 FromCache
+	);
+
+Filter_FilterEvaulated(
+	UNICODESTRING FilterRepresentation,
+	UINT32 IsSatisfied,
+	COUNTEDSTRING FilterName,
+	UINT32 HRESULT,
+	UINT32 FromCache
+	);
+
+Filter_FilterEvaulated(
+	UNICODESTRING FilterRepresentation,
+	UNICODESTRING LeftProperty,
+	UINT32 IsSatisfied,
+	COUNTEDSTRING FilterName,
+	UINT32 HRESULT,
+	UINT32 FromCache
+	);
+
+TraceManager_StopInactiveMessageReceived(
+	ANSISTRING TraceSlot,
+	GUID ScenarioId,
+	UINT64 ProfileHash
+	);
+
+TraceManager_StoppingInactiveAgentTrace(
+	COUNTEDANSISTRING AgentId,
+	ANSISTRING TraceSlot,
+	GUID ScenarioId,
+	UINT64 ProfileHash
+	);
+
+TraceManager_SettingsChangeMessageReceived(
+	VOID
+	);
+
+TraceManager_StopAgentTraceMessageReceived(
+	ANSISTRING TraceSlot,
+	GUID ScenarioId,
+	GUID ScenarioInstanceId,
+	UINT64 ProfileHash
+	);
+
+TraceManager_StartAgentSlotTraceMessageReceived(
+	ANSISTRING TraceSlot,
+	GUID ScenarioId,
+	ANSISTRING ObjectType,
+	UINT64 ObjectHash
+	);
+
+TraceManager_StartAgentTraceMessageReceived(
+	VOID
+	);
+
+DiagTrack_Rundown_TraceManager(
+	VOID
+	);
+
+DiagTrack_Rundown_TraceManager(
+	VOID
+	);
+
+DiagTrack_Rundown_TraceManager_BudgetInfo(
+	UINT64 TraceBufferBudgetCapBytes
+	);
+
+DiagTrack_Rundown_TraceManager_UsedBudget(
+	UINT32 SlotType,
+	UINT64 TraceBufferBudgetBytesForSlot
+	);
+
+TraceManager_UnthrottleHighestPriorityTraces(
+	UINT32 NextUnthrottle,
+	UINT32 RequiredBudget,
+	UINT64 AvailableBudget
+	);
+
+TraceManager_CancelAllTraces(
+	VOID
+	);
+
+TraceManager_ThrottleForExclusiveTrace_HigherPriorityTraceCannotBeThrottled(
+	UINT8 RequestSlot,
+	UINT32 RunningSlot
+	);
+
+TraceManager_ThrottleForExclusiveTrace_Throttle(
+	UINT8 RequestSlot,
+	UINT32 RunningSlot
+	);
+
+TraceManager_ThrottleDownToNewCap(
+	VOID
+	);
+
+TraceManager_ThrottleDownToNewCap_Throttle(
+	UINT32 NextThrottle
+	);
+
+TraceManager_ThrottleLowestPriorityTraces_Throttle(
+	UINT8 RequestSlot,
+	UINT32 RunningSlot
+	);
+
+TraceManager_ThrottleForExclusiveTrace(
+	UINT8 RequestSlot
+	);
+
+TraceManager_ThrottleLowestPriorityTraces_WillThrottle(
+	UINT8 RequestSlot,
+	UINT8 WillThrottle,
+	UINT64 BudgetInUseByWillThrottle,
+	UINT64 BudgetPostThrottling
+	);
+
+TraceManager_ThrottleLowerPriorityExclusives_Throttle(
+	UINT8 RequestSlot,
+	UINT32 RunningSlot
+	);
+
+TraceManager_ThrottleLowestPriorityTraces(
+	UINT8 RequestSlot,
+	UINT32 BufferSizeInBytes
+	);
+
+Tracer_GetTraceBufferBudget_FailedQueryState(
+	VOID
+	);
+
+TraceManager_EnforceBudgetCap(
+	UINT64 InUseBufferBudgetBytes,
+	UINT64 NewBufferBudgetBytes
+	);
+
+TraceManager_EnforceBudgetCap(
+	VOID
+	);
+
+Tracer_GetTraceBufferBudget_QueryingState(
+	UINT64 PhysicalMemoryBytes,
+	UINT32 TracerBufferPermilOverride,
+	UINT32 TraceBufferMaxMBOverride,
+	UINT64 ResultPhysicalMemoryPercentBytes,
+	UINT64 ResultBufferMaxBytes,
+	UINT64 ResultBudgetBytes
+	);
+
+TraceManager_ConfiguringExpirationTimer(
+	UINT32 MinimumTimeToTraceExpirationMillis
+	);
+
+TraceManager_OnBeforeTraceStarted_InsufficientTotalBufferBudget(
+	UINT8 SlotType,
+	UINT64 TotalBudgetBytes,
+	UINT64 AvailableBudgetBytes,
+	UINT32 RequiredBudgetBytes
+	);
+
+TraceManager_OnBeforeTraceStarted_UnableToReserveBufferBudget(
+	UINT8 SlotType,
+	UINT64 TotalBudgetBytes,
+	UINT64 AvailableBudgetBytes,
+	UINT32 RequiredBudgetBytes
+	);
+
+TraceManager_OnAfterTraceStarted_CommittedBufferBudget(
+	UINT8 SlotType,
+	UINT64 AvailableBudgetBytesAfterCommit,
+	UINT32 RequiredBudgetBytes
+	);
+
+TraceManager_OnBeforeTraceStarted_Start(
+	UINT8 SlotType,
+	UINT64 TotalBudgetBytes,
+	UINT64 AvailableBudgetBytes,
+	UINT32 RequiredBudgetBytes,
+	BOOLEAN IsExclusive
+	);
+
+TraceManager_SkipSlotOnTraceExpiry(
+	UINT8 SlotType
+	);
+
+DiagTrack_Rundown_TraceSlot_CacheTraceInfo(
+	COUNTEDSTRING SlotName,
+	GUID ScenarioId,
+	UINT64 ProfileHash,
+	BOOLEAN IsExclusive,
+	BOOLEAN IsAutoLogger,
+	UINT64 MaxTraceDurationFiletime,
+	UINT8 Priority,
+	COUNTEDANSISTRING TraceProfile,
+	UINT32 WprCalculatedBufferSizeBytes,
+	INT32 WprCalculateBufferSizeResult
+	);
+
+DiagTrack_Rundown_TraceSlot(
+	VOID
+	);
+
+DiagTrack_Rundown_TraceSlot(
+	VOID
+	);
+
+DiagTrack_Rundown_TraceSlot_CurrentTraceInfo(
+	COUNTEDSTRING SlotName,
+	GUID ScenarioId,
+	UINT64 ProfileHash,
+	UINT64 UtcStartTimeFiletime,
+	UINT64 SessionStartTimeFiletime,
+	UINT64 StopTimeFiletime,
+	UINT32 RequiredBufferSpace,
+	BOOLEAN HasStopTime,
+	BOOLEAN IsThrottled
+	);
+
+TraceSlot_HandlingWprErrorWithScroch(
+	INT32 HRESULT
+	);
+
+TraceManager_StartingTrace(
+	GUID ScenarioId,
+	UINT64 TraceProfileHash,
+	UINT8 TracePriority,
+	INT32 TraceEndTime,
+	UINT32 HRESULT
+	);
+
+TraceSlot_StartTracingFailedDueToWprError(
+	INT32 HRESULT,
+	GUID ScenarioId,
+	UINT64 TraceProfileHash
+	);
+
+TraceManager_StoppingTrace(
+	BOOLEAN WasPreempted,
+	UINT64 TraceProfileHash
+	);
+
+TraceSlot_Event_OnServiceStartup_RestartedSavedTrace(
+	COUNTEDSTRING SlotName
+	);
+
+TraceSlot_Event_OnServiceShutdown(
+	COUNTEDSTRING SlotName
+	);
+
+TraceSlot_Event_OnServiceShutdown_CancelRunningTrace(
+	COUNTEDSTRING SlotName,
+	BOOLEAN IsAutoLogger,
+	BOOLEAN IsSlotThrottled
+	);
+
+TraceSlot_Event_OnUpdateTraceState(
+	COUNTEDSTRING SlotName
+	);
+
+TraceSlot_Event_OnServiceStartup_RegistryTraceNotValid(
+	COUNTEDSTRING SlotName
+	);
+
+TraceSlot_Event_OnServiceStartup_TraceExpiredDuringOfflinePeriod(
+	COUNTEDSTRING SlotName
+	);
+
+TraceSlot_Event_OnServiceStartup(
+	COUNTEDSTRING SlotName
+	);
+
+TraceSlot_Event_OnBeginScenarioParsing(
+	VOID
+	);
+
+DiagTrack_IsRunningTraceProfileMinTraceDurationMet_Calculation(
+	UINT64 MVTDFiletime,
+	UINT64 RuntimeFiletime
+	);
+
+TraceSlot_SetTemporaryFilePath(
+	COUNTEDSTRING SlotName,
+	UNICODESTRING TempPath
+	);
+
+TraceSlot_FailedToSetTemporaryFilePath(
+	COUNTEDSTRING SlotName,
+	UINT32 ErrorCode
+	);
+
+MoveAllFilesWithPattern_MoveFailed(
+	UNICODESTRING SourcePath,
+	UNICODESTRING DestinationPath,
+	COUNTEDSTRING Pattern,
+	UNICODESTRING FailingSourcePath,
+	UNICODESTRING FailingDestinationPath,
+	INT32 ErrorCode
+	);
+
+SnapshotManager_SnapHeapSnapshotOnDemand(
+	UINT32 ProcessId
+	);
+
+SnapshotManager_StartHeapSnapshotByProcessName(
+	UNICODESTRING ProcessName,
+	BOOLEAN IncludeRunningProcesses,
+	BOOLEAN IncludeFutureProcesses
+	);
+
+Tracer_StoppedTraceSession(
+	UNICODESTRING InstanceName,
+	UNICODESTRING LoggerName,
+	INT32 HRESULT
+	);
+
+Tracer_PerformingScorch(
+	UNICODESTRING InstanceName
+	);
+
+Tracer_MovePreMergedTraces(
+	UNICODESTRING TempTraceDirectory,
+	COUNTEDSTRING DestDir
+	);
+
+Tracer_UpdateTraceState(
+	UNICODESTRING InstanceName
+	);
+
+Tracer_DuplicateWprInstance_EventDoesntAlreadyExist(
+	VOID
+	);
+
+Tracer_DuplicateWprInstance_RetryPath(
+	VOID
+	);
+
+AlternativeSlot_MergeShutdownTraceSuceeded(
+	UINT64 TraceProfileHash,
+	UINT64 BootId
+	);
+
+AlternativeSlot_MergeShutdownTraceFailed(
+	INT32 ReturnCode
+	);
+
+DiagTrack_Rundown_AlternativeSlot(
+	VOID
+	);
+
+DiagTrack_Rundown_AlternativeSlot(
+	VOID
+	);
+
+AotSlot_PickedRandomShutdownTrace(
+	GUID ScenarioId,
+	UINT64 ProfileHash
+	);
+
+AlternativeSlot_StartShutdownTraceFailed(
+	INT32 ReturnCode
+	);
+
+AlternativeSlot_Event_OnNoRemainingEscalations(
+	GUID ScenarioId,
+	UINT64 Hash
+	);
+
+AlternativeSlot_Event_OnEndScenarioParsing(
+	BOOLEAN InitialParse
+	);
+
+AlternativeSlot_Event_OnTraceExpiry(
+	VOID
+	);
+
+AlternativeSlot_Event_OnTraceExpiry(
+	BOOLEAN IsOwnerValid,
+	BOOLEAN IsExpired
+	);
+
+AlternativeSlot_GetTimeToExpirationFiletime(
+	UINT64 RemainingRuntime
+	);
+
+AlternativeSlot_Event_OnTraceRemoval_ParsingActive(
+	GUID ScenarioId,
+	UINT64 Hash
+	);
+
+AlternativeSlot_Event_OnTraceRemoval(
+	GUID ScenarioId,
+	UINT64 Hash
+	);
+
+TraceManager_SnappingTrace(
+	UINT64 TraceProfileHash,
+	UINT32 HRESULT
+	);
+
+AlternativeSlot_DisableNdiscap(
+	GUID ScenarioId,
+	GUID ScenarioInstanceId
+	);
+
+AlternativeSlot_SnapSlotTrace(
+	GUID ScenarioId,
+	GUID ScenarioInstanceId,
+	UINT64 Hash,
+	COUNTEDSTRING OutputDirPath,
+	BOOLEAN IsAutoLogger,
+	BOOLEAN RequireExclusive,
+	BOOLEAN RequireNGENPdbs,
+	BOOLEAN IsFileBacked,
+	UINT64 MinimumViableTraceDurationFiletime
+	);
+
+AlternativeSlot_StartSlotTrace_EnableNdiscap(
+	GUID ScenarioId,
+	GUID ScenarioInstanceId
+	);
+
+DiagTrack_Rundown_AotSlot(
+	VOID
+	);
+
+AotSlot_PickedRandomAot(
+	GUID ScenarioId,
+	UINT64 ProfileHash,
+	UINT32 TraceProbabiltyRange,
+	UINT32 TraceProbabiltyRangeSelection,
+	UINT32 HighRange,
+	UINT32 MediumRange,
+	UINT32 LowRange,
+	UINT16 TraceProbabilityLevel
+	);
+
+AotSlot_StartAnyAot_AttemptToTrace(
+	GUID ScenarioId,
+	UINT64 ProfileHash
+	);
+
+DiagTrack_Rundown_AotSlot(
+	VOID
+	);
+
+DiagTrack_Rundown_AotSlot_Info(
+	UINT32 MaxRuntimeSec,
+	BOOLEAN IsForcePick
+	);
+
+AotSlot_NoStartableTraces(
+	VOID
+	);
+
+AotSlot_PickedRandomMandatoryAot(
+	GUID ScenarioId,
+	UINT64 ProfileHash,
+	UINT16 TraceProbabilityLevel
+	);
+
+AotSlot_GetRandomAoT_SkippingUnstartableTrace(
+	UINT64 TraceHash
+	);
+
+AotSlot_ModeSwitchAttempt(
+	UINT16 OldMode,
+	UINT16 NewMode
+	);
+
+AotSlot_GetForcePickAotTraceSet(
+	GUID ForcePickAot
+	);
+
+AotSlot_IsAotPermitted(
+	BOOLEAN IsAotPermitted
+	);
+
+AotSlot_Event_OnTraceExpiry(
+	BOOLEAN IsForcePick,
+	BOOLEAN IsExpired
+	);
+
+AotSlot_Event_OnTraceExpiry(
+	VOID
+	);
+
+AotSlot_Event_OnTraceRemoval_ParsingActive(
+	GUID ScenarioId,
+	UINT64 Hash
+	);
+
+AotSlot_Event_OnTraceRemoval(
+	GUID ScenarioId,
+	UINT64 Hash
+	);
+
+AotSlot_Event_OnNoRemainingEscalations(
+	GUID ScenarioId,
+	UINT64 Hash
+	);
+
+AotSlot_Event_OnEndScenarioParsing(
+	BOOLEAN InitialParse
+	);
+
+AotSlot_SnapSlotTrace(
+	GUID ScenarioId,
+	GUID ScenarioInstanceId,
+	UINT64 Hash,
+	COUNTEDSTRING OutputDirPath,
+	BOOLEAN IsAutoLogger,
+	BOOLEAN RequireExclusive,
+	BOOLEAN RequireNGENPdbs,
+	UINT64 MinimumViableTraceDurationFiletime
+	);
+
+AotSlot_GetTimeToExpirationFiletime(
+	UINT64 RemainingRuntime
+	);
+
+DiagTrack_Rundown_MiniSlot_Info(
+	BOOLEAN IsEnabled,
+	BOOLEAN IsContentEnabled,
+	UINT32 TotalClusterPriority,
+	UINT64 NumClusters
+	);
+
+DiagTrack_Rundown_MiniSlot_ClusterInfo(
+	UNICODESTRING Name,
+	GUID Id,
+	UINT32 Priority,
+	UINT64 NumTraces,
+	UNICODESTRING TraceHashes
+	);
+
+DiagTrack_Rundown_MiniSlot(
+	VOID
+	);
+
+DiagTrack_Rundown_MiniSlot(
+	VOID
+	);
+
+MiniSlot_Event_OnTraceExpiry(
+	VOID
+	);
+
+MiniSlot_Event_OnTraceExpiry(
+	BOOLEAN IsExpired
+	);
+
+MiniSlot_Event_OnEndScenarioParsing_UnknownClusterSetting(
+	UNICODESTRING SettingName,
+	UNICODESTRING SettingValue
+	);
+
+MiniSlot_Event_OnEndScenarioParsing_InvalidSetting(
+	UNICODESTRING SettingName,
+	UNICODESTRING SettingValue
+	);
+
+MiniSlot_Event_OnEndScenarioParsing_UnknownTraceSetting(
+	UNICODESTRING SettingName,
+	UNICODESTRING SettingValue
+	);
+
+MiniSlot_Event_OnEndScenarioParsing(
+	BOOLEAN InitialParse
+	);
+
+MiniSlot_Event_OnFinalizeScenarioParsing(
+	BOOLEAN IsSlotEnabled,
+	BOOLEAN LastMiniSlotEnabledState,
+	BOOLEAN IsContentPermitted,
+	BOOLEAN LastMiniSlotContentPermittedState
+	);
+
+MiniSlot_SnapSlotTrace(
+	GUID ScenarioId,
+	GUID ScenarioInstanceId,
+	UINT64 Hash,
+	COUNTEDANSISTRING OutputDirPath,
+	BOOLEAN IsAutoLogger,
+	BOOLEAN RequireExclusive,
+	BOOLEAN RequireNGENPdbs,
+	UINT64 MinimumViableTraceDurationFiletime
+	);
+
+MiniSlot_SnappingTrace(
+	UINT64 TraceProfileHash,
+	UINT32 HRESULT
+	);
+
+MiniSlot_GetTimeToExpirationFiletime(
+	UINT64 RemainingRuntime
+	);
+
+DiagTrack_Rundown_SelfDiagSlot(
+	VOID
+	);
+
+DiagTrack_Rundown_SelfDiagSlot(
+	VOID
+	);
+
+SelfDiagSlot_Event_OnTraceRemoval_ParsingActive(
+	GUID ScenarioId,
+	UINT64 Hash
+	);
+
+SelfDiagSlot_Event_OnNoRemainingEscalations(
+	GUID ScenarioId,
+	UINT64 Hash,
+	BOOLEAN IsScenarioParsingActive
+	);
+
+SelfDiagSlot_Event_OnEndScenarioParsing(
+	BOOLEAN InitialParse
+	);
+
+SelfDiagSlot_Event_OnTraceExpiry(
+	VOID
+	);
+
+SelfDiagSlot_SnapSlotTrace(
+	GUID ScenarioId,
+	GUID ScenarioInstanceId,
+	COUNTEDSTRING OutputDirPath
+	);
+
+RunningTraceInfo_OnServiceStartup(
+	COUNTEDSTRING SlotName,
+	GUID ScenarioId,
+	UINT64 ProfileHash,
+	UINT64 UtcStartTimeFiletime,
+	UINT64 SessionStartTimeFiletime,
+	UINT64 StopTimeFiletime,
+	UINT32 RequiredBufferSpace,
+	BOOLEAN HasStopTime,
+	BOOLEAN IsThrottled,
+	UINT32 Priority,
+	BOOLEAN IsExclusive,
+	BOOLEAN IsAutoLogger
+	);
+
+RunningTraceInfo_RemoveFromRegistry(
+	VOID
+	);
+
+RunningTraceInfo_SaveToRegistry(
+	COUNTEDSTRING SlotName,
+	GUID ScenarioId,
+	UINT64 ProfileHash,
+	UINT64 UtcStartTimeFiletime,
+	UINT64 SessionStartTimeFiletime,
+	UINT64 StopTimeFiletime,
+	UINT32 RequiredBufferSpace,
+	BOOLEAN HasStopTime,
+	BOOLEAN IsThrottled,
+	UINT8 Priority,
+	UINT32 IsExclusive,
+	BOOLEAN IsAutoLogger
+	);
+
+RunningTraceInfo_ExtendExpiration(
+	UINT64 UpdatedUtcStartTime,
+	UINT64 NewExpirationTime,
+	UINT64 OldExpirationTime,
+	GUID ScenarioId,
+	UINT64 ProfileHash
+	);
+
+AsimovUploader_TelClientSyntheticSampledOut(
+	COUNTEDSTRING Name
+	);
+
+TriggerFactory_CreateTrigger(
+	COUNTEDSTRING Type
+	);
+
+ITriggerInst_AggregationKeysNotEqual_UnmatchedKeyFieldDataSize(
+	UINT64 KeyIndex,
+	UNICODESTRING FieldName,
+	UINT32 ThisFieldSize,
+	UINT32 OtherFieldSize
+	);
+
+ITriggerInst_AggregationKeysNotEqual_UnmatchedKeyFieldData(
+	UINT64 KeyIndex,
+	UNICODESTRING FieldName
+	);
+
+ITriggerInst_NoAggregationKeyFields_MissingPartC(
+	COUNTEDSTRING TriggerName
+	);
+
+ITriggerInst_AggregationKeyFieldInfo(
+	COUNTEDSTRING TriggerName,
+	UNICODESTRING FieldName,
+	UINT32 DataType,
+	UINT32 DataSize
+	);
+
+ITriggerInst_AggregationKeysNotEqual_UnmatchedKeyFieldCount(
+	UINT64 ThisTriggerAggregationKeyCount,
+	UINT64 OtherTriggerAggregationKeyCount
+	);
+
+ITriggerInst_AggregationKeysNotEqual_UnmatchedKeyFieldName(
+	UINT64 KeyIndex,
+	UNICODESTRING ThisFieldName,
+	UNICODESTRING OtherFieldName
+	);
+
+Trigger_MSAPopulateWithResolvedSID(
+	UINT32 IdentityType
+	);
+
+Trigger_MSACouldntPopulateWithResolvedSid_UnableToRetrieveMSA(
+	UINT32 IdentityType
+	);
+
+Trigger_XToken_ProviderReturnedEmpty(
+	VOID
+	);
+
+Trigger_XToken_NoXuidInGameEvent(
+	VOID
+	);
+
+Trigger_UsingEventSID_BecauseItIsALoggedInUser(
+	UNICODESTRING SID
+	);
+
+Trigger_UsingEventSID_BecauseNoAssociatedLoggedInUserFound(
+	UINT32 SessionId,
+	UNICODESTRING SID
+	);
+
+Trigger_UsingAlternativeSID(
+	UINT32 SessionId,
+	UNICODESTRING EventSID,
+	UNICODESTRING AlternativeSID
+	);
+
+Trigger_UsingOverrideSid_PartCOverride(
+	UNICODESTRING OldSID,
+	UNICODESTRING NewSID,
+	INT32 ValidSid,
+	BOOLEAN LoggedInUser
+	);
+
+Agent_AcceptingScenarioTrigger(
+	GUID ProviderId,
+	COUNTEDSTRING EventName,
+	UINT32 EventId,
+	UINT32 EventVersion,
+	UINT64 EventKeywords,
+	UINT8 EventLevel
+	);
+
+Agent_SkippingUnsupportedAgentTriggerType(
+	UINT8 TriggerType
+	);
+
+Agent_EmptyScenarioTriggersSetReceived(
+	VOID
+	);
+
+Agent_NoScenarioTriggersSetReceived(
+	VOID
+	);
+
+AgentETWConsumer_StopConsumer_ListenerThreadExited(
+	VOID
+	);
+
+Agent_ProcessTrace(
+	INT32 ReturnCode
+	);
+
+AgentETWConsumer_StopConsumer(
+	VOID
+	);
+
+AgentETWConsumer_StopConsumer_CloseTrace(
+	VOID
+	);
+
+Agent_OpenRealTimeTrace(
+	INT32 ReturnCode
+	);
+
+AgentETWConsumer_ListenerThreadExit(
+	UINT32 ExitCode
+	);
+
+Agent_SetTraceStartedEventOnError(
+	VOID
+	);
+
+Agent_FinishLoadSettingsFromHost(
+	VOID
+	);
+
+AgentEtwConsumer_SkipUpdateEtwSession_ConsumerStopping(
+	VOID
+	);
+
+Agent_TriggerSettingReceived(
+	UNICODESTRING Namespace,
+	UNICODESTRING Setting,
+	DOUBLE SampleRate,
+	INT8 Latency,
+	INT8 Persistence,
+	UINT64 CatName,
+	BOOLEAN RemoveCoreDataAttribute
+	);
+
+Agent_MachineSampleNumberReceived(
+	DOUBLE SampleNumber
+	);
+
+UtcJsonEtwReader_AggregationParameters(
+	UINT32 AggregationPeriodMillis,
+	UINT32 MaxEventCount,
+	ANSISTRING AggMode
+	);
+
+UtcJsonEtwReader_ParseDiffpStruct(
+	UNICODESTRING FieldName,
+	ANSISTRING DiffpAlgorithm,
+	ANSISTRING AggMode,
+	DOUBLE Epsilon,
+	DOUBLE PerturbationProbability,
+	ANSISTRING HistogramType,
+	ANSISTRING Value,
+	ANSISTRING MaxValue
+	);
+
+UtcJsonEtwReader_ReplaceAggregateValueStruct(
+	UNICODESTRING FieldName,
+	ANSISTRING AggMode,
+	ANSISTRING Value
+	);
+
+ETWConsumer_TryReloadSettings(
+	VOID
+	);
+
+ETWConsumer_AgentEventNotPermittedForTelemetry(
+	COUNTEDSTRING Event
+	);
+
+ETWConsumer_AgentEventNotApplicable(
+	COUNTEDSTRING Event
+	);
+
+ETWConsumer_AgentEventNotPermittedForScenarios(
+	COUNTEDSTRING Event
+	);
+
+ETWConsumer_ProcessTrace(
+	INT32 ReturnCode
+	);
+
+ETWConsumer_OpenOfflineETLFilesTrace(
+	INT32 ReturnCode
+	);
+
+ETWConsumer_DeleteEtlFileWithoutProcessing(
+	COUNTEDSTRING FilePath
+	);
+
+ETWConsumer_EtlProcessingThreadProc_NotAuthorizedToProcessETLLogs(
+	VOID
+	);
+
+ETWConsumer_EtlProcessingThreadProc_NotAuthorizedToProcessAutoLoggerLoggerETL(
+	VOID
+	);
+
+ETWConsumer_EtlProcessingThreadProc_NotAuthorizedToProcessShutdownLoggerETL(
+	VOID
+	);
+
+ETWConsumer_SendToRemoteAggregator(
+	COUNTEDSTRING TriggerName,
+	BOOL32 EventCopied
+	);
+
+ETWConsumer_EventRejectedForHavingAllKeywordBitsSet(
+	COUNTEDSTRING EventName
+	);
+
+ETWConsumer_etwTriggerEventIsDevHealthMonEvent(
+	UNICODESTRING isDevHealthMonEvent
+	);
+
+ETWConsumer_SwitchToShutdownTrace(
+	VOID
+	);
+
+ETWConsumer_DroppingUnregisteredIKeyEvent(
+	COUNTEDSTRING IKey,
+	COUNTEDSTRING EventName
+	);
+
+ETWConsumer_SkippingShutdownLogger_SessionNotRunning(
+	VOID
+	);
+
+ETWConsumer_SkippingShutdownLogger_NotAuthorized(
+	VOID
+	);
+
+ETWConsumer_FailedToSwitchSessionToLogFile(
+	INT32 HResult
+	);
+
+ETWConsumer_StopConsumer_PostTraceHandleReset(
+	BOOLEAN IsSevilleConsumer
+	);
+
+ETWConsumer_OpenRealTimeTrace(
+	BOOLEAN IsSevilleConsumer,
+	INT32 ReturnCode
+	);
+
+ETWConsumer_EndExistingTrace(
+	INT32 ReturnCode
+	);
+
+ETWConsumer_StopConsumer_PreTraceHandleReset(
+	BOOLEAN IsSevilleConsumer
+	);
+
+ETWConsumer_SkippingRealtimeSession_NotAuthorized(
+	VOID
+	);
+
+ETWConsumer_ProcessTrace(
+	INT32 ReturnCode
+	);
+
+TriggerBuffer_Resize(
+	UINT64 CurrentSize,
+	UINT64 CurrentMaxSize,
+	UINT64 NewMaxSize
+	);
+
+TriggerBuffer_ResizeDisabled(
+	VOID
+	);
+
+TriggerBuffer_ResizeNotNeeded(
+	VOID
+	);
+
+TriggerBuffer_TooFullToResize(
+	UINT64 CurrentSize,
+	UINT64 CurrentMaxSize,
+	UINT64 NewMaxSize
+	);
+
+EtwTriggerDef_ProviderAndGroupIdConflict(
+	GUID ConflictingProviderId
+	);
+
+TriggerAggregator_RemovingAggregationTableEntry(
+	UNICODESTRING eventName.c_str()
+	);
+
+TriggerAggregator_InFlightAggregationTableEntry(
+	UNICODESTRING EventName,
+	UINT64 AggregationStartTime,
+	UINT32 AggregationPeriodMillis,
+	UINT64 AggregationKeyCount
+	);
+
+DiagTrack_Rundown_TriggerAggregator(
+	VOID
+	);
+
+DiagTrack_Rundown_TriggerAggregator(
+	VOID
+	);
+
+TriggerAggregator_SkippingAggregationTimerWorkWhenAggregationIsStopped(
+	VOID
+	);
+
+TriggerAggregator_FinalizeAggregateEvents(
+	VOID
+	);
+
+TriggerAggregator_ProcessAggregateEventEntry(
+	UNICODESTRING eventName.c_str(),
+	UINT32 AggregationPeriodMillis,
+	UINT64 AggregationStartTime,
+	UINT64 AggregationEndTime,
+	UINT64 CurrentTime,
+	BOOLEAN ReadyToFire,
+	BOOLEAN FinalizeIncompleteAggregationWindows,
+	UINT64 AggregateEventCount
+	);
+
+TriggerAggregator_DiscardNewAggregatationFieldValue(
+	VOID
+	);
+
+TriggerAggregator_DiscardExistingAggregatationFieldValue(
+	VOID
+	);
+
+TriggerAggregator_UpdateAggregateEventField(
+	UNICODESTRING FieldName,
+	ANSISTRING AggregationMode,
+	ANSISTRING ExistingValue,
+	ANSISTRING NewValue,
+	ANSISTRING ResultingValue
+	);
+
+TriggerAggregator_MergeExistingAggregateEvent(
+	COUNTEDSTRING EventName,
+	UINT64 AggKeyHash
+	);
+
+TriggerAggregator_AddNewAggregateEvent(
+	COUNTEDSTRING EventName,
+	UINT64 AggregationStartTime,
+	UINT32 AggregationPeriodMillis,
+	UINT64 AggregationKeyHash,
+	UINT32 MaxEvents,
+	ANSISTRING EventAggregationMode,
+	UINT64 AggregateEventCount
+	);
+
+TriggerAggregator_RemoveOldestAggregationKey(
+	VOID
+	);
+
+TriggerAggregator_RemoveRandomAggregationKey(
+	VOID
+	);
+
+TriggerAggregator_RemoveNewestAggregationKey(
+	VOID
+	);
+
+EtwSession_EnumTraceGuidsEx_TraceGuidQueryInfoError(
+	GUID ProviderGuid,
+	UINT32 Win32Error
+	);
+
+EtwSession_SetBinaryTrackingInfo(
+	UINT32 ErrorWin32
+	);
+
+EtwSession_EnumTraceGuidsEx_TraceGroupQueryInfoError(
+	GUID GroupGuid,
+	UINT32 Win32Error
+	);
+
+EtwSession_DisableProvider(
+	COUNTEDSTRING SessionName,
+	GUID Guid,
+	BOOLEAN IsGroup,
+	UINT32 Win32Error
+	);
+
+EtwSession_SetDisallowList(
+	COUNTEDSTRING SessionName,
+	UINT64 DisallowListLength,
+	UINT32 ReturnCode
+	);
+
+EtwSession_ControlTrace(
+	COUNTEDSTRING SessionName,
+	UINT64 LoggerId,
+	UINT32 ControlCode,
+	UINT32 ReturnCodeWin32
+	);
+
+EtwSession_SetEventNameFilter(
+	COUNTEDSTRING SessionName,
+	GUID Provider,
+	UINT8 Level,
+	UINT64 FilterKeywords,
+	BINARY FilterEventNames
+	);
+
+EtwSession_EnableProvider(
+	COUNTEDSTRING SessionName,
+	GUID Provider,
+	BOOL32 IsGroup,
+	UINT64 KeywordsBeforeIndividualEventRules,
+	UINT64 FinalKeywords,
+	UINT8 Level,
+	UINT32 EnableProperty,
+	UINT32 Win32Error
+	);
+
+ETWConsumer_SkipEnableProviderGroup(
+	COUNTEDSTRING SessionName,
+	GUID GroupId
+	);
+
+ETWConsumer_SkipIndividualEventEnable(
+	COUNTEDSTRING SessionName,
+	ANSISTRING EventName,
+	UINT64 EventKeywords,
+	COUNTEDSTRING ProviderName,
+	UINT64 ProviderKeywords
+	);
+
+ETWConsumer_AddToEventNameFilter(
+	COUNTEDSTRING SessionName,
+	ANSISTRING EventName,
+	UINT64 EventKeywords,
+	COUNTEDSTRING ProviderName
+	);
+
+EtwSession_StopExistingTrace(
+	COUNTEDSTRING SessionName
+	);
+
+EtwSession_StartTrace(
+	COUNTEDSTRING SessionName,
+	UINT32 ErrorWin32
+	);
+
+EtwSession_ResumedExistingTrace(
+	UNICODESTRING SessionName
+	);
+
+DiagTrack_Rundown_DifferentialPrivacyManager(
+	VOID
+	);
+
+DifferentialPrivacyManager_DomainDistributionDetails(
+	COUNTEDSTRING EventName,
+	COUNTEDSTRING OriginalValue,
+	BINARY ValueKey,
+	UINT64 HashValue,
+	INT64 DiffpValue
+	);
+
+DiagTrack_Rundown_DifferentialPrivacyManager(
+	VOID
+	);
+
+DifferentialPrivacyManager_StoredParameters(
+	DOUBLE DefaultEpsilon,
+	DOUBLE DefaultPerturbationProbability,
+	UINT64 DomainDistributionHashFunctionPrime
+	);
+
+DifferentialPrivacyManager_NumericMeanDetails(
+	COUNTEDSTRING EventName,
+	UINT64 OriginalValue,
+	UINT8 DiffpMeanBit,
+	ANSISTRING HistogramType,
+	UINT64 Bucket,
+	UINT32 Histogram,
+	UINT32 PerturbedHistogram,
+	INT64 DiffpValue
+	);
+
+DifferentialPrivacyManager_CreateDomainDistributionMemoizationDataEntry(
+	UINT64 HashPrime,
+	DOUBLE Epsilon,
+	UINT64 HashSeed,
+	UINT64 HashValueReportingThreshold,
+	DOUBLE RandomPercentage,
+	DOUBLE ReportHashSeedProbability,
+	BOOLEAN AlwaysReportHashSeed
+	);
+
+DifferentialPrivacyManager_DomainDistributionMemoizationData(
+	COUNTEDSTRING EventName,
+	UINT64 HashPrime,
+	DOUBLE Epsilon,
+	UINT64 HashSeed,
+	UINT64 HashValueReportingThreshold,
+	BOOLEAN AlwaysReportHashSeed
+	);
+
+DifferentialPrivacyManager_CreateNumericMeanMemoizationDataEntry(
+	UINT64 MaxValue,
+	DOUBLE Epsilon,
+	UINT64 RandomBaseValue,
+	DOUBLE Bit0RandomPercentage,
+	DOUBLE Bit0ProbabilityThreshold,
+	BOOLEAN Bit0RandomPercentageWithinThreshold,
+	UINT8 MeanBit0,
+	DOUBLE Bit1RandomPercentage,
+	DOUBLE Bit1ProbabilityThreshold,
+	BOOLEAN Bit1RandomPercentageWithinThreshold,
+	UINT8 MeanBit1,
+	UINT32 SeedHistogram,
+	UINT32 SeedHistogramMask
+	);
+
+DifferentialPrivacyManager_NumericMeanMemoizationData(
+	COUNTEDSTRING EventName,
+	UINT64 MaxValue,
+	DOUBLE Epsilon,
+	UINT64 RandomBaseValue,
+	UINT8 MeanBit0,
+	UINT8 MeanBit1,
+	UINT32 SeedHistogram,
+	UINT32 SeedHistogramMask
+	);
+
+DifferentialPrivacyManager_DiffpResult(
+	UNICODESTRING FieldName,
+	ANSISTRING OriginalValue,
+	INT64 DiffpValue
+	);
+
+ApiServer_FetchReportData_ImpersonatingUser(
+	VOID
+	);
+
+ApiServer_UifIsNotCaller(
+	UNICODESTRING SID
+	);
+
+ApiServer_LuaTokenType(
+	UINT32 luatype
+	);
+
+ApiServer_GetAppSidFailed(
+	VOID
+	);
+
+ApiServer_UifIsCaller(
+	UNICODESTRING SID
+	);
+
+ApiServer_FoundTokenAndSidForRpcImpersonatedUser(
+	UNICODESTRING Sid
+	);
+
+ApiServer_RpcInterfaceRegistered(
+	VOID
+	);
+
+DevHealthMonTenant_NotifyDevHealthMonStateChanged(
+	BOOLEAN isEnabled
+	);
+
+DevHealthMonTenant_DeviceHealthMonitoringEnabledMdm(
+	INT32 DeviceHealthMonitoringMdmValue
+	);
+
+Tenant_EnabledAndHasValidHeartBeatPointer(
+	VOID
+	);
+
+SevilleTenant_EnableStop(
+	VOID
+	);
+
+SevilleTenant_EnableStart(
+	VOID
+	);
+
+LatencyData_FailedToOpenLatencyKey(
+	VOID
+	);
+
+HeartBeat_IncreaseVortexResponseCodeFailure(
+	UINT32 HttpStatusCode
+	);
+
+HeartBeat_InputEndpointErrorString(
+	UNICODESTRING ErrorBucket
+	);
+
+HeartBeat_IncreaseVortexHttpNetworkFailures(
+	INT32 NetworkResult
+	);
+
+HeartBeat_StampLastAttemptedFireTime(
+	UINT64 lastAttemptedFireTime
+	);
+
+HeartBeat_GetNextFireTime(
+	UINT64 lastAttemptToFireTime,
+	UINT64 nextFireTime
+	);
+
+Heartbeat_FailedToOpenHeartbeatKey(
+	VOID
+	);
+
+UsageAnalyzer_ScenarioReport(
+	VOID
+	);
+
+UsageAnalyzer_AsimovReportThrottleOccurrence(
+	NOPRINT Key,
+	ANSISTRING ProviderName,
+	UINT32 Count
+	);
+
+UsageAnalyzer_AsimovReport(
+	VOID
+	);
+
+UsageAnalyzer_ScenarioReport(
+	UINT32 ReportLengthSec,
+	UINT32 CurrentLoadedScenarioCount,
+	UINT32 SeenScenarioCount,
+	UINT32 ConsumerDroppedEventCount,
+	UINT32 TotalEventCount,
+	UINT32 WakingEventCount,
+	UINT64 SpuriousEventCount,
+	UINT64 SyntheticTriggerCount,
+	UINT64 DefCacheMissCount
+	);
+
+UsageAnalyzer_ScenarioReportEntry_2(
+	GUID ScenarioId,
+	UNICODESTRING ScenarioName,
+	UINT64 MatchingKCy,
+	UINT64 EscalationKCy,
+	UINT32 EscalationDiskWriteKB,
+	UINT32 UniqueTriggerCandidateCount,
+	UINT32 SharedTriggerCandidateCount,
+	FLOAT TriggerCandidateBlame,
+	UINT16 UniqueUploadedTriggerCount,
+	UINT16 SharedUploadedTriggerCount,
+	FLOAT UploadedTriggerBlame,
+	UINT16 TriggerCandidateCountScreenOff,
+	UINT16 StateModelTransitionCount,
+	UINT16 GeneratedSyntheticCount,
+	UINT16 ScenarioStarted,
+	UINT16 ScenarioCompletions,
+	UINT16 ScenarioFailures,
+	UINT16 EscalationSuccesses,
+	UINT16 EscalationFailures,
+	UINT16 ScenarioThrottled
+	);
+
+UsageAnalyzer_AsimovReport(
+	UINT32 ReportLengthSec,
+	UINT32 ReportScreenOnLengthSec,
+	UINT32 ReportScreenOffLengthSec
+	);
+
+UsageAnalyzer_AsimovReportEntry(
+	STRING Key,
+	ANSISTRING ProviderName,
+	UINT32 Features,
+	UINT32 EventCount,
+	UINT64 TotalBytes,
+	ANSISTRING TopEvent1Name,
+	UINT32 TopEvent1Count,
+	ANSISTRING TopEvent2Name,
+	UINT32 TopEvent2Count,
+	UINT32 NumProcessesWithKey,
+	UINT32 NumProcessesWithProvider,
+	UINT64 ProviderEnableTimeScreenOn,
+	UINT64 ProviderEnableTimeScreenOff
+	);
+
+UsageAnalyzer_ProcessRecord_ProviderInfo(
+	STRING Process,
+	UINT32 PID,
+	UINT64 Key,
+	STRING Key,
+	ANSISTRING ProviderName,
+	UINT32 Features,
+	UINT32 EventCount
+	);
+
+UsageAnalyzer_ProcessRecord(
+	STRING Process,
+	UINT32 PID,
+	UINT64 Key,
+	UINT64 TotalProcessSecondsScreenOn,
+	UINT64 TotalProcessSecondsScreenOff
+	);
+
+EventTranscript_SuccessfullyOpenedReadConnection(
+	VOID
+	);
+
+EventTranscript_FailedToDeleteOldestRecords(
+	ANSISTRING ErrorMessage
+	);
+
+EventTranscript_SucceededStoreTrim(
+	VOID
+	);
+
+EventTranscript_FailedSQLiteOperation(
+	INT32 ErrorCode,
+	ANSISTRING ErrorCodeString,
+	ANSISTRING ErrorMessageString
+	);
+
+EventTranscript_FailedToDeletedStore(
+	VOID
+	);
+
+EventTranscript_StoreUsageExceededTheLimit(
+	UINT64 StoreUsageBytes
+	);
+
+EventTranscript_FailedToPrePopulateProviderGroupsTable(
+	ANSISTRING ErrorMessage
+	);
+
+EventTranscript_FailedToSetStoreVersion(
+	ANSISTRING ErrorMessage
+	);
+
+EventTranscript_UnexpectedJournalMode(
+	ANSISTRING ActualJournalMode
+	);
+
+EventTranscript_UnexpectedJournalSizeLimit(
+	INT32 ActualSizeLimit
+	);
+
+EventTranscript_OldStoreDetected(
+	INT32 ActualStoreVersion,
+	UINT32 RequiredStoreVersion
+	);
+
+EventTranscript_FailedToSetWAL(
+	ANSISTRING ErrorMessage
+	);
+
+EventTranscript_FailedToLimitJournalSize(
+	ANSISTRING ErrorMessage
+	);
+
+EventTranscript_DeletedOldStore(
+	VOID
+	);
+
+EventTranscript_FailedToCreateTables(
+	ANSISTRING ErrorMessage
+	);
+
+EventTranscript_StoreAlreadyOpened(
+	VOID
+	);
+
+EventTranscript_FailedToDeleteEventTags(
+	VOID
+	);
+
+EventTranscript_FailedToInsertEventTag(
+	UINT32 EventNameHash,
+	UINT32 TagGroupAndRank
+	);
+
+EventTranscript_InsertedEventTag(
+	UINT32 EventNameHash,
+	UINT32 TagGroupAndRank
+	);
+
+EventTranscript_Enabled(
+	UINT32 MaxEventsPerCommit,
+	UINT32 PeriodicCommitTimeSec
+	);
+
+EventTranscript_FailedToDeleteTagDescriptions(
+	VOID
+	);
+
+EventTranscript_FailedToInsertTagDescription(
+	UINT32 TagGroupAndRank,
+	ANSISTRING TagLocale,
+	COUNTEDSTRING TagName,
+	COUNTEDSTRING TagDescription
+	);
+
+EventTranscript_InsertedTagDescription(
+	UINT32 TagGroupAndRank,
+	ANSISTRING TagLocale,
+	COUNTEDSTRING TagName,
+	COUNTEDSTRING TagDescription
+	);
+
+EventTranscript_FailedToPersistEventStoreFull(
+	VOID
+	);
+
+EventTranscript_WorkerThreadIsShuttingDown(
+	VOID
+	);
+
+EventTranscript_ParseTagSetting(
+	COUNTEDSTRING Prefix,
+	ANSISTRING LocaleName,
+	UINT32 TagGroupAndRank
+	);
+
+EventTranscript_CantPauseUnpauseStartingUp(
+	VOID
+	);
+
+EventTranscript_CantPauseUnpauseShuttingDown(
+	VOID
+	);
+
+EventTranscript_WorkerThreadShutdownTimedOut(
+	VOID
+	);
+
+EventTranscript_ShutdownCleanupSkippedDueToStartingUp(
+	VOID
+	);
+
+EventTranscript_ShutdownCleanupSkippedDueToPause(
+	VOID
+	);
+
+ConnectivityHeartBeat_FailedToOpenHeartbeatKey(
+	VOID
+	);
+
+OsEvents_TimerCallback_Exception(
+	VOID
+	);
+
+PrivacyEvents_PersonalizationSettingsCheckMiss(
+	COUNTEDSTRING RequestedUser,
+	UINT32 PersonalizationLevel
+	);
+
+PrivacyEvents_PersonalizationSettingsHandlerCreation(
+	COUNTEDSTRING Sid
+	);
+
+PrivacyEvents_UserPersonalizationSettingsChanged(
+	UINT32 PersonalizationLevel,
+	BOOLEAN PersonalizationAllowed
+	);
+
+Utils_PersonalizationSettingsFromUser(
+	UINT32 PersonalizationLevel
+	);
+
+PrivacyEvents_UserPersonalizationPolicyChanged(
+	BOOLEAN IsPersonalizationAllowedByPolicy
+	);
+
+Utils_PersonalizationSettingsMdmSet(
+	INT32 Configured
+	);
+
+Utils_PersonalizationSettingsGroupPolicy(
+	BOOLEAN PersonalizationAllowed
+	);
+
+Utils_PersonalizationSettingsMdm(
+	INT32 PersonalizationAllowed
+	);
+
+PrivacyEvents_MachinePersonalizationSettingsChanged(
+	BOOLEAN PersonalizationEnabled
+	);
+
+PrivacyEvents_MdmExperiencePolicyChange(
+	UNICODESTRING Sid,
+	UINT32 Session
+	);
+
+Utils_PersonalizationSettingsFromMachine(
+	BOOLEAN PersonalizationEnabled
+	);
+
+SentinelMonitor_FailedToOpenEventMonitorKey(
+	VOID
+	);
+
+Realtime_0(
+	UINT32 SentinelSn
+	);
+
+CostDeferred_0(
+	UINT32 SentinelSn
+	);
+
+CriticalPersistence_0(
+	UINT32 SentinelSn
+	);
+
+Normal_0(
+	UINT32 SentinelSn
+	);
+
+EventMonitor_FailedToOpenEventMonitorKey(
+	VOID
+	);
+
+EventStore_FlushingPreCompressBuffers(
+	INT8 Latency
+	);
+
+SqliteEventStore_BeginReset(
+	VOID
+	);
+
+SqliteEventStore_FailedToShrinkPagesFurther(
+	INT32 HRESULT
+	);
+
+EventStore_ClearAllEvents(
+	VOID
+	);
+
+SqliteTable_TooFullToCommitPreCompressBuffer(
+	UINT64 NumBytes,
+	UINT32 NumEvents,
+	UINT8 StorageBufferType
+	);
+
+SqliteTable_UnexpectedErrorDuringTryInsert(
+	INT32 HRESULT
+	);
+
+SqliteTable_SuccessfullyWroteEvent(
+	UINT64 NumBytes,
+	UINT32 NumEvents,
+	INT32 OverwroteLowerPriorityEvent,
+	UINT8 StorageBufferType
+	);
+
+SqliteTable_TooFullToFlushPreCompressBuffer(
+	UINT64 NumBytes,
+	UINT32 NumEvents,
+	UINT8 StorageBufferType
+	);
+
+EventStore_CommittedPreCompressBuffer(
+	UINT64 NumBytes,
+	UINT32 NumEvents,
+	UINT8 StorageBufferType
+	);
+
+SqliteTable_EventAddedSuccessfully(
+	ANSISTRING Payload
+	);
+
+XMLParser_DebuggingInfo(
+	UNICODESTRING InfoString,
+	INT32 HRESULT
+	);
+
+XMLParser_SessionBegin(
+	UINT64 SessionId
+	);
+
+XMLParser_SessionEnd(
+	UINT64 SessionId
+	);
+
+WERLogger_ReadyToSubmit(
+	VOID
+	);
+
+WERLogger_ReportSubmit(
+	GUID ScenarioId,
+	GUID ScenarioInstanceId,
+	UINT32 ReportResult,
+	INT32 HRESULT,
+	BOOLEAN Consent
+	);
+
+WERLogger_AddFileToCAB(
+	COUNTEDSTRING SourcePath,
+	COUNTEDSTRING DestinationPath,
+	INT32 HRESULT
+	);
+
+EventRateMonitor_ProducerThrottled_Event_Rate(
+	GUID ProviderId,
+	UNICODESTRING ProviderName,
+	UINT64 Hit,
+	UNICODESTRING EstTopEvent1Name,
+	UINT32 EstTopEvent1Count,
+	UNICODESTRING EstTopEvent2Name,
+	UINT32 EstTopEvent2Count,
+	UINT32 EstSeenCount,
+	UINT32 EventRateThreshold,
+	UINT32 EventPerProviderThreshold,
+	UNICODESTRING IKey
+	);
+
+EventRateMonitor_EventRateThrottlingDisabled(
+	VOID
+	);
+
+TriggerBufferMonitor_SkipThrottling_NotEnoughTriggersFromProducer(
+	GUID ProducerId,
+	UINT64 ProducerHitCount,
+	UINT64 TriggerBufferMaxSize
+	);
+
+EventRateMonitor_ProducerThrottled_At_TriggerBuffer(
+	UNICODESTRING ProviderId,
+	UNICODESTRING ProviderName,
+	UINT32 DataType,
+	UINT64 Hit,
+	UNICODESTRING EstTopEvent1Name,
+	UINT32 EstTopEvent1Count,
+	UNICODESTRING EstTopEvent2Name,
+	UINT32 EstTopEvent2Count,
+	UINT32 EstSeenCount,
+	UINT64 Threshold,
+	UINT32 BufferSize,
+	UNICODESTRING IKey
+	);
+
+TriggerBufferMonitor_SkipThrottling_ThrottlingDisabled(
+	VOID
+	);
+
+TriggerBufferMonitor_SkipThrottling_NoProducerEnabled(
+	VOID
+	);
+
+MSAUserIdentityProvider_CachePopulateResult(
+	COUNTEDSTRING SID,
+	UINT32 StorageBufferType,
+	UNICODESTRING IdentityString,
+	UINT32 Type,
+	COUNTEDSTRING RequestedAccountId,
+	UNICODESTRING ReturnedAccountId,
+	HRESULT LastQueryResult,
+	UINT64 LastQueryFiletime,
+	UINT8 BackoffIndex,
+	UINT64 BackoffFiletime
+	);
+
+MSAUserIdentityProvider_SuccessfulCacheHit_NoRequery_ReturnCachedValue_Success(
+	UNICODESTRING IdentityString
+	);
+
+MSAUserIdentityProvider_SuccessfulCacheHit_Requery_ExpiredCacheHit(
+	VOID
+	);
+
+MSAUserIdentityProvider_SuccessfulCacheHit_NoRequery_CachedUnexpiredError_Failure(
+	INT32 LastQueryResult,
+	UINT8 BackoffIndex
+	);
+
+MSAUserIdentityProvider_SuccessfulCache_Requery_LastFailureExpired(
+	UINT8 BackoffIndex
+	);
+
+MSAUserIdentityProvider_NoCacheHit_Requery(
+	VOID
+	);
+
+MSAUserIdentityProvider_SuccessfulCacheHit_NoRequery_NoApiPresent_Failure(
+	VOID
+	);
+
+MSAUserIdentityProvider_ValidatingCacheEntry(
+	COUNTEDSTRING SID,
+	UINT32 IdentityType,
+	UINT32 EndpointTypeIndex,
+	COUNTEDSTRING AccountId,
+	BOOLEAN UsingSecondaryMap
+	);
+
+MSAUserIdentityProvider_SkippingCacheDueToTestHook_Requery(
+	VOID
+	);
+
+MsaUserTicketUserIdentity_EmptyTicketTargetUrl(
+	VOID
+	);
+
+MsaUserSpecificDeviceTicketUserIdentity_EmptyTargetTicketUrl(
+	VOID
+	);
+
+Utils_FileTimeToPrecise8601Failed(
+	UINT64 FileTime,
+	UINT16 Year,
+	UINT16 Month,
+	UINT16 Day,
+	UINT16 Hour,
+	UINT16 Minute,
+	UINT16 Second,
+	UINT32 SecondDecimal,
+	UINT32 LocaleId
+	);
+
+GetAgentDiagnosticsActionDef_ContainerNotificationCallback(
+	UINT8 Notification,
+	UNICODESTRING AgentId
+	);
+
+GetAgentDiagnosticsActionDef_ContainerActivityNotificationCallback(
+	INT32 Result,
+	UNICODESTRING AgentId
+	);
+
+StartTimeTravelDebuggingAction_CommandLine(
+	UNICODESTRING CommandLine
+	);
+
+StartTimeTravelDebuggingAction_SlotTaken(
+	GUID OwningScenarioId
+	);
+
+StartTimeTravelDebuggingAction_TargetProcessId(
+	UNICODESTRING ProcessIdString,
+	UINT32 ProcessId
+	);
+
+GetWNFStateAction_TooManyTypes(
+	VOID
+	);
+
+GetWNFStateAction_NotEnoughTypes(
+	VOID
+	);
+
+GetWNFStateAction_FailedToQueryWNF(
+	INT32 NtStatus,
+	INT32 QueryNumber
+	);
+
+RadarAction_CommandLine(
+	UNICODESTRING CommandLine
+	);
+
+RadarAction_FailedIsWow64Process(
+	INT32 HRESULT
+	);
+
+SetRegKeyAction_SetRegistryKey(
+	UNICODESTRING KeyName,
+	UNICODESTRING ValueName,
+	UNICODESTRING ValueType,
+	UNICODESTRING Value,
+	BOOLEAN IsVolatile,
+	INT32 HRESULT
+	);
+
+StartImpersonationAction_Execute(
+	COUNTEDSTRING SecurityIdentifier
+	);
+
+SoftLanding_CampaignInformation(
+	UNICODESTRING campaignId,
+	UINT32 ruleType
+	);
+
+GetKernelDumpAction_DumpSucceeded(
+	INT32 NtStatus
+	);
+
+GetKernelDumpAction_DumpFailed(
+	INT32 NtStatus
+	);
+
+GetKernelDumpAction_TimeIntervalCheckUnderflow(
+	UINT64 FiletimeInterval
+	);
+
+RunExeWithArgsAction_ProcessExitCode(
+	UNICODESTRING ExpandedExeName,
+	UNICODESTRING FinalCommandLine,
+	UINT32 ExitCode
+	);
+
+RunExeWithArgsAction_SkippingImpersonation(
+	VOID
+	);
+
+TdhFacade_ProviderUnloaded(
+	INT32 HR,
+	GUID ProviderID,
+	UINT32 Size,
+	UINT32 Idle
+	);
+
+ETWConsumer_ModernAppProviderLoaded(
+	UNICODESTRING ProviderPath
+	);
+
+TdhFacade_EventSourceProviderLoaded(
+	GUID ProviderID
+	);
+
+TdhFacade_EventSourceProviderLoadedError(
+	GUID ProviderID,
+	INT32 ReturnCode
+	);
+

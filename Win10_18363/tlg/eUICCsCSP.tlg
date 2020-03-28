@@ -1,0 +1,462 @@
+ProviderNames:
+	Microsoft.Windows.Cellcore.MultiSIM.CSP
+	Microsoft.Windows.Cellcore.LPA.CSP
+	TelemetryAssert
+	TelemetryAssertDiagTrack
+
+
+
+**** Events *****
+LuiSwitchProfile(
+	ANSISTRING Location,
+	BOOL32 fEnable,
+	UNICODESTRING esimId,
+	UNICODESTRING profileId,
+	HRESULT hr
+	);
+
+LuiSwitchProfile(
+	ANSISTRING Location,
+	BOOL32 fEnable,
+	UNICODESTRING esimId,
+	UNICODESTRING profileId,
+	HRESULT hr
+	);
+
+EnterpriseProfileDetails(
+	ANSISTRING Location,
+	HEXINT32 dwParams,
+	UNICODESTRING esimId,
+	UNICODESTRING profileId,
+	UINT32 state,
+	UNICODESTRING serverName,
+	UNICODESTRING matchingId
+	);
+
+EnterpriseEsimDetails(
+	ANSISTRING Location,
+	UINT32 cbSize,
+	HEXINT32 dwParams,
+	UNICODESTRING esimId,
+	HRESULT hrActionResult,
+	UINT32 dwNumProfiles
+	);
+
+ProfileDetails(
+	ANSISTRING Location,
+	UINT32 cbSize,
+	HEXINT32 dwParams,
+	UNICODESTRING esimId,
+	UNICODESTRING profileId,
+	HEXINT32 info.dwParams,
+	UINT32 state
+	);
+
+EsimDetails(
+	ANSISTRING Location,
+	UINT32 cbSize,
+	HEXINT32 dwParams,
+	UNICODESTRING esimId,
+	HEXINT32 info.dwParams,
+	UINT32 state,
+	HEXINT32 dwPolicies,
+	UINT32 dwNumProfiles
+	);
+
+LuiRegisterForAllProfileNotifications(
+	ANSISTRING Location,
+	UNICODESTRING esimId,
+	HRESULT hr
+	);
+
+LuiRegisterForAllProfileNotifications(
+	ANSISTRING Location,
+	UNICODESTRING esimId,
+	HRESULT hr
+	);
+
+LuiRegisterForEsimNotifications(
+	ANSISTRING Location,
+	UNICODESTRING esimId,
+	HRESULT hr
+	);
+
+LuiRegisterForEsimNotifications(
+	ANSISTRING Location,
+	UNICODESTRING esimId,
+	HRESULT hr
+	);
+
+LuiRegisterForAllEnterpriseProfileNotifications(
+	ANSISTRING Location,
+	UNICODESTRING esimId,
+	HRESULT hr
+	);
+
+LuiRegisterForAllEnterpriseProfileNotifications(
+	ANSISTRING Location,
+	UNICODESTRING esimId,
+	HRESULT hr
+	);
+
+LuiRegisterForEnterpriseEsimNotifications(
+	ANSISTRING Location,
+	UNICODESTRING esimId,
+	HRESULT hr
+	);
+
+LuiRegisterForEnterpriseEsimNotifications(
+	ANSISTRING Location,
+	UNICODESTRING esimId,
+	HRESULT hr
+	);
+
+ServiceInfo(
+	ANSISTRING Location,
+	UINT32 cbSize,
+	HEXINT32 dwParams,
+	UINT32 dwNumESIMs
+	);
+
+LpaCallback(
+	ANSISTRING Location,
+	UINT32 type,
+	HEXINT32 cbBuffer,
+	HEXINT64 pBuffer
+	);
+
+LuiAddProfile(
+	ANSISTRING Location,
+	UNICODESTRING esimId,
+	UNICODESTRING profileId,
+	UNICODESTRING serverName,
+	UNICODESTRING matchingId,
+	BOOL32 isEnabled,
+	UNICODESTRING omadmAccountId,
+	HRESULT hr
+	);
+
+LuiAddProfile(
+	ANSISTRING Location,
+	UNICODESTRING esimId,
+	UNICODESTRING profileId,
+	UNICODESTRING serverName,
+	UNICODESTRING matchingId,
+	BOOL32 isEnabled,
+	UNICODESTRING omadmAccountId,
+	HRESULT hr
+	);
+
+NotReadyToCommit(
+	ANSISTRING Location,
+	UNICODESTRING esimId,
+	UNICODESTRING profileId,
+	UNICODESTRING serverName,
+	UNICODESTRING matchingId,
+	HRESULT hr
+	);
+
+LuiWipeEsim(
+	ANSISTRING Location,
+	UNICODESTRING esimId,
+	HRESULT hr
+	);
+
+LuiWipeEsim(
+	ANSISTRING Location,
+	UNICODESTRING esimId,
+	HRESULT hr
+	);
+
+LuiSetEsimPolicy(
+	ANSISTRING Location,
+	UNICODESTRING esimId,
+	UINT32 dwPolicyMask,
+	UINT32 dwPolicyState,
+	HRESULT hr
+	);
+
+LuiSetEsimPolicy(
+	ANSISTRING Location,
+	UNICODESTRING esimId,
+	UINT32 dwPolicyMask,
+	UINT32 dwPolicyState,
+	HRESULT hr
+	);
+
+LuiDeleteProfile(
+	ANSISTRING Location,
+	UNICODESTRING esimId,
+	UNICODESTRING profileId,
+	HRESULT hr
+	);
+
+LuiDeleteProfile(
+	ANSISTRING Location,
+	UNICODESTRING esimId,
+	UNICODESTRING profileId,
+	HRESULT hr
+	);
+
+LuiCloseHandle(
+	ANSISTRING Location,
+	HRESULT hr
+	);
+
+LuiCloseHandle(
+	ANSISTRING Location,
+	HRESULT hr
+	);
+
+WaitForSingleObject(
+	ANSISTRING Location,
+	HEXINT64 m_hInitCompletion,
+	HRESULT hr
+	);
+
+WaitForSingleObject(
+	ANSISTRING Location,
+	HEXINT64 m_hInitCompletion,
+	HRESULT hr
+	);
+
+LuiRegisterForLpaNotifications(
+	ANSISTRING Location,
+	HRESULT hr
+	);
+
+LuiRegisterForLpaNotifications(
+	ANSISTRING Location,
+	HRESULT hr
+	);
+
+LuiOpenHandle(
+	ANSISTRING Location,
+	HRESULT hr
+	);
+
+LuiOpenHandle(
+	ANSISTRING Location,
+	HRESULT hr
+	);
+
+CreateEvent(
+	ANSISTRING Location,
+	HEXINT64 m_hInitCompletion,
+	HRESULT hr
+	);
+
+CreateEvent(
+	ANSISTRING Location,
+	HEXINT64 m_hInitCompletion,
+	HRESULT hr
+	);
+
+WwapiAsyncResponse(
+	ANSISTRING Location,
+	HRESULT hr
+	);
+
+WwapiAsyncResponse(
+	ANSISTRING Location,
+	HRESULT hr
+	);
+
+PostNotification failed(
+	ANSISTRING Location,
+	HRESULT hr
+	);
+
+StringCchPrintf failed(
+	ANSISTRING Location,
+	HRESULT hr
+	);
+
+ChangeAppSetting failed(
+	ANSISTRING Location,
+	HRESULT hr
+	);
+
+CreateSettingsEndpoint failed(
+	ANSISTRING Location,
+	HRESULT hr
+	);
+
+CreateAppEndpoint failed(
+	ANSISTRING Location,
+	HRESULT hr
+	);
+
+CoCreateInstance failed(
+	ANSISTRING Location,
+	HRESULT hr
+	);
+
+CoInitializeEx failed(
+	ANSISTRING Location,
+	HRESULT hr
+	);
+
+UpdatedSlot(
+	ANSISTRING Location,
+	GUID guidInterface,
+	UINT32 dwSlotId,
+	BOOLEAN fIsEmbedded,
+	BOOLEAN fIsSelected,
+	UINT32 slotState
+	);
+
+RequestIdNotFound(
+	ANSISTRING Location,
+	UINT32 ulRequestId
+	);
+
+WwanSetMultiSIMSlotMaping(
+	ANSISTRING Location,
+	GUID guidInterface,
+	UINT32 dwSlotId,
+	UINT32 ulRequestId,
+	UINT32 wwanStatus,
+	HRESULT hr
+	);
+
+WwanSetMultiSIMSlotMaping(
+	ANSISTRING Location,
+	GUID guidInterface,
+	UINT32 dwSlotId,
+	UINT32 ulRequestId,
+	UINT32 wwanStatus,
+	HRESULT hr
+	);
+
+RegistryWrite(
+	ANSISTRING Location,
+	UINT32 dwDisableSlotSelection,
+	HRESULT hr
+	);
+
+RegistryWrite(
+	ANSISTRING Location,
+	UINT32 dwDisableSlotSelection,
+	HRESULT hr
+	);
+
+FoundModem(
+	ANSISTRING Location,
+	GUID modemId,
+	BOOLEAN fIsEmbedded,
+	BOOLEAN fIsSlotSelectionEnabled,
+	GUID guidInterface,
+	UINT32 numSlots
+	);
+
+RegistryRead(
+	ANSISTRING Location,
+	UINT32 dwDisableSlotSelection,
+	HRESULT hr
+	);
+
+FoundSlot(
+	ANSISTRING Location,
+	GUID guidInterface,
+	UINT32 dwSlotId,
+	BOOLEAN fIsEmbedded,
+	BOOLEAN fIsSelected,
+	UINT32 slotState
+	);
+
+RegistryRead(
+	ANSISTRING Location,
+	UINT32 dwEmbeddedUiccSlotId,
+	HRESULT hr
+	);
+
+WwanQueryMultiSIMInfo(
+	ANSISTRING Location,
+	GUID interfaceGuid,
+	UINT32 dwDataSize,
+	HRESULT hr
+	);
+
+WwanQueryMultiSIMInfo(
+	ANSISTRING Location,
+	GUID interfaceGuid,
+	UINT32 dwDataSize,
+	HRESULT hr
+	);
+
+WwanQueryMultiSIMSlotMaping(
+	ANSISTRING Location,
+	GUID interfaceGuid,
+	UINT32 dwDataSize,
+	HRESULT hr
+	);
+
+WwanQueryMultiSIMSlotMaping(
+	ANSISTRING Location,
+	GUID interfaceGuid,
+	UINT32 dwDataSize,
+	HRESULT hr
+	);
+
+WwanQueryInterfaceObject(
+	ANSISTRING Location,
+	GUID interfaceGuid,
+	UINT32 dwDataSize,
+	HRESULT hr
+	);
+
+WwanQueryInterfaceObject(
+	ANSISTRING Location,
+	GUID interfaceGuid,
+	UINT32 dwDataSize,
+	HRESULT hr
+	);
+
+WwanEnumerateInterfaces(
+	ANSISTRING Location,
+	HRESULT hr
+	);
+
+WwanEnumerateInterfaces(
+	ANSISTRING Location,
+	HRESULT hr
+	);
+
+WwanRegisterNotification(
+	ANSISTRING Location,
+	HRESULT hr
+	);
+
+WwanRegisterNotification(
+	ANSISTRING Location,
+	HRESULT hr
+	);
+
+WwanOpenHandle(
+	ANSISTRING Location,
+	HRESULT hr
+	);
+
+WwanOpenHandle(
+	ANSISTRING Location,
+	HRESULT hr
+	);
+
+GetPersistentRegPath(
+	ANSISTRING Location,
+	HRESULT hr
+	);
+
+Assert(
+	UINT32 assertVersion,
+	UINT32 rva,
+	UINT32 timestamp,
+	UINT32 imageSize,
+	ANSISTRING imageName,
+	UINT32 count,
+	UINT32 totalHits,
+	UINT32 ModuleCollection,
+	UINT32 GlobalCollection
+	);
+

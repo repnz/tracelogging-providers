@@ -1,0 +1,228 @@
+ProviderNames:
+	Microsoft.Windows.Audio.BackgroundAudioPolicy
+	Microsoft.Windows.BackgroundManager
+
+
+
+**** Events *****
+OnFindByIdResult(
+	GUID workItemId,
+	INT32 hr,
+	INT32 workItemNull
+	);
+
+OnPolicyBuffered(
+	UNICODESTRING psmKey,
+	GUID workItemId,
+	UINT32 eventType,
+	UINT32 policyBufferingReason,
+	UNICODESTRING workItemEntrypoint
+	);
+
+OnPolicyDropped(
+	UNICODESTRING psmKey,
+	GUID workItemId,
+	UINT32 eventType,
+	UINT32 policyDroppedReason,
+	UNICODESTRING workItemEntrypoint
+	);
+
+OnEvaluateActivationAction(
+	INT32 evalWorkItemFailed,
+	INT32 isNewItem,
+	UINT32 failedCheck,
+	INT32 hr
+	);
+
+FallbackError(
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+FallbackError(
+	UINT64 PartA_PrivTags,
+	SIGNED wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+WIWallClockDisabledDueToExtendedLifetime(
+	GUID workItemId,
+	SID userSid,
+	UINT32 workItemSessionId,
+	UNICODESTRING psmKey,
+	INT32 hostJobType
+	);
+
+s_OnRevokedTasksNotification - Entered.(
+	VOID
+	);
+
+Log(
+	ANSISTRING Function,
+	UNICODESTRING Message
+	);
+
+SubscribeToSystemNotifications failed(
+	HEXINT32 HResult
+	);
+
+OnTimerExpired(
+	BOOL32 fIsFgRunning,
+	UNICODESTRING PackageFullName
+	);
+
+StopTaskTimeoutTimer(
+	UINT32 TimerId
+	);
+
+StartTaskTimeoutTimer(
+	HEXINT32 HResult,
+	UINT32 TimerId
+	);
+
+UpdatePlaybackStatus did not find task ID.(
+	GUID TaskInstanceId
+	);
+
+UpdatePlaybackStatus(
+	GUID TaskInstanceId,
+	BOOL32 IsPlaying
+	);
+
+s_BackgroundTaskPlayStateChanged - NULL payload.(
+	VOID
+	);
+
+s_BackgroundTaskPlayStateChanged - NULL context.(
+	VOID
+	);
+
+s_BackgroundTaskPlayStateChanged - buffer is not a multiple of BMP_BG_PLAYSTATE_CHANGED_DATA.(
+	UINT32 cbBuffer
+	);
+
+s_BackgroundTaskPlayStateChanged - nEntries.(
+	INT32 nEntries
+	);
+
+s_BackgroundTaskPlayStateChanged - Entered.(
+	VOID
+	);
+
+Finished loading settings(
+	UINT32 m_inExclusiveMode,
+	UINT32 m_inHeadlessMode,
+	UINT32 m_taskTimeoutMs
+	);
+
+RevokeTaskCompletion(
+	GUID WorkItemId,
+	HEXINT32 HResult
+	);
+
+Task is already active(
+	VOID
+	);
+
+ApplyTaskCompletionExclusive Entered(
+	VOID
+	);
+
+BG Task Activated(
+	GUID WorkItemId
+	);
+
+DoApplyTaskCompletion(
+	HEXINT32 HResult
+	);
+
+InterruptiveUIStateChanged(
+	UNICODESTRING PsmKey,
+	UNICODESTRING appUserModelId,
+	BOOL32 hasInterruptiveUI
+	);
+
+ApplicationStateChanged(
+	UNICODESTRING PsmKey,
+	UINT8 PLM_STATE_CHANGE,
+	HEXINT32 HResult
+	);
+
+TaskAborted(
+	UNICODESTRING PsmKey,
+	GUID WorkItemId,
+	GUID TaskInstanceId
+	);
+
+OnTaskCompleted(
+	UNICODESTRING PsmKey,
+	GUID WorkItemId,
+	GUID TaskInstanceId,
+	HEXINT32 HResult
+	);
+
+TaskCanceled(
+	UNICODESTRING PsmKey,
+	GUID WorkItemId,
+	GUID TaskInstanceId,
+	HEXINT32 HResult
+	);
+
+OnTaskActivated(
+	UNICODESTRING PsmKey,
+	GUID WorkItemId,
+	GUID TaskInstanceId,
+	HEXINT32 HResult
+	);
+
+EvaluateActivationAction(
+	UNICODESTRING PsmKey,
+	GUID WorkItemId,
+	UINT8 ActivationAction,
+	UNICODESTRING EntryPoint,
+	HEXINT32 HResult
+	);
+
+Initializing a new BmpWorkItemEntry(
+	UNICODESTRING PsmKey,
+	GUID WorkItemId
+	);
+
+EvaluateActivationAction Entered(
+	UNICODESTRING pszPsmKey
+	);
+
+UnsubscribeFromSystemNotifications Failed(
+	HEXINT32 HResult
+	);
+

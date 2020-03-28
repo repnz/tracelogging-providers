@@ -1,0 +1,349 @@
+ProviderNames:
+	Microsoft.Windows.Analog.PerceptionSimulation
+
+
+
+**** Events *****
+AggregateLoaded(
+	ANSISTRING runtime
+	);
+
+AggregateSetSpectrumService(
+	ANSISTRING runtime,
+	INT32 hr
+	);
+
+AggregateActivate(
+	ANSISTRING runtime,
+	BOOL32 active
+	);
+
+AggregateSetDelegate(
+	ANSISTRING runtime,
+	BOOL32 success
+	);
+
+HeadAggregateSmoothAnchorLost(
+	VOID
+	);
+
+FoundPoseWithStamp(
+	UINT64 RemoteStamp
+	);
+
+GetRigPoseForTicks(
+	INT64 Tick,
+	UINT64 RemoteStamp
+	);
+
+GetRigPoseForTicksWithRemote(
+	INT64 Tick,
+	INT32 WantRenderingPose,
+	UINT64 RemoteStamp
+	);
+
+BuildUpdatesFailed(
+	INT32 HRESULT,
+	UINT32 MapToSmoothCoordinateFramePoseCount
+	);
+
+RecordedHeadMaxDistanceFromLast(
+	ANSISTRING type,
+	FLOAT meters
+	);
+
+RecordedHeadMaxDistanceMatrix(
+	ANSISTRING type,
+	FLOAT matrix
+	);
+
+RuntimeLoaded(
+	ANSISTRING runtime
+	);
+
+RuntimeSetSpectrumService(
+	ANSISTRING runtime,
+	INT32 hr
+	);
+
+RuntimeActivate(
+	ANSISTRING runtime,
+	BOOL32 active
+	);
+
+SurfaceVolumesCleared(
+	VOID
+	);
+
+SurfaceInvalidVolume(
+	VOID
+	);
+
+SurfaceAddVolume(
+	GUID id,
+	INT32 hr
+	);
+
+SurfaceRemoveVolume(
+	GUID id,
+	INT32 hr
+	);
+
+UserPresenceChanged(
+	BOOL32 IsUserPresent
+	);
+
+DisplayParametersChanged(
+	UINT32 Width (pixels),
+	UINT32 Height (pixels),
+	FLOAT Width (degrees),
+	FLOAT Height (degrees)
+	);
+
+HandsStartTracking(
+	INT32 hr
+	);
+
+HandsStopTracking(
+	INT32 hr
+	);
+
+HandsReceivedData(
+	BOOLEAN tracking0,
+	ANSISTRING gesture0,
+	FLOAT position0,
+	FLOAT orientation0,
+	ANSISTRING chirality0,
+	BOOLEAN tracking1,
+	ANSISTRING gesture1,
+	FLOAT position1,
+	FLOAT orientation1,
+	ANSISTRING chirality1
+	);
+
+HandsReportData(
+	BOOL32 tracked0,
+	UINT32 id0,
+	ANSISTRING gesture0,
+	INT32 pressed0,
+	FLOAT position0,
+	FLOAT orientation0,
+	BOOL32 tracked1,
+	UINT32 id1,
+	ANSISTRING gesture1,
+	INT32 pressed1,
+	FLOAT position1,
+	FLOAT orientation1
+	);
+
+HandsOldGestureDropped(
+	VOID
+	);
+
+RemoteCalibrationCleared(
+	INT32 hr
+	);
+
+RemoteCalibrationReceived(
+	INT32 hr
+	);
+
+SecondaryHeadErrorIgnored(
+	FLOAT ErrorInMeters
+	);
+
+SecondaryHeadErrorConsumed(
+	FLOAT ErrorInMeters
+	);
+
+SecondaryHeadErrorInterpolating(
+	FLOAT ErrorInMeters
+	);
+
+SecondaryHeadMapInformation(
+	UINT64 Token,
+	UINT32 RemoteMapAnchors,
+	UINT32 CommonAnchors,
+	BOOLEAN FoundPrimary
+	);
+
+SecondaryHeadPoseRate(
+	UINT64 Token,
+	FLOAT PosesPerSecond
+	);
+
+SecondaryHeadDistance(
+	UINT64 Token,
+	FLOAT MetersFromSmooth,
+	FLOAT MetersFromPrevious
+	);
+
+HeadStartTracking(
+	VOID
+	);
+
+HeadStopTracking(
+	VOID
+	);
+
+HeadAcquireSnapshot(
+	GUID spaceId,
+	UINT32 mapId,
+	UINT32 poses,
+	INT32 hr
+	);
+
+HeadGetRigPose(
+	FLOAT rotation,
+	FLOAT translation,
+	ANSISTRING quality,
+	INT32 hr
+	);
+
+HeadRequestCapabilities(
+	BOOLEAN worldLocking
+	);
+
+HeadDynamicNodeReferenceAdded(
+	UINT32 nodeReferences,
+	UINT32 nodeReferencesWithPositionalTracking
+	);
+
+HeadDynamicNodeReferenceRemoved(
+	UINT32 nodeReferences,
+	UINT32 nodeReferencesWithPositionalTracking
+	);
+
+HeadRequestBestLocal(
+	UINT32 index,
+	INT32 hr
+	);
+
+HeadRequestBestLocalAtPose(
+	UINT32 index,
+	INT32 hr
+	);
+
+HeadRequestBestLocalAtPoseForSet(
+	UINT32 index,
+	INT32 hr
+	);
+
+HeadDataCleared(
+	VOID
+	);
+
+HeadDataInvalid(
+	VOID
+	);
+
+HeadDataUpdated(
+	FLOAT transform,
+	ANSISTRING trackingMode
+	);
+
+HeadDataDropped(
+	VOID
+	);
+
+HeadDataDroppedBadMatrix(
+	FLOAT matrix
+	);
+
+RuntimeGetRigPose(
+	UINT32 PoseType,
+	INT64 Tick,
+	UINT64 RemoteStamp
+	);
+
+RuntimeGetRigPoseInterpolated(
+	UINT32 PreviousPoseType,
+	INT64 PreviousTick,
+	UINT32 NextPoseType,
+	INT64 NextTick,
+	INT64 SystemTimeTick
+	);
+
+TimestampConversionFailed(
+	INT32 hr
+	);
+
+FallbackError(
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+DllLoaded(
+	VOID
+	);
+
+FallbackError(
+	UINT64 PartA_PrivTags,
+	SIGNED wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+DllUnloaded(
+	VOID
+	);
+
+DeviceId(
+	GUID id
+	);
+
+ControlMode(
+	ANSISTRING mode
+	);
+
+ControlStreamOnPacketReceived(
+	UINT64 token,
+	ANSISTRING dataType,
+	ANSISTRING result,
+	INT32 hr
+	);
+
+RemoveControlStream(
+	UINT64 token,
+	INT32 hr
+	);
+
+CreateControlStream(
+	UINT64 token,
+	INT32 hr
+	);
+
+RegisterSimulationStreamSink(
+	ANSISTRING dataTypes,
+	INT32 hr
+	);
+

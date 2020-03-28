@@ -1,0 +1,2254 @@
+ProviderNames:
+	Microsoft.Windows.Media.Speech
+	Microsoft.Windows.Media.SpeechRecognition.WinRT
+	Microsoft.Windows.Analog.Speech.Activity
+	Microsoft.Windows.Analog.Speech
+	Microsoft.Windows.SpeechPlatform.Settings
+	Microsoft.Windows.UserSpeechPreferences
+	Microsoft.Windows.Media.Speech.Settings
+	Microsoft.Windows.Media.Speech.Internal.SoundController.WinRT
+	Microsoft.Windows.Media.SpeechSynthesis.WinRT
+	Windows.Media.Speech.VoiceCommands.Telemetry
+	Windows.ApplicationModel.VoiceCommands.VoiceCommandServiceConnection
+	TelemetryAssert
+	TelemetryAssertDiagTrack
+	SAPI.Perf
+
+
+
+**** Events *****
+FallbackError(
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+FallbackError(
+	UINT64 PartA_PrivTags,
+	SIGNED wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+UnexpectedThreadpoolCallbackFailure(
+	HRESULT hr,
+	ANSISTRING function,
+	ANSISTRING file,
+	UINT32 lineNumber
+	);
+
+ActivityStoppedAutomatically(
+	VOID
+	);
+
+TraceMessageValue(
+	UNICODESTRING message,
+	UNICODESTRING propertyName,
+	UNICODESTRING value
+	);
+
+ActivityIntermediateStop(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+ActivityError(
+	UINT64 PartA_PrivTags,
+	SIGNED wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+ActivityError(
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+TrySetSystemSpeechLanguageAsyncOperationActivity(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+TrySetSystemSpeechLanguageAsyncOperationActivity(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+SystemSuspend(
+	VOID
+	);
+
+SystemResume(
+	VOID
+	);
+
+SetActualLanguage(
+	UNICODESTRING langauge
+	);
+
+RecognizerLifetimeActivity(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId,
+	GUID recognizerId,
+	UNICODESTRING languageTag,
+	ANSISTRING systemRecoType
+	);
+
+RecognizerLifetimeActivity(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+RecognizerLifetimeActivity(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+SpeechRecognizerRecognizeWithUiAsyncCalled(
+	GUID recognizerId,
+	HRESULT hresult
+	);
+
+SpeechRecognizerRecognizeAsyncCalled(
+	GUID recognizerId,
+	HRESULT hresult
+	);
+
+SpeechRecognizerRecognizeWithUiAsyncCalled(
+	GUID recognizerId,
+	HRESULT hresult
+	);
+
+SpeechRecognizerRecognizeAsyncCalled(
+	GUID recognizerId,
+	HRESULT hresult
+	);
+
+ActivityStoppedAutomatically(
+	VOID
+	);
+
+ActivityError(
+	UINT64 PartA_PrivTags,
+	SIGNED wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+ActivityIntermediateStop(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+ActivityError(
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+FileGrammarCompilation(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId
+	);
+
+FileGrammarCompilation(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+FileGrammarCompilation(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+SharedListConstraint_InvalidRecoPhrase(
+	UINT64 eventTime,
+	UNICODESTRING phraseText
+	);
+
+SharedListConstraint_InvalidRecoPhrase(
+	UINT64 eventTime,
+	UNICODESTRING phraseText
+	);
+
+SharedListConstraint_InvalidRecoPhrase_Suppressed(
+	UINT32 numSuppressed,
+	UINT32 intervalInSeconds
+	);
+
+SharedListConstraint(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId,
+	UINT64 eventTime
+	);
+
+SharedListConstraint(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT64 eventTime
+	);
+
+SharedListConstraint(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId,
+	UINT64 eventTime,
+	BOOLEAN fImplicitStart
+	);
+
+SharedListConstraint(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+SharedListConstraint(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+SharedListConstraint_CoalesceFailure(
+	HRESULT hr
+	);
+
+SharedListConstraint_CoalescedSession(
+	HRESULT hr,
+	UINT32 length,
+	JSON sessionJson
+	);
+
+SharedListConstraint(
+	UINT64 eventTime,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+SharedListConstraint(
+	UINT64 eventTime,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+SharedListConstraint(
+	UINT64 eventTime,
+	BOOL32 fImplicitStart,
+	NOPRINT wilActivity,
+	UINT32 threadId
+	);
+
+SharedListConstraint(
+	UINT64 eventTime,
+	BOOL32 fImplicitStart,
+	NOPRINT wilActivity,
+	UINT32 threadId
+	);
+
+FDR: Unlikely Session ID found(
+	GUID BadGuid
+	);
+
+ListConstraintLoad(
+	UINT32 listSize
+	);
+
+ListConstraintLoad(
+	UINT32 listSize
+	);
+
+InvalidDefaultRecognizerLanguage(
+	UNICODESTRING languageTag,
+	BOOLEAN tokenExists
+	);
+
+ComplexResponseSpeedOverride(
+	INT32 complexResponseSpeed
+	);
+
+SimpleResponseSpeedOverride(
+	INT32 simpleResponseSpeed
+	);
+
+SpeechRecoAudioQualityDegrading(
+	GUID recognizerId,
+	ANSISTRING speechRecognitionAudioProblem
+	);
+
+SpeechRecoAudioQualityDegrading(
+	GUID recognizerId,
+	ANSISTRING speechRecognitionAudioProblem
+	);
+
+UseLocalDictationCommandsGrammar(
+	UNICODESTRING filename
+	);
+
+ConstraintCompilationActivity(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId
+	);
+
+ConstraintCompilationActivity(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+ConstraintCompilationActivity(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+AppSpeechActivationChanged(
+	BOOLEAN activated
+	);
+
+SpeechRecognizerStartContinuousRecognitionAsyncCalled(
+	GUID recognizerId,
+	HRESULT hresult
+	);
+
+SpeechRecognizerStartContinuousRecognitionAsyncCalled(
+	GUID recognizerId,
+	HRESULT hresult
+	);
+
+RecognizeWithUIAsyncOperationActivity(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId
+	);
+
+RecognizeWithUIAsyncOperationActivity(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+RecognizeWithUIAsyncOperationActivity(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+SpeechRecognizerRecognizeWithUiAsyncSetThreadId(
+	GUID recognizerId,
+	UINT32 threadId
+	);
+
+TrySetSystemSpeechLanguageAsyncOperationActivity(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId
+	);
+
+ConstraintEnableSkipNonCompiled(
+	UINT64 id
+	);
+
+ActivityStoppedAutomatically(
+	VOID
+	);
+
+ConstraintEnableEnter(
+	UINT64 id,
+	INT32 enabled
+	);
+
+ConstraintEnableExecuteEnableGrammar(
+	UINT64 id,
+	INT32 enabled
+	);
+
+ConstraintEnablePostponeOnPauseEnableGrammar(
+	UINT64 id,
+	INT32 positionInQueue
+	);
+
+ActivityError(
+	UINT64 PartA_PrivTags,
+	SIGNED wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+ActivityIntermediateStop(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+LoadConstraintActivity(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId,
+	HEXINT64 constraintId
+	);
+
+LoadConstraintActivity(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	SIGNED wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+LoadConstraintActivity(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+UnloadConstraintActivity(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId,
+	HEXINT64 constraintId
+	);
+
+UnloadConstraintActivity(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	SIGNED wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+UnloadConstraintActivity(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+EnsureAppInfoActivity(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId
+	);
+
+EnsureAppInfoActivity(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	SIGNED wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+EnsureAppInfoActivity(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+TerminateSessionStateChange(
+	INT32 terminationError
+	);
+
+ExecuteSessionStateChange(
+	VOID
+	);
+
+ContinuousRecognitionSessionStateChange(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId,
+	ANSISTRING stateChange
+	);
+
+CancelSessionStateChangeOperation(
+	VOID
+	);
+
+ContinuousRecognitionSessionStateChange(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+ContinuousRecognitionSessionStateChange(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+SpeechServiceConnectionStatus(
+	UINT32 netStatus,
+	INT32 hr
+	);
+
+SpeechRecoNetError(
+	INT32 hrOutput
+	);
+
+HypothesisReceived(
+	UNICODESTRING hypothesisText
+	);
+
+AppSpeechActivationChanged(
+	BOOLEAN activated
+	);
+
+AudioSourceInfo(
+	UNICODESTRING audioSource
+	);
+
+UnexpectedResumeOnSystemEvent(
+	UINT32 resumeCount
+	);
+
+UnexpectedAbortOnSystemEvent(
+	UINT32 suspendCount
+	);
+
+SpeechRecoLocalError(
+	ANSISTRING localError
+	);
+
+SessionCompleteOperationCalledMultipleTimes(
+	INT32 completionHr
+	);
+
+Abort(
+	INT32 hr
+	);
+
+SpeechRecoLocalUnknownStatus(
+	ANSISTRING recoStatus
+	);
+
+LocalRecoStatus(
+	ANSISTRING status
+	);
+
+MicrophoneUseConsentActivity(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+MicrophoneUseConsentActivity(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	SIGNED wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+SpeechRecoResultAvailable(
+	UINT16 recognitionResultStatus,
+	UNICODESTRING recognizedText,
+	UINT16 speechRecognitionConfidence,
+	DOUBLE speechRecognitionRawConfidence
+	);
+
+SpeechRecoResultAvailable(
+	UINT16 recognitionResultStatus,
+	UNICODESTRING recognizedText,
+	UINT32 recognizedTextLength,
+	UINT16 speechRecognitionConfidence,
+	DOUBLE speechRecognitionRawConfidence,
+	UINT32 semanticPropertiesSize,
+	UINT16 constraintType,
+	GUID impressionId
+	);
+
+SpeechRecoLocalPhraseStart(
+	VOID
+	);
+
+SpeechRecoLocalStreamStart(
+	VOID
+	);
+
+SessionEndedAppSpeechActivationLost(
+	VOID
+	);
+
+PauseRequested(
+	VOID
+	);
+
+LocalRecoTimeout(
+	HEXINT32 timerType,
+	HEXINT32 timerId
+	);
+
+StartContinuousRecoEndTimeout(
+	HEXINT32 timerId
+	);
+
+ResetContinuousRecoEndTimeout(
+	HEXINT32 timerId
+	);
+
+StartSpeechServiceSession(
+	VOID
+	);
+
+SpeechRecoSessionActivity(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId,
+	GUID operationId,
+	GUID recognizerId,
+	ANSISTRING source,
+	UNICODESTRING language
+	);
+
+ResumeRequested(
+	VOID
+	);
+
+ResumeOnSystemEvent(
+	VOID
+	);
+
+AbortOnSystemEvent(
+	VOID
+	);
+
+SpeechRecoNetResponse(
+	VOID
+	);
+
+SpeechRecoSessionActivity(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+SpeechRecoSessionActivity(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+SpeechRecoCancel(
+	HEXINT32 operationId
+	);
+
+SpeechRecoOperationCreationFailed(
+	HEXINT32 operationId,
+	GUID recognizerId,
+	HEXINT32 grammarType,
+	HRESULT hresult
+	);
+
+SpeechRecoLocalResult(
+	HEXINT32 operationId
+	);
+
+SpeechRecoUserSpeaking(
+	HEXINT32 operationId,
+	GUID impressionId
+	);
+
+SpeechRecoUserSpeaking(
+	HEXINT32 operationId,
+	GUID impressionId
+	);
+
+SpeechRecoUserSpeaking(
+	HEXINT32 operationId,
+	GUID impressionId
+	);
+
+SpeechRecoUserSpeaking(
+	HEXINT32 operationId,
+	GUID impressionId
+	);
+
+SkipConsentForSystemRecognizer(
+	UINT32 type
+	);
+
+DefaultMicrophoneId(
+	UNICODESTRING id
+	);
+
+ActivateCompletedCallback(
+	VOID
+	);
+
+AudioClientInitialized(
+	VOID
+	);
+
+MicrophoneUseConsentActivity(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId
+	);
+
+TargetRegKeyPath(
+	UNICODESTRING SourcePath,
+	UNICODESTRING TargetPath
+	);
+
+GetSpeechSupportLevel(
+	BOOLEAN HasOptedIntoSpeechServices,
+	BOOLEAN IsSpeechInputEnabled,
+	UINT32 SpeechSupportLevel
+	);
+
+SetSpeechInputEnabled(
+	BOOLEAN IsEnabled,
+	BOOLEAN IsEnabledPrevious
+	);
+
+UserHiveInvalidError(
+	UNICODESTRING UserSid
+	);
+
+UserHiveNotMounted(
+	UNICODESTRING UserSid
+	);
+
+RedirectedRegKeyPath(
+	UNICODESTRING SourcePath,
+	UNICODESTRING RedirectedPath
+	);
+
+UserSidTrace(
+	UNICODESTRING UserSidValue
+	);
+
+UserContextAccess(
+	UNICODESTRING UserHiveType
+	);
+
+GetSpeechInputEnabled(
+	BOOLEAN IsEnabled,
+	UINT32 SpeechPolicyValueSource,
+	UINT32 HResult
+	);
+
+SetSpeechPrivacyValue(
+	BOOLEAN IsOptedIn,
+	BOOLEAN IsOptedInPrevious
+	);
+
+GetSpeechPrivacyValue(
+	BOOLEAN IsOptedIn,
+	UINT32 SpeechPolicyValueSource,
+	UINT32 HResult
+	);
+
+SupportedLanguagesFound(
+	UINT32 languageCount
+	);
+
+TextToSpeechSpeed(
+	INT32 speed
+	);
+
+HolographicSpeechInputDisabled(
+	BOOLEAN isDisabled
+	);
+
+SpeechRecognizerUseRelaxedRecognition(
+	BOOLEAN useRelaxedRecognition
+	);
+
+TextToSpeechVoice(
+	UNICODESTRING voice
+	);
+
+SpeechRecognizerRecognizedLanguage(
+	UNICODESTRING language
+	);
+
+SetSpeechInputDisabled(
+	BOOLEAN disabled,
+	UINT32 hResult
+	);
+
+GetSupportedLanguages(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId
+	);
+
+GetSupportedLanguages(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+GetSupportedLanguages(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	SIGNED wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+SpeechDownloadRequest(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT64 eventTime
+	);
+
+SpeechDownloadRequest(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId,
+	UINT64 eventTime
+	);
+
+SpeechDownloadRequest(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId,
+	UINT64 eventTime,
+	BOOLEAN fImplicitStart
+	);
+
+SpeechDownloadRequest(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+SpeechDownloadRequest(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+SpeechDownloadRequest_CoalescedSession(
+	HRESULT hr,
+	UINT32 length,
+	JSON sessionJson
+	);
+
+SpeechDownloadRequest(
+	UINT64 eventTime,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+SpeechDownloadRequest_CoalesceFailure(
+	HRESULT hr
+	);
+
+SpeechDownloadRequest(
+	UINT64 eventTime,
+	BOOL32 fImplicitStart,
+	NOPRINT wilActivity,
+	UINT32 threadId
+	);
+
+SpeechDownloadRequest(
+	UINT64 eventTime,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+SpeechDownloadRequest(
+	UINT64 eventTime,
+	BOOL32 fImplicitStart,
+	NOPRINT wilActivity,
+	UINT32 threadId
+	);
+
+TestSpeechLanguageInstallation(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId,
+	HEX langId
+	);
+
+TestSpeechLanguageInstallation(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+TestSpeechLanguageInstallation(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	SIGNED wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+SpeechDownloadStateChangedNotificationReceived(
+	UNICODESTRING languageTag,
+	UINT32 state
+	);
+
+SpeechDownloadStatus(
+	UNICODESTRING languageTag,
+	UINT32 state
+	);
+
+SpeechDownloadRequest_DelegatingRequestToDownload(
+	UINT64 eventTime,
+	UNICODESTRING language,
+	UINT32 state
+	);
+
+SpeechDownloadRequest_DelegatingRequestToDownload(
+	UINT64 eventTime,
+	UNICODESTRING language,
+	UINT32 state
+	);
+
+SpeechDownloadRequest_DelegatingRequestToDownload_Suppressed(
+	UINT32 numSuppressed,
+	UINT32 intervalInSeconds
+	);
+
+SoundState(
+	UINT32 earCon,
+	UINT32 state
+	);
+
+PlayEarCon_Start(
+	BOOLEAN isRenderActive,
+	BOOLEAN isTurnedOn,
+	BOOLEAN isSoundLoop,
+	BOOLEAN isSoundSync,
+	UINT32 earConToPlay,
+	UINT32 earConForStateCheck
+	);
+
+StartPlayingEarCon(
+	HRESULT hr,
+	HEXINT32 earCon,
+	HEXINT32 resourceID,
+	BOOL32 isSoundLoop,
+	BOOL32 isSoundSync,
+	HEXINT64 earConResourceManager,
+	HEXINT64 audioSource
+	);
+
+StartPlayingAudio(
+	HRESULT hr,
+	HEXINT32 earCon,
+	HEXINT32 trackingID,
+	HEXINT64 audioSource,
+	BOOL32 isSoundLoop,
+	BOOL32 isSoundSync,
+	HEXINT64 event
+	);
+
+StartPlayingAudio(
+	HRESULT hr
+	);
+
+OnSoundStateChanged(
+	HRESULT hr,
+	HEXINT32 state,
+	HEXINT32 iterations,
+	HEXINT32 earCon,
+	HEXINT32 trackingID,
+	HEXINT64 eventHandler
+	);
+
+CheckState(
+	BOOL32 isThinkingStarted,
+	BOOL32 isRenderActive,
+	BOOL32 isActive,
+	BOOL32 isActiveInternal,
+	BOOL32 shouldBeOn,
+	BOOL32 isTurnedOn
+	);
+
+CheckState(
+	BOOL32 isThinkingStarted,
+	BOOL32 isRenderActive,
+	BOOL32 isActive,
+	BOOL32 isActiveInternal,
+	BOOL32 shouldBeOn,
+	BOOL32 isTurnedOn
+	);
+
+CheckStateTurningOffStreamFinishWaitTimeout(
+	VOID
+	);
+
+CheckState(
+	BOOL32 isThinkingStarted,
+	BOOL32 isRenderActive,
+	BOOL32 isActive,
+	BOOL32 isActiveInternal,
+	BOOL32 shouldBeOn,
+	BOOL32 isTurnedOn
+	);
+
+OnNewState(
+	HRESULT hr,
+	HEXINT32 state
+	);
+
+OnReplayIterationCompleted(
+	HRESULT hr
+	);
+
+WaitForActivation(
+	HRESULT hr
+	);
+
+WaitForActivation(
+	VOID
+	);
+
+StopAudio(
+	HEXINT64 audioPlaybackControl,
+	HEXINT32 earConForStateCheck,
+	BOOL32 isRenderActive
+	);
+
+Unload(
+	VOID
+	);
+
+Unload(
+	VOID
+	);
+
+SpeakAsync(
+	HEXINT32 trackingID,
+	BOOL32 isRenderActive,
+	BOOL32 isTurnedOn
+	);
+
+SpeakAsync(
+	HRESULT hr,
+	HEXINT32 trackingID,
+	HEXINT64 ttsStream,
+	HEXINT64 audioSource
+	);
+
+PlayEarCon(
+	HEXINT32 earCon,
+	BOOL32 isListenStarted,
+	BOOL32 isThinkingStarted,
+	BOOL32 isStartListeningRequired,
+	BOOL32 isPlayedAfterThinking,
+	BOOL32 isSoundSync,
+	BOOL32 isSoundLoop,
+	BOOL32 stopAudioAndPlayDone
+	);
+
+OnStreamStart(
+	VOID
+	);
+
+OnStreamFinish(
+	VOID
+	);
+
+Load(
+	HRESULT hr
+	);
+
+GetTextFromSsml(
+	HRESULT hr
+	);
+
+GetEncodedSsml(
+	HRESULT hr,
+	UNICODESTRING myEncoded
+	);
+
+GetAudioProperties(
+	HEXINT32 audioSourceDirection,
+	HEXINT32 audioSource,
+	UNICODESTRING myName,
+	HEXINT32 (UINT32)sourceRate
+	);
+
+ForceInactive(
+	VOID
+	);
+
+ForceInactive(
+	VOID
+	);
+
+TrySetDefaultVoiceAsyncOperationActivity(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+TrySetDefaultVoiceAsyncOperationActivity(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+GetAllVoicesActivity(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId
+	);
+
+SynthesizerGetDefaultVoiceActivity(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId
+	);
+
+SynthesizerGetDefaultVoiceActivity(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+SynthesizerGetDefaultVoiceActivity(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+SpeechSynthesisVoiceRetrieval(
+	ANSISTRING voiceRetrievalPath,
+	UNICODESTRING voiceName,
+	UNICODESTRING voiceLanguage,
+	UINT16 voiceGender
+	);
+
+GetAllVoicesActivity(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+GetAllVoicesActivity(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+SynthesizeTextToStreamActivity(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId,
+	ANSISTRING synthesizeType,
+	UNICODESTRING text,
+	UINT32 contentLen
+	);
+
+SynthesizerCreationActivity(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId
+	);
+
+SynthesizeTextToStreamActivity(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+SynthesizeTextToStreamActivity(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+SpeechSynthesisSession_VoiceChange_Suppressed(
+	UINT32 numSuppressed,
+	UINT32 intervalInSeconds
+	);
+
+SpeechSynthesisSession_VoiceChange(
+	UINT64 eventTime,
+	UNICODESTRING newVoiceName,
+	UNICODESTRING newVoiceLanguage,
+	UINT16 newVoiceGender,
+	UNICODESTRING oldVoiceName,
+	UNICODESTRING oldVoiceLanguage,
+	UINT16 oldVoiceGender
+	);
+
+SpeechSynthesisSession_VoiceChange(
+	UINT64 eventTime,
+	UNICODESTRING newVoiceName,
+	UNICODESTRING newVoiceLanguage,
+	UINT16 newVoiceGender,
+	UNICODESTRING oldVoiceName,
+	UNICODESTRING oldVoiceLanguage,
+	UINT16 oldVoiceGender
+	);
+
+SpeechSynthesisSession_ActivityLink_Suppressed(
+	UINT32 numSuppressed,
+	UINT32 intervalInSeconds
+	);
+
+SpeechSynthesisSession_ActivityLink(
+	UINT64 eventTime,
+	GUID activityId,
+	ANSISTRING name
+	);
+
+SpeechSynthesisSession_ActivityLink(
+	UINT64 eventTime,
+	GUID activityId,
+	ANSISTRING name
+	);
+
+SynthesizerCreationActivity(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+SynthesizerCreationActivity(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+SpeechSynthesisSession(
+	UINT64 eventTime,
+	BOOL32 fImplicitStart,
+	NOPRINT wilActivity,
+	UINT32 threadId
+	);
+
+SpeechSynthesisSession(
+	UINT64 eventTime,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+SpeechSynthesisSession(
+	UINT64 eventTime,
+	BOOL32 fImplicitStart,
+	NOPRINT wilActivity,
+	UINT32 threadId
+	);
+
+SpeechSynthesisSession(
+	UINT64 eventTime,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+SpeechSynthesisSession_CoalesceFailure(
+	HRESULT hr
+	);
+
+SpeechSynthesisSession_CoalescedSession(
+	HRESULT hr,
+	UINT32 length,
+	JSON sessionJson
+	);
+
+TrySetDefaultVoiceAsyncOperationActivity(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId
+	);
+
+GenerateStream(
+	VOID
+	);
+
+RuntimeError(
+	INT32 runtimeError
+	);
+
+DoConfirmation(
+	VOID
+	);
+
+CancelUIFlow(
+	VOID
+	);
+
+FlowControllerActivity(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	SIGNED wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+FlowControllerActivity(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+TaskControllerStateTransition(
+	UNICODESTRING state
+	);
+
+RecognizeWithUIAsyncTaskControllerActivity(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId
+	);
+
+RecognizeWithUIAsyncTaskControllerActivity(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+RecognizeWithUIAsyncTaskControllerActivity(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+VoiceCommandDefinitionManager_GetInstalledCommandSets(
+	VOID
+	);
+
+VoiceCommandDefinitionManager_InstallFromStorageFileAsync(
+	VOID
+	);
+
+VoiceCommandManager_GetInstalledCommandSets(
+	VOID
+	);
+
+VoiceCommandManager_InstallFromStorageFileAsync(
+	VOID
+	);
+
+InstallAction_AsyncWork(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId
+	);
+
+FailureReattempt(
+	ANSISTRING operation,
+	INT32 reattemptNumber,
+	INT32 previousHr
+	);
+
+InstallAction_AsyncWork(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+InstallAction_AsyncWork(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+GetInstalledCommandSets_AsyncWork(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId
+	);
+
+GetInstalledCommandSets_AsyncWork(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+GetInstalledCommandSets_AsyncWork(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+SetPhraseListAction_AsyncWork(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId
+	);
+
+SetPhraseListAction_AsyncWork(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+SetPhraseListAction_AsyncWork(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+VoiceCommandManager_SetPhraseListAsync(
+	VOID
+	);
+
+VoiceCommandDefinitionManager_SetPhraseListAsync(
+	VOID
+	);
+
+PrepareContentTile(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId
+	);
+
+PerfTimer(
+	UNICODESTRING Operation,
+	UINT32 Miliseconds
+	);
+
+PerfTimer(
+	UNICODESTRING Operation,
+	UINT32 Miliseconds
+	);
+
+PrepareContentTile(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	SIGNED wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+PrepareContentTile(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+Trace(
+	ANSISTRING file,
+	ANSISTRING function,
+	UINT32 lineNumber,
+	ANSISTRING message,
+	HRESULT hr
+	);
+
+SendStatus(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId
+	);
+
+RequestConfirmation(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId
+	);
+
+RequestDisambiguation(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId
+	);
+
+Trace(
+	ANSISTRING file,
+	ANSISTRING function,
+	UINT32 lineNumber,
+	ANSISTRING message
+	);
+
+SendStatus(
+	ANSISTRING Status
+	);
+
+SendStatus(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	SIGNED wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+SendStatus(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+AsyncResponseNotificationRecieved(
+	VOID
+	);
+
+RequestDisambiguation(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+RequestDisambiguation(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	SIGNED wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+DisambiguationCompleted(
+	INT32 SelectedItem
+	);
+
+RequestConfirmation(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	SIGNED wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+RequestConfirmation(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+ConfirmationCompleted(
+	BOOLEAN ConfirmationResult
+	);
+
+AsyncResponseNotificationRecieved(
+	INT32 PrevOperationHr
+	);
+
+MessageSendFailure(
+	UINT32 AppServiceResponseStatus
+	);
+
+SendMessageQueue(
+	UINT32 QueueSize
+	);
+
+MessageSent(
+	ANSISTRING MessageType
+	);
+
+InvalidMessageResponse(
+	ANSISTRING InitialMessage,
+	ANSISTRING ExpectedResponse,
+	ANSISTRING ActualResponse
+	);
+
+MessageRecieved(
+	ANSISTRING MessageType
+	);
+
+MessagePayload(
+	UNICODESTRING Payload
+	);
+
+VoiceCommandReceived(
+	UNICODESTRING InteractionId
+	);
+
+Uninitalized(
+	ANSISTRING Reason
+	);
+
+NotifyCortanaOfUnintilization(
+	UINT32 AppServiceStatus
+	);
+
+NotifyCortanaOfUnintilization(
+	UINT32 AppServiceStatus
+	);
+
+ValidateResponseImages(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId
+	);
+
+ValidateResponseImages(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	SIGNED wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+ValidateResponseImages(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+ActivityFailure(
+	UINT64 PartA_PrivTags,
+	HEX wilActivity,
+	UINT32 hresult,
+	UINT32 threadId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+ActivityFailure(
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+StateTransition(
+	ANSISTRING Current,
+	ANSISTRING Next
+	);
+
+Assert(
+	UINT32 assertVersion,
+	UINT32 rva,
+	UINT32 timestamp,
+	UINT32 imageSize,
+	ANSISTRING imageName,
+	UINT32 count,
+	UINT32 totalHits,
+	UINT32 ModuleCollection,
+	UINT32 GlobalCollection
+	);
+
+SpeechAudioEndpointSelector_GetInitializedAudioClient_Enter(
+	UINT32 dataFlow
+	);
+
+SpeechAudioEndpointSelector_GetInitializedAudioClient_Activate(
+	UINT32 dataFlow
+	);
+
+SpeechAudioEndpointSelector_GetInitializedAudioClient_Initialize(
+	UINT32 dataFlow
+	);
+
+SpeechAudioEndpointSelector_GetInitializedAudioClient_Exit(
+	UINT32 dataFlow
+	);
+
+TranslateSapiError(
+	INT32 sapiError,
+	INT32 winrtError
+	);
+

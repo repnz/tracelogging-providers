@@ -1,0 +1,258 @@
+ProviderNames:
+	Microsoft.Windows.EnterpriseManagement.Enrollment
+	Microsoft.Windows.DeviceManagement.SCEP
+	Microsoft.Windows.EMPS.Enrollment
+	Microsoft.Windows.DeviceManagement.Migration
+	TelemetryAssert
+	TelemetryAssertDiagTrack
+
+
+
+**** Events *****
+MigrationFailure(
+	UNICODESTRING Function,
+	INT32 Line,
+	ANSISTRING File,
+	ANSISTRING Message,
+	HRESULT Result
+	);
+
+MigrationFailure(
+	UNICODESTRING Function,
+	INT32 Line,
+	ANSISTRING File,
+	ANSISTRING Message,
+	HRESULT Result,
+	UINT32 StepFailed
+	);
+
+MDMMigration(
+	UNICODESTRING L"Could not create migration server alert",
+	HRESULT hr
+	);
+
+DesktopMigration(
+	UNICODESTRING Function,
+	INT32 Line,
+	ANSISTRING File,
+	ANSISTRING "Migration will continue when enrolled user is logged in."
+	);
+
+RegistryHelperMigration(
+	UNICODESTRING Function,
+	INT32 Line,
+	ANSISTRING File,
+	HRESULT hr,
+	ANSISTRING "RegSetValueEx failed."
+	);
+
+RegistryHelperMigration(
+	UNICODESTRING Function,
+	INT32 Line,
+	ANSISTRING File,
+	HRESULT hr,
+	ANSISTRING "RegGetValue failed to get string."
+	);
+
+RegistryHelperMigration(
+	UNICODESTRING Function,
+	INT32 Line,
+	ANSISTRING File,
+	HRESULT hr,
+	ANSISTRING "RegGetValue failed to get string buffer length."
+	);
+
+RegistryMigration(
+	ANSISTRING Message,
+	UNICODESTRING keyName,
+	UNICODESTRING valueName
+	);
+
+RegistryHelperMigration(
+	UNICODESTRING Function,
+	INT32 Line,
+	ANSISTRING File,
+	HRESULT hr,
+	ANSISTRING "Failed to open regsitry key"
+	);
+
+ScheduleMigration(
+	ANSISTRING "Could not delete task",
+	UNICODESTRING Task
+	);
+
+ScheduleMigration(
+	UNICODESTRING Function,
+	INT32 Line,
+	ANSISTRING File,
+	HRESULT hr,
+	ANSISTRING "Failed to create polling schedules."
+	);
+
+ScheduleMigration(
+	ANSISTRING "Failed to create OMA-DM client task.",
+	HEXINT32 hr
+	);
+
+ScheduleMigration(
+	ANSISTRING "Failed to create renewal schedules.",
+	HEXINT32 hr
+	);
+
+MDMMigration(
+	UNICODESTRING Function,
+	INT32 Line,
+	ANSISTRING File,
+	UNICODESTRING L"Success"
+	);
+
+MDMMigration(
+	UNICODESTRING Function,
+	INT32 Line,
+	ANSISTRING File,
+	UNICODESTRING L"Started"
+	);
+
+MigrationFailure(
+	UNICODESTRING Function,
+	INT32 Line,
+	ANSISTRING File,
+	ANSISTRING Message,
+	HEXINT32 Result
+	);
+
+WMIMigration(
+	UNICODESTRING Function,
+	INT32 Line,
+	ANSISTRING File,
+	UNICODESTRING L"Finished"
+	);
+
+WMIMigrationFailure(
+	UNICODESTRING Function,
+	INT32 Line,
+	ANSISTRING File,
+	UNICODESTRING L"WMI SCEP Migration Failure",
+	HRESULT HResult
+	);
+
+WMIMigrationFailure(
+	UNICODESTRING Function,
+	INT32 Line,
+	ANSISTRING File,
+	UNICODESTRING L"WMI AppInstallJob Migration Failure",
+	HRESULT HResult
+	);
+
+WMIMigrationFailure(
+	UNICODESTRING Function,
+	INT32 Line,
+	ANSISTRING File,
+	UNICODESTRING L"WMI Certificate Migration Failure",
+	HRESULT HResult
+	);
+
+WMIMigrationFailure(
+	UNICODESTRING Function,
+	INT32 Line,
+	ANSISTRING File,
+	UNICODESTRING L"WMI VPN Migration Failure",
+	HRESULT HResult
+	);
+
+WMIMigrationFailure(
+	UNICODESTRING Function,
+	INT32 Line,
+	ANSISTRING File,
+	UNICODESTRING L"WMI WiFi Migration Failure",
+	HRESULT HResult
+	);
+
+WMIMigrationFailure(
+	UNICODESTRING Function,
+	INT32 Line,
+	ANSISTRING File,
+	UNICODESTRING L"Blue MDM Root Not Found",
+	HRESULT HResult
+	);
+
+WMIMigrationFailure(
+	UNICODESTRING Function,
+	INT32 Line,
+	ANSISTRING File,
+	UNICODESTRING L"Opening HKCU for impersonated user",
+	HRESULT HResult
+	);
+
+WMIMigrationFailure(
+	UNICODESTRING Function,
+	INT32 Line,
+	ANSISTRING File,
+	UNICODESTRING L"Error impersonating user",
+	HRESULT HResult
+	);
+
+WMIMigrationFailure(
+	UNICODESTRING Function,
+	INT32 Line,
+	ANSISTRING File,
+	UNICODESTRING L"Error in CoInitializeEx",
+	HRESULT HResult
+	);
+
+WMIMigrationFailure(
+	UNICODESTRING Function,
+	INT32 Line,
+	ANSISTRING File,
+	UNICODESTRING L"Unable to get UserSid"
+	);
+
+WMIMigration(
+	UNICODESTRING Function,
+	INT32 Line,
+	ANSISTRING File,
+	UNICODESTRING L"Started"
+	);
+
+WMIMigration(
+	UNICODESTRING Function,
+	INT32 Line,
+	ANSISTRING File,
+	HRESULT ErmRevertImpersonateDestructorFailed
+	);
+
+DMPollAuxiliaryScheduleSetupFail(
+	UINT32 Result,
+	ANSISTRING __TlgCV__
+	);
+
+EnrollDMPollTaskSchedulerFail(
+	UINT32 Result,
+	ANSISTRING Function,
+	ANSISTRING __TlgCV__
+	);
+
+DMPollScheduleSetupFail(
+	UINT32 Result,
+	ANSISTRING __TlgCV__
+	);
+
+DMAllUsersPollOnFirstLoginSetupSuccess(
+	ANSISTRING __TlgCV__
+	);
+
+DMPollLoginSetupFail(
+	UINT32 Result,
+	ANSISTRING __TlgCV__
+	);
+
+DMAllUsersPollOnFirstLoginSetupFail(
+	UINT32 Result,
+	ANSISTRING __TlgCV__
+	);
+
+DMPollSecondAuxiliaryScheduleSetupFail(
+	UINT32 Result,
+	ANSISTRING __TlgCV__
+	);
+

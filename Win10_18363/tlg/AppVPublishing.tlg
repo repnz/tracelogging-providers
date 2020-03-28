@@ -1,0 +1,24 @@
+ProviderNames:
+	Microsoft.Windows.AppMan.AppV
+
+
+
+**** Events *****
+PublishPackageFromServer(
+	BOOL32 UTCReplace_AppSessionGuid,
+	GUID PackageID,
+	GUID PackageVersion,
+	BOOLEAN Global,
+	BOOLEAN Policy,
+	UINT64 AppVError,
+	UNICODESTRING SequencerVersion
+	);
+
+DebugMessage(
+	UINT32 LOGLEVEL,
+	UNICODESTRING MESSAGE,
+	UNICODESTRING FUNCTION,
+	UINT32 LINENO,
+	BOOL32 UTCReplace_AppSessionGuid
+	);
+

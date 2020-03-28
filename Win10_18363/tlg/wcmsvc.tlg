@@ -1,0 +1,240 @@
+ProviderNames:
+	Microsoft.Windows.ConnectionManager
+	Microsoft.Windows.TlgAggregateInternal
+	TelemetryAssert
+	TelemetryAssertDiagTrack
+
+
+
+**** Events *****
+MissedL2ArrivalNotification(
+	UINT32 mediaType,
+	GUID interfaceGuid
+	);
+
+TraceDebug(
+	ANSISTRING file,
+	ANSISTRING debugStatement,
+	GUID debugGuid
+	);
+
+ConnectionAggregator::InternalBuildConnectionCandidates - Skipping network because a non-cellular interface has failed reason code(
+	GUID interfaceGuid,
+	UINT32 reasonCode
+	);
+
+RadioManagementEnginePowerDownNonAoAcAdapter(
+	VOID
+	);
+
+WcmPdcInterfaceTracker(
+	UINT32 instanceId,
+	GUID interfaceGuid,
+	ANSISTRING powerPhase,
+	ANSISTRING powerState,
+	FLOAT ioctlTotalTimeMs,
+	UINT32 result
+	);
+
+WcmPdcTimeTracker(
+	UINT32 instanceId,
+	ANSISTRING powerPhase,
+	ANSISTRING powerState,
+	FLOAT totalTimeMs,
+	UINT32 rasDelayMs
+	);
+
+TlgAggregateSummary(
+	GUID Provider,
+	UINT64 NumFlushes,
+	UINT64 MaxEntriesStored,
+	UINT64 TotalEntriesFlushed,
+	UINT32 MaxEntriesFlushed,
+	UINT32 MinEntriesFlushed,
+	UINT32 NumBucketLimitReached,
+	UINT32 NumAllocationFailures,
+	UINT32 NumLargeEventFailures
+	);
+
+Assert(
+	UINT32 assertVersion,
+	UINT32 rva,
+	UINT32 timestamp,
+	UINT32 imageSize,
+	ANSISTRING imageName,
+	UINT32 count,
+	UINT32 totalHits,
+	UINT32 ModuleCollection,
+	UINT32 GlobalCollection
+	);
+
+ConnectoidChangeReceived(
+	UINT32 changeType,
+	BOOLEAN haveListeners
+	);
+
+NotificationListenerUnregistered(
+	HEXINT64 clientHandle,
+	UINT32 result
+	);
+
+NotificationListenerRegistered(
+	UINT32 clientProcessId,
+	HEXINT64 clientHandle,
+	HEXINT64 clientNotificationsAvailableEvent,
+	HEXINT64 registrationBuffer,
+	UINT32 registrationBufferSize,
+	UINT32 result
+	);
+
+TraceDebug(
+	ANSISTRING file,
+	ANSISTRING debugStatement
+	);
+
+TraceDebug(
+	ANSISTRING file,
+	ANSISTRING debugStatement,
+	UINT32 debugDword
+	);
+
+TraceDebug(
+	ANSISTRING file,
+	ANSISTRING debugStatement,
+	ANSISTRING debugString
+	);
+
+StopBadConnectivityState(
+	UINT64 PartA_PrivTags,
+	GUID interfaceGuid,
+	INT32 connectionId,
+	INT32 sequenceNumber,
+	INT32 mediaType,
+	INT32 endingTriggers,
+	INT32 IPv4Triggers,
+	INT32 IPv6Triggers,
+	INT32 tcpConnectionFailureCount,
+	INT32 timeInBadStateMs,
+	BOOLEAN wasEverInGoodState,
+	INT32 newConnectionState
+	);
+
+RouteManagerLinkSpeed(
+	UINT64 PartA_PrivTags,
+	GUID interfaceGuid,
+	INT32 mediaType,
+	BOOL32 linkQualityDegraded,
+	DOUBLE meanRecvLinkSpeed,
+	DOUBLE meanXmitLinkSpeed,
+	DOUBLE maxRecvLinkSpeed,
+	DOUBLE maxXmitLinkSpeed,
+	DOUBLE minRecvLinkSpeed,
+	DOUBLE minXmitLinkSpeed
+	);
+
+StartBadConnectivityState(
+	UINT64 PartA_PrivTags,
+	GUID interfaceGuid,
+	INT32 connectionId,
+	INT32 sequenceNumber,
+	INT32 mediaType,
+	INT32 startingTriggers,
+	INT32 IPv4Triggers,
+	INT32 IPv6Triggers,
+	INT32 tcpConnectionFailureCount,
+	BOOLEAN wasEverInGoodState
+	);
+
+UpdateBadConnectivityState(
+	UINT64 PartA_PrivTags,
+	GUID interfaceGuid,
+	INT32 connectionId,
+	INT32 sequenceNumber,
+	INT32 mediaType,
+	INT32 currentTriggers,
+	INT32 IPv4Triggers,
+	INT32 IPv6Triggers,
+	INT32 tcpConnectionFailureCount,
+	INT32 timeInBadStateMs,
+	BOOLEAN wasEverInGoodState
+	);
+
+AvoidedBadConnectivityState(
+	UINT64 PartA_PrivTags,
+	GUID interfaceGuid,
+	INT32 mediaType
+	);
+
+RouteManagerTriggerEvaluationCompleted(
+	UINT64 PartA_PrivTags,
+	UINT32 failoverOutcome,
+	UINT32 failoverTrigger,
+	UINT32 failoverNotAllowedReason,
+	UINT32 failoverPolicy,
+	UINT64 sequenceNumber,
+	GUID interfaceGuid,
+	UINT32 mediaType,
+	UINT32 dpuStatus,
+	UINT32 l2Connectivity,
+	UINT32 linkQuality,
+	UINT32 signalStrength,
+	UINT32 ipv4UnconstrainedState,
+	UINT32 ipv6UnconstrainedState,
+	UINT32 nlaStatus,
+	UINT32 gatewayStatus,
+	UINT32 routeState,
+	UINT32 roamingState,
+	BOOLEAN hasCaptivePortal,
+	BOOLEAN hasNlaDomain,
+	BOOLEAN hasNlaInternet,
+	UINT32 ipv4RouteCount,
+	UINT32 ipv4PathCount,
+	UINT32 ipv4MovedPathCount,
+	UINT32 ipv4UnreachablePathCount,
+	UINT32 ipv6RouteCount,
+	UINT32 ipv6PathCount,
+	UINT32 ipv6MovedPathCount,
+	UINT32 ipv6UnreachablePathCount
+	);
+
+TokenManager::BuildTokens: AutoConnectTokenGiven(
+	GUID interfaceGuid,
+	UINT32 mediaType,
+	UNICODESTRING profileName
+	);
+
+TokenManager::BuildTokens: AutoConnectTokenRemoved(
+	GUID interfaceGuid,
+	UINT32 mediaType,
+	UNICODESTRING profileName,
+	UINT32 autoConnectTokenRemovalReason
+	);
+
+AutoConnectTokenGiven(
+	GUID interfaceGuid,
+	UINT32 mediaType,
+	UNICODESTRING profileName,
+	UINT64 PartA_PrivTags
+	);
+
+AutoConnectTokenRemoved(
+	GUID interfaceGuid,
+	UINT32 mediaType,
+	UINT32 autoConnectTokenRemovalReason,
+	UNICODESTRING profileName,
+	UINT64 PartA_PrivTags
+	);
+
+TokenManager::BuildTokens: new token(
+	GUID interfaceGuid,
+	UINT32 mediaType,
+	UINT32 autoConnectCount,
+	UINT32 manualConnectCount
+	);
+
+TraceDebug(
+	ANSISTRING file,
+	ANSISTRING debugStatement,
+	UNICODESTRING debugString
+	);
+

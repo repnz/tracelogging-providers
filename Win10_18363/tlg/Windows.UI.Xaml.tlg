@@ -1,0 +1,797 @@
+ProviderNames:
+	Windows.Ui.Xaml
+	TelemetryAssertDiagTrack
+	TelemetryAssert
+	Microsoft.Windows.UI.XAML.Input
+	Microsoft.Windows.Ink.InkOnText
+	Microsoft.Windows.Wil.FeatureLogging
+	Microsoft.Windows.Ink.InkSamplesData
+
+
+
+**** Events *****
+XamlFailFast(
+	INT32 ErrorCode
+	);
+
+RuntimeProfiler(
+	ANSISTRING ApiCounts,
+	UINT32 ProfileGroupId,
+	UINT32 TotalCount,
+	BOOLEAN OnSuspend,
+	BOOLEAN Overflow,
+	BOOLEAN StringOverflow,
+	BOOLEAN UTCReplace_AppSessionGuid
+	);
+
+XamlIslandRoot-NewMaxArea(
+	HEXINT64 IslandInstance,
+	UINT32 IslandType,
+	FLOAT Width,
+	FLOAT Height,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	UINT64 PartA_PrivTags
+	);
+
+AutoScrollStart(
+	VOID
+	);
+
+FallbackError(
+	UINT64 PartA_PrivTags,
+	SIGNED wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+FallbackError(
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+AutoScrollEnd(
+	UINT32 AutoScrollDurationMSec
+	);
+
+NoColorGlyphRendering(
+	UINT32 ColorFontPaletteIndex
+	);
+
+SmartLinkEdited(
+	UNICODESTRING DisplayTitle,
+	UNICODESTRING LinkType
+	);
+
+HandwritingViewDisabled(
+	UINT64 PartA_PrivTags
+	);
+
+FeatureError(
+	UINT32 featureId,
+	INT32 featureVersion,
+	INT32 featureBaseVersion,
+	INT16 featureStage,
+	HRESULT hr,
+	ANSISTRING file,
+	UINT16 lineNumber,
+	ANSISTRING module,
+	ANSISTRING process,
+	ANSISTRING originFile,
+	UINT16 originLineNumber,
+	ANSISTRING originModule,
+	ANSISTRING originName,
+	ANSISTRING message,
+	ANSISTRING callerModule,
+	UINT32 callerReturnAddressOffset,
+	ANSISTRING originCallerModule,
+	UINT32 originCallerReturnAddressOffset
+	);
+
+FeatureVariantUsage(
+	UINT32 featureId,
+	INT32 featureVersion,
+	INT32 featureBaseVersion,
+	INT16 featureStage,
+	BOOLEAN enabled,
+	UINT32 variantKind,
+	UINT8 variant,
+	UINT64 addend
+	);
+
+EnabledFeatureUsage(
+	UINT32 featureId,
+	INT32 featureVersion,
+	INT32 featureBaseVersion,
+	INT16 featureStage,
+	BOOLEAN enabled,
+	UINT32 kind,
+	UINT64 addend
+	);
+
+FeatureUsage(
+	UINT32 featureId,
+	INT32 featureVersion,
+	INT32 featureBaseVersion,
+	INT16 featureStage,
+	BOOLEAN enabled,
+	UINT32 kind,
+	UINT64 addend
+	);
+
+ShowPenSettingsClicked(
+	UINT64 PartA_PrivTags
+	);
+
+AddLanguageClicked(
+	UINT64 PartA_PrivTags
+	);
+
+SpaceButtonClicked(
+	UINT64 PartA_PrivTags
+	);
+
+ExpandDownButtonClicked(
+	UINT64 PartA_PrivTags
+	);
+
+CollapseButtonClicked(
+	UINT64 PartA_PrivTags
+	);
+
+HandwritingTipsUriClicked(
+	UINT64 PartA_PrivTags
+	);
+
+ReturnButtonClicked(
+	UINT64 PartA_PrivTags
+	);
+
+HandwritingTipsClicked(
+	UINT64 PartA_PrivTags
+	);
+
+HandwritingTipsCollapsed(
+	UINT64 PartA_PrivTags
+	);
+
+DeleteButtonClicked(
+	BOOLEAN HasSelectedContent,
+	UNICODESTRING EditedWordsCookies,
+	UINT64 PartA_PrivTags
+	);
+
+SmartLinkClicked(
+	UNICODESTRING DisplayTitle,
+	UNICODESTRING LinkType
+	);
+
+SmartLinkCreated(
+	UNICODESTRING DisplayTitle,
+	UNICODESTRING LinkType,
+	UINT32 LinkLength
+	);
+
+SmartLinkDeleted(
+	UNICODESTRING DisplayTitle,
+	UNICODESTRING LinkType
+	);
+
+SharedD3DDevice_NonSharedLost(
+	VOID
+	);
+
+SharedD3DDevice_PreviouslySharedLost(
+	VOID
+	);
+
+SharedD3DDevice_SharedLost(
+	VOID
+	);
+
+SharedD3DDevice_CreateUnShared(
+	VOID
+	);
+
+SharedD3DDevice_CreateShared(
+	VOID
+	);
+
+SharedD3DDevice_UseShared(
+	VOID
+	);
+
+FirstUiThreadFrameEnd(
+	UNICODESTRING XamlSessionId,
+	UNICODESTRING XamlAppId,
+	UINT32 XamlProcessId
+	);
+
+TextBox_Clear_Event(
+	ANSISTRING "OnDeleteButtonClick"
+	);
+
+TextBoxGotFocus(
+	VOID
+	);
+
+PasswordBoxShowPassword(
+	UINT8 OnPasswordRevealedChanged
+	);
+
+PasswordBoxGotFocus(
+	VOID
+	);
+
+ActivityIntermediateStop(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+InkOnTextInvokeActivity(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+InkOnTextInvokeActivity(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId
+	);
+
+InkOnTextInvokeActivity(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+ActivityError(
+	UINT64 PartA_PrivTags,
+	SIGNED wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+ActivityError(
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+ActivityStoppedAutomatically(
+	VOID
+	);
+
+GesturePerformed(
+	INT32 Gesture,
+	UNICODESTRING InputLanguage,
+	UNICODESTRING FontFace,
+	DOUBLE FontSize,
+	UNICODESTRING OverwrittenChars,
+	UNICODESTRING EditedWordsCookies,
+	UNICODESTRING UpdatedCookies,
+	DOUBLE DeletedLines,
+	BOOLEAN IsInsertBetweenWords,
+	UINT64 PartA_PrivTags
+	);
+
+InputLanguageChanged(
+	UNICODESTRING InputLanguage,
+	UINT64 PartA_PrivTags
+	);
+
+EicInvoked(
+	UNICODESTRING InputLanguage,
+	INT32 InputScope,
+	UNICODESTRING FontFace,
+	DOUBLE FontSize,
+	BOOLEAN IsMultiline,
+	UNICODESTRING InstanceTag,
+	UINT64 PartA_PrivTags
+	);
+
+EicDismissed(
+	INT32 DismissReason,
+	UNICODESTRING InputLanguage,
+	UNICODESTRING FontFace,
+	DOUBLE FontSize,
+	UINT32 StrokesInked,
+	UINT32 CharactersInked,
+	UINT32 WordsInked,
+	UINT32 CharactersFinalized,
+	UINT32 WordsFinalized,
+	UINT32 Operations,
+	UNICODESTRING RecoTime,
+	UNICODESTRING AnalyzeOperationTime,
+	UNICODESTRING ProcessAnnotationNodesWordModeTime,
+	UNICODESTRING ProcessAnnotationNodesLineModeTime,
+	UNICODESTRING ProcessWordNodesTime,
+	UNICODESTRING ProcessLineNodesTime,
+	UNICODESTRING DecidePendingAndCommittedUpdatesTime,
+	UNICODESTRING LogInkOperationTime,
+	UNICODESTRING ApplyUpdatesOperationTime,
+	UNICODESTRING CandidateSelectedOperationTime,
+	UNICODESTRING ConversionTimerOperationTime,
+	UNICODESTRING InactivityTimerOperationTime,
+	UNICODESTRING ShowPredictionCandidatesOperationTime,
+	UNICODESTRING ShowRequestedCandidatesOperationTime,
+	UINT64 PartA_PrivTags
+	);
+
+LogUnexpectedValues(
+	UNICODESTRING Tag,
+	UNICODESTRING Value,
+	UINT64 PartA_PrivTags
+	);
+
+CandidateSelected(
+	UNICODESTRING InputLanguage,
+	UINT32 Index,
+	INT32 CandidateSessionType,
+	UINT64 Length,
+	BOOLEAN IsCandidateFromReco,
+	UINT64 PartA_PrivTags
+	);
+
+LogInkGesture(
+	UNICODESTRING InputLanguage,
+	UINT32 InputScope,
+	UNICODESTRING FontFace,
+	DOUBLE FontSize,
+	UINT32 GestureKind,
+	UNICODESTRING TextBeforeCorrection,
+	UNICODESTRING TextAfterCorrection,
+	UINT32 WordCount,
+	FLOAT WritingRectLeft,
+	FLOAT WritingRectTop,
+	FLOAT WritingRectRight,
+	FLOAT WritingRectBottom,
+	FLOAT DrawingRectLeft,
+	FLOAT DrawingRectTop,
+	FLOAT DrawingRectRight,
+	FLOAT DrawingRectBottom,
+	UNICODESTRING WordBoundingRects,
+	UINT32 Midline,
+	UINT32 Rows,
+	INT32 Column,
+	UNICODESTRING UsagePageGenericX,
+	UNICODESTRING UsagePageGenericY,
+	UNICODESTRING DisplayRect,
+	INT32 NumIntegratedPenDigitizers,
+	BINARY InkIsf,
+	UINT64 PartA_PrivTags
+	);
+
+LogInkFromCandidates(
+	UNICODESTRING CandidateText,
+	UINT32 CandidateIndex,
+	BOOLEAN IsCandidateFromReco,
+	UNICODESTRING RecognizedText,
+	BOOLEAN IsAppend,
+	UNICODESTRING InputLanguage,
+	FLOAT WritingRectLeft,
+	FLOAT WritingRectTop,
+	FLOAT WritingRectRight,
+	FLOAT WritingRectBottom,
+	FLOAT DrawingRectLeft,
+	FLOAT DrawingRectTop,
+	FLOAT DrawingRectRight,
+	FLOAT DrawingRectBottom,
+	FLOAT BoundingRectLeft,
+	FLOAT BoundingRectTop,
+	FLOAT BoundingRectRight,
+	FLOAT BoundingRectBottom,
+	UINT32 Midline,
+	UINT32 Rows,
+	INT32 Column,
+	UNICODESTRING FontFace,
+	DOUBLE FontSize,
+	UNICODESTRING PreContext,
+	UNICODESTRING PreviousWordRects,
+	UNICODESTRING Candidates,
+	UINT32 InputScope,
+	UNICODESTRING UsagePageGenericX,
+	UNICODESTRING UsagePageGenericY,
+	UNICODESTRING DisplayRect,
+	INT32 NumIntegratedPenDigitizers,
+	BINARY InkIsf,
+	UINT64 PartA_PrivTags
+	);
+
+LogInkFromHandwriting(
+	BOOLEAN IsTimeout,
+	UNICODESTRING FinalText,
+	BOOLEAN IsAppend,
+	UNICODESTRING InputLanguage,
+	FLOAT WritingRectLeft,
+	FLOAT WritingRectTop,
+	FLOAT WritingRectRight,
+	FLOAT WritingRectBottom,
+	FLOAT DrawingRectLeft,
+	FLOAT DrawingRectTop,
+	FLOAT DrawingRectRight,
+	FLOAT DrawingRectBottom,
+	FLOAT BoundingRectLeft,
+	FLOAT BoundingRectTop,
+	FLOAT BoundingRectRight,
+	FLOAT BoundingRectBottom,
+	UINT32 Midline,
+	UINT32 Rows,
+	INT32 Column,
+	UNICODESTRING FontFace,
+	DOUBLE FontSize,
+	UNICODESTRING PreContext,
+	UNICODESTRING PreviousWordRects,
+	UNICODESTRING Candidates,
+	UINT32 InputScope,
+	UNICODESTRING UsagePageGenericX,
+	UNICODESTRING UsagePageGenericY,
+	UNICODESTRING DisplayRect,
+	INT32 NumIntegratedPenDigitizers,
+	BINARY InkIsf,
+	UINT64 PartA_PrivTags
+	);
+
+LogInkFromCandidatesLowUsedLanguage(
+	UNICODESTRING CandidateText,
+	UINT32 CandidateIndex,
+	BOOLEAN IsCandidateFromReco,
+	UNICODESTRING RecognizedText,
+	BOOLEAN IsAppend,
+	UNICODESTRING InputLanguage,
+	FLOAT WritingRectLeft,
+	FLOAT WritingRectTop,
+	FLOAT WritingRectRight,
+	FLOAT WritingRectBottom,
+	FLOAT DrawingRectLeft,
+	FLOAT DrawingRectTop,
+	FLOAT DrawingRectRight,
+	FLOAT DrawingRectBottom,
+	FLOAT BoundingRectLeft,
+	FLOAT BoundingRectTop,
+	FLOAT BoundingRectRight,
+	FLOAT BoundingRectBottom,
+	UINT32 Midline,
+	UINT32 Rows,
+	INT32 Column,
+	UNICODESTRING FontFace,
+	DOUBLE FontSize,
+	UNICODESTRING PreContext,
+	UNICODESTRING PreviousWordRects,
+	UNICODESTRING Candidates,
+	UINT32 InputScope,
+	UNICODESTRING UsagePageGenericX,
+	UNICODESTRING UsagePageGenericY,
+	UNICODESTRING DisplayRect,
+	INT32 NumIntegratedPenDigitizers,
+	BINARY InkIsf,
+	UINT64 PartA_PrivTags
+	);
+
+LogInkForUnexpectedValues(
+	UNICODESTRING Tag,
+	UNICODESTRING Value,
+	UNICODESTRING InputLanguage,
+	FLOAT WritingRectLeft,
+	FLOAT WritingRectTop,
+	FLOAT WritingRectRight,
+	FLOAT WritingRectBottom,
+	FLOAT DrawingRectLeft,
+	FLOAT DrawingRectTop,
+	FLOAT DrawingRectRight,
+	FLOAT DrawingRectBottom,
+	FLOAT BoundingRectLeft,
+	FLOAT BoundingRectTop,
+	FLOAT BoundingRectRight,
+	FLOAT BoundingRectBottom,
+	UINT32 Midline,
+	UINT32 Rows,
+	INT32 Column,
+	UNICODESTRING FontFace,
+	DOUBLE FontSize,
+	UINT32 InputScope,
+	UNICODESTRING UsagePageGenericX,
+	UNICODESTRING UsagePageGenericY,
+	UNICODESTRING DisplayRect,
+	INT32 NumIntegratedPenDigitizers,
+	BINARY InkIsf,
+	UINT64 PartA_PrivTags
+	);
+
+LogInkFromHandwritingLowUsedLanguage(
+	BOOLEAN IsTimeout,
+	UNICODESTRING FinalText,
+	BOOLEAN IsAppend,
+	UNICODESTRING InputLanguage,
+	FLOAT WritingRectLeft,
+	FLOAT WritingRectTop,
+	FLOAT WritingRectRight,
+	FLOAT WritingRectBottom,
+	FLOAT DrawingRectLeft,
+	FLOAT DrawingRectTop,
+	FLOAT DrawingRectRight,
+	FLOAT DrawingRectBottom,
+	FLOAT BoundingRectLeft,
+	FLOAT BoundingRectTop,
+	FLOAT BoundingRectRight,
+	FLOAT BoundingRectBottom,
+	UINT32 Midline,
+	UINT32 Rows,
+	INT32 Column,
+	UNICODESTRING FontFace,
+	DOUBLE FontSize,
+	UNICODESTRING PreContext,
+	UNICODESTRING PreviousWordRects,
+	UNICODESTRING Candidates,
+	UINT32 InputScope,
+	UNICODESTRING UsagePageGenericX,
+	UNICODESTRING UsagePageGenericY,
+	UNICODESTRING DisplayRect,
+	INT32 NumIntegratedPenDigitizers,
+	BINARY InkIsf,
+	UINT64 PartA_PrivTags
+	);
+
+Assert(
+	UINT32 assertVersion,
+	UINT32 rva,
+	UINT32 timestamp,
+	UINT32 imageSize,
+	ANSISTRING imageName,
+	UINT32 count,
+	UINT32 totalHits,
+	UINT32 ModuleCollection,
+	UINT32 GlobalCollection
+	);
+
+AssertWithArgs(
+	UINT32 assertVersion,
+	UINT32 rva,
+	UINT32 timestamp,
+	UINT32 imageSize,
+	ANSISTRING imageName,
+	UINT32 count,
+	UINT32 totalHits,
+	ANSISTRING originatingBinary,
+	UINT32 bucketArgument1,
+	UINT32 bucketArgument2,
+	UINT32 ModuleCollection,
+	UINT32 GlobalCollection
+	);
+
+ConnectedAnimation_TryStart(
+	BOOL32 isAnimationEnabled
+	);
+
+Controls_Retemplating(
+	UNICODESTRING ControlType
+	);
+
+XAMLHCColor(
+	INT32 Theme,
+	UNICODESTRING ClassName,
+	BOOL32 IsBackground,
+	UINT32 rgbValue
+	);
+
+GCDuration(
+	UINT32 DurationType,
+	INT64 Max,
+	INT64 Latest,
+	INT64 Count,
+	INT64 LogCount,
+	INT64 TickFrequency
+	);
+
+OnFocusVisualKindChangedToReveal(
+	VOID
+	);
+
+MediaElementCorrelationGuidCreationFailed(
+	VOID
+	);
+
+MediaEngineCorrelationTuple(
+	UNICODESTRING ElementName,
+	GUID ElementInstanceId
+	);
+
+MediaElementFailed(
+	UINT16 SettingsBitField,
+	INT16 ErrorCode,
+	INT64 ExtendedErrorCode,
+	DOUBLE NaturalDuration,
+	DOUBLE Position,
+	INT32 SourceType,
+	INT32 CurrentState,
+	UNICODESTRING ElementName,
+	GUID ElementInstanceId
+	);
+
+ContainerRecyclingLifetimeStats(
+	UINT32 ContainerRequestedCount,
+	UINT32 ContainerCreatedCount
+	);
+
+ModernPanelGuard(
+	UNICODESTRING FailureReason
+	);
+
+DesktopWindowXamlSource-LoadedFrameworks(
+	UINT32 LoadedFrameworkMask,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	UINT64 PartA_PrivTags
+	);
+
+DesktopWindowXamlSource-NewMaxActive(
+	UINT32 NewMaxValue,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	UINT64 PartA_PrivTags
+	);
+
+ActivityStoppedAutomatically(
+	VOID
+	);
+
+ASBSuggestionSelectionChanged(
+	VOID
+	);
+
+ASBSuggestionListOpened(
+	VOID
+	);
+
+SeZoZoom(
+	BOOLEAN IsZoomingOut,
+	INT16 Type
+	);
+
+SoundPlayerSpatialState(
+	UINT32 SoundPlayerState,
+	UINT32 SpatialAudioMode
+	);
+
+ListViewBaseSerializationInvalidWrite(
+	UINT32 serializationKeyCodeUnitCount,
+	UNICODESTRING serializationKey,
+	UINT32 serializationKeyCodeUnitCountWritten
+	);
+
+ConnectedAnimation_TryStart_CoordinatedElements(
+	VOID
+	);
+
+AppWindow-NewMaxActive(
+	UINT32 NewMaxValue,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	UINT64 PartA_PrivTags
+	);
+
+MediaTransportControlsStatistics(
+	GUID ElementInstanceId,
+	HRESULT HRESULTMuteClick,
+	HRESULT HRESULTVolumeClick,
+	HRESULT HRESULTPlayPauseClick,
+	HRESULT HRESULTFullWindowClick,
+	HRESULT HRESULTZoomClick,
+	HRESULT HRESULTTimeElapsedClick,
+	HRESULT HRESULTSizeChanged,
+	HRESULT HRESULTPositionSliderPressed,
+	HRESULT HRESULTScrubbingMode,
+	HRESULT HRESULTCastingClick,
+	HRESULT HRESULTClosedCaptionsClick,
+	HRESULT HRESULTClosedCaptionsTrackSelect,
+	UINT32 NumMuteClick,
+	UINT32 NumVolumeClick,
+	UINT32 NumPlayPauseClick,
+	UINT32 NumFullWindowClick,
+	UINT32 NumZoomClick,
+	UINT32 NumTimeElapsedClick,
+	UINT32 NumSizeChanged,
+	UINT32 NumPositionSliderPressed,
+	UINT32 NumScrubbingMode,
+	UINT32 NumCastingClick,
+	UINT32 NumClosedCaptionsClick,
+	UINT32 NumClosedCaptionsTrackSelect,
+	UINT32 NumFailedMuteClick,
+	UINT32 NumFailedVolumeClick,
+	UINT32 NumFailedPlayPauseClick,
+	UINT32 NumFailedFullWindowClick,
+	UINT32 NumFailedZoomClick,
+	UINT32 NumFailedTimeElapsedClick,
+	UINT32 NumFailedSizeChanged,
+	UINT32 NumFailedPositionSliderPressed,
+	UINT32 NumFailedScrubbingMode,
+	UINT32 NumFailedCastingClick,
+	UINT32 NumFailedClosedCaptionsClick,
+	UINT32 NumFailedClosedCaptionsTrackSelect,
+	INT32 CurrentCCTrack,
+	UINT32 NumCCTurnedOff,
+	UINT32 NumCCTrackChanged,
+	BOOLEAN IsControlPanelVisible,
+	UINT32 NumControlPanelTransitions
+	);
+
+XAMLCUIMissedKeyboardInput(
+	UINT32 msLeft,
+	UINT32 TotalDelayMs
+	);
+
+XAMLCUIInterruptedModalLoop(
+	UINT32 TotalDelayMs
+	);
+

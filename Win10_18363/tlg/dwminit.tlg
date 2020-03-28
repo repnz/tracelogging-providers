@@ -1,0 +1,89 @@
+ProviderNames:
+	Microsoft.Windows.Dwm.DwmInit
+
+
+
+**** Events *****
+Restart(
+	GUID sessionActivityId,
+	UINT32 exitCode,
+	INT32 iNumRetriesSoFar,
+	GUID TargetAppSessionGuid,
+	UINT16 BootId,
+	UINT16 SessionId
+	);
+
+SessionShutdownOnCreateFailure(
+	GUID sessionActivityId,
+	INT32 hResult,
+	GUID TargetAppSessionGuid,
+	UINT16 BootId,
+	UINT16 SessionId
+	);
+
+SessionStart(
+	GUID sessionActivityId,
+	GUID TargetAppSessionGuid,
+	UINT16 BootId,
+	UINT16 SessionId
+	);
+
+DwmpTerminateSessionProcess(
+	GUID sessionActivityId,
+	HRESULT HRESULT,
+	UINT32 dwData,
+	BOOLEAN isWinInit,
+	GUID TargetAppSessionGuid,
+	UINT16 BootId,
+	UINT16 SessionId
+	);
+
+FallbackToBdd(
+	GUID sessionActivityId,
+	INT32 ntStatus,
+	INT32 iNumRetriesSoFar,
+	GUID TargetAppSessionGuid,
+	GUID BootId,
+	UINT16 SessionId
+	);
+
+DwmpCreateSessionProcess(
+	GUID sessionActivityId,
+	HRESULT HRESULT,
+	UINT32 dwProcessId,
+	BOOLEAN isWinInit,
+	GUID TargetAppSessionGuid,
+	UINT16 BootId,
+	UINT16 SessionId
+	);
+
+SessionShutdownOnRestartFailure(
+	GUID sessionActivityId,
+	INT32 hResult,
+	INT32 iNumRetriesSoFar,
+	GUID TargetAppSessionGuid,
+	UINT16 BootId,
+	UINT16 SessionId
+	);
+
+DwmInit_EtwEvent(
+	GUID sessionActivityId,
+	UINT32 eventType,
+	INT32 hResult,
+	UINT32 extraInfo,
+	GUID TargetAppSessionGuid,
+	UINT16 BootId,
+	UINT16 SessionId
+	);
+
+DwmInit_AggregateEvent(
+	GUID sessionActivityId,
+	UINT32 restartCount,
+	UINT32 fallbackToBddCount,
+	UINT32 sessionShutdownOnRestartFailureCount,
+	UINT32 sessionShutdownOnCreateFailureCount,
+	GUID TargetAppSessionGuid,
+	UINT16 BootId,
+	UINT16 SessionId
+	);
+

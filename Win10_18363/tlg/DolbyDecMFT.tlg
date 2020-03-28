@@ -1,0 +1,226 @@
+ProviderNames:
+	Microsoft.Windows.MediaFoundation.DolbyAtmosDecoder
+	Microsoft.Windows.Audio.License
+
+
+
+**** Events *****
+CheckOutputTypeError(
+	GUID MFMediaTelemetrySessionID,
+	UINT32 MFMediaTelemetrySessionInstance,
+	HRESULT Hr,
+	ANSISTRING FailureType,
+	GUID Subtype,
+	UINT32 SuggestedValue,
+	UINT32 InternalValue
+	);
+
+Info(
+	GUID ContextId,
+	ANSISTRING Func,
+	UINT32 LineNum,
+	ANSISTRING Msg
+	);
+
+OnOutputTypeChanged(
+	GUID MFMediaTelemetrySessionID,
+	UINT32 MFMediaTelemetrySessionInstance,
+	HRESULT Hr,
+	INT32 IsSpatial,
+	HRESULT hrIsDolbyDigitalPlusDecoderEnabled,
+	UINT32 ChannelCount,
+	INT32 IsLFEOn,
+	UINT32 SampleType,
+	UINT32 SampleRate,
+	UINT32 FrameSize,
+	UINT32 FullFrameSize,
+	INT64 FrameDuration
+	);
+
+ProcessOutputFailure(
+	GUID MFMediaTelemetrySessionID,
+	UINT32 MFMediaTelemetrySessionInstance,
+	HRESULT Hr,
+	UINT32 InSampleCount,
+	UINT32 OutSampleCount,
+	INT32 DDecInitResult,
+	INT32 DDecProcessTimeSliceResult
+	);
+
+InitializationFailure(
+	GUID MFMediaTelemetrySessionID,
+	UINT32 MFMediaTelemetrySessionInstance,
+	HRESULT Hr
+	);
+
+Error(
+	GUID ContextId,
+	ANSISTRING Func,
+	UINT32 LineNum,
+	ANSISTRING Msg
+	);
+
+Warning(
+	GUID ContextId,
+	ANSISTRING Func,
+	UINT32 LineNum,
+	ANSISTRING Msg,
+	INT32 hr
+	);
+
+CheckInputTypeError(
+	GUID MFMediaTelemetrySessionID,
+	UINT32 MFMediaTelemetrySessionInstance,
+	HRESULT Hr,
+	ANSISTRING FailureType,
+	BOOLEAN IsSpatial,
+	INT32 LicenseCheckResult,
+	UINT32 ChannelCount,
+	UINT32 ChannelMask,
+	UINT32 SampleRate
+	);
+
+OnInputTypeChanged(
+	GUID MFMediaTelemetrySessionID,
+	UINT32 MFMediaTelemetrySessionInstance,
+	HRESULT Hr,
+	INT32 IsSpatial,
+	INT32 IsDD,
+	INT32 LicenseCheckResult,
+	UINT32 ChannelCount,
+	UINT32 ChannelMask,
+	UINT32 SampleRate,
+	GUID SubType
+	);
+
+Error(
+	GUID ContextId,
+	ANSISTRING Func,
+	UINT32 LineNum,
+	ANSISTRING Msg,
+	INT32 hr
+	);
+
+Warning(
+	GUID ContextId,
+	ANSISTRING Func,
+	UINT32 LineNum,
+	ANSISTRING Msg
+	);
+
+Verbose(
+	GUID ContextId,
+	ANSISTRING Func,
+	UINT32 LineNum,
+	ANSISTRING Msg,
+	INT32 hr
+	);
+
+Error(
+	GUID ContextId,
+	ANSISTRING Func,
+	UINT32 LineNum,
+	ANSISTRING Msg
+	);
+
+Verbose(
+	GUID ContextId,
+	ANSISTRING Func,
+	UINT32 LineNum,
+	ANSISTRING Msg
+	);
+
+Info(
+	GUID ContextId,
+	ANSISTRING Func,
+	UINT32 LineNum,
+	ANSISTRING Msg,
+	INT32 hr
+	);
+
+OnBeginStreamingError(
+	GUID MFMediaTelemetrySessionID,
+	UINT32 MFMediaTelemetrySessionInstance,
+	INT32 DecoderInitErrorCode,
+	UINT32 ChannelCount,
+	INT32 SampleType,
+	INT32 DecoderInitErrorCode
+	);
+
+SetDecoderFailure(
+	GUID MFMediaTelemetrySessionID,
+	UINT32 MFMediaTelemetrySessionInstance,
+	HRESULT Hr,
+	ANSISTRING DecoderOp,
+	UINT32 ArgumentValue,
+	INT32 ReturnCode
+	);
+
+Error(
+	GUID ContextId,
+	ANSISTRING Func,
+	UINT32 LineNum,
+	ANSISTRING Msg,
+	INT32 hr
+	);
+
+InitSpatialClientError(
+	GUID MFMediaTelemetrySessionID,
+	UINT32 MFMediaTelemetrySessionInstance,
+	HRESULT Hr
+	);
+
+AtmosLicenseCheckInfo(
+	ANSISTRING Msg
+	);
+
+AtmosLicenseCheck(
+	INT32 TelemetryVersion,
+	GUID ContextId,
+	HRESULT DDPlusDecEnabled,
+	HRESULT MatEncEnabled,
+	HRESULT DolbyHeadphonesEncEnabled,
+	HRESULT DolbySpeakersEncEnabled,
+	HRESULT DtsxHeadphonesEncEnabled,
+	HRESULT DtsxSpeakersEncEnabled,
+	ANSISTRING LicenseEvaluation,
+	HRESULT ErrorCode
+	);
+
+AtmosLicenseCheck(
+	INT32 TelemetryVersion,
+	GUID ContextId,
+	HRESULT DDPlusDecEnabled,
+	HRESULT MatEncEnabled,
+	HRESULT DolbyHeadphonesEncEnabled,
+	HRESULT DolbySpeakersEncEnabled,
+	HRESULT DtsxHeadphonesEncEnabled,
+	HRESULT DtsxSpeakersEncEnabled,
+	ANSISTRING LicenseEvaluation,
+	HRESULT ErrorCode
+	);
+
+AtmosLicenseCheckError(
+	ANSISTRING Msg,
+	HRESULT ErrorCode
+	);
+
+AtmosLicenseCheck::GetLicenseStatus(
+	UNICODESTRING spatialAudioSubtype,
+	HRESULT hr,
+	BOOLEAN isValid,
+	BOOLEAN isRendererCapable
+	);
+
+AtmosLicenseCheck::GetLicenseStatus called, but not in AppService mode.(
+	VOID
+	);
+
+AtmosLicenseCheck::RefreshSpatialAudioLicenseModelState(
+	BOOLEAN _fUseAppService
+	);
+
+AtmosLicenseCheck: Failed to get Default Device ID(
+	HRESULT hr
+	);
+

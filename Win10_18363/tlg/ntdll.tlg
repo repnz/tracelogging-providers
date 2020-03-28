@@ -1,0 +1,166 @@
+ProviderNames:
+	CentennialIssueTrackerTraceLogging
+	Microsoft.Windows.Kernel.LibLoader
+	Microsoft.Windows.Kernel.VsmEnclaveLoader
+	MuiResourceLoaderTraceLogging
+	Microsoft.Windows.Security.Capabilities
+	Microsoft.Windows.Heap
+
+
+
+**** Events *****
+MuiResourceLoad(
+	UNICODESTRING L"ResIdCount less than 2."
+	);
+
+VSMEnclaveTelemetry(
+	ANSISTRING VSM Operation,
+	UINT32 NTSTATUS
+	);
+
+VerifyAlternateResourceModuleWithServiceChecksumFailure(
+	COUNTEDSTRING ResourceFileName,
+	UINT32 ExpectedServiceChecksum,
+	UINT32 ActualServiceChecksum
+	);
+
+MuiResourceLoad(
+	UINT64 ResourceType,
+	UINT64 ResourceID,
+	UINT64 DesiredLanguage,
+	UINT64 DesiredMessage,
+	BOOL32 IsValidatedAccess,
+	UINT32 ServiceCheckSum
+	);
+
+NonCFGImageLoad(
+	COUNTEDSTRING FullDllName,
+	UINT64 TimeDateStamp,
+	UINT32 MajorImageVersion,
+	UINT32 MinorImageVersion,
+	UINT64 CheckSum
+	);
+
+VSMEnclaveTelemetry(
+	ANSISTRING VSM Operation,
+	UINT64 EnclaveType,
+	UINT32 NTSTATUS
+	);
+
+MuiResourceLoad(
+	UNICODESTRING L"Failed to retrieve service checksum."
+	);
+
+Import Redirection Loaded(
+	COUNTEDSTRING Application Full Path,
+	COUNTEDSTRING Import Redirection Dll Full Path
+	);
+
+IntegrityContinuityFailure(
+	COUNTEDSTRING moduleName,
+	UINT32 moduleSigningLevel,
+	UINT32 loadFlags,
+	UINT32 loadReason,
+	UINT32 ciSigningFlags,
+	COUNTEDSTRING parentModuleName,
+	UINT32 parentSigningLevel,
+	UINT32 ciStatus,
+	UINT32 codeIntegrityOptions,
+	UINT32 integrityStatus,
+	BOOLEAN ciSetFailed
+	);
+
+MuiResourceLoad(
+	UINT64 ResourceType,
+	UINT64 ResourceID,
+	UINT64 DesiredLanguage,
+	BOOL32 IsValidatedAccess,
+	UINT32 ServiceCheckSum
+	);
+
+NonRFGImageLoad(
+	COUNTEDSTRING FullDllName,
+	UINT64 TimeDateStamp,
+	UINT32 MajorImageVersion,
+	UINT32 MinorImageVersion,
+	UINT64 CheckSum
+	);
+
+VSMEnclaveTelemetry(
+	ANSISTRING VSM Operation,
+	UINT32 NTSTATUS
+	);
+
+VSMEnclaveTelemetry(
+	ANSISTRING VSM Operation,
+	UINT32 NTSTATUS
+	);
+
+MapAndVerifyResourceFileFailure(
+	NTSTATUS Status,
+	COUNTEDSTRING ResourceFileName,
+	BOOLEAN DevicePath,
+	UINT32 Flags,
+	COUNTEDSTRING Culture
+	);
+
+RelativePathWithAlteredSearchError(
+	UNICODESTRING Dll Name,
+	UNICODESTRING Process Image
+	);
+
+MuiResourceLoad(
+	UINT64 ResourceType,
+	UINT64 ResourceID,
+	BOOL32 IsValidatedAccess,
+	UINT32 ServiceCheckSum
+	);
+
+RtlCapabilityCheckLatency(
+	INT64 Latency,
+	BOOLEAN IsAdmin,
+	BOOLEAN IsInteractiveUser,
+	BOOLEAN IsAdminCapability,
+	BOOLEAN HasCapability
+	);
+
+HeapReleaseVA(
+	UINT64 Size,
+	UINT64 Address,
+	NTSTATUS Status
+	);
+
+HeapReserveVA(
+	UINT64 Size,
+	UINT64 Address,
+	NTSTATUS Status
+	);
+
+HeapGCTimerScheduled(
+	VOID
+	);
+
+HeapCommitVA(
+	UINT64 Size,
+	UINT64 Address,
+	NTSTATUS Status
+	);
+
+HeapMemoryStats(
+	UINT64 Heap,
+	UINT64 ReservedPages,
+	UINT64 CommittedPages,
+	UINT64 FreeCommittedPages,
+	UINT64 LfhFreeCommittedPages
+	);
+
+HeapGcTimerRun(
+	VOID
+	);
+
+HeapDecommitVA(
+	UINT64 Size,
+	UINT64 Address,
+	NTSTATUS Status
+	);
+

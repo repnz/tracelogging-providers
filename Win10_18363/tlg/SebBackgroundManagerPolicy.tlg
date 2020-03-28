@@ -1,0 +1,84 @@
+ProviderNames:
+	Microsoft.Windows.BackgroundManager
+
+
+
+**** Events *****
+OnFindByIdResult(
+	GUID workItemId,
+	INT32 hr,
+	INT32 workItemNull
+	);
+
+OnPolicyBuffered(
+	UNICODESTRING psmKey,
+	GUID workItemId,
+	UINT32 eventType,
+	UINT32 policyBufferingReason,
+	UNICODESTRING workItemEntrypoint
+	);
+
+OnPolicyDropped(
+	UNICODESTRING psmKey,
+	GUID workItemId,
+	UINT32 eventType,
+	UINT32 policyDroppedReason,
+	UNICODESTRING workItemEntrypoint
+	);
+
+OnEvaluateActivationAction(
+	INT32 evalWorkItemFailed,
+	INT32 isNewItem,
+	UINT32 failedCheck,
+	INT32 hr
+	);
+
+FallbackError(
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+FallbackError(
+	UINT64 PartA_PrivTags,
+	SIGNED wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+WIWallClockDisabledDueToExtendedLifetime(
+	GUID workItemId,
+	SID userSid,
+	UINT32 workItemSessionId,
+	UNICODESTRING psmKey,
+	INT32 hostJobType
+	);
+

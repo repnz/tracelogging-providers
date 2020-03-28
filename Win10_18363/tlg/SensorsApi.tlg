@@ -1,0 +1,39 @@
+ProviderNames:
+	Microsoft.Windows.Sensors.SensorsAPI
+	Microsoft.Windows.Sensors.COMLayer
+	TelemetryAssert
+	TelemetryAssertDiagTrack
+
+
+
+**** Events *****
+ResumeSensors(
+	INT32 RunDuringLpe,
+	INT32 PausedByLpe
+	);
+
+SuspendSensors(
+	INT32 RunDuringLpe,
+	INT32 PausedByLpe
+	);
+
+SensorsAPITracing(
+	ANSISTRING MethodName,
+	ANSISTRING MethodLayer,
+	GUID SensorType,
+	INT32 ErrorCode,
+	UINT32 ReturnValue
+	);
+
+Assert(
+	UINT32 assertVersion,
+	UINT32 rva,
+	UINT32 timestamp,
+	UINT32 imageSize,
+	ANSISTRING imageName,
+	UINT32 count,
+	UINT32 totalHits,
+	UINT32 ModuleCollection,
+	UINT32 GlobalCollection
+	);
+

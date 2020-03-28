@@ -1,0 +1,273 @@
+ProviderNames:
+	Microsoft.Windows.MediaFoundation.BackgroundMediaPlayback
+	Microsoft.Windows.MediaFoundation.CallStack
+
+
+
+**** Events *****
+BackgroundMediaPlayerStatics::get_Current(
+	HEXINT64 this,
+	HEXINT64 value
+	);
+
+BackgroundMediaPlayerStatics::CreateAudioSession GetAudioSessionControl(
+	GUID audio session GUID,
+	HRESULT HResult
+	);
+
+Error(
+	ANSISTRING Function,
+	UINT32 Line,
+	HEXINT64 this,
+	HRESULT HRESULT
+	);
+
+Method Entry(
+	ANSISTRING Function,
+	HEXINT64 this
+	);
+
+Error(
+	ANSISTRING Function,
+	UINT32 Line,
+	HRESULT HRESULT
+	);
+
+MediaPlayer state transition(
+	HEXINT64 this,
+	ANSISTRING current state,
+	ANSISTRING new state,
+	ANSISTRING MediaEngine event
+	);
+
+MediaPlayer - Play(
+	HEXINT64 this
+	);
+
+put_Volume(
+	HEXINT64 this,
+	DOUBLE value
+	);
+
+put_Position(
+	HEXINT64 this,
+	DOUBLE value
+	);
+
+MediaPlayerAggregateEvents(
+	GUID MFMediaTelemetrySessionID,
+	UINT32 MFMediaTelemetrySessionInstance,
+	GUID MPInstanceId,
+	GUID XamlCorrelationGuid,
+	UINT32 METlmLastNonErrorEvent,
+	BOOL32 IsTwoProcessMode,
+	HRESULT hrError,
+	BOOL32 IsLocalSource,
+	BOOL32 IsSMTCAvailable,
+	BOOL32 IsRealTimePlayback,
+	BOOL32 IsMediaBreakPlayer,
+	BOOL32 IsAutoPlay,
+	BOOL32 ContentProtectionManager,
+	BOOL32 IsLooping,
+	BOOL32 IsMuted,
+	UINT32 3DVideoOutputType,
+	INT32 AudioCategory,
+	INT32 CurrentState,
+	INT32 PreviousState,
+	DOUBLE CurrentPlaybackRate,
+	DOUBLE VolumeLevel,
+	ANSISTRING EventCountString,
+	ANSISTRING EventTimeString,
+	UINT64 FirstEventTime,
+	UINT32 BreaksSeekedOver,
+	UINT32 AdCount,
+	INT32 LastBreakType,
+	INT32 LastInsertionMethod,
+	INT32 SphericalVideoFormat,
+	BOOL32 SphericalVideoEnabled,
+	BOOL32 VideoSupportEnabled,
+	BOOL32 InFrameServerMode,
+	DOUBLE MinFieldOfView,
+	DOUBLE MaxFieldOfView,
+	INT32 ProjectionMode,
+	INT32 FireReason
+	);
+
+RaiseMutingChangedEventOnEventDispatchThread(
+	HEXINT64 this,
+	ANSISTRING event
+	);
+
+put_IsMuted(
+	HEXINT64 this,
+	BOOL32 value
+	);
+
+Close(
+	HEXINT64 this
+	);
+
+RaiseBufferingProgressChangedEventOnEventDispatchThread(
+	HEXINT64 this,
+	ANSISTRING event,
+	DOUBLE m_lastRaisedBufferingProgress
+	);
+
+start audio srv mon(
+	VOID
+	);
+
+RaiseDownloadProgressChangedEventOnEventDispatchThread(
+	HEXINT64 this,
+	ANSISTRING event
+	);
+
+SetTimelineMarker(
+	HEXINT64 this,
+	DOUBLE value
+	);
+
+DataFromForegroundSent(
+	HEXINT64 this
+	);
+
+UpdateDisplayProperties failed to clear SMTC(
+	HEXINT64 this
+	);
+
+put_ProtectionManager(
+	HEXINT64 this,
+	HEXINT64 pProtectionManager
+	);
+
+MediaPlayer - Pause(
+	HEXINT64 this
+	);
+
+DataFromBackgroundSent(
+	HEXINT64 this
+	);
+
+put_AudioDeviceType(
+	HEXINT64 this,
+	UINT32 value,
+	ANSISTRING value as string
+	);
+
+put_IsLoopingEnabled(
+	HEXINT64 this,
+	BOOL32 value
+	);
+
+SetUriSource(
+	HEXINT64 this,
+	UNICODESTRING value
+	);
+
+RaiseRateChangedEventOnEventDispatchThread(
+	HEXINT64 this,
+	ANSISTRING event,
+	DOUBLE newRate
+	);
+
+RaiseSupportedPlaybackRatesChangedEventOnEventDispatchThread(
+	HEXINT64 this,
+	ANSISTRING event
+	);
+
+put_PlaybackRate(
+	HEXINT64 this,
+	DOUBLE value
+	);
+
+AudioSrv has restarted(
+	VOID
+	);
+
+RaiseNaturalVideoSizeChangedEventOnEventDispatchThread(
+	HEXINT64 this,
+	ANSISTRING event
+	);
+
+MediaPlayer - MediaEngineEvent(
+	HEXINT64 this,
+	UINT32 event,
+	ANSISTRING event name,
+	UINT32 param1,
+	UINT32 param2
+	);
+
+Shutdown complete(
+	UINT32 Time to shutdown,
+	HEXINT64 this
+	);
+
+LaunchBackgroundTask(
+	HEXINT64 this,
+	INT32 PKG Status
+	);
+
+RaisePositionChangedEventOnEventDispatchThread(
+	HEXINT64 this,
+	ANSISTRING event
+	);
+
+RaiseSourceChangedEventOnEventDispatchThread(
+	HEXINT64 this,
+	ANSISTRING event
+	);
+
+RaiseNormalizedSourceRectChangedEventOnEventDispatchThread(
+	HEXINT64 this,
+	ANSISTRING event
+	);
+
+RaiseNaturalDurationChangedEventOnEventDispatchThread(
+	HEXINT64 this,
+	ANSISTRING event
+	);
+
+PlaybackMediaMarkerReached(
+	HEXINT64 this
+	);
+
+put_AudioCategory(
+	HEXINT64 this,
+	UINT32 value,
+	ANSISTRING value as string
+	);
+
+RaiseEventOnEventDispatchThread(
+	HEXINT64 this,
+	ANSISTRING event
+	);
+
+UpdateDisplayProperties error while updating SMTC.(
+	HEXINT64 this
+	);
+
+put_AutoPlay(
+	HEXINT64 this,
+	BOOL32 value
+	);
+
+BackgroundPlayerPrivateStatics::get_Current - BMP: create as current(
+	HEXINT64 this
+	);
+
+RaiseMediaPlayerFailedEventOnEventDispatchThread(
+	HEXINT64 this,
+	ANSISTRING MediaPlayerError,
+	HRESULT hrError
+	);
+
+BackgroundPlayerPrivateStatics::get_Current(
+	HEXINT64 this,
+	HEXINT64 *value
+	);
+
+Shutdown Starting(
+	UINT32 Start tick,
+	HEXINT64 this
+	);
+

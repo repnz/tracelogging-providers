@@ -1,0 +1,323 @@
+ProviderNames:
+	EventAggregation
+
+
+
+**** Events *****
+AggregationEvent(
+	ANSISTRING FunctionName,
+	HEXINT32 EventHandle
+	);
+
+TimeLimitReached(
+	ANSISTRING FunctionName,
+	HEXINT32 EventHandle,
+	INT32 TimeLimitInSeconds
+	);
+
+ErrorEvent(
+	ANSISTRING FunctionName,
+	HEXINT32 EventHandle,
+	ANSISTRING "Failed to enable Aggregate Event"
+	);
+
+TriggerStateEvent(
+	ANSISTRING FunctionName,
+	HEXINT32 EventHandle,
+	UINT8 0,
+	UINT8 0,
+	BOOL32 ConditionState
+	);
+
+AggregationEvent(
+	ANSISTRING FunctionName,
+	HEXINT32 EventHandle,
+	UINT32 StateName,
+	UINT32 StateName,
+	INT32 ChangeStamp
+	);
+
+AggregationEvent(
+	ANSISTRING FunctionName,
+	HEXINT32 EventHandle,
+	ANSISTRING "Invalid Param. pEventID is null"
+	);
+
+ErrorEvent(
+	ANSISTRING FunctionName,
+	HEXINT32 EventHandle,
+	ANSISTRING "Failed to disable Aggregate Event"
+	);
+
+AggregationEvent(
+	ANSISTRING FunctionName,
+	HEXINT32 EventHandle,
+	ANSISTRING "Event is Disabled"
+	);
+
+ErrorEvent(
+	ANSISTRING FunctionName,
+	HEXINT32 EventHandle,
+	ANSISTRING "Failed to enable new Aggregate Event"
+	);
+
+ErrorEvent(
+	ANSISTRING FunctionName,
+	HEXINT32 EventHandle,
+	ANSISTRING ErrorMsg,
+	HEXINT32 Status
+	);
+
+AggregationEvent(
+	ANSISTRING FunctionName,
+	HEXINT32 EventHandle,
+	ANSISTRING "Invalid callback type"
+	);
+
+TriggerStateEvent(
+	ANSISTRING FunctionName,
+	HEXINT32 EventHandle,
+	UINT8 1,
+	UINT8 0,
+	BOOL32 ConditionState
+	);
+
+AggregationEvent(
+	ANSISTRING FunctionName,
+	HEXINT32 EventHandle,
+	ANSISTRING "Invalid Param. Number of conditions are ove limit"
+	);
+
+ErrorEvent(
+	ANSISTRING FunctionName,
+	HEXINT32 EventHandle,
+	ANSISTRING "EventHandle == NULL"
+	);
+
+AggregationEvent(
+	ANSISTRING FunctionName,
+	HEXINT32 EventHandle,
+	ANSISTRING "Invalid Param. Allowed Flags are not set"
+	);
+
+AggregationEvent(
+	ANSISTRING FunctionName,
+	HEXINT32 EventHandle,
+	ANSISTRING "EventInfo",
+	INT32 Size,
+	INT32 Trigger/Condition,
+	INT32 Level
+	);
+
+ErrorEvent(
+	ANSISTRING FunctionName,
+	HEXINT32 EventHandle,
+	ANSISTRING "Failed to enable new Aggregate Event"
+	);
+
+ErrorEvent(
+	ANSISTRING FunctionName,
+	HEXINT32 EventHandle,
+	ANSISTRING "Failed to enable new Aggregate Event"
+	);
+
+ErrorEvent(
+	ANSISTRING FunctionName,
+	HEXINT32 EventHandle,
+	ANSISTRING "Failed to disable Event"
+	);
+
+ErrorEvent(
+	ANSISTRING FunctionName,
+	HEXINT32 EventHandle,
+	ANSISTRING "EventHandle == NULL"
+	);
+
+ErrorEvent(
+	ANSISTRING FunctionName,
+	HEXINT32 EventHandle,
+	ANSISTRING "Failed to disable Aggregate Event during deletion"
+	);
+
+AggregationEvent(
+	ANSISTRING FunctionName,
+	HEXINT32 EventHandle,
+	ANSISTRING "Event set to be disabled"
+	);
+
+AggregationEvent(
+	ANSISTRING FunctionName,
+	HEXINT32 EventHandle,
+	ANSISTRING "Invalid Param. No trigger and no condition"
+	);
+
+ErrorEvent(
+	ANSISTRING FunctionName,
+	HEXINT32 EventHandle,
+	ANSISTRING "EventHandle == NULL"
+	);
+
+AggregationEvent(
+	ANSISTRING FunctionName,
+	HEXINT32 EventHandle,
+	INT32 Trigger State
+	);
+
+AggrgationEvent(
+	ANSISTRING FunctionName,
+	HEXINT32 EventHandle,
+	ANSISTRING "OnEnable Event",
+	HEXINT32 ChangeStamp
+	);
+
+WnfEventCallback(
+	ANSISTRING FunctionName,
+	HEXINT32 EventHandle,
+	UINT32 FailedCheck
+	);
+
+TriggerStateEvent(
+	ANSISTRING FunctionName,
+	HEXINT32 EventHandle,
+	UINT8 1,
+	UINT8 1,
+	BOOL32 ConditionState
+	);
+
+AggregationEvent(
+	ANSISTRING FunctionName,
+	HEXINT32 EventHandle,
+	HEXINT32 Callback Context,
+	HEXINT32 Runtime
+	);
+
+AggregationEvent(
+	ANSISTRING FunctionName,
+	HEXINT32 EventHandle,
+	ANSISTRING "Invalid Param. Pointer to condition list is NULL and number of conditions bigger than zero"
+	);
+
+ConditionStateEvent(
+	ANSISTRING FunctionName,
+	HEXINT32 EventHandle,
+	ANSISTRING "No matching condition"
+	);
+
+ErrorEvent(
+	ANSISTRING FunctionName,
+	HEXINT32 EventHandle,
+	ANSISTRING "EventHandle == NULL"
+	);
+
+ErrorEvent(
+	ANSISTRING FunctionName,
+	HEXINT32 EventHandle,
+	ANSISTRING ErrorMsg,
+	HEXINT32 StateName,
+	HEXINT32 StateName,
+	HEXINT32 Status
+	);
+
+AggregationEvent(
+	ANSISTRING FunctionName,
+	HEXINT32 EventHandle,
+	ANSISTRING "Invalid Param. Both CallBack and StopCallBack are null"
+	);
+
+ErrorEvent(
+	ANSISTRING FunctionName,
+	HEXINT32 EventHandle,
+	ANSISTRING "Failed to add new Aggregate Event to event hash table"
+	);
+
+ErrorEvent(
+	ANSISTRING FunctionName,
+	HEXINT32 EventHandle,
+	ANSISTRING "Failed to allocate new Aggregate Event"
+	);
+
+ErrorEvent(
+	ANSISTRING FunctionName,
+	HEXINT32 EventHandle,
+	ANSISTRING "Failed to find Event"
+	);
+
+AggregationEvent(
+	ANSISTRING FunctionName,
+	HEXINT32 EventHandle
+	);
+
+AggregationEvent(
+	ANSISTRING FunctionName,
+	HEXINT32 EventHandle
+	);
+
+AggregationEvent(
+	ANSISTRING FunctionName,
+	HEXINT32 EventHandle
+	);
+
+TriggerStateEvent(
+	ANSISTRING FunctionName,
+	HEXINT32 EventHandle,
+	UINT8 0,
+	UINT8 1,
+	BOOL32 ConditionState
+	);
+
+AggregationEvent(
+	ANSISTRING FunctionName,
+	HEXINT32 EventHandle
+	);
+
+ErrorEvent(
+	ANSISTRING FunctionName,
+	HEXINT32 EventHandle,
+	ANSISTRING "Failed to allocate new Aggregate Event"
+	);
+
+AggregationEvent(
+	ANSISTRING FunctionName,
+	HEXINT32 EventHandle,
+	HEXINT32 Trigger,
+	HEXINT32 Trigger
+	);
+
+ErrorEvent(
+	ANSISTRING FunctionName,
+	HEXINT32 EventHandle,
+	ANSISTRING "EventHandle == NULL) or (AggregatedRuntime == NULL"
+	);
+
+ErrorEvent(
+	ANSISTRING FunctionName,
+	HEXINT32 EventHandle,
+	ANSISTRING "Failed to acquire Aggregate Event for deletion"
+	);
+
+ErrorEvent(
+	ANSISTRING FunctionName,
+	HEXINT32 EventHandle,
+	ANSISTRING "(AggregatedRuntime->Trigger == NULL) and (AggregatedRuntime->Condition == NULL)"
+	);
+
+WnfEventCallback(
+	ANSISTRING FunctionName,
+	HEXINT32 EventHandle,
+	HEXINT32 Status
+	);
+
+AggregationEvent(
+	ANSISTRING FunctionName,
+	HEXINT32 EventHandle,
+	UINT32 StateName,
+	UINT32 StateName,
+	ANSISTRING "WNF event is deleted"
+	);
+
+ErrorEvent(
+	ANSISTRING FunctionName,
+	HEXINT32 EventHandle,
+	ANSISTRING ErrorMsg
+	);
+

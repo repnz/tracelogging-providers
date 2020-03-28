@@ -1,0 +1,24 @@
+ProviderNames:
+	Microsoft.Windows.MediaFoundation.SourceReader
+	Microsoft.Windows.MediaFoundation.SinkWriter
+	Microsoft.Windows.MediaFoundation.CallStack
+
+
+
+**** Events *****
+Configuration(
+	GUID MFMediaTelemetrySessionID,
+	UINT32 MFMediaTelemetrySessionInstance,
+	GUID InstanceGUID,
+	ANSISTRING ConfigString
+	);
+
+MTInfoOnError(
+	GUID MFMediaTelemetrySessionID,
+	UINT32 MFMediaTelemetrySessionInstance,
+	GUID InstanceGUID,
+	HRESULT ErrorCode,
+	INT32 StreamIndex,
+	ANSISTRING MediaTypesInfo
+	);
+

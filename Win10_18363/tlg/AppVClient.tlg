@@ -1,0 +1,106 @@
+ProviderNames:
+	Microsoft.Windows.AppMan.AppV
+
+
+
+**** Events *****
+ServiceStopped(
+	BOOL32 UTCReplace_AppSessionGuid,
+	GUID UniqueID,
+	UINT32 AppVError
+	);
+
+ServiceStarted(
+	BOOL32 UTCReplace_AppSessionGuid,
+	GUID UniqueID,
+	UINT32 AppVError
+	);
+
+ConfigureServerPolicy(
+	BOOL32 UTCReplace_AppSessionGuid,
+	BOOLEAN Global,
+	UNICODESTRING ConfigurationID,
+	UINT64 AppVErrorOriginal,
+	UINT64 AppVErrorReturned,
+	HRESULT HResult
+	);
+
+AddPackageGroupSlapiDisabled(
+	BOOL32 UTCReplace_AppSessionGuid,
+	UNICODESTRING PackageID,
+	UNICODESTRING PackageVersion,
+	HRESULT HResult
+	);
+
+PublishFromMDM(
+	BOOL32 UTCReplace_AppSessionGuid,
+	BOOLEAN Global,
+	UINT64 AppVErrorOriginal,
+	UINT64 AppVErrorReturned,
+	HRESULT HResult
+	);
+
+AddPackageSlapiDisabled(
+	BOOL32 UTCReplace_AppSessionGuid,
+	UNICODESTRING PackageID,
+	UNICODESTRING PackageVersion,
+	HRESULT HResult
+	);
+
+PublishFromAppVServer(
+	BOOL32 UTCReplace_AppSessionGuid,
+	BOOLEAN Global,
+	UINT64 AppVErrorOriginal,
+	UINT64 AppVErrorReturned,
+	HRESULT HResult
+	);
+
+PublishPackage(
+	BOOL32 UTCReplace_AppSessionGuid,
+	UNICODESTRING PackageID,
+	UNICODESTRING PackageVersion,
+	BOOLEAN Policy,
+	BOOLEAN Global,
+	UINT64 AppVErrorOriginal,
+	UINT64 AppVErrorReturned,
+	HRESULT HResult,
+	UNICODESTRING SequencerVersion
+	);
+
+AddPackage(
+	BOOL32 UTCReplace_AppSessionGuid,
+	UNICODESTRING PackageID,
+	UNICODESTRING PackageVersion,
+	UINT64 AppVErrorOriginal,
+	UINT64 AppVErrorReturned,
+	HRESULT HResult
+	);
+
+UnpublishPackage(
+	BOOL32 UTCReplace_AppSessionGuid,
+	UNICODESTRING PackageID,
+	UNICODESTRING PackageVersion,
+	BOOLEAN Global,
+	UINT64 AppVErrorOriginal,
+	UINT64 AppVErrorReturned,
+	HRESULT HResult
+	);
+
+RemovePackage(
+	BOOL32 UTCReplace_AppSessionGuid,
+	UNICODESTRING PackageID,
+	UNICODESTRING PackageVersion,
+	BOOL32 SafeRemove,
+	UINT64 AppVErrorOriginal,
+	UINT64 AppVErrorReturned,
+	HRESULT HResult
+	);
+
+DebugMessage(
+	UINT32 LOGLEVEL,
+	UNICODESTRING MESSAGE,
+	UNICODESTRING FUNCTION,
+	UINT32 LINENO,
+	BOOL32 UTCReplace_AppSessionGuid
+	);
+

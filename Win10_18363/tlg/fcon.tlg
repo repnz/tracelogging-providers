@@ -1,0 +1,106 @@
+ProviderNames:
+	Microsoft.Windows.FeatureExperiment
+
+
+
+**** Events *****
+FlightIdRegistered(
+	UNICODESTRING flightId
+	);
+
+SetFeatureVariant(
+	UINT32 featureId,
+	UINT32 variantId,
+	UINT32 payload
+	);
+
+SetFeatureEnablementState(
+	UINT32 featureId,
+	UINT32 featureEnabledState,
+	UINT32 featureEnabledStateKind
+	);
+
+FeatureExperimentStateChange(
+	UNICODESTRING flightId,
+	UINT32 state
+	);
+
+OrphanedFlightId(
+	UNICODESTRING flightId
+	);
+
+FlightIdUnregistered(
+	UNICODESTRING flightId
+	);
+
+ExperimentDropped(
+	UNICODESTRING flightId
+	);
+
+AggregatedStagingState(
+	UINT64 PartA_PrivTags,
+	TID Features,
+	UINT32 featureId,
+	BOOL32 hasTrigger,
+	UINT32 state,
+	UINT32 variant,
+	UINT32 stateKind,
+	UNICODESTRING flightId
+	);
+
+IgnoredByPolicy(
+	UINT64 PartA_PrivTags
+	);
+
+ExperimentReconcileIgnored(
+	VOID
+	);
+
+FallbackError(
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+FallbackError(
+	UINT64 PartA_PrivTags,
+	SIGNED wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+FeatureExperimentImpression(
+	UNICODESTRING flightId,
+	UINT32 featureId,
+	UINT32 variantId,
+	FILETIME usageFileTime
+	);
+

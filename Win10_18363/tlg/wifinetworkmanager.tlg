@@ -1,0 +1,102 @@
+ProviderNames:
+	Microsoft.Windows.WiFiNetworkManager.HotSpotProvisioning
+	TelemetryAssert
+	TelemetryAssertDiagTrack
+	WiFiNetworkManager
+
+
+
+**** Events *****
+ProvisionHotspot(
+	ANSISTRING ErrorDescription,
+	UINT32 Error,
+	UINT32 ReasonCode,
+	GUID InterfaceGuid,
+	UNICODESTRING CarrierId,
+	UNICODESTRING ProfileName,
+	UNICODESTRING ConnectionMode
+	);
+
+ProvisionHotspot(
+	ANSISTRING ErrorDescription,
+	UINT32 Error,
+	UNICODESTRING PackageFamilyName,
+	UNICODESTRING PackageFullName
+	);
+
+ProvisionHotspot(
+	ANSISTRING ErrorDescription,
+	UINT32 Error,
+	GUID InterfaceGuid,
+	UNICODESTRING CarrierId,
+	UNICODESTRING ProfileName,
+	UNICODESTRING ConnectionMode
+	);
+
+ProvisionHotspot(
+	ANSISTRING ErrorDescription,
+	UINT32 Error,
+	UNICODESTRING CarrierId
+	);
+
+ProvisionHotspot(
+	ANSISTRING ErrorDescription,
+	UINT32 Error,
+	UNICODESTRING CarrierId,
+	UINT32 NumProfiles,
+	UNICODESTRING PackageFamilyName,
+	UNICODESTRING PackageFullName
+	);
+
+ProvisionHotspot(
+	ANSISTRING ErrorDescription,
+	UINT32 Error,
+	UNICODESTRING CarrierId,
+	UNICODESTRING SubscriberId,
+	UNICODESTRING LastProfileName,
+	UNICODESTRING LastConnectionMode,
+	UINT32 NumProfiles,
+	BOOL32 HotSpot2Node
+	);
+
+WiFiNetworkManagerSetNetworkBlockedReason(
+	GUID InterfaceGuid,
+	UNICODESTRING ProfileName,
+	UINT32 BlockedReason
+	);
+
+WiFiNetworkManagerProfileCreated(
+	GUID InterfaceGuid,
+	UNICODESTRING ProfileName,
+	UINT8 Ssid,
+	UINT32 Auth,
+	UINT32 Cipher,
+	UINT32 NetworkType
+	);
+
+AutoConnectFeatureStateChanged(
+	BOOL32 IsEnabled,
+	UINT32 Result
+	);
+
+WiFiNetworkManagerConnectInitiated(
+	GUID InterfaceGuid,
+	UNICODESTRING ProfileName,
+	UINT32 NetworkType,
+	UINT32 NetworkEstimatedQuality,
+	UINT32 NetworkWeight
+	);
+
+WiFiNetworkManagerWiFiL3StateChanged(
+	UINT64 PartA_PrivTags,
+	GUID InterfaceGuid,
+	UNICODESTRING ProfileName,
+	UINT32 WiFiL3State
+	);
+
+Hotspot2OSUTelemetry(
+	UINT32 ErrorCode,
+	UINT8 SecureSSID,
+	UINT32 LastSuccessfulState
+	);
+

@@ -1,0 +1,51 @@
+ProviderNames:
+	Microsoft.Geolocation.Verbose
+	Microsoft.Geolocation.Service
+	Microsoft.Windows.TlgAggregateInternal
+
+
+
+**** Events *****
+IconTaskbarCreated(
+	ANSISTRING Action,
+	UNICODESTRING Current state
+	);
+
+IconUpdatingStateMachine(
+	UNICODESTRING Event That Happened,
+	UNICODESTRING Original state,
+	UNICODESTRING Updated state,
+	UNICODESTRING Action to do
+	);
+
+FailureLogReport(
+	HRESULT HR,
+	UNICODESTRING CustomMessage,
+	ANSISTRING Function,
+	ANSISTRING CallingCode,
+	ANSISTRING Filename,
+	UINT32 Line
+	);
+
+FailureLogReport_Aggregate(
+	NULL Count,
+	HRESULT HR,
+	UNICODESTRING CustomMessage,
+	ANSISTRING Function,
+	ANSISTRING CallingCode,
+	ANSISTRING Filename,
+	UINT32 Line
+	);
+
+TlgAggregateSummary(
+	GUID Provider,
+	UINT64 NumFlushes,
+	UINT64 MaxEntriesStored,
+	UINT64 TotalEntriesFlushed,
+	UINT32 MaxEntriesFlushed,
+	UINT32 MinEntriesFlushed,
+	UINT32 NumBucketLimitReached,
+	UINT32 NumAllocationFailures,
+	UINT32 NumLargeEventFailures
+	);
+

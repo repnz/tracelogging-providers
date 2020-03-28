@@ -1,0 +1,102 @@
+ProviderNames:
+	Microsoft.Windows.Unistack.FailureTrigger
+	Microsoft.Windows.OneSync.InternetMailCSP
+	Microsoft.Windows.OneSync.DiagCritical
+	Microsoft.Windows.OneSync.DiagWarning
+	Microsoft.Windows.OneSync.DiagError
+	TelemetryAssert
+	TelemetryAssertDiagTrack
+
+
+
+**** Events *****
+AccountDeleteEvent(
+	GUID partnerGuid2
+	);
+
+AccountUpdateEvent(
+	GUID partnerGuid
+	);
+
+FailureTrigger(
+	INT32 errorCode,
+	ANSISTRING expression,
+	ANSISTRING file,
+	INT32 line
+	);
+
+AccountAddEvent(
+	VOID
+	);
+
+Assert(
+	HRESULT hr,
+	ANSISTRING file,
+	UINT32 line
+	);
+
+Warning(
+	HRESULT hr,
+	ANSISTRING file,
+	UINT32 line
+	);
+
+FallbackError(
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+FallbackError(
+	UINT64 PartA_PrivTags,
+	SIGNED wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+Error(
+	HRESULT hr,
+	ANSISTRING file,
+	UINT32 line
+	);
+
+Assert(
+	UINT32 assertVersion,
+	UINT32 rva,
+	UINT32 timestamp,
+	UINT32 imageSize,
+	ANSISTRING imageName,
+	UINT32 count,
+	UINT32 totalHits,
+	UINT32 ModuleCollection,
+	UINT32 GlobalCollection
+	);
+

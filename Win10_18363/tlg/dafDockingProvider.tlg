@@ -1,0 +1,48 @@
+ProviderNames:
+	Microsoft.Windows.Networking.Docking
+
+
+
+**** Events *****
+ManufacturerInfo(
+	UNICODESTRING manufacturer,
+	UNICODESTRING firmwareVersion,
+	UNICODESTRING dockType
+	);
+
+PairingEnd(
+	HEXINT32 hResult
+	);
+
+PairingStart(
+	VOID
+	);
+
+PairingCeremonyUSed(
+	GUID ceremonyUsed
+	);
+
+SelectCeremonyInitiated(
+	VOID
+	);
+
+EndQueryVisibleDocks(
+	VOID
+	);
+
+QueryVisibleDocksStart(
+	VOID
+	);
+
+QueryVisibleDocksComplete(
+	UINT64 Error
+	);
+
+ConnectEnd(
+	UINT32 errorCode
+	);
+
+ConnectStart(
+	VOID
+	);
+

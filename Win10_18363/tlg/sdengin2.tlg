@@ -1,0 +1,39 @@
+ProviderNames:
+	Microsoft.Windows.SafeDocs.Engine
+	Microsoft.Windows.Storage.Win7Backup
+	FveDetectTelemetry
+
+
+
+**** Events *****
+SafeDocsUsage(
+	UINT8 ScenarioId
+	);
+
+win7Result(
+	UINT64 PartA_PrivTags,
+	UNICODESTRING UserAction,
+	HRESULT HResult,
+	INT64 IsHResultUnexpected,
+	INT64 DiskType,
+	INT64 IsSafeSystem,
+	UNICODESTRING DeviceID,
+	UINT8 BackupType
+	);
+
+FveCheckSuspendBitLockerOnUpgrade(
+	INT32 ShouldSuspendBitlocker,
+	BOOLEAN IsSecureBootBound,
+	BOOLEAN IsOsPreRS1,
+	UINT32 AuthUsesFlags,
+	INT32 hr
+	);
+
+FveRemoveTrustedWimData(
+	INT32 hr
+	);
+
+FveAddTrustedWimData(
+	INT32 hr
+	);
+

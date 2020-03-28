@@ -1,0 +1,80 @@
+ProviderNames:
+	Microsoft.Windows.RecoveryDrive
+	FveDetectTelemetry
+
+
+
+**** Events *****
+CreateRecoveryUsbFinished(
+	ANSISTRING __TlgCV__,
+	BOOL32 succeeded,
+	UINT32 errorCode,
+	BOOL32 cancelled
+	);
+
+CreateRecoveryUsbStarted(
+	ANSISTRING __TlgCV__
+	);
+
+ScanUsbDrivesFinished(
+	ANSISTRING __TlgCV__,
+	BOOL32 succeeded,
+	UINT32 errorCode,
+	UINT32 numDrives
+	);
+
+ScanUsbDrivesStarted(
+	ANSISTRING __TlgCV__
+	);
+
+CreateSystemSnapshotFinished(
+	ANSISTRING __TlgCV__,
+	BOOL32 succeeded,
+	UINT32 errorCode
+	);
+
+CreateSystemSnapshotStarted(
+	ANSISTRING __TlgCV__
+	);
+
+GetRecoveryInfoFinished(
+	ANSISTRING __TlgCV__,
+	BOOL32 succeeded,
+	UINT32 errorCode,
+	BOOL32 winreAvailable,
+	BOOL32 recoveryImageAvailable
+	);
+
+GetRecoveryInfoStarted(
+	ANSISTRING __TlgCV__
+	);
+
+UserOptions(
+	ANSISTRING __TlgCV__,
+	BOOL32 backupOS
+	);
+
+SessionStopped(
+	ANSISTRING __TlgCV__
+	);
+
+SessionStarted(
+	ANSISTRING __TlgCV__
+	);
+
+FveCheckSuspendBitLockerOnUpgrade(
+	INT32 ShouldSuspendBitlocker,
+	BOOLEAN IsSecureBootBound,
+	BOOLEAN IsOsPreRS1,
+	UINT32 AuthUsesFlags,
+	INT32 hr
+	);
+
+FveRemoveTrustedWimData(
+	INT32 hr
+	);
+
+FveAddTrustedWimData(
+	INT32 hr
+	);
+

@@ -1,0 +1,299 @@
+ProviderNames:
+	Microsoft.Windows.Security.WebAuth
+	Microsoft.Windows.Shell.WebAuthBridge
+
+
+
+**** Events *****
+WAB_ActivateAppContainerError(
+	INT32 HResult
+	);
+
+WABDataRelated(
+	UNICODESTRING Domain,
+	UNICODESTRING App,
+	UINT32 Flags,
+	UINT32 ConsentPageShown,
+	UINT32 ConsentResult,
+	UINT32 LoginPageShown,
+	UINT32 AccountSwitch
+	);
+
+ResponseHr(
+	INT32 hr
+	);
+
+ResponseHttpError(
+	UINT32 httpError
+	);
+
+ServiceResponseStatus(
+	UINT32 responseStatus
+	);
+
+ServiceConnectionStatus(
+	UINT32 connectionStatus
+	);
+
+IsBridgeableOperation(
+	BOOLEAN isBridgeableOperation
+	);
+
+CallingAppPackageName(
+	UNICODESTRING packageName
+	);
+
+LaunchWamBridgeParams(
+	UINT32 brokerFlags,
+	BOOLEAN useSsoAppContainer,
+	INT32 webAuthOptions
+	);
+
+ResponseResultData(
+	NULL ResultData
+	);
+
+CreatePropertySet(
+	NULL StartUrl,
+	NULL EndUri,
+	UNICODESTRING Options
+	);
+
+LaunchInternetSSO(
+	VOID
+	);
+
+LaunchIntranetSSO(
+	VOID
+	);
+
+SilentModeBrokerActivity(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId
+	);
+
+SilentModeBrokerActivity(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+SilentModeBrokerActivity(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+WebAuthActivityStop(
+	INT32 responseStatus,
+	INT32 responseHr,
+	UINT32 responseErrorDetail
+	);
+
+WebAuthActivityStart(
+	VOID
+	);
+
+WamBridgeBrokerActivity(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId
+	);
+
+ActivityIntermediateStop(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+WebAuthBridgeActivityStop(
+	INT32 responseStatus,
+	INT32 responseHr,
+	UINT32 responseErrorDetail
+	);
+
+WebAuthBridgeStartURLDomain(
+	UNICODESTRING startURLDomain
+	);
+
+LaunchUIModeWAB(
+	VOID
+	);
+
+LaunchSilentModeWAB(
+	VOID
+	);
+
+WebAuthBridgePackagePfn(
+	UNICODESTRING packagePfn
+	);
+
+WebAuthBridgeActivityStart(
+	UINT32 brokerFlags,
+	INT32 useSsoAppContainer,
+	INT32 webAuthOptions
+	);
+
+ActivityStoppedAutomatically(
+	VOID
+	);
+
+ActivityError(
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+ActivityError(
+	UINT64 PartA_PrivTags,
+	SIGNED wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+FallbackError(
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+FallbackError(
+	UINT64 PartA_PrivTags,
+	SIGNED wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+WamBridgeBrokerActivity(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+WamBridgeBrokerActivity(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+WamRequestStatus(
+	INT32 webTokenRequestStatus
+	);
+
+Processing WAM Result failed.(
+	INT32 hr
+	);
+
+Handling provider error response failed.(
+	INT32 hr
+	);
+
+Handling provider response data failed.(
+	INT32 hr
+	);
+
+Requesting Token from WAM failed.(
+	INT32 hr
+	);
+
+WAM Request creation failed.(
+	INT32 hr
+	);
+
+WebAuthBridgeProvider(
+	INT32 id,
+	UNICODESTRING host
+	);
+
+Default WAB2WAM Bridge Enabled.(
+	UNICODESTRING DefProviderIdHost
+	);
+

@@ -1,0 +1,22 @@
+ProviderNames:
+	EAPTtlsEvents
+	EapCredEvents
+
+
+
+**** Events *****
+TTLSAuthResult(
+	UINT64 eapInnerMethod,
+	BOOL32 isOuterMethodPassed,
+	BOOL32 isInnerMethodPassed,
+	BOOL32 isFastReconnected,
+	BOOL32 isAuthSucceeded,
+	UINT64 eapPacket,
+	HEXINT64 authResultCode
+	);
+
+EAPSSORegKey(
+	BOOL32 isFeatureEnabled,
+	GUID interfaceGuid
+	);
+

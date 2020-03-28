@@ -1,0 +1,767 @@
+ProviderNames:
+	Microsoft.Windows.Print.Workflow.Broker
+	TelemetryAssert
+	TelemetryAssertDiagTrack
+	Microsoft.Windows.Print.WorkFlowBroker
+
+
+
+**** Events *****
+Welcome to Broker(
+	VOID
+	);
+
+Error(
+	UINT64 PartA_PrivTags,
+	SIGNED wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+CWorkflowSessionManager::GetManager(
+	VOID
+	);
+
+CWorkflowSessionManager::IsWorkflowAppPresent(
+	UNICODESTRING deviceInterfaceId
+	);
+
+CWorkflowSessionManager::IsWorkflowTaskHostPid(
+	UINT32 ProcessID
+	);
+
+CWorkflowSessionManager::GetSourceSession(
+	UINT32 sessionID
+	);
+
+CWorkflowSessionManager::GetAppSession - Signal app side connect(
+	UINT32 SessionID
+	);
+
+CWorkflowSessionManager::GetAppSession with sessionId:(
+	UINT32 sessionId
+	);
+
+CWorkflowSessionManager::CreateSourceSession - Launch workflow app(
+	UINT32 SessionID
+	);
+
+CWorkflowSessionManager::CreateSourceSession - Create CWorkflowSourceSession object(
+	UINT32 SessionID
+	);
+
+CWorkflowSessionManager::CreateSourceSession - Create CWorkflowSession object and add it into SessionMapSingleton(
+	VOID
+	);
+
+CWorkflowSessionManager::CreateSourceSession with printer name(
+	UNICODESTRING strPrinterName
+	);
+
+SessionMapSingleton::~SessionMapSingleton(
+	VOID
+	);
+
+SessionMapSingleton::SessionMapSingleton(
+	VOID
+	);
+
+SessionMapSingleton::IsWorkflowTaskHostPid - Exit with isWorkflowTaskHostPid(
+	BOOL32 isWorkflowTaskHostPid
+	);
+
+SessionMapSingleton::IsWorkflowTaskHostPid - Find one matched session with backgroud task host's processid id(
+	UINT32 PID
+	);
+
+SessionMapSingleton::IsWorkflowTaskHostPid - Map element's background task host's processid(
+	UINT32 BackgroundTaskHostPID
+	);
+
+SessionMapSingleton::IsWorkflowTaskHostPid(
+	UINT32 Process ID
+	);
+
+SessionMapSingleton::RemoveSession(
+	VOID
+	);
+
+SessionMapSingleton::GetSession - Can not find one matched session with session id(
+	UINT32 SessionID
+	);
+
+SessionMapSingleton::GetSession - Find one matched session with session id(
+	UINT32 SessionID
+	);
+
+SessionMapSingleton::AddSession - The next session id already exists(
+	UINT32 nextSessionID
+	);
+
+SessionMapSingleton::AddSession - Add session with session id (
+	UINT32 SessionID
+	);
+
+SessionMapSingleton::GetInstance: (
+	HEXINT64 InstanceAddress,
+	UINT32 ProcessID,
+	UINT32 ProcNumber,
+	UINT32 ThreadID
+	);
+
+CWorkflowSession::RemoveFromSessionMap - Remove session with session id from SessionMapSingleton(
+	UINT32 _sessionId
+	);
+
+CWorkflowSession::WatchProcesses - aborting due to workflow process crash(
+	VOID
+	);
+
+CWorkflowSession::WatchProcesses - aborting due to source process crash(
+	VOID
+	);
+
+CWorkflowSession::WatchProcesses - exiting due to proper shutdown(
+	VOID
+	);
+
+CWorkflowSession::WatchProcesses - wait exited(
+	UINT32 handleCount,
+	UINT32 _sessionState,
+	UINT32 result
+	);
+
+CWorkflowSession::WatchProcesses - starting to watch processes(
+	VOID
+	);
+
+CWorkflowSession::RequestSpoolingFileHandleForWrite - Request handles to client(
+	UINT32 ClientProcessId,
+	UINT64 OriginalWriteFileHandle,
+	UINT64 OrigianlDataAvailableEventHandle,
+	UINT32 BrokerProcessId,
+	UINT64 DuplicatedWriteFileHandle,
+	UINT64 DuplicatedDataAvailableEventHandle,
+	UINT32 SessionID
+	);
+
+CWorkflowSession::Finalize - setting all _stateChangeEventList auto-reset events to signaled(
+	UINT32 SessionID,
+	UINT32 currentSessionState,
+	UINT32 state,
+	BOOLEAN fromSourceSession
+	);
+
+CWorkflowSession::Finalize - state transition(
+	UINT32 SessionID,
+	UINT32 currentSessionState,
+	UINT32 state,
+	BOOLEAN fromSourceSession
+	);
+
+CWorkflowSession::Finalize - Invalid state transition(
+	UINT32 SessionID,
+	UINT32 currentSessionState,
+	UINT32 state,
+	BOOLEAN fromSourceSession
+	);
+
+CWorkflowSession::Finalize - Enter(
+	UINT32 state,
+	HRESULT errorCode,
+	BOOLEAN fromSourceSession,
+	UINT32 SessionID
+	);
+
+CWorkflowSession::AllowRequestUI - returning whether remote debugger attached(
+	UINT64 _appConnectTickCount,
+	UINT64 elapsedTicks,
+	BOOLEAN *result,
+	UINT32 SessionID
+	);
+
+CWorkflowSession::AllowRequestUI - debugger attached(
+	UINT64 _appConnectTickCount,
+	UINT64 elapsedTicks,
+	BOOLEAN *result,
+	UINT32 SessionID
+	);
+
+CWorkflowSession::AllowRequestUI - within timeout(
+	UINT64 _appConnectTickCount,
+	UINT64 elapsedTicks,
+	BOOLEAN *result,
+	UINT32 SessionID
+	);
+
+CWorkflowSession::DuplicateHandleToClient - Duplicate handle to client(
+	UINT32 ClientProcessId,
+	UINT64 SourceHandle,
+	UINT64 DuplicatedHandleForClient,
+	UINT32 SessionID
+	);
+
+CWorkflowSession::CreateTemporaryFileHandles - Temporary file path(
+	UNICODESTRING szTempFileBuffer,
+	UINT32 SessionID,
+	INT16 attemptCount
+	);
+
+CWorkflowSession::CreateTemporaryFileHandles -- Got caller integrity level(
+	UINT32 integrityLevel
+	);
+
+CWorkflowSession::CreateTemporaryFileHandles(
+	UINT32 SessionID
+	);
+
+CWorkflowSession::~CWorkflowSession - Remove session with session id from SessionMapSingleton(
+	UINT32 _sessionId
+	);
+
+ActivityStoppedAutomatically(
+	VOID
+	);
+
+AppId(
+	UNICODESTRING PackageFullName
+	);
+
+ActivityIntermediateStop(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+ActivityError(
+	UINT64 PartA_PrivTags,
+	SIGNED wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+ActivityError(
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+CWorkflowSourceSession::WillExecutableGetDebuggedOnLaunch(
+	UNICODESTRING executableName.c_str(),
+	BOOLEAN willGetDebuggedOnLaunch
+	);
+
+CWorkflowSourceSession::Close(
+	UINT32 SessionID
+	);
+
+CWorkflowSourceSession::Finalize (
+	UINT32 state,
+	HRESULT errorCode,
+	UINT32 SessionID
+	);
+
+CWorkflowSourceSession::SetPrintTicket(
+	UNICODESTRING *pszOutputFileName,
+	UINT32 SessionID
+	);
+
+CWorkflowSourceSession::GetSessionState(
+	UINT32 *sessionState,
+	UINT32 SessionID
+	);
+
+CWorkflowSourceSession::SetPrintTicket(
+	UNICODESTRING szOutputFileName,
+	UINT32 SessionID
+	);
+
+CWorkflowSourceSession::SetPrintTicket(
+	UINT32 SessionID
+	);
+
+CWorkflowSourceSession::SetXpsDataType(
+	UINT32 xpsDataType,
+	UINT32 SessionID
+	);
+
+CWorkflowSourceSession::SetJobInfo(
+	UINT32 SessionID
+	);
+
+CWorkflowSourceSession::LaunchWorkflowAppForPrinter - SUCCEEDED(
+	UINT32 SessionID
+	);
+
+CWorkflowSourceSession::LaunchWorkflowAppForPrinter - The backround app did not launch on time.(
+	UINT32 SessionID
+	);
+
+CWorkflowSourceSession::LaunchWorkflowAppForPrinter - Wait for app ready event signaled(
+	UINT32 SessionID
+	);
+
+CWorkflowSourceSession::LaunchWorkflowAppForPrinter - Get Wait for app ready event handle(
+	UINT32 SessionID
+	);
+
+CWorkflowSourceSession::LaunchWorkflowAppForPrinter - Fetched info on device(
+	UINT32 SessionID,
+	UNICODESTRING deviceInterfaceId.Get(),
+	UNICODESTRING packageFullName.c_str(),
+	UNICODESTRING entryPoint.c_str()
+	);
+
+CWorkflowSourceSession::LaunchWorkflowAppForPrinter - Activate background task with session id(
+	UINT32 SessionID
+	);
+
+CWorkflowSourceSession::LaunchWorkflowAppForPrinter(
+	UINT32 SessionID
+	);
+
+CWorkflowSourceSession::~CWorkflowSourceSession exit with hr(
+	UINT32 currentSessionState,
+	HRESULT hr,
+	UINT32 SessionID
+	);
+
+SourceSessionFinalize(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId,
+	UINT32 SessionId,
+	UINT32 State,
+	INT32 ErrorCode,
+	UNICODESTRING SourceApp
+	);
+
+SourceSessionFinalize(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+SourceSessionFinalize(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+LaunchWorkFlowAppActivity(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId,
+	UINT32 SessionId,
+	NULL PrinterName
+	);
+
+LaunchWorkFlowAppActivity(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+LaunchWorkFlowAppActivity(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+FallbackError(
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+FallbackError(
+	UINT64 PartA_PrivTags,
+	SIGNED wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+CWorkflowAppSession::GetModalExperienceOptions - Get modal experience options(
+	VOID
+	);
+
+CWorkflowAppSession::GetModalExperienceManager - Create modal experience manager(
+	VOID
+	);
+
+CWorkflowAppSession::GetModalExperienceManager - Get modal experience manager(
+	VOID
+	);
+
+CWorkflowAppSession::DismissForegroundUI - Dismiss the foreground UI(
+	VOID
+	);
+
+CWorkflowAppSession::Finalize - The foreground UI was launched with MEM but was not closed(
+	VOID
+	);
+
+CWorkflowAppSession::Finalize (
+	UINT32 state,
+	HRESULT errorCode,
+	UINT32 SessionID
+	);
+
+CWorkflowAppSession::GetSessionStateChangeEventHandle (
+	UINT64 SessionStateChangeEventHandle,
+	UINT32 SessionID
+	);
+
+CWorkflowAppSession::SetBackgroundTaskHostPid with backgroundTaskHostPid(
+	UINT32 BackgroundTaskHostPid,
+	UINT32 SessionID
+	);
+
+CWorkflowAppSession::RequestForegroundUI - Wait for hThreadRunningEvent signaled(
+	UINT32 SessionID
+	);
+
+CWorkflowAppSession::RequestForegroundUI - Create thread to launch UI from STA thread(
+	UINT32 SessionID
+	);
+
+CWorkflowAppSession::RequestForegroundUI(
+	UINT32 SessionID
+	);
+
+CWorkflowAppSession::RequestSpoolingFileHandleForUIRead - GetSessionStateChangeEventHandle (
+	UINT64 SessionStateChangeEventHandle,
+	UINT32 SessionID
+	);
+
+CWorkflowAppSession::RequestSpoolingFileHandleForUIRead - GetDataAvailableEventHandle (
+	UINT64 DataAvailableHandle,
+	UINT32 SessionID
+	);
+
+CWorkflowAppSession::RequestSpoolingFileHandleForUIRead - GetTempReadHanldeForUI (
+	UINT64 readFileHandle,
+	UINT32 SessionID
+	);
+
+CWorkflowAppSession::RequestSpoolingFileHandleForBackgroundRead - GetSessionStateChangeEventHandle (
+	UINT64 SessionStateChangeEventHandle,
+	UINT32 SessionID
+	);
+
+CWorkflowAppSession::RequestSpoolingFileHandleForBackgroundRead - GetDataAvailableEventHandle (
+	UINT64 DataAvailableHandle,
+	UINT32 SessionID
+	);
+
+CWorkflowAppSession::RequestSpoolingFileHandleForBackgroundRead - GetTempReadHandleForBackground (
+	UINT64 readFileHandle,
+	UINT32 SessionID
+	);
+
+CWorkflowAppSession::RequestSessionReadyEvent(
+	UINT64 SessionReadyEventHandle,
+	UINT32 SessionID
+	);
+
+CWorkflowAppSession::LaunchUiFromSTAThread -Set foreground UI launched flag, experience token after launch workflow foreground UI(
+	HRESULT hr,
+	BOOLEAN details->thisPointer->_uiLaunchedWithMem,
+	UINT64 modal experience token value
+	);
+
+LaunchUiFromSTAThread(
+	VOID
+	);
+
+CWorkflowAppSession::LaunchWorkflowUIWithoutMem - wait for thread complete(
+	UINT32 result
+	);
+
+CWorkflowAppSession::LaunchWorkflowUIWithoutMem - wait for thread start(
+	VOID
+	);
+
+CWorkflowAppSession::LaunchWorkflowUIWithoutMem(
+	VOID
+	);
+
+CWorkflowAppSession::MemParentHostThreadProc - message loop exit(
+	VOID
+	);
+
+CWorkflowAppSession::MemParentHostThreadProc - parentWindowCanExitEvent signaled(
+	VOID
+	);
+
+CWorkflowAppSession::MemParentHostThreadProc - message loop msg(
+	UINT32 msg.message
+	);
+
+CWorkflowAppSession::MemParentHostThreadProc - entering message loop(
+	VOID
+	);
+
+CWorkflowAppSession::MemParentHostThreadProc(
+	VOID
+	);
+
+CWorkflowAppSession::LaunchWorkflowUIWithMem - The app is being debugged before call ShowForContractByAppID to launch the app in MEM(
+	BOOL32 _isUIBeingDebugged
+	);
+
+LaunchWorkflowUIWithMem(
+	VOID
+	);
+
+CWorkflowAppSession::LaunchWorkflowUI(
+	UINT32 windowProcessId,
+	UINT32 windowThreadId,
+	UINT32 sourcePid,
+	BOOL32 useMem
+	);
+
+CWorkflowAppSession::SignalAppSideConnect(
+	UINT32 SessionID
+	);
+
+CWorkflowAppSession::GetParentWindow (
+	UINT64 ParentWindow,
+	UINT64 LastPopupWindow,
+	BOOLEAN IsParentWindowCoreWindow,
+	UINT32 SessionID
+	);
+
+CWorkflowAppSession::GetPrintQueueName (
+	UNICODESTRING *pszPrintQueueName,
+	UINT32 SessionID
+	);
+
+CWorkflowAppSession::GetSessionState (
+	UINT32 *state,
+	UINT32 SessionID
+	);
+
+CWorkflowAppSession::GetOutputFileName (
+	UNICODESTRING *pszOutputFileName,
+	UINT32 SessionID
+	);
+
+CWorkflowAppSession::GetPrintTicket (
+	UINT32 SessionID
+	);
+
+CWorkflowAppSession::GetXpsDataType (
+	UINT32 *xpsDataType,
+	UINT32 SessionID
+	);
+
+CWorkflowAppSession::GetPrintJobInfo (
+	UINT32 SessionID
+	);
+
+CWorkflowAppSession::~CWorkflowAppSession exit with hr(
+	UINT32 currentSessionState,
+	HRESULT hr,
+	UINT32 SessionID
+	);
+
+AppSessionFinalize(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId,
+	UINT32 SessionId,
+	UINT32 State,
+	INT32 ErrorCode
+	);
+
+AppSessionFinalize(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+AppSessionFinalize(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+RequestForegroundUI(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId,
+	UINT32 SessionId
+	);
+
+RequestForegroundUI(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+RequestForegroundUI(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+CWorkflowSourceSession::GetBackgroundTaskInfoForPackage complete(
+	UNICODESTRING packageFamilyName,
+	UNICODESTRING packageFullName.c_str(),
+	UNICODESTRING entryPoint.c_str(),
+	UNICODESTRING executableName.c_str()
+	);
+
+GetCallerProcessInfo - CoGetCallContext failed, returning S_FALSE and will use current process for information(
+	VOID
+	);
+
+CWorkflowModalExperienceManagerAppListener::Invoke from state: (
+	UINT32 state
+	);
+
+Assert(
+	UINT32 assertVersion,
+	UINT32 rva,
+	UINT32 timestamp,
+	UINT32 imageSize,
+	ANSISTRING imageName,
+	UINT32 count,
+	UINT32 totalHits,
+	UINT32 ModuleCollection,
+	UINT32 GlobalCollection
+	);
+

@@ -1,0 +1,589 @@
+ProviderNames:
+	CombaseTraceLoggingProvider
+	Microsoft.Windows.WinRTClassActivation
+	CombaseTraceLoggingProvider
+	Microsoft.Windows.TlgAggregateInternal
+	OleClipboardAggregateTelemetryProvider
+	Microsoft.Windows.OLE.Clipboard
+	Microsoft.Windows.OLE.DragDrop
+	Microsoft.Windows.DataExchange.DragDrop
+
+
+
+**** Events *****
+FallbackError(
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+ComError(
+	HRESULT hresult,
+	ANSISTRING code,
+	UNICODESTRING message,
+	ANSISTRING function,
+	ANSISTRING fileName,
+	UINT32 lineNumber
+	);
+
+FallbackError(
+	UINT64 PartA_PrivTags,
+	SIGNED wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+ComError(
+	HRESULT hresult,
+	ANSISTRING code,
+	UNICODESTRING message,
+	ANSISTRING function,
+	ANSISTRING fileName,
+	UINT16 lineNumber
+	);
+
+ComError(
+	HRESULT hresult,
+	ANSISTRING code,
+	UNICODESTRING message,
+	ANSISTRING function,
+	ANSISTRING fileName,
+	UINT16 lineNumber
+	);
+
+OleSetClipboard(
+	NULL Count,
+	HRESULT HRESULT,
+	BOOL32 NullDataObject
+	);
+
+OleGetClipboard(
+	NULL Count,
+	HRESULT HRESULT,
+	BOOL32 NullDataObject
+	);
+
+OLE_Clipboard_MethodDiagnostics(
+	UNICODESTRING ApiName,
+	HRESULT HRESULT,
+	HRESULT hrRelease,
+	HRESULT hrCreate,
+	HRESULT hrGetBrokerReference
+	);
+
+OLE_Clipboard_MethodDiagnostics(
+	UNICODESTRING ApiName,
+	HRESULT HRESULT,
+	HEXINT64 IDataObject,
+	BOOL32 IsAppContainer
+	);
+
+OLE_Clipboard_MethodDiagnostics(
+	UNICODESTRING ApiName
+	);
+
+OLE_Clipboard_MethodDiagnostics(
+	UNICODESTRING ApiName,
+	HRESULT HRESULT,
+	BOOL32 IsAppContainer
+	);
+
+OLE_Clipboard_MethodDiagnostics(
+	UNICODESTRING ApiName,
+	HRESULT HRESULT,
+	UNICODESTRING CLIPFORMAT,
+	UINT32 tymed,
+	HEXINT64 STGMEDIUM,
+	HEXINT64 pInnerClipData,
+	HEXINT64 pTaskObject
+	);
+
+OLE_Clipboard_MethodDiagnostics(
+	UNICODESTRING ApiName,
+	HRESULT HRESULT,
+	GUID REFIID,
+	HEXINT64 LPVOID,
+	HEXINT64 pInnerClipData,
+	HEXINT64 pTaskObject
+	);
+
+OLE_Clipboard_MethodDiagnostics(
+	UNICODESTRING ApiName,
+	HRESULT HRESULT
+	);
+
+OLE_Clipboard_MethodDiagnostics(
+	UNICODESTRING ApiName,
+	HRESULT HRESULT,
+	HEXINT64 IClipboardBroker
+	);
+
+OLE_Clipboard_MethodDiagnostics(
+	UNICODESTRING ApiName,
+	HRESULT HRESULT,
+	HEXINT64 IUnknown
+	);
+
+OLE_Clipboard_MethodDiagnostics(
+	UNICODESTRING ApiName,
+	HRESULT HRESULT
+	);
+
+OLE_Clipboard_MethodDiagnostics(
+	UNICODESTRING ApiName,
+	HRESULT HRESULT,
+	HEXINT64 IDataObject,
+	UINT32 pdwClipboardSequenceNumber
+	);
+
+OLE_Clipboard_MethodDiagnostics(
+	UNICODESTRING ApiName,
+	HRESULT HRESULT,
+	HEXINT64 IDataObject
+	);
+
+OLE_Clipboard_Telemetry(
+	UNICODESTRING ScenarioName,
+	HRESULT GetCancelObjectStatus,
+	HRESULT CancelStatus
+	);
+
+OLE_Clipboard_MethodDiagnostics(
+	UNICODESTRING ApiName,
+	HRESULT HRESULT,
+	HEXINT64 hWndClipboardOwner,
+	UNICODESTRING PackageFullName,
+	UINT32 ppid
+	);
+
+OLE_Clipboard_MethodDiagnostics(
+	UNICODESTRING ApiName,
+	UINT8 FormatMatchFlag,
+	UNICODESTRING CLIPFORMAT,
+	BOOL32 fNativeOnly,
+	UINT32 tymed,
+	HEXINT64 ptymed,
+	BOOL32 fAllowSynthesized
+	);
+
+OLE_Clipboard_MethodDiagnostics(
+	UNICODESTRING ApiName,
+	HRESULT HRESULT,
+	HEXINT64 FORMATETCDATAARRAY,
+	UINT8 CreateClipDataObjectOptions,
+	HEXINT64 IDataObject
+	);
+
+OLE_Clipboard_MethodDiagnostics(
+	UNICODESTRING ApiName,
+	HRESULT HRESULT,
+	HEXINT64 m_pDataObject,
+	HEXINT64 ClipboardDataObjectTask
+	);
+
+OLE_Clipboard_MethodDiagnostics(
+	UNICODESTRING ApiName,
+	HEXINT64 pformatectIn,
+	HEXINT64 pformatetcOut
+	);
+
+OLE_Clipboard_MethodDiagnostics(
+	UNICODESTRING ApiName,
+	HRESULT HRESULT,
+	UNICODESTRING CLIPFORMAT,
+	UINT32 tymed,
+	UINT32 MatchFormatetc
+	);
+
+OLE_Clipboard_MethodDiagnostics(
+	UNICODESTRING ApiName,
+	HRESULT HRESULT,
+	UINT32 dwDirection,
+	HEXINT64 EnumFORMATETC
+	);
+
+OLE_Clipboard_MethodDiagnostics(
+	UNICODESTRING ApiName,
+	HRESULT HRESULT,
+	UNICODESTRING CLIPFORMAT,
+	UINT32 tymed,
+	HEXINT64 STGMEDIUM,
+	BOOL32 fRelease,
+	HEXINT64 m_pDataObject,
+	HEXINT64 ClipboardDataObjectTask
+	);
+
+OLE_Clipboard_MethodDiagnostics(
+	UNICODESTRING ApiName,
+	HRESULT HRESULT,
+	UNICODESTRING CLIPFORMAT,
+	UINT32 tymed,
+	HEXINT64 STGMEDIUM,
+	BOOL32 fTryWrappedObject,
+	UINT32 MatchFormatetc,
+	HEXINT64 m_pDataObject,
+	HEXINT64 ClipboardDataObjectTask
+	);
+
+OLE_Clipboard_MethodDiagnostics(
+	UNICODESTRING ApiName,
+	HRESULT HRESULT,
+	UNICODESTRING CLIPFORMAT,
+	UINT32 tymed,
+	HEXINT64 STGMEDIUM,
+	UINT32 MatchFormatetc,
+	HEXINT64 m_pDataObject,
+	HEXINT64 ClipboardDataObjectTask
+	);
+
+ActivityStoppedAutomatically(
+	VOID
+	);
+
+ActivityError(
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+ActivityError(
+	UINT64 PartA_PrivTags,
+	SIGNED wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+OLE_DragDrop_MethodDiagnostics(
+	UNICODESTRING ApiName,
+	BOOL32 dropTargetSupportsEvaluatingEdpPolicy
+	);
+
+OLE_DragDrop_MethodDiagnostics(
+	UNICODESTRING ApiName,
+	BOOL32 isDropAllowed,
+	UNICODESTRING description
+	);
+
+OLE_DragDrop_MethodDiagnostics(
+	UNICODESTRING ApiName,
+	HRESULT HRESULT
+	);
+
+OLE_DragDrop_MethodDiagnostics(
+	UNICODESTRING ApiName,
+	BOOL32 isEdpActive,
+	BOOL32 dataObjectHasEnterpriseId,
+	UNICODESTRING enterpriseId
+	);
+
+DragDropSession(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId,
+	UNICODESTRING Result,
+	UNICODESTRING DropTargetName,
+	UNICODESTRING DropTargetUiContext
+	);
+
+DragDropSession(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UNICODESTRING Result,
+	UNICODESTRING DropTargetName,
+	UNICODESTRING DropTargetUiContext
+	);
+
+DragDropSession(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId,
+	UNICODESTRING Result
+	);
+
+DragDropSession(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UNICODESTRING Result
+	);
+
+DragDropSession(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId,
+	UNICODESTRING DragSourceName,
+	UNICODESTRING DragSourceUiContext,
+	UNICODESTRING DataFormat
+	);
+
+DragDropSession(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+DragDropSession(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+LogTokenInfo(
+	HEXINT64 Token,
+	UNICODESTRING Capability
+	);
+
+LogTokenInfo(
+	HEXINT64 Token,
+	ANSISTRING Value Type
+	);
+
+LogTokenInfo(
+	HEXINT64 Token,
+	COUNTEDSTRING Security Attribute Value,
+	UINT64 Version
+	);
+
+LogTokenInfo(
+	HEXINT64 Token,
+	COUNTEDSTRING Security Attribute Value
+	);
+
+LogTokenInfo(
+	HEXINT64 Token,
+	UINT32 Elevation type
+	);
+
+LogTokenInfo(
+	HEXINT64 Token,
+	UINT32 Ace#,
+	UNICODESTRING Sid,
+	UINT32 Access Mask,
+	UINT8 Ace type,
+	UINT8 Ace Flags
+	);
+
+LogTokenInfo(
+	HEXINT64 Token,
+	UINT16 Default Dacl Ace Count
+	);
+
+LogTokenInfo(
+	HEXINT64 Token,
+	UINT32 isLowBox
+	);
+
+LogTokenInfo(
+	HEXINT64 Token,
+	UINT32 isTokenVirtualizationEnabled
+	);
+
+LogTokenInfo(
+	HEXINT64 Token,
+	ANSISTRING Value Type,
+	UINT16 Value
+	);
+
+LogTokenInfo(
+	HEXINT64 Token,
+	UINT32 Privilege low part,
+	UINT32 Privilege high part,
+	UINT32 Attributes
+	);
+
+LogTokenInfo(
+	HEXINT64 Token,
+	INT64 Security Attribute Value
+	);
+
+LogTokenInfo(
+	HEXINT64 Token,
+	UNICODESTRING Primary Group Sid
+	);
+
+LogTokenInfo(
+	HEXINT64 Token,
+	UNICODESTRING Sid,
+	UINT32 Attributes
+	);
+
+LogTokenInfo(
+	HEXINT64 Token,
+	UINT32 Restricted Group Count
+	);
+
+LogTokenInfo(
+	HEXINT64 Token,
+	UINT64 Security Attribute Value
+	);
+
+LogTokenInfo(
+	HEXINT64 Token,
+	UINT32 Mandatory Policy
+	);
+
+LogTokenInfo(
+	HEXINT64 Token,
+	UINT32 Session Id
+	);
+
+LogTokenInfo(
+	HEXINT64 Token,
+	UINT32 Capability Count
+	);
+
+LogTokenInfo(
+	HEXINT64 Token,
+	UINT32 Group Count
+	);
+
+LogTokenInfo(
+	HEXINT64 Token,
+	UINT32 uiAccess
+	);
+
+LogTokenInfo(
+	HEXINT64 Token,
+	UINT32 Authentication Id low part,
+	UINT32 Authentication Id high part
+	);
+
+LogTokenInfo(
+	HEXINT64 Token,
+	UINT32 lowBoxNumber
+	);
+
+LogTokenInfo(
+	HEXINT64 Token,
+	UINT32 sandboxInert
+	);
+
+LogTokenInfo(
+	HEXINT64 Token,
+	UNICODESTRING Integrity Level
+	);
+
+LogTokenInfo(
+	HEXINT64 Token,
+	COUNTEDSTRING Attribute Name
+	);
+
+LogTokenInfo(
+	HEXINT64 Token,
+	UNICODESTRING Package SID
+	);
+
+TlgAggregateSummary(
+	GUID Provider,
+	UINT64 NumFlushes,
+	UINT64 MaxEntriesStored,
+	UINT64 TotalEntriesFlushed,
+	UINT32 MaxEntriesFlushed,
+	UINT32 MinEntriesFlushed,
+	UINT32 NumBucketLimitReached,
+	UINT32 NumAllocationFailures,
+	UINT32 NumLargeEventFailures
+	);
+

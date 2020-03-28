@@ -1,0 +1,65 @@
+ProviderNames:
+	Microsoft.Windows.AppMan.UEV
+
+
+
+**** Events *****
+DebugMessage(
+	UINT32 LOGLEVEL,
+	UNICODESTRING MESSAGE,
+	BOOL32 UTCReplace_AppSessionGuid
+	);
+
+TemplateAction(
+	BOOL32 UTCReplace_AppSessionGuid,
+	INT32 ActionType,
+	UNICODESTRING TemplateName,
+	UNICODESTRING TemplateID,
+	INT32 TargetType,
+	UNICODESTRING TemplateGeneratorVersion,
+	UNICODESTRING FileName,
+	UNICODESTRING AppVersionRange
+	);
+
+SyncUserSettingsActivity(
+	VOID
+	);
+
+SyncUserSettings(
+	BOOL32 UTCReplace_AppSessionGuid,
+	UNICODESTRING TemplateName,
+	UNICODESTRING TemplateId,
+	UNICODESTRING SyncMethod,
+	INT32 SyncDirection,
+	HRESULT HRESULT
+	);
+
+ActivityStoppedAutomatically(
+	VOID
+	);
+
+ImportSettingsFailedUEVException(
+	BOOL32 UTCReplace_AppSessionGuid,
+	UNICODESTRING ExceptionString
+	);
+
+ExportSettingsFailedUEVException(
+	BOOL32 UTCReplace_AppSessionGuid,
+	UNICODESTRING ExceptionString
+	);
+
+ExportSettingsFailedUnknownException(
+	BOOL32 UTCReplace_AppSessionGuid,
+	UNICODESTRING ExceptionString
+	);
+
+PKGXFileCreate(
+	BOOL32 UTCReplace_AppSessionGuid,
+	UNICODESTRING PackagePath,
+	UINT32 PKGXFileSizeBytes,
+	UINT32 ExternalSettingsFilesSizeBytes,
+	UINT32 TotalSettingsFiles,
+	UINT32 NumberOfSettingsFilesOutsidePKGX,
+	UINT32 NumberOfSettingsFilesInsidePKGX
+	);
+

@@ -1,0 +1,91 @@
+ProviderNames:
+	Microsoft.Windows.HyperV.TimeSync
+	Microsoft.Windows.HyperV.TimeSync
+
+
+
+**** Events *****
+ICTimeSyncProviderThreadSpawned(
+	VOID
+	);
+
+FallbackError(
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+Generating time sample(
+	ANSISTRING Feature,
+	INT64 Offset,
+	INT64 Delay,
+	UINT64 Dispersion,
+	UINT8 Stratum
+	);
+
+ICTimeSyncProviderCommand(
+	UNICODESTRING Command
+	);
+
+ICTimeSyncProviderNoSample(
+	VOID
+	);
+
+ICTimeSyncProviderSampleAlert(
+	VOID
+	);
+
+ICTimeSyncProviderSampleTimeout(
+	VOID
+	);
+
+FallbackError(
+	UINT64 PartA_PrivTags,
+	SIGNED wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+ICTimeSyncProviderSample(
+	VOID
+	);
+
+Sample info(
+	ANSISTRING Feature,
+	UINT32 Size,
+	UINT32 SamplesReturned,
+	UINT32 SamplesAvailable
+	);
+
+ICTimeSyncProviderName(
+	UNICODESTRING Name
+	);
+

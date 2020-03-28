@@ -1,0 +1,1399 @@
+ProviderNames:
+	LSM
+	TelemetryAssert
+	TelemetryAssertDiagTrack
+	Microsoft.Windows.Security.CandidateAccountManagerPolicy
+
+
+
+**** Events *****
+Policy Monitor Worker(
+	ANSISTRING msg,
+	HRESULT hr
+	);
+
+Policy Monitor Worker(
+	ANSISTRING msg,
+	BOOL32 bFirstStart
+	);
+
+Policy Monitor Worker(
+	ANSISTRING msg,
+	BOOL32 bIsRunningOnVm,
+	BOOL32 bDenyTS,
+	BOOL32 bDenyChildSessions
+	);
+
+Policy Monitor Worker(
+	ANSISTRING msg
+	);
+
+Policy Monitor Worker(
+	ANSISTRING msg
+	);
+
+Policy Monitor Worker(
+	ANSISTRING msg,
+	UINT64 EventSignaled
+	);
+
+Policy Monitor Worker(
+	ANSISTRING msg,
+	UINT64 WaitTimeout
+	);
+
+Policy Monitor Worker(
+	ANSISTRING msg,
+	HRESULT hr,
+	BOOL32 bFirstStart
+	);
+
+Policy Monitor Worker(
+	ANSISTRING msg,
+	ANSISTRING Failed,
+	HRESULT Result,
+	ANSISTRING Function
+	);
+
+LSM Lifecycle(
+	ANSISTRING msg
+	);
+
+LSM Lifecycle(
+	ANSISTRING msg,
+	HRESULT hr
+	);
+
+LSM Lifecycle(
+	ANSISTRING msg,
+	HRESULT hrTmp
+	);
+
+LSM Lifecycle(
+	ANSISTRING msg,
+	ANSISTRING Failed,
+	HRESULT Result,
+	ANSISTRING Function
+	);
+
+LSM Lifecycle(
+	ANSISTRING msg
+	);
+
+LSM Lifecycle(
+	ANSISTRING msg,
+	HRESULT hr
+	);
+
+SessionArbitration(
+	UINT64 PartA_PrivTags,
+	ANSISTRING State,
+	HRESULT hr,
+	BOOL32 bFinished,
+	HEXINT64 pLogonHandle,
+	HEXINT64 hClientUserToken
+	);
+
+RPC Client Call(
+	ANSISTRING msg,
+	ANSISTRING Failed,
+	HRESULT Result,
+	ANSISTRING Function
+	);
+
+SessionArbitration(
+	UINT64 PartA_PrivTags,
+	ANSISTRING State
+	);
+
+SessionArbitration(
+	UINT64 PartA_PrivTags,
+	ANSISTRING State,
+	HEXINT64 pLogonHandle,
+	HEXINT64 hClientUserToken
+	);
+
+RPC Client Call(
+	ANSISTRING msg,
+	UINT64 RPC_ClientProcessId,
+	UINT64 ulUserToken,
+	HEXINT64 pLogonHandle
+	);
+
+Session Arbitration(
+	ANSISTRING msg,
+	UINT32 SessionId,
+	UNICODESTRING DomainUsername
+	);
+
+RPC Client Call(
+	ANSISTRING msg,
+	HRESULT hr,
+	UINT64 RPC_ClientProcessId
+	);
+
+RPC Client Call(
+	ANSISTRING msg,
+	ANSISTRING Failed,
+	HRESULT Result,
+	ANSISTRING Function,
+	UINT64 RPC_ClientProcessId
+	);
+
+RPC Client Call(
+	ANSISTRING msg,
+	HRESULT hr,
+	UINT64 RPC_ClientProcessId
+	);
+
+RPC Client Call(
+	ANSISTRING msg,
+	ANSISTRING Failed,
+	HRESULT Result,
+	ANSISTRING Function,
+	ANSISTRING Function
+	);
+
+RPC Client Call(
+	ANSISTRING msg,
+	UINT64 RPC_ClientProcessId
+	);
+
+RPC Client Call(
+	ANSISTRING msg,
+	UINT64 Msg,
+	UINT64 SessionId,
+	UINT64 sMsg.Response,
+	UINT64 RPC_ClientProcessId
+	);
+
+RPC Client Call(
+	ANSISTRING msg,
+	UINT64 bufferSize
+	);
+
+RPC Client Call(
+	ANSISTRING msg,
+	UINT64 Msg,
+	UINT64 SessionId,
+	UINT64 timeOut,
+	UINT64 RPC_ClientProcessId
+	);
+
+RPC Client Call(
+	ANSISTRING msg,
+	HRESULT hr,
+	UINT64 RPC_ClientProcessId
+	);
+
+RPC Client Call(
+	ANSISTRING msg,
+	UINT64 RPC_ClientProcessId,
+	HRESULT hr,
+	ANSISTRING Function,
+	UINT64 SessionId
+	);
+
+RPC Client Call(
+	ANSISTRING msg,
+	ANSISTRING Failed,
+	HRESULT Result,
+	ANSISTRING Function,
+	UINT64 RPC_ClientProcessId
+	);
+
+RPC Client Call(
+	ANSISTRING msg,
+	UNICODESTRING pszStringSid,
+	UINT64 RPC_ClientProcessId,
+	HRESULT hr
+	);
+
+RPC Client Call(
+	ANSISTRING msg,
+	HRESULT hr,
+	UINT64 SessId
+	);
+
+RPC Client Call(
+	ANSISTRING msg,
+	UINT64 SessId
+	);
+
+RPC Client Call(
+	ANSISTRING msg,
+	HRESULT hr,
+	UINT64 SessId
+	);
+
+RPC Client Call(
+	ANSISTRING msg,
+	HRESULT hr,
+	UINT64 SessId,
+	UINT64 RPC_ClientProcessId
+	);
+
+RPC Client Call(
+	ANSISTRING msg,
+	HRESULT hr
+	);
+
+RPC Client Call(
+	ANSISTRING msg,
+	UNICODESTRING pszStringSid,
+	UINT64 RPC_ClientProcessId
+	);
+
+RPC Client Call(
+	ANSISTRING msg,
+	BOOL32 IsCacheTerminal,
+	UINT64 SessionID,
+	HRESULT hr,
+	UINT64 RPC_ClientProcessId
+	);
+
+Disconnect Session(
+	ANSISTRING msg,
+	ANSISTRING Function,
+	HRESULT Result
+	);
+
+Disconnect Session(
+	ANSISTRING Task failed,
+	ANSISTRING Function,
+	HRESULT Result
+	);
+
+Disconnect Session(
+	ANSISTRING msg,
+	HRESULT hr
+	);
+
+Disconnect Session(
+	VOID
+	);
+
+Disconnect Session(
+	ANSISTRING Task started,
+	ANSISTRING Function,
+	ANSISTRING msg
+	);
+
+Start/Refresh RCM(
+	ANSISTRING msg,
+	ANSISTRING Failed,
+	HRESULT Result,
+	ANSISTRING Function
+	);
+
+Start/Refresh RCM(
+	ANSISTRING msg,
+	BOOL32 bAlwaysStart,
+	BOOL32 bIsRCMStopped
+	);
+
+Start/Refresh RCM(
+	ANSISTRING msg,
+	BOOL32 bIsRCMStopped
+	);
+
+Start/Refresh RCM(
+	ANSISTRING msg,
+	HRESULT hr
+	);
+
+Cache Session(
+	ANSISTRING msg,
+	BOOL32 bCachedSessionMode
+	);
+
+Cache Session(
+	ANSISTRING msg
+	);
+
+Cache Session(
+	ANSISTRING msg
+	);
+
+Cache Session(
+	ANSISTRING msg,
+	ANSISTRING Failed,
+	HRESULT Result,
+	ANSISTRING Function
+	);
+
+Cache Session(
+	ANSISTRING msg,
+	UNICODESTRING initial program
+	);
+
+Cache Session(
+	ANSISTRING msg,
+	HRESULT hr
+	);
+
+Cache Session(
+	ANSISTRING msg,
+	HRESULT hr
+	);
+
+Cache Session(
+	ANSISTRING msg
+	);
+
+Cache Session(
+	ANSISTRING msg,
+	HRESULT hr
+	);
+
+Cache Session(
+	ANSISTRING msg,
+	UINT32 CacheSessionID,
+	UINT32 TSessionState,
+	UINT32 currentTry
+	);
+
+Cache Session(
+	ANSISTRING msg,
+	UINT32 CacheSessionID,
+	UINT32 TSessionState
+	);
+
+Cache Session(
+	ANSISTRING msg,
+	UINT32 CacheSessionID,
+	UINT32 TSessionState
+	);
+
+Cache Session(
+	ANSISTRING msg
+	);
+
+Cache Session(
+	ANSISTRING msg,
+	UINT32 cacheSessionId
+	);
+
+Cache Session(
+	ANSISTRING msg,
+	BOOL32 this->bCachedSessionMode,
+	BOOL32 Refresh
+	);
+
+Notify VC Event(
+	ANSISTRING msg,
+	UNICODESTRING szName,
+	HRESULT hr,
+	UINT64 SessionId,
+	UNICODESTRING szEventName,
+	BOOL32 fConnected
+	);
+
+Notify VC Event(
+	ANSISTRING msg,
+	ANSISTRING Failed,
+	HRESULT Result,
+	ANSISTRING Function,
+	UNICODESTRING TSRV_VC_KEY
+	);
+
+Notify VC Event(
+	ANSISTRING msg,
+	UNICODESTRING szEvtName
+	);
+
+Notify VC Event(
+	ANSISTRING msg,
+	UNICODESTRING szEvtName,
+	HRESULT hr
+	);
+
+Start/Refresh RCM(
+	ANSISTRING msg
+	);
+
+RCM service nofitication(
+	ANSISTRING msg,
+	UINT64 dwNotificationStatus
+	);
+
+RCM service nofitication(
+	ANSISTRING msg,
+	UINT64 dwNotificationTriggered
+	);
+
+RCM service nofitication(
+	ANSISTRING msg
+	);
+
+RCM service nofitication(
+	ANSISTRING msg,
+	HRESULT hrTmp
+	);
+
+RCM service nofitication(
+	ANSISTRING msg
+	);
+
+TerminalType(
+	UINT64 PartA_PrivTags,
+	ANSISTRING Type
+	);
+
+SMSS Info(
+	ANSISTRING msg,
+	UINT64 valueData,
+	BOOL32 bRet
+	);
+
+Winlogon Message(
+	ANSISTRING msg,
+	UINT64 dwParameter,
+	UINT64 dwCommand,
+	UINT64 SessionId
+	);
+
+Performance Metric(
+	ANSISTRING perf,
+	UINT64 Delta
+	);
+
+Winlogon Message(
+	ANSISTRING msg,
+	HRESULT hr
+	);
+
+Winlogon Message(
+	ANSISTRING msg,
+	UINT64 dwCommand,
+	UINT64 dwParameter,
+	UINT64 SessionId
+	);
+
+Winlogon Message(
+	ANSISTRING msg,
+	ANSISTRING Failed,
+	HRESULT Result,
+	ANSISTRING Function
+	);
+
+Session Change State(
+	ANSISTRING msg,
+	UINT64 SessionId,
+	ANSISTRING PreviousState,
+	ANSISTRING NewState
+	);
+
+Session Change State(
+	ANSISTRING msg,
+	UINT64 SessionId,
+	ANSISTRING this->GetState(),
+	UNICODESTRING event
+	);
+
+Session Change State(
+	ANSISTRING msg,
+	UINT64 SessionId,
+	UNICODESTRING oldstatestr,
+	ANSISTRING this->GetState(),
+	UNICODESTRING event
+	);
+
+Set TimeZone(
+	ANSISTRING msg,
+	ANSISTRING Failed,
+	HRESULT Result,
+	ANSISTRING Function
+	);
+
+Set TimeZone(
+	ANSISTRING msg,
+	HRESULT hr
+	);
+
+LogonTime(
+	UINT64 PartA_PrivTags,
+	UINT64 ConnectTime,
+	UINT64 LogonTime,
+	UINT64 TimeToLogon,
+	ANSISTRING Type
+	);
+
+Terminal Operation(
+	ANSISTRING msg,
+	UINT64 SessionId,
+	UINT64 this->LogoffReason
+	);
+
+Connect Terminal(
+	ANSISTRING msg,
+	HRESULT hr
+	);
+
+Connect Terminal(
+	ANSISTRING msg,
+	ANSISTRING Failed,
+	HRESULT Result,
+	ANSISTRING Function
+	);
+
+Performance Metric(
+	ANSISTRING perf,
+	UINT64 this->CommonData.GetSessionId(),
+	UINT64 Delta
+	);
+
+Connect Terminal(
+	ANSISTRING msg,
+	UINT64 uNumMonitors,
+	UINT64 uPrimaryMonitor
+	);
+
+Connect Terminal(
+	ANSISTRING msg,
+	UINT64 SessionId
+	);
+
+Connect Terminal(
+	ANSISTRING msg,
+	HRESULT hr
+	);
+
+Connect Terminal(
+	ANSISTRING msg,
+	UINT64 state,
+	UINT64 SessionId
+	);
+
+DisconnectTime(
+	UINT64 PartA_PrivTags,
+	UINT64 DisconnectTime,
+	UINT64 LogonTime,
+	UINT64 ConnectTime,
+	UINT64 ConnectionDuration
+	);
+
+Disconnect Session(
+	ANSISTRING Task failed,
+	ANSISTRING Function,
+	HRESULT Result
+	);
+
+Disconnect Session(
+	ANSISTRING msg
+	);
+
+Performance Metric(
+	ANSISTRING perf,
+	UINT64 Delta,
+	UINT64 SessionId
+	);
+
+Disconnect Session(
+	ANSISTRING msg
+	);
+
+RelatedActivity(
+	GUID RelatedActivityID,
+	GUID CurrentActivityID,
+	ANSISTRING reason
+	);
+
+Session Create(
+	ANSISTRING msg,
+	ANSISTRING Function,
+	HRESULT Result
+	);
+
+Session Create(
+	ANSISTRING Task failed,
+	ANSISTRING Function,
+	HRESULT Result
+	);
+
+Session Create(
+	ANSISTRING msg,
+	UINT64 SessionId,
+	GUID Activity ID,
+	UINT64 ParentSessionId,
+	UNICODESTRING szInitialProgram
+	);
+
+Session Create(
+	ANSISTRING msg,
+	ANSISTRING Failed,
+	HRESULT Result,
+	ANSISTRING Function
+	);
+
+Session Create(
+	ANSISTRING Task started,
+	ANSISTRING Function,
+	ANSISTRING msg
+	);
+
+Set Terminal(
+	ANSISTRING msg,
+	UINT64 SessionId,
+	GUID ActivityID
+	);
+
+Set Terminal(
+	ANSISTRING msg,
+	ANSISTRING Failed,
+	HRESULT Result,
+	ANSISTRING Function
+	);
+
+ConnectTime(
+	UINT64 PartA_PrivTags,
+	UINT64 ConnectTime,
+	UINT64 TimeToCreate
+	);
+
+LogonTime(
+	UINT64 PartA_PrivTags,
+	UINT64 ConnectTime,
+	UINT64 UnlockTime,
+	UINT64 TimeToLogon,
+	ANSISTRING Type
+	);
+
+Session Reconnect(
+	ANSISTRING msg
+	);
+
+Session Reconnect(
+	ANSISTRING msg,
+	BOOL32 bFastReconnect,
+	BOOL32 bInContainer,
+	BOOL32 bIsLocalGlass,
+	BOOL32 bIsCacheSession
+	);
+
+Reconnect Compatibility(
+	ANSISTRING msg,
+	GUID CurrentTerminalProtocolGuid,
+	GUID ResultProtocolGuid
+	);
+
+Reconnect Compatibility(
+	ANSISTRING msg,
+	ANSISTRING Failed,
+	HRESULT Result,
+	ANSISTRING Function
+	);
+
+Reconnect Compatibility(
+	ANSISTRING msg,
+	GUID TargetSession->ProtocolGuid,
+	UINT32 TargetSession->SessionReconnectType,
+	GUID IncomingTerminal->ProtocolGuid,
+	UINT32 IncomingTerminal->TerminalClass
+	);
+
+Reconnect Compatibility(
+	ANSISTRING msg
+	);
+
+TerminalClass(
+	UINT64 PartA_PrivTags,
+	UINT32 TerminalType
+	);
+
+Reconnect Compatibility(
+	ANSISTRING msg,
+	GUID ProtocolGuid,
+	UINT32 SessionReconnectType
+	);
+
+CsrssPipe SendMessage(
+	ANSISTRING msg,
+	ANSISTRING Function,
+	HRESULT Result
+	);
+
+CsrssPipe SendMessage(
+	ANSISTRING Task failed,
+	ANSISTRING Function,
+	HRESULT Result
+	);
+
+CsrssPipe SendMessage(
+	ANSISTRING msg
+	);
+
+CsrssPipe SendMessage(
+	ANSISTRING msg,
+	HEXINT64 pCommand,
+	UINT64 pCommand->Msg.MessageId
+	);
+
+CsrssPipe SendMessage(
+	ANSISTRING msg,
+	HEXINT64 pCommand,
+	ANSISTRING pCommand->Msg.ApiNumber,
+	UINT64 pCommand->Msg.MessageId
+	);
+
+CsrssPipe SendMessage(
+	ANSISTRING msg,
+	UINT64 WindowsSubSysProcessId (csrss pid),
+	UINT64 SessionId,
+	HEXINT64 pCommand,
+	HEXINT64 this->Win32CommandHead,
+	HEXINT64 this
+	);
+
+CsrssPipe SendMessage(
+	ANSISTRING msg,
+	ANSISTRING Failed,
+	HRESULT Result,
+	ANSISTRING Function
+	);
+
+CsrssPipe SendMessage(
+	ANSISTRING msg,
+	UINT64 Timeout,
+	HEXINT64 pCommand,
+	UINT64 pCommand->Msg.MessageId
+	);
+
+CsrssPipe SendMessage(
+	ANSISTRING msg,
+	UINT64 MessageId
+	);
+
+CsrssPipe SendMessage(
+	ANSISTRING msg,
+	HEXINT64 pCommand,
+	UINT64 pCommand->Msg.MessageId
+	);
+
+CsrssPipe SendMessage(
+	ANSISTRING msg,
+	HEXINT64 pCommand,
+	BOOL32 bWaitForReply,
+	ANSISTRING Api,
+	UINT64 pCommand->Msg.MessageId
+	);
+
+CsrssPipe SendMessage(
+	ANSISTRING Task started,
+	ANSISTRING Function,
+	ANSISTRING msg
+	);
+
+CsrssPipe SendMessage(
+	ANSISTRING msg,
+	UINT64 RetryCount
+	);
+
+CsrssPipe SendMessage(
+	ANSISTRING msg,
+	GUID ActivityID
+	);
+
+CsrssPipe Reply(
+	ANSISTRING msg,
+	HEXINT64 CommunicationPort
+	);
+
+CsrssPipe Reply(
+	ANSISTRING msg,
+	HEXINT64 pCommand
+	);
+
+CsrssPipe Reply(
+	ANSISTRING msg,
+	UINT64 SessionId,
+	HEXINT64 pCommand
+	);
+
+CsrssPipe Reply(
+	ANSISTRING msg,
+	UINT64 pMsg->MessageId
+	);
+
+CsrssPipe Reply(
+	ANSISTRING msg,
+	UINT64 pMsg->MessageId
+	);
+
+CsrssPipe Reply(
+	ANSISTRING msg,
+	UINT64 SessionId,
+	ANSISTRING Api,
+	UINT64 pMsg->MessageId,
+	INT64 ReturnedStatus,
+	HEXINT64 pCommand
+	);
+
+CsrssPipe Reply(
+	ANSISTRING msg
+	);
+
+CsrssPipe Reply(
+	ANSISTRING msg,
+	ANSISTRING pMsg->ApiNumber,
+	UINT64 pMsg->MessageId
+	);
+
+CCsrMgr Handle Request(
+	ANSISTRING msg,
+	HRESULT hr
+	);
+
+CCsrMgr Handle Request(
+	ANSISTRING msg,
+	BOOL32 Accepted,
+	UINT64 SessionId,
+	HEXINT64 pContext,
+	HRESULT hr
+	);
+
+CCsrMgr Handle Request(
+	ANSISTRING msg,
+	UINT64 Version
+	);
+
+CCsrMgr Handle Request(
+	ANSISTRING msg,
+	INT16 DataLength
+	);
+
+SMSS Info(
+	ANSISTRING msg,
+	HRESULT hr
+	);
+
+CsrssPipe Create(
+	ANSISTRING msg,
+	HRESULT hrTmp
+	);
+
+CsrssPipe Create(
+	ANSISTRING msg,
+	ANSISTRING Failed,
+	HRESULT Result,
+	ANSISTRING Function
+	);
+
+CsrssPipe Create(
+	ANSISTRING msg,
+	HRESULT hr
+	);
+
+CsrssPipe Create(
+	ANSISTRING msg,
+	HRESULT hr,
+	UINT64 InitialCommandSessionId,
+	UINT64 pSessionId
+	);
+
+CsrssPipe Create(
+	ANSISTRING msg,
+	UINT64 pSessionId,
+	UINT64 InitialCommandProcessId,
+	UINT64 WindowsSubSysProcessId (csrss process id)
+	);
+
+CsrssPipe Create(
+	ANSISTRING msg,
+	UNICODESTRING pInitialCommand
+	);
+
+CsrssPipe Create(
+	ANSISTRING msg
+	);
+
+New Glass Session(
+	ANSISTRING msg,
+	UINT64 SessionId,
+	HRESULT hrForId
+	);
+
+New Glass Session(
+	ANSISTRING msg,
+	HRESULT hr
+	);
+
+New Glass Session(
+	ANSISTRING msg
+	);
+
+New Glass Session(
+	ANSISTRING msg
+	);
+
+New Glass Session(
+	ANSISTRING msg,
+	UINT64 tempGlassSessionId,
+	HRESULT hrTemp
+	);
+
+New Glass Session(
+	ANSISTRING msg,
+	UINT64 tempGlassSessionId,
+	HRESULT hr
+	);
+
+New Glass Session(
+	ANSISTRING msg,
+	ANSISTRING Failed,
+	HRESULT Result,
+	ANSISTRING Function
+	);
+
+Dispatch Event(
+	ANSISTRING msg,
+	UINT64 ClientProcessId,
+	UINT64 NumEvents,
+	HEXINT64 this
+	);
+
+Dispatch Event(
+	ANSISTRING msg,
+	UINT64 ClientProcessId,
+	UINT64 NumEvents,
+	UINT64 MaxQueuedEvents
+	);
+
+Dispatch Event(
+	ANSISTRING msg,
+	UINT64 ClientProcessId
+	);
+
+Dispatch Event(
+	ANSISTRING msg,
+	UNICODESTRING GetWTSNotifyNames(Event),
+	HEXINT64 pNotifyInfo,
+	UINT64 SessionId,
+	UINT64 ClientProcessId
+	);
+
+Register Notification(
+	ANSISTRING msg,
+	UINT64 ClientProcessId,
+	UINT64 FilterSessionId,
+	HEXINT32 FilterFlags,
+	HEXINT32 FilterMask
+	);
+
+Register Notification(
+	ANSISTRING msg,
+	ANSISTRING Failed,
+	HRESULT Result,
+	ANSISTRING Function
+	);
+
+Register Notification(
+	ANSISTRING msg,
+	UINT64 ClientProcessId,
+	UINT64 SessionId,
+	HEXINT32 Flags,
+	HEXINT32 Mask
+	);
+
+Session Arbitration(
+	ANSISTRING msg,
+	ANSISTRING Function,
+	UINT32 this->m_SourceSessionId
+	);
+
+Session Arbitration(
+	ANSISTRING msg,
+	UINT32 this->m_SourceSessionId
+	);
+
+Session Arbitration(
+	ANSISTRING msg,
+	UINT32 this->m_SourceSessionId,
+	UINT32 SelectedSessionId
+	);
+
+Session Arbitration(
+	ANSISTRING msg,
+	HRESULT hr,
+	UINT64 cSessionIds
+	);
+
+Session Arbitration(
+	ANSISTRING msg
+	);
+
+Session Arbitration(
+	ANSISTRING msg,
+	ANSISTRING Failed,
+	HRESULT Result,
+	ANSISTRING Function
+	);
+
+Session Arbitration(
+	ANSISTRING msg,
+	UINT64 m_SourceSessionId
+	);
+
+Cache Session(
+	ANSISTRING msg,
+	HRESULT hr2
+	);
+
+SessionArbitration(
+	UINT64 PartA_PrivTags,
+	ANSISTRING State,
+	ANSISTRING Type
+	);
+
+Session Arbitration(
+	ANSISTRING msg,
+	UINT64 i
+	);
+
+Session Arbitration(
+	ANSISTRING msg,
+	BOOL32 bDefaultForGlassOnly,
+	GUID TerminalType
+	);
+
+AppCompat(
+	ANSISTRING msg,
+	BOOL32 bIsAppServer
+	);
+
+AppCompat(
+	ANSISTRING msg,
+	HRESULT lReturn,
+	BOOL32 bIsAppServer,
+	UNICODESTRING REG_TERMSRV_APPCOMPAT
+	);
+
+AppCompat(
+	ANSISTRING msg,
+	HRESULT lReturn
+	);
+
+Logging(
+	ANSISTRING msg,
+	UNICODESTRING LoggerName,
+	HRESULT hr,
+	UNICODESTRING szpLogFilename,
+	UINT64 m_hTrace,
+	UINT64 MaximumFileSize
+	);
+
+Logging(
+	ANSISTRING msg,
+	ANSISTRING Failed,
+	HRESULT Result,
+	ANSISTRING Function
+	);
+
+Logging(
+	ANSISTRING msg,
+	UINT64 this->m_LogFileSize,
+	UNICODESTRING m_szLoggerName
+	);
+
+Logging(
+	ANSISTRING msg,
+	UNICODESTRING m_szLoggerName,
+	UINT64 dwRet
+	);
+
+Logging(
+	ANSISTRING msg,
+	UINT64 this->m_LogFileSize
+	);
+
+Logging(
+	ANSISTRING msg,
+	HRESULT hr,
+	UNICODESTRING szKey
+	);
+
+Logging(
+	ANSISTRING msg
+	);
+
+GenericTrace(
+	ANSISTRING szOutput
+	);
+
+GenericTrace(
+	ANSISTRING szOutput
+	);
+
+GenericTrace(
+	ANSISTRING szOutput
+	);
+
+GenericTrace(
+	ANSISTRING szOutput
+	);
+
+GenericTrace(
+	ANSISTRING szOutput
+	);
+
+Dispatch Event(
+	ANSISTRING msg,
+	HRESULT hrcall,
+	HEXINT64 ITSNotifySink
+	);
+
+Dispatch Event(
+	ANSISTRING msg,
+	HRESULT hr,
+	UINT64 SessionId,
+	HEXINT64 pNotifyInfo,
+	HEXINT64 this,
+	HEXINT64 pUser
+	);
+
+Dispatch Event(
+	ANSISTRING msg,
+	HRESULT hr,
+	UINT64 SessionId,
+	HEXINT64 pNotifyInfo,
+	HEXINT64 this,
+	UINT64 newState,
+	UINT64 oldState
+	);
+
+Dispatch Event(
+	ANSISTRING msg,
+	UINT64 SessionId,
+	HEXINT64 pNotifyInfo,
+	HEXINT64 this
+	);
+
+Dispatch Event(
+	ANSISTRING msg,
+	ANSISTRING SessionState
+	);
+
+Dispatch Event(
+	ANSISTRING msg,
+	HEXINT64 ITSNotifySink,
+	HRESULT hrcall
+	);
+
+Dispatch Event(
+	ANSISTRING msg,
+	UINT64 SessionId,
+	HEXINT64 pNotifyInfo,
+	HEXINT64 this,
+	UINT64 newState,
+	UINT64 oldState
+	);
+
+Dispatch Event(
+	ANSISTRING msg,
+	ANSISTRING Failed,
+	HRESULT Result,
+	ANSISTRING Function
+	);
+
+Dispatch Event(
+	ANSISTRING msg,
+	UINT64 SessionId,
+	HEXINT64 pNotifyInfo,
+	HEXINT64 pTerminal,
+	HEXINT64 this,
+	UINT64 newState,
+	UINT64 oldState
+	);
+
+Dispatch Event(
+	ANSISTRING msg,
+	HRESULT hr,
+	UINT64 SessionId,
+	HEXINT64 pNotifyInfo,
+	UINT64 newState,
+	UINT64 oldState,
+	HEXINT64 this
+	);
+
+Dispatch Event(
+	ANSISTRING msg,
+	HRESULT hr,
+	UINT64 SessionId,
+	HEXINT64 pNotifyInfo,
+	UINT64 newState,
+	UINT64 oldState,
+	HEXINT64 pTerminal,
+	HEXINT64 this
+	);
+
+Dispatch Event(
+	ANSISTRING msg,
+	HRESULT hr,
+	UINT64 SessionId,
+	HEXINT64 pNotifyInfo,
+	HEXINT64 this
+	);
+
+Dispatch Event(
+	ANSISTRING msg,
+	UINT64 SessionId,
+	HEXINT64 pNotifyInfo,
+	HEXINT64 this,
+	UINT64 State
+	);
+
+Dispatch Event(
+	ANSISTRING msg,
+	HRESULT hr,
+	UINT64 SessionId,
+	HEXINT64 pNotifyInfo,
+	HEXINT64 this,
+	UINT64 State
+	);
+
+Dispatch Event(
+	ANSISTRING msg,
+	UINT64 SessionId,
+	HEXINT64 pNotifyInfo,
+	HEXINT64 this,
+	HEXINT64 pUser
+	);
+
+Dispatch Event(
+	ANSISTRING msg,
+	UINT64 SessionId
+	);
+
+Dispatch Event(
+	ANSISTRING msg,
+	ANSISTRING CurrentState,
+	ANSISTRING ExpectedState
+	);
+
+Security Descriptor(
+	ANSISTRING msg
+	);
+
+Security Descriptor(
+	ANSISTRING msg,
+	ANSISTRING Failed,
+	HRESULT Result,
+	ANSISTRING Function,
+	UNICODESTRING regKey,
+	UNICODESTRING regVal
+	);
+
+Security Descriptor(
+	ANSISTRING msg,
+	UNICODESTRING regVal,
+	UNICODESTRING regKey
+	);
+
+Security Descriptor(
+	ANSISTRING msg,
+	UNICODESTRING regVal
+	);
+
+Security Descriptor(
+	ANSISTRING msg,
+	ANSISTRING Failed,
+	HRESULT Result,
+	ANSISTRING Function
+	);
+
+Security Descriptor(
+	ANSISTRING msg,
+	UNICODESTRING regKey,
+	UNICODESTRING regVal
+	);
+
+Security Descriptor(
+	ANSISTRING msg,
+	UNICODESTRING Listener
+	);
+
+Security Descriptor(
+	ANSISTRING msg,
+	UNICODESTRING regVal,
+	UNICODESTRING regKey,
+	HRESULT hr
+	);
+
+Security Descriptor(
+	ANSISTRING msg,
+	UNICODESTRING regKey,
+	HRESULT hr
+	);
+
+PolicyEnabled(
+	UNICODESTRING policy
+	);
+
+FallbackError(
+	UINT64 PartA_PrivTags,
+	SIGNED wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+FallbackError(
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+Assert(
+	UINT32 assertVersion,
+	UINT32 rva,
+	UINT32 timestamp,
+	UINT32 imageSize,
+	ANSISTRING imageName,
+	UINT32 count,
+	UINT32 totalHits,
+	UINT32 ModuleCollection,
+	UINT32 GlobalCollection
+	);
+
+AssertWithArgs(
+	UINT32 assertVersion,
+	UINT32 rva,
+	UINT32 timestamp,
+	UINT32 imageSize,
+	ANSISTRING imageName,
+	UINT32 count,
+	UINT32 totalHits,
+	ANSISTRING originatingBinary,
+	UINT32 bucketArgument1,
+	UINT32 bucketArgument2,
+	UINT32 ModuleCollection,
+	UINT32 GlobalCollection
+	);
+

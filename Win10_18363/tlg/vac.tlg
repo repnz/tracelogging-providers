@@ -1,0 +1,270 @@
+ProviderNames:
+	Microsoft.Windows.Audio.Service.VAC
+	Microsoft.Windows.Analog.Speech
+	Microsoft.Windows.Audio.ASA.PathFinder
+	Microsoft.Windows.Audio.Service.ASA.Triton
+
+
+
+**** Events *****
+FallbackError(
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+FallbackError(
+	UINT64 PartA_PrivTags,
+	SIGNED wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+VacSession_ProcessingPerf_Suppressed(
+	UINT32 numSuppressed,
+	UINT32 intervalInSeconds
+	);
+
+VacSession_ProcessingPerf(
+	UINT64 eventTime,
+	FLOAT Duration
+	);
+
+VacSession_RegisteredSourcesAndClients_Suppressed(
+	UINT32 numSuppressed,
+	UINT32 intervalInSeconds
+	);
+
+VacSession_RegisteredSourcesAndClients(
+	UINT64 eventTime,
+	UINT64 sources,
+	UINT64 clients
+	);
+
+VacSession_ProcessingStatistics_Suppressed(
+	UINT32 numSuppressed,
+	UINT32 intervalInSeconds
+	);
+
+VacSession_ProcessingStatistics(
+	UINT64 eventTime,
+	UINT32 ReportingDuration,
+	UINT64 MaxSources,
+	UINT64 MaxClients,
+	UINT64 HeadTrackingGlitches,
+	FLOAT HtAvgGlitchDuration,
+	FLOAT HtMinGlitchDuration,
+	FLOAT HtMaxGlitchDuration
+	);
+
+VacSession_ProcessingStatistics(
+	UINT64 eventTime,
+	UINT32 ReportingDuration,
+	UINT64 MaxSources,
+	UINT64 MaxClients,
+	UINT64 HeadTrackingGlitches,
+	FLOAT HtAvgGlitchDuration,
+	FLOAT HtMinGlitchDuration,
+	FLOAT HtMaxGlitchDuration
+	);
+
+VacSession(
+	UINT64 eventTime,
+	BOOL32 fImplicitStart,
+	NOPRINT wilActivity,
+	UINT32 threadId
+	);
+
+VacSession(
+	UINT64 eventTime,
+	BOOL32 fImplicitStart,
+	NOPRINT wilActivity,
+	UINT32 threadId
+	);
+
+VacSession(
+	UINT64 eventTime,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+VacSession(
+	UINT64 eventTime,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+VacSession_CoalesceFailure(
+	HRESULT hr
+	);
+
+VacSession_CoalescedSession(
+	HRESULT hr,
+	UINT32 length,
+	JSON sessionJson
+	);
+
+FDR: Unlikely Session ID found(
+	GUID BadGuid
+	);
+
+VacSession_TrackingStateChange_Suppressed(
+	UINT32 numSuppressed,
+	UINT32 intervalInSeconds
+	);
+
+VacSession_TrackingStateChange(
+	UINT64 eventTime,
+	UINT32 TrackingState
+	);
+
+PathFinder Spatial Analyzer ComputeOcclusion Perf(
+	FLOAT Milliseconds,
+	FLOAT SourcePositionX,
+	FLOAT SourcePositionY,
+	FLOAT SourcePositionZ,
+	BOOLEAN IsOccluded,
+	FLOAT PathLength
+	);
+
+PathFinder Hop Location(
+	FLOAT x,
+	FLOAT y,
+	FLOAT z
+	);
+
+Number of sources(
+	UINT64 Sources
+	);
+
+Statistics(
+	UINT32 ReportingDuration,
+	UINT64 MaxSources,
+	UINT64 SpatialAnalysisGlitches,
+	FLOAT SpatialAnalysisAverageGlitchDuration,
+	FLOAT SpatialAnalysisMinGlitchDuration,
+	FLOAT SpatialAnalysisMaxGlitchDuration,
+	UINT64 SpatialAnalysisAngularGlitches,
+	UINT64 SpatialAnalysisVolumeGlitches
+	);
+
+PathFinder Geometry Processor Occlusion Perf(
+	BOOL32 Occluded,
+	UINT64 Surfaces,
+	FLOAT Milliseconds
+	);
+
+PathFinder Geometry Processor Update Perf(
+	FLOAT Milliseconds
+	);
+
+PathFinder SurfaceMesh Occlusion Perf(
+	BOOL32 Occluded,
+	FLOAT Milliseconds
+	);
+
+TritonFailedToLoadAceFile(
+	UNICODESTRING tritonFileName.c_str()
+	);
+
+TritonLoadAll(
+	BOOLEAN tritonLoadAllSuccess
+	);
+
+TritonInitLoad(
+	BOOLEAN tritonInitLoadSuccess
+	);
+
+TritonQueryAcoustics(
+	BOOLEAN querySuccess
+	);
+
+SourceTritonPosition(
+	FLOAT sourceTritonPosition.x,
+	FLOAT sourceTritonPosition.y,
+	FLOAT sourceTritonPosition.z
+	);
+
+SourceWorldPosition(
+	FLOAT sourceWorldPosition.x,
+	FLOAT sourceWorldPosition.y,
+	FLOAT sourceWorldPosition.z
+	);
+
+SourceCenter(
+	FLOAT HrtfHelpers::AsRef<float3>(sourceCenter).x,
+	FLOAT HrtfHelpers::AsRef<float3>(sourceCenter).y,
+	FLOAT HrtfHelpers::AsRef<float3>(sourceCenter).z
+	);
+
+ListenerTritonPosition(
+	FLOAT listenerTritonPosition.x,
+	FLOAT listenerTritonPosition.y,
+	FLOAT listenerTritonPosition.z
+	);
+
+ListenerWorldPosition(
+	FLOAT listenerWorldPosition.x,
+	FLOAT listenerWorldPosition.y,
+	FLOAT listenerWorldPosition.z
+	);
+
+TritonFailure_LocationPair(
+	FLOAT listenerPosition.x,
+	FLOAT listenerPosition.y,
+	FLOAT listenerPosition.z,
+	FLOAT sourcePosition.x,
+	FLOAT sourcePosition.y,
+	FLOAT sourcePosition.z
+	);
+
+Triton Error Message(
+	UNICODESTRING Error message
+	);
+
+Triton result(
+	FLOAT listenerPosition.x,
+	FLOAT listenerPosition.y,
+	FLOAT listenerPosition.z,
+	FLOAT sourcePosition.x,
+	FLOAT sourcePosition.y,
+	FLOAT sourcePosition.z,
+	FLOAT PrimaryArrivalDirection.x,
+	FLOAT PrimaryArrivalDirection.y,
+	FLOAT PrimaryArrivalDirection.z,
+	FLOAT PrimaryArrivalSourceDistance,
+	FLOAT PrimaryArrivalGeometryPowerDb,
+	FLOAT EarlyReflectionsPowerDb,
+	FLOAT LateReverb60DbDecaySeconds
+	);
+

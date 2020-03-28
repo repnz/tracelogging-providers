@@ -1,0 +1,102 @@
+ProviderNames:
+	Microsoft.Windows.Audio.License
+
+
+
+**** Events *****
+SpatialAudioLicenseBroker: SendRequest(
+	UNICODESTRING requestCommand,
+	UNICODESTRING requestAudioRendererId,
+	UNICODESTRING requestSpatialAudioSubtype,
+	UINT32 responseStatusCode,
+	UNICODESTRING responseStatusString,
+	UNICODESTRING responseLaunchUri,
+	UINT8 responseIsRendererCapable,
+	UINT8 responseSpeakerProtectionOverride,
+	INT64 responseExpirationDateTicks
+	);
+
+SpatialAudioLicenseBroker [SendRequest] Received response.(
+	UINT32 responseStatusCode
+	);
+
+SpatialAudioLicenseBroker: SendRequest(
+	UNICODESTRING Command
+	);
+
+SpatialAudioLicenseBroker: [SendRequest] Expected Value was not returned.(
+	UNICODESTRING STATUS
+	);
+
+SpatialAudioLicenseBroker: AppService not found.(
+	UNICODESTRING subtype
+	);
+
+SpatialAudioLicenseBroker: No AppServices installed.(
+	VOID
+	);
+
+SpatialAudioLicenseBroker: EvaluateLicense(
+	INT64 systemDateInFileTimeTicks,
+	INT64 expirationDateInFileTimeTicks,
+	INT32 isValid
+	);
+
+SpatialAudioLicenseBroker::OpenAsync(
+	UINT32 connection status
+	);
+
+AppServiceOpenAsyncTimeOut(
+	UINT64 PartA_PrivTags,
+	UNICODESTRING packageFamilyName,
+	UNICODESTRING appServiceName
+	);
+
+SpatialAudioLicenseBroker: Attempting to open AppService.(
+	VOID
+	);
+
+SpatialAudioLicenseBroker: [GetRuntimeParametersFromAppService] Response status(
+	UINT32 response status
+	);
+
+SpatialAudioLicenseBroker: [GetRuntimeParametersFromAppService] Received response.(
+	VOID
+	);
+
+AppServiceGetRuntimeParametersTimeOut(
+	UINT64 PartA_PrivTags,
+	UNICODESTRING licenseAppPackageFamilyName,
+	UNICODESTRING licenseAppServiceName,
+	UNICODESTRING spatialAudioSubtype,
+	UNICODESTRING audioRendererId
+	);
+
+SpatialAudioLicenseBroker: GetRuntimeParametersFromAppService(
+	UNICODESTRING spatialAudioSubtype
+	);
+
+SpatialAudioLicenseBroker: GetLicenseStatusFromAppService(
+	INT32 isLicenseValid,
+	INT32 isRendererCapable,
+	INT32 hasSpeakerProtectionOverride,
+	UINT64 expirationDateTicks,
+	UNICODESTRING spatialAudioSubtype
+	);
+
+SpatialAudioLicenseBroker: GetLicenseStatus(
+	INT32 isLicenseValid,
+	INT32 isRendererCapable,
+	INT32 hasSpeakerProtectionOverride,
+	UINT64 expirationDateTicks,
+	UNICODESTRING spatialAudioSubtype
+	);
+
+SpatialAudioLicenseBroker: Running as MUA.(
+	VOID
+	);
+
+SpatialAudioLicenseBroker: IsRunningAsMua(
+	BOOLEAN isMUA
+	);
+

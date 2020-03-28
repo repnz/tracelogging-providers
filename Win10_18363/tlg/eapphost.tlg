@@ -1,0 +1,80 @@
+ProviderNames:
+	Microsoft.Windows.Networking.EAPPHost
+	EapCredEvents
+
+
+
+**** Events *****
+EapBeginSessionThrowException(
+	GUID interfaceGuid,
+	UINT32 winError,
+	UNICODESTRING exceptionReason
+	);
+
+EapThrowException(
+	GUID interfaceGuid,
+	UINT32 eapSessionId,
+	UINT8 sessionState,
+	UINT8 eapType,
+	UNICODESTRING exceptionReason
+	);
+
+EapEndSession(
+	GUID interfaceGuid,
+	UINT32 eapSessionId,
+	UINT8 sessionState,
+	UINT8 eapType,
+	UINT32 eapAuthTime,
+	UINT32 eapReasonCode,
+	BOOL32 isSuccess
+	);
+
+EapGetResult(
+	GUID interfaceGuid,
+	UINT32 eapSessionId,
+	UINT8 sessionState,
+	UINT8 eapType,
+	UINT8 outerMethod,
+	UINT8 innerMethod,
+	UINT32 outerVendorId,
+	UINT32 outerAuthorId,
+	UINT32 innerVendorId,
+	UINT32 innerAuthorId,
+	UINT32 eapAuthTime,
+	BOOL32 saveUserData,
+	UINT32 eapReasonCode,
+	BOOL32 isSuccess
+	);
+
+EapSetUIContext(
+	GUID interfaceGuid,
+	UINT32 eapSessionId,
+	UINT8 sessionState,
+	UINT8 eapType,
+	UNICODESTRING setUIContextReason
+	);
+
+EapGetIdentity(
+	GUID interfaceGuid,
+	UINT32 eapSessionId,
+	UINT8 sessionState,
+	UINT8 eapType,
+	UINT8 responseAction,
+	BOOL32 invokeUI,
+	UINT32 guestAccess
+	);
+
+EapBeginSession(
+	GUID interfaceGuid,
+	UINT32 eapSessionId,
+	UINT8 sessionState,
+	UINT8 eapType,
+	BOOL32 isMachineJoinedToDomain
+	);
+
+CredentialUnPlumbing(
+	UINT32 credentialType,
+	UINT32 resultCode,
+	GUID interfaceGuid
+	);
+

@@ -1,0 +1,119 @@
+ProviderNames:
+	Microsoft.Windows.Power.EnergyMeter
+	Microsoft.Windows.Power.Dimming
+	Microsoft.Windows.Power.AdaptiveStandby
+	Microsoft.Windows.Power.Toast
+	Microsoft.Windows.Power.SleepStudy
+	TelemetryAssert
+	TelemetryAssertDiagTrack
+
+
+
+**** Events *****
+EmiChannelData(
+	UNICODESTRING ChannelName,
+	BOOLEAN IsInCsSession,
+	UINT8 CsSessionId,
+	UINT64 AbsoluteEnergy,
+	UINT64 AbsoluteTime
+	);
+
+HotKeyPressed(
+	UINT32 hotKey,
+	UINT32 original,
+	UINT32 target,
+	UINT32 consoleState,
+	BOOLEAN hotKeyFiltered,
+	BOOLEAN poweredOnAc
+	);
+
+BasicBrightnessEngineShutdown(
+	BOOLEAN Shutdown
+	);
+
+AdaptiveStandbyInternalError(
+	UINT32 error
+	);
+
+AdaptiveStandbyBatteryReserveAction(
+	UINT32 timeInStandby,
+	UINT32 gracePeriod,
+	UINT32 remainingBatteryPercentage,
+	UINT32 remainingBatteryTime,
+	UINT32 reserveBatteryTime,
+	BOOL32 executeAction,
+	UINT32 rejectReason,
+	UINT32 dataSources,
+	UINT32 csSessionId
+	);
+
+AdaptiveStandbyBudgetAction(
+	UINT32 timeInStandby,
+	UINT32 gracePeriod,
+	UINT32 remainingBatteryPercentage,
+	UINT32 batteryDrainPercentage,
+	UINT32 batteryDrainPercentageThreshold,
+	BOOL32 executeAction,
+	UINT32 rejectReason,
+	UINT32 dataSources,
+	UINT32 csSessionId
+	);
+
+AdaptiveStandbySrumFailure(
+	UINT32 action,
+	UINT32 error
+	);
+
+BatteryChargeLimitingToast(
+	BOOLEAN BclModeWnfPayload,
+	BOOLEAN ToastState,
+	HRESULT ToastErrorCode
+	);
+
+SleepSessionTooShort(
+	UINT32 Type,
+	UINT32 Id,
+	UINT64 Duration
+	);
+
+SleepSessionMissingEvents(
+	UINT32 Type,
+	UINT32 Id,
+	BOOL32 MissingStart,
+	BOOL32 MissingStop,
+	HRESULT SaveDiagnosticTraceFileStatus
+	);
+
+SleepSessionErrorInGpuEnumeration(
+	UINT32 SessionId,
+	UINT32 GpuCount,
+	HRESULT HResultStatus
+	);
+
+Assert(
+	UINT32 assertVersion,
+	UINT32 rva,
+	UINT32 timestamp,
+	UINT32 imageSize,
+	ANSISTRING imageName,
+	UINT32 count,
+	UINT32 totalHits,
+	UINT32 ModuleCollection,
+	UINT32 GlobalCollection
+	);
+
+AssertWithArgs(
+	UINT32 assertVersion,
+	UINT32 rva,
+	UINT32 timestamp,
+	UINT32 imageSize,
+	ANSISTRING imageName,
+	UINT32 count,
+	UINT32 totalHits,
+	ANSISTRING originatingBinary,
+	UINT32 bucketArgument1,
+	UINT32 bucketArgument2,
+	UINT32 ModuleCollection,
+	UINT32 GlobalCollection
+	);
+

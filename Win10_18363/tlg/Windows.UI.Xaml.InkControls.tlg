@@ -1,0 +1,168 @@
+ProviderNames:
+	Windows.UI.Xaml.InkControls
+	Windows.Ui.Xaml
+	TelemetryAssert
+	TelemetryAssertDiagTrack
+	Microsoft.Windows.DXaml.InkControls
+
+
+
+**** Events *****
+XamlFailFast(
+	INT32 ErrorCode
+	);
+
+InkToolbar_AddStroke(
+	UINT64 sessionId,
+	UINT32 visibleSessionId,
+	INT32 DrawingPenKind,
+	UINT32 currentColor,
+	DOUBLE width,
+	DOUBLE height,
+	UINT32 pointerType
+	);
+
+InkToolbar_StencilL3ItemClicked(
+	UINT64 sessionId,
+	UINT32 visibleSessionId,
+	UNICODESTRING stencilName,
+	BOOLEAN isChecked
+	);
+
+InkToolbar_Invisible(
+	UINT64 sessionId,
+	UINT32 visibleSessionId
+	);
+
+InkToolbar_EraserL3ItemClicked(
+	UINT64 sessionId,
+	UINT32 visibleSessionId,
+	UNICODESTRING eraserName
+	);
+
+InkToolbar_ToggleAction(
+	UINT64 sessionId,
+	UINT32 visibleSessionId,
+	INT32 InkToolbarToggle
+	);
+
+InkToolbar_Visible(
+	UINT64 sessionId,
+	UINT32 visibleSessionId
+	);
+
+InkToolbar_FlyoutMenu(
+	UINT64 sessionId,
+	UINT32 visibleSessionId,
+	UNICODESTRING flyout
+	);
+
+InkToolbar_MenuAction(
+	UINT64 sessionId,
+	UINT32 visibleSessionId,
+	INT32 InkToolbarMenu
+	);
+
+InkToolbar_SwitchToolByClick(
+	UINT64 sessionId,
+	UINT32 visibleSessionId,
+	INT32 inkToolbarTool
+	);
+
+Diagnostic(
+	ANSISTRING Message
+	);
+
+InkToolbar_BoundInkCanvas(
+	UINT64 sessionId,
+	UINT32 visibleSessionId
+	);
+
+Diagnostic(
+	ANSISTRING Message
+	);
+
+InkToolbar_ClickStencilButton(
+	UINT64 sessionId,
+	UINT32 visibleSessionId,
+	INT32 stencilKind
+	);
+
+Diagnostic(
+	ANSISTRING Message
+	);
+
+InkToolbar_Create(
+	UINT64 sessionId,
+	UINT32 visibleSessionId
+	);
+
+InkToolbar_Close(
+	UINT64 sessionId,
+	UINT32 visibleSessionId
+	);
+
+Diagnostic(
+	ANSISTRING Message
+	);
+
+InkToolbar_PenL3ManipulationConfirmed(
+	UINT64 sessionId,
+	UINT32 visibleSessionId,
+	UINT32 PenKind,
+	ANSISTRING changedItem
+	);
+
+FallbackError(
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+FallbackError(
+	UINT64 PartA_PrivTags,
+	SIGNED wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+Assert(
+	UINT32 assertVersion,
+	UINT32 rva,
+	UINT32 timestamp,
+	UINT32 imageSize,
+	ANSISTRING imageName,
+	UINT32 count,
+	UINT32 totalHits,
+	UINT32 ModuleCollection,
+	UINT32 GlobalCollection
+	);
+

@@ -1,0 +1,34 @@
+ProviderNames:
+	Microsoft.Windows.ExploitGuard.PayloadRestrictions
+
+
+
+**** Events *****
+ROPViolation(
+	BOOLEAN auditMode,
+	UINT32 reportCode,
+	UNICODESTRING processPath,
+	FILETIME processStartTime,
+	UNICODESTRING apiName,
+	HEXINT64 returnAddress,
+	HEXINT64 calledAddress,
+	HEXINT64 targetAddress,
+	HEXINT64 stackPointer,
+	HEXINT64 framePointer,
+	COUNTEDSTRING returnAddressModulePath
+	);
+
+AddressFilterViolation(
+	BOOLEAN auditMode,
+	UINT32 reportCode,
+	UNICODESTRING processPath,
+	FILETIME processStartTime,
+	COUNTEDSTRING modulePath,
+	HEXINT64 moduleBase,
+	HEXINT64 instructionPointer,
+	HEXINT64 addressAccessed,
+	UNICODESTRING protectedModulePath,
+	HEXINT64 protectedModuleBase,
+	UNICODESTRING apiName
+	);
+

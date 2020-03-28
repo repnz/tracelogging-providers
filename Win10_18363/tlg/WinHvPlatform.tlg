@@ -1,0 +1,85 @@
+ProviderNames:
+	Microsoft.Windows.HypervisorPlatform.Tracing
+
+
+
+**** Events *****
+FallbackError(
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+Map(
+	HEXINT64 Gpa,
+	HEXINT64 Va,
+	HEXINT64 Size
+	);
+
+Unmap(
+	HEXINT64 Gpa,
+	HEXINT64 Size
+	);
+
+FallbackError(
+	UINT64 PartA_PrivTags,
+	SIGNED wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+SetupPartition(
+	GUID partitionId,
+	UNICODESTRING processName
+	);
+
+RunVp(
+	VOID
+	);
+
+SetRegisters(
+	UINT32 Count
+	);
+
+GetRegisters(
+	UINT32 Count
+	);
+
+VpExit(
+	ANSISTRING Reason,
+	HEXINT64 GuestAddress,
+	HEXINT64 IP
+	);
+
+CancelVp(
+	BOOLEAN DeliveredCancel
+	);
+

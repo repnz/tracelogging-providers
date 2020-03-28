@@ -1,0 +1,454 @@
+ProviderNames:
+	Microsoft.Windows.Provisioning.Handlers
+	TelemetryAssert
+	TelemetryAssertDiagTrack
+
+
+
+**** Events *****
+ActivityStoppedAutomatically(
+	VOID
+	);
+
+CellWrapperV2:Error(
+	ANSISTRING Function,
+	INT32 HResult
+	);
+
+CellWrapperV2:Event(
+	ANSISTRING Function
+	);
+
+CellWrapperV2:Error(
+	HEXINT32 Code,
+	ANSISTRING Function,
+	INT32 HResult
+	);
+
+CellWrapperV2:Event(
+	ANSISTRING "async WwanMsmEventTypeUiccCardAdditionalInfo contains error",
+	GUID Value,
+	ANSISTRING Function
+	);
+
+CellWrapperV2:Error(
+	ANSISTRING "buffer size is smaller than needed for GID1/PNN",
+	HEXINT32 Code1,
+	HEXINT32 Code2,
+	ANSISTRING Function,
+	INT32 HResult
+	);
+
+CellWrapperV2:Event(
+	ANSISTRING "reg Key value for the ICCID is not present",
+	ANSISTRING Function
+	);
+
+CellWrapperV2:Event(
+	ANSISTRING "eSIM profile Class is",
+	UINT32 Value,
+	ANSISTRING Function
+	);
+
+CellWrapperV2:Error(
+	ANSISTRING "cbUsed > cbCSS",
+	HEXINT32 Code1,
+	HEXINT32 Code2,
+	ANSISTRING Function,
+	INT32 HResult
+	);
+
+CellWrapperV2:Error(
+	ANSISTRING "failed to open reg Key path for the ICC",
+	ANSISTRING Function,
+	INT32 HResult
+	);
+
+CellWrapperV2:Event(
+	ANSISTRING "Operator profile deleted",
+	ANSISTRING Function
+	);
+
+CellWrapperV2:Error(
+	ANSISTRING "failed to open reg Key value for the ICC",
+	ANSISTRING Function,
+	INT32 HResult
+	);
+
+CellWrapperV2:Event(
+	ANSISTRING "Retrieved a list of interfaces",
+	UINT32 Value,
+	ANSISTRING Function
+	);
+
+CellWrapperV2:Event(
+	ANSISTRING "the executor is not in the list",
+	GUID Value,
+	ANSISTRING Function
+	);
+
+CellWrapperV2:Event(
+	ANSISTRING "Singleton initialied",
+	ANSISTRING Function
+	);
+
+CellWrapperV2:Error(
+	ANSISTRING "m_lenCSSinDWORD != pCellStateHdr->meta.lenTotal",
+	HEXINT32 Code1,
+	HEXINT32 Code2,
+	ANSISTRING Function,
+	INT32 HResult
+	);
+
+CellWrapperV2:Event(
+	ANSISTRING "Operator profile saved",
+	ANSISTRING Function
+	);
+
+CellWrapperV2:Event(
+	ANSISTRING "Cellular Snapshot built",
+	UINT32 Value,
+	ANSISTRING Function
+	);
+
+CellWrapperV2:Event(
+	ANSISTRING "m_lenCSSinDWORD",
+	UINT32 Value,
+	ANSISTRING Function
+	);
+
+CellWrapperV2:Event(
+	ANSISTRING "DeviceCaps info obtained",
+	GUID Value,
+	ANSISTRING Function
+	);
+
+CellWrapperV2:Event(
+	ANSISTRING "UICC binds infor obtained",
+	GUID Value,
+	ANSISTRING Function
+	);
+
+CellWrapperV2:Error(
+	ANSISTRING "CreateEvent failed",
+	ANSISTRING Function,
+	INT32 HResult
+	);
+
+InterfaceInfo: (
+	GUID IntfGuid,
+	BOOL32 IsVirtualIntf,
+	UINT32 ModemExecutorCount,
+	UINT32 ExecutorIdx
+	);
+
+CellWrapperV2:Event(
+	ANSISTRING "Sub infor obtained",
+	GUID Value,
+	ANSISTRING Function
+	);
+
+CellWrapperV2:Error(
+	ANSISTRING "WwanRegisterNotification failed",
+	ANSISTRING Function,
+	INT32 HResult
+	);
+
+CellWrapperV2:Event(
+	ANSISTRING "SeqNumLastCellStateChgWnf obtained",
+	UINT32 Value,
+	ANSISTRING Function
+	);
+
+CellWrapperV2:Event(
+	ANSISTRING "UiccCardAdditionalInfo obtained",
+	GUID Value,
+	ANSISTRING Function
+	);
+
+CellWrapperV2:Error(
+	ANSISTRING "dataSize is smaller than that of of WWAN_INTERFACE_OBJECT",
+	HEXINT32 Code1,
+	HEXINT32 Code2,
+	ANSISTRING Function,
+	INT32 HResult
+	);
+
+CellWrapperV2:Error(
+	ANSISTRING "pModemStateHdr->numSIMSlot != sims.size()",
+	HEXINT32 Code1,
+	HEXINT32 Code2,
+	ANSISTRING Function,
+	INT32 HResult
+	);
+
+CellWrapperV2:Error(
+	ANSISTRING "dataSize is smaller than that of WWAN_SUBSCRIBER_INFORMATION",
+	HEXINT32 Code1,
+	HEXINT32 Code2,
+	ANSISTRING Function,
+	INT32 HResult
+	);
+
+CellWrapperV2:Event(
+	ANSISTRING "reg Key path for the ICCID is not present",
+	ANSISTRING Function
+	);
+
+CellWrapperV2:Error(
+	ANSISTRING "dataSize does not match WWAN_UICC_BINDINGS",
+	HEXINT32 Code1,
+	HEXINT32 Code2,
+	ANSISTRING Function,
+	INT32 HResult
+	);
+
+CellWrapperV2:Error(
+	ANSISTRING "the buffer size is not enough for languages",
+	HEXINT32 Code1,
+	HEXINT32 Code2,
+	ANSISTRING Function,
+	INT32 HResult
+	);
+
+CellWrapperV2:Error(
+	ANSISTRING "buffer size is smaller than needed for  WWAN_UICCLINE_INFO",
+	HEXINT32 Code1,
+	HEXINT32 Code2,
+	ANSISTRING Function,
+	INT32 HResult
+	);
+
+CellWrapperV2:Event(
+	ANSISTRING "singleton destroyed",
+	ANSISTRING Function
+	);
+
+WwanMsmEventTypeUiccCardAdditionalInfo: Error(
+	UINT32 Notif data size,
+	UINT32 DataOffset in WWAN_INTF_OP_INFO,
+	UINT32 DataSize in WWAN_INTF_OP_INFO,
+	HEXINT32 status in WWAN_INTF_OP_INFO
+	);
+
+CellWrapperV2:Error(
+	ANSISTRING "dataSize is smaller than that of ULONG",
+	HEXINT32 Code1,
+	HEXINT32 Code2,
+	ANSISTRING Function,
+	INT32 HResult
+	);
+
+CellWrapperV2:Event(
+	ANSISTRING "Singleton deinitialied",
+	ANSISTRING Function
+	);
+
+CellWrapperV2:Error(
+	ANSISTRING "dwSizeUiccAdditionalInfo < pUiccAdditionalInfo->cbSize",
+	HEXINT32 Code1,
+	HEXINT32 Code2,
+	ANSISTRING Function,
+	INT32 HResult
+	);
+
+CellWrapperV2:Event(
+	ANSISTRING "singleton created",
+	ANSISTRING Function
+	);
+
+CellWrapperV2:Event(
+	ANSISTRING "duplicate physical interface",
+	GUID Value,
+	ANSISTRING Function
+	);
+
+CellWrapperV2:Error(
+	ANSISTRING "WwanOpenHandle failed",
+	ANSISTRING Function,
+	INT32 HResult
+	);
+
+CellWrapperV2:Event(
+	ANSISTRING "Operator profile loaded",
+	ANSISTRING Function
+	);
+
+CellWrapperV2:Event(
+	ANSISTRING "Cellular State Snapshot returned",
+	ANSISTRING Function
+	);
+
+ProvHandlersGetKeysStarted(
+	UNICODESTRING Handler
+	);
+
+ProvHandlersGetKeysFailed(
+	UNICODESTRING Handler,
+	INT32 HResult
+	);
+
+ProvHandlersHandleProvStateStarted(
+	UNICODESTRING Handler,
+	INT32 State
+	);
+
+ProvHandlersHandleProvStateFailed(
+	UNICODESTRING Handler,
+	INT32 HResult
+	);
+
+ProvHandlersKeyReturned(
+	UNICODESTRING Handler,
+	UNICODESTRING Source,
+	UNICODESTRING Name,
+	UNICODESTRING Value
+	);
+
+ProvHandlersReadExtensionKeyFailed(
+	UNICODESTRING Key
+	);
+
+ProvHandlersQueryNodeFailed(
+	UNICODESTRING Handler,
+	UNICODESTRING KeyName,
+	INT32 HResult
+	);
+
+ProvHandlersReadExtensionKey(
+	UNICODESTRING Key
+	);
+
+ProvHandlersReadExtensionKey(
+	INT32 HResult
+	);
+
+CMVUIStatus2::GetMVUISelectionByIccid initiates m_cellular(
+	VOID
+	);
+
+CMVUIStatus2 m_cellular->Terminate(
+	HRESULT HResult
+	);
+
+ProfileSelectionChanged(
+	UNICODESTRING KeyValuePairs
+	);
+
+CheckUINeededReturn(
+	UINT32 LengthUICandidateList,
+	INT32 IsUINeeded,
+	UNICODESTRING SelectedUIName
+	);
+
+UiccRemoved(
+	UNICODESTRING Iccid
+	);
+
+UiccModemReset(
+	UNICODESTRING Iccid
+	);
+
+UiccProfileChanged(
+	UNICODESTRING Iccid
+	);
+
+UiccRefreshed(
+	UNICODESTRING Iccid
+	);
+
+InvalidSimIccId(
+	UNICODESTRING ModemId
+	);
+
+DeviceWideStoreApp(
+	UNICODESTRING ProvisionDataPath,
+	BOOL32 OobeComplete
+	);
+
+RemovedLogonTriggerForCellularTask(
+	INT32 triggerCountBefore
+	);
+
+AddedLogonTriggerForCellularTask(
+	INT32 triggerCountBefore
+	);
+
+NewConnections(
+	UNICODESTRING Iccid
+	);
+
+UiccHandler2PreProcessProfileSelectionStateComplete(
+	UINT32 ProvisionDataCount
+	);
+
+NewUicc(
+	BOOLEAN IsFirstUicc,
+	UNICODESTRING ModemId,
+	UINT32 SlotIndex,
+	UINT32 LineIndex,
+	COUNTEDSTRING Iccid,
+	COUNTEDSTRING Imsi,
+	UINT64 MncLength,
+	UNICODESTRING Spn,
+	UNICODESTRING Pnn,
+	UNICODESTRING Gid1,
+	UNICODESTRING Languages
+	);
+
+UiccKeyset(
+	VOID
+	);
+
+UiccKeyset(
+	VOID
+	);
+
+CUiccHandler2::Uninitialize m_cellular->Terminate()(
+	BOOLEAN remainingNewKeySets
+	);
+
+CUiccHandler2::Initialize(
+	VOID
+	);
+
+ActivityStoppedAutomatically(
+	VOID
+	);
+
+UndoConnectivitySettings(
+	UINT32 HResult
+	);
+
+UndoConnectivitySettingsFailed(
+	UINT32 HResult
+	);
+
+DeletingConfigNode(
+	UNICODESTRING URI
+	);
+
+UndoConnectivitySettings(
+	UNICODESTRING Iccid
+	);
+
+ProvisionDevice(
+	INT32 HResult
+	);
+
+KnownUiccFromRegKey(
+	UNICODESTRING UiccKeyName
+	);
+
+Assert(
+	UINT32 assertVersion,
+	UINT32 rva,
+	UINT32 timestamp,
+	UINT32 imageSize,
+	ANSISTRING imageName,
+	UINT32 count,
+	UINT32 totalHits,
+	UINT32 ModuleCollection,
+	UINT32 GlobalCollection
+	);
+

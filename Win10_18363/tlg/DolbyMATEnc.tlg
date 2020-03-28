@@ -1,0 +1,85 @@
+ProviderNames:
+	Microsoft.Windows.Audio.MatEncoder
+
+
+
+**** Events *****
+SwEncErrors(
+	INT32 TelemetryVersion,
+	INT32 SkippedAddCount,
+	FILETIME StartTime,
+	FILETIME EndTime,
+	INT64 InvalidInputBufferDataType,
+	INT64 ProcessChunkFailure,
+	INT64 AddBytesFailure,
+	INT64 UnknownMetadaCommand
+	);
+
+ApiErrors(
+	INT32 TelemetryVersion,
+	INT32 SkippedAddCount,
+	HEX Initialize,
+	UINT32 Failure,
+	HRESULT FirstErr,
+	HRESULT MostHitErr,
+	UINT32 MostHitErrHitCount,
+	HEX SetAudioObject,
+	UINT32 Failure,
+	HRESULT FirstErr,
+	HRESULT MostHitErr,
+	UINT32 MostHitErrHitCount,
+	HEX MixChannelData,
+	UINT32 Failure,
+	HRESULT FirstErr,
+	HRESULT MostHitErr,
+	UINT32 MostHitErrHitCount,
+	HEX Process,
+	UINT32 Failure,
+	HRESULT FirstErr,
+	HRESULT MostHitErr,
+	UINT32 MostHitErrHitCount
+	);
+
+Info(
+	GUID ContextId,
+	ANSISTRING Func,
+	UINT32 LineNum,
+	ANSISTRING Msg
+	);
+
+Error(
+	GUID ContextId,
+	ANSISTRING Func,
+	UINT32 LineNum,
+	ANSISTRING Msg
+	);
+
+Error(
+	GUID ContextId,
+	ANSISTRING Func,
+	UINT32 LineNum,
+	ANSISTRING Msg,
+	INT32 hr
+	);
+
+Warning(
+	GUID ContextId,
+	ANSISTRING Func,
+	UINT32 LineNum,
+	ANSISTRING Msg
+	);
+
+Error(
+	GUID ContextId,
+	ANSISTRING Func,
+	UINT32 LineNum,
+	ANSISTRING Msg
+	);
+
+Verbose(
+	GUID ContextId,
+	ANSISTRING Func,
+	UINT32 LineNum,
+	ANSISTRING Msg
+	);
+

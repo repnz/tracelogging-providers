@@ -1,0 +1,100 @@
+ProviderNames:
+	Microsoft.Windows.App.Browser
+
+
+
+**** Events *****
+UrlBlockCreate(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	UNICODESTRING Identifier,
+	UINT32 ElapsedCreateTimeMcs,
+	INT32 hResult
+	);
+
+DOMSerializationRequest(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	UINT32 totalURLAnalysisTimeInMs,
+	UINT32 serializationTimeInMs,
+	BOOLEAN areAllSerializationsAllowed
+	);
+
+DOMTelemetryRequestError(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	INT32 hResult,
+	BOOLEAN amsiCoCreateSucceeded
+	);
+
+SendSynchronousLookupRequestError(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	UNICODESTRING Base64EncodedUri,
+	UINT32 ResponseCode
+	);
+
+SendTelemetryRequestError(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	UNICODESTRING Base64EncodedUri,
+	UINT32 ResponseCode
+	);
+
+ProcessedL2CacheFile(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	INT32 HRESULT,
+	BOOLEAN DidDownloadL2,
+	INT32 ErrorType,
+	UINT32 HttpResponseCode
+	);
+
+CGenericDownloadSink::OnStopBinding(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	UNICODESTRING OwnerTag,
+	UINT32 ElapsedBindingTimeMs,
+	INT32 IsAborted,
+	INT32 IsFetchedFromCache,
+	UINT32 LastResponseStatusCode,
+	INT32 IsSSLError,
+	UNICODESTRING SSLErrorString,
+	INT32 hResult,
+	UNICODESTRING ErrorString,
+	UINT32 NetworkCost
+	);
+
+CGenericDownloadSink::s_AbortEventCallback(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	UNICODESTRING OwnerTag
+	);
+
+InitializeL1ConfigData(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	UINT64 DataWatermark,
+	UINT32 NumberOfHashes,
+	INT32 IsZeroWatermark
+	);
+
+ProcessedL1CacheFile(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	INT32 HRESULT,
+	BOOLEAN IsIncremental,
+	INT32 ErrorType,
+	UINT32 HttpResponseCode
+	);
+

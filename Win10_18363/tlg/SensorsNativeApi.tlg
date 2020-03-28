@@ -1,0 +1,46 @@
+ProviderNames:
+	Microsoft.Windows.Sensors.NativeLayer
+
+
+
+**** Events *****
+SensorsAPITracing(
+	ANSISTRING MethodName,
+	ANSISTRING MethodLayer,
+	HEXINT64 SensorHandle,
+	UINT32 ErrorCode,
+	UINT32 ReturnValue
+	);
+
+SensorAPITelemetry(
+	INT32 MethodName,
+	INT32 MethodLayer,
+	INT32 ErrCode,
+	INT32 InternalErrCode,
+	GUID InterfaceGuid,
+	UNICODESTRING Interface,
+	UNICODESTRING SensorName,
+	INT32 Version
+	);
+
+SensorAPITelemetryEventOverflow(
+	INT32 IsEventsOverflow
+	);
+
+SensorAPITelemetry(
+	INT32 MethodLayer,
+	INT32 MethodName,
+	HEXINT64 Handle,
+	INT32 ErrCode,
+	INT32 InternalErrCode,
+	UNICODESTRING Interface,
+	GUID SensorGuid,
+	INT32 SensorClassName,
+	UINT32 Count,
+	UINT32 Version
+	);
+
+SensorAPITelemetryEventThrottled(
+	INT32 IsEventsThrottled
+	);
+

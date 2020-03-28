@@ -1,0 +1,194 @@
+ProviderNames:
+	Microsoft-Windows-Desktop-Shell-SystemSettingsV2-Handlers
+	Microsoft.Windows.Shell.BlueLightReduction
+	Microsoft.Windows.ErrorHandling.Fallback
+	Microsoft.Windows.Mobile.Shell.DisplaySettings
+	Microsoft.Windows.Wil.FeatureLogging
+
+
+
+**** Events *****
+DisplayTimeout::SetValue(
+	UINT64 PartA_PrivTags,
+	UINT32 PowerWriteACValueIndex result,
+	UINT32 PowerWriteACValueIndex value
+	);
+
+DisplayTimeout(
+	UINT64 PartA_PrivTags,
+	ANSISTRING PowerGetActiveScheme
+	);
+
+DisplayTimeout::GetValue(
+	UINT64 PartA_PrivTags,
+	INT32 PowerReadDCValue result,
+	UINT32 timeoutDCValue
+	);
+
+FallbackError(
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+DisplayTimeout::SetValue(
+	UINT64 PartA_PrivTags,
+	UINT32 PowerWriteDCValueIndex result,
+	UINT32 PowerWriteDCValueIndex value
+	);
+
+FallbackError(
+	UINT64 PartA_PrivTags,
+	SIGNED wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+SettingsManualHoursOffTime(
+	INT32 oldManualOffHour,
+	INT32 oldManualOffMinute,
+	INT32 newManualOffHour,
+	INT32 newManualOffMinute
+	);
+
+SupportUpdatedInSettings(
+	BOOLEAN oldIsSupported,
+	BOOLEAN newIsSupported,
+	BOOLEAN firstNotification,
+	BOOLEAN notifyIsSupported
+	);
+
+SettingsTemperatureChange(
+	BOOLEAN oldIsDefault,
+	INT32 oldTemperature,
+	BOOLEAN newIsDefault,
+	INT32 newTargetTemperature
+	);
+
+SettingsManualHoursOnTime(
+	INT32 oldManualOnHour,
+	INT32 oldManualOnMinute,
+	INT32 newManualOnHour,
+	INT32 newManualOnMinute
+	);
+
+SettingsScheduleChange(
+	INT32 oldSchedule,
+	INT32 newSchedule
+	);
+
+CshellBrightnessManager::OnSingletonInit(
+	UINT64 PartA_PrivTags,
+	ANSISTRING PowerGetActiveScheme
+	);
+
+ CshellBrightnessManager::SetBrightnessLevel(
+	UINT64 PartA_PrivTags,
+	UINT32 brightnessLevel
+	);
+
+ CshellBrightnessManager::SetAutoBrightness(
+	UINT64 PartA_PrivTags,
+	BOOLEAN autoBrightness
+	);
+
+DisableUIBCSet(
+	BOOL32 UIBCDisabled,
+	UINT32 HResult
+	);
+
+FeatureError(
+	UINT32 featureId,
+	INT32 featureVersion,
+	INT32 featureBaseVersion,
+	INT16 featureStage,
+	HRESULT hr,
+	ANSISTRING file,
+	UINT16 lineNumber,
+	ANSISTRING module,
+	ANSISTRING process,
+	ANSISTRING originFile,
+	UINT16 originLineNumber,
+	ANSISTRING originModule,
+	ANSISTRING originName,
+	ANSISTRING message,
+	ANSISTRING callerModule,
+	UINT32 callerReturnAddressOffset,
+	ANSISTRING originCallerModule,
+	UINT32 originCallerReturnAddressOffset
+	);
+
+EnabledFeatureUsage(
+	UINT32 featureId,
+	INT32 featureVersion,
+	INT32 featureBaseVersion,
+	INT16 featureStage,
+	BOOLEAN enabled,
+	UINT32 kind,
+	UINT64 addend
+	);
+
+FeatureVariantUsage(
+	UINT32 featureId,
+	INT32 featureVersion,
+	INT32 featureBaseVersion,
+	INT16 featureStage,
+	BOOLEAN enabled,
+	UINT32 variantKind,
+	UINT8 variant,
+	UINT64 addend
+	);
+
+FeatureUsage(
+	UINT32 featureId,
+	INT32 featureVersion,
+	INT32 featureBaseVersion,
+	INT16 featureStage,
+	BOOLEAN enabled,
+	UINT32 kind,
+	UINT64 addend
+	);
+
+ExternalDisplayRotated(
+	UNICODESTRING MonitorFriendlyDeviceName,
+	UINT32 MonitorMode,
+	UINT32 OldDisplayConfigRotation,
+	UINT32 NewDisplayConfigRotation,
+	INT32 hResult
+	);
+
+ScaleFactorChanged(
+	BOOLEAN IsMonitorInternal,
+	UNICODESTRING monitorFriendlyDeviceName,
+	INT32 CurrentScaleFactor,
+	INT32 NewScaleFactor
+	);
+

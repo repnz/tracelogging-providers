@@ -1,0 +1,390 @@
+ProviderNames:
+	Microsoft.Windows.Audio.DeviceGraph
+	Microsoft.Windows.Audio.AudioEngineUtil
+	Microsoft.Windows.Audio.CrossProcess
+	Microsoft.Windows.Audio.Spatial.CrossProcess
+
+
+
+**** Events *****
+FallbackError(
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+AudioSrv-Svchost-Crash(
+	VOID
+	);
+
+FallbackError(
+	UINT64 PartA_PrivTags,
+	SIGNED wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+AudioDgUnhandledException(
+	HRESULT SadMap Size
+	);
+
+ApoLatency(
+	GUID Clsid,
+	DOUBLE secondsLatency
+	);
+
+ApoGetLatencyFailure(
+	GUID Clsid,
+	HEXINT32 HResult
+	);
+
+DeviceGraphStop(
+	UNICODESTRING endpointInstanceId,
+	INT32 stopNumber,
+	DOUBLE secondsSinceLastStart,
+	DOUBLE secondsCumulative,
+	DOUBLE msAveragePumpPassDuration
+	);
+
+DeviceGraphDestroy(
+	VOID
+	);
+
+DeviceGraphPause(
+	INT32 stopNumber,
+	DOUBLE secondsSinceLastStart,
+	DOUBLE secondsCumulative
+	);
+
+DeviceGraphResume(
+	VOID
+	);
+
+DeviceGraphInitialize(
+	GUID GraphId,
+	DOUBLE Period,
+	UINT32 Direction,
+	FLOAT SampleRate,
+	UINT32 MaxChannels,
+	INT32 IsOffload,
+	GUID ConnectorProcessingMode,
+	GUID APOProcessingMode,
+	UNICODESTRING EndpointDeviceId,
+	UNICODESTRING EndpointInstanceId,
+	GUID ConnectorSubFormat,
+	INT32 AccessibilityAudioMonoMixState
+	);
+
+DeviceGraphStart(
+	VOID
+	);
+
+Errors(
+	ANSISTRING Func,
+	UINT32 LineNum,
+	HRESULT HResult
+	);
+
+TrackSystemEffectBehavior(
+	UINT64 PartA_PrivTags,
+	BOOL32 IsException?,
+	UINT32 APOType,
+	GUID APOCLSID,
+	UNICODESTRING EndpointID
+	);
+
+Errors(
+	ANSISTRING Func,
+	INT32 LineNum,
+	HRESULT HResult
+	);
+
+ApoExceptionCaught(
+	ANSISTRING APOType,
+	GUID APOCLSID,
+	UNICODESTRING EndpointID,
+	ANSISTRING Func,
+	HRESULT HResult
+	);
+
+CSystemEffectWrapper::TrackAPOFailureUnhandled(
+	UINT32 APOType,
+	GUID APOCLSID,
+	UNICODESTRING EndpointID
+	);
+
+CCPAudioHistoryReader::GetNextDataPointer completed(
+	HEXINT64 this
+	);
+
+CCPAudioHistoryReader::RuntimeClassInitialize - Locate start pos(
+	HEXINT64 this,
+	UINT32 BytesPerFrame,
+	UINT32 QueueHistoryProducerOldestItem,
+	UINT32 QueueHistoryProducerNewestItem,
+	INT64 hnsOldestItem,
+	UINT64 hnsStartTS
+	);
+
+CCPAudioHistoryReader::GetNextDataPointer(
+	HEXINT64 this,
+	UINT32 FrameCount,
+	UINT32 m_u32FirstIntraPacketOffset,
+	UINT32 u32Data,
+	UINT32 StartPos,
+	UINT32 EndPos,
+	FLOAT Value,
+	INT64 QPC
+	);
+
+SetCurrentTimeStamp(
+	HEXINT64 this,
+	HEXINT32 AEPositionFlag,
+	HEXINT32 EndpointFlags,
+	UINT64 PaddingFrames,
+	INT64 QPC,
+	UINT64 DevicePosition,
+	UINT64 StreamPosition
+	);
+
+Glitch(
+	GUID ContextId,
+	INT32 glitchTypeEnum,
+	ANSISTRING glitchTypeString,
+	UINT32 numGlitches
+	);
+
+ActivelyGlitching(
+	GUID ContextId,
+	FILETIME FirstGlitchTime,
+	FILETIME LastGlitchTime,
+	UINT32 TOTAL,
+	UINT32 CLIENT_INPUT_NO_MESSAGES,
+	UINT32 CLIENT_INPUT_SIZE_MISMATCH,
+	UINT32 CLIENT_OUTPUT_SERVER_OVERREAD,
+	UINT32 CLIENT_OUTPUT_READ_POINTER_OVERWRITE,
+	UINT32 SERVER_INPUT_STARVATION,
+	UINT32 SERVER_OUTPUT_QUEUE_FULL_PACKET_DROP,
+	UINT32 SERVER_OUTPUT_READ_POINTER_OVERWRITE
+	);
+
+FinishedGlitching(
+	GUID ContextId,
+	FILETIME FirstGlitchTime,
+	FILETIME LastGlitchTime,
+	UINT32 TOTAL,
+	UINT32 CLIENT_INPUT_NO_MESSAGES,
+	UINT32 CLIENT_INPUT_SIZE_MISMATCH,
+	UINT32 CLIENT_OUTPUT_SERVER_OVERREAD,
+	UINT32 CLIENT_OUTPUT_READ_POINTER_OVERWRITE,
+	UINT32 SERVER_INPUT_STARVATION,
+	UINT32 SERVER_OUTPUT_QUEUE_FULL_PACKET_DROP,
+	UINT32 SERVER_OUTPUT_READ_POINTER_OVERWRITE
+	);
+
+Errors(
+	ANSISTRING Func,
+	UINT32 LineNum,
+	HRESULT HResult
+	);
+
+OffloadPositionAdjustment(
+	HEXINT64 this,
+	UINT64 DevicePos,
+	INT64 DeviceQPC,
+	UINT64 PreAdjustedPosition,
+	UINT64 u64ValidFramesRead
+	);
+
+GetPosition_Offload(
+	HEXINT64 this,
+	UINT32 u32Flags,
+	UINT64 pu64Position,
+	UINT64 pu64QPCPosition
+	);
+
+CCrossProcessServerOutputEndpoint::AddAudioHistoryPacket(
+	HEXINT64 this,
+	UINT32 FrameCount,
+	UINT32 BytesPerFrame,
+	UINT32 WriteOffset,
+	UINT32 EndOfHistoryDataOffset,
+	UINT32 WriteItem,
+	INT64 QPC
+	);
+
+ActivelyErring(
+	GUID StreamContextId,
+	FILETIME FirstErrorTime,
+	FILETIME LastErrorTime,
+	UINT32 PING_PONG_STATE_CORRUPTION,
+	UINT32 SPATIAL_BLOCK_INVALID_STATE,
+	UINT32 CONTROL_DATA_INVALID
+	);
+
+FinishedErring(
+	GUID StreamContextId,
+	FILETIME FirstErrorTime,
+	FILETIME LastErrorTime,
+	UINT32 PING_PONG_STATE_CORRUPTION,
+	UINT32 SPATIAL_BLOCK_INVALID_STATE,
+	UINT32 CONTROL_DATA_INVALID
+	);
+
+SpatialObjectResourceStats(
+	GUID StreamContextId,
+	PID ActiveObjectStats,
+	UINT32 Count,
+	DOUBLE Sum,
+	UINT32 Min,
+	UINT32 Max,
+	DOUBLE StdDev,
+	PID AvailableObjectStats,
+	UINT32 Count,
+	DOUBLE Sum,
+	UINT32 Min,
+	UINT32 Max,
+	DOUBLE StdDev
+	);
+
+ActivelyGlitching(
+	GUID StreamContextId,
+	FILETIME FirstGlitchTime,
+	FILETIME LastGlitchTime,
+	UINT32 GLITCH_TOTAL,
+	UINT32 SERVER_INPUT_STARVATION,
+	UINT32 CLIENT_OUTPUT_OVERFILL,
+	UINT64 ProcessingPassCount
+	);
+
+FinishedGlitching(
+	GUID StreamContextId,
+	FILETIME FirstGlitchTime,
+	FILETIME LastGlitchTime,
+	UINT32 GLITCH_TOTAL,
+	UINT32 SERVER_INPUT_STARVATION,
+	UINT32 CLIENT_OUTPUT_OVERFILL,
+	UINT64 ProcessingPassCount
+	);
+
+GetPosition(
+	GUID StreamContextId,
+	UINT64 clkDevPos,
+	UINT64 clkPaddingFrames,
+	UINT64 clkHnsQpcPos,
+	UINT64 deltaHnsQpc,
+	UINT64 prevPos,
+	UINT64 rawPos
+	);
+
+Control(
+	GUID StreamContextId,
+	ANSISTRING Context
+	);
+
+ReleaseInputDataPointer(
+	GUID StreamContextId,
+	UINT32 frameCount,
+	UINT32 procStarted
+	);
+
+EmptyBufferCount(
+	GUID StreamContextId,
+	UINT32 count
+	);
+
+SetClientEvent(
+	GUID StreamContextId
+	);
+
+GetAvailableObjectCount(
+	GUID StreamContextId,
+	ANSISTRING Context,
+	UINT32 objs
+	);
+
+SetGrantedCount(
+	GUID StreamContextId,
+	UINT32 objsGranted,
+	UINT64 hnsDeadline
+	);
+
+GrantedCompleted(
+	GUID StreamContextId,
+	UINT32 objsGranted
+	);
+
+GetInputDataPointer(
+	GUID StreamContextId,
+	UINT32 frameCount,
+	UINT32 bufferFlags,
+	UINT32 running
+	);
+
+IndexMap(
+	GUID StreamContextId,
+	ANSISTRING Context,
+	UINT32 bufId,
+	UINT32 objId,
+	UINT32 index,
+	UINT32 firstRef,
+	HRESULT result
+	);
+
+AsarObjUsage(
+	GUID StreamContextId,
+	UINT32 objsInUse,
+	UINT32 objsFree
+	);
+
+AsarGranted(
+	GUID StreamContextId,
+	UINT32 objsGranted
+	);
+
+Trace(
+	ANSISTRING Func,
+	UINT32 LineNum
+	);
+
+BlockObjects(
+	GUID StreamContextId,
+	ANSISTRING Context,
+	UINT32 bufId,
+	UINT32 objCount
+	);
+
+Glitch(
+	GUID contextId,
+	INT32 inputStarvation,
+	INT32 outputOverfill
+	);
+

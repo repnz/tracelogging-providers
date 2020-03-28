@@ -1,0 +1,31 @@
+ProviderNames:
+	Microsoft.Windows.DShow.MFproxy
+	Microsoft.Windows.MediaFoundation.CallStack
+
+
+
+**** Events *****
+DShowPinMediaTypeCorrelationEvents(
+	GUID DShowCorrelationID,
+	UINT32 Pin Id:,
+	GUID Major Type:,
+	GUID Sub Type:,
+	UINT32 Height:,
+	UINT32 Width:,
+	INT64 FrameRate:
+	);
+
+DShowKsProxyEvents(
+	GUID DShowCorrelationID,
+	SYSTEMTIME CreateTime,
+	HRESULT CreateHResult,
+	SYSTEMTIME LoadTime,
+	HRESULT LoadHResult,
+	SYSTEMTIME RunTime,
+	HRESULT RunHResult,
+	SYSTEMTIME StopTime,
+	SYSTEMTIME DestroyTime,
+	UNICODESTRING Camera SymLink,
+	UNICODESTRING Camera Friendly Name
+	);
+

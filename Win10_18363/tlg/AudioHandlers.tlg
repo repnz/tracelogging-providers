@@ -1,0 +1,212 @@
+ProviderNames:
+	Microsoft.Windows.Media.Settings.Audio
+	Microsoft.Windows.Audio.Spatial.Metadata
+	Microsoft.Windows.SystemSettings.AudioSettingsHandlers
+
+
+
+**** Events *****
+SystemSettings::DataModel::BaseBalanceHandler::get_IsApplicable(
+	UINT32 number of endpoint channels
+	);
+
+SystemSettings::DataModel::BaseBalanceHandler::BaseBalanceHandler(
+	ANSISTRING ("BaseBalanceHandler")
+	);
+
+SystemSettings::DataModel::InputLevelHandler::GetDefaultEndpointAndCapture(
+	ANSISTRING ("Created CCaptureBucket")
+	);
+
+SystemSettings::DataModel::InputLevelHandler::GetDefaultEndpointAndCapture(
+	ANSISTRING ("Destroyed CCaptureBucket")
+	);
+
+SystemSettings::DataModel::InputLevelHandler::GetDefaultEndpointAndCapture(
+	BOOLEAN IsCurrentInputEndpointBluetooth
+	);
+
+SystemSettings::DataModel::InputLevelHandler::GetDefaultEndpointAndCapture(
+	BOOLEAN forceCreate
+	);
+
+DefaultEndPointChanged(
+	UNICODESTRING NewDefaultAudioEndpointId,
+	BOOL32 SuccessEndpointChange
+	);
+
+AudioEndpointCount(
+	INT32 NumberOfEndpoints,
+	BOOL32 IsNumChanged
+	);
+
+MuteSet(
+	UNICODESTRING AudioEndpointId,
+	INT32 VolumeLevelBeforeSet,
+	BOOL32 IsSetToMute,
+	BOOL32 SuccessSetMute
+	);
+
+VolumeSliderChange(
+	UNICODESTRING AudioEndpointId,
+	INT32 VolumeLevelAtBeginning
+	);
+
+FallbackError(
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+FallbackError(
+	UINT64 PartA_PrivTags,
+	SIGNED wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+Grouping-Inactive(
+	HEXINT64 vIter,
+	UINT32 PID,
+	INT32 IsSystemSounds,
+	UNICODESTRING DisplayName,
+	GUID GroupParameter,
+	UNICODESTRING SessionId,
+	INT32 ValidToDisplay,
+	UNICODESTRING OutputEndpoint,
+	UNICODESTRING InputEndpoint
+	);
+
+Adding-Inactive(
+	HEXINT64 vIter,
+	UINT32 PID,
+	INT32 IsSystemSounds,
+	UNICODESTRING DisplayName,
+	GUID GroupParameter,
+	UNICODESTRING SessionId,
+	INT32 ValidToDisplay,
+	UNICODESTRING OutputEndpoint,
+	UNICODESTRING InputEndpoint
+	);
+
+Grouping-Active(
+	HEXINT64 vIter,
+	UINT32 PID,
+	INT32 IsSystemSounds,
+	UNICODESTRING DisplayName,
+	GUID GroupParameter,
+	UNICODESTRING SessionId,
+	INT32 ValidToDisplay,
+	UNICODESTRING OutputEndpoint,
+	UNICODESTRING InputEndpoint
+	);
+
+Adding-Active(
+	HEXINT64 vIter,
+	UINT32 PID,
+	INT32 IsSystemSounds,
+	UNICODESTRING DisplayName,
+	GUID GroupParameter,
+	UNICODESTRING SessionId,
+	INT32 ValidToDisplay,
+	UNICODESTRING OutputEndpoint,
+	UNICODESTRING InputEndpoint
+	);
+
+Removing(
+	HEXINT64 iter,
+	UINT32 PID,
+	UNICODESTRING DisplayName,
+	GUID GroupParameter,
+	UNICODESTRING SessionId,
+	INT32 ValidToDisplay,
+	UNICODESTRING OutputEndpoint,
+	UNICODESTRING InputEndpoint
+	);
+
+SystemSettings::DataModel::AppList::GetSessionInfo(
+	UINT32 No display name for PID
+	);
+
+QueryFullProcessImageName error(
+	HEXINT64 hProcess,
+	INT32 GetLastError,
+	UINT32 No image name for PID
+	);
+
+Not valid to display:(
+	UINT32 PID,
+	BOOLEAN State,
+	BOOLEAN Active,
+	BOOLEAN Session,
+	BOOLEAN Hide,
+	BOOLEAN not settings app,
+	BOOLEAN Flow
+	);
+
+ProcessIdToSessionId error(
+	INT32 GetLastError,
+	UINT32 PID
+	);
+
+Changed endpoint for(
+	HEXINT64 this,
+	UINT32 PID,
+	UNICODESTRING DisplayName,
+	GUID GroupParameter,
+	UNICODESTRING SessionId
+	);
+
+Error(
+	ANSISTRING Function,
+	INT32 Line,
+	HRESULT ResultCode
+	);
+
+AssertFailure(
+	ANSISTRING Function,
+	INT32 Line,
+	HRESULT ResultCode
+	);
+
+Unknown SpatialAudioEncoderId(
+	ANSISTRING Function,
+	INT32 Line,
+	HRESULT ResultCode
+	);
+
+SpatialAudioMetadataDictionary::RuntimeClassInitialize(
+	HEXINT64 this,
+	HRESULT HResult,
+	GUID FormatId,
+	UNICODESTRING EndPointId
+	);
+

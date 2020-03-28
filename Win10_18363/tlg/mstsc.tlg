@@ -1,0 +1,91 @@
+ProviderNames:
+	RDWin32ClientTelemetryProvider
+	RDP.MSTSCTelemetry
+	Microsoft.RDS.RADC.FeedSubscription
+	Microsoft.RDS.RdClient.Client.FeedSubscription
+
+
+
+**** Events *****
+SmartSizingChanged(
+	ANSISTRING state
+	);
+
+ZoomLevelChanged(
+	UINT32 previousZoomLevel,
+	UINT32 newZoomLevel
+	);
+
+SessionData(
+	UINT32 eventVersion,
+	BOOLEAN userInitiated,
+	UINT32 clientStackDisconnectCode,
+	UINT32 serverStackDisconnectCode,
+	UINT64 duration,
+	GUID correlationId
+	);
+
+SessionLaunch(
+	UINT32 eventVersion,
+	UINT64 launchTime,
+	UINT32 monitorCount,
+	UINT32 keyboardLayout,
+	UINT32 colorDepth,
+	UINT32 desktopHeight,
+	UINT32 desktopWidth,
+	UINT32 desktopScaleFactor,
+	UINT32 soundRedirectionMode,
+	UINT32 displayBBar,
+	UINT32 pinBBar,
+	UINT32 printerRedirection,
+	UINT32 sCardRedirection,
+	UINT32 soundCaptureEnabled,
+	UINT32 spanMonitors,
+	UINT32 startFullScreen,
+	UINT32 useMultiMon,
+	UINT32 portRedirection,
+	UINT32 pnpRedirection,
+	UINT32 restrictedAdmin,
+	UINT32 redirectedAuthentication,
+	UINT32 remoteAppMode,
+	UINT32 sourceType,
+	GUID correlationId
+	);
+
+CmdLineLaunch(
+	UINT32 eventVersion,
+	UINT32 ParseError,
+	UINT32 connectionFile,
+	UINT32 server,
+	UINT32 admin,
+	UINT32 fullScreen,
+	UINT32 width,
+	UINT32 height,
+	UINT32 public,
+	UINT32 span,
+	UINT32 multiMon,
+	UINT32 restrictedAdmin,
+	UINT32 redirectedAuthentication,
+	UINT32 prompt,
+	UINT32 fShadow,
+	UINT32 fShadowWithControl,
+	UINT32 noConsentPrompt,
+	UINT32 session,
+	UINT32 clxCmdLine,
+	UINT32 fileEdit,
+	UINT32 appContainer,
+	UINT32 authCookie,
+	UINT32 regServer,
+	UINT32 unRegServer,
+	UINT32 embedding,
+	UINT32 remoteFile,
+	UINT32 remoteCmdLine,
+	UINT32 web,
+	UINT32 webFileName,
+	UINT32 oTPCookie,
+	UINT32 trustedZone,
+	UINT32 cacheToClear,
+	UINT32 console,
+	GUID correlationId
+	);
+

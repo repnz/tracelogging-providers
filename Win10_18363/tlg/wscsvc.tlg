@@ -1,0 +1,168 @@
+ProviderNames:
+	Microsoft.Windows.Security.WSC
+
+
+
+**** Events *****
+WscNotifyUserForRenew(
+	UNICODESTRING companyName,
+	UNICODESTRING productName,
+	UNICODESTRING exePath,
+	UNICODESTRING productVersion,
+	UINT32 notificationType,
+	INT32 status
+	);
+
+WscNotifyUserForUninstall(
+	UNICODESTRING companyName,
+	UNICODESTRING productName,
+	UNICODESTRING exePath,
+	UNICODESTRING productVersion,
+	INT32 status
+	);
+
+ActivityStoppedAutomatically(
+	VOID
+	);
+
+WscNotifyUserForNearExpiration(
+	UNICODESTRING companyName,
+	UNICODESTRING productName,
+	UNICODESTRING exePath,
+	UNICODESTRING productVersion,
+	UINT32 notificationDays,
+	INT32 status
+	);
+
+InitiateOfflineCleanStop(
+	INT32 status
+	);
+
+InitiateOfflineCleanStart(
+	UNICODESTRING productName,
+	UNICODESTRING exePath
+	);
+
+InitiateOfflineCleanStart(
+	VOID
+	);
+
+CallerValidation(
+	UNICODESTRING productName,
+	UNICODESTRING exePath,
+	HRESULT status
+	);
+
+EnableDefender(
+	BOOL32 enable,
+	UINT32 state,
+	UINT32 reason,
+	UINT32 defenderStatus
+	);
+
+DatastoreMigratedVersion(
+	UINT32 datastoreisvtype,
+	UINT32 datastoremigrated,
+	HRESULT status
+	);
+
+DeviceProtectedStatus(
+	UINT32 numOfProducts,
+	UINT32 protectedStatus,
+	UNICODESTRING productName
+	);
+
+UpdateFirewall(
+	UINT32 state,
+	BOOL32 isCurrent,
+	UNICODESTRING exePath,
+	UNICODESTRING companyName,
+	UNICODESTRING productName,
+	UNICODESTRING productVersion
+	);
+
+UpdateAntiVirus(
+	UINT32 state,
+	BOOL32 isCurrent,
+	UNICODESTRING exePath,
+	UNICODESTRING companyName,
+	UNICODESTRING productName,
+	UNICODESTRING productVersion
+	);
+
+UpdateAntiSpyware(
+	UINT32 state,
+	BOOL32 isCurrent,
+	UNICODESTRING exePath,
+	UNICODESTRING companyName,
+	UNICODESTRING productName,
+	UNICODESTRING productVersion
+	);
+
+UnregisterFirewall(
+	UNICODESTRING exePath,
+	UNICODESTRING companyName,
+	UNICODESTRING productName,
+	UNICODESTRING productVersion
+	);
+
+UnregisterAntiVirus(
+	UNICODESTRING exePath,
+	UNICODESTRING companyName,
+	UNICODESTRING productName,
+	UNICODESTRING productVersion
+	);
+
+UnregisterAntiSpyware(
+	UNICODESTRING exePath,
+	UNICODESTRING companyName,
+	UNICODESTRING productName,
+	UNICODESTRING productVersion
+	);
+
+RegisterFirewall(
+	UNICODESTRING exePath,
+	UNICODESTRING companyName,
+	UNICODESTRING productName,
+	UNICODESTRING productVersion
+	);
+
+RegisterAntiVirus(
+	UNICODESTRING exePath,
+	UNICODESTRING companyName,
+	UNICODESTRING productName,
+	UNICODESTRING productVersion
+	);
+
+RegisterAntiSpyware(
+	UNICODESTRING exePath,
+	UNICODESTRING companyName,
+	UNICODESTRING productName,
+	UNICODESTRING productVersion
+	);
+
+LoadProduct(
+	UNICODESTRING exePath,
+	UNICODESTRING companyName,
+	UNICODESTRING productName,
+	UNICODESTRING productVersion,
+	UINT32 state,
+	BOOL32 isDatastoreRegistry
+	);
+
+WscDSASaveDefaultByPtr(
+	UNICODESTRING companyName,
+	UNICODESTRING productName,
+	UNICODESTRING productVersion,
+	HEXINT32 HResult
+	);
+
+WscDSARemediateProduct(
+	UNICODESTRING companyName,
+	UNICODESTRING productName,
+	UNICODESTRING productVersion,
+	HEXINT32 HResult,
+	UINT32 remediationAction,
+	BOOL32 compliance
+	);
+

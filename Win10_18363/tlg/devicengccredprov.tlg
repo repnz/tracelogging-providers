@@ -1,0 +1,413 @@
+ProviderNames:
+	Microsoft.Windows.Security.DevCredProv
+	Microsoft.Windows.Security.DevCredProv
+	TelemetryAssert
+	TelemetryAssertDiagTrack
+
+
+
+**** Events *****
+FailureInfo(
+	HRESULT HResult,
+	ANSISTRING File,
+	UINT32 LineNumber,
+	UNICODESTRING Message
+	);
+
+Info(
+	HRESULT HResult,
+	ANSISTRING File,
+	UINT32 LineNumber,
+	UNICODESTRING Message
+	);
+
+FallbackError(
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+FallbackError(
+	UINT64 PartA_PrivTags,
+	SIGNED wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+ScanDeploymentWorkThreadEnd(
+	VOID
+	);
+
+ScanDeploymentWorkThreadStart(
+	VOID
+	);
+
+ResetLocalAccount(
+	HRESULT hrEnableAccount,
+	UNICODESTRING user
+	);
+
+CheckAutologon(
+	INT32 UserSessionRequired
+	);
+
+AutologonFlags(
+	BOOLEAN HadAutoLogon,
+	INT32 HasActiveUserSession,
+	BOOLEAN DeploymentTaskCreated
+	);
+
+ShowNotificationMessage(
+	UINT32 messageId,
+	BOOL32 inLogonScreen,
+	UINT32 selectedCredentialId,
+	BOOL32 selectedCredChanged,
+	BOOL32 fromLogonUI
+	);
+
+IsEnrolled(
+	VOID
+	);
+
+WindowTrackingEventHookProc exits(
+	VOID
+	);
+
+HandleWinEvent(
+	UINT32 foregroundProcId,
+	UINT32 currentProcId,
+	HEXINT64 hwnd
+	);
+
+DeviceNgcScenarioAutologon::SetDisplayState->PerformAutologon(
+	VOID
+	);
+
+DeviceNgcScenarioAutologon::GetCredentialCount->PerformAutologon(
+	VOID
+	);
+
+WaitForMultipleObjects(
+	UINT32 WaitRet,
+	UINT32 TimeOutInterval,
+	UINT64 TriggerCount
+	);
+
+PauseListening(
+	VOID
+	);
+
+ResumeListening(
+	VOID
+	);
+
+ShellLogonComplete(
+	VOID
+	);
+
+GetSerializationInternal(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId
+	);
+
+GetSerializationInternal(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	INT32 accountType,
+	BOOLEAN isConvenienceCredential,
+	BOOLEAN isUnlockScenario
+	);
+
+GetSerializationInternal(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId,
+	INT32 accountType,
+	BOOLEAN isConvenienceCredential,
+	BOOLEAN isUnlockScenario
+	);
+
+ActivityError(
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+ActivityError(
+	UINT64 PartA_PrivTags,
+	SIGNED wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+GetSerializationInternal(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+GetSerializationInternal(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+ActivityStoppedAutomatically(
+	VOID
+	);
+
+ProcessAuthFailure(
+	UINT32 ErrorCode
+	);
+
+DeviceNgcCredentialAutologon::GetSerializationInternal(
+	VOID
+	);
+
+AutologonReportResultInternal(
+	INT32 status,
+	INT32 subStatus,
+	UNICODESTRING user
+	);
+
+DeviceNgcCredentialAutologon::SubmitRequestSerializationInternal(
+	VOID
+	);
+
+ReportResultInternal(
+	INT32 status,
+	INT32 subStatus
+	);
+
+LsaLookupAuthenticationPackageError(
+	INT32 retVal
+	);
+
+RtlUnicodeStringToAnsiStringError(
+	INT32 retVal
+	);
+
+LsaConnectUntrustedError(
+	INT32 retVal
+	);
+
+CacheGetUserNameAndDomain(
+	SID userSid,
+	UNICODESTRING userName,
+	UNICODESTRING domain
+	);
+
+CacheGetUserSid(
+	UNICODESTRING userName,
+	SID sid
+	);
+
+InvalidSidNameUse(
+	INT32 retVal,
+	UINT32 sidNameUse
+	);
+
+LsaLookupSids2(
+	INT32 retVal
+	);
+
+LookupAccountSidLocalW(
+	UINT32 retVal
+	);
+
+FallBackToLocalSidLookup(
+	INT32 retVal
+	);
+
+LsaOpenPolicy(
+	INT32 retVal
+	);
+
+LookupAccountNameLocalWFailed(
+	UINT32 retVal
+	);
+
+LookupAccountNameLocalWSizeQuerySucceededUnexpectedly(
+	INT32 retVal
+	);
+
+LookupAccountNameLocalWSizeQueryFailed(
+	UINT32 retVal
+	);
+
+FormatMessageWFailed(
+	UINT32 retVal
+	);
+
+LoadStringWFailed(
+	UINT32 retVal
+	);
+
+NgcCredProvEnumLogonKeysFailed(
+	INT32 retVal
+	);
+
+InvalidSerializationBufferUserSidTooLarge(
+	INT32 retVal
+	);
+
+InvalidSerializationBufferTooSmall(
+	INT32 retVal
+	);
+
+UnmarshaledCredentialUnsupportedType(
+	INT32 retVal
+	);
+
+CredUnmarshalCredential(
+	UINT32 retVal
+	);
+
+CredUnPackAuthenticationBufferWFailed(
+	UINT32 retVal
+	);
+
+CredUnPackAuthenticationBufferWSizeQuerySucceededUnexpectedly(
+	INT32 retVal
+	);
+
+CredUnPackAuthenticationBufferWSizeQueryFailed(
+	UINT32 retVal
+	);
+
+InvalidSerializationBufferBadSubmitType(
+	INT32 retVal
+	);
+
+UnmarshaledSspiCredentialNotV2(
+	INT32 retVal
+	);
+
+SspiUnmarshalCredUIContext(
+	INT32 retVal
+	);
+
+CredUnPackAuthenticationBufferWIsNotPresent(
+	INT32 retVal
+	);
+
+CertGetCertificateContextProperty(
+	UINT32 retVal
+	);
+
+CertGetCertificateContextPropertyRequiredSize(
+	UINT32 retVal
+	);
+
+CertFindCertificateInStore(
+	UINT32 retVal
+	);
+
+CertNotPresentInMyStore(
+	UINT32 retVal
+	);
+
+CertOpenSystemStore(
+	UINT32 retVal
+	);
+
+Assert(
+	UINT32 assertVersion,
+	UINT32 rva,
+	UINT32 timestamp,
+	UINT32 imageSize,
+	ANSISTRING imageName,
+	UINT32 count,
+	UINT32 totalHits,
+	UINT32 ModuleCollection,
+	UINT32 GlobalCollection
+	);
+

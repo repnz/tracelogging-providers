@@ -1,0 +1,129 @@
+ProviderNames:
+	Microsoft.ClipC
+
+
+
+**** Events *****
+ClipGetLicenseAndPolicyForPfn(
+	UINT64 PartA_PrivTags,
+	UNICODESTRING PackageFamilyName,
+	UNICODESTRING PolicyName,
+	HRESULT Result,
+	UINT64 ms
+	);
+
+ClipGetSubscriptionStatus(
+	HRESULT Result,
+	UINT64 ms
+	);
+
+GetExchangeDeviceUniqueID(
+	HRESULT Result,
+	UINT64 TimeTaken_MS
+	);
+
+GetOfflineDeviceUniqueID(
+	HRESULT Result,
+	UINT64 TimeTaken_MS,
+	UINT32 RetrievalMethod
+	);
+
+ClipCleanUpState(
+	HRESULT Result,
+	UINT64 ms
+	);
+
+ClipGatherDiagnostics(
+	HRESULT Result,
+	UINT64 ms
+	);
+
+ClipRefreshLicense(
+	HRESULT Result,
+	UINT64 ms
+	);
+
+ClipGenerateClientChallengeData(
+	HRESULT Result,
+	UINT64 ms
+	);
+
+ClipGenerateDeviceLicenseRequest(
+	UINT32 ChallengeSize,
+	HRESULT Result,
+	UINT64 ms,
+	HRESULT Result,
+	UINT64 ms
+	);
+
+ClipCallServer(
+	UNICODESTRING Command,
+	UINT32 InBlobSize,
+	HRESULT Result,
+	UINT64 ms
+	);
+
+ClipGetFileIdFromAssociateId(
+	HRESULT Result,
+	UINT64 ms
+	);
+
+ClipGetQueryResults(
+	HRESULT Result,
+	UINT64 ms
+	);
+
+ClipGetAssociatedResults(
+	HRESULT Result,
+	UINT64 ms
+	);
+
+ClipQueryAssociateId(
+	UNICODESTRING Query,
+	HRESULT Result,
+	UINT64 ms
+	);
+
+ClipGetLicenseData(
+	HRESULT Result,
+	UINT64 ms
+	);
+
+ClipUninstallLicense(
+	HRESULT Result,
+	UINT64 ms
+	);
+
+ClipInstallLicense(
+	UINT32 LicenseBlobSize,
+	UINT32 LicenseType,
+	HRESULT Result,
+	UINT64 ms
+	);
+
+ClipInstallLicense_FAILURE(
+	UINT32 LicenseBlobSize,
+	UINT32 LicenseType,
+	HRESULT Result,
+	UNICODESTRING ProcessName,
+	UNICODESTRING CallerModule,
+	UINT32 LicenseReportedData,
+	BINARY LicenseData
+	);
+
+ClipClose(
+	HRESULT Result,
+	UINT64 ms
+	);
+
+ClipOpen(
+	HRESULT Result,
+	UINT64 ms
+	);
+
+AssignedAccessCheck(
+	HRESULT Result,
+	UNICODESTRING PackageFamilyName,
+	UNICODESTRING PolicyName
+	);
+

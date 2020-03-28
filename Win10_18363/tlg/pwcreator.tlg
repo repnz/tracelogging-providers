@@ -1,0 +1,59 @@
+ProviderNames:
+	Microsoft.Windows.WindowsToGo.Startup.Options
+	Microsoft.Windows.WindowsToGo.Creator.Tool
+	TelemetryAssert
+	TelemetryAssertDiagTrack
+
+
+
+**** Events *****
+Provision(
+	ANSISTRING "Provisioning started"
+	);
+
+Provision(
+	ANSISTRING "Provisioning complete",
+	UINT32 ProvisioningResult,
+	INT32 ProvisionHResult,
+	UINT32 DeviceCharacteristics,
+	UINT32 ImageCharacteristics
+	);
+
+Provision(
+	UNICODESTRING WimName,
+	UNICODESTRING WimEdition,
+	UNICODESTRING WimVersionInformation,
+	UINT32 ImageSizeMb
+	);
+
+Provision(
+	UNICODESTRING DeviceName,
+	UINT64 DeviceSizeGb,
+	UINT32 ControllerType,
+	UINT32 ProtocolType
+	);
+
+ActivityStoppedAutomatically(
+	VOID
+	);
+
+Provision(
+	VOID
+	);
+
+Provision(
+	VOID
+	);
+
+Assert(
+	UINT32 assertVersion,
+	UINT32 rva,
+	UINT32 timestamp,
+	UINT32 imageSize,
+	ANSISTRING imageName,
+	UINT32 count,
+	UINT32 totalHits,
+	UINT32 ModuleCollection,
+	UINT32 GlobalCollection
+	);
+

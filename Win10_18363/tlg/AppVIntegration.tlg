@@ -1,0 +1,37 @@
+ProviderNames:
+	Microsoft.Windows.AppMan.AppV
+
+
+
+**** Events *****
+DebugMessage(
+	UINT32 LOGLEVEL,
+	UNICODESTRING MESSAGE,
+	UNICODESTRING FUNCTION,
+	UINT32 LINENO,
+	BOOL32 UTCReplace_AppSessionGuid
+	);
+
+PublishActiveXObject(
+	BOOL32 UTCReplace_AppSessionGuid,
+	GUID PackageID,
+	GUID VersionID,
+	UNICODESTRING ActiveXKey
+	);
+
+PublishBrowserPlugin(
+	BOOL32 UTCReplace_AppSessionGuid,
+	GUID PackageID,
+	GUID VersionID,
+	INT64 BrowserPluginType,
+	UNICODESTRING BrowserPluginKey
+	);
+
+PublishShellExtension(
+	BOOL32 UTCReplace_AppSessionGuid,
+	GUID PackageID,
+	GUID VersionID,
+	INT64 ShellExtensionType,
+	UNICODESTRING ShellExtensionKey
+	);
+

@@ -1,0 +1,582 @@
+ProviderNames:
+	Microsoft.Windows.Power.Battery
+	Microsoft.Windows.Power.CpuUtilization
+	Microsoft.Windows.Power.DeviceProblems
+	Microsoft.Windows.Power.Device
+	Microsoft.Windows.Power.EnergyWizard
+	Microsoft.Windows.Power.PlatformCapabilities
+	Microsoft.Windows.Power.PpmProfiles
+	Microsoft.Windows.Power.PowerPolicy
+	Microsoft.Windows.Power.PowerRequest
+	Microsoft.Windows.Power.SelectiveSuspend
+	Microsoft.Windows.Power.SleepStudy
+	Microsoft.Windows.Power.ScreenOnStudy
+	Microsoft.Windows.Power.SystemInformation
+	Microsoft.Windows.Power.TimerResolution
+	TelemetryAssert
+	TelemetryAssertDiagTrack
+
+
+
+**** Events *****
+DrainRate(
+	GUID sessionGuid,
+	UINT32 totalDrainRate
+	);
+
+Information(
+	GUID sessionGuid,
+	UINT32 flags,
+	UINT32 cycleCount,
+	UINT32 lastFullCharge,
+	UINT32 manufactureDate,
+	UINT32 designCapacity,
+	UINT32 lastChargeCapacity
+	);
+
+Characteristics(
+	GUID sessionGuid,
+	UINT32 aggregatedDesignCapacity,
+	UINT32 aggregateFullChargeCapacity,
+	UINT32 cycleCount,
+	UINT32 batteryCount
+	);
+
+DailyUsage(
+	GUID sessionGuid,
+	UINT32 activeDcTime,
+	UINT32 csDcTime,
+	UINT32 activeAcTime,
+	UINT32 csAcTime,
+	UINT32 activeEnergyConsumption,
+	UINT32 csEnergyConsumption
+	);
+
+CpuTopProcesses(
+	GUID sessionGuid,
+	UNICODESTRING processName,
+	UINT32 processUtilization,
+	UNICODESTRING moduleName,
+	UINT32 ModuleUtilization
+	);
+
+CpuAverageUtilization(
+	GUID sessionGuid,
+	UINT32 systemBusyTime
+	);
+
+ProblemsDetected(
+	GUID sessionGuid,
+	UINT8 problemsDetected
+	);
+
+InstalledDevice(
+	GUID sessionGuid,
+	UNICODESTRING instancePath,
+	UINT8 isFxDevice
+	);
+
+LogEntriesCount(
+	GUID sessionGuid,
+	UINT32 informational,
+	UINT32 warning,
+	UINT32 error
+	);
+
+Duration(
+	GUID sessionGuid,
+	UINT32 duration
+	);
+
+Ppm(
+	GUID sessionGuid,
+	UINT32 ppmData
+	);
+
+Flags(
+	GUID sessionGuid,
+	UINT32 flags
+	);
+
+Sleep(
+	GUID sessionGuid,
+	UINT32 sleepData
+	);
+
+LegacyDrivers(
+	UNICODESTRING legacyDriver
+	);
+
+PlatformRole(
+	GUID sessionGuid,
+	UINT32 firmwarePlatformRole,
+	UINT32 cleanPlatformRole,
+	UINT8 hasBattery
+	);
+
+ProcessorStates(
+	GUID sessionGuid,
+	UINT32 cStates,
+	UINT32 pStates,
+	UINT32 tStates
+	);
+
+EffectivePerfEpp(
+	GUID sessionGuid,
+	GUID schemeGuid,
+	UINT32 acValueIndex,
+	UINT32 dcValueIndex
+	);
+
+PolicyBits(
+	GUID sessionGuid,
+	UINT32 policyBits
+	);
+
+DCRtcWakePolicy(
+	GUID sessionGuid,
+	UINT32 DCRtcWakePolicy
+	);
+
+PpmProfileInformation(
+	GUID sessionGuid,
+	UNICODESTRING profileName,
+	GUID profileGuid,
+	UINT8 isActive,
+	UINT8 isEnabled,
+	UINT64 ActiveCount,
+	UINT64 MaxActiveDurationInUs,
+	UINT64 MinActiveDurationInUs,
+	UINT64 TotalActiveDurationInUs
+	);
+
+DCVideoPerformance(
+	GUID sessionGuid,
+	UINT32 DCVideoPerformance
+	);
+
+DCEnergyPerfPreference(
+	GUID sessionGuid,
+	UINT32 DCEnergyPerfPreference
+	);
+
+Scheme(
+	GUID sessionGuid,
+	UINT32 scheme
+	);
+
+DCStandbyConnectivity(
+	GUID sessionGuid,
+	UINT32 DCStandbyConnectivity
+	);
+
+ACUserPresencePrediction(
+	GUID sessionGuid,
+	UINT32 ACUserPresencePrediction
+	);
+
+AcDimTimeout(
+	GUID sessionGuid,
+	UINT32 acDimTimeout
+	);
+
+ACStandbyConnectivity(
+	GUID sessionGuid,
+	UINT32 ACStandbyConnectivity
+	);
+
+DcIdleTimeout(
+	GUID sessionGuid,
+	UINT32 dcDisplayIdleTimeout
+	);
+
+ACVideoPerformance(
+	GUID sessionGuid,
+	UINT32 ACVideoPerformance
+	);
+
+DcDiskTimeout(
+	GUID sessionGuid,
+	UINT32 dcDiskTimeout
+	);
+
+ACRtcWakePolicy(
+	GUID sessionGuid,
+	UINT32 ACRtcWakePolicy
+	);
+
+ActualOverlayPowerScheme(
+	GUID sessionGuid,
+	GUID scheme,
+	BOOLEAN acOverlay
+	);
+
+EffectiveProcThrottleMin(
+	GUID sessionGuid,
+	GUID schemeGuid,
+	UINT32 acValueIndex,
+	UINT32 dcValueIndex
+	);
+
+DcDimTimeout(
+	GUID sessionGuid,
+	UINT32 dcDimTimeout
+	);
+
+AcDiskTimeout(
+	GUID sessionGuid,
+	UINT32 acDiskTimeout
+	);
+
+ACBrightnessPolicy(
+	GUID sessionGuid,
+	UINT32 ACBrightnessPolicy
+	);
+
+ACEnergyPerfPreference(
+	GUID sessionGuid,
+	UINT32 ACEnergyPerfPreference
+	);
+
+Dc80211Performance(
+	GUID sessionGuid,
+	UINT32 dc80211Performance
+	);
+
+AcIdleTimeout(
+	GUID sessionGuid,
+	UINT32 acDisplayIdleTimeout
+	);
+
+EffectiveProcThrottleMax(
+	GUID sessionGuid,
+	GUID schemeGuid,
+	UINT32 acValueIndex,
+	UINT32 dcValueIndex
+	);
+
+ACHibernateIdleTimeout(
+	GUID sessionGuid,
+	UINT32 ACHibernateIdleTimeout
+	);
+
+PpmProfileStatus(
+	GUID sessionGuid,
+	UINT8 isRegistered
+	);
+
+DcSleepTimeout(
+	GUID sessionGuid,
+	UINT32 dcSleepTimeout
+	);
+
+DcPerfStateMin(
+	GUID sessionGuid,
+	UINT32 dcPerfStateMin
+	);
+
+DCUserPresencePrediction(
+	GUID sessionGuid,
+	UINT32 DCUserPresencePrediction
+	);
+
+AcPerfStateMin(
+	GUID sessionGuid,
+	UINT32 acPerfStateMin
+	);
+
+AcSleepTimeout(
+	GUID sessionGuid,
+	UINT32 acSleepTimeout
+	);
+
+ACEnergySaverPolicy(
+	GUID sessionGuid,
+	UINT32 ACEnergySaverPolicy
+	);
+
+DCHibernateIdleTimeout(
+	GUID sessionGuid,
+	UINT32 DCHibernateIdleTimeout
+	);
+
+DcPersonality(
+	GUID sessionGuid,
+	UINT32 dcPersonality
+	);
+
+AcPersonality(
+	GUID sessionGuid,
+	UINT32 AcPersonality
+	);
+
+DCMinCores(
+	GUID sessionGuid,
+	UINT32 DCMinCores
+	);
+
+OverlayPowerSchemeSuspendReasons(
+	GUID sessionGuid,
+	UINT32 reasonMask
+	);
+
+Ac80211Performance(
+	GUID sessionGuid,
+	UINT32 ac80211Performance
+	);
+
+DCBrightnessPolicy(
+	GUID sessionGuid,
+	UINT32 DCBrightnessPolicy
+	);
+
+PpmProfileSetting(
+	GUID sessionGuid,
+	UNICODESTRING settingName,
+	GUID settingGuid,
+	GUID profileGuid,
+	UINT8 isAcSetting,
+	UINT8 cpuClass,
+	HEX settingValue
+	);
+
+ACMinCores(
+	GUID sessionGuid,
+	UINT32 ACMinCores
+	);
+
+EffectivePerfBoostMode(
+	GUID sessionGuid,
+	GUID schemeGuid,
+	UINT32 acValueIndex,
+	UINT32 dcValueIndex
+	);
+
+AcAspm(
+	GUID sessionGuid,
+	UINT32 acAspm
+	);
+
+DcAspm(
+	GUID sessionGuid,
+	UINT32 dcAspm
+	);
+
+DCEnergySaverPolicy(
+	GUID sessionGuid,
+	UINT32 DCEnergySaverPolicy
+	);
+
+PowerRequest(
+	GUID sessionGuid,
+	UINT32 requestType,
+	UNICODESTRING requestorName
+	);
+
+ScreenOnSessionSummary(
+	UINT64 startTime,
+	UINT64 durationInSec,
+	GUID screenOnSessionGuid,
+	UINT32 energyChangeInmWh,
+	UINT64 energyChangeRateInmW,
+	UINT32 chargeCapacityInmWh,
+	UINT32 fullChargeCapacityInmWh,
+	UINT8 onAc,
+	GUID actualOverlayPowerScheme,
+	UINT32 entryReason,
+	UINT32 exitReason
+	);
+
+ScreenOnEnergyEstimation(
+	UINT64 startTime,
+	UINT64 durationInSec,
+	GUID screenOnSessionGuid,
+	UINT8 onAc,
+	UINT32 energyRecordMeasuredBitmap,
+	UNICODESTRING appName,
+	UINT64 cpuPowerConsumption,
+	UINT64 diskPowerConsumption,
+	UINT64 displayPowerConsumption,
+	UINT64 mbbPowerConsumption,
+	UINT64 networkPowerConsumption,
+	UINT64 socPowerConsumption,
+	UINT64 lossPowerConsumption,
+	UINT64 otherPowerConsumption,
+	UINT64 totalPowerConsumption
+	);
+
+UsbDevice(
+	GUID sessionGuid,
+	UINT32 vendorId,
+	UINT32 productId,
+	UINT32 suspendTime,
+	UNICODESTRING deviceName,
+	UINT32 flags
+	);
+
+SleepStudyCpuC0AnalysisWithE3Data(
+	UINT8 rank,
+	UINT64 startTimeInMinHourDayYearFormat,
+	UINT64 durationInMin,
+	UNICODESTRING cpuActiveName,
+	DOUBLE cpuActiveTimePercent,
+	BOOLEAN isDeviceOnAcSource,
+	BOOLEAN isBatterySaverOn,
+	UNICODESTRING appName,
+	UINT64 cpuEnergyConsumptionInmJ,
+	UINT8 csSessionId
+	);
+
+SleepStudyManualRun(
+	VOID
+	);
+
+SleepStudyTopOffenders(
+	UINT8 csSessionId,
+	UINT32 startTime,
+	UINT32 duration,
+	UINT32 energyChange,
+	UINT32 energyChangeRate,
+	INT64 energyChangeV2,
+	UINT32 energyChangeV2Flags,
+	UINT32 dripsPercentage,
+	UINT32 onAc,
+	UINT32 designCapacity,
+	UINT32 audioPercentage,
+	UINT32 type,
+	UNICODESTRING name,
+	UINT32 activeTimePercentage,
+	UNICODESTRING parentName,
+	UINT32 parentActiveTimePercentage,
+	UINT32 hwDripsPercentage,
+	UINT32 level,
+	BOOLEAN isBlockerLeafNode,
+	UINT32 activatorId
+	);
+
+SleepStudySessionSummary(
+	UINT8 csSessionId,
+	UINT32 startTime,
+	UINT32 duration,
+	UINT32 energyChange,
+	UINT32 energyChangeRate,
+	INT64 energyChangeV2,
+	UINT32 energyChangeV2Flags,
+	UINT32 dripsPercentage,
+	UINT32 packedAsULong,
+	UINT32 hwDripsPercentage,
+	INT8 csEnterReason,
+	INT8 csExitReason,
+	UINT32 csExitLatencyInUs,
+	UINT32 startTimeUtc,
+	UINT32 VideoTimeoutInSec,
+	UINT32 LockConsoleTimeoutInSec,
+	UINT32 StandbyTimeoutInSec,
+	UINT8 SystemGpuAdapterCount,
+	UINT32 modernSleepEnabledActionsAsULong,
+	UINT32 modernSleepAppliedActionsAsULong,
+	UINT32 sessionSummaryErrorFlags,
+	UINT64 sessionSwDripsinHundersNs,
+	UINT64 sessionHwDripsinHundersNs,
+	UINT32 entryRemainingCapacity,
+	UINT32 exitRemainingCapacity,
+	UINT32 entryFullCapacity,
+	UINT32 exitFullCapacity,
+	UINT8 IsHibernateEnabled,
+	UINT32 HibernateTimeoutInSec,
+	UINT32 HibernateBudgetPercentage,
+	UINT32 DirectedDripsTransitionCount,
+	UINT8 IsLockConsoleTimeoutActive,
+	UINT8 IsDebuggerEnabled
+	);
+
+SleepStudyInvalidOffenders(
+	UINT8 csSessionId,
+	UINT32 startTime,
+	UINT32 duration,
+	UINT32 energyChange,
+	UINT32 energyChangeRate,
+	UINT32 dripsPercentage,
+	UINT32 onAc,
+	UINT32 designCapacity,
+	UINT32 type,
+	UNICODESTRING name,
+	UINT32 activeTimePercentage,
+	UNICODESTRING parentName,
+	UINT32 parentActiveTimePercentage,
+	UINT32 hwDripsPercentage,
+	UINT32 level,
+	UINT32 activatorId
+	);
+
+SleepStudyWrongBlockerData(
+	UINT32 startTime,
+	UINT32 duration,
+	UINT32 energyChange,
+	UINT32 energyChangeRate,
+	INT64 energyChangeV2,
+	UINT32 energyChangeV2Flags,
+	UINT32 dripsPercentage,
+	UINT32 onAc,
+	UINT32 designCapacity,
+	UINT8 sessionScenarioInstanceId,
+	UINT64 sessionDurationHundredNs,
+	UINT32 type,
+	UNICODESTRING name,
+	UINT32 blockerErrorFlags,
+	UINT8 blockerScenarioInstanceId,
+	UINT64 blockerActiveTimeHundredNs
+	);
+
+SystemInformation(
+	GUID sessionGuid,
+	UINT32 processCount,
+	UINT32 threadCount,
+	UINT32 commonFlags
+	);
+
+TimerStack(
+	GUID sessionGuid,
+	UINT32 requestedPeriod,
+	UNICODESTRING processName,
+	UNICODESTRING callerModule,
+	INT32 callerOffset,
+	UNICODESTRING calleeModule,
+	UINT32 calleeOffset
+	);
+
+TimerPeriod(
+	GUID sessionGuid,
+	UINT32 currentPeriod,
+	UINT32 maximumPeriod,
+	UINT32 minimumPeriod
+	);
+
+TimerRequest(
+	GUID sessionGuid,
+	UINT32 requestedPeriod,
+	UNICODESTRING processName
+	);
+
+TimerStack(
+	GUID sessionGuid,
+	UINT32 requestedPeriod,
+	UNICODESTRING processName,
+	UNICODESTRING callerModule,
+	UINT32 callerOffset,
+	UNICODESTRING calleeModule,
+	UINT32 calleeOffset
+	);
+
+Assert(
+	UINT32 assertVersion,
+	UINT32 rva,
+	UINT32 timestamp,
+	UINT32 imageSize,
+	ANSISTRING imageName,
+	UINT32 count,
+	UINT32 totalHits,
+	UINT32 ModuleCollection,
+	UINT32 GlobalCollection
+	);
+

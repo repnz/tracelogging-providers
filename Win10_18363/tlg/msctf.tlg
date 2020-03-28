@@ -1,0 +1,212 @@
+ProviderNames:
+	Microsoft.Windows.Wil.FeatureLogging
+	Microsoft.Windows.Desktop.TextInput.TextServiceFramework
+	Microsoft.Windows.Desktop.TextInput.ThreadInputManager
+	Microsoft.Windows.Desktop.TextInput.TabNavigation
+	Microsoft.Windows.Desktop.TextInput.MsCtfIme
+
+
+
+**** Events *****
+FeatureError(
+	UINT32 featureId,
+	INT32 featureVersion,
+	INT32 featureBaseVersion,
+	INT16 featureStage,
+	HRESULT hr,
+	ANSISTRING file,
+	UINT16 lineNumber,
+	ANSISTRING module,
+	ANSISTRING process,
+	ANSISTRING originFile,
+	UINT16 originLineNumber,
+	ANSISTRING originModule,
+	ANSISTRING originName,
+	ANSISTRING message,
+	ANSISTRING callerModule,
+	UINT32 callerReturnAddressOffset,
+	ANSISTRING originCallerModule,
+	UINT32 originCallerReturnAddressOffset
+	);
+
+FeatureVariantUsage(
+	UINT32 featureId,
+	INT32 featureVersion,
+	INT32 featureBaseVersion,
+	INT16 featureStage,
+	BOOLEAN enabled,
+	UINT32 variantKind,
+	UINT8 variant,
+	UINT64 addend
+	);
+
+EnabledFeatureUsage(
+	UINT32 featureId,
+	INT32 featureVersion,
+	INT32 featureBaseVersion,
+	INT16 featureStage,
+	BOOLEAN enabled,
+	UINT32 kind,
+	UINT64 addend
+	);
+
+FeatureUsage(
+	UINT32 featureId,
+	INT32 featureVersion,
+	INT32 featureBaseVersion,
+	INT16 featureStage,
+	BOOLEAN enabled,
+	UINT32 kind,
+	UINT64 addend
+	);
+
+FallbackError(
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+FallbackError(
+	UINT64 PartA_PrivTags,
+	SIGNED wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+HotKeyFailed(
+	UINT32 failureCondition,
+	GUID classID,
+	UINT16 languageID,
+	GUID profileID
+	);
+
+KbdSwitchHotkeyUsage(
+	UINT64 PartA_PrivTags,
+	UINT32 langId
+	);
+
+TabHotKeyReceived(
+	UNICODESTRING moduleFileName,
+	UNICODESTRING className,
+	UINT64 ctrlHotKey
+	);
+
+TipUsage(
+	UINT64 PartA_PrivTags,
+	UNICODESTRING tipFilename,
+	UINT32 fileVersionMS,
+	UINT32 fileVersionLS,
+	GUID tipClsId,
+	GUID tipProfileGuid,
+	UINT32 keystrokeCount,
+	UINT32 languageId,
+	BOOLEAN isDefault,
+	BOOLEAN isMostConverted
+	);
+
+ActiveKeyboardProfileSet(
+	UINT64 PartA_PrivTags,
+	UINT32 previousLanguageId,
+	UINT32 previousProfileType,
+	UINT32 previousProfileId,
+	UINT32 languageId,
+	UINT32 profileType,
+	UINT32 profileId
+	);
+
+CiceroServerRestartTimeout(
+	UINT64 PartA_PrivTags,
+	HRESULT hResult,
+	BOOL32 isShutdownReqested,
+	BOOL32 isFirstSuccessfullWait,
+	INT32 QPCInitializeHigh,
+	UINT32 QPCInitializeLow,
+	INT32 QPCSchedulerHigh,
+	UINT32 QPCSchedulerLow
+	);
+
+InputSessionFinalized(
+	UINT64 PartA_PrivTags,
+	UNICODESTRING applicationName,
+	UINT32 processId,
+	UINT32 totalTextKeystrokeCount,
+	UINT32 totalBackspaceCount,
+	UINT32 totalMoveCount,
+	UINT32 imeKeystrokeCount,
+	UINT32 imeBackspaceCount,
+	UINT32 imeMoveCount,
+	UINT32 imeEscapeCount,
+	UINT32 totalImeKeystrokeCount,
+	UINT32 totalCompositionFinalizedCount,
+	UINT32 totalCompositionCancelledCount,
+	UINT32 totalCompositionUnhandledCount,
+	INT32 totalFinalizedCharacterCount,
+	UINT32 shortcutAllCount,
+	UINT32 shortcutCopyCount,
+	UINT32 shortcutPasteCount,
+	UINT32 shortcutCutCount,
+	UINT32 shortcutUndoCount,
+	UINT32 shortcutWinPasteCount,
+	UINT32 shortcutWinPeriodCount,
+	UINT64 totalTimeMilliseconds,
+	GUID textServiceId,
+	GUID profileId,
+	UINT32 langId,
+	UNICODESTRING HKL,
+	BOOL32 openStatus,
+	HEXINT32 conversionMode,
+	HEXINT32 staticFlags,
+	HEXINT32 dynamicFlags,
+	BOOL32 isVerticalWriting,
+	UINT32 inputScope,
+	BOOL32 isPrivateField
+	);
+
+InputSessionStarted(
+	UINT64 PartA_PrivTags,
+	UNICODESTRING applicationName,
+	UINT32 processId,
+	GUID textServiceId,
+	GUID profileId,
+	UINT32 langId,
+	BOOL32 openStatus,
+	HEXINT32 conversionMode,
+	HEXINT32 staticFlags,
+	HEXINT32 dynamicFlags,
+	BOOL32 isVerticalWriting,
+	UINT32 inputScope,
+	BOOL32 isPrivateField
+	);
+
+ImeCompositionStarted(
+	UINT32 Level
+	);
+

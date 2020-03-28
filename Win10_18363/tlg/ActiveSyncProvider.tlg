@@ -1,0 +1,550 @@
+ProviderNames:
+	Microsoft.Windows.OneSync.DiagError
+	Microsoft.Windows.OneSync.DiagCritical
+	Microsoft.Windows.Unistack.FailureTrigger
+	Microsoft.Windows.OneSync.DiagWarning
+	Microsoft.Windows.OneSync.ActiveSyncEngine
+
+
+
+**** Events *****
+FallbackError(
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+Warning(
+	HRESULT hr,
+	ANSISTRING file,
+	UINT32 line
+	);
+
+Error(
+	HRESULT hr,
+	ANSISTRING file,
+	UINT32 line
+	);
+
+Assert(
+	HRESULT hr,
+	ANSISTRING file,
+	UINT32 line
+	);
+
+FallbackError(
+	UINT64 PartA_PrivTags,
+	SIGNED wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+FailureTrigger(
+	INT32 errorCode,
+	ANSISTRING expression,
+	ANSISTRING file,
+	INT32 line
+	);
+
+InvalidPropertyEvent(
+	UINT32 objectType,
+	HEXINT32 propertyId,
+	UINT32 validationResult,
+	UINT32 size
+	);
+
+InvalidAutdHeartbeatOutOfRangeResponse(
+	GUID partnerGUID,
+	INT32 minHeartbeat,
+	INT32 maxHeartbeat,
+	INT32 currentHeartbeat,
+	UINT32 serverHeartbeat
+	);
+
+SyncPingStopEvent(
+	GUID partnerGuid,
+	HRESULT hrSyncPingStop
+	);
+
+SyncPingResponseEvent(
+	GUID partnerGuid,
+	UINT32 progressFlags,
+	HRESULT hrSyncPingResponse
+	);
+
+SyncPingEvent(
+	GUID partnerGuid,
+	HEXINT32 storeID,
+	UINT32 heartbeat,
+	HRESULT hrSyncPing
+	);
+
+AttachmentDownloadSize(
+	GUID partnerGUID,
+	UNICODESTRING messageId,
+	INT64 expectedAttachmentSize,
+	INT64 commitedAttachmentSize,
+	UINT32 downloadCommitResult
+	);
+
+ActivityStoppedAutomatically(
+	VOID
+	);
+
+HTTPRetryErrorEvent(
+	INT32 hr
+	);
+
+SSLRequiredButNotEnabledErrorEvent(
+	INT32 hr
+	);
+
+GoogleServerErrorEvent(
+	INT32 hr
+	);
+
+NewServerNameNotResolvedErrorEvent(
+	INT32 hr
+	);
+
+HTTPNotFoundErrorFromProxyEvent(
+	INT32 hr
+	);
+
+UnknownWBXMLTokenErrorEvent(
+	INT32 hr
+	);
+
+ActivityError(
+	UINT64 PartA_PrivTags,
+	SIGNED wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+ActivityError(
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+SyncCancelEvent(
+	GUID partnerGUID
+	);
+
+AccountProperties(
+	GUID partnerGUID,
+	UNICODESTRING userDataAccountObjectId,
+	UNICODESTRING emailDomain,
+	UINT32 accountType,
+	UNICODESTRING serverName,
+	UINT32 syncSchedule,
+	UNICODESTRING protectedDomain,
+	UINT32 accountProtected,
+	UNICODESTRING protocolVersion,
+	HEXINT32 lastSyncResult,
+	FILETIME lastSyncSuccessTime,
+	FILETIME lastSyncAttemptTime,
+	INT64 sentMailCount,
+	INT64 receivedMailCount,
+	INT64 deletedMailCount,
+	INT64 updatedMailCount,
+	UINT32 throttleCount,
+	UINT32 interactiveSyncCount,
+	UINT32 delayedSyncCount,
+	HEXINT32 userDataAccountId,
+	FILETIME accountCreateTime
+	);
+
+FirstSyncTodayEvent(
+	UINT32 SMIMEAlwaysEncrypt,
+	UINT32 SMIMEAlwaysSign,
+	UINT32 RequireEncryptedSMIMEMessages,
+	UINT32 RequireSignedSMIMEMessages,
+	UINT32 AllowSMIMEEncryptionAlogorithmNegotiation,
+	UINT32 AllowSMIMESoftCerts,
+	UINT32 RequiredEncryptionSMIMEAlgorithm,
+	UINT32 RequiredSignedSMIMEAlgorithm,
+	GUID partnerGuid
+	);
+
+ActiveSyncEngineSyncEnd(
+	GUID partnerGUID,
+	HRESULT syncHResult,
+	INT64 syncSessionReceivedMailCount,
+	INT64 syncSessionDeletedMailCount,
+	INT64 syncSessionUpdatedMailCount,
+	INT64 syncSessionSentMailCount,
+	INT64 syncFolderCount,
+	INT64 folderErrorCount,
+	INT64 itemErrorCount
+	);
+
+ActiveSyncEngineActivity(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId,
+	UNICODESTRING phase,
+	GUID partnerGUID,
+	HRESULT syncHResult,
+	INT64 syncSessionReceivedMailCount,
+	INT64 syncSessionDeletedMailCount,
+	INT64 syncSessionUpdatedMailCount,
+	INT64 syncSessionSentMailCount,
+	INT64 syncFolderCount,
+	INT64 folderErrorCount,
+	INT64 itemErrorCount
+	);
+
+ActiveSyncEngineActivity(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UNICODESTRING phase,
+	GUID partnerGUID,
+	HRESULT syncHResult,
+	INT64 syncSessionReceivedMailCount,
+	INT64 syncSessionDeletedMailCount,
+	INT64 syncSessionUpdatedMailCount,
+	INT64 syncSessionSentMailCount,
+	INT64 syncFolderCount,
+	INT64 folderErrorCount,
+	INT64 itemErrorCount
+	);
+
+ActiveSyncEngineActivity(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId,
+	UNICODESTRING phase,
+	GUID partnerGUID,
+	BOOL32 userInteractive,
+	BOOL32 isInitialSync,
+	UNICODESTRING protocolVersion
+	);
+
+ActiveSyncEngineActivity(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+ActiveSyncEngineActivity(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+PurgeEvent(
+	GUID partnerGuid,
+	UINT32 reason
+	);
+
+HttpSettingsHandler_GetRfc1766InfoFailed(
+	ANSISTRING details,
+	HEXINT32 locale,
+	HRESULT hr
+	);
+
+ActiveSyncProvider_AirSync_EmptySyncLoopDetected(
+	HEXINT32 accountId
+	);
+
+SyncFolderError(
+	GUID partnerGuid,
+	UNICODESTRING folderID,
+	INT32 folderType,
+	FILETIME lastUpdatedTime,
+	INT32 syncFolderResult
+	);
+
+LogFolderSyncSkippedServerCommands(
+	GUID partnerGuid,
+	INT32 skippedCount,
+	INT32 changeCount
+	);
+
+MailServerActionEvent(
+	UNICODESTRING serverAction,
+	GUID partnerGuid,
+	HRESULT result,
+	UNICODESTRING type,
+	UINT32 count,
+	UINT64 duration_ms
+	);
+
+EASPolicyStatusEvent(
+	INT32 policyStatus
+	);
+
+ActivityIntermediateStop(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+EasPolicy_ApplyFailed(
+	UNICODESTRING policyName,
+	HRESULT hr
+	);
+
+EasPolicy_RemoveFailed(
+	HEXINT32 partnerId,
+	UNICODESTRING policyName,
+	HRESULT hr
+	);
+
+EASPolicyActivity(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId,
+	GUID partnerGUID
+	);
+
+EASPolicyActivity(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+EASPolicyActivity(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+OutgoingActiveSyncEngineActivity(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId,
+	UNICODESTRING phase,
+	GUID partnerGUID,
+	HRESULT syncHResult,
+	INT64 syncSessionSentMailCount
+	);
+
+OutgoingActiveSyncEngineActivity(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UNICODESTRING phase,
+	GUID partnerGUID,
+	HRESULT syncHResult,
+	INT64 syncSessionSentMailCount
+	);
+
+OutgoingActiveSyncEngineActivity(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId,
+	UNICODESTRING phase,
+	GUID partnerGUID,
+	BOOL32 userInteractive
+	);
+
+OutgoingActiveSyncEngineActivity(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+OutgoingActiveSyncEngineActivity(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+LogItemMove(
+	GUID partnerGuid,
+	INT32 moveCodeStatus,
+	ANSISTRING logData
+	);
+
+LogMeetingResponse(
+	GUID partnerGuid,
+	INT32 responseStatus,
+	ANSISTRING logData
+	);
+
+MoveFailedSentMailToDraft(
+	GUID partnerGuid,
+	INT32 retryCount,
+	INT64 messageSize,
+	INT64 messageSizeLimit,
+	BOOL32 IsMessageSizeLimitObtainedFromServer,
+	INT32 syncSentMailResult,
+	INT32 hrDraftNDR
+	);
+
+DpulRetryUnsendEmail(
+	VOID
+	);
+
+HandleSentMail(
+	GUID partnerGuid,
+	INT32 retryCount,
+	INT64 messageSize,
+	INT64 messageSizeLimit,
+	BOOL32 isMessageSizeLimitObtainedFromServer,
+	INT32 syncSentMailResult
+	);
+
+LogPerItemError(
+	GUID partnerGuid,
+	ANSISTRING itemType,
+	INT32 syncDirection,
+	INT32 syncCommandType,
+	INT32 syncItemResult
+	);
+
+ActiveSyncProvider_SmartSend_Item_Not_Found(
+	HEXINT32 partnerId
+	);
+
+DraftMailSyncEvent(
+	GUID partnerGuid,
+	UINT32 mailItemId,
+	UINT32 syncCommandType,
+	UINT32 syncDirection,
+	HRESULT syncDraftMailResult
+	);
+
+DraftMailSentEvent(
+	GUID partnerGuid,
+	UINT32 mailItemId,
+	UINT32 syncDirection,
+	HRESULT syncSentMailResult
+	);
+

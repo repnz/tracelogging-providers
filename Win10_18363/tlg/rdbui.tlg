@@ -1,0 +1,141 @@
+ProviderNames:
+	Microsoft-Windows-Sysmain-Prefetch
+
+
+
+**** Events *****
+PfResPriPrefetchStats(
+	HEXINT32 ErrorCode,
+	UINT64 Pri7PagesBefore,
+	UINT64 Pri7PagesAfter
+	);
+
+PfResPriPrefetchDbStats(
+	HEXINT32 ErrorCode,
+	HEXINT32 Flags,
+	UINT32 StaticDbFilePageCount,
+	UINT32 StaticDbMetafilePageCount,
+	UINT32 StaticDbFilePrivatePageCount,
+	UINT32 DynamicDbFilePageCount,
+	UINT32 DynamicDbMetafilePageCount,
+	UINT32 DynamicDbFilePrivatePageCount,
+	UINT32 CriticalAppsDbFilePageCount,
+	UINT32 CriticalAppsDbMetafilePageCount,
+	UINT32 CriticalAppsDbFilePrivatePageCount,
+	UINT32 RemainingBudgetInPages
+	);
+
+PfIuPredictionStats(
+	UINT32 State,
+	UINT32 HistoryTrueCount,
+	UINT32 MissingDataCount,
+	BOOL32 ActualState
+	);
+
+PfIuPredictionAggregatedStats(
+	UINT32 State,
+	UINT32 HistoryTrueCount,
+	UINT32 ObservedCount,
+	UINT32 ActualTrueCount,
+	UINT32 ActualFalseCount
+	);
+
+ALPFDirectoryCleanupInfo(
+	UINT32 FileCount,
+	UINT32 SizeKb,
+	UINT32 MinDeletedScenAge,
+	UINT32 PrefetchFilesReduction,
+	UINT32 Result
+	);
+
+ALPFProcessTrace(
+	UNICODESTRING Id,
+	UINT32 PrefetchedPages,
+	UINT32 HitPages,
+	UINT32 IgnoredPages,
+	UINT32 MissedPages,
+	UINT32 NewPages,
+	UINT32 ForegroundWeight,
+	UINT32 Sensitivity,
+	BOOL32 ModernApp,
+	UINT32 NumLaunches,
+	UINT32 Result
+	);
+
+ALPFDecompressScenario(
+	UINT32 CompressedSize,
+	UINT32 DecompressedSize,
+	UINT32 Result
+	);
+
+ALPFUpdateOptimalLayout(
+	FILETIME LastLayoutTime,
+	BOOL32 LayoutChanged,
+	UINT32 LayoutFileSize,
+	BOOL32 DefraggerLaunched,
+	UINT32 Result
+	);
+
+PfSdgProcessGroupAdd(
+	HEXINT64 GroupContext,
+	HEXINT64 ProcessContext,
+	PID Pid,
+	HEXINT32 ErrorCode
+	);
+
+PfApAppStart(
+	UNICODESTRING AUMID
+	);
+
+PfApPrelaunchableAppFailLimitHit(
+	UNICODESTRING AUMID,
+	UINT32 SecondsSinceLastSwitch
+	);
+
+PfApPrelaunchableAppStateChange(
+	HEXINT32 AppNameKey,
+	UNICODESTRING AUMID,
+	UINT32 OldState,
+	UINT32 NewState,
+	UINT32 Reason
+	);
+
+PfApPrelaunchableAppStateChange(
+	HEXINT32 AppNameKey,
+	UNICODESTRING AUMID,
+	UINT32 OldState,
+	UINT32 NewState,
+	UINT32 Reason
+	);
+
+PfRbBootStatistics(
+	UINT64 BytesMissedNotInPlan,
+	UINT64 BytesMissedPartiallyInPlan,
+	UINT64 BytesMissedTooLarge,
+	UINT64 BytesHit,
+	UINT64 BytesPrefetched,
+	UINT32 MissedNotInPlanCount,
+	UINT32 MissedPartiallyInPlanCount,
+	UINT32 MissedTooLargeCount,
+	UINT32 HitCount,
+	UINT32 PrefetchReadCount,
+	UINT32 HistoryCount,
+	UINT32 PlanAge,
+	UINT32 Flags,
+	UINT64 SyncPhaseIoBytes,
+	UINT32 SyncPhaseIoCount,
+	UINT32 SyncPhaseDurationUs,
+	UINT32 PostSyncPhasePendCount
+	);
+
+RdbCacheCreation(
+	UNICODESTRING ProductName,
+	UINT32 DeviceSizeMb,
+	UINT32 CacheSizeMb,
+	UINT32 ReadSpeedKBs,
+	UINT32 WriteSpeedKBs,
+	UINT32 BusType,
+	UINT32 FsType,
+	HEXINT32 Flags
+	);
+

@@ -1,0 +1,54 @@
+ProviderNames:
+	Microsoft.Windows.Sensors.WinRTLayer
+
+
+
+**** Events *****
+SensorAPITelemetryEventOverflow(
+	INT32 IsEventsOverflow
+	);
+
+SensorAPITelemetryEventThrottled(
+	INT32 IsEventsThrottled
+	);
+
+SensorAPITelemetry(
+	INT32 MethodName,
+	INT32 MethodLayer,
+	INT32 SensorClassName,
+	INT32 ErrCode,
+	INT32 InternalErrCode,
+	INT32 Version
+	);
+
+SensorAPITelemetry(
+	INT32 MethodLayer,
+	INT32 MethodName,
+	HEXINT64 Handle,
+	INT32 ErrCode,
+	INT32 InternalErrCode,
+	UNICODESTRING Interface,
+	GUID SensorGuid,
+	INT32 SensorClassName,
+	UINT32 Count,
+	UINT32 Version
+	);
+
+SensorsAPITracing(
+	ANSISTRING RuntimeClassName,
+	ANSISTRING MethodName,
+	ANSISTRING MethodLayer,
+	INT32 ErrorCode,
+	INT32 ReturnValue
+	);
+
+SensorsAPITracing(
+	ANSISTRING RuntimeClassName,
+	ANSISTRING MethodName,
+	ANSISTRING MethodLayer,
+	INT32 ErrorCode,
+	INT32 ReturnValue,
+	BOOLEAN IsAppForWp8dot0OrOlder,
+	BOOLEAN IsIdleOperationEnabled
+	);
+

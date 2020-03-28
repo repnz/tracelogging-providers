@@ -1,0 +1,3316 @@
+ProviderNames:
+	MBBSettingUX
+	MicrosoftWindowsShellNetworkUX
+	Microsoft.Windows.NetworkUx.SettingsHandler
+	Microsoft.Windows.Cell.SettingsHandler
+	TelemetryAssert
+	TelemetryAssertDiagTrack
+	Microsoft-Windows-Desktop-Shell-SystemSettingsV2-Handlers
+
+
+
+**** Events *****
+MBBSettingUX(
+	UNICODESTRING Error
+	);
+
+MBBSettingUX(
+	UNICODESTRING Info
+	);
+
+FallbackError(
+	UINT64 PartA_PrivTags,
+	SIGNED wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+FallbackError(
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+MBBSettingUX(
+	UNICODESTRING Verbose
+	);
+
+MBQuickAction::IsEnabled::get(
+	BOOLEAN quickActionIsEnabled
+	);
+
+MBQuickAction::IsEnabled::get(
+	UINT32 adapters->Size
+	);
+
+MBQuickAction::IsEnabled::get(
+	BOOLEAN airplaneModeOn
+	);
+
+MBQuickAction::Value::get(
+	BOOLEAN value
+	);
+
+MBQuickAction::SetProperty::Failed(
+	UNICODESTRING Property Name
+	);
+
+MBQuickAction::SetProperty(
+	UNICODESTRING Property Name
+	);
+
+MBQuickAction::GetProperty::Failed(
+	UNICODESTRING Property Name
+	);
+
+MBQuickAction::GetProperty::QuickActionIsActive(
+	BOOLEAN Value
+	);
+
+MBQuickAction::GetProperty::QuickActionNextValue(
+	BOOLEAN !Value
+	);
+
+MBQuickAction::GetProperty::Value(
+	BOOLEAN Value
+	);
+
+DataMartSimProperties::ReadDataMartRegistryValues(
+	BOOL32 IsDynamoEnabled,
+	BOOL32 IsRoamingUIEnabled,
+	BOOL32 IsDataMartSim,
+	INT32 MriType,
+	INT32 HRESULT
+	);
+
+DataMartSimProperties::ReadDataMartRegistryValues(
+	UINT32 MriTypeDWORD,
+	INT32 MriType,
+	INT32 HRESULT
+	);
+
+DataMartSimProperties::ReadDataMartRegistryValues(
+	UINT32 ShowRoamingUIDWORD,
+	INT32 HRESULT
+	);
+
+DataMartSimProperties::ReadDataMartRegistryValues(
+	UINT32 IsDataMartSimDWORD,
+	INT32 HRESULT
+	);
+
+DataMartSimProperties::ReadDataMartRegistryValues(
+	UINT32 PaidCellDWORD,
+	INT32 HRESULT
+	);
+
+DataMartSimProperties::ReadDataMartRegistryValues(
+	BOOLEAN IsDynamoEnabled,
+	INT32 HRESULT
+	);
+
+MobileBroadbandPreCfeDisconnected::SetProperty::Failed(
+	VOID
+	);
+
+DataMartHelper::GetProperty::GetProviderAppsList(
+	VOID
+	);
+
+DataMartHelper::GetProperty::GetFlyoutMessageBody(
+	VOID
+	);
+
+DataMartHelper::GetProperty::IsActive(
+	BOOLEAN fIsActive
+	);
+
+DataMartBalanceHandler::GetProperty(
+	UNICODESTRING Property Name
+	);
+
+DataMartHelper::DataMartSwitchState(
+	INT32 State
+	);
+
+Creating network providers app list(
+	UINT64 Size
+	);
+
+MobileBroadbandConnectionSetting::ExecuteGetBalance(
+	INT32 HRESULT
+	);
+
+DataMartHelper::ExecuteGetBalance(
+	INT32 HRESULT
+	);
+
+DataMartHelper::ExecuteGetBalance(
+	INT32 FailedHR
+	);
+
+DataMartHelper::ExecuteGetBalance(
+	INT32 StatusCode
+	);
+
+DataMartHelper::ExecuteGetBalance(
+	INT32 BalanceStatusCode
+	);
+
+DataMartHelper::ExecuteGetBalance(
+	INT32 BalanceHr
+	);
+
+DataMartHelper::InitializeDataMartProperties(
+	BOOLEAN IsDataMartSim,
+	BOOLEAN IsRoamingUIEnabled
+	);
+
+DatamartHelper::Refresh(
+	BOOL32 hasEidChanged,
+	BOOL32 isESimEmpty,
+	BOOL32 hasIccidChanged,
+	BOOL32 hasConnectivityChanged,
+	INT32 connectivity
+	);
+
+MobileBroadbandCellularSettingsHelper::~MobileBroadbandCellularSettingsHelper(
+	VOID
+	);
+
+MobileBroadbandCellularSettingsHelper::OnMultiSimInfoChanged(
+	GUID AdapterID,
+	UINT32 numberOfSlots
+	);
+
+MobileBroadbandCellularSettingsHelper::OnDataProfileDeleted(
+	GUID AdapterID,
+	UNICODESTRING profileName
+	);
+
+MobileBroadbandCellularSettingsHelper::OnDataProfileUpdated(
+	GUID AdapterID,
+	UNICODESTRING profileName
+	);
+
+MobileBroadbandCellularSettingsHelper::OnProvisioningStateChanged(
+	GUID AdapterID,
+	BOOLEAN provisioningState
+	);
+
+MobileBroadbandCellularSettingsHelper::OnInternetDataRoamingTypeChanged DEBUG(
+	GUID AdapterID,
+	UINT32 roamingType
+	);
+
+MobileBroadbandCellularSettingsHelper::OnRegistrationStateChanged(
+	GUID AdapterID
+	);
+
+MobileBroadbandCellularSettingsHelper::OnIMSIChanged(
+	GUID AdapterID
+	);
+
+MobileBroadbandCellularSettingsHelper::RuntimeClassInitialize(
+	VOID
+	);
+
+MobileBroadbandESimHelper::Not expected notification(
+	GUID expected AdapterID,
+	GUID actual AdapterID
+	);
+
+MobileBroadbandESimHelper::OnESimStateUpdated(
+	GUID AdapterID,
+	INT32 eSimState,
+	BOOLEAN m_EsimProperties.isUiDisabledByPolicy
+	);
+
+MobileBroadbandESimHelper::OnESimServiceStateChanged(
+	INT32 serviceState
+	);
+
+MobileBroadbandDataRoamingSetting::SetRoamingMode(
+	UINT32 dataRoamingMode
+	);
+
+MobileBroadbandDataRoamingSetting::SetProperty::Failed(
+	VOID
+	);
+
+RoamingModeChange(
+	BOOL32 isNextRoamingAllowed
+	);
+
+MobileBroadbandDataRoamingSetting::SetProperty: Unexpected roaming selection, roaming value not set(
+	VOID
+	);
+
+MobileBroadbandDataRoamingSetting::SetProperty(
+	UNICODESTRING Property Name
+	);
+
+MobileBroadbandDataRoamingSetting::GetProperty::Failed(
+	VOID
+	);
+
+MobileBroadbandDataRoamingSetting::GetProperty(
+	UNICODESTRING Property Name
+	);
+
+Roaming policy in effect: dataRoaming: %d, effectiveDataRoaming: %d(
+	UINT32 m_dataRoaming,
+	UINT32 m_effectiveDataRoaming
+	);
+
+MobileBroadbandConnectCompletion::GetProperty::Failed(
+	VOID
+	);
+
+RequireManualApnRequest(
+	VOID
+	);
+
+MobileBroadbandConnectCompletion::GetProperty::NetworkConnectionAPNIsRequiredError(
+	VOID
+	);
+
+MobileBroadbandConnectCompletion::GetProperty::NetworkConnectionContactOperator(
+	VOID
+	);
+
+ConnectCompleteResult(
+	INT32 connectionResult
+	);
+
+MobileBroadbandConnectCompletion::GetProperty::IsError(
+	INT32 Result.Value
+	);
+
+MobileBroadbandConnectCompletion::GetProperty(
+	UNICODESTRING Property Name
+	);
+
+MobileBroadbandConnectCompletion::Invoke(
+	VOID
+	);
+
+MobileBroadbandInProgress::GetProperty::Failed(
+	VOID
+	);
+
+MobileBroadbandInProgress::GetProperty::ConnectingWithoutProfile(
+	BOOLEAN IsConnecting
+	);
+
+MobileBroadbandInProgress::GetProperty::ConnectingWithProfile(
+	BOOLEAN IsConnecting
+	);
+
+MobileBroadbandInProgress::GetProperty::Registering(
+	BOOLEAN IsRegistering
+	);
+
+MobileBroadbandInProgress::GetProperty::IsUnlocking(
+	BOOLEAN IsUnlocking
+	);
+
+MobileBroadbandInProgress::GetProperty(
+	UNICODESTRING Property Name
+	);
+
+MobileBroadbandPin::GetProperty::failed(
+	VOID
+	);
+
+MobileBroadbandPin::GetProperty(
+	UNICODESTRING Property Name
+	);
+
+MobileBroadbandAccountExperience::GetProperty::Failed(
+	VOID
+	);
+
+MobileBroadbandAccountExperience::GetProperty(
+	UNICODESTRING Property Name
+	);
+
+MobileBroadbandConnectionSetting::OnRadioPowerStateChanged(
+	VOID
+	);
+
+MobileBroadbandConnectionSetting::OnDescriptionChanged. Failed to get Name(
+	INT32 HRESULT
+	);
+
+MobileBroadbandConnectionSetting::OnDescriptionChanged(
+	UNICODESTRING new categoryName
+	);
+
+MobileBroadbandConnectionSetting::OnSelectedSlotChanged. Failed to get SelectedSlot(
+	INT32 HRESULT
+	);
+
+MobileBroadbandConnectionSetting::UpdateMultiSimSelectedSlot Updated(
+	UINT32 selectedSlot
+	);
+
+MobileBroadbandConnectionSetting::UpdateMultiSimSelectedSlot The active slot or is higher than the number of slots.(
+	UINT32 number of slots
+	);
+
+MobileBroadbandConnectionSetting::OnSelectedSlotChanged(
+	UINT32 new selectedSlot,
+	UINT32 old selectedSlot
+	);
+
+MobileBroadbandConnectionSetting::OnMbAuxiliaryPreferenceEvent(
+	UINT32 preferenceType
+	);
+
+MobileBroadbandConnectionSetting::OnInternetDataRoamingTypeChanged. Failed to change RoamingPreference(
+	INT32 HRESULT
+	);
+
+MobileBroadbandConnectionSetting::OnInternetDataRoamingTypeChanged. _roamingSettingHandler is nullptr(
+	VOID
+	);
+
+MobileBroadbandConnectionSetting::OnInternetDataRoamingTypeChanged(
+	UINT32 roamingPreference
+	);
+
+MobileBroadbandConnectionSetting::OnAutoConnectChanged. Failed to change AutoconnectEnabled(
+	INT32 HRESULT
+	);
+
+MobileBroadbandConnectionSetting::OnAutoConnectChanged(
+	BOOLEAN isAutoconnectEnabled
+	);
+
+MobileBroadbandConnectionSetting::OnMbInterfaceEvent(
+	UINT32 changeType
+	);
+
+MobileBroadbandConnectionSetting::ChangeFlyoutEsimProfileVisibility, StringFromIID failed(
+	VOID
+	);
+
+MobileBroadbandConnectionSetting::IsInternetConnectivityAvailable(
+	BOOL32 connectivityAvailable
+	);
+
+MobileBroadbandConnectionSetting::ChangeFlyoutEsimProfileVisibility(
+	BOOL32 showProfileSection
+	);
+
+MobileBroadbandConnectionSetting::OnInternetProfileUpdated(
+	UNICODESTRING profileName
+	);
+
+MobileBroadbandConnectionSetting::OnInternetProfileRemoved(
+	UNICODESTRING profileName
+	);
+
+MobileBroadbandConnectionSetting::UpdateMultiSimNumberOfSlots(
+	UINT32 numberOfSlots
+	);
+
+MobileBroadbandConnectionSetting::UpdateRegistrationState(
+	UINT32 RegistrationState
+	);
+
+MobileBroadbandConnectionSetting::UpdateProvisioningState(
+	BOOL32 provisionionState
+	);
+
+MobileBroadbandConnectionSetting::UpdateESimProperties(
+	BOOL32 ESim properties available,
+	BOOL32 ESim profile enabled,
+	BOOL32 ESim UI disabled,
+	BOOL32 ESim service busy,
+	BOOL32 ESim provisioning profile available,
+	INT32 ESim profiles available
+	);
+
+MobileBroadbandConnectionSetting::Connectivity::get::Disconnected(
+	VOID
+	);
+
+MobileBroadbandConnectionSetting::Connectivity::get::Blocked(
+	VOID
+	);
+
+MobileBroadbandConnectionSetting::Connectivity::get::Connected(
+	VOID
+	);
+
+MobileBroadbandConnectionSetting::ShowNextPrompt::MBPin(
+	VOID
+	);
+
+MobileBroadbandConnectionSetting::ShowNextPrompt::MBInProgress(
+	VOID
+	);
+
+MobileBroadbandConnectionSetting::ShowNextPrompt::MBConnectionCompletion(
+	VOID
+	);
+
+MobileBroadbandConnectionSetting::OnAvailableNetworkEvent(
+	GUID networkGuid,
+	INT32 changeType
+	);
+
+MobileBroadbandConnectionSetting::OnAvailableNetworkEvent(
+	GUID networkGuid,
+	INT32 inputType,
+	INT32 stateChange
+	);
+
+MobileBroadbandConnectionSetting::DisplayedConnectivity::get(
+	UNICODESTRING Connectivity,
+	UINT32 SignalStrengthBar
+	);
+
+MobileBroadbandConnectionSetting::_GetConnectivityStatusString(
+	UINT32 _category->BlockedReason
+	);
+
+MobileBroadbandConnectionSetting::_GetConnectivityStatusString(
+	UINT32 _category->Connectivity
+	);
+
+MobileBroadbandConnectionSetting::Status::get(
+	UNICODESTRING connectivityString
+	);
+
+MobileBroadbandConnectionSetting::Refresh(
+	BOOLEAN _CFEInProgress
+	);
+
+CancelConnect(
+	VOID
+	);
+
+HitDisConnect(
+	VOID
+	);
+
+MobileBroadbandConnectionSetting::Invoke(
+	UNICODESTRING Connectivity
+	);
+
+Warning: Failed to switch the active slot to the newSelectedSlot(
+	UINT32 newSelectedSlot,
+	INT32 HRESULT
+	);
+
+MobileBroadbandConnectionSetting::SetProperty::DualSimSelectedSim(
+	UINT32 newSelectedSlot
+	);
+
+The selected Slot is the same that was already set. No change applied(
+	UINT32 _selectedSlot
+	);
+
+Warning: The selected Slot is not in the range of supported Slots.(
+	VOID
+	);
+
+MobileBroadbandConnectionSetting::SetProperty::_autoConnect(
+	BOOLEAN _autoConnect
+	);
+
+CheckAutoConnect(
+	BOOL32 _autoConnect
+	);
+
+MobileBroadbandConnectionSetting::SetProperty(
+	UNICODESTRING Property Name
+	);
+
+MobileBroadbandConnectionSetting::GetValue::SettingPathComponent(
+	UNICODESTRING settingPathComponentString
+	);
+
+MobileBroadbandConnectionSetting::GetValue(
+	UNICODESTRING name
+	);
+
+MobileBroadbandConnectionSetting::GetProperty::Failed(
+	VOID
+	);
+
+MobileBroadbandConnectionSetting::GetProperty::ShowWcosOobeAllowCellularData(
+	BOOLEAN IsWCOS,
+	BOOLEAN IsOobeInProgress
+	);
+
+MobileBroadbandConnectionSetting::GetProperty::IsOobeEsimDiscoveryHelpVisible(
+	BOOLEAN _isESimPropertiesAvailable,
+	INT32 _esimAvailableProfileCount,
+	BOOL32 _isESimProvisioningAvailable,
+	BOOL32 internetConnectivity
+	);
+
+MobileBroadbandConnectionSetting::GetProperty::IsOobeEsimDiscoveryVisible(
+	BOOLEAN _isESimPropertiesAvailable,
+	INT32 _esimAvailableProfileCount,
+	BOOL32 _isESimProvisioningAvailable,
+	BOOL32 internetConnectivity
+	);
+
+MobileBroadbandConnectionSetting::GetProperty::OobeEsimProfileList, getting Esim Profile List Handler(
+	VOID
+	);
+
+MobileBroadbandConnectionSetting::GetProperty::OobeEsimProfileList, creating Esim Setting Manager(
+	VOID
+	);
+
+MobileBroadbandConnectionSetting::GetProperty::IsOobeEsimProfileSwitchAvailable(
+	BOOL32 _isESimProfileEnabled,
+	INT32 _esimAvailableProfileCount
+	);
+
+MobileBroadbandConnectionSetting::GetProperty::ShouldShowOobeEsimProfileSection(
+	BOOL32 _isESimProfileEnabled,
+	BOOL32 _isEsimProfileSectionOpen
+	);
+
+No dropdown string for the Selected Sim(
+	UINT32 _selectedSlot
+	);
+
+MobileBroadbandConnectionSetting::GetProperty::DualSimIsEnabled(
+	BOOLEAN _uxConfigs.shouldDisableDssaSwitch,
+	BOOLEAN _isMultiSimChangeInProgress
+	);
+
+MobileBroadbandConnectionSetting::GetProperty::ShowDualSimDropdown(
+	BOOLEAN showDualSimDropdown
+	);
+
+MobileBroadbandConnectionSetting::GetProperty::IsESimWarningLinkVisible(
+	BOOLEAN isESimWarningLinkVisible
+	);
+
+MobileBroadbandConnectionSetting::GetProperty::ShowESimL3DeepLink(
+	BOOLEAN showESimL3DeepLink
+	);
+
+MobileBroadbandConnectionSetting::GetProperty::ShowESimWarningText(
+	BOOLEAN showESimWarningText
+	);
+
+MobileBroadbandConnectionSetting::GetProperty::ESimWarningText(
+	UNICODESTRING esimWarningText
+	);
+
+MobileBroadbandConnectionSetting::GetProperty::ShowDeepLink(
+	BOOLEAN showDeepLink
+	);
+
+MobileBroadbandConnectionSetting::GetProperty::ShowWarningText(
+	BOOL32 ShouldShowAsAutoConnect(),
+	UINT64 _internetProfileNames.size(),
+	UINT32 _category->Connectivity,
+	BOOL32 _provisioningInProgress,
+	BOOL32 _registeredOnRoaming,
+	UINT32 _roamingSettingHandler->GetRoamingMode(),
+	BOOL32 _isPurchaseProfileActive
+	);
+
+MobileBroadbandConnectionSetting::GetProperty::ShowConnectButton(
+	BOOLEAN showConnectButton
+	);
+
+MobileBroadbandConnectionSetting::GetProperty::ConnectButtonEnabled(
+	BOOLEAN _provisioningInProgress,
+	BOOLEAN _isESimServiceBusy,
+	BOOLEAN _isMultiSimChangeInProgress
+	);
+
+MobileBroadbandConnectionSetting::GetProperty::ShowRoamingControl(
+	BOOLEAN shouldShowRoamingControl
+	);
+
+MobileBroadbandConnectionSetting::GetProperty::AutoConnectControlEnabled(
+	BOOL32 ShouldShowAsAutoConnect(),
+	UINT32 _category->Connectivity,
+	BOOL32 _provisioningInProgress,
+	BOOL32 _isESimServiceBusy,
+	BOOL32 _uxConfigs.shouldDisableAutoconnect
+	);
+
+MobileBroadbandConnectionSetting::GetProperty::ShowAutoConnect(
+	BOOLEAN shouldShowAutoConnect
+	);
+
+MobileBroadbandConnectionSetting::GetProperty::IsAutoConnect(
+	BOOLEAN _autoConnect,
+	BOOLEAN shouldDisableAutoconnect
+	);
+
+MobileBroadbandConnectionSetting::GetProperty::IsESimPropertiesVisible(
+	BOOLEAN _isESimPropertiesAvailable
+	);
+
+MobileBroadbandConnectionSetting::GetProperty::IsESimPropertiesEnabled(
+	BOOLEAN isESimPropertiesEnabled
+	);
+
+MobileBroadbandConnectionSetting::GetProperty::Id(
+	GUID CategoryGuid
+	);
+
+Failed to generate the signal strength for narrator.(
+	VOID
+	);
+
+return signal strength for narrator.(
+	UNICODESTRING narrator string
+	);
+
+eSIM action required case. No narrator string for signal strength.(
+	VOID
+	);
+
+MobileBroadbandConnectionSetting::GetProperty::GetCFEState(
+	UNICODESTRING CFEState
+	);
+
+MobileBroadbandConnectionSetting::GetProperty::OverlaySymbolGlyph(
+	BOOLEAN Roaming,
+	BOOLEAN IsRoamingUIEnabled,
+	BOOLEAN Tethering,
+	BOOLEAN ShouldShowEsimUI
+	);
+
+MobileBroadbandConnectionSetting::GetProperty::OverlayGlyph(
+	UINT32 SignalStrengthBar
+	);
+
+MobileBroadbandConnectionSetting::GetProperty::GetConnectivity(
+	UNICODESTRING Connectivity
+	);
+
+MobileBroadbandConnectionSetting::GetProperty::GetConnectivity. Redirect(
+	VOID
+	);
+
+MobileBroadbandConnectionSetting::GetProperty::GetBrandingIconFile(
+	UNICODESTRING BrandingIconFile
+	);
+
+MobileBroadbandConnectionSetting::GetProperty::GetDisplayedConnectivity(
+	UNICODESTRING DisplayedConnectivity
+	);
+
+MobileBroadbandConnectionSetting::GetProperty::GetSignalStrength(
+	UINT32 SignalStrengthBar
+	);
+
+MobileBroadbandConnectionSetting::GetProperty::ShouldShowMbaeLink(
+	BOOLEAN fShouldShowMbaeLink
+	);
+
+MobileBroadbandConnectionSetting::GetProperty::IsOOBE(
+	BOOLEAN fIsOobeInProgress
+	);
+
+MobileBroadbandConnectionSetting::GetProperty::ShowDatamartEmptyESimExperience(
+	BOOLEAN fShowDatamartEmptyEsimExpereince
+	);
+
+MobileBroadbandConnectionSetting::GetProperty::ShouldShowPaidCell(
+	BOOLEAN fShouldShowDataMartUI
+	);
+
+MobileBroadbandConnectionSetting::GetProperty::IsMsSim(
+	BOOLEAN fIsDataMartSim
+	);
+
+MobileBroadbandConnectionSetting::GetProperty::GetStatus(
+	UNICODESTRING State
+	);
+
+MobileBroadbandConnectionSetting::GetProperty(
+	UNICODESTRING Property Name
+	);
+
+MobileBroadbandConnectionSetting::GetProperty::LaunchEsimL3Page(
+	INT32 ActivateApplication HResult
+	);
+
+MobileBroadbandConnectionSetting::GetProperty::LaunchEsimL3Page(
+	INT32 CoCreateInstance HResult
+	);
+
+MobileBroadbandConnectionSetting::_GetStateSetting::Binding(
+	UNICODESTRING Updated CFEState,
+	UNICODESTRING Binding name
+	);
+
+MobileBroadbandConnectionSetting::_UpdateCFEState::Binding(
+	UNICODESTRING Updated CFEState,
+	UNICODESTRING Binding name
+	);
+
+MobileBroadbandConnectionSetting::_UpdateCFEState(
+	UNICODESTRING Updating CFEState
+	);
+
+MobileBroadbandConnectionSetting::SetCFEInProgress(
+	BOOLEAN CFEInProgress,
+	BOOLEAN _CFEInProgress
+	);
+
+MobileBroadbandConnectionSetting::~MobileBroadbandConnectionSetting, Exception thrown when unregistering events(
+	INT32 HRESULT
+	);
+
+PaidCellViewBalanceClicked(
+	INT32 ResultCode,
+	UNICODESTRING Exception,
+	BOOLEAN IsEsim,
+	ANSISTRING __TlgCV__,
+	UNICODESTRING MarketId,
+	UINT32 SignalStrength,
+	UINT32 ConnectionType,
+	UNICODESTRING Language
+	);
+
+PaidCellAppListSize(
+	INT32 ResultCode,
+	UNICODESTRING Exception,
+	ANSISTRING __TlgCV__,
+	UNICODESTRING MarketId,
+	UNICODESTRING Language,
+	UINT32 SignalStrength,
+	UINT32 ConnectionType,
+	UINT32 InstalledAppsCount
+	);
+
+PaidCellGetTheAppClicked(
+	UNICODESTRING Exception,
+	ANSISTRING __TlgCV__,
+	UNICODESTRING MarketId,
+	UNICODESTRING Language,
+	UINT32 SignalStrength,
+	UINT32 ConnectionType,
+	UINT32 ConnectivityState
+	);
+
+PaidCellViewPlansClicked(
+	INT32 ResultCode,
+	UNICODESTRING Exception,
+	ANSISTRING __TlgCV__,
+	UNICODESTRING MarketId,
+	UNICODESTRING Language,
+	UINT32 SignalStrength,
+	UINT32 ConnectionType,
+	UNICODESTRING Pfn,
+	UINT32 ConnectivityState
+	);
+
+PaidCellGetBalanceParsingComplete(
+	INT32 ResultCode,
+	UNICODESTRING Exception,
+	ANSISTRING __TlgCV__,
+	UNICODESTRING MarketId,
+	UNICODESTRING Language,
+	UINT32 SignalStrength,
+	UINT32 ConnectionType,
+	UINT32 ProviderAppListLength,
+	INT32 BalanceStringPopulated,
+	UNICODESTRING BalanceState
+	);
+
+PaidCellGetBalanceComplete(
+	INT32 ResultCode,
+	INT32 HttpStatusCode,
+	UNICODESTRING Exception,
+	ANSISTRING __TlgCV__,
+	UNICODESTRING MarketId,
+	UINT32 SignalStrength,
+	UINT32 ConnectionType,
+	UINT32 Latency,
+	UNICODESTRING Endpoint,
+	UNICODESTRING Language
+	);
+
+PaidCellIsDataMartSim(
+	INT32 ResultCode,
+	UNICODESTRING Exception,
+	ANSISTRING __TlgCV__,
+	UNICODESTRING MarketId,
+	UNICODESTRING Language,
+	UINT32 SignalStrength,
+	UINT32 ConnectionType,
+	UNICODESTRING Endpoint
+	);
+
+PaidCellGetDeviceTicket(
+	INT32 ResultCode,
+	UNICODESTRING Exception,
+	ANSISTRING __TlgCV__,
+	UNICODESTRING MarketId,
+	UNICODESTRING Language,
+	UINT32 SignalStrength,
+	UINT32 ConnectionType,
+	UINT32 Latency
+	);
+
+CMBBEventSingleton::GetSettingManager::Enter::Performance Counter(
+	UINT32 start RefreshAdapterStatus
+	);
+
+CMBBEventSingleton::GetSettingManager::New setting manager is returned(
+	GUID AdapterID,
+	UINT32 End GetSettingManager
+	);
+
+CMBBEventSingleton::GetSettingManager::New setting manager is created(
+	GUID AdapterID
+	);
+
+CMBBEventSingleton::GetSettingManager::Setting manager exists and has been returned(
+	GUID AdapterID
+	);
+
+CMBBEventSingleton::GetSettingManager(
+	UINT32 start BindToAdapter
+	);
+
+CMBBEventSingleton::GetSettingManager(
+	UINT32 Enter GetSettingManager
+	);
+
+CMBBEventSingleton::GetSettingManager::Setting manager has been removed(
+	GUID AdapterID
+	);
+
+CMBBEventSingleton::_ListenerDeinit(
+	VOID
+	);
+
+CMBBEventSingleton::_ListenerInit::Create instance of CCellularExternalEventHelper succeeded(
+	VOID
+	);
+
+CMBBEventSingleton::_ListenerInit::Create instance of CCellularExternalEventHelper failed(
+	INT32 HRESULT
+	);
+
+CMBBEventSingleton::_ListenerInit::Create instance of CCellularExternalEventHelper(
+	VOID
+	);
+
+CMBBEventSingleton::_ListenerInit::Create instance of CCellularSettingsPublisher(
+	VOID
+	);
+
+CMBBEventSingleton::_ListenerInit::Create instance of CCellularSettingsPublisher succeeded.(
+	VOID
+	);
+
+CMBBEventSingleton::BindToAdapter(
+	GUID AdapterID
+	);
+
+MBBSettingUX(
+	UNICODESTRING Warning
+	);
+
+OnValueChanged(
+	UNICODESTRING ID,
+	UNICODESTRING Property
+	);
+
+get_IsApplicable(
+	UNICODESTRING ESimID,
+	UNICODESTRING SettingHandler ID,
+	UINT8 IsApplicable
+	);
+
+get_IsEnabled(
+	UNICODESTRING ESimID,
+	UNICODESTRING SettingHandler ID,
+	UINT8 IsEnabled
+	);
+
+Create the settinghandler of PLMN Editor(
+	GUID AdapterID
+	);
+
+Create the settinghandler of APN Editor(
+	GUID AdapterID,
+	UINT32 purpose
+	);
+
+CMBBDefaultAPNSelectionSettingHandler::SetValue(
+	UNICODESTRING Selection
+	);
+
+CMBBDefaultAPNSelectionSettingHandler::GetPossibleValues(
+	VOID
+	);
+
+CMBBDefaultAPNSelectionSettingHandler::GetValue(
+	UNICODESTRING hstrName
+	);
+
+CMBBDefaultAPNSelectionSettingHandler::GetValue(
+	VOID
+	);
+
+CMBBSprintHFASettingHandler::Invoke(
+	UINT32 parent HWND
+	);
+
+CMBBSprintHFASettingHandler::GetProperty(
+	UNICODESTRING Property Name
+	);
+
+CMBBShowEstimatedDataSettingHandler::pfnLaunchSessionByUri returned(
+	INT32 HR
+	);
+
+CMBBSetMeteredConnectionSettingHandler::_IsMeteredConnection GetCostMenuItem failed(
+	INT32 hResult,
+	GUID interfaceGuid,
+	UNICODESTRING profileName
+	);
+
+CMBBLaunchSTKUXSettingHandler::Invoke(
+	UINT32 parent HWND
+	);
+
+CMBBSetMeteredConnectionSettingHandler::_Initialize::Failure is returned from _IsMeteredConnection()(
+	INT32 HRESULT
+	);
+
+CMBBSetMeteredConnectionSettingHandler::_Initialize IsEnabled from IsDataPlanExist(
+	BOOLEAN IsEnabled
+	);
+
+CMBBSetMeteredConnectionSettingHandler::_IsMeteredConnection(
+	VOID
+	);
+
+CMBBSetMeteredConnectionSettingHandler::_SetMeteredConnection(
+	BOOLEAN New Value
+	);
+
+CMBBSetMeteredConnectionSettingHandler::_Initialize(
+	VOID
+	);
+
+CMBBSetMeteredConnectionSettingHandler::SetValue(
+	BOOLEAN New Value
+	);
+
+CMBBSetMeteredConnectionSettingHandler::_Initialize IsEnabled from IsMeteredPolicy(
+	BOOLEAN IsEnabled
+	);
+
+CMBBSetMeteredConnectionSettingHandler::_Initialize::_IsMeteredConnection succeeded(
+	VOID
+	);
+
+CMBBSetMeteredConnectionSettingHandler::GetValue(
+	BOOLEAN New Value
+	);
+
+CMBBShowEstimatedDataSettingHandler::pfnCreate returned(
+	INT32 HR
+	);
+
+CMBBShowEstimatedDataSettingHandler::_Initialize(
+	VOID
+	);
+
+CMBBShowEstimatedDataSettingHandler::SetValue(
+	BOOLEAN New value
+	);
+
+CMBBShowEstimatedDataSettingHandler::GetValue(
+	BOOLEAN _fIsShowEstimatedDataSet,
+	UINT8 IsEnabled
+	);
+
+CMBBShowEstimatedDataSettingHandler::_GetDataUsage(
+	VOID
+	);
+
+CMBBShowEstimatedDataSettingHandler::get_Description(
+	GUID AdapterID,
+	UNICODESTRING SettingHandler ID
+	);
+
+CMBBAdapterPropertiesSettingHandler::_GetSubscriberFields Failed to add UICCID.(
+	INT32 HRESULT
+	);
+
+CMBBAdapterPropertiesSettingHandler::_GetSubscriberFields Failed to add Subscriber ID.(
+	INT32 HRESULT
+	);
+
+CMBBAdapterPropertiesSettingHandler::_GetSubscriberFields Failed to add Phone Number.(
+	INT32 HRESULT
+	);
+
+CMBBMoveUpPLMNSettingHandler::Invoke(
+	UINT32 parent hwnd
+	);
+
+CMBBRemovePLMNSettingHandler::GetProperty(
+	UNICODESTRING Property Name
+	);
+
+CMBBMoveUpPLMNSettingHandler::GetProperty::Failed to find the plmn at offsite(
+	UINT32 OffSet
+	);
+
+CMBBMoveUpPLMNSettingHandler::GetProperty::New PLMN list is rejected by CsHelper(
+	VOID
+	);
+
+CMBBEditPLMNSettingHandler::get_IsUpdating(
+	BOOLEAN IsUpdating
+	);
+
+CMBBAddPLMNSettingHandler::GetProperty::New PLMN is invalid(
+	VOID
+	);
+
+CMBBRemovePLMNSettingHandler::SetProperty(
+	UNICODESTRING Property Name
+	);
+
+CMBBEditPLMNSettingHandler::Invoke(
+	UINT32 parent hwnd
+	);
+
+CMBBAddPLMNSettingHandler::GetProperty::Update existing PLMN(
+	VOID
+	);
+
+CMBBAddPLMNSettingHandler::GetProperty::PLMN list is updated(
+	VOID
+	);
+
+CMBBAddPLMNSettingHandler::GetProperty::Saved updated PLMN(
+	VOID
+	);
+
+CMBBAddPLMNSettingHandler::GetProperty::Updated PLMN list is rejected by CsHelper(
+	VOID
+	);
+
+CMBBRemovePLMNSettingHandler::GetProperty::Failed to find the plmn at offsite(
+	UINT32 OffSet
+	);
+
+CMBBRemovePLMNSettingHandler::GetProperty::New PLMN list is rejected by CsHelper(
+	VOID
+	);
+
+CMBBEditPLMNSettingHandler::GetProperty(
+	UNICODESTRING Property Name
+	);
+
+CMBBEditPLMNSettingHandler::SetProperty(
+	UNICODESTRING Property Name
+	);
+
+CMBBAddPLMNSettingHandler::Invoke(
+	UINT32 parent hwnd
+	);
+
+CMBBRemovePLMNSettingHandler::Invoke(
+	UINT32 parent hwnd
+	);
+
+CMBBAddPLMNSettingHandler::GetProperty::Saved New PLMN(
+	VOID
+	);
+
+CMBBAddPLMNSettingHandler::GetProperty::New PLMN is rejected by CsHelper(
+	VOID
+	);
+
+CMBBAddPLMNSettingHandler::get_IsUpdating(
+	BOOLEAN IsUpdating
+	);
+
+CMBBAddPLMNSettingHandler::GetProperty(
+	UNICODESTRING Property Name
+	);
+
+CMBBAddPLMNSettingHandler::GetProperty::Saving New PLMN(
+	VOID
+	);
+
+CMBBGenericPLMN::ValidMCC(
+	VOID
+	);
+
+CMBBGenericPLMN::_GetGenericProperty(
+	UNICODESTRING Property Name
+	);
+
+CMBBAddPLMNSettingHandler::SetProperty(
+	UNICODESTRING Property Name
+	);
+
+CMBBGenericPLMN::ValidMNC(
+	VOID
+	);
+
+CMBBPLMNEntitySettingHandler::_Initialize::Create new PLMN(
+	VOID
+	);
+
+CMBBPLMNEntitySettingHandler::_Initialize::Use existing PLMN(
+	VOID
+	);
+
+CMBBGenericPLMN::_SetGenericProperty(
+	UNICODESTRING Property Name
+	);
+
+CMBBGenericPLMN::_Initialize(
+	UINT32 action,
+	UNICODESTRING MCC,
+	UNICODESTRING MNC,
+	UINT32 Data Class
+	);
+
+CMBBPLMNEntitySettingHandler::GetProperty(
+	UNICODESTRING Property Name
+	);
+
+CMBBPLMNEntitySettingHandler::Invoke(
+	UINT32 parent hwnd
+	);
+
+CMBBPLMNEntitySettingHandler::GetProperty::Failed to find property(
+	UNICODESTRING Property Name
+	);
+
+CMBBAPNEntitySettingDataBase::GetSetting(
+	UNICODESTRING Property Name
+	);
+
+CMBBPLMNCollectionSettingHandler::GetProperty(
+	UNICODESTRING Property Name
+	);
+
+CMBBPLMNEntitySettingHandler::get_Description(
+	GUID AdapterID,
+	UNICODESTRING SettingHandler ID,
+	UNICODESTRING Operator NumericName,
+	UINT32 DataClass
+	);
+
+CMBBCreatePLMNSettingHandler::GetProperty(
+	UNICODESTRING Property Name
+	);
+
+CMBBCreatePLMNSettingHandler::get_Description(
+	GUID AdapterID,
+	UNICODESTRING SettingHandler ID
+	);
+
+CMBBPLMNCollectionSettingHandler::GetSettingsCollection(
+	VOID
+	);
+
+CMBBCreatePLMNSettingDataBase::GetSetting(
+	UNICODESTRING Property Name
+	);
+
+CMBBNetworkTypeSelectionSettingHandler::SetValue(
+	UNICODESTRING Roaming Mode
+	);
+
+CMBBNetworkTypeSelectionSettingHandler::GetValue::Domestic Roaming is not allowed in networktype selection(
+	VOID
+	);
+
+CMBBNetworkTypeSelectionSettingHandler::SetValue::Unsupport type(
+	VOID
+	);
+
+CMBBModeSelectionLabelSettingHandler::get_Description(
+	GUID AdapterID
+	);
+
+CMBBNetworkTypeSelectionSettingHandler::SetValue::Not ready(
+	VOID
+	);
+
+CMBBNetworkTypeSelectionSettingHandler::GetValue(
+	UINT32 Roaming Mode
+	);
+
+CMBBNetworkTypeSelectionSettingHandler::GetPossibleValues(
+	VOID
+	);
+
+CMBBModeSelectionSettingHandler::GetValue::Failed to read current mode.(
+	VOID
+	);
+
+CMBBModeSelectionSettingHandler::GetValue(
+	UNICODESTRING Current radio mode
+	);
+
+CMBBModeSelectionSettingHandler::SetValue(
+	UNICODESTRING Roaming Mode
+	);
+
+CMBBIMSRoamingSettingHandler::Invoke(
+	UINT32 parent handle
+	);
+
+CMBBIMSRoamingSettingHandler::get_IsUpdating(
+	VOID
+	);
+
+CMBBModeSelectionSettingHandler::GetPossibleValues(
+	VOID
+	);
+
+CMBBIMSSettingTitleSettingHandler::GetProperty(
+	UNICODESTRING Property Name
+	);
+
+get_Description(
+	GUID AdapterID,
+	UNICODESTRING SettingHandler ID
+	);
+
+CMBBIMSRoamingSettingHandler::SetProperty(
+	UNICODESTRING Property Name
+	);
+
+CMBBIMSRoamingSettingHandler::GetProperty(
+	UNICODESTRING Property Name
+	);
+
+CMBBIMSVoLTEToggleSettingHandler::GetProperty(
+	UNICODESTRING Property Name
+	);
+
+CMBBIMSVoLTEToggleSettingHandler::SetProperty(
+	UNICODESTRING Property Name
+	);
+
+CMBBAvoidCurrentCDMANetworkSettingHandler::GetProperty(
+	UNICODESTRING Property Name
+	);
+
+CMBBAvoidCurrentCDMANetworkSettingHandler::Invoke(
+	UINT32 parent HWND
+	);
+
+CMBBIMSRegistrationSettingHandler::GetProperty(
+	UNICODESTRING Property Name
+	);
+
+CMBBDisablePersoLockSettingHandler::Invoke::Enter(
+	UINT8 Updating,
+	UINT8 EnterFinalState
+	);
+
+CMBBDisablePersoLockSettingHandler::get_IsUpdating(
+	UINT8 Updating,
+	UINT8 EnterFinalState
+	);
+
+CMBBDisablePersoLockSettingHandler::Invoke::Exit(
+	UINT8 Updating,
+	UINT8 EnterFinalState
+	);
+
+CMBBDisablePersoLockSettingHandler::Invoke::VerifySimPin::Failed(
+	VOID
+	);
+
+CMBBDisablePersoLockSettingHandler::_ProcessPinOperationResult::PinIsBlocked(
+	VOID
+	);
+
+CMBBDisablePersoLockSettingHandler::_ProcessPinOperationResult::PinIsDisabled(
+	VOID
+	);
+
+CMBBDisablePersoLockSettingHandler::_ProcessPinOperationResult::ShallNotHappen(
+	UINT32 AttemptsRemaining,
+	UINT8 Pin Enabled,
+	UINT32 Pin State,
+	UINT32 Pin Type
+	);
+
+CMBBDisablePersoLockSettingHandler::_ProcessPinOperationResult::UpdateAttemptsRemaining(
+	UINT32 Previous AttemptsRemaining
+	);
+
+CMBBDisablePersoLockSettingHandler::_ProcessPinOperationResult::PinIsVerified(
+	VOID
+	);
+
+CMBBDisablePersoLockSettingHandler::_ProcessPinOperationResult(
+	UINT8 Updating,
+	UINT8 EnterFinalState
+	);
+
+CMBBUnblockSIMPIN1SettingHandler::Invoke::Exit(
+	UINT8 Updating,
+	UINT8 EnterFinalState
+	);
+
+CMBBUnblockSIMPIN1SettingHandler::Invoke::UnblockSimPin::Failed(
+	VOID
+	);
+
+CMBBDisablePersoLockSettingHandler::GetProperty(
+	UNICODESTRING Property Name
+	);
+
+CMBBDisablePersoLockSettingHandler::SetProperty(
+	UNICODESTRING Property Name
+	);
+
+CMBBUnblockSIMPIN1SettingHandler::_ProcessPinOperationResult::ShallNotHappen(
+	UINT32 AttemptsRemaining,
+	UINT8 Pin Enabled,
+	UINT32 Pin State,
+	UINT32 Pin Type
+	);
+
+CMBBUnblockSIMPIN1SettingHandler::_ProcessPinOperationResult::UpdateAttemptsRemaining(
+	UINT32 Previous AttemptsRemaining
+	);
+
+CMBBUnblockSIMPIN1SettingHandler::Invoke::Enter(
+	UINT8 Updating,
+	UINT8 EnterFinalState
+	);
+
+CMBBUnblockSIMPIN1SettingHandler::get_IsUpdating(
+	UINT8 Updating,
+	UINT8 EnterFinalState
+	);
+
+CMBBUnblockSIMPIN1SettingHandler::_ProcessPinOperationResult(
+	UINT8 Updating,
+	UINT8 EnterFinalState
+	);
+
+CMBBUnblockSIMPIN1SettingHandler::GetProperty(
+	UNICODESTRING Property Name
+	);
+
+CMBBUnblockSIMPIN1SettingHandler::_ProcessPinOperationResult::PinIsUnblocked(
+	VOID
+	);
+
+CMBBUnblockSIMPIN1SettingHandler::_ProcessPinOperationResult::Unblock PIN is succeeded(
+	VOID
+	);
+
+CMBBChangeSIMPIN1SettingHandler::Invoke::ChangeSimPin::Failed(
+	VOID
+	);
+
+CMBBUnblockSIMPIN1SettingHandler::SetProperty(
+	UNICODESTRING Property Name
+	);
+
+CMBBChangeSIMPIN1SettingHandler::Invoke::Exit(
+	UINT8 Updating,
+	UINT8 EnterFinalState
+	);
+
+CMBBChangeSIMPIN1SettingHandler::get_IsUpdating(
+	UINT8 Updating,
+	UINT8 EnterFinalState
+	);
+
+CMBBChangeSIMPIN1SettingHandler::_ProcessPinOperationResult::ShallNotHappen(
+	UINT32 AttemptsRemaining,
+	UINT8 Pin Enabled,
+	UINT32 Pin State,
+	UINT32 Pin Type
+	);
+
+CMBBChangeSIMPIN1SettingHandler::Invoke::Enter(
+	UINT8 Updating,
+	UINT8 EnterFinalState
+	);
+
+CMBBChangeSIMPIN1SettingHandler::_ProcessPinOperationResult::PinIsChanged(
+	VOID
+	);
+
+CMBBChangeSIMPIN1SettingHandler::_ProcessPinOperationResult(
+	UINT8 Updating,
+	UINT8 EnterFinalState
+	);
+
+CMBBChangeSIMPIN1SettingHandler::_ProcessPinOperationResult::UpdateAttemptsRemaining(
+	UINT32 Previous AttemptsRemaining
+	);
+
+CMBBChangeSIMPIN1SettingHandler::_ProcessPinOperationResult::PinIsBlocked(
+	VOID
+	);
+
+CMBBDisableSIMPIN1SettingHandler::Invoke::Exit(
+	UINT8 Updating,
+	UINT8 EnterFinalState
+	);
+
+CMBBDisableSIMPIN1SettingHandler::Invoke::DisableSimPin::Failed(
+	VOID
+	);
+
+CMBBChangeSIMPIN1SettingHandler::GetProperty(
+	UNICODESTRING Property Name
+	);
+
+CMBBChangeSIMPIN1SettingHandler::SetProperty(
+	UNICODESTRING Property Name
+	);
+
+CMBBDisableSIMPIN1SettingHandler::get_IsUpdating(
+	UINT8 Updating,
+	UINT8 EnterFinalState
+	);
+
+CMBBDisableSIMPIN1SettingHandler::_ProcessPinOperationResult::ShallNotHappen(
+	UINT32 AttemptsRemaining,
+	UINT8 Pin Enabled,
+	UINT32 Pin State,
+	UINT32 Pin Type
+	);
+
+CMBBDisableSIMPIN1SettingHandler::Invoke::EnableSIMPIN1(
+	UINT32 SIMPIN1Type,
+	UNICODESTRING Current PIN1
+	);
+
+CMBBDisableSIMPIN1SettingHandler::Invoke::Enter(
+	UINT8 Updating,
+	UINT8 EnterFinalState
+	);
+
+CMBBDisableSIMPIN1SettingHandler::_ProcessPinOperationResult::PinIsBlocked(
+	VOID
+	);
+
+CMBBDisableSIMPIN1SettingHandler::_ProcessPinOperationResult(
+	UINT32 PinState,
+	UINT8 PinEnabled
+	);
+
+CMBBDisableSIMPIN1SettingHandler::_ProcessPinOperationResult::UpdateAttemptsRemaining(
+	UINT32 Previous AttemptsRemaining
+	);
+
+CMBBDisableSIMPIN1SettingHandler::GetProperty(
+	UNICODESTRING Property Name
+	);
+
+CMBBDisableSIMPIN1SettingHandler::SetProperty(
+	UNICODESTRING Property Name
+	);
+
+CMBBDisableSIMPIN1SettingHandler::_ProcessPinOperationResult(
+	UINT8 IsValid,
+	UINT32 PinOperation
+	);
+
+CMBBDisableSIMPIN1SettingHandler::_ProcessPinOperationResult(
+	UINT8 Updating,
+	UINT8 EnterFinalState
+	);
+
+CMBBEnableSIMPIN1SettingHandler::Invoke::EnableSIMPIN1(
+	UINT32 SIMPIN1Type,
+	UNICODESTRING Current PIN1
+	);
+
+CMBBEnableSIMPIN1SettingHandler::Invoke::Exit(
+	UINT8 Updating,
+	UINT8 EnterFinalState
+	);
+
+CMBBEnableSIMPIN1SettingHandler::Invoke::EnableSimPin::Failed(
+	VOID
+	);
+
+CMBBEnableSIMPIN1SettingHandler::get_IsUpdating(
+	UINT8 Updating,
+	UINT8 EnterFinalState
+	);
+
+CMBBEnableSIMPIN1SettingHandler::_ProcessPinOperationResult::ShallNotHappen(
+	UINT32 AttemptsRemaining,
+	UINT8 Pin Enabled,
+	UINT32 Pin State,
+	UINT32 Pin Type
+	);
+
+CMBBEnableSIMPIN1SettingHandler::Invoke::Enter(
+	UINT8 Updating,
+	UINT8 EnterFinalState
+	);
+
+CMBBEnableSIMPIN1SettingHandler::_ProcessPinOperationResult::OperationFailed(
+	INT32 HResult
+	);
+
+CMBBEnableSIMPIN1SettingHandler::_ProcessPinOperationResult::PinIsBlocked(
+	VOID
+	);
+
+CMBBEnableSIMPIN1SettingHandler::_ProcessPinOperationResult::PinIsEnabled(
+	VOID
+	);
+
+CMBBEnableSIMPIN1SettingHandler::_ProcessPinOperationResult::UpdateAttemptsRemaining(
+	UINT32 AttemptsRemaining
+	);
+
+CMBBEnableSIMPIN1SettingHandler::_ProcessPinOperationResult(
+	UINT8 Updating,
+	UINT8 EnterFinalState
+	);
+
+CMBBMMSAPNCollectionSettingHandler::GetProperty(
+	UNICODESTRING Property Name
+	);
+
+CMBBMMSAPNCollectionSettingHandler::GetSettingsCollection(
+	VOID
+	);
+
+CMBBEnableSIMPIN1SettingHandler::GetProperty(
+	UNICODESTRING Property Name
+	);
+
+CMBBEnableSIMPIN1SettingHandler::SetProperty(
+	UNICODESTRING Property Name
+	);
+
+CMBBLTEAttachAPNCollectionSettingHandler::GetSettingsCollection(
+	VOID
+	);
+
+CMBBInternetAPNCollectionSettingHandler::GetProperty(
+	UNICODESTRING Property Name
+	);
+
+CMBBLTEAttachAPNCollectionSettingHandler::GetProperty(
+	UNICODESTRING Property Name
+	);
+
+CMBBAPNEntitySettingHandler::Invoke(
+	UINT32 parent hwnd
+	);
+
+CMBBAPNEntitySettingHandler::GetProperty(
+	UNICODESTRING Property Name
+	);
+
+CMBBInternetAPNCollectionSettingHandler::GetSettingsCollection(
+	VOID
+	);
+
+CMBBAPNEntitySettingHandler::get_Description(
+	GUID AdapterID,
+	UNICODESTRING SettingHandler ID
+	);
+
+CMBBApplyAPNSettingHandler::Invoke::Disable current enabled manual profiles(
+	UINT32 parent hwnd,
+	UNICODESTRING ProfileName for Exception
+	);
+
+CMBBApplyAPNSettingHandler::Invoke::Disable current enabled manual MMS profiles(
+	UINT32 parent hwnd,
+	UNICODESTRING ProfileName for Exception
+	);
+
+CMBBApplyAPNSettingHandler::Invoke::Enable admin profile(
+	VOID
+	);
+
+CMBBApplyAPNSettingHandler::Invoke::Enable user selected manual profile(
+	VOID
+	);
+
+CMBBEditAPNSettingHandler::_UpdateWwanProfile::Enable user selected manual profile(
+	VOID
+	);
+
+CMBBEditAPNSettingHandler::_UpdateWwanProfile::Disable current enabled manual profiles(
+	UNICODESTRING ProfileName for Exception
+	);
+
+CMBBApplyAPNSettingHandler::GetProperty(
+	UNICODESTRING Property Name
+	);
+
+CMBBApplyAPNSettingHandler::SetProperty(
+	UNICODESTRING Property Name
+	);
+
+CMBBEditAPNSettingHandler::Invoke(
+	UINT32 parent hwnd
+	);
+
+CMBBEditAPNSettingHandler::get_IsUpdating(
+	BOOLEAN IsUpdating
+	);
+
+CMBBEditAPNSettingHandler::_UpdateWwanProfile::Disable current enabled manual MMS profiles(
+	UNICODESTRING ProfileName for Exception
+	);
+
+CMBBEditAPNSettingHandler::_UpdateWwanProfile(
+	GUID AdapterID,
+	UNICODESTRING profileName,
+	UINT32 activationState,
+	UNICODESTRING description,
+	UNICODESTRING iconFilePath,
+	UNICODESTRING simIccID,
+	UNICODESTRING apn,
+	UNICODESTRING userName,
+	UNICODESTRING password,
+	UINT32 authProtocol,
+	UINT32 roamingType,
+	UINT32 ipType,
+	UINT32 internetProfileType,
+	UINT32 provisionSource,
+	UINT8 enabled,
+	UINT32 profilePurpose,
+	UNICODESTRING proxyURL,
+	UINT32 proxyPort
+	);
+
+CMBBEditAPNSettingHandler::GetProperty(
+	UNICODESTRING Property Name
+	);
+
+CMBBEditAPNSettingHandler::SetProperty(
+	UNICODESTRING Property Name
+	);
+
+CMBBAddAPNSettingHandler::GetProperty::UpdateResult::Failed(
+	INT32 HRESULT
+	);
+
+CMBBAddAPNSettingHandler::GetProperty::UpdateResult::Succeeded(
+	VOID
+	);
+
+CMBBRemoveAPNSettingHandler::GetProperty(
+	UNICODESTRING Property Name
+	);
+
+CMBBRemoveAPNSettingHandler::SetProperty(
+	UNICODESTRING Property Name
+	);
+
+CMBBRemoveAPNSettingHandler::Invoke(
+	UINT32 parent hwnd
+	);
+
+CMBBAddAPNSettingHandler::_AddWwanProfile::Disable current enabled manual MMS profiles(
+	UNICODESTRING ProfileName for Exception
+	);
+
+CMBBAddAPNSettingHandler::_AddWwanProfile::Enable user selected manual profile(
+	VOID
+	);
+
+CMBBAddAPNSettingHandler::_AddWwanProfile::Disable current enabled manual profiles(
+	UNICODESTRING ProfileName for Exception
+	);
+
+CMBBAddAPNSettingHandler::get_IsUpdating(
+	BOOLEAN IsUpdating
+	);
+
+CMBBAddAPNSettingHandler::_AddWwanProfile(
+	GUID AdapterID,
+	UNICODESTRING profileName
+	);
+
+CMBBAddAPNSettingHandler::Invoke(
+	UINT32 parent hwnd
+	);
+
+CMBBAddAPNSettingHandler::SetProperty(
+	UNICODESTRING Property Name
+	);
+
+CMBBCreateInternetAPNSettingDataBase::GetSetting(
+	UNICODESTRING Property Name
+	);
+
+CMBBAddAPNSettingHandler::GetProperty(
+	UNICODESTRING Property Name
+	);
+
+CMBBCreateInternetAPNSettingHandler::get_Description(
+	GUID AdapterID,
+	UNICODESTRING SettingHandler ID
+	);
+
+CMBBCreateMMSAPNSettingHandler::get_Description(
+	GUID AdapterID,
+	UNICODESTRING SettingHandler ID
+	);
+
+CMBBCreateMMSAPNSettingHandler::GetProperty(
+	UNICODESTRING Property Name
+	);
+
+CMBBLTEAttachAPNSettingHandler::get_Description(
+	GUID AdapterID
+	);
+
+CMBBGenericAPN::_GetGenericProperty(
+	UNICODESTRING Property Name
+	);
+
+CMBBCreateInternetAPNSettingHandler::GetProperty(
+	UNICODESTRING Property Name
+	);
+
+CMBBActiveNetworkSettingHandler::GetNamedValue::Regstate is not ready(
+	VOID
+	);
+
+CMBBActiveNetworkSettingHandler::GetNamedValue::register to roaming network without provider name(
+	VOID
+	);
+
+CMBBGenericAPN::_SetGenericProperty(
+	UNICODESTRING Property Name
+	);
+
+CMBBGenericAPN::_Initialize(
+	UINT32 action,
+	UINT32 purpose
+	);
+
+CMBBActiveNetworkSettingHandler::GetNamedValue::Searching network(
+	VOID
+	);
+
+CMBBActiveNetworkSettingHandler::GetNamedValue::Unsuccessful register(
+	UINT32 Reject Cause
+	);
+
+CMBBActiveNetworkSettingHandler::GetNamedValue::register to home network without provider name(
+	VOID
+	);
+
+CMBBActiveNetworkSettingHandler::GetNamedValue::reject cause #2(
+	VOID
+	);
+
+CMBBActiveNetworkSettingHandler::GetNamedValue::Radio is OFF(
+	VOID
+	);
+
+CMBBActiveNetworkSettingHandler::GetNamedValue::reject cause #6(
+	VOID
+	);
+
+CMBBActiveNetworkSettingHandler::GetNamedValue::reject cause #3(
+	VOID
+	);
+
+CMBBHighestDataSpeedSelectionSettingHandler::SetValue::Reset acquisitionOrder(
+	UINT8 f3GPreferred
+	);
+
+CMBBHighestDataSpeedSelectionSettingHandler::SetValue(
+	UNICODESTRING New DataSpeed
+	);
+
+CMBBActiveNetworkSettingHandler::GetNamedValue::ATT Cause #2(
+	UNICODESTRING Name
+	);
+
+CMBBHighestDataSpeedSelectionSettingHandler::GetValue::2G(
+	VOID
+	);
+
+CMBBHighestDataSpeedSelectionSettingHandler::GetValue::3GOnly(
+	VOID
+	);
+
+CMBBHighestDataSpeedSelectionSettingHandler::GetPossibleValues(
+	VOID
+	);
+
+CMBBHighestDataSpeedSelectionSettingHandler::GetValue::Failed to match one(
+	VOID
+	);
+
+CMBBHighestDataSpeedSelectionSettingHandler::GetValue::4G(
+	VOID
+	);
+
+CMBBHighestDataSpeedSelectionSettingHandler::GetValue::3GPreferred(
+	VOID
+	);
+
+CMBBHighestDataSpeedSelectionSettingHandler::GetValue::3G(
+	VOID
+	);
+
+CMBBHighestDataSpeedSelectionSettingHandler::GetValue::4G3GOnly(
+	VOID
+	);
+
+CMBBHighestDataSpeedSelectionSettingHandler::GetValue::4GOnly(
+	VOID
+	);
+
+CMBBHighestDataSpeedSelectionSettingHandler::GetValue::State(
+	UINT32 Allowed RAT,
+	UINT8 4G Support,
+	UINT8 3G Support,
+	UINT8 2G Support,
+	UINT8 3G Preferred
+	);
+
+CMBBHighestDataSpeedSelectionSettingHandler::GetValue(
+	VOID
+	);
+
+CMBBNetworkSelectionSettingHandler::_GetOperatorDisplayName(
+	UNICODESTRING Operator ID
+	);
+
+CMBBNetworkSelectionSettingHandler::get_IsUpdating(
+	BOOLEAN IsUpdating
+	);
+
+CMBBNetworkSelectionSettingHandler::SetProperty(
+	UNICODESTRING Property Name
+	);
+
+CMBBNetworkSelectionSettingHandler::_AttemptRegisterToUserSelectedNetwork(
+	VOID
+	);
+
+CMBBNetworkSelectionSettingHandler::Invoke(
+	UINT32 Parent HWND
+	);
+
+CMBBNetworkSelectionSettingHandler:: DEBUG, SCAN refresh PossibleNetworks(
+	UINT8 _fIsUpdating,
+	UINT8 isSearchingNetwork
+	);
+
+CMBBNetworkSelectionSettingHandler::GetProperty(
+	UNICODESTRING Property Name
+	);
+
+CMBBUpdateSettingsSettingHandler::GetProperty(
+	UNICODESTRING Property Name
+	);
+
+CMBBNetworkSelectionSettingHandler::_GetPossibleNetworkSelectionList(
+	VOID
+	);
+
+OmaDmSync::CheckIfMobileOperatorDmAccountIsPresent(
+	HRESULT HRESULT
+	);
+
+DMSessionUpdateInvoke(
+	UINT32 parentHandle
+	);
+
+CMBBUpdateSettingsSettingHandler::Invoke(
+	UINT32 parent handle
+	);
+
+OmaDmSync::InitiateMobileOperatorDMSession(
+	HRESULT HRESULT
+	);
+
+CMBBConnectionProfileSelectionSettingHandler::GetProperty(
+	UNICODESTRING Property Name
+	);
+
+CMBBConnectionProfileSelectionSettingHandler::SetValue(
+	UNICODESTRING Profile
+	);
+
+ConnectionProfileItemSelected(
+	UNICODESTRING ItemName
+	);
+
+CMBBConnectionProfileSelectionSettingHandler::GetPossibleValues(
+	VOID
+	);
+
+CMBBConnectionProfileSelectionSettingHandler::GetValue(
+	VOID
+	);
+
+CMBBDataRoamingSettingHandler::SetProperty(
+	UNICODESTRING Property Name
+	);
+
+CMBBDataRoamingSettingHandler::GetProperty(
+	UNICODESTRING Property Name
+	);
+
+CMBBDataRoamingSettingHandler::Invoke(
+	UINT32 parent handle
+	);
+
+CMBBDataRoamingSettingHandler::get_IsUpdating(
+	VOID
+	);
+
+CMBBVoiceRoamingSettingHandler::SetProperty(
+	UNICODESTRING Property Name
+	);
+
+CMBBVoiceRoamingSettingHandler::Invoke(
+	UINT32 parent handle
+	);
+
+CMBBVoiceRoamingSettingHandler::get_IsUpdating(
+	VOID
+	);
+
+CMBBInternetDataEnabledSettingHandler::SetValue(
+	BOOLEAN New Value
+	);
+
+CMBBVoiceRoamingSettingHandler::GetProperty(
+	UNICODESTRING Property Name
+	);
+
+CMBBInternetDataEnabledSettingHandler::GetValue(
+	UINT8 InternetDataStatus.IsValid
+	);
+
+GetPossiblePLMNRadioTypes(
+	VOID
+	);
+
+GetPossibleModes(
+	VOID
+	);
+
+GetPossibleCDMANetworkTypes(
+	VOID
+	);
+
+GetInternetProfileTypeFromStringID(
+	UNICODESTRING stringID
+	);
+
+GetStringIDFromInternetProfileType(
+	UINT32 profileType
+	);
+
+GetPossibleInternetProfileType(
+	VOID
+	);
+
+GetInternetProfileTypeFromStringID::Received invalid resource id, return InternetOnly.(
+	VOID
+	);
+
+GetIpTypeFromStringID(
+	UNICODESTRING stringID,
+	UINT32 purpose
+	);
+
+GetStringIDFromIpType(
+	UINT32 IpType,
+	UINT32 purpose
+	);
+
+GetPossibleIPTypeValues(
+	VOID
+	);
+
+GetIpTypeFromStringID::Received invalid resource id, return IPTypeIPv4v6.(
+	VOID
+	);
+
+GetPossibleAuthenticationValues(
+	VOID
+	);
+
+GetPossibleRoamingModes(
+	VOID
+	);
+
+GetAuthenticationTypeFromStringID(
+	UNICODESTRING stringID
+	);
+
+StringIDFromAuthProtocol(
+	UINT32 authenticationType
+	);
+
+CMBBParentSettingDatabaseHolder::GetParentSettingDatabase(
+	INT32 HRESULT
+	);
+
+Generate the resource ID(
+	UNICODESTRING Setting Handler ID,
+	UNICODESTRING ResID
+	);
+
+AddResourceStringToVector(
+	UNICODESTRING Resource ID
+	);
+
+get_IsApplicable(
+	GUID AdapterID,
+	UNICODESTRING SettingHandler ID,
+	UINT8 IsApplicable,
+	UINT32 Reason
+	);
+
+get_IsEnabled(
+	GUID AdapterID,
+	UNICODESTRING SettingHandler ID,
+	UINT8 IsEnabled,
+	UINT32 Reason
+	);
+
+~CMBBAdapterInfo::_spMBBSettingManager->RemoveSetting failed(
+	VOID
+	);
+
+MobileCellularConnectionsHandler::UpdateDssaMappedSlot(
+	UINT32 mappedSlot
+	);
+
+Warning: The active slot or is higher than the number of slots.(
+	UINT32 number of slots,
+	UINT32 received mapped slot
+	);
+
+MobileCellularConnectionsHandler::UpdateDssaNumberOfSlots(
+	UINT32 numberOfSlots
+	);
+
+MobileSIM::HandleNotification(
+	UNICODESTRING NotificationCode,
+	UINT32 NotificationSize
+	);
+
+MobileCellularConnectionsHandler::_CreateAndAddToList(
+	GUID adapterId
+	);
+
+MobileCellularConnectionsHandler::SetValue::DssaSelectedSim(
+	UINT32 newSelectedSlot
+	);
+
+Warning: The selected slot not in the range of supported slots.(
+	VOID
+	);
+
+Warning: Failed to switch the active slot(
+	UINT32 newSelectedSlot
+	);
+
+The selected slot is the same that was already set. No change applied(
+	VOID
+	);
+
+RoamingModeChange(
+	UINT32 roamingMode
+	);
+
+MobileBroadbandESimHelper::OnESimStateUpdated(
+	GUID AdapterID,
+	INT32 eSimState,
+	BOOLEAN m_eSimUiDisabledByPolicy
+	);
+
+MobileSIM::UpdateESimProperties(
+	BOOLEAN ESim properties enabled,
+	BOOLEAN ESim profile enabled,
+	BOOLEAN ESim UI disabled,
+	BOOLEAN ESim service busy
+	);
+
+MobileSIM::HandleNotification(
+	ANSISTRING NotificationCode,
+	GUID AdapterID,
+	UINT32 NotificationSize
+	);
+
+MobileSIM::_SetInAffinityChange(
+	GUID adapterId,
+	BOOL32 DataAffinity
+	);
+
+SetDataRoamingPolicy(
+	BOOL32 setDataRoamingPolicySuccess,
+	UINT32 DataRoamingMode
+	);
+
+MobileSIM::GetDataAffinity(
+	GUID adapterId,
+	UINT32 SlotId,
+	BOOL32 DataAffinity
+	);
+
+SetDataEnablement(
+	BOOL32 isDataEnable,
+	UINT32 errorCode,
+	UINT32 initialModemPowerState
+	);
+
+MobileSIM::SetSIMIndex(
+	GUID adapterId,
+	UINT32 simIndex
+	);
+
+ClickSimSettings(
+	VOID
+	);
+
+ActivityIntermediateStop(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+ActivityError(
+	UINT64 PartA_PrivTags,
+	SIGNED wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+ActivityError(
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+ActivityStoppedAutomatically(
+	VOID
+	);
+
+RadioEnabledActivity(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId,
+	BOOLEAN isEnabled,
+	INT32 radioType,
+	UNICODESTRING description,
+	INT32 uxEntryPoint
+	);
+
+RadioEnabledActivity(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+RadioEnabledActivity(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+CMBBSettingManager::_RunInTpQueueAndWait Task running failed.(
+	UINT32 waitResult
+	);
+
+CMBBSettingManager::_RunInTpQueueAndWait Threadpool timed out. Deadlock happened.(
+	VOID
+	);
+
+Create the instance of settinghandler(
+	GUID AdapterID,
+	UNICODESTRING SettingHandler ID
+	);
+
+CMBBSettingManager::RefreshAdapterProperties(
+	VOID
+	);
+
+CMBBSettingManager::OnMultiSimInfoChanged(
+	GUID AdapterID,
+	UINT32 numberOfSlots
+	);
+
+OnValueChanged(
+	UNICODESTRING ID,
+	UNICODESTRING Property,
+	HEXINT64 HandlerAddress
+	);
+
+CMBBSettingManager::OnProvisioningStateChanged(
+	GUID AdapterID,
+	BOOLEAN provisioningState
+	);
+
+CMBBSettingManager::OnLTEAttachInfoChanged(
+	GUID AdapterID,
+	BOOLEAN attached,
+	UNICODESTRING apnString
+	);
+
+CMBBSettingManager::OnAdminProvisionedDataProfileEnabledChanged(
+	GUID AdapterID,
+	BOOLEAN adminEnabled
+	);
+
+CMBBSettingManager::OnAuxiliaryPreferenceChanged(
+	GUID AdapterID,
+	UINT32 CellularSettingsAuxiliaryPrefType,
+	UINT32 DataSize,
+	HEXINT64 pData
+	);
+
+CMBBSettingManager::OnImsOmaDmFlagsChanged(
+	GUID AdapterID,
+	UINT8 imsOmaDmProvisioningEnabled,
+	UINT8 imsOmaDmVoiceEnabled
+	);
+
+CMBBSettingManager::OnImsRegistrationChanged(
+	GUID AdapterID,
+	UINT32 IMS Service,
+	UINT32 IMS Type,
+	UNICODESTRING IMS Service Domain
+	);
+
+CMBBSettingManager::OnSupportedApnAuthProtocolsChanged(
+	GUID AdapterID,
+	UINT32 Supported Authentication Protocols
+	);
+
+CMBBSettingManager::OnProvisionedInternetProfilesPresent changed, refresh the collection(
+	GUID AdapterID,
+	UINT8 System Profiles Present
+	);
+
+CMBBSettingManager::OnProvisionedMmsProfilesPresent changed, refresh the collection(
+	GUID AdapterID,
+	UINT8 System Profiles Present
+	);
+
+CMBBSettingManager::OnRegistrationTypeChanged Update registration details(
+	VOID
+	);
+
+CMBBSettingManager::OnRegistrationTypeChanged(
+	GUID AdapterID,
+	UINT8 Automatic,
+	UNICODESTRING Operator Id,
+	UNICODESTRING Roaming Mode
+	);
+
+CMBBSettingManager::multivariant customization item is not found(
+	UNICODESTRING Value
+	);
+
+CMBBSettingManager::multivariant customization item is loaded(
+	UNICODESTRING Value,
+	UINT32 Data
+	);
+
+CMBBSettingManager::OnRadioAccessTechnologyInfoChanged(
+	GUID AdapterID,
+	UINT32 Allowed RAT,
+	UINT32 Possible RAT,
+	UINT32 Acquisition order element number
+	);
+
+CMBBSettingManager::OnImsXcapEnablementChanged(
+	GUID AdapterID,
+	UINT8 imsEnabled
+	);
+
+CMBBSettingManager::OnImsRoamingEnablementChanged(
+	GUID AdapterID,
+	UINT8 imsEnabled
+	);
+
+CMBBSettingManager::OnImsVideoEnablementChanged(
+	GUID AdapterID,
+	UINT8 imsEnabled
+	);
+
+CMBBSettingManager::OnImsServiceEnablementChanged(
+	GUID AdapterID,
+	UINT8 imsEnabled
+	);
+
+CMBBSettingManager::OnImsVoiceEnablementChanged(
+	GUID AdapterID,
+	UINT8 imsEnabled
+	);
+
+CMBBSettingManager::OnDataProfileDeleted::Operator provisioned internet profile is deleted.(
+	VOID
+	);
+
+CMBBSettingManager::OnDataProfileDeleted::Admin provisioned internet profile is deleted.(
+	VOID
+	);
+
+CMBBSettingManager::OnDataProfileDeleted::User provisioned mms profile is deleted.(
+	VOID
+	);
+
+CMBBSettingManager::OnDataProfileDeleted::Device provisioned internet profile is deleted.(
+	VOID
+	);
+
+CMBBSettingManager::OnDataProfileDeleted::System provisioned mms profile is removed.(
+	VOID
+	);
+
+CMBBSettingManager::OnDataProfileDeleted::Admin provisioned internet profile is removed.(
+	VOID
+	);
+
+CMBBSettingManager::OnDataProfileDeleted::User provisioned internet profile is deleted.(
+	VOID
+	);
+
+CMBBSettingManager::OnDataProfileDeleted::MMS profile provisioned by Admin is removed, need show AddProfile button and re-populate profile list.(
+	VOID
+	);
+
+CMBBSettingManager::OnDataProfileDeleted::Admin provisioned LTE profile is removed.(
+	VOID
+	);
+
+CMBBSettingManager::OnDataProfileDeleted::Received(
+	GUID AdapterID,
+	UNICODESTRING profileName,
+	BOOLEAN fDMConfigProfile
+	);
+
+CMBBSettingManager::OnDMConfigProfileDeleted::User provisioned LTE Attach profile is deleted.(
+	VOID
+	);
+
+CMBBSettingManager::OnDMConfigProfileDeleted::System provisioned internet profile is removed.(
+	VOID
+	);
+
+CMBBSettingManager::OnDataProfileUpdated::an admin provisioned internet profile is detected(
+	VOID
+	);
+
+CMBBSettingManager::_OnDataProfileUpdated(
+	GUID AdapterID,
+	UNICODESTRING Profile Name,
+	UNICODESTRING Activation State,
+	UNICODESTRING description,
+	UNICODESTRING iconFilePath,
+	UNICODESTRING simIccID,
+	UNICODESTRING apn,
+	UNICODESTRING userName,
+	UNICODESTRING password,
+	UINT32 Authentication Protocol,
+	UNICODESTRING roamingType,
+	UNICODESTRING ipType,
+	UINT32 internetProfileType,
+	UNICODESTRING provisionSource,
+	UINT8 enabled,
+	UNICODESTRING profilePurpose,
+	UNICODESTRING proxyURL,
+	UINT32 proxyPort
+	);
+
+CMBBSettingManager::OnDataProfileUpdated::an admin provisioned MMS profile is detected(
+	VOID
+	);
+
+CMBBSettingManager::OnSimToolkitApplicationsPresent(
+	GUID AdapterID,
+	UINT8 bSimToolkitAppsPresent
+	);
+
+CMBBSettingManager::OnPreferredPlmnChanged::Failed to get collection.(
+	VOID
+	);
+
+CMBBSettingManager::OnPreferredPlmnChanged(
+	GUID AdapterID,
+	UINT32 Count of PLMN,
+	INT32 Operation Result
+	);
+
+CMBBSettingManager::OnAvailableNetworksFinished DEBUG(
+	GUID AdapterID,
+	UINT32 Operators count
+	);
+
+CMBBSettingManager::GetNormalizedProfileName: normalized name(
+	UNICODESTRING Profile Name,
+	UNICODESTRING Apn Name,
+	UNICODESTRING Generated Name
+	);
+
+CMBBSettingManager::_OnPinOperationCompleted(
+	UNICODESTRING new PinOperation,
+	UNICODESTRING old PinOperation,
+	INT32 new hr,
+	INT32 old hr
+	);
+
+CMBBSettingManager::OnPinOperationCompleted. Failed to get_PinOperation(
+	INT32 HRESULT
+	);
+
+CMBBSettingManager::_OnPinInfoUpdated::Device is perso locked and not allowed to unlock(
+	VOID
+	);
+
+CMBBSettingManager::_OnPinInfoUpdated(
+	UNICODESTRING MbPinType,
+	UNICODESTRING MbPinState,
+	UINT8 Pin Enabled,
+	UINT32 Attempts Remaining,
+	UNICODESTRING MbPinFormat,
+	UINT32 MinLength,
+	UINT32 MaxLength
+	);
+
+CMBBSettingManager::OnPinInfoUpdated. Failed to get_PinInfo(
+	INT32 HRESULT
+	);
+
+CMBBSettingManager::_OnPinInfoUpdated::Device is perso locked and allowed to unlock(
+	VOID
+	);
+
+CMBBSettingManager::_OnAvailableNetworksFinished. DEBUG: UPDATE(
+	INT32 HRESULT
+	);
+
+CMBBSettingManager::_OnAvailableNetworksFinished. get_Size Failed(
+	INT32 HRESULT
+	);
+
+CMBBSettingManager::_OnAvailableNetworksFinished::AvailableNetwork(
+	UNICODESTRING Operators NumericName,
+	UNICODESTRING Operators CountryCode,
+	UNICODESTRING Operators wszLongName,
+	UNICODESTRING Operators wszShortName,
+	UINT32 Operators dataClasses,
+	UINT32 Operators dataClasses
+	);
+
+CMBBSettingManager::_OnAvailableNetworksFinished. GetAt Failed(
+	INT32 HRESULT,
+	UINT32 index
+	);
+
+CMBBSettingManager::_OnAvailableNetworksFinished. get_ScannedOperators Failed(
+	INT32 HRESULT
+	);
+
+CMBBSettingManager::_OnAvailableNetworksFinished(
+	VOID
+	);
+
+CMBBSettingManager::_OnRoamingPreferenceChanged(
+	UINT32 roamingPreference
+	);
+
+CMBBSettingManager::_OnRoamingPreferenceChanged. Error getting RoamingPreference(
+	INT32 HRESULT
+	);
+
+CMBBSettingManager::_OnDataEnablementChanged(
+	UINT8 isDataEnabled
+	);
+
+CMBBSettingManager::_OnDataEnablementChanged. Error getting DataEnablement(
+	INT32 HRESULT
+	);
+
+CMBBSettingManager::_OnModemOptionalFeaturesChanged. Failed to get_OptionalFeatures(
+	INT32 HRESULT
+	);
+
+CMBBSettingManager::_OnRadioAccessCapabilitiesChanged. Failed to get_WwanDataClasses(
+	INT32 HRESULT
+	);
+
+CMBBSettingManager::_OnRadioAccessCapabilitiesChanged(
+	UINT32 new _supportedDataClasses,
+	UINT32 old _supportedDataClasses
+	);
+
+CMBBSettingManager::_OnRadioPowerStateChanged(
+	UINT32 first _uxRadioPowerState
+	);
+
+CMBBSettingManager::_OnRadioPowerStateChanged(
+	UINT32 new _uxRadioPowerState,
+	UINT32 old _uxRadioPowerState
+	);
+
+CMBBSettingManager::_OnModemOptionalFeaturesChanged(
+	UINT32 new optionalFeatures,
+	UINT8 old optionalFeatures
+	);
+
+CMBBSettingManager::_OnRadioPowerStateChanged. Failed to get_RadioPowerState(
+	INT32 HRESULT
+	);
+
+CMBBSettingManager::_OnSelectedSlotChanged. Failed to get_SelectedSlot(
+	INT32 HRESULT
+	);
+
+CMBBSettingManager::_OnPhoneNumberChanged(
+	UNICODESTRING first TelephoneNumber
+	);
+
+CMBBSettingManager::_OnPhoneNumberChanged(
+	UNICODESTRING new TelephoneNumber,
+	UNICODESTRING old _uxSIMSubscriberNumberStatus
+	);
+
+CMBBSettingManager::_OnSelectedSlotChanged(
+	UINT32 new selectedSlot,
+	UINT32 old selectedSlot
+	);
+
+CMBBSettingManager::_OnPhoneNumberChanged. Phone number is empty, or error getting number(
+	INT32 HRESULT
+	);
+
+CMBBSettingManager::_OnIMSIChanged. Error getting IMSI(
+	INT32 HRESULT
+	);
+
+CMBBSettingManager::_OnIMSIChanged(
+	UNICODESTRING new Imsi,
+	UNICODESTRING old Imsi
+	);
+
+CMBBSettingManager::_OnIccIdChanged. Failed to get_ICCID(
+	INT32 HRESULT
+	);
+
+CMBBSettingManager::_OnIccIdChanged(
+	UNICODESTRING new IccId,
+	UNICODESTRING old IccId
+	);
+
+CMBBSettingManager::UpdateDataProfile. UpdateProfile failed.(
+	HRESULT HRESULT,
+	UNICODESTRING profileToUpdate
+	);
+
+CMBBSettingManager::UpdateDataProfile. Failed to prepare the profile object.(
+	HRESULT HRESULT,
+	UNICODESTRING profileToUpdate
+	);
+
+CMBBSettingManager::UpdateDataProfile. Cannot get a baseline profile to update.(
+	HRESULT HRESULT,
+	UNICODESTRING profileToUpdate
+	);
+
+CMBBSettingManager::UpdateDataProfile. Only new profile can be both Internet and LTEAttach.(
+	HRESULT HRESULT
+	);
+
+CMBBSettingManager::UpdateDataProfile. GetActivationFactory failed.(
+	HRESULT HRESULT
+	);
+
+CMBBSettingManager::UpdateDataProfile. ActivateInstance failed.(
+	HRESULT HRESULT
+	);
+
+CMBBSettingManager::UpdateDataProfile. Failed to read profile from cache.(
+	HRESULT HRESULT,
+	UNICODESTRING profileName
+	);
+
+CMBBSettingManager::_RefreshProfiles. GetLteAttachProfiles failed.(
+	GUID AdapterID,
+	HRESULT HRESULT
+	);
+
+CMBBSettingManager::UpdateDataProfile. FAiled to create a profile object from factory.(
+	HRESULT HRESULT,
+	UNICODESTRING profileName
+	);
+
+CMBBSettingManager::_RefreshProfiles. Failed to get Internet profile.(
+	GUID AdapterID,
+	HRESULT HRESULT,
+	UINT32 profileIndex
+	);
+
+CMBBSettingManager::_RefreshProfiles. Failed to get LTE attach profile.(
+	GUID AdapterID,
+	HRESULT HRESULT,
+	UINT32 profileIndex
+	);
+
+CMBBSettingManager::_RefreshProfiles. GetInternetProfiles failed.(
+	GUID AdapterID,
+	HRESULT HRESULT
+	);
+
+CMBBSettingManager::GetCellularSettingsProfileFromMbConnectionProfile. Failed to call get_IsPurchaseProfile(
+	HRESULT HRESULT
+	);
+
+CMBBSettingManager::_RefreshProfiles. category not ready(
+	VOID
+	);
+
+CMBBSettingManager::GetCellularSettingsProfileFromMbConnectionProfile. Unknown profileType(
+	HRESULT HRESULT
+	);
+
+CMBBSettingManager::GetCellularSettingsProfileFromMbConnectionProfile. Failed to call get_ProfileType(
+	HRESULT HRESULT
+	);
+
+CMBBSettingManager::GetCellularSettingsProfileFromMbConnectionProfile. Unknown provisionSource(
+	HRESULT HRESULT
+	);
+
+CMBBSettingManager::GetCellularSettingsProfileFromMbConnectionProfile. Failed to call get_ProvisionSource(
+	HRESULT HRESULT
+	);
+
+CMBBSettingManager::GetCellularSettingsProfileFromMbConnectionProfile. Failed to call get_ActivationState(
+	HRESULT HRESULT
+	);
+
+CMBBSettingManager::GetCellularSettingsProfileFromMbConnectionProfile. Failed to call get_IpType(
+	HRESULT HRESULT
+	);
+
+CMBBSettingManager::GetCellularSettingsProfileFromMbConnectionProfile. Failed to call get_IsEnabled(
+	HRESULT HRESULT
+	);
+
+CMBBSettingManager::GetCellularSettingsProfileFromMbConnectionProfile. Failed to call get_AuthProtocol(
+	HRESULT HRESULT
+	);
+
+CMBBSettingManager::GetCellularSettingsProfileFromMbConnectionProfile. Failed to call StringCchCopy(
+	HRESULT HRESULT
+	);
+
+CMBBSettingManager::GetCellularSettingsProfileFromMbConnectionProfile. Unknown AuthProtocol(
+	HRESULT HRESULT
+	);
+
+CMBBSettingManager::GetCellularSettingsProfileFromMbConnectionProfile. Failed to call get_Apn(
+	HRESULT HRESULT
+	);
+
+CMBBSettingManager::GetCellularSettingsProfileFromMbConnectionProfile. Failed to call get_UserName(
+	HRESULT HRESULT
+	);
+
+CMBBSettingManager::GetCellularSettingsProfileFromMbConnectionProfile. Failed to call get_SimIccid(
+	HRESULT HRESULT
+	);
+
+CMBBSettingManager::GetCellularSettingsProfileFromMbConnectionProfile. Failed to call get_Description(
+	HRESULT HRESULT
+	);
+
+CMBBSettingManager::GetCellularSettingsProfileFromMbConnectionProfile. Failed to call get_ProfileName(
+	HRESULT HRESULT
+	);
+
+CMBBSettingManager::OnMbConnectionProfileUpdated: get_ProfileName failed(
+	INT32 HRESULT
+	);
+
+CMBBSettingManager::OnMbConnectionProfileUpdated: get_ProfileType failed(
+	INT32 HRESULT
+	);
+
+CMBBSettingManager::OnMbConnectionProfileUpdated: get_ProvisionSource failed(
+	INT32 HRESULT
+	);
+
+CMBBSettingManager::OnMbAuxiliaryPreferenceEvent(
+	UINT32 preferenceType
+	);
+
+CMBBSettingManager::OnMbConnectionProfileUpdated: get_IsRemoved failed(
+	INT32 HRESULT
+	);
+
+CMBBSettingManager::OnMbConnectionProfileUpdated: _GetCellularSettingsProfileFromMbConnectionProfile failed(
+	INT32 HRESULT
+	);
+
+CMBBSettingManager::OnAdapterRemoved(
+	GUID AdapterID
+	);
+
+CMBBSettingManager::OnMbInterfaceEvent(
+	UINT32 changeType
+	);
+
+CMBBSettingManager::OnAvailableNetworksStarted(
+	GUID AdapterID
+	);
+
+CMBBSettingManager::OnMmsDataEnabledChanged(
+	GUID AdapterID,
+	UINT8 MMS Data enabled
+	);
+
+CMBBSettingManager::OnRegistrationStateChanged(
+	GUID AdapterID,
+	UNICODESTRING Reg State,
+	UNICODESTRING Reg Mode,
+	UNICODESTRING Provider ID,
+	UNICODESTRING Provider Name,
+	UINT32 Error Code
+	);
+
+CMBBSettingManager::OnDisallowAutoConnectChanged(
+	GUID AdapterID,
+	UINT8 disallowAutoConnect
+	);
+
+CMBBSettingManager::OnInternetDataEnabledChanged DEBUG(
+	GUID AdapterID,
+	UINT8 dataEnabled
+	);
+
+CMBBSettingManager::OnInternetDataRoamingTypeChanged DEBUG(
+	GUID AdapterID,
+	UNICODESTRING CellularSettingDataRoamingType
+	);
+
+CMBBSettingManager::OnInternetRoamingGroupPolicyChanged::Can't read BlockRoaming Value(
+	UINT8 fBlockRoaming
+	);
+
+CMBBSettingManager::OnInternetRoamingGroupPolicyChanged::Read BlockRoaming Value(
+	UINT8 fBlockRoaming
+	);
+
+CMBBSettingManager::OnInternetRoamingGroupPolicyChanged::Update UX for BlockRoaming change.(
+	VOID
+	);
+
+CMBBSettingManager::OnInternetRoamingGroupPolicyChanged(
+	VOID
+	);
+
+CMBBSettingManager::RegisterGPRoamingBlockChange::Failed to open the regkey(
+	UNICODESTRING Roaming Block
+	);
+
+CMBBSettingManager::RegisterGPRoamingBlockChange(
+	VOID
+	);
+
+CMBBSettingManager::RegisterGPRoamingBlockChange::Failed on RegNotifyChangeKeyValue(
+	VOID
+	);
+
+CMBBSettingManager::_UpdateProfileState::system provisioned internet change involved admin profile, refresh the collection(
+	VOID
+	);
+
+CMBBSettingManager::_UpdateProfileState::add and display new system provisioned MMS profile(
+	UNICODESTRING Profile Name
+	);
+
+CMBBSettingManager::_UpdateProfileState::overwrite system provisioned internet profile and request the setting handler update.(
+	VOID
+	);
+
+CMBBSettingManager::_UpdateProfileState::received update for invalid internetProfileType (
+	VOID
+	);
+
+CMBBSettingManager::_UpdateProfileState::add and display new system provisioned LTE Attach profile(
+	UNICODESTRING Profile Name
+	);
+
+CMBBSettingManager::_UpdateProfileState::overwrite user internet profile and request the setting handler update.(
+	VOID
+	);
+
+CMBBSettingManager::_UpdateProfileState::refresh the whole list as cellular receives a new mms profile(
+	UNICODESTRING Profile Name
+	);
+
+CMBBSettingManager::_UpdateProfileState:: admin LTE attach profile updated, refresh the collection(
+	VOID
+	);
+
+CMBBSettingManager::_UpdateProfileState::Operator profile updated, refresh the collection(
+	VOID
+	);
+
+CMBBSettingManager::_UpdateProfileState::refresh the whole list as cellular receives a new LTE attach profile.(
+	VOID
+	);
+
+CMBBSettingManager::_UpdateProfileState::add and display new system provisioned internet profile(
+	UNICODESTRING Profile Name,
+	UINT32 provisionSource,
+	UINT32 activationState
+	);
+
+CMBBSettingManager::_UpdateProfileState:: admin profile updated, refresh the collection(
+	VOID
+	);
+
+CMBBSettingManager::_UpdateProfileState::overwrite admin internet profile.(
+	VOID
+	);
+
+CMBBSettingManager::_UpdateProfileState::Overwrite operator internet profile.(
+	VOID
+	);
+
+CMBBSettingManager::_UpdateProfileState::Add operator profile to the list.(
+	VOID
+	);
+
+CMBBSettingManager::_UpdateProfileState::refresh the whole list as cellular receives a new internet profile.(
+	VOID
+	);
+
+CMBBSettingManager::_UpdateProfileState::Can't add invalid profile (
+	VOID
+	);
+
+CMBBSettingManager::multivariant customization item is loaded(
+	UNICODESTRING Value,
+	UNICODESTRING Data
+	);
+
+CMBBSettingManager::Load roaming block setting defined by group policy(
+	UINT8 BlockRoaming
+	);
+
+CMBBSettingManager::get misc configuration(
+	VOID
+	);
+
+CMBBSettingManager::Load default cutomizations managed by CellManager(
+	VOID
+	);
+
+CMBBSettingManager::Load IMSI specific cutomizations managed by CellManager(
+	UNICODESTRING IMSI
+	);
+
+CMBBSettingManager::localized MV customization item is loaded(
+	UNICODESTRING Value,
+	UNICODESTRING Data
+	);
+
+CMBBSettingManager::Open default regkey used by CellUX(
+	VOID
+	);
+
+CMBBSettingManager::_GetProductFeatureConfiguration::SIMToSIMUIM.(
+	INT32 RESULT,
+	UINT8 Config
+	);
+
+CMBBSettingManager::_GetProductFeatureConfiguration::SIM1ToUIM1.(
+	INT32 RESULT,
+	UINT8 Config
+	);
+
+CMBBSettingManager::Open IMSI specific regkey used by CellUX(
+	UNICODESTRING IMSI
+	);
+
+CMBBSettingManager::_GetProductFeatureConfiguration::COM object can't be initialized.(
+	VOID
+	);
+
+CMBBSettingManager::_GetProductFeatureConfiguration::initialize CCellManagerProductFeatures(
+	VOID
+	);
+
+CMBBSettingManager::_SetDefaultValueInHandlers::Registry monitor thread is created successfully.(
+	VOID
+	);
+
+CMBBSettingManager::_SetDefaultValueInHandlers::Registry monitor thread is failed to create.(
+	VOID
+	);
+
+CMBBSettingManager::EnableSpecificDeviceProfile: translated profile string to apn name(
+	UNICODESTRING Profile Name,
+	UNICODESTRING Apn Name
+	);
+
+CMBBSettingManager::Disable enabled mms profile(
+	UNICODESTRING Profile Name
+	);
+
+CMBBSettingManager::EnableSpecificDeviceProfile: disable enabled internet profile(
+	UNICODESTRING Profile Name
+	);
+
+CMBBSettingManager::EnableSpecificDeviceProfile: enable disabled internet profile(
+	UNICODESTRING Profile Name
+	);
+
+CMBBSettingManager::CopyLTEAttachProfilesToCollection::Failed to install LTE attach profile(
+	HRESULT hr
+	);
+
+CMBBSettingManager::CopyLTEAttachProfilesToCollection(
+	VOID
+	);
+
+CMBBSettingManager::Disable enabled internet profile(
+	UNICODESTRING Profile Name
+	);
+
+CMBBSettingManager::CopyLTEAttachProfilesToCollection::Failed to install system LTE Attach profile(
+	HRESULT hr
+	);
+
+CMBBSettingManager::CopyLTEAttachProfilesToCollection::Installed system LTE Attach profile(
+	VOID
+	);
+
+CMBBSettingManager::CopyLTEAttachProfilesToCollection::Failed to install user's LTE Attach profile(
+	HRESULT hr
+	);
+
+CMBBSettingManager::CopyLTEAttachProfilesToCollection::Installed user's LTE Attach profile(
+	VOID
+	);
+
+CMBBSettingManager::CopyLTEAttachProfilesToCollection::Failed to create vector for LTE attach profile(
+	HRESULT hr
+	);
+
+CMBBSettingManager::CopyWwanProfileToCollection::Failed to install MMS profile(
+	HRESULT hr
+	);
+
+CMBBSettingManager::CopyLTEAttachProfilesToCollection::Failed to install admin-provisioned LTE attach profile(
+	HRESULT hr
+	);
+
+CMBBSettingManager::CopyLTEAttachProfilesToCollection::Installed admin-provisioned LTE attach profile(
+	VOID
+	);
+
+CMBBSettingManager::CopyWwanProfileToCollection::Failed to install user's MMS profile(
+	UINT32 purpose,
+	HRESULT hr
+	);
+
+CMBBSettingManager::CopyWwanProfileToCollection::Installed user's MMS profile(
+	UINT32 purpose
+	);
+
+CMBBSettingManager::CopyWwanProfileToCollection::Failed to install internet profile(
+	HRESULT hr
+	);
+
+CMBBSettingManager::CopyWwanProfileToCollection(
+	UINT32 purpose
+	);
+
+CMBBSettingManager::CopyWwanProfileToCollection::Failed to create vector for MMS profile(
+	HRESULT hr
+	);
+
+CMBBSettingManager::CopyWwanProfileToCollection::Failed to install user's internet profile(
+	HRESULT hr
+	);
+
+CMBBSettingManager::CopyWwanProfileToCollection::Failed to install system MMS profile(
+	HRESULT hr
+	);
+
+CMBBSettingManager::CopyWwanProfileToCollection::Installed system MMS profile(
+	UINT32 purpose
+	);
+
+CMBBSettingManager::CopyWwanProfileToCollection::Installed system internet profile(
+	UINT32 purpose,
+	UINT32 activationState
+	);
+
+CMBBSettingManager::CopyWwanProfileToCollection::Failed to install admin-provisioned internet profile(
+	HRESULT hr
+	);
+
+CMBBSettingManager::CopyWwanProfileToCollection::Installed user's internet profile(
+	UINT32 purpose
+	);
+
+CMBBSettingManager::CopyWwanProfileToCollection::Failed to install system internet profile(
+	HRESULT hr
+	);
+
+CMBBSettingManager::CopyWwanProfileToCollection::Installed admin-provisioned internet profile(
+	VOID
+	);
+
+CMBBSettingManager::CopyWwanProfileToCollection::Failed to create vector for internet profile(
+	HRESULT hr
+	);
+
+CMBBSettingManager::CopyPLMNToCollection(
+	VOID
+	);
+
+CMBBSettingManager::ProcessChangedPin1State(
+	VOID
+	);
+
+CMBBSettingManager::RegisterSettingHandler::Invalid arguments(
+	UNICODESTRING SettingID
+	);
+
+CMBBSettingManager::GetGroupVisibilityForAPNSettings(
+	UINT8 Visibility
+	);
+
+CMBBSettingManager::RegisterSettingHandler(
+	UNICODESTRING SettingID
+	);
+
+CMBBSettingManager::GetGroupVisibilityForSIMPin(
+	UINT8 Visibility
+	);
+
+CMBBSettingManager::GetGroupVisibilityForMobileSIMInfo(
+	UINT8 Visibility
+	);
+
+CMBBSettingManager::GetGroupVisibilityForMobileInternet(
+	UINT8 Visibility
+	);
+
+CMBBSettingManager::GetGroupVisibilityForIMSConnection(
+	UINT8 Visibility
+	);
+
+CMBBSettingManager::GetGroupVisibilityForMobileNetwork(
+	UINT8 Visibility
+	);
+
+CMBBSettingManager::EvaluateManualNetworkSelectionSettingVisibility _isAutomaticRegistration = false(
+	VOID
+	);
+
+CMBBSettingManager::EvaluateManualNetworkSelectionSettingVisibility registrationStatus reports non-automatic registration.(
+	VOID
+	);
+
+CMBBSettingManager::GetGroupVisibilityForMobileOperatorSettings(
+	UINT8 Visibility
+	);
+
+CMBBSettingManager::IsSettingEnabledByManager::Radio/Executor is powered off or on call.(
+	UNICODESTRING SettingID
+	);
+
+CMBBSettingManager::EvaluateManualNetworkSelectionSettingVisibility Desktop specific(
+	VOID
+	);
+
+CMBBSettingManager::EvaluateManualNetworkSelectionSettingVisibility Enter(
+	VOID
+	);
+
+CMBBSettingManager::IsSettingVisibleByManager::Pin is locked(
+	UNICODESTRING SettingID,
+	BOOLEAN IsSettingVisibleByManager
+	);
+
+CMBBSettingManager::IsSettingVisibleByManager::Pin is blocked(
+	UNICODESTRING SettingID,
+	UINT32 Attempts Remaining,
+	BOOLEAN IsSettingVisibleByManager
+	);
+
+CMBBSettingManager::_ObtainMbCategory. Could not obtain category.(
+	GUID AdapterID
+	);
+
+CMBBSettingManager::IsSettingVisibleByManager::Sim is not present(
+	UNICODESTRING SettingID
+	);
+
+CMBBSettingManager::IsSettingVisibleByManager::Adapter is removed(
+	UNICODESTRING SettingID
+	);
+
+CMBBSettingManager::~CMBBSettingManager(
+	UNICODESTRING UiccID
+	);
+
+CMBBSettingManager::CMBBSettingManager: Unable to obtain MB Category(
+	VOID
+	);
+
+CreatedHandler(
+	UNICODESTRING settingid,
+	HEXINT64 HandlerAddress,
+	HEXINT64 this,
+	HRESULT HRESULT
+	);
+
+Failed as query the setting handler(
+	UNICODESTRING SettingHandler ID
+	);
+
+Create the instance of CMBBSettingManager(
+	GUID AdapterID
+	);
+
+WiFiUxConnect(
+	UNICODESTRING NetworkName,
+	UINT32 Position,
+	UINT32 ListCount,
+	UINT8 HasProfile,
+	UNICODESTRING ProfileName,
+	UINT8 ConnectAutomatically,
+	UINT8 ConnectAllowedByPolicy,
+	UINT8 IsHidden,
+	UINT8 IsSecureNetwork,
+	UINT32 SignalBarCount,
+	UINT8 IsHotspot2Enabled,
+	UINT32 ProfileType
+	);
+
+Assert(
+	UINT32 assertVersion,
+	UINT32 rva,
+	UINT32 timestamp,
+	UINT32 imageSize,
+	ANSISTRING imageName,
+	UINT32 count,
+	UINT32 totalHits,
+	UINT32 ModuleCollection,
+	UINT32 GlobalCollection
+	);
+
+NetworkSnapshot.NlmData(
+	GUID SessionGuid,
+	UINT32 NetworkSnapshotFlags,
+	UNICODESTRING NetworksProfile
+	);
+

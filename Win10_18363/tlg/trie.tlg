@@ -1,0 +1,68 @@
+ProviderNames:
+	Microsoft.Windows.TextInput.InputPersonalizationTraceLogging
+	TextInput
+
+
+
+**** Events *****
+FallbackError(
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+CorruptedUserTrie(
+	UINT32 CurrentNodeIndex,
+	UINT32 LastValidNodeIndex,
+	UNICODESTRING FunctionName,
+	INT32 LineNumber,
+	UNICODESTRING Filename
+	);
+
+FailedHResult(
+	INT32 HRESULT,
+	UNICODESTRING Error Message
+	);
+
+FallbackError(
+	UINT64 PartA_PrivTags,
+	SIGNED wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+UserTrieVerification(
+	UNICODESTRING FailedCondition,
+	UINT32 Param1,
+	UINT32 Param2,
+	UNICODESTRING Filename
+	);
+

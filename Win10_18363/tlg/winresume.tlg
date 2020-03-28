@@ -1,0 +1,109 @@
+ProviderNames:
+	Microsoft.Windows.Kernel.BootEnvironment
+	Microsoft.Windows.Kernel.BootEnvironment
+	MicrosoftWindowsCodeIntegrityTraceLoggingProvider
+	MicrosoftWindowsCodeIntegrityAuditTraceLoggingProvider
+
+
+
+**** Events *****
+OsLaunch(
+	UINT32 EventTimestamp,
+	GUID BootApplicationId,
+	UINT64 BootSequence,
+	STRING IO,
+	UINT64 BytesRead,
+	UINT64 BytesWritten,
+	ANSISTRING BootType,
+	UINT64 UserInputTime,
+	BOOL32 LastShutdownSucceeded,
+	BOOL32 LastBootSucceeded,
+	UINT8 BootAttemptCount,
+	ANSISTRING MenuPolicy,
+	BOOL32 RecoveryEnabled,
+	UINT8 BootStatusPolicy,
+	BOOL32 FirmwareResetReasonSupplied,
+	UINT8 FirmwareResetReasonPch,
+	UINT32 FirmwareResetReasonPchAdditional,
+	UINT8 FirmwareResetReasonEmbeddedController,
+	UINT32 FirmwareResetReasonEmbeddedControllerAdditional,
+	BOOL32 MeasuredLaunchResume
+	);
+
+TcbLaunchRamDiskAllocationRetry(
+	NTSTATUS Status
+	);
+
+CodeIntegritySignCheckTriggeredCatalogFallback(
+	HEXINT32 NTStatus,
+	UNICODESTRING FileName,
+	UINT32 HashAlgId,
+	HEX FileHash,
+	UINT32 SigningPolicyCheckFlags
+	);
+
+MSSignedWinLoadDriverLoadSuccessAudit(
+	UNICODESTRING FileName,
+	ANSISTRING VerificationFileType,
+	HEXINT32 VerificationStatus,
+	HEXINT32 RootPolicyBits,
+	FILETIME SigningTime,
+	FILETIME CurrentSystemTime,
+	UINT32 TBSHashAlgID,
+	UINT8 TBSHash,
+	STRING IssuerCommonName,
+	STRING PublisherCommonName
+	);
+
+UnsignedWinLoadDriverLoadSuccessAudit(
+	UNICODESTRING FileName,
+	ANSISTRING VerificationFileType
+	);
+
+CodeIntegrityImageSignatureVerificationFailed(
+	UNICODESTRING FileName,
+	HEXINT32 StatusCode,
+	UINT32 HashAlgId,
+	HEX FileHash
+	);
+
+CodeIntegrityBinarySignatureExpired(
+	UNICODESTRING FileName,
+	FILETIME ValidFrom,
+	FILETIME ValidTo,
+	FILETIME CurrentSystemTime
+	);
+
+ThirdPartySignedWinLoadDriverLoadSuccessAudit(
+	UNICODESTRING FileName,
+	ANSISTRING VerificationFileType,
+	HEXINT32 VerificationStatus,
+	HEXINT32 RootPolicyBits,
+	FILETIME SigningTime,
+	FILETIME CurrentSystemTime,
+	UINT32 TBSHashAlgID,
+	UINT8 TBSHash,
+	UINT8 EncodedCertBlob
+	);
+
+CodeIntegrityWHQLDriverFailure(
+	UNICODESTRING FileName,
+	ANSISTRING VerificationFileType,
+	HEXINT32 VerificationStatus,
+	HEXINT32 RootPolicyBits,
+	HEXINT32 LoadInformation,
+	FILETIME SigningTime,
+	FILETIME CurrentSystemTime,
+	UINT8 EncodedCertBlob
+	);
+
+CodeIntegrityWHQLDriverAuditFailure(
+	UNICODESTRING FileName,
+	ANSISTRING VerificationFileType,
+	HEXINT32 VerificationStatus,
+	HEXINT32 RootPolicyBits,
+	FILETIME SigningTime,
+	FILETIME CurrentSystemTime,
+	UINT8 EncodedCertBlob
+	);
+

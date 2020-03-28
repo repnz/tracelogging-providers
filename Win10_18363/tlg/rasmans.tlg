@@ -1,0 +1,204 @@
+ProviderNames:
+	Microsoft.Windows.Networking.RAS.MediaManager
+	Microsoft.Windows.Networking.RAS.Manager
+	Microsoft.Windows.Networking.VPNPlugin
+	Microsoft.Windows.Networking.RAS.Dialer
+	Microsoft.Windows.Networking.VPNPlugin.Manager
+
+
+
+**** Events *****
+StateChange(
+	ANSISTRING ProfileName,
+	GUID CorrelationGuid,
+	ANSISTRING PhoneNumber,
+	UINT32 PortState,
+	UINT32 DisconnectType,
+	UINT32 DisconnectReason,
+	GUID ProfileGuid,
+	ANSISTRING ProfileName,
+	UINT32 ConnectionType,
+	ANSISTRING DeviceName,
+	UINT32 DeviceType,
+	UINT32 VpnConnectionType,
+	HEXINT64 ConnectionHandle,
+	UINT32 NumCustomIPSECPolicies,
+	UINT32 NumConfiguredEKUs,
+	UINT32 NumServers,
+	UINT32 NumRoutes,
+	UINT32 NumPerAppTrafficFilters,
+	HEXINT32 ErrorCode,
+	ANSISTRING ErrorMessage
+	);
+
+ConnectionClose(
+	ANSISTRING ProfileName,
+	GUID CorrelationGuid,
+	ANSISTRING PhoneNumber,
+	UINT32 PortState,
+	UINT32 DisconnectType,
+	UINT32 DisconnectReason,
+	GUID ProfileGuid,
+	ANSISTRING ProfileName,
+	UINT32 ConnectionType,
+	ANSISTRING DeviceName,
+	UINT32 DeviceType,
+	UINT32 VpnConnectionType,
+	HEXINT64 ConnectionHandle,
+	UINT32 NumCustomIPSECPolicies,
+	UINT32 NumConfiguredEKUs,
+	UINT32 NumServers,
+	UINT32 NumRoutes,
+	UINT32 NumPerAppTrafficFilters
+	);
+
+VpnConnectivityStateChange(
+	UINT32 RasEventType,
+	UINT32 VpnConnectionState,
+	UINT32 VpnInterfaceType,
+	UINT32 PhysicalInterfaceType,
+	ANSISTRING AdapterName,
+	HRESULT IsDeviceConnectedToInternetHResult,
+	BOOL32 IsDeviceConnectedToInternet,
+	GUID ProfileGuid,
+	ANSISTRING ProfileName,
+	UINT32 ConnectionType,
+	ANSISTRING DeviceName,
+	UINT32 DeviceType,
+	UINT32 VpnConnectionType,
+	HEXINT64 ConnectionHandle,
+	UINT32 NumCustomIPSECPolicies,
+	UINT32 NumConfiguredEKUs,
+	UINT32 NumServers,
+	UINT32 NumRoutes,
+	UINT32 NumPerAppTrafficFilters
+	);
+
+PhonebookEntryLog(
+	UNICODESTRING PbkEntryOp,
+	HRESULT PbkEntryOpHr,
+	UNICODESTRING ProfileName,
+	UINT32 ConnectionType,
+	UINT32 DialMode,
+	UINT32 OverridePreference,
+	UINT32 RedialAttempts,
+	UINT32 RedialSeconds,
+	INT32 IdleDisconnectSeconds,
+	BOOL32 RedialOnLinkFailure,
+	UINT32 AuthRestrictions,
+	UINT32 VpnStrategy,
+	UINT32 DataEncryption,
+	BOOL32 AutoLogOn,
+	BOOL32 UseRasCredentials,
+	UINT32 ExcludedProtocols,
+	BOOL32 LcpExtensions,
+	BOOL32 SwCompression,
+	BOOL32 NegotiateMultilinkAlways,
+	UINT32 CallbackMode,
+	GUID ProfileGuid,
+	BOOL32 BypassProxyForLocal,
+	UINT32 NumCustomIPSECPolicies,
+	UINT32 NumConfiguredEKUs,
+	UINT32 NumServers,
+	UINT32 NumRoutes,
+	UINT32 NumNrptRules,
+	BOOL32 AutoTriggerCapable,
+	UINT32 NumClassicAppIds,
+	UINT32 NumAppIds,
+	UINT32 NumDnsSearchSuffixes,
+	BOOL32 IsPowerShellCreated,
+	BOOL32 DisableDefaultDnsSuffixes,
+	UINT32 NumTrustedNetworks,
+	BOOL32 ProxySettingsModified,
+	UINT32 NumPerAppTrafficFilters,
+	BOOL32 AlwaysOnCapable,
+	BOOL32 IsDeviceComplianceEnabled,
+	BOOL32 IsDeviceComplianceSSOEnabled,
+	BOOL32 IsDeviceComplianceSSOEKUConfigured,
+	BOOL32 IsDeviceComplianceSSOIssuerHashConfigured,
+	UNICODESTRING ApnProviderId,
+	UNICODESTRING ApnAccessPointName,
+	BOOL32 ApnIsCompressionEnabled,
+	UNICODESTRING CustomRasDialDll,
+	UNICODESTRING DestinationServer,
+	BOOLEAN BitmapProfileProperties
+	);
+
+AppTriggered(
+	UINT64 PartA_PrivTags,
+	UNICODESTRING ProfileName,
+	UINT32 AppTriggerType
+	);
+
+RasDisconnectScheduled(
+	UINT64 PartA_PrivTags,
+	HEXINT64 ConnectionHandle,
+	UINT32 DisconnectReason
+	);
+
+PhysicalConnectionCompleted(
+	UINT64 PartA_PrivTags,
+	UINT32 LogicalConnectionId,
+	GUID ActivityId,
+	HEXINT64 ConnectionHandle,
+	UNICODESTRING ProfileName,
+	BOOL32 IsExpectedEvent,
+	BOOL32 IsCanceled,
+	HEXINT32 OperationResult,
+	BOOL32 IsUserTunnel,
+	BOOL32 IsDeviceInNQM,
+	UINT32 LastPowerState
+	);
+
+PhysicalConnectionStarted(
+	UINT64 PartA_PrivTags,
+	UINT32 LogicalConnectionId,
+	HEXINT64 ConnectionHandle,
+	UNICODESTRING ProfileName,
+	BOOL32 IsUserTunnel,
+	BOOL32 IsExpectedEvent,
+	GUID InterfaceGuid,
+	HEXINT32 ErrorCode,
+	BOOL32 IsDeviceInNQM,
+	UINT32 LastPowerState,
+	UINT32 LogicalConnectionStartReason,
+	GUID CorrelationId
+	);
+
+LogicalConnectionCompleted(
+	UINT64 PartA_PrivTags,
+	UINT32 LogicalConnectionId,
+	GUID ActivityId,
+	UNICODESTRING ProfileName,
+	BOOL32 IsCanceled,
+	UINT32 LogicalConnectionCancelReason,
+	HEXINT32 OperationResult,
+	BOOL32 IsUserTunnel,
+	BOOL32 IsDeviceInNQM,
+	UINT32 LastPowerState,
+	HEXINT64 ConnectionHandle,
+	UINT32 PhysicalConnectionEvents
+	);
+
+LogicalConnectionStarted(
+	UINT64 PartA_PrivTags,
+	UINT32 LogicalConnectionId,
+	UINT32 LogicalConnectionStartReason,
+	UNICODESTRING ProfileName,
+	BOOL32 IsUserTunnel,
+	GUID ActivityId,
+	BOOL32 IsDeviceInNQM,
+	UINT32 LastPowerState
+	);
+
+VpnTriggersAndCancellations(
+	UINT64 PartA_PrivTags,
+	UINT32 TotalTriggers,
+	SYSTEMTIME TriggerDateTimes,
+	UINT32 TriggerTypes,
+	UINT32 TotalCancellations,
+	SYSTEMTIME CancellationDateTimes,
+	UINT32 CancellationReasons,
+	HEXINT64 ConnectionHandle
+	);
+

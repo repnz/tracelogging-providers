@@ -1,0 +1,307 @@
+ProviderNames:
+	Microsoft.ClipSvc
+
+
+
+**** Events *****
+ClipSRefreshLicense(
+	UNICODESTRING LicenseId,
+	HRESULT Result,
+	UINT64 ms
+	);
+
+ClipSGetTrackingInfoIds(
+	UNICODESTRING Query,
+	HRESULT Result,
+	UINT64 ms
+	);
+
+ClipSGetQueryResults(
+	UNICODESTRING Query,
+	HRESULT Result,
+	UINT64 ms
+	);
+
+ClipSQueryAssociateId(
+	UNICODESTRING Query,
+	UINT32 NumReturnIds,
+	HRESULT Result,
+	UINT64 ms
+	);
+
+ClipSGetFileIdFromAssociateId(
+	HRESULT Result,
+	UINT64 ms
+	);
+
+ClipSGenerateClientChallengeData(
+	UINT32 LicenseProtocolVersion,
+	UINT32 SigningKeyVersion,
+	UINT32 ClientVersion,
+	UINT32 ChallengeSize,
+	HRESULT Result,
+	UINT64 ms
+	);
+
+ClipSGenerateDeviceLicenseRequest(
+	UINT32 ChallengeSize,
+	UINT64 HwTicks,
+	UINT64 ClepTicks,
+	UINT64 OduidTicks,
+	UINT64 EkPubTicks
+	);
+
+ClipSCallServer(
+	UINT32 OutBlobSize,
+	HRESULT Result,
+	UINT64 ms
+	);
+
+ClipSCallServerNotifyPhoneLicenseReady(
+	UNICODESTRING Command,
+	HRESULT Result,
+	UINT64 ms
+	);
+
+ClipSCallServerImportLicenses(
+	UNICODESTRING Command,
+	HRESULT Result,
+	UINT64 ms
+	);
+
+ClipSInstallUefiLicenses(
+	UINT64 CurrentStage,
+	HRESULT Result,
+	UINT64 ms
+	);
+
+ClipSInstallUefiLicenses_Single(
+	UNICODESTRING Namespace,
+	UNICODESTRING Path,
+	HRESULT Result
+	);
+
+ClipSImportLicense_FailedDelete(
+	UNICODESTRING static_cast<LPCWSTR>(arrPendingDeleteFiles[nIter]),
+	HRESULT Result
+	);
+
+ClipSImportLicense(
+	UNICODESTRING static_cast<LPCWSTR>(arrFiles[nIter]),
+	HRESULT Result
+	);
+
+ClipSPostUpgradeLicenseRefresh(
+	UNICODESTRING Command,
+	HRESULT Result,
+	UINT64 ms
+	);
+
+VersionUpdated(
+	UINT32 NewVersion
+	);
+
+RefreshRequired(
+	BOOL32 ServicingMarkerFound,
+	UINT32 PreviousVersion
+	);
+
+ClipSGetLicense(
+	UINT32 LicenseFileSize,
+	HRESULT Result,
+	UINT64 ms
+	);
+
+ClipSUninstallLicense(
+	UNICODESTRING LicenseId,
+	HRESULT Result,
+	UINT64 ms
+	);
+
+ClipSInstallLicenseWorker(
+	UINT32 LicenseBlobSize,
+	UINT32 LicenseType,
+	BOOL32 RefreshOperation,
+	HRESULT Result,
+	UINT64 ms
+	);
+
+GetPFMAndUserId(
+	HRESULT Result,
+	UINT64 ms
+	);
+
+InstallDeviceUnlockToken(
+	UINT32 LicenseType,
+	HRESULT Result,
+	UINT64 ms
+	);
+
+InstallDeviceUnlockToken.UnlockTokenFound(
+	HRESULT Result,
+	UINT64 ms
+	);
+
+UpdateKernelData(
+	UINT32 LicenseType,
+	BOOL32 DeleteEntry,
+	HRESULT Result,
+	UINT64 ms
+	);
+
+ClipSvcTroubleshoot(
+	UINT32 Diagnosis_Kind,
+	HRESULT Result,
+	UNICODESTRING Stage
+	);
+
+TokenStoreNotification_SingleTokenFailureNoData(
+	VOID
+	);
+
+TokenStoreNotification_SingleTokenFailure(
+	UNICODESTRING TokenRef,
+	HRESULT Result
+	);
+
+TokenStoreNotification_ErrorFound_NoData(
+	VOID
+	);
+
+TokenStoreNotification_ErrorFound(
+	HRESULT Result
+	);
+
+TokenStoreNotification_HashMismatch(
+	VOID
+	);
+
+TokenStoreNotification_Corrupted(
+	VOID
+	);
+
+TokenStoreNotification_Recreated(
+	HRESULT Result
+	);
+
+ManagedSModeSwitch.Completed(
+	HRESULT Result
+	);
+
+GetDeviceHardwareData_aggregate(
+	UINT32 attempts,
+	UINT32 failed,
+	UINT64 total_time_success,
+	UINT64 longest_time_success,
+	UINT64 total_time_failure,
+	UINT64 longest_time_failure
+	);
+
+GetOfflineDeviceUniqueID_aggregate(
+	UINT32 attempts,
+	UINT32 failed,
+	UINT64 total_time_success,
+	UINT64 longest_time_success,
+	UINT64 total_time_failure,
+	UINT64 longest_time_failure
+	);
+
+ClipCleanUpState_aggregate(
+	UINT32 attempts,
+	UINT32 failed,
+	UINT64 total_time_success,
+	UINT64 longest_time_success,
+	UINT64 total_time_failure,
+	UINT64 longest_time_failure
+	);
+
+ClipRefreshLicense_aggregate(
+	UINT32 attempts,
+	UINT32 failed,
+	UINT64 total_time_success,
+	UINT64 longest_time_success,
+	UINT64 total_time_failure,
+	UINT64 longest_time_failure
+	);
+
+ClipGenerateClientChallengeData_aggregate(
+	UINT32 attempts,
+	UINT32 failed,
+	UINT64 total_time_success,
+	UINT64 longest_time_success,
+	UINT64 total_time_failure,
+	UINT64 longest_time_failure
+	);
+
+ClipGenerateDeviceLicenseRequest_aggregate(
+	UINT32 attempts,
+	UINT32 failed,
+	UINT64 total_time_success,
+	UINT64 longest_time_success,
+	UINT64 total_time_failure,
+	UINT64 longest_time_failure
+	);
+
+ClipCallServer_aggregate(
+	UINT32 attempts,
+	UINT32 failed,
+	UINT64 total_time_success,
+	UINT64 longest_time_success,
+	UINT64 total_time_failure,
+	UINT64 longest_time_failure
+	);
+
+ClipGetFileIdFromAssociateId_aggregate(
+	UINT32 attempts,
+	UINT32 failed,
+	UINT64 total_time_success,
+	UINT64 longest_time_success,
+	UINT64 total_time_failure,
+	UINT64 longest_time_failure
+	);
+
+ClipGetAssociatedResults_aggregate(
+	UINT32 attempts,
+	UINT32 failed,
+	UINT64 total_time_success,
+	UINT64 longest_time_success,
+	UINT64 total_time_failure,
+	UINT64 longest_time_failure
+	);
+
+ClipQueryAssociateId_aggregate(
+	UINT32 attempts,
+	UINT32 failed,
+	UINT64 total_time_success,
+	UINT64 longest_time_success,
+	UINT64 total_time_failure,
+	UINT64 longest_time_failure
+	);
+
+ClipGetLicense_aggregate(
+	UINT32 attempts,
+	UINT32 failed,
+	UINT64 total_time_success,
+	UINT64 longest_time_success,
+	UINT64 total_time_failure,
+	UINT64 longest_time_failure
+	);
+
+ClipUninstallLicense_aggregate(
+	UINT32 attempts,
+	UINT32 failed,
+	UINT64 total_time_success,
+	UINT64 longest_time_success,
+	UINT64 total_time_failure,
+	UINT64 longest_time_failure
+	);
+
+ClipInstallLicense_aggregate(
+	UINT32 attempts,
+	UINT32 failed,
+	UINT64 total_time_success,
+	UINT64 longest_time_success,
+	UINT64 total_time_failure,
+	UINT64 longest_time_failure
+	);
+

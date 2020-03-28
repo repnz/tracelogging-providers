@@ -1,0 +1,96 @@
+ProviderNames:
+	Microsoft.Windows.FileSystem.Chkdsk
+	TelemetryAssert
+	TelemetryAssertDiagTrack
+
+
+
+**** Events *****
+Format(
+	GUID formatVolumeId,
+	UNICODESTRING formatFileSystemName,
+	UINT32 formatApiCalled,
+	UINT32 formatVersionMajor,
+	UINT32 formatVersionMinor,
+	UINT32 formatFlags,
+	UINT32 formatClusterSize,
+	UINT32 formatPhases,
+	UINT32 formatLogFileSize,
+	UINT64 formatDuration,
+	UINT32 formatExitStatus,
+	UINT32 formatSourceTag
+	);
+
+ChkdskCompleted(
+	BOOL32 chkdskFix,
+	BOOL32 chkdskAutocheckScheduled,
+	GUID chkdskVolumeGuid,
+	UNICODESTRING chkdskFileSystemName,
+	INT32 chkdskAutocheck,
+	INT32 chkdskFixLevel,
+	UINT32 chkdskExitStatus,
+	UINT32 chkdskSourceTag,
+	BOOL32 chkdskResult,
+	BOOL32 chkdskAborted,
+	UINT64 chkdskDuration,
+	UINT32 chkdskSequenceNumber,
+	BOOL32 chkdskVolumeIsDirty
+	);
+
+ChkdskStarting(
+	GUID chkdskVolumeGuid,
+	UNICODESTRING chkdskFileSystemName,
+	INT32 chkdskAutocheck,
+	INT32 chkdskFixLevel
+	);
+
+ChkdskStageEntered(
+	UINT16 chkdskStage
+	);
+
+ChkdskRunInfo(
+	UNICODESTRING chkdskProgramName,
+	INT64 chkdskVolumeSize,
+	HEXINT64 chkdskHouseKeepingBitmask,
+	HEXINT64 chkdskArgumentsBitmask,
+	GUID chkdskVolumeGuid,
+	INT64 chkdskNumberUserFiles,
+	UNICODESTRING chkdskDuration
+	);
+
+ChkdskRunInfo(
+	UINT32 volumeCorruptionNtStatus,
+	UINT32 volumeCorruptionState,
+	UINT32 volumeCorruptionFlags,
+	UNICODESTRING chkdskProgramName,
+	INT64 chkdskVolumeSize,
+	HEXINT64 chkdskHouseKeepingBitmask,
+	HEXINT64 chkdskArgumentsBitmask,
+	GUID chkdskVolumeGuid,
+	INT64 chkdskNumberUserFiles,
+	UNICODESTRING chkdskDuration
+	);
+
+ChkdskVerbEncountered(
+	UINT32 chkdskVerb,
+	UINT32 chkdskVerbOutcome,
+	UINT32 chkdskVerbOutcomeStatus,
+	HEXINT32 chkdskVerbHeaderFlags,
+	UINT32 chkdskVerbSourceId,
+	UINT64 chkdskVerbSignature,
+	UINT64 chkdskVerbObjectId,
+	UINT64 chkdskVerbDuration
+	);
+
+Assert(
+	UINT32 assertVersion,
+	UINT32 rva,
+	UINT32 timestamp,
+	UINT32 imageSize,
+	ANSISTRING imageName,
+	UINT32 count,
+	UINT32 totalHits,
+	UINT32 ModuleCollection,
+	UINT32 GlobalCollection
+	);
+

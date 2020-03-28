@@ -1,0 +1,361 @@
+ProviderNames:
+	Microsoft.Windows.Print.APMon
+	Microsoft.Windows.Print.WSDMon
+	Microsoft.Windows.Print.IppMon
+	Microsoft.Windows.Print.IppCommon
+	Microsoft.Windows.Print.HttpRest
+	Microsoft.Windows.Print.CloudPrintHelper
+	Microsoft.Windows.Print.IppAdapterCommon
+	Microsoft.Windows.Print.IppConfigConverter
+
+
+
+**** Events *****
+FallbackError(
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+FallbackError(
+	UINT64 PartA_PrivTags,
+	SIGNED wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+TraceInfo(
+	ANSISTRING Function,
+	UNICODESTRING Message
+	);
+
+TraceWarning(
+	ANSISTRING Function,
+	UNICODESTRING Message
+	);
+
+PreferIPP(
+	BOOLEAN KeyExists,
+	BOOLEAN KeySet
+	);
+
+InitiatePnp(
+	UINT64 PartA_PrivTags,
+	UNICODESTRING PortName,
+	NULL PrinterName,
+	UNICODESTRING Uuid,
+	NULL AepIdHashed,
+	UNICODESTRING PortType,
+	UNICODESTRING Manufacturer,
+	UNICODESTRING ModelName,
+	UNICODESTRING MakeAndModel,
+	UNICODESTRING FirmwareVersion,
+	UNICODESTRING 1284DeviceID,
+	UNICODESTRING HardwareID,
+	UNICODESTRING CompatID,
+	INT32 hr
+	);
+
+AttachOfflinePort(
+	UINT64 PartA_PrivTags,
+	UNICODESTRING Source,
+	UNICODESTRING PortName,
+	UNICODESTRING DeviceInstanceId,
+	UNICODESTRING GlobalIdentity,
+	UNICODESTRING PnPXId,
+	UNICODESTRING Manufacturer,
+	UNICODESTRING ModelName,
+	INT32 hr
+	);
+
+CreateOfflinePort(
+	UINT64 PartA_PrivTags,
+	UNICODESTRING PortName,
+	UNICODESTRING DeviceInstanceId,
+	UNICODESTRING GlobalIdentity,
+	UNICODESTRING PnPXId,
+	UNICODESTRING Manufacturer,
+	UNICODESTRING ModelName,
+	INT32 hr
+	);
+
+PDLSupported(
+	UINT64 PartA_PrivTags,
+	INT32 IsWSD20,
+	INT32 IsMobileCompatible,
+	INT32 SupportsOXPS,
+	INT32 SupportsMSXPS,
+	INT32 SupportsPWGRaster,
+	INT32 SupportsPCLm,
+	INT32 Supports3MF,
+	UNICODESTRING PnpId,
+	UNICODESTRING CompatId,
+	UNICODESTRING UUID
+	);
+
+ActivityStoppedAutomatically(
+	VOID
+	);
+
+ActivityError(
+	UINT64 PartA_PrivTags,
+	SIGNED wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+ActivityError(
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+AuthenticateActivity(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId,
+	BOOLEAN IsMps,
+	ANSISTRING Module
+	);
+
+TraceWarning(
+	ANSISTRING Module,
+	ANSISTRING Function,
+	UNICODESTRING Message
+	);
+
+AuthenticateActivity(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+AuthenticateActivity(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+TraceInfo(
+	ANSISTRING Module,
+	ANSISTRING Function,
+	UNICODESTRING Message
+	);
+
+ActivityIntermediateStop(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+GetPrinterDataActivity(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId,
+	UNICODESTRING Schema,
+	UNICODESTRING PortType
+	);
+
+RetrievePrinterDataResult(
+	UINT64 PartA_PrivTags,
+	UNICODESTRING RequestLang,
+	INT32 HResult
+	);
+
+GetPrinterDataActivity(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+GetPrinterDataActivity(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+JobActivity(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+JobActivity(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+JobActivity(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId,
+	NULL PrinterName,
+	UNICODESTRING PortType,
+	UINT32 SpoolerJobId,
+	UNICODESTRING DocumentFormat,
+	UNICODESTRING PrinterMakeAndModel,
+	BOOLEAN IsSecure,
+	ANSISTRING __TlgCV__
+	);
+
+JobEnd(
+	UINT64 PartA_PrivTags,
+	INT32 HResult,
+	INT16 IppJobStatus,
+	ANSISTRING __TlgCV__
+	);
+
+JobCancel(
+	UINT64 PartA_PrivTags,
+	INT32 HResult,
+	INT16 IppJobStatus,
+	ANSISTRING __TlgCV__
+	);
+
+JobWrite(
+	UINT64 PartA_PrivTags,
+	UINT32 BufferSize,
+	INT32 HResult,
+	ANSISTRING __TlgCV__
+	);
+
+JobActivity(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	BOOLEAN JobRestarted,
+	ANSISTRING __TlgCV__
+	);
+
+JobActivity(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId,
+	BOOLEAN JobRestarted,
+	ANSISTRING __TlgCV__
+	);
+
+Compliance(
+	ANSISTRING PrinterMakeAndModel,
+	UNICODESTRING Detail,
+	UNICODESTRING SubDetail
+	);
+

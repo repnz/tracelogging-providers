@@ -1,0 +1,79 @@
+ProviderNames:
+	Microsoft.Windows.Kernel.Registry.FromApp
+	Microsoft.Windows.TlgAggregateInternal
+
+
+
+**** Events *****
+AllowlistMatch(
+	HEXINT64 RootKey,
+	UNICODESTRING RelativePath
+	);
+
+AllowlistMismatch(Aggregate)(
+	NULL Count,
+	HEXINT64 RootKey
+	);
+
+BadAccessMask(Aggregate)(
+	NULL Count,
+	UINT64 AllowedAccess,
+	UINT64 RequestedAccess
+	);
+
+BadAccessMask(
+	UINT64 AllowedAccess,
+	UINT64 RequestedAccess,
+	HEXINT64 RootKey,
+	UNICODESTRING RelativePath
+	);
+
+DisallowedOptions(
+	UINT32 Options,
+	UINT16 FuncId
+	);
+
+AttemptedWowRedirection(Aggregate)(
+	NULL Count,
+	UINT32 Flags,
+	UINT16 FuncId
+	);
+
+AttemptDisallowedSubkeyAccess(
+	VOID
+	);
+
+DisallowedOptions(Aggregate)(
+	NULL Count,
+	UINT32 Options,
+	UINT16 FuncId
+	);
+
+AttemptedWowRedirection(
+	UINT32 Flags,
+	UINT16 FuncId
+	);
+
+AllowlistMismatch(
+	HEXINT64 RootKey,
+	UNICODESTRING RelativePath
+	);
+
+AllowlistMatch(Aggregate)(
+	NULL Count,
+	HEXINT64 RootKey,
+	UNICODESTRING RelativePath
+	);
+
+TlgAggregateSummary(
+	GUID Provider,
+	UINT64 NumFlushes,
+	UINT64 MaxEntriesStored,
+	UINT64 TotalEntriesFlushed,
+	UINT32 MaxEntriesFlushed,
+	UINT32 MinEntriesFlushed,
+	UINT32 NumBucketLimitReached,
+	UINT32 NumAllocationFailures,
+	UINT32 NumLargeEventFailures
+	);
+

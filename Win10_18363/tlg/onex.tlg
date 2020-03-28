@@ -1,0 +1,36 @@
+ProviderNames:
+	Microsoft.Windows.Networking.OneX
+
+
+
+**** Events *****
+OneXStopAuthentication(
+	UINT32 portId,
+	UINT32 sessionId,
+	GUID InterfaceGuid,
+	UINT32 numAuthAttempts,
+	UINT32 numAuthenticatorNotFound,
+	UINT32 numAuthSuccess,
+	UINT32 numAuthFailures,
+	UINT32 numAuthTimeouts,
+	UINT32 numValidEapolFramesReceived,
+	UINT32 numInvalidEapolFramesReceived,
+	UINT32 numUnsupportedEapolFramesReceived,
+	UINT32 numEapolStartTransmitted,
+	UINT32 numTransmitErrors,
+	UINT32 averageTimeNeededToPerformAuth,
+	UINT32 oneXErrorCode
+	);
+
+OneXStartAuthentication(
+	UINT32 portId,
+	UINT32 sessionId,
+	GUID InterfaceGuid,
+	UINT8 oneXMediaType,
+	UINT8 oneXMode,
+	UINT8 authIdentity,
+	BOOL32 isDomainUser,
+	UINT32 getDomainUserError,
+	UINT32 oneXErrorCode
+	);
+

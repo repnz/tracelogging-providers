@@ -1,0 +1,273 @@
+ProviderNames:
+	Microsoft.Windows.Security.Fido
+
+
+
+**** Events *****
+FailureInfo(
+	HRESULT hResult,
+	ANSISTRING file,
+	UINT32 lineNumber,
+	UNICODESTRING message
+	);
+
+Info(
+	HRESULT hResult,
+	ANSISTRING file,
+	UINT32 lineNumber,
+	UNICODESTRING message
+	);
+
+Error:FidoComCreateRandomAccessStreamFromBufferDataNotFlushed(
+	INT32 resultCode
+	);
+
+Error:FidoComCreateRandomAccessStreamFromBufferWaitForFlushCompletion(
+	INT32 resultCode
+	);
+
+Error:FidoComCreateRandomAccessStreamFromBufferFlushAsync(
+	INT32 resultCode
+	);
+
+Error:FidoComCreateRandomAccessStreamFromBufferDataNotStored(
+	INT32 resultCode
+	);
+
+Error:FidoComCreateRandomAccessStreamFromBufferGetBufferLength(
+	INT32 resultCode
+	);
+
+Error:FidoComCreateRandomAccessStreamFromBufferWaitForStoreCompletion(
+	INT32 resultCode
+	);
+
+Error:FidoComCreateRandomAccessStreamFromBufferStoreAsync(
+	INT32 resultCode
+	);
+
+Error:FidoComCreateRandomAccessStreamFromBufferWriterBuffer(
+	INT32 resultCode
+	);
+
+Error:FidoComCreateRandomAccessStreamFromBufferCreateDataWriter(
+	INT32 resultCode
+	);
+
+Error:FidoComCreateRandomAccessStreamFromBufferGetDataWriterActivationFactory(
+	INT32 resultCode
+	);
+
+Error:FidoComCreateRandomAccessStreamFromBufferGetOutputStream(
+	INT32 resultCode
+	);
+
+Error:FidoComCreateRandomAccessStreamFromBufferActivateRandomAccessStreamInstance(
+	INT32 resultCode
+	);
+
+Error:FidoComGetBufferFromUrl(
+	INT32 resultCode
+	);
+
+Error:FidoComGetBufferFromUrlGetHttpClientActivationFactory(
+	INT32 resultCode
+	);
+
+Error:FidoComGetBufferFromUrlCreateUri(
+	INT32 resultCode
+	);
+
+Error:FidoComGetBufferFromUrlGetUriActivationFactory(
+	INT32 resultCode
+	);
+
+Error:FormatMessage(
+	INT32 resultCode
+	);
+
+Error:FidoLoadString(
+	INT32 resultCode
+	);
+
+UpdateDeviceStatus(
+	GUID correlationId,
+	UINT32 transport,
+	UINT32 wnfState,
+	HEXINT32 error
+	);
+
+WaitError(
+	UINT32 winRet
+	);
+
+Invalid WebAuthNWorkerType(
+	UINT32 workerId
+	);
+
+ResignalWorkStageChangeEvent(
+	GUID correlationId,
+	UINT32 workStage
+	);
+
+WorkEventSignaled(
+	UINT32 waitRet
+	);
+
+UpdateDeviceTransport(
+	GUID correlationId,
+	UINT32 transport
+	);
+
+UnexpectedDataReadyEvent(
+	GUID correlationId
+	);
+
+UnexpectedWorkStageChangeEvent(
+	GUID correlationId,
+	UINT32 workStage
+	);
+
+CloseFidoAuthenticationSession(
+	GUID correlationId
+	);
+
+StartFidoAuthenticationSession(
+	GUID correlationId
+	);
+
+DoFidoWork(
+	GUID correlationId,
+	UINT32 workStage
+	);
+
+ReportStageStatus(
+	GUID correlationId,
+	UINT32 workStage,
+	HRESULT opResult
+	);
+
+ChangeWorkStageInternal(
+	GUID correlationId,
+	UINT32 currentWorkStage,
+	UINT32 newWorkStage,
+	BOOLEAN resetRetryCount
+	);
+
+ChangeToSameWorkStage(
+	GUID correlationId,
+	UINT32 currentWorkStage
+	);
+
+StopWork(
+	GUID correlationId
+	);
+
+Error:GetBitmapBufferFromRandomAccessStreamIStream_Read(
+	INT32 resultCode
+	);
+
+Error:GetBitmapBufferFromRandomAccessStreamIStream_Reset(
+	INT32 resultCode
+	);
+
+Warning:GetBitmapBufferFromRandomAccessStreamBufferSize(
+	INT32 resultCode
+	);
+
+Error:GetBitmapBufferFromRandomAccessStreamIStream_Size(
+	INT32 resultCode
+	);
+
+Error:GetBitmapBufferFromRandomAccessStreamSaveImageWithWIC(
+	INT32 resultCode
+	);
+
+Error:GetBitmapBufferFromRandomAccessStreamSHCreateMemoryStream(
+	INT32 resultCode
+	);
+
+Error:GetBitmapBufferFromRandomAccessStreamLoadImage(
+	INT32 resultCode
+	);
+
+Error:GetBitmapBufferFromRandomAccessStreamSHCreateMemStream(
+	INT32 resultCode
+	);
+
+Error:GetBitmapBufferFromRandomAccessStreamSanitizeImage(
+	INT32 resultCode
+	);
+
+Error:GetBitmapBufferFromRandomAccessStreamCreateSanitizationInstance(
+	INT32 resultCode
+	);
+
+Error:GetBitmapBufferFromRandomAccessStreamCreateStream(
+	INT32 resultCode
+	);
+
+Error:FidoCredProvCredentialGetBitmapBufferValueFromRandomAccessStream(
+	INT32 resultCode
+	);
+
+Error:FidoCredProvCredentialGetBitmapBufferValueCreateRandomAccessStreamFromBuffer(
+	INT32 resultCode
+	);
+
+Error:FidoCredProvCredentialGetBitmapBufferValueFromUrl(
+	INT32 resultCode
+	);
+
+Error:FidoCredProvCredentialSerializeCredential(
+	INT32 resultCode
+	);
+
+Warning:FidoCredProvCredentialGetBitmapBufferValueFromResource(
+	INT32 resultCode
+	);
+
+Warning:FidoCredProvCredentialGetBitmapBufferValueFromStream(
+	INT32 resultCode
+	);
+
+Warning:FidoCredProvCredentialGetBitmapBufferValueFromUrl(
+	INT32 resultCode
+	);
+
+Error:FidoCredProvCredentialGetBitmapBufferValueInvalidParameter(
+	INT32 resultCode
+	);
+
+Error:FidoCredProvCredentialGetStringValue(
+	INT32 resultCode
+	);
+
+Error:FidoCredProvCredentialGetStringValueInvalidFieldId(
+	INT32 resultCode
+	);
+
+Error:FidoCredProvCredentialGetStringValueInvalidParameter(
+	INT32 resultCode
+	);
+
+Error:FidoCredProvCredentialRuntimeClassInitializeCopyCredential(
+	INT32 resultCode
+	);
+
+FidoCredentialLogonUI::SetSelectedInternal(
+	BOOLEAN failToUnlock
+	);
+
+FidoCredentialLogonUI::SwitchUIModeInternal(
+	UINT32 uiMode
+	);
+
+InvalidSerializationBufferUserSidTooLarge(
+	INT32 retVal
+	);
+
+InvalidSerializationBufferTooSmall(
+	INT32 retVal
+	);
+

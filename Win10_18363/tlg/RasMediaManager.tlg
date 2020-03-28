@@ -1,0 +1,354 @@
+ProviderNames:
+	Microsoft.Windows.Networking.RAS.MediaManager
+	Microsoft.Windows.Networking.RAS.Manager
+	Microsoft.Windows.Networking.VPNPlugin
+	Microsoft.Windows.Networking.RAS.Dialer
+	Microsoft.Windows.Networking.VPNPlugin.Manager
+	TelemetryAssert
+	TelemetryAssertDiagTrack
+	MicrosoftWindowsShellNetworkUX
+
+
+
+**** Events *****
+PhonebookEntryLog(
+	UNICODESTRING PbkEntryOp,
+	HRESULT PbkEntryOpHr,
+	UNICODESTRING ProfileName,
+	UINT32 ConnectionType,
+	UINT32 DialMode,
+	UINT32 OverridePreference,
+	UINT32 RedialAttempts,
+	UINT32 RedialSeconds,
+	INT32 IdleDisconnectSeconds,
+	BOOL32 RedialOnLinkFailure,
+	UINT32 AuthRestrictions,
+	UINT32 VpnStrategy,
+	UINT32 DataEncryption,
+	BOOL32 AutoLogOn,
+	BOOL32 UseRasCredentials,
+	UINT32 ExcludedProtocols,
+	BOOL32 LcpExtensions,
+	BOOL32 SwCompression,
+	BOOL32 NegotiateMultilinkAlways,
+	UINT32 CallbackMode,
+	GUID ProfileGuid,
+	BOOL32 BypassProxyForLocal,
+	UINT32 NumCustomIPSECPolicies,
+	UINT32 NumConfiguredEKUs,
+	UINT32 NumServers,
+	UINT32 NumRoutes,
+	UINT32 NumNrptRules,
+	BOOL32 AutoTriggerCapable,
+	UINT32 NumClassicAppIds,
+	UINT32 NumAppIds,
+	UINT32 NumDnsSearchSuffixes,
+	BOOL32 IsPowerShellCreated,
+	BOOL32 DisableDefaultDnsSuffixes,
+	UINT32 NumTrustedNetworks,
+	BOOL32 ProxySettingsModified,
+	UINT32 NumPerAppTrafficFilters,
+	BOOL32 AlwaysOnCapable,
+	BOOL32 IsDeviceComplianceEnabled,
+	BOOL32 IsDeviceComplianceSSOEnabled,
+	BOOL32 IsDeviceComplianceSSOEKUConfigured,
+	BOOL32 IsDeviceComplianceSSOIssuerHashConfigured,
+	UNICODESTRING ApnProviderId,
+	UNICODESTRING ApnAccessPointName,
+	BOOL32 ApnIsCompressionEnabled,
+	UNICODESTRING CustomRasDialDll,
+	UNICODESTRING DestinationServer,
+	BOOLEAN BitmapProfileProperties
+	);
+
+RasConnectionStatus(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 ConnectionStatus
+	);
+
+RasConnectionStatus(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId,
+	UINT32 ConnectionStatus
+	);
+
+RasConnectionStatus(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId,
+	GUID InterfaceGuid
+	);
+
+ActivityStoppedAutomatically(
+	VOID
+	);
+
+ActivityError(
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+ActivityError(
+	UINT64 PartA_PrivTags,
+	SIGNED wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+FallbackError(
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+FallbackError(
+	UINT64 PartA_PrivTags,
+	SIGNED wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+RasConnectionStatus(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+RasConnectionStatus(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+RasDisconnectScheduled(
+	UINT64 PartA_PrivTags,
+	HEXINT64 ConnectionHandle,
+	UINT32 DisconnectReason,
+	HEXINT32 ErrorCode
+	);
+
+RasConnectionFlow(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId,
+	GUID InterfaceGuid
+	);
+
+RasConnectionFlow(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 ConnectionFlowResult
+	);
+
+RasConnectionFlow(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId,
+	UINT32 ConnectionFlowResult
+	);
+
+ManualCancel(
+	UINT64 PartA_PrivTags,
+	HRESULT OperationResult
+	);
+
+ActivityIntermediateStop(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+RasDisconnect(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId,
+	GUID InterfaceGuid
+	);
+
+RasDisconnect(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+RasDisconnect(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+RasConnectionFlow(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+RasConnectionFlow(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+ConnectionCreate(
+	UINT64 PartA_PrivTags,
+	UNICODESTRING ProfileName,
+	INT32 ErrorCode
+	);
+
+LaunchTokenBrokerStatus(
+	UNICODESTRING EntryName,
+	HEXINT32 OperationResult,
+	HEXINT64 WindowsHandle,
+	UINT32 TokenRequestStatusCode,
+	HEXINT32 TokenRequestHresult
+	);
+
+Assert(
+	UINT32 assertVersion,
+	UINT32 rva,
+	UINT32 timestamp,
+	UINT32 imageSize,
+	ANSISTRING imageName,
+	UINT32 count,
+	UINT32 totalHits,
+	UINT32 ModuleCollection,
+	UINT32 GlobalCollection
+	);
+

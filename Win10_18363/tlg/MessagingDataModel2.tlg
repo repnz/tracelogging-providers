@@ -1,0 +1,1449 @@
+ProviderNames:
+	Microsoft.Windows.Messaging.Service
+	TelemetryAssert
+	TelemetryAssertDiagTrack
+
+
+
+**** Events *****
+[Error] Assert(
+	HRESULT HResult,
+	ANSISTRING Location,
+	UINT32 Line Number
+	);
+
+Error(
+	INT32 HRESULT,
+	ANSISTRING Location,
+	UINT32 Line Number
+	);
+
+[Error] Originate(
+	HRESULT HResult,
+	ANSISTRING Location,
+	UINT32 Line Number
+	);
+
+[Error] Propagate(
+	HRESULT HResult,
+	ANSISTRING Location,
+	UINT32 Line Number
+	);
+
+Error Propagated(
+	INT32 HRESULT,
+	ANSISTRING Location,
+	UINT32 Line Number
+	);
+
+GetDefaultFileNameFromMediaType(
+	ANSISTRING Comment,
+	INT32 media type
+	);
+
+CSmStore::EndTransaction(
+	VOID
+	);
+
+CSmStore::EndTransaction(
+	ANSISTRING Comment
+	);
+
+CSmStore::StartTransaction(
+	UINT32 ThreadId
+	);
+
+CSmStore::CleanStore(
+	ANSISTRING Comment
+	);
+
+CSmStore::SetProviderUnseenCount(
+	VOID
+	);
+
+CSmStore::ResetNewMessageCountByProviders(
+	VOID
+	);
+
+CSmStore::Unadvise(
+	UINT32 Sink
+	);
+
+CSmStore::AdviseByProviders(
+	UINT32 Sink
+	);
+
+CSmStore::AdviseProvider(
+	UINT32 Sink
+	);
+
+CSmStore::FindConversationById(
+	ANSISTRING Comment,
+	UNICODESTRING Conversation Id
+	);
+
+CSmMessage::SetRemoteId(
+	UNICODESTRING Info
+	);
+
+CSmMessage::SetMessageDeferredDownload(
+	ANSISTRING Comment,
+	INT32 pending download
+	);
+
+CSmMessage::WriteMessageInternal(
+	ANSISTRING Comment
+	);
+
+CSmMessage::WriteMessageInternal(
+	ANSISTRING Comment
+	);
+
+CSmMessage::WriteMessageInternal(
+	UINT32 Is read
+	);
+
+CSmMessage::DeleteMessageFromStoreHelper(
+	VOID
+	);
+
+UpdateMessageStatus(
+	UNICODESTRING messageId,
+	INT32 messageDirection,
+	INT32 transport,
+	INT32 messageStatus,
+	INT32 transportResult,
+	INT32 errorType,
+	INT32 errorCode
+	);
+
+CSmMessage::SetUnread(
+	ANSISTRING Comment,
+	UINT32 Is read
+	);
+
+UntriagedMessagesAtBoot(
+	ANSISTRING Count
+	);
+
+MessagingThreading::ResolveRecipientToAggregate(
+	ANSISTRING Comment,
+	UINT32 number hash
+	);
+
+MessagingThreading::ThreadingForMultiParty(
+	UNICODESTRING Comment
+	);
+
+MessagingThreading::ThreadingForSingleParty(
+	UNICODESTRING Comment
+	);
+
+MessagingThreading::ThreadingForSingleParty(
+	ANSISTRING Comment,
+	UINT32 aggregateId.data[0],
+	UINT32 aggregateId.data[1],
+	UINT32 aggregateId.data[2]
+	);
+
+MessagingThreading::_FindBestConversation(
+	ANSISTRING Comment
+	);
+
+MessagingThreading::_FindBestConversation(
+	ANSISTRING Comment,
+	UINT32 aggregateId.data[0],
+	UINT32 aggregateId.data[1],
+	UINT32 aggregateId.data[2]
+	);
+
+MessagingThreading::UpgradeConversation(
+	UNICODESTRING Comment
+	);
+
+CSmProviderConversation::_GetLeadingMessageId(
+	ANSISTRING Comment,
+	UNICODESTRING ConversationId,
+	UNICODESTRING MessageId,
+	UINT32 MessageType,
+	UINT32 ProviderId,
+	UINT32 IterationCount
+	);
+
+CSmProviderConversation::_GetLeadingMessageId(
+	ANSISTRING Comment
+	);
+
+CSmConversation::_GetLeadingMessageId(
+	ANSISTRING Comment,
+	UNICODESTRING ConversationId,
+	UNICODESTRING MessageId,
+	UINT32 MessageType,
+	UINT32 IterationCount
+	);
+
+CSmConversation::_GetLeadingMessageId(
+	ANSISTRING Comment
+	);
+
+CSmConversation::CreateConversationIfNecessary(
+	ANSISTRING Comment
+	);
+
+CSmConversation::_MarkAsRead(
+	ANSISTRING Comment
+	);
+
+MapiAdviseSink::_OnNewMessage(
+	ANSISTRING Comment
+	);
+
+MapiAdviseSink::_OnNewMessage(
+	VOID
+	);
+
+MapiAdviseSink::OnNotify(
+	ANSISTRING Comment
+	);
+
+MapiAdviseSink::OnNotify(
+	ANSISTRING Comment,
+	HRESULT HResult
+	);
+
+MapiAdviseSink::_ProcessNotification(
+	UINT32 Event type,
+	UINT32 Object type
+	);
+
+MapiAdviseSink::_ProcessNotification(
+	ANSISTRING Comment,
+	UINT32 event
+	);
+
+MapiAdviseSink::_OnConversationNotify(
+	UINT32 Event type,
+	UINT32 Sink
+	);
+
+MapiAdviseSink::_OnMessageNotify(
+	ANSISTRING Comment,
+	UINT32 Event type,
+	UNICODESTRING Message ID
+	);
+
+CSmMessageRCS::GetMutableWriteProps(
+	ANSISTRING Comment
+	);
+
+MessagingAsyncDeletion::_DeleteProviderMessages(
+	ANSISTRING Comment,
+	UINT32 Conversation Index
+	);
+
+MessagingAsyncDeletion::_OnAsyncDeletionNotification(
+	ANSISTRING Comment,
+	UINT32 Batch number
+	);
+
+MessagingAsyncDeletion::DeleteConversationInBatches(
+	ANSISTRING Comment,
+	UINT32 Batch Count
+	);
+
+SlideAccessor::_BuildSlideFromSmil(
+	ANSISTRING Comment,
+	INT32 hr
+	);
+
+SlideAccessor::_CreateXmlReaderAndSetInput(
+	ANSISTRING Comment,
+	INT32 hr
+	);
+
+MapiNotificationWrapper::_GetSmProps(
+	ANSISTRING Comment
+	);
+
+CellMessagingHelper::OnInitializationComplete(
+	ANSISTRING Comment
+	);
+
+CellMessagingHelper::OnSlotCanAssociationsChanged(
+	VOID
+	);
+
+CellMessagingHelper::_CreateAndInitializeCanSubscriptions(
+	UINT32 Number of CanSubscriptions created)
+	);
+
+CellMessagingHelper::_Initialize(
+	ANSISTRING Comment
+	);
+
+MessagingMultiSimConverter::_NotifyChanged(
+	ANSISTRING Comment
+	);
+
+MessagingMultiSimConverter::_WaitForProviderInfoReady(
+	ANSISTRING Comment,
+	INT32 hr
+	);
+
+MessagingMultiSimConverter::_WaitForProviderInfoReady(
+	ANSISTRING Comment
+	);
+
+MessagingMultiSimConverter::_SetProviderInfo(
+	UINT32 Provider ID,
+	GUID PhoneLineId,
+	GUID ModemId,
+	UINT32 SlotIndex,
+	BOOLEAN HasImsClient,
+	GUID ImsClientId
+	);
+
+MessagingMultiSimConverter::_SetProviderInfo(
+	UINT64 Provider count
+	);
+
+MessagingMultiSimConverter::GetProviderIdForImsClientId(
+	UINT32 Provider ID,
+	GUID Ims Client ID
+	);
+
+MessagingMultiSimConverter::GetImsClientIdForProviderId(
+	UINT32 Provider ID,
+	GUID Ims Client ID
+	);
+
+MessagingMultiSimConverter::GetProviderIdForPhoneLineId(
+	UINT32 Provider ID,
+	GUID Line ID
+	);
+
+MessagingMultiSimConverter::GetPhoneLineIdForProviderId(
+	UINT32 Provider ID,
+	GUID Line ID
+	);
+
+MessagingMultiSimConverter::GetSimId(
+	UNICODESTRING Sim ID,
+	UINT32 Provider ID
+	);
+
+MessagingMultiSimConverter::GetSlotId(
+	UINT32 Provider ID,
+	GUID  Modem ID,
+	UINT32 Slot Index
+	);
+
+MessagingMultiSimConverter::GetProviderIdForSlotId(
+	UINT32 Provider ID,
+	GUID Modem ID,
+	UINT32 Slot Index
+	);
+
+MessagingMultiSimConverter::GetProviderIdForSimId(
+	UNICODESTRING Sim ID,
+	UINT32 Provider ID
+	);
+
+MessagingMultiSimConverter::GetExecutorIndex(
+	UNICODESTRING Sim ID,
+	UINT32 Executor Index
+	);
+
+WwanConnectionConfiguration::_GetWwanInterfaceObject(
+	UNICODESTRING Comment,
+	UNICODESTRING SimId
+	);
+
+WwanConnectionConfiguration::_Initialize(
+	UNICODESTRING SimId,
+	BOOL32 IsCellularRadioOn,
+	BOOL32 IsDataEnabled,
+	BOOL32 IsDataToggleOn,
+	BOOL32 IsCurrentlyRoaming,
+	BOOL32 IsRoamingSupported,
+	BOOL32 IsRoaming
+	);
+
+WwanConnectionConfiguration::_Initialize - Start(
+	UNICODESTRING SimId
+	);
+
+CanSubscription::OnSmsModelFetchDone(
+	UNICODESTRING Can ID,
+	UINT32 Provider ID
+	);
+
+CanSubscription::OnSmsModelRemoved(
+	UNICODESTRING Can ID,
+	UINT32 Provider ID
+	);
+
+CanSubscription::OnSmsModelAdded(
+	UNICODESTRING Can ID,
+	UINT32 Provider ID
+	);
+
+CanSubscription::OnRegistrationStatusChanged(
+	UNICODESTRING Can ID,
+	UINT32 Provider ID
+	);
+
+CanSubscription::RegisterForSmsReadyStatus(
+	VOID
+	);
+
+CanSubscription::CreateMessageToSend(
+	UNICODESTRING Can ID,
+	UINT32 Provider ID
+	);
+
+CanSubscription::Uninitialize(
+	ANSISTRING Comment
+	);
+
+CanSubscription::Uninitialize(
+	UNICODESTRING Can ID,
+	UINT32 Provider ID
+	);
+
+CanSubscription::Initialize(
+	UNICODESTRING Can ID,
+	UINT32 Provider ID
+	);
+
+PhoneOMBasedProviderInfoManager::_GetPhoneLines(
+	UINT32 c_needFields,
+	UINT32 componentInfo.ValidFields
+	);
+
+PhoneOMBasedProviderInfoManager::_GetPhoneLines(
+	ANSISTRING comment,
+	GUID lineInfo.lineType
+	);
+
+PhoneOMBasedProviderInfoManager::_GetPhoneLines(
+	UINT32 lineCount
+	);
+
+PhoneOMBasedProviderInfoManager::OnImsClientEnumerationCompleted(
+	VOID
+	);
+
+PhoneOMBasedProviderInfoManager::OnImsClientRemoved(
+	GUID Ims Client ID
+	);
+
+PhoneOMBasedProviderInfoManager::_OnImsClientAdded(
+	GUID Existing Ims Client ID
+	);
+
+PhoneOMBasedProviderInfoManager::OnImsClientAdded(
+	GUID Ims Client ID
+	);
+
+PhoneOMBasedProviderInfoManager::_PhoneListenerCallback(
+	VOID
+	);
+
+PhoneOMBasedProviderInfoManager::_Initialize(
+	HRESULT hr
+	);
+
+SimOMBasedProviderInfoManager::OnDiscoveryStateChanged(
+	ANSISTRING Comment
+	);
+
+ProviderManager::OnMessagingMultiSimConverterProviderEnumerationComplete(
+	VOID
+	);
+
+ProviderManager::OnMessagingMultiSimConverterReady(
+	VOID
+	);
+
+ProviderManager::OnMessagingMultiSimConverterProviderRemoved(
+	UINT32 providerId,
+	INT32 isPrimaryDevice,
+	INT32 IsImsClientValid,
+	GUID pImsClientId
+	);
+
+ProviderManager::OnMessagingMultiSimConverterProviderAdded(
+	UINT32 providerId,
+	INT32 isPrimaryDevice,
+	INT32 IsImsClientValid,
+	GUID pImsClientId
+	);
+
+ProviderManager::GetProviderById(
+	HRESULT QueryInterface Error
+	);
+
+ProviderManager::_WaitForProviderInfoReady(
+	UINT32 waitResult,
+	ANSISTRING FunctionName,
+	UINT32 Error
+	);
+
+EnsureMessageIsLastInConversation(
+	ANSISTRING Comment
+	);
+
+ManualRetry(
+	UNICODESTRING messageId,
+	INT32 recipientCount,
+	INT32 class,
+	INT32 transport
+	);
+
+SmsProvider::SendMessageW(
+	ANSISTRING Comment,
+	UNICODESTRING MessageId,
+	UNICODESTRING ConversationId
+	);
+
+SmsProvider::SendMessageW(
+	ANSISTRING Comment
+	);
+
+SmsProvider::SendMessageW(
+	UINT32 Provider Id
+	);
+
+RcsProvider::NotifyMessageRead(
+	ANSISTRING Comment,
+	UNICODESTRING MessageId,
+	UNICODESTRING ConversationId
+	);
+
+RcsProvider::NotifyMessageRead(
+	ANSISTRING Comment,
+	UNICODESTRING MessageId,
+	INT32 ReadReciept,
+	INT32 PendingAccept,
+	UNICODESTRING ConversationId
+	);
+
+RcsProvider::SendMessageW(
+	UINT32 Provider Id
+	);
+
+MessagingNotificationCallback::OnNotificationItemFinished(
+	ANSISTRING Comment,
+	UINT32 actions,
+	INT32 handled
+	);
+
+NotificationSuppressed(
+	UNICODESTRING messageId
+	);
+
+MessagingNotificationCallback::OnNotificationItemFinished(
+	ANSISTRING Comment,
+	INT32 type,
+	UNICODESTRING messageId
+	);
+
+MessagingNotificationManager::OnNewMessage(
+	ANSISTRING Comment
+	);
+
+MessagingNotificationManager::OnMessageModified(
+	ANSISTRING Comment
+	);
+
+MessagingNotificationItem::_HandleNewIncomingMessage(
+	ANSISTRING Comment,
+	ANSISTRING provider,
+	UINT32 actions
+	);
+
+MessagingNotificationItem::_HandleFailedOutgoingMessage(
+	ANSISTRING Comment,
+	ANSISTRING provider,
+	UINT32 actions
+	);
+
+MessagingNotificationItem::Execute(
+	ANSISTRING Comment,
+	INT32 type,
+	UINT32 actions
+	);
+
+MessagingNotificationItem::_Initialize(
+	ANSISTRING Comment,
+	INT32 type,
+	UINT32 actions
+	);
+
+MessageRethreading::_RethreadForIMContact(
+	ANSISTRING Comment,
+	UINT32 Current Aggregate ID,
+	UINT32 Batch Count
+	);
+
+MessageRethreading::_EndContactSyncSession(
+	ANSISTRING Comment
+	);
+
+MessageRethreading::_RethreadByContactRawAddress(
+	ANSISTRING Comment,
+	UINT32 Current Aggregate ID,
+	UINT32 Batch Count
+	);
+
+MessageRethreading::_RethreadByAggregateID(
+	ANSISTRING Comment,
+	UINT32 Old Aggregate ID,
+	UINT32 New Aggregate ID,
+	UINT32 Batch Count
+	);
+
+MessageRethreading::_ProcessChanges(
+	ANSISTRING Comment,
+	UINT32 Total Count
+	);
+
+MessageRethreading::_CollectChanges(
+	ANSISTRING Comment
+	);
+
+MessageRethreading::_UpdateStore(
+	ANSISTRING Comment,
+	UINT32 Folder index
+	);
+
+MessageRethreading::_OnContactChanges(
+	ANSISTRING Comment,
+	UINT32 Store index
+	);
+
+MessageRethreading::_ConfigureSyncPartners(
+	ANSISTRING Comment
+	);
+
+_SaveIdListToVector(
+	UNICODESTRING Verbose
+	);
+
+_AreIdListEqual(
+	UNICODESTRING Verbose
+	);
+
+CloudServiceController::_ScheduleTask(
+	UNICODESTRING [Info],
+	UINT32 TaskType
+	);
+
+CloudServiceController::_ScheduleTask(
+	UNICODESTRING Verbose
+	);
+
+CloudServiceController::_CheckSyncIterationResult(
+	UNICODESTRING Verbose
+	);
+
+CloudServiceController::_RetryDownloadMessage(
+	UNICODESTRING Verbose
+	);
+
+CloudServiceController::_FinishSync(
+	UNICODESTRING [Warning],
+	UINT32 current iteration,
+	INT32 current iteration HRESULT
+	);
+
+CloudServiceController::RetryDownloadMessage(
+	UNICODESTRING Verbose
+	);
+
+CloudServiceController::_FinishSync(
+	UNICODESTRING Verbose
+	);
+
+SyncStop(
+	GUID id,
+	INT32 lastSyncState,
+	INT32 iteration,
+	INT32 errorCode,
+	INT32 downloadConversationsCount,
+	INT32 downloadedConversationsCount,
+	INT32 uploadChangesCount,
+	INT32 uploadFailedChangesCount,
+	INT32 uploadRetryNeededChangesCount,
+	INT32 totalDownloadedMessages
+	);
+
+CloudServiceController::_UploadOneDeleteMessage(
+	UNICODESTRING [Info],
+	UNICODESTRING ChatServiceMessageId,
+	UINT64 ClientMessageId
+	);
+
+CloudServiceController::_UploadOneDeleteMessage(
+	UNICODESTRING Verbose
+	);
+
+UploadMessageToService(
+	UINT32 UploadTime,
+	UINT32 MediaContentCount
+	);
+
+[MessagingCloudServiceSync] The change is within the pending window (too recent).(
+	UINT64 message time in seconds,
+	UINT64 allowed time in seconds
+	);
+
+CloudServiceController::_UploadOneNewMessage(
+	UNICODESTRING Verbose
+	);
+
+CloudServiceController::_UploadOneMessage(
+	UNICODESTRING Verbose
+	);
+
+CloudServiceController::_UploadLocalMessages(
+	UNICODESTRING [Warning],
+	UINT32 number of changes fetched.,
+	UINT32 number of changes need to be retried.
+	);
+
+CloudServiceController::_UploadLocalMessages(
+	UNICODESTRING [Warning],
+	INT32 number of changes failed,
+	INT32 number of changes need to be retried.
+	);
+
+CloudServiceController::_UploadLocalMessages(
+	UNICODESTRING [Info],
+	INT32 number of upload needed changes fetched
+	);
+
+SyncError(
+	GUID id,
+	ANSISTRING errorFriendlyName,
+	INT32 iteration,
+	INT32 errorCode
+	);
+
+CloudServiceController::_UploadLocalMessages(
+	UNICODESTRING Verbose
+	);
+
+CloudServiceController::_DownloadOneMessage(
+	UNICODESTRING [Error],
+	HRESULT HResult
+	);
+
+CloudServiceController::_DownloadOneMessage(
+	UNICODESTRING [Info],
+	UNICODESTRING Message ID,
+	UINT64 Client Message ID,
+	UINT32 Media content count
+	);
+
+CloudServiceController::_SaveOneMessage(
+	UNICODESTRING [Warning],
+	UNICODESTRING Message ID,
+	UINT64 ClientMessage ID,
+	UNICODESTRING messageChange Remote ID
+	);
+
+CloudServiceController::_DownloadOneMessage(
+	UNICODESTRING Verbose
+	);
+
+CloudServiceController::_SaveOneMessage(
+	UNICODESTRING Info
+	);
+
+CloudServiceController::_SaveOneMessage(
+	UNICODESTRING [Info],
+	UINT32 ContentCount
+	);
+
+CloudServiceController::_SaveOneMessage(
+	UNICODESTRING [Info],
+	UNICODESTRING Message ID,
+	UINT64 ClientMessage ID
+	);
+
+DownloadMessagesToLocal(
+	UINT64 TotalMessagesFromChatService,
+	UINT32 NumberOfSavedTextMessage,
+	UINT32 NumberOfSavedMultimediaMessages,
+	UINT32 TotalDownloadTime
+	);
+
+CloudServiceController::_DownloadOneConversation(
+	UNICODESTRING [Info],
+	UINT32 number of toal messages downloaded from one conversation.,
+	UNICODESTRING saved sync State
+	);
+
+CloudServiceController::_DownloadOneConversation(
+	UNICODESTRING [Warning],
+	UNICODESTRING cached conversation SyncState
+	);
+
+InfiniteSync(
+	GUID id,
+	ANSISTRING errorFriendlyName,
+	INT32 iteration,
+	INT32 errorCode
+	);
+
+CloudServiceController::_DownloadOneConversation(
+	UNICODESTRING Info
+	);
+
+CloudServiceController::_DownloadOneConversation(
+	UNICODESTRING [Info],
+	INT32 number of messages downloaded,
+	UNICODESTRING Sync state used to fetch messages,
+	UNICODESTRING next Sync state used to fetch messages
+	);
+
+CloudServiceController::_DownloadOneConversation(
+	UNICODESTRING [Info],
+	UINT64 Sync StartTime
+	);
+
+CloudServiceController::_DownloadOneConversation(
+	UNICODESTRING Verbose
+	);
+
+CloudServiceController::_DownloadRemoteMessages(
+	UNICODESTRING [Info],
+	INT32 number of converations downloaded,
+	UNICODESTRING Next Sync State
+	);
+
+CloudServiceController::_DownloadRemoteMessages(
+	UNICODESTRING [Info],
+	UNICODESTRING Start Sync State,
+	UINT64 Start sync time
+	);
+
+CloudServiceController::_CalculateSyncWindow(
+	UNICODESTRING [Info],
+	INT64 sync start time,
+	INT64 sync end time
+	);
+
+CloudServiceController::_DownloadRemoteMessages(
+	UNICODESTRING Verbose
+	);
+
+CloudServiceController::_CalculateSyncWindow(
+	UNICODESTRING Verbose
+	);
+
+CloudServiceController::_StartCloudMigration(
+	UNICODESTRING Verbose
+	);
+
+CloudServiceController::_GetEndpointId(
+	UNICODESTRING Verbose
+	);
+
+CloudServiceController::_SignOut(
+	ANSISTRING Comment
+	);
+
+CloudServiceController::_CreateEndpoint(
+	UNICODESTRING Verbose
+	);
+
+CloudServiceController::OnCloudServicePolicyChanged(
+	UNICODESTRING Verbose
+	);
+
+CloudServiceController::_SignIn(
+	UNICODESTRING Verbose
+	);
+
+CloudServiceController::OneShotTimerFired(
+	UNICODESTRING Warning
+	);
+
+CloudServiceController::_OnSyncTimerFired(
+	UNICODESTRING Info
+	);
+
+CloudServiceController::OneShotTimerFired(
+	UNICODESTRING Verbose
+	);
+
+CloudServiceController::_StartSyncTimer(
+	UNICODESTRING Info
+	);
+
+CloudServiceController::_ResetSyncTimer(
+	UNICODESTRING Verbose
+	);
+
+CloudServiceController::_CalculateSyncTimer(
+	UNICODESTRING [Warning],
+	UINT32 current iteration,
+	INT32 current iteration HRESULT,
+	UINT32 next sync timer interval
+	);
+
+CloudServiceController::_StartSyncTimer(
+	UNICODESTRING Verbose
+	);
+
+CloudServiceController::_CalculateSyncTimer(
+	UNICODESTRING Verbose
+	);
+
+CloudServiceController::_ResetTelemetryGuid(
+	UNICODESTRING Verbose
+	);
+
+SyncStart(
+	GUID id,
+	INT32 iteration,
+	INT32 cloudType
+	);
+
+CloudServiceController::_ProcessSingleTask(
+	UNICODESTRING Info
+	);
+
+CloudServiceController::_ProcessSingleTask(
+	UNICODESTRING Verbose
+	);
+
+CloudServiceController::_ExecuteSync(
+	UNICODESTRING [Warning],
+	INT32 HResult,
+	UINT32 TaskType
+	);
+
+CloudServiceController::_ExecuteSync(
+	UNICODESTRING Warning
+	);
+
+CloudServiceController::_ExecuteSync(
+	UNICODESTRING Info
+	);
+
+CloudServiceController::_ExecuteSync(
+	UNICODESTRING Error
+	);
+
+CloudServiceController::_ExecuteSync(
+	UNICODESTRING [Info],
+	UINT32 Task Type
+	);
+
+CloudServiceController::_ExecuteSync(
+	UNICODESTRING Verbose
+	);
+
+CloudServiceController::_StartSync(
+	UNICODESTRING Warning
+	);
+
+CloudServiceController::_StartSync(
+	UNICODESTRING [Warning],
+	UINT32 current iteration
+	);
+
+CloudServiceController::_StartSync::<lambda_510c2e8b9ce3530758de865b8004d5bf>::operator ()(
+	UNICODESTRING [Error],
+	UINT32 current iteration,
+	UINT32 current state
+	);
+
+CloudServiceController::_StartSync(
+	UNICODESTRING Verbose
+	);
+
+CloudServiceController::_ScheduleSync(
+	UNICODESTRING [Info],
+	UINT32 Sync task types
+	);
+
+CloudServiceController::_ScheduleSync(
+	UNICODESTRING Info
+	);
+
+CloudServiceController::_CreateSyncTasks(
+	UNICODESTRING Info
+	);
+
+CloudServiceController::_CreateSyncTasks(
+	UNICODESTRING [Info],
+	UINT32 Sync task types
+	);
+
+CloudServiceController::_SetSyncState(
+	UNICODESTRING [Info],
+	INT32 old state,
+	INT32 new state
+	);
+
+CloudServiceController::StartSync(
+	UNICODESTRING Verbose
+	);
+
+CloudServiceController::_GetSyncState(
+	UNICODESTRING [Info],
+	INT32 current sync state
+	);
+
+CloudServiceController::_SetSyncState(
+	UNICODESTRING Verbose
+	);
+
+CloudServiceController::_IsSyncIterationErrorTransient(
+	UNICODESTRING Verbose
+	);
+
+CloudServiceController::_GetSyncState(
+	UNICODESTRING Verbose
+	);
+
+CloudServiceController::_PostInitialize(
+	UNICODESTRING Info
+	);
+
+CloudServiceController::Shutdown(
+	UNICODESTRING Verbose
+	);
+
+CloudServiceController::_PostInitialize(
+	UNICODESTRING Verbose
+	);
+
+CloudServiceController::_Initialize(
+	UNICODESTRING Verbose
+	);
+
+CloudServiceController::CreateInstance(
+	UNICODESTRING Verbose
+	);
+
+CloudServiceController::~CloudServiceController(
+	UNICODESTRING Verbose
+	);
+
+CloudServiceController::CloudServiceController(
+	UNICODESTRING Verbose
+	);
+
+ChatServiceClient::SignOut(
+	UNICODESTRING Info
+	);
+
+ChatServiceClient::SignIn(
+	UNICODESTRING Info
+	);
+
+AsyncMediaServiceClient::SignIn(
+	UNICODESTRING Info
+	);
+
+AsyncMediaServiceClient::SignOut(
+	UNICODESTRING Info
+	);
+
+InfiniteDelete(
+	ANSISTRING errorFriendlyName
+	);
+
+MessageSaver::_CreateTombstonedMessage(
+	UNICODESTRING [Info],
+	UINT64 ClientMessageId
+	);
+
+MessageSaver::_DeleteAllEmptyConversations(
+	UNICODESTRING Verbose
+	);
+
+MessageSaver::UpdateMultimediaMessage(
+	UNICODESTRING Verbose
+	);
+
+MessageSaver::_FillMediaAttachment(
+	UNICODESTRING Verbose
+	);
+
+MessageSaver::_FillTextAttachment(
+	UNICODESTRING Verbose
+	);
+
+MessageSaver::_CreateAttachment(
+	UNICODESTRING Verbose
+	);
+
+MessageSaver::_SetPropertiesFromChatServiceMessage(
+	UNICODESTRING Verbose
+	);
+
+MessageSaver::_CreateMessage(
+	UNICODESTRING Info
+	);
+
+MessageSaver::_CreateMessage(
+	UNICODESTRING [Info],
+	UINT64 ClientMessageId
+	);
+
+MessageSaver::_CreateMessage(
+	UNICODESTRING [Info],
+	UINT64 ClientMessageId,
+	UINT32 SmMessageTransportType
+	);
+
+MessageSaver::_ReplaceMessage(
+	UNICODESTRING [Info],
+	UINT32 ContentCount
+	);
+
+MessageSaver::_CreateMessage(
+	UNICODESTRING Verbose
+	);
+
+MessageSaver::_ReplaceMessage(
+	UNICODESTRING Verbose
+	);
+
+MessageSaver::DeleteAllSyncMessages(
+	UNICODESTRING Verbose
+	);
+
+MessageSaver::SavePendingDownloadMessage(
+	UNICODESTRING Info
+	);
+
+MessageSaver::SavePendingDownloadMessage(
+	UNICODESTRING Error
+	);
+
+MessageSaver::SavePendingDownloadMessage(
+	UNICODESTRING Verbose
+	);
+
+MessageSaver::SaveMultimediaMessage(
+	UNICODESTRING Verbose
+	);
+
+MessageSaver::Shutdown(
+	UNICODESTRING Verbose
+	);
+
+MessageSaver::SaveTextMessage(
+	UNICODESTRING Verbose
+	);
+
+MessageSaver::_Initialize(
+	UNICODESTRING Verbose
+	);
+
+MessageSaver::CreateInstance(
+	UNICODESTRING Verbose
+	);
+
+MessageSaver::~MessageSaver(
+	UNICODESTRING Verbose
+	);
+
+MessageSaver::MessageSaver(
+	UNICODESTRING Verbose
+	);
+
+CloudServicePolicyManager::_GetMdmSyncPolicyState(
+	UNICODESTRING [Warning],
+	HRESULT HResult
+	);
+
+CloudServicePolicyManager::_OnMdmSyncStateChanged(
+	UNICODESTRING [Info],
+	UINT32 WNF_ENTR_ALLOWMESSAGESYNC_POLICY_VALUE_CHANGED
+	);
+
+CloudServicePolicyManager::_GetMdmSyncPolicyState(
+	UNICODESTRING Verbose
+	);
+
+CloudServicePolicyManager::_OnAcPowerStateChanged(
+	UNICODESTRING [Info],
+	UINT32 WNF_SEB_SYSTEM_AC
+	);
+
+CloudServicePolicyManager::_OnMdmSyncStateChanged(
+	UNICODESTRING Verbose
+	);
+
+CloudServicePolicyManager::_OnUserPresenceStateChanged(
+	UNICODESTRING [Info],
+	UINT32 WNF_SEB_USER_PRESENT
+	);
+
+CloudServicePolicyManager::_OnAcPowerStateChanged(
+	UNICODESTRING Verbose
+	);
+
+CloudServicePolicyManager::_OnFreeNetworkStateChanged(
+	UNICODESTRING [Info],
+	UINT32 WNF_SEB_FREE_NETWORK_PRESENT
+	);
+
+CloudServicePolicyManager::_OnUserPresenceStateChanged(
+	UNICODESTRING Verbose
+	);
+
+CloudServicePolicyManager::_OnBatterySaverStateChanged(
+	UNICODESTRING [Info],
+	UINT32 WNF_PO_ENERGY_SAVER_STATE
+	);
+
+CloudServicePolicyManager::_OnFreeNetworkStateChanged(
+	UNICODESTRING Verbose
+	);
+
+CloudServicePolicyManager::RequestToken(
+	UNICODESTRING [Info],
+	UINT32 Battery State,
+	UINT32 FreeNetwork State,
+	UINT32 ACPower State,
+	UINT32 UserPresence State,
+	UINT32 DataSaver State,
+	UINT32 Roaming State,
+	UINT32 MDMPolicy State
+	);
+
+CloudServicePolicyManager::_OnBatterySaverStateChanged(
+	UNICODESTRING Verbose
+	);
+
+CloudServicePolicyManager::RequestToken(
+	UNICODESTRING Verbose
+	);
+
+GetDataSaverAndRoamingState(
+	UNICODESTRING [Info],
+	INT32 isDataSaverEnabled,
+	INT32 isOnRoamingNetwork
+	);
+
+GetDataSaverAndRoamingState(
+	UNICODESTRING Verbose
+	);
+
+IsPolicyAndStateMatched(
+	UNICODESTRING Verbose
+	);
+
+CloudServicePolicyManager::_WnfChangedCallback(
+	UNICODESTRING Error
+	);
+
+CloudServicePolicyManager::_Initialize(
+	UNICODESTRING Verbose
+	);
+
+CloudServicePolicyManager::_WnfChangedCallback(
+	UNICODESTRING Verbose
+	);
+
+CloudServicePolicyManager::_WnfChangedCallback(
+	UNICODESTRING Fatal
+	);
+
+CloudServicePolicyManager::~CloudServicePolicyManager(
+	UNICODESTRING Verbose
+	);
+
+CloudServicePolicyManager::CloudServicePolicyManager(
+	UNICODESTRING Verbose
+	);
+
+CloudServicePolicyManager::CreateInstance(
+	UNICODESTRING Verbose
+	);
+
+[CloudServiceAccountProvider] SyncAccountState value is unexpected.(
+	UINT32 SyncAccountState value
+	);
+
+[CloudServiceAccountProvider] There is no provider that needs to be initialized.(
+	VOID
+	);
+
+ChatServiceMessage::_ParseContent(
+	ANSISTRING comment,
+	UNICODESTRING Message ID,
+	UNICODESTRING Message Type,
+	UINT64 ClientMessageID
+	);
+
+ChatServiceMessage::_ParseContent(
+	ANSISTRING comment,
+	UNICODESTRING Message ID,
+	UNICODESTRING Message Type
+	);
+
+ChatServiceMessage::_ParseContent(
+	ANSISTRING comment,
+	UNICODESTRING Message ID
+	);
+
+[MessagingCloudServiceSync] AsyncMediaServiceDocument::_InitializeFromSyncMediaInfo version mismatch(
+	UNICODESTRING expcted version,
+	UNICODESTRING actual version
+	);
+
+[MessagingCloudServiceSync] The change is not in sync window.(
+	UINT64 sortTime in seconds,
+	UINT64 startTime in seconds
+	);
+
+[MessagingCloudServiceSync] The message is not syncable(
+	VOID
+	);
+
+[MessagingCloudServiceSync] The message is not default transport type(
+	UINT32 transport type
+	);
+
+[MessagingCloudServiceSync] The message is not SMS/MMS/RCS(
+	UINT32 message type
+	);
+
+[MessagingCloudServiceSync]The message in the change has not been triaged by spam filter yet(
+	UINT32 ProviderId
+	);
+
+[MessagingCloudServiceSync] Addition change must have a remote ID.(
+	VOID
+	);
+
+CloudServiceAccount::_GetServiceTicketFromTokenBrokerResult - WebTokenRequestStatus_Unknown.(
+	UINT32 webTokenRequestStatus
+	);
+
+CloudServiceAccount::_GetServiceTicketFromTokenBrokerResult - WebTokenRequestStatus_AccountProviderNotAvailable.(
+	VOID
+	);
+
+CloudServiceAccount::_GetServiceTicketFromTokenBrokerResult - WebTokenRequestStatus_AccountSwitch.(
+	VOID
+	);
+
+CloudServiceAccount::_GetServiceTicketFromTokenBrokerResult - WebTokenRequestStatus_UserInteractionRequired.(
+	VOID
+	);
+
+CloudServiceAccount::_GetServiceTicketFromTokenBrokerResult - WebTokenRequestStatus_UserCancel.(
+	VOID
+	);
+
+CloudServiceAccount::_GetServiceTicketFromTokenBrokerResult - WebTokenRequestStatus_ProviderError.(
+	UNICODESTRING errorFriendlyName,
+	INT32 errorCode
+	);
+
+CloudServiceAccount::_GetServiceTicketFromTokenBrokerResult - Error getting ticket.(
+	UNICODESTRING errorFriendlyName,
+	INT32 errorCode
+	);
+
+CloudServiceTransaction::_LogCloudServiceResponse(
+	ANSISTRING Comment,
+	UINT32 StatusCode,
+	UNICODESTRING response content
+	);
+
+CloudServiceTransaction::_LogCloudServiceResponse(
+	ANSISTRING Comment,
+	UINT32 StatusCode,
+	UNICODESTRING response content
+	);
+
+CloudServiceTransaction::_LogCloudServiceResponse(
+	ANSISTRING Comment,
+	UINT32 StatusCode,
+	UNICODESTRING response content
+	);
+
+CloudServiceTransaction::Execute(
+	ANSISTRING Comment,
+	UNICODESTRING URI
+	);
+
+ChatServiceTransaction::_LogChatServiceResponse(
+	ANSISTRING Comment,
+	UINT32 StatusCode,
+	UNICODESTRING ContextId,
+	UNICODESTRING Date
+	);
+
+ChatServiceTransaction::_LogChatServiceResponse(
+	ANSISTRING Comment,
+	UINT32 StatusCode,
+	UNICODESTRING ContextId,
+	UNICODESTRING Date
+	);
+
+ChatServiceTransaction::_LogChatServiceResponse(
+	ANSISTRING Comment,
+	UINT32 StatusCode,
+	UNICODESTRING ContextId,
+	UNICODESTRING Date
+	);
+
+[MessagingCloudServiceSync] Sending authentication request without a RegistrationToken.(
+	VOID
+	);
+
+AsyncMediaServiceTransaction::_HandleErrorResponse(
+	ANSISTRING Comment,
+	UINT32 StatusCode
+	);
+
+ModemDetector::_GetDeviceType(
+	INT32 Device type
+	);
+
+CMessagingNode::_SetStatus(
+	ANSISTRING Comment,
+	UINT32 status
+	);
+
+CMessagingNode::_SetType(
+	ANSISTRING Comment,
+	UINT32 type
+	);
+
+MessagingAuditQuery(
+	INT32 auditQueryCount,
+	INT32 auditQueryReturnedCount,
+	UINT64 auditQueryDuration
+	);
+
+auditLevel(
+	INT32 auditLevel
+	);
+
+Assert(
+	UINT32 assertVersion,
+	UINT32 rva,
+	UINT32 timestamp,
+	UINT32 imageSize,
+	ANSISTRING imageName,
+	UINT32 count,
+	UINT32 totalHits,
+	UINT32 ModuleCollection,
+	UINT32 GlobalCollection
+	);
+

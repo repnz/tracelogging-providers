@@ -1,0 +1,50 @@
+ProviderNames:
+	Microsoft.Windows.Security.TokenBinding
+
+
+
+**** Events *****
+TBDeleteBinding(
+	UINT8 majorVersion,
+	UINT8 minorVersion,
+	UNICODESTRING targetURL,
+	UINT32 secStatus
+	);
+
+TBGenerateBinding(
+	UINT8 majorVersion,
+	UINT8 minorVersion,
+	NULL targetURL,
+	UINT8 bindingType,
+	UINT8 keyType,
+	UINT64 elapsedTime,
+	UINT32 secStatus,
+	UINT32 secStatus2,
+	BOOL32 bAttemptedRetry
+	);
+
+TBGenerateMessage(
+	UINT8 majorVersion,
+	UINT8 minorVersion,
+	UINT32 tokenBindingsCount,
+	UINT32 secStatus
+	);
+
+TBDeleteBinding(
+	UINT8 majorVersion,
+	UINT8 minorVersion,
+	NULL targetURL,
+	UINT32 secStatus
+	);
+
+TBVerifyMessage(
+	UINT8 majorVersion,
+	UINT8 minorVersion,
+	UINT8 keyType,
+	UINT32 resultArrayCount,
+	BOOL32 isHashTableInitialized,
+	UINT32 hashEntryCount,
+	UINT64 elapsedTime,
+	UINT32 secStatus
+	);
+

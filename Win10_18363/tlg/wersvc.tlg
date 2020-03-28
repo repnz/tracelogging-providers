@@ -1,0 +1,121 @@
+ProviderNames:
+	Microsoft.Windows.WindowsErrorReporting
+	TelemetryAssert
+	TelemetryAssertDiagTrack
+	Microsoft.Windows.HangReporting
+	Microsoft.Windows.HangReporting
+
+
+
+**** Events *****
+WER_Spew(
+	UINT64 PartA_PrivTags,
+	INT32 HRESULT,
+	ANSISTRING File,
+	UINT32 LineNumber,
+	ANSISTRING FailingCode,
+	ANSISTRING FailingFunction,
+	UNICODESTRING UserMessage
+	);
+
+Assert(
+	UINT32 assertVersion,
+	UINT32 rva,
+	UINT32 timestamp,
+	UINT32 imageSize,
+	ANSISTRING imageName,
+	UINT32 count,
+	UINT32 totalHits,
+	UINT32 ModuleCollection,
+	UINT32 GlobalCollection
+	);
+
+AssertWithArgs(
+	UINT32 assertVersion,
+	UINT32 rva,
+	UINT32 timestamp,
+	UINT32 imageSize,
+	ANSISTRING imageName,
+	UINT32 count,
+	UINT32 totalHits,
+	ANSISTRING originatingBinary,
+	UINT32 bucketArgument1,
+	UINT32 bucketArgument2,
+	UINT32 ModuleCollection,
+	UINT32 GlobalCollection
+	);
+
+AppHangEvent(
+	UINT64 PartA_PrivTags,
+	UINT32 ProcessId,
+	FILETIME ProcessCreateTime,
+	UINT32 TypeCode,
+	UNICODESTRING AppName,
+	UINT64 AppVersion,
+	UNICODESTRING PackageFullName,
+	UNICODESTRING PackageRelativeAppId,
+	UNICODESTRING WaitingOnAppName,
+	UINT64 WaitingOnAppVersion,
+	UNICODESTRING WaitingOnPackageFullName,
+	UNICODESTRING WaitingOnPackageRelativeAppId,
+	UINT16 ProcessArchitecture,
+	UNICODESTRING ReportId,
+	GUID AppSessionGuid,
+	UNICODESTRING TargetAppId,
+	UNICODESTRING TargetAppVer,
+	UINT64 TargetAsId,
+	BOOL32 IsFatal
+	);
+
+EtwSessionMerge(
+	UINT64 PartA_PrivTags,
+	UNICODESTRING ReportId,
+	UNICODESTRING FileName,
+	UNICODESTRING SessionName,
+	HRESULT hr,
+	UINT32 EventsLost,
+	UINT32 BuffersLost,
+	UINT32 EventsWritten,
+	UINT32 BuffersWritten,
+	UINT64 FileSizeInBytes,
+	FILETIME SessionStartTime,
+	FILETIME SessionEndTime,
+	FILETIME MinEventTime,
+	FILETIME MaxEventTime,
+	UINT32 LogFileMode,
+	UINT32 BufferSizeInBytes,
+	UINT32 MaxFileSizeInMb
+	);
+
+WprcInstanceFlush(
+	UINT64 PartA_PrivTags,
+	UNICODESTRING ReportId,
+	UNICODESTRING InstanceName,
+	HRESULT hr
+	);
+
+EtwSessionFlush(
+	UINT64 PartA_PrivTags,
+	UNICODESTRING ReportId,
+	UNICODESTRING SessionName,
+	HRESULT hr,
+	UINT32 Pass,
+	INT32 RundownType,
+	UINT32 LogFileMode,
+	UINT32 BufferSizeInKb,
+	UINT32 MaxBuffers,
+	UINT32 MaxFileSizeInMb,
+	UINT32 BuffersWritten,
+	UINT32 EventsLost,
+	UINT32 BuffersLost
+	);
+
+EtwSessionQuery(
+	UINT64 PartA_PrivTags,
+	UNICODESTRING ReportId,
+	UNICODESTRING SessionName,
+	HRESULT hr,
+	UINT32 Pass,
+	INT32 RundownType
+	);
+

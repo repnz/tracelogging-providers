@@ -1,0 +1,594 @@
+ProviderNames:
+	Microsoft.OSG.OSS.CredProvFramework
+	TelemetryAssert
+	TelemetryAssertDiagTrack
+	Microsoft.Windows.CredProviders.PasswordProvider
+
+
+
+**** Events *****
+LsaOpenLocalSystemPolicy(
+	ANSISTRING EventLevel,
+	ANSISTRING Invoke,
+	NTSTATUS ResultCode
+	);
+
+ActivityStoppedAutomatically(
+	VOID
+	);
+
+ActivityError(
+	UINT64 PartA_PrivTags,
+	SIGNED wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+ActivityError(
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+CPasswordProvider::_LoadPersistedCredentials(
+	ANSISTRING EventLevel,
+	ANSISTRING Invoke,
+	UINT32 usage,
+	HRESULT hr
+	);
+
+CPasswordProvider::_SetInputAuthIdentity(
+	ANSISTRING EventLevel,
+	ANSISTRING Invoke,
+	UINT32 usage,
+	HRESULT hr
+	);
+
+CPasswordProvider::_SetTargetName(
+	ANSISTRING EventLevel,
+	ANSISTRING Invoke,
+	UINT32 usage,
+	HRESULT hr
+	);
+
+CPasswordCredential::_CheckAndPersistCredentials(
+	ANSISTRING EventLevel,
+	ANSISTRING Invoke,
+	UINT32 usage,
+	HRESULT hr
+	);
+
+CPasswordCredential::_KerbChangePasswordRequestFill(
+	ANSISTRING EventLevel,
+	ANSISTRING Invoke,
+	UINT32 usage,
+	HRESULT hr
+	);
+
+CPasswordCredential::_KerbInteractiveUnlockLogonFill(
+	ANSISTRING EventLevel,
+	ANSISTRING Invoke,
+	UINT32 usage,
+	HRESULT hr
+	);
+
+CPasswordCredential::_EncryptAndMarshal(
+	ANSISTRING EventLevel,
+	ANSISTRING Invoke,
+	UINT32 usage,
+	HRESULT hr
+	);
+
+CPasswordCredential::Initialize(
+	ANSISTRING EventLevel,
+	ANSISTRING Invoke,
+	UINT32 usage,
+	UINT32 packageId,
+	INT32 calledBySspiPfc,
+	INT32 saveCredsByCaller,
+	INT32 noCheckboxSspi,
+	BOOLEAN doNotLoadStoredCreds,
+	BOOLEAN logonNoElevation,
+	BOOLEAN isDomainJoined,
+	BOOLEAN isCloudDomainJoined,
+	BOOLEAN useCloudDomainSpecificUi,
+	HRESULT hr
+	);
+
+CPasswordCredential::ReportResult(
+	ANSISTRING EventLevel,
+	ANSISTRING Invoke,
+	UINT32 usage,
+	UINT32 changeMode,
+	NTSTATUS status,
+	NTSTATUS subStatus,
+	HRESULT hr
+	);
+
+CPasswordCredential::ReportResult(
+	ANSISTRING EventLevel,
+	ANSISTRING Invoke,
+	UINT32 usage,
+	NTSTATUS status,
+	NTSTATUS subStatus
+	);
+
+CPasswordCredential::ReportResult(
+	ANSISTRING EventLevel,
+	ANSISTRING Invoke,
+	HRESULT hrUpdateStuffer
+	);
+
+CPasswordCredential::ReportResult(
+	ANSISTRING EventLevel,
+	ANSISTRING Invoke
+	);
+
+CPasswordCredential::GetSerialization(
+	ANSISTRING EventLevel,
+	ANSISTRING Invoke,
+	UINT32 usage,
+	UINT32 changeMode,
+	UINT32 response,
+	HRESULT hr
+	);
+
+CPasswordCredential::_GetSerializationSecurityQAChange(
+	ANSISTRING EventLevel,
+	ANSISTRING Invoke,
+	UINT32 SecurityQuestionState,
+	HRESULT hr
+	);
+
+CPasswordCredential::_GetSerializationSecurityQAChange(
+	ANSISTRING EventLevel,
+	ANSISTRING Invoke,
+	UINT32 SecurityQuestionState
+	);
+
+CPasswordCredential::_GetSerializationChange(
+	ANSISTRING EventLevel,
+	ANSISTRING Invoke,
+	UINT32 usage,
+	UINT32 response,
+	HRESULT hr
+	);
+
+CPasswordCredential::_GetSerializationForSspiPfc(
+	ANSISTRING EventLevel,
+	ANSISTRING Invoke,
+	UINT32 usage,
+	UINT32 packageId,
+	UINT32 response,
+	HRESULT hr
+	);
+
+CPasswordCredential::_GetSerializationUnlockLogon(
+	ANSISTRING EventLevel,
+	ANSISTRING Invoke,
+	UINT32 usage,
+	UINT32 response,
+	HRESULT hr
+	);
+
+CPasswordCredential::_OnLocalPasswordReset(
+	ANSISTRING EventLevel,
+	ANSISTRING Invoke,
+	HRESULT hr
+	);
+
+CPasswordCredential::_OnLocalPasswordReset(
+	ANSISTRING EventLevel,
+	ANSISTRING Invoke
+	);
+
+CPasswordCredential::_OnPasswordLink(
+	ANSISTRING EventLevel,
+	ANSISTRING Invoke,
+	UINT32 usage,
+	HRESULT hr
+	);
+
+CPasswordCredential::_OnPasswordLink(
+	ANSISTRING EventLevel,
+	ANSISTRING Invoke,
+	HRESULT hr,
+	NTSTATUS _passwordResetStatus
+	);
+
+CPasswordCredential::_sPasswordResetThreadProc(
+	ANSISTRING EventLevel,
+	ANSISTRING Invoke,
+	HRESULT hr
+	);
+
+CPasswordCredential::_GetLogonPasswordReset(
+	ANSISTRING EventLevel,
+	ANSISTRING Invoke,
+	UINT32 usage,
+	HRESULT hrCoCreate
+	);
+
+CPasswordCredential::SetStringValue(
+	ANSISTRING EventLevel,
+	ANSISTRING Invoke,
+	UINT32 usage,
+	UINT32 fieldID,
+	HRESULT hr
+	);
+
+CPasswordCredential::GetBitmapBufferValue(
+	ANSISTRING EventLevel,
+	ANSISTRING Invoke,
+	UINT32 usage,
+	UINT32 fieldID,
+	HRESULT hr
+	);
+
+CPasswordCredential::GetBitmapValue(
+	ANSISTRING EventLevel,
+	ANSISTRING Invoke,
+	UINT32 usage,
+	UINT32 fieldID,
+	HRESULT hr
+	);
+
+CPasswordCredential::SetSelected(
+	ANSISTRING EventLevel,
+	ANSISTRING Invoke,
+	UINT32 usage,
+	UINT32 changeMode,
+	INT32 autologon,
+	HRESULT hr
+	);
+
+CPasswordProvider::_CreateEnumeratedCredentials(
+	ANSISTRING EventLevel,
+	ANSISTRING Invoke
+	);
+
+CPasswordProvider::_CreateEnumeratedCredentials(
+	ANSISTRING EventLevel,
+	ANSISTRING Invoke,
+	UINT32 userCountAfterFiltering,
+	UINT32 accountOptions
+	);
+
+CPasswordProvider::_CreateEnumeratedCredentials(
+	ANSISTRING EventLevel,
+	ANSISTRING Invoke,
+	UINT32 usage,
+	HRESULT hrUserArray2
+	);
+
+CPasswordProvider::_CreateEnumeratedCredentials(
+	ANSISTRING EventLevel,
+	ANSISTRING Invoke,
+	UINT32 usage,
+	INT32 credUIOnlyFlag
+	);
+
+CPasswordProvider::_EnumerateOneCredential(
+	ANSISTRING EventLevel,
+	ANSISTRING Invoke,
+	UINT32 usage,
+	HRESULT hr
+	);
+
+CPasswordProvider::_EnumerateSetSerialization(
+	ANSISTRING EventLevel,
+	ANSISTRING Invoke,
+	UINT32 usage,
+	BOOLEAN autoLogonWithFirstCredential,
+	INT32 calledBySspiPfc,
+	HEXINT64 pkil,
+	HRESULT hr
+	);
+
+CPasswordProvider::_SetSerializationForSspiPfc(
+	ANSISTRING EventLevel,
+	ANSISTRING Invoke,
+	UINT32 usage,
+	HRESULT hr
+	);
+
+CPasswordProvider::_EnumerateCredentials(
+	ANSISTRING EventLevel,
+	ANSISTRING Invoke,
+	UINT32 usage,
+	UINT32 userArraySize,
+	HRESULT hr
+	);
+
+CPasswordProvider::_EnumerateAutoLogonUser(
+	ANSISTRING EventLevel,
+	ANSISTRING Invoke,
+	UINT32 usage,
+	HRESULT hr
+	);
+
+CPasswordProvider::SetIsV1CredProv(
+	ANSISTRING EventLevel,
+	ANSISTRING Invoke
+	);
+
+CPasswordProvider::GetCredentialCount(
+	ANSISTRING EventLevel,
+	ANSISTRING Invoke,
+	UINT32 usage,
+	UINT32 numOfCredentials,
+	UINT32 defaultCredential,
+	INT32 autoLogonWithDefault,
+	HRESULT hr
+	);
+
+CPasswordProvider::SetSerialization(
+	ANSISTRING EventLevel,
+	ANSISTRING Invoke,
+	UINT32 usage,
+	HRESULT hr
+	);
+
+CPasswordProvider::SetUsageScenario(
+	ANSISTRING EventLevel,
+	ANSISTRING Invoke,
+	UINT32 usage,
+	HRESULT hr
+	);
+
+CPasswordProvider::RuntimeClassInitialize(
+	ANSISTRING EventLevel,
+	ANSISTRING Invoke,
+	INT32 credUIOnlyFlag
+	);
+
+GetValidAuthPackageId(
+	ANSISTRING EventLevel,
+	ANSISTRING Invoke,
+	UINT32 requestedAuthPackage,
+	UINT32 validAuthPackage,
+	WIN32ERROR dwRet
+	);
+
+LocalUsersSSPRChangePassword(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId,
+	BOOLEAN retValue,
+	UINT32 _netChangePassword
+	);
+
+LocalUsersSSPRChangePassword(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	BOOLEAN retValue,
+	UINT32 _netChangePassword
+	);
+
+LocalUsersSSPRChangePassword(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId
+	);
+
+LocalUsersSSPRChangePassword(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+LocalUsersSSPRChangePassword(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+LocalUsersSSPRResetClicked(
+	VOID
+	);
+
+AutoLogonAfterUserConfigAndReboot(
+	VOID
+	);
+
+AutoLogonWithNoPassword(
+	VOID
+	);
+
+FallbackError(
+	UINT64 PartA_PrivTags,
+	SIGNED wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+FallbackError(
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+Assert(
+	UINT32 assertVersion,
+	UINT32 rva,
+	UINT32 timestamp,
+	UINT32 imageSize,
+	ANSISTRING imageName,
+	UINT32 count,
+	UINT32 totalHits,
+	UINT32 ModuleCollection,
+	UINT32 GlobalCollection
+	);
+
+ReplaceDotWithMachineName(
+	ANSISTRING EventLevel,
+	ANSISTRING Invoke,
+	HRESULT ResultCode
+	);
+
+GetMachineDomainName(
+	ANSISTRING EventLevel,
+	ANSISTRING Invoke,
+	HRESULT ResultCode
+	);
+
+GetMachineDomainName(
+	ANSISTRING EventLevel,
+	ANSISTRING Invoke,
+	UNICODESTRING DomainName
+	);
+
+GetMachineName(
+	ANSISTRING EventLevel,
+	ANSISTRING Invoke,
+	HRESULT ResultCode
+	);
+
+GetMachineName(
+	ANSISTRING EventLevel,
+	ANSISTRING Invoke,
+	UNICODESTRING MachineName
+	);
+
+CEnumCredentialProviderUsers::s_LookupInternetDisplayName(
+	ANSISTRING EventLevel,
+	ANSISTRING Invoke,
+	HRESULT ResultCode
+	);
+
+CEnumCredentialProviderUsers::CallCloudAPPackage(
+	ANSISTRING EventLevel,
+	ANSISTRING Invoke,
+	NTSTATUS NTStatus
+	);
+
+CEnumCredentialProviderUsers::CallCloudAPPackage(
+	ANSISTRING EventLevel,
+	ANSISTRING Invoke,
+	NTSTATUS NTStatus
+	);
+
+CEnumCredentialProviderUsers::s_CreatePropStoreFromFullNameAndSid(
+	ANSISTRING EventLevel,
+	ANSISTRING Invoke,
+	HRESULT ResultCode
+	);
+
+CEnumCredentialProviderUsers::s_CreatePropStoreFromFullNameAndSid(
+	ANSISTRING EventLevel,
+	ANSISTRING Invoke,
+	GUID ProviderGuid,
+	BOOL32 IsConnectedUser
+	);
+
+CEnumCredentialProviderUsers::s_CreatePropStoreFromFullNameAndSid(
+	ANSISTRING EventLevel,
+	ANSISTRING Invoke,
+	HRESULT ResultCode
+	);
+
+CEnumCredentialProviderUsers::s_LookupAccountName(
+	ANSISTRING EventLevel,
+	ANSISTRING Invoke,
+	HRESULT ResultCode
+	);
+
+CEnumCredentialProviderUsers::s_LookupAccountName(
+	ANSISTRING EventLevel,
+	ANSISTRING Invoke,
+	UNICODESTRING DomainName
+	);
+
+s_FindConnectedUserBySid(
+	ANSISTRING EventLevel,
+	ANSISTRING Invoke,
+	HRESULT ResultCode
+	);
+

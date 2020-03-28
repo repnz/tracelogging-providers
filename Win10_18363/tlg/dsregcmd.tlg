@@ -1,0 +1,143 @@
+ProviderNames:
+	Microsoft.CAndE.ADFabric.CDJ.Recovery
+	Microsoft.CAndE.ADFabric.AutoJoin
+	Microsoft.CAndE.ADFabric.CDJ.AzureSecureVMJoin
+	TelemetryAssert
+	TelemetryAssertDiagTrack
+
+
+
+**** Events *****
+AzureSecureVMJoinStop(
+	INT32 hr,
+	UNICODESTRING tenantId,
+	UNICODESTRING operation,
+	UNICODESTRING azureResourceId,
+	UNICODESTRING adrsResourceId,
+	UNICODESTRING errorPhase
+	);
+
+RecoveryCheckEvent(
+	INT32 hr,
+	UNICODESTRING stage,
+	UNICODESTRING message,
+	UINT32 deviceKeysHealthCheckResult
+	);
+
+RecoveryCheckEvent(
+	INT32 hr,
+	UNICODESTRING stage
+	);
+
+RecoveryCheckStart(
+	BOOLEAN isForced
+	);
+
+RecoveryCheckStop(
+	INT32 hr,
+	INT32 exitCode,
+	INT32 win32Error,
+	UNICODESTRING description
+	);
+
+ActivityStoppedAutomatically(
+	VOID
+	);
+
+AzureSecureVMJoinStart(
+	VOID
+	);
+
+RecoveryCheckStop(
+	INT32 hr,
+	INT32 exitCode,
+	INT32 win32Error,
+	UNICODESTRING description,
+	UINT32 recoveryStartCount,
+	UINT32 joinType
+	);
+
+AutoRegistrationStart(
+	VOID
+	);
+
+AutoRegistrationStart(
+	VOID
+	);
+
+AutoRegistrationStop(
+	INT32 errorCode,
+	UNICODESTRING adalLog,
+	UNICODESTRING authCorrelationID,
+	UNICODESTRING config,
+	UNICODESTRING errorType,
+	UNICODESTRING registration,
+	UNICODESTRING tenantType,
+	UNICODESTRING tenantId,
+	UNICODESTRING joinMode,
+	UNICODESTRING drsInstance
+	);
+
+AutoJoinFailFastChecksStart(
+	VOID
+	);
+
+AutoJoinFailFastChecksStop(
+	UNICODESTRING preCheckResult,
+	UNICODESTRING isJoined,
+	UNICODESTRING isDcAvailable,
+	UNICODESTRING isSystem,
+	UNICODESTRING keyProvider,
+	UNICODESTRING keyContainer,
+	UNICODESTRING dsrInstance,
+	UNICODESTRING deviceKeysHealthy,
+	INT32 resultCode
+	);
+
+AutoRegistrationStop(
+	INT32 errorCode,
+	UNICODESTRING adalLog,
+	UNICODESTRING authCorrelationID,
+	UNICODESTRING config,
+	UNICODESTRING errorType,
+	UNICODESTRING registration,
+	UNICODESTRING tenantType,
+	UNICODESTRING tenantId,
+	UNICODESTRING joinMode
+	);
+
+AutoRegistrationStop(
+	INT32 errorCode,
+	UNICODESTRING adalLog,
+	UNICODESTRING authCorrelationID,
+	UNICODESTRING config,
+	UNICODESTRING errorType,
+	UNICODESTRING registration,
+	UNICODESTRING tenantType,
+	UNICODESTRING tenantId,
+	UNICODESTRING joinMode,
+	UNICODESTRING drsInstance
+	);
+
+RecoveryNotificationStart(
+	BOOLEAN isAdmin,
+	INT32 joinType
+	);
+
+RecoveryNotificationStop(
+	INT32 hr,
+	INT32 buttonId
+	);
+
+Assert(
+	UINT32 assertVersion,
+	UINT32 rva,
+	UINT32 timestamp,
+	UINT32 imageSize,
+	ANSISTRING imageName,
+	UINT32 count,
+	UINT32 totalHits,
+	UINT32 ModuleCollection,
+	UINT32 GlobalCollection
+	);
+

@@ -1,0 +1,900 @@
+ProviderNames:
+	Microsoft.Windows.App.Browser
+	TelemetryAssertDiagTrack
+	TelemetryAssert
+	Microsoft.Windows.Wil.FeatureLogging
+
+
+
+**** Events *****
+IEFrameProcessAttached(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid
+	);
+
+IEAddToFavoritesDialogDismissed(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	INT64 buttonIdPressed
+	);
+
+IEAddToFavoritesDialogPresented(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid
+	);
+
+IEAddToFavoritesDialogOKPressed(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid
+	);
+
+ClickedLinkOnSmartScreenWarningPage(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	UNICODESTRING target,
+	UNICODESTRING urlReportedAsSafe
+	);
+
+IE11DefaultsFREAPICallNonMSDomain(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid
+	);
+
+AdobeAcroPDFLoaded(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	INT32 result,
+	UNICODESTRING pdfUrl
+	);
+
+LaunchIEByIEHttp(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	ANSISTRING Function
+	);
+
+IEPrintSuccessful(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	INT32 printSelection,
+	INT32 printLinkedDocuments,
+	INT32 printShortcutTable,
+	INT32 printActiveFrame,
+	INT32 printAsShown,
+	INT32 printDocumentHasFrameset
+	);
+
+IEPrintCancelled(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	INT32 hResult
+	);
+
+IEPrintCommandInvoked(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid
+	);
+
+IENavFailureIntranet(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	UNICODESTRING url
+	);
+
+IENavFailureInternet(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	UNICODESTRING url
+	);
+
+LaunchInHVSI(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	GUID PreviousUserInputId,
+	HRESULT HResult
+	);
+
+LaunchInHVSIDualEngine(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	GUID PreviousUserInputId,
+	HRESULT HResult
+	);
+
+LaunchInHVSIAutomatic(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	ANSISTRING Function,
+	HRESULT hr
+	);
+
+LaunchInHVSIDualEngineAutomatic(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	ANSISTRING Function,
+	HRESULT hr
+	);
+
+TBAuthStart(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	UNICODESTRING requestID,
+	UNICODESTRING browserName
+	);
+
+TBAuthEnd(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	UNICODESTRING requestID,
+	INT32 hr,
+	UNICODESTRING browserName
+	);
+
+UpdateCVListRegistry(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	INT64 newVersion
+	);
+
+GetCVListRegistry(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	INT64 currentVersion
+	);
+
+IEFrameSecurityBand(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	INT32 nCommandType,
+	INT32 dwID,
+	UNICODESTRING groupName,
+	UNICODESTRING clsid
+	);
+
+IEAddToFavoritesReturnedFailure(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	INT32 errorResult
+	);
+
+IEAddToFavoritesNoUrlToAdd(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	UNICODESTRING urlToAdd,
+	INT32 hrError,
+	UINT32 addFavFlags
+	);
+
+IEAddToFavoritesUrlToAdd(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	UNICODESTRING urlToAdd,
+	UINT32 addFavFlags
+	);
+
+IEAddToFavoritesSucceeded(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid
+	);
+
+IEAddToFavoritesInvoked(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid
+	);
+
+IEShortLivedProcess(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	UNICODESTRING reason
+	);
+
+IEIsDualEngineProcess(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	INT32 isDualEngine
+	);
+
+ContentProcessStart(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	UINT32 processType
+	);
+
+MarkProcessTelemetryStateFailed(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	UINT32 failedLocation,
+	HRESULT hr
+	);
+
+IENewTabPageSettingChanged(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	UINT32 dwOldNTP,
+	UINT32 dwNewNTP,
+	UNICODESTRING changeReason
+	);
+
+IEOpenFeedbackHub(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	UINT32 launchFrom,
+	INT32 hr
+	);
+
+TAB_BFCACHE_SUSPEND_COMPLETE(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid
+	);
+
+IESearchSuggestionInvoked(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	INT32 isSearchSuggestionAnURL
+	);
+
+IESearchSuggestionsQueryReturned(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	UINT32 countOfSuggestionsReturned,
+	UINT64 searchTextLength,
+	INT32 hResult
+	);
+
+IESearchSuggestionsQueryInvoked(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	UINT64 searchTextLength,
+	UNICODESTRING searchProvider
+	);
+
+IETabSwitchStartWithKeyboardShortcut(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	INT32 switchingFromTabId,
+	UNICODESTRING keyboardShortCut,
+	UINT32 durationInMillisecondsSinceInput
+	);
+
+IEOpenUrlWithEdge(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	UINT32 cmdID,
+	UNICODESTRING urlHost
+	);
+
+IEFrameCloseCompleted(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	UINT32 frameCountInManagerProcess,
+	INT32 downloadRefCount
+	);
+
+IEAddNewForegroundTabWithKeyboardShortcut(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	UINT32 durationInMillisecondsSinceInput
+	);
+
+IETabsBelowAddressBarChanged(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	UINT32 oldValue,
+	UINT32 newValue,
+	UINT32 details,
+	UNICODESTRING changeReason
+	);
+
+IEFrameSettingSyncOn(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	BOOLEAN isIESettingSyncOn
+	);
+
+IEFrameCloseInitiated(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	INT32 tabCount
+	);
+
+IEFrameShow(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid
+	);
+
+NotificationShown(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	UINT32 notificationId,
+	UNICODESTRING notificationUri,
+	GUID activityCorrelationId,
+	GUID dismissedActivityCorrelationId
+	);
+
+LaunchInHVSIAllowSetForeground(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	ANSISTRING Function,
+	HRESULT hr
+	);
+
+LaunchInHVSIResult(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	ANSISTRING Function,
+	HRESULT hr
+	);
+
+IEAddNewForegroundTabCreateInstance(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	INT32 newTabId,
+	UNICODESTRING tabType
+	);
+
+IEHangIntranet(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	UNICODESTRING url
+	);
+
+IECrashIntranet(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	UNICODESTRING url
+	);
+
+IEHangInternet(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	UNICODESTRING url
+	);
+
+IECrashInternet(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	UNICODESTRING url
+	);
+
+IEAddNewForegroundTabCreateInstance(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	INT32 newTabId,
+	ANSISTRING tabType
+	);
+
+HungTab(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid
+	);
+
+IE11DefaultsFREConfigUpdate(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	UINT32 updateResult
+	);
+
+IE11DefaultsFRENTPOffer(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	UINT32 ntpOffer
+	);
+
+IE11DefaultsFREDSPOffer(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	UINT32 dspOffer
+	);
+
+IE11DefaultsFREDHPOffer(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	UINT32 dhpOffer
+	);
+
+IENewsFeedTabEnabled(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	UINT32 dwOldNTP
+	);
+
+IE11DefaultsFRENTPOfferSet(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	UINT32 ntpOfferSet
+	);
+
+IE11DefaultsFREDSPOfferSet(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	UINT32 dspOfferSet
+	);
+
+IE11DefaultsFREDHPOfferSet(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	UINT32 dhpOfferSet
+	);
+
+IE11DefaultsFRETargetOSSKU(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	UINT32 productCategory,
+	UINT32 productType
+	);
+
+IEAddNewForegroundTabCreateComplete(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	INT32 switchingToTabId,
+	UNICODESTRING newTabPage,
+	INT32 fSetByPolicy
+	);
+
+IETabSetToVisible(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	INT32 switchingFromTabId,
+	INT32 switchingToTabId
+	);
+
+TabRecoveryDepNxCrash(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	UNICODESTRING url
+	);
+
+TabRecoveryTimedOut(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	UNICODESTRING url
+	);
+
+TabRecoveryInitiated(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	UNICODESTRING url
+	);
+
+HVSIUntrustedUnexpected(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	ANSISTRING Function,
+	INT32 HVSIUntrustedReason
+	);
+
+IEFrameCloseHidden(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid
+	);
+
+IEFrameCloseDelayedOnBeforeUnload(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid
+	);
+
+IETabSwitchStartUIA(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	INT32 switchingFromTabId,
+	INT32 switchingToTabId,
+	UINT32 durationInMillisecondsSinceInput
+	);
+
+IETabButtonStyleUpdated(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	INT32 switchingToTabId
+	);
+
+IEAddNewForegroundTabUsingButton(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	UINT32 durationInMillisecondsSinceInput
+	);
+
+FeatureVariantUsage(
+	UINT32 featureId,
+	INT32 featureVersion,
+	INT32 featureBaseVersion,
+	INT16 featureStage,
+	BOOLEAN enabled,
+	UINT32 variantKind,
+	UINT8 variant,
+	UINT64 addend
+	);
+
+FeatureError(
+	UINT32 featureId,
+	INT32 featureVersion,
+	INT32 featureBaseVersion,
+	INT16 featureStage,
+	HRESULT hr,
+	ANSISTRING file,
+	UINT16 lineNumber,
+	ANSISTRING module,
+	ANSISTRING process,
+	ANSISTRING originFile,
+	UINT16 originLineNumber,
+	ANSISTRING originModule,
+	ANSISTRING originName,
+	ANSISTRING message,
+	ANSISTRING callerModule,
+	UINT32 callerReturnAddressOffset,
+	ANSISTRING originCallerModule,
+	UINT32 originCallerReturnAddressOffset
+	);
+
+FeatureUsage(
+	UINT32 featureId,
+	INT32 featureVersion,
+	INT32 featureBaseVersion,
+	INT16 featureStage,
+	BOOLEAN enabled,
+	UINT32 kind,
+	UINT64 addend
+	);
+
+EnabledFeatureUsage(
+	UINT32 featureId,
+	INT32 featureVersion,
+	INT32 featureBaseVersion,
+	INT16 featureStage,
+	BOOLEAN enabled,
+	UINT32 kind,
+	UINT64 addend
+	);
+
+IEOpenNewEdgeButtonPressed(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid
+	);
+
+FallbackError(
+	UINT64 PartA_PrivTags,
+	SIGNED wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+FallbackError(
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+IETravelToTravelLogEntryFromBackForwardMenu(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	UINT32 durationInMillisecondsSinceInput,
+	INT32 travelLogMenuID
+	);
+
+IETravelBandGoBackwardInvoked(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	UINT32 durationInMillisecondsSinceInput
+	);
+
+IETravelBandGoForwardInvoked(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	UINT32 durationInMillisecondsSinceInput
+	);
+
+IEAddressBandRefreshInvoked(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	UINT32 durationInMillisecondsSinceInput
+	);
+
+IEAddressBandStopInvoked(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	UINT32 durationInMillisecondsSinceInput
+	);
+
+IEFavoritesCenterNavigationInvokedViaShortCut(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	UNICODESTRING favoritesCenterUrl,
+	INT32 navFlags
+	);
+
+IEFavoritesCenterNavigationInvokedViaNoShortCut(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	INT32 navFlags
+	);
+
+IEFavoritesCenterNavigationInvokedViaBrokerCall(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid
+	);
+
+IEFavoritesCenterNavigationInvokedViaNoBroker(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid
+	);
+
+EuppProtectionEvent(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	UINT32 eventID
+	);
+
+IEAddressBandNavigateInvoked(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	INT32 homePageNavigate,
+	UINT32 durationInMillisecondsSinceInput
+	);
+
+IEAddressBarSearch(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	UINT32 variantId,
+	UNICODESTRING form
+	);
+
+ShowEdgeReminder(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	UINT32 dwRemainingCount
+	);
+
+IEFavoritesBandNavigateInvoked(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	UINT32 sqmExtraDataFromNavFlags
+	);
+
+IEDownloadPause(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	GUID IEDownloadId
+	);
+
+IEDownloadCancel(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	GUID IEDownloadId
+	);
+
+IEDownloadAcceptedByUser(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	GUID IEDownloadId,
+	UNICODESTRING IEDownloadFileName,
+	UINT64 IEDownloadFileSize
+	);
+
+IEDownloadStart(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	GUID IEDownloadId
+	);
+
+IEDownloadComplete(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	GUID IEDownloadId,
+	UNICODESTRING IEDownloadAvgSpeed
+	);
+
+ElevationDialog(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	INT32 nCommandType,
+	INT32 dwID
+	);
+
+ClearActivityHistoryByUrl(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	UNICODESTRING AppName
+	);
+
+IECacheableHomepageChanged(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	UNICODESTRING oldHomepage,
+	UNICODESTRING redirectCache,
+	UNICODESTRING newPrimaryHomepage,
+	UNICODESTRING homepageChangeReason
+	);
+
+IEHomepageChanged(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	UNICODESTRING newPrimaryHomepage,
+	UNICODESTRING oldHomepage,
+	UNICODESTRING homepageChangeReason
+	);
+
+Assert(
+	UINT32 assertVersion,
+	UINT32 rva,
+	UINT32 timestamp,
+	UINT32 imageSize,
+	ANSISTRING imageName,
+	UINT32 count,
+	UINT32 totalHits,
+	UINT32 ModuleCollection,
+	UINT32 GlobalCollection
+	);
+
+WdagUnclassifiedProtocol(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	UNICODESTRING protocol,
+	UINT32 usesNetwork,
+	INT32 hr
+	);
+
+StorageTelemetryError(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	HEXINT32 hresult
+	);
+
+AppCacheTelemetryError(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	HEXINT32 hresult
+	);
+
+IndexedDBTelemetryError(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	HEXINT32 hresult
+	);
+
+AppCacheQuotasPeriodicIncrements(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	UINT64 domainStorageInBytes,
+	UINT64 userStorageInBytes,
+	UNICODESTRING domain
+	);
+
+IndexedDBSizePeriodicIncrements(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	UINT64 storageInBytes,
+	COUNTEDSTRING domain
+	);
+

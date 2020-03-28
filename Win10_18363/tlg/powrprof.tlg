@@ -1,0 +1,22 @@
+ProviderNames:
+	Microsoft.Windows.LimitsManagement.Telemetry
+
+
+
+**** Events *****
+LimitsManagementPassiveComplete(
+	UNICODESTRING policyName,
+	UINT32 durationInMs
+	);
+
+LimitsManagementPassiveValueChange(
+	UNICODESTRING policyName,
+	UINT8 throttlePercent
+	);
+
+LimitsManagementPassiveHistogram(
+	UNICODESTRING policyName,
+	UINT32 throttleHistogram,
+	UINT8 bucketThresholds
+	);
+

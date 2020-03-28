@@ -1,0 +1,68 @@
+ProviderNames:
+	Microsoft.Tpm.ProvisioningTask
+
+
+
+**** Events *****
+SecureBootInfoTrace(
+	UNICODESTRING policyGuid,
+	UINT32 policyGuidResult
+	);
+
+ClearTPMIfNotReady(
+	HEXINT32 HResult,
+	BOOLEAN ScheduledAdminClearTask,
+	UINT32 KeepTPMReadyCSP,
+	UINT32 KeepTPMReadyGP
+	);
+
+UMCIInfoTrace(
+	UINT32 umciModeResult
+	);
+
+TpmImproperShutdownDetected(
+	VOID
+	);
+
+TpmProvisioningTaskComplete(
+	HEXINT32 HResult,
+	HEXINT32 InformationBitMask
+	);
+
+SecureBootStatusInfoTrace(
+	UINT32 SecureBootStatus
+	);
+
+TpmProvisioningTaskCreateWindowsAIK(
+	HEXINT32 HResult,
+	HEXINT32 InformationBitMask
+	);
+
+UseLegacyDAParameters(
+	UNICODESTRING Reason,
+	HRESULT HResult
+	);
+
+TpmProvisioningTaskNotComplete(
+	HEXINT32 HResult,
+	HEXINT32 InformationBitMask
+	);
+
+TpmEKCertValidateAndCleanup(
+	HEXINT32 HResult,
+	HEXINT32 InformationBitMask
+	);
+
+MeasuredBootInfoTrace(
+	UINT32 IntegrityServicesEnable
+	);
+
+TpmProvisioningTaskCreateSavedPlatformClaim(
+	HEXINT32 HResult
+	);
+
+TpmLockoutCountInfo(
+	UINT32 LockoutCounter,
+	UINT32 MaxLockoutCountAllowed
+	);
+

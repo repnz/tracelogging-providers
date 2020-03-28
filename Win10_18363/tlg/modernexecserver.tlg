@@ -1,0 +1,1458 @@
+ProviderNames:
+	Microsoft.Windows.ProcessLifetimeManager
+	Microsoft.Windows.ForegroundManager
+	Microsoft.Windows.LifetimeManager.AppStateTransition
+	TelemetryAssert
+	TelemetryAssertDiagTrack
+	Microsoft.Windows.BackgroundAccessManager
+
+
+
+**** Events *****
+HamGetRunningApps: Failed to enumerate applications(
+	HRESULT hr,
+	UNICODESTRING package,
+	NTSTATUS Status
+	);
+
+UserNotification_AuthStatusChanging(
+	SID UserSid,
+	HRESULT hr,
+	HRESULT hrDeferral,
+	UINT32 AuthStatus
+	);
+
+UserNotification_AuthStatusChanging(
+	VOID
+	);
+
+UserNotification_Added(
+	SID UserSid,
+	HRESULT hr
+	);
+
+UserNotification_Added(
+	VOID
+	);
+
+WaitOnBiNotifyNewSessionFailed(
+	UINT32 HRBiNotifyNewUser,
+	UINT32 HRBiNotifyNewSession
+	);
+
+AllowUninstall(
+	HRESULT hr
+	);
+
+AllowUninstall(
+	UNICODESTRING package
+	);
+
+FinishedServicing(
+	INT32 result
+	);
+
+FinishedServicing(
+	UINT32 packageCount
+	);
+
+AllowServicing(
+	INT32 result
+	);
+
+AllowServicing(
+	UINT32 packageCount,
+	INT32 notifyBi,
+	INT32 terminateRunningApps
+	);
+
+HamTerminatePackage(
+	UNICODESTRING Package,
+	UINT32 type,
+	HRESULT hr
+	);
+
+Disconnected Psm(
+	VOID
+	);
+
+HamWaitForPendingTerminateIfNeeded(
+	HEXINT64 HostId,
+	BOOLEAN WasWaitNeeded,
+	NTSTATUS Status
+	);
+
+HamWaitForPendingTerminateIfNeeded(
+	HEXINT64 HostId
+	);
+
+Activation_Fail(
+	NTSTATUS Status,
+	HEXINT32 ActivationId
+	);
+
+Activation_Fail(
+	HEXINT32 ActivationId
+	);
+
+ChangePackageBiState failed(
+	INT32 result
+	);
+
+Background workitems for package were force terminated(
+	UNICODESTRING packageFullName
+	);
+
+Changing the package state through BI(
+	UNICODESTRING packageFullName,
+	UINT32 newState
+	);
+
+OnUserLogoff: User not found in data store(
+	UINT64 user
+	);
+
+s_CancelBackgroundTasksAtLogOff(stop)(
+	UINT64 user,
+	INT32 ntstatus
+	);
+
+s_CancelBackgroundTasksAtLogOff(start)(
+	UINT64 user
+	);
+
+_UnregisterForStateChanges(
+	BOOLEAN fPackageLevel,
+	INT32 result,
+	UINT32 cookie
+	);
+
+_RegisterForStateChanges(
+	BOOLEAN fpackageLevel,
+	UINT32 filter,
+	INT32 result,
+	UINT32 cookie
+	);
+
+Terminating via debug API(
+	UINT64 user,
+	UNICODESTRING packageFullName,
+	INT32 result
+	);
+
+Debug_ResumePackage(
+	UINT64 User,
+	UNICODESTRING PackageFullName,
+	INT32 hr
+	);
+
+Debug_SuspendPackage(
+	UINT64 User,
+	UNICODESTRING PackageFullName,
+	INT32 hr
+	);
+
+DebugControl_DisableDebugMode(
+	UINT64 User,
+	UNICODESTRING PackageFullName,
+	INT32 result
+	);
+
+DebugControl_DisableDebugRelatedPackage(
+	UINT64 user,
+	UNICODESTRING packageFullName
+	);
+
+DebugControl_EnableDebugMode(
+	UINT64 User,
+	HRESULT hr,
+	UNICODESTRING PackageFullName
+	);
+
+DebugControl_EnableDebugRelatedPackage(
+	UINT64 User,
+	UNICODESTRING PackageFullName
+	);
+
+Application_Terminate(
+	HRESULT hr,
+	UNICODESTRING PsmKey,
+	HEXINT64 UserContext,
+	HEXINT32 TerminateFlags
+	);
+
+ActivityStoppedAutomatically(
+	VOID
+	);
+
+RegisteredApplicationId(
+	UNICODESTRING applicationId
+	);
+
+RegisteredPackage(
+	UNICODESTRING registeredPackage
+	);
+
+RegisteredPackageFullName(
+	UNICODESTRING packageFullName
+	);
+
+ActivityFailure(
+	UINT64 PartA_PrivTags,
+	HEX wilActivity,
+	UINT32 hresult,
+	UINT32 threadId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+ActivityFailure(
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+ActivityIntermediateStop(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+ActivityError(
+	UINT64 PartA_PrivTags,
+	SIGNED wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+ActivityError(
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+Startup(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId
+	);
+
+Startup(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+Startup(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	SIGNED wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+MigrateUserSettings(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId,
+	UNICODESTRING userSid
+	);
+
+MigrateUserSettings(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+MigrateUserSettings(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	SIGNED wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+RegisterPackageForApplication(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId,
+	UNICODESTRING packageFamilyName
+	);
+
+RegisterPackageForApplication(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	SIGNED wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function,
+	UNICODESTRING packageFamilyName
+	);
+
+RegisterPackageForApplication(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId,
+	UNICODESTRING userSid,
+	UNICODESTRING applicationUserModelId
+	);
+
+RegisterPackageForApplication(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+RegisterPackageForApplication(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	SIGNED wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+MigrateUserSettings(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId,
+	UNICODESTRING userSid,
+	GUID productId
+	);
+
+GetPackageAccessStateForProductId(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+GetPackageAccessStateForProductId(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	SIGNED wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+RegisterPackageForProductId(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId,
+	UNICODESTRING userSid,
+	GUID productId
+	);
+
+RegisterPackageForProductId(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+RegisterPackageForProductId(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	SIGNED wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+ReregisterPackage(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId,
+	UNICODESTRING userSid,
+	UNICODESTRING oldPackageFullName,
+	UNICODESTRING newPackageFullName
+	);
+
+ReregisterPackage(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+ReregisterPackage(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	SIGNED wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+GetRegisteredApplications(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId,
+	UNICODESTRING userSid
+	);
+
+GetRegisteredApplications(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+GetRegisteredApplications(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	SIGNED wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+GetRegisteredApplicationsForPackage(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId,
+	UINT32 applicationCount
+	);
+
+GetRegisteredApplicationsForPackage(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	SIGNED wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function,
+	UINT32 applicationCount
+	);
+
+GetRegisteredApplicationsForPackage(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId,
+	UNICODESTRING userSid,
+	UNICODESTRING packageFullName
+	);
+
+GetRegisteredApplicationsForPackage(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+GetRegisteredApplicationsForPackage(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	SIGNED wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+GetRegisteredPackages(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId,
+	UINT32 packageCount
+	);
+
+GetRegisteredPackages(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	SIGNED wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function,
+	UINT32 packageCount
+	);
+
+GetRegisteredPackages(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId,
+	UNICODESTRING userSid
+	);
+
+GetRegisteredPackages(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+GetRegisteredPackages(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	SIGNED wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+UnregisterPackage(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId,
+	UNICODESTRING userSid,
+	UNICODESTRING packageFullName
+	);
+
+UnregisterPackage(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+UnregisterPackage(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	SIGNED wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+RegisterApplication(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId,
+	UNICODESTRING userSid,
+	UNICODESTRING packageFullName
+	);
+
+RegisterPackage(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+RegisterPackage(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	SIGNED wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+UnregisterApplication(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId,
+	UNICODESTRING userSid,
+	UNICODESTRING applicationUserModelId
+	);
+
+UnregisterApplication(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+UnregisterApplication(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	SIGNED wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+RegisterApplication(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId,
+	UNICODESTRING userSid,
+	UNICODESTRING applicationUserModelId
+	);
+
+RegisterApplication(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+RegisterApplication(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	SIGNED wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+SetBackgroundAccessStateForApplication(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId,
+	UNICODESTRING packageFullName
+	);
+
+SetBackgroundAccessStateForApplication(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	SIGNED wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function,
+	UNICODESTRING packageFullName
+	);
+
+SetBackgroundAccessStateForApplication(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId,
+	UNICODESTRING userSid,
+	UNICODESTRING AUMID,
+	UINT32 packageState
+	);
+
+SetBackgroundAccessStateForApplication(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+SetBackgroundAccessStateForApplication(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	SIGNED wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+SetPackageSingleAccessState(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId,
+	UNICODESTRING userSid,
+	UNICODESTRING packageFullName,
+	UINT32 packageState,
+	INT32 enabled
+	);
+
+SetPackageSingleAccessState(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+SetPackageSingleAccessState(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	SIGNED wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+SetPackageAccessState(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId,
+	UNICODESTRING userSid,
+	UNICODESTRING packageFullName,
+	UINT32 packageState
+	);
+
+SetPackageAccessState(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+SetPackageAccessState(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	SIGNED wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+FallbackError(
+	UINT64 PartA_PrivTags,
+	SIGNED wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+FallbackError(
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+Assert(
+	UINT32 assertVersion,
+	UINT32 rva,
+	UINT32 timestamp,
+	UINT32 imageSize,
+	ANSISTRING imageName,
+	UINT32 count,
+	UINT32 totalHits,
+	UINT32 ModuleCollection,
+	UINT32 GlobalCollection
+	);
+
+Activation_WindowRemoved(
+	VOID
+	);
+
+Activation_StartForHostAsync(
+	VOID
+	);
+
+Activation_DisableTimeout(
+	NTSTATUS Status,
+	HEXINT32 ActivationId,
+	BOOLEAN DisableTimeout
+	);
+
+Activation_SendNotification(
+	HEXINT32 ActivationId,
+	INT32 Notification,
+	HRESULT hr
+	);
+
+Activation_WaitForStarted(
+	VOID
+	);
+
+Activation_Terminate(
+	NTSTATUS Status,
+	HEXINT32 ActivationId,
+	UINT8 TerminateType,
+	HEXINT32 TerminateReason,
+	UINT32 HungThreadId
+	);
+
+Activation_WindowRemoved(
+	NTSTATUS Status,
+	BOOLEAN IsDehydrated,
+	HEXINT32 ActivationId
+	);
+
+Activation_IsDehydrated(
+	VOID
+	);
+
+User_Logoff(
+	VOID
+	);
+
+Activation_Register(
+	VOID
+	);
+
+Host_Terminate(
+	VOID
+	);
+
+Activation_Register(
+	NTSTATUS Status,
+	HEXINT32 ActivationId
+	);
+
+Activation_SetImportance(
+	VOID
+	);
+
+HamShim_GetApplicationStateForPsmKey(
+	NTSTATUS Status,
+	UNICODESTRING PsmKey,
+	SID Sid,
+	UINT8 ApplicationState,
+	UINT8 TerminateReason
+	);
+
+Activation_WaitForStarted(
+	NTSTATUS Status,
+	HEXINT32 ActivationId,
+	HEXINT32 Flags,
+	UINT64 HostGeneration,
+	UINT32 TimeoutMs
+	);
+
+Activation_SetImportance(
+	NTSTATUS Status,
+	HEXINT32 ActivationId,
+	HEXINT32 Importance
+	);
+
+Activation_SetIsKillable(
+	NTSTATUS Status,
+	HEXINT32 ActivationId,
+	BOOLEAN IsKillable
+	);
+
+Activation_Stop(
+	NTSTATUS Status,
+	HEXINT32 ActivationId
+	);
+
+Activation_StartAsync(
+	NTSTATUS Status,
+	HEXINT32 ActivationId,
+	HEXINT32 Flags,
+	BOOL32 WasRehydrated
+	);
+
+Session_Logoff(
+	VOID
+	);
+
+Activation_IsDebugged(
+	VOID
+	);
+
+Activation_Stop(
+	VOID
+	);
+
+Activation_AllowCsEntry(
+	NTSTATUS Status,
+	HEXINT32 ActivationId
+	);
+
+Activation_StartForHostAsync(
+	NTSTATUS Status,
+	HEXINT32 ActivationId,
+	UNICODESTRING PsmKey,
+	HEXINT64 HostId,
+	HEXINT32 Importance
+	);
+
+Host_TerminateByProcessIfSuspended(
+	NTSTATUS Status,
+	PID Pid,
+	BOOL32 HostTerminated
+	);
+
+Activation_WaitForStarted(
+	NTSTATUS Status,
+	HEXINT32 ActivationId,
+	HEXINT32 Flags,
+	UINT64 HostGeneration,
+	UINT32 TimeoutMs
+	);
+
+Activation_DisableTimeout(
+	VOID
+	);
+
+Activation_Cancel(
+	VOID
+	);
+
+Activation_AllowCsEntry(
+	VOID
+	);
+
+Activation_Terminate(
+	VOID
+	);
+
+User_Logoff(
+	NTSTATUS Status,
+	SID Sid
+	);
+
+Activation_StartAsync(
+	VOID
+	);
+
+Host_Created(
+	UNICODESTRING PsmKey,
+	HEXINT64 HostId,
+	SID Sid
+	);
+
+Activation_IsDehydrated(
+	NTSTATUS Status,
+	HEXINT32 ActivationId,
+	BOOLEAN IsDehydrated
+	);
+
+Host_Terminate(
+	NTSTATUS Status,
+	HEXINT64 HostId,
+	UNICODESTRING PsmKey,
+	SID Sid
+	);
+
+Session_Logoff(
+	NTSTATUS Status
+	);
+
+HamShim_GetApplicationStateForPsmKey(
+	VOID
+	);
+
+Host_TerminateByProcessIfSuspended(
+	VOID
+	);
+
+Activation_Cancel(
+	NTSTATUS Status,
+	HEXINT32 ActivationId,
+	UINT8 TerminateType,
+	HEXINT32 Flags
+	);
+
+WriteAppNotificationFailed(
+	UNICODESTRING PackageFamilyName,
+	NTSTATUS Status
+	);
+
+Activation_SetIsKillable(
+	VOID
+	);
+
+Activation_IsDebugged(
+	NTSTATUS Status,
+	HEXINT32 ActivationId,
+	BOOL32 IsDebugged
+	);
+
+Debug_DisableDebugMode(
+	VOID
+	);
+
+Debug_TerminatePackage(
+	VOID
+	);
+
+Debug_SuspendPackage(
+	NTSTATUS Status,
+	UNICODESTRING PackageFullName,
+	UINT32 PreviousPackageState
+	);
+
+Debug_PackageResumeClose(
+	NTSTATUS Status,
+	UNICODESTRING PackageFullName,
+	SID UserSid
+	);
+
+Debug_PackageResume(
+	NTSTATUS Status,
+	UNICODESTRING PackageFullName,
+	SID UserSid,
+	UINT32 PreviousPackageState
+	);
+
+Debug_DisableDebugMode(
+	NTSTATUS Status,
+	UNICODESTRING PackageFullName
+	);
+
+Debug_EnableDebugMode(
+	VOID
+	);
+
+Debug_QueryPackageState(
+	NTSTATUS Status,
+	UNICODESTRING PackageFullName,
+	UINT8 PackageState
+	);
+
+Debug_PackageResumeClose(
+	VOID
+	);
+
+Debug_Callback(
+	VOID
+	);
+
+Debug_Callback(
+	NTSTATUS Status,
+	HEXINT32 CallbackReason,
+	UNICODESTRING HostPsmKey,
+	HEXINT32 HostJobType
+	);
+
+Debug_EnableDebugMode(
+	NTSTATUS Status,
+	UNICODESTRING PackageFullName
+	);
+
+Debug_QueryPackageState(
+	VOID
+	);
+
+Debug_TerminatePackage(
+	NTSTATUS Status,
+	UNICODESTRING PackageFullName
+	);
+
+Debug_SuspendPackage(
+	VOID
+	);
+
+Debug_PackageResume(
+	VOID
+	);
+
+Activation_Callback(
+	NTSTATUS Status,
+	HEXINT64 Activity,
+	HEXINT32 ActivationId,
+	UINT32 Subject
+	);
+
+Activity_StopRequestFail(
+	NTSTATUS Status,
+	UINT8 StopRequestType,
+	HEXINT32 ActivationId,
+	HEXINT64 ActivityId,
+	UINT8 CurrentState,
+	UINT8 NextState
+	);
+
+Host_StartedCount(
+	HEXINT64 HostId,
+	HEXINT32 ActivationId,
+	UINT32 StartedCount
+	);
+
+Activation_Rehydrate(
+	HRESULT hr,
+	HEXINT32 ActivationId,
+	UNICODESTRING PsmKey,
+	UINT64 PartA_PrivTags
+	);
+
+Activation_Rehydrate(
+	VOID
+	);
+
+Activation_Callback(
+	VOID
+	);
+
+Activation_StateChanged(
+	HEXINT32 ActivationId,
+	HEXINT64 Activity,
+	UINT8 NewState,
+	UINT8 OldSate
+	);
+
+Activity_Dehydrate(
+	NTSTATUS Status,
+	HEXINT32 Id,
+	UNICODESTRING PsmKey,
+	UINT64 PartA_PrivTags
+	);
+
+Host_RemoveDehydratedViews(
+	VOID
+	);
+
+Host_DelayStopCallback(
+	HEXINT64 HostId
+	);
+
+Host_RemoveDehydratedViews(
+	UNICODESTRING PsmKey,
+	HEXINT64 HostId
+	);
+
+Host_StopTimerQueued(
+	HEXINT64 HostId,
+	UNICODESTRING PsmKey,
+	HEXINT32 ActivationId
+	);
+
+Host_SuspendResumeNotification(
+	UNICODESTRING PsmKey,
+	HEXINT64 HostId,
+	BOOLEAN Suspend
+	);
+
+Host_SuspendResumeNotification(
+	VOID
+	);
+
+Host_Destroyed(
+	UNICODESTRING PsmKey,
+	HEXINT64 HostId
+	);
+
+Activation_DelayStopped(
+	NTSTATUS Status,
+	HEXINT32 ActivationId,
+	UNICODESTRING PsmKey
+	);
+
+Host_DelayStopCallback(
+	VOID
+	);
+

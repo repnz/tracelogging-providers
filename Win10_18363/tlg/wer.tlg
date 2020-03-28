@@ -1,0 +1,360 @@
+ProviderNames:
+	Microsoft.Windows.WindowsErrorReporting
+	TelemetryAssert
+	TelemetryAssertDiagTrack
+
+
+
+**** Events *****
+WER_Spew(
+	UINT64 PartA_PrivTags,
+	INT32 HRESULT,
+	ANSISTRING File,
+	UINT32 LineNumber,
+	ANSISTRING FailingCode,
+	ANSISTRING FailingFunction,
+	UNICODESTRING UserMessage
+	);
+
+Assert(
+	UINT32 assertVersion,
+	UINT32 rva,
+	UINT32 timestamp,
+	UINT32 imageSize,
+	ANSISTRING imageName,
+	UINT32 count,
+	UINT32 totalHits,
+	UINT32 ModuleCollection,
+	UINT32 GlobalCollection
+	);
+
+WerReportCloseWithoutSubmit(
+	UINT64 PartA_PrivTags,
+	UNICODESTRING ReportId,
+	UNICODESTRING IntegratorReportId,
+	UNICODESTRING EventName,
+	UNICODESTRING SignatureParameter01,
+	UNICODESTRING SignatureParameter02,
+	UNICODESTRING SignatureParameter03,
+	UNICODESTRING SignatureParameter04,
+	UNICODESTRING SignatureParameter05,
+	UNICODESTRING SignatureParameter06,
+	UNICODESTRING SignatureParameter07,
+	UNICODESTRING SignatureParameter08,
+	UNICODESTRING SignatureParameter09,
+	UNICODESTRING SignatureParameter10,
+	BOOL32 DumpsRequested,
+	UINT32 FilesRequested
+	);
+
+WerReportAddDumpFailure(
+	UINT64 PartA_PrivTags,
+	HRESULT hr,
+	UNICODESTRING ReportId,
+	UNICODESTRING EventName,
+	UINT32 Pid,
+	UINT32 Tid,
+	UINT32 DumpType,
+	UINT32 DumpFlags
+	);
+
+WerReportAddFileFailure(
+	UINT64 PartA_PrivTags,
+	HRESULT hr,
+	UNICODESTRING ReportId,
+	UNICODESTRING EventName,
+	UINT32 FileType,
+	UINT32 FileFlags
+	);
+
+WerReportSetParameterFailure(
+	UINT64 PartA_PrivTags,
+	HRESULT hr,
+	UNICODESTRING ReportId,
+	UNICODESTRING EventName,
+	UINT32 ParamId,
+	UNICODESTRING ParamName,
+	UNICODESTRING ParamValue
+	);
+
+WerReportCreate(
+	UINT64 PartA_PrivTags,
+	HRESULT HResult,
+	UNICODESTRING ReportId,
+	UNICODESTRING IntegratorReportId,
+	UNICODESTRING EventName,
+	INT32 ReportType,
+	UNICODESTRING ApplicationName
+	);
+
+AbruptExit(
+	UINT64 PartA_PrivTags,
+	BOOL32 IsConsoleApp,
+	UINT32 Reason,
+	UNICODESTRING ReportId
+	);
+
+WerReportSubmit(
+	UINT64 PartA_PrivTags,
+	UNICODESTRING ReportId,
+	UNICODESTRING IntegratorReportId,
+	UNICODESTRING EventName,
+	UINT8 SignatureParamCount,
+	UNICODESTRING SignatureParameter01,
+	UNICODESTRING SignatureParameter02,
+	UNICODESTRING SignatureParameter03,
+	UNICODESTRING SignatureParameter04,
+	UNICODESTRING SignatureParameter05,
+	UNICODESTRING SignatureParameter06,
+	UNICODESTRING SignatureParameter07,
+	UNICODESTRING SignatureParameter08,
+	UNICODESTRING SignatureParameter09,
+	UNICODESTRING SignatureParameter10,
+	UINT32 SubmitFlags,
+	BOOL32 CEREnabled,
+	UINT32 Consent
+	);
+
+WerReportNotSubmitted(
+	UINT64 PartA_PrivTags,
+	HRESULT HResult,
+	UNICODESTRING ReportId,
+	UNICODESTRING IntegratorReportId
+	);
+
+UploadTaskTriggered(
+	UINT64 PartA_PrivTags,
+	BOOLEAN Force,
+	HRESULT hr,
+	UINT32 NtStatus,
+	UINT32 TaskState
+	);
+
+ReportZipArchived(
+	UINT64 PartA_PrivTags,
+	HRESULT HResult,
+	UNICODESTRING ArchivePath,
+	UNICODESTRING AppName
+	);
+
+WerEvent(
+	UINT64 PartA_PrivTags,
+	UNICODESTRING BucketId,
+	UNICODESTRING BucketTable,
+	UNICODESTRING BucketHash,
+	UNICODESTRING EventName,
+	UINT8 SignatureParameterCount,
+	UNICODESTRING SignatureParameter01,
+	UNICODESTRING SignatureParameter02,
+	UNICODESTRING SignatureParameter03,
+	UNICODESTRING SignatureParameter04,
+	UNICODESTRING SignatureParameter05,
+	UNICODESTRING SignatureParameter06,
+	UNICODESTRING SignatureParameter07,
+	UNICODESTRING SignatureParameter08,
+	UNICODESTRING SignatureParameter09,
+	UNICODESTRING SignatureParameter10,
+	UNICODESTRING Response,
+	UNICODESTRING CabId,
+	UINT32 ReportStatus,
+	UNICODESTRING ReportId,
+	UINT64 PayloadSizeInBytes,
+	UNICODESTRING CabGuid
+	);
+
+WerEventNoisy(
+	UINT64 PartA_PrivTags,
+	UNICODESTRING BucketId,
+	UNICODESTRING BucketTable,
+	UNICODESTRING BucketHash,
+	UNICODESTRING EventName,
+	UINT8 SignatureParameterCount,
+	UNICODESTRING SignatureParameter01,
+	UNICODESTRING SignatureParameter02,
+	UNICODESTRING SignatureParameter03,
+	UNICODESTRING SignatureParameter04,
+	UNICODESTRING SignatureParameter05,
+	UNICODESTRING SignatureParameter06,
+	UNICODESTRING SignatureParameter07,
+	UNICODESTRING SignatureParameter08,
+	UNICODESTRING SignatureParameter09,
+	UNICODESTRING SignatureParameter10,
+	UNICODESTRING Response,
+	UNICODESTRING CabId,
+	UINT32 ReportStatus,
+	UNICODESTRING ReportId,
+	UINT64 PayloadSizeInBytes,
+	UNICODESTRING CabGuid
+	);
+
+WerReportFailed(
+	UINT64 PartA_PrivTags,
+	UNICODESTRING ReportId,
+	UNICODESTRING IntegratorReportId,
+	HRESULT hr,
+	UINT32 ReportStatus
+	);
+
+WerReportUploadSuspended(
+	UINT64 PartA_PrivTags,
+	UNICODESTRING ReportId,
+	UNICODESTRING IntegratorReportId,
+	UINT32 ReportStatus
+	);
+
+WerReportAsync(
+	UINT64 PartA_PrivTags,
+	UNICODESTRING ReportId,
+	UNICODESTRING IntegratorReportId
+	);
+
+WerReportQueueDisabled(
+	UINT64 PartA_PrivTags,
+	UNICODESTRING ReportId,
+	UNICODESTRING IntegratorReportId,
+	UINT32 ReportStatus
+	);
+
+WerReportCancelled(
+	UINT64 PartA_PrivTags,
+	UNICODESTRING ReportId,
+	UNICODESTRING IntegratorReportId,
+	UINT32 ReportStatus
+	);
+
+WerReportQueuedFolder(
+	UINT64 PartA_PrivTags,
+	UNICODESTRING ReportPath,
+	UNICODESTRING AppName,
+	UNICODESTRING EventType,
+	UINT32 ReportStatus
+	);
+
+WerReportQueued(
+	UINT64 PartA_PrivTags,
+	UNICODESTRING ReportId,
+	UNICODESTRING IntegratorReportId,
+	UINT32 ReportStatus,
+	HRESULT NetworkError,
+	UINT32 Reason,
+	UINT32 ReportSource
+	);
+
+WerReportUploadedTestInfo(
+	UINT64 PartA_PrivTags,
+	UNICODESTRING AppName,
+	UNICODESTRING EventType,
+	UNICODESTRING ReportPath,
+	UINT32 ReportStatus
+	);
+
+WerReportUploaded(
+	UINT64 PartA_PrivTags,
+	UNICODESTRING ReportId,
+	UNICODESTRING IntegratorReportId,
+	UNICODESTRING BucketId,
+	UNICODESTRING BucketTable,
+	UNICODESTRING BucketHash,
+	UNICODESTRING CabId,
+	BOOLEAN IsQueueSkipped,
+	UINT32 ReportStatus,
+	HRESULT hr,
+	UNICODESTRING CabGuid,
+	FILETIME CreateTime,
+	UNICODESTRING EventType,
+	UINT32 OneTraceStatus
+	);
+
+WerReportDebugging(
+	UINT64 PartA_PrivTags,
+	UNICODESTRING ReportId,
+	UNICODESTRING IntegratorReportId,
+	UINT32 ReportStatus
+	);
+
+WerReportDisabled(
+	UINT64 PartA_PrivTags,
+	UNICODESTRING ReportId,
+	UNICODESTRING IntegratorReportId,
+	INT32 DisabledReason,
+	UINT32 ReportStatus
+	);
+
+WerReportAborted(
+	UINT64 PartA_PrivTags,
+	UNICODESTRING ReportId,
+	UNICODESTRING IntegratorReportId,
+	UINT32 ReportStatus
+	);
+
+WERDumpCollectionStatus(
+	UINT64 PartA_PrivTags,
+	HRESULT hr,
+	UNICODESTRING CodeSite,
+	UNICODESTRING ReportId,
+	UINT32 DumpType
+	);
+
+WerPayloadTransport(
+	UINT64 PartA_PrivTags,
+	UNICODESTRING ReportId,
+	HRESULT HttpExchangeResult,
+	UINT32 UploadDuration,
+	UINT64 PayloadSize,
+	UNICODESTRING Protocol,
+	UNICODESTRING Stage,
+	BOOLEAN IsTcpPriorityHintVeryLow,
+	UINT32 RequestStatusCode,
+	UINT64 BytesUploaded,
+	HRESULT TransportHr
+	);
+
+TpAzureStorageExchange(
+	UINT64 PartA_PrivTags,
+	UNICODESTRING ReportId,
+	HRESULT hr,
+	UINT32 LastBlockId,
+	UINT64 TotalBytesUploaded
+	);
+
+ResumableUploadsNotSupported(
+	UINT64 PartA_PrivTags,
+	UNICODESTRING Command,
+	UNICODESTRING ReportId,
+	UNICODESTRING Protocol,
+	BOOL32 Retry
+	);
+
+WerReportOcaStage2Status(
+	UINT64 PartA_PrivTags,
+	UNICODESTRING ReportId,
+	UNICODESTRING TicketId,
+	UNICODESTRING Status,
+	UNICODESTRING Message
+	);
+
+GetMSATicket(
+	UINT64 PartA_PrivTags,
+	UINT64 Milliseconds,
+	HRESULT hr
+	);
+
+ReportUpdateError(
+	UINT64 PartA_PrivTags,
+	UNICODESTRING ReportId,
+	HRESULT hr,
+	INT32 State,
+	INT32 Action
+	);
+
+WerReportPruned(
+	UINT64 PartA_PrivTags,
+	UNICODESTRING EventName,
+	UNICODESTRING ReportId,
+	UNICODESTRING IntegratorReportId,
+	BOOL32 IsInvalidReport,
+	INT32 DeleteReason,
+	UNICODESTRING ReportPath,
+	UINT64 ReportSize
+	);
+

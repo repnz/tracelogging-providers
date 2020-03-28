@@ -1,0 +1,104 @@
+ProviderNames:
+	Microsoft.Windows.Security.LUA
+
+
+
+**** Events *****
+FallbackError(
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+AmsiUACScanError(
+	HRESULT amsiScanResultHr,
+	UNICODESTRING amProviderName
+	);
+
+AMScanThreadTerminatedForcefully(
+	UINT32 threadTerminationWaitInterval,
+	UINT32 waitRetVal
+	);
+
+FallbackError(
+	UINT64 PartA_PrivTags,
+	SIGNED wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+AMScanThreadDidNotTerminate(
+	UINT32 waitRetVal
+	);
+
+AMScanTimedOut(
+	UINT32 timeOutInterval
+	);
+
+AMProviderUnexpectedReturn(
+	UINT32 amsiResult,
+	UNICODESTRING AMProviderName
+	);
+
+LowILConsentUILaunched(
+	UINT32 eventType,
+	BOOLEAN splitToken,
+	UNICODESTRING friendlyName,
+	UINT32 elevationReason,
+	UNICODESTRING exeName,
+	UINT32 signatureState,
+	UNICODESTRING publisherName,
+	UNICODESTRING cmdLine,
+	UINT32 telemetryFlags,
+	UINT32 timeStamp,
+	UINT32 fileVersionMS,
+	UINT32 fileVersionLS,
+	UINT32 AMScanResult,
+	UNICODESTRING AMProviderName
+	);
+
+ConsentUILaunched(
+	UINT32 eventType,
+	BOOLEAN splitToken,
+	UNICODESTRING friendlyName,
+	UINT32 elevationReason,
+	UNICODESTRING exeName,
+	UINT32 signatureState,
+	UNICODESTRING publisherName,
+	UNICODESTRING cmdLine,
+	UINT32 telemetryFlags,
+	UINT32 timeStamp,
+	UINT32 fileVersionMS,
+	UINT32 fileVersionLS,
+	UINT32 AMScanResult,
+	UNICODESTRING AMProviderName
+	);
+

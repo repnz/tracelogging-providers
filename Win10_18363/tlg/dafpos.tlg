@@ -1,0 +1,231 @@
+ProviderNames:
+	Microsoft.IoT.POS.DafProvider
+	TelemetryAssert
+	TelemetryAssertDiagTrack
+
+
+
+**** Events *****
+CommonQuery_GetDeviceResult(
+	UNICODESTRING instanceId,
+	HRESULT hr
+	);
+
+CommonQuery_Stop_End(
+	HRESULT hr
+	);
+
+CommonQuery_Stop_Begin(
+	VOID
+	);
+
+CommonQuery_StartTaskCallback_End(
+	HRESULT hr
+	);
+
+CommonQuery_StartTaskCallback_Begin(
+	VOID
+	);
+
+CommonQuery_Start(
+	HRESULT hr
+	);
+
+ProviderDirectoryUpdateFailed(
+	HRESULT result
+	);
+
+DirTimerCallback(
+	VOID
+	);
+
+DirCreateThreadpoolTimerFailed(
+	WIN32ERROR winError
+	);
+
+DafPosProviderUnloaded(
+	VOID
+	);
+
+DafPosProviderLoaded(
+	VOID
+	);
+
+WilFailure(
+	ANSISTRING function,
+	ANSISTRING file,
+	UINT32 lineNumber,
+	UNICODESTRING message,
+	HRESULT hr
+	);
+
+DafPosPassThroughInitAssociationResult(
+	UNICODESTRING bluetoothAepId,
+	HRESULT hr
+	);
+
+DevMgmtCreatingDeviceNode(
+	UNICODESTRING instanceId
+	);
+
+TargetedServiceQueryBeginSilentlyFailed(
+	HRESULT hr
+	);
+
+Assert(
+	UINT32 assertVersion,
+	UINT32 rva,
+	UINT32 timestamp,
+	UINT32 imageSize,
+	ANSISTRING imageName,
+	UINT32 count,
+	UINT32 totalHits,
+	UINT32 ModuleCollection,
+	UINT32 GlobalCollection
+	);
+
+FindFirstFileExWFailed(
+	WIN32ERROR lastError
+	);
+
+FindFirstFilePattern(
+	UNICODESTRING filePattern
+	);
+
+InvalidRegularExpression(
+	UNICODESTRING posProviderPath,
+	UINT32 peripheralIndex,
+	ANSISTRING regexErrorDescription
+	);
+
+ClassIdCollision(
+	UNICODESTRING posProviderPath,
+	GUID providerClassId,
+	UNICODESTRING existingPosProviderPath
+	);
+
+LoadedProtocolProvider(
+	UNICODESTRING posProviderPath,
+	UNICODESTRING providerVendor,
+	UINT32 posMetadataVersion,
+	UINT32 providerVersion,
+	UINT32 numSupportedPeripherals
+	);
+
+TotalDeviceCountOverflowed(
+	VOID
+	);
+
+TotalProviderCountOverflowed(
+	VOID
+	);
+
+InvalidProtocolProviderMetadata(
+	UNICODESTRING posProviderPath
+	);
+
+LoadProtocolProviderFailed(
+	ANSISTRING loadReason,
+	UNICODESTRING posProviderPath,
+	HRESULT loadError
+	);
+
+CreateLogicalBarcodeScannerProvider(
+	HRESULT result
+	);
+
+CreateBluetoothProvider(
+	HRESULT result
+	);
+
+CreateProtocolProvider(
+	UNICODESTRING posProviderPath,
+	GUID providerClassId
+	);
+
+LoadProtocolProviderFailed(
+	HRESULT loadError,
+	UNICODESTRING posProviderPath,
+	GUID providerClassId
+	);
+
+DirIoFinished(
+	WIN32ERROR ioResult,
+	UNICODESTRING path
+	);
+
+DirReadFailed(
+	WIN32ERROR lastError
+	);
+
+DirOpenDirectoryFailed(
+	UNICODESTRING dirPath,
+	WIN32ERROR winError
+	);
+
+DafRemoveCallback(
+	HRESULT callbackResult
+	);
+
+CallDafStartRemoveAssociation(
+	HRESULT returnedResult
+	);
+
+DafFinalizeCallback(
+	UINT32 dafAssociationStatus,
+	HRESULT callbackResult
+	);
+
+CallDafStartFinalize(
+	HRESULT returnedResult
+	);
+
+DafReadCallback(
+	UINT32 readDataSize,
+	HRESULT callbackResult
+	);
+
+CallDafStartReadCeremonyData(
+	HRESULT returnedResult
+	);
+
+DafWriteCallback(
+	HRESULT callbackResult
+	);
+
+CallDafStartWriteCeremonyData(
+	UINT32 writeDataSize,
+	HRESULT returnedResult
+	);
+
+CallDafSelectCeremony(
+	GUID ceremony,
+	HRESULT returnedResult
+	);
+
+DafCeremoniesCallback(
+	UINT32 ceremonyCount,
+	HRESULT callbackResult
+	);
+
+CallDafStartEnumCeremonies(
+	HRESULT returnedResult
+	);
+
+CallDafCreateAssociationContext(
+	UNICODESTRING aepId,
+	HRESULT returnedResult
+	);
+
+CallDafCloseAssociationContext(
+	VOID
+	);
+
+GetResourceDllHandleFailed(
+	WIN32ERROR lastError
+	);
+
+BluetoothDeviceMonitor::OnDevObjectQueryResultAddUpdate(
+	UNICODESTRING deviceId
+	);
+

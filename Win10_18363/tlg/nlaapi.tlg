@@ -1,0 +1,31 @@
+ProviderNames:
+	NLA
+	Microsoft.Windows.TlgAggregateInternal
+
+
+
+**** Events *****
+NSP: WSM_NSPIoctl_v2(
+	NULL Count
+	);
+
+NSP: WSM_NSPLookupServiceNext_v2(
+	NULL Count
+	);
+
+NSP: WSM_NSPLookupServiceBegin_v2(
+	NULL Count
+	);
+
+TlgAggregateSummary(
+	GUID Provider,
+	UINT64 NumFlushes,
+	UINT64 MaxEntriesStored,
+	UINT64 TotalEntriesFlushed,
+	UINT32 MaxEntriesFlushed,
+	UINT32 MinEntriesFlushed,
+	UINT32 NumBucketLimitReached,
+	UINT32 NumAllocationFailures,
+	UINT32 NumLargeEventFailures
+	);
+

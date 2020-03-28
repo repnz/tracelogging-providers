@@ -1,0 +1,80 @@
+ProviderNames:
+	Microsoft.Windows.Capture.Photography
+	Microsoft.Windows.MediaFoundation.CallStack
+
+
+
+**** Events *****
+InputVideoResolution(
+	ANSISTRING MediaPhotographyModule,
+	BOOL32 UTCReplace_AppSessionGuid,
+	GUID MFCaptureEngineSessionGuid,
+	UINT32 Width,
+	UINT32 Height
+	);
+
+VSChangedReason(
+	ANSISTRING MediaPhotographyModule,
+	BOOL32 UTCReplace_AppSessionGuid,
+	GUID MFCaptureEngineSessionGuid,
+	UINT32 ReasonCode
+	);
+
+MFPhotographyEvents(
+	ANSISTRING MediaPhotographyModule,
+	BOOL32 UTCReplace_AppSessionGuid,
+	GUID MFCaptureEngineSessionGuid,
+	UINT64 EffectCreateTimeInMS,
+	UINT64 EffectDisposeTimeInMS,
+	UINT8 QualityLevel,
+	UINT64 NumOfLatency,
+	DOUBLE MinLatencyInMSec,
+	DOUBLE MaxLatencyInMSec,
+	DOUBLE AvgLatencyInMSec,
+	UINT8 IsLowLatencyMode,
+	UINT8 IsHardwareVSUsed,
+	UINT8 IfIgnoreHardware,
+	UINT64 NumOfCorrectMotion,
+	DOUBLE AvgOfCorrectMotionTrace,
+	DOUBLE MinCorrectMotionTrace,
+	DOUBLE MaxCorrectMotionTrace
+	);
+
+MFPhotographyEvents(
+	ANSISTRING MediaPhotographyModule,
+	BOOL32 UTCReplace_AppSessionGuid,
+	GUID MFCaptureEngineSessionGuid,
+	UINT64 EffectCreateTimeInMS,
+	UINT64 EffectDisposeTimeInMS,
+	UINT64 DesiredAnalysisIntervalInMS,
+	UINT8 IsHDREnabled,
+	UINT8 IsHWHisgramUsed,
+	UINT32 NumOfFailedAnalysis,
+	UINT64 NumOfDetection,
+	DOUBLE MinDetectionLatency,
+	DOUBLE MaxDetectionLatency,
+	DOUBLE AvgDetectionLatency
+	);
+
+MFPhotographyEvents(
+	ANSISTRING MediaPhotographyModule,
+	BOOL32 UTCReplace_AppSessionGuid,
+	GUID MFCaptureEngineSessionGuid,
+	UINT64 EffectCreateTimeInMS,
+	UINT64 EffectDisposeTimeInMS,
+	UINT64 DesiredAnalysisIntervalInMS,
+	UINT8 IsHardwareFDEnabled,
+	UINT8 IfIgnoreHardware,
+	UINT8 IsSyncModeDetection,
+	UINT8 DetectionMode,
+	UINT32 NumOfFailedAnalysis,
+	UINT64 NumOfDetection,
+	DOUBLE MinDetectionLatency,
+	DOUBLE MaxDetectionLatency,
+	DOUBLE AvgDetectionLatency,
+	UINT64 MinDetectedFaces,
+	UINT64 MaxDetectedFaces,
+	UINT64 AvgDetectedFaces,
+	UINT64 SumDurationWithFDEnabled
+	);
+

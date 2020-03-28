@@ -1,0 +1,46 @@
+ProviderNames:
+	ShutdownDotExe
+
+
+
+**** Events *****
+CallFailed(
+	ANSISTRING WhichCall,
+	UINT32 FailCode,
+	UINT32 Flags,
+	ANSISTRING OptionString
+	);
+
+ShutdownExeInvoked(
+	INT32 fLogoff,
+	INT32 fForce,
+	INT32 fReboot,
+	INT32 fHibernate,
+	INT32 fAbort,
+	INT32 fPoweroff,
+	INT32 fAnnotate,
+	INT32 fRestartApps,
+	INT32 fRestartAppsShutdown,
+	INT32 fShutdownHybrid,
+	INT32 fServerNameSpecified,
+	INT32 fMessageSpecified,
+	UINT32 dwTimeout,
+	UINT32 dwReason
+	);
+
+CallFailed(
+	ANSISTRING Name,
+	UINT32 dwRet
+	);
+
+CallFailed(
+	ANSISTRING WhichCall,
+	UINT32 FailCode,
+	INT32 Flags,
+	ANSISTRING OptionString
+	);
+
+UsageDisplayed(
+	VOID
+	);
+

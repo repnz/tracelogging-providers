@@ -1,0 +1,97 @@
+ProviderNames:
+	Microsoft-Windows-OneBackup-BackupPage
+
+
+
+**** Events *****
+BackupTargetPropertiesUpdateFailed(
+	UNICODESTRING ProviderId,
+	UINT32 Property,
+	HEXINT32 HResult
+	);
+
+BackupNowCancelled(
+	UNICODESTRING ProviderId,
+	HEXINT32 HResult
+	);
+
+BoolBasedBackupFrequencyChanged(
+	UNICODESTRING ProviderId,
+	BOOL32 Value,
+	HEXINT32 HResult
+	);
+
+SecondaryTargetsLinkClicked(
+	VOID
+	);
+
+BackupSettingChanged(
+	UNICODESTRING ProviderId,
+	UINT32 CapabilityType,
+	BOOL32 Value,
+	HEXINT32 HResult
+	);
+
+ListBasedRetentionChanged(
+	UNICODESTRING ProviderId,
+	UINT32 Value,
+	HEXINT32 HResult
+	);
+
+ListBasedBackupFrequencyChanged(
+	UNICODESTRING ProviderId,
+	UINT32 Value,
+	HEXINT32 HResult
+	);
+
+AppBackupSettingChanged(
+	UNICODESTRING ProviderId,
+	UNICODESTRING AppPFN,
+	BOOL32 Value,
+	HEXINT32 HResult
+	);
+
+RemoveBackupInitiated(
+	UNICODESTRING ProviderId,
+	HEXINT32 HResult
+	);
+
+AdvanceSettingsPageVisit(
+	UNICODESTRING ProviderId
+	);
+
+SelectDriveInitiated(
+	VOID
+	);
+
+MainPageVisit(
+	UNICODESTRING ConfiguredAccounts,
+	HEXINT64 SettingListSize,
+	HEXINT32 HResult
+	);
+
+RelatedSettingsLinkVisited(
+	UNICODESTRING RelatedSettingId,
+	UNICODESTRING ProviderId,
+	HEXINT32 HResult
+	);
+
+BackupNowInitiated(
+	UNICODESTRING ProviderId,
+	HEXINT32 HResult
+	);
+
+IncludesExcludesListChanged(
+	UNICODESTRING ProviderId,
+	UINT32 ListType,
+	UINT32 OperationType,
+	UNICODESTRING KnownFolderId,
+	HEXINT32 HResult
+	);
+
+NewBackupConfigured(
+	UNICODESTRING ProviderId,
+	HEXINT32 TargetType,
+	HEXINT32 HResult
+	);
+

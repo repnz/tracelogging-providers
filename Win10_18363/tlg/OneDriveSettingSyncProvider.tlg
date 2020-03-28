@@ -1,0 +1,486 @@
+ProviderNames:
+	Microsoft.Windows.BackupAndRoaming.WilProvider
+	Microsoft.Windows.BackupAndRoaming.Diagnostics
+	Microsoft.Windows.BackupAndRoaming.SyncEngine
+	Microsoft.Windows.TlgAggregateInternal
+	TelemetryAssert
+	TelemetryAssertDiagTrack
+
+
+
+**** Events *****
+FallbackError(
+	UINT64 PartA_PrivTags,
+	SIGNED wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+FallbackError(
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+EmptyStructuredState(
+	UNICODESTRING CollectionId
+	);
+
+ParseLiveMetadata(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId
+	);
+
+ActivityIntermediateStop(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+ActivityError(
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+ActivityError(
+	UINT64 PartA_PrivTags,
+	SIGNED wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+ParseLiveMetadata(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	SIGNED wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+ParseLiveMetadata(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+ActivityStoppedAutomatically(
+	VOID
+	);
+
+ActivityFailure(
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+ActivityFailure(
+	UINT64 PartA_PrivTags,
+	HEX wilActivity,
+	UINT32 hresult,
+	UINT32 threadId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+GetMsaToken(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId,
+	UNICODESTRING ServiceName,
+	UNICODESTRING Policy
+	);
+
+GetMsaToken(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	SIGNED wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+GetMsaToken(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+RoamingAPIQOS(
+	UINT32 APICode,
+	HEXINT32 HResult,
+	UINT32 Duration,
+	UNICODESTRING StringArgument,
+	UINT32 DwordArgument
+	);
+
+RoamingScenarioQOS(
+	UINT32 ScenarioId,
+	HEXINT32 HResult,
+	UINT32 ErrorType,
+	UINT32 Duration,
+	HEXINT64 TransactionId,
+	UNICODESTRING StringArgument,
+	UINT32 DwordArgument,
+	GUID ProviderId,
+	UNICODESTRING IdentityHash,
+	UINT32 UnitsSucceeded,
+	UINT32 UnitsFailed,
+	UINT64 UnitsSize,
+	GUID OperationId,
+	UINT32 OperationOrigin,
+	UINT32 Priority,
+	UINT32 AccountType
+	);
+
+PerformPdcActivation(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId
+	);
+
+PerformPdcActivation(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+PerformPdcActivation(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	SIGNED wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+NotificationSubscriptionLimitExceeded(
+	VOID
+	);
+
+DeviceTrustRefreshed(
+	UNICODESTRING CallingOperation,
+	BOOL32 PreviousState,
+	BOOL32 NewState,
+	HEXINT32 HResult
+	);
+
+LiveStorageMetabaseInvalidModifiedTime(Aggregate)(
+	NULL Count,
+	UNICODESTRING CollectionId,
+	UNICODESTRING SettingUnitId,
+	UNICODESTRING Context,
+	INT64 DateModified
+	);
+
+PdcDeactivationFailed(
+	HEXINT32 HResult,
+	HEXINT64 PDCHandle,
+	HEXINT64 PDCActivationHandle
+	);
+
+PdcRevocation(
+	HEXINT64 PDCHandle,
+	HEXINT64 PDCActivationHandle
+	);
+
+PdcClientRegistrationFailed(
+	HEXINT32 HResult
+	);
+
+PdcClientUnregistrationFailed(
+	HEXINT32 HResult,
+	HEXINT64 PDCHandle
+	);
+
+MsaPolicyDocumentNotCached(
+	VOID
+	);
+
+SettingUnitMetadataFiletime(
+	UNICODESTRING ContextMessage,
+	UNICODESTRING CollectionId,
+	UNICODESTRING SettingUnitId,
+	FILETIME CurrentTime,
+	FILETIME SettingUnitModifiedTime,
+	FILETIME MetadataModifiedTime,
+	INT64 SettingUnitModifiedTimeInt64,
+	INT64 MetadataModifiedTimeInt64
+	);
+
+NewMetadataItemCreated(
+	UNICODESTRING CollectionId,
+	UNICODESTRING UnitId,
+	UINT64 SyncGIDPrefix,
+	GUID SyncGIDUniqueId,
+	UNICODESTRING CallingMethod
+	);
+
+GetMsaLoginProofTokenFailed(
+	HRESULT HResult,
+	BOOL32 IsDeviceTrusted
+	);
+
+InvalidateMsaTokenCache(
+	FILETIME CurrentTime,
+	FILETIME LastTokenCacheInvalidationTime
+	);
+
+GetMsaTokenFailed(
+	UINT32 WebTokenRequestStatus,
+	HEXINT32 TBCoreHResult,
+	HEXINT32 WebProviderError,
+	BOOL32 WebProviderErrorAvailable
+	);
+
+GetSettingHandlerInstanceFromFullyQualifiedCollectionIdFailed(
+	UNICODESTRING CallingMethod,
+	UNICODESTRING CollectionId,
+	HEXINT32 HResult
+	);
+
+SpecificSyncUnitErrorHitWithSyncGID(
+	UNICODESTRING CollectionId,
+	UNICODESTRING UnitId,
+	UINT64 SyncGIDPrefix,
+	GUID SyncGIDUniqueId,
+	HEXINT32 ErrorCode,
+	UINT32 ProviderOperation,
+	UINT32 SyncOperation
+	);
+
+SyncGIDsOfFailingSync(
+	UNICODESTRING CollectionId,
+	UNICODESTRING UnitId,
+	UINT64 SyncGIDPrefix,
+	GUID SyncGIDUniqueId
+	);
+
+ResurrectDeletedItemWithoutSettingUnitId(
+	UNICODESTRING CollectionId,
+	UNICODESTRING UnitId
+	);
+
+CheckMetadataStores(
+	BOOL32 ThereWasAnInvalidSyncGIdError,
+	HRESULT InvalidSyncGIdErrorHresult,
+	BOOL32 IsPhoneDevice,
+	BOOL32 ReplicasHaveBeenCleanedSinceLastFix,
+	BOOL32 ShouldDeleteMetadataStores
+	);
+
+BackupDeletedFromClient(
+	HEXINT32 hr,
+	UNICODESTRING DeviceId
+	);
+
+OneDriveUploadBatch(
+	UNICODESTRING collectionId,
+	UNICODESTRING operation,
+	HEXINT32 hr,
+	UINT32 unitCount,
+	UINT64 totalBytes
+	);
+
+BackupDisabledInCloud(
+	BOOL32 CloudResponse,
+	BOOL32 Outcome
+	);
+
+LiveStorageRedirect(
+	UNICODESTRING itemURL,
+	HRESULT Execute result
+	);
+
+EnumerateDeviceBackups(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId
+	);
+
+EnumerateDeviceBackups(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	SIGNED wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+EnumerateDeviceBackups(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+TlgAggregateSummary(
+	GUID Provider,
+	UINT64 NumFlushes,
+	UINT64 MaxEntriesStored,
+	UINT64 TotalEntriesFlushed,
+	UINT32 MaxEntriesFlushed,
+	UINT32 MinEntriesFlushed,
+	UINT32 NumBucketLimitReached,
+	UINT32 NumAllocationFailures,
+	UINT32 NumLargeEventFailures
+	);
+
+Assert(
+	UINT32 assertVersion,
+	UINT32 rva,
+	UINT32 timestamp,
+	UINT32 imageSize,
+	ANSISTRING imageName,
+	UINT32 count,
+	UINT32 totalHits,
+	UINT32 ModuleCollection,
+	UINT32 GlobalCollection
+	);
+
+AssertWithArgs(
+	UINT32 assertVersion,
+	UINT32 rva,
+	UINT32 timestamp,
+	UINT32 imageSize,
+	ANSISTRING imageName,
+	UINT32 count,
+	UINT32 totalHits,
+	ANSISTRING originatingBinary,
+	UINT32 bucketArgument1,
+	UINT32 bucketArgument2,
+	UINT32 ModuleCollection,
+	UINT32 GlobalCollection
+	);
+

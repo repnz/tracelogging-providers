@@ -1,0 +1,27 @@
+ProviderNames:
+	Microsoft.Windows.ShAcct
+
+
+
+**** Events *****
+Query PKEY_Identity_ProviderID(
+	HRESULT hr
+	);
+
+GetConnectedUserEnum failed(
+	HRESULT hr
+	);
+
+SHNextObjectFromEnumUnknown failed(
+	HRESULT hr,
+	INT32 ConnectedUserCount
+	);
+
+SHNextObjectFromEnumUnknown succeeded(
+	INT32 ConnectedUserCount
+	);
+
+CConnectedAccounts::FindByRID(
+	UNICODESTRING ConnectedUserSid
+	);
+

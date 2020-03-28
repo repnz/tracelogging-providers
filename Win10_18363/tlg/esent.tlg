@@ -1,0 +1,62 @@
+ProviderNames:
+	Microsoft.Windows.ESENT.TraceLogging
+
+
+
+**** Events *****
+DeferredAttach(
+	UINT32 reason
+	);
+
+CorruptLog(
+	UINT32 reason
+	);
+
+EventLog(
+	UINT32 msgid
+	);
+
+Repair(
+	INT32 err
+	);
+
+JetApiError(
+	UNICODESTRING InstDisplayName,
+	INT32 JetOp,
+	INT32 err
+	);
+
+FileError(
+	INT32 err,
+	UINT32 errSystem
+	);
+
+WriteError(
+	INT32 err,
+	UINT32 errSystem,
+	UINT64 cmsecIOElapsed
+	);
+
+HungIO(
+	BOOL32 fWrite,
+	UINT32 cbRun,
+	UINT32 csecHangTime
+	);
+
+AssertFail(
+	ANSISTRING szMessage,
+	UNICODESTRING wszIssueSource
+	);
+
+EnforceFail(
+	UNICODESTRING wszContext,
+	ANSISTRING szMessage,
+	UNICODESTRING wszIssueSource
+	);
+
+JetInitError(
+	UNICODESTRING InstDisplayName,
+	UINT64 SignHash,
+	INT32 errTracked
+	);
+

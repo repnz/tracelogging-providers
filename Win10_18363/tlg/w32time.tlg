@@ -1,0 +1,29 @@
+ProviderNames:
+	Microsoft.Windows.W32Time
+
+
+
+**** Events *****
+W32TimeTelemetries(
+	FILETIME LastSynchedTime,
+	INT64 OffsetPriorToSync,
+	UINT64 ReasonForSync,
+	UNICODESTRING ProviderName,
+	UINT64 HashedSource,
+	UINT64 HashedRefId,
+	BOOLEAN isSecureTimeSeedSetsTime,
+	BOOLEAN isTimeProviderSetsTime,
+	UINT64 KernelLeapIndicator,
+	UINT64 TimeProviderLeapIndicator,
+	UINT32 LeapSecondsCount,
+	BOOLEAN IsLeapSecondsEnabled,
+	INT64 CurrentUtcOffset,
+	UINT64 LeapSecondsState
+	);
+
+TimeProviderInformation(
+	UNICODESTRING TimeProvider Path,
+	BOOLEAN IsInputProvider,
+	BOOLEAN IsMetaDataProvider
+	);
+

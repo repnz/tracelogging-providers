@@ -1,0 +1,74 @@
+ProviderNames:
+	Microsoft.Windows.MediaFoundation.MKVSource
+	Microsoft.Windows.MediaFoundation.CallStack
+
+
+
+**** Events *****
+PlaySuccess(
+	GUID MFMediaTelemetrySessionID,
+	UINT32 MFMediaTelemetrySessionInstance,
+	INT64 version,
+	INT64 readVersion,
+	INT64 maxIdLength,
+	INT64 maxSizeLength,
+	ANSISTRING docType,
+	INT64 docTypeVersion,
+	INT64 docTypeReadVersion,
+	UINT64 SegmentDuration,
+	UINT32 TrackCount,
+	INT32 TrackTypes,
+	INT32 TrackNumbers,
+	UINT64 TrackCodecDelays,
+	UINT64 TrackSeekPreRolls,
+	UINT16 TrackLanguages,
+	UINT16 TrackCodecIds,
+	UINT16 TrackCodecNames,
+	UINT16 TrackPrivatesCount,
+	BINARY TrackPrivates,
+	UINT64 SamplesDroppedInTransformation,
+	UNICODESTRING MuxingApp,
+	UNICODESTRING WritingApp,
+	UINT32 ChapterEditionCount
+	);
+
+FailedToParseHeader(
+	GUID MFMediaTelemetrySessionID,
+	UINT32 MFMediaTelemetrySessionInstance,
+	HRESULT HR,
+	ANSISTRING FunctionName,
+	INT64 ParseStatus,
+	INT32 HeaderDataLength,
+	HEX HeaderData
+	);
+
+PlayFail(
+	GUID MFMediaTelemetrySessionID,
+	UINT32 MFMediaTelemetrySessionInstance,
+	HRESULT HR,
+	ANSISTRING FunctionName,
+	INT64 ParseStatus,
+	ANSISTRING FailReason,
+	INT64 version,
+	INT64 readVersion,
+	INT64 maxIdLength,
+	INT64 maxSizeLength,
+	ANSISTRING docType,
+	INT64 docTypeVersion,
+	INT64 docTypeReadVersion,
+	UINT64 SegmentDuration,
+	UINT32 TrackCount,
+	INT32 TrackTypes,
+	INT32 TrackNumbers,
+	UINT64 TrackCodecDelays,
+	UINT64 TrackSeekPreRolls,
+	UINT16 TrackLanguages,
+	UINT16 TrackCodecIds,
+	UINT16 TrackCodecNames,
+	UINT16 TrackPrivatesCount,
+	BINARY TrackPrivates,
+	UNICODESTRING MuxingApp,
+	UNICODESTRING WritingApp,
+	UINT32 ChapterEditionCount
+	);
+

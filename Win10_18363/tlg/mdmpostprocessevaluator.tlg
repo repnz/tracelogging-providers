@@ -1,0 +1,88 @@
+ProviderNames:
+	Microsoft.Windows.DeviceManagement.MdmPostProcessEvaluator
+	Microsoft.Windows.WinRTClassActivation
+	CombaseTraceLoggingProvider
+	CombaseTraceLoggingProvider
+
+
+
+**** Events *****
+FallbackError(
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+EvaluatorRunResult(
+	INT32 resultValue
+	);
+
+FallbackError(
+	UINT64 PartA_PrivTags,
+	SIGNED wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+EvaluatorLoadScenariosResult(
+	INT32 resultValue,
+	UNICODESTRING stringParamValue
+	);
+
+ConfigManagerService(
+	INT32 resultValue,
+	UNICODESTRING stringParamValue
+	);
+
+InitScenarioResult(
+	INT32 resultValue,
+	UNICODESTRING scenarioNameParam,
+	INT32 isScenarioEnabledParam
+	);
+
+ComError(
+	HRESULT hresult,
+	ANSISTRING code,
+	UNICODESTRING message,
+	ANSISTRING function,
+	ANSISTRING fileName,
+	UINT16 lineNumber
+	);
+
+ComError(
+	HRESULT hresult,
+	ANSISTRING code,
+	UNICODESTRING message,
+	ANSISTRING function,
+	ANSISTRING fileName,
+	UINT16 lineNumber
+	);
+

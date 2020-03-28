@@ -1,0 +1,171 @@
+ProviderNames:
+	Microsoft.Windows.MediaFoundation.MP3Source
+	Microsoft.Windows.MediaFoundation.MSE
+	Microsoft.Windows.MediaFoundation.MediaEngine
+	Microsoft.Windows.MediaFoundation.CallStack
+
+
+
+**** Events *****
+CanPlayType(
+	UNICODESTRING MimeTypeString,
+	UNICODESTRING Container,
+	BOOL32 IsAudioOnlyContainer,
+	UINT32 canPlayTypeFlags,
+	UINT32 AnswerContainer,
+	BOOL32 fAudioOnly,
+	UINT32 AnswerACodecs,
+	UINT32 AnswerVCodecs,
+	UINT32 AnswerFeatures,
+	BOOL32 fHEVCCodecPresent,
+	UNICODESTRING FirstUnsupportedFeature,
+	UINT32 TotalFeatureCount,
+	BOOL32 ID3D11VideoDeviceFound,
+	UINT32 DecoderCaps,
+	UINT32 VideoDeviceAnswer
+	);
+
+Error(
+	GUID MFMediaTelemetrySessionID,
+	UINT32 MFMediaTelemetrySessionInstance,
+	INT32 mseError,
+	INT32 hrStatus,
+	BOOLEAN fInternal
+	);
+
+BufferedStats(
+	GUID MFMediaTelemetrySessionID,
+	UINT32 MFMediaTelemetrySessionInstance,
+	UINT64 bufferedCount,
+	DOUBLE bufferedAverage,
+	DOUBLE bufferedMin,
+	DOUBLE bufferedMax,
+	UINT64 stallDurCnt,
+	UINT64 stallDurAvg,
+	UINT64 stallDurMin,
+	UINT64 stallDurMax,
+	UINT64 betweenDurCnt,
+	UINT64 betweenDurAvg,
+	UINT64 betweenDurMin,
+	UINT64 betweenDurMax,
+	UINT32 m_ulStallCount,
+	UINT64 timeStampNow,
+	UINT64 timeStampHistory,
+	BOOLEAN stallStateHistory,
+	UINT32 m_dwHistoryCount,
+	UINT64 bytesAppended,
+	UINT32 durationAppended,
+	UINT32 bitrates,
+	UINT32 tracksEnabled,
+	UINT32 tracks,
+	UINT32 m_dwSourceBufferCount
+	);
+
+SetSourceV3(
+	GUID ApplicationID,
+	GUID MFMediaTelemetrySessionID,
+	UINT32 MFMediaTelemetrySessionInstance,
+	UINT64 METlmSetSourceTime,
+	ANSISTRING SetSourceMode,
+	UINT32 SrcElementsCount,
+	INT32 SummaryError,
+	UNICODESTRING URLs,
+	UNICODESTRING MimeTypes
+	);
+
+DPHostname(
+	INT32 ErrorCode,
+	BOOLEAN UtcAggParams,
+	UINT32 Period,
+	UINT32 MaxEvents,
+	UINT8 Mode,
+	TID UtcDiffpVal,
+	COUNTEDSTRING Name,
+	UNICODESTRING Value,
+	UINT8 Algorithm,
+	UINT8 AggMode,
+	DOUBLE Epsilon,
+	DOUBLE PertProb
+	);
+
+PlaybackInterruption(
+	GUID ApplicationID,
+	GUID MFMediaTelemetrySessionID,
+	UINT32 MFMediaTelemetrySessionInstance,
+	UINT64 METlmSetSourceTime,
+	UINT32 PlaybackInterruption
+	);
+
+MediaEngineAggregateEvents(
+	GUID ApplicationID,
+	GUID MFMediaTelemetrySessionID,
+	UINT32 MFMediaTelemetrySessionInstance,
+	UINT32 METlmLastNonErrorEvent,
+	BOOL32 ProtectedContent,
+	UINT32 AudioStreamID,
+	UINT32 VideoStreamID,
+	UINT64 TTFF,
+	DOUBLE Duration,
+	DOUBLE METlmCurrentPlaybackRate,
+	DOUBLE METlmMinPlaybackRate,
+	DOUBLE METlmMaxPlaybackRate,
+	UINT32 METlmCanPlayThrough,
+	UINT64 METlmCanPlayThroughTime,
+	UINT32 METlmCanPlay,
+	UINT64 METlmCanPlayTime,
+	UINT32 METlmError,
+	UINT64 METlmErrorTime,
+	UINT32 METlmSeeked,
+	UINT64 METlmSeekedTime,
+	UINT32 METlmLoadedMetadata,
+	UINT64 METlmLoadedMetadataTime,
+	UINT32 METlmSetSource,
+	UINT64 METlmSetSourceTime,
+	UINT32 METlmSeamlessTransitionAttempted,
+	UINT64 METlmSeamlessTransitionAttemptedTime,
+	UINT32 METlmSeamlessTransitionCompleted,
+	UINT64 METlmSeamlessTransitionCompletedTime,
+	ANSISTRING EventCounts,
+	ANSISTRING EventJournal,
+	UINT64 EventsDropped,
+	UNICODESTRING CantPlay,
+	UINT32 CantPlayCount,
+	UINT64 FirstEventTime,
+	HEXINT32 ErrorCode,
+	HEXINT32 ExtendedErrorCode,
+	BOOL32 InprocPMP,
+	UINT32 PCFlags,
+	GUID ProtSysId,
+	UINT64 HWChkTime,
+	INT32 FireReason,
+	UINT32 PlaybackInterruption
+	);
+
+TimedTextAggregateEvents(
+	GUID MFMediaTelemetrySessionID,
+	UINT32 MFMediaTelemetrySessionInstance,
+	UINT32 dwTrackFirst,
+	UINT32 m_dwTotalTracks,
+	UINT32 m_dwTotalCues,
+	UINT32 m_dwTotalErrors,
+	INT32 m_eErrorCode,
+	INT32 m_hrExtendedErrorCode,
+	BOOLEAN trAdded,
+	BOOLEAN trSelected,
+	INT32 trKind,
+	BOOLEAN trInband,
+	GUID trDataFormat,
+	UINT64 trCueCount,
+	DOUBLE trCueLatenessMin,
+	DOUBLE trCueLatenessAvg,
+	DOUBLE trCueLatenessMax,
+	UINT32 trErrors,
+	INT32 trErrorCode,
+	INT32 trExtendedErrorCode
+	);
+
+ID3Write(
+	INT32 hresult,
+	UINT32 FramesWritten
+	);
+

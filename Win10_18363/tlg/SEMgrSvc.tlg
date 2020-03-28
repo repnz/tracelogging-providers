@@ -1,0 +1,1047 @@
+ProviderNames:
+	Microsoft.Windows.Nfc.SEManagement
+	TelemetryAssert
+	TelemetryAssertDiagTrack
+	Microsoft.Windows.PlatformExtensions
+	Microsoft.Windows.Nfc.SEManagement
+	Microsoft.Windows.ShellActivationHelpers
+	Microsoft.Windows.Payments
+	Microsoft.Windows.Payments.MediatorService
+
+
+
+**** Events *****
+Noisy(
+	ANSISTRING funcName,
+	ANSISTRING msg,
+	INT32 SEMgrServiceId
+	);
+
+Noisy(
+	ANSISTRING funcName,
+	ANSISTRING msg
+	);
+
+Error(
+	ANSISTRING funcName,
+	ANSISTRING msg,
+	HRESULT HResult
+	);
+
+Noisy(
+	ANSISTRING funcName,
+	ANSISTRING msg,
+	INT32 Action,
+	INT32 FilterType
+	);
+
+ServiceMain(
+	VOID
+	);
+
+Noisy(
+	ANSISTRING funcName,
+	ANSISTRING msg,
+	INT32 ShutdownDelay
+	);
+
+StopService(
+	VOID
+	);
+
+ResultLog(
+	INT8 FailureType,
+	HRESULT HResult,
+	ANSISTRING File,
+	UINT32 LineNumber,
+	UNICODESTRING Message
+	);
+
+Error(
+	ANSISTRING funcName,
+	ANSISTRING msg
+	);
+
+ServiceMain(
+	INT32 hResult
+	);
+
+Noisy(
+	ANSISTRING funcName,
+	ANSISTRING msg,
+	BOOL32 TriggeredByScm
+	);
+
+TryActivateContractExtension(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	BOOLEAN wasImplementationReturned,
+	BOOLEAN wasRedirectorUsed,
+	UNICODESTRING registeredAcid
+	);
+
+Noisy(
+	ANSISTRING funcName,
+	ANSISTRING msg,
+	BOOL32 enableEmulation,
+	BOOL32 isPowerIndependent
+	);
+
+FallbackError(
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+EvaluatingRegistration(
+	UNICODESTRING acid,
+	BOOLEAN isDefault
+	);
+
+Noisy(
+	ANSISTRING funcName,
+	ANSISTRING msg,
+	INT32 CardEmulationState
+	);
+
+TryActivateContractExtension(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+TryActivateContractExtension(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+TryLookupExtensionPointImplementationAcid(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+ActivityError(
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+TryLookupExtensionPointImplementationAcid(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId,
+	UNICODESTRING extensionPointName
+	);
+
+ActivityError(
+	UINT64 PartA_PrivTags,
+	SIGNED wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+ActivityError(
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+TryLookupExtensionPointImplementationAcid(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId,
+	UNICODESTRING implementationAcid
+	);
+
+ActivityError(
+	UINT64 PartA_PrivTags,
+	SIGNED wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+FallbackError(
+	UINT64 PartA_PrivTags,
+	SIGNED wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+TryLookupExtensionPointImplementationAcid(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+ActivityStoppedAutomatically(
+	VOID
+	);
+
+TryLookupExtensionPointImplementationAcid(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UNICODESTRING implementationAcid
+	);
+
+Noisy(
+	ANSISTRING funcName,
+	ANSISTRING msg,
+	HEXINT32 StateName1,
+	HEXINT32 StateName2,
+	INT32 Change,
+	INT32 Value
+	);
+
+Noisy(
+	ANSISTRING funcName,
+	ANSISTRING msg,
+	INT32 EmulationMode,
+	INT32 SEType
+	);
+
+TryActivateContractExtension(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId,
+	UNICODESTRING extensionPointName,
+	UINT32 contextWindowId,
+	GUID requestedIid
+	);
+
+ActivityStoppedAutomatically(
+	VOID
+	);
+
+TryActivateContractExtension(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId,
+	BOOLEAN wasImplementationReturned,
+	BOOLEAN wasRedirectorUsed,
+	UNICODESTRING registeredAcid
+	);
+
+Noisy(
+	ANSISTRING funcName,
+	ANSISTRING msg,
+	HRESULT HResult
+	);
+
+Noisy(
+	ANSISTRING funcName,
+	ANSISTRING msg,
+	HEXINT32 IoResult,
+	INT32 BytesTransferred
+	);
+
+RegisterBrokerEvent(
+	UNICODESTRING packageFamilyName,
+	INT32 eventType,
+	GUID eventId
+	);
+
+UnregisterBrokerEvent(
+	GUID eventId
+	);
+
+Noisy(
+	ANSISTRING funcName,
+	ANSISTRING msg,
+	INT32 CallReason,
+	HEXINT64 Event
+	);
+
+LaunchNfcEventSession(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+LaunchNfcEventSession(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId,
+	UNICODESTRING packageFamilyName,
+	UNICODESTRING args,
+	UINT32 launchBehavior
+	);
+
+PlayNfcEventSound(
+	VOID
+	);
+
+LaunchNfcEventSession(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UNICODESTRING callerPackageFamilyName,
+	BOOL32 wasLaunchRequestAllowed,
+	UINT64 launchTimestamp,
+	UNICODESTRING aumid,
+	UNICODESTRING defaultTileId
+	);
+
+LaunchNfcEventSession(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId,
+	UNICODESTRING callerPackageFamilyName,
+	BOOL32 wasLaunchRequestAllowed,
+	UINT64 launchTimestamp,
+	UNICODESTRING aumid,
+	UNICODESTRING defaultTileId
+	);
+
+Noisy(
+	ANSISTRING funcName,
+	ANSISTRING msg,
+	INT32 CallReason,
+	HEXINT64 Event,
+	INT32 TriggerType,
+	UNICODESTRING ApplicationName,
+	HEXINT64 ProcessToken,
+	HEXINT64 ThreadToken
+	);
+
+LaunchNfcEventSession(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+ExternalReaderDeparted(
+	VOID
+	);
+
+ExternalFieldEnter(
+	VOID
+	);
+
+ExternalFieldExit(
+	VOID
+	);
+
+ExternalReaderArrived(
+	VOID
+	);
+
+Noisy(
+	ANSISTRING funcName,
+	ANSISTRING msg,
+	INT32 EventType
+	);
+
+LaunchModernNfcSession(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT64 userContextUsedForLaunch
+	);
+
+ShellActivateApplication(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+ShellActivateApplication(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId,
+	UNICODESTRING targetAppAumid,
+	UNICODESTRING launchArgs,
+	BOOLEAN wasActivationContextSupplied,
+	UNICODESTRING requestingAumid,
+	UINT32 callerWindowId,
+	UINT64 userContextToken
+	);
+
+ShellActivateApplication(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId,
+	BOOLEAN wasActivationExecuted,
+	HRESULT finalActivationResult,
+	UINT32 launchedProcessPid,
+	BOOLEAN wasActivationManagerUsed
+	);
+
+ShellActivateApplication(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	BOOLEAN wasActivationExecuted,
+	HRESULT finalActivationResult,
+	UINT32 launchedProcessPid,
+	BOOLEAN wasActivationManagerUsed
+	);
+
+ShellActivateApplication(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+ExtensionActivationAttempted(
+	BOOLEAN wasImplemented
+	);
+
+LaunchModernNfcSession(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+LaunchModernNfcSession(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId,
+	UINT64 userContextUsedForLaunch
+	);
+
+LaunchModernNfcSession(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+LaunchModernNfcSession(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId,
+	UNICODESTRING appUserModelId,
+	UNICODESTRING launchArgs,
+	BOOL32 allowLaunchAboveLock
+	);
+
+RoutingMgr::Initialize(
+	INT32 hResult
+	);
+
+RegisterAppletIdGroup(
+	UNICODESTRING packageFamilyName,
+	GUID registrationId,
+	UINT32 appletIdCount,
+	INT32 category,
+	INT32 appletType,
+	BOOL32 allowAutomaticEnable,
+	BOOL32 requiresSecureUserAuthentication,
+	UNICODESTRING description
+	);
+
+Noisy(
+	ANSISTRING funcName,
+	ANSISTRING msg,
+	INT32 NumMonitors
+	);
+
+SelectAppletIdConflict(
+	GUID registrationId1,
+	GUID registrationId2
+	);
+
+ChangeAppletIdGroupPolicy(
+	UNICODESTRING packageFamilyName,
+	GUID registrationId,
+	INT32 newPolicy,
+	INT32 originalPolicy
+	);
+
+ApplicationInBackground(
+	VOID
+	);
+
+RoutingMgr::UnregisterAppletIdGroup(
+	INT32 hResult
+	);
+
+RoutingTableFull(
+	INT32 routingtablesize,
+	INT32 requestedentries
+	);
+
+Noisy(
+	ANSISTRING funcName,
+	ANSISTRING msg,
+	UNICODESTRING Aid,
+	UNICODESTRING InitialRegistration,
+	UNICODESTRING DuplicationRegistration
+	);
+
+UnregisterAppletIdGroup(
+	UNICODESTRING packageFamilyName,
+	GUID registrationId
+	);
+
+RoutingMgr::ChangeAppletIdGroupPolicy(
+	INT32 hResult
+	);
+
+Noisy(
+	ANSISTRING funcName,
+	ANSISTRING msg,
+	UNICODESTRING EventName
+	);
+
+RegisterAppletId(
+	UNICODESTRING appletId,
+	GUID registrationId
+	);
+
+RoutingMgrInitialize(
+	BOOLEAN nfccRoutingSupported
+	);
+
+WriteAppletIdGroupRegKeys(
+	UNICODESTRING packageFamilyName,
+	UINT32 cAppletIdGroups
+	);
+
+DeviceCastle::Library::Internal::Utilities::TranslateExceptions(
+	UNICODESTRING funcName,
+	INT32 hResult
+	);
+
+EndPrepareApduWithCryptograms(
+	VOID
+	);
+
+EndNCryptDecrypt(
+	INT32 hResult
+	);
+
+StartNCryptDecrypt(
+	VOID
+	);
+
+CreateKey(
+	INT32 hResult
+	);
+
+AuthorizedKeyAccessContractChallenge(
+	UINT32 challengeRequirement,
+	BOOLEAN challengeRequired
+	);
+
+NgcGetKeyAttestationForUserIdKey(
+	UNICODESTRING keyName,
+	UINT32 ngcKeyStatus
+	);
+
+NgcContainerAuthenticationCallback(
+	GUID containerId,
+	UINT32 protectorId,
+	INT32 hResult,
+	UINT8 ownerSid
+	);
+
+EdpDplKetStateCallback(
+	UINT32 sessionId,
+	UINT32 locked
+	);
+
+Warning(
+	ANSISTRING funcName,
+	ANSISTRING msg
+	);
+
+Info(
+	ANSISTRING funcName,
+	ANSISTRING msg
+	);
+
+SendApdu(
+	GUID connectionSessionId,
+	INT32 hResult
+	);
+
+TryReceiveApdus(
+	GUID connectionSessionId
+	);
+
+SendApduWithCryptograms(
+	GUID connectionSessionId,
+	BOOLEAN apduPreparationSuccessful,
+	INT32 hResult
+	);
+
+HCEEventHandler::RefreshBackgroundTaskState(
+	INT32 hResult
+	);
+
+SendAutoResponderResponse(
+	UINT16 connectionId,
+	INT32 hResult
+	);
+
+Error(
+	ANSISTRING funcName,
+	ANSISTRING msg,
+	INT32 Type,
+	HRESULT HResult
+	);
+
+SelectAppletIdFailure(
+	UNICODESTRING appletId
+	);
+
+ReceivedHCEDeactivation(
+	GUID connectionSessionId,
+	UINT16 connectionId
+	);
+
+ReceivedApdu(
+	GUID connectionSessionId,
+	UINT16 connectionId
+	);
+
+SelectAppletId(
+	UNICODESTRING appletId,
+	INT32 registrationPolicy,
+	UNICODESTRING packageFamilyName,
+	GUID connectionSessionId,
+	UINT16 connectionId
+	);
+
+ReceivedHCEActivation(
+	GUID connectionSessionId,
+	UINT16 connectionId,
+	INT32 isDebugging
+	);
+
+Info(
+	ANSISTRING funcName,
+	ANSISTRING msg,
+	INT32 lockedState
+	);
+
+Noisy(
+	ANSISTRING funcName,
+	ANSISTRING msg,
+	HEXINT64 SecureElement
+	);
+
+Noisy(
+	ANSISTRING funcName,
+	ANSISTRING msg,
+	HEXINT64 SESession
+	);
+
+Noisy(
+	ANSISTRING funcName,
+	ANSISTRING msg,
+	HEXINT64 SEChannel
+	);
+
+PaymentMediatorRequestInitiated(
+	UNICODESTRING paymentAppPFN,
+	UNICODESTRING merchantURI,
+	UNICODESTRING methodList,
+	UINT32 transactionId,
+	GUID telemetryId
+	);
+
+ActivityStoppedAutomatically(
+	VOID
+	);
+
+EncapsulationCaughtException(
+	ANSISTRING funcName,
+	ANSISTRING expType,
+	ANSISTRING what,
+	INT32 hr
+	);
+
+ActivityError(
+	UINT64 PartA_PrivTags,
+	SIGNED wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+ActivityIntermediateStop(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+ApiCall(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId,
+	ANSISTRING funcName
+	);
+
+ApiCall(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+ApiCall(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	SIGNED wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+PaymentRequestRetrieved(
+	UINT32 transactionId
+	);
+
+PaymentRequestRegistered(
+	UINT32 transactionId,
+	GUID telmetryId,
+	UNICODESTRING paymentAppPackageFamilyName,
+	UNICODESTRING userSid
+	);
+
+PaymentRequestUnregistered(
+	UINT32 transactionId,
+	UINT32 completionStatus
+	);
+
+RequestStateChanged(
+	UINT32 transactionId,
+	ANSISTRING from,
+	ANSISTRING to
+	);
+
+Assert(
+	UINT32 assertVersion,
+	UINT32 rva,
+	UINT32 timestamp,
+	UINT32 imageSize,
+	ANSISTRING imageName,
+	UINT32 count,
+	UINT32 totalHits,
+	UINT32 ModuleCollection,
+	UINT32 GlobalCollection
+	);
+
+PowerProfileMgr::StartPerfBoost(
+	INT32 hResult
+	);
+
+PowerProfileMgr::Initialize(
+	INT32 hResult
+	);
+
+PowerProfileMgr::StopPerfBoost(
+	INT32 hResult
+	);
+
+StopPerfBoost(
+	BOOLEAN fTimerExpired
+	);
+
+StartPerfBoost(
+	INT32 boostStatus
+	);
+
+SETransactionEventReceived(
+	GUID SecureElementId
+	);
+
+Noisy(
+	ANSISTRING funcName,
+	ANSISTRING msg,
+	INT32 ChannelsQuotaPid,
+	INT32 CurrentUsedChannels
+	);
+
+Noisy(
+	ANSISTRING funcName,
+	ANSISTRING msg,
+	SYSTEMTIME AtSystemTime
+	);
+
+Noisy(
+	ANSISTRING funcName,
+	ANSISTRING msg,
+	INT32 AvailableChannels
+	);
+
+SystemRootAccessDetected(
+	VOID
+	);
+
+GetProductionConfigurationStateFailure(
+	INT32 hResult
+	);
+
+SecurityMgr::Initialize(
+	VOID
+	);
+

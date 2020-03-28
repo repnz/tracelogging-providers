@@ -1,0 +1,1033 @@
+ProviderNames:
+	Microsoft.Windows.Messaging.Service
+	Microsoft.Windows.CellCore.MobileBroadband.Service
+	TelemetryAssert
+	TelemetryAssertDiagTrack
+	Microsoft.Windows.PlatformExtensions
+
+
+
+**** Events *****
+MBBServiceStop(
+	UINT64 SeqN,
+	UNICODESTRING state
+	);
+
+MBBServiceStart(
+	UINT64 SeqN,
+	UNICODESTRING state
+	);
+
+FallbackError(
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+FallbackError(
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+MBBOidReqTimedOut(
+	UINT64 SeqN,
+	UINT64 PartA_PrivTags,
+	GUID InterfaceGuid,
+	UINT32 OidReqCode,
+	UINT32 OidReqType,
+	UINT32 currentCountConsecutiveOIDTimedOut
+	);
+
+MBBContextActivateRequest(
+	UINT64 SeqN,
+	GUID InterfaceId,
+	UINT32 RequestId,
+	UINT32 ConnectionId,
+	UINT32 IPType,
+	UINT32 AuthType,
+	UINT32 Compression,
+	UINT32 ProfileCreationType
+	);
+
+MBBContextDeactivateRequest(
+	UINT64 SeqN,
+	GUID InterfaceId,
+	UINT32 RequestId,
+	UINT32 ConnectionId,
+	UINT32 IPType,
+	UINT32 AuthType,
+	UINT32 Compression,
+	UINT32 ProfileCreationType
+	);
+
+ActivityStoppedAutomatically(
+	VOID
+	);
+
+ActivityStoppedAutomatically(
+	VOID
+	);
+
+EvaluatingRegistration(
+	UNICODESTRING acid,
+	BOOLEAN isDefault
+	);
+
+ActivityError(
+	UINT64 PartA_PrivTags,
+	SIGNED wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+ActivityError(
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+ActivityError(
+	UINT64 PartA_PrivTags,
+	SIGNED wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+ActivityError(
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+PinOperationStarted(
+	UINT64 SeqN,
+	GUID InterfaceId,
+	INT32 PinOperation
+	);
+
+PinOperationFailure(
+	UINT64 SeqN,
+	GUID InterfaceId,
+	INT32 PinType,
+	INT32 PinOperation,
+	HEXINT32 ErrorCode
+	);
+
+PinOperationSuccess(
+	UINT64 SeqN,
+	GUID InterfaceId,
+	INT32 PinType,
+	INT32 PinOperation
+	);
+
+ModemIncorrectPinResponse(
+	UINT64 SeqN,
+	UNICODESTRING Vendor,
+	UNICODESTRING Model,
+	UNICODESTRING Firmware,
+	GUID InterfaceId,
+	UINT32 ReqPinType,
+	UINT32 RespPinType,
+	UINT32 PinOperation
+	);
+
+D3ColdPinUnlockFailure(
+	UINT64 SeqN,
+	GUID InterfaceId,
+	BOOL32 IsPin1Blocked,
+	INT32 PinType,
+	INT32 PinState,
+	INT32 Error
+	);
+
+PinUnlockAttempted(
+	UINT64 SeqN,
+	GUID InterfaceId,
+	UNICODESTRING Result
+	);
+
+WwanSimPin_SimSecurityAppStateLaunched(
+	UINT64 SeqN,
+	UINT32 status,
+	UINT32 requestId,
+	GUID interfaceId,
+	UINT32 appRequestOpState,
+	UINT32 simSecurityOpState,
+	UINT32 userActionOpState
+	);
+
+WwanSimPin_SimSecurityAppStateBeforeLaunch(
+	UINT64 SeqN,
+	GUID interfaceId,
+	UINT32 appRequestOpState,
+	UINT32 simSecurityOpState,
+	UINT32 userActionOpState
+	);
+
+WwanSimPin_SimSecurityAppLaunching(
+	UINT64 SeqN,
+	UINT32 status,
+	UINT32 requestId,
+	GUID interfaceId,
+	UNICODESTRING appArguments
+	);
+
+WwanSimPin_OrphanedRequests(
+	UINT64 SeqN,
+	UINT32 count,
+	GUID interfaceId
+	);
+
+WwanSimPin_SimSecurityApp_Timeout(
+	UINT64 SeqN,
+	GUID interfaceId,
+	UINT32 requestId,
+	UINT32 status
+	);
+
+TryLookupExtensionPointImplementationAcid(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId,
+	UNICODESTRING implementationAcid
+	);
+
+TryLookupExtensionPointImplementationAcid(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UNICODESTRING implementationAcid
+	);
+
+TryLookupExtensionPointImplementationAcid(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId,
+	UNICODESTRING extensionPointName
+	);
+
+TryLookupExtensionPointImplementationAcid(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+TryLookupExtensionPointImplementationAcid(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+TryActivateContractExtension(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId,
+	BOOLEAN wasImplementationReturned,
+	BOOLEAN wasRedirectorUsed,
+	UNICODESTRING registeredAcid
+	);
+
+TryActivateContractExtension(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	BOOLEAN wasImplementationReturned,
+	BOOLEAN wasRedirectorUsed,
+	UNICODESTRING registeredAcid
+	);
+
+TryActivateContractExtension(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId,
+	UNICODESTRING extensionPointName,
+	UINT32 contextWindowId,
+	GUID requestedIid
+	);
+
+TryActivateContractExtension(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+TryActivateContractExtension(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+FallbackError(
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+FallbackError(
+	UINT64 PartA_PrivTags,
+	SIGNED wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+ConnectionMediumState(
+	UINT64 SeqN,
+	GUID interfaceGuid,
+	UINT64 connectedMediumStateVersion,
+	UINT64 connectionId,
+	UINT32 mediumState
+	);
+
+DSIWlanState(
+	UINT64 SeqN,
+	GUID interfaceGuid,
+	UINT32 iWlanState
+	);
+
+DSModemDualSIMCap(
+	UINT64 SeqN,
+	GUID interfaceGuid,
+	BOOL32 isModemTypeKnown,
+	UINT32 executors,
+	UINT32 activeExecutors
+	);
+
+DSLTEDefaultBearerBridging(
+	UINT64 SeqN,
+	BOOL32 bridgingEvent,
+	UNICODESTRING accessString
+	);
+
+DSLTEAttachDefaultBearer(
+	UINT64 SeqN,
+	GUID interfaceGuid,
+	UNICODESTRING accessString,
+	UINT32 ipType
+	);
+
+DSInternalErrorCode(
+	UINT64 SeqN,
+	GUID interfaceGuid,
+	UINT64 uInternalErrorCodeGroup,
+	UINT64 uInternalErrorSpecificCause,
+	UINT64 uAdditionalInfo
+	);
+
+DSDataSuspensionState(
+	UINT64 SeqN,
+	GUID interfaceGuid,
+	UINT32 suspensionState
+	);
+
+DSConnectionMediumState(
+	UINT64 SeqN,
+	UINT64 connMediumStateVersion,
+	UINT64 connectionId,
+	UINT32 mediumState
+	);
+
+DSIWlanState(
+	UINT64 SeqN,
+	UINT32 iWlanState
+	);
+
+DSDMConfigBinary(
+	UINT64 SeqN,
+	UINT32 responseCode,
+	UINT64 additionalInfo
+	);
+
+DSMaxCntxtNumber(
+	UINT64 SeqN,
+	UINT32 rspMaxCntxtNumber
+	);
+
+DSModemDualSIMCap(
+	UINT64 SeqN,
+	BOOL32 isModemTypeKnown,
+	UINT64 nExecutors,
+	UINT64 nActiveExecutors,
+	UINT64 nActiveDataExecutors
+	);
+
+DSDMConfigV2(
+	UINT64 SeqN,
+	UINT32 responseCode,
+	UNICODESTRING connectionId,
+	BOOL32 enabled,
+	UINT32 roaming,
+	UNICODESTRING APNString,
+	UINT32 ipType
+	);
+
+DSDMConnConfig(
+	UINT64 SeqN,
+	UINT32 responseCode,
+	UNICODESTRING connectionId,
+	BOOL32 enabled,
+	UINT32 roaming,
+	UNICODESTRING APNString,
+	UINT32 ipType
+	);
+
+DSIPV6eHRPDConfig(
+	UINT64 SeqN,
+	UINT32 responseCode,
+	UNICODESTRING APNString,
+	BOOL32 Ipv6Enabled
+	);
+
+DSModemExecutorNumber(
+	UINT64 SeqN,
+	UINT64 modemNumber,
+	UINT64 executorID
+	);
+
+DSDataDormancyHint(
+	UINT64 SeqN,
+	GUID interfaceGuid,
+	UINT32 responseCode,
+	UINT32 CurrentDataDormancyHintState
+	);
+
+DSLTEInfoV2(
+	UINT64 SeqN,
+	BOOL32 isLTEAttached,
+	UNICODESTRING lastAttachAPN,
+	UINT32 lastAttachBearerIPType,
+	BOOL32 unbridgedBearer,
+	BOOL32 unbridgedBearerModemUsage
+	);
+
+DSLTEInfoV1(
+	UINT64 SeqN,
+	BOOL32 LTEAttached,
+	UNICODESTRING lastAttachAPN,
+	UINT32 lastAttachBearerIPType
+	);
+
+DSActivationOption(
+	UINT64 SeqN,
+	UINT32 responseCode,
+	UINT32 currentActivationOption
+	);
+
+DSDataSuspension(
+	UINT64 SeqN,
+	UINT32 suspensionState
+	);
+
+MBBPolicySet(
+	UINT64 SeqN,
+	GUID profileId,
+	UINT32 roamControlState
+	);
+
+MBBNitzInfo(
+	UINT64 SeqN,
+	UINT64 PartA_PrivTags,
+	GUID InterfaceGuid,
+	BOOL32 IsNitzDateValid,
+	BOOL32 IsNitzTimeValid,
+	UINT64 Year,
+	UINT64 Month,
+	UINT64 Day,
+	UINT64 Hour,
+	UINT64 Minute,
+	UINT64 Second
+	);
+
+MBBRadioState(
+	UINT64 SeqN,
+	GUID InterfaceId,
+	INT32 SlotIndex,
+	UNICODESTRING SimProviderId,
+	INT32 RequestId,
+	HEXINT32 Status,
+	UINT32 HwRadioState,
+	UINT32 SwRadioState
+	);
+
+MBBPacketServiceState(
+	UINT64 SeqN,
+	GUID InterfaceId,
+	INT32 RequestId,
+	HEXINT32 Status,
+	INT32 PacketServiceState,
+	INT32 NetworkError,
+	INT32 ExecutorIndex,
+	INT32 SlotIndex,
+	UNICODESTRING SimProviderId,
+	HEXINT32 AvailableDataClass,
+	HEXINT32 CurrentDataClass
+	);
+
+MBBRegisterState(
+	UINT64 SeqN,
+	GUID InterfaceId,
+	INT32 ExecutorIndex,
+	INT32 SlotIndex,
+	INT32 RequestId,
+	HEXINT32 Status,
+	INT32 RegisterMode,
+	INT32 RegisterState,
+	UNICODESTRING SimProviderId,
+	INT32 NetworkError,
+	INT32 CurrentCellularClass,
+	UNICODESTRING ProviderId,
+	UNICODESTRING ProviderName,
+	UNICODESTRING RoamingText,
+	HEXINT32 RegistrationFlags,
+	INT32 DefaultCntxtActivationState
+	);
+
+MBBReadyInfo(
+	UINT64 SeqN,
+	GUID InterfaceId,
+	INT32 ExecutorIndex,
+	INT32 SlotIndex,
+	INT32 RequestId,
+	INT32 ReadyState,
+	UNICODESTRING SimProviderId,
+	INT32 EmergencyMode,
+	UINT8 CdmaShortMsgSize,
+	UINT32 NumTelephoneNumbers
+	);
+
+MBBInternetActivating(
+	UINT64 SeqN,
+	HEXINT32 regState,
+	HEXINT32 stateMachineCurrState,
+	GUID InterfaceId,
+	HEXINT32 roamControlPolicy,
+	UNICODESTRING profileName,
+	BOOL32 autoConnect,
+	UNICODESTRING apn,
+	UINT32 IPType,
+	UINT32 AuthType,
+	UINT32 Compression,
+	UINT32 autoConnectOrder
+	);
+
+MBBAutoConnectNotPossible(
+	UINT64 SeqN,
+	HEXINT32 regState,
+	HEXINT32 stateMachineCurrState,
+	HEXINT32 roamControlInternetProfileSet,
+	HEXINT32 mDMEnablementPolicy,
+	HEXINT32 dataClass,
+	HEXINT32 psState,
+	HEXINT32 mDMRoamPolicy,
+	HEXINT32 autoProfile,
+	BOOL32 isExecutorAvailable,
+	BOOL32 enabledInternetProfileSet,
+	BOOL32 operatorServiceEnablement,
+	BOOL32 transientEnabledSet,
+	BOOL32 autoConnectEnabled,
+	BOOL32 gpDisableAutoConnect,
+	BOOL32 clientDisableAutoConnect,
+	BOOL32 clientDisableAutoConnectExplicitlySet,
+	BOOL32 userChoseManualConnectModePreRS2,
+	BOOL32 powerStatesAllowing,
+	BOOL32 bCellularRnRinProgress
+	);
+
+MBBProfileNotApplicableAuto(
+	UINT64 SeqN,
+	HEXINT32 regState,
+	HEXINT32 stateMachineCurrState
+	);
+
+MBBProfileNotApplicableManual(
+	UINT64 SeqN,
+	HEXINT32 regState,
+	HEXINT32 stateMachineCurrState,
+	UNICODESTRING profileName
+	);
+
+MBBOnDemandActivating(
+	UINT64 SeqN,
+	HEXINT32 regState,
+	HEXINT32 stateMachineCurrState,
+	UNICODESTRING profileName,
+	UNICODESTRING apn,
+	UINT64 connId,
+	UINT32 IPType,
+	UINT32 AuthType,
+	UINT32 Compression
+	);
+
+MBBAdditionalProfileNotApplicable(
+	UINT64 SeqN,
+	HEXINT32 regState
+	);
+
+MBBContextState(
+	UINT64 SeqN,
+	GUID InterfaceId,
+	ANSISTRING ContextState,
+	HEXINT32 State,
+	HEXINT32 Event,
+	UINT32 ProfileCreationType,
+	UNICODESTRING apn,
+	UINT32 IPType,
+	UINT32 RequestedIPType,
+	UINT32 ActivatedIPType,
+	UNICODESTRING Reason,
+	BOOL32 HasValidIPV4Address,
+	BOOL32 HasValidIPV6Address,
+	UINT32 CurrentXlatTranslation
+	);
+
+MBBContextStateChange(
+	UINT64 SeqN,
+	UINT64 PartA_PrivTags,
+	INT32 ExecutorIndex,
+	INT32 SlotIndex,
+	UNICODESTRING SimProviderId,
+	INT32 SIMReadyState,
+	UNICODESTRING providerId,
+	INT32 RegState,
+	BOOL32 IsPSAutoAttach,
+	INT32 CellClass,
+	INT32 PSState,
+	HEXINT32 DataClass,
+	INT32 5GFreqRange,
+	GUID InterfaceId,
+	BOOL32 IsPhysicalInterface,
+	BOOLEAN IsEsim,
+	UINT32 RequestId,
+	UINT32 Status,
+	UINT32 ConnectionId,
+	UINT32 ProfileCreationType,
+	UNICODESTRING apn,
+	INT32 ActivationState,
+	INT32 IPType,
+	UINT32 NetworkError,
+	BOOLEAN IsEnterpriseEsim
+	);
+
+WwanSimPin_SimSecurityOpsStateUpdate(
+	UINT64 SeqN,
+	GUID interfaceId,
+	UINT32 appRequestOpState,
+	UINT32 simSecurityOpState,
+	UINT32 userActionOpState,
+	UINT32 modemOpState
+	);
+
+MBBRadioPowerStateChange(
+	UINT64 SeqN,
+	ANSISTRING ModemInterface,
+	GUID ModemId,
+	HEXINT32 RadioPowerState,
+	BOOL32 IsEmbedded,
+	HEXINT32 RequestId
+	);
+
+ModemReset(
+	UINT64 SeqN,
+	UINT32 ResetResponse,
+	GUID InterfaceId
+	);
+
+ModemResetStarted(
+	UINT64 SeqN,
+	GUID InterfaceId
+	);
+
+MBBRadioPowerStateRequest(
+	UINT64 SeqN,
+	ANSISTRING ModemInterface,
+	GUID ModemId,
+	HEXINT32 RadioPowerState,
+	BOOL32 IsEmbedded,
+	HEXINT32 RequestId
+	);
+
+SetSarTransmissionStatus(
+	UINT64 SeqN,
+	GUID InterfaceId
+	);
+
+SetSarConfigStarted(
+	UINT64 SeqN,
+	GUID InterfaceId
+	);
+
+MBBReadyStateESIMInfo(
+	UINT64 SeqN,
+	UINT64 PartA_PrivTags,
+	GUID InterfaceId,
+	BOOLEAN IsEsim,
+	BOOLEAN IsEnterpriseEsim,
+	INT32 ReadyState
+	);
+
+ModemDriverCaps(
+	UINT64 SeqN,
+	GUID PhysicalInterfaceGuid,
+	GUID ModemId,
+	UINT32 DriverMajorVersion,
+	UINT32 DriverMinorVersion,
+	UINT32 DriverCapabilities,
+	UINT32 DeviceType,
+	UINT32 CellularClass,
+	UINT32 VoiceClass,
+	UINT32 SimClass,
+	UINT32 DataClass,
+	UNICODESTRING CustomDataClass,
+	UINT32 GsmBandClass,
+	UINT32 CdmaBandClass,
+	UINT32 CdmaBandClass,
+	UINT32 CdmaBandClass,
+	UNICODESTRING Manufacturer,
+	UNICODESTRING Model,
+	UNICODESTRING FirmwareInfo,
+	UINT32 MaxActivatedContexts,
+	UINT32 ModemType,
+	UINT32 MultiSimType,
+	UINT32 MaxActiveContextPerExecutorByModem,
+	BOOL32 IsEmbeddedType,
+	UINT32 DeviceResetCapabilities,
+	BOOL32 IsESIMCapable,
+	BOOL32 IsLTEAttachConfigSupported,
+	BOOL32 IsProvisionedContextMgmtSupported,
+	BOOL32 IsDSSASupported,
+	BOOL32 IsSARCapable,
+	BOOL32 IsNetworkBlacklistSupported,
+	BOOL32 IsModemBulkConfigSupported,
+	BOOL32 IsBaseStationInfoSupported,
+	BOOL32 IsPCOSupported
+	);
+
+RILSignalStrength(
+	UINT64 SeqN,
+	INT32 SignalStrength,
+	INT32 SignalBars,
+	INT32 ErrorRate
+	);
+
+UnexpectedAsyncCellularCmd(
+	UINT64 SeqN,
+	ANSISTRING Status,
+	GUID InterfaceGuid,
+	UINT32 ModemIndex,
+	UINT32 ExecutorIndex,
+	UINT32 CommandType
+	);
+
+MBBResetRecoveryDeviceCapability(
+	UINT64 SeqN,
+	GUID InterfaceGuid,
+	BOOL32 IsPLDRCapable,
+	BOOL32 IsFLDRCapable
+	);
+
+MBBResetRecovery(
+	UINT64 SeqN,
+	GUID InterfaceGuid,
+	UINT32 Trigger,
+	UINT32 RecoveryStage,
+	UINT32 Result,
+	BOOL32 Enabled,
+	BOOL32 UseAPMToggling,
+	BOOL32 UsePnPDisableEnable,
+	BOOL32 UseFLDR,
+	BOOL32 UsePLDR,
+	BOOL32 CoinVelocityEnabled,
+	BOOL32 CoinVelocityAPMToggling,
+	BOOL32 CoinVelocityPnPDisableEnable,
+	BOOL32 CoinVelocityFLDR,
+	BOOL32 CoinVelocityPLDR,
+	UINT64 elapsedTimeInMs
+	);
+
+LocationUpdateFilterOverride(
+	UINT64 SeqN,
+	HEXINT32 NFSFilterMask,
+	HEXINT32 NFSFilterState
+	);
+
+ScreenActivity(
+	UINT64 SeqN,
+	UNICODESTRING State,
+	HEXINT32 NFSFilterMask,
+	HEXINT32 NFSFilterState
+	);
+
+ModemResetState(
+	UINT64 SeqN,
+	ANSISTRING ModemInterface,
+	GUID ModemId,
+	UINT32 ResetState
+	);
+
+MBBRadioPowerStateChange(
+	UINT64 SeqN,
+	ANSISTRING ModemInterface,
+	GUID ModemId,
+	HEXINT32 RadioPowerState
+	);
+
+RILRadioType(
+	UINT64 SeqN,
+	UINT32 executorIndex,
+	HEXINT32 radioType
+	);
+
+IMSStatusChanged(
+	UINT64 SeqN,
+	UINT32 ExecutorIndex,
+	HEXINT32 BmskSystemCaps,
+	UNICODESTRING CurrentOperatorShortName,
+	UNICODESTRING CurrentOperatorNumName,
+	UINT32 RawRILRegState,
+	UINT32 RawRILSystemType,
+	UINT32 RILSignalBars,
+	UINT32 RegRejectReason,
+	UINT32 VoiceDomain,
+	UINT32 DataRoamingState,
+	HEXINT32 BmskValidParams,
+	UINT32 hUiccApp,
+	UINT32 IMSSystemType,
+	HEXINT32 BmskIMSAvailableServices,
+	UNICODESTRING IMSServingDomain,
+	UINT32 IMSSMSSupportedFormat
+	);
+
+RILFilteredRegistrationState(
+	UINT64 SeqN,
+	UINT32 executorIndex,
+	HEXINT32 regState,
+	HEXINT32 radioType,
+	UNICODESTRING operatorName
+	);
+
+RILUnfilteredRegistrationState(
+	UINT64 SeqN,
+	UINT32 executorIndex,
+	UINT32 rilRegStatusInfoCount,
+	HEXINT32 regStat0,
+	HEXINT32 regStat1,
+	HEXINT32 rejectReason0,
+	HEXINT32 rejectReason1,
+	HEXINT32 mcc0,
+	HEXINT32 mnc0,
+	HEXINT32 mcc1,
+	HEXINT32 mnc1,
+	HEXINT32 voiceClass0,
+	HEXINT32 voiceClass1,
+	HEXINT32 systemType0,
+	HEXINT32 systemType1,
+	HEXINT32 radioType
+	);
+
+RILPinLockStateChange(
+	UINT64 SeqN,
+	UINT32 slotIndex,
+	HEXINT32 uiccStatus
+	);
+
+IMSFailure(
+	UINT64 SeqN,
+	UINT32 ExecutorIndex,
+	HEXINT32 BmskSystemCaps,
+	UNICODESTRING CurrentOperatorShortName,
+	UNICODESTRING CurrentOperatorNumName,
+	UINT32 RawRILRegState,
+	UINT32 RawRILSystemType,
+	UINT32 RILSignalBars,
+	UINT32 RegRejectReason,
+	UINT32 VoiceDomain,
+	UINT32 DataRoamingState,
+	HEXINT32 BmskValidParams,
+	UINT32 SIPErrorCode,
+	UINT32 SIPMessageType,
+	UINT32 SIPMessageSubType,
+	UNICODESTRING SIPErrorString
+	);
+
+Assert(
+	UINT32 assertVersion,
+	UINT32 rva,
+	UINT32 timestamp,
+	UINT32 imageSize,
+	ANSISTRING imageName,
+	UINT32 count,
+	UINT32 totalHits,
+	UINT32 ModuleCollection,
+	UINT32 GlobalCollection
+	);
+

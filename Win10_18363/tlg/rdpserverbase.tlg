@@ -1,0 +1,208 @@
+ProviderNames:
+	RDP
+	RDP.Graphics
+
+
+
+**** Events *****
+RDPEncryption(
+	BOOLEAN EncryptionSuccess,
+	UINT32 clientVersion,
+	UINT32 clientBuild,
+	UINT32 clientCapabilities
+	);
+
+RDPEncryption(
+	NTSTATUS EncryptionNegotiationResult,
+	BOOL32 negotiationSuccess,
+	UINT32 negotiationFailureCode,
+	BOOL32 collabConnection,
+	UINT32 selectedProtocol,
+	UINT32 clientSupportedEncryption,
+	UINT32 serverSecurityLayer,
+	UINT32 userAuthenticationLevel,
+	BOOL32 serverFipsEnabled,
+	UINT32 serverMinEncryptionLevelGP,
+	UINT32 serverSecurityLayerGP,
+	UINT32 serverSecurityLayerRegPolicy,
+	UINT32 serverSKU,
+	BOOL32 rdshRole,
+	BOOL32 rdshDeployment
+	);
+
+RDPGraphicsError(
+	GUID correlationId,
+	GUID guid,
+	UINT32 function,
+	UINT32 line,
+	HRESULT error
+	);
+
+RDPGraphicsMonitorInfo(
+	GUID correlationId,
+	UINT32 width,
+	UINT32 height,
+	UINT32 numCurrent,
+	UINT32 numTotal,
+	UINT32 widthTotal,
+	UINT32 heightTotal,
+	UINT32 widthPhysical,
+	UINT32 heightPhysical,
+	UINT32 orientation,
+	UINT32 desktopScaleFactor,
+	UINT32 deviceScaleFactor
+	);
+
+RDPGraphicsDeltaPixels(
+	GUID correlationId,
+	UINT32 frameId,
+	UINT32 pixelStart,
+	UINT32 pixelEnd,
+	FLOAT ratio
+	);
+
+RDPGraphicsSubsampleAdapter(
+	GUID correlationId,
+	UNICODESTRING adapterDescription,
+	UINT32 adapterVendorId,
+	UINT32 adapterDeviceId
+	);
+
+RDPGraphicsNonBlackFramePostLogon(
+	GUID correlationId,
+	UINT32 MsSinceLogon,
+	UINT64 PartA_PrivTags
+	);
+
+RDPGraphicsClassifierPixels(
+	GUID correlationId,
+	UINT32 frameId,
+	FLOAT classifyRatio,
+	UINT32 imagePixel,
+	FLOAT imageRatio,
+	UINT32 textPixel,
+	FLOAT textRatio
+	);
+
+RDPGraphicsAvcMaxEncodedFrameSizeInBytes(
+	GUID correlationId,
+	UINT32 width,
+	UINT32 height,
+	UINT32 maxSize
+	);
+
+RDPGraphicsFirstNonBlackFrame(
+	GUID correlationId,
+	UINT64 ullDurationSinceSessionNotify,
+	UINT64 PartA_PrivTags
+	);
+
+RDPGraphicsCachePixels(
+	GUID correlationId,
+	UINT32 frameId,
+	UINT32 pixelStart,
+	UINT32 pixelEnd,
+	FLOAT ratio
+	);
+
+RDPGraphicsLegacy(
+	GUID correlationId
+	);
+
+RDPGraphicsVOBRHint(
+	GUID correlationId,
+	UINT32 flags,
+	UINT64 GeometryMappingId,
+	UINT32 width,
+	UINT32 height
+	);
+
+RDPGraphicsSubsampleError(
+	GUID correlationId,
+	HRESULT error,
+	UINT32 subsamplerType
+	);
+
+RDPGraphicsPerformance(
+	GUID correlationId,
+	UINT32 PercentFramesSkippedNetwork,
+	UINT32 PercentFramesSkippedClient,
+	UINT32 PercentFramesSkippedServer,
+	UINT32 PercentFramesHighEncodingTime,
+	UINT32 PercentFramesHighQuality,
+	UINT32 PercentFramesMediumQuality,
+	UINT32 PercentFramesLowQuality,
+	UINT32 PercentFramesDownsampled,
+	UINT32 NumProfileSwitches,
+	UINT32 NumDownsampleSwitches
+	);
+
+RDPGraphicsAvcEncoder(
+	GUID correlationId,
+	BOOL32 hardwareEncode,
+	UNICODESTRING name
+	);
+
+RDPGraphicsAvcEncHwToSwFallback(
+	GUID correlationId,
+	HRESULT error
+	);
+
+RDPGraphicsProgressiveCodecStats(
+	GUID correlationId,
+	UINT32 frameId,
+	UINT32 bandwidth,
+	UINT32 bandwidthLeft,
+	UINT32 sendableBytes,
+	UINT32 targetQuality,
+	UINT32 compressedTotalEst,
+	UINT32 compressedTotalAct
+	);
+
+RDPGraphicsProgressiveCodecIndividualStats(
+	GUID correlationId,
+	UINT32 frameId,
+	UINT32 currWorkitem,
+	UINT32 numWorkitem,
+	UINT32 bufferUsed,
+	UINT32 bufferAvailable,
+	UINT32 bufferEstimated,
+	UINT32 bufferSize,
+	UINT32 estCompressSize,
+	UINT32 quality,
+	UINT64 imageEncTimeEst,
+	UINT64 imageEncTime,
+	UINT32 imageEncPixels
+	);
+
+RDPClientOSType(
+	GUID correlationId,
+	UINT32 osMajorType,
+	UINT32 osMinorType
+	);
+
+RDPGraphicsSystemSettings(
+	GUID correlationId,
+	BOOL32 AVCPreferred,
+	UINT32 ImageQuality,
+	BOOL32 GPUEnabled,
+	UINT32 AVCHardwareEncodingMode,
+	UINT32 MaxAllowedMonitorCount,
+	UINT32 MaxAllowedWidth,
+	UINT32 MaxAllowedHeight,
+	BOOL32 HidefRAILEnabled,
+	BOOL32 BulkCompressEnabled,
+	UINT32 EncodingProfile,
+	UINT32 ListenerType
+	);
+
+RDPGraphicsProfile(
+	GUID correlationId,
+	HEXINT32 profileId,
+	UINT32 capsVersion,
+	BOOL32 avcCapable,
+	UINT32 clientMode,
+	BOOL32 railConnection,
+	BOOL32 remoteFxMode
+	);
+

@@ -1,0 +1,121 @@
+ProviderNames:
+	Microsoft.Windows.OneSync.DiagError
+	Microsoft.Windows.OneSync.DiagTrace
+	Microsoft.Windows.OneSync.DiagCritical
+	Microsoft.Windows.Unistack.FailureTrigger
+	Microsoft.Windows.OneSync.DiagWarning
+
+
+
+**** Events *****
+FallbackError(
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+Warning(
+	HRESULT hr,
+	ANSISTRING file,
+	UINT32 line
+	);
+
+OneSyncService_ServiceStopped(
+	UINT64 durationMs
+	);
+
+FailureTrigger(
+	INT32 errorCode,
+	ANSISTRING expression,
+	ANSISTRING file,
+	INT32 line
+	);
+
+OneSyncService_ServiceFailedToInitialize(
+	HRESULT hr,
+	UINT64 durationMs
+	);
+
+OneSyncService_DBFailedToInit(
+	HRESULT hr
+	);
+
+Error(
+	HRESULT hr,
+	ANSISTRING file,
+	UINT32 line
+	);
+
+OneSyncService_ServiceOnstartedSucceeded(
+	UINT64 durationMs
+	);
+
+OneSyncService_ServiceOnstartingSucceeded(
+	UINT64 durationMs
+	);
+
+OneSyncService_ServiceStartupError(
+	ANSISTRING service,
+	HRESULT hr
+	);
+
+Assert(
+	HRESULT hr,
+	ANSISTRING file,
+	UINT32 line
+	);
+
+FallbackError(
+	UINT64 PartA_PrivTags,
+	SIGNED wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+SNAS_ProviderNotRegistered(
+	GUID providerId,
+	HRESULT hr
+	);
+
+SNAS_SendingNotificationFailed(
+	HRESULT hr
+	);
+
+SNAS_ProviderOnLoadedFailed(
+	GUID providerId,
+	HRESULT hr
+	);
+
+SNAS_ProviderInitFailed(
+	GUID providerId,
+	HRESULT hr
+	);
+

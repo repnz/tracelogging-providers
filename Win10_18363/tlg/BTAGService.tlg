@@ -1,0 +1,106 @@
+ProviderNames:
+	Microsoft.Windows.Bluetooth.Hfp
+	TelemetryAssert
+	TelemetryAssertDiagTrack
+
+
+
+**** Events *****
+ComponentUnload(
+	UINT64 PartA_PrivTags,
+	UNICODESTRING ComponentName
+	);
+
+ComponentLoad(
+	UINT64 PartA_PrivTags,
+	UNICODESTRING ComponentName
+	);
+
+HfpConnectionUpdate(
+	UINT64 PartA_PrivTags,
+	BOOLEAN IsConnectionAttempt,
+	BOOLEAN IsConnected,
+	INT32 StatusErrorCode,
+	UINT64 BTDeviceAddress
+	);
+
+HfpConnectionAttempt(
+	UINT64 PartA_PrivTags,
+	UINT64 BTDeviceAddress
+	);
+
+BthHfpCodecSelectionCompleted(
+	UINT64 PartA_PrivTags,
+	INT32 CodecSelection,
+	UINT64 BTDeviceAddress
+	);
+
+BthHfpCodecSelectionFailed(
+	UINT64 PartA_PrivTags,
+	UINT64 BTDeviceAddress
+	);
+
+BthHfpAvailableCodecs(
+	UINT64 PartA_PrivTags,
+	ANSISTRING AvailableCodecs,
+	UINT64 BTDeviceAddress
+	);
+
+HfpHfAtCommand(
+	UINT64 PartA_PrivTags,
+	INT32 HfCommand,
+	BOOL32 Result,
+	UINT64 BTDeviceAddress,
+	UINT64 BTDeviceAddressLocal
+	);
+
+HfpHfCallStateChanged(
+	UINT64 PartA_PrivTags,
+	INT32 CallId,
+	INT32 CallState,
+	UINT64 BTDeviceAddress
+	);
+
+HfpHfVolumeChangeMicrophone(
+	UINT64 PartA_PrivTags,
+	INT32 Volume,
+	UINT64 BTDeviceAddressLocal
+	);
+
+HfpHfVolumeChangeSpeaker(
+	UINT64 PartA_PrivTags,
+	INT32 Volume,
+	UINT64 BTDeviceAddressLocal
+	);
+
+HfpAgChldReceived(
+	UINT64 PartA_PrivTags,
+	UINT64 AgChld,
+	UINT64 BTDeviceAddress
+	);
+
+HfpAgBrsfReceived(
+	UINT64 PartA_PrivTags,
+	UINT64 AgBrsf,
+	UINT64 BTDeviceAddress
+	);
+
+HfpClccContents(
+	UINT64 PartA_PrivTags,
+	BOOL32 ClccHasName,
+	BOOL32 ClccHasNumber,
+	UINT64 BTDeviceAddress
+	);
+
+Assert(
+	UINT32 assertVersion,
+	UINT32 rva,
+	UINT32 timestamp,
+	UINT32 imageSize,
+	ANSISTRING imageName,
+	UINT32 count,
+	UINT32 totalHits,
+	UINT32 ModuleCollection,
+	UINT32 GlobalCollection
+	);
+

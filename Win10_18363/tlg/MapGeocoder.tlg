@@ -1,0 +1,84 @@
+ProviderNames:
+	Microsoft.Windows.Maps.MapEngine
+
+
+
+**** Events *****
+StopFinderCall(
+	INT32 connectivityType,
+	INT32 providerType,
+	INT32 errorCode,
+	INT32 searchType,
+	INT32 resultCount,
+	INT32 asyncId,
+	DOUBLE requestCenterLatitude,
+	DOUBLE requestCenterLongitude,
+	DOUBLE firstResultCenterLatitude,
+	DOUBLE firstResultCenterLongitude,
+	UNICODESTRING searchText,
+	UNICODESTRING region,
+	UNICODESTRING userLanguage,
+	INT32 offlineOperationErrorCode,
+	INT32 offlineGridLoadRequestedCount,
+	INT32 offlineGridLoadFailedCount
+	);
+
+FallbackError(
+	UINT64 PartA_PrivTags,
+	SIGNED wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+FallbackError(
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+StopLocalLocationFinderCall(
+	INT32 connectivityType,
+	INT32 providerType,
+	INT32 errorCode,
+	INT32 searchType,
+	INT32 resultCount,
+	INT32 asyncId,
+	DOUBLE centerLatitude,
+	DOUBLE centerLatitude,
+	UNICODESTRING searchText,
+	UNICODESTRING categoryText,
+	UNICODESTRING region,
+	UNICODESTRING userLanguage,
+	INT32 searchRadiusInMeters,
+	INT32 offlineGridLoadRequestedCount,
+	INT32 offlineGridLoadFailedCount
+	);
+

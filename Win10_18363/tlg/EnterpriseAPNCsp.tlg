@@ -1,0 +1,51 @@
+ProviderNames:
+	Microsoft.Windows.CellCore.Provisioning
+	TelemetryAssert
+	TelemetryAssertDiagTrack
+
+
+
+**** Events *****
+EnterpriseAPNCsp(
+	UNICODESTRING State,
+	INT32 result
+	);
+
+AddUpdateConnection(
+	UNICODESTRING provisioningMessage,
+	UINT32 creationType,
+	UNICODESTRING profileName,
+	UNICODESTRING connectionName,
+	UNICODESTRING apnName,
+	BOOL32 alwaysOn,
+	BOOL32 useRequiresMappingsPolicy,
+	UINT32 IPType,
+	UINT32 authType,
+	INT32 result
+	);
+
+DeleteConnection(
+	UNICODESTRING provisioningMessage,
+	UNICODESTRING connectionName,
+	UINT32 result
+	);
+
+DeleteConnectionRegEntry(
+	UNICODESTRING provisioningMessage,
+	UNICODESTRING connectionName,
+	UNICODESTRING profileName,
+	UINT32 result
+	);
+
+Assert(
+	UINT32 assertVersion,
+	UINT32 rva,
+	UINT32 timestamp,
+	UINT32 imageSize,
+	ANSISTRING imageName,
+	UINT32 count,
+	UINT32 totalHits,
+	UINT32 ModuleCollection,
+	UINT32 GlobalCollection
+	);
+

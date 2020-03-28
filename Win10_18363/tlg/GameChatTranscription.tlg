@@ -1,0 +1,39 @@
+ProviderNames:
+	Microsoft.Xbox.GameChatTranscription
+
+
+
+**** Events *****
+GenericStats(
+	UINT64 TranscriberCompleteWebSocketConnection,
+	UINT64 TranscriberServerInitiatedFinalize,
+	UINT64 TranscriberAudioBytesDiscardedFromServerInitiatedFinalize,
+	UINT64 TranscriberWebSocketTimedOutUploading,
+	UINT64 TranscriberWebSocketTimedOutWaitingForResult,
+	UINT64 TranscriberWebSocketTimedOutFromInactivity,
+	UINT64 TranscriberWebSocketRecognitionStatusSuccess,
+	UINT64 TranscriberWebSocketRecognitionStatusEndOfDictation,
+	UINT64 TranscriberWebSocketRecognitionStatusInitialSilenceTimeout,
+	UINT64 TranscriberWebSocketRecognitionStatusNoMatch,
+	UINT64 TranscriberWebSocketRecognitionStatusUnknown,
+	UINT64 TranscriberTurnDurationSum,
+	UINT64 TranscriberTurnDurationMax,
+	UINT64 TranscriberTurnDurationMin,
+	UINT32 TranscriberTurnDurationIncrementCount,
+	UINT64 TranscriberAudioBufferDurationSum,
+	UINT64 TranscriberAudioBufferDurationMax,
+	UINT64 TranscriberAudioBufferDurationMin,
+	UINT32 TranscriberAudioBufferDurationIncrementCount
+	);
+
+ErrorStats(
+	UNICODESTRING ErrorData
+	);
+
+PeriodicApiStats1(
+	UINT32 GCTF_CreateInstance,
+	UINT32 GCT_ProcessEncodedAudio,
+	UINT32 GCT_EndSpokenPhrase,
+	UINT32 GCT_FireSpeechTranscribedCallback
+	);
+

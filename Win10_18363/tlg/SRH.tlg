@@ -1,0 +1,591 @@
+ProviderNames:
+	Microsoft.Windows.Narrator.Asimov
+	Microsoft.Windows.Wil.FeatureLogging
+
+
+
+**** Events *****
+NarratorCommandError(
+	UINT64 PartA_PrivTags,
+	HRESULT hResult,
+	UNICODESTRING ErrorString,
+	BOOL32 isBumper
+	);
+
+AutoStart(
+	UINT64 PartA_PrivTags,
+	BOOL32 configured
+	);
+
+LaunchAppStart(
+	UINT64 PartA_PrivTags
+	);
+
+LaunchOptions(
+	UINT64 PartA_PrivTags,
+	BOOL32 noVoice,
+	BOOL32 noUtilMan,
+	BOOL32 hardwareButton,
+	BOOL32 developerMode,
+	BOOL32 globalHotkey
+	);
+
+BrailleInitialized(
+	UINT64 PartA_PrivTags,
+	UNICODESTRING brailleInputTable,
+	UNICODESTRING brailleOutputTable,
+	INT32 brailleNotificationTimeout,
+	UNICODESTRING brailleDeviceConfiguration,
+	INT32 brailleCursorRepresentation,
+	BOOL32 brailleBlinkingCursor
+	);
+
+CreateUiStop(
+	UINT64 PartA_PrivTags
+	);
+
+CreateUiStart(
+	UINT64 PartA_PrivTags
+	);
+
+BeginMonitoringStop(
+	UINT64 PartA_PrivTags
+	);
+
+BeginMonitoringStart(
+	UINT64 PartA_PrivTags
+	);
+
+AppClose(
+	UINT64 PartA_PrivTags
+	);
+
+LaunchAppStop(
+	UINT64 PartA_PrivTags
+	);
+
+InitializeMonitorsStop(
+	UINT64 PartA_PrivTags
+	);
+
+InitializeMonitorsStart(
+	UINT64 PartA_PrivTags
+	);
+
+InitializeGlobalsStop(
+	UINT64 PartA_PrivTags
+	);
+
+InitializeGlobalsStart(
+	UINT64 PartA_PrivTags
+	);
+
+StartupSettings(
+	UINT64 PartA_PrivTags,
+	ANSISTRING capsLockAlertState,
+	BOOL32 isPhoneticReading,
+	ANSISTRING userVerbosityState,
+	BOOL32 isCharEcho,
+	BOOL32 isFunctionKeyEcho,
+	BOOL32 isNavigationKeyEcho,
+	BOOL32 isToggleKeyEcho,
+	BOOL32 isModifierKeyEcho,
+	BOOL32 isWordEcho,
+	BOOL32 isFollowInsertionPoint,
+	BOOL32 isAutoReadAdvancedInfo
+	);
+
+ShutdownUiaStart(
+	UINT64 PartA_PrivTags
+	);
+
+ShutdownUiaStop(
+	UINT64 PartA_PrivTags
+	);
+
+ShutdownComponentsStop(
+	UINT64 PartA_PrivTags
+	);
+
+ShutdownMonitorsStop(
+	UINT64 PartA_PrivTags
+	);
+
+ShutdownMonitorsStart(
+	UINT64 PartA_PrivTags
+	);
+
+ShutdownComponentsStart(
+	UINT64 PartA_PrivTags
+	);
+
+ToggleSelectionMode(
+	UINT64 PartA_PrivTags,
+	UINT32 SelectionModeEnabled
+	);
+
+ContinuousReadingTextSegment(
+	UINT64 PartA_PrivTags,
+	UINT32 command,
+	UINT32 sourceType,
+	UNICODESTRING appName,
+	UINT32 textSegmentId,
+	ANSISTRING textSegmentBreakType,
+	UINT32 chunkCount
+	);
+
+NarratorKeyLog(
+	UINT64 PartA_PrivTags,
+	UINT32 keyCode
+	);
+
+NarratorModifiersSetting(
+	UINT64 PartA_PrivTags,
+	UINT32 value,
+	BOOL32 startup
+	);
+
+FeatureUsage(
+	UINT32 featureId,
+	INT32 featureVersion,
+	INT32 featureBaseVersion,
+	INT16 featureStage,
+	BOOLEAN enabled,
+	UINT32 kind,
+	UINT64 addend
+	);
+
+EnabledFeatureUsage(
+	UINT32 featureId,
+	INT32 featureVersion,
+	INT32 featureBaseVersion,
+	INT16 featureStage,
+	BOOLEAN enabled,
+	UINT32 kind,
+	UINT64 addend
+	);
+
+FeatureVariantUsage(
+	UINT32 featureId,
+	INT32 featureVersion,
+	INT32 featureBaseVersion,
+	INT16 featureStage,
+	BOOLEAN enabled,
+	UINT32 variantKind,
+	UINT8 variant,
+	UINT64 addend
+	);
+
+FeatureError(
+	UINT32 featureId,
+	INT32 featureVersion,
+	INT32 featureBaseVersion,
+	INT16 featureStage,
+	HRESULT hr,
+	ANSISTRING file,
+	UINT16 lineNumber,
+	ANSISTRING module,
+	ANSISTRING process,
+	ANSISTRING originFile,
+	UINT16 originLineNumber,
+	ANSISTRING originModule,
+	ANSISTRING originName,
+	ANSISTRING message,
+	ANSISTRING callerModule,
+	UINT32 callerReturnAddressOffset,
+	ANSISTRING originCallerModule,
+	UINT32 originCallerReturnAddressOffset
+	);
+
+FallbackError(
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+FallbackError(
+	UINT64 PartA_PrivTags,
+	SIGNED wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+UserFeedback(
+	UINT64 PartA_PrivTags,
+	GUID activityGuid
+	);
+
+LaunchSearchAndSelectStart(
+	UINT64 PartA_PrivTags
+	);
+
+UserFeedbackAppContext(
+	UINT64 PartA_PrivTags,
+	UNICODESTRING appName,
+	UNICODESTRING automationContext
+	);
+
+NarratorCommandGeneratedStop(
+	UINT64 PartA_PrivTags,
+	UINT32 Command,
+	UNICODESTRING appName,
+	UNICODESTRING automationContext,
+	UINT32 sourceTypeId,
+	UINT32 currentView,
+	UINT32 currentSelectionView
+	);
+
+NarratorCommandGeneratedStart(
+	UINT64 PartA_PrivTags,
+	UINT32 Command,
+	UNICODESTRING appName,
+	UNICODESTRING automationContext,
+	UINT32 sourceTypeId,
+	UINT32 currentView,
+	UINT32 currentSelectionView,
+	UINT32 keyboardMode,
+	UINT32 commandCategory,
+	UINT32 narratorModifier,
+	BOOLEAN isTextPatternElement,
+	GUID activityGuid
+	);
+
+NarratorCommandGeneratedStop(
+	UINT64 PartA_PrivTags,
+	INT32 Command,
+	UNICODESTRING appName,
+	UNICODESTRING automationContext,
+	UINT32 sourceTypeId,
+	INT32 recognizedGesture,
+	UINT32 currentView,
+	UINT32 currentSelectionView
+	);
+
+NarratorCommandGeneratedStart(
+	UINT64 PartA_PrivTags,
+	INT32 Command,
+	UNICODESTRING appName,
+	UNICODESTRING automationContext,
+	UINT32 sourceTypeId,
+	INT32 recognizedGesture,
+	UINT32 currentView,
+	UINT32 currentSelectionView,
+	GUID activityGuid
+	);
+
+RecognizedGesture(
+	UINT64 PartA_PrivTags,
+	UINT32 GestureId
+	);
+
+KeyboardLayoutSetting(
+	UINT64 PartA_PrivTags,
+	UINT32 value,
+	BOOL32 startup
+	);
+
+ConsoleUpdated(
+	UINT64 PartA_PrivTags
+	);
+
+NarratorKeyboardEchoStart(
+	UINT64 PartA_PrivTags,
+	GUID activityGuid
+	);
+
+EnterNarratorDeveloperMode(
+	UINT64 PartA_PrivTags,
+	UINT32 TargetPID
+	);
+
+UpdateNarratorContextStop(
+	UINT64 PartA_PrivTags,
+	UINT32 activityToken,
+	UINT32 appContextSame,
+	UINT32 eventId,
+	UNICODESTRING appName,
+	UNICODESTRING automationContext
+	);
+
+UpdateNarratorContextStart(
+	UINT64 PartA_PrivTags,
+	UINT32 eventId
+	);
+
+NarratorCursorUpdated(
+	UINT64 PartA_PrivTags,
+	UNICODESTRING AutomationContext,
+	UNICODESTRING appName
+	);
+
+UpdateSoftFocus(
+	UINT64 PartA_PrivTags,
+	UNICODESTRING AutomationContext
+	);
+
+ElementNameNullOrEmpty(
+	UINT64 PartA_PrivTags,
+	UNICODESTRING AppName,
+	UNICODESTRING WindowAutomationContext,
+	UNICODESTRING ElementAutomationContext
+	);
+
+CheckSubcontextStart(
+	UINT64 PartA_PrivTags,
+	UINT32 EventId
+	);
+
+CheckContextStop(
+	UINT64 PartA_PrivTags,
+	UINT32 ContextChanged,
+	UINT32 EventId
+	);
+
+CheckSubcontextStop(
+	UINT64 PartA_PrivTags,
+	UINT32 SubcontextChanged,
+	UINT32 EventId
+	);
+
+UpdateAppContext(
+	UINT64 PartA_PrivTags,
+	UINT32 windowContextUpdated,
+	UNICODESTRING appName,
+	UNICODESTRING automationContext
+	);
+
+CheckContextStart(
+	UINT64 PartA_PrivTags,
+	UINT32 EventId
+	);
+
+ProcessFocusChangeStart(
+	UINT64 PartA_PrivTags
+	);
+
+ProcessFocusChangeStop(
+	UINT64 PartA_PrivTags,
+	UINT32 EventCancelled,
+	UINT32 EventId
+	);
+
+ProcessFocusChangeUpdateCursor(
+	UINT64 PartA_PrivTags,
+	UINT32 activityToken,
+	INT32 InputType,
+	BOOL32 ContextChanged
+	);
+
+ProgressiveRendering(
+	UINT64 PartA_PrivTags,
+	INT32 millisecondsBetweenRenderings,
+	INT32 groupNumber
+	);
+
+ModeChange(
+	UINT64 PartA_PrivTags,
+	UINT32 NewMode
+	);
+
+TouchModeSwitch(
+	UINT64 PartA_PrivTags,
+	UINT32 IsWindowActive
+	);
+
+ProcessNarratorCommandExecute(
+	UINT64 PartA_PrivTags,
+	GUID activityGuid,
+	UINT32 activityToken,
+	INT32 Command
+	);
+
+ProcessNarratorCommandStop(
+	UINT64 PartA_PrivTags,
+	INT32 Command
+	);
+
+ProcessNarratorCommandStart(
+	UINT64 PartA_PrivTags,
+	INT32 Command
+	);
+
+TaskbarIsFlashing(
+	UINT64 PartA_PrivTags
+	);
+
+NarratorKeyboardEcho(
+	UINT64 PartA_PrivTags,
+	GUID activityGuid,
+	UINT32 activityToken
+	);
+
+NarratorStartupVoiceParameters(
+	UINT64 PartA_PrivTags,
+	UNICODESTRING Voice,
+	INT32 Speed,
+	INT32 Volume,
+	INT32 Pitch,
+	BOOL32 Reading With Intent,
+	BOOL32 Pause,
+	BOOL32 DuckAudio,
+	UINT64 PartA_PrivTags
+	);
+
+IgnoreEventRule(
+	UINT64 PartA_PrivTags,
+	UINT32 activityToken,
+	UNICODESTRING eventRuleName
+	);
+
+NarratorVoiceParametersRendering(
+	UINT64 PartA_PrivTags,
+	UNICODESTRING Voice,
+	INT32 Speed,
+	INT32 Volume,
+	INT32 Pitch,
+	BOOL32 Pause,
+	BOOL32 DuckAudio,
+	UINT64 PartA_PrivTags
+	);
+
+SAPIRendererAttributesUpdated(
+	UINT64 PartA_PrivTags,
+	UNICODESTRING voiceName
+	);
+
+SelectedVoiceNotFound(
+	UINT64 PartA_PrivTags,
+	UNICODESTRING selectedVoice,
+	UNICODESTRING fallbackVoice
+	);
+
+ExitNarratorSpeechStart(
+	UINT64 PartA_PrivTags
+	);
+
+ExitNarratorSpeechStop(
+	UINT64 PartA_PrivTags
+	);
+
+SapiTextSpeak(
+	UINT64 PartA_PrivTags,
+	UINT32 activityToken
+	);
+
+SAPIRendererAttributesUpdated(
+	UINT64 PartA_PrivTags,
+	DOUBLE onecoreVoiceSpeed
+	);
+
+SAPIRendererAttributesUpdated(
+	UINT64 PartA_PrivTags,
+	BOOL32 intonationPause
+	);
+
+SAPIRendererAttributesUpdated(
+	UINT64 PartA_PrivTags,
+	INT32 onecoreVoicePitch
+	);
+
+SapiTextSpeak(
+	UINT64 PartA_PrivTags
+	);
+
+SAPIRendererAttributesUpdated(
+	UINT64 PartA_PrivTags,
+	INT32 voiceVolume
+	);
+
+SAPIRendererAttributesUpdated(
+	UINT64 PartA_PrivTags,
+	INT32 voiceSpeed
+	);
+
+SAPIRendererAttributesUpdated(
+	UINT64 PartA_PrivTags,
+	INT32 voicePitch
+	);
+
+CancelSpeaking(
+	UINT64 PartA_PrivTags
+	);
+
+SecureDesktopCheck(
+	UINT64 PartA_PrivTags,
+	UINT32 IsSecureDesktop
+	);
+
+SessionTime(
+	UINT64 PartA_PrivTags,
+	INT32 iTime
+	);
+
+NarratorQuickStartCheckboxStatus(
+	UINT64 PartA_PrivTags,
+	BOOL32 CheckedStatus
+	);
+
+NarratorUIExit(
+	UINT64 PartA_PrivTags
+	);
+
+ResetNarratorLogging(
+	UINT64 PartA_PrivTags
+	);
+
+StartNarratorLogging(
+	UINT64 PartA_PrivTags
+	);
+
+StopNarratorLogging(
+	UINT64 PartA_PrivTags
+	);
+
+TurnOnPhoneticMode(
+	UINT64 PartA_PrivTags,
+	BOOL32 isPhoneticSettingOn
+	);
+
+BrailleStartWrite(
+	UINT64 PartA_PrivTags,
+	ANSISTRING deviceName,
+	UINT32 displaySizeRowCount,
+	UINT32 displaySizeColumnCount
+	);
+
+NarratorFindThreadStart(
+	UINT64 PartA_PrivTags
+	);
+
+NarratorFindThreadEnd(
+	UINT64 PartA_PrivTags
+	);
+

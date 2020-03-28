@@ -1,0 +1,479 @@
+ProviderNames:
+	Microsoft.Windows.Security.Biometrics.Service
+	TelemetryAssert
+	TelemetryAssertDiagTrack
+
+
+
+**** Events *****
+Error:FailureInfo(
+	INT32 ResultCode,
+	UNICODESTRING debugString
+	);
+
+Info:LOWEPOCH_EXITED(
+	INT32 ResultCode
+	);
+
+Info:LOWEPOCH_ENTERING(
+	INT32 ResultCode
+	);
+
+Info:APMRESUMEAUTOMATIC(
+	INT32 ResultCode
+	);
+
+Info:APMSUSPEND(
+	INT32 ResultCode
+	);
+
+Error:StartTrustletFailed(
+	INT32 ResultCode
+	);
+
+SecureBioAvailability(
+	BOOLEAN available,
+	BOOLEAN policy,
+	UINT32 policyReason
+	);
+
+Info:SkipIdleStop(
+	INT32 ResultCode
+	);
+
+WaitForNotification(
+	INT32 notificationType
+	);
+
+SensorControlThreadBiometricUnit(
+	UINT32 UnitId,
+	UNICODESTRING DisplayName
+	);
+
+Info:ClearEnrollAuthorizeIdentity(
+	INT32 ResultCode,
+	UINT32 unitId,
+	SID reinterpret_cast<const SID*>(m_EnrollAuthorizeIdentity->Value.AccountSid.Data)
+	);
+
+Info:SetEnrollAuthorizeIdentity(
+	INT32 ResultCode,
+	UINT32 unitId,
+	SID reinterpret_cast<const SID*>(Identity->Value.AccountSid.Data)
+	);
+
+ActivityStoppedAutomatically(
+	VOID
+	);
+
+AuthorizeEnd(
+	INT32 hrStatus
+	);
+
+AuthorizeStart(
+	UINT32 biometricType,
+	UINT64 hardwareSubType,
+	BOOL32 BUSecurityLevel,
+	BOOL32 isTpmPresent
+	);
+
+AuthValueProvisionStop(
+	BOOL32 requireSecureSensors,
+	INT32 hrSensorResult,
+	INT32 hrTpmResult,
+	INT32 hrStatus
+	);
+
+AuthValueProvisionFailed(
+	UNICODESTRING failurePoint,
+	BOOL32 requireSecureSensors,
+	INT32 hrSensorResult,
+	INT32 hrTpmResult,
+	INT32 hrStatus
+	);
+
+AuthValueProvisionStart(
+	UNICODESTRING sensorId,
+	BOOL32 isTrustletRunning
+	);
+
+DataProtectorUnprotect(
+	UINT32 dataProtectorType,
+	INT32 HrStatus,
+	UINT32 isolationLevelEnabled,
+	BOOL32 isTrustletRunning
+	);
+
+DataProtectorProtect(
+	UINT32 dataProtectorType,
+	INT32 hrStatus,
+	UINT32 isolationLevelEnabled,
+	BOOL32 isTrustletRunning
+	);
+
+TrustletLaunch(
+	INT32 hrStatus
+	);
+
+BioServiceLegacyFeatureUsed(
+	UNICODESTRING featureName
+	);
+
+BioServiceBiometricUnitConfigured(
+	UNICODESTRING sensorDisplayName,
+	UNICODESTRING sensorAdapterDisplayName,
+	UNICODESTRING engineAdapterDisplayName,
+	UNICODESTRING storageAdapterDisplayName,
+	UINT32 biometricType,
+	UINT32 isolationLevelSelector,
+	BOOL32 isTrustletRunning
+	);
+
+BioServiceBiometricUnitCreate(
+	UNICODESTRING deviceInstanceId
+	);
+
+BioServiceActivityFailedDeactivate(
+	UNICODESTRING deviceDescription,
+	UNICODESTRING deviceInstanceId,
+	UNICODESTRING sensorAdapter,
+	UNICODESTRING engineAdapter,
+	UNICODESTRING storageAdapter,
+	UINT32 biometricType,
+	UINT64 hardwareSubType,
+	UINT64 hardwareCapabilities,
+	UINT32 BUSecurityLevel,
+	BOOL32 isTrustletRunning
+	);
+
+BioServiceActivityFailedActivate(
+	UNICODESTRING deviceDescription,
+	UNICODESTRING deviceInstanceId,
+	UNICODESTRING sensorAdapter,
+	UNICODESTRING engineAdapter,
+	UNICODESTRING storageAdapter,
+	UINT32 biometricType,
+	UINT64 hardwareSubType,
+	UINT64 hardwareCapabilities,
+	UINT32 BUSecurityLevel,
+	BOOL32 isTrustletRunning
+	);
+
+BioServiceActivityHardware(
+	UNICODESTRING hardwareId,
+	UINT32 hardwareCapabilities,
+	UINT32 bioType,
+	UINT32 hardwareSubtype,
+	BOOL32 isTrustletRunning
+	);
+
+BioServiceEnrollmentEnd(
+	UNICODESTRING hardwareId,
+	UINT32 hardwareCapabilities,
+	UINT32 hardwareSubtype,
+	BOOL32 enrollmentSuccessful,
+	UINT32 BUSecurityLevel,
+	BOOL32 isVsmCfg,
+	BOOL32 isTrustletRunning
+	);
+
+BioServiceEnrollmentStart(
+	VOID
+	);
+
+BioServiceActivityCapture(
+	BOOL32 captureSuccessful,
+	UINT32 captureDetail,
+	UNICODESTRING hardwareId,
+	UINT32 BUSecurityLevel,
+	BOOL32 isVsmCfg,
+	BOOL32 isTrustletRunning
+	);
+
+BioServiceActivityStop(
+	VOID
+	);
+
+BioServiceActivityStart(
+	VOID
+	);
+
+Error:ReadPipeHandleFailed(
+	UINT32 ResultCode
+	);
+
+Warning:CancelIoExFailed(
+	UINT32 ResultCode
+	);
+
+Info:FocusClientUnregistered(
+	INT32 ResultCode,
+	UINT32 ClientProcessId
+	);
+
+Info:FocusClientRegistered(
+	BOOLEAN ResultCode,
+	UINT32 ClientProcessId
+	);
+
+Error:DuplicateResponseHandleFailed(
+	UINT32 ResultCode
+	);
+
+Error:DuplicateQueryHandleFailed(
+	UINT32 ResultCode
+	);
+
+Error:OpenClientProcessFailed(
+	UINT32 ResultCode
+	);
+
+Error:OpenServerProcessFailed(
+	UINT32 ResultCode
+	);
+
+Error:CreatePipeFailed(
+	UINT32 ResultCode
+	);
+
+Info:FocusLockReleased(
+	BOOLEAN ResultCode,
+	UINT32 FocusLockClientId,
+	UINT32 References
+	);
+
+Info:FocusLockAcquired(
+	BOOLEAN ResultCode,
+	UINT32 FocusLockClientId,
+	UINT32 References
+	);
+
+Warning:GeneratedBogusTicket(
+	INT32 ResultCode,
+	UINT32 processId,
+	BOOLEAN isTrustedSession,
+	BOOLEAN isFocusProcess
+	);
+
+Error:TooManyOpenSessions(
+	INT32 ResultCode
+	);
+
+PlugInLoadCheckExtendedFingerprintSigning(
+	INT32 retVal,
+	UINT32 nSignatureState,
+	UINT32 nSignatureType,
+	UNICODESTRING displayName,
+	UNICODESTRING publisherName,
+	UNICODESTRING moreInfoUrl,
+	STRING hash,
+	BOOLEAN signingCheckEnforced
+	);
+
+PlugInLoadCheckSigningLevel(
+	INT32 retVal
+	);
+
+CloseDatabaseFailed(
+	INT32 retVal
+	);
+
+FoundCorruptDatabase(
+	INT32 retVal,
+	BOOL32 VirtualSecureMode,
+	UNICODESTRING SensorAdapter,
+	UNICODESTRING EngineAdapter,
+	UNICODESTRING StorageAdapter,
+	UNICODESTRING VsmSensorAdapter,
+	UNICODESTRING VsmEngineAdapter,
+	UNICODESTRING VsmStorageAdapter
+	);
+
+MisconfiguredDatabase(
+	GUID databaseId
+	);
+
+PipelineLoadPlugIns(
+	INT32 retVal,
+	UNICODESTRING hardwareId,
+	UINT32 capabilities,
+	UINT32 sensorSubType,
+	UINT64 biometricFactor,
+	UNICODESTRING description,
+	UNICODESTRING manufacturer,
+	UNICODESTRING model,
+	UINT32 firmwareMajorVersion,
+	UINT32 firmwareMinorVersion,
+	INT32 adapterHr,
+	INT32 engineHr,
+	INT32 storageHr
+	);
+
+Info:ReleaseBinding(
+	INT32 ResultCode,
+	UINT32 type,
+	UINT64 session,
+	UINT32 unitId
+	);
+
+Info:Bind(
+	INT32 ResultCode,
+	UINT32 type,
+	UINT64 session,
+	UINT32 unitId
+	);
+
+BioPolicySettings(
+	INT32 serviceSource,
+	BOOL32 serviceValue,
+	INT32 logonSource,
+	BOOL32 logonValue,
+	INT32 domainLogonSource,
+	BOOL32 domainLogonValue,
+	INT32 eventType,
+	BOOL32 requireSecureSensors
+	);
+
+ActivityStoppedAutomatically(
+	VOID
+	);
+
+AdapterCallEnd(
+	UNICODESTRING adapterCall,
+	UINT32 unitId,
+	INT32 result
+	);
+
+AdapterCallBegin(
+	UNICODESTRING adapterCall,
+	UINT32 unitId
+	);
+
+ActivityStoppedAutomatically(
+	VOID
+	);
+
+CWinBioSrvCaptureSample::Execute(
+	INT32 retVal,
+	BOOL32 flagsIncludeRaw
+	);
+
+CWinBioSrvCaptureSample::Execute(
+	INT32 retVal,
+	BOOL32 flagsIncludeRaw
+	);
+
+FingerprintProcessing(
+	INT32 retVal,
+	UINT32 rejectDetail,
+	UINT8 purpose,
+	UINT32 BUSecurityLevel
+	);
+
+FingerprintProcessing(
+	INT32 retVal,
+	UINT32 rejectDetail,
+	UINT8 purpose,
+	UINT32 BUSecurityLevel
+	);
+
+EnumEnrollmentsExecute(
+	INT32 retVal,
+	UINT64 subFactorCount,
+	UNICODESTRING hardwareId,
+	UINT32 capabilities,
+	UINT32 biometricFactor,
+	UINT32 sensorSubType
+	);
+
+WinBioSrvEnrollCommitExecute(
+	INT32 hr,
+	UINT32 buSecurityLevel,
+	UINT32 biometricFactor
+	);
+
+CWinBioSrvIdentifyExecute(
+	INT32 hr,
+	UINT32 buSecurityLevel,
+	UINT32 biometricFactor
+	);
+
+CWinBioSrvIdentify(
+	INT32 hr,
+	INT32 hrMatch,
+	UINT64 e2eUnlockStartTime,
+	UINT64 durationInMs,
+	UINT32 buSecurityLevel,
+	UINT32 biometricFactor
+	);
+
+RegEnumKeyExFailed(
+	INT32 retVal
+	);
+
+RegQueryInfoKeyFailed(
+	INT32 retVal
+	);
+
+RegOpenKeyExFailed(
+	INT32 retVal
+	);
+
+SetProtectorUpdateNeededRegKey(
+	INT32 retVal,
+	UNICODESTRING SID,
+	UINT32 Value
+	);
+
+RegSetValueProtectorUpdateNeededFailed(
+	INT32 retVal
+	);
+
+RegOpenKeySensorInfoFailed(
+	INT32 retVal
+	);
+
+Assert(
+	UINT32 assertVersion,
+	UINT32 rva,
+	UINT32 timestamp,
+	UINT32 imageSize,
+	ANSISTRING imageName,
+	UINT32 count,
+	UINT32 totalHits,
+	UINT32 ModuleCollection,
+	UINT32 GlobalCollection
+	);
+
+NgcCredProvEnumLogonKeysFailed(
+	INT32 retVal
+	);
+
+RpcClientBindError(
+	INT64 retVal
+	);
+
+RpcClientCreateBindingHandleError(
+	INT32 retVal
+	);
+
+RpcClientAlreadyBound(
+	VOID
+	);
+
+NoNewBindAttemptsOnUnrecoverableError(
+	INT32 retVal
+	);
+
+RpcClientCannotCopyServerSid(
+	UINT32 retVal
+	);
+
+RpcClientCreateSecurityDescriptorFailure(
+	UINT32 retVal
+	);
+
+RpcClientInvalidServerSid(
+	UINT32 retVal
+	);
+

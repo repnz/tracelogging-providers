@@ -1,0 +1,133 @@
+ProviderNames:
+	Microsoft.Windows.TimeBroker
+	TelemetryAssert
+	TelemetryAssertDiagTrack
+	Microsoft.Windows.TlgAggregateInternal
+
+
+
+**** Events *****
+SetTimerFailed(
+	NTSTATUS Status,
+	FILETIME DueTime
+	);
+
+PsmTimerWakeup(
+	VOID
+	);
+
+WakeTimerFired(
+	UNICODESTRING Description,
+	UNICODESTRING Package
+	);
+
+AlarmDisable(
+	GUID eventId,
+	UNICODESTRING appName,
+	FILETIME endTime,
+	BOOL32 wakeEnabled,
+	BOOL32 backgroundAccess,
+	UINT16 callReason
+	);
+
+OnCreate(
+	NULL Count,
+	NULL PeriodMin,
+	NULL PeriodMax,
+	NULL WakeEnabled,
+	NULL AppEventsOfType,
+	WIN32ERROR Status,
+	UNICODESTRING AppName,
+	UINT32 Type,
+	BOOL32 AppContainer
+	);
+
+ExpiringTimers(
+	NULL LowMemoryWakes,
+	NULL PsmWakes,
+	NULL SystemTimerWakes
+	);
+
+AlarmNotRestored(
+	GUID eventId,
+	UNICODESTRING appName,
+	FILETIME endTime,
+	WIN32ERROR Status
+	);
+
+AlarmEnable(
+	GUID eventId,
+	UNICODESTRING appName,
+	FILETIME endTime,
+	BOOL32 wakeEnabled,
+	BOOL32 backgroundAccess,
+	UINT16 callReason
+	);
+
+EventMissed(
+	GUID EventId,
+	UNICODESTRING Package,
+	UINT16 Type,
+	INT64 PeriodInSeconds,
+	INT64 LifetimeInSeconds,
+	BOOL32 WakeEnabled,
+	BOOL32 BackgroundAccess
+	);
+
+AlarmSignal(
+	GUID eventId,
+	UNICODESTRING appName,
+	FILETIME startTime,
+	FILETIME currentTime,
+	FILETIME endTime,
+	BOOL32 wakeEnabled,
+	BOOL32 backgroundAccess,
+	UINT32 status
+	);
+
+EventSignaled(
+	GUID EventId,
+	UNICODESTRING Package,
+	UINT16 EventStatus,
+	UINT16 Type,
+	INT64 PeriodInSeconds,
+	INT64 LifetimeInSeconds,
+	BOOL32 WakeEnabled,
+	BOOL32 BackgroundAccess
+	);
+
+EventEarly(
+	GUID EventId,
+	UNICODESTRING Package,
+	UINT16 EventStatus,
+	UINT16 Type,
+	INT64 PeriodInSeconds,
+	INT64 LifetimeInSeconds,
+	BOOL32 WakeEnabled,
+	BOOL32 BackgroundAccess
+	);
+
+Assert(
+	UINT32 assertVersion,
+	UINT32 rva,
+	UINT32 timestamp,
+	UINT32 imageSize,
+	ANSISTRING imageName,
+	UINT32 count,
+	UINT32 totalHits,
+	UINT32 ModuleCollection,
+	UINT32 GlobalCollection
+	);
+
+TlgAggregateSummary(
+	GUID Provider,
+	UINT64 NumFlushes,
+	UINT64 MaxEntriesStored,
+	UINT64 TotalEntriesFlushed,
+	UINT32 MaxEntriesFlushed,
+	UINT32 MinEntriesFlushed,
+	UINT32 NumBucketLimitReached,
+	UINT32 NumAllocationFailures,
+	UINT32 NumLargeEventFailures
+	);
+

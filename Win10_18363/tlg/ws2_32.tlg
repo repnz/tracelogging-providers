@@ -1,0 +1,65 @@
+ProviderNames:
+	Microsoft-Windows-Winsock2
+
+
+
+**** Events *****
+Ws2IPv6ConnectFailure(
+	INT32 ConnectSuccessCount,
+	INT32 ConnectSuccessCountWithIPv6Preferred,
+	INT32 ConnectSuccessCountWithIPv6Failed,
+	INT32 ConnectSuccessCountWithIPv6FailFastOn,
+	INT32 IPv6FailFastAttemptsInConnectSuccess,
+	INT32 IPv6SuccessfulFailFastAttemptsInConnectSuccess
+	);
+
+Ws2ProviderLoadFailure(
+	GUID ProviderId,
+	UNICODESTRING Path,
+	BOOLEAN BSP,
+	BOOLEAN IFS,
+	BOOLEAN ND,
+	INT32 AF,
+	INT32 ST,
+	INT32 Protocol,
+	INT32 FailurePoint,
+	WIN32ERROR ErrorCode
+	);
+
+Ws2LSPAndChainsInstallation(
+	GUID ProviderId,
+	UNICODESTRING Path,
+	UNICODESTRING Path32,
+	UNICODESTRING Name,
+	BOOLEAN IFS,
+	UINT32 InstallType,
+	WIN32ERROR Result
+	);
+
+Ws2TrackedFunction(
+	ANSISTRING Name
+	);
+
+Ws2ProtocolInstallation(
+	GUID ProviderId,
+	UNICODESTRING Path,
+	BOOLEAN BSP,
+	BOOLEAN IFS,
+	BOOLEAN ND,
+	INT32 AF,
+	INT32 ST,
+	INT32 Protocol,
+	UINT32 InstallType,
+	WIN32ERROR Result
+	);
+
+Ws2NameSpaceInstallation(
+	GUID ProviderId,
+	UNICODESTRING Path,
+	UNICODESTRING Identifier,
+	UINT32 NameSpace,
+	BOOLEAN ExAPI,
+	UINT32 InstallType,
+	WIN32ERROR Result
+	);
+

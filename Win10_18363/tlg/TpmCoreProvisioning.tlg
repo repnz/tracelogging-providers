@@ -1,0 +1,913 @@
+ProviderNames:
+	Microsoft.Tpm.ProvisioningTask
+	Microsoft.Tpm.DebugTracing
+	Microsoft.Tpm.HealthAttestationCertificateTask
+	Microsoft.Windows.Security.BitLocker.CSP.State.Update
+	Microsoft.Windows.Security.BitLocker.EncryptionDelay
+	Microsoft.Windows.Security.BitLocker.BcdUpdate
+	TelemetryAssert
+	TelemetryAssertDiagTrack
+
+
+
+**** Events *****
+FallbackError(
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+CTpmCoreClass::SetTpmProperties(
+	BOOLEAN TpmIsActivated,
+	BOOLEAN TpmIsEnabled,
+	BOOLEAN TpmIsOwned,
+	HRESULT HResult
+	);
+
+TpmProvisioningTakeOwnership(
+	INT32 HResult,
+	UNICODESTRING Tpm_Version
+	);
+
+TpmProvisioningClearOccurred(
+	UNICODESTRING Reason
+	);
+
+TracerStart(
+	UNICODESTRING Name
+	);
+
+TracerStop(
+	UNICODESTRING Name,
+	HRESULT HResult
+	);
+
+FallbackError(
+	UINT64 PartA_PrivTags,
+	SIGNED wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+TpmProvisioningCreateLockoutPolicyNVHashFailed(
+	INT32 HResult
+	);
+
+WriteFullOwnerAuthToRegistry(
+	INT32 HResult
+	);
+
+CTpmCoreClass::Initialize(
+	BOOLEAN TpmIsPresent,
+	BOOLEAN TpmIsVersion20,
+	HRESULT HResult
+	);
+
+DebugMessage(
+	UNICODESTRING Message
+	);
+
+UseLegacyDAParameters(
+	UNICODESTRING Reason,
+	INT32 HResult
+	);
+
+UseLegacyDAParameters(
+	UNICODESTRING Reason
+	);
+
+DebugMessage(
+	UNICODESTRING Description,
+	INT32 hr
+	);
+
+TpmProvisioningSetPrimaryPolicyFailed(
+	INT32 HResult
+	);
+
+SupportsUseOnceDAParams(
+	INT32 SupportedByTpmSpecRevision,
+	INT32 SupportedByTpmManufacturer
+	);
+
+CTpmCoreClass20::SetTpmProperties(
+	BOOLEAN TpmIsActivated,
+	BOOLEAN TpmIsEnabled,
+	BOOLEAN TpmIsOwned,
+	HRESULT HResult
+	);
+
+CTpmCoreClass20::Initialize(
+	BOOLEAN TpmIsPresent,
+	BOOLEAN TpmIsVersion20,
+	HRESULT HResult
+	);
+
+SetDAParameters(
+	UINT8 UseLegacyDAParameters,
+	INT32 HResult,
+	UINT32 MaxTries,
+	UINT32 RecoveryTime,
+	UINT32 LockoutRecovery
+	);
+
+WindowsAIKActivity(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+WindowsAIKActivity(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	SIGNED wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+ActivityError(
+	UINT64 PartA_PrivTags,
+	SIGNED wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+TpmUnattendedSetupClearTpm(
+	INT32 TpmGetIsOwnedStatusFailed
+	);
+
+ActivityIntermediateStop(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+WindowsAIKActivity(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId
+	);
+
+TpmUnattendedSetupClearTpm(
+	UINT32 ClearTpmSettings,
+	UINT8 ClearTpmAttempted,
+	INT32 HResult
+	);
+
+ActivityStoppedAutomatically(
+	VOID
+	);
+
+TpmUnattendedSetupClearTpm(
+	UINT32 ClearTpmSettings,
+	UINT8 ClearTpmAttempted
+	);
+
+WindowsAIKMessage(
+	UNICODESTRING Message
+	);
+
+WindowsAIKMessage(
+	UNICODESTRING Description,
+	UNICODESTRING Data
+	);
+
+WnfNotification(
+	UNICODESTRING StateName,
+	UINT32 StateData
+	);
+
+TpmHaDeleteDestroyValue(
+	INT32 hr,
+	UNICODESTRING Name
+	);
+
+TpmHaDeleteOpenVolatileRegKey(
+	INT32 hr
+	);
+
+TpmHaDeleteOpenRegKey(
+	INT32 hr
+	);
+
+TpmCertGetEkCertFromWeb(
+	UINT32 ManufacturerId,
+	UINT32 tpmVersion,
+	UNICODESTRING EkCertType,
+	UINT64 ElapsedMs,
+	UINT32 HResultGettingEkCertFromWeb
+	);
+
+TpmCertQueryEkPub(
+	UNICODESTRING EkCertType,
+	UINT32 HResultQueryingEkPub
+	);
+
+TpmCertGetEkCertFromWeb(Impersonate)(
+	HEXINT32 ManufacturerId,
+	HEXINT32 TpmVersion,
+	UNICODESTRING EkCertType,
+	UINT64 ElapsedMs,
+	HEXINT32 HResultGettingEkCertFromWeb
+	);
+
+EkCertificateServiceQueryFailed(
+	UNICODESTRING ServerURL,
+	UNICODESTRING ServerPath,
+	UINT32 HTTPResponseCode,
+	UNICODESTRING ServerResponseBody,
+	UNICODESTRING Action,
+	UNICODESTRING Reason
+	);
+
+Pdcv2ActivationClientActivate(
+	INT32 ntstatus,
+	UINT32 ActivationError
+	);
+
+TpmGetHealthCertReponse(
+	INT32 hr,
+	UINT32 HTTPResponseCode,
+	UNICODESTRING Endpoint,
+	UNICODESTRING Response
+	);
+
+TpmGetHealthCertReponseConnectionStatus(
+	INT32 hr,
+	UINT32 HTTPResponseCode,
+	UNICODESTRING Endpoint
+	);
+
+TpmFWLinkQueryFailure(
+	UINT32 FwLinkId,
+	UNICODESTRING Retrieved_URL,
+	INT32 HResultFromFwLink,
+	INT32 HResultFromResourceDll
+	);
+
+TpmFWLinkQueryFailure(
+	UINT32 FwLinkId,
+	UNICODESTRING Retrieved_URL,
+	UINT32 HResultFromFwLink,
+	UINT32 HResultFromResourceDll
+	);
+
+Pdcv2ActivationClientRenewActivation(
+	INT32 ntstatus,
+	UINT32 ActivationError,
+	UINT32 CallbackReason
+	);
+
+Pdcv2ActivationClientDeactivate(
+	INT32 ntstatus,
+	UINT32 pdcActivationHandle
+	);
+
+Pdcv2ActivationClientRegister(
+	INT32 ntstatus
+	);
+
+EkCertificateServiceQuerySucceeded(
+	UNICODESTRING ServerURL,
+	UNICODESTRING ServerPath,
+	UINT32 HTTPResponseCode,
+	UNICODESTRING ServerResponseBody,
+	UNICODESTRING Action,
+	UNICODESTRING Reason
+	);
+
+Pdcv2ActivationClientUnregister(
+	INT32 ntstatus,
+	UINT32 hPdc
+	);
+
+TpmInfoTrace(
+	UNICODESTRING ActivityName,
+	UINT32 TpmStatus
+	);
+
+TpmInfoTrace(
+	UNICODESTRING ActivityName,
+	UINT32 TpmStatus,
+	UINT32 TpmIsReadyInformation,
+	UINT32 TpmManufacturerId,
+	UNICODESTRING TpmOemVersion,
+	UNICODESTRING PPIVersion,
+	UINT32 EnableActivateConfirmationStatus,
+	UNICODESTRING TcgSpecVersion,
+	UINT32 EkCertState,
+	INT32 TpmIsFIPS,
+	INT32 TpmIsAutoProvisioningEnabled,
+	UNICODESTRING TpmVersion,
+	UNICODESTRING DAParameters,
+	BOOLEAN isWindowsAIKPresent,
+	BOOLEAN isWindowsAIKCertPresent
+	);
+
+TpmHaGetEventLog(
+	UINT32 cbLog,
+	UNICODESTRING CorrelationId,
+	INT32 hr
+	);
+
+TpmHaVerifyDeviceHealthMDMAlert(
+	INT32 hr
+	);
+
+TpmCoreProvFunction(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	SIGNED wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+TpmHaRetrieveGetHACImpersonate(
+	UINT32 ProtocolVersion,
+	UINT64 ElapsedMs,
+	UNICODESTRING Endpoint,
+	UNICODESTRING CorrelationId,
+	INT32 hr,
+	UINT32 cbHealthCert
+	);
+
+TpmHaRetrieveGetHAC(
+	UINT32 ProtocolVersion,
+	UINT64 ElapsedMs,
+	UNICODESTRING Endpoint,
+	UNICODESTRING CorrelationId,
+	INT32 hr,
+	UINT32 cbHealthCert
+	);
+
+TpmHaVerifyCheckTpm(
+	INT32 hr
+	);
+
+activityVerifyDeviceHealth(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+activityVerifyDeviceHealth(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+TpmHaVerifyGetNewHAC(
+	INT32 hr
+	);
+
+TpmHaVerifyCreateHAC(
+	INT32 hr
+	);
+
+TpmCoreProvFunction(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId,
+	ANSISTRING Function
+	);
+
+TpmCoreProvFunction(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	SIGNED wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function,
+	ANSISTRING Function
+	);
+
+TpmHaRetrieveGetHACCapability(
+	UINT32 ManufacturerID,
+	UINT32 tpmVersion,
+	UNICODESTRING CorrelationId,
+	INT32 hr
+	);
+
+activityTpmRetrieveHealthCertificate(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+activityVerifyDeviceHealth(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId
+	);
+
+TpmCertGetWindowsAik(
+	UNICODESTRING CorrelationId,
+	INT32 hr
+	);
+
+activityTpmRetrieveHealthCertificate(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId
+	);
+
+activityTpmRetrieveHealthCertificate(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+ActivityIntermediateStop(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+ActivityStoppedAutomatically(
+	VOID
+	);
+
+TpmCoreProvFunction(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId,
+	ANSISTRING Function
+	);
+
+TpmCoreProvFunction(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+TpmHaRetrieveCreateHAClaim(
+	UINT32 cbClaimBlob,
+	UNICODESTRING CorrelationId,
+	INT32 hr
+	);
+
+TpmHaRetrieveInstallHAC(
+	UNICODESTRING Endpoint,
+	UNICODESTRING CorrelationId,
+	INT32 hr
+	);
+
+TpmHaRetrieveVerifyHAC_SH(
+	UINT64 ElapsedMs,
+	UNICODESTRING CorrelationId,
+	INT32 hr,
+	UNICODESTRING HealthCertValidation,
+	UNICODESTRING EndpointName
+	);
+
+TpmHaRetrieveCreateHAClaim_SH(
+	UNICODESTRING CorrelationId,
+	INT32 hr,
+	UINT32 cbClaimBlob
+	);
+
+TpmHaVerifyGetHAC(
+	INT32 hr
+	);
+
+ActivityError(
+	UINT64 PartA_PrivTags,
+	SIGNED wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+ActivityError(
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+TpmHaCorrelationId(
+	UNICODESTRING CorrelationId,
+	INT32 hr
+	);
+
+activityTpmRetrieveAndVerifyHealthCertificate(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId
+	);
+
+TpmHaSHARetrieveCreateHAClaim(
+	UINT32 cbClaimBlob,
+	UNICODESTRING CorrelationId,
+	INT32 hr
+	);
+
+TpmHaSHARetrieveGetHAC(
+	UINT32 ProtocolVersion,
+	UINT64 ElapsedMs,
+	UNICODESTRING Endpoint,
+	UNICODESTRING CorrelationId,
+	INT32 hr,
+	UINT32 cbHealthCert
+	);
+
+TpmHaSHAGetWindowsAik(
+	UNICODESTRING CorrelationId,
+	INT32 hr
+	);
+
+CleanupEkCertificates(
+	UNICODESTRING Action,
+	UNICODESTRING EKCertType,
+	UNICODESTRING Result
+	);
+
+CleanupEkCertificates(
+	UNICODESTRING Action,
+	UNICODESTRING EKCertType,
+	UNICODESTRING Result,
+	INT32 hr
+	);
+
+activityTpmRetrieveAndVerifyHealthCertificate(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+Tpm20IsResetLockoutCountNeeded(
+	INT32 HResult
+	);
+
+TpmHaSHAGetEventLog(
+	UINT32 cbLog,
+	UNICODESTRING CorrelationId,
+	INT32 hr
+	);
+
+TpmChangeOwnerAuth(
+	INT32 HResult,
+	UINT8 RemoveAuthInReg,
+	UINT8 NoSynch
+	);
+
+Tpm20IsResetLockoutCountNeeded(
+	UINT32 LockoutCounter,
+	UINT32 MaxLockoutCountAllowed
+	);
+
+activityTpmRetrieveAndVerifyHealthCertificate(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+TpmHaSHARetrieveVerifyHAClaim(
+	UINT32 ProtocolVersion,
+	UINT64 ElapsedMs,
+	UNICODESTRING CorrelationId,
+	INT32 hr,
+	UNICODESTRING EndpointName
+	);
+
+TpmHaSHARetrieveGetHACCapability(
+	UINT32 ManufacturerID,
+	UINT32 tpmVersion,
+	UNICODESTRING CorrelationId,
+	INT32 hr
+	);
+
+Tpm20ResetLockoutCount(
+	INT32 HResult
+	);
+
+TpmHaSHARetrieveGetHACImpersonate(
+	UINT32 ProtocolVersion,
+	UINT64 ElapsedMs,
+	UNICODESTRING Endpoint,
+	UNICODESTRING CorrelationId,
+	INT32 hr,
+	UINT32 cbHealthCert
+	);
+
+TpmOwnerAuthEscrowed(
+	INT32 HResult
+	);
+
+TpmSetLegacyDAParameters(
+	INT32 HResult,
+	UINT32 MaxTries,
+	UINT32 RecoveryTime,
+	UINT32 LockoutRecovery
+	);
+
+activityTpmCreateHealthAttestationClaim(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId
+	);
+
+activityTpmCreateHealthStatusClaim(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId
+	);
+
+TpmCertGetSyntheticAik(
+	INT32 hr
+	);
+
+TpmHaCreateHealthAttestationGetQuote(
+	INT32 hr
+	);
+
+TpmHaCreateHealthAttestationClaimGetPcrs(
+	INT32 hr,
+	UINT32 PcrAlgId
+	);
+
+TpmHaCreateHealthStatusClaimGetQuote(
+	INT32 hr
+	);
+
+TpmHaCreateHealthStatusClaimGetPcrs(
+	INT32 hr,
+	UINT32 PcrAlgId
+	);
+
+TpmHaQuoteInfo(
+	BINARY Quote,
+	UINT32 QuoteHashAlg,
+	HEXINT32 hr
+	);
+
+TpmHaPcrsInfo(
+	BINARY Pcrs,
+	UINT32 PcrAlgId,
+	HEXINT32 hr
+	);
+
+activityTpmCreateHealthAttestationClaim(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+activityTpmCreateHealthAttestationClaim(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+activityTpmCreateHealthStatusClaim(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+activityTpmCreateHealthStatusClaim(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+TpmCertGetFormattedHASUrlEndpoint(
+	UNICODESTRING ServerName,
+	UNICODESTRING UrlPath,
+	INT32 hr
+	);
+
+TpmRetrieveEkCertificate(
+	INT32 hr
+	);
+
+TpmCertAppendEkCert(
+	UINT32 cbAttestationXml,
+	INT32 hr
+	);
+
+TpmCertAppendAikCert(
+	UINT32 AikCertSize,
+	INT32 hr
+	);
+
+TpmCertAppendAikPub(
+	UINT32 AikPubSize,
+	INT32 hr
+	);
+
+TpmHaRetrieveGetQuote(
+	INT32 hr
+	);
+
+TpmHaCollectSystemProperties(
+	ANSISTRING IntelMEFirmwareVersion,
+	INT32 isIntelMECorporateSKU,
+	INT32 isIntelAMTProvisioned
+	);
+
+Assert(
+	UINT32 assertVersion,
+	UINT32 rva,
+	UINT32 timestamp,
+	UINT32 imageSize,
+	ANSISTRING imageName,
+	UINT32 count,
+	UINT32 totalHits,
+	UINT32 ModuleCollection,
+	UINT32 GlobalCollection
+	);
+

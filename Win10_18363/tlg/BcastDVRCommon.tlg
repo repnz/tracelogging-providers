@@ -1,0 +1,109 @@
+ProviderNames:
+	Microsoft.Windows.Media.Capture
+	Microsoft.Windows.Media.Capture.AppCaptureMetadataWriter
+
+
+
+**** Events *****
+BcastDVR_LiveObjectTracker_NoMapEntry(
+	ANSISTRING className
+	);
+
+FallbackError(
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+FallbackError(
+	UINT64 PartA_PrivTags,
+	SIGNED wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+BcastDVR_LiveObjectTracker_PrintAll(
+	UINT32 object,
+	ANSISTRING className
+	);
+
+BcastDVR_MetadataManager_Metadata(
+	UNICODESTRING name,
+	UNICODESTRING value,
+	UINT32 type,
+	UINT32 valueType,
+	BOOLEAN add,
+	UINT32 priority
+	);
+
+BcastDVR_PlugInUtility_RegisterCallingPlugIn(
+	UNICODESTRING providerName,
+	UNICODESTRING sebEventId,
+	UNICODESTRING appId
+	);
+
+BcastDVR_PlugInUtility_SetDefaultPlugIn(
+	UNICODESTRING sebEventId
+	);
+
+BcastDVR_DebugFlagHelper_Registry(
+	UNICODESTRING value,
+	UINT32 IsEnabled
+	);
+
+BcastDVR_DebugFlagHelper_File(
+	UNICODESTRING filePath,
+	UINT32 IsEnabled
+	);
+
+BcastDVR_Printf(
+	ANSISTRING pszFunction,
+	ANSISTRING pszFile,
+	INT32 iLine,
+	UNICODESTRING buffer
+	);
+
+BcastDVR_LogError(
+	HRESULT hr,
+	ANSISTRING pszFunction,
+	ANSISTRING pszFile,
+	INT32 iLine
+	);
+
+BcastDVR_LogErrorEx(
+	HRESULT hr,
+	ANSISTRING pszFunction,
+	ANSISTRING pszFile,
+	INT32 iLine,
+	ANSISTRING pszErrorInfo,
+	ANSISTRING pszErrorData
+	);
+

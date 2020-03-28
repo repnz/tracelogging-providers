@@ -1,0 +1,167 @@
+ProviderNames:
+	Microsoft-Windows-Telephony-PhoneOm
+	Microsoft.Windows.Apps.CommsEnhancementRTProviders
+	Microsoft.Windows.Apps.CallsRTProviders
+	TelemetryAssert
+	TelemetryAssertDiagTrack
+
+
+
+**** Events *****
+PhoneApiInitUninitMismatch(
+	ANSISTRING details,
+	UINT32 apiInitCount
+	);
+
+[Error] Propagate(
+	HRESULT HResult,
+	ANSISTRING Location,
+	UINT32 Line Number
+	);
+
+[Error] Originate(
+	HRESULT HResult,
+	ANSISTRING Location,
+	UINT32 Line Number
+	);
+
+[Error] Assert(
+	HRESULT HResult,
+	ANSISTRING Location,
+	UINT32 Line Number
+	);
+
+PhoneApiLine(
+	ANSISTRING details,
+	ANSISTRING Api
+	);
+
+PhoneApi(
+	ANSISTRING details,
+	ANSISTRING Api,
+	GUID Line
+	);
+
+PhoneApiLine(
+	ANSISTRING details,
+	ANSISTRING Api,
+	GUID Line
+	);
+
+PhoneApi(
+	ANSISTRING details,
+	ANSISTRING Api
+	);
+
+PhoneApiCall(
+	ANSISTRING details,
+	ANSISTRING Api,
+	HEXINT32 Call
+	);
+
+PhoneClientWaitForApiReady(
+	ANSISTRING End
+	);
+
+PhoneClientWaitForApiReady(
+	ANSISTRING Start
+	);
+
+WaitForServiceReady(
+	ANSISTRING Start
+	);
+
+PhoneApiTwoCall(
+	ANSISTRING details,
+	ANSISTRING Api,
+	HEXINT32 callId1,
+	HEXINT32 callId2
+	);
+
+PhoneApiTwoCall(
+	ANSISTRING details,
+	ANSISTRING Api,
+	HEXINT32 callIdTalking,
+	HEXINT32 callIdHeld
+	);
+
+PHPERF_STARTCALL_BEGIN(
+	VOID
+	);
+
+PhoneApiUninitializeMismatch(
+	ANSISTRING details
+	);
+
+LoadLocalizedAccountFriendlyNameNoAumid(
+	ANSISTRING details,
+	GUID Line
+	);
+
+PhoneListenerDetectedRestart(
+	ANSISTRING details,
+	HEXINT64 listener
+	);
+
+PhoneListenerLostNotification(
+	ANSISTRING details,
+	HEXINT64 listener
+	);
+
+PhoneListenerFailedToRetrieveNotification(
+	ANSISTRING details,
+	HEXINT64 listener,
+	HRESULT result
+	);
+
+PhoneListenerAdded(
+	ANSISTRING details,
+	HEXINT64 listener
+	);
+
+PhoneListenerRemoved(
+	ANSISTRING details,
+	HEXINT64 listener
+	);
+
+CommsEnhancementPublicApiCalled(
+	UNICODESTRING ApiName,
+	UINT64 TimeDuration
+	);
+
+CommsEnhancementPublicApiFailed(
+	UNICODESTRING ApiName,
+	HRESULT ErrorCode
+	);
+
+ShowPhoneCallUIInvoked(
+	VOID
+	);
+
+SetCallOrigin(
+	UINT64 PartA_PrivTags,
+	HRESULT hresult
+	);
+
+DialWithOptionsInvoked(
+	VOID
+	);
+
+DialInvoked(
+	HRESULT hrTelemetry,
+	GUID LineId,
+	INT32 TransportType
+	);
+
+Assert(
+	UINT32 assertVersion,
+	UINT32 rva,
+	UINT32 timestamp,
+	UINT32 imageSize,
+	ANSISTRING imageName,
+	UINT32 count,
+	UINT32 totalHits,
+	UINT32 ModuleCollection,
+	UINT32 GlobalCollection
+	);
+

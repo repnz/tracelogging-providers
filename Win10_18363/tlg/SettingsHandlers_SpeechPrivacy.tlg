@@ -1,0 +1,338 @@
+ProviderNames:
+	Microsoft.Windows.SystemSettings.SettingsHandlers.SpeechPrivacy
+	Microsoft.Windows.SystemSettings.SettingsHandlers.VoiceAgentActivation
+	Microsoft.Windows.AgentActivationRuntime.Settings
+
+
+
+**** Events *****
+ActivityStoppedAutomatically(
+	VOID
+	);
+
+ActivityIntermediateStop(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+ActivityError(
+	UINT64 PartA_PrivTags,
+	SIGNED wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+ActivityError(
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+ToggleSpeechPersonalization(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId
+	);
+
+ToggleSpeechPersonalization(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+ToggleSpeechPersonalization(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+FallbackError(
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+FallbackError(
+	UINT64 PartA_PrivTags,
+	SIGNED wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+SettingListGetNamedProperty(
+	UNICODESTRING name
+	);
+
+ToggleVoiceAgentActivationOnLockScreen(
+	UNICODESTRING appId,
+	UINT32 state
+	);
+
+ToggleVoiceAgentActivation(
+	UNICODESTRING appId,
+	UINT32 state
+	);
+
+SettingItemGetNamedProperty(
+	UNICODESTRING name
+	);
+
+VoiceAgentActivationSettingUpdate(
+	UNICODESTRING appId,
+	INT32 kind,
+	INT32 name
+	);
+
+AgentActivationSettingManagerInitialize(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId
+	);
+
+AgentActivationSettingUpdate(
+	UNICODESTRING appid,
+	INT32 settingName
+	);
+
+AgentConfigurationUpdate(
+	UNICODESTRING appid,
+	INT32 updateKind
+	);
+
+AgentActivationSystemLanguageUpdate(
+	UNICODESTRING langaugeTag
+	);
+
+AgentConfigurationFilePath(
+	UNICODESTRING path
+	);
+
+ActivityIntermediateStop(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+ActivityError(
+	UINT64 PartA_PrivTags,
+	SIGNED wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+AgentActivationSettingManagerInitialize(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	SIGNED wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+AgentActivationSettingManagerInitialize(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+ActivityStoppedAutomatically(
+	VOID
+	);
+
+HighPriorityAgent(
+	UNICODESTRING aumid
+	);
+
+LanguageUpdate(
+	UNICODESTRING aumid,
+	UINT16 langId,
+	UNICODESTRING displayText
+	);
+
+AgentActivationConfigSource(
+	UNICODESTRING type,
+	UNICODESTRING sourceId
+	);
+
+AgentConfiguration(
+	UNICODESTRING configString
+	);
+
+AgentInstallStatus(
+	UNICODESTRING appid,
+	INT32 installStatusHR,
+	BOOLEAN isCortanaApp
+	);
+
+RegistrySettingUpdate(
+	UNICODESTRING hiveRoot,
+	UNICODESTRING path
+	);
+
+RegistrySettingMonitorSetup(
+	UNICODESTRING hiveRoot,
+	UNICODESTRING path
+	);
+
+VoiceActivationEnabledStatus(
+	UNICODESTRING aumid,
+	BOOLEAN enabled,
+	INT32 reason
+	);
+
+VoiceActivationOnLockScreenEnabledStatus(
+	UNICODESTRING aumid,
+	BOOLEAN enabled,
+	INT32 reason
+	);
+
+Trace(
+	UNICODESTRING message
+	);
+
+EnforcingCortanaVoiceActivationSettings(
+	UNICODESTRING setting,
+	BOOLEAN enabled
+	);
+
+SetVoiceActivationOnLockScreenEnabled(
+	UNICODESTRING aumid,
+	BOOLEAN enabled
+	);
+
+SetVoiceActivationEnabled(
+	UNICODESTRING aumid,
+	BOOLEAN enabled
+	);
+
+VoiceActivationOnLockScreenEnabledChanged(
+	UNICODESTRING aumid
+	);
+
+VoiceActivationEnabledChanged(
+	UNICODESTRING aumid
+	);
+
+UsingDefaultConfig(
+	VOID
+	);
+
+AgentConfigurationSourceRawText(
+	ANSISTRING text
+	);
+
+AgentConfigurationParsedItem(
+	UNICODESTRING aumid,
+	UNICODESTRING keyword,
+	UNICODESTRING keywordId,
+	UINT16 langId,
+	INT32 activationKind,
+	INT32 vaDefaultHint,
+	INT32 vaOnLockDefaultHint,
+	INT32 priority
+	);
+

@@ -1,0 +1,192 @@
+ProviderNames:
+	Microsoft.Windows.CoreUIComponents
+
+
+
+**** Events *****
+RotationStatusChanged(
+	BOOL32 IsNotifySubscribersNavigationClient
+	);
+
+RotationStatusChanged(
+	INT32 RotationValueClient,
+	INT32 NewViewBoundWidth,
+	INT32 NewViewBoundHeight
+	);
+
+ViewActivator_ActivateFailed(
+	HRESULT Result,
+	UINT64 UserHandle,
+	UINT64 HostId,
+	UINT64 AamActivationId,
+	UNICODESTRING AppUserModelId
+	);
+
+ViewActivator_ActivateCompleted(
+	UINT32 TokenViewInstanceId,
+	UINT32 ViewInstanceId,
+	UINT64 AamActivationId,
+	HRESULT Result
+	);
+
+ViewManager_NavigateToViewFailed(
+	UINT32 ViewInstanceId,
+	UINT32 ViewNavigationLevel,
+	HRESULT Result
+	);
+
+ViewActivator_Activate(
+	UINT32 TokenViewInstanceId,
+	UINT64 UserHandle,
+	UINT64 HostId,
+	UINT64 AamActivationId,
+	UNICODESTRING AppUserModelId
+	);
+
+ViewManager_ReplaceAndNavigateToView(
+	UINT32 ViewInstanceId,
+	UINT32 TokenViewInstanceId,
+	UINT32 ViewNavigationLevel
+	);
+
+ViewManager_InitiateUserLogoff(
+	UINT64 UserHandle
+	);
+
+ViewManager_NavigateAwayFromView(
+	UINT32 ViewInstanceId,
+	UINT32 ViewNavigationLevel
+	);
+
+ViewManager_ResumeAndNavigateToView(
+	UINT32 ViewInstanceId,
+	UINT32 TokenViewInstanceId,
+	UINT32 ViewNavigationLevel
+	);
+
+ViewManager_ViewRemoved(
+	UINT32 ViewInstanceId,
+	UINT64 UserHandle,
+	UINT64 HostId,
+	UNICODESTRING AppUserModelId
+	);
+
+ViewManager_RequestNavigateToView(
+	UINT32 ViewInstanceId,
+	UINT32 RequestingViewInstanceId,
+	UINT32 ViewActivationFlags,
+	UINT64 UserHandle
+	);
+
+ViewManager_InitiateShutdown(
+	VOID
+	);
+
+ViewManager_ViewAdded(
+	UINT32 ViewInstanceId,
+	UINT64 UserHandle,
+	UINT64 HostId,
+	UNICODESTRING AppUserModelId
+	);
+
+NavigationServerWindow_RegisterWindowHandleWithDxcoreFailed(
+	UINT32 WindowInstanceId,
+	UINT32 OwningProcessId,
+	UINT32 Result
+	);
+
+ViewManager_NavigateToView(
+	UINT32 ViewInstanceId,
+	UINT32 ViewNavigationLevel
+	);
+
+NavigationServerTask_CloseTaskTimeoutExpired(
+	UINT32 ViewInstanceId,
+	UINT32 EventType,
+	UINT32 CurrentState,
+	UINT32 TargetState
+	);
+
+NavigationServerTask_ClearBufferedResumeActivationsTimeoutExpired(
+	UINT32 ViewInstanceId,
+	UINT32 EventType,
+	UINT32 CurrentState,
+	UINT32 TargetState
+	);
+
+NavigationServerTask_ShellNavigationTimeoutExpired(
+	UINT32 ViewInstanceId,
+	UINT32 EventType,
+	UINT32 CurrentState,
+	UINT32 TargetState
+	);
+
+NavigationServerTask_TelemetryResumeTimeoutExpired(
+	UINT32 ViewInstanceId,
+	UINT32 EventType,
+	UINT32 CurrentState,
+	UINT32 TargetState
+	);
+
+NavigationTask_OnDisconnected(
+	UINT32 ViewInstanceId,
+	UINT32 Result
+	);
+
+NavigationServerTask_NavigationTimeoutExpired(
+	UINT32 ViewInstanceId,
+	UINT32 EventType,
+	UINT32 CurrentState,
+	UINT32 TargetState
+	);
+
+ForegroundTaskManager_OnTaskStateChangeFailed(
+	UINT32 ViewInstanceId,
+	UINT32 StateChange,
+	HRESULT Result
+	);
+
+NavigationWindow_OnDisconnected(
+	UINT32 WindowInstanceId,
+	UINT32 Result
+	);
+
+ForegroundTaskManager_ResumePrerequisitePhaseFailed(
+	UINT32 ViewInstanceId,
+	HRESULT Result
+	);
+
+ForegroundTaskManager_ResourcePending(
+	UINT32 ViewInstanceId
+	);
+
+ForegroundTaskManager_LaunchTaskFailed(
+	UINT32 ViewInstanceId,
+	HRESULT Result
+	);
+
+ForegroundTaskManager_ActivationPrerequisitePhaseFailed(
+	UINT32 ViewInstanceId,
+	HRESULT Result
+	);
+
+ForegroundTaskManager_CancelTaskFailed(
+	UINT32 ViewInstanceId,
+	HRESULT Result
+	);
+
+ForegroundTaskManager_AbortTaskFailed(
+	UINT32 ViewInstanceId,
+	HRESULT Result
+	);
+
+ForegroundTaskManager_ResumeTaskFailed(
+	UINT32 ViewInstanceId,
+	HRESULT Result
+	);
+
+ForegroundTaskManager_PauseTaskFailed(
+	UINT32 ViewInstanceId,
+	HRESULT Result
+	);
+

@@ -1,0 +1,57 @@
+ProviderNames:
+	Microsoft.Windows.ConnectionManager
+	Microsoft.Windows.TlgAggregateInternal
+	TelemetryAssert
+	TelemetryAssertDiagTrack
+
+
+
+**** Events *****
+TlgAggregateSummary(
+	GUID Provider,
+	UINT64 NumFlushes,
+	UINT64 MaxEntriesStored,
+	UINT64 TotalEntriesFlushed,
+	UINT32 MaxEntriesFlushed,
+	UINT32 MinEntriesFlushed,
+	UINT32 NumBucketLimitReached,
+	UINT32 NumAllocationFailures,
+	UINT32 NumLargeEventFailures
+	);
+
+WlanAcmDisconnectedNotificationReceived(
+	GUID interfaceGuid,
+	UNICODESTRING profileName,
+	UINT32 reasonCode
+	);
+
+WlanAcmConnectionCompleteNotificationReceived(
+	GUID interfaceGuid,
+	UNICODESTRING profileName,
+	UINT32 reasonCode
+	);
+
+Assert(
+	UINT32 assertVersion,
+	UINT32 rva,
+	UINT32 timestamp,
+	UINT32 imageSize,
+	ANSISTRING imageName,
+	UINT32 count,
+	UINT32 totalHits,
+	UINT32 ModuleCollection,
+	UINT32 GlobalCollection
+	);
+
+CspAvailableConnectionRemoved(
+	GUID interfaceGuid,
+	UINT32 mediaType,
+	UNICODESTRING availableConnectionId
+	);
+
+CspAvailableConnectionAdded(
+	GUID interfaceGuid,
+	UINT32 mediaType,
+	UNICODESTRING availableConnectionId
+	);
+

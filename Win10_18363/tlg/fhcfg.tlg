@@ -1,0 +1,70 @@
+ProviderNames:
+	Microsoft-Windows-FileHistory-ConfigMgr
+	Microsoft-Windows-OneBackup-TargetDiscovery
+	FveDetectTelemetry
+	Microsoft.Windows.TlgAggregateInternal
+
+
+
+**** Events *****
+FHInterfaceUsage(Aggregate)(
+	NULL Count,
+	UNICODESTRING ProcessName,
+	UINT8 InterfaceId
+	);
+
+FileHistoryConfigMgrEvent(
+	UINT32 ConfigurationState,
+	UINT32 ProtectedLibraryCount,
+	UINT32 ProtectedFolderCount,
+	UINT32 ExcludedLibraryCount,
+	UINT32 ExcludedFolderCount,
+	UINT32 DriveType,
+	UINT64 TotalNumberOfBytes,
+	UINT64 FreeBytesAvailable,
+	INT32 IsReassociationPerformed,
+	INT32 IsMigrationPerformed,
+	UINT32 TargetDataRootPathLength
+	);
+
+TargetDiscoveryQueryComplete(
+	BOOL32 IsQueryCancelled,
+	BOOL32 IsValidNetwork,
+	BOOL32 IsNetworkDiscoveryOn,
+	UINT32 NetworkCategory,
+	UINT32 NumOfListAItems,
+	UINT32 NumOfListBItems,
+	UINT32 InternalTargetsCount,
+	UINT32 ExternalTargetsCount,
+	BOOL32 HomeGroupTargetPresent,
+	UINT32 MappedDrivesCount
+	);
+
+FveCheckSuspendBitLockerOnUpgrade(
+	INT32 ShouldSuspendBitlocker,
+	BOOLEAN IsSecureBootBound,
+	BOOLEAN IsOsPreRS1,
+	UINT32 AuthUsesFlags,
+	INT32 hr
+	);
+
+FveRemoveTrustedWimData(
+	INT32 hr
+	);
+
+FveAddTrustedWimData(
+	INT32 hr
+	);
+
+TlgAggregateSummary(
+	GUID Provider,
+	UINT64 NumFlushes,
+	UINT64 MaxEntriesStored,
+	UINT64 TotalEntriesFlushed,
+	UINT32 MaxEntriesFlushed,
+	UINT32 MinEntriesFlushed,
+	UINT32 NumBucketLimitReached,
+	UINT32 NumAllocationFailures,
+	UINT32 NumLargeEventFailures
+	);
+

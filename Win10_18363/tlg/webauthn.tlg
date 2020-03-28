@@ -1,0 +1,173 @@
+ProviderNames:
+	Microsoft.Windows.Security.Fido
+
+
+
+**** Events *****
+WebAuthNCtapGetAssertion(
+	GUID transactionId,
+	UNICODESTRING rpId,
+	UINT32 timeoutMilliseconds,
+	UINT32 cAllowList,
+	UINT32 authenticatorAttachment,
+	UINT32 userVerificationRequirement,
+	HEXINT32 flags,
+	UNICODESTRING providerName,
+	UNICODESTRING devicePath,
+	UNICODESTRING manufacturerName,
+	UNICODESTRING productName,
+	GUID aAGuid,
+	BOOL32 u2fProtocol,
+	BOOL32 webAuthNCall,
+	HRESULT hr
+	);
+
+WebAuthNCtapMakeCredential(
+	GUID transactionId,
+	UNICODESTRING rpId,
+	INT32 coseAlgs,
+	UINT32 timeoutMilliseconds,
+	UINT32 cExcludeList,
+	BOOL32 requireResidentKey,
+	UINT32 authenticatorAttachment,
+	UINT32 userVerificationRequirement,
+	UINT32 attestationConveyancePreference,
+	HEXINT32 flags,
+	UNICODESTRING providerName,
+	UNICODESTRING devicePath,
+	UNICODESTRING manufacturerName,
+	UNICODESTRING productName,
+	GUID aAGuid,
+	BOOL32 u2fProtocol,
+	UNICODESTRING attestationFormatType,
+	UINT32 cX5c,
+	BINARY x5c0,
+	BINARY x5c1,
+	UINT32 attestationDecodeType,
+	UNICODESTRING attestationAlg,
+	BOOL32 webAuthNCall,
+	HRESULT hr
+	);
+
+ActivityStoppedAutomatically(
+	VOID
+	);
+
+WebGetAssertion(
+	INT32 retVal,
+	GUID transactionId,
+	UNICODESTRING rpId,
+	UINT32 version,
+	UINT32 authenticatorAttachment,
+	BOOL32 tryNgc,
+	BOOL32 tryCtap
+	);
+
+WebGetAssertion(
+	INT32 retVal,
+	GUID transactionId,
+	UNICODESTRING rpId,
+	UINT32 version,
+	UINT32 authenticatorAttachment,
+	BOOL32 tryNgc,
+	BOOL32 tryCtap
+	);
+
+WebMakeCredential(
+	INT32 retVal,
+	GUID transactionId,
+	UNICODESTRING rpId,
+	UINT32 version,
+	UINT32 authenticatorAttachment,
+	BOOL32 tryNgc,
+	BOOL32 tryCtap
+	);
+
+WebMakeCredential(
+	INT32 retVal,
+	GUID transactionId,
+	UNICODESTRING rpId,
+	UINT32 version,
+	UINT32 authenticatorAttachment,
+	BOOL32 tryNgc,
+	BOOL32 tryCtap
+	);
+
+UVPlatformAuthenticatorCheck(
+	BOOL32 isAvailable,
+	HRESULT hr
+	);
+
+WebAuthNNgcGetAssertion(
+	GUID transactionId,
+	UNICODESTRING rpId,
+	UINT32 timeoutMilliseconds,
+	UINT32 cAllowList,
+	UINT32 authenticatorAttachment,
+	UINT32 userVerificationRequirement,
+	BOOL32 webAuthNCall,
+	UINT32 eligibleCredentialsCount,
+	UINT32 ngcKeyType,
+	GUID aAGuid,
+	HRESULT hr
+	);
+
+WebAuthNNgcMakeCredential(
+	GUID transactionId,
+	UNICODESTRING rpId,
+	INT32 coseAlgs,
+	UINT32 timeoutMilliseconds,
+	UINT32 cExcludeList,
+	BOOL32 requireResidentKey,
+	UINT32 authenticatorAttachment,
+	UINT32 userVerificationRequirement,
+	UINT32 attestationConveyancePreference,
+	HEXINT32 flags,
+	UNICODESTRING attestationFormatType,
+	UINT32 cX5c,
+	BINARY x5c0,
+	BINARY x5c1,
+	UINT32 attestationDecodeType,
+	UNICODESTRING attestationAlg,
+	BOOL32 webAuthNCall,
+	INT32 selectedAlgorithm,
+	GUID aAGuid,
+	BOOL32 isTpm20,
+	HRESULT createTpmAttestationHResult,
+	HRESULT createSelfAttestationHResult,
+	HRESULT hr
+	);
+
+WebAuthNUsbDeviceError(
+	GUID transactionId,
+	UNICODESTRING devicePath,
+	UNICODESTRING manufacturerName,
+	UNICODESTRING productName,
+	GUID aAGuid,
+	BOOL32 u2fProtocol,
+	UINT32 state,
+	UINT32 deviceStatus,
+	HRESULT hr
+	);
+
+WebAuthNNfcDeviceError(
+	GUID transactionId,
+	UNICODESTRING devicePath,
+	GUID aAGuid,
+	BOOL32 u2fProtocol,
+	UINT32 state,
+	UINT32 deviceStatus,
+	HRESULT hr
+	);
+
+WebAuthNBleDeviceError(
+	GUID transactionId,
+	UNICODESTRING devicePath,
+	UNICODESTRING productName,
+	GUID aAGuid,
+	BOOL32 u2fProtocol,
+	UINT32 state,
+	UINT32 deviceStatus,
+	HRESULT hr
+	);
+

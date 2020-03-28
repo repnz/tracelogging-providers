@@ -1,0 +1,1160 @@
+ProviderNames:
+	Microsoft.Windows.Holographic.OasisBenchmark
+	Microsoft.Windows.Holographic.HolographicExtensions
+	Microsoft.Windows.Holographic.Coordinator
+	Microsoft.Windows.Holographic.Coordinator
+	Microsoft.Windows.Holographic.InputBanner
+	Microsoft.Windows.Holographic.HolographicSessionTracker
+	Microsoft.Windows.Holographic.ViewPorter
+	Microsoft.Windows.Holographic.CrossApartmentBarrier
+	Microsoft.Windows.Holographic.HolographicLoader
+	Microsoft.Windows.Holographic.MixedRealityMode
+	TelemetryAssert
+	TelemetryAssertDiagTrack
+	Microsoft.Windows.Holographic.SlatePositionGuardian
+	Microsoft.Windows.Holographic.SlatePositionGuardianVerbose
+	Microsoft.Windows.Holographic.VirtualMonitorPool
+	Microsoft.Windows.Holographic.Win32SlateActivationLog
+	Microsoft.Windows.Holographic.Install
+	Microsoft.Windows.Holographic.DesktopFodInstaller
+
+
+
+**** Events *****
+BenchmarkDeterminedQualityLevel(
+	UINT32 QualityLevel,
+	UINT32 VendorId,
+	UINT32 DeviceId,
+	UINT32 HMDRefreshRate,
+	BOOL32 IsThrottled
+	);
+
+BenchmarkQueryEnumValueFailed(
+	VOID
+	);
+
+BenchmarkGetQualityOverrideLevel(
+	UINT32 QualityLevel
+	);
+
+BenchmarkDeterminedQualityLevel(
+	UINT32 QualityLevel,
+	UINT32 VendorId,
+	UINT32 DeviceId,
+	UINT32 HMDRefreshRate,
+	BOOL32 IsThrottled
+	);
+
+StartBenchmark(
+	VOID
+	);
+
+BenchmarkCreateProcessFailed(
+	VOID
+	);
+
+BenchmarkTimeout(
+	VOID
+	);
+
+BenchmarkReturnValueNotZero(
+	VOID
+	);
+
+BenchmarkSuccess(
+	VOID
+	);
+
+FallbackError(
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+FallbackError(
+	UINT64 PartA_PrivTags,
+	SIGNED wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+DelayedInitializationBehaviorExecuting(
+	UINT64 PartA_PrivTags
+	);
+
+FailedToAssignForegroundToRealm(
+	BOOLEAN toHolographic,
+	BOOLEAN previousWasHolographicWindow,
+	BOOLEAN currentIsHolographicWindow,
+	UINT32 previousForegroundWindow,
+	UINT32 currentForegroundWindow,
+	UINT64 PartA_PrivTags
+	);
+
+WNFInputContextBehaviorExecuting(
+	INT32 InputContext,
+	UINT64 PartA_PrivTags
+	);
+
+RunBenchmark(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+CloseApplication(
+	UNICODESTRING AppUserModelId,
+	UINT64 PartA_PrivTags
+	);
+
+ShutdownShell(
+	UINT64 PartA_PrivTags
+	);
+
+HmdResetIdleTimer(
+	UINT64 PartA_PrivTags
+	);
+
+ActivityError(
+	UINT64 PartA_PrivTags,
+	SIGNED wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+UninstallPrepCompleteBehaviorExecuting(
+	UINT64 PartA_PrivTags
+	);
+
+DcompHolographicCompositionCreated(
+	UINT64 PartA_PrivTags
+	);
+
+SetActivationRealm(
+	BOOLEAN ToHolographic
+	);
+
+RunBenchmark(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+HmdRemoved(
+	UINT64 PartA_PrivTags
+	);
+
+PauseHolographicDisplayBehaviorExecuting(
+	UINT64 PartA_PrivTags
+	);
+
+HoloHotkeyPressed(
+	BOOLEAN HmdInUse,
+	BOOLEAN ForegroundIs3D,
+	UINT64 PartA_PrivTags
+	);
+
+HmdUseStateRequested(
+	BOOLEAN inUse,
+	UINT64 PartA_PrivTags
+	);
+
+ActivityError(
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+HolographicCoordinatorVerbose(
+	ANSISTRING Message,
+	ANSISTRING Line
+	);
+
+RaiseStatusChanged(
+	UINT32 SysHolographicWindowingEnvironmentState,
+	UINT32 StatusCode,
+	UINT32 SubstatusCode,
+	UINT64 PartA_PrivTags
+	);
+
+SimulatedMonitorPresenceOnMRStartup(
+	BOOLEAN present,
+	UINT64 PartA_PrivTags
+	);
+
+HolographicCompositionDisplayError(
+	INT32 errorCode,
+	UINT64 PartA_PrivTags
+	);
+
+HoloHotkeyResult(
+	UNICODESTRING action
+	);
+
+SetIPDBehaviorExecuting(
+	UINT64 PartA_PrivTags
+	);
+
+StartShell(
+	UINT64 PartA_PrivTags
+	);
+
+ShutdownHolographicShellBehaviorExecuting(
+	UINT64 PartA_PrivTags
+	);
+
+StartingUserIdleTimer(
+	UINT32 IdleTimerMs,
+	UINT64 PartA_PrivTags
+	);
+
+RunBenchmark(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId,
+	BOOLEAN result
+	);
+
+SystemStateUpdated2(
+	BOOLEAN HmdEnumerationComplete,
+	BOOLEAN UserIdleTimerExpired,
+	INT32 DependencyState,
+	BOOLEAN DependencyRecoveryRequired,
+	BOOLEAN CompositorAvailable,
+	BOOLEAN SystemIsOnDefaultDesktop,
+	BOOLEAN PendingHmdIdleTimerReset,
+	INT32 SubscriptionState,
+	BOOLEAN DisplaysAllowIdleTimer,
+	BOOLEAN HolographicDriverDetected,
+	INT32 RetailDemoState,
+	UINT64 PartA_PrivTags
+	);
+
+HoloShellStateUpdated(
+	INT32 HmdState,
+	BOOLEAN SimulationEnabled,
+	INT32 PriorHoloShellState,
+	INT32 NewHoloShellState,
+	UINT64 PartA_PrivTags
+	);
+
+HmdUseStateRequestResult(
+	BOOLEAN approved,
+	UINT64 PartA_PrivTags
+	);
+
+RunQualityBenchmarkBehaviorExecuting(
+	UINT64 PartA_PrivTags
+	);
+
+HolographicDisplayWatcherStarted(
+	UINT64 PartA_PrivTags
+	);
+
+HmdAdded(
+	UINT64 PartA_PrivTags
+	);
+
+StoppingUserIdleTimer(
+	UINT64 PartA_PrivTags
+	);
+
+HmdRunningOnIntegratedGraphics(
+	BOOLEAN integratedGraphics,
+	UINT64 PartA_PrivTags
+	);
+
+SystemStateTracing(
+	ANSISTRING StateInfo,
+	INT32 HmdState,
+	BOOLEAN HmdEnumerationComplete,
+	BOOLEAN SimulationEnabled,
+	BOOLEAN UserIdleTimerExpired,
+	BOOLEAN FirstRunSucceeded,
+	UINT8 DependencyState,
+	BOOLEAN DependencyRecoveryRequired,
+	INT32 BenchmarkRequestState,
+	INT32 UninstallState,
+	BOOLEAN ViewerAppRunning,
+	INT32 HoloShellState,
+	BOOLEAN CompositorAvailable,
+	INT32 HoloSILoadedState,
+	INT32 HolographicDisplayState,
+	BOOLEAN HolographicAppInForeground,
+	BOOLEAN SystemIsOnDefaultDesktop,
+	BOOLEAN SystemStandby,
+	INT32 SessionIdleFlags,
+	INT32 HolographicStateChangeRequest,
+	BOOLEAN PendingHmdIdleTimerReset,
+	INT32 SubscriptionState,
+	BOOLEAN DisplaysAllowIdleTimer,
+	BOOLEAN HolographicDriverDetected,
+	INT32 RetailDemoState
+	);
+
+LaunchViewerWindowBehaviorExecuting(
+	UINT64 PartA_PrivTags
+	);
+
+ResumeHolographicDisplayBehaviorExecuting(
+	UINT64 PartA_PrivTags
+	);
+
+HmdEnumerationCompleted(
+	UINT64 PartA_PrivTags
+	);
+
+HolographicCompositionDisplayCreating(
+	UINT64 PartA_PrivTags
+	);
+
+SimulatedMonitorPresenceChanged(
+	BOOLEAN newPresence,
+	INT32 shellState,
+	UINT64 PartA_PrivTags
+	);
+
+HolographicCompositionDisplayCreated(
+	UINT64 PartA_PrivTags
+	);
+
+HolographicActivationRealmRequestResult(
+	BOOLEAN approved,
+	UINT64 PartA_PrivTags
+	);
+
+NotifyHolographicForegroundLostBehaviorExecuting(
+	UINT64 PartA_PrivTags
+	);
+
+SuspendHolographicShellBehaviorExecuting(
+	UINT64 PartA_PrivTags
+	);
+
+HmdTargetId(
+	BOOLEAN DcompHolographicDisplayIsNull,
+	INT32 HmdVidPnTarget,
+	UINT64 PartA_PrivTags
+	);
+
+SuspendShell(
+	UINT64 PartA_PrivTags
+	);
+
+HmdAddedHelper(
+	GUID displayGuid,
+	GUID defaultDisplayGuid,
+	UINT64 PartA_PrivTags
+	);
+
+SystemStateUpdated(
+	INT32 HmdState,
+	BOOLEAN SimulationEnabled,
+	BOOLEAN FirstRunSucceeded,
+	BOOLEAN ViewerAppRunning,
+	INT32 HoloShellReady,
+	INT32 HolographicComponentsLoaded,
+	INT32 HolographicDisplayState,
+	INT32 BenchmarkRequestState,
+	INT32 HolographicStateChangeRequest,
+	BOOLEAN HolographicAppInForeground,
+	INT32 UninstallState,
+	BOOLEAN SystemStandby,
+	INT32 SessionIdleFlags,
+	UINT64 PartA_PrivTags
+	);
+
+ActivityStoppedAutomatically(
+	VOID
+	);
+
+SuccessfullyAssignedForegroundToRealm(
+	BOOLEAN toHolographic,
+	BOOLEAN previousWasHolographicWindow,
+	BOOLEAN currentIsHolographicWindow,
+	UINT32 previousForegroundWindow,
+	UINT32 currentForegroundWindow
+	);
+
+WNFDisplayContextBehaviorExecuting(
+	INT32 DisplayContext,
+	UINT64 PartA_PrivTags
+	);
+
+HmdRemovedHelper(
+	GUID displayGuid,
+	GUID defaultDisplayGuid,
+	UINT64 PartA_PrivTags
+	);
+
+HmdUserPresenceChanged(
+	BOOLEAN userPresence,
+	UINT64 PartA_PrivTags
+	);
+
+ScreensaverModePausingDisplay(
+	UINT64 PartA_PrivTags
+	);
+
+BootHolographicShellBehaviorExecuting(
+	UINT64 PartA_PrivTags
+	);
+
+RetailDemoState(
+	INT32 MixedRealityRetailDemoState,
+	UNICODESTRING RetailAccessCode,
+	BOOLEAN ProvisionGuardDisabled,
+	UINT64 PartA_PrivTags
+	);
+
+HoloSIUnloaded(
+	UINT64 PartA_PrivTags
+	);
+
+RunBenchmark(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId
+	);
+
+StopUserIdleTimerBehaviorExecuting(
+	UINT64 PartA_PrivTags
+	);
+
+HolographicActivationRealmRequested(
+	UINT64 PartA_PrivTags
+	);
+
+EnabledBehaviors(
+	UNICODESTRING Behaviors,
+	UINT64 PartA_PrivTags
+	);
+
+ResumeHolographicShellBehaviorExecuting(
+	UINT64 PartA_PrivTags
+	);
+
+PublishQualityLevel(
+	UINT32 QualityLevel,
+	UINT64 PartA_PrivTags
+	);
+
+StartUserIdleTimerBehaviorExecuting(
+	UINT64 PartA_PrivTags
+	);
+
+CompositorAvailability(
+	BOOLEAN available,
+	UINT64 PartA_PrivTags
+	);
+
+UserIdleTimerExpired(
+	UINT64 PartA_PrivTags
+	);
+
+RunBenchmark(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	BOOLEAN result
+	);
+
+StartUninstallPrepBehaviorExecuting(
+	UINT64 PartA_PrivTags
+	);
+
+ReleaseHolographicDisplayBehaviorExecuting(
+	UINT64 PartA_PrivTags
+	);
+
+CloseApplicationView(
+	UNICODESTRING AppUserModelId,
+	UINT64 PartA_PrivTags
+	);
+
+ShowFirstRunLaunchDialog(
+	UINT64 PartA_PrivTags
+	);
+
+DependenciesInstallState(
+	BOOLEAN Installed,
+	UINT64 PartA_PrivTags
+	);
+
+BannerNoAction(
+	BOOLEAN IsVisible,
+	INT32 DisplayContext
+	);
+
+DisplayContextWnfReceived(
+	INT32 DisplayContext
+	);
+
+BannerVisibility(
+	BOOLEAN Visible,
+	UINT64 PartA_PrivTags
+	);
+
+DefaultActiveSessionTimeoutUsed(
+	UINT64 PartA_PrivTags
+	);
+
+UsageInfo(
+	UINT64 DurationInS,
+	UINT64 SessionDurationInS,
+	UINT64 ActiveSessionDurationInS,
+	INT32 DisplayContext
+	);
+
+TransitioningShellExperienceToHolographic(
+	UINT32 windowInstanceId,
+	UINT64 PartA_PrivTags
+	);
+
+TransitioningShellExperienceFromHolographic(
+	UINT32 windowInstanceId,
+	UINT64 PartA_PrivTags
+	);
+
+TraceStartProgress(
+	UINT32 eventId,
+	UNICODESTRING eventName
+	);
+
+Stop(
+	UINT64 PartA_PrivTags
+	);
+
+Start(
+	UINT64 PartA_PrivTags
+	);
+
+CrossApartmentViolationDetected(
+	BOOLEAN UTCReplace_AppSessionGuid,
+	UINT32 OwningThread,
+	UINT32 WatchedThread,
+	UINT64 PartA_PrivTags
+	);
+
+CrossApartmentViolationBlocked(
+	BOOLEAN UTCReplace_AppSessionGuid,
+	UINT32 OwningThread,
+	UINT32 WatchedThread,
+	UINT64 PartA_PrivTags
+	);
+
+Suspend(
+	UINT64 PartA_PrivTags
+	);
+
+RegistrationTransfer(
+	UINT32 ProcessId,
+	HEXINT64 ProcessHandle
+	);
+
+CheckingSystemProcesses(
+	UINT32 FirstRun,
+	UINT64 RegisteredProcesses,
+	UINT64 FailedProcesses
+	);
+
+CreateToolhelp32SnapshotFailed(
+	UINT32 Error
+	);
+
+GetProcessIdFromWindowFailure(
+	HEXINT64 View,
+	HRESULT Result
+	);
+
+NotEnoughCores(
+	UINT32 ProcessorCount
+	);
+
+RegisterUserProcess(
+	PID PID,
+	NTSTATUS Result
+	);
+
+RegisterProcessAfterFailure(
+	UNICODESTRING Name,
+	PID PID,
+	NTSTATUS Result
+	);
+
+Register2dApp(
+	UNICODESTRING ProcessName,
+	UINT32 Procid
+	);
+
+WinEventMessageHook(
+	UINT64 message,
+	UINT64 hwnd,
+	UINT32 Procid
+	);
+
+GetLargestValidResourceRequestFailed(
+	NTSTATUS Status
+	);
+
+RmGameModeUnregisterProcessFailed(
+	UNICODESTRING ProcessName,
+	UINT32 ProcessId,
+	HEXINT64 ProcessHandle,
+	NTSTATUS Status
+	);
+
+MixedRealityMode(
+	VOID
+	);
+
+NoSystemProcessesRegistered(
+	VOID
+	);
+
+CheckingShellProcesses(
+	UINT32 FirstRun,
+	UINT64 RegisteredProcesses,
+	UINT64 FailedProcesses
+	);
+
+RegisteredProcess(
+	UINT32 ProcessId
+	);
+
+ShellProcessNoLongerRunning(
+	UNICODESTRING Name,
+	PID PID
+	);
+
+Process32FirstFailed(
+	UINT32 Error
+	);
+
+PerformDelayedInitialization(
+	VOID
+	);
+
+NoFailedSystemProcesses(
+	VOID
+	);
+
+ShutdownServices(
+	VOID
+	);
+
+UnregisterProcess(
+	UINT32 ProcessId,
+	HEXINT64 ProcessHandle,
+	NTSTATUS Status
+	);
+
+MRModeEnabledByOverride(
+	VOID
+	);
+
+SystemProcessNoLongerRunning(
+	UNICODESTRING Name,
+	PID PID
+	);
+
+Register2dAppInList(
+	UINT32 Procid
+	);
+
+GetIsThrottledFailure(
+	HRESULT Result
+	);
+
+RegisterStoppedUserProcess(
+	PID PID,
+	NTSTATUS Result
+	);
+
+NoFailedShellProcesses(
+	VOID
+	);
+
+RegisterProcessFailed(
+	UINT32 ProcessId,
+	HEXINT64 ProcessHandle,
+	NTSTATUS Status
+	);
+
+OpenProcessFailed(
+	UINT32 process,
+	UINT32 Error
+	);
+
+RegisterProcessOnFirstRun(
+	UNICODESTRING Name,
+	PID PID,
+	NTSTATUS Result
+	);
+
+MixedRealityMode(
+	VOID
+	);
+
+ApplyingImposedPosition(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+OnShowWindowPolicyMaximization(
+	HEXINT32 WindowId,
+	UNICODESTRING ProcessName,
+	ANSISTRING showCommand,
+	HEX currentPosition,
+	INT32 left,
+	INT32 top,
+	INT32 right,
+	INT32 bottom,
+	HEX imposedPosition,
+	INT32 left,
+	INT32 top,
+	INT32 right,
+	INT32 bottom,
+	HEX delta,
+	INT32 left,
+	INT32 top,
+	INT32 right,
+	INT32 bottom
+	);
+
+GuardianEnabled(
+	UINT64 PartA_PrivTags
+	);
+
+OwnedWindowNeedsPositionReapplied(
+	HEXINT32 windowId,
+	UNICODESTRING processName,
+	ANSISTRING windowState,
+	BOOL32 dragIsInProgress,
+	HEX currentPosition,
+	INT32 left,
+	INT32 top,
+	INT32 right,
+	INT32 bottom,
+	HEX imposedPosition,
+	INT32 left,
+	INT32 top,
+	INT32 right,
+	INT32 bottom,
+	HEX delta,
+	INT32 left,
+	INT32 top,
+	INT32 right,
+	INT32 bottom
+	);
+
+GuardianDisabled(
+	UINT64 PartA_PrivTags
+	);
+
+ApplyingImposedPosition(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	SIGNED wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+OwnedWindowNeedsMaximization(
+	HEXINT32 windowId,
+	UNICODESTRING processName,
+	ANSISTRING windowState,
+	HEX currentPosition,
+	INT32 left,
+	INT32 top,
+	INT32 right,
+	INT32 bottom,
+	HEX imposedPosition,
+	INT32 left,
+	INT32 top,
+	INT32 right,
+	INT32 bottom,
+	HEX delta,
+	INT32 left,
+	INT32 top,
+	INT32 right,
+	INT32 bottom
+	);
+
+UnownedWindowNeedsRelocation(
+	HEXINT32 WindowId,
+	UNICODESTRING ProcessName,
+	ANSISTRING windowState,
+	HEX finalRect,
+	INT32 left,
+	INT32 top,
+	INT32 right,
+	INT32 bottom
+	);
+
+ActivityIntermediateStop(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+"ApplyingImposedPosition"(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId,
+	HEXINT32 WindowId,
+	UNICODESTRING ProcessName,
+	INT32 Position.Left,
+	INT32 Position.Top,
+	INT32 Position.Right,
+	INT32 Position.Bottom
+	);
+
+EvictingView(
+	UINT32 Window,
+	UNICODESTRING ProcessName,
+	UINT64 PartA_PrivTags
+	);
+
+ActivityError(
+	UINT64 PartA_PrivTags,
+	SIGNED wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+RegisterWindow(
+	UINT32 WindowId,
+	UNICODESTRING ProcessName,
+	INT32 PositionX,
+	INT32 PositionY,
+	INT32 PositionWidth,
+	INT32 PositionHeight,
+	UINT64 PartA_PrivTags
+	);
+
+ForgetWindow(
+	UINT32 WindowId,
+	UNICODESTRING ProcessName,
+	UINT64 PartA_PrivTags
+	);
+
+ActivityStoppedAutomatically(
+	VOID
+	);
+
+PositionAdjustmentGracePeriodStarted(
+	UINT32 Window,
+	UNICODESTRING ProcessName
+	);
+
+AcquisitionOrReservation(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId,
+	ANSISTRING __TlgCV__,
+	UNICODESTRING Type,
+	UINT32 MonitorCount
+	);
+
+MonitorCreationThreadStarting(
+	UINT64 PartA_PrivTags
+	);
+
+AcquisitionOrReservation(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+ActivityStoppedAutomatically(
+	VOID
+	);
+
+CompactAsync(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+ClearAsync(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+MonitorCreationThreadRunning(
+	UINT64 PartA_PrivTags
+	);
+
+MonitorCreationThreadCaughtException(
+	INT32 hresult,
+	UINT64 PartA_PrivTags
+	);
+
+CompactAsync(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+ClearAsync(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+AcquisitionOrReservation(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+ActivityIntermediateStop(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+MonitorCreationThreadStopped(
+	UINT64 PartA_PrivTags
+	);
+
+ClearAsync(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId
+	);
+
+MonitorCreationThreadHasNoMoreIncomingRequests(
+	UINT64 PartA_PrivTags
+	);
+
+CompactAsync(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId
+	);
+
+SlateActivationRecorded(
+	UINT32 Window,
+	UNICODESTRING ProcessName,
+	UINT32 ProcessId,
+	UINT64 PartA_PrivTags
+	);
+
+InstallState(
+	UINT32 installState
+	);
+
+FodCompatibilityCheck(
+	BOOLEAN isFodCompatible,
+	UINT32 fodVersion,
+	UINT32 osVersion
+	);
+
+DependencyInstallState(
+	UNICODESTRING dependencyName,
+	BOOLEAN isInstalled
+	);
+
+GpoQuery(
+	UINT32 PathRetrievedResult,
+	UNICODESTRING PathValue,
+	BOOLEAN isDomainJoined,
+	BOOLEAN isCloudDomainJoined
+	);
+
+FodUninstallHelperCompleted(
+	UINT32 AcquisitionTimeMs,
+	INT32 FodHelperHresult,
+	UINT32 CbsRequiredAction
+	);
+
+FodHelperCompleted(
+	UINT32 AcquisitionTimeMs,
+	INT32 FodHelperHresult,
+	UINT32 CbsRequiredAction
+	);
+
+TraceLoggingInfo(
+	UNICODESTRING traceLoggingMessage
+	);
+
+Assert(
+	UINT32 assertVersion,
+	UINT32 rva,
+	UINT32 timestamp,
+	UINT32 imageSize,
+	ANSISTRING imageName,
+	UINT32 count,
+	UINT32 totalHits,
+	UINT32 ModuleCollection,
+	UINT32 GlobalCollection
+	);
+

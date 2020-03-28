@@ -1,0 +1,44 @@
+ProviderNames:
+	Microsoft.Windows.Setup.SetupClnPlugin
+
+
+
+**** Events *****
+SetupClnPluginPurge(
+	UNICODESTRING PluginName,
+	UNICODESTRING ClientProcess,
+	UINT64 SpaceRequestedToBeFreed,
+	UINT64 SpaceActuallyFreed,
+	UINT32 IsCleanUpAllowedToRun,
+	UINT32 CleanUpBlockCondition,
+	UINT32 CleanupHResult
+	);
+
+SetupClnPluginPurge(
+	UNICODESTRING PluginName,
+	UNICODESTRING ClientProcess,
+	UINT64 SpaceRequestedToBeFreed,
+	UINT64 SpaceActuallyFreed,
+	UINT32 IsCleanUpAllowedToRun,
+	UINT32 CleanUpBlockCondition,
+	UINT32 CleanupHResult,
+	ANSISTRING __TlgCV__
+	);
+
+SetupClnPluginSpaceUsed(
+	UNICODESTRING PluginName,
+	UNICODESTRING ClientProcess,
+	UINT64 SpaceUsed,
+	UINT32 CleanUpBlockCondition,
+	UINT32 CleanupHResult
+	);
+
+SetupClnPluginSpaceUsed(
+	UNICODESTRING PluginName,
+	UNICODESTRING ClientProcess,
+	UINT64 SpaceUsed,
+	UINT32 CleanUpBlockCondition,
+	UINT32 CleanupHResult,
+	ANSISTRING __TlgCV__
+	);
+

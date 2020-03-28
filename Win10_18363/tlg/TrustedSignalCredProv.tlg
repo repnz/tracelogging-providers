@@ -1,0 +1,94 @@
+ProviderNames:
+	Microsoft.Windows.Security.TrustedSignal
+
+
+
+**** Events *****
+FailureInfo(
+	HRESULT hResult,
+	ANSISTRING file,
+	UINT32 lineNumber,
+	UNICODESTRING message
+	);
+
+Info(
+	HRESULT hResult,
+	ANSISTRING file,
+	UINT32 lineNumber,
+	UNICODESTRING message
+	);
+
+TrustedSignalSetUserSid(
+	UNICODESTRING userSid
+	);
+
+TrustedSignalSetAuthenticationInfo(
+	BOOLEAN acceptingCred
+	);
+
+TrustedSignalSetDisplayState(
+	HEXINT32 previousState,
+	HEXINT32 currentState
+	);
+
+ActivityStoppedAutomatically(
+	VOID
+	);
+
+TrustedSignalsNotFound(
+	ANSISTRING __TlgCV__
+	);
+
+TrustedSignalVerified(
+	INT64 ruleId,
+	UNICODESTRING pluginName,
+	ANSISTRING __TlgCV__
+	);
+
+WaitForWorkStageChangeEvent(
+	UINT32 WaitRet
+	);
+
+UpdateTrustedSignalStatus(
+	UNICODESTRING message,
+	ANSISTRING __TlgCV__
+	);
+
+StopTrustedSignalQuery(
+	UNICODESTRING userSid,
+	ANSISTRING __TlgCV__
+	);
+
+SubmitTrustedSignalCredentials(
+	UNICODESTRING userSid,
+	ANSISTRING __TlgCV__
+	);
+
+TrustedSignalPluginData(
+	INT64 ruleId,
+	UNICODESTRING pluginName,
+	ANSISTRING __TlgCV__
+	);
+
+TrustedSignalPluginCount(
+	UINT32 numRules,
+	ANSISTRING __TlgCV__
+	);
+
+StartTrustedSignalQuery(
+	UNICODESTRING userSid,
+	ANSISTRING __TlgCV__
+	);
+
+TrustedSignalWorkerStop(
+	VOID
+	);
+
+TrustedSignalWorkerStart(
+	VOID
+	);
+
+TrustedSignalGetSerialization(
+	UINT32 serializationDataSize
+	);
+

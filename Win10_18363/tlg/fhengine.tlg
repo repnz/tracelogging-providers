@@ -1,0 +1,61 @@
+ProviderNames:
+	Microsoft.Windows.FileHistory.Engine
+
+
+
+**** Events *****
+FileHistoryBackupIncUsnJournalScan(
+	INT32 HResult,
+	INT32 ConsecutiveELFailureCount
+	);
+
+FileHistoryBackupSessionEvent(
+	UINT32 BackupType,
+	INT64 BackupSessionDuration,
+	UINT64 BackupFrequency,
+	INT32 InitializationStatus,
+	INT64 TimeSinceLastBackup,
+	INT64 CatalogAge,
+	UINT64 ApproximateCatalogSize,
+	INT64 SearchIndexRebuildTime,
+	INT32 Phase1Status,
+	INT64 Phase1Duration,
+	INT32 IsFullUsnJournalScan,
+	INT32 CreatedFileCount,
+	INT32 ModifiedFileCount,
+	INT32 RenamedFileCount,
+	INT32 DeletedFileCount,
+	INT32 EncryptedFileCount,
+	INT32 TotalUpdatedFileCount,
+	INT32 Phase2Status,
+	INT64 Phase2Duration,
+	INT32 TargetStatus,
+	INT32 TargetSupportsEncryption,
+	UINT64 TargetThroughput,
+	INT64 TargetAbsentTime,
+	UINT64 TargetTotalSpace,
+	UINT64 TargetFreeSpace,
+	INT32 FilesCopiedToTarget,
+	INT32 FilesCopiedToStaging,
+	INT32 RandomFailedCopyStatus,
+	INT64 BytesCopiedToTarget,
+	INT64 BytesCopiedToStaging,
+	INT32 OplockBackoffCount,
+	INT32 SharingViolationCount,
+	INT64 OldestUnprotectedItemAge,
+	INT64 OldestPartiallyProtectedItemAge,
+	UINT64 StagingVolumeTotalSpace,
+	UINT64 StagingVolumeFreeSpace,
+	INT32 UnstagedFileCount,
+	UINT32 MinimumRetentionAge,
+	INT32 RetiredBackupSetCount,
+	INT32 RetiredFileCount,
+	INT64 RetiredFileSize,
+	UINT32 BackupCycleStopReason,
+	INT32 FinalizationStatus,
+	UINT64 UsedBytesInStaging,
+	UINT64 TotalBytesInStaging,
+	UINT64 UsedBytesOnDefaultTarget,
+	UINT64 TotalBytesOnDefaultTarget
+	);
+

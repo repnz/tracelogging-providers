@@ -1,0 +1,265 @@
+ProviderNames:
+	Microsoft.Windows.Audio.SpatializerApo
+	Microsoft.Windows.Analog.Speech
+	Microsoft.Windows.Audio.Spatial.Metadata
+
+
+
+**** Events *****
+CSpatializer::AddRef(
+	UINT32 refcount
+	);
+
+CSpatializer::Release(
+	UINT32 refcount
+	);
+
+FallbackError(
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+FallbackError(
+	UINT64 PartA_PrivTags,
+	SIGNED wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+CSpatializer_UninitializePending(
+	VOID
+	);
+
+CSpatializer_VacClientParameterUpdateContention(
+	VOID
+	);
+
+CSpatializer_EOSPending(
+	VOID
+	);
+
+CSpatializer::TryEnableSpatialization(
+	UINT32 InitState
+	);
+
+CSpatializer::ControlSpatialization_NoWnfRecord(
+	UINT32 WindowId,
+	UINT32 ProcessId
+	);
+
+CSpatializer::ControlSpatialization(
+	BOOL32 EnableSpatializer,
+	BOOL32 PreviousEnabledState,
+	BOOL32 ExclusiveModeActive,
+	UINT32 WindowId,
+	UINT32 ProcessId
+	);
+
+CSpatializer::SetWindowId(
+	UINT32 WindowId,
+	UINT32 ProcessId
+	);
+
+LockedForProcess_UnlockForProcess_Suppressed(
+	UINT32 numSuppressed,
+	UINT32 intervalInSeconds
+	);
+
+LockedForProcess_UnlockForProcess(
+	UINT64 eventTime,
+	UINT32 ProcessId,
+	UINT32 ViewId,
+	GUID AudioClientGuidId,
+	UINT32 DisabledByVacCount,
+	UINT32 VacClientContentionCount,
+	UINT32 EnabledCount,
+	UINT32 DisabledCount
+	);
+
+LockedForProcess_UnlockForProcess(
+	UINT64 eventTime,
+	UINT32 ProcessId,
+	UINT32 ViewId,
+	GUID AudioClientGuidId,
+	UINT32 DisabledByVacCount,
+	UINT32 VacClientContentionCount,
+	UINT32 EnabledCount,
+	UINT32 DisabledCount
+	);
+
+LockedForProcess_LockForProcess_Suppressed(
+	UINT32 numSuppressed,
+	UINT32 intervalInSeconds
+	);
+
+LockedForProcess_LockForProcess(
+	UINT64 eventTime,
+	UINT32 ProcessId,
+	UINT32 ViewId,
+	GUID AudioClientGuidId,
+	UINT32 Channels,
+	UINT32 SampleRate,
+	UINT32 MaxFrameCount
+	);
+
+LockedForProcess_LockForProcess(
+	UINT64 eventTime,
+	UINT32 ProcessId,
+	UINT32 ViewId,
+	GUID AudioClientGuidId,
+	UINT32 Channels,
+	UINT32 SampleRate,
+	UINT32 MaxFrameCount
+	);
+
+CSpatializer_Uninitialized(
+	VOID
+	);
+
+CSpatializer::InitializeInternal(
+	VOID
+	);
+
+FDR: Unlikely Session ID found(
+	GUID BadGuid
+	);
+
+LockedForProcess(
+	UINT64 eventTime,
+	BOOL32 fImplicitStart,
+	NOPRINT wilActivity,
+	UINT32 threadId
+	);
+
+LockedForProcess(
+	UINT64 eventTime,
+	BOOL32 fImplicitStart,
+	NOPRINT wilActivity,
+	UINT32 threadId
+	);
+
+LockedForProcess(
+	UINT64 eventTime,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+LockedForProcess(
+	UINT64 eventTime,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+LockedForProcess_CoalesceFailure(
+	HRESULT hr
+	);
+
+LockedForProcess_CoalescedSession(
+	HRESULT hr,
+	UINT32 length,
+	JSON sessionJson
+	);
+
+VSSUnlockForProcess(
+	INT32 TelemetryVersion,
+	HRESULT Hr,
+	INT32 InitState,
+	UINT32 SpatialRenderingMode,
+	UINT32 PassthroughCount,
+	UINT32 PassthroughSilenceCount,
+	UINT32 ASARProcessingPassCount,
+	UINT32 ASARProcessingPassSilenceCount,
+	UINT32 WriteToASARErrorCount,
+	UINT32 WriteSilenceToASARErrorCount,
+	UINT32 InvalidBufferErrorCount,
+	DOUBLE Duration
+	);
+
+VSSLockForProcess(
+	INT32 TelemetryVersion,
+	HRESULT Hr,
+	UINT32 LineNumber,
+	INT32 InitState,
+	UINT32 SpatialRenderingMode,
+	BOOLEAN VSSAllowed,
+	BOOLEAN VSSAllowedZeroFilled,
+	UINT32 SampleRate,
+	BOOLEAN IsSparseUpmixChannelMap,
+	UINT32 ChannelCount,
+	UINT32 ChannelMask,
+	UINT32 OutChannelCount,
+	UINT32 MaxFrameCount,
+	UINT32 MaxFrameCountForASAR
+	);
+
+VSSInitialize(
+	INT32 TelemetryVersion,
+	HRESULT Hr,
+	UINT32 LineNumber,
+	ANSISTRING Code
+	);
+
+BaseAsar_UninitializePending(
+	VOID
+	);
+
+CASARSampleBuffer::EnableASAROutput(
+	UINT32 m_nextObjectId
+	);
+
+AssertFailure(
+	ANSISTRING Function,
+	INT32 Line,
+	HRESULT ResultCode
+	);
+
+Error(
+	ANSISTRING Function,
+	INT32 Line,
+	HRESULT ResultCode
+	);
+
+Unknown SpatialAudioEncoderId(
+	ANSISTRING Function,
+	INT32 Line,
+	HRESULT ResultCode
+	);
+
+SpatialAudioMetadataDictionary::RuntimeClassInitialize(
+	HEXINT64 this,
+	HRESULT HResult,
+	GUID FormatId,
+	UNICODESTRING EndPointId
+	);
+

@@ -1,0 +1,56 @@
+ProviderNames:
+	PenTraceLoggingProvider
+
+
+
+**** Events *****
+WISPTISPen(
+	ANSISTRING ContextTransformRect
+	);
+
+WISPTISPen(
+	ANSISTRING InitVirtualScreenRect
+	);
+
+WISPTISPen(
+	ANSISTRING FXYAdjust
+	);
+
+WISPTISPen(
+	ANSISTRING MatchingScreenRect
+	);
+
+InputInteractionUsage(
+	UINT32 InputSource,
+	UINT32 ComponentSource,
+	UNICODESTRING AppName,
+	UINT32 PanCount,
+	UINT32 ZoomCount,
+	UINT32 RotateCount,
+	UINT32 PressAndTapCount,
+	UINT32 ManipulationCount,
+	UINT32 MouseWheelManipulationCount,
+	UINT32 HoldCount,
+	UINT32 TapCount,
+	UINT32 DoubleTapCount,
+	UINT32 SecondaryTapCount,
+	UINT32 FlickCount,
+	UINT32 HoverCount,
+	UINT32 DragCount,
+	UINT32 RightDragCount,
+	UINT32 CrossSlideCount,
+	UINT32 InkStrokeCount
+	);
+
+GestureDetails(
+	UNICODESTRING PackageName,
+	UNICODESTRING AppName,
+	UINT32 InputSource,
+	UINT32 ComponentSource,
+	UINT32 GestureId,
+	UINT32 ZoomOrSubGesture,
+	UINT32 RotationDegrees,
+	UINT32 PanX,
+	UINT32 PanY
+	);
+

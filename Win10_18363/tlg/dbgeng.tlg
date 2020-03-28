@@ -1,0 +1,131 @@
+ProviderNames:
+	Microsoft.Windows.DebuggingTools.DebuggerEngine
+	TelemetryAssert
+	TelemetryAssertDiagTrack
+
+
+
+**** Events *****
+ActivityStoppedAutomatically(
+	VOID
+	);
+
+CabSessionStarted(
+	UNICODESTRING CabGuid,
+	INT32 CabType,
+	GUID FeatureSessionId
+	);
+
+EntireCommandLineEndError(
+	UINT8 ErrorCode
+	);
+
+SingleCommandEnd2(
+	INT64 CommandSeqNumber,
+	UNICODESTRING CommandName,
+	UNICODESTRING SingleCommandName,
+	UNICODESTRING FullSingleCommandName,
+	UNICODESTRING CommandSource,
+	BOOL32 IsExtension,
+	BOOL32 IsBuiltInExtension,
+	BOOL32 IsNotRightContext,
+	BOOL32 IsParseSuccessful,
+	BOOL32 IsExecuteSuccessful,
+	UNICODESTRING CurrentFrameIsOptimized
+	);
+
+SingleCommandBegin(
+	VOID
+	);
+
+LoggingKernelDebuggerTransportInfo(
+	UNICODESTRING TransportName,
+	UNICODESTRING TransportParameters
+	);
+
+DataModelEnumDebugSymbolError(
+	UNICODESTRING FunctionName,
+	UNICODESTRING ModuleName,
+	UNICODESTRING SymbolName,
+	UNICODESTRING SymbolType
+	);
+
+iDNAReaderVersion(
+	INT8 SmartCpuVersion
+	);
+
+LoggingClientInfo(
+	UNICODESTRING CurrentVersion,
+	UNICODESTRING CurrentProcessName,
+	UNICODESTRING Bitness,
+	UNICODESTRING CurrentCommandline,
+	BOOL32 IsInternalBuild
+	);
+
+LoggingDebuggedExeName(
+	UNICODESTRING DebuggedExeName
+	);
+
+FeatureUsed(
+	UNICODESTRING Product,
+	UNICODESTRING Feature,
+	UNICODESTRING Action,
+	GUID FeatureSessionId
+	);
+
+TargetInfo(
+	UINT32 Class,
+	UINT32 Qualifier
+	);
+
+LogUnexpectedGuestStepBreak(
+	UINT32 ExceptionCode,
+	UINT64 BreakpointAddress,
+	UNICODESTRING BreakpointMachineName,
+	UNICODESTRING TargetMachineName,
+	UNICODESTRING EffectiveMachineName
+	);
+
+LogQueryUsage(
+	UNICODESTRING QuerySource,
+	INT64 CommandSeqNumber
+	);
+
+EngineSessionEnd(
+	VOID
+	);
+
+EngineSession(
+	VOID
+	);
+
+TtdReplayStatisticsExpected(
+	VOID
+	);
+
+TtdReplayStatistic(
+	ANSISTRING StatisticName,
+	INT64 Count,
+	DOUBLE Sum,
+	DOUBLE StandardDeviation,
+	DOUBLE Maximum,
+	DOUBLE Minimum
+	);
+
+TtdReplayStatistic(
+	ANSISTRING StatisticName,
+	INT64 Count
+	);
+
+Assert(
+	UINT32 assertVersion,
+	UINT32 rva,
+	UINT32 timestamp,
+	UINT32 imageSize,
+	ANSISTRING imageName,
+	UINT32 count,
+	UINT32 totalHits,
+	UINT32 ModuleCollection,
+	UINT32 GlobalCollection
+	);
+

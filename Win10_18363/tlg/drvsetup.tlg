@@ -1,0 +1,82 @@
+ProviderNames:
+	Microsoft.Windows.DriverInstall
+	Microsoft.Windows.DriverInstall
+	TelemetryAssert
+	TelemetryAssertDiagTrack
+
+
+
+**** Events *****
+NewDevDriverRecoveryEnd(
+	UINT64 PartA_PrivTags,
+	UNICODESTRING RecoveryIdentifier,
+	UINT32 MethodId,
+	UINT32 UpdateStatus,
+	BOOL32 RebootRequired,
+	WIN32ERROR Error
+	);
+
+NewDevDriverRecoveryStart(
+	UINT64 PartA_PrivTags,
+	UNICODESTRING RecoveryIdentifier,
+	UINT32 RecoveryMethodId,
+	UNICODESTRING DriverPackageIds,
+	UINT32 DriverPackageIdCount
+	);
+
+DriverPackageDelete(
+	UINT64 PartA_PrivTags,
+	UNICODESTRING DriverInfName,
+	UNICODESTRING DriverPackageId,
+	UNICODESTRING DriverVersion,
+	FILETIME DriverDate,
+	GUID ClassGuid,
+	UINT32 ConfigurableFlags,
+	UINT32 StatusFlags,
+	UINT32 UnconfigureFlags,
+	UNICODESTRING SubmissionId,
+	WIN32ERROR ReturnCode
+	);
+
+NewDevInstallDeviceEnd(
+	UNICODESTRING DeviceInstanceId,
+	UNICODESTRING FlightId,
+	UNICODESTRING WuTargetedHardwareId,
+	UNICODESTRING WuUntargetedHardwareId,
+	UINT32 InstallFlags,
+	FILETIME InstallDate,
+	BOOL32 RebootRequired,
+	BOOL32 DriverUpdated,
+	BOOL32 RollbackPossible,
+	WIN32ERROR Error
+	);
+
+NewDevInstallDeviceStart(
+	UNICODESTRING DeviceInstanceId,
+	UNICODESTRING LastDriverInfName,
+	FILETIME LastInstallDate,
+	FILETIME FirstInstallDate,
+	FILETIME LastDriverDate,
+	UNICODESTRING LastDriverVersion,
+	UNICODESTRING LastMatchingDeviceId,
+	UNICODESTRING LastSubmissionId,
+	BOOL32 LastDriverInbox,
+	HEXINT32 LastProblem,
+	NTSTATUS LastProblemStatus,
+	FILETIME LastFirmwareDate,
+	UNICODESTRING LastFirmwareVersion,
+	UNICODESTRING LastFirmwareRevision
+	);
+
+Assert(
+	UINT32 assertVersion,
+	UINT32 rva,
+	UINT32 timestamp,
+	UINT32 imageSize,
+	ANSISTRING imageName,
+	UINT32 count,
+	UINT32 totalHits,
+	UINT32 ModuleCollection,
+	UINT32 GlobalCollection
+	);
+

@@ -1,0 +1,91 @@
+ProviderNames:
+	Microsoft.Windows.Analog.SpatialStore
+	Microsoft.Windows.Analog.SpatialStore
+
+
+
+**** Events *****
+MacroError(
+	HRESULT HRESULT,
+	ANSISTRING File,
+	UINT32 LineNumber,
+	ANSISTRING Code
+	);
+
+LogInfo(
+	UNICODESTRING loggingMessage
+	);
+
+FallbackError(
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+FallbackError(
+	UINT64 PartA_PrivTags,
+	SIGNED wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+WipeDatabaseDirectory(
+	UNICODESTRING path,
+	INT32 hrReason,
+	INT32 hrMove,
+	INT32 hrDelete
+	);
+
+MoveAndDeleteDirectoryRecursiveViaSiblingNoThrow(
+	UNICODESTRING PATH,
+	UNICODESTRING SiblingDeleteFolderName,
+	INT32 hrMove,
+	INT32 hrDelete
+	);
+
+RemoveDirectoryRecursive(
+	UNICODESTRING PATH,
+	INT32 HRESULT,
+	INT32 deleteCount
+	);
+
+CheckDatabaseVersionFileExists(
+	UNICODESTRING PATH,
+	INT32 HRESULT,
+	BOOLEAN pDatabaseVersionFileExists
+	);
+
+CheckDatabaseEdbFileExists(
+	UNICODESTRING PATH,
+	INT32 HRESULT,
+	BOOLEAN databaseEdbFileExists
+	);
+

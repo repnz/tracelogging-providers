@@ -1,0 +1,547 @@
+ProviderNames:
+	Microsoft.Windows.Cellcore.Lpa.WinRT
+
+
+
+**** Events *****
+StopWatcher(
+	ANSISTRING Component,
+	ANSISTRING Location
+	);
+
+StartWatcher(
+	ANSISTRING Component,
+	ANSISTRING Location
+	);
+
+TryCreateESimWatcher(
+	ANSISTRING Component,
+	ANSISTRING Location,
+	HRESULT hr,
+	BOOL32 isAuthorized
+	);
+
+TryCreateESimWatcher(
+	ANSISTRING Component,
+	ANSISTRING Location,
+	HRESULT hr,
+	BOOL32 isAuthorized
+	);
+
+AsyncOperationFinished(
+	ANSISTRING Component,
+	ANSISTRING Location,
+	HRESULT hr
+	);
+
+AsyncOperationFinished(
+	ANSISTRING Component,
+	ANSISTRING Location,
+	HRESULT hr
+	);
+
+AsyncOperationFinished(
+	ANSISTRING Component,
+	ANSISTRING Location,
+	HRESULT hr,
+	UINT32 transactionId
+	);
+
+AsyncOperationStarted(
+	ANSISTRING Component,
+	ANSISTRING Location,
+	HRESULT hr,
+	UINT32 transactionId
+	);
+
+AsyncOperationStarted(
+	ANSISTRING Component,
+	ANSISTRING Location,
+	HRESULT hr,
+	UINT32 transactionId
+	);
+
+EventListBad(
+	ANSISTRING Component,
+	ANSISTRING Location,
+	HRESULT hrTemp,
+	UINT32 transactionId
+	);
+
+EventListReady(
+	ANSISTRING Component,
+	ANSISTRING Location,
+	UINT32 eventCount
+	);
+
+MetadataNotReady(
+	ANSISTRING Component,
+	ANSISTRING Location,
+	HRESULT hrTemp,
+	UINT32 transactionId
+	);
+
+MetadataReady(
+	ANSISTRING Component,
+	ANSISTRING Location,
+	UNICODESTRING ProfileId
+	);
+
+MetadataReady(
+	ANSISTRING Component,
+	ANSISTRING Location,
+	UNICODESTRING ProfileId
+	);
+
+AsyncOperationFinished(
+	ANSISTRING Component,
+	ANSISTRING Location,
+	UINT32 transactionId,
+	HRESULT pAsyncResult->hrResult,
+	UINT32 errorDetail,
+	UINT32 policyViolation
+	);
+
+AsyncOperationFinished(
+	ANSISTRING Component,
+	ANSISTRING Location,
+	UINT32 transactionId,
+	HRESULT pAsyncResult->hrResult,
+	UINT32 errorDetail,
+	UINT32 policyViolation
+	);
+
+LpasvcInitializationFailure(
+	ANSISTRING Component,
+	ANSISTRING Location,
+	HRESULT hr
+	);
+
+ESimWatcherFailure(
+	ANSISTRING Component,
+	ANSISTRING Location,
+	HRESULT hr,
+	UNICODESTRING eSimID
+	);
+
+ESimUpdated(
+	ANSISTRING Component,
+	ANSISTRING Location,
+	BOOL32 isNew,
+	UNICODESTRING eSimId
+	);
+
+AuthModeReceived(
+	ANSISTRING Component,
+	ANSISTRING Location,
+	UINT32 pServiceInfo->userAuthMode
+	);
+
+AuthResultReceived(
+	ANSISTRING Component,
+	ANSISTRING Location,
+	HRESULT pAsyncResult->hrResult
+	);
+
+ProfileWatcherFailure(
+	ANSISTRING Component,
+	ANSISTRING Location,
+	HRESULT hr,
+	UNICODESTRING eSimID,
+	UNICODESTRING profileID
+	);
+
+MetadataRemoved(
+	ANSISTRING Component,
+	ANSISTRING Location,
+	UNICODESTRING EID,
+	UNICODESTRING profileId
+	);
+
+MetadataReplaced(
+	ANSISTRING Component,
+	ANSISTRING Location,
+	UNICODESTRING EID,
+	UNICODESTRING profileId,
+	UNICODESTRING newProfileId
+	);
+
+IgnoreNotification(
+	ANSISTRING Component,
+	ANSISTRING Location,
+	UINT32 type,
+	UINT32 pESimDetails->dwParams
+	);
+
+ProfileMetadataEventFailure(
+	ANSISTRING Component,
+	ANSISTRING Location,
+	HRESULT hr,
+	UNICODESTRING eSimID,
+	UNICODESTRING profileID
+	);
+
+IgnoreNotification(
+	ANSISTRING Component,
+	ANSISTRING Location,
+	UINT32 type,
+	UINT32 (pProfileDetails->dwParams),
+	UINT32 (pProfileDetails->info.dwParams)
+	);
+
+get_State(
+	ANSISTRING Component,
+	ANSISTRING Location,
+	HRESULT hr,
+	UINT32 State
+	);
+
+get_State(
+	ANSISTRING Component,
+	ANSISTRING Location,
+	HRESULT hr,
+	UINT32 State
+	);
+
+get_ProviderName(
+	ANSISTRING Component,
+	ANSISTRING Location,
+	HRESULT hr,
+	UNICODESTRING ProviderName
+	);
+
+get_ProviderName(
+	ANSISTRING Component,
+	ANSISTRING Location,
+	HRESULT hr,
+	UNICODESTRING ProviderName
+	);
+
+get_ProviderId(
+	ANSISTRING Component,
+	ANSISTRING Location,
+	HRESULT hr,
+	UNICODESTRING ProviderId
+	);
+
+get_ProviderId(
+	ANSISTRING Component,
+	ANSISTRING Location,
+	HRESULT hr,
+	UNICODESTRING ProviderId
+	);
+
+get_ProviderIcon(
+	ANSISTRING Component,
+	ANSISTRING Location,
+	HRESULT hr
+	);
+
+get_ProviderIcon(
+	ANSISTRING Component,
+	ANSISTRING Location,
+	HRESULT hr
+	);
+
+get_ProfileId(
+	ANSISTRING Component,
+	ANSISTRING Location,
+	HRESULT hr,
+	UNICODESTRING ProfileId
+	);
+
+get_ProfileId(
+	ANSISTRING Component,
+	ANSISTRING Location,
+	HRESULT hr,
+	UNICODESTRING ProfileId
+	);
+
+get_Policies(
+	ANSISTRING Component,
+	ANSISTRING Location,
+	HRESULT hr,
+	UINT32 dwPolicies
+	);
+
+get_Policies(
+	ANSISTRING Component,
+	ANSISTRING Location,
+	HRESULT hr,
+	UINT32 dwPolicies
+	);
+
+get_IsConfirmationCodeRequired(
+	ANSISTRING Component,
+	ANSISTRING Location,
+	HRESULT hr,
+	BOOL32 IsConfirmationCodeRequired
+	);
+
+get_IsConfirmationCodeRequired(
+	ANSISTRING Component,
+	ANSISTRING Location,
+	HRESULT hr,
+	BOOL32 IsConfirmationCodeRequired
+	);
+
+Discovery(
+	ANSISTRING Component,
+	ANSISTRING Location,
+	UNICODESTRING serverAddress,
+	UNICODESTRING matchingId,
+	HRESULT hr
+	);
+
+Discovery(
+	ANSISTRING Component,
+	ANSISTRING Location,
+	UNICODESTRING serverAddress,
+	UNICODESTRING matchingId,
+	HRESULT hr
+	);
+
+Reset(
+	ANSISTRING Component,
+	ANSISTRING Location,
+	HRESULT hr
+	);
+
+Reset(
+	ANSISTRING Component,
+	ANSISTRING Location,
+	HRESULT hr
+	);
+
+Download(
+	ANSISTRING Component,
+	ANSISTRING Location,
+	HRESULT hr,
+	UNICODESTRING strActivationCode
+	);
+
+Download(
+	ANSISTRING Component,
+	ANSISTRING Location,
+	HRESULT hr,
+	UNICODESTRING strActivationCode
+	);
+
+DeleteProfile(
+	ANSISTRING Component,
+	ANSISTRING Location,
+	HRESULT hr,
+	UNICODESTRING strActivationCode
+	);
+
+DeleteProfile(
+	ANSISTRING Component,
+	ANSISTRING Location,
+	HRESULT hr,
+	UNICODESTRING strActivationCode
+	);
+
+get_ModemDeviceId(
+	ANSISTRING Component,
+	ANSISTRING Location,
+	HRESULT hr,
+	UNICODESTRING DeviceId,
+	GUID adapterId
+	);
+
+get_ModemDeviceId(
+	ANSISTRING Component,
+	ANSISTRING Location,
+	HRESULT hr,
+	UNICODESTRING DeviceId,
+	GUID adapterId
+	);
+
+get_FirmwareVersion(
+	ANSISTRING Component,
+	ANSISTRING Location,
+	HRESULT hr,
+	UNICODESTRING Version
+	);
+
+get_FirmwareVersion(
+	ANSISTRING Component,
+	ANSISTRING Location,
+	HRESULT hr,
+	UNICODESTRING Version
+	);
+
+get_Eid(
+	ANSISTRING Component,
+	ANSISTRING Location,
+	HRESULT hr,
+	UNICODESTRING EID
+	);
+
+get_Eid(
+	ANSISTRING Component,
+	ANSISTRING Location,
+	HRESULT hr,
+	UNICODESTRING EID
+	);
+
+get_AvailableMemoryInBytes(
+	ANSISTRING Component,
+	ANSISTRING Location,
+	HRESULT hr,
+	UINT32 pESimDetails->dwNonVolatileMemoryAvailable
+	);
+
+get_AvailableMemoryInBytes(
+	ANSISTRING Component,
+	ANSISTRING Location,
+	HRESULT hr,
+	UINT32 pESimDetails->dwNonVolatileMemoryAvailable
+	);
+
+ErrorWithoutReason(
+	ANSISTRING Component,
+	ANSISTRING Location,
+	HRESULT pAsyncResult->hrResult
+	);
+
+SetNickName(
+	ANSISTRING Component,
+	ANSISTRING Location,
+	HRESULT hr,
+	UNICODESTRING ProfileId,
+	UNICODESTRING strNickName
+	);
+
+SetNickName(
+	ANSISTRING Component,
+	ANSISTRING Location,
+	HRESULT hr,
+	UNICODESTRING ProfileId,
+	UNICODESTRING strNickName
+	);
+
+Enable(
+	ANSISTRING Component,
+	ANSISTRING Location,
+	UNICODESTRING ProfileId,
+	HRESULT hr
+	);
+
+Enable(
+	ANSISTRING Component,
+	ANSISTRING Location,
+	UNICODESTRING ProfileId,
+	HRESULT hr
+	);
+
+Disable(
+	ANSISTRING Component,
+	ANSISTRING Location,
+	UNICODESTRING ProfileId,
+	HRESULT hr
+	);
+
+Disable(
+	ANSISTRING Component,
+	ANSISTRING Location,
+	UNICODESTRING ProfileId,
+	HRESULT hr
+	);
+
+get_State(
+	ANSISTRING Component,
+	ANSISTRING Location,
+	HRESULT hr,
+	UNICODESTRING ProfileId,
+	UINT32 State
+	);
+
+get_State(
+	ANSISTRING Component,
+	ANSISTRING Location,
+	HRESULT hr,
+	UNICODESTRING ProfileId,
+	UINT32 State
+	);
+
+get_ProviderName(
+	ANSISTRING Component,
+	ANSISTRING Location,
+	HRESULT hr,
+	UNICODESTRING ProfileId,
+	UNICODESTRING ProviderName
+	);
+
+get_ProviderName(
+	ANSISTRING Component,
+	ANSISTRING Location,
+	HRESULT hr,
+	UNICODESTRING ProfileId,
+	UNICODESTRING ProviderName
+	);
+
+get_ProviderId(
+	ANSISTRING Component,
+	ANSISTRING Location,
+	HRESULT hr,
+	UNICODESTRING ProfileId,
+	UNICODESTRING ProviderId
+	);
+
+get_ProviderId(
+	ANSISTRING Component,
+	ANSISTRING Location,
+	HRESULT hr,
+	UNICODESTRING ProfileId,
+	UNICODESTRING ProviderId
+	);
+
+get_Policies(
+	ANSISTRING Component,
+	ANSISTRING Location,
+	HRESULT hr,
+	UNICODESTRING ProfileId,
+	UINT32 dwPolicies
+	);
+
+get_Policies(
+	ANSISTRING Component,
+	ANSISTRING Location,
+	HRESULT hr,
+	UNICODESTRING ProfileId,
+	UINT32 dwPolicies
+	);
+
+get_NickName(
+	ANSISTRING Component,
+	ANSISTRING Location,
+	HRESULT hr,
+	UNICODESTRING ProfileId,
+	UNICODESTRING NickName
+	);
+
+get_NickName(
+	ANSISTRING Component,
+	ANSISTRING Location,
+	HRESULT hr,
+	UNICODESTRING ProfileId,
+	UNICODESTRING NickName
+	);
+
+get_Class(
+	ANSISTRING Component,
+	ANSISTRING Location,
+	HRESULT hr,
+	UNICODESTRING ProfileId,
+	UINT32 Class
+	);
+
+get_Class(
+	ANSISTRING Component,
+	ANSISTRING Location,
+	HRESULT hr,
+	UNICODESTRING ProfileId,
+	UINT32 Class
+	);
+

@@ -1,0 +1,34 @@
+ProviderNames:
+	Microsoft.Windows.DebuggingTools.DebuggerEngine
+
+
+
+**** Events *****
+GuestExitedWithCode(
+	UNICODESTRING Product,
+	UINT32 ExitCode,
+	UINT32 ProcessId
+	);
+
+RecordedTracefileInfo(
+	UNICODESTRING Product,
+	UINT64 SizeInKilobytes,
+	GUID FeatureSessionId
+	);
+
+SessionContext(
+	UNICODESTRING Name,
+	UNICODESTRING Value,
+	GUID FeatureSessionId
+	);
+
+FeatureUsed(
+	UNICODESTRING Product,
+	UNICODESTRING Feature,
+	UNICODESTRING Action,
+	GUID FeatureSessionId,
+	INT32 ErrorType,
+	UINT64 ErrorValue,
+	UNICODESTRING ErrorMsg
+	);
+

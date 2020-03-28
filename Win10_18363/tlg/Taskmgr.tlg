@@ -1,0 +1,230 @@
+ProviderNames:
+	Microsoft.Windows.Taskmgr
+	TelemetryAssert
+	TelemetryAssertDiagTrack
+	Microsoft.Windows.Wil.FeatureLogging
+
+
+
+**** Events *****
+FeatureError(
+	UINT32 featureId,
+	INT32 featureVersion,
+	INT32 featureBaseVersion,
+	INT16 featureStage,
+	HRESULT hr,
+	ANSISTRING file,
+	UINT16 lineNumber,
+	ANSISTRING module,
+	ANSISTRING process,
+	ANSISTRING originFile,
+	UINT16 originLineNumber,
+	ANSISTRING originModule,
+	ANSISTRING originName,
+	ANSISTRING message,
+	ANSISTRING callerModule,
+	UINT32 callerReturnAddressOffset,
+	ANSISTRING originCallerModule,
+	UINT32 originCallerReturnAddressOffset
+	);
+
+FeatureVariantUsage(
+	UINT32 featureId,
+	INT32 featureVersion,
+	INT32 featureBaseVersion,
+	INT16 featureStage,
+	BOOLEAN enabled,
+	UINT32 variantKind,
+	UINT8 variant,
+	UINT64 addend
+	);
+
+EnabledFeatureUsage(
+	UINT32 featureId,
+	INT32 featureVersion,
+	INT32 featureBaseVersion,
+	INT16 featureStage,
+	BOOLEAN enabled,
+	UINT32 kind,
+	UINT64 addend
+	);
+
+FeatureUsage(
+	UINT32 featureId,
+	INT32 featureVersion,
+	INT32 featureBaseVersion,
+	INT16 featureStage,
+	BOOLEAN enabled,
+	UINT32 kind,
+	UINT64 addend
+	);
+
+FallbackError(
+	UINT64 PartA_PrivTags,
+	SIGNED wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+FallbackError(
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+SetDefaultTab(
+	UINT64 PartA_PrivTags,
+	UNICODESTRING OldTabName,
+	UNICODESTRING NewTabName
+	);
+
+Feedback(
+	UINT64 PartA_PrivTags,
+	UNICODESTRING AppId,
+	UNICODESTRING Tab
+	);
+
+CreateNewTask(
+	VOID
+	);
+
+StartupDisabled(
+	UNICODESTRING FriendlyName,
+	UNICODESTRING Publisher,
+	UNICODESTRING Status,
+	UNICODESTRING StartupImpact
+	);
+
+StartupEnabled(
+	UNICODESTRING FriendlyName,
+	UNICODESTRING Publisher,
+	UNICODESTRING Status,
+	UNICODESTRING StartupImpact
+	);
+
+Launch(
+	UNICODESTRING Source,
+	UNICODESTRING Tab
+	);
+
+PerformanceTab(
+	UNICODESTRING PerformanceTabViewed
+	);
+
+PerformanceTab(
+	UNICODESTRING PerformanceTabViewed,
+	DOUBLE ResourcePercent
+	);
+
+TabItemInteraction(
+	UNICODESTRING Action,
+	UNICODESTRING Tab
+	);
+
+TabViewed(
+	UNICODESTRING Tab
+	);
+
+CollectTrace(
+	UINT64 PartA_PrivTags,
+	UNICODESTRING TraceType,
+	UNICODESTRING AppId
+	);
+
+EndTask(
+	GUID AppSessionGuid,
+	GUID UTCReplace_TargetAppId,
+	BOOLEAN UTCReplace_TargetAppVer,
+	BOOLEAN UTCReplace_CommandLineHash,
+	UINT32 TargetAsId,
+	HEXINT32 Flags,
+	UNICODESTRING TaskType,
+	DOUBLE CPU,
+	DOUBLE Memory,
+	DOUBLE Disk,
+	DOUBLE Network,
+	DOUBLE GPU,
+	DOUBLE PowerUsage,
+	DOUBLE PowerUsageTrend,
+	UNICODESTRING Tab
+	);
+
+EndTask(
+	GUID AppSessionGuid,
+	GUID UTCReplace_TargetAppId,
+	BOOLEAN UTCReplace_TargetAppVer,
+	BOOLEAN UTCReplace_CommandLineHash,
+	UINT32 TargetAsId,
+	HEXINT32 Flags,
+	UNICODESTRING TaskType,
+	DOUBLE CPU,
+	DOUBLE Memory,
+	DOUBLE Disk,
+	DOUBLE Network,
+	DOUBLE GPU,
+	DOUBLE PowerUsage,
+	DOUBLE PowerUsageTrend,
+	UNICODESTRING Tab,
+	GUID EndTaskSessionGuid
+	);
+
+EndTaskSummary(
+	GUID AppSessionGuid,
+	UNICODESTRING FriendlyName,
+	UINT32 Processes,
+	DOUBLE CPU,
+	DOUBLE Memory,
+	DOUBLE Disk,
+	DOUBLE Network,
+	DOUBLE GPU,
+	DOUBLE PowerUsage,
+	DOUBLE PowerUsageTrend,
+	UNICODESTRING Tab
+	);
+
+ColumnActions(
+	UNICODESTRING ColumnName,
+	UNICODESTRING ColumnAction,
+	UNICODESTRING Tab
+	);
+
+Assert(
+	UINT32 assertVersion,
+	UINT32 rva,
+	UINT32 timestamp,
+	UINT32 imageSize,
+	ANSISTRING imageName,
+	UINT32 count,
+	UINT32 totalHits,
+	UINT32 ModuleCollection,
+	UINT32 GlobalCollection
+	);
+

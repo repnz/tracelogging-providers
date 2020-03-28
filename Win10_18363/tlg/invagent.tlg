@@ -1,0 +1,122 @@
+ProviderNames:
+	Microsoft.Windows.Inventory.Core
+	Microsoft.Windows.Inventory.Core
+	Microsoft.Windows.Inventory.Core
+	Microsoft.Windows.Inventory.Core
+	Microsoft.Windows.Compatibility.Asl
+	TelemetryAssert
+	TelemetryAssertDiagTrack
+
+
+
+**** Events *****
+TelemetryClient(
+	UINT64 BinFileVersion,
+	ANSISTRING ChannelName,
+	ANSISTRING CorrelationVectors,
+	ANSISTRING Types,
+	ANSISTRING Names,
+	ANSISTRING Counts,
+	ANSISTRING Metrics,
+	UNICODESTRING Messages,
+	ANSISTRING ActivityResults
+	);
+
+InventoryApplicationStartSync(
+	ANSISTRING __TlgCV__,
+	UNICODESTRING InventoryVersion,
+	PID PartB_Ms.Device.DeviceInventoryChange,
+	INT32 action,
+	UNICODESTRING objectType,
+	UNICODESTRING objectInstanceId,
+	UNICODESTRING syncId,
+	UNICODESTRING inventoryId
+	);
+
+InventoryApplicationRemove(
+	ANSISTRING __TlgCV__,
+	UNICODESTRING InventoryVersion,
+	PID PartB_Ms.Device.DeviceInventoryChange,
+	INT32 action,
+	UNICODESTRING objectType,
+	UNICODESTRING objectInstanceId,
+	UNICODESTRING syncId,
+	UNICODESTRING inventoryId
+	);
+
+InventoryApplicationAdd(
+	ANSISTRING __TlgCV__,
+	UNICODESTRING InventoryVersion,
+	UNICODESTRING ProgramInstanceId,
+	UNICODESTRING Name,
+	UNICODESTRING Publisher,
+	UNICODESTRING Version,
+	UINT32 Language,
+	UNICODESTRING Source,
+	UNICODESTRING Type,
+	UNICODESTRING StoreAppType,
+	UNICODESTRING MsiProductCode,
+	UNICODESTRING MsiPackageCode,
+	UNICODESTRING HiddenArp,
+	UNICODESTRING OSVersionAtInstallTime,
+	UNICODESTRING PackageFullName,
+	UNICODESTRING RootDirPath,
+	UNICODESTRING InstallDate,
+	STRING InstallDateMsi,
+	UNICODESTRING Value,
+	UINT32 Order,
+	STRING InstallDateFromLinkFile,
+	UNICODESTRING Value,
+	UINT32 Order,
+	STRING InstallDateArpLastModified,
+	UNICODESTRING Value,
+	UINT32 Order,
+	PID PartB_Ms.Device.DeviceInventoryChange,
+	INT32 action,
+	UNICODESTRING objectType,
+	UNICODESTRING objectInstanceId,
+	UNICODESTRING syncId,
+	UNICODESTRING inventoryId
+	);
+
+FileSigningInfoStartSync(
+	ANSISTRING __TlgCV__,
+	UNICODESTRING InventoryVersion,
+	PID PartB_Ms.Device.DeviceInventoryChange,
+	INT32 action,
+	UNICODESTRING objectType,
+	UNICODESTRING objectInstanceId,
+	UNICODESTRING syncId,
+	UNICODESTRING inventoryId
+	);
+
+FileSigningInfoAdd(
+	ANSISTRING __TlgCV__,
+	UNICODESTRING InventoryVersion,
+	UNICODESTRING FileName,
+	UNICODESTRING FileType,
+	UNICODESTRING DriverPackageStrongName,
+	UNICODESTRING CatalogSigners,
+	UNICODESTRING DigestAlgorithm,
+	UNICODESTRING EmbeddedSigners,
+	UNICODESTRING Thumbprint,
+	PID PartB_Ms.Device.DeviceInventoryChange,
+	INT32 action,
+	UNICODESTRING objectType,
+	UNICODESTRING objectInstanceId,
+	UNICODESTRING syncId,
+	UNICODESTRING inventoryId
+	);
+
+Assert(
+	UINT32 assertVersion,
+	UINT32 rva,
+	UINT32 timestamp,
+	UINT32 imageSize,
+	ANSISTRING imageName,
+	UINT32 count,
+	UINT32 totalHits,
+	UINT32 ModuleCollection,
+	UINT32 GlobalCollection
+	);
+

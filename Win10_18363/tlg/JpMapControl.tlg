@@ -1,0 +1,132 @@
+ProviderNames:
+	Windows.Maps.Platform.JPMapControl
+
+
+
+**** Events *****
+StartFinderCall(
+	INT32 asyncId
+	);
+
+StartLocalLocationFinderCall(
+	INT32 asyncId
+	);
+
+StopGettingRoute(
+	GUID routingSessionId,
+	INT32 ConnectivityTypeEnum,
+	INT32 ProviderEnum,
+	INT32 NumManeuvers,
+	INT64 RouteEstimatedDurationInTicks,
+	DOUBLE LengthInMeters,
+	UINT32 NumAlternateRoutes,
+	HRESULT HRESULT
+	);
+
+StartGettingRoute(
+	UINT32 numberOfStopWaypoints,
+	UINT32 numberOfViaWaypoints,
+	UINT32 travelMode,
+	UINT32 routeOptimization,
+	GUID routingSessionId
+	);
+
+FinishShowPlaceInfo(
+	BOOLEAN asyncOperationCompleted,
+	INT32 asyncOpStatus,
+	HRESULT operationHr,
+	INT32 launcherUriStatus,
+	UNICODESTRING entityId,
+	INT32 geoshapeType,
+	UNICODESTRING geoshapeProperties,
+	UNICODESTRING displayAddress,
+	UNICODESTRING displayName,
+	UNICODESTRING protocolLaunch
+	);
+
+StartShowPlaceInfo(
+	UNICODESTRING entityId,
+	INT32 creationSignature,
+	BOOLEAN isValidDevice,
+	ANSISTRING __TlgCV__
+	);
+
+AddMapElement(
+	ANSISTRING ElementType,
+	INT32 TotalNumberOfElements
+	);
+
+LogMaxNumberOfXamlChildren(
+	UINT32 MaxNumberOfXamlChildren
+	);
+
+SetMapControlViewPortSize(
+	INT32 ScreenWidth,
+	INT32 ScreenHeight,
+	INT32 MapStyle
+	);
+
+AddMapControl(
+	INT32 TotalNumberOfMapControls
+	);
+
+MosStackUsed(
+	BOOL32 isChinaVariant
+	);
+
+StopOverviewMapShutdown(
+	VOID
+	);
+
+StopMapControlShutdown(
+	VOID
+	);
+
+StopMapEngineShutdown(
+	VOID
+	);
+
+StartOverviewMapShutdown(
+	VOID
+	);
+
+StartMapEngineShutdown(
+	VOID
+	);
+
+StartMapControlShutdown(
+	VOID
+	);
+
+TabNavigationOnMapElement(
+	UINT32 elementType
+	);
+
+AddMapElement(
+	ANSISTRING ElementType,
+	INT32 ElementImageType
+	);
+
+StartQueryPackages(
+	UINT16 QueryRegionType,
+	UINT32 OfflineOperationId
+	);
+
+StopQueryPackages(
+	UINT32 OfflineOperationId,
+	UINT16 QueryRegionType,
+	HRESULT HRESULT
+	);
+
+StopQueryPackages(
+	UINT32 OfflineOperationId,
+	UINT16 QueryRegionType,
+	UINT32 NumQueryResults,
+	HRESULT HRESULT
+	);
+
+QueuePackage(
+	UINT32 DownloadedRegionId,
+	HRESULT HRESULT
+	);
+

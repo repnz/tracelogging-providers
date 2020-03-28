@@ -1,0 +1,436 @@
+ProviderNames:
+	Microsoft.Windows.Fundamentals.Partner.SystemInitiatedUserFeedback
+	Microsoft.Windows.Fundamentals.SystemInitiatedUserFeedback
+	Microsoft.Windows.Fundamentals.UserInitiatedFeedback
+	WindowsFlightingSettings
+
+
+
+**** Events *****
+Error(
+	UNICODESTRING Description,
+	INT32 ErrorCode,
+	ANSISTRING FunctionDescription,
+	INT32 Line
+	);
+
+Rejected(
+	ANSISTRING Description,
+	GUID QuestionId,
+	GUID QuestionVersion,
+	UINT32 MeasureId,
+	GUID InstanceId,
+	ANSISTRING version
+	);
+
+ErrorEx(
+	ANSISTRING Description,
+	UINT32 MeasureId,
+	GUID QuestionId,
+	GUID QuestionVersion,
+	GUID InstanceId,
+	UNICODESTRING Payload,
+	INT32 ErrorCode,
+	ANSISTRING File,
+	ANSISTRING FunctionDescription,
+	INT32 Line,
+	ANSISTRING version
+	);
+
+ErrorEx(
+	ANSISTRING Description,
+	UINT32 MeasureId,
+	GUID QuestionId,
+	GUID QuestionVersion,
+	GUID InstanceId,
+	INT32 ErrorCode,
+	ANSISTRING File,
+	ANSISTRING FunctionDescription,
+	INT32 Line,
+	ANSISTRING version
+	);
+
+QuestionFrequencyBreakthrough(
+	GUID QuestionId,
+	GUID QuestionVersion,
+	UINT32 MeasureId,
+	GUID InstanceId
+	);
+
+Error(
+	UNICODESTRING Description,
+	INT32 ErrorCode,
+	ANSISTRING File,
+	ANSISTRING FunctionDescription,
+	INT32 Line
+	);
+
+QuestionManualTriggerPassthrough(
+	GUID QuestionId,
+	GUID QuestionVersion,
+	UINT32 MeasureId,
+	GUID InstanceId
+	);
+
+Debug(
+	ANSISTRING Details,
+	GUID QuestionId,
+	GUID QuestionVersion
+	);
+
+Error(
+	ANSISTRING Description,
+	UINT32 regKeyArrayIndex,
+	INT32 ErrorCode
+	);
+
+Rejected(
+	ANSISTRING Description,
+	UNICODESTRING Details,
+	GUID QuestionId,
+	GUID QuestionVersion,
+	UINT32 MeasureId,
+	GUID InstanceId,
+	ANSISTRING version
+	);
+
+Dispatched(
+	ANSISTRING DispatchType,
+	UINT32 LengthInBytes,
+	GUID QuestionId,
+	GUID QuestionVersion,
+	UINT32 MeasureId,
+	GUID InstanceId,
+	UNICODESTRING Language,
+	INT32 UsingLocStrings,
+	ANSISTRING version
+	);
+
+ProcessingEscalation(
+	GUID QuestionId,
+	GUID QuestionVersion,
+	UINT32 MeasureId,
+	INT32 SettingSiufDispatchEnabled,
+	INT32 SettingIgnoreQuestionHistory,
+	INT32 SettingIgnoreBreakthroughMTBD,
+	INT32 SettingIgnoreUserPresenting,
+	INT32 SettingIgnorePostLogonQuietPeriod,
+	UINT32 RuleNumberOfSIUFInPeriod,
+	UINT64 RulePeriodInNanoSeconds,
+	UINT64 RulePostLogonQuietPeriodInNanoSeconds,
+	UINT64 RuleBreakthroughMTBDInNanoSeconds,
+	UINT32 GPDoNotShowFeedbackNotifications,
+	UINT32 EffectiveSettingSIUFState,
+	INT32 IsInsiderPreviewEnabled,
+	INT32 FrequencyBreakthrough,
+	INT32 ReaskBreathrough,
+	INT32 PostLogonQuietPeriodBreakthrough,
+	INT32 ManualTriggerPassThrough,
+	INT32 ReAskAfterUpdate,
+	GUID InstanceId,
+	ANSISTRING version
+	);
+
+Rejected(
+	ANSISTRING Description,
+	ANSISTRING Details,
+	FILETIME RejectionTime,
+	FILETIME AllowedAfter,
+	UINT32 DispatchCountInPeriod,
+	GUID QuestionId,
+	GUID QuestionVersion,
+	UINT32 MeasureId,
+	GUID InstanceId,
+	ANSISTRING version
+	);
+
+Dispatched(
+	UNICODESTRING DispatchType,
+	UINT32 LengthInBytes,
+	GUID QuestionId,
+	GUID QuestionVersion,
+	UINT32 MeasureId,
+	GUID InstanceId,
+	UNICODESTRING Language,
+	INT32 UsingLocStrings,
+	ANSISTRING version
+	);
+
+UifEscalationInfo(
+	ANSISTRING Message,
+	HRESULT StatusCode,
+	GUID ScenarioId,
+	GUID InstanceId
+	);
+
+Rejected(
+	ANSISTRING Description,
+	ANSISTRING Details,
+	UINT32 CurrentBuildHash,
+	UINT32 LastBuildHash,
+	GUID QuestionId,
+	GUID QuestionVersion,
+	UINT32 MeasureId,
+	GUID InstanceId,
+	ANSISTRING version
+	);
+
+Debug(
+	ANSISTRING Details,
+	INT32 Result
+	);
+
+Rejected(
+	ANSISTRING Description,
+	GUID QuestionId,
+	GUID QuestionVersion,
+	UNICODESTRING Details,
+	INT32 Result,
+	UINT32 MeasureId,
+	GUID InstanceId,
+	ANSISTRING version
+	);
+
+QuestionReaskForBuild(
+	ANSISTRING Description,
+	UINT32 CurrentBuildHash,
+	UINT32 LastBuildHash,
+	GUID QuestionId,
+	GUID QuestionVersion,
+	UINT32 MeasureId,
+	GUID InstanceId
+	);
+
+Rejected(
+	ANSISTRING Description,
+	ANSISTRING Reason,
+	UINT32 CurrentBuildHash,
+	UINT32 LastBuildHash,
+	GUID QuestionId,
+	GUID QuestionVersion,
+	UINT32 MeasureId,
+	GUID InstanceId,
+	ANSISTRING version
+	);
+
+Rejected(
+	ANSISTRING Description,
+	GUID QuestionId,
+	GUID QuestionVersion,
+	FILETIME LastAskTime,
+	UINT32 MeasureId,
+	GUID InstanceId,
+	ANSISTRING version
+	);
+
+Error(
+	ANSISTRING Description,
+	UINT32 regKeyArrayIndex
+	);
+
+Rejected(
+	ANSISTRING Description,
+	UINT32 PayloadVersion,
+	GUID QuestionId,
+	GUID QuestionVersion,
+	UINT32 MeasureId,
+	GUID InstanceId,
+	ANSISTRING version
+	);
+
+QuestionReaskBreakthrough(
+	GUID QuestionId,
+	GUID QuestionVersion,
+	UINT32 MeasureId,
+	GUID InstanceId
+	);
+
+Error(
+	INT32 ErrorCode,
+	ANSISTRING File,
+	ANSISTRING FunctionDescription,
+	INT32 Line
+	);
+
+QuestionHistoryFlush(
+	UINT32 HistorySize,
+	UINT32 HistoryElementCount
+	);
+
+WarningQuestionHistorySize(
+	ANSISTRING Process,
+	UINT32 HistorySize,
+	UINT32 HistoryElementCount
+	);
+
+Error(
+	ANSISTRING Description,
+	INT32 ErrorCode,
+	ANSISTRING File,
+	ANSISTRING FunctionDescription,
+	INT32 Line
+	);
+
+Debug(
+	ANSISTRING Details,
+	UINT64 Session Token,
+	HEXINT64 User Token,
+	INT32 Result
+	);
+
+Debug(
+	ANSISTRING Details,
+	UINT32 Result
+	);
+
+Debug(
+	ANSISTRING Details
+	);
+
+Debug(
+	ANSISTRING Details,
+	UNICODESTRING Account Name,
+	UNICODESTRING Domain Name,
+	UINT32 Name Use
+	);
+
+Debug(
+	ANSISTRING Details,
+	UINT32 Device Family,
+	INT32 Result
+	);
+
+Debug(
+	ANSISTRING Details,
+	HEXINT64 User Token,
+	UNICODESTRING SID,
+	UINT32 Result
+	);
+
+Debug(
+	ANSISTRING Details,
+	UINT32 Index,
+	UINT32 SessionId,
+	INT32 Result
+	);
+
+Debug(
+	UNICODESTRING ringName
+	);
+
+FeedbackPIISubmitted(
+	UINT32 MeasureId,
+	GUID SubmissionId,
+	UNICODESTRING EmailAddress
+	);
+
+FeedbackSubmitted(
+	GUID QuestionId,
+	GUID QuestionVersion,
+	GUID SubmissionId,
+	GUID RootSubmissionId,
+	UNICODESTRING QuestionType,
+	UNICODESTRING DispatchType,
+	UINT32 QuestionValue,
+	UNICODESTRING FollowUpValue,
+	UINT32 MeasureId,
+	UNICODESTRING Language,
+	BOOL32 IsEmailAddressIncluded,
+	UINT32 Setting1,
+	ANSISTRING version
+	);
+
+Rejected(
+	ANSISTRING Description,
+	FILETIME LogonTime,
+	FILETIME NowTime,
+	GUID QuestionId,
+	GUID QuestionVersion,
+	UINT32 MeasureId,
+	GUID InstanceId,
+	ANSISTRING version
+	);
+
+Debug(
+	UNICODESTRING LocFilesPath
+	);
+
+Debug(
+	UNICODESTRING DiagnosisPath
+	);
+
+GetInstalledRingName(
+	INT32 hr,
+	UNICODESTRING ringName,
+	GUID SessionId
+	);
+
+GetInstalledRingName(
+	INT32 hr,
+	UNICODESTRING ringName,
+	GUID SessionId
+	);
+
+GetRingName(
+	INT32 hr,
+	UNICODESTRING ringName,
+	GUID SessionId
+	);
+
+GetRingName(
+	INT32 hr,
+	UNICODESTRING ringName,
+	GUID SessionId
+	);
+
+FallbackError(
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+FallbackError(
+	UINT64 PartA_PrivTags,
+	SIGNED wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+StaticLibCoCreateInstanceFailed(
+	INT32 hr,
+	GUID SessionId
+	);
+
+StaticLibAsyncValidationFailed(
+	INT32 hr,
+	GUID SessionId
+	);
+

@@ -1,0 +1,74 @@
+ProviderNames:
+	InputCore
+
+
+
+**** Events *****
+DManip::WindowHookCallback PostDispatch(
+	HEXINT32 Message,
+	PID MessageStruct,
+	HEXINT32 WindowMessage,
+	HEXINT64 WindowHandle,
+	HEXINT64 WParam,
+	HEXINT64 LParam,
+	HEXINT32 TickCount
+	);
+
+DManip::WindowHookCallback PreDispatch(
+	HEXINT32 Message,
+	PID MessageStruct,
+	HEXINT32 WindowMessage,
+	HEXINT64 WindowHandle,
+	HEXINT64 WParam,
+	HEXINT64 LParam,
+	HEXINT32 TickCount
+	);
+
+DManipContact::SetDeferral(
+	UINT32 ContactId,
+	ANSISTRING Deferral
+	);
+
+DManipContact::SetNonClient(
+	UINT32 ContactId,
+	BOOL32 NonClient
+	);
+
+DManipContact::SetState(
+	UINT32 ContactId,
+	ANSISTRING State
+	);
+
+DManipContact::SetTrackStatus(
+	UINT32 ContactId,
+	ANSISTRING TrackStatus
+	);
+
+DManipContact::SetAuto(
+	UINT32 ContactId,
+	BOOL32 Auto
+	);
+
+DManipContact::SetImplicit(
+	UINT32 ContactId,
+	BOOL32 Implicit
+	);
+
+DManip::CancelContact(
+	UINT32 PointerId
+	);
+
+DManip::CancelDeferral(
+	UINT32 PointerId
+	);
+
+DManip::DeferContact(
+	UINT32 PointerId,
+	UINT32 Timeout
+	);
+
+DManip::SetContact(
+	UINT32 PointerId,
+	HEXINT64 WindowHandle
+	);
+

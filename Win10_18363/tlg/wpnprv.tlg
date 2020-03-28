@@ -1,0 +1,432 @@
+ProviderNames:
+	WNSCP
+	TelemetryAssert
+	TelemetryAssertDiagTrack
+	Microsoft.Windows.Wil.FeatureLogging
+
+
+
+**** Events *****
+WnsConnectionProviderLoad(
+	HEXINT32 OperationResult
+	);
+
+Assert(
+	UINT32 assertVersion,
+	UINT32 rva,
+	UINT32 timestamp,
+	UINT32 imageSize,
+	ANSISTRING imageName,
+	UINT32 count,
+	UINT32 totalHits,
+	UINT32 ModuleCollection,
+	UINT32 GlobalCollection
+	);
+
+WnpTransportImplReconnectTakingLong(
+	UINT64 CurrentTickCount,
+	UINT64 ExpectedReconnectTime
+	);
+
+WnpTransportImplReconnectDropped(
+	UINT64 CurrentTickCount,
+	UINT64 ExpectedReconnectTime
+	);
+
+WnsConnectionProviderPowerActivity(
+	UINT8 IsSystemSuspended
+	);
+
+WnsConnectionProviderConnectivityChanged(
+	HEXINT32 NlmConnectivity,
+	GUID ConnectionId,
+	GUID AdapterGuid
+	);
+
+CWNPTransportImpl::Connect(
+	HEXINT32 OperationResult,
+	UINT64 UserId
+	);
+
+CWNPTransportImpl::ConnectNull(
+	BOOL32 WNPNetIsNull,
+	BOOL32 FeatureSetIsNull,
+	BOOL32 AuthTypeIsNull,
+	BOOL32 AuthPayloadIsNull,
+	BOOL32 BindPayloadIsNull,
+	BOOL32 ClientContextIsNull,
+	BOOL32 AuthPayload2IsNull,
+	BOOL32 BindPayload2IsNull,
+	BOOL32 IsConnected,
+	UINT64 UserId
+	);
+
+WnsConnectionProviderSimpleWndCloseFailure(
+	UINT64 ConnectionProviderSimpleWndCloseWindowErrorCode,
+	UINT64 ConnectionProviderSimpleWndCloseWindowReturnCode
+	);
+
+WnsConnectionProviderInvalidConnectCallback(
+	VOID
+	);
+
+WnsConnectionProviderConnectionSetupTimerExpired(
+	ANSISTRING DeviceId,
+	UINT8 IsLongRunningOperation,
+	INT32 ProtocolState,
+	ANSISTRING WnsServerName,
+	INT32 WnsSeverPort
+	);
+
+WnsConnectionProviderRemoveUserEnd(
+	ANSISTRING DeviceId,
+	INT64 UserId,
+	INT32 UserType,
+	UINT8 IsLongRunningOperation,
+	HEXINT32 OperationResult
+	);
+
+WnsConnectionProviderRemoveUserStart(
+	ANSISTRING DeviceId,
+	INT64 UserId,
+	INT32 UserType,
+	UINT8 IsLongRunningOperation
+	);
+
+WnsConnectionProviderAddUserEnd(
+	ANSISTRING DeviceId,
+	INT64 UserId,
+	INT32 UserType,
+	UINT8 IsLongRunningOperation,
+	HEXINT32 OperationResult
+	);
+
+WnsConnectionProviderAddUserStart(
+	ANSISTRING DeviceId,
+	INT64 UserId,
+	INT32 UserType,
+	UINT8 IsLongRunningOperation
+	);
+
+WnsConnectionProviderLogicalConnectionStop(
+	ANSISTRING DeviceId,
+	UINT8 IsLongRunningOperation,
+	HEXINT32 IsFastReconnect
+	);
+
+WnsConnectionProviderLogicalConnectionStart(
+	ANSISTRING DeviceId,
+	UINT8 IsLongRunningOperation,
+	HEXINT32 IsFastReconnect
+	);
+
+WnsConnectionProviderProtocolInitiatedDisconnect(
+	ANSISTRING DeviceId,
+	UINT8 IsLongRunningOperation,
+	HEXINT32 DisconnectReason
+	);
+
+WnsConnectionProviderSendPNGEnd(
+	ANSISTRING DeviceId,
+	UINT8 IsLongRunningOperation,
+	HEXINT32 OperationResult
+	);
+
+WnsConnectionProviderSendPNGStart(
+	ANSISTRING DeviceId,
+	UINT8 IsLongRunningOperation,
+	UINT8 IsOutOfBandPNG
+	);
+
+WnsConnectionProviderXfrProcessStarted(
+	ANSISTRING DeviceId,
+	UINT8 IsLongRunningOperation,
+	ANSISTRING WnsServerName,
+	INT32 WnsSeverPort,
+	HEXINT32 OperationResult
+	);
+
+WnsConnectionProviderCntAutBndTransactionStart(
+	ANSISTRING DeviceId,
+	UINT8 IsLongRunningOperation,
+	UINT8 IsFastReconnect,
+	UINT64 LastMessageId,
+	INT32 ContextId,
+	INT32 GeoId
+	);
+
+WnsConnectionProviderWnpProtocolConnectEnd(
+	ANSISTRING DeviceId,
+	UINT8 IsLongRunningOperation,
+	HEXINT32 OperationResult
+	);
+
+WnsConnectionProviderWnpProtocolState(
+	ANSISTRING DeviceId,
+	UINT8 IsLongRunningOperation,
+	INT32 ProtocolState
+	);
+
+WnsConnectionProviderNetworkDisconnect(
+	HEXINT32 DisconnectReason
+	);
+
+WnsConnectionProviderTlsNegotiationStart(
+	UINT8 IsLongRunningOperation,
+	INT32 ConnectorID
+	);
+
+WnsConnectionProviderProxyNegotiationStart(
+	UINT8 IsLongRunningOperation,
+	INT32 ConnectorID
+	);
+
+WnsConnectionProviderProbeNCSIByConnector(
+	UINT8 IsLongRunningOperation,
+	HEXINT32 OperationResult,
+	INT32 ConnectorID
+	);
+
+WnsConnectionProviderTLSNegotiationEnd(
+	UINT8 IsLongRunningOperation,
+	ANSISTRING WNSServerName,
+	HEXINT32 OperationResult,
+	INT32 ConnectorID
+	);
+
+WnsConnectionProviderProxyConnectEnd(
+	UINT8 IsLongRunningOperation,
+	ANSISTRING WNSServerName,
+	INT32 ProxyType,
+	HEXINT32 OperationResult,
+	INT32 ConnectorID
+	);
+
+WnsConnectionProviderDNSLookupEnd(
+	UINT8 IsLongRunningOperation,
+	ANSISTRING WNSServerName,
+	HEXINT32 OperationResult,
+	INT32 ConnectorID
+	);
+
+WnsConnectionProviderSocketClose(
+	UINT8 IsLongRunningOperation,
+	ANSISTRING WNSServerName,
+	INT16 WNSServerPort,
+	INT32 ConnectorID
+	);
+
+WnsConnectionProviderDirectConnectEnd(
+	UINT8 IsLongRunningOperation,
+	ANSISTRING WNSServerName,
+	INT16 WNSServerPort,
+	HEXINT32 OperationResult,
+	INT32 ProtocolType,
+	INT32 SelectionReason,
+	INT32 ConnectorID
+	);
+
+WnsConnectionProviderDirectConnectEnd(
+	UINT8 IsLongRunningOperation,
+	ANSISTRING WNSServerName,
+	INT16 WNSServerPort,
+	HEXINT32 OperationResult,
+	INT32 ProtocolType,
+	INT32 InterfaceType,
+	INT32 SelectionReason,
+	INT32 ConnectorID
+	);
+
+WnsConnectionProviderDirectConnectEnd(
+	UINT8 IsLongRunningOperation,
+	ANSISTRING WNSServerName,
+	INT16 WNSServerPort,
+	HEXINT32 OperationResult,
+	BINARY IPAddress,
+	INT32 ProtocolType,
+	INT32 SelectionReason,
+	INT32 ConnectorID
+	);
+
+WnsConnectionProviderDirectConnectEnd(
+	UINT8 IsLongRunningOperation,
+	ANSISTRING WNSServerName,
+	INT16 WNSServerPort,
+	HEXINT32 OperationResult,
+	BINARY IPAddress,
+	INT32 ProtocolType,
+	INT32 InterfaceType,
+	INT32 SelectionReason,
+	INT32 ConnectorID
+	);
+
+WnsConnectionProviderConnectorCloseWindowError(
+	UINT64 WnpConnectorCloseWindowErrorCode,
+	UINT64 WnpConnectorCloseWindowReturnCode
+	);
+
+WnsConnectionProviderConfigureBatching(
+	ANSISTRING DeviceId,
+	HEXINT32 OperationResult,
+	UINT64 States
+	);
+
+WnsConnectionProviderConfigureBatching(
+	ANSISTRING DeviceId,
+	HEXINT32 OperationResult,
+	UINT64 State
+	);
+
+WnsConnectionProviderNotificationDeliveredToPlatform(
+	ANSISTRING DeviceId,
+	UNICODESTRING ChannelId,
+	HEXINT32 OperationResult,
+	UINT64 MessageId,
+	ANSISTRING __TlgCV__
+	);
+
+WnsConnectionProviderNotificationACKSent(
+	ANSISTRING DeviceId,
+	HEXINT32 OperationResult,
+	UINT64 MessageId,
+	UINT64 UserId
+	);
+
+WnsConnectionProviderNotificationReceived(
+	ANSISTRING DeviceId,
+	UNICODESTRING ChannelId,
+	HEXINT32 OperationResult,
+	UINT8 AckRequired,
+	UINT8 IsCacheRollover,
+	UINT8 IsSuppressPopup,
+	UINT64 MessageId,
+	ANSISTRING __TlgCV__,
+	INT32 NotificationType,
+	INT32 NotificationAction,
+	UINT64 OfflineCacheCount
+	);
+
+FeatureError(
+	UINT32 featureId,
+	INT32 featureVersion,
+	INT32 featureBaseVersion,
+	INT16 featureStage,
+	HRESULT hr,
+	ANSISTRING file,
+	UINT16 lineNumber,
+	ANSISTRING module,
+	ANSISTRING process,
+	ANSISTRING originFile,
+	UINT16 originLineNumber,
+	ANSISTRING originModule,
+	ANSISTRING originName,
+	ANSISTRING message,
+	ANSISTRING callerModule,
+	UINT32 callerReturnAddressOffset,
+	ANSISTRING originCallerModule,
+	UINT32 originCallerReturnAddressOffset
+	);
+
+FeatureVariantUsage(
+	UINT32 featureId,
+	INT32 featureVersion,
+	INT32 featureBaseVersion,
+	INT16 featureStage,
+	BOOLEAN enabled,
+	UINT32 variantKind,
+	UINT8 variant,
+	UINT64 addend
+	);
+
+EnabledFeatureUsage(
+	UINT32 featureId,
+	INT32 featureVersion,
+	INT32 featureBaseVersion,
+	INT16 featureStage,
+	BOOLEAN enabled,
+	UINT32 kind,
+	UINT64 addend
+	);
+
+FeatureUsage(
+	UINT32 featureId,
+	INT32 featureVersion,
+	INT32 featureBaseVersion,
+	INT16 featureStage,
+	BOOLEAN enabled,
+	UINT32 kind,
+	UINT64 addend
+	);
+
+FallbackError(
+	UINT64 PartA_PrivTags,
+	SIGNED wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+FallbackError(
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+WnsConnectionProviderProbeNCSIByAuthManager(
+	UINT8 IsLongRunningOperation,
+	HEXINT32 OperationResult
+	);
+
+WnsConnectionProviderAuthenticationEnd(
+	ANSISTRING DeviceId,
+	UINT8 IsLongRunningOperation,
+	HEXINT32 OperationResult,
+	HEXINT32 ServerAuthResult
+	);
+
+WnsConnectionProviderTestConnectionReconnecting(
+	ANSISTRING DeviceId,
+	HEXINT32 OperationResult
+	);
+
+WnsConnectionProviderTestConnectionConnected(
+	ANSISTRING DeviceId,
+	HEXINT32 OperationResult
+	);
+
+WnsConnectionProviderKAActivity(
+	ANSISTRING DeviceId,
+	UINT8 IsKAWaitSucceeded,
+	UINT8 IsKAEvaluationConverged,
+	INT32 MaxWorkingKATime,
+	INT32 NewGuessKAValue,
+	HEXINT32 NextKADetectionPhase
+	);
+

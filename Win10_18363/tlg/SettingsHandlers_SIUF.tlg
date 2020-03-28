@@ -1,0 +1,109 @@
+ProviderNames:
+	Microsoft.Windows.Settings.TelemetryPage
+	Microsoft.Windows.Shell.SystemSettings.SIUF
+	Microsoft.Windows.DeviceDelete
+
+
+
+**** Events *****
+CurrentRulesValues(
+	UINT32 CurrentNumberOfSIUFInPeriod,
+	UINT64 CurrentPeriodInNanoSeconds
+	);
+
+NewRulesValues(
+	UINT32 NewNumberOfSIUFInPeriod,
+	UINT64 NewPeriodInNanoSeconds,
+	UINT32 CurrentNumberOfSIUFInPeriod,
+	UINT64 CurrentPeriodInNanoSeconds
+	);
+
+FallbackError(
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+FallbackError(
+	UINT64 PartA_PrivTags,
+	SIGNED wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+SiufDisabledViaSettings(
+	VOID
+	);
+
+DeviceDelete_0(
+	ANSISTRING __TlgCV__
+	);
+
+DeviceDelete_0(
+	ANSISTRING __TlgCV__
+	);
+
+SettingsUI_DoGenericAsyncWork_SetTelemetryOptIn(
+	UINT32 AllowTelemetry
+	);
+
+SettingsUI_GetIsSetByGroupPolicy(
+	UINT8 IsSetByGroupPolicy
+	);
+
+SettingsUI_GetValue(
+	UINT32 AllowedTelemetryLevel
+	);
+
+SettingsUI_SetValue(
+	UINT32 TelemetryLevel
+	);
+
+SettingsUI_GetIsEnabled(
+	UINT8 IsEnabled
+	);
+
+SettingsUI_InitializeValue(
+	BOOLEAN IsInitialized,
+	BOOLEAN IsSetByGroupPolicy,
+	UINT32 TelemetryLevel,
+	INT32 SettingsFlightEnabled
+	);
+
+Utils_SetRegistryKey(
+	UINT32 HKEY,
+	UINT32 DataType,
+	UNICODESTRING KeyName,
+	UNICODESTRING ValueName,
+	UINT32 Value,
+	INT32 HRESULT
+	);
+

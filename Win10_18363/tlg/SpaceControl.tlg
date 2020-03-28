@@ -1,0 +1,287 @@
+ProviderNames:
+	Microsoft.Windows.Storage.SpaceControl
+
+
+
+**** Events *****
+InstanceEnd(
+	VOID
+	);
+
+InstanceStart(
+	VOID
+	);
+
+ChangeSettingsEnd(
+	HRESULT CompletionCode
+	);
+
+ChangeSettingsStart(
+	VOID
+	);
+
+RepairSpaceEnd(
+	UNICODESTRING CurrentPage,
+	GUID PoolGuid,
+	GUID SpaceGuid,
+	HRESULT CompletionCode
+	);
+
+OnlineSpaceEnd(
+	UNICODESTRING CurrentPage,
+	GUID PoolGuid,
+	GUID SpaceGuid,
+	HRESULT CompletionCode
+	);
+
+ViewSpaceFilesEnd(
+	UNICODESTRING CurrentPage,
+	GUID PoolGuid,
+	GUID SpaceGuid,
+	HRESULT CompletionCode
+	);
+
+SpaceElementEventStart(
+	UNICODESTRING CurrentPage,
+	GUID PoolGuid,
+	GUID SpaceGuid
+	);
+
+VisitPageEnd(
+	UNICODESTRING CurrentPage
+	);
+
+VisitPageStart(
+	UNICODESTRING CurrentPage,
+	UINT32 PoolCount,
+	UINT32 CorruptDiskCount
+	);
+
+VisitHelpPageEnd(
+	UNICODESTRING CurrentPage,
+	HRESULT CompletionCode
+	);
+
+VisitHelpPageStart(
+	UNICODESTRING CurrentPage
+	);
+
+CreatePoolEnd(
+	GUID PoolGuid,
+	UINT32 PoolNameLength,
+	UINT32 SelectedDiskCount,
+	HRESULT CompletionCode
+	);
+
+CreatePoolStart(
+	VOID
+	);
+
+VisitPageStart(
+	UNICODESTRING CurrentPage,
+	UINT32 AvailableDisks
+	);
+
+DestroyPoolEnd(
+	GUID PoolGuid,
+	HRESULT CompletionCode
+	);
+
+DestroyPoolStart(
+	GUID PoolGuid
+	);
+
+VisitPageStart(
+	UNICODESTRING CurrentPage,
+	GUID PoolGuid
+	);
+
+OptimizePoolEnd(
+	GUID PoolGuid,
+	HRESULT CompletionCode
+	);
+
+OptimizePoolStart(
+	GUID PoolGuid
+	);
+
+RenamePoolEnd(
+	GUID PoolGuid,
+	UINT32 PoolNameLength,
+	HRESULT CompletionCode
+	);
+
+RenamePoolStart(
+	GUID PoolGuid,
+	HRESULT CompletionCode
+	);
+
+UpgradePoolEnd(
+	GUID PoolGuid,
+	HRESULT CompletionCode
+	);
+
+UpgradePoolStart(
+	GUID PoolGuid
+	);
+
+OfflineDiskEnd(
+	GUID DriveGuid,
+	HRESULT CompletionCode
+	);
+
+OnlineDiskEnd(
+	GUID DriveGuid,
+	HRESULT CompletionCode
+	);
+
+ViewDiskFilesEnd(
+	GUID DriveGuid,
+	HRESULT CompletionCode
+	);
+
+DiskElementEventStart(
+	GUID DriveGuid
+	);
+
+CreateSpaceEnd(
+	GUID PoolGuid,
+	GUID SpaceGuid,
+	UNICODESTRING FileSystem,
+	UINT32 SpaceNameLength,
+	STRING AccessLetter,
+	UINT32 ResiliencyType,
+	UINT32 FaultTolerance,
+	UINT64 Capacity,
+	HRESULT CompletionCode
+	);
+
+CreateSpaceStart(
+	GUID PoolGuid
+	);
+
+AddDrivesEnd(
+	GUID PoolGuid,
+	BOOL32 OptimizeOnAdd,
+	HRESULT CompletionCode
+	);
+
+AddDrivesStart(
+	GUID PoolGuid
+	);
+
+VisitPageStart(
+	UNICODESTRING CurrentPage,
+	GUID PoolGuid,
+	UINT32 AvailableDisks
+	);
+
+FormatSpaceEnd(
+	GUID PoolGuid,
+	GUID SpaceGuid,
+	UNICODESTRING FileSystem,
+	UINT32 SpaceNameLength,
+	STRING AccessLetter,
+	HRESULT CompletionCode
+	);
+
+FormatSpaceStart(
+	GUID PoolGuid,
+	GUID SpaceGuid
+	);
+
+VisitPageStart(
+	UNICODESTRING CurrentPage,
+	GUID PoolGuid,
+	GUID SpaceGuid
+	);
+
+RenameSpaceEnd(
+	GUID PoolGuid,
+	GUID SpaceGuid,
+	UINT32 SpaceNameLength,
+	STRING AccessLetter,
+	UINT64 Capacity,
+	HRESULT CompletionCode
+	);
+
+RenameSpaceStart(
+	GUID PoolGuid,
+	GUID SpaceGuid
+	);
+
+DestroySpaceEnd(
+	GUID PoolGuid,
+	GUID SpaceGuid,
+	HRESULT CompletionCode
+	);
+
+DestroySpaceStart(
+	GUID PoolGuid,
+	GUID SpaceGuid
+	);
+
+RenameDriveEnd(
+	GUID PoolGuid,
+	GUID DriveGuid,
+	UINT32 DriveNameLength,
+	HRESULT CompletionCode
+	);
+
+RenameDriveStart(
+	GUID PageSessionGuid,
+	GUID PoolGuid,
+	GUID DriveGuid
+	);
+
+VisitPageStart(
+	UNICODESTRING CurrentPage,
+	GUID PoolGuid,
+	GUID DriveGuid
+	);
+
+ResetDriveEnd(
+	GUID PoolGuid,
+	GUID DriveGuid,
+	HRESULT CompletionCode
+	);
+
+ResetDriveStart(
+	GUID PoolGuid,
+	GUID DriveGuid
+	);
+
+RemoveDriveEnd(
+	GUID PoolGuid,
+	GUID DriveGuid,
+	HRESULT CompletionCode
+	);
+
+RemoveDriveStart(
+	GUID PoolGuid,
+	GUID DriveGuid
+	);
+
+EvacuateDriveEnd(
+	GUID PoolGuid,
+	GUID DriveGuid,
+	HRESULT CompletionCode
+	);
+
+EvacuateDriveStart(
+	GUID PoolGuid,
+	GUID DriveGuid
+	);
+
+SelectFormattedDisk(
+	UNICODESTRING CurrentPage,
+	UINT32 FormattedDisksSelected,
+	GUID FormattedDiskGuids
+	);
+
+SelectUnformattedDisk(
+	UNICODESTRING CurrentPage,
+	UINT32 UnformattedDisksSelected,
+	GUID UnformattedDiskGuids
+	);
+

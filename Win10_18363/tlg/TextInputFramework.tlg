@@ -1,0 +1,1761 @@
+ProviderNames:
+	Microsoft.Windows.Wil.FeatureLogging
+	TextInput
+
+
+
+**** Events *****
+TextInputFramework!TextInputServer::SetKeepSoftwareKeyboardVisibleOnEditControlFocusLoss(
+	BOOLEAN bKeepVisible,
+	UINT32 PID,
+	UINT32 Current Window PID
+	);
+
+TextInputFramework!TextInputServer::EditControlCompositionTerminated(
+	UINT32 uiEditControlID,
+	BOOLEAN bOverride
+	);
+
+TextInputFramework!TextInputServer::InputHostDelegateInput(
+	UINT32 SourcePID,
+	UINT32 SourcePID,
+	UINT32 DelegatePID,
+	UINT32 DelegatePID
+	);
+
+TextInputFramework!TextInputServer::InputHostSetViewIDDelegation(
+	UINT32 SystemProcessID,
+	UINT32 SystemThreadID,
+	UINT32 sourceViewInstanceId,
+	UINT32 delegateViewInstanceId,
+	UINT32 ForegroundViewInstanceId
+	);
+
+TextInputFramework!TextInputServer::InputHostSiteDelegateInput(
+	UINT32 SystemProcessID,
+	UINT32 SystemThreadID,
+	UINT32 sourceViewInstanceId,
+	UINT32 delegateViewInstanceId,
+	UINT32 ForegroundViewInstanceId
+	);
+
+TextInputFramework!TextInputServer::NotifyViewOfActivationStateChange(
+	UINT32 ViewId,
+	INT32 oldActivationState,
+	INT32 newActivationState
+	);
+
+TextInputFramework!TextInputServer::InputHostOnWindowEnabled(
+	UINT32 ViewInstanceId,
+	BOOLEAN bEnable
+	);
+
+TextInputFramework!TextInputServer::InputHostSiteEnableWindow(
+	UINT32 ViewInstanceId,
+	BOOLEAN bEnable
+	);
+
+TextInputFramework!TextInputServer::InputHostKeyEventRaised(
+	UINT32 uKeyEventID
+	);
+
+TextInputFramework!TextInputServer::InputHostAcceleratorKeyCompleted(
+	UINT32 uKeyEventID,
+	BOOLEAN bRequestActivation,
+	BOOLEAN bHandled
+	);
+
+TextInputFramework!TextInputServer::SetCompositionInfo(
+	ANSISTRING "There is no TextInputClient in focus"
+	);
+
+TextInputFramework!TextInputServer::SetCompositionInfo(
+	UINT32 ulTextInputClientID1,
+	UINT64 ulTextInputClientID2,
+	UINT32 uiEditControlID,
+	UINT32 uiOperationID,
+	INT32 iCompositionBegin,
+	INT32 iCompositionEnd
+	);
+
+TextInputFramework!TextInputServer::SetTextFormat(
+	ANSISTRING "There is no TextInputClient in focus"
+	);
+
+TextInputFramework!TextInputServer::SetTextFormat(
+	UINT32 ulTextInputClientID1,
+	UINT64 ulTextInputClientID2,
+	UINT32 uiEditControlID,
+	UINT32 uiOperationID,
+	INT32 iFormatBegin,
+	INT32 iFormatEnd
+	);
+
+TextInputFramework!TextInputServer::InputHostSiteDepartFocusComplete(
+	VOID
+	);
+
+TextInputFramework!TextInputServer::InputHostNavigateFocusComplete(
+	VOID
+	);
+
+TextInputFramework!TextInputServer::InputHostSiteNavigateFocus(
+	VOID
+	);
+
+TextInputFramework!TextInputServer::InputHostDepartFocus(
+	VOID
+	);
+
+TextInputFramework!TextInputServer::EditControlNavigateFocus(
+	UINT32 ulTextInputClientID1,
+	UINT64 ulTextInputClientID2,
+	UINT32 EditControlID,
+	BOOLEAN bOverride
+	);
+
+TextInputFramework!TextInputServer::InputHostNavigateFocus(
+	BOOLEAN bOverride
+	);
+
+TextInputFramework!TextInputServer::UpdateCurrentInputFocus(
+	UINT32 oldViewId,
+	UINT32 newViewId,
+	UINT32 oldPID,
+	UINT32 newPID,
+	UINT32 oldTID,
+	UINT32 newTID
+	);
+
+TextInputFramework!TextInputServer::SetCurrentTextInputHost(
+	ANSISTRING "Null TextInputHost"
+	);
+
+TextInputFramework!TextInputServer::SetCurrentTextInputHost(
+	UINT32 SystemProcessID,
+	UINT32 SystemThreadID
+	);
+
+TextInputFramework!TextInputServer::NotifyDelegateOfDelegationStateChange(
+	UINT32 SourceViewInstanceId,
+	UINT32 SourceProcessId,
+	BOOLEAN DelegationEnabled
+	);
+
+TextInputFramework!TextInputServer::UpdateCurrentTextInputHost(
+	UINT32 CurrentDelegateViewInstanceId
+	);
+
+TextInputFramework!TextInputServer::UpdateCurrentTextInputHost(
+	UINT32 foregroundViewInstanceId,
+	UINT32 delegateViewInstanceId,
+	HEXINT64 spDelegateHost
+	);
+
+TextInputFramework!TextInputServer::UpdateCurrentTextInputHost(
+	HEXINT64 NewHost,
+	BOOLEAN bIsDelegate,
+	UINT32 ViewInstanceID,
+	UINT32 ProcessID,
+	UINT32 ThreadID
+	);
+
+TextInputFramework!TextInputServer::UpdateForegroundTextInputHost(
+	HEXINT64 pHost,
+	UINT32 ProcessID,
+	UINT32 ThreadID
+	);
+
+TextInputFramework!TextInputServer::UpdateForegroundProcess(
+	UINT32 uiPID
+	);
+
+TextInputFramework!TextInputServer::ConnectionClosed(
+	UINT32 SystemProcessID,
+	UINT32 SystemThreadID
+	);
+
+TextInputFramework!TextInputServer::OnInputFocusEvent(
+	UINT32 SystemProcessID,
+	UINT32 SystemThreadID
+	);
+
+TextInputFramework!TextInputServer::OperationCompleted(
+	ANSISTRING "There is no TextInputClient in focus"
+	);
+
+TextInputFramework!TextInputServer::UnhandledKey(
+	UINT32 ulTextInputClientID1,
+	UINT64 ulTextInputClientID2,
+	UINT32 uiEditControlID,
+	UINT32 uiOperationID,
+	UINT32 uiKey,
+	UNICODESTRING hstrKeyText,
+	UINT32 uiModifiers
+	);
+
+TextInputFramework!TextInputServer::UnhandledKey(
+	UINT32 ulTextInputClientID1,
+	UINT64 ulTextInputClientID2,
+	UINT32 uiEditControlID,
+	UINT32 uiOperationID,
+	UINT32 uiModifiers
+	);
+
+TextInputFramework!TextInputServer::OperationCompleted2(
+	ANSISTRING "There is no registered TextInputClient for the provided id"
+	);
+
+TextInputFramework!TextInputServer::OperationCompleted2(
+	UINT32 ulTextInputClientID1,
+	UINT64 ulTextInputClientID2,
+	UINT32 uiEditControlID,
+	UINT32 uiOperationID,
+	UINT32 acknowledgmentType
+	);
+
+TextInputFramework!TextInputServer::OperationCompleted(
+	ANSISTRING "There is no registered TextInputClient for the provided id"
+	);
+
+TextInputFramework!TextInputServer::OperationCompleted(
+	UINT32 ulTextInputClientID1,
+	UINT64 ulTextInputClientID2,
+	UINT32 uiEditControlID,
+	UINT32 uiOperationID,
+	UINT32 acknowledgmentType
+	);
+
+TextInputFramework!TextInputServer::ForceRemoveFocus(
+	ANSISTRING "There is no TextInputClient in focus"
+	);
+
+TextInputFramework!TextInputServer::ForceRemoveFocus(
+	VOID
+	);
+
+TextInputFramework!TextInputServer::TagText(
+	ANSISTRING "There is no TextInputClient in focus"
+	);
+
+TextInputFramework!TextInputServer::TagText(
+	UINT32 ulTextInputClientID1,
+	UINT64 ulTextInputClientID2,
+	UINT32 uiEditControlID,
+	UINT32 uiOperationID,
+	INT32 iTagBegin,
+	INT32 iTagEnd,
+	UINT32 uiTagStyle
+	);
+
+TextInputFramework!TextInputServer::StartPositionTracking(
+	ANSISTRING "There is no TextInputClient in focus"
+	);
+
+TextInputFramework!TextInputServer::StartPositionTracking(
+	UINT32 ulTextInputClientID1,
+	UINT64 ulTextInputClientID2,
+	UINT32 uiEditControlID,
+	UINT32 uiOperationID,
+	BOOLEAN bTrackEditControlPosition,
+	BOOLEAN bTrackSelectionPosition
+	);
+
+TextInputFramework!TextInputServer::StartLayoutChangeTracking(
+	ANSISTRING "There is no TextInputClient in focus"
+	);
+
+TextInputFramework!TextInputServer::StartLayoutChangeTracking(
+	UINT32 ulTextInputClientID1,
+	UINT64 ulTextInputClientID2,
+	UINT32 uiEditControlID,
+	UINT32 uiOperationID,
+	BOOLEAN bListening,
+	INT32 range.Begin,
+	INT32 range.End
+	);
+
+TextInputFramework!TextInputServer::SetInComposition(
+	ANSISTRING "There is no TextInputClient in focus"
+	);
+
+TextInputFramework!TextInputServer::SetInComposition(
+	UINT32 ulTextInputClientID1,
+	UINT64 ulTextInputClientID2,
+	UINT32 uiEditControlID,
+	UINT32 uiOperationID,
+	BOOLEAN bInComposition
+	);
+
+TextInputFramework!TextInputServer::SetInputMethodMode(
+	UNICODESTRING hstrIMEMode
+	);
+
+TextInputFramework!TextInputServer::SetInputLocale(
+	ANSISTRING "There is no TextInputClient in focus"
+	);
+
+TextInputFramework!TextInputServer::SetInputLocale(
+	UINT32 ulTextInputClientID1,
+	UINT64 ulTextInputClientID2,
+	UINT32 uiEditControlID,
+	UINT32 uiOperationID,
+	UINT32 uiLocaleID
+	);
+
+TextInputFramework!TextInputServer::SetSelection(
+	ANSISTRING "There is no TextInputClient in focus"
+	);
+
+TextInputFramework!TextInputServer::SetSelection(
+	UINT32 ulTextInputClientID1,
+	UINT64 ulTextInputClientID2,
+	UINT32 uiEditControlID,
+	UINT32 uiOperationID,
+	INT32 iSelectionBegin,
+	INT32 iSelectionEnd,
+	UINT32 bindDirection,
+	UINT32 gripperVisibility
+	);
+
+TextInputFramework!TextInputServer::ReportError(
+	ANSISTRING "There is no TextInputClient in focus"
+	);
+
+TextInputFramework!TextInputServer::ReportError(
+	UINT32 ulTextInputClientID1,
+	UINT64 ulTextInputClientID2,
+	UINT32 uiEditControlID,
+	UINT32 uiOperationID,
+	UNICODESTRING hstrEditbufferString,
+	INT32 iSelBegin,
+	INT32 iSelEnd,
+	HEXINT32 hrError,
+	UNICODESTRING hstrErrorString
+	);
+
+TextInputFramework!TextInputServer::ReplaceText(
+	ANSISTRING "There is no TextInputClient in focus"
+	);
+
+TextInputFramework!TextInputServer::ReplaceText(
+	UINT32 ulTextInputClientID1,
+	UINT64 ulTextInputClientID2,
+	UINT32 uiEditControlID,
+	UINT32 uiOperationID,
+	INT32 iReplaceBegin,
+	INT32 iReplaceEnd,
+	UNICODESTRING hstrReplaceString
+	);
+
+TextInputFramework!TextInputServer::ReplaceText(
+	UINT32 ulTextInputClientID1,
+	UINT64 ulTextInputClientID2,
+	UINT32 uiEditControlID,
+	UINT32 uiOperationID,
+	INT32 iReplaceBegin,
+	INT32 iReplaceEnd
+	);
+
+TextInputFramework!TextInputServer::InsertText(
+	ANSISTRING "There is no TextInputClient in focus"
+	);
+
+TextInputFramework!TextInputServer::InsertText(
+	UINT32 ulTextInputClientID1,
+	UINT64 ulTextInputClientID2,
+	UINT32 uiEditControlID,
+	UINT32 uiOperationID,
+	INT32 iPosition,
+	UNICODESTRING hstrText
+	);
+
+TextInputFramework!TextInputServer::InsertText(
+	UINT32 ulTextInputClientID1,
+	UINT64 ulTextInputClientID2,
+	UINT32 uiEditControlID,
+	UINT32 uiOperationID,
+	INT32 iPosition
+	);
+
+TextInputFramework!TextInputServer::InsertChar(
+	ANSISTRING "There is no TextInputClient in focus"
+	);
+
+TextInputFramework!TextInputServer::InsertChar(
+	UINT32 ulTextInputClientID1,
+	UINT64 ulTextInputClientID2,
+	UINT32 uiEditControlID,
+	UINT32 uiOperationID,
+	INT32 iPosition,
+	UINT16 chCharacter,
+	UINT32 uiChecksum
+	);
+
+TextInputFramework!TextInputServer::InsertChar(
+	UINT32 ulTextInputClientID1,
+	UINT64 ulTextInputClientID2,
+	UINT32 uiEditControlID,
+	UINT32 uiOperationID,
+	INT32 iPosition,
+	UINT32 uiChecksum
+	);
+
+TextInputFramework!TextInputServer::InputHostFocusLeave(
+	ANSISTRING "Acknowledge focus leave in host"
+	);
+
+TextInputFramework!TextInputServer::InputHostFocusLeave(
+	UINT32 uiOrdinal,
+	BOOLEAN bOverride,
+	UINT32 SystemProcessID,
+	UINT32 SystemThreadID,
+	UINT32 m_uiCurrentWindowProcessID
+	);
+
+TextInputFramework!TextInputServer::InputHostFocusEnter(
+	UINT32 uiOrdinal,
+	BOOLEAN bOverride,
+	UINT32 SystemProcessID,
+	UINT32 SystemThreadID,
+	UINT32 m_uiCurrentWindowProcessID
+	);
+
+TextInputFramework!TextInputServer::EditControlKeyEventCompleted(
+	UINT32 ulTextInputClientID1,
+	UINT64 ulTextInputClientID2,
+	UINT32 uEditControlID,
+	UINT32 uKeyEventID
+	);
+
+TextInputFramework!TextInputServer::InputHostKeyEventCompleted(
+	UINT32 uKeyEventID
+	);
+
+TextInputFramework!TextInputServer::OnEditControlOrSelectionPositionChanged(
+	UINT32 textInputClientID1,
+	UINT64 textInputClientID2,
+	UINT32 uEditControlID,
+	INT32 rcSelectionBounds.Left,
+	INT32 rcSelectionBounds.Top,
+	INT32 rcSelectionBounds.Right,
+	INT32 rcSelectionBounds.Bottom,
+	INT32 rcControlBounds.Left,
+	INT32 rcControlBounds.Top,
+	INT32 rcControlBounds.Right,
+	INT32 rcControlBounds.Bottom
+	);
+
+TextInputFramework!TextInputServer::OnEditControlLayoutChanged(
+	UINT32 textInputClientID1,
+	UINT64 textInputClientID2,
+	UINT32 uEditControlID,
+	INT32 rcTextBounds.Left,
+	INT32 rcTextBounds.Top,
+	INT32 rcTextBounds.Right,
+	INT32 rcTextBounds.Bottom,
+	INT32 rcControlBounds.Left,
+	INT32 rcControlBounds.Top,
+	INT32 rcControlBounds.Right,
+	INT32 rcControlBounds.Bottom
+	);
+
+TextInputFramework!TextInputServer::RequestSoftwareKeyboardVisibilityChange(
+	BOOLEAN bVisible,
+	UINT32 viewType,
+	UINT32 PID,
+	UINT32 Current Window PID
+	);
+
+TextInputFramework!TextInputServer::EditControlUnpopulate(
+	ANSISTRING "Edit control couldn't be found"
+	);
+
+TextInputFramework!TextInputServer::EditControlUnpopulate(
+	UINT32 ulTextInputClientID1,
+	UINT64 ulTextInputClientID2,
+	UINT32 uiEditControlID,
+	UINT32 iBegin,
+	UINT32 iEnd
+	);
+
+TextInputFramework!TextInputServer::EditControlPopulate(
+	ANSISTRING "Edit control couldn't be found"
+	);
+
+TextInputFramework!TextInputServer::EditControlPopulate(
+	UINT32 ulTextInputClientID1,
+	UINT64 ulTextInputClientID2,
+	UINT32 uiEditControlID,
+	UINT32 iPopulateBegin
+	);
+
+TextInputFramework!TextInputServer::EditControlTextChanged(
+	ANSISTRING "Edit control couldn't be found"
+	);
+
+TextInputFramework!TextInputServer::EditControlTextChanged(
+	UINT32 ulTextInputClientID1,
+	UINT64 ulTextInputClientID2,
+	UINT32 uiEditControlID,
+	INT32 iOffset1,
+	INT32 iOffset2,
+	INT32 iTextLength,
+	BOOLEAN bOverride
+	);
+
+TextInputFramework!TextInputServer::EditControlFocusLeave(
+	UINT32 ulTextInputClientID1,
+	UINT64 ulTextInputClientID2,
+	UINT32 EditControlID,
+	BOOLEAN bOverride,
+	ANSISTRING "Client Registration not found"
+	);
+
+TextInputFramework!TextInputServer::EditControlFocusLeave(
+	UINT32 ulTextInputClientID1,
+	UINT64 ulTextInputClientID2,
+	UINT32 EditControlID,
+	BOOLEAN bOverride,
+	UINT32 SystemProcessID,
+	UINT32 SystemThreadID
+	);
+
+TextInputFramework!TextInputServer::EditControlFocusLeave (Send Ack)(
+	UINT32 EditControlID,
+	ANSISTRING "acknowledge focus leave in editcontrol"
+	);
+
+TextInputFramework!TextInputServer::EditControlFocusEnter is going to be dropped(
+	VOID
+	);
+
+TextInputFramework!TextInputServer::EditControlFocusEnter (Ack)(
+	BOOLEAN bOverride,
+	UINT32 ProcessID,
+	UINT32 ThreadID,
+	ANSISTRING "acknowledge focus leave in previous host"
+	);
+
+TextInputFramework!TextInputServer::EditControlFocusEnter (Ack)(
+	BOOLEAN bOverride,
+	UINT32 PreviousID,
+	ANSISTRING "acknowledge focus leave in previous control"
+	);
+
+TextInputFramework!TextInputServer::EditControlFocusEnter(
+	BOOLEAN bOverride,
+	ANSISTRING "Client Registration not found"
+	);
+
+TextInputFramework!TextInputServer::EditControlFocusEnter(
+	BOOLEAN bOverride,
+	UINT32 SystemProcessID,
+	UINT32 SystemThreadID
+	);
+
+TextInputFramework!TextInputServer::UnregisterTextInputHostSite(
+	UINT32 SystemProcessID,
+	UINT32 SystemThreadID
+	);
+
+TextInputFramework!TextInputServer::RegisterTextInputHostSite(
+	UINT32 SystemProcessID,
+	UINT32 SystemThreadID,
+	UINT32 hostedView
+	);
+
+TextInputFramework!TextInputServer::UnregisterTextInputHost(
+	UINT32 SystemProcessID,
+	UINT32 SystemThreadID
+	);
+
+TextInputFramework!TextInputServer::RegisterTextInputHost(
+	UINT32 SystemProcessID,
+	UINT32 SystemThreadID,
+	UINT32 viewInstanceId,
+	UINT32 windowInstanceId,
+	INT32 textInputHostType
+	);
+
+FeatureError(
+	UINT32 featureId,
+	INT32 featureVersion,
+	INT32 featureBaseVersion,
+	INT16 featureStage,
+	HRESULT hr,
+	ANSISTRING file,
+	UINT16 lineNumber,
+	ANSISTRING module,
+	ANSISTRING process,
+	ANSISTRING originFile,
+	UINT16 originLineNumber,
+	ANSISTRING originModule,
+	ANSISTRING originName,
+	ANSISTRING message,
+	ANSISTRING callerModule,
+	UINT32 callerReturnAddressOffset,
+	ANSISTRING originCallerModule,
+	UINT32 originCallerReturnAddressOffset
+	);
+
+FeatureVariantUsage(
+	UINT32 featureId,
+	INT32 featureVersion,
+	INT32 featureBaseVersion,
+	INT16 featureStage,
+	BOOLEAN enabled,
+	UINT32 variantKind,
+	UINT8 variant,
+	UINT64 addend
+	);
+
+EnabledFeatureUsage(
+	UINT32 featureId,
+	INT32 featureVersion,
+	INT32 featureBaseVersion,
+	INT16 featureStage,
+	BOOLEAN enabled,
+	UINT32 kind,
+	UINT64 addend
+	);
+
+FeatureUsage(
+	UINT32 featureId,
+	INT32 featureVersion,
+	INT32 featureBaseVersion,
+	INT16 featureStage,
+	BOOLEAN enabled,
+	UINT32 kind,
+	UINT64 addend
+	);
+
+FallbackError(
+	UINT64 PartA_PrivTags,
+	SIGNED wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+FallbackError(
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+TextInputFramework!CTextInputClientFreeThread::OnCompositionTerminated(
+	UINT32 uEditControlID
+	);
+
+TextInputFramework!CTextInputClientFreeThread::EditControlTextChanged(
+	UINT32 uEditControlID,
+	INT32 nChangeBegin,
+	INT32 nChangeEnd,
+	INT32 nNewEnd,
+	INT32 spReg.m_iTextLength,
+	INT32 spReg.m_Selection.Begin,
+	INT32 spReg.m_Selection.End,
+	INT32 nSelectionBegin,
+	INT32 nSelectionEnd
+	);
+
+TextInputFramework!CTextInputClientFreeThread::SelectionChanged(
+	UINT32 uEditControlID,
+	INT32 nSelectionBegin,
+	INT32 nSelectionEnd
+	);
+
+TextInputFramework!CTextInputClientFreeThread::EditControlUnregister(
+	UINT32 ID
+	);
+
+TextInputFramework!CTextInputClientFreeThread::EditControlFocusChange(
+	UINT32 Outstanding count,
+	ANSISTRING "Increase outstanding count of host"
+	);
+
+TextInputFramework!CTextInputClientFreeThread::EditControlFocusChange(
+	UINT32 ID,
+	BOOLEAN fInFocus
+	);
+
+TextInputFramework!CTextInputClientFreeThread::EditControlRegister(
+	UINT32 ID
+	);
+
+TextInputFramework!TextInputHost::EndKeyEventPayload(
+	UINT32 uiEditControlID,
+	UINT32 uiKeyEventID,
+	UINT16 keyEventInfo.VirtualKey,
+	UINT32 OutstandingOperationCount
+	);
+
+TextInputFramework!TextInputHost::EndKeyEventPayload(
+	UINT32 uiEditControlID,
+	UINT32 uiKeyEventID,
+	UINT32 OutstandingOperationCount
+	);
+
+TextInputFramework!TextInputHost::BeginKeyEventPayload(
+	UINT32 uiEditControlID,
+	UINT32 uiKeyEventID,
+	UINT16 keyEventInfo.VirtualKey,
+	UINT32 OutstandingOperationCount
+	);
+
+TextInputFramework!TextInputHost::BeginKeyEventPayload(
+	UINT32 uiEditControlID,
+	UINT32 uiKeyEventID,
+	UINT32 OutstandingOperationCount
+	);
+
+TextInputFramework!TextInputHost::OnNonCUIConfigurationChange(
+	BOOLEAN nonCUIConfiguration.bEnableNonCUIDepartFocus,
+	BOOLEAN m_nonCUIConfiguration.bEnableNonCUIDepartFocus
+	);
+
+TextInputFramework!TextInputHost::OnActivationStateChange(
+	UINT32 activationState,
+	UINT32 m_activationState
+	);
+
+TextInputFramework!TextInputHost::OnInputDelegated(
+	UINT32 NewDelegateWindow
+	);
+
+TextInputFramework!TextInputHost::OnInputDelegated(
+	UINT32 sourceViewInstanceId,
+	UINT32 sourceProcessId,
+	BOOLEAN bDelegated,
+	BOOLEAN m_bDelegated,
+	UINT32 m_hDelegateWindow
+	);
+
+TextInputFramework!TextInputHost::OnAcceleratorKeyEvent(
+	UINT32 uiKeyEventID,
+	UINT32 uiEditControlID,
+	INT32 AcceleratorKeyRoutingStage,
+	UINT16 keyEventInfo.VirtualKey,
+	UINT32 OutstandingOperationCount
+	);
+
+TextInputFramework!TextInputHost::OnAcceleratorKeyEvent(
+	UINT32 uiKeyEventID,
+	UINT32 uiEditControlID,
+	INT32 AcceleratorKeyRoutingStage,
+	UINT32 OutstandingOperationCount
+	);
+
+TextInputFramework!TextInputHost::GetCurrentTextInputHost(
+	VOID
+	);
+
+TextInputFramework!TextInputHost::GetFocusedOnThread(
+	UINT32 uiThreadID
+	);
+
+TextInputFramework!TextInputHost::InputHostFocusLeave(
+	HEXINT64 this,
+	UINT32 PID,
+	UINT32 TID,
+	BOOLEAN bOverride,
+	UINT32 dwOrdinal
+	);
+
+TextInputFramework!TextInputHost::InputHostFocusEnter(
+	HEXINT64 this,
+	BOOLEAN bOverride,
+	UINT32 dwOrdinal
+	);
+
+TextInputFramework!TextInputHost::PutHasFocus(
+	HEXINT64 pPrevFocused,
+	UINT32 PrevTID,
+	HEXINT64 pFocused,
+	UINT32 NewTID
+	);
+
+TextInputFramework!TextInputHost::PutHasFocus(
+	UINT32 PID,
+	UINT32 TID,
+	BOOLEAN bFocus,
+	UINT32 m_hWnd
+	);
+
+TextInputFramework!TextInputHost::GetEndpoint(
+	UINT32 PID,
+	UINT32 TID
+	);
+
+TextInputFramework!TextInputHost::OperationCompleted(
+	UINT32 eAcknowledgmentType,
+	UINT32 OutstandingOperationCount
+	);
+
+TextInputFramework!TextInputHost::OnCharacterEvent(
+	UINT32 uiEditControlID,
+	UINT32 uiKeyEventID,
+	UINT32 uiKeyDownEventID,
+	UINT32 OutstandingOperationCount
+	);
+
+TextInputFramework!TextInputHost::OnKeyEvent(
+	UINT32 uiEditControlID,
+	UINT32 uiKeyEventID,
+	UINT32 uiLastSeenKeyEventID,
+	UINT16 keyEventInfo.VirtualKey,
+	UINT32 OutstandingOperationCount
+	);
+
+TextInputFramework!TextInputHost::OnKeyEvent(
+	UINT32 uiEditControlID,
+	UINT32 uiKeyEventID,
+	UINT32 uiLastSeenKeyEventID,
+	UINT32 OutstandingOperationCount
+	);
+
+TextInputFramework!TextInputHostSite::DelegateInput(
+	UINT32 sourceViewInstanceId,
+	UINT32 delegateViewInstanceId,
+	BOOLEAN bDelegate,
+	UINT32 m_viewInstanceId
+	);
+
+TextInputFramework!TextInputClient::PopulateEditControl - GetSelectionAsync Continuation failure(
+	INT32 hrResult,
+	UINT32 EditControlID
+	);
+
+TextInputFramework!TextInputClient::EndKeyEventPayload(
+	UINT32 uiKeyEventID,
+	ANSISTRING "Acknowledge EndKeyEventPayload 2"
+	);
+
+TextInputFramework!TextInputClient::EndKeyEventPayload(
+	UINT32 uiEditControlID,
+	UINT32 uiKeyEventID,
+	UINT16 keyEventInfo.VirtualKey,
+	UINT16 keyEventInfo.EventFlags
+	);
+
+TextInputFramework!TextInputClient::EndKeyEventPayload(
+	UINT32 uiEditControlID,
+	UINT32 uiKeyEventID,
+	UINT16 keyEventInfo.EventFlags
+	);
+
+TextInputFramework!TextInputClient::EndKeyEventPayload(
+	UINT32 uiKeyEventID,
+	ANSISTRING "Acknowledge EndKeyEventPayload"
+	);
+
+TextInputFramework!TextInputClient::BeginKeyEventPayload(
+	UINT32 uiKeyEventID,
+	ANSISTRING "Acknowledge BeginKeyEventPayload 2"
+	);
+
+TextInputFramework!TextInputClient::BeginKeyEventPayload(
+	UINT32 uiEditControlID,
+	UINT32 uiKeyEventID,
+	UINT16 keyEventInfo.VirtualKey,
+	UINT16 keyEventInfo.EventFlags
+	);
+
+TextInputFramework!TextInputClient::BeginKeyEventPayload(
+	UINT32 uiEditControlID,
+	UINT32 uiKeyEventID,
+	UINT16 keyEventInfo.EventFlags
+	);
+
+TextInputFramework!TextInputClient::BeginKeyEventPayload(
+	UINT32 uiKeyEventID,
+	ANSISTRING "Acknowledge BeginKeyEventPayload"
+	);
+
+TextInputFramework!TextInputClient::SetCoreDispatcherHandled(
+	VOID
+	);
+
+TextInputFramework!TextInputClient::OnHostAcceleratorKeyEvent(
+	UINT32 uKeyEventID,
+	ANSISTRING "Acknowledge accelerator key event"
+	);
+
+TextInputFramework!TextInputClient::OnHostAcceleratorKeyEvent(
+	UINT32 uKeyEventID,
+	UINT32 uEditControlID,
+	INT32 eRoutingStage,
+	UINT16 VirtualKey,
+	UINT16 EventFlags
+	);
+
+TextInputFramework!TextInputClient::OnHostAcceleratorKeyEvent(
+	UINT32 uKeyEventID,
+	UINT32 uEditControlID,
+	INT32 eRoutingStage,
+	UINT16 EventFlags
+	);
+
+TextInputFramework!TextInputClient::OnConversionModeChanged(
+	UINT32 mode
+	);
+
+TextInputFramework!TextInputClient::OnCandidateUIEvent(
+	UINT32 uEditControlID,
+	UINT32 EventType
+	);
+
+TextInputFramework!TextInputClient::OnCompositionTerminated(
+	UINT32 uEditControlID
+	);
+
+TextInputFramework!TextInputClient::StartNavigateFocus(
+	UINT32 DestinationViewID
+	);
+
+TextInputFramework!TextInputClient::PopulateAndSendSelNotification(
+	INT32 selection.Begin,
+	INT32 selection.End,
+	INT32 iPopBegin1,
+	INT32 iPopEnd1,
+	INT32 iPopBegin2,
+	INT32 iPopEnd2
+	);
+
+TextInputFramework!TextInputClient::PopulateAndSendSelNotification - QueryTextAsync continuation failure (EditBuffer text cache not fully populated)(
+	INT32 hrResult,
+	INT32 iPopBegin1,
+	INT32 iPopEnd1,
+	UINT32 EditControlID
+	);
+
+TextInputFramework!TextInputClient::PopulateAndSendSelNotification - second QueryTextAsync continuation failure (EditBuffer text cache not fully populated)(
+	INT32 hrResult,
+	INT32 iPopBegin2,
+	INT32 iPopEnd2,
+	UINT32 EditControlID
+	);
+
+TextInputFramework!TextInputClient::MergePendingTextChange(
+	ANSISTRING "Rolling back state (cache tracker and doc length)"
+	);
+
+TextInputFramework!TextInputClient::SendPendingSelectionChange(
+	UINT32 uiEditControlID,
+	INT32 iSelectionBegin,
+	INT32 iSelectionEnd
+	);
+
+TextInputFramework!TextInputClient::NotifyTextChangedInternal - QueryTextAsync continuation failure (notification dropped - consider adding resync)(
+	INT32 hrResult,
+	INT32 cpPopBegin1,
+	INT32 cpPopEnd1,
+	UINT32 EditControlID
+	);
+
+TextInputFramework!TextInputClient::NotifyTextChangedInternal - second QueryTextAsync continuation failure (notification dropped - consider adding resync)(
+	INT32 hrResult,
+	INT32 cpPopBegin2,
+	INT32 cpPopEnd2,
+	UINT32 EditControlID
+	);
+
+TextInputFramework!TextInputClient::NotifyTextChange(
+	UINT32 uiEditControlID,
+	INT32 iChangeBegin,
+	INT32 iChangeEnd
+	);
+
+TextInputFramework!TextInputClient::RegisterEditControl(
+	UINT32 m_uiEditClientOperationID,
+	UINT32 uiEditControlID,
+	INT32 pRegistration.m_iTextLength,
+	INT32 rangeSelection.Begin,
+	INT32 rangeSelection.End
+	);
+
+TextInputFramework!TextInputClient::GetRegistrationAndCheckNoAbort(
+	UINT32 uiEditControlID,
+	ANSISTRING "Operation Ignored, still populating"
+	);
+
+TextInputFramework!TextInputClient::GetRegistrationAndCheckNoAbort(
+	UINT32 uiEditControlID,
+	UINT32 Outstanding Op Count,
+	ANSISTRING "Operation Ignored, oustanding operations"
+	);
+
+TextInputFramework!TextInputClient::GetRegistrationAndCheckNoAbort(
+	UINT32 uiEditControlID,
+	ANSISTRING "Operation Ignored, no Edit Control"
+	);
+
+TextInputFramework!TextInputClient::GetRegistrationAndCheckNoAbort(
+	UINT32 uiEditControlID,
+	ANSISTRING "Operation Ignored, outstanding operation in host"
+	);
+
+TextInputFramework!TextInputClient::ReportOperationFailed(
+	UINT32 uiEditControlID,
+	UINT32 uiOperationID,
+	HEXINT32 hrError
+	);
+
+PerfTICOnKeyEvent(
+	UINT16 scanCode,
+	UINT64 ciceroStartingTime,
+	UINT16 virtualKey,
+	UINT16 eventFlags,
+	UINT64 deviceId
+	);
+
+PerfTICOnKeyEvent(
+	UINT16 scanCode,
+	UINT64 ciceroStartingTime,
+	UINT16 virtualKey,
+	UINT16 eventFlags,
+	UINT64 deviceId
+	);
+
+ISOD: TextInputFramework!TextInputClient::OnKeyEvent(
+	UINT16 scanCode,
+	UINT16 virtualKey,
+	UINT16 eventFlags,
+	UINT64 deviceId
+	);
+
+ISOD: TextInputFramework!TextInputClient::OnKeyEvent(
+	UINT16 eventFlags,
+	UINT64 deviceId
+	);
+
+TextInputFramework!TextInputClient::SetKeyDownHandled(
+	VOID
+	);
+
+TextInputFramework!TextInputClient::EditControlLayoutChanged(
+	UINT32 uEditControlID
+	);
+
+TextInputFramework!TextInputClient::OnHostCharacterEvent(
+	UINT32 uiKeyEventID,
+	ANSISTRING "Task was overridden, don't send character key completion 2"
+	);
+
+TextInputFramework!TextInputClient::OnHostCharacterEvent(
+	UINT32 uiKeyEventID,
+	ANSISTRING "Acknowledge Character event 2"
+	);
+
+TextInputFramework!TextInputClient::OnHostCharacterEvent(
+	UINT32 uiKeyEventID,
+	ANSISTRING "Key event targed to framework, send without ack"
+	);
+
+TextInputFramework!TextInputClient::OnHostCharacterEvent(
+	UINT32 uiKeyEventID,
+	ANSISTRING "Task was overridden, don't send character key completion "
+	);
+
+TextInputFramework!TextInputClient::OnHostCharacterEvent(
+	UINT32 uiEditControlID,
+	UINT32 uiKeyEventID,
+	UINT32 uiKeyDownEventID,
+	UINT16 chLog
+	);
+
+TextInputFramework!TextInputClient::OnHostCharacterEvent(
+	UINT32 uiEditControlID,
+	UINT32 uiKeyEventID,
+	UINT32 uiKeyDownEventID
+	);
+
+TextInputFramework!TextInputClient::OnHostCharacterEvent(
+	UINT32 uiKeyEventID,
+	ANSISTRING "Acknowledge Character event"
+	);
+
+TextInputFramework!TextInputClient::OnHostKeyEvent(
+	UINT32 uiKeyEventID,
+	ANSISTRING "Task was overridden, don't send key completion 2"
+	);
+
+TextInputFramework!TextInputClient::OnHostKeyEvent(
+	UINT32 uiKeyEventID,
+	ANSISTRING "Acknowledge key event 2"
+	);
+
+TextInputFramework!TextInputClient::OnHostKeyEvent(
+	ANSISTRING "Direct send to framework"
+	);
+
+TextInputFramework!TextInputClient::OnHostKeyEvent(
+	UINT32 uiKeyEventID,
+	ANSISTRING "Task was overridden, don't send key completion"
+	);
+
+TextInputFramework!TextInputClient::OnHostKeyEvent(
+	UINT32 uiEditControlID,
+	UINT32 uiKeyEventID,
+	UINT32 uiLastSeenKeyEventID,
+	UINT16 keyEventInfo.VirtualKey,
+	UINT16 keyEventInfo.EventFlags
+	);
+
+TextInputFramework!TextInputClient::OnHostKeyEvent(
+	UINT32 uiEditControlID,
+	UINT32 uiKeyEventID,
+	UINT32 uiLastSeenKeyEventID,
+	UINT16 keyEventInfo.EventFlags
+	);
+
+TextInputFramework!TextInputClient::OnHostKeyEvent(
+	UINT32 uiKeyEventID,
+	ANSISTRING "Acknowledge key event"
+	);
+
+TextInputFramework!TextInputClient::EditControlTextChanged(
+	UINT32 uiEditControlID,
+	INT32 iChangeBegin,
+	INT32 iChangeEnd,
+	INT32 iNewLength,
+	INT32 spReg.m_iTextLength,
+	INT32 spReg.m_Selection.Begin,
+	INT32 spReg.m_Selection.End,
+	ANSISTRING "Cache tracker updated"
+	);
+
+TextInputFramework!TextInputClient::EditControlTextChanged(
+	ANSISTRING "Do initial populate for the edit control"
+	);
+
+TextInputFramework!TextInputClient::EditControlTextChanged(
+	ANSISTRING "Setting the rollback tracker"
+	);
+
+TextInputFramework!TextInputClient::EditControlTextChanged(
+	ANSISTRING "Dropping TextChanged notification because edit control is resyncing"
+	);
+
+TextInputFramework!TextInputClient::EditControlTextChanged(
+	UINT32 uiEditControlID,
+	INT32 iChangeBegin,
+	INT32 iChangeEnd,
+	INT32 iNewLength,
+	INT32 spReg.m_iTextLength,
+	INT32 spReg.m_Selection.Begin,
+	INT32 spReg.m_Selection.End,
+	INT32 iSelectionBegin,
+	INT32 iSelectionEnd
+	);
+
+TextInputFramework!TextInputClient::NotifySelectionChanged(
+	INT32 iSelectionBegin,
+	INT32 iSelectionEnd,
+	BOOLEAN bOverride,
+	UINT32 pReg.m_uiEditControlID
+	);
+
+TextInputFramework!TextInputClient::SelectionChanged(
+	ANSISTRING "SelectionChange notification saved"
+	);
+
+TextInputFramework!TextInputClient::SelectionChanged(
+	ANSISTRING "Drop invalid selection change"
+	);
+
+TextInputFramework!TextInputClient::SelectionChanged(
+	ANSISTRING "Reprocessing incomplete text change"
+	);
+
+TextInputFramework!TextInputClient::SelectionChanged(
+	ANSISTRING "Do initial populate for the edit control"
+	);
+
+TextInputFramework!TextInputClient::SelectionChanged(
+	UINT32 uiEditControlID,
+	INT32 iSelectionBegin,
+	INT32 iSelectionEnd,
+	INT32 spReg.m_iTextLength
+	);
+
+TextInputFramework!TextInputClient::SelectionChanged(
+	ANSISTRING "Dropping SelectionChange notification because edit control is resyncing"
+	);
+
+TextInputFramework!TextInputClient::SelectionChanged(
+	UINT32 uiEditControlID,
+	INT32 iSelectionBegin,
+	INT32 iSelectionEnd
+	);
+
+TextInputFramework!TextInputClient::EditControlTappedEx(
+	UINT32 uiEditControlID,
+	INT32 iTapPosition,
+	BOOLEAN bSettingFocus,
+	INT32 spReg.m_iTextLength
+	);
+
+TextInputFramework!TextInputClient::EditControlTapped(
+	UINT32 uiEditControlID,
+	INT32 spReg.m_iTextLength
+	);
+
+TextInputFramework!TextInputClient::EditControlUnregister(
+	UINT32 uiEditControlID
+	);
+
+TextInputFramework!TextInputClient::EditControlFocusChangeInternal(
+	UINT32 spReg->m_uiEditControlID,
+	ANSISTRING "Calling EditControlFocusLeave"
+	);
+
+TextInputFramework!TextInputClient::EditControlFocusChangeInternal(
+	UINT32 uiEditControlID,
+	INT32 iCaretPos,
+	INT32 TextLength
+	);
+
+TextInputFramework!TextInputClient::EditControlFocusChangeInternal(
+	ANSISTRING "Focus change ignroed because control has unregistered"
+	);
+
+TextInputFramework!TextInputClient::EditControlFocusChangeInternal(
+	UINT32 ID,
+	BOOLEAN bInFocus
+	);
+
+TextInputFramework!TextInputClient::EditControlRegister(
+	UINT32 uiOperationID,
+	UINT32 uiEditControlID
+	);
+
+TextInputFramework!TextInputClient::UpdateLayoutInfo(
+	UINT32 uiEditControlID
+	);
+
+TextInputFramework!TextInputClient::SetTextFormat(
+	UINT32 uiOperationID,
+	UINT32 uiEditControlID,
+	INT32 iFormatBegin,
+	INT32 iFormatEnd
+	);
+
+TextInputFramework!TextInputClient::SetCompositionInfo(
+	UINT32 uiOperationID,
+	UINT32 uiEditControlID,
+	INT32 iCompositionBegin,
+	INT32 iCompositionEnd
+	);
+
+TextInputFramework!TextInputClient::ReportError(
+	UINT32 uiOperationID,
+	UINT32 uiEditControlID,
+	UNICODESTRING hstrEditText,
+	INT32 iSelectionBegin,
+	INT32 iSelectionEnd,
+	HEXINT32 iErrorcode,
+	UNICODESTRING hstrErrorText
+	);
+
+TextInputFramework!TextInputClient::Resynchronize(
+	UINT8 bOverride,
+	UINT32 uiEditControlID
+	);
+
+TextInputFramework!TextInputClient::UnhandledKey(
+	UINT32 uiOperationID,
+	UINT32 uiEditControlID,
+	UINT32 uiKey,
+	UNICODESTRING hstrKeyText,
+	UINT32 uiModifiers
+	);
+
+TextInputFramework!TextInputClient::UnhandledKey(
+	UINT32 uiOperationID,
+	UINT32 uiEditControlID,
+	UINT32 uiModifiers
+	);
+
+TextInputFramework!TextInputClient::OnKeyEvent(
+	UINT32 uiKeyEventID,
+	ANSISTRING "Task was overridden, acknowledgement suppressed"
+	);
+
+TextInputFramework!TextInputClient::OnKeyEvent(
+	UINT32 uiKeyEventID,
+	UINT32 uiEditControlID,
+	BOOLEAN bNotifyFramework,
+	UINT16 VirtualKey,
+	UINT16 EventFlags
+	);
+
+TextInputFramework!TextInputClient::OnKeyEvent(
+	UINT32 uiKeyEventID,
+	UINT32 uiEditControlID,
+	BOOLEAN bNotifyFramework,
+	UINT16 EventFlags
+	);
+
+TextInputFramework!TextInputClient::OnKeyEvent(
+	UINT32 uiKeyEventID,
+	ANSISTRING "Key event acknowledged"
+	);
+
+PerfTICOperationCompleted(
+	BOOL32 IsKeyUp,
+	BOOL32 IsHWKB,
+	UINT32 ProfileType,
+	UINT32 LangID,
+	GUID CLSID,
+	GUID GuidProfile,
+	UINT32 HKL,
+	UINT32 hklSubstitute,
+	UINT32 KLID,
+	UINT32 Caps,
+	UINT32 Flags,
+	DOUBLE TimeFromCiceroToIS(ms),
+	DOUBLE DurationOfISKeyEventProcessor(ms),
+	DOUBLE DurationOfIME(ms),
+	DOUBLE DurationOfIS(ms),
+	DOUBLE DurationOfApp(ms),
+	DOUBLE CiceroTime(ms),
+	DOUBLE TimeFromISToCicero(ms),
+	DOUBLE TimeFromEndIMEToStartApp(ms),
+	DOUBLE TimeFromEndAppToEndIS(ms),
+	DOUBLE TimeFromCiceroToIS/Cicero%,
+	DOUBLE %DurationOfISKeyEventProcessor/Cicero%,
+	DOUBLE DurationOfIME/Cicero%,
+	DOUBLE DurationOfIS/Cicero%,
+	DOUBLE DurationOfApp/Cicero%,
+	DOUBLE TimeFromISToCicero/Cicero%,
+	DOUBLE TimeFromEndIMEToStartApp/Cicero%,
+	DOUBLE TimeFromEndAppToEndIS/Cicero%,
+	UINT64 TimeStartFromCicero(PerfCounter),
+	UINT64 TimeEndFromCicero(PerfCounter),
+	UINT64 TimeStartFromIS(PerfCounter),
+	UINT64 TimeEndFromIS(PerfCounter),
+	UINT64 TimeStartFromIME(PerfCounter),
+	UINT64 TimeEndFromIME(PerfCounter),
+	UINT64 TimeStartFromApp(PerfCounter),
+	UINT64 TimeEndFromApp(PerfCounter),
+	UINT64 TimeStartFromISKeyEventprocessor(PerfCounter),
+	UINT64 TimeEndFromISKeyEventprocessor(PerfCounter),
+	UINT64 PerformancecounterFrequency(PerfCounter),
+	UINT32 acknowledgmentType(PerfCounter)
+	);
+
+PerfTICOperationCompleted(
+	BOOL32 IsKeyUp,
+	BOOL32 IsHWKB,
+	UINT32 ProfileType,
+	UINT32 LangID,
+	GUID CLSID,
+	GUID GuidProfile,
+	UINT32 HKL,
+	UINT32 hklSubstitute,
+	UINT32 KLID,
+	UINT32 Caps,
+	UINT32 Flags,
+	DOUBLE TimeFromCiceroToIS(ms),
+	DOUBLE DurationOfISKeyEventProcessor(ms),
+	DOUBLE DurationOfIME(ms),
+	DOUBLE DurationOfIS(ms),
+	DOUBLE DurationOfApp(ms),
+	DOUBLE CiceroTime(ms),
+	DOUBLE TimeFromISToCicero(ms),
+	DOUBLE TimeFromEndIMEToStartApp(ms),
+	DOUBLE TimeFromEndAppToEndIS(ms),
+	DOUBLE TimeFromCiceroToIS/Cicero%,
+	DOUBLE %DurationOfISKeyEventProcessor/Cicero%,
+	DOUBLE DurationOfIME/Cicero%,
+	DOUBLE DurationOfIS/Cicero%,
+	DOUBLE DurationOfApp/Cicero%,
+	DOUBLE TimeFromISToCicero/Cicero%,
+	DOUBLE TimeFromEndIMEToStartApp/Cicero%,
+	DOUBLE TimeFromEndAppToEndIS/Cicero%,
+	UINT64 TimeStartFromCicero(PerfCounter),
+	UINT64 TimeEndFromCicero(PerfCounter),
+	UINT64 TimeStartFromIS(PerfCounter),
+	UINT64 TimeEndFromIS(PerfCounter),
+	UINT64 TimeStartFromIME(PerfCounter),
+	UINT64 TimeEndFromIME(PerfCounter),
+	UINT64 TimeStartFromApp(PerfCounter),
+	UINT64 TimeEndFromApp(PerfCounter),
+	UINT64 TimeStartFromISKeyEventprocessor(PerfCounter),
+	UINT64 TimeEndFromISKeyEventprocessor(PerfCounter),
+	UINT64 PerformancecounterFrequency(PerfCounter),
+	UINT32 acknowledgmentType(PerfCounter)
+	);
+
+ISOD TextInputFramework!TextInputClient::OperationCompleted(
+	UINT32 uiEditControlID,
+	UINT32 acknowledgmentType
+	);
+
+TextInputFramework!TextInputClient::OperationCompleted(
+	UINT32 uiOperationID,
+	UINT32 uiEditControlID,
+	UINT32 acknowledgmentType,
+	UINT32 Outstanding Op count
+	);
+
+TextInputFramework!TextInputClient::ForceRemoveFocus(
+	UINT32 uiEditControlID
+	);
+
+TextInputFramework!TextInputClient::TagText(
+	UINT32 uiOperationID,
+	UINT32 uiEditControlID,
+	INT32 iTagBegin,
+	INT32 iTagEnd,
+	UINT32 uiTagStyle
+	);
+
+TextInputFramework!TextInputClient::StartPositionTracking(
+	UINT32 uiOperationID,
+	UINT32 uiEditControlID,
+	BOOLEAN bTrackEditControlPosition,
+	BOOLEAN bTrackSelectionPosition
+	);
+
+TextInputFramework!TextInputClient::StartLayoutChangeTracking(
+	UINT32 uiOperationID,
+	UINT32 uiEditControlID,
+	BOOLEAN bListening,
+	INT32 range.Begin,
+	INT32 range.End
+	);
+
+TextInputFramework!TextInputClient::SetInComposition(
+	UINT32 uiOperationID,
+	UINT32 uiEditControlID,
+	BOOLEAN bInComposition
+	);
+
+TextInputFramework!TextInputClient::SetInputLocale(
+	UINT32 uiOperationID,
+	UINT32 uiEditControlID,
+	UINT32 uiLocaleID
+	);
+
+TextInputFramework!TextInputClient::SetSelection(
+	UINT32 uiOperationID,
+	UINT32 uiEditControlID,
+	INT32 iSelectionBegin,
+	INT32 iSelectionEnd,
+	UINT32 bindDirection,
+	UINT32 gripperVisibility
+	);
+
+TextInputFramework!TextInputClient::SetSmartLink(
+	UINT32 operationID,
+	UINT32 editControlID,
+	INT32 linkBegin,
+	INT32 linkEnd,
+	UNICODESTRING Text,
+	UNICODESTRING URIText,
+	UNICODESTRING URLText,
+	UNICODESTRING altText,
+	UINT32 richType
+	);
+
+TextInputFramework!TextInputClient::ReplaceText(
+	UINT32 uiOperationID,
+	UINT32 uiEditControlID,
+	INT32 iReplaceBegin,
+	INT32 iReplaceEnd,
+	UNICODESTRING Text,
+	INT32 cchTextLength
+	);
+
+TextInputFramework!TextInputClient::ReplaceText(
+	UINT32 uiOperationID,
+	UINT32 uiEditControlID,
+	INT32 iReplaceBegin,
+	INT32 iReplaceEnd
+	);
+
+TextInputFramework!TextInputClient::ReplaceTextInternal - QueryTextAsync continuation failure (EditBuffer text cache not extending as designed)(
+	INT32 hrResult,
+	INT32 cpPopBegin1,
+	INT32 cpPopEnd1,
+	INT32 cpPopBegin2,
+	INT32 cpPopEnd2,
+	UINT32 OperationID,
+	UINT32 EditControlID
+	);
+
+TextInputFramework!TextInputClient::ReplaceTextInternal - second QueryTextAsync continuation failure (EditBuffer text cache not extending as designed)(
+	INT32 hrResult,
+	INT32 cpPopBegin2,
+	INT32 cpPopEnd2,
+	UINT32 OperationID,
+	UINT32 EditControlID
+	);
+
+TextInputFramework!TextInputClient::InsertText(
+	UINT32 uiOperationID,
+	UINT32 uiEditControlID,
+	INT32 iPosition,
+	INT32 cchTextLength,
+	UNICODESTRING Text
+	);
+
+TextInputFramework!TextInputClient::InsertText(
+	UINT32 uiOperationID,
+	UINT32 uiEditControlID,
+	INT32 iPosition
+	);
+
+TextInputFramework!TextInputClient::OnEditControlOperationCompleted(
+	UINT32 uiEditControlID,
+	UINT32 OperationID
+	);
+
+TextInputFramework!TextInputClient::InsertChar(
+	UINT32 uiOperationID,
+	UINT32 uiEditControlID,
+	INT32 iPosition,
+	UINT16 chCharacter,
+	UINT32 uiChecksum,
+	UINT16 chLog
+	);
+
+TextInputFramework!TextInputClient::InsertChar(
+	UINT32 uiOperationID,
+	UINT32 uiEditControlID,
+	INT32 iPosition
+	);
+
+TextInputFramework!CAsyncTaskScheduler::GenerateQueryID(
+	UINT32 _uCurrentQueryID
+	);
+
+TextInputFramework!CAsyncTaskScheduler::HasPendingTask(
+	UINT32 eType,
+	UINT32 Found
+	);
+
+TextInputFramework!CAsyncTaskScheduler::RunAfterLastEditAction(
+	UINT32 uID
+	);
+
+TextInputFramework!CAsyncTaskScheduler::RunCancellations(
+	UINT32 uID
+	);
+
+TextInputFramework!CAsyncTaskScheduler::CancelPendingEditActions(
+	UINT32 uID
+	);
+
+TextInputFramework!CAsyncTaskScheduler::CancelPendingTasks(
+	UINT32 uID
+	);
+
+TextInputFramework!CAsyncTaskScheduler::CompleteTask(
+	UINT32 uID,
+	ANSISTRING "Cancel task because resync is in progress"
+	);
+
+TextInputFramework!CAsyncTaskScheduler::CompletePendingTask(
+	HEXINT32 hr
+	);
+
+TextInputFramework!CAsyncTaskScheduler::CompletePendingTask(
+	UINT32 uID,
+	UINT32 eType,
+	UINT32 eState,
+	UINT32 uDeferredOperationID
+	);
+
+TextInputFramework!CAsyncTaskScheduler::BeginPendingTask(
+	HEXINT32 hr,
+	UINT32 eState
+	);
+
+TextInputFramework!CAsyncTaskScheduler::BeginPendingTask(
+	UINT32 uID,
+	UINT32 eType,
+	UINT32 eState,
+	UINT32 uDeferredOperationID,
+	UINT32 uCurrentQueryID
+	);
+
+TextInputFramework!CAsyncTaskScheduler::DeferCurrentTask(
+	UINT32 Deferred OperationID,
+	UINT32 eType
+	);
+
+TextInputFramework!OutstandingOpTracker::PopOutstandingOp(
+	UINT32 uiOperationID,
+	UINT32 m_uiEditControlID,
+	UINT32 eType,
+	UINT32 uiSerial
+	);
+
+TextInputFramework!OutstandingOpTracker::PopOutstandingOp(
+	UINT32 uiOperationID,
+	UINT32 m_uiEditControlID,
+	UINT32 eType,
+	UINT32 uiSerial,
+	UINT32 uiSize
+	);
+
+TextInputFramework!OutstandingOpTracker::SetOutstandingOpID(
+	UINT32 uiOperationID,
+	UINT32 m_uiEditControlID,
+	UINT32 eType,
+	UINT32 uiSerial
+	);
+
+TextInputFramework!OutstandingOpTracker::PushOutstandingOp(
+	UINT32 uiOperationID,
+	UINT32 m_uiEditControlID,
+	UINT32 eType,
+	UINT32 uiSerial,
+	UINT32 uiSize
+	);
+
+TextInputFramework!ClientOwnerRegistration::~OutstandingOpGuard(
+	UINT32 m_uiEditControlID,
+	UINT32 m_eAckType,
+	ANSISTRING "Pop non committed operation"
+	);
+
+TextInputFramework!CGetLayoutBoundsAsync::Complete(
+	UINT32 TaskID,
+	HEXINT32 hr
+	);
+
+TextInputFramework!CGetSelectionAsync::Complete(
+	UINT32 TaskID,
+	HEXINT32 hr,
+	INT32 selection.Begin,
+	INT32 selection.End
+	);
+
+TextInputFramework!CQueryTextAsync::Complete(
+	UINT32 TaskID,
+	HEXINT32 hr,
+	INT32 cchText
+	);
+
+TextInputFramework!CEditActionAsync::Complete(
+	UINT32 TaskID,
+	HEXINT32 hr
+	);
+
+InputServiceLatency(
+	UINT32 ProfileType,
+	UINT32 LangID,
+	GUID CLSID,
+	GUID GuidProfile,
+	UINT32 HKL,
+	UINT32 hklSubstitute,
+	UINT32 KLID,
+	UINT32 Caps,
+	UINT32 Flags,
+	UINT32 IsHWKB,
+	UINT32 Bucket1KeyUpCount,
+	UINT32 Bucket1KeyUpLatencySum,
+	UINT32 Bucket2KeyUpCount,
+	UINT32 Bucket2KeyUpLatencySum,
+	UINT32 Bucket3KeyUpCount,
+	UINT32 Bucket3KeyUpLatencySum,
+	UINT32 Bucket4KeyUpCount,
+	UINT32 Bucket4KeyUpLatencySum,
+	UINT32 Bucket5KeyUpCount,
+	UINT32 Bucket5KeyUpLatencySum,
+	UINT32 Bucket6KeyUpCount,
+	UINT32 Bucket6KeyUpLatencySum,
+	UINT32 Bucket1KeyDownCount,
+	UINT32 Bucket1KeyDownLatencySum,
+	UINT32 Bucket2KeyDownCount,
+	UINT32 Bucket2KeyDownLatencySum,
+	UINT32 Bucket3KeyDownCount,
+	UINT32 Bucket3KeyDownLatencySum,
+	UINT32 Bucket4KeyDownCount,
+	UINT32 Bucket4KeyDownLatencySum,
+	UINT32 Bucket5KeyDownCount,
+	UINT32 Bucket5KeyDownLatencySum,
+	UINT32 Bucket6KeyDownCount,
+	UINT32 Bucket6KeyDownLatencySum,
+	UINT32 Bucket1GamingKeyUpCount,
+	UINT32 Bucket1GamingKeyUpLatencySum,
+	UINT32 Bucket2GamingKeyUpCount,
+	UINT32 Bucket2GamingKeyUpLatencySum,
+	UINT32 Bucket3GamingKeyUpCount,
+	UINT32 Bucket3GamingKeyUpLatencySum,
+	UINT32 Bucket4GamingKeyUpCount,
+	UINT32 Bucket4GamingKeyUpLatencySum,
+	UINT32 Bucket5GamingKeyUpCount,
+	UINT32 Bucket5GamingKeyUpLatencySum,
+	UINT32 Bucket6GamingKeyUpCount,
+	UINT32 Bucket6GamingKeyUpLatencySum,
+	UINT32 Bucket1GamingKeyDownCount,
+	UINT32 Bucket1GamingKeyDownLatencySum,
+	UINT32 Bucket2GamingKeyDownCount,
+	UINT32 Bucket2GamingKeyDownLatencySum,
+	UINT32 Bucket3GamingKeyDownCount,
+	UINT32 Bucket3GamingKeyDownLatencySum,
+	UINT32 Bucket4GamingKeyDownCount,
+	UINT32 Bucket4GamingKeyDownLatencySum,
+	UINT32 Bucket5GamingKeyDownCount,
+	UINT32 Bucket5GamingKeyDownLatencySum,
+	UINT32 Bucket6GamingKeyDownCount,
+	UINT32 Bucket6GamingKeyDownLatencySum
+	);
+
+TextInputFramework!EditBufferCacheTracker::NotifyTextChangeFromInputService(
+	INT32 iChangeBegin,
+	INT32 iChangeEnd,
+	INT32 cchReplacement
+	);
+
+TextInputFramework!EditBufferCacheTracker::NotifyTextChange(
+	INT32 iBegin,
+	INT32 iEnd,
+	ANSISTRING "Post State"
+	);
+
+TextInputFramework!EditBufferCacheTracker::NotifyTextChange(
+	INT32 iBegin,
+	INT32 iEnd,
+	ANSISTRING "Pre State"
+	);
+
+TextInputFramework!EditBufferCacheTracker::NotifyTextChange(
+	INT32 iChangeBegin,
+	INT32 iChangeEnd,
+	INT32 cchReplacement
+	);
+

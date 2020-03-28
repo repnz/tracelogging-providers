@@ -1,0 +1,39 @@
+ProviderNames:
+	Microsoft.Windows.Maps.ZTrace
+
+
+
+**** Events *****
+TelemetryMessage(
+	INT32 level,
+	ANSISTRING function,
+	INT32 line,
+	ANSISTRING message
+	);
+
+ErrorMessage(
+	INT32 level,
+	ANSISTRING function,
+	INT32 line,
+	ANSISTRING message
+	);
+
+ErrorOrigination(
+	HRESULT error,
+	ANSISTRING function,
+	INT32 line
+	);
+
+ErrorPropagation(
+	HRESULT error,
+	ANSISTRING function,
+	INT32 line
+	);
+
+ErrorTruncated(
+	HRESULT error,
+	ANSISTRING function,
+	INT32 line,
+	ANSISTRING message
+	);
+

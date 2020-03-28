@@ -1,0 +1,95 @@
+ProviderNames:
+	Microsoft.Windows.ErrorHandling.Fallback
+	Microsoft.Windows.Shell.ShareUX
+
+
+
+**** Events *****
+FallbackError(
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+FallbackError(
+	UINT64 PartA_PrivTags,
+	SIGNED wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+Receiver_ShowCanceledToast(
+	UNICODESTRING remoteDeviceName,
+	ANSISTRING __TlgCV__
+	);
+
+Receiver_ShowSomethingWrongToast(
+	UNICODESTRING remoteDeviceName,
+	ANSISTRING __TlgCV__
+	);
+
+Receiver_ShowLostConnectToast(
+	UNICODESTRING remoteDeviceName,
+	ANSISTRING __TlgCV__
+	);
+
+Receiver_ShowCompletedToast(
+	UNICODESTRING remoteDeviceName,
+	ANSISTRING __TlgCV__
+	);
+
+Receiver_ShowConnectingToast(
+	UNICODESTRING remoteDeviceName,
+	ANSISTRING __TlgCV__
+	);
+
+Receiver_ShowFilesToast(
+	UNICODESTRING remoteDeviceName,
+	INT32 fileCount,
+	ANSISTRING __TlgCV__
+	);
+
+Receiver_ShowUriToast(
+	UNICODESTRING remoteDeviceName,
+	UNICODESTRING uriTitle,
+	ANSISTRING __TlgCV__
+	);
+
+Receiver_ShowNearShareDisabledToast(
+	ANSISTRING __TlgCV__
+	);
+
+Receiver_ShowFileToast(
+	UNICODESTRING remoteDeviceName,
+	UNICODESTRING fileName,
+	ANSISTRING __TlgCV__
+	);
+

@@ -1,0 +1,168 @@
+ProviderNames:
+	Microsoft.Windows.EnterpriseManagement.Enrollment
+	Microsoft.EMPS.Enrollment
+	Microsoft.Windows.DeviceManagement.SCEP
+
+
+
+**** Events *****
+DeleteChallengeFromRegistry(
+	INT32 HRESULT
+	);
+
+UtilsIsCertThumbprintPresentInRegistryFailed(
+	INT32 HRESULT
+	);
+
+DeleteTaskFromTaskScheduler(
+	INT32 HRESULT
+	);
+
+UtilsDeleteCertPrivateKey(
+	INT32 HRESULT
+	);
+
+SCEPSendOmaDmAlert(
+	UNICODESTRING AlertSource
+	);
+
+SCEPUtilsWriteRespondentServerURL(
+	UNICODESTRING RespondentServerURL
+	);
+
+SCEPUtilsReadChallengeSuccessful(
+	VOID
+	);
+
+SCEPGetInstallStatus(
+	UINT32 CurrentInstallStatus
+	);
+
+SCEPUtilsReplaceCertThumbprint(
+	ANSISTRING "Writing new Thumbprint to registry",
+	UNICODESTRING Thumbprint
+	);
+
+SCEPWriteErrorCodeAndStatus(
+	ANSISTRING "Cert Install Pending"
+	);
+
+SCEPWriteErrorCodeAndStatus(
+	ANSISTRING "Cert Installed Successfully"
+	);
+
+SCEPWriteErrorCodeAndStatus(
+	UNICODESTRING RegistryPath,
+	UINT32 InstallStatus,
+	INT32 ErrorCode
+	);
+
+SCEPOpenRegistryKey(
+	UNICODESTRING KeyPath,
+	UINT32 SamDesired
+	);
+
+SCEPLogInfo(
+	ANSISTRING SCEPInfo
+	);
+
+SCEPLogWarn(
+	ANSISTRING SCEPWarn
+	);
+
+UtilsWriteRespondentServerURL(
+	INT32 ErrorCode,
+	ANSISTRING __TlgCV__
+	);
+
+ReadFromRegistry(
+	INT32 SCEPUrlCount,
+	ANSISTRING __TlgCV__
+	);
+
+UtilsReplaceCertThumbprint(
+	ANSISTRING Message,
+	INT32 ErrorCode,
+	ANSISTRING __TlgCV__
+	);
+
+InstallFromRegEntriesStart(
+	SYSTEMTIME InstallStart,
+	UNICODESTRING UniqueId,
+	UINT32 KeyProtection,
+	UNICODESTRING CorrelationGuid,
+	ANSISTRING __TlgCV__
+	);
+
+InstallCertificateWithScepHelper(
+	UNICODESTRING Message,
+	INT32 ErrorCode,
+	UNICODESTRING CorrelationGuid,
+	ANSISTRING __TlgCV__
+	);
+
+OpenRegistryKey(
+	INT32 ErrorCode,
+	ANSISTRING __TlgCV__
+	);
+
+InstallServerCertificates(
+	UNICODESTRING NDESUrl,
+	INT32 ErrorCode,
+	UNICODESTRING CorrelationGuid,
+	ANSISTRING __TlgCV__
+	);
+
+LogError(
+	ANSISTRING SCEPError,
+	ANSISTRING __TlgCV__
+	);
+
+WriteErrorCodeAndStatus(
+	ANSISTRING Message,
+	INT32 ErrorCode,
+	UNICODESTRING CorrelationGuid,
+	ANSISTRING __TlgCV__
+	);
+
+DeleteCertWriteErrorCodeAndStatus(
+	ANSISTRING Message,
+	INT32 Status,
+	UNICODESTRING Thumbprint,
+	ANSISTRING __TlgCV__
+	);
+
+InstallFromRegEntries(
+	UNICODESTRING UniqueId,
+	UINT32 KeyProtection,
+	INT32 InstallStatus,
+	UINT32 CurrentRetryCount,
+	UINT32 RetryCount,
+	SYSTEMTIME InstallStart,
+	SYSTEMTIME InstallStop,
+	INT32 HRESULT,
+	UNICODESTRING CertificateThumbprint,
+	UNICODESTRING RespondentServerUrl,
+	BOOLEAN IsRenewal,
+	UNICODESTRING CorrelationGuid,
+	ANSISTRING __TlgCV__
+	);
+
+SendOmaDmAlert(
+	UNICODESTRING MDMServerId,
+	UNICODESTRING SCEPUniqueId,
+	UNICODESTRING SCEPEnrollmentResult,
+	ANSISTRING __TlgCV__
+	);
+
+ReadFromRegistry(
+	UINT32 SCEPKeyProtection,
+	ANSISTRING __TlgCV__
+	);
+
+EnrollDMPollTaskSchedulerFail(
+	UINT32 Result,
+	ANSISTRING Function,
+	ANSISTRING __TlgCV__
+	);
+

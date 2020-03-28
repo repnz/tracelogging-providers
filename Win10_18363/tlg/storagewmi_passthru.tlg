@@ -1,0 +1,29 @@
+ProviderNames:
+	SmpPassThru Trace Provider
+
+
+
+**** Events *****
+Error(
+	UNICODESTRING Function,
+	UINT32 Line,
+	HEXINT32 ErrorCode_HRESULT
+	);
+
+ExitFunction(
+	UNICODESTRING Function,
+	UINT32 Line,
+	UINT64 ElapsedTime_ms,
+	HEXINT32 ErrorCode_HRESULT
+	);
+
+BadArgument(
+	UNICODESTRING Function,
+	UINT32 Line
+	);
+
+EnterFunction(
+	UNICODESTRING Function,
+	UINT32 Line
+	);
+

@@ -1,0 +1,156 @@
+ProviderNames:
+	Microsoft.Windows.WorkFolders
+
+
+
+**** Events *****
+PartnershipDetail(
+	UINT8 PartnershipStatus,
+	UNICODESTRING TenantDetail,
+	UNICODESTRING ServerUrl,
+	BOOL32 ConfiguredByPolicy,
+	BOOL32 UsingDefaultPath,
+	BOOL32 EncryptData,
+	BOOL32 RequirePin
+	);
+
+PauseResume(
+	UINT32 PauseResumeTrigger
+	);
+
+CloudFilesEnumeration(
+	UINT32 TotalConvertedFileCount,
+	UINT32 PinnedFileCount,
+	UINT32 UnpinnedFileCount,
+	UINT32 NoPinStateFileCount,
+	UINT32 HydratedFileCount,
+	UINT32 DehydratedFileCount,
+	UINT32 TotalConvertedDirCount,
+	UINT32 PinnedDirCount,
+	UINT32 UnpinnedDirCount,
+	UINT32 NoPinStateDirCount,
+	UINT32 InSyncItemCount,
+	UINT32 NotInSyncItemCount,
+	UINT32 TotalNotConvertedFileCount,
+	UINT32 TotalNotConvertedDirCount,
+	UINT32 GhostingPolicy
+	);
+
+RepairFile(
+	HRESULT HResult,
+	UINT64 HResultCount
+	);
+
+HydrationEvent(
+	UINT32 IsHydration,
+	UINT64 FileSize,
+	UNICODESTRING FileExtension,
+	HRESULT HResult,
+	UINT64 HResultCount
+	);
+
+GhostingPolicy(
+	UINT32 GhostingPolicy
+	);
+
+AuthenticationScheme(
+	HRESULT AuthenticationScheme
+	);
+
+ServerSyncSession(
+	INT32 SyncDirection,
+	HRESULT HResult,
+	UINT64 HResultCount
+	);
+
+LocalProviderV2(
+	UNICODESTRING CommandDetail,
+	HRESULT HResult,
+	UINT64 HResultCount
+	);
+
+RemoteProviderV2(
+	UNICODESTRING CommandDetail,
+	HRESULT HResult,
+	UINT64 HResultCount
+	);
+
+TombstoneCount(
+	HRESULT TotalTombstoneCount,
+	UINT64 TotalTombstoneDurationInMs
+	);
+
+TombstoneV2(
+	HRESULT HResult,
+	UINT64 HResultCount
+	);
+
+SyncSessionStatisticsV2(
+	UINT32 SyncHint,
+	BOOL32 SyncReconcilePathHit,
+	BOOL32 SyncReconcileSkipped,
+	UINT32 EncryptionPolicy,
+	UINT64 ReconcileTaskDuration,
+	UINT64 TaskDuration,
+	HRESULT HResult,
+	UINT32 DownloadSessionType,
+	UINT32 DownloadBatchCount,
+	UINT32 DownloadFilesCount,
+	UINT64 DownloadedData,
+	UINT64 DownloadSessionDuration,
+	UINT32 UploadSessionType,
+	UINT32 UploadBatchCount,
+	UINT32 UploadFilesCount,
+	UINT64 UploadedData,
+	UINT64 UploadSessionDuration
+	);
+
+SyncSessionCount(
+	UINT64 TotalSessionCount,
+	UINT64 EmptySessionCount,
+	UINT64 FailedSessionCount
+	);
+
+ProtocolCommandV2(
+	UNICODESTRING CommandDetail,
+	HRESULT HResult,
+	UINT64 HResultCount
+	);
+
+ChangeTracker(
+	HRESULT HResult,
+	UINT64 HResultCount
+	);
+
+PerItemError(
+	INT32 SyncDirection,
+	HRESULT HResult,
+	UINT64 HResultCount
+	);
+
+ServerCapabilities(
+	UNICODESTRING TenantDetail,
+	UNICODESTRING TenantDetailSource,
+	UNICODESTRING ServerUrl,
+	UNICODESTRING ServerOsVersion
+	);
+
+ChangeEnumeration(
+	UINT64 DirectoryCount,
+	UINT64 FileCount,
+	UINT64 DataSize,
+	UINT64 MaxFileSize,
+	UINT64 MinFileSize,
+	UINT64 Upto1KB,
+	UINT64 Upto10KB,
+	UINT64 Upto100KB,
+	UINT64 Upto1MB,
+	UINT64 Upto10MB,
+	UINT64 Upto100MB,
+	UINT64 Upto1GB,
+	UINT64 Upto10GB,
+	UINT64 10GBPlus,
+	UINT64 TaskDuration,
+	HRESULT HResult
+	);
+

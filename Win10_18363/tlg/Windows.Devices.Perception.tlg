@@ -1,0 +1,136 @@
+ProviderNames:
+	Microsoft-Windows-PerceptionRuntime-Verbose
+	Microsoft-Windows-PerceptionRuntime
+
+
+
+**** Events *****
+IFR(
+	UNICODESTRING DebugInfoEvent
+	);
+
+IGNORE_HR(
+	UNICODESTRING DebugInfoEvent
+	);
+
+IFR_VERIFY(
+	UNICODESTRING DebugInfoEvent
+	);
+
+ConnectToService(
+	INT32 hr,
+	UINT32 attempt
+	);
+
+ServiceConnection::HandleMessage(
+	ANSISTRING Description,
+	UINT32 MessageType,
+	ANSISTRING MessageTypeString,
+	INT32 Result
+	);
+
+ServiceConnection::HandleMessage(
+	ANSISTRING Description,
+	UINT32 MessageType,
+	ANSISTRING MessageTypeString
+	);
+
+FrameReaderCreated(
+	HEXINT64 ReaderAddress,
+	UNICODESTRING Kind,
+	UNICODESTRING SourceId,
+	UNICODESTRING SourceDisplayName,
+	BOOLEAN IsPaused,
+	BOOL32 UTCReplace_AppSessionGuid
+	);
+
+PerceptionFrameSourceCreated(
+	UNICODESTRING device,
+	UNICODESTRING SourceID,
+	UNICODESTRING SourceDisplayName,
+	UNICODESTRING Kind,
+	BOOL32 UTCReplace_AppSessionGuid
+	);
+
+FrameReaderIsPausedChanged(
+	HEXINT64 ReaderAddress,
+	UNICODESTRING Kind,
+	UNICODESTRING SourceId,
+	UNICODESTRING SourceDisplayName,
+	BOOLEAN IsPaused
+	);
+
+FrameArrived(
+	UNICODESTRING SourceId,
+	UNICODESTRING Kind,
+	UNICODESTRING SourceDisplayName,
+	INT32 FrameCount,
+	BOOL32 UTCReplace_AppSessionGuid
+	);
+
+FrameReaderClosed(
+	HEXINT64 ReaderAddress,
+	UNICODESTRING Kind,
+	UNICODESTRING SourceId,
+	UNICODESTRING SourceDisplayName,
+	BOOLEAN IsPaused,
+	INT32 FrameCount,
+	UINT64 DurationMsec
+	);
+
+CreateWatcher(
+	UNICODESTRING Kind,
+	BOOL32 UTCReplace_AppSessionGuid
+	);
+
+FindAllAsync(
+	UNICODESTRING Kind,
+	UINT32 Count,
+	BOOL32 UTCReplace_AppSessionGuid
+	);
+
+FromIdAsync(
+	UNICODESTRING Kind,
+	UNICODESTRING Device,
+	BOOL32 UTCReplace_AppSessionGuid
+	);
+
+RequestAccessAsync(
+	INT32 AccessStatus,
+	UNICODESTRING Kind,
+	BOOL32 UTCReplace_AppSessionGuid
+	);
+
+ActivityStoppedAutomatically(
+	VOID
+	);
+
+SourceManagerWatcherNotify(
+	UNICODESTRING KpiDataEvent
+	);
+
+ServiceEnumSourcesTimeout(
+	VOID
+	);
+
+ServiceEnumSourcesTimeout(
+	UNICODESTRING EventLogEvent
+	);
+
+RuntimeClassInitializeActivity(
+	VOID
+	);
+
+RuntimeClassInitializeActivity(
+	VOID
+	);
+
+SetProperty(
+	UNICODESTRING Property
+	);
+
+EncodePropertyFailed(
+	UNICODESTRING Key,
+	UNICODESTRING ValueRuntimeClassName
+	);
+

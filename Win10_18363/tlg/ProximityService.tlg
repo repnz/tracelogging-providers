@@ -1,0 +1,34 @@
+ProviderNames:
+	Microsoft.Windows.Networking.Proximity.Service
+
+
+
+**** Events *****
+DeviceDeparted(
+	VOID
+	);
+
+DeviceArrival(
+	UINT32 flag
+	);
+
+WFDProviderSessionStop(
+	UINT32 ErrorCode,
+	UINT64 SessionDurationMs,
+	UNICODESTRING AppId,
+	UNICODESTRING BrowsePeerId,
+	UINT32 AppRole
+	);
+
+WFDProviderSessionStart(
+	UINT32 ErrorCodeConnect,
+	UINT32 ErrorCodeSession,
+	UINT64 ConnectDurationMs,
+	UNICODESTRING AppId,
+	UNICODESTRING BrowsePeerId,
+	GUID InterfaceGuid,
+	UINT32 AppRole,
+	UNICODESTRING RemotePeerDeviceAddress,
+	UINT32 RemoteAppRole
+	);
+

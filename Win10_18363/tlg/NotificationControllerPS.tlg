@@ -1,0 +1,747 @@
+ProviderNames:
+	Microsoft.Windows.Shell.NotificationController
+	Microsoft.Windows.Wil.FeatureLogging
+
+
+
+**** Events *****
+ActivityStoppedAutomatically(
+	VOID
+	);
+
+FallbackError(
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+FallbackError(
+	UINT64 PartA_PrivTags,
+	SIGNED wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+NotifySinksInner(
+	UINT32 session,
+	UINT32 cookie,
+	INT32 sinkPointer,
+	HRESULT hresult
+	);
+
+NotifySinksInner(
+	UINT32 session,
+	UINT32 cookie,
+	INT32 sinkPointer
+	);
+
+TryUnregisterSinkGenericInternal(
+	UINT32 session,
+	UINT32 cookie,
+	INT32 sinkPointer
+	);
+
+SinkQueueCanceled(
+	UINT32 session,
+	UINT32 cookie
+	);
+
+RegisterSinkGeneric(
+	UINT32 session,
+	UINT32 cookie,
+	INT32 sinkPointer,
+	HRESULT hresult
+	);
+
+RegisterSinkGeneric(
+	UINT32 session,
+	UINT32 cookie,
+	INT32 sinkPointer
+	);
+
+UserContextControllerUnregisterFailedSink(
+	UINT32 session,
+	UINT64 sinkCount
+	);
+
+UserContextControllerUnregisterSink(
+	UINT32 session,
+	UINT64 sinkCount
+	);
+
+UserContextControllerRegisterContextSink(
+	UINT32 session,
+	UINT32 flags,
+	UINT64 sinkSize
+	);
+
+UserContextControllerBroadcastContextsDeleted(
+	UINT32 session,
+	UINT64 count
+	);
+
+UserContextControllerBroadcastContextsAdded(
+	UINT32 session,
+	UINT64 count
+	);
+
+UserContextControllerUserSignedOut(
+	UINT64 userToken
+	);
+
+UserContextControllerNewUserSignedIn(
+	UINT64 userToken
+	);
+
+UserContextControllerDestructor(
+	VOID
+	);
+
+PassthroughProxyInitSuccess(
+	VOID
+	);
+
+PassthroughProxyStarted(
+	VOID
+	);
+
+PassthroughProxyTerminated(
+	VOID
+	);
+
+MainDemuxerInformUiInteractionOccurred(
+	UNICODESTRING groupId,
+	UNICODESTRING itemId
+	);
+
+MainDemuxerRegisterToastSinkCreated(
+	UINT32 session,
+	UINT32 flags
+	);
+
+MainDemuxerRegisterDataSinkCreated(
+	UINT32 session,
+	UINT32 flags
+	);
+
+MainDemuxerToastReportStatus(
+	UNICODESTRING groupId,
+	UNICODESTRING itemId,
+	UINT32 toastStatus
+	);
+
+MainDemuxerDeprioritizeToast(
+	UNICODESTRING groupId,
+	UNICODESTRING itemId
+	);
+
+MainDemuxerGetSettingsForAumid(
+	UNICODESTRING aumid
+	);
+
+MainDemuxerSaveNotificationDraft(
+	UNICODESTRING groupId,
+	UNICODESTRING itemId
+	);
+
+MainDemuxerActivateNotification(
+	UNICODESTRING groupId,
+	UNICODESTRING itemId
+	);
+
+MainDemuxerActivateNotificationGroup(
+	UNICODESTRING groupId
+	);
+
+MainDemuxerDeleteNotifications(
+	UINT32 count
+	);
+
+MainDemuxerSetNocenterStatus(
+	UINT32 static_cast<DWORD>(status)
+	);
+
+MainDemuxerRegisterContextProviderWithMe(
+	UINT32 session
+	);
+
+MainDemuxerInitSuccess(
+	VOID
+	);
+
+MainDemuxerStarted(
+	VOID
+	);
+
+MainDemuxerTerminated(
+	VOID
+	);
+
+MainDemuxerTerminating(
+	VOID
+	);
+
+FeatureUsage(
+	UINT32 featureId,
+	INT32 featureVersion,
+	INT32 featureBaseVersion,
+	INT16 featureStage,
+	BOOLEAN enabled,
+	UINT32 kind,
+	UINT64 addend
+	);
+
+FeatureError(
+	UINT32 featureId,
+	INT32 featureVersion,
+	INT32 featureBaseVersion,
+	INT16 featureStage,
+	HRESULT hr,
+	ANSISTRING file,
+	UINT16 lineNumber,
+	ANSISTRING module,
+	ANSISTRING process,
+	ANSISTRING originFile,
+	UINT16 originLineNumber,
+	ANSISTRING originModule,
+	ANSISTRING originName,
+	ANSISTRING message,
+	ANSISTRING callerModule,
+	UINT32 callerReturnAddressOffset,
+	ANSISTRING originCallerModule,
+	UINT32 originCallerReturnAddressOffset
+	);
+
+FeatureVariantUsage(
+	UINT32 featureId,
+	INT32 featureVersion,
+	INT32 featureBaseVersion,
+	INT16 featureStage,
+	BOOLEAN enabled,
+	UINT32 variantKind,
+	UINT8 variant,
+	UINT64 addend
+	);
+
+EnabledFeatureUsage(
+	UINT32 featureId,
+	INT32 featureVersion,
+	INT32 featureBaseVersion,
+	INT16 featureStage,
+	BOOLEAN enabled,
+	UINT32 kind,
+	UINT64 addend
+	);
+
+DataDemuxerDidntNotifySinkAllNotifications(
+	UINT32 session,
+	UINT32 sinkFlags,
+	UINT32 count,
+	INT32 notifyResult
+	);
+
+DataDemuxerNotifiedSinkAllNotifications(
+	UINT32 session,
+	UINT32 sinkFlags,
+	UINT32 count,
+	HRESULT hresult
+	);
+
+DataDemuxerNotifySinksThatNotificationsDeleted(
+	UINT32 session,
+	UINT32 sinkFlags,
+	UINT32 count,
+	HRESULT hresult
+	);
+
+DataDemuxerNotifySinksThatNotificationsUpdated(
+	UINT32 session,
+	UINT32 sinkFlags,
+	UINT32 count,
+	HRESULT hresult
+	);
+
+DataDemuxerNotifiedSinkThatNotificationsAdded(
+	UINT32 session,
+	UINT32 sinkFlags,
+	UINT32 count,
+	HRESULT hresult
+	);
+
+DataDemuxerUnregisteredFailedSink(
+	UINT32 session,
+	UINT64 sinkCount,
+	UINT32 flags
+	);
+
+DataDemuxerUnregisteredSink(
+	UINT32 session,
+	UINT64 sinkCount,
+	UINT32 flags
+	);
+
+DataDemuxerContextDeleted(
+	UNICODESTRING context,
+	UINT32 flags
+	);
+
+DataDemuxerContextAdded(
+	UNICODESTRING context,
+	UINT32 flags
+	);
+
+DataDemuxerRegisterDataSink(
+	UINT32 session,
+	UINT32 flags
+	);
+
+DataDemuxerInitSuccess(
+	VOID
+	);
+
+DataDemuxerStarted(
+	VOID
+	);
+
+DataDemuxerTerminated(
+	VOID
+	);
+
+ToastDemuxerNotificationToastSlotEmpty(
+	UNICODESTRING context,
+	UINT32 flags,
+	UNICODESTRING sinkTag,
+	UINT32 slotsAvailable,
+	UINT32 slotIndex
+	);
+
+ToastDemuxerNotificationToastUpdated(
+	UNICODESTRING context,
+	UINT32 flags,
+	UNICODESTRING sinkTag,
+	UINT32 slotsAvailable,
+	UNICODESTRING groupId,
+	UNICODESTRING updatedItemId,
+	UNICODESTRING replacedItemId,
+	UINT32 slotIndex
+	);
+
+ToastDemuxerNotificationToastSlotNew(
+	UNICODESTRING context,
+	UINT32 flags,
+	UNICODESTRING sinkTag,
+	UINT32 slotsAvailable,
+	UNICODESTRING groupId,
+	UNICODESTRING itemId,
+	UINT32 slotIndex
+	);
+
+ToastDemuxerContextDeleted(
+	UNICODESTRING context,
+	UINT32 flags,
+	UNICODESTRING sinkTag,
+	UINT32 slotsAvailable
+	);
+
+ToastDemuxerContextAdded(
+	UNICODESTRING context,
+	UINT32 flags,
+	UNICODESTRING sinkTag,
+	UINT32 slotsAvailable
+	);
+
+ToastDemuxerInitSuccess(
+	VOID
+	);
+
+ToastDemuxerStarted(
+	VOID
+	);
+
+ToastDemuxerTerminated(
+	VOID
+	);
+
+ToastController_LowPowerStateChanged(
+	BOOLEAN isInLowPowerState,
+	BOOLEAN hasNonEmptyToastQueues
+	);
+
+ToastController_MonitorStateChanged(
+	BOOLEAN isMonitorOn,
+	BOOLEAN hasNonEmptyToastQueues
+	);
+
+ToastController_ActionCenterProcessChanged(
+	UINT32 pid
+	);
+
+ToastControllerBroadcastSlotUpdated(
+	UINT32 session,
+	UINT32 slotIndex,
+	HRESULT hresult
+	);
+
+ToastControllerBroadcastSlotNew(
+	UINT32 session,
+	UINT32 slotIndex,
+	HRESULT hresult
+	);
+
+ToastControllerBroadcastSlotEmpty(
+	UINT32 session,
+	UINT32 slotIndex,
+	HRESULT hresult
+	);
+
+ToastController_BroadcastAllSlotsEmpty(
+	VOID
+	);
+
+ToastControllerRemoveToastNotFound(
+	UINT32 session,
+	UNICODESTRING groupId,
+	UNICODESTRING itemId
+	);
+
+ToastControllerRemoveToastNotDirtied(
+	UINT32 session,
+	UINT32 slotIndex,
+	UNICODESTRING groupId,
+	UNICODESTRING itemId
+	);
+
+ToastControllerRemoveToastDirtied(
+	UINT32 session,
+	UINT32 slotIndex,
+	UNICODESTRING groupId,
+	UNICODESTRING itemId
+	);
+
+ToastControllerSilentUpdate(
+	UINT32 session,
+	UINT32 slotIndex,
+	UNICODESTRING groupId,
+	UNICODESTRING updatedItemId,
+	UNICODESTRING replacedItemId
+	);
+
+ToastControllerBroadcastUpdate(
+	UINT32 session,
+	UINT32 slotIndex,
+	UNICODESTRING groupId,
+	UNICODESTRING updatedItemId,
+	UNICODESTRING replacedItemId
+	);
+
+ToastControllerBroadcastUpdateAsNew(
+	UINT32 session,
+	UINT32 slotIndex,
+	UNICODESTRING groupId,
+	UNICODESTRING updatedItemId,
+	UNICODESTRING replacedItemId
+	);
+
+ToastControllerUpdateNotificationNotFoundInQueue(
+	UINT32 session,
+	UNICODESTRING groupId,
+	UNICODESTRING updatedItemId,
+	UNICODESTRING replacedItemId
+	);
+
+ProcessedByActionCenterToastController(
+	UINT64 PartA_PrivTags,
+	UNICODESTRING appUserModelId,
+	UNICODESTRING packageFullName,
+	UINT64 arrivalTimestamp,
+	UINT64 expiryTimestamp,
+	UINT64 activityStartTimestamp,
+	BOOLEAN isAdaptivePayload,
+	UNICODESTRING tag,
+	UNICODESTRING group,
+	UINT32 notificationId,
+	GUID messageId,
+	UINT32 startType,
+	GUID activityCorrelationId,
+	UINT32 wpnToastFlags,
+	BOOLEAN receivedOffline,
+	UNICODESTRING scenario,
+	UNICODESTRING settingsActivationArgs,
+	UNICODESTRING correlationId,
+	UINT32 notificationFlags,
+	UINT32 soundFlags,
+	UINT32 finalComputedNotificationFlags,
+	UINT32 toastFilterSuppressionReason,
+	BOOLEAN isInteractive,
+	INT32 priority,
+	BOOLEAN receivedWhenDeviceLocked,
+	BOOLEAN wasQueuedOnActionCenterToastController,
+	BOOLEAN dirtiedSlotWhenQueued,
+	BOOLEAN areAppBannersEnabled,
+	BOOLEAN isGhostToast,
+	UINT32 toastQueueLengthWhenAdded
+	);
+
+ToastControllerNotificationWasNotAToast(
+	UINT32 session,
+	UNICODESTRING itemId,
+	UNICODESTRING groupId
+	);
+
+ToastControllerNotificationDidNotMeetFilterCriteria(
+	UINT32 session,
+	UNICODESTRING itemId,
+	UNICODESTRING groupId
+	);
+
+ToastControllerNotificationDidNotMeetFilterCriteriaSoPassThrough(
+	UINT32 session,
+	UNICODESTRING itemId,
+	UNICODESTRING groupId
+	);
+
+ToastControllerNotificationPrefilterSinkHasNoSinksSoPassThrough(
+	UNICODESTRING itemId,
+	UNICODESTRING groupId
+	);
+
+ToastControllerToastAdded(
+	UINT32 slotIndex,
+	UNICODESTRING itemId,
+	UNICODESTRING groupId
+	);
+
+ToastControllerToastSoundOnlyToastAdded(
+	UINT32 slotIndex,
+	UNICODESTRING itemId,
+	UNICODESTRING groupId
+	);
+
+ToastControllerToastVibrateOnlyToastAdded(
+	UINT32 slotIndex,
+	UNICODESTRING itemId,
+	UNICODESTRING groupId
+	);
+
+ToastControllerDecayedToasts(
+	UINT64 numDecayedToasts
+	);
+
+ToastControllerWitheldToastsFromDecaying(
+	UINT64 numWitheldToasts
+	);
+
+ToastControllerDecayedEverything(
+	VOID
+	);
+
+ToastControllerDecayAllToasts(
+	UINT32 session
+	);
+
+ToastControllerNotificationPrefilterSinkFailedSoDrainingIt(
+	UNICODESTRING itemId,
+	UNICODESTRING groupId
+	);
+
+ToastControllerUnregisterFailedSink(
+	UINT32 session,
+	UINT64 sinkCount
+	);
+
+ToastControllerUnregisteredSink(
+	UINT32 session,
+	UINT64 sinkCount
+	);
+
+ToastControllerRegisteredSink(
+	UINT32 session,
+	UINT64 sinkCount
+	);
+
+ToastControllerLockStateChanged(
+	BOOLEAN (!!(isLocked))
+	);
+
+SinkLifetimeManager_EnsureForProcess(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId,
+	UINT32 newPid,
+	UINT32 oldPid
+	);
+
+SinkLifetimeManager_Stop(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId
+	);
+
+SinkLifetimeManager_Stopped(
+	UINT64 handle
+	);
+
+SinkLifetimeManager_Invalidated(
+	UINT32 terminateReason
+	);
+
+SinkLifetimeManager_StopRequestedByHam(
+	UINT32 stopType,
+	UINT32 stopRequestReason,
+	UINT32 terminateReason
+	);
+
+SinkLifetimeManager_Started(
+	UINT64 handle
+	);
+
+CreatedNewActivity(
+	UINT64 handle
+	);
+
+ClosedActivity(
+	UINT64 handle
+	);
+
+ActivityStarted(
+	VOID
+	);
+
+BlockUntilCompletion(
+	VOID
+	);
+
+SinkLifetimeManager_Stop(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+SinkLifetimeManager_Stop(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+ActivityIntermediateStop(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+ActivityError(
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+ActivityError(
+	UINT64 PartA_PrivTags,
+	SIGNED wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+SinkLifetimeManager_EnsureForProcess(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+SinkLifetimeManager_EnsureForProcess(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+ActivityStoppedAutomatically(
+	VOID
+	);
+

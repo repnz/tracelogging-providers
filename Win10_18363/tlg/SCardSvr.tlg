@@ -1,0 +1,70 @@
+ProviderNames:
+	Microsoft.Windows.Security.SmartCards.SCardSvr
+
+
+
+**** Events *****
+DriverInformationStop(
+	UINT32 smartCardKeyCount,
+	UINT32 readerKeyCount
+	);
+
+ReaderRegistryKey(
+	UNICODESTRING registryKeyName
+	);
+
+SmartCardRegistryKey(
+	UNICODESTRING registryKeyName,
+	UNICODESTRING miniDriver,
+	UNICODESTRING cryptoProvider,
+	UNICODESTRING keyStorageProvider
+	);
+
+ActivityStoppedAutomatically(
+	VOID
+	);
+
+DriverInformationStart(
+	VOID
+	);
+
+NotAllowedFidoAppletRID(
+	UINT64 PartA_PrivTags
+	);
+
+SendReceiveData(
+	INT32 retVal
+	);
+
+ClientRpcRecoverableError(
+	INT32 retVal
+	);
+
+ReleaseChannel(
+	INT32 retVal
+	);
+
+AcquireChannel(
+	INT32 retVal
+	);
+
+RefreshContainerNodes(
+	INT32 retVal
+	);
+
+RpcClientBindError(
+	INT64 retVal
+	);
+
+RpcBindingCreateW(
+	INT32 retVal
+	);
+
+ConvertStringSecurityDescriptorToSecurityDescriptorW(
+	UINT32 retVal
+	);
+
+ConvertStringSidToSidW(
+	UINT32 retVal
+	);
+

@@ -1,0 +1,128 @@
+ProviderNames:
+	Microsoft.Windows.EnterpriseManagement.Enrollment
+	Microsoft.Windows.EMPS.Enrollment
+	TelemetryAssert
+	TelemetryAssertDiagTrack
+
+
+
+**** Events *****
+AutoEnrollGetAsyncResultsFailure(
+	UINT32 Result,
+	ANSISTRING __TlgCV__
+	);
+
+EnrollGenerateCertRequestFail(
+	UINT32 Result,
+	UNICODESTRING HashAlgorithm,
+	UNICODESTRING PrivateAlgorthum,
+	UINT32 Flags,
+	ANSISTRING __TlgCV__
+	);
+
+ServerMessageParsingError(
+	ANSISTRING Function,
+	UINT32 Result,
+	ANSISTRING __TlgCV__
+	);
+
+AutoMDMEnrollAttempt(
+	UINT32 Result,
+	BOOL32 UseDeviceCredential,
+	ANSISTRING __TlgCV__
+	);
+
+ServerMessageParsingFound(
+	UNICODESTRING Symbol,
+	UINT32 Result,
+	ANSISTRING __TlgCV__
+	);
+
+AutoEnrollWaitForCompletiongNoThrowFailure(
+	UINT32 Result,
+	ANSISTRING __TlgCV__
+	);
+
+AutoMDMEnrollImpersonateFailure(
+	UINT32 Result,
+	ANSISTRING __TlgCV__
+	);
+
+AutoEnrollDmRequestAadUserTokenFailure(
+	UINT32 Result,
+	ANSISTRING __TlgCV__
+	);
+
+AutoMDMEnrollDmGetAadDeviceTokenFailure(
+	UINT32 Result,
+	ANSISTRING __TlgCV__
+	);
+
+WSSecurityFault(
+	UNICODESTRING ServerFaultCodeSubcode,
+	UNICODESTRING ServerFaultReasonText,
+	UINT32 Result,
+	ANSISTRING __TlgCV__
+	);
+
+EnrollCertPolicyResponseFail(
+	UINT32 Result,
+	ANSISTRING __TlgCV__
+	);
+
+EnrollCertificateRenewFailed(
+	UINT32 Result,
+	ANSISTRING __TlgCV__
+	);
+
+UnparsedWSSecurityFault(
+	ANSISTRING __TlgCV__
+	);
+
+EnrollCertificateRequestSendFail(
+	UINT32 Result,
+	ANSISTRING __TlgCV__
+	);
+
+EnrollCertPolicyRequestSendFail(
+	UINT32 Result,
+	ANSISTRING __TlgCV__
+	);
+
+EnrollCertificateResponseFail(
+	UINT32 Result,
+	ANSISTRING __TlgCV__
+	);
+
+EnrollCertAuthFail(
+	UINT32 Result,
+	ANSISTRING __TlgCV__
+	);
+
+AutoEnrollAADEnrollAsyncFailure(
+	UINT32 Result,
+	ANSISTRING __TlgCV__
+	);
+
+AutoEnrollDmRaiseToastNotificationAndWaitFailure(
+	UINT32 Result,
+	ANSISTRING __TlgCV__
+	);
+
+AutoMDMEnrollAttemptRetryOnFailure(
+	UINT32 Result,
+	ANSISTRING __TlgCV__
+	);
+
+Assert(
+	UINT32 assertVersion,
+	UINT32 rva,
+	UINT32 timestamp,
+	UINT32 imageSize,
+	ANSISTRING imageName,
+	UINT32 count,
+	UINT32 totalHits,
+	UINT32 ModuleCollection,
+	UINT32 GlobalCollection
+	);
+

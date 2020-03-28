@@ -1,0 +1,66 @@
+ProviderNames:
+	WldpTraceLoggingProvider
+
+
+
+**** Events *****
+WldpEnableDeveloperMode(
+	UINT8 AccountType,
+	UNICODESTRING API,
+	HEXINT32 ErrorCode
+	);
+
+WldpClassIsInApprovedList(
+	COUNTEDSTRING DecisionLocation,
+	GUID ClsId,
+	COUNTEDSTRING Provider,
+	COUNTEDSTRING Key,
+	COUNTEDSTRING ValueName,
+	BOOL32 IsApproved,
+	HEXINT32 ErrorCode
+	);
+
+WldpDisableDeveloperMode(
+	UNICODESTRING API,
+	HEXINT32 ErrorCode
+	);
+
+WldpValidationBlockedByPolicy(
+	COUNTEDSTRING ProviderName,
+	UNICODESTRING Module,
+	UNICODESTRING OriginalFileName,
+	UNICODESTRING API
+	);
+
+WldpValidationAudit(
+	COUNTEDSTRING ProviderName,
+	UNICODESTRING Module,
+	UNICODESTRING OriginalFileName,
+	UNICODESTRING API
+	);
+
+WldpFindResourceFailure(
+	COUNTEDSTRING ProviderName,
+	UNICODESTRING Module,
+	UNICODESTRING OriginalFileName,
+	UNICODESTRING API,
+	HEXINT32 ErrorCode
+	);
+
+WldpNtQuerySecurityPolicyFailure(
+	COUNTEDSTRING ProviderName,
+	UNICODESTRING Module,
+	UNICODESTRING OriginalFileName,
+	UNICODESTRING API,
+	HEXINT32 ErrorCode
+	);
+
+WldpRetailUnlocked(
+	NTSTATUS ErrorCode
+	);
+
+WldpNgscbCheckIsHSTIVerifiedFailure(
+	BOOL32 HSTIResult,
+	HRESULT ErrorCode
+	);
+

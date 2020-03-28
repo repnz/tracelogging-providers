@@ -1,0 +1,957 @@
+ProviderNames:
+	Microsoft.Windows.Shell.SystemSettings.StorageSense
+	Microsoft.Windows.Wil.FeatureLogging
+	Microsoft.Windows.Storage.StorageReserve
+
+
+
+**** Events *****
+ActivityStoppedAutomatically(
+	VOID
+	);
+
+CAppInvisibleAdvanced(
+	ANSISTRING InvokeMethod,
+	UNICODESTRING PackageIdentity
+	);
+
+CAppSizesList::HandleAppEnumNotification(
+	UINT32 notificationType
+	);
+
+CAppSizesList::HandleListChangeNotification(
+	UINT32 notificationType
+	);
+
+EnumerateApps(
+	UINT32 appCount,
+	UINT32 desktopAppCount,
+	UINT32 driveNum,
+	UINT32 AppEnumerationMode,
+	HRESULT result
+	);
+
+EnumerateApps(
+	VOID
+	);
+
+CAppSizesList::DoGenericAsyncWork(
+	BOOLEAN fireAppUpdate,
+	BOOLEAN fireSort,
+	BOOLEAN fireFilter
+	);
+
+CAppSizesList::GetNamedValue(
+	UNICODESTRING PropertyName,
+	HRESULT result
+	);
+
+CPackageSizeSetting::GetProperty(
+	UNICODESTRING PropertyName,
+	UNICODESTRING szPkgId,
+	HRESULT result
+	);
+
+CAppOperationSetting::_ChangeAppDesktop(
+	UNICODESTRING Desktop AppId,
+	UNICODESTRING appName,
+	UNICODESTRING publisherName,
+	UNICODESTRING partialProgId,
+	HRESULT result
+	);
+
+CAppOperationSetting::_UninstallAppModern(
+	UNICODESTRING AUMID,
+	HRESULT result
+	);
+
+StorageSenseAppOperation(
+	UINT32 Op,
+	UNICODESTRING appName,
+	UINT64 appSize,
+	STRING volFrom,
+	STRING volTo,
+	UINT32 fileSystemTypeFrom,
+	UINT32 fileSystemTypeTo,
+	UINT32 storageTypeFrom,
+	UINT32 storageTypeTo,
+	UINT32 BusTypeFrom,
+	UINT32 BusTypeTo,
+	GUID storageIdFrom,
+	GUID storageIdTo,
+	HRESULT result,
+	HRESULT extendedError,
+	BOOL32 handleDependents
+	);
+
+CAppOperationSetting::_MoveAppModern - Failed to convert StorageID.(
+	VOID
+	);
+
+CAppOperationSetting::_MoveAppModern - Failed to get InternalPackageManager instance.(
+	VOID
+	);
+
+CAppOperationSetting::_MoveAppModern - Failed to get volume GUID.(
+	VOID
+	);
+
+CAppOperationSetting::_MoveAppModern - Failed to get PackageManager instance.(
+	VOID
+	);
+
+CAppOperationSetting::_MoveAppModern(
+	UNICODESTRING appName,
+	HRESULT result,
+	HRESULT extendedError
+	);
+
+CAppOperationSetting::_MoveAppModern - Failed to get PackageManagerInternal instance.(
+	VOID
+	);
+
+CAppOperationSetting::_MoveAppModern - Failed to find repository after creation(
+	VOID
+	);
+
+CAppOperationSetting::_MoveAppModern - Failed to create AppXRepo.(
+	VOID
+	);
+
+CAppOperationSetting::_MoveAppModern - Failed to initialize app move environment(
+	VOID
+	);
+
+CAppOperationSetting::_MoveAppModern - Failed to get storage device info from drive number(
+	VOID
+	);
+
+MoveAppModernStart(
+	VOID
+	);
+
+CAppOperationSetting::Invoke(
+	UINT32 eAction,
+	HRESULT result
+	);
+
+CAppOperationSetting::SetProperty(
+	UNICODESTRING PropertyName,
+	HRESULT result
+	);
+
+CAppOperationSetting::GetProperty(
+	UNICODESTRING PropertyName,
+	HRESULT result
+	);
+
+CAppSizesDriveSelection::SetValue(
+	INT32 SelectedDriveIndex,
+	HRESULT HRESULT
+	);
+
+CAppSizesDriveSelectionSingleton::SetVolumeGuid(
+	UNICODESTRING volumeGuid,
+	HRESULT HRESULT
+	);
+
+CAppSizesDriveSelectionSingleton::SetValueIndex(
+	UINT32 driveIndex,
+	HRESULT HRESULT
+	);
+
+CAppSizesDriveSelectionSingleton::GetDriveFromIndex(
+	UINT32 valueIndex,
+	HRESULT HRESULT
+	);
+
+CAppSizesDriveSelectionSingleton::GetPossibleValues(
+	INT32 NumPossibleValues,
+	HRESULT HRESULT
+	);
+
+CAppSizesFilter::SetValue(
+	UNICODESTRING FilterCriteria,
+	HRESULT HRESULT
+	);
+
+CAppSizesSort::SetValue(
+	INT32 SelectedSortOptionIndex,
+	HRESULT HRESULT
+	);
+
+FallbackError(
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+FallbackError(
+	UINT64 PartA_PrivTags,
+	SIGNED wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+CBreakdownPageDeviceSetting::Invoke(
+	UINT32 StorageType,
+	UINT32 DeviceInstance,
+	UINT32 DeviceAction,
+	HRESULT HRESULT
+	);
+
+CBreakdownPageDeviceSetting::get_IsApplicable(
+	UINT32 StorageType,
+	UINT32 DeviceInstance,
+	UINT32 DeviceAction,
+	UINT8 IsApplicable
+	);
+
+CBreakdownPageDeviceSetting::CreateInstance(
+	UINT32 StorageType,
+	UINT32 DeviceInstance,
+	UINT32 DeviceAction,
+	HRESULT HRESULT
+	);
+
+CBreakdownPageRefreshSetting::Invoke(
+	HRESULT result
+	);
+
+CBreakdownPageRefreshSetting::DoGenericAsyncWork(
+	HRESULT result
+	);
+
+CBreakdownPageRefreshSetting::GetProperty(
+	UINT32 StorageType,
+	UINT32 DeviceInstance,
+	UNICODESTRING PropertyName,
+	HRESULT result
+	);
+
+CBreakdownPageRefreshSetting::CreateInstance(
+	UINT32 StorageType,
+	UINT32 DeviceInstance,
+	HRESULT HRESULT
+	);
+
+CFolderTileData::Invoke(
+	UNICODESTRING FolderPath,
+	HRESULT result
+	);
+
+CFolderTileData::GetProperty(
+	UNICODESTRING PropertyName,
+	HRESULT result
+	);
+
+CFolderTileData::CreateInstance(
+	UNICODESTRING folderPath,
+	HRESULT HRESULT
+	);
+
+StorageSenseBreakdownCategoryEx(
+	UINT32 storageType,
+	UINT32 deviceIndex,
+	UNICODESTRING volumeName,
+	UINT32 dataType,
+	UINT32 categoryExId,
+	UNICODESTRING categoryName,
+	UINT8 eventVer,
+	UINT64 categorySize,
+	HRESULT result
+	);
+
+StorageSenseOtherCategoryTopFolders(
+	UINT32 storageType,
+	UINT32 deviceIndex,
+	UNICODESTRING volumeName,
+	UINT32 dataType,
+	UINT32 categoryExId,
+	UINT64 categorySize,
+	UINT8 counts,
+	UNICODESTRING paths,
+	UNICODESTRING sizes,
+	HRESULT result
+	);
+
+CBreakdownPageListSetting::GetNamedValue(
+	UINT32 StorageType,
+	UINT32 DeviceInstance,
+	UINT32 BreakdownCategoryEx,
+	UNICODESTRING PropertyName,
+	HRESULT result
+	);
+
+CBreakdownPageListSetting::CreateInstance(
+	UINT32 StorageType,
+	UINT32 DeviceInstance,
+	UINT32 BreakdownCategoryEx,
+	HRESULT HRESULT
+	);
+
+StorageSenseBreakdownPageAction(
+	UINT32 categoryExId,
+	UINT32 dataType,
+	HRESULT launchResult,
+	UNICODESTRING categoryName,
+	UINT8 eventVer
+	);
+
+StorageSenseBreakdownCategoryEx(
+	UINT32 storageType,
+	UINT32 deviceIndex,
+	UNICODESTRING volumeName,
+	UINT32 dataType,
+	UINT32 categoryExId,
+	UNICODESTRING categoryName,
+	UINT8 eventVer,
+	UINT64 categorySize,
+	HRESULT result
+	);
+
+CBreakdownPageActionSetting::GetProperty(
+	UINT32 StorageType,
+	UINT32 DeviceInstance,
+	UINT32 BreakdownCategoryEx,
+	UNICODESTRING PropertyName,
+	HRESULT result
+	);
+
+CBreakdownPageActionSetting::get_IsApplicable(
+	UINT32 StorageType,
+	UINT32 DeviceInstance,
+	UINT32 BreakdownCategoryEx,
+	UINT8 IsApplicable
+	);
+
+CBreakdownPageActionSetting::get_IsEnabled(
+	UINT32 StorageType,
+	UINT32 DeviceInstance,
+	UINT32 BreakdownCategoryEx,
+	UINT8 IsEnabled
+	);
+
+CBreakdownPageActionSetting::CreateInstance(
+	UINT32 StorageType,
+	UINT32 DeviceInstance,
+	UINT32 BreakdownCategoryEx,
+	HRESULT HRESULT
+	);
+
+CategoryBreakdown(
+	UINT32 RefreshType
+	);
+
+CategoryBreakdown(
+	UINT32 RefreshType
+	);
+
+CBreakdownCollectionSetting::HandleNotification - handler changed - refreshing(
+	UINT32 NotificationType
+	);
+
+CBreakdownCollectionSetting::GetSettingsCollection(
+	UINT32 StorageType,
+	UINT32 DeviceInstance,
+	UINT32 BreakdownCategory,
+	HRESULT HRESULT
+	);
+
+CBreakdownHandlerVolumeListener::HandleNotification - volume changed(
+	BOOLEAN bResetView
+	);
+
+QueryCategory(
+	UINT32 categoryId,
+	UINT32 dataType,
+	HRESULT result
+	);
+
+StorageSenseBreakdownCategory(
+	UINT32 storageType,
+	UINT32 deviceIndex,
+	UNICODESTRING volumeName,
+	UINT32 dataType,
+	UINT32 categoryId,
+	UINT64 categorySize,
+	UINT64 totalSize,
+	UINT64 freeSize,
+	HRESULT result,
+	UINT8 flag,
+	UNICODESTRING categoryName,
+	UINT8 eventVer
+	);
+
+QueryCategory(
+	UINT32 categoryId
+	);
+
+CBreakdownItemSetting::GetProperty(
+	UNICODESTRING EntryName,
+	UINT32 CategoryID,
+	UNICODESTRING PropertyName,
+	HRESULT result
+	);
+
+ShowCategories(
+	BOOL32 showAll,
+	UINT64 PartA_PrivTags
+	);
+
+CStorageSenseDynamicDatabase::GetSetting(
+	UNICODESTRING SettingName,
+	HRESULT result
+	);
+
+CStorageSenseDynamicDatabase::CreateInstance(
+	UINT32 StorageType,
+	UNICODESTRING EntryName,
+	UINT32 DeviceInstance,
+	HRESULT result
+	);
+
+StorageSenseManageSaveLocation(
+	UINT32 accessFlag,
+	UINT32 previousStorageType,
+	UINT32 previousDeviceIndex,
+	UINT32 previousStorageSettings,
+	UNICODESTRING previousVolumeName,
+	UINT32 previousBusType,
+	GUID previousStorageId,
+	UINT32 previousFileSystemType,
+	UINT32 currentStorageType,
+	UINT32 currentDeviceIndex,
+	UINT32 currentStorageSettings,
+	UNICODESTRING currentVolumeName,
+	UINT32 currentBusType,
+	GUID currentStorageId,
+	UINT32 currentFileSystemType,
+	HRESULT result,
+	BOOLEAN isChanged
+	);
+
+ApplySaveLocationValueStart(
+	VOID
+	);
+
+CSaveLocationsSettings::SetValue(
+	UNICODESTRING NewSaveLocation,
+	UNICODESTRING OldSaveLocation
+	);
+
+CSaveLocationsSettings::GetPossibleValues(
+	HRESULT result
+	);
+
+StorageSenseSaveLocation(
+	UINT32 accessFlag,
+	BOOLEAN isCardFound,
+	UINT32 storageType,
+	UINT32 deviceIndex,
+	UNICODESTRING volumeName,
+	HRESULT result
+	);
+
+StorageSenseManageCloudPolicy(
+	UNICODESTRING providerId,
+	BOOL32 enabled,
+	UINT32 thresholdIndex,
+	HRESULT hr
+	);
+
+StorageSenseCloudProvider(
+	UNICODESTRING providerId,
+	BOOL32 enabled,
+	UINT32 policyThreshold,
+	HRESULT hr
+	);
+
+StorageSenseCloudList(
+	UINT32 expectedCount,
+	UINT32 count,
+	HRESULT hr
+	);
+
+StorageSenseCloudList(
+	VOID
+	);
+
+StorageSenseCloudApplicable(
+	UINT32 providerCount,
+	HRESULT hr
+	);
+
+StorageSenseDiskSpaceFreedLastMonth(
+	UINT64 BytesFreed,
+	HRESULT hrGetStoragePolicySettings,
+	HRESULT hr
+	);
+
+StorageSenseManageStoragePolicy(
+	UINT32 storagePolicy,
+	BOOL32 enabled,
+	UINT32 thresholdIndex,
+	HRESULT hr
+	);
+
+StorageSenseExecuteStoragePolicy(
+	UINT32 spaceFreedMB,
+	UINT32 flags,
+	HRESULT hr
+	);
+
+StorageSenseExecuteStoragePolicy(
+	VOID
+	);
+
+QueryVolumes(
+	HRESULT result
+	);
+
+StorageSenseVolumeCount(
+	UINT32 volumeCount,
+	UINT32 expectedCount,
+	HRESULT result
+	);
+
+StorageSenseVolume(
+	UINT32 storageType,
+	UINT32 deviceIndex,
+	UNICODESTRING volumeName,
+	UINT64 totalSize,
+	UINT64 freeSize,
+	BOOL32 encrypted,
+	GUID storageId,
+	UINT32 fileSystemType,
+	UINT32 busType,
+	HRESULT result
+	);
+
+QueryVolumes(
+	VOID
+	);
+
+CVolumeCollectionSetting::HandleNotification(
+	UINT32 VolumeUpdateNotification,
+	BOOL32 IsListReset
+	);
+
+CVolumeItemSetting::HandleNotification - Refresh disk space(
+	VOID
+	);
+
+CVolumeItemSetting::GetProperty(
+	UNICODESTRING EntryName,
+	UNICODESTRING PropertyName,
+	HRESULT result
+	);
+
+CVolumeItemSetting::CreateInstance(
+	UINT32 StorageType,
+	UNICODESTRING EntryName,
+	UINT32 DeviceInstance,
+	INT32 HRESULT
+	);
+
+StorageSenseCleanMgrCleanup(
+	UNICODESTRING plugIn,
+	UNICODESTRING CLSID,
+	BOOLEAN autoRun,
+	UNICODESTRING name,
+	UNICODESTRING description,
+	UINT64 spaceToFree,
+	UINT64 spaceFreed,
+	DOUBLE cleanupTime,
+	UINT64 totalBytes,
+	UINT64 freeBytesBefore,
+	UINT64 freeBytesAfter,
+	INT64 storageReserveBefore,
+	INT64 storageReserveAfter,
+	INT64 pluginReserveAreaUsage,
+	HRESULT result,
+	UINT64 PartA_PrivTags
+	);
+
+StorageCleanupItemRefresh(
+	UINT32 refreshType,
+	UINT64 PartA_PrivTags
+	);
+
+StorageSenseBreakdownCategoryEx(
+	UINT32 storageType,
+	UINT32 deviceIndex,
+	UNICODESTRING volumeName,
+	UINT32 dataType,
+	UINT32 categoryExId,
+	UNICODESTRING categoryName,
+	UINT8 eventVer,
+	UINT64 categorySize,
+	HRESULT result,
+	UINT64 PartA_PrivTags
+	);
+
+StorageSensePurgeStop(
+	UNICODESTRING driveLetter,
+	UINT64 totalPurgeSize,
+	DOUBLE totalPurgeTime,
+	HRESULT purgeLastFailedHr,
+	UINT32 totalPluginPurged,
+	UINT32 totalPurgeSucceeded,
+	UINT32 totalPurgeFailed,
+	UINT32 totalPurgeNonZero,
+	UINT64 totalBytes,
+	UINT64 freeBytesBefore,
+	UINT64 freeBytesAfter,
+	INT64 unclaimableSpace,
+	INT64 storageReserveAfter,
+	UINT64 PartA_PrivTags
+	);
+
+StorageSenseBreakdownPageAction(
+	UINT32 categoryExId,
+	UINT32 dataType,
+	HRESULT launchResult,
+	UNICODESTRING categoryName,
+	UINT8 eventVer,
+	UINT64 PartA_PrivTags
+	);
+
+StorageSensePurgeStart(
+	INT64 unclaimableSpace,
+	UINT64 PartA_PrivTags
+	);
+
+StorageSenseScanStop(
+	UNICODESTRING driveLetter,
+	UINT64 totalScanSize,
+	DOUBLE totalScanTime,
+	HRESULT scanLastFailedHr,
+	UINT64 pluginCount,
+	UINT32 totalCreateInstanceFailed,
+	UINT32 totalPluginScanned,
+	UINT32 totalScanSucceeded,
+	UINT32 totalScanFailed,
+	UINT32 totalScanNonZero,
+	UINT32 totalAutoRun,
+	BOOLEAN showReserveDisclaimer,
+	INT64 storageReserveBefore,
+	INT64 unclaimableSpace,
+	UINT64 PartA_PrivTags
+	);
+
+StorageSenseScanStart(
+	UINT64 PartA_PrivTags
+	);
+
+STORAGE_APP_PAIRING_DIFFERENT_DEVICE Dialog(
+	HRESULT result
+	);
+
+StringHelpers::ShowMessageDialog(
+	UNICODESTRING Title,
+	UNICODESTRING Content,
+	UNICODESTRING ConfirmButton,
+	UNICODESTRING szCancelButton,
+	HRESULT result
+	);
+
+CVolumeItemSetting::_InitializeSaveLocationOptionList(
+	UINT64 NumDevices,
+	HRESULT HRESULT
+	);
+
+CRemovableMediaManager::WnfAppPairingChangeCallback(
+	VOID
+	);
+
+CRemovableMediaManager::WnfVolumePresenceChangeCallback(
+	VOID
+	);
+
+CRemovableMediaManager::OnSingletonDeinit(
+	VOID
+	);
+
+CRemovableMediaManager::OnSingletonInit(
+	HRESULT HRESULT
+	);
+
+Package uninstall callback(
+	UNICODESTRING PackageFullName
+	);
+
+Package install callback(
+	UNICODESTRING PackageFullName
+	);
+
+CAppPackageList::_InsertApp - Inserting app(
+	UNICODESTRING PackageFullName
+	);
+
+FeatureError(
+	UINT32 featureId,
+	INT32 featureVersion,
+	INT32 featureBaseVersion,
+	INT16 featureStage,
+	HRESULT hr,
+	ANSISTRING file,
+	UINT16 lineNumber,
+	ANSISTRING module,
+	ANSISTRING process,
+	ANSISTRING originFile,
+	UINT16 originLineNumber,
+	ANSISTRING originModule,
+	ANSISTRING originName,
+	ANSISTRING message,
+	ANSISTRING callerModule,
+	UINT32 callerReturnAddressOffset,
+	ANSISTRING originCallerModule,
+	UINT32 originCallerReturnAddressOffset
+	);
+
+FeatureVariantUsage(
+	UINT32 featureId,
+	INT32 featureVersion,
+	INT32 featureBaseVersion,
+	INT16 featureStage,
+	BOOLEAN enabled,
+	UINT32 variantKind,
+	UINT8 variant,
+	UINT64 addend
+	);
+
+EnabledFeatureUsage(
+	UINT32 featureId,
+	INT32 featureVersion,
+	INT32 featureBaseVersion,
+	INT16 featureStage,
+	BOOLEAN enabled,
+	UINT32 kind,
+	UINT64 addend
+	);
+
+FeatureUsage(
+	UINT32 featureId,
+	INT32 featureVersion,
+	INT32 featureBaseVersion,
+	INT16 featureStage,
+	BOOLEAN enabled,
+	UINT32 kind,
+	UINT64 addend
+	);
+
+StorageSenseAppReset(
+	UINT32 OperationType,
+	UNICODESTRING pkgFamilyName,
+	HRESULT hr,
+	HRESULT extendedError
+	);
+
+CAppInfo::Create(
+	UNICODESTRING AUMID,
+	UNICODESTRING PackageFullName,
+	HRESULT HRESULT
+	);
+
+CStorSvcHandler::OnSingletonDeinit(
+	VOID
+	);
+
+CStorSvcHandler::_ClearHandleList(
+	VOID
+	);
+
+CStorSvcHandler::RefreshDriveTypeQueries(
+	VOID
+	);
+
+CStorSvcHandler::RefreshTimestamp(
+	VOID
+	);
+
+CStorSvcHandler::RefreshQueries(
+	VOID
+	);
+
+CleanmgrHelper::_ExecuteCmd(
+	UNICODESTRING Cmd,
+	BOOL32 Wait,
+	HRESULT Hresult
+	);
+
+StorageSenseCleanMgrScan(
+	UNICODESTRING plugIn,
+	UNICODESTRING CLSID,
+	BOOLEAN autoRun,
+	UNICODESTRING name,
+	UNICODESTRING description,
+	UINT64 spaceUsed,
+	DOUBLE scanTime,
+	HRESULT result,
+	UINT64 PartA_PrivTags
+	);
+
+StorageSenseCleanmgrPluginInitialize(
+	UNICODESTRING plugIn,
+	UNICODESTRING CLSID,
+	BOOLEAN autoRun,
+	UNICODESTRING name,
+	UNICODESTRING description,
+	HRESULT result,
+	UINT64 PartA_PrivTags
+	);
+
+StorageSenseCleanmgrPluginInstantiate(
+	UNICODESTRING plugIn,
+	UNICODESTRING CLSID,
+	BOOLEAN autoRun,
+	UINT32 reserveID,
+	HRESULT result,
+	UINT64 PartA_PrivTags
+	);
+
+ActivityStoppedAutomatically(
+	VOID
+	);
+
+ActivityFailure(
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+ActivityFailure(
+	UINT64 PartA_PrivTags,
+	HEX wilActivity,
+	UINT32 hresult,
+	UINT32 threadId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+ActivityIntermediateStop(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+ActivityError(
+	UINT64 PartA_PrivTags,
+	SIGNED wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+ActivityError(
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+QueryStorageReserve(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId
+	);
+
+QueryStorageReserve(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+QueryStorageReserve(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	SIGNED wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+

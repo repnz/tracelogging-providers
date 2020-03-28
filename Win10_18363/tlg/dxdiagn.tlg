@@ -1,0 +1,85 @@
+ProviderNames:
+	Microsoft.Windows.DxDiag
+	Microsoft.Windows.Graphics.DirectXDatabaseHelper
+
+
+
+**** Events *****
+GetData(
+	BOOL32 IsAttachedToISV,
+	UNICODESTRING Method,
+	UINT32 Level
+	);
+
+DxDiagNStop(
+	VOID
+	);
+
+DxDiagNStart(
+	VOID
+	);
+
+ActivityStoppedAutomatically(
+	VOID
+	);
+
+FallbackError(
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+FallbackError(
+	UINT64 PartA_PrivTags,
+	SIGNED wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+DirectXDatabaseConfigAccessError(
+	BOOLEAN UTCReplace_AppSessionGuid,
+	UINT8 schemaVersion,
+	UINT32 HResult,
+	UINT32 ConfigQueryType,
+	UINT32 DxDbSourceType,
+	UINT64 PartA_PrivTags
+	);
+
+DuplicateAppEntryInDatabase(
+	BOOLEAN UTCReplace_AppSessionGuid,
+	UINT8 schemaVersion,
+	UNICODESTRING processName,
+	UINT32 numDuplicates,
+	UNICODESTRING DxDbVersion,
+	UINT32 DxDbSourceType,
+	UINT64 PartA_PrivTags
+	);
+

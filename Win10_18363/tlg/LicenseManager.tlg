@@ -1,0 +1,509 @@
+ProviderNames:
+	Microsoft.Windows.LicenseManager.Telemetry
+	Microsoft.Windows.Store.LicenseManager.UsageAudit
+	TelemetryAssert
+	TelemetryAssertDiagTrack
+	Microsoft.Xbox.WinHttp
+
+
+
+**** Events *****
+EnterInvalidStateFailed(
+	UNICODESTRING ContentId,
+	UINT32 HResult
+	);
+
+DoLicenseUseCompletedAuditing(
+	UNICODESTRING ContentId,
+	UINT32 HResult
+	);
+
+GetConsoleUserIdsLinkedToPuid(
+	UNICODESTRING PUID,
+	HEXINT32 ErrorCode
+	);
+
+FullNegotiateForcedBecauseOfNoLocalLicense(
+	UNICODESTRING ContentId
+	);
+
+FullNegotiateForcedBecauseOfKeyQuality(
+	UNICODESTRING ContentId,
+	UINT32 Quality,
+	UINT32 QualityDetailCode
+	);
+
+FullNegotiateForcedBecauseMissingLeaseIsRequired(
+	UNICODESTRING ContentId
+	);
+
+BeginUsageAuditHasNoLease(
+	UNICODESTRING contentId,
+	UINT32 usage,
+	BOOLEAN hasLease
+	);
+
+UsageAuditHasTimeButNoKey(
+	UNICODESTRING contentId,
+	UINT32 usage,
+	BOOLEAN hasLease
+	);
+
+SubscriptionLicenseUsage(
+	UNICODESTRING ContentId,
+	UNICODESTRING ProductId,
+	UNICODESTRING PackageIdentifier,
+	UNICODESTRING SkuId,
+	UNICODESTRING EntitlementId,
+	UNICODESTRING SubscriptionProductId,
+	UNICODESTRING LeaseId,
+	UINT64 DurationMs,
+	BOOL32 IsTrialLicense,
+	BOOL32 IsOfflineEnabledDevice,
+	BOOL32 IsLeaseOnline,
+	GUID LicenseUsageSession,
+	UNICODESTRING AppSessionGuids,
+	UINT32 AuditSquenceId,
+	UNICODESTRING PartA_iKey
+	);
+
+UserLicenseUsage(
+	UNICODESTRING ContentId,
+	UNICODESTRING ProductId,
+	UNICODESTRING PackageIdentifier,
+	UNICODESTRING SkuId,
+	UNICODESTRING EntitlementId,
+	UNICODESTRING LeaseId,
+	UINT64 DurationMs,
+	BOOL32 IsTrialLicense,
+	BOOL32 IsOfflineEnabledDevice,
+	BOOL32 IsLeaseOnline,
+	GUID LicenseUsageSession,
+	UNICODESTRING AppSessionGuids,
+	UINT32 AuditSquenceId,
+	UNICODESTRING PartA_iKey
+	);
+
+DoAuditLeaseUsageForUnexpectedGrantReason(
+	UNICODESTRING ContentId,
+	UINT32 LicenseGrantReason
+	);
+
+PublishWnfForOfflinePcChangeFailed(
+	PID PartB_Ms.Telemetry.Error,
+	UNICODESTRING ErrorMessage,
+	HRESULT ErrorCode,
+	ANSISTRING ErrorLocation,
+	UINT32 LineNumber,
+	ANSISTRING ErrorMethod
+	);
+
+ServiceOptionalPackageRundownNotificationImpl(
+	UNICODESTRING PackageFullName,
+	UINT32 ErrorCode,
+	UINT64 DurationBlockingPackageCleanup
+	);
+
+ServicePackageRundownNotificationImpl(
+	UNICODESTRING PackageFullName,
+	UINT32 ErrorCode,
+	UINT64 DurationBlockingPackageCleanup
+	);
+
+ServicePackageSuspendedNotificationImpl(
+	UNICODESTRING PackageFullName,
+	UINT32 ErrorCode,
+	UINT64 DurationBlockingAppSuspend
+	);
+
+ServiceEnsureLicenseForOptionalPackageUsageImpl(
+	UNICODESTRING PackageFullName,
+	UINT32 ErrorCode,
+	UINT64 DurationBlockingPackageMount
+	);
+
+LicenseManagerBlockingActivationOrResume(
+	UNICODESTRING PackageFullName,
+	UINT32 Reason
+	);
+
+ServiceEnsureLicenseForPackageActivationImpl(
+	UNICODESTRING PackageFullName,
+	UINT32 ErrorCode,
+	UINT64 DurationBlockingAppActive,
+	UINT64 CurrectTick
+	);
+
+LicenseManagerBlockingActivationOrResume(
+	UNICODESTRING Package`FullName,
+	UINT32 Reason
+	);
+
+ServicePrecacheLicenseForPackageResumeImpl(
+	UNICODESTRING PackageFullName,
+	UINT32 ErrorCode,
+	UINT64 DurationBlockingAppActive,
+	UINT64 CurrectTick
+	);
+
+ServiceBeginAcquireLicenseImpl(
+	UNICODESTRING PackageFullName,
+	BOOL32 IsSystemUsage,
+	UINT64 CurrectTick
+	);
+
+UnleaseOptionalPackageFailure(
+	PID PartB_Ms.Telemetry.Error,
+	UNICODESTRING ErrorMessage,
+	HRESULT ErrorCode,
+	ANSISTRING ErrorLocation,
+	UINT32 LineNumber,
+	ANSISTRING ErrorMethod,
+	UNICODESTRING PackageFullName,
+	UNICODESTRING OptionalPackageFullName
+	);
+
+PublishWnfForExpiredTrial(
+	UINT32 Reason,
+	UNICODESTRING PackageFullName,
+	UNICODESTRING UserIdStr
+	);
+
+PublishWnfForExpiredTrialFailed(
+	PID PartB_Ms.Telemetry.Error,
+	UNICODESTRING ErrorMessage,
+	NTSTATUS ErrorCode,
+	ANSISTRING ErrorLocation,
+	UINT32 LineNumber,
+	ANSISTRING ErrorMethod,
+	UNICODESTRING PackageFullName
+	);
+
+PublishWnfForTrialLicense(
+	UINT32 NTSTATUS,
+	UINT32 Reason,
+	UNICODESTRING PackageFullName,
+	UNICODESTRING UserIdStr
+	);
+
+PublishWnfForTrialLicenseFailed(
+	PID PartB_Ms.Telemetry.Error,
+	UNICODESTRING ErrorMessage,
+	NTSTATUS ErrorCode,
+	ANSISTRING ErrorLocation,
+	UINT32 LineNumber,
+	ANSISTRING ErrorMethod,
+	UNICODESTRING PackageFullName,
+	UNICODESTRING UserIdStr
+	);
+
+PublishWnfForTrialLicense(
+	UINT32 Reason,
+	UNICODESTRING PackageFullName,
+	UNICODESTRING UserIdStr
+	);
+
+UnexpectedRunningKeyState(
+	UINT32 ErrorCode
+	);
+
+LeaseKeyPfmMismatch(
+	UNICODESTRING LeasePFN,
+	UNICODESTRING KeyPFM,
+	UNICODESTRING ContentId
+	);
+
+UserRootLookupError(
+	UINT32 ErrorCode,
+	UNICODESTRING UserRootContentId,
+	UNICODESTRING UserRootLeaseId
+	);
+
+PassRootLookupError(
+	UINT32 ErrorCode,
+	UNICODESTRING PassContentId,
+	UNICODESTRING PassLeaseId
+	);
+
+WnsCallbackRegistrationSuccess(
+	ANSISTRING __TlgCV__,
+	NTSTATUS PartB_Ms.Qos.OutgoingServiceRequest,
+	UNICODESTRING operationName,
+	UNICODESTRING TargetUri,
+	INT32 LatencyMs,
+	UNICODESTRING ServiceErrorCode,
+	BOOLEAN Succeeded,
+	UNICODESTRING RequestMethod,
+	UNICODESTRING ResponseContentType,
+	UNICODESTRING Protocol,
+	INT32 ProtocolStatusCode,
+	UNICODESTRING DependencyOperationName,
+	UNICODESTRING DependencyOperationVersion,
+	UNICODESTRING DependencyName,
+	UNICODESTRING DependencyType,
+	INT32 ResponseSizeBytes,
+	INT32 NumberOfLeaseUris,
+	UNICODESTRING ChannelUri
+	);
+
+ExistingOSLicenseInstalled(
+	BOOLEAN installed,
+	UNICODESTRING contentId
+	);
+
+JsonIsMalformed(
+	ANSISTRING operationName,
+	UNICODESTRING ServerName
+	);
+
+ExchangeKeyForEntitlementSuccess(
+	ANSISTRING __TlgCV__,
+	NTSTATUS PartB_Ms.Qos.OutgoingServiceRequest,
+	UNICODESTRING operationName,
+	UNICODESTRING targetUri,
+	INT32 latencyMs,
+	UNICODESTRING serviceErrorCode,
+	BOOLEAN succeeded,
+	UNICODESTRING requestMethod,
+	UNICODESTRING responseContentType,
+	UNICODESTRING protocol,
+	INT32 protocolStatusCode,
+	UNICODESTRING dependencyOperationName,
+	UNICODESTRING dependencyOperationVersion,
+	UNICODESTRING dependencyName,
+	UNICODESTRING dependencyType,
+	INT32 responseSizeBytes
+	);
+
+ReactiveLicensingResult(
+	UINT32 HResult,
+	UNICODESTRING AppPackageFullName,
+	INT32 latencyMs
+	);
+
+RenewLeaseSuccess(
+	ANSISTRING __TlgCV__,
+	NTSTATUS PartB_Ms.Qos.OutgoingServiceRequest,
+	UNICODESTRING operationName,
+	UNICODESTRING targetUri,
+	INT32 latencyMs,
+	UNICODESTRING serviceErrorCode,
+	BOOLEAN succeeded,
+	UNICODESTRING requestMethod,
+	UNICODESTRING responseContentType,
+	UNICODESTRING protocol,
+	INT32 protocolStatusCode,
+	UNICODESTRING dependencyOperationName,
+	UNICODESTRING dependencyOperationVersion,
+	UNICODESTRING dependencyName,
+	UNICODESTRING dependencyType,
+	INT32 responseSizeBytes,
+	UNICODESTRING leaseId
+	);
+
+DropLeaseSuccess(
+	ANSISTRING __TlgCV__,
+	NTSTATUS PartB_Ms.Qos.OutgoingServiceRequest,
+	UNICODESTRING operationName,
+	UNICODESTRING targetUri,
+	INT32 latencyMs,
+	UNICODESTRING serviceErrorCode,
+	BOOLEAN succeeded,
+	UNICODESTRING requestMethod,
+	UNICODESTRING responseContentType,
+	UNICODESTRING protocol,
+	INT32 protocolStatusCode,
+	UNICODESTRING dependencyOperationName,
+	UNICODESTRING dependencyOperationVersion,
+	UNICODESTRING dependencyName,
+	UNICODESTRING dependencyType,
+	INT32 responseSizeBytes,
+	UNICODESTRING leaseId
+	);
+
+LogRequestUserRootSuccess(
+	ANSISTRING __TlgCV__,
+	NTSTATUS PartB_Ms.Qos.OutgoingServiceRequest,
+	UNICODESTRING operationName,
+	UNICODESTRING targetUri,
+	INT32 latencyMs,
+	UNICODESTRING serviceErrorCode,
+	BOOLEAN succeeded,
+	UNICODESTRING requestMethod,
+	UNICODESTRING responseContentType,
+	UNICODESTRING protocol,
+	INT32 protocolStatusCode,
+	UNICODESTRING dependencyOperationName,
+	UNICODESTRING dependencyOperationVersion,
+	UNICODESTRING dependencyName,
+	UNICODESTRING dependencyType,
+	INT32 responseSizeBytes,
+	UNICODESTRING contentId,
+	INT64 leaseCount,
+	INT64 keyCount
+	);
+
+LogRequestSubscriptionRootsSuccess(
+	ANSISTRING __TlgCV__,
+	NTSTATUS PartB_Ms.Qos.OutgoingServiceRequest,
+	UNICODESTRING operationName,
+	UNICODESTRING targetUri,
+	INT32 latencyMs,
+	UNICODESTRING serviceErrorCode,
+	BOOLEAN succeeded,
+	UNICODESTRING requestMethod,
+	UNICODESTRING responseContentType,
+	UNICODESTRING protocol,
+	INT32 protocolStatusCode,
+	UNICODESTRING dependencyOperationName,
+	UNICODESTRING dependencyOperationVersion,
+	UNICODESTRING dependencyName,
+	UNICODESTRING dependencyType,
+	INT32 responseSizeBytes,
+	UNICODESTRING contentId,
+	INT64 leaseCount,
+	INT64 keyCount
+	);
+
+RequestLicenseSuccess(
+	ANSISTRING __TlgCV__,
+	NTSTATUS PartB_Ms.Qos.OutgoingServiceRequest,
+	UNICODESTRING operationName,
+	UNICODESTRING targetUri,
+	INT32 latencyMs,
+	UNICODESTRING serviceErrorCode,
+	BOOLEAN succeeded,
+	UNICODESTRING requestMethod,
+	UNICODESTRING responseContentType,
+	UNICODESTRING protocol,
+	INT32 protocolStatusCode,
+	UNICODESTRING dependencyOperationName,
+	UNICODESTRING dependencyOperationVersion,
+	UNICODESTRING dependencyName,
+	UNICODESTRING dependencyType,
+	INT32 responseSizeBytes,
+	UNICODESTRING contentId,
+	INT64 leaseCount,
+	INT64 keyCount
+	);
+
+SatisfactionError(
+	ANSISTRING __TlgCV__,
+	INT32 FaultCode,
+	UNICODESTRING Description,
+	UNICODESTRING ServerId
+	);
+
+LicenseServiceFault(
+	ANSISTRING __TlgCV__,
+	NTSTATUS PartB_Ms.Qos.OutgoingServiceRequest,
+	UNICODESTRING operationName,
+	UNICODESTRING targetUri,
+	INT32 latencyMs,
+	UNICODESTRING serviceErrorCode,
+	BOOLEAN succeeded,
+	UNICODESTRING requestMethod,
+	UNICODESTRING responseContentType,
+	UNICODESTRING protocol,
+	INT32 protocolStatusCode,
+	UNICODESTRING dependencyOperationName,
+	UNICODESTRING dependencyOperationVersion,
+	UNICODESTRING dependencyName,
+	UNICODESTRING dependencyType,
+	INT32 responseSizeBytes,
+	UNICODESTRING description,
+	UNICODESTRING param,
+	UNICODESTRING serverId,
+	UNICODESTRING source,
+	UNICODESTRING target,
+	UNICODESTRING data
+	);
+
+PushNotificationChannelFailure(
+	UINT32 ErrorCode
+	);
+
+InvalidPushNotificationContent(
+	UNICODESTRING RawContent
+	);
+
+RootMachineInitialConnectFailed(
+	UINT32 HResult
+	);
+
+RootMachineInitialEnsureAllKeysAndLeasesFailed(
+	UINT32 HResult
+	);
+
+WinstoreAuth_SendTokenRequestAndGetTickets_Failure(
+	HRESULT hr
+	);
+
+WinstoreAuth_UserAuthRequired(
+	HRESULT HRESULT_FROM_WIN32(1317L)
+	);
+
+WinstoreAuth_SLSFailure(
+	HRESULT GetLastError()
+	);
+
+Assert(
+	UINT32 assertVersion,
+	UINT32 rva,
+	UINT32 timestamp,
+	UINT32 imageSize,
+	ANSISTRING imageName,
+	UINT32 count,
+	UINT32 totalHits,
+	UINT32 ModuleCollection,
+	UINT32 GlobalCollection
+	);
+
+HttpRequestFailure(
+	NTSTATUS PartB_Ms.Qos.OutgoingServiceRequest,
+	UNICODESTRING operationName,
+	UNICODESTRING targetUri,
+	INT32 latencyMs,
+	INT32 serviceErrorCode,
+	BOOLEAN succeeded,
+	UNICODESTRING requestMethod,
+	UNICODESTRING responseContentType,
+	UNICODESTRING protocol,
+	UNICODESTRING protocolStatusCode,
+	UNICODESTRING dependencyOperationName,
+	UNICODESTRING dependencyOperationVersion,
+	UNICODESTRING dependencyName,
+	UNICODESTRING dependencyType,
+	INT32 responseSizeBytes,
+	UNICODESTRING __TlgCV__,
+	UINT32 InternetConnectionState,
+	UNICODESTRING Version,
+	UNICODESTRING Headers,
+	UINT32 SecureFailureFlags
+	);
+
+InternalFailureSummary(
+	UNICODESTRING OperationName,
+	UNICODESTRING TargetHostName,
+	UINT32 ServiceErrorCode,
+	UINT64 TotalLatencyMs,
+	UINT64 MinLatencyMs,
+	UINT32 ErrorCount,
+	UNICODESTRING Version
+	);
+
+OutgoingServiceRequestSummary(
+	UNICODESTRING OperationName,
+	UNICODESTRING TargetHostName,
+	UNICODESTRING RequestMethod,
+	UNICODESTRING ResponseCodeGrouping,
+	UINT16 GroupResponseCount,
+	UINT64 TotalGroupLatencyMs,
+	UINT64 MinimumGroupLatencyMs,
+	UINT64 MaximumGroupLatencyMs,
+	UNICODESTRING SampleCorrelationVector,
+	UNICODESTRING Protocol,
+	BOOL32 Succeeded,
+	UNICODESTRING Version
+	);
+

@@ -1,0 +1,29 @@
+ProviderNames:
+	Microsoft.Windows.Diagnostics.Troubleshooter.Networking
+
+
+
+**** Events *****
+NdfDiagnosticsComplete(
+	GUID sessionId,
+	UNICODESTRING ListHelperClasses,
+	INT32 NumRootCausesFound,
+	UNICODESTRING ListRepairGuids,
+	UNICODESTRING NLMStatusAtComplete,
+	UINT32 NLMStatusAtCompleteCode,
+	UNICODESTRING NLMStatusAtLaunch,
+	UINT32 NLMStatusAtLaunchCode,
+	UINT8 ConnectedMediaAtLaunch,
+	UINT8 ConnectedMediaAtComplete,
+	UINT64 DurationInMs,
+	HRESULT HResult,
+	INT32 FinalStopStatus
+	);
+
+NdfDiagnosticsLaunched(
+	GUID sessionId,
+	UNICODESTRING NLMStatus,
+	UINT8 ConnectedMedia,
+	UINT32 NLMStatusCode
+	);
+

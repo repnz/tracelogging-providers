@@ -1,0 +1,549 @@
+ProviderNames:
+	Microsoft.Windows.MediaFoundation.MediaPlaylist
+	Microsoft.Windows.MediaFoundation.MediaTranscode
+	Microsoft.Windows.MediaFoundation.MediaCapture
+	Microsoft.Windows.MediaFoundation.AdaptiveMediaSource
+	Microsoft.Windows.MediaFoundation.CallStack
+	Microsoft.Windows.MediaFoundation.MediaEngine
+	Microsoft.Windows.Media.Editing
+
+
+
+**** Events *****
+DPHostname(
+	INT32 ErrorCode,
+	BOOLEAN UtcAggParams,
+	UINT32 Period,
+	UINT32 MaxEvents,
+	UINT8 Mode,
+	TID UtcDiffpVal,
+	COUNTEDSTRING Name,
+	UNICODESTRING Value,
+	UINT8 Algorithm,
+	UINT8 AggMode,
+	DOUBLE Epsilon,
+	DOUBLE PertProb
+	);
+
+SourceCreationCompletedV2(
+	UNICODESTRING uri,
+	INT32 hrURLSummary,
+	UNICODESTRING extension,
+	UNICODESTRING contentType,
+	UINT64 ullElapsedTime,
+	GUID guidSourceId,
+	ANSISTRING type,
+	BOOLEAN live,
+	UINT32 streamCount,
+	UNICODESTRING streams,
+	INT32 hrStreamSummary
+	);
+
+SourceCreationErrorV2(
+	UNICODESTRING uri,
+	INT32 hrURLSummary,
+	UNICODESTRING extension,
+	UNICODESTRING contentType,
+	INT32 hrStatus,
+	INT32 status,
+	UINT64 ullElapsedTime,
+	GUID guidSourceId
+	);
+
+DASHParseError(
+	INT32 hr,
+	INT32 nodeType,
+	BOOLEAN started,
+	INT32 hrReport,
+	UINT32 dwStreamPosition,
+	UINT32 bufferTotalSize,
+	UINT32 bufferOffset,
+	BINARY bufferData
+	);
+
+StreamError(
+	GUID m_guidSourceId,
+	GUID MFMediaTelemetrySessionID,
+	UINT32 srcBufferId,
+	INT32 streamType,
+	INT32 hrStatus
+	);
+
+StreamSwitchHistory(
+	GUID m_guidSourceId,
+	GUID MFMediaTelemetrySessionID,
+	UINT32 m_pSrcBufferId,
+	INT32 streamType,
+	UINT32 m_dwManifestDownloadFailures,
+	INT32 m_hrLastManifestDownloadError,
+	UINT32 m_dwSegmentDownloadFailures,
+	INT32 m_hrLastSegmentDownloadError,
+	UINT32 m_dwKeyDownloadFailures,
+	INT32 m_hrLastKeyDownloadError,
+	UINT32 m_dwMediaSegmentIndexDownloadFailures,
+	INT32 m_hrLastMediaSegmentIndexDownloadError,
+	UINT32 m_dwSkippedSegmentCount,
+	UINT32 m_dwRetryCount,
+	UINT64 bufferCount,
+	DOUBLE bufferAverage,
+	DOUBLE bufferMin,
+	DOUBLE bufferMax,
+	FLOAT rateMin,
+	FLOAT rateMax,
+	UINT32 m_dwMode,
+	UINT64 m_ullAverageBandwidth,
+	UINT32 m_dwSuggestedBitrate,
+	UINT32 m_dwDesiredMinBitrate,
+	UINT32 m_dwDesiredMaxBitrate,
+	DOUBLE m_dblDesiredBitrateHeadroomRatio,
+	DOUBLE m_dblBitrateDowngradeTriggerRatio,
+	UINT8 m_fHeuristicsValid,
+	UINT32 m_dwSwitchCount,
+	UINT64 timeStampNow,
+	UINT64 timeStampHistory,
+	UINT32 newBitrateHistory,
+	UINT32 newIndexHistory,
+	UINT32 bitrateCountHistory,
+	UINT32 modeHistory,
+	UINT64 averageBandwidthHistory,
+	UINT32 suggestedBitrateHistory,
+	UINT32 desiredMinBitrateHistory,
+	UINT32 desiredMaxBitrateHistory,
+	BOOLEAN heuristicsValidHistory,
+	UINT32 switchReasonHistory
+	);
+
+HLSParseError(
+	INT32 hr,
+	INT32 currentExtTag,
+	UINT32 chunkCount,
+	UINT64 currentMediaSequence,
+	UINT32 bandwidth,
+	UINT32 bufferTotalSize,
+	INT64 bufferOffset,
+	BINARY bufferData
+	);
+
+SubtitleError(
+	GUID m_guidSourceId,
+	GUID MFMediaTelemetrySessionID,
+	UINT32 srcBufferId,
+	INT32 hrStatus
+	);
+
+ItemFailed(
+	HRESULT ErrorCode,
+	UINT32 ItemIndex,
+	GUID MFMediaTelemetrySessionID,
+	UINT32 MFMediaTelemetrySessionInstance
+	);
+
+ItemChanged(
+	INT32 Reason,
+	UINT32 ItemIndex,
+	BOOL32 InstanceIdIncremented,
+	GUID MFMediaTelemetrySessionID,
+	UINT32 MFMediaTelemetrySessionInstance
+	);
+
+AggregateEvents(
+	INT32 ItemChangedCount,
+	INT32 ItemChangedReason,
+	INT32 ItemErrorCount,
+	HRESULT ExtendedErrorCode,
+	UINT32 PlaylistSize,
+	BOOL32 Shuffle,
+	BOOL32 AutoRepeat,
+	GUID MFMediaTelemetrySessionID,
+	UINT32 MFMediaTelemetrySessionInstance
+	);
+
+SetSourceV2(
+	ANSISTRING SetSourceMode,
+	UNICODESTRING URL,
+	GUID MFMediaTelemetrySessionID,
+	UINT32 MFMediaTelemetrySessionInstance
+	);
+
+InitializeComplete(
+	GUID CorrelationID,
+	BOOL32 UTCReplace_AppSessionGuid,
+	UINT64 QPCTime,
+	INT32 StreamingMode,
+	INT32 MemoryPreference,
+	INT32 SharingMode,
+	GUID ProfileGuid,
+	INT32 ProfileId,
+	HEXINT32 HRESULT
+	);
+
+InitializeStart(
+	GUID CorrelationID,
+	BOOL32 UTCReplace_AppSessionGuid,
+	UINT64 QPCTime,
+	UINT32 AsyncId,
+	ANSISTRING Func
+	);
+
+AddEffectDefinitionOperation(
+	GUID MFCaptureEngineSessionGuid,
+	BOOL32 UTCReplace_AppSessionGuid,
+	UNICODESTRING EffectAcid
+	);
+
+AddEffectDefinitionOperation(
+	GUID MFCaptureEngineSessionGuid,
+	BOOL32 UTCReplace_AppSessionGuid,
+	UNICODESTRING EffectAcid
+	);
+
+MediaFrameReader.SetFormatAsync(
+	GUID CorrelationID,
+	BOOL32 UTCReplace_AppSessionGuid,
+	HEXINT64 Object,
+	UINT32 SourceStreamIndex,
+	UNICODESTRING MajorType,
+	UNICODESTRING Subtype,
+	UINT32 Width,
+	UINT32 Height,
+	UINT32 Numerator,
+	UINT32 Denominator
+	);
+
+MediaFrameReader.SetFormatAsync(
+	GUID CorrelationID,
+	BOOL32 UTCReplace_AppSessionGuid,
+	HEXINT64 Object,
+	UINT32 SourceStreamIndex,
+	HRESULT HResult
+	);
+
+WinRTMediaCaptureEvents(
+	GUID MFCaptureEngineSessionGuid,
+	BOOL32 UTCReplace_AppSessionGuid,
+	UINT64 WMCCreateTime,
+	UINT64 WMCDestoryTime,
+	UINT64 CECreateTime,
+	UINT64 CEInitializeTime,
+	PID MediaCaptureTelemetryAsyncCallData,
+	UINT32 uiAsyncId,
+	INT32 hrFinishStatus,
+	UINT64 ullStartTime,
+	UINT64 ullFinishTime,
+	COUNTEDANSISTRING szAsyncCallName
+	);
+
+AdvancedPhotoCaptureStrategyImpl._PrepareVPSAsync(
+	HEXINT64 Parent,
+	HEXINT64 AsyncOp
+	);
+
+AdvancedPhotoCaptureStrategyImpl._PrepareVPSAsync(
+	HEXINT64 Parent,
+	HEXINT64 AsyncOp,
+	HRESULT HResult
+	);
+
+AdvancedPhotoCaptureStrategyImpl._PrepareLowLag(
+	HEXINT64 Parent,
+	HEXINT64 AsyncOp,
+	HRESULT HResult
+	);
+
+AdvancedPhotoCaptureStrategyImpl._PrepareLowLag(
+	HEXINT64 Parent,
+	HEXINT64 AsyncOp
+	);
+
+AdvancedPhotoCapture.AllPhotosCaptured(
+	GUID CorrelationID,
+	BOOL32 UTCReplace_AppSessionGuid,
+	HEXINT64 Parent,
+	HEXINT64 AsyncOp
+	);
+
+AdvancedPhotoCapture.AllPhotosCaptured(
+	GUID CorrelationID,
+	BOOL32 UTCReplace_AppSessionGuid,
+	HEXINT64 Parent,
+	HEXINT64 AsyncOp,
+	HRESULT HResult
+	);
+
+AdvancedPhotoCapture.OptionalReferencePhotoCaptured(
+	HEXINT64 Parent,
+	HEXINT64 AsyncOp,
+	HRESULT HResult
+	);
+
+AdvancedPhotoCapture.OptionalReferencePhotoCaptured(
+	HEXINT64 AsyncOp,
+	HEXINT64 Parent
+	);
+
+AdvancedPhotoCaptureServer.FinishAsync(
+	HEXINT64 Parent,
+	HEXINT64 AsyncOp
+	);
+
+AdvancedPhotoCaptureServer.FinishAsync(
+	HEXINT64 Parent,
+	HEXINT64 AsyncOp,
+	HRESULT HResult
+	);
+
+AdvancedPhotoCapture.CaptureAsync(
+	GUID CorrelationID,
+	BOOL32 UTCReplace_AppSessionGuid,
+	HEXINT64 Parent,
+	HEXINT64 AsyncOp,
+	INT32 Mode,
+	HEXINT64 Context
+	);
+
+AdvancedPhotoCaptureServer.Reprepare(
+	HEXINT64 Parent,
+	HEXINT64 AsyncOp,
+	HRESULT HResult
+	);
+
+AdvancedPhotoCapture.CaptureAsync(
+	GUID CorrelationID,
+	BOOL32 UTCReplace_AppSessionGuid,
+	HEXINT64 Parent,
+	HEXINT64 AsyncOp,
+	HEXINT64 Context,
+	INT32 Strategy,
+	HRESULT HResult
+	);
+
+AdvancedPhotoCaptureServer.Reprepare(
+	HEXINT64 Parent,
+	HEXINT64 AsyncOp
+	);
+
+MediaFrameReader.StopAsync(
+	GUID CorrelationID,
+	GUID ReaderSessionId,
+	BOOL32 UTCReplace_AppSessionGuid,
+	HEXINT64 Object,
+	HRESULT HResult
+	);
+
+MediaFrameReader.StopAsync(
+	GUID CorrelationID,
+	GUID ReaderSessionId,
+	BOOL32 UTCReplace_AppSessionGuid,
+	HEXINT64 Object
+	);
+
+MediaFrameReader.StartAsync(
+	GUID CorrelationID,
+	GUID ReaderSessionId,
+	BOOL32 UTCReplace_AppSessionGuid,
+	HEXINT64 Object,
+	UNICODESTRING Id,
+	INT32 Kind,
+	UINT32 Index,
+	UNICODESTRING MajorType,
+	UNICODESTRING Subtype,
+	UINT32 Width,
+	UINT32 Height,
+	UINT32 Numerator,
+	UINT32 Denominator,
+	HRESULT HResult
+	);
+
+MediaFrameReader.StartAsync(
+	GUID CorrelationID,
+	GUID ReaderSessionId,
+	BOOL32 UTCReplace_AppSessionGuid,
+	HEXINT64 Object,
+	UNICODESTRING Id,
+	INT32 Kind,
+	UINT32 Index,
+	UNICODESTRING MajorType,
+	UNICODESTRING Subtype,
+	UINT32 Width,
+	UINT32 Height,
+	UINT32 Numerator,
+	UINT32 Denominator,
+	HRESULT HResult
+	);
+
+MediaFrameReader.RuntimeClassInitialize(
+	GUID CorrelationID,
+	BOOL32 UTCReplace_AppSessionGuid,
+	HEXINT64 Object,
+	UNICODESTRING Id,
+	UINT32 SourceStreamIndex,
+	UINT32 ReaderId,
+	UNICODESTRING OutputSubtype,
+	UINT32 OutputWidth,
+	UINT32 OutputHeight,
+	HRESULT HResult
+	);
+
+MultiSourceMediaFrameReader.StopAsync(
+	GUID CorrelationID,
+	GUID ReaderSessionId,
+	BOOL32 UTCReplace_AppSessionGuid,
+	HEXINT64 Object,
+	HRESULT HResult
+	);
+
+MultiSourceMediaFrameReader.StopAsync(
+	GUID CorrelationID,
+	GUID ReaderSessionId,
+	BOOL32 UTCReplace_AppSessionGuid,
+	HEXINT64 Object
+	);
+
+MultiSourceMediaFrameReader.StartAsync(
+	GUID CorrelationID,
+	GUID ReaderSessionId,
+	BOOL32 UTCReplace_AppSessionGuid,
+	HEXINT64 Object
+	);
+
+MultiSourceMediaFrameReader.StartAsync(
+	GUID CorrelationID,
+	GUID ReaderSessionId,
+	BOOL32 UTCReplace_AppSessionGuid,
+	HEXINT64 Object,
+	HRESULT HResult
+	);
+
+MultiSourceMediaFrameReader.RuntimeClassInitialize(
+	GUID CorrelationID,
+	BOOL32 UTCReplace_AppSessionGuid,
+	HEXINT64 Object,
+	UINT32 ReaderId,
+	HRESULT HResult
+	);
+
+LowLightFusion.FuseAsync(
+	GUID CorrelationID,
+	BOOL32 UTCReplace_AppSessionGuid,
+	HEXINT64 Parent,
+	HEXINT64 AsyncOp,
+	HRESULT HResult,
+	BOOL32 isCanceled,
+	INT32 Status
+	);
+
+AdvancedPhotoCaptureOperation.CaptureAsync(
+	GUID CorrelationID,
+	UINT32 MF_CAPTURE_METADATA_FLASH
+	);
+
+HighDynamicRangeFusion.FuseAsync(
+	GUID CorrelationID,
+	BOOL32 UTCReplace_AppSessionGuid,
+	HEXINT64 Parent,
+	HEXINT64 AsyncOp
+	);
+
+HighDynamicRangeFusion.FuseAsync(
+	GUID CorrelationID,
+	BOOL32 UTCReplace_AppSessionGuid,
+	HEXINT64 Parent,
+	HEXINT64 AsyncOp,
+	HRESULT HResult
+	);
+
+PhotoAvailable(
+	HEXINT64 Object,
+	INT32 PhotoCount,
+	FLOAT EVComp
+	);
+
+AdvancedPhotoCaptureOperation.CaptureAsync(
+	GUID CorrelationID,
+	BOOL32 UTCReplace_AppSessionGuid,
+	HEXINT64 Parent,
+	HEXINT64 AsyncOp,
+	HRESULT HResult
+	);
+
+EncodeBitmap(
+	HEXINT64 Bitmap,
+	HEXINT64 Encoder,
+	HRESULT HResult
+	);
+
+EncodeBitmap.RemovePadding(
+	HEXINT64 Bitmap
+	);
+
+EncodeBitmap.Encoder(
+	ANSISTRING Type
+	);
+
+EncodeBitmap.RemovePadding(
+	HEXINT64 Bitmap
+	);
+
+EncodeBitmap(
+	HEXINT64 Bitmap
+	);
+
+ProcessingQueueFull(
+	GUID CorrelationID,
+	BOOL32 UTCReplace_AppSessionGuid,
+	HEXINT64 AdvancedCaptureMemoryManager,
+	UINT32 Capacity
+	);
+
+MediaFrameReader.ReaderSessionStats(
+	GUID CorrelationID,
+	GUID ReaderSessionId,
+	BOOL32 UTCReplace_AppSessionGuid,
+	UINT32 FramesDelivered,
+	UINT32 FrameIntrinsicsReturned,
+	UINT32 FrameIntrinsicsReturnedFallback,
+	UINT32 FrameCoordinateSystemsReturned,
+	UINT32 FrameCoordinateSystemsReturnedFallback,
+	UINT32 CoordinateMappersReturned,
+	UINT32 CoordinateMapperPointsRequestedTotal,
+	UINT32 CoordinateMapperPointsSuccessfullyMappedTotal,
+	UINT32 CoordinateMapperPointsRequestedAverage,
+	UINT32 CoordinateMapperPointsSuccessfullyMappedAverage
+	);
+
+PrepareTranscodeOperationStart(
+	GUID MFMediaTelemetrySessionID,
+	UINT32 MFMediaTelemetrySessionInstance,
+	INT64 MemoryUsage,
+	INT64 MemoryLimit,
+	HEXINT32 ErrorCode
+	);
+
+PrepareTranscodeOperationStart(
+	GUID MFMediaTelemetrySessionID,
+	UINT32 MFMediaTelemetrySessionInstance,
+	INT64 MemoryUsage,
+	INT64 MemoryLimit,
+	BOOLEAN HasVideo,
+	BOOLEAN HasAudio,
+	HEX VideoProfile,
+	UINT32 Bitrate,
+	UINT32 Height,
+	UINT32 Width,
+	UNICODESTRING Codec,
+	PID AudioProfile,
+	UINT32 Bitrate,
+	UINT32 BitsPerSample,
+	UINT32 ChannelCount,
+	UINT32 SampleRate,
+	UNICODESTRING Codec
+	);
+
+BasicVideoEffectProcessFrameStart(
+	UINT32 MemorySupportedType,
+	BOOL32 IsD3D11Mode,
+	UINT32 Width,
+	UINT32 Height,
+	GUID Subtype
+	);
+

@@ -1,0 +1,29 @@
+ProviderNames:
+	Microsoft.Windows.Storage.VDS.Service
+	FveDetectTelemetry
+
+
+
+**** Events *****
+VDSProviderDetails(
+	GUID ProviderGUID,
+	UINT16 ProviderType,
+	BOOL32 IsVDSProviderInbox
+	);
+
+FveCheckSuspendBitLockerOnUpgrade(
+	INT32 ShouldSuspendBitlocker,
+	BOOLEAN IsSecureBootBound,
+	BOOLEAN IsOsPreRS1,
+	UINT32 AuthUsesFlags,
+	INT32 hr
+	);
+
+FveRemoveTrustedWimData(
+	INT32 hr
+	);
+
+FveAddTrustedWimData(
+	INT32 hr
+	);
+

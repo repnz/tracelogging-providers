@@ -1,0 +1,688 @@
+ProviderNames:
+	MbaeApiLogging
+	Microsoft.Windows.Cellcore.Settings
+	TelemetryAssert
+	TelemetryAssertDiagTrack
+
+
+
+**** Events *****
+MbaeApi Result Logging(
+	HRESULT HRESULT,
+	ANSISTRING File,
+	UINT32 LineNumber,
+	ANSISTRING Function,
+	UNICODESTRING Message
+	);
+
+FallbackError(
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+FallbackError(
+	UINT64 PartA_PrivTags,
+	SIGNED wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+DebugTrace(
+	UNICODESTRING Verbose
+	);
+
+DebugTrace(
+	UNICODESTRING Error
+	);
+
+DebugTrace(
+	UNICODESTRING Info
+	);
+
+CCellularSettingsPublisher::OnModemOptionalFeaturesPresent(
+	GUID AdapterID,
+	UINT32 optionalFeatures
+	);
+
+CCellularSettingsPublisher::OnMultiSimMappedSlotChanged(
+	GUID AdapterID,
+	UINT32 mappedSlot
+	);
+
+CCellularSettingsPublisher::OnMultiSimInfoChanged(
+	GUID AdapterID,
+	UINT32 numberOfSlots
+	);
+
+CCellularSettingsPublisher::OnProvisionedStateChanged(
+	GUID AdapterID,
+	BOOLEAN provisioningState
+	);
+
+CCellularSettingsPublisher::OnLTEAttachAPNChanged(
+	GUID AdapterID,
+	BOOLEAN attached,
+	UNICODESTRING apnString
+	);
+
+CCellularSettingsPublisher::OnAdminProvisionedDataProfileEnabledChanged(
+	GUID AdapterID,
+	BOOLEAN adminEnabled
+	);
+
+CCellularSettingsPublisher::OnAuxilaryPreferenceChanged(
+	GUID AdapterID,
+	UINT32 CellularSettingsAuxilaryPrefType,
+	UINT32 DataSize,
+	HEXINT64 Data
+	);
+
+CCellularSettingsPublisher::OnModemPowerStateChanged(
+	GUID AdapterID,
+	UINT32 PowerState
+	);
+
+CCellularSettingsPublisher::OnWifiCallingErrorUpdated(
+	GUID AdapterID,
+	UINT32 ErrorType,
+	UINT32 ErrorCode,
+	UNICODESTRING ErrorMsg
+	);
+
+CCellularSettingsPublisher::OnPSMediaPreferencesChanged(
+	GUID AdapterID,
+	UINT32 CellularSettingsPacketServiceMediaPreference,
+	UINT32 CellularSettingsPacketServiceMediaPreferenceRoaming
+	);
+
+CCellularSettingsPublisher::OnAssociatedSlotChanged(
+	GUID AdapterID,
+	UINT32 SlotId
+	);
+
+CCellularSettingsPublisher::OnSupportedApnAuthProtocolsChanged(
+	GUID AdapterID,
+	UINT32 Supported Authentication Protocols
+	);
+
+CCellularSettingsPublisher::OnImsRegistrationChanged(
+	GUID AdapterID,
+	UINT32 imsStatus.systemType,
+	UINT32 imsStatus.services,
+	UNICODESTRING imsStatus.servingDomain
+	);
+
+CCellularSettingsPublisher::OnProvisionedMmsProfilesPresent(
+	GUID AdapterID,
+	BOOLEAN profilesPresent
+	);
+
+CCellularSettingsPublisher::OnProvisionedInternetProfilesPresent(
+	GUID AdapterID,
+	BOOLEAN profilesPresent
+	);
+
+CCellularSettingsPublisher::OnIMSIChanged(
+	GUID AdapterID,
+	UNICODESTRING IMSI
+	);
+
+CCellularSettingsPublisher::OnExecutorRadioStateChanged(
+	GUID AdapterID,
+	UINT32 mbnRadio
+	);
+
+CCellularSettingsPublisher::OnSlotStateChanged(
+	GUID AdapterID,
+	UINT32 slotState
+	);
+
+CCellularSettingsPublisher::OnRegistrationTypeChanged(
+	GUID AdapterID,
+	UINT8 automaticRegistration,
+	UNICODESTRING operatorId,
+	UINT32 roamMode
+	);
+
+CCellularSettingsPublisher::OnRadioAccessCapabilitiesChanged(
+	GUID AdapterID,
+	UINT32 supportedModemType,
+	UINT32 supportedDataClasses
+	);
+
+CCellularSettingsPublisher::OnRadioAccessTechnologyInfoChanged(
+	GUID AdapterID,
+	UINT32 possibleRat,
+	UINT32 allowedRat,
+	UINT32 acquisitionOrderSize
+	);
+
+CCellularSettingsPublisher::OnImsOmaDmFlagsChanged(
+	GUID AdapterID,
+	BOOL32 imsOmaDmProvisioningEnabled,
+	BOOL32 imsOmaDmVoiceEnabled
+	);
+
+CCellularSettingsPublisher::OnIMSRoamingEnablementChanged(
+	GUID AdapterID,
+	BOOL32 imsRoaming
+	);
+
+CCellularSettingsPublisher::OnImsXcapEnablementChanged(
+	GUID AdapterID,
+	BOOL32 imsEnabled
+	);
+
+CCellularSettingsPublisher::OnImsServiceEnablementChanged(
+	GUID AdapterID,
+	BOOL32 imsEnabled
+	);
+
+CCellularSettingsPublisher::OnImsVideoEnablementChanged(
+	GUID AdapterID,
+	BOOL32 imsEnabled
+	);
+
+CCellularSettingsPublisher::OnImsVoiceEnablementChanged(
+	GUID AdapterID,
+	BOOL32 imsEnabled
+	);
+
+CCellularSettingsPublisher::OnDataProfileDeleted(
+	GUID AdapterID,
+	UNICODESTRING profileName,
+	BOOLEAN fDMConfigProfile
+	);
+
+CCellularSettingsPublisher::OnDataProfileUpdated(
+	GUID AdapterID,
+	UNICODESTRING profileName,
+	UNICODESTRING apn
+	);
+
+CCellularSettingsPublisher::OnSimToolkitApplicationsPresent(
+	GUID AdapterID,
+	BOOL32 bSimToolkitAppsPresent
+	);
+
+CCellularSettingsPublisher::OnPreferredPlmnChanged(
+	GUID AdapterID,
+	UINT32 cPlmn,
+	INT32 operationResult
+	);
+
+CCellularSettingsPublisher::OnAvailableNetworksFinished(
+	GUID AdapterID,
+	UINT32 cOperators
+	);
+
+CCellularSettingsPublisher::OnAvailableNetworksStarted(
+	GUID AdapterID
+	);
+
+CCellularSettingsPublisher::OnSimFriendlyNameChanged(
+	GUID AdapterID,
+	UNICODESTRING pSimFriendlyName
+	);
+
+CCellularSettingsPublisher::OnIccIdChanged(
+	GUID AdapterID,
+	UNICODESTRING pIccId
+	);
+
+CCellularSettingsPublisher::OnAdapterRemoved(
+	GUID AdapterID
+	);
+
+CCellularSettingsPublisher::OnPhoneNumberChanged(
+	GUID AdapterID,
+	UNICODESTRING pPhoneNumber
+	);
+
+CCellularSettingsPublisher::OnRegistrationStateChanged(
+	GUID AdapterID,
+	UNICODESTRING providerId,
+	UNICODESTRING providerName,
+	UINT32 registerMode,
+	UINT32 registerState
+	);
+
+CCellularSettingsPublisher::OnPinOperationCompleted(
+	GUID AdapterID,
+	UINT32 pinOperation,
+	UINT32 operationResult
+	);
+
+CCellularSettingsPublisher::OnPinStateUpdated(
+	GUID AdapterID,
+	UINT32 pinType,
+	UINT32 pinState,
+	UINT32 pinFormat,
+	BOOL32 pinEnabled,
+	UINT32 minLength,
+	UINT32 maxLength,
+	UINT32 attemptsRemaining
+	);
+
+CCellularSettingsPublisher::OnMmsDataEnabledChanged(
+	GUID AdapterID,
+	BOOL32 bEnabled
+	);
+
+CCellularSettingsPublisher::OnInternetDataRoamingTypeChanged(
+	GUID AdapterID,
+	UINT32 roamingType
+	);
+
+CCellularSettingsPublisher::OnDisallowAutoConnectChanged(
+	GUID AdapterID,
+	BOOL32 disallowAutoConnect
+	);
+
+CCellularSettingsPublisher::OnInternetDataEnabledChanged(
+	GUID AdapterID,
+	BOOL32 dataEnabled
+	);
+
+CCellularSettingsPublisher::HasPhoneCapabilities(
+	UINT8 *hasPhoneCapabilities
+	);
+
+CCellularSettingsPublisher::UnadviseAdapter(
+	GUID adapterID
+	);
+
+CCellularSettingsPublisher::AdviseAdapter(
+	GUID adapterID
+	);
+
+DebugTrace(
+	UNICODESTRING Warning
+	);
+
+DeleteDataProfile(
+	BOOL32 isWwanDeleteProfileSuccess,
+	BOOL32 isDeleteDMConfigProfileSuccess,
+	UINT32 deleteDMConfigProfileErrorCode,
+	UNICODESTRING profileName
+	);
+
+UpdateDataProfile(
+	BOOL32 isProfileSaved,
+	BOOL32 isWwanProfileSetSuccess,
+	BOOL32 isProxySetSuccess,
+	BOOL32 isDMProvisionedEntered,
+	BOOL32 isDMProvisionedSuccess
+	);
+
+UpdateDataProfile(
+	BOOL32 isProfileSaved,
+	BOOL32 isWwanProfileSetSuccess,
+	BOOL32 isProxySetSuccess,
+	BOOL32 isDMProvisionedEntered,
+	BOOL32 isDMProvisionedSuccess,
+	UINT32 profileIPType,
+	UINT32 profileAuthProtocol,
+	UINT32 profileRoamingType,
+	UINT32 profilePurpose,
+	UINT32 internetProfileType,
+	UNICODESTRING profileName
+	);
+
+SetInternetDataRoamingType(
+	BOOL32 SetInternetDataRoamingTypeSuccess,
+	UINT32 DataRoamingType
+	);
+
+CWwanTranslator::ProcessWwanNotification(
+	ANSISTRING NotificationCode,
+	GUID AdapterID,
+	UINT32 NotificationSize
+	);
+
+CWwanTranslator::SetLteAttachedStateByAdapterId(
+	GUID AdapterID,
+	ANSISTRING Description
+	);
+
+CWwanTranslator::GetLteAttachedStateByAdapterId(
+	GUID AdapterID,
+	ANSISTRING Description
+	);
+
+CWwanTranslator::SetPin1PreviousState(
+	GUID AdapterID,
+	ANSISTRING Description
+	);
+
+CWwanTranslator::GetPin1PreviousState(
+	GUID AdapterID,
+	ANSISTRING Description
+	);
+
+CWwanTranslator::SetPin2ReportedByAdapterId(
+	GUID AdapterID,
+	ANSISTRING Description
+	);
+
+CWwanTranslator::SetPin1ReportedByAdapterId(
+	GUID AdapterID,
+	ANSISTRING Description
+	);
+
+CWwanTranslator::GetPinReportedByAdapterId(
+	GUID AdapterID,
+	ANSISTRING Description
+	);
+
+CWwanTranslator::GetModemTypeByAdapterId(
+	GUID AdapterID,
+	ANSISTRING Description
+	);
+
+CWwanTranslator::RemoveInterface(
+	GUID adapterID
+	);
+
+CWwanTranslator::AddInterface(
+	GUID adapterID
+	);
+
+SlotBindingMap::OnWwanNotification(
+	GUID AdapterID,
+	INT32 SlotIndex
+	);
+
+CCellularTranslator::_GetAdapterPsMediaPreferences(
+	ANSISTRING Description,
+	GUID AdapterID
+	);
+
+CCellularTranslator::_SetAdapterPsMediaPreferences(
+	ANSISTRING Description,
+	GUID AdapterID
+	);
+
+CCellularTranslator::_GetAdapterPrevPinState(
+	ANSISTRING Description,
+	GUID AdapterID
+	);
+
+CCellularTranslator::_SetAdapterPrevPinState(
+	ANSISTRING Description,
+	GUID AdapterID
+	);
+
+CCellularTranslator::_GetAdapterCurrentPersoFeature(
+	ANSISTRING Description,
+	GUID AdapterID
+	);
+
+CCellularTranslator::_SetAdapterCurrentPersoFeature(
+	ANSISTRING Description,
+	GUID AdapterID
+	);
+
+CCellularTranslator::_SetAdapterCanState(
+	ANSISTRING Description,
+	GUID AdapterID
+	);
+
+CCellularTranslator::_GetAdapterUiccApp(
+	ANSISTRING Description,
+	GUID AdapterID
+	);
+
+CCellularTranslator::_SetAdapterUiccApp(
+	ANSISTRING Description,
+	GUID AdapterID
+	);
+
+CCellularTranslator::GetAdapterUicc(
+	ANSISTRING Description,
+	GUID AdapterID
+	);
+
+CCellularTranslator::SetAdapterUicc(
+	ANSISTRING Description,
+	GUID AdapterID
+	);
+
+CCellularTranslator::GetAdapterCan(
+	ANSISTRING Description,
+	GUID AdapterID
+	);
+
+CCellularTranslator::SetAdapterCan(
+	ANSISTRING Description,
+	GUID AdapterID
+	);
+
+CCellularTranslator::GetAdapterCanId(
+	ANSISTRING Description,
+	GUID AdapterID
+	);
+
+CCellularTranslator::_SetAdapterModemId(
+	ANSISTRING Description,
+	GUID AdapterID
+	);
+
+CCellularTranslator::_GetAdapterModem(
+	ANSISTRING Description,
+	GUID AdapterID
+	);
+
+CCellularTranslator::SetAdapterModem(
+	ANSISTRING Description,
+	GUID AdapterID
+	);
+
+CCellularTranslator::_SendCanPowerUpdate(
+	ANSISTRING Description,
+	GUID AdapterID
+	);
+
+EquivalentPinState(
+	INT32 Party,
+	UINT32 pinType,
+	UINT32 pinState,
+	UINT32 pinFormat,
+	BOOL32 pinEnabled,
+	UINT32 minLength,
+	UINT32 maxLength,
+	UINT32 attemptsRemaining
+	);
+
+CCellularTranslator::_SetAdapterCanState(
+	ANSISTRING Description,
+	GUID AdapterID
+	);
+
+CCellularTranslator::OnCanStateChange(
+	GUID AdapterID,
+	UINT32 CanState
+	);
+
+CCellularTranslator::OnRegistrationStatusChanged(
+	ANSISTRING Description,
+	GUID AdapterID
+	);
+
+CCellularTranslator::OnUICCRemoved(
+	ANSISTRING Description,
+	GUID adapterID
+	);
+
+CCellularTranslator::OnCanRemoved(
+	ANSISTRING Description,
+	GUID CanID
+	);
+
+CCellularTranslator::OnCanRemoved(
+	ANSISTRING Description,
+	GUID AdapterID
+	);
+
+CCellularTranslator::AdapterIdFromModemAndSlot(
+	ANSISTRING Description,
+	GUID ModemID,
+	UINT32 slotIndex
+	);
+
+CCellularTranslator::AdviseAdapter(
+	ANSISTRING Description,
+	GUID AdapterID,
+	GUID ModemId
+	);
+
+CCellularTranslator::AdviseAdapter(
+	ANSISTRING Description,
+	GUID AdapterID,
+	GUID CanID
+	);
+
+CapiPsMediaPreference(
+	UINT32 psMediaPreference,
+	UINT32 roamSettingPreference
+	);
+
+CapiUnblockSimPin(
+	BOOL32 unblockSimPinSuccess,
+	UINT32 pinType
+	);
+
+CapiChangeSimPin(
+	BOOL32 changeSimPinSuccess,
+	UINT32 pinType
+	);
+
+CapiEnableSimPin(
+	BOOL32 enableSimPinSuccess,
+	UINT32 pinType,
+	BOOL32 isEnable
+	);
+
+CapiVerifySimPin(
+	BOOL32 verifySimPinSuccess,
+	UINT32 pinType
+	);
+
+CapiSetImsVoWifiEntitlementCheck(
+	BOOL32 setImsVoWifiEntitlementCheckSuccess
+	);
+
+CapiSetImsRoamingEnabled(
+	BOOL32 setImsRoamingEnabledSuccess,
+	BOOL32 isImsEnable
+	);
+
+CapiSetImsXcapEnabled(
+	BOOL32 ImsXcapEnabled,
+	BOOL32 setSetImsXcapEnabledSuccess
+	);
+
+CapiSetImsServiceEnabled(
+	BOOL32 ImsServiceEnabled,
+	BOOL32 setSetImsServiceEnabledSuccess
+	);
+
+CapiSetImsVideoEnabled(
+	BOOL32 ImsVideoEnabled,
+	BOOL32 setSetImsVideoEnabledSuccess
+	);
+
+CapiSetImsVoiceEnabled(
+	BOOL32 setImsVoiceEnabledSuccess,
+	BOOL32 isImsEnable
+	);
+
+CapiSetRegistrationType(
+	BOOL32 isRegistrationPreferenceSaved,
+	BOOL32 isAutoRegistrationOn,
+	UINT32 roamMode,
+	UNICODESTRING operatorId
+	);
+
+CapiGetAvailableNetworks(
+	VOID
+	);
+
+CCellularSettingHelperCAPI::CreateInstance(
+	ANSISTRING Description,
+	GUID adapterID
+	);
+
+WwanGetAvailableNetworks(
+	VOID
+	);
+
+WwanSetRegistrationType(
+	BOOL32 isRegistrationPreferenceSaved,
+	BOOL32 isAutoRegistrationOn,
+	UINT32 roamMode,
+	UNICODESTRING operatorId
+	);
+
+WwanUnblockSimPin(
+	BOOL32 unblockSimPinSuccess,
+	UINT32 pinType
+	);
+
+WwanChangeSimPin(
+	BOOL32 simPinChangeSuccess,
+	UINT32 pinType
+	);
+
+WwanEnableSimPin(
+	BOOL32 simPinEnableSuccess,
+	UINT32 pinType,
+	BOOL32 isEnable
+	);
+
+WwanVerifySimPin(
+	BOOL32 simPinVerificationSuccess,
+	UINT32 pinType
+	);
+
+Assert(
+	UINT32 assertVersion,
+	UINT32 rva,
+	UINT32 timestamp,
+	UINT32 imageSize,
+	ANSISTRING imageName,
+	UINT32 count,
+	UINT32 totalHits,
+	UINT32 ModuleCollection,
+	UINT32 GlobalCollection
+	);
+

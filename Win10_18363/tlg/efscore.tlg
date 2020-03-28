@@ -1,0 +1,896 @@
+ProviderNames:
+	Microsoft.Windows.Security.EFS.EfsCore
+	Microsoft.Windows.EDP.Enforcement
+	TelemetryAssert
+	TelemetryAssertDiagTrack
+	Microsoft.Windows.ErrorHandling.Fallback
+	Microsoft.Windows.Security.Efs
+
+
+
+**** Events *****
+EdpIsAccessAllowed(
+	UINT8 IsAllowed,
+	UNICODESTRING CallerUniqueID,
+	INT32 ActivityStatus
+	);
+
+FallbackError(
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+FallbackError(
+	UINT64 PartA_PrivTags,
+	SIGNED wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+EfsDecrypt(
+	UINT32 Result
+	);
+
+LogOefsRecoveryFailure(
+	INT32 hr
+	);
+
+LogOefsRecoveryFileCount(
+	UINT32 recoveryFileCount
+	);
+
+RmsClearKeys(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId
+	);
+
+RmsGetEfsKeyFromLicense(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId
+	);
+
+RmsCreateLicense(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId
+	);
+
+RmsProvisionForCurrentUser(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId
+	);
+
+LogRmsCreateLicense(
+	BOOLEAN isTemplateIdAvailable,
+	INT32 intermediateHr,
+	INT32 hr
+	);
+
+LogRmsGetEfsKeyFromLicense(
+	UINT32 LicenseSize,
+	UINT32 FekSize,
+	INT32 intermediateHr,
+	INT32 hr
+	);
+
+LogRmsClearKeys(
+	INT32 hr
+	);
+
+LogRmsProvisionForCurrentUser(
+	INT32 hr
+	);
+
+RmsCreateLicense(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+RmsCreateLicense(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+RmsGetEfsKeyFromLicense(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+RmsGetEfsKeyFromLicense(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+RmsClearKeys(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+RmsClearKeys(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+ActivityIntermediateStop(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+ActivityError(
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+ActivityError(
+	UINT64 PartA_PrivTags,
+	SIGNED wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+RmsProvisionForCurrentUser(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+RmsProvisionForCurrentUser(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+ActivityStoppedAutomatically(
+	VOID
+	);
+
+EfsxDecryptFileKey.RecoveryProtectors(
+	UINT32 status
+	);
+
+EdpCredSvcDplCredentialReset(
+	BOOL32 isNgcContainerDeletion,
+	INT32 status
+	);
+
+CDplServiceImpl::PublishMissingCredentialNotification_TemporarilySupressed(
+	UINT32 secondsRemaining
+	);
+
+CDplServiceImpl::PublishMissingCredentialNotification_Throttled(
+	UINT32 secondsRemaining
+	);
+
+CDplServiceImpl_UpdateDplProtection(
+	UNICODESTRING reason,
+	INT32 status
+	);
+
+CDplServiceImpl::PublishMissingCredentialNotification_RetrievedFromCloud(
+	VOID
+	);
+
+CDplServiceImpl::PublishMissingCredentialNotification_PermanentlySuppressed(
+	VOID
+	);
+
+CDplServiceImpl.ImportCredentials(
+	INT32 status
+	);
+
+CDplServiceImpl::PublishMissingCredentialNotification.Publish(
+	INT32 status
+	);
+
+CDplProtectorNgc.ResolveNgcKeyName(
+	INT32 status,
+	UNICODESTRING extendedError
+	);
+
+CDplProtectorNgc.Protect(
+	INT32 status
+	);
+
+CDplProtectorNgc.Unprotect(
+	INT32 bOnUnlock,
+	INT32 status
+	);
+
+CDplProtectorNgc.CreateNgcKeyWorker(
+	INT32 status
+	);
+
+CEdpCredSvcUserState.ResolveProtectorInfo(
+	UINT32 testProtectorsEnabled,
+	INT32 status
+	);
+
+CDplAccount.OnDplPolicyDisabled(
+	INT32 protectedPrivateKeyBlobsDeleted,
+	INT32 privateKeyBlobsProcessed,
+	INT32 protectedKdfKeyBlobsDeleted,
+	INT32 privateKdfKeysProcessed,
+	BOOL32 isConsumerCredential,
+	UINT32 consumerCredentialLevel,
+	INT32 status
+	);
+
+EnableCDpl_DuckNotAccessible(
+	INT32 OkToCreate
+	);
+
+CDplAccount.Deserialize_NCryptUnprotectSecret(
+	INT32 status
+	);
+
+CDplAccount.OnDplPolicyEnabled(
+	INT32 numPrivateKeysProtected,
+	INT32 numPrivateKeys,
+	INT32 numKdfKeysProtected,
+	INT32 numKdfKeys,
+	INT32 Status
+	);
+
+OnDplPolicyDisabled_DuckNotAccessible(
+	VOID
+	);
+
+CDplAccount.EnableCDpl(
+	INT32 numPrivateKeysProtected,
+	INT32 numPrivateKeys,
+	INT32 numKdfKeysProtected,
+	INT32 numKdfKeys,
+	INT32 Status
+	);
+
+OnDplPolicyEnabled_DuckNotAccessible(
+	VOID
+	);
+
+CDplAccount.Serialize_NCryptProtectSecret(
+	INT32 status,
+	BOOL32 consumerCredential,
+	UINT32 consumerCredentialLevel
+	);
+
+RecoveryIngestionProcessFile.Recover(
+	UINT32 dwStage,
+	INT32 moveHr,
+	INT32 status
+	);
+
+RetrieveCredentialStart(
+	VOID
+	);
+
+CDplUser.GetCreateDplKeyPair.CreateNewDPLAccount(
+	INT32 dplPolicyEnabled,
+	INT32 status,
+	BOOL32 consumerCredential,
+	UINT32 consumerCredentialLevel
+	);
+
+CreateNewConsumerCredential(
+	UINT32 status,
+	UINT32 credentialLevel,
+	BOOL32 dplEnforced
+	);
+
+GetCreateDuck.DuckCreated(
+	INT32 status
+	);
+
+RetrieveCredentialStop(
+	ANSISTRING RetrievalState,
+	INT32 AttemptCount,
+	BOOL32 IsAutoRecoverySupported,
+	UINT32 NumCreds,
+	UINT32 RecoveryIngestionStage,
+	INT32 Result
+	);
+
+CDplUser.SaveDplAccountsAndKeys(
+	UINT32 numSaved,
+	UINT32 numDeleted,
+	INT32 status
+	);
+
+BackupRecoveryFileToFolder.UpdateRequired(
+	INT32 status
+	);
+
+BackupCredentialStart(
+	VOID
+	);
+
+CDplUser.DeleteDuck(
+	INT32 status
+	);
+
+BackupCredentialStop(
+	ANSISTRING BackupState,
+	INT32 AttemptCount,
+	BOOL32 IsAutoRecoverySupported,
+	UINT64 BackupTime,
+	UINT32 BackupKeySize,
+	INT32 Result
+	);
+
+RetrieveCredentialParsed(
+	ANSISTRING RetrievalState,
+	ANSISTRING KeyRetrivalType
+	);
+
+CDplUser.DeleteDplAccount(
+	INT32 status
+	);
+
+CDplUser.OnDeviceLockStateChange(
+	INT32 deviceLockState,
+	UINT32 delaySeconds
+	);
+
+CDplDuck_OnDeviceLocked(
+	VOID
+	);
+
+CDplDuck.UnsealOnUnlock(
+	INT32 status
+	);
+
+ParseResponseStart(
+	VOID
+	);
+
+ParseResponseStop(
+	INT32 IsSpecificKeyRequest,
+	INT32 IsKeysRequest,
+	INT32 IsBackupRequest,
+	INT32 UnknownRequest,
+	UINT32 HttpStatusCode,
+	INT32 Result
+	);
+
+ParseResponseFailCode(
+	UNICODESTRING ParseSubCodeError
+	);
+
+ActivityError(
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+ActivityError(
+	UINT64 PartA_PrivTags,
+	SIGNED wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+GetDplIsAllowedStatus(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId
+	);
+
+GetDplIsAllowedStatus(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+GetDplIsAllowedStatus(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+LogEdpDetermineFileProtectionType(
+	UNICODESTRING fileExtension,
+	UINT32 protectionType,
+	UINT32 driveType,
+	BOOLEAN testHookSet
+	);
+
+ActivityIntermediateStop(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+ActivityStoppedAutomatically(
+	VOID
+	);
+
+DplIsProtectionAllowed.Status(
+	UINT64 PartA_PrivTags,
+	BOOLEAN isAllowed,
+	UNICODESTRING appName
+	);
+
+TemporalFileAccessGrantOrError(
+	INT64 ProcessUniqueId,
+	UNICODESTRING AppId,
+	GUID EfsStreamId,
+	HRESULT Result,
+	TID ProcInfo,
+	NULL ProcessFullName,
+	COUNTEDSTRING ProcessName,
+	HEX ProcessEdpContext,
+	BOOL32 Present,
+	UINT64 PolicyFlags,
+	UINT32 EnterpriseIdCount,
+	NULL EnterpriseId,
+	HEX ThreadEdpContext,
+	BOOL32 Present,
+	UINT64 PolicyFlags,
+	UINT32 EnterpriseIdCount,
+	NULL EnterpriseId,
+	COUNTEDSTRING ProcessUserSid,
+	COUNTEDSTRING ThreadUserSid
+	);
+
+BlockEncryptionForInvalidSubject(
+	NULL FileName,
+	UNICODESTRING Layer,
+	TID ProcInfo,
+	NULL ProcessFullName,
+	COUNTEDSTRING ProcessName,
+	HEX ProcessEdpContext,
+	BOOL32 Present,
+	UINT64 PolicyFlags,
+	UINT32 EnterpriseIdCount,
+	NULL EnterpriseId,
+	HEX ThreadEdpContext,
+	BOOL32 Present,
+	UINT64 PolicyFlags,
+	UINT32 EnterpriseIdCount,
+	NULL EnterpriseId,
+	COUNTEDSTRING ProcessUserSid,
+	COUNTEDSTRING ThreadUserSid
+	);
+
+DplApplyPolicy(
+	UNICODESTRING PolicyString,
+	UNICODESTRING UserSid,
+	HRESULT Result
+	);
+
+TemporalFileAccessAdd(
+	UNICODESTRING FilePaths,
+	GUID EfsStreamIds,
+	INT32 ProcessId,
+	INT64 ProcessUniqueId,
+	UNICODESTRING AppId,
+	HRESULT Result,
+	TID ProcInfo,
+	NULL ProcessFullName,
+	COUNTEDSTRING ProcessName,
+	HEX ProcessEdpContext,
+	BOOL32 Present,
+	UINT64 PolicyFlags,
+	UINT32 EnterpriseIdCount,
+	NULL EnterpriseId,
+	HEX ThreadEdpContext,
+	BOOL32 Present,
+	UINT64 PolicyFlags,
+	UINT32 EnterpriseIdCount,
+	NULL EnterpriseId,
+	COUNTEDSTRING ProcessUserSid,
+	COUNTEDSTRING ThreadUserSid
+	);
+
+DplStateChange(
+	UNICODESTRING State,
+	UNICODESTRING UserSid,
+	UINT32 KeyDropDelay,
+	BOOL32 Realtime
+	);
+
+PolicyUpdate(
+	UNICODESTRING EnterpriseProtectedDomainNames,
+	INT32 EnforcementLevel,
+	UNICODESTRING RmsTemplateId,
+	BOOL32 AllowAzureRms,
+	BOOL32 AllowUserDecryption,
+	BOOL32 RevokeOnUnenroll,
+	BOOL32 HasDataRecoveryCertificate,
+	BOOL32 RequireProtectionUnderLockConfig,
+	BOOL32 Realtime
+	);
+
+CopyFileEnforcement.ServiceName(
+	UNICODESTRING serviceName
+	);
+
+SmbFileAccessDenied(
+	NULL ServerName,
+	NULL ServerDnsName,
+	NULL RemoteFilePath,
+	COUNTEDSTRING FileExtension,
+	NULL ServerEnterpriseId,
+	TID ProcInfo,
+	NULL ProcessFullName,
+	COUNTEDSTRING ProcessName,
+	HEX ProcessEdpContext,
+	BOOL32 Present,
+	UINT64 PolicyFlags,
+	UINT32 EnterpriseIdCount,
+	NULL EnterpriseId,
+	HEX ThreadEdpContext,
+	BOOL32 Present,
+	UINT64 PolicyFlags,
+	UINT32 EnterpriseIdCount,
+	NULL EnterpriseId,
+	COUNTEDSTRING ProcessUserSid,
+	COUNTEDSTRING ThreadUserSid,
+	HEX EventEdpContext,
+	BOOL32 Present,
+	UINT64 PolicyFlags,
+	UINT32 EnterpriseIdCount,
+	NULL EnterpriseId
+	);
+
+EdpKeysAccessBlocked(
+	UNICODESTRING ProtectorDescriptor,
+	UNICODESTRING UserSid,
+	HRESULT Result
+	);
+
+CopyFileEnforcement(
+	UINT32 EdpAction,
+	NULL SrcFile,
+	NULL DstFile,
+	BOOL32 IsSrcRemote,
+	BOOL32 IsDstRemote,
+	HRESULT Result,
+	TID ProcInfo,
+	NULL ProcessFullName,
+	COUNTEDSTRING ProcessName,
+	HEX ProcessEdpContext,
+	BOOL32 Present,
+	UINT64 PolicyFlags,
+	UINT32 EnterpriseIdCount,
+	NULL EnterpriseId,
+	HEX ThreadEdpContext,
+	BOOL32 Present,
+	UINT64 PolicyFlags,
+	UINT32 EnterpriseIdCount,
+	NULL EnterpriseId,
+	COUNTEDSTRING ProcessUserSid,
+	COUNTEDSTRING ThreadUserSid
+	);
+
+AutomaticEncryption(
+	COUNTEDSTRING FileName,
+	TID ProcInfo,
+	NULL ProcessFullName,
+	COUNTEDSTRING ProcessName,
+	HEX ProcessEdpContext,
+	BOOL32 Present,
+	UINT64 PolicyFlags,
+	UINT32 EnterpriseIdCount,
+	NULL EnterpriseId,
+	HEX ThreadEdpContext,
+	BOOL32 Present,
+	UINT64 PolicyFlags,
+	UINT32 EnterpriseIdCount,
+	NULL EnterpriseId,
+	COUNTEDSTRING ProcessUserSid,
+	COUNTEDSTRING ThreadUserSid,
+	HEX EventEdpContext,
+	BOOL32 Present,
+	UINT64 PolicyFlags,
+	UINT32 EnterpriseIdCount,
+	NULL EnterpriseId,
+	NTSTATUS Result
+	);
+
+ServiceEncryptionQueue(
+	UNICODESTRING FileName,
+	UNICODESTRING Identity,
+	UNICODESTRING UserSid,
+	UNICODESTRING ProtectorDescriptor,
+	BOOL32 EncryptionRequiredForFile,
+	BOOL32 DisableEncryptionOverride,
+	HRESULT Result,
+	HRESULT VerifyRequiresEncryptionResult,
+	HRESULT MapProtectorDescriptorResult,
+	HRESULT EncryptFileResult,
+	TID ProcInfo,
+	NULL ProcessFullName,
+	COUNTEDSTRING ProcessName,
+	HEX ProcessEdpContext,
+	BOOL32 Present,
+	UINT64 PolicyFlags,
+	UINT32 EnterpriseIdCount,
+	NULL EnterpriseId,
+	HEX ThreadEdpContext,
+	BOOL32 Present,
+	UINT64 PolicyFlags,
+	UINT32 EnterpriseIdCount,
+	NULL EnterpriseId,
+	COUNTEDSTRING ProcessUserSid,
+	COUNTEDSTRING ThreadUserSid
+	);
+
+FileAccessDenied(
+	NULL FileName,
+	COUNTEDSTRING FileExtension,
+	TID ProcInfo,
+	NULL ProcessFullName,
+	COUNTEDSTRING ProcessName,
+	HEX ProcessEdpContext,
+	BOOL32 Present,
+	UINT64 PolicyFlags,
+	UINT32 EnterpriseIdCount,
+	NULL EnterpriseId,
+	HEX ThreadEdpContext,
+	BOOL32 Present,
+	UINT64 PolicyFlags,
+	UINT32 EnterpriseIdCount,
+	NULL EnterpriseId,
+	COUNTEDSTRING ProcessUserSid,
+	COUNTEDSTRING ThreadUserSid,
+	HEX EventEdpContext,
+	BOOL32 Present,
+	UINT64 PolicyFlags,
+	UINT32 EnterpriseIdCount,
+	NULL EnterpriseId,
+	NTSTATUS Result
+	);
+
+QueueForEncryption(
+	UNICODESTRING FileName,
+	UNICODESTRING Identity,
+	UNICODESTRING UserSid,
+	HRESULT Result,
+	HRESULT QueueFileResult,
+	HRESULT WriteQueueResult,
+	TID ProcInfo,
+	NULL ProcessFullName,
+	COUNTEDSTRING ProcessName,
+	HEX ProcessEdpContext,
+	BOOL32 Present,
+	UINT64 PolicyFlags,
+	UINT32 EnterpriseIdCount,
+	NULL EnterpriseId,
+	HEX ThreadEdpContext,
+	BOOL32 Present,
+	UINT64 PolicyFlags,
+	UINT32 EnterpriseIdCount,
+	NULL EnterpriseId,
+	COUNTEDSTRING ProcessUserSid,
+	COUNTEDSTRING ThreadUserSid
+	);
+
+FileRequiresEncryption(
+	COUNTEDSTRING FileName,
+	COUNTEDSTRING Identity,
+	INT32 Scenario,
+	HEX EventEdpContext,
+	BOOL32 Present,
+	UINT64 PolicyFlags,
+	UINT32 EnterpriseIdCount,
+	NULL EnterpriseId,
+	NTSTATUS Result,
+	TID ProcInfo,
+	NULL ProcessFullName,
+	COUNTEDSTRING ProcessName,
+	HEX ProcessEdpContext,
+	BOOL32 Present,
+	UINT64 PolicyFlags,
+	UINT32 EnterpriseIdCount,
+	NULL EnterpriseId,
+	HEX ThreadEdpContext,
+	BOOL32 Present,
+	UINT64 PolicyFlags,
+	UINT32 EnterpriseIdCount,
+	NULL EnterpriseId,
+	COUNTEDSTRING ProcessUserSid,
+	COUNTEDSTRING ThreadUserSid
+	);
+
+Debug_CaptureState(
+	VOID
+	);
+
+Debug_EnableProvider(
+	VOID
+	);
+
+Debug_DisableProvider(
+	VOID
+	);
+
+InternalError(
+	UINT32 ErrorCode,
+	UNICODESTRING ErrorMessage
+	);
+
+Assert(
+	UINT32 assertVersion,
+	UINT32 rva,
+	UINT32 timestamp,
+	UINT32 imageSize,
+	ANSISTRING imageName,
+	UINT32 count,
+	UINT32 totalHits,
+	UINT32 ModuleCollection,
+	UINT32 GlobalCollection
+	);
+

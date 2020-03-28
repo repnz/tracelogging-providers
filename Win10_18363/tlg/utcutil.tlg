@@ -1,0 +1,69 @@
+ProviderNames:
+	Microsoft.Windows.DiagTrack.XML
+	Microsoft.Windows.DiagTrack
+
+
+
+**** Events *****
+UtcUtil_DllMain_Unregister(
+	VOID
+	);
+
+UtcUtil_DllMain_Register(
+	VOID
+	);
+
+Utils_GetWcosProductId(
+	UINT32 WcosProductId
+	);
+
+Utils_OpenKeyFailed(
+	INT32 HKEY,
+	COUNTEDSTRING InputKeyName,
+	UNICODESTRING ExpandedKeyName,
+	UINT32 Error
+	);
+
+Utils_OpenKey(
+	INT32 HKEY,
+	COUNTEDSTRING InputKeyName,
+	UNICODESTRING ExpandedKeyName,
+	INT32 ResultHandle
+	);
+
+Utils_ServerLevelsEnum(
+	COUNTEDSTRING Key,
+	UINT32 Value
+	);
+
+Utils_GetRegistryKey(
+	INT32 HKEY,
+	UINT32 DataType,
+	COUNTEDSTRING KeyName,
+	COUNTEDSTRING ValueName,
+	UINT32 Value,
+	INT32 HRESULT
+	);
+
+Utils_CannotReadTestHookDueToPpl(
+	VOID
+	);
+
+Utils_GetRegistryKey(
+	INT32 HKEY,
+	UINT32 DataType,
+	COUNTEDSTRING KeyName,
+	COUNTEDSTRING ValueName,
+	COUNTEDSTRING Value,
+	INT32 HRESULT
+	);
+
+Utils_SetRegistryKey(
+	INT32 HKEY,
+	UINT32 DataType,
+	COUNTEDSTRING KeyName,
+	COUNTEDSTRING ValueName,
+	COUNTEDSTRING Value,
+	INT32 HRESULT
+	);
+

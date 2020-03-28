@@ -1,0 +1,2733 @@
+ProviderNames:
+	Microsoft.Windows.Security.TokenBroker.BrowserSSO
+	Microsoft.Windows.Security.TokenBroker
+	Microsoft.Windows.TlgAggregateInternal
+	Microsoft.Windows.Security.TokenBroker
+
+
+
+**** Events *****
+FailureInfo(
+	INT32 Error,
+	UNICODESTRING DebugString
+	);
+
+CreateTokenBrokerInternalStaticsFailed(
+	HRESULT HResult
+	);
+
+SetInterfaceSecurityFailed(
+	HRESULT HResult
+	);
+
+GlobalCacheExpirationRegistry_IsEntryValid_Failed(
+	HRESULT hr
+	);
+
+GlobalCacheExpirationRegistry_ReadFailed(
+	HRESULT HRESULT_FROM_WIN32(status),
+	UNICODESTRING RegistryKey
+	);
+
+GlobalCacheExpirationRegistry_AlreadyRegistered(
+	VOID
+	);
+
+GlobalCacheExpirationRegistry_WNF_Exception(
+	HRESULT hr
+	);
+
+GlobalCacheExpirationRegistry_ClearCache(
+	VOID
+	);
+
+SetCachedTokenResponses_RequestLogging(
+	INT32 Error,
+	ANSISTRING Message
+	);
+
+GetCachedTokenResponses_RequestLogging(
+	INT32 Error,
+	ANSISTRING Message
+	);
+
+GetAllAccountsFromResponses_NextAccount(
+	UNICODESTRING nextAccountId
+	);
+
+GetAllAccountsFromResponses_Responses(
+	UINT32 numberOfResponses
+	);
+
+GetAllAccountsFromResponses_Status(
+	UINT32 Status
+	);
+
+GetAllAccountsFromResponses(
+	VOID
+	);
+
+AddAccountIdsPropertyToCacheEntry_NextAccount(
+	UNICODESTRING AccountId
+	);
+
+AddAccountIdsPropertyToCacheEntry_NumberOfAccounts(
+	UINT32 NumberOfAccounts
+	);
+
+AddAccountIdsPropertyToCacheEntry(
+	VOID
+	);
+
+AddProviderPropertyToCacheEntry(
+	VOID
+	);
+
+ReadTokenCacheEntry_IdMismatch(
+	INT32 Error
+	);
+
+ReadTokenCacheEntry_InvalidTypeEvent(
+	INT32 Error,
+	ANSISTRING Message,
+	UINT32 static_cast<UINT32>(jsonReader.GetType())
+	);
+
+ReadTokenCacheEntry(
+	UNICODESTRING jsonString,
+	UINT32 objectType
+	);
+
+CreateRequestHash_UserContext_Event(
+	VOID
+	);
+
+CWebTokenRequestResultOperation::AddSuccessfulUICallToRegistry_failed(
+	INT32 Error
+	);
+
+AddSuccessfullUICallToRegistry(
+	VOID
+	);
+
+SetCachedTokenResponses_EmptyResultBuffer(
+	INT32 Error
+	);
+
+SetCachedTokenResponses_ExpiredToken(
+	INT32 Error,
+	INT64 ExpirationTime,
+	INT64 CurrentTime
+	);
+
+SetCachedTokenResponses_Disabled(
+	ANSISTRING Message
+	);
+
+SetCachedTokenResponses(
+	UNICODESTRING appPfn,
+	UNICODESTRING requestScope,
+	HEXINT64 webTokenRequest,
+	HEXINT64 accountIdHints,
+	INT32 requestStatus,
+	INT64 expirationTime,
+	HEXINT64 resultBuffer,
+	HEXINT64 requestBuffer,
+	HEXINT64 requestId
+	);
+
+GetCachedTokenResponses_EntryInvalidatedByProvider(
+	VOID
+	);
+
+GetCachedTokenResponses_Disabled(
+	ANSISTRING Message
+	);
+
+ActivityStoppedAutomatically(
+	VOID
+	);
+
+TBStoredObjectWithCacheDelete_ClearAllObjectsCacheEntry_Failed(
+	INT32 HResult
+	);
+
+TBStoredObjectWithCacheWriteBytes_ClearCacheEntry_Failed(
+	INT32 HResult
+	);
+
+TBStoredObjectWithCacheDeleteEvent(
+	UNICODESTRING CacheKey
+	);
+
+TBStoredObjectWithCacheDeleteEvent_Failed(
+	INT32 HResult
+	);
+
+TBStoredObjectWithCacheWriteBytesEvent(
+	UNICODESTRING CacheKey
+	);
+
+TBStoredObjectWithCacheWriteBytesEvent_Failed(
+	INT32 HResult
+	);
+
+TBStoredObjectWithCacheReadBytesEvent(
+	UNICODESTRING CacheKey
+	);
+
+TBStoredObjectWithCacheReadBytesEvent_Failed(
+	INT32 HResult
+	);
+
+TBStoredObjectWithCacheWriteBytesToCacheEvent(
+	UNICODESTRING CacheKey
+	);
+
+TBStoredObjectWithCacheWriteBytesToCache_Failed(
+	INT32 HResult
+	);
+
+TBStoredObjectReadBytesFromCacheCacheTooLargeEvent(
+	UNICODESTRING CacheKey
+	);
+
+TBStoredObjectWithCacheReadBytesFromCacheEvent(
+	UNICODESTRING CacheKey
+	);
+
+TBStoredObjectWithCacheReadBytesFromCache_Failed(
+	INT32 HResult
+	);
+
+TBStoredObjectWithCacheWriteAllObjectIdsForTypeToCacheEvent(
+	INT32 ObjectType,
+	UNICODESTRING OwnerPfn
+	);
+
+TBStoredObjectWithCacheWriteAllObjectIdsForTypeToCache_Failed(
+	INT32 HResult,
+	INT32 ObjectType,
+	UNICODESTRING OwnerPfn
+	);
+
+TBStoredObjectWithCacheGetAllObjectIdsForTypeEvent(
+	INT32 ObjectType,
+	UNICODESTRING OwnerPfn
+	);
+
+TBStoredObjectWithCacheGetAllObjectIdsForTypeEvent_Failed(
+	INT32 HResult,
+	INT32 ObjectType,
+	UNICODESTRING OwnerPfn
+	);
+
+TBStoredObjectGetAllObjectIdsFromCacheFoundEvent(
+	UNICODESTRING ObjectId,
+	UNICODESTRING OwnerPfn,
+	UNICODESTRING CacheKey
+	);
+
+TBStoredObjectWithCacheReadAllObjectIdsForTypeFromCacheEvent(
+	INT32 ObjectType,
+	UNICODESTRING OwnerPfn
+	);
+
+TBStoredObjectWithCacheReadAllObjectIdsForTypeFromCache_Failed(
+	INT32 HResult,
+	INT32 ObjectType,
+	UNICODESTRING OwnerPfn
+	);
+
+_InstantiateAccountsWamObjectStore_Failed(
+	INT32 HResult
+	);
+
+TBStoredObjectCantReadFileEvent(
+	INT32 Error,
+	ANSISTRING Message,
+	UNICODESTRING ObjectFilePath
+	);
+
+TBStoredObjectOpenFileRetryEvent(
+	UINT32 RetryCount,
+	UINT32 AboutToSleepTime
+	);
+
+TBStoredObjectOpenFileEvent(
+	UINT32 AccessType,
+	UNICODESTRING ObjectFilePath
+	);
+
+OpenFileWithRetriesInternalStart(
+	VOID
+	);
+
+TBStoredObjectOpenFileForAccess(
+	UINT32 CreateDisposition,
+	UINT32 AccessType,
+	UNICODESTRING ObjectFilePath
+	);
+
+TBStoredObjectCantMoveTruncateFileEvent(
+	INT32 Error,
+	UNICODESTRING ObjectFilePath
+	);
+
+TBStoredObjectCantMoveFilePointerEvent(
+	INT32 Error,
+	UNICODESTRING ObjectFilePath
+	);
+
+TBStoredObjectCantWriteFileEvent(
+	INT32 Error,
+	UNICODESTRING ObjectFilePath
+	);
+
+TBStoredObjectValidateFileSizeTooLargeEvent(
+	INT32 Error,
+	UNICODESTRING ObjectFilePath
+	);
+
+TBStoredObjectCantCreateDirectoryEvent(
+	INT32 Error,
+	UNICODESTRING FolderPath
+	);
+
+TBStoredObjectCantCreateNewFileEvent(
+	INT32 Error
+	);
+
+TBStoredObjectCreateFolderStructureEvent(
+	UNICODESTRING ObjectFolderPath
+	);
+
+TBStoredObjectFolderStructureDoesntExistEvent(
+	VOID
+	);
+
+TBStoredObjectCreateNewFileEvent(
+	UNICODESTRING ObjectFilePath
+	);
+
+TBStoredObjectInitializeEvent(
+	UNICODESTRING ObjectFolderPath,
+	UNICODESTRING ObjectFilePath
+	);
+
+TBStoredObjectDeleteEvent(
+	VOID
+	);
+
+TBStoredObjectWriteFileTooLargeEvent(
+	INT32 Error
+	);
+
+TBStoredObjectWriteBytesEvent(
+	VOID
+	);
+
+TBStoredObjectClockSkewEvent(
+	INT32 ObjectType,
+	FILETIME CreationTime,
+	FILETIME CurrentTime
+	);
+
+TBStoredObjectReadBytesEvent(
+	VOID
+	);
+
+TBStoredObjectGetAllObjectIdFoundEvent(
+	UNICODESTRING OwnerPfn,
+	UNICODESTRING FileName,
+	INT32 HRESULT
+	);
+
+TBStoredObjectEnumerateAllFileObjectIdsFromFilesForTypeEvent(
+	INT32 ObjectType,
+	UNICODESTRING OwnerPfn
+	);
+
+TBStoredObjectObjectCreateErrorEvent(
+	INT32 Error
+	);
+
+TBStoredObjectCreateEvent(
+	INT32 ObjectType,
+	UNICODESTRING ObjectId,
+	UNICODESTRING StringObjectId,
+	UNICODESTRING OwnerPfn
+	);
+
+TBStoredObjectGetObjectTypeDirectoryNameFromObjectTypeEvent(
+	INT32 Error
+	);
+
+TBStoredObjectGetRetriesFromObjectTypeEvent(
+	INT32 Error
+	);
+
+GetMediumFolderPath_ExpandVarsFailure(
+	HRESULT hr,
+	ANSISTRING Message
+	);
+
+GetMediumFolderPath_OpenThreadTokenFailure(
+	HRESULT hr
+	);
+
+GetMediumFolderPath_OpenProcessFailure(
+	HRESULT hr
+	);
+
+GetMediumFolderPath_OpenThreadToken_ERROR_NO_TOKEN(
+	HRESULT hr
+	);
+
+Sha1HashStringArgsTypeEvent(
+	INT32 Error
+	);
+
+TBJsonObjectInvalidTypeEvent(
+	INT32 Error,
+	ANSISTRING Message,
+	UINT32 ObjectType
+	);
+
+TBJsonPropertyNotSingleStringEvent(
+	INT32 Error,
+	ANSISTRING Message,
+	UINT32 PropertyType,
+	UNICODESTRING PropertyName
+	);
+
+TBJsonPropertyProtectInlineBytesEvent(
+	VOID
+	);
+
+TBJsonPropertyNotInlineBytesEvent(
+	INT32 Error,
+	ANSISTRING Message,
+	UINT32 PropertyType,
+	UNICODESTRING PropertyName
+	);
+
+TBJsonPropertyNotBooleanEvent(
+	INT32 Error,
+	ANSISTRING Message,
+	UINT32 PropertyType,
+	UNICODESTRING PropertyName
+	);
+
+TBJsonPropertyUnprotectInlineBytesEvent(
+	VOID
+	);
+
+TBJsonPropertyInvalidProtectedTypeEvent(
+	INT32 Error,
+	ANSISTRING Message,
+	UINT32 PropertyType
+	);
+
+TBJsonPropertyUknownTypeEvent(
+	INT32 Error,
+	ANSISTRING Message,
+	UNICODESTRING PropertyType
+	);
+
+TBJsonPropertyInvalidProtectedTypeEvent(
+	INT32 Error,
+	ANSISTRING Message,
+	UINT32 PropertyType,
+	UNICODESTRING PropertyName
+	);
+
+TBJsonObjectUknownObjectTypeEvent(
+	INT32 Error,
+	ANSISTRING Message,
+	UNICODESTRING ObjectType
+	);
+
+TBJsonObjectSchemaTooHighEvent(
+	INT32 Error,
+	ANSISTRING Message
+	);
+
+TbEnsureMUMAPfnIsRegisteredForUser_Succeeded(
+	VOID
+	);
+
+EnsurePackageIsRegisteredByFamilyNameForUserAsync_Succeeded(
+	UNICODESTRING pfn
+	);
+
+EnsurePackageRegisteredForMultiUserSession_Succeeded(
+	UNICODESTRING pfn
+	);
+
+Reg_ConvertPluginPFNToPluginIdResultEvent(
+	UNICODESTRING PluginId
+	);
+
+Reg_ConvertPluginPFNToPluginIdEvent(
+	UNICODESTRING PluginPfn
+	);
+
+Reg_GetPluginPFNResultEvent(
+	UNICODESTRING ProviderPfn
+	);
+
+Reg_GetPluginPFNEvent(
+	UNICODESTRING ProviderId,
+	UNICODESTRING Authority,
+	UNICODESTRING RealProviderId
+	);
+
+PluginRegistration::GetSystemWebAccountProvider_NotSupported(
+	VOID
+	);
+
+PluginRegistration::GetSystemWebAccountProvider_ExtensionDisabled(
+	VOID
+	);
+
+Reg_GetWebAccountProviderFromIdAndAuthorityConnectedEvent(
+	VOID
+	);
+
+Reg_GetWebAccountProviderFromIdAndAuthorityEvent(
+	UNICODESTRING ProviderId,
+	UNICODESTRING Authority
+	);
+
+Reg_CreateProviderFromRegistrationAumIdEvent(
+	UNICODESTRING AumId
+	);
+
+Reg_CreateProviderFromRegistrationLogoEvent(
+	UNICODESTRING Logo
+	);
+
+Reg_CreateProviderFromRegistrationCreateEvent(
+	UNICODESTRING AccountType,
+	UNICODESTRING Purpose
+	);
+
+Reg_CreateProviderFromRegistrationMappedEvent(
+	UNICODESTRING EffectivePluginId,
+	UNICODESTRING EffectiveAuthority
+	);
+
+Reg_CreateProviderFromRegistration(
+	UNICODESTRING AliasPluginId,
+	UNICODESTRING AliasAuthority,
+	UINT64 UserContextToken
+	);
+
+CHttpCookieRequestResultOperationDoWork(
+	INT32 HResult,
+	UNICODESTRING requestID,
+	UNICODESTRING providerId,
+	UNICODESTRING authority,
+	UINT64 durationMs
+	);
+
+DeSerailzing for WebAccountProviderOperationKind_DeleteAccount(
+	VOID
+	);
+
+DeSerailzing for WebAccountProviderOperationKind_SignoutAccount(
+	VOID
+	);
+
+DeSerailzing for WebAccountProviderOperationKind_RetrieveCookies(
+	VOID
+	);
+
+DeSerailzing for WebAccountProviderOperationKind_GetTokenSilently(
+	VOID
+	);
+
+WebAccountProviderOperationKind_GetTokenSilently_Deserialize_Failed(
+	GUID contractOperationId,
+	GUID namedEventGuid,
+	INT32 HRESULT
+	);
+
+Found COID & GUID in the ValueSet(
+	VOID
+	);
+
+ByteArray Converted To ValueSet(
+	VOID
+	);
+
+CWebAccountProviderTriggerDetailsRuntimeClassInitializeFailure(
+	INT32 HResult
+	);
+
+CWebAccountProviderTriggerDetailsStop(
+	INT32 HResult
+	);
+
+CWebAccountProviderTriggerDetailsStart(
+	VOID
+	);
+
+ProviderFindAllWebAccounts(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	SIGNED wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function,
+	UINT32 accountsCount
+	);
+
+ProviderFindAllWebAccounts(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId,
+	UINT32 accountsCount
+	);
+
+ProviderInvalidateAppCache(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId
+	);
+
+ProviderClearPerUserFromPerAppAccount(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId
+	);
+
+ProviderGetPerUserFromPerAppAccount(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId
+	);
+
+ProviderSetPerAppToPerUserAccount(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId
+	);
+
+ProviderAddWebAccount(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId
+	);
+
+ProviderSetScope(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId
+	);
+
+ProviderGetView(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId
+	);
+
+ProviderClearView(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId
+	);
+
+ProviderSetView(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId
+	);
+
+ProviderFindAllWebAccounts(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId
+	);
+
+ProviderClearWebAccountPicture(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId
+	);
+
+ProviderSetWebAccountPicture(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId
+	);
+
+ProviderDeleteWebAccount(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId
+	);
+
+ProviderUpdateWebAccountProperties(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId
+	);
+
+ProviderCallerData(
+	UNICODESTRING pfn,
+	UNICODESTRING id,
+	BOOL32 isMua
+	);
+
+ProviderInvalidateAppCache(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	SIGNED wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+ProviderInvalidateAppCache(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+ProviderClearPerUserFromPerAppAccount(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	SIGNED wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+ProviderClearPerUserFromPerAppAccount(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+ProviderGetPerUserFromPerAppAccount(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	SIGNED wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+ProviderGetPerUserFromPerAppAccount(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+ProviderSetPerAppToPerUserAccount(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	SIGNED wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+ProviderSetPerAppToPerUserAccount(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+ProviderAddWebAccount(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	SIGNED wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+ProviderAddWebAccount(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+ProviderSetScope(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	SIGNED wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+ProviderSetScope(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+WebAccountManagerPullCookiesAsyncInfo(
+	UNICODESTRING URL
+	);
+
+WebAccountManagerPushCookiesAsyncInfo(
+	UNICODESTRING URL,
+	UNICODESTRING requestID
+	);
+
+ProviderGetView(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	SIGNED wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+ProviderGetView(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+ProviderClearView(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	SIGNED wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+ProviderClearView(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+ProviderSetView(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	SIGNED wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+ProviderSetView(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+ProviderFindAllWebAccounts(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	SIGNED wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+ProviderFindAllWebAccounts(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+ProviderClearWebAccountPicture(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	SIGNED wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+ProviderClearWebAccountPicture(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+ProviderSetWebAccountPicture(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	SIGNED wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+ProviderSetWebAccountPicture(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+ProviderDeleteWebAccount(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	SIGNED wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+ProviderDeleteWebAccount(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+ActivityError(
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+ActivityError(
+	UINT64 PartA_PrivTags,
+	SIGNED wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+ProviderUpdateWebAccountProperties(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	SIGNED wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+ProviderUpdateWebAccountProperties(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+ActivityFailure(
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+ActivityFailure(
+	UINT64 PartA_PrivTags,
+	HEX wilActivity,
+	UINT32 hresult,
+	UINT32 threadId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+FallbackError(
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+FallbackError(
+	UINT64 PartA_PrivTags,
+	SIGNED wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+ActivityIntermediateStop(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+WebProviderTokenRequestGetApplicationTokenBindingKey(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	SIGNED wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+WebProviderTokenRequestGetApplicationTokenBindingKey(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+WebProviderTokenRequestGetApplicationTokenBindingKeyId(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	SIGNED wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+WebProviderTokenRequestGetApplicationTokenBindingKeyId(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+WebProviderTokenRequestCheckApplicationForCapability(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	SIGNED wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function,
+	BOOL32 hasCapability
+	);
+
+WebProviderTokenRequestCheckApplicationForCapability(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId,
+	BOOL32 hasCapability
+	);
+
+WebProviderTokenRequestCheckApplicationForCapability(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId,
+	UNICODESTRING capability
+	);
+
+WebProviderTokenRequestGetApplicationTokenBindingKeyId(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId
+	);
+
+WebProviderTokenRequestGetApplicationTokenBindingKey(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId
+	);
+
+WebTokenRequestResultInvalidateCache(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId
+	);
+
+GetApplicationTokenBindingKeyIdAsyncCallDetails(
+	UNICODESTRING ProviderId,
+	UNICODESTRING Authority,
+	UNICODESTRING CallbackUri,
+	UNICODESTRING TargetUri,
+	UNICODESTRING TargetDomain,
+	INT32 KeyType,
+	UINT64 BindingCtx
+	);
+
+GetApplicationTokenBindingKeyAsyncCallDetails(
+	UNICODESTRING ProviderId,
+	UNICODESTRING Authority,
+	UNICODESTRING CallbackUri,
+	UNICODESTRING TargetUri,
+	UNICODESTRING TargetDomain,
+	INT32 KeyType,
+	UINT64 BindingCtx
+	);
+
+WebProviderTokenRequestCheckApplicationForCapability(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	SIGNED wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+WebProviderTokenRequestCheckApplicationForCapability(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+WebTokenRequestResultInvalidateCache(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	SIGNED wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+WebTokenRequestResultInvalidateCache(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+WebTokenRequestResultOperation(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 webTokenRequestStatus,
+	UINT32 errorCode,
+	UINT32 responseCount,
+	BOOLEAN isCacheHit,
+	INT32 cacheLookupResult,
+	INT32 cacheWriteResult,
+	GUID silentTaskId,
+	BOOL32 isSpuriousActivation,
+	BOOL32 isCallerAppContainer,
+	UINT32 silentTaskState,
+	UINT32 silentTaskErrorReason
+	);
+
+WebTokenRequestResultOperation(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId,
+	UINT32 webTokenRequestStatus,
+	UINT32 errorCode,
+	UINT32 responseCount,
+	BOOLEAN isCacheHit,
+	INT32 cacheLookupResult,
+	INT32 cacheWriteResult,
+	GUID silentTaskId,
+	BOOL32 isSpuriousActivation,
+	BOOL32 isCallerAppContainer,
+	UINT32 silentTaskState,
+	UINT32 silentTaskErrorReason
+	);
+
+WebTokenRequestResultOperation(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+WebTokenRequestResultOperation(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+CoreFindAccountOperation(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	SIGNED wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+CoreFindAccountOperation(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+CoreFindAccountProviderOperation(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	SIGNED wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function,
+	UNICODESTRING providerId,
+	UNICODESTRING authority
+	);
+
+CoreFindAccountProviderOperation(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId,
+	UNICODESTRING providerId,
+	UNICODESTRING authority
+	);
+
+CoreFindAllAccountsOperation(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	SIGNED wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function,
+	UINT32 webAccountStatus,
+	UINT32 errorCode,
+	UINT32 accountsCount
+	);
+
+CoreFindAllAccountsOperation(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId,
+	UINT32 webAccountStatus,
+	UINT32 errorCode,
+	UINT32 accountsCount
+	);
+
+CoreFindAllAccountsOperation(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	SIGNED wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+CoreFindAllAccountsOperation(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+CoreFindAllAccountsOperation(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId,
+	ANSISTRING entrypoint,
+	UNICODESTRING callingApp,
+	UNICODESTRING serviceName
+	);
+
+CoreFindAccountProviderOperation(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId,
+	ANSISTRING entrypoint,
+	UNICODESTRING callingApp,
+	UNICODESTRING serviceName
+	);
+
+CoreFindAccountOperation(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId,
+	ANSISTRING entrypoint,
+	UNICODESTRING callingApp,
+	UNICODESTRING serviceName
+	);
+
+WebTokenRequestResultOperation(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId,
+	ANSISTRING entrypoint,
+	UNICODESTRING callingApp,
+	UNICODESTRING serviceName
+	);
+
+WebAuthenticationCoreManagerCreateWebAccountMonitor(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId
+	);
+
+FindAllAccountsInfo(
+	UNICODESTRING providerId,
+	UNICODESTRING authority,
+	UNICODESTRING clientId
+	);
+
+FindAccountProvider(
+	UNICODESTRING providerId,
+	UNICODESTRING authority,
+	UINT64 userContext,
+	BOOLEAN isSystemProvider
+	);
+
+FindAccountInfo(
+	UNICODESTRING providerId,
+	UNICODESTRING authority
+	);
+
+WebTokenRequestInfo(
+	UNICODESTRING providerId,
+	UNICODESTRING authority,
+	UNICODESTRING scope,
+	BOOLEAN callerIsEnumeratingAccounts,
+	UNICODESTRING clientId,
+	UNICODESTRING correlationId,
+	UINT32 promptType,
+	BOOLEAN isRequestTokenAsync,
+	UINT64 appWindow
+	);
+
+WebAuthenticationCoreManagerCreateWebAccountMonitor(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	SIGNED wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+WebAuthenticationCoreManagerCreateWebAccountMonitor(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+CallerIsSystemOrService(
+	VOID
+	);
+
+CoreFindAccountProviderOperation(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	SIGNED wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+CoreFindAccountProviderOperation(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+ActivityWatchdogTimeOut(
+	INT64 TimeoutMs
+	);
+
+ActivityError(
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+ActivityError(
+	UINT64 PartA_PrivTags,
+	SIGNED wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+ActivityStoppedAutomatically(
+	VOID
+	);
+
+ValidateAppCallBackUriNoHostEvent(
+	INT32 Error,
+	UNICODESTRING Message
+	);
+
+ValidateAppCallBackUriNotSidEvent(
+	INT32 Error,
+	UNICODESTRING Host,
+	UNICODESTRING Message
+	);
+
+ValidateAppCallBackUriNoSchemeEvent(
+	INT32 Error,
+	UNICODESTRING Message
+	);
+
+ValidateAppCallBackUriInvalidSchemeEvent(
+	INT32 Error,
+	UNICODESTRING Scheme,
+	UNICODESTRING Message
+	);
+
+ValidateAppCallBackUriNullUriEvent(
+	INT32 Error,
+	UNICODESTRING Message
+	);
+
+ValidatePropertyBagNextPropertyInvalidValueEvent(
+	INT32 Error
+	);
+
+ValidatePropertyBagNextPropertyEvent(
+	UNICODESTRING PropertyName,
+	UNICODESTRING PropertyValue
+	);
+
+ValidatePropertyBagNextPropertyInvalidKeyEvent(
+	INT32 Error
+	);
+
+ValidatePropertyBagEvent(
+	VOID
+	);
+
+AddWebTokenResponsesToCache_SetCachedTokenResponses_Failure(
+	HRESULT hr
+	);
+
+AddWebTokenResponsesToCache(
+	ANSISTRING Message
+	);
+
+AddWebTokenResponsesToCache_SetCachedTokenResponses_Success(
+	BINARY Entry Index
+	);
+
+AddWebTokenResponsesToCache_SkipDefWABBridge(
+	VOID
+	);
+
+AddWebTokenResponsesToCache(
+	ANSISTRING Message,
+	INT32 WebTokenRequestStatus
+	);
+
+CheckCacheForWebTokenResponses - no valid entry found(
+	VOID
+	);
+
+AddWebTokenResponsesToCache - invalid parameter(
+	HEXINT64 request,
+	HEXINT64 appPfn,
+	HEXINT64 requestId
+	);
+
+CheckCacheForWebTokenResponses - invalid parameter(
+	HEXINT64 request,
+	UNICODESTRING appPfn,
+	UNICODESTRING accountProvider,
+	HEXINT64 responses,
+	HEXINT64 providererror,
+	HEXINT64 status
+	);
+
+SerializeResponses_Account(
+	UINT32 ResponseIndex,
+	UNICODESTRING AppAccountId
+	);
+
+SerializeResponses_ResponseToken(
+	UINT32 ResponseIndex,
+	BOOLEAN IsTokenPresent
+	);
+
+SerializeResponses_NumberOfResponses(
+	UINT32 Count
+	);
+
+SerializeResponses_Start(
+	UINT32 LookupContext,
+	UNICODESTRING PFN,
+	UINT32 Status,
+	BOOLEAN IsErrorProvided
+	);
+
+WebAccountsDeseriazlieFailedEvent(
+	INT32 Error
+	);
+
+WebTokenRequestDeseriazlieFailedEvent(
+	INT32 Error
+	);
+
+NoWebAccountsToDeseriazlieEvent(
+	VOID
+	);
+
+DeSerializeWebTokenRequsetResultOperationParamsFromValueSet Start(
+	VOID
+	);
+
+WebAccountsSeriazlieFailedEvent(
+	INT32 Error
+	);
+
+SerializeWebTokenRequsetResultOperationParamsToValueSet Start(
+	VOID
+	);
+
+WebTokenRequestSeriazlieFailedEvent(
+	INT32 Error
+	);
+
+SerializeWebTokenRequestToValueSet Start(
+	VOID
+	);
+
+DeSerializeWebTokenRequestFromValueSet Start(
+	VOID
+	);
+
+Deserialize_GetSecureInputParameters_Failed(
+	GUID contractbrokerId,
+	INT32 HRESULT
+	);
+
+SerializeResponsesAndCompleteAction_GetSecureInputParameters_Failed(
+	GUID contractbrokerId,
+	INT32 HRESULT
+	);
+
+RetrieveCookiesOperation_ReportError(
+	UINT32 Error,
+	UNICODESTRING errorMessage.IsEmpty() ? L"NULL" : errorMessage.GetRawBuffer(nullptr)
+	);
+
+RetrieveCookiesOperation_ReportCompleted(
+	VOID
+	);
+
+ProviderOperationFactory_AccountObject(
+	UNICODESTRING AccountId
+	);
+
+DeleteAccountOperation_ReportCompleted(
+	VOID
+	);
+
+DeleteAccountOperation_ReportError(
+	UINT32 Error,
+	UNICODESTRING ErrorMessage
+	);
+
+SignOutAccountOperation_ReportError(
+	UINT32 Error,
+	UNICODESTRING ErrorMessage
+	);
+
+ProviderOperationFactory_AccountBytes(
+	UINT32 BytesCount
+	);
+
+CInvalidateAppCacheAction_DoWork(
+	UNICODESTRING AccountId,
+	UNICODESTRING ProviderPfn
+	);
+
+GetWebAccountMapForPerAppEmptyEvent(
+	VOID
+	);
+
+DeleteAccountOperationInfo(
+	NULL AccountId,
+	UNICODESTRING ProviderPfn
+	);
+
+CProviderGetMapForPerAppOperationDoWork(
+	VOID
+	);
+
+DeleteAccountActionProviderPfn_AccountNotFoundEvent(
+	VOID
+	);
+
+AddAccountOperationProvider_ScopeMismatch(
+	INT32 CurrentScope,
+	INT32 NewScope
+	);
+
+AddAccountOperationProvider_AccountExists(
+	UNICODESTRING AccountId
+	);
+
+CWebTokenRequestResultOperation_SystemProviderWithUiSelectionData(
+	VOID
+	);
+
+CWebTokenRequestResultOperation_SystemProviderWithUiRequired(
+	VOID
+	);
+
+CWebTokenRequestResultOperation_SystemProviderWithAccounts(
+	VOID
+	);
+
+CWebTokenRequestResultOperation_Fallback_EffectiveToken(
+	HRESULT hrPFN
+	);
+
+InitializeOperationDataIsAppContainerFailedEvent(
+	INT32 Error
+	);
+
+CWebTokenRequestResultOperation_No_PFN(
+	HRESULT hrPFN
+	);
+
+IWebAccountProviderSystemInformation_Ignore(
+	UINT32 NumberOfAccounts,
+	UINT8 isAddNewAccount,
+	UNICODESTRING lastSelectedAccountId
+	);
+
+ResultOperation_DoWork_Hresult_Convert(
+	INT32 HRESULT
+	);
+
+CWebTokenRequestResultOperation::TryUi_WriteUICallsToRegistryFailed(
+	INT32 HRESULT
+	);
+
+CWebTokenRequestResultOperation::WriteTokenResponseCache_NoResultsEvent(
+	VOID
+	);
+
+CWebTokenRequestResultOperation::WriteTokenResponseCache_ErrorBailOut(
+	INT32 Error
+	);
+
+CWebTokenRequestResultOperation::TryUi_NoFallbackNeededEvent(
+	VOID
+	);
+
+CWebTokenRequestResultOperation::TryUi_SoftErrorEvent(
+	INT32 Error
+	);
+
+DuplicateCurrentProcessHandleForServerProcessEvent(
+	INT32 Error,
+	HEXINT64 Handle
+	);
+
+WebTokenRequestResultOperation_WriteTokenResponseCache(
+	VOID
+	);
+
+WebTokenRequestResultOperation_WriteTokenResponseCache_Failed(
+	INT32 HResult
+	);
+
+CWebTokenRequestResultOperation::TrySilent_UiRequiredEvent(
+	VOID
+	);
+
+TrySilentAddNewBailOut(
+	VOID
+	);
+
+SerializeWebTokenRequsetResultOperationParamsToValueSet Failed(
+	INT32 Error
+	);
+
+CWebTokenRequestResultOperation::TrySilent_AttemptEvent(
+	VOID
+	);
+
+CWebTokenRequestResultOperation::TrySilent_ConsiderEvent(
+	VOID
+	);
+
+CWebTokenRequestResultOperation::TrySilent_ErrorBailOut(
+	INT32 Error
+	);
+
+CWebTokenRequestResultOperation::TrySilent_HaveResults(
+	VOID
+	);
+
+CWebTokenRequestResultOperation::TryCache_Ui(
+	BOOLEAN isUiRequired,
+	BOOLEAN isAddNewAccountRequested
+	);
+
+CWebTokenRequestResultOperation::TryCache_EntryNotFound(
+	VOID
+	);
+
+CWebTokenRequestResultOperation::TryCache_Error(
+	INT32 Error
+	);
+
+CWebTokenRequestResultOperation::TryCache_ConsiderEvent(
+	VOID
+	);
+
+CWebTokenRequestResultOperation::TryExtension_SystemProvider_NotHandled(
+	INT32 ExtensionType,
+	INT32 Error
+	);
+
+CWebTokenRequestResultOperation::TryCache_ErrorBailOut(
+	INT32 Error
+	);
+
+CWebTokenRequestResultOperation::TryCache_HaveResults(
+	VOID
+	);
+
+CWebTokenRequestResultOperation::TryExtension_SystemProvider_ExtensionError(
+	INT32 ExtensionType,
+	INT32 Error
+	);
+
+CWebTokenRequestResultOperation::TryExtension_SystemProvider_NoExtension(
+	INT32 ExtensionType,
+	INT32 Error
+	);
+
+CWebTokenRequestResultOperation::TryExtension_SystemProvider_UiRequired(
+	INT32 ExtensionType,
+	INT32 Error
+	);
+
+CWebTokenRequestResultOperation::TryExtension_ExtError(
+	INT32 ExtensionType,
+	INT32 Error
+	);
+
+CWebTokenRequestResultOperation::TryExtension_HaveResults(
+	INT32 ExtensionType
+	);
+
+CWebTokenRequestResultOperation::TryExtension_ConsiderEvent(
+	INT32 ExtensionType
+	);
+
+CWebTokenRequestResultOperation::TryExtension_UiRequired(
+	INT32 ExtensionType
+	);
+
+CWebTokenRequestResultOperation::TryExtension_AddNewAccount(
+	INT32 ExtensionType
+	);
+
+CWebTokenRequestResultOperation::ApplyConnectedAccountLogic_NoConnectedAccountEvent(
+	UINT32 Error
+	);
+
+CWebTokenRequestResultOperation::ApplyConnectedAccountLogic_InvalidHintEvent(
+	VOID
+	);
+
+CWebTokenRequestResultOperation::ApplyAccountSwitchStatus_UpdateStatus(
+	VOID
+	);
+
+CWebTokenRequestResultOperation::ApplyConnectedAccountLogic_ConnectedRequestEvent(
+	VOID
+	);
+
+CWebTokenRequestResultOperation::ApplyConnectedAccountLogic_ConsiderEvent(
+	VOID
+	);
+
+CWebTokenRequestResultOperation::ApplyAccountSwitchStatus_NoResponsesBailOut(
+	VOID
+	);
+
+CWebTokenRequestResultOperation::ApplyAccountSwitchStatus_NumberOfAccountsInBailOut(
+	INT32 Count
+	);
+
+CWebTokenRequestResultOperation::ApplyAccountSwitchStatus_NoResponseAccountBailOut(
+	VOID
+	);
+
+CWebTokenRequestResultOperation::ApplyAccountSwitchStatus_NumberOfResponsesBailOut(
+	INT32 Count
+	);
+
+CWebTokenRequestResultOperation::ApplyAccountSwitchStatus_StatusBailOut(
+	INT32 Status
+	);
+
+CWebTokenRequestResultOperation::ApplyAccountSwitchStatus_NoResultsEvent(
+	VOID
+	);
+
+CWebTokenRequestResultOperation::ApplyAccountSwitchStatus_DefaultAccountBailOut(
+	VOID
+	);
+
+CWebTokenRequestResultOperation::ApplyAccountSwitchStatus_AccountControlBailOut(
+	VOID
+	);
+
+CWebTokenRequestResultOperation::ApplyAccountSwitchStatus_ConsiderEvent(
+	VOID
+	);
+
+CWebTokenRequestResultOperation::ApplyAccountSwitchStatus_ErrorBailOut(
+	INT32 Error
+	);
+
+CWebTokenRequestResultOperation::ApplyAccountSwitchStatus_NonUiBailOut(
+	VOID
+	);
+
+CWebTokenRequestResultOperation_RecordCallerIdentityEvent(
+	VOID
+	);
+
+CWebTokenRequestResultOperationResult(
+	UINT64 PartA_PrivTags,
+	UINT64 elapsedTimeSum(ms),
+	INT32 result,
+	BOOLEAN cacheHit,
+	INT32 cacheLookupResult,
+	INT32 cacheWriteResult,
+	UNICODESTRING providerId,
+	UNICODESTRING authority,
+	UNICODESTRING callingAppPFN,
+	UNICODESTRING callingProcessName,
+	UNICODESTRING serviceName,
+	BOOLEAN isRequestTokenAsync,
+	BOOLEAN isUiRequired,
+	BOOLEAN isSilentSuccess,
+	BOOLEAN callerIsAppContainer,
+	BOOLEAN callerIsMUMA,
+	BOOLEAN callerIsEnumeratingAccounts,
+	BOOLEAN isTokenForGuestUser
+	);
+
+UpdateRequestWithAccountControlWebAccount_AccountNotFoundEvent(
+	VOID
+	);
+
+UpdateRequestWithAccountControlWebAccount_AccountFoundEvent(
+	VOID
+	);
+
+UpdateRequestWithAccountControlWebAccountEvent(
+	VOID
+	);
+
+UpdateRequestWithAccountControlWebAccount_AccountIdFoundEvent(
+	UNICODESTRING AccountId
+	);
+
+UpdateRequestWithAccountControlWebAccount_AccountIdNotFoundEvent(
+	VOID
+	);
+
+CWebTokenRequestResultOperation_AccountAlreadySetEvent(
+	VOID
+	);
+
+ValidateProviderAndAccountsMatch_SkipSystemProvider(
+	VOID
+	);
+
+WebRequestSemaphore_Wait_Timedout(
+	UINT32 TimeoutMiliseconds
+	);
+
+WebRequestSemaphore_Wait_Acquired(
+	VOID
+	);
+
+WebRequestSemaphore_Release_Failed(
+	INT32 Error
+	);
+
+WebRequestSemaphore_Wait_Failed(
+	INT32 Error
+	);
+
+WebRequestSemaphore_ctor_Success(
+	UNICODESTRING Name
+	);
+
+WebRequestSemaphore_Open_Error(
+	INT32 Error
+	);
+
+WebRequestSemaphore_Create_Error(
+	INT32 Error
+	);
+
+WebRequestSemaphore_ctor_build_name(
+	INT32 Error
+	);
+
+WebRequestSemaphore_ctor_CryptBinaryToStringW_convert(
+	INT32 Error
+	);
+
+WebRequestSemaphore_ctor_CreateRequestHash(
+	INT32 Error
+	);
+
+WebRequestSemaphore_ctor_getview(
+	INT32 Error
+	);
+
+WebRequestSemaphore_ctor_CryptBinaryToStringW_alloc(
+	INT32 Error
+	);
+
+WebRequestSemaphore_ctor_CryptBinaryToStringW_getsize(
+	INT32 Error
+	);
+
+TraceResult_Account(
+	UINT32 ResponseIndex,
+	UNICODESTRING AccountId
+	);
+
+TraceResult_PerResponseError(
+	UINT32 ResponseIndex,
+	BOOLEAN IsErrorProvided,
+	UINT32 Error,
+	UNICODESTRING Error
+	);
+
+TraceResult_NumberOfResponses(
+	UINT32 Count
+	);
+
+TraceResult_ResponseToken(
+	UINT32 ResponseIndex,
+	BOOLEAN IsTokenPresent
+	);
+
+TraceResult_NoResponses(
+	VOID
+	);
+
+TraceResult_Start(
+	UINT32 Status,
+	BOOLEAN IsErrorProvided,
+	UINT32 Error,
+	UNICODESTRING ErrorMessage
+	);
+
+TraceResult_Null(
+	VOID
+	);
+
+CoreFindAllAccountsOperationInvalidAccountEvent(
+	VOID
+	);
+
+CoreFindAccountOperationAccountErrorEvent(
+	INT32 Error
+	);
+
+CCoreFindAccountOperationDoWorkAccountNotFound(
+	VOID
+	);
+
+CoreFindAllAccountsOperationAccountErrorEvent(
+	INT32 HResult
+	);
+
+CCoreFindAccountProviderOperationDoWorkProviderNotRegistered(
+	UINT64 PartA_PrivTags,
+	UNICODESTRING ProviderId,
+	UNICODESTRING Authority
+	);
+
+CCoreFindAccountOperationDoWorkConnectedAccountNotFound(
+	INT32 Error
+	);
+
+CoreFindAccountOperationNonConnectedAccountEvent(
+	VOID
+	);
+
+CoreFindAccountOperationConnectedAccountEvent(
+	VOID
+	);
+
+CWebAccountMonitorProcessAccountChangeInvokeHandler(
+	INT32 HResult
+	);
+
+WebAccountMonitorWnfCallbackEvent(
+	VOID
+	);
+
+CWebAccountMonitorProcessAccountChanges(
+	INT32 HResult
+	);
+
+WebAccountMonitorPsmStateChangeEvent(
+	VOID
+	);
+
+CWebAccountMonitorInitialize(
+	INT32 HResult
+	);
+
+WebAccountMonitorDefAccountInitFailedEvent(
+	INT32 Error
+	);
+
+WebAccountProviderOperationBase_get_Kind(
+	INT32 Option
+	);
+
+TlgAggregateSummary(
+	GUID Provider,
+	UINT64 NumFlushes,
+	UINT64 MaxEntriesStored,
+	UINT64 TotalEntriesFlushed,
+	UINT32 MaxEntriesFlushed,
+	UINT32 MinEntriesFlushed,
+	UINT32 NumBucketLimitReached,
+	UINT32 NumAllocationFailures,
+	UINT32 NumLargeEventFailures
+	);
+
+ClearWebAccountMapSkipUpdateEvent(
+	VOID
+	);
+
+ClearWebAccountMapEvent(
+	VOID
+	);
+
+SetWebAccountMapEventDetailsEvent(
+	UNICODESTRING perUserId,
+	UNICODESTRING ProviderPfn,
+	UNICODESTRING Account Id
+	);
+
+SetWebAccountMapSkipUpdateEvent(
+	UNICODESTRING perUserId
+	);
+
+SetWebAccountScopeEventDetailsEvent(
+	INT32 Scope,
+	UNICODESTRING ProviderPfn,
+	UNICODESTRING Account Id
+	);
+
+SetWebAccountMapEvent(
+	VOID
+	);
+
+SetWebAccountScopeEvent(
+	VOID
+	);
+
+SetWebAccountScopeSkipUpdateEvent(
+	INT32 Scope
+	);
+
+GetWebAccountClientViewsEvent(
+	VOID
+	);
+
+ClearWebAccountClientViewImplEvent(
+	VOID
+	);
+
+ClearWebAccountClientViewEvent(
+	VOID
+	);
+
+ClearWebAccountClientViewEvent(
+	NULL AccountId,
+	NULL PerUserAccountId,
+	UNICODESTRING AppPfn,
+	UNICODESTRING ProviderPfn
+	);
+
+SetWebAccountClientViewEventEvent(
+	VOID
+	);
+
+SetWebAccountClientViewEventImpl(
+	UNICODESTRING PairwiseIdSourceString,
+	BOOL32 PropertiesViewAllowed
+	);
+
+UpdateAccountSystemOnlyData_UserSidToUserContextConversionFailed(
+	HRESULT Result,
+	UNICODESTRING AccountUserSid
+	);
+
+GetWebAccountClientViewSkipUpdateEvent(
+	VOID
+	);
+
+SetWebAccountClientViewEvent(
+	NULL AccountId,
+	NULL PerUserAccountId,
+	UNICODESTRING AppPfn,
+	UNICODESTRING ProviderPfn
+	);
+
+GetAllProviderAccountsFromDataStoreEvent(
+	UNICODESTRING ProviderPfn
+	);
+
+ClearAccountPictureInDataStoreEvent(
+	VOID
+	);
+
+GetAllProviderAccountsFromDataStoreAccountCreateFailedEvent(
+	INT32 Error,
+	UNICODESTRING AccountHexId,
+	UNICODESTRING ProviderPfn
+	);
+
+GetAllProviderAccountsFromDataStoreAccountsCountEvent(
+	UINT64 NumberOfAccounts
+	);
+
+DeleteAccountFromDataStore_FailedClearDefault(
+	INT32 Error
+	);
+
+SetAccountPictureInDataStoreEvent(
+	VOID
+	);
+
+IsAccountNeedUpdateEvent_PropertiesMismatchEvent(
+	VOID
+	);
+
+UpdateAccountDataInDataStore_NoNeedToUpdateEvent(
+	VOID
+	);
+
+UpdateAccountDataInDataStoreEvent(
+	VOID
+	);
+
+CreateAccountInDataStoreEvent(
+	VOID
+	);
+
+TrySignalAccountEventFailure(
+	INT32 Error,
+	UNICODESTRING AccountId,
+	UNICODESTRING ProviderPfn
+	);
+
+IsAccountNeedUpdateEvent_NameMismatchEvent(
+	VOID
+	);
+
+IsAccountNeedUpdateEvent(
+	VOID
+	);
+
+TrySignalAccountEvent(
+	VOID
+	);
+
+DeleteAccountPictureDataWithSize(
+	ANSISTRING Message,
+	UINT32 Object Type
+	);
+
+UpdateAccountRevisionNumber(
+	UNICODESTRING ProviderPfn,
+	UNICODESTRING Account Id,
+	UNICODESTRING Old Revision Number,
+	UNICODESTRING New Revision Number
+	);
+
+SerializeAccountNextPropertyEvent(
+	UNICODESTRING PropertyName,
+	UNICODESTRING PropertyValue
+	);
+
+SerializeAccountEvent(
+	UNICODESTRING AccountId,
+	UNICODESTRING ProviderPfn,
+	UNICODESTRING AccountName
+	);
+
+SerializeAccounNoPropertiesEvent(
+	VOID
+	);
+
+InitializeAccountFromDataStore_InvalidUserContext(
+	UNICODESTRING AccountUserSid,
+	UINT64 AccountUserContext,
+	UINT64 ProviderUserContext
+	);
+
+InitializeAccountFromDataStoreEvent_IdsMismatchEvent(
+	INT32 Error,
+	UNICODESTRING AccountId,
+	UNICODESTRING ProviderPfn
+	);
+
+InitializeAccountFromDataStoreRealIdAccessCheckEvent(
+	INT32 Error
+	);
+
+InitializeAccountFromDataStoreEvent_BadSaltEvent(
+	INT32 Error
+	);
+
+InitializeAccountFromDataStoreAccessCheckEvent(
+	BOOL32 PropertyViewAllowed
+	);
+
+InitializeAccountFromDataStoreEvent_InvalidTypeEvent(
+	INT32 Error,
+	ANSISTRING Message,
+	UINT32 static_cast<UINT32>(jsonReader.GetType())
+	);
+
+InitializeAccountFromDataStoreEvent(
+	UNICODESTRING AccountId,
+	UINT32 Flags,
+	UNICODESTRING ProviderPfn,
+	UNICODESTRING AppPfn
+	);
+
+InitializeAccountFromDataStoreEvent_DeleteFailedEvent(
+	INT32 Error
+	);
+
+InitializeAccountFromDataStoreEvent_CorruptedEvent(
+	VOID
+	);
+
+AccountSystemOnlyInfo_InitializeFromAccountEvent(
+	VOID
+	);
+
+AccountSystemOnlyInfo_InitializeFromAccountDetailsEvent(
+	UNICODESTRING RealId,
+	UNICODESTRING ProviderPfn
+	);
+
+InitializeFromAccountId_InvalidTypeEvent(
+	INT32 Error,
+	ANSISTRING Message,
+	UINT32 static_cast<UINT32>(jsonReader.GetType())
+	);
+
+AccountSystemOnlyInfo_InitializeFromAccountId(
+	UNICODESTRING AccountId,
+	UNICODESTRING ProviderPfn
+	);
+
+CheckAndExecuteExtensionRequest_Skip3rdParty(
+	VOID
+	);
+
+CheckAndExecuteExtensionRequest_ExtensionsDisabled(
+	VOID
+	);
+
+CheckAndExecuteExtensionRequest_CloneFailed(
+	HRESULT hr
+	);
+
+CheckAndExecuteExtensionRequest_FindExtensionForRequestFailed(
+	HRESULT hr
+	);
+

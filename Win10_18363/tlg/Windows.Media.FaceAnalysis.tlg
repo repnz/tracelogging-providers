@@ -1,0 +1,143 @@
+ProviderNames:
+	Windows.Media.FaceAnalysis.Api
+	Windows.Media.FaceAnalysis.PerformanceProvider
+	Windows.Media.FaceAnalysis.ApiDiagnostics
+
+
+
+**** Events *****
+DetectorDetectedRectDetail(
+	STRING ImageDimensions,
+	UINT32 BitmapWidth,
+	UINT32 BitmapHeight,
+	HEX DetectedRect,
+	INT32 Left,
+	INT32 Top,
+	INT32 Right,
+	INT32 Bottom
+	);
+
+FaceDetectorRT_DetectFacesAsync(
+	VOID
+	);
+
+DetectionSuccess(
+	STRING ImageDimensions,
+	UINT32 BitmapWidth,
+	UINT32 BitmapHeight,
+	UINT32 FacesFound
+	);
+
+CreateAndInitializeDetector(
+	VOID
+	);
+
+FaceDetectorRT_Initialize(
+	VOID
+	);
+
+FaceDetectorRT_Initialize(
+	VOID
+	);
+
+Windows::Media::FaceAnalysis::FaceDetectorRTFactory::IsBitmapPixelFormatSupported.IsBitmapFormatSupportedCalled(
+	UINT32 BitmapPixelFormat enum
+	);
+
+CreateAndInitializeDetector(
+	VOID
+	);
+
+CreateAsyncFailed(
+	HRESULT ResultCode
+	);
+
+DetectionFailure(
+	HRESULT ResultCode,
+	STRING ImageDimensions,
+	UINT32 BitmapWidth,
+	UINT32 BitmapHeight,
+	STRING DetectConstraints,
+	UINT32 detectMin,
+	UINT32 detectMax
+	);
+
+ActivityStoppedAutomatically(
+	VOID
+	);
+
+FaceDetectorRT_DetectFacesAsync(
+	VOID
+	);
+
+FaceTrackerRT_ProcessNextFrameAsync(
+	VOID
+	);
+
+ProcessFrameSucceeded(
+	UINT32 FacesFound,
+	BOOLEAN VideoFrameDetails,
+	UINT32 BitmapWidth,
+	UINT32 BitmapHeight,
+	INT64 Timestamp
+	);
+
+FaceTrackerRT_ProcessNextFrameAsync(
+	VOID
+	);
+
+InitializeDetectors(
+	VOID
+	);
+
+ProcessIVideoFrameFailure(
+	HRESULT ResultCode,
+	BOOLEAN VideoFrameDetails,
+	UINT32 BitmapWidth,
+	UINT32 BitmapHeight,
+	INT64 Timestamp,
+	STRING DetectConstraints,
+	UINT32 detectMin,
+	UINT32 detectMax
+	);
+
+InitializeDetectors(
+	VOID
+	);
+
+ProcessingIVideoFrameMissingSoftwareBitmap(
+	HRESULT ResultCode
+	);
+
+FaceTrackerRT_Initialize(
+	VOID
+	);
+
+FaceTrackerRT_Initialize(
+	VOID
+	);
+
+Windows::Media::FaceAnalysis::FaceTrackerRTFactory::IsBitmapPixelFormatSupported.IsBitmapFormatSupportedCalled(
+	UINT32 BitmapPixelFormat enum
+	);
+
+TrackerDetectedRectDetail(
+	BOOLEAN VideoFrameDetails,
+	UINT32 BitmapWidth,
+	UINT32 BitmapHeight,
+	INT64 Timestamp,
+	HEX DetectedRect,
+	INT32 Left,
+	INT32 Top,
+	INT32 Right,
+	INT32 Bottom
+	);
+
+InitializeDetectorPoolFailure(
+	HRESULT ResultCode
+	);
+
+DetectFailure(
+	HRESULT ResultCode
+	);
+

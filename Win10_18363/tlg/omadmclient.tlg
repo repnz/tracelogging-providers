@@ -1,0 +1,239 @@
+ProviderNames:
+	Microsoft.Windows.DeviceManagement.SessionManagement
+	Microsoft.Windows.EnterpriseManagement.Enrollment
+	Microsoft.Windows.EnterpriseManagement.PolicyManager
+	Microsoft.Windows.DeviceManagement.OmaDmApiProvider
+	Microsoft.Windows.EnterpriseManagement.ResourceManager
+	Microsoft.Windows.DeviceManagement.OmaDmClient
+	Microsoft.Windows.DeviceManagement.ConfigManager2
+	Microsoft.Windows.EnterpriseManagement.DeclaredConfiguration
+	Microsoft.Windows.DeviceManagement.DevDetailCsp
+	Microsoft.Windows.DeviceManagement.OMADMPRC
+	Microsoft.Windows.EnterpriseManagement.ResourceManagerUnenrollHook
+	Microsoft.Windows.DeviceManagement.SecurityPolicyCsp
+	Microsoft.Windows.DeviceManagement.DmAccCsp
+	Microsoft.Windows.DeviceManagement.DevInfo
+	Microsoft.Windows.EnterpriseManagement.ConfigManagerHook
+	Microsoft-Windows-DeviceManagement-W7NodeProcessor
+	Microsoft.Windows.EMPS.Enrollment
+	TelemetryAssert
+	TelemetryAssertDiagTrack
+
+
+
+**** Events *****
+OmaDmSessionUser(
+	UNICODESTRING TargetUserSid,
+	UINT32 EnrolledUser,
+	UNICODESTRING UserToken,
+	UINT32 EnrollmentType,
+	ANSISTRING __TlgCV__
+	);
+
+OmaDmXmlVerboseTrace(
+	INT32 bucketNumber,
+	INT32 BufferLength,
+	UNICODESTRING Buffer
+	);
+
+OmaDmMultipleMessagesInPackage(
+	UINT32 ServerMaxXmlSize,
+	UINT32 ServerMaxObjectSize,
+	UINT32 CurrentXmlSize,
+	ANSISTRING __TlgCV__
+	);
+
+OmaDmSessionInformation(
+	HEXINT32 Origin,
+	HEX Initiator,
+	UINT32 SessionId,
+	UNICODESTRING AccountId,
+	UNICODESTRING ServerId,
+	UNICODESTRING ServerVer,
+	HEXINT32 Mode,
+	UINT32 AuthenticationType,
+	UNICODESTRING ClientVersion,
+	HEXINT32 EDPStatus,
+	UNICODESTRING EntDmId,
+	UINT32 EnrollmentType,
+	ANSISTRING __TlgCV__
+	);
+
+ClientCertificateMissing(
+	UINT32 ClientCertSearchCriteriaConfigured,
+	UINT32 ImpersonateRequired,
+	UNICODESTRING TargetUserSid,
+	ANSISTRING __TlgCV__
+	);
+
+UpdateStatusAlertInformation(
+	UINT64 PartA_PrivTags,
+	HEXINT32 UpdateStatusAlertEventtype,
+	UNICODESTRING UpdateStatusAlertAlertType,
+	UNICODESTRING UpdateStatusAlertAlertData,
+	ANSISTRING __TlgCV__
+	);
+
+ClientCertificateReferenceUnauthorized(
+	FILETIME ClientCertInfoNotBefore,
+	FILETIME ClientCertInfoNotAfter,
+	UINT32 ImpersonateRequired,
+	UNICODESTRING TargetUserSid,
+	ANSISTRING __TlgCV__
+	);
+
+OmaDmHttpHeaderAlert(
+	UNICODESTRING pszAlertType,
+	UINT32 mark,
+	ANSISTRING __TlgCV__
+	);
+
+ClientAlertInformation(
+	HEXINT32 ClientAlertEventType,
+	UNICODESTRING ClientAlertAlertType,
+	ANSISTRING __TlgCV__
+	);
+
+OmaDmLoadSessions(
+	UNICODESTRING InitiationID,
+	HRESULT Hresult,
+	UINT32 SessionAvailable,
+	UINT32 SessionOrphaned,
+	UINT32 SessionLoaded,
+	ANSISTRING __TlgCV__
+	);
+
+OmaDmSessionEndInformation(
+	UNICODESTRING ServerVersion,
+	HRESULT Hresult,
+	ANSISTRING __TlgCV__
+	);
+
+OmaDmMultipleMessagesInPackageContinue(
+	UINT32 RemainingBodyResponseSize,
+	UINT32 PreviousBodyResponseSize,
+	ANSISTRING __TlgCV__
+	);
+
+OmaDmClientExeComplete(
+	HRESULT Hresult,
+	ANSISTRING __TlgCV__
+	);
+
+ProcessCommandLine(
+	HRESULT HResult,
+	ANSISTRING __TlgCV__
+	);
+
+OmaDmSyncmlVerboseTrace(
+	INT32 bucketNumber,
+	INT32 BufferLength,
+	ANSISTRING Buffer
+	);
+
+OmaDmSessionUserTokenFailure(
+	HRESULT Hresult,
+	HRESULT DeviceHresult,
+	BOOLEAN isAadEnrollment,
+	ANSISTRING __TlgCV__
+	);
+
+OmaDmSessionEndInformation(
+	UNICODESTRING ServerVersion,
+	HRESULT Hresult,
+	ANSISTRING __TlgCV__
+	);
+
+OmaDmSessionComplete(
+	HRESULT Hresult,
+	ANSISTRING __TlgCV__
+	);
+
+OmaDmTimeBomb(
+	UNICODESTRING ServerLastSuccessTime,
+	UNICODESTRING LocalTime,
+	UINT32 TimeBomb,
+	ANSISTRING __TlgCV__
+	);
+
+LogServerSideTimeSaved(
+	UINT32 durationInSeconds,
+	ANSISTRING __TlgCV__
+	);
+
+PostSessionWork(
+	HRESULT HResult,
+	ANSISTRING __TlgCV__
+	);
+
+OmaDmSyncmlVerboseTrace(
+	INT32 bucketNumber,
+	INT32 BufferLength,
+	UNICODESTRING Buffer
+	);
+
+OmaDmClientExeStart(
+	ANSISTRING __TlgCV__
+	);
+
+OmaDmSessionStart(
+	UINT32 SessionId,
+	UNICODESTRING ServerId,
+	ANSISTRING __TlgCV__
+	);
+
+FunctionExit(
+	ANSISTRING __TlgCV__,
+	ANSISTRING FunctionName,
+	HRESULT Hresult,
+	INT32 Tag,
+	UNICODESTRING EventData
+	);
+
+FunctionExit(
+	ANSISTRING __TlgCV__,
+	ANSISTRING FunctionName,
+	HRESULT Hresult,
+	INT32 Tag,
+	UNICODESTRING EventData
+	);
+
+FunctionEntry(
+	ANSISTRING __TlgCV__,
+	ANSISTRING FunctionName,
+	UNICODESTRING EventData
+	);
+
+GenericLogEvent(
+	ANSISTRING __TlgCV__,
+	INT32 Tag,
+	UNICODESTRING EventData
+	);
+
+GenericLogEvent(
+	ANSISTRING __TlgCV__,
+	INT32 Tag,
+	UNICODESTRING EventData
+	);
+
+Assert(
+	UINT32 assertVersion,
+	UINT32 rva,
+	UINT32 timestamp,
+	UINT32 imageSize,
+	ANSISTRING imageName,
+	UINT32 count,
+	UINT32 totalHits,
+	UINT32 ModuleCollection,
+	UINT32 GlobalCollection
+	);
+
+DeclaredConfigurationAlertSummary(
+	UINT64 PartA_PrivTags,
+	UNICODESTRING EnrollmentId,
+	UNICODESTRING UserSid,
+	UNICODESTRING SummaryAlert,
+	HRESULT HRESULT,
+	ANSISTRING __TlgCV__
+	);
+

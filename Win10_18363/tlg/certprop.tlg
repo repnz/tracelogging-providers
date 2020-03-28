@@ -1,0 +1,326 @@
+ProviderNames:
+	Microsoft.Windows.Security.SmartCards.CertPropSvc
+
+
+
+**** Events *****
+RpcCallTriggeredCertificateUpdate(
+	VOID
+	);
+
+ReaderMonitorState(
+	UINT32 readerMonState.SessionId,
+	BOOL32 readerMonState.Impersonate,
+	BOOL32 readerMonState.ReadRootCertificatesFromCards,
+	BOOL32 readerMonState.ReadCertificatesFromCards,
+	BOOL32 readerMonState.ReverseSubject,
+	BOOL32 readerMonState.AllowSignatureOnlyKeys,
+	BOOL32 readerMonState.ForceReadAllCertificates,
+	UINT32 readerMonState.SCardScope,
+	UINT32 readerMonState.CertCollectionFilterOption
+	);
+
+ReaderCertProcessingCompleted(
+	UNICODESTRING readerInfo.ReaderName,
+	UINT32 readerInfo.ActivityCount,
+	UNICODESTRING readerInfo.CardName,
+	UNICODESTRING readerInfo.ProviderName,
+	UNICODESTRING readerInfo.KeyStorageProviderName,
+	UNICODESTRING readerInfo.DefaultContainer,
+	UNICODESTRING readerInfo.FriendlyCardName,
+	UNICODESTRING readerInfo.FriendlyDeviceName,
+	UINT32 readerInfo.ProvType,
+	UINT32 readerInfo.LastReaderError,
+	UINT32 readerMonState.SessionId,
+	BOOL32 readerMonState.Impersonate,
+	BOOL32 readerMonState.ReadRootCertificatesFromCards,
+	BOOL32 readerMonState.ReadCertificatesFromCards,
+	BOOL32 readerMonState.ReverseSubject,
+	BOOL32 readerMonState.AllowSignatureOnlyKeys,
+	BOOL32 readerMonState.ForceReadAllCertificates,
+	UINT32 readerMonState.SCardScope,
+	UINT32 readerMonState.CertCollectionFilterOption
+	);
+
+RpcCallTriggeredCertificateUpdate(
+	UINT32 sessionId,
+	UNICODESTRING readerName,
+	UINT32 numberOfCertsRead,
+	UINT32 numberOfRootCertsRead,
+	UINT32 certCollectionFilter,
+	UINT32 rootCertCollectionFilter,
+	BOOL32 enableCertProp,
+	UINT32 retVal
+	);
+
+RpcCallTriggeredRootCertificateUpdate(
+	UINT32 sessionId,
+	BOOL32 enableRootCertProp,
+	UINT32 numberOfRootCertsRead,
+	UINT32 retVal
+	);
+
+RpcCallTriggeredRootCertificateUpdate(
+	VOID
+	);
+
+SessionChangeTriggered(
+	UINT32 retVal
+	);
+
+SessionChangeTriggered(
+	VOID
+	);
+
+ReaderRootCertProcessingCompleted(
+	UNICODESTRING readerInfo.ReaderName,
+	UINT32 readerInfo.ActivityCount,
+	UNICODESTRING readerInfo.CardName,
+	UNICODESTRING readerInfo.ProviderName,
+	UNICODESTRING readerInfo.KeyStorageProviderName,
+	UNICODESTRING readerInfo.DefaultContainer,
+	UNICODESTRING readerInfo.FriendlyCardName,
+	UNICODESTRING readerInfo.FriendlyDeviceName,
+	UINT32 readerInfo.ProvType,
+	UINT32 readerInfo.LastReaderError,
+	UINT32 readerMonState.SessionId,
+	BOOL32 readerMonState.Impersonate,
+	BOOL32 readerMonState.ReadRootCertificatesFromCards,
+	BOOL32 readerMonState.ReadCertificatesFromCards,
+	BOOL32 readerMonState.ReverseSubject,
+	BOOL32 readerMonState.AllowSignatureOnlyKeys,
+	BOOL32 readerMonState.ForceReadAllCertificates,
+	UINT32 readerMonState.SCardScope,
+	UINT32 readerMonState.CertCollectionFilterOption
+	);
+
+ReadEncodedCert(
+	UINT32 certContext.CertEncodingType,
+	UINT32 certContext.CertEncoded,
+	UINT32 certContext.Version,
+	FILETIME certContext.NotBefore,
+	FILETIME certContext.NotAfter
+	);
+
+CollectCertificatesUsingCapi(
+	UINT32 numberOfCertsAdded,
+	UINT32 retVal
+	);
+
+ReadContainerDataCng(
+	VOID
+	);
+
+CollectCertificatesUsingCapi(
+	VOID
+	);
+
+ReadContainerDataCapi(
+	UINT32 retVal
+	);
+
+CollectCertificatesUsingCng(
+	VOID
+	);
+
+CollectRootCertificatesUsingCapi(
+	VOID
+	);
+
+ReaderMonitorTriggeredCertificateUpdateStop(
+	VOID
+	);
+
+ReadRootCertificatesFromReader(
+	VOID
+	);
+
+ReaderMonitorTriggeredCertificateUpdateStart(
+	VOID
+	);
+
+ReadCertificatesFromReader(
+	VOID
+	);
+
+ReadEncodedCert(
+	UINT32 certContext.CertEncodingType,
+	UINT32 certContext.CertEncoded,
+	UINT32 certContext.Version,
+	FILETIME certContext.NotBefore,
+	FILETIME certContext.NotAfter
+	);
+
+ReaderMonitorTriggeredCertificateUpdate(
+	UNICODESTRING readerInfo.ReaderName,
+	UINT32 readerInfo.ActivityCount,
+	UNICODESTRING readerInfo.CardName,
+	UNICODESTRING readerInfo.ProviderName,
+	UNICODESTRING readerInfo.KeyStorageProviderName,
+	UNICODESTRING readerInfo.DefaultContainer,
+	UNICODESTRING readerInfo.FriendlyCardName,
+	UNICODESTRING readerInfo.FriendlyDeviceName,
+	UINT32 readerInfo.ProvType,
+	UINT32 readerInfo.LastReaderError,
+	UINT32 readerMonState.SessionId,
+	BOOL32 readerMonState.Impersonate,
+	BOOL32 readerMonState.ReadRootCertificatesFromCards,
+	BOOL32 readerMonState.ReadCertificatesFromCards,
+	BOOL32 readerMonState.ReverseSubject,
+	BOOL32 readerMonState.AllowSignatureOnlyKeys,
+	BOOL32 readerMonState.ForceReadAllCertificates,
+	UINT32 readerMonState.SCardScope,
+	UINT32 readerMonState.CertCollectionFilterOption,
+	UINT32 retVal,
+	UINT32 numberOfCertsRead,
+	UINT32 numberOfRootCertsRead,
+	UINT32 certCollectionFilter,
+	UINT32 rootCertCollectionFilter
+	);
+
+ReadContainerDataCapi(
+	VOID
+	);
+
+ReadRootCertificatesFromReader(
+	UNICODESTRING readerInfo.ReaderName,
+	UINT32 readerInfo.ActivityCount,
+	UNICODESTRING readerInfo.CardName,
+	UNICODESTRING readerInfo.ProviderName,
+	UNICODESTRING readerInfo.KeyStorageProviderName,
+	UNICODESTRING readerInfo.DefaultContainer,
+	UNICODESTRING readerInfo.FriendlyCardName,
+	UNICODESTRING readerInfo.FriendlyDeviceName,
+	UINT32 readerInfo.ProvType,
+	UINT32 readerInfo.LastReaderError,
+	UINT32 readerMonState.SessionId,
+	BOOL32 readerMonState.Impersonate,
+	BOOL32 readerMonState.ReadRootCertificatesFromCards,
+	BOOL32 readerMonState.ReadCertificatesFromCards,
+	BOOL32 readerMonState.ReverseSubject,
+	BOOL32 readerMonState.AllowSignatureOnlyKeys,
+	BOOL32 readerMonState.ForceReadAllCertificates,
+	UINT32 readerMonState.SCardScope,
+	UINT32 readerMonState.CertCollectionFilterOption,
+	UINT32 retVal
+	);
+
+CollectRootCertificatesUsingCng(
+	UINT32 numberOfCertsAdded,
+	UINT32 retVal
+	);
+
+CollectCertificatesUsingCng(
+	UINT32 numberOfCertsAdded,
+	UINT32 retVal
+	);
+
+ReadCngKey(
+	BOOL32 useHelloCertsAsSmartCardCerts,
+	UINT32 deviceTypeId,
+	UNICODESTRING provName,
+	BOOL32 certPropagated,
+	UINT32 retVal
+	);
+
+CollectRootCertificatesUsingCapi(
+	UINT32 numberOfCertsAdded,
+	UINT32 retVal
+	);
+
+ReadCertificatesFromReader(
+	BOOL32 readCerts,
+	BOOL32 readRootCerts,
+	UNICODESTRING readerInfo.ReaderName,
+	UINT32 readerInfo.ActivityCount,
+	UNICODESTRING readerInfo.CardName,
+	UNICODESTRING readerInfo.ProviderName,
+	UNICODESTRING readerInfo.KeyStorageProviderName,
+	UNICODESTRING readerInfo.DefaultContainer,
+	UNICODESTRING readerInfo.FriendlyCardName,
+	UNICODESTRING readerInfo.FriendlyDeviceName,
+	UINT32 readerInfo.ProvType,
+	UINT32 readerInfo.LastReaderError,
+	UINT32 readerMonState.SessionId,
+	BOOL32 readerMonState.Impersonate,
+	BOOL32 readerMonState.ReadRootCertificatesFromCards,
+	BOOL32 readerMonState.ReadCertificatesFromCards,
+	BOOL32 readerMonState.ReverseSubject,
+	BOOL32 readerMonState.AllowSignatureOnlyKeys,
+	BOOL32 readerMonState.ForceReadAllCertificates,
+	UINT32 readerMonState.SCardScope,
+	UINT32 readerMonState.CertCollectionFilterOption,
+	UINT32 retVal
+	);
+
+ReadCertificatesFromReader(
+	VOID
+	);
+
+ReadCertificatesFromReader(
+	UNICODESTRING readerInfo.ReaderName,
+	UINT32 readerInfo.ActivityCount,
+	UNICODESTRING readerInfo.CardName,
+	UNICODESTRING readerInfo.ProviderName,
+	UNICODESTRING readerInfo.KeyStorageProviderName,
+	UNICODESTRING readerInfo.DefaultContainer,
+	UNICODESTRING readerInfo.FriendlyCardName,
+	UNICODESTRING readerInfo.FriendlyDeviceName,
+	UINT32 readerInfo.ProvType,
+	UINT32 readerInfo.LastReaderError,
+	UINT32 readerMonState.SessionId,
+	BOOL32 readerMonState.Impersonate,
+	BOOL32 readerMonState.ReadRootCertificatesFromCards,
+	BOOL32 readerMonState.ReadCertificatesFromCards,
+	BOOL32 readerMonState.ReverseSubject,
+	BOOL32 readerMonState.AllowSignatureOnlyKeys,
+	BOOL32 readerMonState.ForceReadAllCertificates,
+	UINT32 readerMonState.SCardScope,
+	UINT32 readerMonState.CertCollectionFilterOption,
+	UINT32 retVal
+	);
+
+ReadContainerDataCng(
+	UINT32 retVal
+	);
+
+SessionUnlockTriggeredCertificateUpdate(
+	UINT32 numberOfReaders,
+	UINT32 numberOfCertsRead,
+	UINT32 numberOfRootCertsRead
+	);
+
+SessionUnlockTriggeredCertificateUpdateStop(
+	UINT32 numberOfReaders
+	);
+
+CollectRootCertificatesUsingCng(
+	VOID
+	);
+
+SessionUnlockTriggeredCertificateUpdateStart(
+	VOID
+	);
+
+ReaderMonStateAndReaderInfoData(
+	UNICODESTRING readerInfo.ReaderName,
+	UINT32 readerInfo.ActivityCount,
+	UNICODESTRING readerInfo.CardName,
+	UNICODESTRING readerInfo.ProviderName,
+	UNICODESTRING readerInfo.KeyStorageProviderName,
+	UNICODESTRING readerInfo.DefaultContainer,
+	UNICODESTRING readerInfo.FriendlyCardName,
+	UNICODESTRING readerInfo.FriendlyDeviceName,
+	UINT32 readerInfo.ProvType,
+	UINT32 readerInfo.LastReaderError,
+	UINT32 readerMonState.SessionId,
+	BOOL32 readerMonState.Impersonate,
+	BOOL32 readerMonState.ReadRootCertificatesFromCards,
+	BOOL32 readerMonState.ReadCertificatesFromCards,
+	BOOL32 readerMonState.ReverseSubject,
+	BOOL32 readerMonState.AllowSignatureOnlyKeys,
+	BOOL32 readerMonState.ForceReadAllCertificates,
+	UINT32 readerMonState.SCardScope,
+	UINT32 readerMonState.CertCollectionFilterOption
+	);
+

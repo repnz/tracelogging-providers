@@ -1,0 +1,147 @@
+ProviderNames:
+	Microsoft.Windows.Networking.BranchCache
+
+
+
+**** Events *****
+ContentPublicationCompleted(
+	GUID SessionId,
+	UINT64 PublicationID,
+	HRESULT HRESULT,
+	HRESULT HRESULTAsync,
+	UINT64 DeclaredContentLength,
+	UINT64 ObservedContentLength
+	);
+
+PublishSegment(
+	GUID SessionId,
+	UINT64 PublicationId,
+	UINT64 ContentOffset,
+	UINT32 SegmentSize,
+	UINT64 HashOffset
+	);
+
+ContentPublicationCreated(
+	GUID SessionId,
+	UINT64 PublicationID,
+	UINT32 ContentIdentifierSize,
+	UINT32 ApplicationMetadataSize,
+	UINT64 DeclaredContentLength,
+	UINT32 PublicationVersion,
+	UINT32 PublicationFlags,
+	UINT32 AlgorithmId
+	);
+
+DataDownload(
+	GUID SessionId,
+	FILETIME DownloadCreated,
+	FILETIME DownloadStarted,
+	BINARY SegmentId,
+	UINT32 Timeout,
+	WIN32ERROR ErrorCode,
+	UINT32 DownloadedBlocks,
+	UINT32 RequestedBlocks,
+	UINT32 DiscoveredPeers,
+	UINT32 SelectedPeers,
+	UINT32 MsSegmentAge,
+	UINT64 MsToCompleteSinceCreate,
+	UINT64 MsToCompleteSinceStart
+	);
+
+PCCRR PerfCounters(
+	GUID SessionId,
+	FILETIME ServiceStartupTimestamp,
+	FILETIME UpdateTimestamp,
+	UINT64 CompletedDataDownloads,
+	UINT64 MaxObservedSimultaneousDownloads,
+	UINT64 AvgBlockDownloadByteRate,
+	UINT64 CompletedUploads,
+	UINT64 SuccessfulUploads,
+	UINT64 MaxObservedSimultaneousUploads,
+	UINT32 MicrosAvgServingLatency,
+	UINT32 MicrosMinObservedServingLatency,
+	UINT32 MicrosMaxObservedServingLatency,
+	DOUBLE CurrAverageInboundRequestFrequency,
+	DOUBLE MaxObservedInboundRequestFrequency,
+	UINT64 MicrosAvgDiscoveryTime,
+	UINT64 AttemptedNetworkDiscoveries,
+	UINT64 AttemptedV1NetworkDiscoveries,
+	UINT64 AttemptedV2NetworkDiscoveries,
+	UINT64 SuccessfulNetworkDiscoveries,
+	UINT64 SuccessfulV1NetworkDiscoveries,
+	UINT64 SuccessfulV2NetworkDiscoveries,
+	UINT64 SuppressedDiscoveries,
+	UINT64 PreDiscoveries,
+	DOUBLE CurrAverageInboundDiscoveryFrequency,
+	DOUBLE MaxObservedInboundDiscoveryFrequency,
+	UINT64 TotBytesServed,
+	UINT64 TotBytesRetrieved,
+	UINT64 GetBlockListMsgsSent,
+	UINT64 GetBlockListMsgsRecvd,
+	UINT64 GetBlocksMsgsSent,
+	UINT64 GetBlocksMsgsRecvd,
+	UINT64 GetSegmentListMsgsSent,
+	UINT64 GetSegmentListMsgsRecvd,
+	UINT64 BlockListMsgsSent,
+	UINT64 BlockListMsgsRecvd,
+	UINT64 BlockMsgsSent,
+	UINT64 EmptyBlockMsgsSent,
+	UINT64 BlockMsgsRecvd,
+	UINT64 SegmentListMsgsSent,
+	UINT64 SegmentListMsgsRecvd,
+	UINT64 NegoReqMsgSent,
+	UINT64 NegoReqMsgRecvd,
+	UINT64 NegoRespMsgSent,
+	UINT64 NegoRespMsgRecvd,
+	UINT64 QuarantinedPeers,
+	DOUBLE MinObservedPUIValue,
+	DOUBLE MaxObservedPUIValue
+	);
+
+UsageMode(
+	GUID SessionId,
+	BOOLEAN LocalCache,
+	BOOLEAN Distributed,
+	BOOLEAN HostedCacheServer,
+	BOOLEAN HostedCacheClient,
+	BOOLEAN PublishingHTTP,
+	BOOLEAN PublishingAPI,
+	BOOLEAN InternalSession,
+	BOOLEAN TestSession,
+	UINT32 UsageBitmask
+	);
+
+PerfCounters(
+	GUID SessionId,
+	UINT64 MegaBytesServed,
+	UINT64 MegaBytesFromCache,
+	UINT64 MegaBytesFromServer,
+	UINT64 MegaBytesFromCacheSMB,
+	UINT64 MegaBytesFromServerSMB,
+	UINT64 MegaBytesFromCacheWinINet,
+	UINT64 MegaBytesFromServerWinINet,
+	UINT64 MegaBytesFromCacheWinHTTP,
+	UINT64 MegaBytesFromServerWinHTTP,
+	UINT64 MegaBytesFromCacheBITS,
+	UINT64 MegaBytesFromServerBITS,
+	UINT64 MegaBytesFromCacheOther,
+	UINT64 MegaBytesFromServerOther,
+	UINT64 CacheCompleteSegments,
+	UINT64 CachePartialSegments,
+	UINT64 AttemptedDiscoveries,
+	UINT64 SuccessfulDiscoveries,
+	UINT64 AverageBranchByteRate,
+	UINT64 HCSegmentOffers,
+	UINT64 HCOfferQueueLength,
+	UINT64 PublishedContents,
+	UINT64 MsAverageResponseLatency
+	);
+
+TelemetrySessionEnd(
+	GUID SessionId
+	);
+
+TelemetrySessionStart(
+	GUID SessionId
+	);
+

@@ -1,0 +1,262 @@
+ProviderNames:
+	Microsoft.OSG.OSS.CredProvFramework
+	TelemetryAssert
+	TelemetryAssertDiagTrack
+	Microsoft.Windows.Security.CandidateAccountManagerPolicy
+
+
+
+**** Events *****
+LsaOpenLocalSystemPolicy(
+	ANSISTRING EventLevel,
+	ANSISTRING Invoke,
+	NTSTATUS ResultCode
+	);
+
+Assert(
+	UINT32 assertVersion,
+	UINT32 rva,
+	UINT32 timestamp,
+	UINT32 imageSize,
+	ANSISTRING imageName,
+	UINT32 count,
+	UINT32 totalHits,
+	UINT32 ModuleCollection,
+	UINT32 GlobalCollection
+	);
+
+CCredentialProviderUserArray::GetAccountOptions(
+	ANSISTRING EventLevel,
+	ANSISTRING Invoke,
+	HEXINT32 EmptyTileEnumerationFlags
+	);
+
+CCredentialProviderUserArray::SetProviderFilters(
+	ANSISTRING EventLevel,
+	ANSISTRING Invoke,
+	UINT64 FilteredSize,
+	INT32 InitialSize,
+	HEXINT32 EmptyTileEnumerationFlags
+	);
+
+CCredentialProviderUserArray::RuntimeClassInitialize(
+	ANSISTRING EventLevel,
+	ANSISTRING Invoke,
+	HEXINT32 UsageScenario,
+	HEXINT32 EmptyTileEnumerationFlags,
+	UINT64 NumOfUsers,
+	HRESULT ResultCode
+	);
+
+CEnumCredentialProviderUsers::s_LookupInternetDisplayName(
+	ANSISTRING EventLevel,
+	ANSISTRING Invoke,
+	HRESULT ResultCode
+	);
+
+CEnumCredentialProviderUsers::s_EnumInternetUsers(
+	ANSISTRING EventLevel,
+	ANSISTRING Invoke,
+	HRESULT ResultCode
+	);
+
+CEnumCredentialProviderUsers::s_EnumInternetUsers(
+	ANSISTRING EventLevel,
+	ANSISTRING Invoke,
+	HRESULT ResultCode
+	);
+
+CEnumCredentialProviderUsers::s_EnumInternetUsers(
+	ANSISTRING EventLevel,
+	ANSISTRING Invoke,
+	WIN32ERROR WinError
+	);
+
+CEnumCredentialProviderUsers::CallCloudAPPackage(
+	ANSISTRING EventLevel,
+	ANSISTRING Invoke,
+	NTSTATUS NTStatus
+	);
+
+CEnumCredentialProviderUsers::CallCloudAPPackage(
+	ANSISTRING EventLevel,
+	ANSISTRING Invoke,
+	NTSTATUS NTStatus
+	);
+
+CEnumCredentialProviderUsers::s_CreatePropStoreFromFullNameAndSid(
+	ANSISTRING EventLevel,
+	ANSISTRING Invoke,
+	HRESULT ResultCode
+	);
+
+CEnumCredentialProviderUsers::s_CreatePropStoreFromFullNameAndSid(
+	ANSISTRING EventLevel,
+	ANSISTRING Invoke,
+	GUID ProviderGuid,
+	BOOL32 IsConnectedUser
+	);
+
+CEnumCredentialProviderUsers::s_CreatePropStoreFromFullNameAndSid(
+	ANSISTRING EventLevel,
+	ANSISTRING Invoke,
+	HRESULT ResultCode
+	);
+
+CEnumCredentialProviderUsers::s_LookupAccountName(
+	ANSISTRING EventLevel,
+	ANSISTRING Invoke,
+	HRESULT ResultCode
+	);
+
+CEnumCredentialProviderUsers::s_HasConnectedUser(
+	ANSISTRING EventLevel,
+	ANSISTRING Invoke,
+	HRESULT ResultCode
+	);
+
+CEnumCredentialProviderUsers::s_EnumerateLocalAdmins(
+	ANSISTRING EventLevel,
+	ANSISTRING Invoke,
+	HRESULT ResultCode
+	);
+
+CEnumCredentialProviderUsers::s_EnumerateCurrentUser(
+	ANSISTRING EventLevel,
+	ANSISTRING Invoke,
+	HRESULT ResultCode
+	);
+
+CEnumCredentialProviderUsers::s_EnumerateInSessionUser(
+	ANSISTRING EventLevel,
+	ANSISTRING Invoke,
+	UINT32 SessionId,
+	HRESULT ResultCode
+	);
+
+CEnumCredentialProviderUsers::s_EnumLastLoggedonUser(
+	ANSISTRING EventLevel,
+	ANSISTRING Invoke,
+	HRESULT ResultCode
+	);
+
+CEnumCredentialProviderUsers::s_EnumLogonUsers(
+	ANSISTRING EventLevel,
+	ANSISTRING Invoke,
+	HRESULT ResultCode
+	);
+
+s_FindConnectedUserBySid(
+	ANSISTRING EventLevel,
+	ANSISTRING Invoke,
+	HRESULT ResultCode
+	);
+
+s_CreatePropStoreFromAccount(
+	ANSISTRING EventLevel,
+	ANSISTRING Invoke,
+	HRESULT ResultCode
+	);
+
+s_CreatePropStoreFromAccount(
+	ANSISTRING EventLevel,
+	ANSISTRING Invoke,
+	BOOL32 IsConnectedUser,
+	GUID ProviderCLSID,
+	UNICODESTRING UserSid,
+	UINT32 LogonStatus
+	);
+
+s_GetLogonStatusString(
+	ANSISTRING EventLevel,
+	ANSISTRING Invoke,
+	HRESULT ResultCode
+	);
+
+s_GetLastLoggedOnUsernameAndSid(
+	ANSISTRING EventLevel,
+	ANSISTRING Invoke,
+	HRESULT ResultCode
+	);
+
+s_GetLastLoggedOnUsernameAndSid(
+	ANSISTRING EventLevel,
+	ANSISTRING Invoke,
+	UNICODESTRING UserSid
+	);
+
+PolicyEnabled(
+	UNICODESTRING policy
+	);
+
+FallbackError(
+	UINT64 PartA_PrivTags,
+	SIGNED wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+FallbackError(
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+ReplaceDotWithMachineName(
+	ANSISTRING EventLevel,
+	ANSISTRING Invoke,
+	HRESULT ResultCode
+	);
+
+GetMachineDomainName(
+	ANSISTRING EventLevel,
+	ANSISTRING Invoke,
+	HRESULT ResultCode
+	);
+
+GetMachineDomainName(
+	ANSISTRING EventLevel,
+	ANSISTRING Invoke,
+	UNICODESTRING DomainName
+	);
+
+GetMachineName(
+	ANSISTRING EventLevel,
+	ANSISTRING Invoke,
+	HRESULT ResultCode
+	);
+
+GetMachineName(
+	ANSISTRING EventLevel,
+	ANSISTRING Invoke,
+	UNICODESTRING MachineName
+	);
+

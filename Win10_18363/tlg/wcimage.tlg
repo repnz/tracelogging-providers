@@ -1,0 +1,40 @@
+ProviderNames:
+	Microsoft.Windows.Containers.DynamicImage
+
+
+
+**** Events *****
+WcCreateContainerImage_FsError(
+	UINT32 Result,
+	UNICODESTRING Path
+	);
+
+WcCreateContainerImage_RegistryError(
+	UINT32 Result,
+	UNICODESTRING Key,
+	UNICODESTRING Value
+	);
+
+WcpApplyContainerWim_Error(
+	UINT32 Result,
+	UNICODESTRING Wim Path,
+	UINT32 Wim Index
+	);
+
+CreateContainerImage_End(
+	HRESULT HResult
+	);
+
+CreateContainerImage_Start(
+	VOID
+	);
+
+CreateContainerImageFromPortableBaseLayer_End(
+	UINT64 PartA_PrivTags,
+	HRESULT HResult
+	);
+
+CreateContainerImageFromPortableBaseLayer_Start(
+	UINT64 PartA_PrivTags
+	);
+

@@ -1,0 +1,159 @@
+ProviderNames:
+	UiaManager
+
+
+
+**** Events *****
+FallbackError(
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+FallbackError(
+	UINT64 PartA_PrivTags,
+	SIGNED wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+ResultLoggingCallback(
+	ANSISTRING file,
+	UINT32 lineNumber,
+	UINT32 failureType,
+	INT32 failureCount,
+	UINT32 threadId,
+	HEXINT32 hr,
+	UNICODESTRING message,
+	ANSISTRING code,
+	ANSISTRING function
+	);
+
+CreateAutomationConnectionForHwnd(
+	UINT32 hwnd,
+	UINT32 connectionId,
+	BOOL32 isMsaaProvider
+	);
+
+UiaManagerImpl::CreateAutomationEndpointConnection(
+	GUID endpointId,
+	UNICODESTRING connectionName
+	);
+
+UiaManagerImpl::RegisterEndpointHostAsHwnd(
+	GUID endpointId,
+	HEXINT32 HandleToLong(hostHwnd)
+	);
+
+UiaManagerImpl::RegisterEndpointHostAsViewInstanceId(
+	GUID endpointId,
+	GUID hostEndpointId
+	);
+
+UiaManagerImpl::RegisterEndpointHostAsViewInstanceId(
+	GUID endpointId,
+	HEXINT32 hostViewInstanceId
+	);
+
+UiaManagerImpl::RegisterEndpoint(
+	GUID endpointId
+	);
+
+UiaManagerImpl::RemoveEndpointRegistration(
+	GUID endpointId
+	);
+
+UiaManagerImpl::AddViewIdToWindowRegistration(
+	UINT32 windowInstanceId,
+	UINT32 viewInstanceId
+	);
+
+UiaManagerImpl::RegisterWindow(
+	UINT32 windowInstanceId
+	);
+
+UiaManagerImpl::CreateAutomationConnection(
+	UINT32 viewInstanceId,
+	UNICODESTRING pszConnection
+	);
+
+UiaManagerImpl::RemoveWindowRegistration(
+	UINT32 windowInstanceId,
+	UINT32 viewInstanceId
+	);
+
+UiaManagerServiceHostComponent::v_ShutdownServices(
+	VOID
+	);
+
+UiaManagerServiceHostComponent::v_PublishServices(
+	VOID
+	);
+
+NamedPipeCreateClientPipe(
+	UNICODESTRING pipeName
+	);
+
+NamedPipeCreateServerPipe(
+	UNICODESTRING pipeName
+	);
+
+NamedPipeDisconnected(
+	VOID
+	);
+
+NamedPipeConnected(
+	VOID
+	);
+
+NamedPipeChannelCommunicationFailure(
+	VOID
+	);
+
+NamedPipeChannelCommunicationFailure(
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+

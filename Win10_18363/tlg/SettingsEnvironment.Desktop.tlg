@@ -1,0 +1,167 @@
+ProviderNames:
+	Microsoft.Windows.Wil.FeatureLogging
+	Microsoft.Windows.Shell.SystemSettings.SettingsEnvironment
+	Microsoft.Windows.Shell.SystemSettings.SettingsEnvironment.Desktop
+	Microsoft.PPI.Settings.SettingsEnvironment
+	Microsoft-Windows-Shell-CortanaProactive
+	Microsoft.Windows.Shell.InputDialTrace
+
+
+
+**** Events *****
+FeatureVariantUsage(
+	UINT32 featureId,
+	INT32 featureVersion,
+	INT32 featureBaseVersion,
+	INT16 featureStage,
+	BOOLEAN enabled,
+	UINT32 variantKind,
+	UINT8 variant,
+	UINT64 addend
+	);
+
+EnabledFeatureUsage(
+	UINT32 featureId,
+	INT32 featureVersion,
+	INT32 featureBaseVersion,
+	INT16 featureStage,
+	BOOLEAN enabled,
+	UINT32 kind,
+	UINT64 addend
+	);
+
+FallbackError(
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+FeatureUsage(
+	UINT32 featureId,
+	INT32 featureVersion,
+	INT32 featureBaseVersion,
+	INT16 featureStage,
+	BOOLEAN enabled,
+	UINT32 kind,
+	UINT64 addend
+	);
+
+FeatureError(
+	UINT32 featureId,
+	INT32 featureVersion,
+	INT32 featureBaseVersion,
+	INT16 featureStage,
+	HRESULT hr,
+	ANSISTRING file,
+	UINT16 lineNumber,
+	ANSISTRING module,
+	ANSISTRING process,
+	ANSISTRING originFile,
+	UINT16 originLineNumber,
+	ANSISTRING originModule,
+	ANSISTRING originName,
+	ANSISTRING message,
+	ANSISTRING callerModule,
+	UINT32 callerReturnAddressOffset,
+	ANSISTRING originCallerModule,
+	UINT32 originCallerReturnAddressOffset
+	);
+
+FallbackError(
+	UINT64 PartA_PrivTags,
+	SIGNED wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+SettingAllowed(
+	UNICODESTRING SettingId
+	);
+
+SettingBlocked(
+	UNICODESTRING SettingId
+	);
+
+CortanaUndocking_ReplaceDecisionReadBeforeReevaluation(
+	UINT64 PartA_PrivTags
+	);
+
+Info(
+	ANSISTRING file,
+	UINT32 lineNumber,
+	ANSISTRING function,
+	UNICODESTRING message
+	);
+
+ChangeEnvironmentVariable(
+	ANSISTRING Component,
+	ANSISTRING Location,
+	UNICODESTRING _name,
+	BOOL32 value
+	);
+
+StopNetworkUxManagerClient(
+	ANSISTRING Component,
+	ANSISTRING Location
+	);
+
+StartNetworkUxManagerClient(
+	ANSISTRING Component,
+	ANSISTRING Location,
+	HRESULT hr
+	);
+
+UpdateAdapterCounts(
+	ANSISTRING Component,
+	ANSISTRING Location,
+	INT32 ethernetAdapterCount,
+	INT32 wifiAdapterCount,
+	INT32 mbAdapterCount
+	);
+
+GetAdapterCounts(
+	ANSISTRING Component,
+	ANSISTRING Location,
+	HRESULT hr,
+	INT32 s_EthernetAdapterCount,
+	INT32 s_WiFiAdapterCount,
+	INT32 s_MBAdapterCount
+	);
+
+GetAdapterCounts(
+	ANSISTRING Component,
+	ANSISTRING Location,
+	HRESULT hr,
+	INT32 s_EthernetAdapterCount,
+	INT32 s_WiFiAdapterCount,
+	INT32 s_MBAdapterCount
+	);
+

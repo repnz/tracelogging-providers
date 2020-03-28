@@ -1,0 +1,47 @@
+ProviderNames:
+	Microsoft.Windows.Das
+
+
+
+**** Events *****
+DasQueryDetails(
+	INT64 TotalTime,
+	INT64 StartTime,
+	HEXINT32 Status,
+	HEXINT32 QueriedProviders,
+	HEXINT32 TotalDeviceDiscoveryCount,
+	HEXINT32 BtDeviceDiscoveryCount,
+	HEXINT32 BtLeDeviceDiscoveryCount,
+	HEXINT32 UpnpDeviceDiscoveryCount,
+	HEXINT32 WsdDeviceDiscoveryCount,
+	HEXINT32 PrintDeviceDiscoveryCount,
+	HEXINT32 WcnDeviceDiscoveryCount,
+	HEXINT32 WfdDeviceDiscoveryCount,
+	HEXINT32 IotDeviceDiscoveryCount,
+	HEXINT32 GipDeviceDiscoveryCount,
+	HEXINT32 DnsSdDeviceDiscoveryCount,
+	INT32 QueryState
+	);
+
+DasAssociationError(
+	INT64 StartTime,
+	HEXINT32 Status,
+	UNICODESTRING CeremonyPaired,
+	UNICODESTRING Provider,
+	NULL AepIdHashed,
+	INT32 AssocState,
+	HRESULT HResult,
+	HRESULT HResultProvider,
+	UNICODESTRING DebugHint
+	);
+
+DasAssociationDetails(
+	INT64 TotalTime,
+	INT64 StartTime,
+	HEXINT32 Status,
+	UNICODESTRING pszCeremonyPaired,
+	UNICODESTRING pszProvider,
+	NULL AepIdHashed,
+	INT32 AssocState
+	);
+

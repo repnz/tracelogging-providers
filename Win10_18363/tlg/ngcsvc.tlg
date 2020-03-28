@@ -1,0 +1,3494 @@
+ProviderNames:
+	Microsoft.Windows.Security.NGC.KspSvc
+	Microsoft.Windows.Security.NGC.KspSvc
+	TelemetryAssert
+	TelemetryAssertDiagTrack
+	Microsoft.Windows.Security.DevCredSvc
+
+
+
+**** Events *****
+AdjustTokenPrivilegesEnableSeTakeOwnershipPrivilege(
+	UINT32 retVal
+	);
+
+LookupPrivilegeValue(
+	UINT32 retVal
+	);
+
+OpenProcessToken(
+	UINT32 retVal
+	);
+
+GetLocalAppDataPath(
+	INT32 retVal
+	);
+
+ConvertStringSidToSid(
+	UINT32 retVal
+	);
+
+AdjustTokenPrivilegesDisableSeTakeOwnershipPrivilege(
+	UINT32 retVal
+	);
+
+VerifyAndFixCtnrSvcAppDirectoryAcl(
+	UINT32 win32Ret,
+	INT32 hr,
+	BOOLEAN aclFixNeeded,
+	BOOLEAN aclFixSuccessful
+	);
+
+FindNextFileW(
+	UINT32 retVal
+	);
+
+FindFirstFileW(
+	UINT32 retVal
+	);
+
+ContainerServiceAppDataAclNeedsFix(
+	UNICODESTRING rootPath
+	);
+
+ContainerServiceAppDataAclOk(
+	UNICODESTRING rootPath
+	);
+
+GetNamedSecurityInfo(
+	UINT32 retVal
+	);
+
+ContainerServiceAppDataAclMissingEntry(
+	UNICODESTRING rootPath
+	);
+
+AuthzAccessCheck(
+	UINT32 retVal
+	);
+
+AuthzInitializeContextFromSid(
+	UINT32 retVal
+	);
+
+AuthzInitializeResourceManager(
+	UINT32 retVal
+	);
+
+ContainerServiceAppDataAclMissing(
+	VOID
+	);
+
+ContainerServiceAppDataAclAccessDenied(
+	VOID
+	);
+
+ContainerServiceAppDataAclFixed(
+	UNICODESTRING path,
+	BOOLEAN isDirectory
+	);
+
+SetNamedSecurityInfoNewDacl(
+	UINT32 retVal
+	);
+
+SetEntriesInAcl(
+	UINT32 retVal
+	);
+
+SetNamedSecurityInfoForLocalSystemOwner(
+	UINT32 retVal
+	);
+
+ControlService(
+	UINT32 retVal
+	);
+
+ChangeServiceConfig(
+	UINT32 retVal
+	);
+
+OpenService(
+	UINT32 retVal
+	);
+
+OpenSCManager(
+	UINT32 retVal
+	);
+
+BCryptOpenAlgorithmProvider(
+	INT32 retVal
+	);
+
+VerifyClaimVerifyClaim(
+	INT32 retVal
+	);
+
+VerifyClaimImportSubjectPub(
+	INT32 retVal
+	);
+
+VerifyClaimImportAikPub(
+	INT32 retVal
+	);
+
+VerifyClaimOpenTpmProv(
+	INT32 retVal
+	);
+
+VerifyClaimBadFlags(
+	INT32 retVal
+	);
+
+VerifyClaimInvalidParameter(
+	INT32 retVal
+	);
+
+CreateClaimInvalidParameterList(
+	INT32 retVal
+	);
+
+CreateClaimInvalidParameterBuffer(
+	INT32 retVal
+	);
+
+CreateClaimTooManyParameters(
+	INT32 retVal
+	);
+
+CreateClaimInvalidParameterVersion(
+	INT32 retVal
+	);
+
+CreateClaimBadFlags(
+	INT32 retVal
+	);
+
+CreateClaimInvalidParameter(
+	INT32 retVal
+	);
+
+ExportKeyBadFlags(
+	INT32 retVal
+	);
+
+ExportKeyInvalidParameter(
+	INT32 retVal
+	);
+
+ImportKeyBadBlobType(
+	INT32 retVal
+	);
+
+ImportKeyMustFinalizePublicKey(
+	INT32 retVal
+	);
+
+ImportKeyUnsupportedImport(
+	INT32 retVal
+	);
+
+ImportKeyInvalidKeyName(
+	INT32 retVal
+	);
+
+ImportKeyMultipleNamesSpecified(
+	INT32 retVal
+	);
+
+ImportKeyBadFlags(
+	INT32 retVal
+	);
+
+ImportKeyInvalidParameter(
+	INT32 retVal
+	);
+
+FreeKeyInvalidParameter(
+	INT32 retVal
+	);
+
+FreeProviderInvalidParameter(
+	INT32 retVal
+	);
+
+FreeBufferInvalidParameter(
+	INT32 retVal
+	);
+
+EnumKeysBadFlags(
+	INT32 retVal
+	);
+
+EnumKeysInvalidParameter(
+	INT32 retVal
+	);
+
+DeleteKeyBadFlags(
+	INT32 retVal
+	);
+
+DeleteKeyInvalidParameter(
+	INT32 retVal
+	);
+
+SignHashInvalidHashLength(
+	INT32 retVal
+	);
+
+SignHashUnsupportedPaddingAlgorithm(
+	INT32 retVal
+	);
+
+SignHashGetAuthenticatorDataSize(
+	INT32 retVal
+	);
+
+SignHashBadFlags(
+	INT32 retVal
+	);
+
+SignHashInvalidParameter(
+	INT32 retVal
+	);
+
+DecryptBadFlags(
+	INT32 retVal
+	);
+
+DecryptInvalidParameter(
+	INT32 retVal
+	);
+
+FinalizeKeyBadFlags(
+	INT32 retVal
+	);
+
+FinalizeKeyInvalidParameter(
+	INT32 retVal
+	);
+
+SetKeyPropertyBadFlags(
+	INT32 retVal
+	);
+
+SetKeyPropertyInvalidParameter(
+	INT32 retVal
+	);
+
+SetKeyProperty(
+	UNICODESTRING property,
+	UINT32 flags
+	);
+
+GetKeyPropertyBadFlags(
+	INT32 retVal
+	);
+
+GetKeyPropertyInvalidParameter(
+	INT32 retVal
+	);
+
+GetKeyProperty(
+	UNICODESTRING property,
+	UINT32 flags
+	);
+
+SetProviderPropertyBadFlags(
+	INT32 retVal
+	);
+
+SetProviderPropertyInvalidParameter(
+	INT32 retVal
+	);
+
+SetProviderProperty(
+	UNICODESTRING property,
+	UINT32 flags
+	);
+
+GetProviderPropertyBadFlags(
+	INT32 retVal
+	);
+
+GetProviderPropertyInvalidParameter(
+	INT32 retVal
+	);
+
+GetProviderProperty(
+	UNICODESTRING property,
+	UINT32 flags
+	);
+
+CreatePersistedKeyBadFlags(
+	INT32 retVal
+	);
+
+CreatePersistedKeyInvalidParameter(
+	INT32 retVal
+	);
+
+OpenKeyBadFlags(
+	INT32 retVal
+	);
+
+OpenKeyInvalidParameter(
+	INT32 retVal
+	);
+
+OpenStorageProviderInvalidParameter(
+	INT32 retVal
+	);
+
+CredProtectGetFailed(
+	UINT32 retVal
+	);
+
+AllocateProtectedCredRpcBuffer(
+	INT32 retVal
+	);
+
+CredProtectRetrieveSizeFailed(
+	UINT32 retVal
+	);
+
+StringCchLengthPasswordFailed(
+	INT32 retVal
+	);
+
+AllocatePasswordRpcBuffer(
+	INT32 retVal
+	);
+
+CheckNgcUserSignonSupportAccessRight(
+	INT32 retVal
+	);
+
+ConvertSidToStringSid(
+	UINT32 retVal
+	);
+
+LookupAccountNameLocal(
+	UINT32 retVal
+	);
+
+LookupAccountNameLocal(
+	UINT32 retVal
+	);
+
+CryptUnprotectData(
+	UINT32 retVal
+	);
+
+RegQueryValueEx(
+	UINT32 retVal
+	);
+
+RegQueryValueExZeroSize(
+	INT32 retVal
+	);
+
+GetPasswordFromRegistryGetJoinInfo(
+	INT32 retVal
+	);
+
+RegCreateKeyEx(
+	UINT32 retVal
+	);
+
+VaultGetItemPasswordByteArraySizeWrong(
+	INT32 retVal,
+	UINT32 byteArraySize
+	);
+
+VaultGetItemPasswordByteArrayTypeWrong(
+	INT32 retVal,
+	UINT32 valueType
+	);
+
+VaultGetItem(
+	UINT32 retVal
+	);
+
+RegOpenKeyEx(
+	UINT32 retVal
+	);
+
+RegGetValueWithBuffer(
+	UINT32 retVal
+	);
+
+ConvertStringSidToSid(
+	UINT32 retVal,
+	UNICODESTRING userSid
+	);
+
+VaultRemoveItem(
+	UINT32 retVal
+	);
+
+RegDeleteKeyEx(
+	UINT32 retVal
+	);
+
+VaultAddItem(
+	UINT32 retVal
+	);
+
+SystemTimeToFileTime(
+	UINT32 retVal
+	);
+
+RegSetKeyValue(
+	UINT32 retVal
+	);
+
+CacheUserNameAndSidFailed(
+	INT32 retVal
+	);
+
+StringCchLengthStringSidFailed(
+	INT32 retVal
+	);
+
+VaultCreateItemType(
+	UINT32 retVal
+	);
+
+VaultGetItemType(
+	UINT32 retVal
+	);
+
+VaultOpenVault(
+	UINT32 retVal
+	);
+
+TransportRemoveCompanionDeviceProtectorError(
+	INT32 retVal
+	);
+
+TransportFindContainerError(
+	INT32 retVal
+	);
+
+CheckNgcUserSid(
+	INT32 retVal
+	);
+
+AddCompanionDeviceProtectorFailed(
+	INT32 retVal
+	);
+
+AuthenticateGestureFailed(
+	INT32 retVal
+	);
+
+ChangePinFailed(
+	INT32 retVal
+	);
+
+NgcPolicyInitializeFailed(
+	INT32 retVal
+	);
+
+GetContainerMetadataFailed(
+	INT32 retVal
+	);
+
+ConvertStringSidToSidFailed(
+	UINT32 retVal
+	);
+
+BadSoftLockoutInfoMetadata(
+	INT32 retVal
+	);
+
+GetContainerMetadataSoftLockoutInfoFailed(
+	INT32 retVal
+	);
+
+BadGestureCharacteristicsMetadata(
+	INT32 retVal
+	);
+
+GetContainerMetadataGestureCharacteristicsFailed(
+	INT32 retVal
+	);
+
+TransportRemovePrebootProtectorError(
+	INT32 retVal
+	);
+
+TransportAddPrebootProtectorError(
+	INT32 retVal
+	);
+
+CheckNgcUserSignonSupportAccessRight(
+	INT32 retVal
+	);
+
+TransportRemoveBioProtectorError(
+	INT32 retVal
+	);
+
+AddBioProtectorFailed(
+	INT32 retVal
+	);
+
+ClearBioProtectorUpdateNeededFailed(
+	INT32 retVal
+	);
+
+BiometricsDisallowed(
+	INT32 retVal
+	);
+
+GetContainerMetadataPolicyFailed(
+	INT32 retVal
+	);
+
+FindLocalContainerFailed(
+	INT32 retVal
+	);
+
+TransportChangePinError(
+	INT32 retVal
+	);
+
+NgcPolicyInvalidPinError(
+	INT32 retVal
+	);
+
+NgcPolicyValidatePinError(
+	INT32 retVal
+	);
+
+NgcPolicyInitializeError(
+	INT32 retVal
+	);
+
+TransportPolicyMetadataError(
+	INT32 retVal
+	);
+
+RecoverPinSilentAccessDenied(
+	INT32 retVal
+	);
+
+PolicyManagerPinDoesNotSatisfySequencesPolicyError(
+	INT32 retVal
+	);
+
+PolicyManagerValidateSequencesPolicyError(
+	INT32 retVal
+	);
+
+TransportPinNotSupportedError(
+	INT32 retVal
+	);
+
+TransportSoftLockoutInfoMetadataError(
+	INT32 retVal
+	);
+
+TransportGestureCharacteristicsMetadataError(
+	INT32 retVal
+	);
+
+AllocateBlobRpcBufferOutOfMemory(
+	INT32 retVal
+	);
+
+TransportProtectedRecoveryBlobMetadataError(
+	INT32 retVal
+	);
+
+AllocatePolicyRpcBufferOutOfMemory(
+	INT32 retVal
+	);
+
+AllocateContainerInfoOutOfMemory(
+	INT32 retVal
+	);
+
+EnumContainersCheckContainerForHardwareCapabilityFailed(
+	INT32 retVal
+	);
+
+EnumContainersCheckContainerForLogonKeyFailed(
+	INT32 retVal
+	);
+
+EnumContainersCopySidFailed(
+	INT32 retVal
+	);
+
+EnumContainersInvalidSid(
+	UINT32 retVal
+	);
+
+BadContainerImplTypeMetadata(
+	INT32 retVal
+	);
+
+UnexpectedAccountType(
+	INT32 retVal
+	);
+
+CdjJoinInfoNotFound(
+	INT32 retVal
+	);
+
+DsrGetJoinInfoFailed(
+	INT32 retVal
+	);
+
+CheckContainerForLogonKeyWarningNoOnPremConvenienceCredential(
+	INT32 retVal
+	);
+
+DsrIsDeviceJoinedFailed(
+	INT32 retVal
+	);
+
+NgcLocalFindCredentialFailed(
+	INT32 retVal
+	);
+
+GetUserAccountTypeFailed(
+	INT32 retVal
+	);
+
+BadIsLogonCapableMetadata(
+	INT32 retVal
+	);
+
+GetKeyMetadata(
+	INT32 retVal
+	);
+
+StringCopyPropertyFailed(
+	INT32 retVal
+	);
+
+AllocatePropertyRpcBufferOutOfMemory(
+	INT32 retVal
+	);
+
+ActivityStoppedAutomatically(
+	VOID
+	);
+
+StartFailureCannotInitServiceInfo(
+	UINT32 retVal
+	);
+
+FailureInfo(
+	INT32 retVal,
+	UNICODESTRING debugString
+	);
+
+SuccessStart(
+	INT32 retVal,
+	INT64 timeElapsedMs
+	);
+
+StartFailureServiceRunningStatus(
+	INT32 retVal
+	);
+
+MissingRequiredSingleSessionApis(
+	UINT32 retVal
+	);
+
+MissingRequiredApis(
+	UINT32 retVal
+	);
+
+StartFailureServicePendingStatus(
+	INT32 retVal
+	);
+
+StartFailureCtrlHandlerReg(
+	INT32 retVal
+	);
+
+StartFailureStopEventCreate(
+	INT32 retVal
+	);
+
+SvcStart(
+	INT32 retVal
+	);
+
+PassportServiceStartFailed(
+	WIN32ERROR retVal
+	);
+
+SvcStart(
+	INT32 retVal
+	);
+
+SuccessStop(
+	INT32 retVal,
+	INT64 timeElapsedMs,
+	INT64 serviceRunTimeMs
+	);
+
+StopFailureServicePendingStatus(
+	INT32 retVal
+	);
+
+SvcStop(
+	INT32 retVal
+	);
+
+UnregisterWait(
+	UINT32 retVal
+	);
+
+PassportServiceStopFailed(
+	WIN32ERROR retVal,
+	BOOLEAN earlyExit
+	);
+
+StopFailureServiceStoppedStatus(
+	UINT32 retVal
+	);
+
+StopFailureEarlyTermination(
+	INT32 retVal
+	);
+
+SvcStop(
+	INT32 retVal
+	);
+
+WinStationIsSessionRemoteable(
+	UINT32 retVal
+	);
+
+WTSQueryUserToken(
+	UINT32 retVal
+	);
+
+SkippingNgcFirstExperiment(
+	UINT32 sessionId
+	);
+
+FallbackError(
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+FallbackError(
+	UINT64 PartA_PrivTags,
+	SIGNED wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+UMgrEnumerateSessionUsers(
+	INT32 retVal
+	);
+
+UMgrQueryUserToken(
+	INT32 retVal
+	);
+
+UMgrQueryUserTokenNoSessionLikelyGuestAccount(
+	INT32 retVal
+	);
+
+SkippingUserAssociation(
+	UINT32 sessionId,
+	UINT64 userContextToken
+	);
+
+CreateEndpointSecurityDescriptorFailure(
+	INT32 retVal
+	);
+
+CreateDeviceCredentialMgrSecurityDescriptorFailure(
+	INT32 retVal
+	);
+
+CreateDeviceCredentialPresenceSecurityDescriptorFailure(
+	INT32 retVal
+	);
+
+CreateDeviceCredentialSecurityDescriptorFailure(
+	INT32 retVal
+	);
+
+CreateLocalAccountVaultSecurityDescriptorFailure(
+	INT32 retVal
+	);
+
+QueryTransientObjectSecurityDescriptorForNgcLocalAccountVaultInterface(
+	INT32 retVal
+	);
+
+CreateTicketSecurityDescriptorFailure(
+	INT32 retVal
+	);
+
+QueryTransientObjectSecurityDescriptorForNgcTicketInterface(
+	INT32 retVal
+	);
+
+CreateSilentMgmtSecurityDescriptorFailure(
+	INT32 retVal
+	);
+
+CreateMgmtSecurityDescriptorFailure(
+	INT32 retVal
+	);
+
+CreateKspSecurityDescriptorFailure(
+	INT32 retVal
+	);
+
+ServiceNotIdleStoppingDueToPinCache(
+	VOID
+	);
+
+ExportDataBufferTooSmall(
+	INT32 retVal
+	);
+
+ActivityStoppedAutomatically(
+	VOID
+	);
+
+ExportPublicKeyBcryptExportFailed(
+	INT32 retVal
+	);
+
+ExportPublicKeyImportPublicKeyInfoFailed(
+	UINT32 retVal
+	);
+
+ExportPublicKeyBadCertificate(
+	UINT32 retVal
+	);
+
+GetKeyPropertyUnsupportedProperty(
+	INT32 retVal
+	);
+
+EphemeralNCryptImportKey(
+	INT32 retVal
+	);
+
+EphemeralImportKeyUnsupportedKeyLength(
+	INT32 retVal
+	);
+
+EphemeralNCryptSetUsageProperty(
+	INT32 retVal
+	);
+
+EphemeralNCryptSetLengthProperty(
+	INT32 retVal
+	);
+
+EphemeralNCryptCreatePersistedKey(
+	INT32 retVal
+	);
+
+CreateEphemeralKeyInvalidAlgId(
+	UINT32 retVal
+	);
+
+EphemeralExportNCryptExportKey(
+	INT32 retVal
+	);
+
+EphemeralExportInvalidSoftwareHandle(
+	INT32 retVal
+	);
+
+EphemeralNCryptFinalizeKey(
+	INT32 retVal
+	);
+
+EphemeralFinalizeInvalidSoftwareHandle(
+	INT32 retVal
+	);
+
+NgcEphemeralKeyNCryptOpenSoftwareProvider(
+	INT32 retVal
+	);
+
+NgcUserIdKey::InitializeStateForNewPersistedOrImportedKey(
+	VOID
+	);
+
+NgcUtilsShouldAddBioProtector(
+	INT32 retVal
+	);
+
+KeyExistsNoOverwriteFlag(
+	INT32 retVal
+	);
+
+GetFidoAccountInformationFailed(
+	INT32 retVal
+	);
+
+FidoSignPkcs1(
+	INT32 retVal
+	);
+
+FidoSignPkcs1BuildFullHashWithPadding(
+	INT32 retVal
+	);
+
+FidoSignPkcs1HashData(
+	INT32 retVal
+	);
+
+FidoSignPkcs1GetHashLen(
+	INT32 retVal
+	);
+
+FidoSignPkcs1GetAuthenticatorData(
+	INT32 retVal
+	);
+
+FidoSignPkcs1GetAuthenticatorDataGetSize(
+	INT32 retVal
+	);
+
+FidoSignPkcs1GetUvmData(
+	INT32 retVal
+	);
+
+GetKeyPropertyBadMetadata(
+	INT32 retVal
+	);
+
+GetKeyPropertyTransportError(
+	INT32 retVal
+	);
+
+InvalidGestureType(
+	INT32 retVal
+	);
+
+GetBioGestureMetadata(
+	INT32 retVal
+	);
+
+InvalidKeyImplType(
+	INT32 retVal
+	);
+
+FinalizeKeyBadImportKey(
+	INT32 retVal
+	);
+
+DuplicateTransactionTicketForKeyOp(
+	INT32 retVal
+	);
+
+InvalidDispatchGestureOperation(
+	INT32 retVal
+	);
+
+PerformOperationWithGestureDispatchOperationError(
+	INT32 retVal
+	);
+
+PerformOperationWithGestureAuthenticateGestureTransportError(
+	INT32 retVal
+	);
+
+PerformOperationWithGestureAuthenticateNewPinGestureTransportError(
+	INT32 retVal
+	);
+
+PerformOperationWithGestureChangePinTransportError(
+	INT32 retVal
+	);
+
+PerformOperationWithGestureGetPolicyMetatdataTransportError(
+	INT32 retVal
+	);
+
+PerformOperationWithGestureBadSoftLockoutInfoMetadata(
+	INT32 retVal
+	);
+
+PerformOperationWithGestureGetSoftLockoutInfoMetadataTransportError(
+	INT32 retVal
+	);
+
+PerformOperationWithGestureBadGestureCharacteristicsMetadata(
+	INT32 retVal
+	);
+
+PerformOperationWithGestureGetGestureCharacteristicsMetatdataTransportError(
+	INT32 retVal
+	);
+
+PerformOperationWithGestureNoWindowHandle(
+	VOID
+	);
+
+PerformOperationWithGestureSilentFlagWithNoTicket(
+	INT32 retVal
+	);
+
+PerformOperationWithGestureCacheUsed(
+	INT32 retVal,
+	BOOLEAN usedPinCache
+	);
+
+PerformOperationWithGestureTicketProvided(
+	VOID
+	);
+
+PerformOperationWithGestureNeedGestureForTransactionKey(
+	INT32 retVal
+	);
+
+PerformOperationWithGestureIncorrectGestureAuthTicket(
+	INT32 retVal
+	);
+
+PerformOperationWithGestureTsCheckFailed(
+	INT32 retVal
+	);
+
+PerformLocalOperationWithGesture(
+	INT32 retVal,
+	BOOLEAN silent,
+	BOOLEAN gestureRequired,
+	UINT16 ticketUseType,
+	UINT16 operation,
+	BOOLEAN validTicket,
+	BOOLEAN pinBlockProtection,
+	BOOLEAN shouldAddBioProtector,
+	INT32 addBioProtectorStatus,
+	BOOLEAN persistedInPinCache,
+	UINT32 cacheType,
+	UINT32 keyImplType
+	);
+
+PerformOperationWithGestureGetKeyImplType(
+	INT32 retVal
+	);
+
+PerformLocalOperationWithGesture(
+	INT32 retVal,
+	BOOLEAN silent,
+	BOOLEAN gestureRequired,
+	UINT16 ticketUseType,
+	UINT16 operation,
+	BOOLEAN validTicket,
+	BOOLEAN pinBlockProtection,
+	BOOLEAN shouldAddBioProtector,
+	INT32 addBioProtectorStatus,
+	BOOLEAN persistedInPinCache,
+	UINT32 cacheType,
+	UINT32 keyImplType
+	);
+
+CheckNameForNewPersistedKeyInvalidDomainOrAccountId(
+	INT32 retVal
+	);
+
+CheckNameForNewPersistedKeyInvalidContainerId(
+	INT32 retVal
+	);
+
+CheckNameForNewPersistedKeyInvalidContainerSid(
+	INT32 retVal
+	);
+
+TransportCreateClaimFailed(
+	INT32 retVal
+	);
+
+CreateClaimBadKeyState(
+	INT32 retVal
+	);
+
+CreatePersistedKeyInvalidAlgId(
+	UINT32 retVal
+	);
+
+ImportKeyUnsupportedKeyType(
+	INT32 retVal
+	);
+
+ImportKeyUnsupportedKeyLength(
+	INT32 retVal
+	);
+
+PrimeNgcCacheNodeResult(
+	NTSTATUS ntStatus,
+	NTSTATUS ntSubStatus
+	);
+
+GetAuthPackageIdForLsaFailed(
+	INT32 retVal
+	);
+
+LsaConnectUntrustedFailed(
+	INT32 retVal
+	);
+
+RequestThreadpoolWork(
+	INT32 retVal
+	);
+
+NgcPackAuthBufferForLsaFailed(
+	INT32 retVal
+	);
+
+CannotDuplicateTicketForLsaLogonUser(
+	INT32 retVal
+	);
+
+GetAuthTicketForLsaFailed(
+	INT32 retVal
+	);
+
+BuildDefaultDecryptionKeyNameStringForLsaFailed(
+	INT32 retVal
+	);
+
+GetUserNameAndDomainForLsaLogonFailed(
+	INT32 retVal
+	);
+
+SetLastCredProvFailed(
+	INT32 retVal
+	);
+
+ConvertSidToStringSidFailed(
+	UINT32 retVal
+	);
+
+AccountTypeNotSupported(
+	INT32 retVal
+	);
+
+GetUserAccountTypeFailed(
+	INT32 retVal
+	);
+
+NgcUserIdKey::Open(
+	VOID
+	);
+
+DecryptUnsupportedByKey(
+	INT32 retVal
+	);
+
+DecryptBadKeyState(
+	INT32 retVal
+	);
+
+SignHashFidoBadFlags(
+	INT32 retVal
+	);
+
+SignHashBuildFullHashWithPadding(
+	INT32 retVal
+	);
+
+SignHashUnsupportedByFidoKey(
+	INT32 retVal
+	);
+
+SignHashUnsupportedByKey(
+	INT32 retVal
+	);
+
+SignHashBadKeyState(
+	INT32 retVal
+	);
+
+CannotExportNonExportableKey(
+	INT32 retVal
+	);
+
+ExportKeyBadKeyState(
+	INT32 retVal
+	);
+
+ExportPublicKeyTransportError(
+	INT32 retVal
+	);
+
+ExportPublicKeyBadKeyState(
+	INT32 retVal
+	);
+
+GetKeyPropertyBadKeyState(
+	INT32 retVal
+	);
+
+GetKeyPropertyFidoAccountInformationNotFound(
+	INT32 retVal
+	);
+
+NgcUserIdKey::GetProperty(
+	INT32 PinCacheIsGestureRequired
+	);
+
+GetKeyPropertyRetrievedFreeKeyOpTicket(
+	INT32 retVal
+	);
+
+GetContainerStatusKeyPropertyBadMetadata(
+	INT32 retVal
+	);
+
+GetContainerStatusKeyPropertyTransportError(
+	INT32 retVal
+	);
+
+GetContainerStatusKeyPropertyBadKeyState(
+	INT32 retVal
+	);
+
+GetKeyPropertyNotFound(
+	INT32 retVal
+	);
+
+GetKeyPropertyCertificateNotFound(
+	INT32 retVal
+	);
+
+SetKeyPropertyUnsupportedProperty(
+	INT32 retVal
+	);
+
+SetKeyPropertyBadKeyState(
+	INT32 retVal
+	);
+
+SetKeyPropertyInvalidCacheFlags(
+	INT32 retVal
+	);
+
+SetKeyPropertyInvalidDataSize(
+	INT32 retVal
+	);
+
+SetKeyPropertyCancellationId(
+	INT32 retVal
+	);
+
+NgcUserIdKey::SetProperty(
+	UNICODESTRING UseContext
+	);
+
+SetUseContextInvalidData(
+	INT32 retVal
+	);
+
+NgcUserIdKey::SetProperty(
+	BOOLEAN PinCacheIsGestureRequired
+	);
+
+SetKeyPropertyInvalidAuthTicket(
+	INT32 retVal
+	);
+
+SetKeyPropertyInvalidConversion(
+	INT32 retVal
+	);
+
+SetKeyPropertyInvalidExportPolicy(
+	INT32 retVal
+	);
+
+SetKeyPropertyInvalidUiPolicySize(
+	INT32 retVal
+	);
+
+SetKeyPropertyInvalidUiPolicyVersion(
+	INT32 retVal
+	);
+
+SetKeyPropertySizeSmallerThanHeader(
+	INT32 retVal
+	);
+
+SetKeyPropertyUnsupportedKeyLength(
+	INT32 retVal
+	);
+
+CertificatePropagationFailed(
+	INT32 retVal
+	);
+
+ReaderNameNotFound(
+	INT32 retVal
+	);
+
+ReaderAndContainerNameMalformatted(
+	INT32 retVal
+	);
+
+GetReaderAndContainerNameError(
+	INT32 retVal
+	);
+
+WnfPublishWarning(
+	INT32 retVal
+	);
+
+StateDataSetContextKeyNameWarning(
+	INT32 retVal
+	);
+
+CertificateNotRegistered(
+	INT32 retVal
+	);
+
+SetKeyPropertyBadKeyUsage(
+	INT32 retVal
+	);
+
+SetCertificateProperty(
+	NTSTATUS retVal,
+	BOOLEAN isRegisteredAadKey,
+	UINT16 accountType,
+	BOOLEAN setLastUsedCredProv,
+	UINT16 signedBy
+	);
+
+StateDataSetContextUserSidWarning(
+	INT32 retVal
+	);
+
+ConvertSidToStringSidWWarning(
+	UINT32 retVal
+	);
+
+CopySidFailed(
+	UINT32 retVal
+	);
+
+WinBioRemoveCredentialFailed(
+	INT32 retVal
+	);
+
+WinBioRemoveCredentialSucceeded(
+	INT32 retVal
+	);
+
+FinalizeKeyContainerType(
+	INT32 retVal
+	);
+
+FinalizeKeyInvalidKeyState(
+	INT32 retVal
+	);
+
+DeleteKeyTransportError(
+	INT32 retVal
+	);
+
+DeletionOfProtectedKeyBlocked(
+	VOID
+	);
+
+OpenKeyInvalidContainerSid(
+	UINT32 retVal
+	);
+
+NgcKspCheckKeyAccessRight(
+	INT32 retVal
+	);
+
+AddSidToKeyNameCopySid(
+	UINT32 retVal
+	);
+
+AddSidToKeyNameGetUserSid(
+	INT32 retVal
+	);
+
+ExportNextKeyNameOutOfMemory(
+	INT32 retVal
+	);
+
+ExportNextKeyNameCopyAlgId(
+	INT32 retVal
+	);
+
+ExportNextKeyNameCopyName(
+	INT32 retVal
+	);
+
+ExportNextKeyNameListInfo(
+	UINT32 keyRequested,
+	UINT32 maxCount
+	);
+
+BuildKeyNamesEnumKeys(
+	INT32 retVal,
+	GUID containerId
+	);
+
+BuildKeyNamesEnumBadDecryptionKeyScope(
+	INT32 retVal
+	);
+
+CreateClaimMismatchedKeys(
+	INT32 retVal
+	);
+
+GetProviderPropertyUnsupportedProperty(
+	INT32 retVal
+	);
+
+GetProviderPropertyNotFound(
+	INT32 retVal
+	);
+
+SetProviderPropertyUnsupportedProperty(
+	INT32 retVal
+	);
+
+SetProviderPropertyInvalidDataSize(
+	INT32 retVal
+	);
+
+CreateThreadpoolTimerForUserCacheEntry(
+	UINT32 retVal
+	);
+
+NgcContainerCacheEntryState(
+	ANSISTRING operationContext,
+	GUID containerId,
+	BOOLEAN isRemote
+	);
+
+NgcContainerCacheEntryState(
+	ANSISTRING operationContext,
+	GUID containerId,
+	BOOLEAN isRemote
+	);
+
+UserCacheEntryExpiredDueToLockedSession(
+	VOID
+	);
+
+UserCacheEntryExpiredDueToNoSessionAssociation(
+	VOID
+	);
+
+UserCacheEntryState(
+	ANSISTRING operationContext,
+	UINT32 sessionId,
+	BOOLEAN sessionIsLocked,
+	SID userSid,
+	UINT64 userContext,
+	UINT64 ngcContainerListSize
+	);
+
+UserCacheEntryState(
+	ANSISTRING operationContext,
+	UINT32 sessionId,
+	BOOLEAN sessionIsLocked,
+	UINT64 userContext,
+	UINT64 ngcContainerListSize
+	);
+
+QueryActiveSession(
+	UINT32 retVal
+	);
+
+ShellWnfNotification(
+	UINT32 deviceLockState
+	);
+
+UserCacheEntryNotFound(
+	INT32 retVal
+	);
+
+CacheAccessDenied(
+	INT32 retVal
+	);
+
+CacheAccessAllowedForInteractiveUser(
+	VOID
+	);
+
+CacheAccessAllowedForSystem(
+	VOID
+	);
+
+CacheAccessAllowedForLsa(
+	VOID
+	);
+
+PinCacheManager::CheckCacheAccess(
+	INT32 retVal
+	);
+
+make_wnf_subscription(
+	INT32 retVal
+	);
+
+PinCacheManagerDeauthenticate(
+	INT32 retVal
+	);
+
+PinCacheManager::Deauthenticate(
+	GUID containerId,
+	UINT32 reason
+	);
+
+PinCacheManager::RemoveAllUsers(
+	VOID
+	);
+
+PinCacheManager::MarkSessionUnlocked(
+	UINT32 sessionId
+	);
+
+PinCacheManager::MarkSessionLockedAndRemoveCacheWhileUnlockedTickets(
+	UINT32 sessionId
+	);
+
+ConvertSidToStringSidWFailed(
+	INT32 retVal
+	);
+
+PinCacheManager::GetUserSid(
+	VOID
+	);
+
+RemoveUserWithSessionOrContext(
+	UINT32 sessionId,
+	UINT64 userContext
+	);
+
+UserCacheEntryContextChange(
+	UINT64 oldUserContext,
+	UINT64 newUserContext
+	);
+
+UserCacheEntrySessionIdChange(
+	UINT32 oldSessionId,
+	UINT32 newSessionId
+	);
+
+AssociateUserWithSessionAndContext(
+	INT32 retVal,
+	NULL userSid,
+	UINT32 sessionId,
+	UINT64 userContextToken
+	);
+
+PinCacheManager::GetAuthTicket(
+	INT32 retVal
+	);
+
+AddAuthTicketIgnoringDefaultOrInvalidTicket(
+	VOID
+	);
+
+PinCacheManager::AddAuthTicket(
+	INT32 retVal
+	);
+
+NgcUtilsUnpackPinChangeOutputSerializationBufferError(
+	INT32 retVal
+	);
+
+NgcUtilsInvokeCredUIBrokerError(
+	INT32 retVal
+	);
+
+NgcUtilsPackPinChangeInputSerializationBufferError(
+	INT32 retVal
+	);
+
+NgcUtilsCoMemResourceStringAllocCopyError(
+	INT32 retVal
+	);
+
+PromptForGesture(
+	INT32 retVal,
+	HRESULT authError,
+	UINT16 accountType,
+	UINT16 gestureType,
+	BOOLEAN gestureSupported,
+	UNICODESTRING appName,
+	BOOLEAN inProgressiveLockout
+	);
+
+PromptForGesture(
+	INT32 retVal,
+	HRESULT authError,
+	UINT16 accountType,
+	UINT16 gestureType,
+	BOOLEAN gestureSupported,
+	UNICODESTRING appName,
+	BOOLEAN inProgressiveLockout
+	);
+
+FallbackToGenericAppName(
+	INT32 retVal
+	);
+
+DuplicateAuthTicket(
+	INT32 retVal
+	);
+
+GetAuthTicket(
+	INT32 retVal
+	);
+
+NoVpnPluginCapabilities(
+	INT32 retVal
+	);
+
+CheckForVpnPluginCapabilities(
+	INT32 retVal
+	);
+
+IsCallerInAppContainer(
+	INT32 retVal
+	);
+
+TicketGetTicketFromPinCache(
+	INT32 retVal
+	);
+
+CheckTokenCapability(
+	UINT32 retVal
+	);
+
+TicketCreateForSmartCardInvalidParameter(
+	INT32 retVal
+	);
+
+CreateTicketForSmartCard(
+	HRESULT retVal,
+	UINT32 smartCardPolicy,
+	BOOLEAN requesterOwnsContainer
+	);
+
+TicketCreateForNewKeyInvalidParameter(
+	INT32 retVal
+	);
+
+PerformOperationWithGestureAddBioProtectorError(
+	INT32 retVal
+	);
+
+BioProtectorAdded(
+	INT32 retVal
+	);
+
+NgcTicketCreateForKeyOperationsCannotDuplicateTicketForBio(
+	INT32 retVal
+	);
+
+ShouldAddBioProtectorFailed(
+	INT32 retVal
+	);
+
+TicketCreateForKeyOperationsMismatchedKeyContainers(
+	INT32 retVal
+	);
+
+TicketCreateForKeyOperationsInvalidParameter(
+	INT32 retVal
+	);
+
+CheckNgcSharedUserCertificatesAccessRight(
+	INT32 retVal
+	);
+
+ConvertCallerSidToStringSid(
+	UINT32 retVal
+	);
+
+ConvertKeySidToStringSid(
+	UINT32 retVal
+	);
+
+SmartCardTicketUseDisabledByPolicy(
+	INT32 retVal
+	);
+
+UnableToObtainSmartCardTicketPolicySetting(
+	INT32 retVal
+	);
+
+CheckTicketAccessForKeyOperationMissingSid(
+	INT32 retVal
+	);
+
+FindContainerNotFound(
+	INT32 retVal
+	);
+
+FindContainerEnumContainers(
+	INT32 retVal
+	);
+
+FindContainerConvertStringSidToSidW(
+	UINT32 retVal
+	);
+
+FindOwningContainerNoContainerFound(
+	INT32 retVal
+	);
+
+FindKeyEnumKeys(
+	INT32 retVal
+	);
+
+FindKeyEmptySid(
+	INT32 retVal
+	);
+
+NgcFirstOptOut(
+	UINT32 maxSwitchCount,
+	UINT32 accountType
+	);
+
+NgcFirstOptInAgain(
+	VOID
+	);
+
+PolicyManager_GetDeviceLockPolicy_AllowSimpleDevicePassword(
+	INT32 retVal
+	);
+
+InitializeDefaultProPolicy(
+	INT32 retVal
+	);
+
+InitializeDefaultProPinPolicy(
+	INT32 retVal
+	);
+
+InitializeDefaultConsumerPolicy(
+	INT32 retVal
+	);
+
+InitializeDefaultPinPolicy(
+	INT32 retVal
+	);
+
+NgcPolicyUsingDefaults(
+	INT32 retVal
+	);
+
+NgcPolicyUsingDeviceLockPolicy(
+	INT32 retVal
+	);
+
+NgcPolicyUsingMergedPassportCsp(
+	INT32 retVal
+	);
+
+NgcPolicyUsingPassportCsp(
+	INT32 retVal
+	);
+
+DsrGetJoinInfo(
+	INT32 retVal
+	);
+
+NgcPolicyUsingGroupPolicy(
+	INT32 retVal
+	);
+
+PolicyManager.GetManagedPolicy(
+	INT32 retVal,
+	BOOL32 userSidProvided,
+	UNICODESTRING tenantId,
+	UINT32 policyType,
+	BOOL32 isSupportedDeviceLockPolicy,
+	UINT32 biometricsPolicy,
+	UINT32 smartCardPolicy,
+	UINT32 hardWarePolicy,
+	UINT32 pinPolicyMinLength,
+	UINT32 pinPolicyMaxLength,
+	UINT32 pinPolicyUpperCase,
+	UINT32 pinPolicyLowerCase,
+	UINT32 pinPolicyDigits,
+	UINT32 pinPolicySpecialCharacters,
+	UINT32 pinPolicyOtherCharacters,
+	BOOL32 allowSequences,
+	UINT32 history,
+	UINT32 expiration
+	);
+
+PolicyManager.GetManagedPolicy(
+	INT32 retVal,
+	BOOL32 userSidProvided,
+	UNICODESTRING tenantId,
+	UINT32 policyType,
+	BOOL32 isSupportedDeviceLockPolicy,
+	UINT32 biometricsPolicy,
+	UINT32 smartCardPolicy,
+	UINT32 hardWarePolicy,
+	UINT32 pinPolicyMinLength,
+	UINT32 pinPolicyMaxLength,
+	UINT32 pinPolicyUpperCase,
+	UINT32 pinPolicyLowerCase,
+	UINT32 pinPolicyDigits,
+	UINT32 pinPolicySpecialCharacters,
+	UINT32 pinPolicyOtherCharacters,
+	BOOL32 allowSequences,
+	UINT32 history,
+	UINT32 expiration
+	);
+
+OverrideHardwarePolicyFromRegistry(
+	INT32 retVal
+	);
+
+InitializeHardwarePolicyFromRegistry(
+	INT32 retVal
+	);
+
+GetManagedPolicyInternal(
+	INT32 retVal
+	);
+
+MergedPolicies(
+	INT32 retVal,
+	UINT32 NumberOfPoliciesMerged
+	);
+
+MergePolicyFailed(
+	INT32 retVal
+	);
+
+MergingPolicyFromTenant(
+	INT32 retVal,
+	UNICODESTRING TenantId
+	);
+
+EnumTenantIdKeys(
+	INT32 retVal
+	);
+
+QueryKeyInfo(
+	INT32 retVal
+	);
+
+OpenNgcPolicyKey(
+	INT32 retVal
+	);
+
+DevicePolicyRootExistsButReadFailed(
+	INT32 retVal
+	);
+
+ReadProContainerDevicePolicyRootFailed(
+	INT32 retVal
+	);
+
+UserPolicyRootExistsButReadFailed(
+	INT32 retVal
+	);
+
+ReadProContainerUserPolicyRootFailed(
+	INT32 retVal
+	);
+
+InitializeNgcPolicyFailed(
+	INT32 retVal
+	);
+
+InitializePinPolicyFailed(
+	INT32 retVal
+	);
+
+FailedToReadAllowSimpleDevicePasswordPolicy(
+	INT32 retVal
+	);
+
+InvalidExpirationValue(
+	INT32 retVal,
+	INT32 expiration
+	);
+
+FailedToReadDevicePasswordExpirationPolicy(
+	INT32 retVal
+	);
+
+InvalidHistoryValue(
+	INT32 retVal,
+	INT32 history
+	);
+
+FailedToReadDevicePasswordHistoryPolicy(
+	INT32 retVal
+	);
+
+InvalidMinDevicePasswordComplexCharactersValue(
+	INT32 retVal
+	);
+
+FailedToReadMinDevicePasswordComplexCharactersPolicy(
+	INT32 retVal
+	);
+
+FailedToReadAlphanumericDevicePasswordRequiredPolicy(
+	INT32 retVal
+	);
+
+InvalidDevicePasswordLengthValue(
+	INT32 retVal,
+	INT32 minPasswordLength
+	);
+
+FailedToReadMinDevicePasswordLengthPolicy(
+	INT32 retVal
+	);
+
+FailedToReadDevicePasswordEnabledPolicy(
+	INT32 retVal
+	);
+
+DeviceLockPolicyNotSupportedBySku(
+	INT32 retVal
+	);
+
+GpKeyEmpty(
+	INT32 retVal
+	);
+
+IsKeyEmpty(
+	INT32 retVal
+	);
+
+ReadGroupPolicyRootFailed(
+	INT32 retVal
+	);
+
+OpenBioPolicyKeyFailed(
+	INT32 retVal
+	);
+
+ReadPolicyValueDataOutOfRange(
+	INT32 retVal,
+	UNICODESTRING subKey,
+	UNICODESTRING valueName
+	);
+
+InvalidParameter(
+	INT32 retVal
+	);
+
+RegGetValueW(
+	INT32 retVal
+	);
+
+ConvertSidToStringSidFailed(
+	UINT32 retVal
+	);
+
+SetProtectorUpdateNeededRegKey(
+	INT32 retVal,
+	UNICODESTRING SID,
+	UINT32 Value
+	);
+
+RegSetValueProtectorUpdateNeededFailed(
+	INT32 retVal
+	);
+
+RegOpenKeySensorInfoFailed(
+	INT32 retVal
+	);
+
+RegGetValueProtectorUpdateNeededFailed(
+	INT32 retVal
+	);
+
+ConvertPrivateBlobToRsaFullKeyFailedToGetKeyUsage(
+	INT32 retVal
+	);
+
+ConvertPrivateBlobToRsaFullKeyInvalidBlobType(
+	INT32 retVal
+	);
+
+ConvertPrivateBlobToRsaFullKeyFailedToExportKey(
+	INT32 retVal
+	);
+
+ConvertPrivateBlobToRsaFullKeyFailedToFinalizeKey(
+	INT32 retVal
+	);
+
+ConvertPrivateBlobToRsaFullKeyFailedToSetExportPolicy(
+	INT32 retVal
+	);
+
+ConvertPrivateBlobToRsaFullKeyFailedToImportEphemeralKey(
+	INT32 retVal
+	);
+
+ConvertPrivateBlobToRsaFullKeyFailedToOpenSoftwareKsp(
+	INT32 retVal
+	);
+
+RsaFullKeyConstructorKeyBlobTooShort(
+	UINT32 retVal
+	);
+
+RsaFullKeyConstructorBadKeyBlob(
+	UINT32 retVal
+	);
+
+RsaPubKeyConstructorKeyBlobTooShort(
+	UINT32 retVal
+	);
+
+RsaPubKeyConstructorBadKeyBlob(
+	UINT32 retVal
+	);
+
+DeleteLogonCredsAvailableRegValue(
+	UINT32 retVal
+	);
+
+OpenLogonCredsAvailableRegKey(
+	UINT32 retVal
+	);
+
+UnsetLogonCredsAvailableRegValue(
+	UINT32 retVal
+	);
+
+OpenOrCreateLogonCredsAvailableRegKey(
+	UINT32 retVal
+	);
+
+SetLogonCredsAvailableRegValue(
+	UINT32 retVal
+	);
+
+LogonKeysAvailableRegValue(
+	UINT32 valueState
+	);
+
+QueryLogonCredsAvailableRegValue(
+	UINT32 retVal
+	);
+
+ConvertSidToStringSid(
+	INT32 retVal
+	);
+
+CacheGetUserNameAndDomain(
+	SID userSid,
+	UNICODESTRING userName,
+	UNICODESTRING domain
+	);
+
+InvalidSidNameUse(
+	INT32 retVal,
+	UINT32 sidNameUse
+	);
+
+LsaLookupSids2(
+	INT32 retVal
+	);
+
+LookupAccountSidLocalW(
+	UINT32 retVal
+	);
+
+FallBackToLocalSidLookup(
+	INT32 retVal
+	);
+
+LsaOpenPolicy(
+	INT32 retVal
+	);
+
+GetTokenInformation(
+	UINT32 retVal
+	);
+
+GetTokenInformation(
+	INT32 retVal
+	);
+
+GetUserAccountType(
+	INT32 retVal
+	);
+
+LsaLookupUserAccountType(
+	INT32 retVal
+	);
+
+LsaLookupAuthenticationPackageError(
+	INT32 retVal
+	);
+
+RtlUnicodeStringToAnsiStringError(
+	INT32 retVal
+	);
+
+LsaConnectUntrustedError(
+	INT32 retVal
+	);
+
+QueryLsaPidInvalidSize(
+	UINT32 retVal
+	);
+
+QueryLsaPid(
+	UINT32 retVal
+	);
+
+OpenLsaKey(
+	UINT32 retVal
+	);
+
+ParseNgcKeyNameStringAccountId(
+	INT32 retVal
+	);
+
+ParseNgcKeyNameStringTenant(
+	INT32 retVal
+	);
+
+ParseNgcKeyNameStringDomain(
+	INT32 retVal
+	);
+
+BuildNgcKeyNameStringConvertContainerId(
+	INT32 retVal
+	);
+
+ParseNgcKeyNameStringContainerId(
+	INT32 retVal
+	);
+
+BuildNgcKeyNameStringConvertSid(
+	INT32 retVal
+	);
+
+ParseNgcKeyNameStringSid(
+	INT32 retVal
+	);
+
+ParseNgcKeyNameStringInvalidLength(
+	INT32 retVal
+	);
+
+BuildNgcKeyNameStringInvalidLength(
+	INT32 retVal
+	);
+
+KeyState(
+	SID userSid,
+	GUID containerId,
+	UNICODESTRING domain,
+	UNICODESTRING tenantDomain,
+	UNICODESTRING accountId
+	);
+
+KeyState(
+	GUID containerId,
+	UNICODESTRING tenantDomain
+	);
+
+FormatMessageWFailed(
+	UINT32 retVal
+	);
+
+LoadStringWFailed(
+	UINT32 retVal
+	);
+
+InvalidSerializationBufferPinTooLarge(
+	INT32 retVal
+	);
+
+InvalidSerializationBufferTooSmall(
+	INT32 retVal
+	);
+
+InvalidFlags(
+	INT32 retVal,
+	UINT32 flags
+	);
+
+InvalidGestures(
+	INT32 retVal,
+	UINT32 gestures
+	);
+
+UserSidRequired(
+	INT32 retVal
+	);
+
+PinCharCountRequired(
+	INT32 retVal
+	);
+
+CredUIPromptForWindowsCredentialsWFailed(
+	UINT32 retVal
+	);
+
+CreateEventWFailed(
+	UINT32 retVal
+	);
+
+ConvertStringSecurityDescriptorToSecurityDescriptorWFailed(
+	UINT32 retVal
+	);
+
+CredUIPromptForWindowsCredentialsWIsNotPresent(
+	INT32 retVal
+	);
+
+CredUIInvoked(
+	HRESULT retVal
+	);
+
+NgcPolicySerializeError(
+	INT32 retVal
+	);
+
+InvalidSerializationBufferNewPinTooLarge(
+	INT32 retVal
+	);
+
+StringCchPrintfWFailed(
+	INT32 retVal
+	);
+
+RpcServerStopGroupDeactivateError(
+	INT32 retVal
+	);
+
+RpcServerStartGroupActivateError(
+	INT32 retVal
+	);
+
+RpcServerCreateInterfaceGroupError(
+	INT32 retVal
+	);
+
+RpcCallerInfoState(
+	SID appContainerSid,
+	SID userSid,
+	UINT32 sessionId,
+	UINT32 processId
+	);
+
+RpcCallerInfoState(
+	SID appContainerSid,
+	UINT32 sessionId
+	);
+
+I_RpcBindingInqLocalClientPID(
+	UINT32 retVal
+	);
+
+RpcRevertToSelfEx(
+	INT32 retVal
+	);
+
+RpcImpersonateClient(
+	INT32 retVal
+	);
+
+RpcClientBindError(
+	INT64 retVal
+	);
+
+RpcClientCreateBindingHandleError(
+	INT32 retVal
+	);
+
+NoNewBindAttemptsOnUnrecoverableError(
+	INT32 retVal
+	);
+
+RpcClientAlreadyBound(
+	VOID
+	);
+
+RpcClientCreateSecurityDescriptorFailure(
+	UINT32 retVal
+	);
+
+RpcClientCannotCopyServerSid(
+	UINT32 retVal
+	);
+
+RpcClientInvalidServerSid(
+	UINT32 retVal
+	);
+
+EnableDeploymentTask(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId
+	);
+
+StartDevicePresenceCheckInternal(
+	UINT32 Stage
+	);
+
+SebSignalEvent(
+	GUID BrokerEventId,
+	UNICODESTRING PackageName,
+	HRESULT hr
+	);
+
+SebQueryEventPackage(
+	GUID BrokerEventId,
+	HRESULT hr
+	);
+
+PresenceCheckTimerCallback(
+	VOID
+	);
+
+PresenceCheck(
+	BOOLEAN Delayed,
+	UINT32 Scenario
+	);
+
+RollbackDefaultAccountState(
+	HRESULT hrProfile
+	);
+
+UpdatePackageFlag(
+	UNICODESTRING PackageName,
+	UINT32 DeployFlags
+	);
+
+EnableDeploymentTask(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UNICODESTRING user
+	);
+
+EnableDeploymentTask(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId,
+	UNICODESTRING user
+	);
+
+ActivityError(
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+ActivityError(
+	UINT64 PartA_PrivTags,
+	SIGNED wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+EnableDeploymentTask(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+EnableDeploymentTask(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+FoundRemovedPackage(
+	UNICODESTRING PackageName,
+	UNICODESTRING DeviceId
+	);
+
+FoundNewPackage(
+	UNICODESTRING PackageName,
+	UINT32 DeployFlags
+	);
+
+PublishEvent(
+	UINT32 Stage,
+	UINT32 SessionId,
+	UINT32 Scenario,
+	UNICODESTRING DeviceId
+	);
+
+DeviceCredentialMgr::SetDeviceHmac(m_authDataReadyEvent)(
+	UNICODESTRING deviceId
+	);
+
+DeviceCredentialMgr::AllowAuthentication(
+	BOOLEAN isAllowed,
+	UINT32 AuthenticationStage
+	);
+
+StartPresenceCheckTimer(
+	VOID
+	);
+
+SebSignalEvent(
+	UINT32 Stage,
+	GUID BrokerEventId,
+	UNICODESTRING PackageName,
+	DOUBLE TimeDiff,
+	HRESULT hr
+	);
+
+SebQueryEventPackage(
+	UINT32 Stage,
+	GUID BrokerEventId,
+	HRESULT hr
+	);
+
+FailureInfo(
+	HRESULT HResult,
+	ANSISTRING File,
+	UINT32 LineNumber,
+	UNICODESTRING Message
+	);
+
+Info(
+	HRESULT HResult,
+	ANSISTRING File,
+	UINT32 LineNumber,
+	UNICODESTRING Message
+	);
+
+UpdateDeploymentData(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId
+	);
+
+ScanDeploymentData(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId
+	);
+
+UpdateAuthenticationStage(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId
+	);
+
+CheckIfUserSessionIsRequired(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId
+	);
+
+CompleteAuthentication(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId
+	);
+
+AbortAuthentication(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId
+	);
+
+InitializeAuthentication(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId
+	);
+
+CompleteProvisioning(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId
+	);
+
+AbortProvisioning(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId
+	);
+
+InitializeProvisioning(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId
+	);
+
+CheckIfUserSessionIsRequired(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	BOOLEAN userSessionRequired
+	);
+
+CheckIfUserSessionIsRequired(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId,
+	BOOLEAN userSessionRequired
+	);
+
+CheckIfUserSessionIsRequired(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+CheckIfUserSessionIsRequired(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+UpdateAuthenticationStage(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	SIGNED wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function,
+	UINT32 newStage
+	);
+
+UpdateAuthenticationStage(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId,
+	UINT32 newStage
+	);
+
+UpdateAuthenticationStage(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	SIGNED wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+UpdateAuthenticationStage(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+UpdateDeploymentData(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	SIGNED wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+UpdateDeploymentData(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+ActivityIntermediateStop(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+ActivityError(
+	UINT64 PartA_PrivTags,
+	SIGNED wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+ScanDeploymentData(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	SIGNED wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+ScanDeploymentData(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+AbortAuthentication(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UNICODESTRING errorLog
+	);
+
+AbortAuthentication(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId,
+	UNICODESTRING errorLog
+	);
+
+AbortAuthentication(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+AbortAuthentication(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+ShowNotificationMessage(
+	UNICODESTRING deviceName,
+	INT32 messageId
+	);
+
+s_DeviceCredentialRpcCompleteAuthentication(CompleteAuthentication)(
+	HRESULT hr
+	);
+
+CompleteAuthentication(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+CompleteAuthentication(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+InitializeAuthentication(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UNICODESTRING deviceId
+	);
+
+InitializeAuthentication(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId,
+	UNICODESTRING deviceId
+	);
+
+s_DeviceCredentialRpcInitializeAuthentication(CreateInstance)(
+	UNICODESTRING deviceId,
+	HRESULT hr
+	);
+
+InitializeAuthentication(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+InitializeAuthentication(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+AbortProvisioning(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UNICODESTRING errorLog
+	);
+
+AbortProvisioning(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId,
+	UNICODESTRING errorLog
+	);
+
+AbortProvisioning(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+AbortProvisioning(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+ActivityIntermediateStop(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+CompleteProvisioning(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+CompleteProvisioning(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+InitializeProvisioning(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UNICODESTRING deviceId,
+	UNICODESTRING modelNum,
+	UINT32 protocolVersion,
+	INT32 capabilities
+	);
+
+InitializeProvisioning(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId,
+	UNICODESTRING deviceId,
+	UNICODESTRING modelNum,
+	UINT32 protocolVersion,
+	INT32 capabilities
+	);
+
+InitializeProvisioning(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+InitializeProvisioning(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+DeviceCredentialAuthentication::CompleteAuthentication(SetDeviceHmac)(
+	UNICODESTRING deviceId,
+	HRESULT hr
+	);
+
+DeviceCredentialAuthentication::CreateInstance(DisAllowAuthentication)(
+	UNICODESTRING deviceId
+	);
+
+AppInfo(
+	UNICODESTRING appId,
+	UNICODESTRING userSid
+	);
+
+UpdatePresenceState(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId
+	);
+
+RegisterPresenceMonitoring(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId
+	);
+
+UpdatePresenceState(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UNICODESTRING appId,
+	UNICODESTRING deviceId,
+	UINT32 state
+	);
+
+UpdatePresenceState(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId,
+	UNICODESTRING appId,
+	UNICODESTRING deviceId,
+	UINT32 state
+	);
+
+UpdatePresenceState(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+UpdatePresenceState(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+RegisterPresenceMonitoring(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	BOOL32 existingDevice,
+	UNICODESTRING appId,
+	UNICODESTRING deviceId,
+	UINT32 monitoringMode
+	);
+
+RegisterPresenceMonitoring(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId,
+	BOOL32 existingDevice,
+	UNICODESTRING appId,
+	UNICODESTRING deviceId,
+	UINT32 monitoringMode
+	);
+
+RegisterPresenceMonitoring(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+RegisterPresenceMonitoring(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+PolicyNotInitializedBeforeSerialization(
+	INT32 retVal
+	);
+
+CannotMergeUninitializedPolicy(
+	INT32 retVal
+	);
+
+InvalidSerializationPinPolicyLengthOverrun(
+	INT32 retVal
+	);
+
+InvalidSerializationArithmeticOverflow(
+	INT32 retVal
+	);
+
+InvalidSerializationInvalidPinPolicyOffset(
+	INT32 retVal
+	);
+
+NgcPolicyAlreadyInitialized(
+	INT32 retVal
+	);
+
+InvalidSerializationTooSmall(
+	INT32 retVal
+	);
+
+NgcPinPolicyAlreadyInitialized(
+	INT32 retVal
+	);
+
+NgcPolicyValidationFailedInvalidSmartCardPolicy(
+	INT32 retVal
+	);
+
+NgcPolicyValidationFailedInvalidAttestationPolicy(
+	INT32 retVal
+	);
+
+NgcPolicyValidationFailedInvalidVersion(
+	INT32 retVal
+	);
+
+NgcPolicyValidationFailedInvalidbiometricsPolicy(
+	INT32 retVal
+	);
+
+ConversionFromSmartCardPolicyOptionFailedInvalidValue(
+	INT32 retVal
+	);
+
+InvalidPinDigitSequenceNotAllowed(
+	INT32 retVal
+	);
+
+InvalidPinSpecialCharacterNotAllowed(
+	INT32 retVal
+	);
+
+InvalidPinOtherCharacterNotAllowed(
+	INT32 retVal
+	);
+
+InvalidPinLowercaseLetterNotAllowed(
+	INT32 retVal
+	);
+
+InvalidPinDigitNotAllowed(
+	INT32 retVal
+	);
+
+InvalidPinOtherCharacterRequired(
+	INT32 retVal
+	);
+
+InvalidPinUppercaseLetterNotAllowed(
+	INT32 retVal
+	);
+
+InvalidPinDigitRequired(
+	INT32 retVal
+	);
+
+InvalidPinSpecialCharacterRequired(
+	INT32 retVal
+	);
+
+InvalidPinUppercaseLetterRequired(
+	INT32 retVal
+	);
+
+InvalidPinLowercaseLetterRequired(
+	INT32 retVal
+	);
+
+InvalidPinTooManyCharacters(
+	INT32 retVal
+	);
+
+InvalidPinUnknownCharacterClass(
+	INT32 retVal
+	);
+
+PinPolicyRulesNotInitializedBeforeValidation(
+	INT32 retVal
+	);
+
+InvalidPinTooFewCharacters(
+	INT32 retVal
+	);
+
+PinPolicyRules.ValidatePin(
+	INT32 retVal,
+	UINT32 resultValidatePin
+	);
+
+PinPolicyRules.ValidatePin(
+	INT32 retVal,
+	UINT32 resultValidatePin
+	);
+
+InvalidPinPolicySerializationUnsupportedVersion(
+	INT32 retVal
+	);
+
+PinPolicyRulesNotInitializedBeforeSerialization(
+	INT32 retVal
+	);
+
+InvalidPinPolicySerializationWrongSizeV2(
+	INT32 retVal
+	);
+
+InvalidPinPolicySerializationWrongSizeV3(
+	INT32 retVal
+	);
+
+InvalidPinPolicySerializationTooSmall(
+	INT32 retVal
+	);
+
+InvalidPinPolicySerializationWrongSizeV1(
+	INT32 retVal
+	);
+
+PinPolicyRulesAlreadyInitialized(
+	INT32 retVal
+	);
+
+ValidationFailedInvalidExpiration(
+	INT32 retVal
+	);
+
+ValidationFailedAllCharacterClassesDisallowed(
+	INT32 retVal
+	);
+
+ValidationFailedInvalidPinHistoryCount(
+	INT32 retVal
+	);
+
+ValidationFailedInvalidMinOrMaxLength(
+	INT32 retVal
+	);
+
+ValidationFailedInvalidCharacterPolicyOption(
+	INT32 retVal
+	);
+
+InvalidOtherCharactersPolicyOption(
+	INT32 retVal
+	);
+
+InvalidPinPolicySerializationVersion(
+	INT32 retVal
+	);
+
+InvalidDigitsPolicyOption(
+	INT32 retVal
+	);
+
+InvalidSpecialCharactersPolicyOption(
+	INT32 retVal
+	);
+
+InvalidUppercaseCharacterPolicyOption(
+	INT32 retVal
+	);
+
+InvalidLowercaseCharacterPolicyOption(
+	INT32 retVal
+	);
+
+Assert(
+	UINT32 assertVersion,
+	UINT32 rva,
+	UINT32 timestamp,
+	UINT32 imageSize,
+	ANSISTRING imageName,
+	UINT32 count,
+	UINT32 totalHits,
+	UINT32 ModuleCollection,
+	UINT32 GlobalCollection
+	);
+
+ClientRpcRecoverableError(
+	INT32 retVal
+	);
+

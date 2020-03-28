@@ -1,0 +1,46 @@
+ProviderNames:
+	MicrosoftWindowsCodeIntegrityTraceLoggingProvider
+	Microsoft.Windows.Kernel.BootEnvironment
+	Microsoft.Windows.Kernel.BootEnvironment
+
+
+
+**** Events *****
+OsLaunch(
+	UINT32 EventTimestamp,
+	GUID BootApplicationId,
+	UINT64 BootSequence,
+	STRING IO,
+	UINT64 BytesRead,
+	UINT64 BytesWritten,
+	ANSISTRING BootType,
+	BOOL32 MeasuredLaunchPrepared,
+	BOOL32 TcbLaunch,
+	UINT64 UserInputTime,
+	BOOL32 LastShutdownSucceeded,
+	BOOL32 LastBootSucceeded,
+	UINT8 BootAttemptCount,
+	ANSISTRING MenuPolicy,
+	BOOL32 RecoveryEnabled,
+	UINT8 BootStatusPolicy,
+	UINT64 MaxBelow4GbFreeRange,
+	UINT64 MaxAbove4GbFreeRange,
+	BOOL32 FirmwareResetReasonSupplied,
+	UINT8 FirmwareResetReasonPch,
+	UINT32 FirmwareResetReasonPchAdditional,
+	UINT8 FirmwareResetReasonEmbeddedController,
+	UINT32 FirmwareResetReasonEmbeddedControllerAdditional
+	);
+
+Tpm.Provisioning.Winload(
+	UINT64 SrkProvisioningMs
+	);
+
+VSMDRTMKeyReport(
+	BOOLEAN DrtmBoundKeyProvisioned,
+	NTSTATUS CachedCopyStatus,
+	NTSTATUS LKeyGenerationStatus,
+	NTSTATUS SealAndSaveStatus,
+	NTSTATUS UefiKeysStatus
+	);
+

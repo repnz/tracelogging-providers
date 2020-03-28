@@ -1,0 +1,140 @@
+ProviderNames:
+	Microsoft.Web.Platform.Chakra
+
+
+
+**** Events *****
+RecyclerOutOfMemory(
+	ANSISTRING binaryVersion,
+	ANSISTRING binaryFlavor,
+	ANSISTRING binaryArch,
+	ANSISTRING chakraBuildCommit,
+	UNICODESTRING runType,
+	UNICODESTRING Discriminator1,
+	UNICODESTRING Discriminator2,
+	GUID chakraInstanceID,
+	GUID recyclerID,
+	UINT32 AllocationPolicyManagerLimit,
+	UINT32 AllocationPolicyManagerUsage,
+	UINT32 PinnedObjectCount,
+	UINT32 ClosedContextCount
+	);
+
+ScriptContextTelemetry(
+	ANSISTRING binaryVersion,
+	ANSISTRING binaryFlavor,
+	ANSISTRING binaryArch,
+	ANSISTRING chakraBuildCommit,
+	UNICODESTRING runType,
+	UNICODESTRING Discriminator1,
+	UNICODESTRING Discriminator2,
+	GUID chakraInstanceID,
+	GUID activityID,
+	GUID recyclerID,
+	UINT32 hostType,
+	BOOL32 isJSRT,
+	INT64 scriptContextLifeSpanMicros,
+	UINT32 BuiltInCountNameCRCs,
+	UINT32 BuiltInCountValues,
+	UINT32 LanguageFeaturesNameCRCs,
+	UINT32 LanguageFeaturesValues,
+	UINT32 RejitReasonCRCs,
+	UINT32 RejitReasonCounts,
+	UINT32 RejitReasonCountsCap,
+	UINT32 BailoutReasonCRCs,
+	UINT32 BailOutCounts,
+	UINT32 BailOutCountsCap,
+	UINT32 CustomCounters
+	);
+
+ChakraInit(
+	ANSISTRING binaryVersion,
+	ANSISTRING binaryFlavor,
+	ANSISTRING binaryArch,
+	ANSISTRING chakraBuildCommit,
+	UNICODESTRING runType,
+	UNICODESTRING Discriminator1,
+	UNICODESTRING Discriminator2,
+	GUID chakraInstanceID,
+	UINT32 HostingInterface,
+	BOOL32 isJSRT,
+	BOOL32 experimentalFlagEnabled
+	);
+
+DirectCallRaw.PerfStats(
+	ANSISTRING binaryVersion,
+	ANSISTRING binaryFlavor,
+	ANSISTRING binaryArch,
+	ANSISTRING chakraBuildCommit,
+	UNICODESTRING runType,
+	UNICODESTRING Discriminator1,
+	UNICODESTRING Discriminator2,
+	GUID chakraInstanceID,
+	GUID activityId,
+	UINT64 Frequency,
+	UINT64 TridentLoadAddress,
+	BINARY Data
+	);
+
+GCTelemetry_0(
+	ANSISTRING binaryVersion,
+	ANSISTRING binaryFlavor,
+	ANSISTRING binaryArch,
+	ANSISTRING chakraBuildCommit,
+	UNICODESTRING runType,
+	UNICODESTRING Discriminator1,
+	UNICODESTRING Discriminator2,
+	GUID chakraInstanceID,
+	GUID recyclerID,
+	INT64 recyclerLifeSpanMicros,
+	UINT32 recyclerConfigFlags,
+	INT64 microsSinceLastTransmit,
+	UINT32 passCount,
+	INT64 passElapsedTimesMicros,
+	FILETIME passStartTimes,
+	FILETIME lastScriptExecutionTimes,
+	BOOL32 isInScript,
+	BOOL32 isScriptActive,
+	INT64 UIThreadBlockedMicros,
+	INT64 UIThreadBlockedCpuUserTimeMicros,
+	INT64 UIThreadBlockedCpuKernelTimeMicros,
+	UINT32 UIThreadBlockedNameCRCs,
+	INT64 AllocatorByteSizeEntries,
+	UINT32 AllocatorByteSizeEntryNameCRCs,
+	INT64 GCStartProcessingElapsedMicros,
+	INT64 GCEndProcessingElapsedMicros,
+	INT64 GCBucketStatsProcessingElapsedMicros,
+	INT64 HeapInfoUsedBytes,
+	INT64 HeapInfoTotalBytes,
+	UINT32 startPassCollectionState,
+	UINT32 endPassCollectionState,
+	UINT32 collectionStartReason,
+	UINT32 collectionFinishReason,
+	UINT32 collectionStartFlags,
+	UINT32 PinnedObjectCount,
+	UINT32 ClosedContextCount,
+	INT64 ThreadPageAllocator_DecommitStats,
+	INT64 LeafPageAllocator_DecommitStats,
+	INT64 LargeBlockPageAllocator_DecommitStats,
+	INT64 WithBarrierPageAllocator_DecommitStats
+	);
+
+RecyclerUtilization_0(
+	UINT64 heapTotalBytes,
+	UINT64 heapUsedBytes,
+	DOUBLE heapUsageRatio
+	);
+
+GCTelemetryError(
+	ANSISTRING binaryVersion,
+	ANSISTRING binaryFlavor,
+	ANSISTRING binaryArch,
+	ANSISTRING chakraBuildCommit,
+	UNICODESTRING runType,
+	UNICODESTRING Discriminator1,
+	UNICODESTRING Discriminator2,
+	GUID chakraInstanceID,
+	GUID recyclerID,
+	ANSISTRING errorMessage
+	);
+

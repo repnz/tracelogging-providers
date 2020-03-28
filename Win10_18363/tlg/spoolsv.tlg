@@ -1,0 +1,99 @@
+ProviderNames:
+	Microsoft.Windows.Print.SpoolerService
+	Microsoft.Windows.Print.DevmodeSizePatch
+	Microsoft.Windows.Print.SplLib
+
+
+
+**** Events *****
+ForcedShutdown(
+	UINT32 Pid,
+	HEXINT32 Status,
+	HEXINT32 LastError
+	);
+
+StateChanged(
+	UINT32 Pid,
+	HEXINT32 PreviousStatus,
+	HEXINT32 NewStatus
+	);
+
+FixDevmode(
+	NULL PrinterName,
+	UINT32 DevmodeType,
+	UINT32 Signature,
+	UNICODESTRING Fix,
+	UINT16 Size
+	);
+
+FallbackError(
+	UINT64 PartA_PrivTags,
+	SIGNED wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+FallbackError(
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+MRUEstablishedValueChanged(
+	UINT32 IsMRUEstablished,
+	UINT32 ErrorCode
+	);
+
+DefaultPrinterModeChanged(
+	UINT32 DefaultPrinterMode,
+	UINT32 ErrorCode
+	);
+
+DefaultPrinterChanged(
+	NULL OldPrinterName,
+	NULL NewPrinterName,
+	INT32 IsSelectedBySpooler,
+	UINT32 DefaultPrinterMode,
+	UNICODESTRING UserSid,
+	UNICODESTRING DebugHint,
+	UINT32 HResult
+	);
+
+ChooseDefaultPrinter(
+	INT32 ReturnValue,
+	NULL ReturnedDefaultPrinter,
+	NULL ChosenDefaultPrinter,
+	NULL PrinterConnectionName,
+	NULL VirtualPrinterName,
+	UNICODESTRING TSPrinterName,
+	UNICODESTRING DebugHint
+	);
+

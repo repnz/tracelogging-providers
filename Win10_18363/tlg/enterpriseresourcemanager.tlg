@@ -1,0 +1,217 @@
+ProviderNames:
+	Microsoft.Windows.DeviceManagement.SessionManagement
+	Microsoft.Windows.EnterpriseManagement.Enrollment
+	Microsoft.Windows.EnterpriseManagement.PolicyManager
+	Microsoft.Windows.DeviceManagement.OmaDmApiProvider
+	Microsoft.Windows.EnterpriseManagement.ResourceManager
+	Microsoft.Windows.DeviceManagement.OmaDmClient
+	Microsoft.Windows.DeviceManagement.ConfigManager2
+	Microsoft.Windows.EnterpriseManagement.DeclaredConfiguration
+	Microsoft.Windows.DeviceManagement.DevDetailCsp
+	Microsoft.Windows.DeviceManagement.OMADMPRC
+	Microsoft.Windows.EnterpriseManagement.ResourceManagerUnenrollHook
+	Microsoft.Windows.DeviceManagement.SecurityPolicyCsp
+	Microsoft.Windows.DeviceManagement.DmAccCsp
+	Microsoft.Windows.DeviceManagement.DevInfo
+	Microsoft.Windows.EnterpriseManagement.ConfigManagerHook
+	Microsoft-Windows-DeviceManagement-W7NodeProcessor
+	Microsoft.Windows.EMPS.Enrollment
+
+
+
+**** Events *****
+IsDoNotTrackPath(
+	UNICODESTRING L"Start"
+	);
+
+RemoveAllIgnoredUri(
+	HRESULT HResult
+	);
+
+IsDoNotTrackPath(
+	UNICODESTRING L"Error reading Path",
+	HRESULT HResult
+	);
+
+SaveIgnoredURI(
+	INT32 URINumber,
+	UNICODESTRING URIPath
+	);
+
+WriteResource(
+	UNICODESTRING L"Error Finding Enrollment",
+	HRESULT HResult
+	);
+
+RemoveAllIgnoredUri(
+	UNICODESTRING L"Start"
+	);
+
+WriteResource(
+	UNICODESTRING L"Invalid Input Arguments",
+	HRESULT HResult
+	);
+
+DeleteResource(
+	UNICODESTRING EnrollmentID,
+	UNICODESTRING UserSID,
+	UNICODESTRING ContextID,
+	UNICODESTRING URIPath,
+	INT32 ResourceType
+	);
+
+WriteResource(
+	SYSTEMTIME WriteEndTime,
+	HRESULT HRESULTForResourceProvision
+	);
+
+WriteResource(
+	UNICODESTRING L"Error Checking DoNotTrack Path",
+	HRESULT HResult
+	);
+
+WriteResource(
+	UNICODESTRING EnrollmentID,
+	UNICODESTRING UserSID,
+	UNICODESTRING ContextID,
+	UNICODESTRING URIPath,
+	INT32 ResourceType
+	);
+
+RemoveAllIgnoredUri(
+	HRESULT DeleteRegKey
+	);
+
+WriteResource(
+	UNICODESTRING L"DoNotTrack Path"
+	);
+
+WriteResource(
+	SYSTEMTIME WriteStartTime
+	);
+
+DeleteResource(
+	UNICODESTRING L"Invalid Input Arguments",
+	HRESULT HResult
+	);
+
+DeleteResource(
+	UNICODESTRING L"DeleteResourcePathFromDifferentSource Failed. ERROR_FILE_NOT_FOUND can be expected.",
+	HRESULT HResult
+	);
+
+WriteResource(
+	UNICODESTRING L"Server not Enrolled",
+	HRESULT HResult
+	);
+
+DeleteResource(
+	SYSTEMTIME DeleteEndTime,
+	HRESULT HRESULTForResourceDelete
+	);
+
+SaveIgnoredURI(
+	HRESULT HResult
+	);
+
+DeleteResource(
+	UNICODESTRING L"Server not Enrolled",
+	HRESULT HResult
+	);
+
+DeleteResource(
+	SYSTEMTIME DeleteStartTime
+	);
+
+IsDoNotTrackPath(
+	BOOL32 pfDoNotTrack,
+	HRESULT HResult
+	);
+
+DeleteResource(
+	UNICODESTRING L"Invalid Enrollment",
+	HRESULT HResult
+	);
+
+IsDoNotTrackPath(
+	UNICODESTRING L"DoNotTrack Path",
+	HRESULT HResult
+	);
+
+SaveIgnoredURI(
+	UNICODESTRING L"Start"
+	);
+
+SearchAllowedCspList(
+	UNICODESTRING L"CSP not in tracked list",
+	HRESULT HResult
+	);
+
+SearchAllowedCspList(
+	UNICODESTRING Opening regkey,
+	HRESULT HResult
+	);
+
+SearchAllowedCspList(
+	ANSISTRING "Get subpath",
+	HRESULT HResult
+	);
+
+SearchAllowedCspList(
+	ANSISTRING "Enum regkey",
+	HRESULT HResult
+	);
+
+SearchAllowedCspList(
+	ANSISTRING "InitializeFromString",
+	HRESULT HResult
+	);
+
+SearchAllowedCspList(
+	ANSISTRING "CoCreateInstance",
+	HRESULT HResult
+	);
+
+SearchAllowedCspList(
+	UNICODESTRING L"Error finding CSP",
+	HRESULT HResult
+	);
+
+SearchAllowedCspList(
+	UNICODESTRING L"Caught exception",
+	HRESULT HResult
+	);
+
+WriteResource(
+	UNICODESTRING pszMessage,
+	HRESULT HResult,
+	ANSISTRING __TlgCV__
+	);
+
+VerifyIfResourceIsModifiableByDifferentConfigurationSource(
+	UNICODESTRING ExistingEnrollmentID,
+	UINT32 ExistingEnrollmentType,
+	UNICODESTRING NewEnrollmentID,
+	UINT32 NewEnrollmentType,
+	UNICODESTRING ResourceURI,
+	UINT32 Command,
+	BOOL32 AllowAccess,
+	HRESULT HResult,
+	ANSISTRING __TlgCV__
+	);
+
+DeleteResourceFromDifferentSource(
+	UNICODESTRING ExistingEnrollmentID,
+	UNICODESTRING ResourceURI,
+	UINT32 Command,
+	UINT32 UserType,
+	HRESULT HResult,
+	ANSISTRING __TlgCV__
+	);
+
+DeleteResource(
+	UNICODESTRING pszMessage,
+	HRESULT HResult,
+	ANSISTRING __TlgCV__
+	);
+

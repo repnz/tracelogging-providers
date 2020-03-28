@@ -1,0 +1,99 @@
+ProviderNames:
+	Microsoft.Windows.CleanPC
+	Microsoft.Windows.SystemReset
+	Microsoft.Windows.Upgrade.Uninstall
+	Microsoft.Windows.Upgrade.Uninstall
+
+
+
+**** Events *****
+RepairNeeded(
+	GUID sessionID,
+	UNICODESTRING repairNeeded
+	);
+
+PBRCorruptionRepairOption(
+	GUID sessionID,
+	INT32 errorCode,
+	UINT32 cbsSessionOption,
+	INT32 meteredConnection
+	);
+
+CleanPCRemovedAppList(
+	UNICODESTRING AppList
+	);
+
+UninstallFailed(
+	HEXINT32 hr,
+	UINT32 failureReason
+	);
+
+UninstallFinalizedAndRebootTriggered(
+	VOID
+	);
+
+UninstallGoBackButtonClicked(
+	VOID
+	);
+
+UninstallCheckUpdatesButtonClicked(
+	VOID
+	);
+
+UninstallPasswordCancelButtonClicked(
+	VOID
+	);
+
+UninstallNeedToKnowCancelButtonClicked(
+	VOID
+	);
+
+UninstallReasonCancelButtonClicked(
+	VOID
+	);
+
+UninstallGoBackCancelButtonClicked(
+	VOID
+	);
+
+FallbackError(
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+FallbackError(
+	UINT64 PartA_PrivTags,
+	SIGNED wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+

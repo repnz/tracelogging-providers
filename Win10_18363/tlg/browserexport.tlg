@@ -1,0 +1,126 @@
+ProviderNames:
+	Microsoft.Windows.App.Browser
+
+
+
+**** Events *****
+BrowserDataMigration_ExportCookie(
+	GUID sessionID,
+	GUID userInputID,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	UNICODESTRING pwszName,
+	UNICODESTRING pwszValue,
+	UNICODESTRING pwszDomain,
+	UNICODESTRING pwszPath,
+	UINT32 dwFlags,
+	FILETIME ftExpires,
+	INT32 fExpiresSet
+	);
+
+BrowserExport_FaviconImageCount(
+	ANSISTRING browser,
+	INT32 count,
+	BOOL32 UTCReplace_AppSessionGuid,
+	GUID userInputID
+	);
+
+BrowserExport_StartupError(
+	UNICODESTRING error,
+	BOOL32 UTCReplace_AppSessionGuid,
+	GUID userInputID
+	);
+
+BrowserExport_GetLowCookies(
+	ANSISTRING browser,
+	INT32 hresult,
+	BOOL32 UTCReplace_AppSessionGuid,
+	GUID userInputID
+	);
+
+BrowserExport_Exception(
+	ANSISTRING exceptionMessage,
+	BOOL32 UTCReplace_AppSessionGuid,
+	GUID userInputID
+	);
+
+BrowserExport_HistoryHeuristics(
+	ANSISTRING browser,
+	INT32 totalCount,
+	INT32 countForLastHour,
+	INT32 countForLastDay,
+	INT32 countForLastWeek,
+	INT32 countForLastMonth,
+	BOOL32 UTCReplace_AppSessionGuid,
+	GUID userInputID
+	);
+
+BrowserExport_StartupArgs(
+	UNICODESTRING commandLine,
+	BOOL32 UTCReplace_AppSessionGuid
+	);
+
+BrowserExport_FormDataExport(
+	ANSISTRING browser,
+	INT32 hresult,
+	INT32 count,
+	BOOL32 UTCReplace_AppSessionGuid,
+	GUID userInputID
+	);
+
+BrowserExport_End(
+	BOOL32 UTCReplace_AppSessionGuid,
+	GUID userInputID
+	);
+
+BrowserExport_BrowserChoice(
+	UNICODESTRING browser,
+	BOOL32 UTCReplace_AppSessionGuid,
+	GUID userInputID
+	);
+
+BrowserExport_HistoryCount(
+	ANSISTRING browser,
+	INT32 count,
+	BOOL32 UTCReplace_AppSessionGuid,
+	GUID userInputID
+	);
+
+BrowserExport_CookieCount(
+	ANSISTRING browser,
+	INT32 count,
+	BOOL32 UTCReplace_AppSessionGuid,
+	GUID userInputID
+	);
+
+BrowserExport_FaviconMappingCount(
+	ANSISTRING browser,
+	INT32 count,
+	BOOL32 UTCReplace_AppSessionGuid,
+	GUID userInputID
+	);
+
+BrowserExport_LoginCount(
+	ANSISTRING browser,
+	INT32 count,
+	BOOL32 UTCReplace_AppSessionGuid,
+	GUID userInputID
+	);
+
+BrowserExport_DataStoreInitializationError(
+	UNICODESTRING browser,
+	ANSISTRING error,
+	BOOL32 UTCReplace_AppSessionGuid,
+	GUID userInputID
+	);
+
+BrowserExport_Begin(
+	BOOL32 UTCReplace_AppSessionGuid,
+	GUID userInputID
+	);
+
+BrowserExport_OutputFile(
+	INT32 dataTypeCount,
+	BOOL32 UTCReplace_AppSessionGuid,
+	GUID userInputID
+	);
+

@@ -1,0 +1,94 @@
+ProviderNames:
+	TetheringService
+	TelemetryAssert
+	TelemetryAssertDiagTrack
+
+
+
+**** Events *****
+CheckEntitlement(
+	UNICODESTRING BtMacAddr,
+	BOOL32 DllEntitlementRequired,
+	BOOL32 MBAEEntitlementRequired,
+	HEXINT32 OperationResult
+	);
+
+BTPanRemoteStart(
+	UNICODESTRING BtMacAddr,
+	GUID PublicInterfaceGuid,
+	GUID BluetoothInterfaceGuid,
+	HEXINT32 OperationResult
+	);
+
+StartSharingEnd(
+	UNICODESTRING BtMacAddr,
+	GUID PublicInterfaceGuid,
+	GUID PrivateInterfaceGuid,
+	UINT32 PublicInterfaceNdisPhysicalMediumType,
+	UINT32 PrivateInterfaceNdisPhysicalMediumType,
+	HEXINT32 SharingOptions,
+	HEXINT32 OperationResult
+	);
+
+StartSharingStart(
+	UNICODESTRING BtMacAddr,
+	GUID PublicInterfaceGuid,
+	GUID PrivateInterfaceGuid,
+	HEXINT32 SharingOptions
+	);
+
+ActivityStoppedAutomatically(
+	VOID
+	);
+
+StopTetheringSession(
+	BOOL32 Async,
+	BOOL32 MagicTethering,
+	BOOL32 BluetoothPan,
+	BOOL32 AddBluetoothPeer,
+	HEXINT32 SessionFlags,
+	BOOL32 Mobile,
+	HEXINT32 SharingOptions,
+	BOOL32 DllEntitlementRequired,
+	BOOL32 MbaeEntitlementRequired,
+	HEXINT32 EntitlementCheckHResult,
+	UNICODESTRING BtMacAddr,
+	UINT32 PublicInterfaceIndex,
+	GUID PublicInterfaceGuid,
+	UINT32 PublicInterfaceNdisPhysicalMediumType,
+	UINT32 PrivateInterfaceIndex,
+	GUID PrivateInterfaceGuid,
+	UINT32 PrivateInterfaceNdisPhysicalMediumType,
+	BOOL32 ChangedFromWiFiToBluetooth,
+	BOOL32 CanSwitchFromWifiToBluetooth,
+	BOOL32 AskedForUserPermission,
+	HRESULT StartPowerManagementHResult,
+	HRESULT EnablePublicInterfaceHResult,
+	HRESULT EnablePrivateInterfaceHResult,
+	HRESULT StartSharingHResult,
+	HRESULT StopSharingHResult,
+	UINT32 StopReason,
+	UINT32 MaxConnectedPeers,
+	UINT64 SessionDuration
+	);
+
+StartTetheringSession(
+	BOOL32 Async,
+	BOOL32 MagicTethering,
+	BOOL32 BluetoothPan,
+	BOOL32 AddBluetoothPeer,
+	HEXINT32 SessionFlags
+	);
+
+Assert(
+	UINT32 assertVersion,
+	UINT32 rva,
+	UINT32 timestamp,
+	UINT32 imageSize,
+	ANSISTRING imageName,
+	UINT32 count,
+	UINT32 totalHits,
+	UINT32 ModuleCollection,
+	UINT32 GlobalCollection
+	);
+

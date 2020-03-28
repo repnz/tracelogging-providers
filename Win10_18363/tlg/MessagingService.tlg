@@ -1,0 +1,146 @@
+ProviderNames:
+	Microsoft.Windows.Messaging.Service
+	TelemetryAssert
+	TelemetryAssertDiagTrack
+
+
+
+**** Events *****
+MessagingService::OnTransportsIdle(
+	VOID
+	);
+
+MessagingService::OnStopping(
+	BOOLEAN DeviceShutdown
+	);
+
+MessagingService::OnStarted(
+	VOID
+	);
+
+TransportManager::OnTaskCompleted(
+	UNICODESTRING Comment
+	);
+
+TransportManager::ScheduleTask(
+	UNICODESTRING Comment
+	);
+
+TransportManager::Shutdown(
+	VOID
+	);
+
+TransportManager::_StopIdleTimer(
+	VOID
+	);
+
+TransportManager::_StartIdleTimer(
+	VOID
+	);
+
+TransportManager::Start(
+	VOID
+	);
+
+TransportManager::_Initialize(
+	INT32 IdleTimeout(ms)
+	);
+
+ReceiveSms(
+	UNICODESTRING messageId,
+	UNICODESTRING class
+	);
+
+Error(
+	INT32 HRESULT,
+	ANSISTRING Location,
+	UINT32 Line Number
+	);
+
+Error Propagated(
+	INT32 HRESULT,
+	ANSISTRING Location,
+	UINT32 Line Number
+	);
+
+TextMessageTransport::Shutdown(
+	VOID
+	);
+
+TextMessageTransport::Start(
+	BOOLEAN HasEmbeddedModem
+	);
+
+IncomingTextMessageHandler::_RegisterForTextMessages(
+	UNICODESTRING FilterXML
+	);
+
+IncomingTextMessageHandler::Start(
+	VOID
+	);
+
+IncomingTextMessageHandler::_OnNewMessage(
+	UNICODESTRING Comment
+	);
+
+IncomingTextMessageHandler::_OnNewMessageEvent(
+	INT32 HRESULT
+	);
+
+IncomingTextMessageHandler::Shutdown(
+	VOID
+	);
+
+IncomingTextMessageHandler::_Initialize(
+	VOID
+	);
+
+ReceiveTextMessageTask::_CompleteTask(
+	VOID
+	);
+
+ReceiveTextMessageTask::_FindReplacementMessage(
+	UNICODESTRING Comment
+	);
+
+ReceiveTextMessageTask::_ParseTrigger(
+	INT32 SmsMessageType
+	);
+
+ReceiveTextMessageTask::_ParseTrigger(
+	INT32 HRESULT
+	);
+
+ReceiveTextMessageTask::_ParseTrigger(
+	UNICODESTRING Comment,
+	INT32 SmsMessageType
+	);
+
+ReceiveTextMessageTask::Execute(
+	VOID
+	);
+
+ReceiveTextMessageTask::Execute::<lambda_6b13b3ca9573ba6e620ea2eff0e54e6a>::operator ()(
+	INT32 HRESULT
+	);
+
+ReceiveTextMessageTask::_Initialize(
+	VOID
+	);
+
+TextMessage::_Initialize(
+	VOID
+	);
+
+Assert(
+	UINT32 assertVersion,
+	UINT32 rva,
+	UINT32 timestamp,
+	UINT32 imageSize,
+	ANSISTRING imageName,
+	UINT32 count,
+	UINT32 totalHits,
+	UINT32 ModuleCollection,
+	UINT32 GlobalCollection
+	);
+

@@ -1,0 +1,110 @@
+ProviderNames:
+	Microsoft.Windows.Bluetooth.QuickPair
+	Microsoft.Windows.Bluetooth.Battery
+
+
+
+**** Events *****
+QuickPairFailedToDisplayToastUnknownDevice(
+	UINT64 TickCountInMS,
+	UINT16 ToastType,
+	HRESULT StatusErrorCode
+	);
+
+QuickPairUserActionUnknownDevice(
+	UINT64 TickCountInMS,
+	UINT16 UserAction
+	);
+
+QuickPairUserAction(
+	GUID QuickPairEngineSessionId,
+	UINT64 TickCountInMS,
+	UINT16 UserAction,
+	UNICODESTRING BTDeviceAddressType,
+	UINT64 BTDeviceAddress
+	);
+
+QuickPairFailedToDisplayToast(
+	GUID QuickPairEngineSessionId,
+	UINT64 TickCountInMS,
+	UINT16 ToastType,
+	UNICODESTRING BTDeviceAddressType,
+	UINT64 BTDeviceAddress,
+	HRESULT StatusErrorCode
+	);
+
+QuickPairDeviceInRange(
+	GUID ProximitySessionId,
+	GUID QuickPairEngineSessionId,
+	UINT8 Scenario,
+	UINT8 SubscenarioString,
+	UINT64 TickCountInMS,
+	UNICODESTRING BTDeviceAddressType,
+	UINT64 BTDeviceAddress
+	);
+
+QuickPairDeviceOutOfRange(
+	GUID ProximitySessionId,
+	GUID QuickPairEngineSessionId,
+	UINT64 TickCountInMS,
+	UNICODESTRING BTDeviceAddressType,
+	UINT64 BTDeviceAddress
+	);
+
+QuickPairUnregister(
+	GUID ProximitySessionId,
+	GUID QuickPairEngineSessionId,
+	UINT64 TickCountInMS
+	);
+
+QuickPairRegister(
+	GUID ProximitySessionId,
+	GUID QuickPairEngineSessionId,
+	UINT64 TickCountInMS
+	);
+
+FallbackError(
+	UINT64 PartA_PrivTags,
+	SIGNED wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+FallbackError(
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+BluetoothBatteryChargedEvent(
+	VOID
+	);
+

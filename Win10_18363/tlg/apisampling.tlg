@@ -1,0 +1,86 @@
+ProviderNames:
+	Microsoft.Windows.DynamicApi.Data
+
+
+
+**** Events *****
+ErrorEvent(
+	UINT32 errorType,
+	UINT32 counts,
+	UINT32 error
+	);
+
+Coverage(
+	UINT64 PartA_PrivTags,
+	UINT32 ResetCount,
+	UINT32 SaveCount,
+	UINT32 EventIndex,
+	UINT32 SampleCount,
+	UINT32 ModuleCount,
+	UINT32 RemainingSampleCount,
+	UINT32 RemainingModuleCount,
+	UINT32 DataVersion,
+	ANSISTRING Data
+	);
+
+WerUpload(
+	UINT64 PartA_PrivTags,
+	GUID ReportGuid,
+	UINT32 ResetCount,
+	UINT32 SaveCount,
+	UINT32 UploadCount,
+	HRESULT HRESULT
+	);
+
+UtcUpload(
+	UINT64 PartA_PrivTags,
+	UINT32 ResetCount,
+	UINT32 SaveCount,
+	HRESULT HRESULT,
+	UINT32 PickedSampleCount,
+	UINT32 PickedModuleCount,
+	UINT32 UpdatedSampleCount,
+	UINT32 UpdatedModuleCount
+	);
+
+FallbackError(
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+FallbackError(
+	UINT64 PartA_PrivTags,
+	SIGNED wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+

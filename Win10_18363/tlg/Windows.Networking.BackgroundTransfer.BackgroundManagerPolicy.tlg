@@ -1,0 +1,297 @@
+ProviderNames:
+	Microsoft.Windows.Networking.BackgroundTransfer.BackgroundManagerPolicy
+
+
+
+**** Events *****
+Ignoring policy condition change for work item: a new evaluation is already pending.(
+	VOID
+	);
+
+Ignoring policy condition change for work item: waiting for Resource Manager before considering reevaluation.(
+	VOID
+	);
+
+OnPolicyConditionsChangedForWorkItem arguments(
+	GUID workItemId,
+	UNICODESTRING psmKey,
+	UNICODESTRING entryPoint,
+	UNICODESTRING appliedResourceSet,
+	UNICODESTRING state
+	);
+
+ReevaluateActiveWorkItem results(
+	UNICODESTRING newEvaluation,
+	BOOL32 canceling
+	);
+
+BackgroundTransferPolicy::Evaluate failed. Exiting ReevaluateActiveWorkItem without applying any changes.(
+	HRESULT evaluateHResult
+	);
+
+BackgroundTransferPolicy::ReevaluateActiveWorkItem arguments(
+	GUID workItemId,
+	UNICODESTRING appliedResourceSet,
+	UNICODESTRING oldState
+	);
+
+BackgroundTransferPolicy::Evaluate failed. Exiting ReevaluatePendingWorkItem without applying any changes.(
+	HRESULT evaluateHResult
+	);
+
+BackgroundTransferPolicy::ReevaluatePendingWorkItem arguments(
+	GUID workItemId,
+	UNICODESTRING appliedResourceSet,
+	UNICODESTRING oldState
+	);
+
+OnBackgroundAccessStateChanged arguments(
+	UNICODESTRING packageFullName,
+	UNICODESTRING newState
+	);
+
+OnTaskCompleted(
+	UNICODESTRING psmKey,
+	GUID workItemId,
+	GUID taskInstanceId
+	);
+
+OnCancelOrAbort(
+	UNICODESTRING psmKey,
+	GUID workItemId,
+	GUID taskInstanceId
+	);
+
+OnTaskDiscarded(
+	GUID workItemId
+	);
+
+OnTaskActivated(
+	UNICODESTRING psmKey,
+	GUID workItemId,
+	GUID taskInstanceId
+	);
+
+OnTaskActivating(
+	GUID workItemId,
+	GUID taskInstanceId
+	);
+
+OnPolicyShutdown(
+	VOID
+	);
+
+OnPolicyInitialize(
+	VOID
+	);
+
+EvaluateActivationAction result(
+	GUID workItemId,
+	UNICODESTRING psmKey,
+	UNICODESTRING entryPoint,
+	UNICODESTRING StringifyActivationAction(*action)
+	);
+
+BackgroundTransferPolicy::Evaluate failed, proceeding as if it Denied(
+	HRESULT evaluateHResult
+	);
+
+Work item is already active - ignoring(
+	VOID
+	);
+
+EvaluateActivationAction arguments(
+	GUID workItemId,
+	UNICODESTRING psmKey,
+	UNICODESTRING entryPoint
+	);
+
+OnInterruptiveUIStateChanged arguments(
+	UNICODESTRING psmKey,
+	BOOLEAN hasInterruptiveUI
+	);
+
+OnBatterySaverStateChanged arguments(
+	BOOLEAN enabled
+	);
+
+OnApplicationStateChanged arguments(
+	SID userSid,
+	UNICODESTRING psmKey,
+	UNICODESTRING state
+	);
+
+Calling IBackgroundManagerControl3::GetApplicationInterruptiveUIStateByPsmKey(
+	UNICODESTRING psmKey
+	);
+
+Calling IBackgroundManagerControl::GetBatterySaverEnabledState(
+	VOID
+	);
+
+Calling IBackgroundManagerControl::GetBackgroundAccessState(
+	UNICODESTRING psmKey
+	);
+
+Calling IBackgroundManagerControl::ActivateDeferredWorkItem(
+	GUID workItemId
+	);
+
+Calling IBackgroundManagerControl::RescheduleTask(
+	GUID workItemId,
+	GUID taskInstanceId
+	);
+
+Calling IBackgroundManagerControl::CancelTask(
+	GUID workItemId
+	);
+
+Calling IBackgroundManagerControl::TryAcquireResourceSet(
+	GUID workItemId,
+	UNICODESTRING resourceSetType,
+	BOOLEAN replaceExisting
+	);
+
+scope exit(
+	ANSISTRING scopeDescription
+	);
+
+scope enter(
+	ANSISTRING scopeDescription,
+	UNICODESTRING fileName,
+	INT32 line,
+	UNICODESTRING function
+	);
+
+BackgroundTaskCanceledByBMPolicy(
+	GUID workItemId,
+	UNICODESTRING appUserModelId,
+	UNICODESTRING psmKey,
+	UNICODESTRING entryPoint,
+	UNICODESTRING taskCancelationReasonString
+	);
+
+UnexpectedWorkItemStateDetected(
+	GUID workItemId,
+	UNICODESTRING workItemState,
+	UNICODESTRING appliedResourceSet,
+	HEXINT32 allowedWorkItemStatesBitmask,
+	UNICODESTRING contextDescription
+	);
+
+Error(
+	HRESULT HRESULT,
+	ANSISTRING File,
+	UINT32 LineNumber,
+	ANSISTRING Code
+	);
+
+FallbackError(
+	UINT64 PartA_PrivTags,
+	SIGNED wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+FallbackError(
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+RunningAppTracker::GetLastKnownStatus result(
+	SID userSid,
+	UNICODESTRING psmKey,
+	BOOLEAN isAppRunning,
+	BOOLEAN isPPLERunning,
+	BOOLEAN isRunning
+	);
+
+Scheduling IBackgroundWorkCostHandler::OnBackgroundWorkCostChanged on a separate thread(
+	VOID
+	);
+
+Ignoring WNF_SEB_BACKGROUND_WORK_COST_HIGH notification (same BackgroundWorkCost as before)(
+	VOID
+	);
+
+WNF_SEB_BACKGROUND_WORK_COST_HIGH callback invoked(
+	UNICODESTRING newBackgroundWorkCost
+	);
+
+WNF_SEB_BACKGROUND_WORK_COST_HIGH initial state query result(
+	UNICODESTRING backgroundWorkCost,
+	BOOLEAN isBackgroundWorkCostHighPublished
+	);
+
+AppPolicyTracker::AddCustomAppPolicy(
+	UNICODESTRING appUserModelId,
+	BOOLEAN allowHighCostBackgroundWork
+	);
+
+Scheduling IGameModeStateHandler::OnGameModeStateChanged on a separate thread(
+	VOID
+	);
+
+Ignoring WNF_RM_GAME_MODE_ACTIVE notification (same GameModeState as before)(
+	VOID
+	);
+
+WNF_RM_GAME_MODE_ACTIVE callback invoked(
+	UNICODESTRING newGameModeState,
+	UINT32 gameModeProcessId
+	);
+
+WNF_RM_GAME_MODE_ACTIVE initial state query result(
+	UNICODESTRING gameModeState,
+	UINT32 gameModeProcessId,
+	BOOLEAN isGameModeStatePublished
+	);
+
+XboxSpecificEvaluationCalculated(
+	UNICODESTRING evaluationDescription
+	);
+
+EvaluationCalculated(
+	UNICODESTRING evaluationDescription
+	);
+
+PolicyEvaluator::GetResourceSetTypeByName Result(
+	UNICODESTRING resourceSetTypeName,
+	INT32 resourceSetKey
+	);
+
+CheckPackageCapability result(
+	UNICODESTRING psmKey,
+	UNICODESTRING capabilityName,
+	BOOLEAN hasCapability
+	);
+

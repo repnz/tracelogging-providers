@@ -1,0 +1,385 @@
+ProviderNames:
+	Microsoft.Windows.Storage.DataIntegrityScan
+
+
+
+**** Events *****
+DiscanCREventResumeContextFound(
+	GUID RunInstanceID,
+	GUID VolumeID
+	);
+
+DiscanEventResumeContextFound(
+	GUID RunInstanceID,
+	GUID VolumeID
+	);
+
+DiscanCREventCorruptionRepaired(
+	GUID RunInstanceID,
+	GUID VolumeID,
+	HEXINT64 NumberBytesRepaired,
+	HEXINT64 NumberBytesFailed,
+	HEXINT32 OperationalStatus,
+	HEXINT64 ErrorFileOffset,
+	HEXINT64 ErrorFileLength
+	);
+
+DiscanEventCorruptionRepaired(
+	GUID RunInstanceID,
+	GUID VolumeID,
+	HEXINT64 NumberBytesRepaired,
+	HEXINT64 NumberBytesFailed,
+	HEXINT32 OperationalStatus,
+	HEXINT64 ErrorFileOffset,
+	HEXINT64 ErrorFileLength
+	);
+
+DiscanEventCorruptionRepairDeferred(
+	GUID RunInstanceID,
+	GUID VolumeID,
+	HEXINT64 NumberBytesRepaired,
+	HEXINT64 NumberBytesFailed,
+	HEXINT32 OperationalStatus,
+	HEXINT64 ErrorFileOffset,
+	HEXINT64 ErrorFileLength
+	);
+
+DiscanCREventNonUserDataCorruptionRepaired(
+	GUID RunInstanceID,
+	GUID VolumeID,
+	HEXINT64 NumberBytesRepaired,
+	HEXINT64 NumberBytesFailed,
+	HEXINT32 OperationalStatus,
+	HEXINT64 ErrorFileOffset,
+	HEXINT64 ErrorFileLength
+	);
+
+DiscanEventNonUserDataCorruptionRepaired(
+	GUID RunInstanceID,
+	GUID VolumeID,
+	HEXINT64 NumberBytesRepaired,
+	HEXINT64 NumberBytesFailed,
+	HEXINT32 OperationalStatus,
+	HEXINT64 ErrorFileOffset,
+	HEXINT64 ErrorFileLength
+	);
+
+DiscanEventNonUserDataCorruptionRepairDeferred(
+	GUID RunInstanceID,
+	GUID VolumeID,
+	HEXINT64 NumberBytesRepaired,
+	HEXINT64 NumberBytesFailed,
+	HEXINT32 OperationalStatus,
+	HEXINT64 ErrorFileOffset,
+	HEXINT64 ErrorFileLength
+	);
+
+DiscanCREventVolumeDataCorruptionRepaired(
+	GUID RunInstanceID,
+	GUID VolumeID,
+	HEXINT64 NumberBytesRepaired,
+	HEXINT64 NumberBytesFailed,
+	HEXINT32 OperationalStatus,
+	HEXINT64 ErrorFileOffset,
+	HEXINT64 ErrorFileLength
+	);
+
+DiscanEventVolumeDataCorruptionRepaired(
+	GUID RunInstanceID,
+	GUID VolumeID,
+	HEXINT64 NumberBytesRepaired,
+	HEXINT64 NumberBytesFailed,
+	HEXINT32 OperationalStatus,
+	HEXINT64 ErrorFileOffset,
+	HEXINT64 ErrorFileLength
+	);
+
+DiscanEventVolumeDataCorruptionRepairDeferred(
+	GUID RunInstanceID,
+	GUID VolumeID,
+	HEXINT64 NumberBytesRepaired,
+	HEXINT64 NumberBytesFailed,
+	HEXINT32 OperationalStatus,
+	HEXINT64 ErrorFileOffset,
+	HEXINT64 ErrorFileLength
+	);
+
+DiscanCREventCorruptionNotRepaired(
+	GUID RunInstanceID,
+	GUID VolumeID,
+	HEXINT64 NumberBytesRepaired,
+	HEXINT64 NumberBytesFailed,
+	HEXINT32 OperationalStatus,
+	HEXINT64 ErrorFileOffset,
+	HEXINT64 ErrorFileLength
+	);
+
+DiscanEventCorruptionNotRepaired(
+	GUID RunInstanceID,
+	GUID VolumeID,
+	HEXINT64 NumberBytesRepaired,
+	HEXINT64 NumberBytesFailed,
+	HEXINT32 OperationalStatus,
+	HEXINT64 ErrorFileOffset,
+	HEXINT64 ErrorFileLength
+	);
+
+DiscanCREventNonUserDataCorruptionNotRepaired(
+	GUID RunInstanceID,
+	GUID VolumeID,
+	HEXINT64 NumberBytesRepaired,
+	HEXINT64 NumberBytesFailed,
+	HEXINT32 OperationalStatus,
+	HEXINT64 ErrorFileOffset,
+	HEXINT64 ErrorFileLength
+	);
+
+DiscanEventNonUserDataCorruptionNotRepaired(
+	GUID RunInstanceID,
+	GUID VolumeID,
+	HEXINT64 NumberBytesRepaired,
+	HEXINT64 NumberBytesFailed,
+	HEXINT32 OperationalStatus,
+	HEXINT64 ErrorFileOffset,
+	HEXINT64 ErrorFileLength
+	);
+
+DiscanCREventVolumeDataCorruptionNotRepaired(
+	GUID RunInstanceID,
+	GUID VolumeID,
+	HEXINT64 NumberBytesRepaired,
+	HEXINT64 NumberBytesFailed,
+	HEXINT32 OperationalStatus,
+	HEXINT64 ErrorFileOffset,
+	HEXINT64 ErrorFileLength
+	);
+
+DiscanEventVolumeDataCorruptionNotRepaired(
+	GUID RunInstanceID,
+	GUID VolumeID,
+	HEXINT64 NumberBytesRepaired,
+	HEXINT64 NumberBytesFailed,
+	HEXINT32 OperationalStatus,
+	HEXINT64 ErrorFileOffset,
+	HEXINT64 ErrorFileLength
+	);
+
+DiscanCREventVolumeScanComplete(
+	GUID RunInstanceID,
+	GUID DiskID,
+	HEXINT64 TotalBytesRepaired,
+	HEXINT64 TotalBytesFailed,
+	HEXINT32 ScanResult,
+	UINT64 DurationTicks,
+	HEXINT64 StartingOffset,
+	HEXINT64 ExtentLength
+	);
+
+DiscanCREventVolumeScanStart(
+	GUID RunInstanceID,
+	GUID DiskID,
+	HEXINT64 StartingOffset,
+	HEXINT64 ExtentLength
+	);
+
+DiscanCREventVolumeDrtClear(
+	GUID DiskID,
+	HEXINT32 ClearResult,
+	HEXINT64 StartingOffset,
+	HEXINT64 ExtentLength
+	);
+
+DiscanCREventVolumeScanComplete(
+	GUID RunInstanceID,
+	GUID VolumeID,
+	HEXINT64 TotalBytesRepaired,
+	HEXINT64 TotalBytesFailed,
+	HEXINT64 MetadataBytesProcessed,
+	HEXINT64 DataBytesProcessed,
+	HEXINT64 TotalMetadataBytesInUse,
+	HEXINT64 TotalDataBytesInUse,
+	HEXINT32 ScanResult,
+	UINT64 DirectoryCount,
+	UINT64 FileCount,
+	UINT32 MaxThreadCount,
+	UINT64 DurationTicks,
+	UINT32 PercentComplete,
+	GUID DiskID,
+	HEXINT64 StartingOffset,
+	HEXINT64 ExtentLength,
+	UINT8 FsId
+	);
+
+DiscanEventVolumeScanComplete(
+	GUID RunInstanceID,
+	GUID VolumeID,
+	HEXINT64 TotalBytesRepaired,
+	HEXINT64 TotalBytesFailed,
+	HEXINT64 MetadataBytesProcessed,
+	HEXINT64 DataBytesProcessed,
+	HEXINT64 TotalMetadataBytesInUse,
+	HEXINT64 TotalDataBytesInUse,
+	HEXINT32 ScanResult,
+	UINT64 DirectoryCount,
+	UINT64 FileCount,
+	UINT32 MaxThreadCount,
+	UINT64 DurationTicks,
+	UINT32 PercentComplete,
+	GUID DiskID,
+	HEXINT64 StartingOffset,
+	HEXINT64 ExtentLength,
+	UINT8 FsId
+	);
+
+DiscanCREventVolumeScanPartialComplete(
+	GUID RunInstanceID,
+	GUID VolumeID,
+	HEXINT64 TotalBytesRepaired,
+	HEXINT64 TotalBytesFailed,
+	HEXINT64 MetadataBytesProcessed,
+	HEXINT64 DataBytesProcessed,
+	HEXINT64 TotalMetadataBytesInUse,
+	HEXINT64 TotalDataBytesInUse,
+	HEXINT32 ScanResult,
+	UINT64 DirectoryCount,
+	UINT64 FileCount,
+	UINT32 MaxThreadCount,
+	UINT64 DurationTicks,
+	UINT32 PercentComplete,
+	GUID DiskID,
+	HEXINT64 StartingOffset,
+	HEXINT64 ExtentLength,
+	UINT8 FsId
+	);
+
+DiscanEventVolumeScanPartialComplete(
+	GUID RunInstanceID,
+	GUID VolumeID,
+	HEXINT64 TotalBytesRepaired,
+	HEXINT64 TotalBytesFailed,
+	HEXINT64 MetadataBytesProcessed,
+	HEXINT64 DataBytesProcessed,
+	HEXINT64 TotalMetadataBytesInUse,
+	HEXINT64 TotalDataBytesInUse,
+	HEXINT32 ScanResult,
+	UINT64 DirectoryCount,
+	UINT64 FileCount,
+	UINT32 MaxThreadCount,
+	UINT64 DurationTicks,
+	UINT32 PercentComplete,
+	GUID DiskID,
+	HEXINT64 StartingOffset,
+	HEXINT64 ExtentLength,
+	UINT8 FsId
+	);
+
+DiscanCREventVolumeScanProgress(
+	GUID RunInstanceID,
+	GUID VolumeID,
+	HEXINT64 TotalBytesRepaired,
+	HEXINT64 TotalBytesFailed,
+	HEXINT64 MetadataBytesProcessed,
+	HEXINT64 DataBytesProcessed,
+	HEXINT64 TotalMetadataBytesInUse,
+	HEXINT64 TotalDataBytesInUse,
+	HEXINT32 ScanResult,
+	UINT64 DirectoryCount,
+	UINT64 FileCount,
+	UINT32 MaxThreadCount,
+	UINT64 DurationTicks,
+	UINT32 PercentComplete,
+	GUID DiskID,
+	HEXINT64 StartingOffset,
+	HEXINT64 ExtentLength,
+	UINT8 FsId
+	);
+
+DiscanEventVolumeScanProgress(
+	GUID RunInstanceID,
+	GUID VolumeID,
+	HEXINT64 TotalBytesRepaired,
+	HEXINT64 TotalBytesFailed,
+	HEXINT64 MetadataBytesProcessed,
+	HEXINT64 DataBytesProcessed,
+	HEXINT64 TotalMetadataBytesInUse,
+	HEXINT64 TotalDataBytesInUse,
+	HEXINT32 ScanResult,
+	UINT64 DirectoryCount,
+	UINT64 FileCount,
+	UINT32 MaxThreadCount,
+	UINT64 DurationTicks,
+	UINT32 PercentComplete,
+	GUID DiskID,
+	HEXINT64 StartingOffset,
+	HEXINT64 ExtentLength,
+	UINT8 FsId
+	);
+
+DiscanCREventVolumeScanStart(
+	GUID RunInstanceID,
+	GUID VolumeID,
+	HEXINT64 StartingOffset,
+	HEXINT64 ExtentLength
+	);
+
+DiscanEventVolumeScanStart(
+	GUID RunInstanceID,
+	GUID VolumeID
+	);
+
+DiscanCREventDiskScanComplete(
+	GUID RunInstanceID,
+	GUID DiskID
+	);
+
+DiscanCREventScanAbort(
+	GUID RunInstanceID,
+	GUID DiskID
+	);
+
+DiscanEventDiskScanComplete(
+	GUID RunInstanceID,
+	GUID DiskID
+	);
+
+DiscanCREventDiskScanStart(
+	GUID RunInstanceID,
+	GUID DiskID
+	);
+
+DiscanEventDiskScanStart(
+	GUID RunInstanceID,
+	GUID DiskID
+	);
+
+DiscanCREventTaskCompleted(
+	GUID RunInstanceID
+	);
+
+DiscanEventTaskCompleted(
+	GUID RunInstanceID
+	);
+
+DiscanCREventTaskStarting(
+	GUID RunInstanceID
+	);
+
+DiscanEventTaskStarting(
+	GUID RunInstanceID
+	);
+
+DiscanEventRegenerateParityCompleted(
+	GUID RunInstanceID,
+	GUID VolumeID,
+	UINT64 RegeneratedParityExtentCount,
+	UINT64 RegeneratedParityExtentSize
+	);
+
+DiscanEventRegenerateParityFailed(
+	GUID RunInstanceID,
+	GUID VolumeID,
+	UINT64 QueuedParityExtentCount,
+	UINT64 QueuedParityExtentSize,
+	HEXINT32 ScanResult
+	);
+

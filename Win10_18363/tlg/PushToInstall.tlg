@@ -1,0 +1,102 @@
+ProviderNames:
+	Microsoft.Windows.PushToInstall
+	Microsoft.Xbox.WinHttp
+
+
+
+**** Events *****
+OutgoingServiceRequest(
+	ANSISTRING __TlgCV__,
+	PID PartB_Ms.Qos.OutgoingServiceRequest,
+	UNICODESTRING targetUri,
+	INT32 latencyMs,
+	INT32 protocolStatusCode,
+	UINT64 responseSizeBytes,
+	BOOLEAN succeeded
+	);
+
+Info(
+	UNICODESTRING ErrorMessage,
+	HRESULT ErrorCode,
+	ANSISTRING ErrorLocation,
+	UINT32 LineNumber,
+	ANSISTRING ErrorMethod
+	);
+
+Warning(
+	UNICODESTRING ErrorMessage,
+	HRESULT ErrorCode,
+	ANSISTRING ErrorLocation,
+	UINT32 LineNumber,
+	ANSISTRING ErrorMethod
+	);
+
+Error(
+	PID PartB_Ms.Telemetry.Error,
+	UNICODESTRING ErrorMessage,
+	HRESULT ErrorCode,
+	ANSISTRING ErrorLocation,
+	UINT32 LineNumber,
+	ANSISTRING ErrorMethod
+	);
+
+WinstoreAuth_SendTokenRequestAndGetTickets_Failure(
+	HRESULT hr
+	);
+
+WinstoreAuth_UserAuthRequired(
+	HRESULT HRESULT_FROM_WIN32(1317L)
+	);
+
+WinstoreAuth_SLSFailure(
+	HRESULT GetLastError()
+	);
+
+HttpRequestFailure(
+	NTSTATUS PartB_Ms.Qos.OutgoingServiceRequest,
+	UNICODESTRING operationName,
+	UNICODESTRING targetUri,
+	INT32 latencyMs,
+	INT32 serviceErrorCode,
+	BOOLEAN succeeded,
+	UNICODESTRING requestMethod,
+	UNICODESTRING responseContentType,
+	UNICODESTRING protocol,
+	UNICODESTRING protocolStatusCode,
+	UNICODESTRING dependencyOperationName,
+	UNICODESTRING dependencyOperationVersion,
+	UNICODESTRING dependencyName,
+	UNICODESTRING dependencyType,
+	INT32 responseSizeBytes,
+	UNICODESTRING __TlgCV__,
+	UINT32 InternetConnectionState,
+	UNICODESTRING Version,
+	UNICODESTRING Headers,
+	UINT32 SecureFailureFlags
+	);
+
+InternalFailureSummary(
+	UNICODESTRING OperationName,
+	UNICODESTRING TargetHostName,
+	UINT32 ServiceErrorCode,
+	UINT64 TotalLatencyMs,
+	UINT64 MinLatencyMs,
+	UINT32 ErrorCount,
+	UNICODESTRING Version
+	);
+
+OutgoingServiceRequestSummary(
+	UNICODESTRING OperationName,
+	UNICODESTRING TargetHostName,
+	UNICODESTRING RequestMethod,
+	UNICODESTRING ResponseCodeGrouping,
+	UINT16 GroupResponseCount,
+	UINT64 TotalGroupLatencyMs,
+	UINT64 MinimumGroupLatencyMs,
+	UINT64 MaximumGroupLatencyMs,
+	UNICODESTRING SampleCorrelationVector,
+	UNICODESTRING Protocol,
+	BOOL32 Succeeded,
+	UNICODESTRING Version
+	);
+

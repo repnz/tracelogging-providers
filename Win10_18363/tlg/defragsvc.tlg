@@ -1,0 +1,217 @@
+ProviderNames:
+	Microsoft.Windows.Storage.Defrag
+	TelemetryAssert
+	TelemetryAssertDiagTrack
+
+
+
+**** Events *****
+DefragTierOptimize(
+	UNICODESTRING volumePath,
+	BOOL32 scheduledTask,
+	BOOL32 tieringPolicyEngineTask,
+	BOOL32 manualTask
+	);
+
+DefragShrinkInhibitor(
+	UNICODESTRING volumePath,
+	UNICODESTRING flags,
+	UINT64 totalClusters,
+	UINT64 totalUsedClusters,
+	UINT64 totalFiles,
+	UINT64 extentsTotal,
+	UINT32 bytesPerCluster,
+	UINT64 lastClusterShrinkInhibitor,
+	UINT16 shrinkInhibitorPhase,
+	BOOL32 isBootVolume,
+	BOOL32 inhibitorActive,
+	BOOL32 isPageFile,
+	BOOL32 isNtfsSystemFile,
+	BOOL32 isTxfSystemFile,
+	BOOL32 isDefragDenyFile,
+	BOOL32 isDataAttribute,
+	BOOL32 isSystemAttribute,
+	BOOL32 isIndexAllocationAttribute,
+	BOOL32 isUnknownAttribute
+	);
+
+DefragAnalysisEnd(
+	UNICODESTRING volumePath,
+	HRESULT hResult
+	);
+
+DefragAnalysisStats(
+	UNICODESTRING volumePath,
+	UINT8 fileSystem,
+	UINT64 totalDirectoryExtentsFragged,
+	UINT32 totalDirectoryFragged,
+	UINT32 totalUnmovableFiles,
+	UINT32 totalMovableFiles,
+	UINT64 totalExtents,
+	UINT32 totalFiles,
+	UINT32 averageFragsPerFile,
+	UINT64 fraggedClusters,
+	UINT64 totalUsedClusters,
+	UINT32 percentFragmentation,
+	UINT64 averageFreeSpaceSize,
+	UINT64 freeSpaceCount,
+	UINT64 largestFreeSpaceSize,
+	UINT64 maxNumberOfReclaimableBytes
+	);
+
+DefragAnalysisStart(
+	UNICODESTRING volumePath
+	);
+
+DefragFullEnd(
+	UNICODESTRING volumePath,
+	HRESULT hResult
+	);
+
+DefragFullStats(
+	UNICODESTRING volumePath,
+	UINT32 analysisSec,
+	UINT32 defragSec,
+	UINT32 bytesPerCluster,
+	UINT32 totalClusters,
+	UINT32 totalUsedClusters,
+	UINT32 percentFragmentation,
+	UINT32 totalFiles,
+	UINT32 extentsTotal,
+	UINT32 filesFragged,
+	UINT32 extentsFragged,
+	UINT32 largestFreeSpaceSizeBytes,
+	UINT32 freeSpaceCount,
+	UINT32 fileSystem
+	);
+
+DefragFullStart(
+	UNICODESTRING volumePath
+	);
+
+DefragRunSlabifyEnd(
+	UNICODESTRING volumePath,
+	HRESULT hResult
+	);
+
+DefragRunSlabifyStats(
+	UNICODESTRING volumePath,
+	UINT32 earlyAbort,
+	UINT32 bytesPerCluster,
+	UINT32 slabSizeInMB,
+	UINT32 slabAlignmentInMB,
+	UINT32 totalClusters,
+	UINT32 totalUsedClusters,
+	UINT32 slabs,
+	UINT32 inUseSlabs,
+	UINT32 potentialPurgableSlabs,
+	UINT32 actualPurgedSlabs,
+	UINT32 volsnapPinnedSlabs,
+	UINT32 unknownFailSlabs,
+	UINT32 spaceInefficientSlabs
+	);
+
+DefragRunSlabifyStart(
+	UNICODESTRING volumePath
+	);
+
+DefragShrinkEstimate(
+	UNICODESTRING volumePath,
+	UINT64 maxNumberOfReclaimableBytes,
+	BOOL32 isInhibitor,
+	HRESULT hResult
+	);
+
+DefragShrinkRunOperation(
+	UNICODESTRING volumePath,
+	UINT64 newVolumeSizeBytes,
+	HRESULT hResult
+	);
+
+DefragEndTierOptimize(
+	UNICODESTRING volumePath,
+	GUID operationId,
+	HRESULT hResult
+	);
+
+DefragEndFileBlockMovement(
+	UNICODESTRING volumePath,
+	GUID operationId,
+	HRESULT hResult
+	);
+
+DefragEndFileBlockMovementForTier(
+	UNICODESTRING volumePath,
+	GUID operationId,
+	UINT64 movementPass,
+	UINT64 numberOfClustersMoved,
+	UINT64 numberOfClustersFailedToMove,
+	UINT64 numberOfClustersFailedToMoveForDeletedFiles,
+	UINT64 numberOfClustersFailedToMoveForDiskFull,
+	UINT64 numberOfClustersFailedToMoveForOperationTimedOut
+	);
+
+DefragStartFileBlockMovement(
+	UNICODESTRING volumePath,
+	GUID operationId
+	);
+
+DefragEndHeatProcessing(
+	UNICODESTRING volumePath,
+	GUID operationId,
+	HRESULT hResult
+	);
+
+DefragStartHeatProcessing(
+	UNICODESTRING volumePath,
+	GUID operationId
+	);
+
+DefragEndTierReconcile(
+	UNICODESTRING volumePath,
+	GUID operationId,
+	UINT64 bytesRequestedToMoveToFlash,
+	UINT64 bytesRequestedToMoveToDisk,
+	UINT64 bytesMovedToFlash,
+	UINT64 bytesMovedToDisk,
+	HRESULT hResult
+	);
+
+DefragStartTierReconcile(
+	UNICODESTRING volumePath,
+	GUID operationId
+	);
+
+DefragStartTierOptimize(
+	UNICODESTRING volumePath,
+	GUID operationId
+	);
+
+DefragNtfsShrinkVolume(
+	UNICODESTRING volumePath,
+	BOOL32 volumePrepareForShrinkError,
+	UINT8 shrinkOperation,
+	UINT32 volumeBytesPerSector,
+	UINT64 newVolumeSectors,
+	NTSTATUS status,
+	HRESULT hResult
+	);
+
+DefragMoveFileBlockFailure(
+	UNICODESTRING volumePath,
+	NTSTATUS status,
+	UINT64 lcnToFreeSpace
+	);
+
+Assert(
+	UINT32 assertVersion,
+	UINT32 rva,
+	UINT32 timestamp,
+	UINT32 imageSize,
+	ANSISTRING imageName,
+	UINT32 count,
+	UINT32 totalHits,
+	UINT32 ModuleCollection,
+	UINT32 GlobalCollection
+	);
+

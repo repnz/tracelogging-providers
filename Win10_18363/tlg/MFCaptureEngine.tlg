@@ -1,0 +1,343 @@
+ProviderNames:
+	Microsoft.Windows.MediaFoundation.CallStack
+	Microsoft.Windows.Capture.MFCaptureEngine
+
+
+
+**** Events *****
+MFCaptureEngineStopRecordStop(
+	GUID MFCaptureEngineSessionGuid,
+	GUID EventGuid,
+	UINT64 QPCTime,
+	UINT64 CurrentKB,
+	UINT64 PeakKB,
+	HEXINT32 HR_ResourceQuery,
+	BOOL32 UTCReplace_AppSessionGuid,
+	UINT64 CPUCycleTime
+	);
+
+MFCaptureEngineAPIError(
+	GUID MFCaptureEngineSessionGuid,
+	GUID EventGuid,
+	UINT64 QPCTime,
+	BOOL32 UTCReplace_AppSessionGuid,
+	HEXINT32 HRESULT
+	);
+
+MFCaptureEngineStopPhotoSequenceStart(
+	GUID MFCaptureEngineSessionGuid,
+	GUID EventGuid,
+	UINT64 QPCTime,
+	UINT64 CurrentKB,
+	UINT64 PeakKB,
+	HEXINT32 HR_ResourceQuery,
+	BOOL32 UTCReplace_AppSessionGuid,
+	BOOL32 IsVariablePhotoSequence
+	);
+
+MFCaptureEngineStopRecordStart(
+	GUID MFCaptureEngineSessionGuid,
+	GUID EventGuid,
+	UINT64 QPCTime,
+	UINT64 CurrentKB,
+	UINT64 PeakKB,
+	HEXINT32 HR_ResourceQuery,
+	BOOL32 UTCReplace_AppSessionGuid
+	);
+
+MFCaptureEngineResumeRecordStart(
+	GUID MFCaptureEngineSessionGuid,
+	GUID EventGuid,
+	UINT64 QPCTime,
+	UINT64 CurrentKB,
+	UINT64 PeakKB,
+	HEXINT32 HR_ResourceQuery,
+	BOOL32 UTCReplace_AppSessionGuid
+	);
+
+MFCaptureEnginePauseRecordStart(
+	GUID MFCaptureEngineSessionGuid,
+	GUID EventGuid,
+	UINT64 QPCTime,
+	UINT64 CurrentKB,
+	UINT64 PeakKB,
+	HEXINT32 HR_ResourceQuery,
+	BOOL32 UTCReplace_AppSessionGuid,
+	BOOL32 IfReleaseHWResource
+	);
+
+MFCaptureEngineStopPreviewStart(
+	GUID MFCaptureEngineSessionGuid,
+	GUID EventGuid,
+	UINT64 QPCTime,
+	UINT64 CurrentKB,
+	UINT64 PeakKB,
+	HEXINT32 HR_ResourceQuery,
+	BOOL32 UTCReplace_AppSessionGuid
+	);
+
+MFCaptureEngineSessionStart(
+	GUID MFCaptureEngineSessionGuid,
+	GUID EventGuid,
+	UINT64 QPCTime,
+	UINT64 CurrentKB,
+	UINT64 PeakKB,
+	HEXINT32 HR_ResourceQuery,
+	BOOL32 UTCReplace_AppSessionGuid,
+	HEXINT64 MFCaptureEnginePtr,
+	UNICODESTRING CommandLineHash
+	);
+
+MFCaptureEngineSessionStop(
+	GUID MFCaptureEngineSessionGuid,
+	GUID EventGuid,
+	UINT64 QPCTime,
+	UINT64 CurrentKB,
+	UINT64 PeakKB,
+	HEXINT32 HR_ResourceQuery,
+	BOOL32 UTCReplace_AppSessionGuid,
+	HEXINT64 MFCaptureEnginePtr,
+	UINT32 NumPhotos,
+	UINT32 NumVideos,
+	UINT32 NumOverHeatEvents
+	);
+
+MFCaptureEngineOnEvent(
+	GUID MFCaptureEngineSessionGuid,
+	GUID EventGuid,
+	UINT64 QPCTime,
+	BOOL32 UTCReplace_AppSessionGuid,
+	HEXINT32 HRESULT,
+	HEXINT32 StreamIndex
+	);
+
+MFCaptureEngineOnEvent(
+	GUID MFCaptureEngineSessionGuid,
+	GUID EventGuid,
+	UINT64 QPCTime,
+	UINT64 CurrentKB,
+	UINT64 PeakKB,
+	HEXINT32 HR_ResourceQuery,
+	BOOL32 UTCReplace_AppSessionGuid,
+	HEXINT32 HRESULT,
+	HEXINT32 StreamIndex
+	);
+
+MFCaptureEngineTakePhotoTaskStart(
+	GUID MFCaptureEngineSessionGuid,
+	GUID EventGuid,
+	UINT64 QPCTime,
+	UINT64 CurrentKB,
+	UINT64 PeakKB,
+	HEXINT32 HR_ResourceQuery,
+	BOOL32 UTCReplace_AppSessionGuid,
+	SOCKETADDRESS VideoTelemetrySinkInfo,
+	GUID srcSubType,
+	UINT32 srcWidth,
+	UINT32 srcHeight,
+	UINT32 srcFpsNum,
+	UINT32 srcFpsDen,
+	GUID sinkSubType,
+	UINT32 sinkWidth,
+	UINT32 sinkHeight,
+	UINT32 sinkFpsNum,
+	UINT32 sinkFpsDen
+	);
+
+MFCaptureEngineStartPhotoSequenceTaskStart(
+	GUID MFCaptureEngineSessionGuid,
+	GUID EventGuid,
+	UINT64 QPCTime,
+	UINT64 CurrentKB,
+	UINT64 PeakKB,
+	HEXINT32 HR_ResourceQuery,
+	BOOL32 UTCReplace_AppSessionGuid,
+	SOCKETADDRESS VideoTelemetrySinkInfo,
+	GUID srcSubType,
+	UINT32 srcWidth,
+	UINT32 srcHeight,
+	UINT32 srcFpsNum,
+	UINT32 srcFpsDen,
+	GUID sinkSubType,
+	UINT32 sinkWidth,
+	UINT32 sinkHeight,
+	UINT32 sinkFpsNum,
+	UINT32 sinkFpsDen
+	);
+
+MFCaptureEngineStartRecordTaskStart(
+	GUID MFCaptureEngineSessionGuid,
+	GUID EventGuid,
+	UINT64 QPCTime,
+	UINT64 CurrentKB,
+	UINT64 PeakKB,
+	HEXINT32 HR_ResourceQuery,
+	BOOL32 UTCReplace_AppSessionGuid,
+	BOOL32 IsAudioOnlyCapture,
+	SOCKETADDRESS VideoTelemetrySinkInfo,
+	GUID srcSubType,
+	UINT32 srcWidth,
+	UINT32 srcHeight,
+	UINT32 srcFpsNum,
+	UINT32 srcFpsDen,
+	GUID sinkSubType,
+	UINT32 sinkWidth,
+	UINT32 sinkHeight,
+	UINT32 sinkFpsNum,
+	UINT32 sinkFpsDen,
+	SOCKETADDRESS AudioTelemetrySinkInfo,
+	GUID srcSubType,
+	UINT32 srcCh,
+	UINT32 srcbDepth,
+	UINT32 srcSPS,
+	UINT32 srcReserve,
+	GUID sinkSubType,
+	UINT32 sinkCh,
+	UINT32 sinkbDepth,
+	UINT32 sinkSPS,
+	UINT32 sinkReserve
+	);
+
+MFCaptureEngineStartPreviewStart(
+	GUID MFCaptureEngineSessionGuid,
+	GUID EventGuid,
+	UINT64 QPCTime,
+	UINT64 CurrentKB,
+	UINT64 PeakKB,
+	HEXINT32 HR_ResourceQuery,
+	BOOL32 UTCReplace_AppSessionGuid,
+	SOCKETADDRESS VideoTelemetrySinkInfo,
+	GUID srcSubType,
+	UINT32 srcWidth,
+	UINT32 srcHeight,
+	UINT32 srcFpsNum,
+	UINT32 srcFpsDen,
+	GUID sinkSubType,
+	UINT32 sinkWidth,
+	UINT32 sinkHeight,
+	UINT32 sinkFpsNum,
+	UINT32 sinkFpsDen
+	);
+
+CameraDEVKPKEYInventory(
+	GUID MFCaptureEngineSessionGuid,
+	BOOL32 UTCReplace_AppSessionGuid,
+	HEXINT32 HRESULT,
+	UNICODESTRING CameraName,
+	UNICODESTRING CameraSymbolicLink,
+	UNICODESTRING MicrophoneName,
+	UNICODESTRING MicrophoneSymbolicLink
+	);
+
+MFCaptureEngineSessionCommandLine(
+	UNICODESTRING Arguments,
+	UNICODESTRING CommandLineHash
+	);
+
+MFCaptureEngineAudioDeviceCheckAccess(
+	GUID MFCaptureEngineSessionGuid,
+	BOOL32 UTCReplace_AppSessionGuid,
+	HEXINT32 HRESULT
+	);
+
+MFCaptureEngineDeviceEnumeration(
+	GUID MFCaptureEngineSessionGuid,
+	BOOL32 UTCReplace_AppSessionGuid,
+	HEXINT32 HRESULT
+	);
+
+MFCaptureEngineAPIError(
+	GUID MFCaptureEngineSessionGuid,
+	GUID EventGuid,
+	UINT64 QPCTime,
+	BOOL32 UTCReplace_AppSessionGuid,
+	UINT32 StreamIndex,
+	HEXINT32 HRESULT
+	);
+
+MFCaptureEnginePreviewSinkFirstFrame(
+	GUID MFCaptureEngineSessionGuid,
+	GUID EventGuid,
+	UINT64 QPCTime,
+	UINT64 CurrentKB,
+	UINT64 PeakKB,
+	HEXINT32 HR_ResourceQuery,
+	BOOL32 UTCReplace_AppSessionGuid,
+	HEXINT32 HRESULT,
+	UINT32 SinkStreamIndex,
+	UINT64 RefTimeStamp
+	);
+
+MFCaptureEngineSinkStats(
+	GUID MFCaptureEngineSessionGuid,
+	HEXINT32 SinkPin,
+	UINT64 Durration,
+	UINT64 DroppedFrames,
+	BOOL32 UTCReplace_AppSessionGuid
+	);
+
+MFCaptureEngineFrameReaderSinkFirstFrame(
+	GUID MFCaptureEngineSessionGuid,
+	GUID EventGuid,
+	UINT64 QPCTime,
+	UINT64 CurrentKB,
+	UINT64 PeakKB,
+	HEXINT32 HR_ResourceQuery,
+	BOOL32 UTCReplace_AppSessionGuid,
+	HEXINT32 HRESULT,
+	UINT32 SinkStreamIndex,
+	UINT64 RefTimeStamp,
+	BOOL32 SecureBufferInUse,
+	UNICODESTRING ReaderSessionIds
+	);
+
+MFCaptureEngineRecordSinkFirstFrame(
+	GUID MFCaptureEngineSessionGuid,
+	GUID EventGuid,
+	UINT64 QPCTime,
+	BOOL32 UTCReplace_AppSessionGuid,
+	HEXINT32 HRESULT,
+	UINT32 SinkStreamIndex,
+	UINT64 RefTimeStamp
+	);
+
+MFCaptureEngineSinkStats(
+	GUID MFCaptureEngineSessionGuid,
+	HEXINT32 SinkPin,
+	UINT64 Duration,
+	UINT64 DroppedFrames,
+	UINT64 nFrames,
+	UINT64 MinDeltaOfTimeStamps,
+	UINT64 MaxDeltaOfTimeStamps,
+	UINT64 StdDevDeltaOfTimeStamps,
+	UINT64 AveDeltaOfTimeStamps,
+	UINT64 MinDeltaOfReceivedSamples,
+	UINT64 MaxDeltaOfReceivedSamples,
+	UINT64 StdDevDeltaOfReceivedSamples,
+	UINT64 AveDeltaOfReceivedSamples,
+	BOOL32 UTCReplace_AppSessionGuid
+	);
+
+MFCaptureEnginePhotoTaken(
+	GUID MFCaptureEngineSessionGuid,
+	GUID EventGuid,
+	UINT64 QPCTime,
+	UINT64 CurrentKB,
+	UINT64 PeakKB,
+	HEXINT32 HR_ResourceQuery,
+	BOOL32 UTCReplace_AppSessionGuid,
+	UINT32 SinkStreamIndex,
+	UINT64 RefTimeStamp,
+	UINT64 SampleTimeStamp
+	);
+
+MFCaptureEnginePhotoSequenceSinkFirstFrame(
+	GUID MFCaptureEngineSessionGuid,
+	GUID EventGuid,
+	UINT64 QPCTime,
+	BOOL32 UTCReplace_AppSessionGuid,
+	HEXINT32 HRESULT,
+	UINT32 SinkStreamIndex,
+	UINT64 RefTimeStamp
+	);
+

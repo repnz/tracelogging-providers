@@ -1,0 +1,77 @@
+ProviderNames:
+	Microsoft.Windows.EnergyEstimation
+	Microsoft.Windows.SRUM.ProcessTag
+	TelemetryAssert
+	TelemetryAssertDiagTrack
+
+
+
+**** Events *****
+CyclesbyBucketBigLittle(
+	UINT8 EventVersion,
+	UINT8 DeviceState,
+	UINT8 PercLittleCore,
+	UINT8 PercLittleCoreLoFreq,
+	UINT8 PercBigCoreLoFreq,
+	UINT8 PercDpcIsr,
+	UINT32 Durationms,
+	UINT32 CPUEnergymJ,
+	UINT64 TotalCycles,
+	UINT64 BigCoreCyclesbyFrequency,
+	UINT64 LittleCoreCyclesbyFrequency
+	);
+
+CyclesbyBucket(
+	UINT8 EventVersion,
+	UINT8 DeviceState,
+	UINT8 PercBg,
+	UINT8 PercBgLoFreq,
+	UINT8 PercTotalLoFreq,
+	UINT8 PercDpcIsr,
+	UINT32 Durationms,
+	UINT32 CPUEnergymJ,
+	UINT32 BAMSettings,
+	UINT64 TotalCycles,
+	UINT64 OverallCyclesbyFrequency,
+	UINT64 BgCyclesbyFrequency
+	);
+
+RetrieveAppVersionFailed(
+	UINT8 EventVersion,
+	UNICODESTRING PackageFullName,
+	WIN32ERROR WinError
+	);
+
+RetrieveImageVersionFailed(
+	UINT8 EventVersion,
+	UNICODESTRING ImageName,
+	WIN32ERROR WinError
+	);
+
+TaggedEnergyUsage(
+	UINT8 EventVersion,
+	FILETIME EventTimestamp,
+	UNICODESTRING AppName,
+	UNICODESTRING Tag,
+	UINT32 DeviceState,
+	UINT64 CPUEnergy,
+	UINT64 DiskEnergy,
+	UINT64 NetworkEnergy,
+	UINT64 MBBEnergy,
+	UINT64 WorkOnBehalfCPUEnergy,
+	UINT64 AttributedCPUEnergy,
+	UINT32 Time
+	);
+
+Assert(
+	UINT32 assertVersion,
+	UINT32 rva,
+	UINT32 timestamp,
+	UINT32 imageSize,
+	ANSISTRING imageName,
+	UINT32 count,
+	UINT32 totalHits,
+	UINT32 ModuleCollection,
+	UINT32 GlobalCollection
+	);
+

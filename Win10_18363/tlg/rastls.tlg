@@ -1,0 +1,69 @@
+ProviderNames:
+	EAPRasTlsEvents
+	EapCredEvents
+
+
+
+**** Events *****
+EAPTLSAuthFail(
+	UINT64 eapOuterMethod,
+	BOOL32 isFastReconnected,
+	UINT64 eapTLSRawResultCode,
+	GUID interfaceGuid,
+	UINT64 authResultCode
+	);
+
+CredentialUnPlumbing(
+	UINT64 credentialType,
+	UINT64 resultCode,
+	GUID interfaceGuid
+	);
+
+PEAPAuthResult(
+	UINT64 eapOuterMethod,
+	UINT64 eapInnerMethod,
+	BOOL32 isOuterMethodPassed,
+	BOOL32 isInnerMethodPassed,
+	BOOL32 isInnerEAPOptional,
+	BOOL32 isFastReconnectEnabled,
+	BOOL32 isFastReconnected,
+	GUID interfaceGuid,
+	UINT64 eapPacket,
+	UINT64 authResultCode
+	);
+
+EAPTLSAuthPass(
+	UINT64 eapOuterMethod,
+	BOOL32 isFastReconnected,
+	GUID interfaceGuid,
+	UINT64 authResultCode
+	);
+
+EAPTLSAuthResult(
+	UINT64 eapOuterMethod,
+	BOOL32 isOuterMethodPassed,
+	BOOL32 isFastReconnected,
+	GUID interfaceGuid,
+	UINT64 eapPacket,
+	UINT64 authResultCode
+	);
+
+CredentialPlumbing(
+	UINT64 resultCode,
+	GUID interfaceGuid
+	);
+
+PEAPAuthFail(
+	UINT64 eapOuterMethod,
+	UINT64 eapInnerMethod,
+	BOOL32 isFastReconnectEnabled,
+	BOOL32 isFastReconnected,
+	GUID interfaceGuid,
+	UINT64 authResultCode
+	);
+
+EAPSSORegKey(
+	BOOL32 isFeatureEnabled,
+	GUID interfaceGuid
+	);
+

@@ -1,0 +1,153 @@
+ProviderNames:
+	Microsoft.Windows.Storage.StorageWMI
+	Microsoft.Windows.Storage.PmUtil
+	FveDetectTelemetry
+
+
+
+**** Events *****
+Error(
+	UNICODESTRING Function,
+	UINT32 Line,
+	HEXINT32 ErrorCode_HRESULT
+	);
+
+ExitFunction(
+	UNICODESTRING Function,
+	UINT32 Line,
+	UINT64 ElapsedTime_ms,
+	HEXINT32 ErrorCode_HRESULT
+	);
+
+BadArgument(
+	UNICODESTRING Function,
+	UINT32 Line
+	);
+
+EnterFunction(
+	UNICODESTRING Function,
+	UINT32 Line
+	);
+
+ExitFunction(
+	UNICODESTRING Function,
+	UINT32 Line,
+	UINT64 ElapsedTime_ms
+	);
+
+TLS Failed(
+	ANSISTRING Message,
+	HEXINT32 ErrorCode_HRESULT
+	);
+
+Error(
+	UNICODESTRING Function,
+	UINT32 Line,
+	HEXINT32 ErrorCode_HRESULT,
+	HEXINT32 OriginalError_MIResult
+	);
+
+CreatePartition(
+	ANSISTRING Message
+	);
+
+SetPartition(
+	ANSISTRING Message
+	);
+
+SmWriteErrorFromCommonOutput(
+	HEXINT32 ErrorCode_SM_RC
+	);
+
+UnmappedError(
+	UNICODESTRING ClassName,
+	UNICODESTRING MethodName,
+	HEXINT32 ReturnCode
+	);
+
+SmFindStringInValueMap(
+	ANSISTRING Message,
+	UINT32 Size,
+	UINT32 Index
+	);
+
+StorageProvider(
+	UNICODESTRING ObjectId,
+	UNICODESTRING Name,
+	UINT16 Type,
+	UNICODESTRING Manufacturer,
+	UNICODESTRING Version
+	);
+
+EnterFunction(
+	UNICODESTRING Function,
+	UINT32 Line
+	);
+
+ExitFunction(
+	UNICODESTRING Function,
+	UINT32 Line,
+	UINT64 ElapsedTime_ms,
+	BOOL32 RunAsJob,
+	UNICODESTRING SourceCaller,
+	HEXINT32 ErrorCode_HRESULT,
+	UINT64 ElapsedTime_ms,
+	BOOL32 RunAsJob,
+	BINARY EntryInformation,
+	BOOL32 EntryInformation.Complete,
+	BINARY ResultInformation,
+	BOOL32 ResultInformation.Complete
+	);
+
+ExitFunction(
+	UNICODESTRING Function,
+	UINT32 Line,
+	UINT64 ElapsedTime_ms,
+	BOOL32 RunAsJob,
+	UNICODESTRING SourceCaller,
+	HEXINT32 ErrorCode_HRESULT,
+	HEXINT32 ErrorCode_MIResult,
+	BOOL32 RunAsJob,
+	HEXINT32 ReturnCode_SM_RETURN_CODE,
+	UNICODESTRING MessageID,
+	UNICODESTRING Message,
+	UNICODESTRING MessageArguments,
+	UINT32 MessageArgumentsCount,
+	BINARY EntryInformation,
+	BOOL32 EntryInformation.Complete,
+	BINARY ResultInformation,
+	BOOL32 ResultInformation.Complete
+	);
+
+SmInstanceResultCallback(
+	ANSISTRING Message
+	);
+
+SmIndicationResultCallback(
+	HEXINT32 MI Result
+	);
+
+SmStreamResultCallback(
+	ANSISTRING Message
+	);
+
+SmInstanceResultCallback(
+	HEXINT32 MI Result
+	);
+
+FveRemoveTrustedWimData(
+	INT32 hr
+	);
+
+FveCheckSuspendBitLockerOnUpgrade(
+	INT32 ShouldSuspendBitlocker,
+	BOOLEAN IsSecureBootBound,
+	BOOLEAN IsOsPreRS1,
+	UINT32 AuthUsesFlags,
+	INT32 hr
+	);
+
+FveAddTrustedWimData(
+	INT32 hr
+	);
+

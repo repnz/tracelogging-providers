@@ -1,0 +1,78 @@
+ProviderNames:
+	Microsoft.Windows.Licensing.UpgradeSubscription
+
+
+
+**** Events *****
+AcquireSubscriptionLicense(
+	HRESULT Result,
+	UNICODESTRING Pfn,
+	FILETIME ExpirationTime
+	);
+
+GetLockStatus(
+	HRESULT Result
+	);
+
+ClipGetSubscriptionStatusFailure(
+	HRESULT Result
+	);
+
+SLOpenFailure(
+	HRESULT Result
+	);
+
+DisableTask(
+	HRESULT Result
+	);
+
+SLConsumeWindowsRight(
+	HRESULT Result
+	);
+
+AcquireSubscriptionLicenseStart(
+	VOID
+	);
+
+AcquireUnlockLicenseStop(
+	HRESULT Result
+	);
+
+UpdatedLicenseAcquisitionFailure(
+	INT32 SubscriptionId,
+	HRESULT Result,
+	UNICODESTRING Pfn
+	);
+
+AcquireUnlockLicenseStart(
+	VOID
+	);
+
+AcquireSubscriptionLicenseFailure(
+	HRESULT LMResult,
+	HRESULT Result
+	);
+
+AcquireSubscriptionLicenseStop(
+	HRESULT Result
+	);
+
+UpdateBaseSku(
+	HRESULT Result,
+	UNICODESTRING PreferredOs,
+	UNICODESTRING OsProductPfn
+	);
+
+SPCallIsAppLicensedFailure(
+	HRESULT Result,
+	UNICODESTRING Pfn
+	);
+
+ActivityStoppedAutomatically(
+	VOID
+	);
+
+EnableTask(
+	HRESULT Result
+	);
+

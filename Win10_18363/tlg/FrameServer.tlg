@@ -1,0 +1,242 @@
+ProviderNames:
+	Microsoft.Windows.MediaFoundation.FrameServer
+	Microsoft.Windows.MediaFoundation.CallStack
+
+
+
+**** Events *****
+FrameServerSourceRemove(
+	GUID FrameServerSessionGuid,
+	GUID SourceSessionId
+	);
+
+FrameServerRegisterRpcInterface(
+	GUID FrameServerSessionGuid,
+	HEXINT32 HRESULT
+	);
+
+FrameServerIdleTimeOut(
+	GUID FrameServerSessionGuid,
+	UINT32 TimeOut
+	);
+
+FrameServerShutdown(
+	GUID FrameServerSessionGuid,
+	UINT32 ClientsCreated,
+	UINT32 MaxConcurrentClients,
+	UINT32 SensorGroupUpdateFlag
+	);
+
+FrameServerAddSourceByName(
+	GUID FrameServerSessionGuid,
+	GUID ContextSession,
+	GUID SourceSessionId,
+	HEXINT32 ShareMode,
+	HEXINT32 HRESULT
+	);
+
+FrameServerSourceCreate(
+	GUID FrameServerSessionGuid,
+	UNICODESTRING DeviceFriendlyName,
+	UNICODESTRING SymbolicLinkName,
+	GUID SourceSessionId,
+	HEXINT32 HRESULT
+	);
+
+FrameServerInitialize(
+	GUID FrameServerSessionGuid,
+	HEXINT32 HRESULT
+	);
+
+ProviderCallWatchdogTimeout(
+	UNICODESTRING description,
+	UNICODESTRING manager,
+	UNICODESTRING provider,
+	UINT32 timeout,
+	UINT32 queueCount,
+	UINT32 maxQueueCount,
+	BOOL32 UTCReplace_AppSessionGuid
+	);
+
+SourceCreated(
+	HRESULT hr,
+	UNICODESTRING manager,
+	UNICODESTRING provider,
+	BOOL32 UTCReplace_AppSessionGuid
+	);
+
+FaceAuthenticationModeEntered(
+	HRESULT hr,
+	UNICODESTRING manager,
+	UINT8 started,
+	BOOL32 UTCReplace_AppSessionGuid
+	);
+
+UnregisterFaceAuthSensorGroup(
+	HRESULT hr,
+	UNICODESTRING manager
+	);
+
+RegisterFaceAuthSensorGroup(
+	HRESULT hr,
+	UNICODESTRING manager
+	);
+
+UnregisterSensorGroup(
+	HRESULT hr,
+	UNICODESTRING manager,
+	UNICODESTRING group
+	);
+
+RegisterSensorGroup(
+	HRESULT hr,
+	UNICODESTRING manager,
+	UNICODESTRING source,
+	UNICODESTRING group
+	);
+
+UpdateAvailabilityForProvider(
+	HRESULT hr,
+	UNICODESTRING provider,
+	UINT8 state
+	);
+
+UnregisterCorrelationGroup(
+	HRESULT hr,
+	HEXINT64 manager
+	);
+
+RegisterCorrelationGroup(
+	HRESULT hr,
+	HEXINT64 manager
+	);
+
+UnregisterControlGroup(
+	HRESULT hr,
+	HEXINT64 manager
+	);
+
+RegisterControlGroup(
+	HRESULT hr,
+	HEXINT64 manager
+	);
+
+UnregisterFaceAuthenticationGroup(
+	HRESULT hr,
+	HEXINT64 manager
+	);
+
+RegisterFaceAuthenticationGroup(
+	HRESULT hr,
+	HEXINT64 manager
+	);
+
+UnregisterFrameProviderInfo(
+	HRESULT hr,
+	UNICODESTRING provider
+	);
+
+RegisterFrameProviderInfo(
+	HRESULT hr,
+	UNICODESTRING provider,
+	UNICODESTRING id,
+	UNICODESTRING frame,
+	BOOL32 UTCReplace_AppSessionGuid
+	);
+
+ProviderManagerUnloaded(
+	HRESULT hr,
+	UNICODESTRING manager,
+	BOOL32 UTCReplace_AppSessionGuid
+	);
+
+ProviderManagerLoaded(
+	HRESULT hr,
+	UNICODESTRING manager,
+	UNICODESTRING version,
+	HEXINT64 id,
+	BOOL32 UTCReplace_AppSessionGuid
+	);
+
+ProviderManagerKeyProcessed(
+	HRESULT hr,
+	UNICODESTRING manager,
+	INT32 info,
+	BOOL32 UTCReplace_AppSessionGuid
+	);
+
+PixelFormatError(
+	HRESULT hr,
+	UNICODESTRING manager,
+	UNICODESTRING provider,
+	UNICODESTRING format,
+	UINT32 formatValue,
+	UNICODESTRING alpha,
+	UINT32 alphaValue
+	);
+
+FramePublished(
+	HRESULT hr,
+	UNICODESTRING provider,
+	UINT32 count,
+	BOOL32 UTCReplace_AppSessionGuid
+	);
+
+StreamStopped(
+	HRESULT hr,
+	UNICODESTRING provider,
+	UINT32 count,
+	UINT32 failed,
+	BOOL32 UTCReplace_AppSessionGuid
+	);
+
+StreamStart(
+	HRESULT hr,
+	UNICODESTRING provider,
+	BOOL32 UTCReplace_AppSessionGuid
+	);
+
+FrameServerClientClose(
+	GUID FrameServerSessionGuid,
+	GUID ContextSession
+	);
+
+FrameServerClientCreate(
+	GUID FrameServerSessionGuid,
+	HEXINT32 HRESULT,
+	GUID ContextSession,
+	GUID SelectedProfileType,
+	UINT32 SelectedProfileIndex
+	);
+
+FSStreamStop(
+	GUID FrameServerSessionGuid,
+	GUID ContextSession,
+	GUID SourceSessionId,
+	HEXINT32 PinIndex,
+	HEXINT32 HRESULT
+	);
+
+FSStreamStart(
+	GUID FrameServerSessionGuid,
+	GUID ContextSession,
+	GUID SourceSessionId,
+	HEXINT32 PinIndex,
+	GUID SubType,
+	UINT32 FrameSourceType,
+	UINT32 IsSpherical,
+	UINT32 SphericalFormat,
+	HEXINT32 HRESULT
+	);
+
+FSSourceAsyncError(
+	GUID FrameServerSessionGuid,
+	GUID SourceSessionId,
+	HEXINT32 HRESULT
+	);
+
+FrameServerSecureStreaming(
+	GUID FrameServerSessionGuid,
+	BOOL32 SecureModeSetting
+	);
+

@@ -1,0 +1,502 @@
+ProviderNames:
+	Microsoft.Windows.Inventory.General
+	Microsoft.Windows.Inventory.General
+	Microsoft.Windows.Inventory.General
+	Microsoft.Windows.Inventory.General
+	Census
+	Census
+	Census
+	Census
+	Microsoft.Windows.Compatibility.Asl
+	Microsoft.Windows.Inventory.Core
+	Microsoft.Windows.Inventory.Core
+	Microsoft.Windows.Inventory.Core
+	Microsoft.Windows.Inventory.Core
+	FveDetectTelemetry
+
+
+
+**** Events *****
+Enterprise(
+	ANSISTRING __TlgCV__,
+	ANSISTRING __TlgCV__,
+	UNICODESTRING IsCloudDomainJoined,
+	UNICODESTRING IsMDMEnrolled,
+	UINT32 CDJType,
+	UNICODESTRING ServerFeatures,
+	UNICODESTRING CommercialId,
+	UNICODESTRING AzureVMType,
+	BOOL32 AzureOSIDPresent,
+	UNICODESTRING HashedDomain,
+	UNICODESTRING SystemCenterID,
+	UNICODESTRING MPNId,
+	UNICODESTRING SCCMClientId,
+	UNICODESTRING IsDeviceProtected,
+	UNICODESTRING IsDERequirementMet,
+	UNICODESTRING IsEDPEnabled,
+	UNICODESTRING AADDeviceId,
+	UINT32 ContainerType,
+	UINT32 EnrollmentType
+	);
+
+OS(
+	ANSISTRING __TlgCV__,
+	ANSISTRING __TlgCV__,
+	UINT32 GenuineState,
+	UNICODESTRING IsPortableOperatingSystem,
+	UNICODESTRING IsSecureBootEnabled,
+	UNICODESTRING OSEdition,
+	UNICODESTRING InstallationType,
+	UINT32 OSInstallType,
+	UNICODESTRING OSOOBEDateTime,
+	UINT32 OSSKU,
+	UNICODESTRING DeviceTimeZone,
+	UNICODESTRING OSUILocale,
+	UNICODESTRING RACw7Id,
+	UNICODESTRING CompactOS,
+	UINT32 Signature,
+	UINT32 IsDeviceRetailDemo,
+	UNICODESTRING ActivationChannel,
+	HRESULT LicenseStateReason,
+	UNICODESTRING OA3xOriginalProductKey,
+	UNICODESTRING ProductKeyID2,
+	UNICODESTRING ServiceMachineIP,
+	UNICODESTRING ServiceProductKeyID,
+	UINT32 ServiceMachinePort,
+	UINT32 OSSubscriptionTypeId,
+	UINT32 OSSubscriptionStatus,
+	UINT32 SLICVersion,
+	UINT32 SLICStatus,
+	UNICODESTRING LanguagePacks,
+	UNICODESTRING InstallLanguage,
+	UINT32 IsEduData,
+	UINT32 SharedPCMode,
+	UINT64 ProductActivationTime,
+	UINT32 ProductActivationResult,
+	UNICODESTRING AssignedAccessStatus,
+	UINT32 DeveloperUnlockStatus
+	);
+
+WU(
+	ANSISTRING __TlgCV__,
+	ANSISTRING __TlgCV__,
+	UNICODESTRING WUMachineId,
+	UNICODESTRING WUServer,
+	UINT32 WUDODownloadMode,
+	UINT32 OSWUAutoUpdateOptions,
+	UNICODESTRING OSWUAutoUpdateOptionsSource,
+	UINT32 AppStoreAutoUpdate,
+	UINT32 AppStoreAutoUpdatePolicy,
+	UINT32 AppStoreAutoUpdateMDM,
+	UNICODESTRING DelayUpgrade,
+	UNICODESTRING UpdateServiceURLConfigured,
+	INT32 WUDeferUpgradePeriod,
+	INT32 WUDeferUpdatePeriod,
+	UNICODESTRING WUPauseState,
+	BOOL32 OSUninstalled,
+	BOOL32 OSRolledBack,
+	UINT32 OSRollbackCount,
+	UINT32 UninstallActive,
+	UNICODESTRING AppraiserGatedStatus,
+	UINT32 OSAssessmentForFeatureUpdate,
+	UINT32 OSAssessmentForQualityUpdate,
+	UINT32 OSAssessmentForSecurityUpdate,
+	UINT32 OSAssessmentFeatureOutOfDate,
+	UINT32 OSAssessmentQualityOutOfDate,
+	UNICODESTRING OSAssessmentReleaseInfoTime
+	);
+
+Azure(
+	ANSISTRING __TlgCV__,
+	UINT64 PartA_PrivTags,
+	ANSISTRING __TlgCV__,
+	UNICODESTRING NodeID,
+	UNICODESTRING CloudCoreBuildEx,
+	UNICODESTRING CloudCoreSupportBuildEx
+	);
+
+VM(
+	ANSISTRING __TlgCV__,
+	ANSISTRING __TlgCV__,
+	UNICODESTRING VirtualizationFirmwareEnabled,
+	UNICODESTRING SLATSupported,
+	UINT32 IOMMUPresent,
+	UNICODESTRING IsVirtualDevice,
+	UINT32 HyperVisor,
+	BOOL32 IsVDI,
+	UNICODESTRING CloudService
+	);
+
+Hardware(
+	ANSISTRING __TlgCV__,
+	ANSISTRING __TlgCV__,
+	INT32 ChassisType,
+	UNICODESTRING ComputerHardwareID,
+	UNICODESTRING DeviceName,
+	UNICODESTRING OEMDigitalMarkerFileName,
+	UNICODESTRING OEMManufacturerName,
+	UNICODESTRING OEMModelNumber,
+	UNICODESTRING OEMModelName,
+	UNICODESTRING OEMModelSKU,
+	UNICODESTRING OEMModelBaseBoard,
+	UNICODESTRING OEMModelBaseBoardVersion,
+	UNICODESTRING OEMModelSystemFamily,
+	UNICODESTRING OEMModelSystemVersion,
+	UNICODESTRING OEMOptionalIdentifier,
+	UNICODESTRING OEMSerialNumber,
+	UNICODESTRING PhoneManufacturer,
+	UNICODESTRING SoCName,
+	UNICODESTRING InventoryId,
+	UNICODESTRING VoiceSupported,
+	UNICODESTRING D3DMaxFeatureLevel,
+	UNICODESTRING TPMManufacturerVersion,
+	UNICODESTRING TPMManufacturerId,
+	UINT32 PowerPlatformRole,
+	INT32 TPMVersion,
+	UINT32 StudyID,
+	UINT32 TelemetryLevel,
+	UINT32 TelemetrySettingAuthority,
+	UINT32 DeviceForm,
+	INT32 DigitizerSupport,
+	INT32 ActiveMicCount,
+	BOOL32 Gyroscope,
+	BOOL32 Magnetometer,
+	BOOL32 NFCProximity,
+	UINT32 TelemetryLevelLimitEnhanced
+	);
+
+Flighting(
+	ANSISTRING __TlgCV__,
+	ANSISTRING __TlgCV__,
+	UNICODESTRING FlightIds,
+	UNICODESTRING MSA_Accounts,
+	UINT32 IsFlightsDisabled,
+	UNICODESTRING FlightingBranchName,
+	DOUBLE DeviceSampleRate,
+	UNICODESTRING SSRK,
+	UNICODESTRING DriverTargetRing,
+	UINT32 EnablePreviewBuilds
+	);
+
+Firmware(
+	ANSISTRING __TlgCV__,
+	ANSISTRING __TlgCV__,
+	UNICODESTRING FirmwareManufacturer,
+	UNICODESTRING FirmwareReleaseDate,
+	INT32 FirmwareType,
+	UNICODESTRING FirmwareVersion
+	);
+
+Network(
+	ANSISTRING __TlgCV__,
+	ANSISTRING __TlgCV__,
+	UNICODESTRING MobileOperatorBilling,
+	UNICODESTRING MobileOperatorCommercialized,
+	UNICODESTRING NetworkAdapterGUID,
+	UNICODESTRING IMEI0,
+	UNICODESTRING SPN0,
+	UNICODESTRING MobileOperatorNetwork0,
+	UNICODESTRING MCC0,
+	UNICODESTRING MNC0,
+	UNICODESTRING IMEI1,
+	UNICODESTRING SPN1,
+	UNICODESTRING MobileOperatorNetwork1,
+	UNICODESTRING MCC1,
+	UNICODESTRING MNC1,
+	UNICODESTRING MEID
+	);
+
+Processor(
+	ANSISTRING __TlgCV__,
+	ANSISTRING __TlgCV__,
+	INT32 ProcessorCores,
+	INT32 ProcessorPhysicalCores,
+	UINT32 ProcessorArchitecture,
+	UINT32 ProcessorClockSpeed,
+	UNICODESTRING ProcessorManufacturer,
+	UNICODESTRING ProcessorModel,
+	UNICODESTRING ProcessorIdentifier,
+	UINT64 ProcessorUpdateRevision,
+	UINT64 PreviousUpdateRevision,
+	INT32 SocketCount,
+	UINT32 KvaShadow,
+	UINT32 SpeculationControl,
+	UINT32 MMSettingOverride,
+	UINT32 MMSettingOverrideMask,
+	UINT32 ProcessorUpdateStatus
+	);
+
+Xbox(
+	ANSISTRING __TlgCV__,
+	ANSISTRING __TlgCV__,
+	UNICODESTRING XboxLiveDeviceId,
+	UNICODESTRING XboxConsoleSerialNumber,
+	UNICODESTRING XboxLiveSandboxId,
+	UNICODESTRING XboxConsolePreferredLanguage
+	);
+
+Memory(
+	ANSISTRING __TlgCV__,
+	ANSISTRING __TlgCV__,
+	INT32 TotalPhysicalRAM,
+	UINT32 TotalVisibleMemory
+	);
+
+Security(
+	ANSISTRING __TlgCV__,
+	ANSISTRING __TlgCV__,
+	BOOL32 HVCIRunning,
+	BOOL32 CGRunning,
+	UINT32 VBSState,
+	UINT32 SecureBootCapable,
+	UINT32 RequiredSecurityProperties,
+	UINT32 AvailableSecurityProperties,
+	UINT32 SModeState,
+	BOOL32 IsSawHost,
+	BOOL32 IsSawGuest,
+	UINT64 DGState
+	);
+
+Storage(
+	ANSISTRING __TlgCV__,
+	ANSISTRING __TlgCV__,
+	INT64 PrimaryDiskTotalCapacity,
+	INT64 SystemVolumeTotalCapacity,
+	UINT32 PrimaryDiskType,
+	UINT32 StorageReservePassedPolicy
+	);
+
+App(
+	ANSISTRING __TlgCV__,
+	ANSISTRING __TlgCV__,
+	UINT64 CensusVersion,
+	UINT32 AppraiserEnterpriseErrorCode,
+	UINT32 AppraiserErrorCode,
+	UINT32 AppraiserRunIsInProgressOrCrashed,
+	UINT64 AppraiserRunStartTimeStamp,
+	UINT64 AppraiserRunEndTimeStamp,
+	UINT32 AppraiserTaskEnabled,
+	HRESULT AppraiserTaskExitCode,
+	FILETIME AppraiserTaskLastRun
+	);
+
+StopCensusLogTrace(
+	VOID
+	);
+
+StartCensusLogTrace(
+	VOID
+	);
+
+Battery(
+	ANSISTRING __TlgCV__,
+	ANSISTRING __TlgCV__,
+	UINT32 InternalBatteryCapablities,
+	UINT32 InternalBatteryCapacityCurrent,
+	UINT32 InternalBatteryCapacityDesign,
+	UINT32 InternalBatteryNumberOfCharges,
+	UNICODESTRING IsAlwaysOnAlwaysConnectedCapable
+	);
+
+InventoryMiscellaneousUUPInfoRemove(
+	ANSISTRING __TlgCV__,
+	ANSISTRING __TlgCV__,
+	PID PartB_Ms.Device.DeviceInventoryChange,
+	INT32 action,
+	UNICODESTRING objectType,
+	UNICODESTRING objectInstanceId,
+	UNICODESTRING syncId,
+	UNICODESTRING inventoryId
+	);
+
+InventoryMiscellaneousUUPInfoAdd(
+	ANSISTRING __TlgCV__,
+	ANSISTRING __TlgCV__,
+	UNICODESTRING Identifier,
+	UNICODESTRING Version,
+	UNICODESTRING Source,
+	UNICODESTRING PreviousVersion,
+	UNICODESTRING LastActivatedVersion,
+	PID PartB_Ms.Device.DeviceInventoryChange,
+	INT32 action,
+	UNICODESTRING objectType,
+	UNICODESTRING objectInstanceId,
+	UNICODESTRING syncId,
+	UNICODESTRING inventoryId
+	);
+
+InventoryMiscellaneousUUPInfoStartSync(
+	ANSISTRING __TlgCV__,
+	ANSISTRING __TlgCV__,
+	PID PartB_Ms.Device.DeviceInventoryChange,
+	INT32 action,
+	UNICODESTRING objectType,
+	UNICODESTRING objectInstanceId,
+	UNICODESTRING syncId,
+	UNICODESTRING inventoryId
+	);
+
+UserDisplay(
+	ANSISTRING __TlgCV__,
+	ANSISTRING __TlgCV__,
+	UINT32 InternalPrimaryDisplayLogicalDPIX,
+	UINT32 InternalPrimaryDisplayLogicalDPIY,
+	UINT32 InternalPrimaryDisplayPhysicalDPIX,
+	UINT32 InternalPrimaryDisplayPhysicalDPIY,
+	INT32 InternalPrimaryDisplayResolutionHorizontal,
+	INT32 InternalPrimaryDisplayResolutionVertical,
+	INT32 InternalPrimaryDisplaySizePhysicalH,
+	INT32 InternalPrimaryDisplaySizePhysicalY,
+	INT32 NumberofInternalDisplays,
+	INT32 NumberofExternalDisplays,
+	UINT32 VRAMDedicated,
+	UINT32 VRAMDedicatedSystem,
+	UINT32 VRAMSharedSystem
+	);
+
+PrivacySettings(
+	ANSISTRING __TlgCV__,
+	ANSISTRING __TlgCV__,
+	INT16 Activity,
+	INT16 AppDiagnostics,
+	INT16 Appointments,
+	INT16 Bluetooth,
+	INT16 BluetoothSync,
+	INT16 BroadFileSystemAccess,
+	INT16 CellularData,
+	INT16 Chat,
+	INT16 Contacts,
+	INT16 DocumentsLibrary,
+	INT16 Email,
+	INT16 GazeInput,
+	INT16 HumanInterfaceDevice,
+	INT16 Location,
+	INT16 LocationHistory,
+	INT16 Microphone,
+	INT16 PhoneCall,
+	INT16 PhoneCallHistory,
+	INT16 PicturesLibrary,
+	INT16 Radios,
+	INT16 SensorsCustom,
+	INT16 SerialCommunication,
+	INT16 Sms,
+	INT16 USB,
+	INT16 UserAccountInformation,
+	INT16 UserDataTasks,
+	INT16 UserNotificationListener,
+	INT16 VideosLibrary,
+	INT16 Webcam,
+	INT16 WiFiDirect,
+	INT16 ActivityHistoryCollection,
+	INT16 ActivityHistoryCloudSync,
+	INT16 AdvertisingId,
+	INT16 SpeechPersonalization,
+	INT16 InkTypeImprovement,
+	INT16 FindMyDevice
+	);
+
+Speech(
+	ANSISTRING __TlgCV__,
+	ANSISTRING __TlgCV__,
+	UNICODESTRING KWSEnabled,
+	UNICODESTRING SpeakerIdEnabled,
+	UNICODESTRING AboveLockEnabled,
+	UNICODESTRING HolographicSpeechInputDisabled,
+	UNICODESTRING HolographicSpeechInputDisabledRemote,
+	UNICODESTRING SpeechServicesEnabled,
+	INT32 RemotelyManaged,
+	INT32 GPAllowInputPersonalization,
+	INT32 MDMAllowInputPersonalization,
+	INT32 KeyVer,
+	INT32 SpeechServicesValueSource
+	);
+
+Userdefault(
+	ANSISTRING __TlgCV__,
+	ANSISTRING __TlgCV__,
+	UNICODESTRING DefaultBrowserProgId,
+	UNICODESTRING DefaultApp,
+	UNICODESTRING CalendarType,
+	UNICODESTRING ShortDateFormat,
+	UNICODESTRING LongDateFormat
+	);
+
+UserNLS(
+	ANSISTRING __TlgCV__,
+	ANSISTRING __TlgCV__,
+	UNICODESTRING DefaultAppLanguage,
+	UINT32 HomeLocation,
+	UNICODESTRING DisplayLanguage,
+	UNICODESTRING SpeechInputLanguages,
+	UNICODESTRING KeyboardInputLanguages
+	);
+
+UserPrivacySettings(
+	ANSISTRING __TlgCV__,
+	ANSISTRING __TlgCV__,
+	INT16 Activity,
+	INT16 AppDiagnostics,
+	INT16 Appointments,
+	INT16 Bluetooth,
+	INT16 BluetoothSync,
+	INT16 BroadFileSystemAccess,
+	INT16 CellularData,
+	INT16 Chat,
+	INT16 Contacts,
+	INT16 DocumentsLibrary,
+	INT16 Email,
+	INT16 GazeInput,
+	INT16 HumanInterfaceDevice,
+	INT16 Location,
+	INT16 LocationHistory,
+	INT16 Microphone,
+	INT16 PhoneCall,
+	INT16 PhoneCallHistory,
+	INT16 PicturesLibrary,
+	INT16 Radios,
+	INT16 SensorsCustom,
+	INT16 SerialCommunication,
+	INT16 Sms,
+	INT16 USB,
+	INT16 UserAccountInformation,
+	INT16 UserDataTasks,
+	INT16 UserNotificationListener,
+	INT16 VideosLibrary,
+	INT16 Webcam,
+	INT16 WiFiDirect,
+	INT16 ActivityHistoryCollection,
+	INT16 ActivityHistoryCloudSync,
+	INT16 AdvertisingId,
+	INT16 SpeechPersonalization,
+	INT16 InkTypePersonalization,
+	INT16 InkTypeImprovement
+	);
+
+TelemetryClient(
+	UINT64 BinFileVersion,
+	ANSISTRING ChannelName,
+	ANSISTRING CorrelationVectors,
+	ANSISTRING Types,
+	ANSISTRING Names,
+	ANSISTRING Counts,
+	ANSISTRING Metrics,
+	UNICODESTRING Messages,
+	ANSISTRING ActivityResults
+	);
+
+FveRemoveTrustedWimData(
+	INT32 hr
+	);
+
+FveCheckSuspendBitLockerOnUpgrade(
+	INT32 ShouldSuspendBitlocker,
+	BOOLEAN IsSecureBootBound,
+	BOOLEAN IsOsPreRS1,
+	UINT32 AuthUsesFlags,
+	INT32 hr
+	);
+
+FveAddTrustedWimData(
+	INT32 hr
+	);
+

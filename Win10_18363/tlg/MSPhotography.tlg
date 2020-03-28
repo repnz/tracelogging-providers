@@ -1,0 +1,558 @@
+ProviderNames:
+	Microsoft.Windows.Capture.Photography
+	Microsoft.Windows.Capture.Photography
+	Microsoft.Windows.MediaFoundation.CallStack
+
+
+
+**** Events *****
+RunAnalysis(
+	ANSISTRING MediaPhotographyModule,
+	BOOL32 UTCReplace_AppSessionGuid,
+	GUID MFCaptureEngineSessionGuid,
+	HEXINT32 HRESULT
+	);
+
+SetupSampleAnalysis(
+	ANSISTRING MediaPhotographyModule,
+	BOOL32 UTCReplace_AppSessionGuid,
+	GUID MFCaptureEngineSessionGuid,
+	HEXINT32 HRESULT
+	);
+
+MFPhotographyEvents(
+	ANSISTRING MediaPhotographyModule,
+	BOOL32 UTCReplace_AppSessionGuid,
+	GUID MFCaptureEngineSessionGuid,
+	UINT64 EffectCreateTimeInMS,
+	UINT64 EffectDisposeTimeInMS,
+	UINT8 QualityLevel,
+	UINT64 NumOfLatency,
+	DOUBLE MinLatencyInMSec,
+	DOUBLE MaxLatencyInMSec,
+	DOUBLE AvgLatencyInMSec,
+	UINT8 IsLowLatencyMode,
+	UINT8 IsHardwareVSUsed,
+	UINT8 IfIgnoreHardware,
+	UINT64 NumOfCorrectMotion,
+	DOUBLE AvgOfCorrectMotionTrace,
+	DOUBLE MinCorrectMotionTrace,
+	DOUBLE MaxCorrectMotionTrace
+	);
+
+MFPhotographyEvents(
+	ANSISTRING MediaPhotographyModule,
+	BOOL32 UTCReplace_AppSessionGuid,
+	GUID MFCaptureEngineSessionGuid,
+	UINT64 EffectCreateTimeInMS,
+	UINT64 EffectDisposeTimeInMS,
+	UINT64 DesiredAnalysisIntervalInMS,
+	UINT8 IsHDREnabled,
+	UINT8 IsHWHisgramUsed,
+	UINT32 NumOfFailedAnalysis,
+	UINT64 NumOfDetection,
+	DOUBLE MinDetectionLatency,
+	DOUBLE MaxDetectionLatency,
+	DOUBLE AvgDetectionLatency
+	);
+
+MFPhotographyEvents(
+	ANSISTRING MediaPhotographyModule,
+	BOOL32 UTCReplace_AppSessionGuid,
+	GUID MFCaptureEngineSessionGuid,
+	UINT64 EffectCreateTimeInMS,
+	UINT64 EffectDisposeTimeInMS,
+	UINT64 DesiredAnalysisIntervalInMS,
+	UINT8 IsHardwareFDEnabled,
+	UINT8 IfIgnoreHardware,
+	UINT8 IsSyncModeDetection,
+	UINT8 DetectionMode,
+	UINT32 NumOfFailedAnalysis,
+	UINT64 NumOfDetection,
+	DOUBLE MinDetectionLatency,
+	DOUBLE MaxDetectionLatency,
+	DOUBLE AvgDetectionLatency,
+	UINT64 MinDetectedFaces,
+	UINT64 MaxDetectedFaces,
+	UINT64 AvgDetectedFaces,
+	UINT64 SumDurationWithFDEnabled
+	);
+
+Fuse.RunHdr(
+	VOID
+	);
+
+Fuse.RunHdr(
+	VOID
+	);
+
+Fuse.Total(
+	VOID
+	);
+
+Fuse.Init(
+	UINT32 ColorSpace
+	);
+
+Fuse.AlignImages(
+	VOID
+	);
+
+Fuse.Total(
+	VOID
+	);
+
+Fuse.AlignImages(
+	VOID
+	);
+
+AddFrame(
+	UINT32 FrameNumber,
+	INT32 Width,
+	INT32 Height,
+	INT32 Stride
+	);
+
+RunTwoFrameTemporalDenoise.CompareMotionBlur(
+	VOID
+	);
+
+RunHdr.FusionHdr(
+	VOID
+	);
+
+RunHdr.BlurAndScaleX2MultiThreaded(
+	VOID
+	);
+
+RunTwoFrameTemporalDenoise.TemporalAverage(
+	VOID
+	);
+
+RunHdr.BlurAndScaleX2MultiThreaded(
+	VOID
+	);
+
+RunTwoFrameTemporalDenoise.ComputeBlendWeights(
+	VOID
+	);
+
+RunTwoFrameTemporalDenoise.AllocateMemoryBuffers(
+	VOID
+	);
+
+AlignImages.Apply121Downsamples(
+	VOID
+	);
+
+RunTwoFrameTemporalDenoise.CompareMotionBlur(
+	VOID
+	);
+
+RunHdr.BlendThree(
+	VOID
+	);
+
+RunHdr.FusionHdr(
+	VOID
+	);
+
+RunTwoFrameTemporalDenoise.DistanceTransform(
+	VOID
+	);
+
+RunHdr.DilationBuffer(
+	VOID
+	);
+
+RunTwoFrameTemporalDenoise.FusionTemporalDenoising(
+	VOID
+	);
+
+AlignImages.CStackAlign.AlignImages(
+	VOID
+	);
+
+AlignImages.CStackAlign.WarpImages(
+	VOID
+	);
+
+RunTwoFrameTemporalDenoise.ApplyThreshold(
+	VOID
+	);
+
+RunHdr.BlendTwo(
+	VOID
+	);
+
+AlignImages.Apply121Downsamples(
+	VOID
+	);
+
+RunTwoFrameTemporalDenoise.VtSeparableFilterBoxDecimate2to1(
+	VOID
+	);
+
+RunTwoFrameTemporalDenoise.AllocateMemoryBuffers(
+	VOID
+	);
+
+RunTwoFrameTemporalDenoise.DistanceTransform(
+	VOID
+	);
+
+RunHdr.BlendThree(
+	VOID
+	);
+
+RunTwoFrameTemporalDenoise.BlurAndScaleUpX2(
+	VOID
+	);
+
+RunHdr.BlendTwo(
+	VOID
+	);
+
+RunTwoFrameTemporalDenoise.FusionTotal(
+	VOID
+	);
+
+RunHdr.DilationBuffer(
+	VOID
+	);
+
+RunTwoFrameTemporalDenoise.FusionTemporalDenoising(
+	VOID
+	);
+
+AlignImages.CStackAlign.WarpImages(
+	VOID
+	);
+
+RunTwoFrameTemporalDenoise.ComputeBlendWeights(
+	VOID
+	);
+
+RunTwoFrameTemporalDenoise.TemporalAverage(
+	VOID
+	);
+
+RunTwoFrameTemporalDenoise.BlurAndScaleUpX2(
+	VOID
+	);
+
+AlignImages.CStackAlign.AlignImages(
+	VOID
+	);
+
+RunTwoFrameTemporalDenoise.ApplyThreshold(
+	VOID
+	);
+
+Fusion was not done. Histogram similarity criterion for the input frames not met.(
+	BOOL32 fFusionDone
+	);
+
+RunTwoFrameTemporalDenoise.VtSeparableFilterBoxDecimate2to1(
+	VOID
+	);
+
+RunTwoFrameTemporalDenoise.FusionTotal(
+	VOID
+	);
+
+ImageFusion_FusionTemporalDenoising.ComputeHistogramMatchLUT(
+	VOID
+	);
+
+ImageFusion_FusionTemporalDenoising.ComputeMotionMask(
+	VOID
+	);
+
+ImageFusion_FusionTemporalDenoising.ComputeMotionMask(
+	VOID
+	);
+
+Both images are bright. Fusion will be done.(
+	BOOL32 fViableForFusion
+	);
+
+ImageFusion_FusionTemporalDenoising.ImageTonemapping(
+	VOID
+	);
+
+Red channel histograms of the two inputs are too different. Fusion bypassed.(
+	BOOL32 fViableForFusion
+	);
+
+ImageFusion_FusionTemporalDenoising.ComputeLowLightMetric(
+	VOID
+	);
+
+ImageFusion_FusionTemporalDenoising.ImageTonemapping(
+	VOID
+	);
+
+ImageFusion_FusionTemporalDenoising.CheckImageViabilityForFusion(
+	VOID
+	);
+
+ImageFusion_FusionTemporalDenoising.FusionTotal(
+	VOID
+	);
+
+ImageFusion_FusionTemporalDenoising.FusionTotal(
+	VOID
+	);
+
+ImageFusion_FusionTemporalDenoising.CheckImageViabilityForFusion(
+	VOID
+	);
+
+ImageFusion_FusionTemporalDenoising.ComputeHistogramMatchLUT(
+	VOID
+	);
+
+Green channel histograms of the two inputs are too different. Fusion bypassed.(
+	BOOL32 fViableForFusion
+	);
+
+ImageFusion_FusionTemporalDenoising.GenerateStatitics(
+	VOID
+	);
+
+ImageFusion_FusionTemporalDenoising.GenerateStatitics(
+	VOID
+	);
+
+Blue channel histograms of the two inputs are too different. Fusion bypassed.(
+	BOOL32 fViableForFusion
+	);
+
+ImageFusion_FusionTemporalDenoising.ComputeLowLightMetric(
+	VOID
+	);
+
+Histograms of the two inputs are not too different. Fusion will be done.(
+	BOOL32 fViableForFusion
+	);
+
+HDR.Aligner.MappingImageToReferenceMean(
+	VOID
+	);
+
+HDR.Aligner.GenerateBlockFlow(
+	VOID
+	);
+
+HDR.Aligner.GenerateBlockFlow(
+	VOID
+	);
+
+HDR.Aligner.EstimateCropRect(
+	VOID
+	);
+
+HDR.Aligner.LocalWarpImages(
+	VOID
+	);
+
+HDR.Aligner.MappingImageToReferenceMean(
+	VOID
+	);
+
+HDR.Aligner.VTWarpImageEx(
+	VOID
+	);
+
+HDR.Aligner.EstimateCropRect(
+	VOID
+	);
+
+HDR.Aligner.CalcBlockIndex(
+	VOID
+	);
+
+HDR.Aligner.CalcBlockIndex(
+	VOID
+	);
+
+HDR.Aligner.VTWarpImage(
+	VOID
+	);
+
+HDR.Aligner.VTWarpImage(
+	VOID
+	);
+
+HDR.Aligner.LocalWarpImages(
+	VOID
+	);
+
+HDR.Aligner.VTWarpImageEx(
+	VOID
+	);
+
+HDR.Aligner.EstimageImageMean(
+	VOID
+	);
+
+HDR.Aligner.EstimageImageMean(
+	VOID
+	);
+
+BlendTwo.BlendUV(
+	VOID
+	);
+
+BlendTwo.BlendUV(
+	VOID
+	);
+
+BlendTwo.BlendY(
+	VOID
+	);
+
+BlendTwo.BlendY(
+	VOID
+	);
+
+LLFusionStatics.FuseAsync(
+	INT32 NumberOfFrames,
+	INT32 Width,
+	INT32 Height,
+	HRESULT HResult
+	);
+
+LLFusionOp.FuseTime(
+	INT32 NumberOfFrames,
+	INT32 Width,
+	INT32 Height,
+	INT32 OutputWidth,
+	INT32 OutputHeight,
+	INT32 LLFusionTime,
+	HRESULT HResult
+	);
+
+Fuse_TwoFrameTemporalDenoising.AlignImages(
+	VOID
+	);
+
+Failed to denoise input frame(
+	UINT32 FrameNumber,
+	INT32 Width,
+	INT32 Height,
+	INT32 Stride,
+	INT32 iWindowRadius,
+	INT32 iLumaDownsampleRatio,
+	INT32 iChromaDownsampleRatio
+	);
+
+Fuse_TwoFrameTemporalDenoising.RunTwoFrameTemporalDenoise(
+	VOID
+	);
+
+Fuse_SingleFrameDenoising.DenoiseImages(
+	VOID
+	);
+
+Fuse_SingleFrameDenoising.DenoiseImages(
+	VOID
+	);
+
+Fuse_TwoFrameTemporalDenoising.DenoiseImages(
+	VOID
+	);
+
+Fuse_TwoFrameTemporalDenoising.AlignImages(
+	VOID
+	);
+
+Fuse_TwoFrameTemporalDenoising.DenoiseImages(
+	VOID
+	);
+
+LLFusion.Init(
+	UINT32 ColorSpace
+	);
+
+Fuse_TwoFrameTemporalDenoising.RunTwoFrameTemporalDenoise(
+	VOID
+	);
+
+Denoise.SingleChannelGuidedFilter.CalcCoefficients(
+	INT32 radius,
+	FLOAT sigma
+	);
+
+Denoise.GuidedFilter.Decimate(
+	VOID
+	);
+
+Denoise.GuidedFilter.RunSingleChannelFilterNV12(
+	VOID
+	);
+
+Denoise.SingleChannelGuidedFilter.RunFilter(
+	VOID
+	);
+
+Denoise.AdaptiveBrightnessCorrectionLUT.GenerateLUT(
+	VOID
+	);
+
+Denoise.GuidedFilter.CalcNoise(
+	VOID
+	);
+
+Denoise.GuidedFilter.CalcNoise(
+	VOID
+	);
+
+Denoise.SingleChannelGuidedFilter.Destruct(
+	VOID
+	);
+
+Denoise.GuidedFilter.Decimate(
+	VOID
+	);
+
+Denoise.GuidedFilter.RunSingleChannelFilterNV12(
+	VOID
+	);
+
+Generating gamma correction LUT.(
+	FLOAT flAppliedGamma
+	);
+
+Denoise.SingleChannelGuidedFilter.CalcBilinearInterpolatedResults(
+	VOID
+	);
+
+Denoise.SingleChannelGuidedFilter.CalcCoefficients(
+	VOID
+	);
+
+Denoise.SingleChannelGuidedFilter.RunFilter(
+	INT32 radius,
+	FLOAT sigma,
+	INT32 scale
+	);
+
+Denoise.AdaptiveBrightnessCorrectionLUT.GenerateLUT(
+	VOID
+	);
+
+Denoise.GuidedFilter.RunSingleChannelFilterNV12.SkippedProcessing(
+	UINT32 width,
+	UINT32 height
+	);
+
+Denoise.SingleChannelGuidedFilter.CalcBilinearInterpolatedResults(
+	VOID
+	);
+
+Denoise.GuidedFilter.Destruct(
+	VOID
+	);
+

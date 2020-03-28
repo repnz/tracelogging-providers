@@ -1,0 +1,64 @@
+ProviderNames:
+	Microsoft.Windows.Graphics.DirectWrite
+
+
+
+**** Events *****
+FontStreamingClientSide(
+	GUID sessionId,
+	UINT8 version,
+	UINT32 bufferSize,
+	BINARY clientSide
+	);
+
+FontStreamingServerSide(
+	GUID sessionId,
+	UINT8 version,
+	UINT32 bufferSize,
+	BINARY serverSide
+	);
+
+DWriteSessionFonts(
+	UINT32 SessionId,
+	UINT32 AddedFontCount,
+	UNICODESTRING AddedFontNames,
+	UINT32 RemovedFontCount,
+	UNICODESTRING RemovedFontNames
+	);
+
+DWriteFontCacheServerError(
+	UINT32 LineNumber,
+	UINT64 TaskID,
+	INT32 HRESULT,
+	COUNTEDANSISTRING Params
+	);
+
+DWriteFontCacheLogServerCacheSnapshot(
+	UINT32 UserDefaultLCID,
+	UINT32 systemCacheSize,
+	UINT32 systemCacheGeneration,
+	UINT32 userContextCount,
+	UINT32 fontCacheClientCount,
+	UINT32 averageUserCacheSize,
+	UINT32 averageClientCacheSize,
+	UINT32 fontFaceCacheSize,
+	UINT32 fontFaceCacheGeneration
+	);
+
+DWriteFontCacheLogNewServerCacheInstance(
+	UINT32 UserDefaultLCID,
+	UINT32 newCacheReason,
+	UINT32 cacheGeneration,
+	UINT32 cacheType,
+	UINT64 timeSinceLastNewCache,
+	UINT32 currentCacheElementCount,
+	UINT32 previousCacheElementCount,
+	UINT32 copiedCacheElementCount,
+	UINT32 copiedAndUsedCacheElementCount
+	);
+
+DWriteNewFonts(
+	UINT32 SourceType,
+	UNICODESTRING FullNames
+	);
+

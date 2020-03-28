@@ -1,0 +1,59 @@
+ProviderNames:
+	ManageBDETraceLoggingProvider
+	TelemetryAssert
+	TelemetryAssertDiagTrack
+
+
+
+**** Events *****
+Bitlocker.ManageBDE.WMainComplete(
+	VOID
+	);
+
+Bitlocker.ManageBDE.WMainStart(
+	VOID
+	);
+
+Bitlocker.ManageBDE.PerformActionComplete(
+	ANSISTRING ActionName,
+	INT32 HResult,
+	INT32 LegacyMode
+	);
+
+Bitlocker.ManageBDE.PerformActionStart(
+	ANSISTRING ActionName
+	);
+
+Bitlocker.ManageBDE.PerformActionComplete(
+	ANSISTRING ActionName,
+	INT32 HResult,
+	INT32 EncMethod,
+	INT32 LegacyMode
+	);
+
+Bitlocker.ManageBDE.ValidateUsableTPMPresence(
+	INT32 IsUsableTPMPresent
+	);
+
+Bitlocker.ManageBDE.PerformActionComplete(
+	ANSISTRING ActionName,
+	INT32 HResult,
+	INT32 LegacyMode
+	);
+
+Bitlocker.ManageBDE.PerformActionStart(
+	ANSISTRING ActionName
+	);
+
+Assert(
+	UINT32 assertVersion,
+	UINT32 rva,
+	UINT32 timestamp,
+	UINT32 imageSize,
+	ANSISTRING imageName,
+	UINT32 count,
+	UINT32 totalHits,
+	UINT32 ModuleCollection,
+	UINT32 GlobalCollection
+	);
+

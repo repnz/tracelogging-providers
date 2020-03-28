@@ -1,0 +1,25 @@
+ProviderNames:
+	Microsoft.Windows.Cellcore.SmsRouter
+	TextInput
+	TelemetryAssert
+	TelemetryAssertDiagTrack
+
+
+
+**** Events *****
+IncomingMessageIdentified(
+	UINT32 Type
+	);
+
+Assert(
+	UINT32 assertVersion,
+	UINT32 rva,
+	UINT32 timestamp,
+	UINT32 imageSize,
+	ANSISTRING imageName,
+	UINT32 count,
+	UINT32 totalHits,
+	UINT32 ModuleCollection,
+	UINT32 GlobalCollection
+	);
+

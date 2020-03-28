@@ -1,0 +1,831 @@
+ProviderNames:
+	Microsoft.RemoteAssistance
+
+
+
+**** Events *****
+AppTrace(
+	ANSISTRING __TlgCV__,
+	UNICODESTRING FunctionName,
+	UNICODESTRING FileName,
+	INT32 LineNumber,
+	INT32 HResult,
+	UNICODESTRING TraceMsg,
+	BOOL32 Value
+	);
+
+AppTrace(
+	ANSISTRING __TlgCV__,
+	UNICODESTRING FunctionName,
+	UNICODESTRING FileName,
+	INT32 LineNumber,
+	INT32 HResult,
+	UNICODESTRING TraceMsg,
+	UNICODESTRING Headers
+	);
+
+AppTrace(
+	ANSISTRING __TlgCV__,
+	UNICODESTRING FunctionName,
+	UNICODESTRING FileName,
+	INT32 LineNumber,
+	INT32 HResult,
+	UNICODESTRING TraceMsg
+	);
+
+AppTrace(
+	ANSISTRING __TlgCV__,
+	UNICODESTRING FunctionName,
+	UNICODESTRING FileName,
+	INT32 LineNumber,
+	INT32 HResult,
+	UNICODESTRING TraceMsg,
+	UNICODESTRING Url
+	);
+
+AppTrace(
+	ANSISTRING __TlgCV__,
+	UNICODESTRING FunctionName,
+	UNICODESTRING FileName,
+	INT32 LineNumber,
+	INT32 HResult,
+	UNICODESTRING TraceMsg,
+	UNICODESTRING url
+	);
+
+AppError(
+	ANSISTRING __TlgCV__,
+	INT32 HResult,
+	UNICODESTRING ErrorMessage,
+	UNICODESTRING ApplicationLanguage
+	);
+
+AppTrace(
+	ANSISTRING __TlgCV__,
+	UNICODESTRING FunctionName,
+	UNICODESTRING FileName,
+	INT32 LineNumber,
+	INT32 HResult,
+	UNICODESTRING TraceMsg,
+	UNICODESTRING storedCommandLine.c_str()
+	);
+
+AppTrace(
+	ANSISTRING __TlgCV__,
+	UNICODESTRING FunctionName,
+	UNICODESTRING FileName,
+	INT32 LineNumber,
+	INT32 HResult,
+	UNICODESTRING TraceMsg,
+	UNICODESTRING argv[1]
+	);
+
+AppTrace(
+	ANSISTRING __TlgCV__,
+	UNICODESTRING FunctionName,
+	UNICODESTRING FileName,
+	INT32 LineNumber,
+	INT32 HResult,
+	UNICODESTRING TraceMsg,
+	BOOL32 *outIsStartAfterReboot
+	);
+
+AppLaunched(
+	ANSISTRING __TlgCV__,
+	BOOLEAN App_Event,
+	UNICODESTRING AgentSessionGuid,
+	UNICODESTRING OperationName,
+	UNICODESTRING EventDescription,
+	UNICODESTRING ApplicationLanguage,
+	UNICODESTRING PreviousExecutionState,
+	BOOLEAN IsNewSession,
+	INT64 TimeSinceLastSuspendInMilliseconds,
+	INT64 SessionTimeoutInMilliseconds
+	);
+
+AppOutgoingQoS(
+	NTSTATUS PartB_Ms.Qos.OutgoingServiceRequest,
+	ANSISTRING operationName,
+	ANSISTRING targetUri,
+	INT32 latencyMs,
+	INT32 serviceErrorCode,
+	BOOLEAN succeeded,
+	ANSISTRING requestMethod,
+	ANSISTRING responseContentType,
+	ANSISTRING protocol,
+	ANSISTRING protocolStatusCode,
+	ANSISTRING dependencyOperationName,
+	ANSISTRING dependencyOperationVersion,
+	ANSISTRING dependencyName,
+	ANSISTRING dependencyType,
+	INT32 responseSizeBytes,
+	ANSISTRING __TlgCV__,
+	UNICODESTRING AgentSessionGuid,
+	UNICODESTRING ApplicationLanguage,
+	UNICODESTRING AdditionalInfo
+	);
+
+AppIncomingQoS(
+	WIN32ERROR PartB_Ms.Qos.IncomingServiceRequest,
+	ANSISTRING operationName,
+	ANSISTRING targetUri,
+	INT32 latencyMs,
+	INT32 serviceErrorCode,
+	BOOLEAN succeeded,
+	ANSISTRING requestMethod,
+	ANSISTRING responseContentType,
+	ANSISTRING protocol,
+	ANSISTRING protocolStatusCode,
+	ANSISTRING operationVersion,
+	ANSISTRING callerIpAddress,
+	ANSISTRING callerName,
+	INT32 requestSizeBytes,
+	ANSISTRING __TlgCV__,
+	UNICODESTRING AgentSessionGuid,
+	UNICODESTRING ApplicationLanguage,
+	UNICODESTRING AdditionalInfo
+	);
+
+AppLoaded(
+	ANSISTRING __TlgCV__,
+	WIN32ERROR PartB_Ms.Qos.IncomingServiceRequest,
+	ANSISTRING operationName,
+	ANSISTRING targetUri,
+	INT32 latencyMs,
+	INT32 serviceErrorCode,
+	BOOLEAN succeeded,
+	ANSISTRING requestMethod,
+	ANSISTRING responseContentType,
+	ANSISTRING protocol,
+	ANSISTRING protocolStatusCode,
+	ANSISTRING operationVersion,
+	ANSISTRING callerIpAddress,
+	ANSISTRING callerName,
+	INT32 requestSizeBytes,
+	UNICODESTRING AdditionalInfo
+	);
+
+NavigateEvent(
+	ANSISTRING __TlgCV__,
+	BOOLEAN App_Event,
+	UNICODESTRING AgentSessionGuid,
+	UNICODESTRING OperationName,
+	UNICODESTRING EventDescription,
+	UNICODESTRING ApplicationLanguage,
+	UNICODESTRING AdditionalDetails
+	);
+
+AppChatSession(
+	ANSISTRING __TlgCV__,
+	BOOLEAN App_Event,
+	UNICODESTRING AgentSessionGuid,
+	UNICODESTRING OperationName,
+	UNICODESTRING EventDescription,
+	UNICODESTRING ApplicationLanguage,
+	UNICODESTRING AdditionalDetails
+	);
+
+AppAnnotation(
+	ANSISTRING __TlgCV__,
+	BOOLEAN App_Event,
+	UNICODESTRING AgentSessionGuid,
+	UNICODESTRING OperationName,
+	UNICODESTRING EventDescription,
+	UNICODESTRING ApplicationLanguage,
+	UNICODESTRING AdditionalDetails
+	);
+
+AppSharingSession(
+	ANSISTRING __TlgCV__,
+	BOOLEAN App_Event,
+	UNICODESTRING AgentSessionGuid,
+	UNICODESTRING OperationName,
+	UNICODESTRING EventDescription,
+	UNICODESTRING ApplicationLanguage,
+	UNICODESTRING AdditionalDetails
+	);
+
+AppSuspended(
+	ANSISTRING __TlgCV__,
+	BOOLEAN App_Event,
+	UNICODESTRING AgentSessionGuid,
+	UNICODESTRING OperationName,
+	UNICODESTRING EventDescription,
+	UNICODESTRING ApplicationLanguage,
+	UNICODESTRING AdditionalDetails
+	);
+
+AppLoaded(
+	ANSISTRING __TlgCV__,
+	BOOLEAN App_Event,
+	UNICODESTRING AgentSessionGuid,
+	UNICODESTRING OperationName,
+	UNICODESTRING EventDescription,
+	UNICODESTRING ApplicationLanguage,
+	UNICODESTRING AdditionalDetails
+	);
+
+AppLaunched(
+	ANSISTRING __TlgCV__,
+	BOOLEAN App_Event,
+	UNICODESTRING AgentSessionGuid,
+	UNICODESTRING OperationName,
+	UNICODESTRING EventDescription,
+	UNICODESTRING ApplicationLanguage,
+	UNICODESTRING AdditionalDetails
+	);
+
+AppError(
+	ANSISTRING __TlgCV__,
+	INT32 HResult,
+	UNICODESTRING ErrorMessage,
+	UNICODESTRING ApplicationLanguage,
+	UNICODESTRING OperationName
+	);
+
+AppError(
+	ANSISTRING __TlgCV__,
+	INT32 HResult,
+	UNICODESTRING ErrorMessage,
+	UNICODESTRING ApplicationLanguage,
+	UNICODESTRING OperationName,
+	UNICODESTRING CallStack
+	);
+
+AppTrace(
+	ANSISTRING __TlgCV__,
+	UNICODESTRING FunctionName,
+	UNICODESTRING FileName,
+	INT32 LineNumber,
+	INT32 HResult,
+	UNICODESTRING TraceMsg,
+	UNICODESTRING Name
+	);
+
+AppAnnotation(
+	ANSISTRING __TlgCV__,
+	BOOLEAN App_Event,
+	UNICODESTRING AgentSessionGuid,
+	UNICODESTRING OperationName,
+	UNICODESTRING EventDescription,
+	UNICODESTRING ApplicationLanguage,
+	INT32 HResult,
+	INT32 CanvasError HResult,
+	INT32 TimeElapsed
+	);
+
+AppTrace(
+	ANSISTRING __TlgCV__,
+	UNICODESTRING FunctionName,
+	UNICODESTRING FileName,
+	INT32 LineNumber,
+	INT32 HResult,
+	UNICODESTRING TraceMsg,
+	FLOAT NewX,
+	FLOAT NewY,
+	FLOAT NewWidthInPixels,
+	FLOAT NewHeightInPixels
+	);
+
+AppTrace(
+	ANSISTRING __TlgCV__,
+	UNICODESTRING FunctionName,
+	UNICODESTRING FileName,
+	INT32 LineNumber,
+	INT32 HResult,
+	UNICODESTRING TraceMsg,
+	INT32 ErrorCode
+	);
+
+AppAnnotation(
+	ANSISTRING __TlgCV__,
+	BOOLEAN App_Event,
+	UNICODESTRING AgentSessionGuid,
+	UNICODESTRING OperationName,
+	UNICODESTRING EventDescription,
+	UNICODESTRING ApplicationLanguage,
+	INT32 HResult
+	);
+
+AppTrace(
+	ANSISTRING __TlgCV__,
+	UNICODESTRING FunctionName,
+	UNICODESTRING FileName,
+	INT32 LineNumber,
+	INT32 HResult,
+	UNICODESTRING TraceMsg,
+	FLOAT RenderTargetWidthInPixels,
+	FLOAT RenderTargetHeightInPixels,
+	FLOAT CompositionScaleX,
+	FLOAT CompositionScaleY
+	);
+
+AppTrace(
+	ANSISTRING __TlgCV__,
+	UNICODESTRING FunctionName,
+	UNICODESTRING FileName,
+	INT32 LineNumber,
+	INT32 HResult,
+	UNICODESTRING TraceMsg,
+	FLOAT RenderTargetWidth,
+	FLOAT RenderTargetHeight,
+	FLOAT dpiX,
+	FLOAT dpiY
+	);
+
+AppSharingSession(
+	ANSISTRING __TlgCV__,
+	BOOLEAN App_Event,
+	UNICODESTRING AgentSessionGuid,
+	UNICODESTRING OperationName,
+	UNICODESTRING EventDescription,
+	UNICODESTRING ApplicationLanguage,
+	INT32 HResultSetEvent
+	);
+
+AppSharingSession(
+	ANSISTRING __TlgCV__,
+	BOOLEAN App_Event,
+	UNICODESTRING AgentSessionGuid,
+	UNICODESTRING OperationName,
+	UNICODESTRING EventDescription,
+	UNICODESTRING ApplicationLanguage
+	);
+
+AppIncomingQoS(
+	WIN32ERROR PartB_Ms.Qos.IncomingServiceRequest,
+	ANSISTRING operationName,
+	ANSISTRING targetUri,
+	INT32 latencyMs,
+	INT32 serviceErrorCode,
+	BOOLEAN succeeded,
+	ANSISTRING requestMethod,
+	ANSISTRING responseContentType,
+	ANSISTRING protocol,
+	ANSISTRING protocolStatusCode,
+	ANSISTRING operationVersion,
+	ANSISTRING callerIpAddress,
+	ANSISTRING callerName,
+	INT32 requestSizeBytes,
+	ANSISTRING __TlgCV__,
+	UNICODESTRING AgentSessionGuid,
+	UNICODESTRING ApplicationLanguage,
+	INT32 TimeoutInMilliseconds,
+	BOOLEAN ViewerTimedOut,
+	BOOLEAN EndShareBeforeconnect,
+	BOOLEAN InitialChangeSharingModeFailed,
+	BOOLEAN RelayFailed,
+	BOOLEAN EndSharingReceived,
+	BOOLEAN UsingRelay,
+	INT32 RequestedSharingMode,
+	HRESULT HResult
+	);
+
+AppTrace(
+	ANSISTRING __TlgCV__,
+	UNICODESTRING FunctionName,
+	UNICODESTRING FileName,
+	INT32 LineNumber,
+	INT32 HResult,
+	UNICODESTRING TraceMsg,
+	FLOAT X,
+	FLOAT Y,
+	FLOAT Width,
+	FLOAT Height
+	);
+
+AppSharingSession(
+	ANSISTRING __TlgCV__,
+	BOOLEAN App_Event,
+	UNICODESTRING AgentSessionGuid,
+	UNICODESTRING OperationName,
+	UNICODESTRING EventDescription,
+	UNICODESTRING ApplicationLanguage,
+	INT32 Present,
+	INT32 Attempted,
+	INT32 HResult
+	);
+
+AppSharingSession(
+	ANSISTRING __TlgCV__,
+	BOOLEAN App_Event,
+	UNICODESTRING AgentSessionGuid,
+	UNICODESTRING OperationName,
+	UNICODESTRING EventDescription,
+	UNICODESTRING ApplicationLanguage,
+	INT32 Previous,
+	INT32 Current
+	);
+
+AppTrace(
+	ANSISTRING __TlgCV__,
+	UNICODESTRING FunctionName,
+	UNICODESTRING FileName,
+	INT32 LineNumber,
+	INT32 HResult,
+	UNICODESTRING TraceMsg,
+	INT32 Previous,
+	INT32 Current
+	);
+
+AppTrace(
+	ANSISTRING __TlgCV__,
+	UNICODESTRING FunctionName,
+	UNICODESTRING FileName,
+	INT32 LineNumber,
+	INT32 HResult,
+	UNICODESTRING TraceMsg,
+	INT64 Requested,
+	INT64 Actual
+	);
+
+AppTrace(
+	ANSISTRING __TlgCV__,
+	UNICODESTRING FunctionName,
+	UNICODESTRING FileName,
+	INT32 LineNumber,
+	INT32 HResult,
+	UNICODESTRING TraceMsg,
+	INT32 DisconnectTimeoutInMilliseconds
+	);
+
+AppError(
+	ANSISTRING __TlgCV__,
+	INT32 HResult,
+	UNICODESTRING ErrorMessage,
+	UNICODESTRING ApplicationLanguage,
+	INT32 WaitResult
+	);
+
+AppTrace(
+	ANSISTRING __TlgCV__,
+	UNICODESTRING FunctionName,
+	UNICODESTRING FileName,
+	INT32 LineNumber,
+	INT32 HResult,
+	UNICODESTRING TraceMsg,
+	UNICODESTRING PropertyName
+	);
+
+AppOutgoingQoS(
+	NTSTATUS PartB_Ms.Qos.OutgoingServiceRequest,
+	ANSISTRING operationName,
+	ANSISTRING targetUri,
+	INT32 latencyMs,
+	INT32 serviceErrorCode,
+	BOOLEAN succeeded,
+	ANSISTRING requestMethod,
+	ANSISTRING responseContentType,
+	ANSISTRING protocol,
+	ANSISTRING protocolStatusCode,
+	ANSISTRING dependencyOperationName,
+	ANSISTRING dependencyOperationVersion,
+	ANSISTRING dependencyName,
+	ANSISTRING dependencyType,
+	INT32 responseSizeBytes,
+	ANSISTRING __TlgCV__,
+	UNICODESTRING AgentSessionGuid,
+	UNICODESTRING ApplicationLanguage,
+	INT32 HResult,
+	UNICODESTRING RelayCorrelationId
+	);
+
+AppOutgoingQoS(
+	NTSTATUS PartB_Ms.Qos.OutgoingServiceRequest,
+	ANSISTRING operationName,
+	ANSISTRING targetUri,
+	INT32 latencyMs,
+	INT32 serviceErrorCode,
+	BOOLEAN succeeded,
+	ANSISTRING requestMethod,
+	ANSISTRING responseContentType,
+	ANSISTRING protocol,
+	ANSISTRING protocolStatusCode,
+	ANSISTRING dependencyOperationName,
+	ANSISTRING dependencyOperationVersion,
+	ANSISTRING dependencyName,
+	ANSISTRING dependencyType,
+	INT32 responseSizeBytes,
+	ANSISTRING __TlgCV__,
+	UNICODESTRING AgentSessionGuid,
+	UNICODESTRING ApplicationLanguage,
+	INT32 HResult
+	);
+
+AppTrace(
+	ANSISTRING __TlgCV__,
+	UNICODESTRING FunctionName,
+	UNICODESTRING FileName,
+	INT32 LineNumber,
+	INT32 HResult,
+	UNICODESTRING TraceMsg,
+	INT32 AttendeeId
+	);
+
+AppTrace(
+	ANSISTRING __TlgCV__,
+	UNICODESTRING FunctionName,
+	UNICODESTRING FileName,
+	INT32 LineNumber,
+	INT32 HResult,
+	UNICODESTRING TraceMsg,
+	INT64 AttendeeId,
+	INT64 BytesSent
+	);
+
+AppSharingSession(
+	ANSISTRING __TlgCV__,
+	BOOLEAN App_Event,
+	UNICODESTRING AgentSessionGuid,
+	UNICODESTRING OperationName,
+	UNICODESTRING EventDescription,
+	UNICODESTRING ApplicationLanguage,
+	INT64 ErrorUnknown
+	);
+
+AppTrace(
+	ANSISTRING __TlgCV__,
+	UNICODESTRING FunctionName,
+	UNICODESTRING FileName,
+	INT32 LineNumber,
+	INT32 HResult,
+	UNICODESTRING TraceMsg,
+	INT64 AttendeeId
+	);
+
+AppSharingSession(
+	ANSISTRING __TlgCV__,
+	BOOLEAN App_Event,
+	UNICODESTRING AgentSessionGuid,
+	UNICODESTRING OperationName,
+	UNICODESTRING EventDescription,
+	UNICODESTRING ApplicationLanguage,
+	INT64 ErrorHResult
+	);
+
+AppSharingSession(
+	ANSISTRING __TlgCV__,
+	BOOLEAN App_Event,
+	UNICODESTRING AgentSessionGuid,
+	UNICODESTRING OperationName,
+	UNICODESTRING EventDescription,
+	UNICODESTRING ApplicationLanguage,
+	INT64 AttendeeId,
+	UNICODESTRING Reason,
+	INT64 DisconnectCode,
+	INT32 HResult
+	);
+
+AppSharingSession(
+	ANSISTRING __TlgCV__,
+	BOOLEAN App_Event,
+	UNICODESTRING AgentSessionGuid,
+	UNICODESTRING OperationName,
+	UNICODESTRING EventDescription,
+	UNICODESTRING ApplicationLanguage,
+	INT64 AttendeeId,
+	INT32 HResult
+	);
+
+AppSharingSession(
+	ANSISTRING __TlgCV__,
+	BOOLEAN App_Event,
+	UNICODESTRING AgentSessionGuid,
+	UNICODESTRING OperationName,
+	UNICODESTRING EventDescription,
+	UNICODESTRING ApplicationLanguage,
+	ANSISTRING Description
+	);
+
+AppTrace(
+	ANSISTRING __TlgCV__,
+	UNICODESTRING FunctionName,
+	UNICODESTRING FileName,
+	INT32 LineNumber,
+	INT32 HResult,
+	UNICODESTRING TraceMsg,
+	UNICODESTRING Command,
+	UNICODESTRING Context,
+	INT8 Channel
+	);
+
+AppError(
+	ANSISTRING __TlgCV__,
+	INT32 HResult,
+	UNICODESTRING ErrorMessage,
+	UNICODESTRING ApplicationLanguage,
+	UNICODESTRING CommandText
+	);
+
+AppError(
+	ANSISTRING __TlgCV__,
+	INT32 HResult,
+	UNICODESTRING ErrorMessage,
+	UNICODESTRING ApplicationLanguage,
+	UNICODESTRING Command,
+	UNICODESTRING CommandText
+	);
+
+AppIncomingQoS(
+	WIN32ERROR PartB_Ms.Qos.IncomingServiceRequest,
+	ANSISTRING operationName,
+	ANSISTRING targetUri,
+	INT32 latencyMs,
+	INT32 serviceErrorCode,
+	BOOLEAN succeeded,
+	ANSISTRING requestMethod,
+	ANSISTRING responseContentType,
+	ANSISTRING protocol,
+	ANSISTRING protocolStatusCode,
+	ANSISTRING operationVersion,
+	ANSISTRING callerIpAddress,
+	ANSISTRING callerName,
+	INT32 requestSizeBytes,
+	ANSISTRING __TlgCV__,
+	UNICODESTRING AgentSessionGuid,
+	UNICODESTRING ApplicationLanguage,
+	UNICODESTRING OriginalMessage,
+	UNICODESTRING ResponseName,
+	UNICODESTRING ResponseText,
+	HRESULT HResult
+	);
+
+AppTrace(
+	ANSISTRING __TlgCV__,
+	UNICODESTRING FunctionName,
+	UNICODESTRING FileName,
+	INT32 LineNumber,
+	INT32 HResult,
+	UNICODESTRING TraceMsg,
+	UNICODESTRING CommandText,
+	INT8 Channel
+	);
+
+AppTrace(
+	ANSISTRING __TlgCV__,
+	UNICODESTRING FunctionName,
+	UNICODESTRING FileName,
+	INT32 LineNumber,
+	INT32 HResult,
+	UNICODESTRING TraceMsg,
+	UNICODESTRING Command
+	);
+
+AppTrace(
+	ANSISTRING __TlgCV__,
+	UNICODESTRING FunctionName,
+	UNICODESTRING FileName,
+	INT32 LineNumber,
+	INT32 HResult,
+	UNICODESTRING TraceMsg,
+	UNICODESTRING GroupName
+	);
+
+AppTrace(
+	ANSISTRING __TlgCV__,
+	UNICODESTRING FunctionName,
+	UNICODESTRING FileName,
+	INT32 LineNumber,
+	INT32 HResult,
+	UNICODESTRING TraceMsg,
+	UNICODESTRING SessionPassword
+	);
+
+AppTrace(
+	ANSISTRING __TlgCV__,
+	UNICODESTRING FunctionName,
+	UNICODESTRING FileName,
+	INT32 LineNumber,
+	INT32 HResult,
+	UNICODESTRING TraceMsg,
+	UNICODESTRING ConnectionString
+	);
+
+AppTrace(
+	ANSISTRING __TlgCV__,
+	UNICODESTRING FunctionName,
+	UNICODESTRING FileName,
+	INT32 LineNumber,
+	INT32 HResult,
+	UNICODESTRING TraceMsg,
+	UNICODESTRING SharingMode
+	);
+
+AppTrace(
+	ANSISTRING __TlgCV__,
+	UNICODESTRING FunctionName,
+	UNICODESTRING FileName,
+	INT32 LineNumber,
+	INT32 HResult,
+	UNICODESTRING TraceMsg,
+	DOUBLE ConnectTimeoutInMilliseconds,
+	DOUBLE FrameCaptureIntervalInMilliseconds,
+	DOUBLE PreferredPasswordLengthInChars,
+	UNICODESTRING InitialSharingMode,
+	UNICODESTRING RelayConnectionId,
+	UNICODESTRING RelayHostName,
+	UNICODESTRING RelayCorrelationId,
+	DOUBLE RelayPort
+	);
+
+AppTrace(
+	ANSISTRING __TlgCV__,
+	UNICODESTRING FunctionName,
+	UNICODESTRING FileName,
+	INT32 LineNumber,
+	INT32 HResult,
+	UNICODESTRING TraceMsg,
+	UNICODESTRING errormode
+	);
+
+KeyboardHook(
+	ANSISTRING __TlgCV__,
+	BOOLEAN App_Event,
+	UNICODESTRING AgentSessionGuid,
+	UNICODESTRING OperationName,
+	UNICODESTRING EventDescription,
+	UNICODESTRING ApplicationLanguage,
+	INT32 HResult
+	);
+
+KeyboardHook(
+	ANSISTRING __TlgCV__,
+	BOOLEAN App_Event,
+	UNICODESTRING AgentSessionGuid,
+	UNICODESTRING OperationName,
+	UNICODESTRING EventDescription,
+	UNICODESTRING ApplicationLanguage,
+	INT32 Number of Collab Key Send failures,
+	INT32 Number of null sink errors
+	);
+
+AppTrace(
+	ANSISTRING __TlgCV__,
+	UNICODESTRING FunctionName,
+	UNICODESTRING FileName,
+	INT32 LineNumber,
+	INT32 HResult,
+	UNICODESTRING TraceMsg,
+	FLOAT CompositionScaleX,
+	FLOAT CompositionScaleY,
+	UINT32 DpiX,
+	UINT32 DpiY,
+	INT32 MonitorRect Left physical pixels,
+	INT32 MonitorRect Top physical pixels,
+	INT32 MonitorRect Right physical pixels,
+	INT32 MonitorRect Bottom physical pixels
+	);
+
+AppTrace(
+	ANSISTRING __TlgCV__,
+	UNICODESTRING FunctionName,
+	UNICODESTRING FileName,
+	INT32 LineNumber,
+	INT32 HResult,
+	UNICODESTRING TraceMsg,
+	UINT32 TotalSettingsCount
+	);
+
+AppError(
+	ANSISTRING __TlgCV__,
+	INT32 HResult,
+	UNICODESTRING ErrorMessage,
+	UNICODESTRING ApplicationLanguage,
+	UNICODESTRING SettingName
+	);
+
+AppTrace(
+	ANSISTRING __TlgCV__,
+	UNICODESTRING FunctionName,
+	UNICODESTRING FileName,
+	INT32 LineNumber,
+	INT32 HResult,
+	UNICODESTRING TraceMsg,
+	UNICODESTRING URL,
+	BOOLEAN IsAllowed
+	);
+
+AppTrace(
+	ANSISTRING __TlgCV__,
+	UNICODESTRING FunctionName,
+	UNICODESTRING FileName,
+	INT32 LineNumber,
+	INT32 HResult,
+	UNICODESTRING TraceMsg,
+	BOOL32 Does Default Account Exist,
+	BOOL32 Found a token,
+	UNICODESTRING Authority available,
+	UNICODESTRING MSA scope
+	);
+
+AppTrace(
+	ANSISTRING __TlgCV__,
+	UNICODESTRING FunctionName,
+	UNICODESTRING FileName,
+	INT32 LineNumber,
+	INT32 HResult,
+	UNICODESTRING TraceMsg,
+	BOOL32 Prompt User From JS,
+	BOOL32 Does Default Account Exist
+	);
+

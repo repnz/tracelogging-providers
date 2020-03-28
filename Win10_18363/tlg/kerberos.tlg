@@ -1,0 +1,133 @@
+ProviderNames:
+	Microsoft.Windows.Security.Kerberos
+	TelemetryAssert
+	TelemetryAssertDiagTrack
+	Microsoft.Windows.TlgAggregateInternal
+
+
+
+**** Events *****
+ReadRegistryValue_Aggregate(
+	NULL Count,
+	UNICODESTRING registryValue,
+	BOOL32 isInRegistry,
+	UINT32 registryData,
+	UINT32 effectiveValue,
+	BOOL32 credGuardEn
+	);
+
+NtlmFallback_Aggregate(
+	NULL Count,
+	UINT16 fallbackReason,
+	BOOL32 containsDomainSeparator
+	);
+
+NtlmFallback_Aggregate(
+	NULL Count,
+	UINT16 fallbackReason
+	);
+
+RsaEncryptedAsReply_Aggregated(
+	NULL Count,
+	BOOL32 credGuardEn
+	);
+
+UnconstrainedDelegationRequested_Aggregated(
+	NULL Count,
+	BOOL32 credGuardEn
+	);
+
+KerbLargestToken(
+	UINT32 maxTokenSize
+	);
+
+KerbCredIsoIumDestroyed(
+	VOID
+	);
+
+KerbCredIsoIumCreated(
+	INT32 Status
+	);
+
+KerbCredIsoInProcDestroyed(
+	VOID
+	);
+
+KerbCredIsoInProcConstructed(
+	VOID
+	);
+
+KerbQuerySupplementalCredentials(
+	BOOLEAN iumAware,
+	INT32 status
+	);
+
+LogonUserStop_Aggregate(
+	NULL Count,
+	HEXINT32 status,
+	INT16 logonType,
+	BOOL32 kerbRunningIsolated,
+	NULL logonInfo
+	);
+
+GetTgtStop_Aggregate(
+	NULL count,
+	HEXINT32 status,
+	HEXINT32 kerberr,
+	COUNTEDSTRING serviceNameFirstPart,
+	BOOL32 kerbRunningIsolated,
+	HEXINT32 eType,
+	HEXINT32 pdu,
+	BOOL32 pkCredsPresent,
+	BOOL32 pwdCredsPresent,
+	BOOL32 selfSignedCreds,
+	BOOL32 certTimeInvalid
+	);
+
+MachineAccountLogon_Aggregate(
+	NULL count,
+	HEXINT32 status,
+	HEXINT32 kerberr,
+	COUNTEDSTRING serviceNameFirstPart,
+	BOOL32 kerbRunningIsolated,
+	HEXINT32 eType,
+	HEXINT32 pdu,
+	BOOL32 fallbackToPwd,
+	BOOL32 machinePkinitEnabled,
+	BOOL32 machinePkinitBehavior
+	);
+
+MachineKeyPreauthFailure(
+	VOID
+	);
+
+KerbAcceptCreds(
+	INT32 Status,
+	BOOL32 CloudApCredsPresented,
+	UNICODESTRING CredType
+	);
+
+Assert(
+	UINT32 assertVersion,
+	UINT32 rva,
+	UINT32 timestamp,
+	UINT32 imageSize,
+	ANSISTRING imageName,
+	UINT32 count,
+	UINT32 totalHits,
+	UINT32 ModuleCollection,
+	UINT32 GlobalCollection
+	);
+
+TlgAggregateSummary(
+	GUID Provider,
+	UINT64 NumFlushes,
+	UINT64 MaxEntriesStored,
+	UINT64 TotalEntriesFlushed,
+	UINT32 MaxEntriesFlushed,
+	UINT32 MinEntriesFlushed,
+	UINT32 NumBucketLimitReached,
+	UINT32 NumAllocationFailures,
+	UINT32 NumLargeEventFailures
+	);
+

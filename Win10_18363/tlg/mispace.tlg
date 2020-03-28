@@ -1,0 +1,1181 @@
+ProviderNames:
+	Microsoft.Windows.Storage.MiSpace
+	Microsoft.Windows.Storage.PmUtil
+	FveDetectTelemetry
+
+
+
+**** Events *****
+Enter function(
+	ANSISTRING Function,
+	UINT32 Line
+	);
+
+Error(
+	UNICODESTRING Function,
+	UINT32 Line,
+	HEXINT32 ErrorCode_HRESULT
+	);
+
+Exit function(
+	ANSISTRING Function,
+	UINT32 Line
+	);
+
+ExitFunction(
+	UNICODESTRING Function,
+	UINT32 Line,
+	UINT64 ElapsedTime_ms,
+	HEXINT32 ErrorCode_HRESULT
+	);
+
+BadArgument(
+	UNICODESTRING Function,
+	UINT32 Line
+	);
+
+Provider Load(
+	UINT32 ErrorCode
+	);
+
+EnterFunction(
+	UNICODESTRING Function,
+	UINT32 Line
+	);
+
+ActivityStoppedAutomatically(
+	VOID
+	);
+
+Provider Load(
+	VOID
+	);
+
+Error(
+	ANSISTRING Function,
+	UINT32 Line,
+	HEXINT32 ErrorCode_MIResult
+	);
+
+Error(
+	ANSISTRING Function,
+	UINT32 Line,
+	HEXINT32 ErrorCode_HRESULT
+	);
+
+Error(
+	UNICODESTRING Function,
+	UINT32 Line,
+	HEXINT32 ErrorCode_HRESULT,
+	HEXINT32 OriginalError_MIResult
+	);
+
+Error(
+	ANSISTRING Function,
+	UINT32 Line,
+	HEXINT32 ErrorCode_SM_RC
+	);
+
+ObjectID Mismatch(
+	UNICODESTRING ChildId1,
+	UNICODESTRING ChildId2
+	);
+
+ObjectID Mismatch(
+	UNICODESTRING ParentId1,
+	UNICODESTRING ParentId2
+	);
+
+ObjectID Mismatch(
+	UINT32 Type1,
+	UINT32 Type2
+	);
+
+Filter(
+	UINT32 SubsystemType
+	);
+
+ObjectID Mismatch(
+	UNICODESTRING ObjectId1,
+	UNICODESTRING ObjectId2
+	);
+
+Error(
+	ANSISTRING Function,
+	UINT32 Line,
+	HEXINT32 ErrorCode_DWORD
+	);
+
+Warning(
+	ANSISTRING Function,
+	UINT32 Line,
+	HEXINT32 ErrorCode_DWORD
+	);
+
+Subsystem Unregister(
+	ANSISTRING Message,
+	UNICODESTRING SubsystemId
+	);
+
+Success(
+	ANSISTRING Function,
+	UINT32 Line,
+	HEXINT32 ErrorCode_DWORD
+	);
+
+InstanceProperties(
+	GUID SubsystemId,
+	UINT32 SubsystemType,
+	UINT16 StorageConnectionType,
+	BOOL32 IsMixedMode
+	);
+
+Indication Disabled(
+	UINT32 Type
+	);
+
+Indication Enabled(
+	UINT32 Type
+	);
+
+Failure detected on drive(
+	WIN32ERROR DriveObject->Param1,
+	GUID DriveObject->Id.Id
+	);
+
+Invalid cluster fault domain Id(
+	UNICODESTRING Id
+	);
+
+_TranslatePoolRemoveDriveErrors(
+	HEXINT32 HRESULT,
+	HEXINT32 SMRC
+	);
+
+Cluster subsystem refresh failed(
+	HRESULT hResult
+	);
+
+Drive Missing(
+	ANSISTRING Message,
+	UNICODESTRING NodeName,
+	GUID PoolId,
+	GUID DriveId
+	);
+
+_TranslateCreateVirtualDiskErrors(
+	HEXINT32 HRESULT,
+	HEXINT32 SMRC
+	);
+
+Failure detected on enclosure(
+	WIN32ERROR EnclosureObject->Param1,
+	GUID EnclosureObject->Id
+	);
+
+Enclosure not physically connected(
+	ANSISTRING Message,
+	UNICODESTRING NodeName,
+	GUID EnclosureId
+	);
+
+_TranslateDeletePoolErrors(
+	HEXINT32 HRESULT,
+	HEXINT32 SMRC
+	);
+
+Failed to get missing drive info from cluster(
+	GUID Drive id,
+	GUID Pool id,
+	HEXINT32 Status
+	);
+
+Failed to find enclosure on node(
+	GUID Enclosure id,
+	HEXINT32 Status
+	);
+
+UpdateFirmware(
+	UNICODESTRING ObjectType,
+	GUID ObjectId,
+	UNICODESTRING Manufacturer,
+	UNICODESTRING Model,
+	UNICODESTRING SerialNumber,
+	UINT32 BusType,
+	UINT16 SlotNumber,
+	ANSISTRING OldFirmwareVersion,
+	ANSISTRING NewFirmwareVersion,
+	UINT64 DownloadTime_ms,
+	UINT64 ActivateTime_ms,
+	UINT32 ReturnCode
+	);
+
+_TranslateMaintenanceErrors(
+	HEXINT32 HRESULT,
+	HEXINT32 SMRC
+	);
+
+Space Detached(
+	ANSISTRING Message,
+	UNICODESTRING NodeName,
+	GUID PoolId,
+	GUID SpaceId
+	);
+
+Space Detached(
+	ANSISTRING Message,
+	GUID PoolId,
+	GUID SpaceId
+	);
+
+Failure detected on drive(
+	WIN32ERROR status.win32,
+	GUID DriveIds->Ids[index]
+	);
+
+_TranslateSetSpaceAttributesErrors(
+	HEXINT32 HRESULT,
+	HEXINT32 SMRC
+	);
+
+_TranslateSetStorageTierErrors(
+	HEXINT32 HRESULT,
+	HEXINT32 SMRC
+	);
+
+Enclosure not physically connected(
+	ANSISTRING Message,
+	GUID EnclosureId
+	);
+
+_TranslateDeleteSpaceErrors(
+	HEXINT32 HRESULT,
+	HEXINT32 SMRC
+	);
+
+There are no child fault domain objects of the desired type(
+	UINT32 ParentLevel,
+	GUID ParentId,
+	UINT32 ChildLevel
+	);
+
+_TranslateSetPoolAttributesErrors(
+	HEXINT32 HRESULT,
+	HEXINT32 SMRC
+	);
+
+_TranslateSpaceAddRemoveDriveErrors(
+	HEXINT32 HRESULT,
+	HEXINT32 SMRC
+	);
+
+_TranslateSpaceRebalanceMetadataErrors(
+	HEXINT32 HRESULT,
+	HEXINT32 SMRC
+	);
+
+_TranslateCreatePoolErrors(
+	HEXINT32 HRESULT,
+	HEXINT32 SMRC
+	);
+
+_TranslateSetPoolErrors(
+	HEXINT32 HRESULT,
+	HEXINT32 SMRC
+	);
+
+The desired parent fault domain object was not found(
+	UINT32 ChildType,
+	GUID ChildId,
+	UINT32 ParentType
+	);
+
+_TranslatePoolRebalanceMetadataErrors(
+	HEXINT32 HRESULT,
+	HEXINT32 SMRC
+	);
+
+_TranslateSetDefaultsErrors(
+	HEXINT32 HRESULT,
+	HEXINT32 SMRC
+	);
+
+Failed to find enclosure drive in cluster(
+	GUID Drive id,
+	HEXINT32 Status
+	);
+
+_TranslateSetSpaceErrors(
+	HEXINT32 HRESULT,
+	HEXINT32 SMRC
+	);
+
+Pool Read-Only(
+	ANSISTRING Message,
+	UNICODESTRING NodeName,
+	GUID PoolId
+	);
+
+Drive not physically connected(
+	ANSISTRING Message,
+	UNICODESTRING NodeName,
+	GUID PoolId,
+	GUID DriveId
+	);
+
+Failed to find enclosure drive(
+	GUID Drive id,
+	HEXINT32 Status
+	);
+
+_TranslatePoolAddDriveErrors(
+	HEXINT32 HRESULT,
+	HEXINT32 SMRC
+	);
+
+Failure detected on drive(
+	WIN32ERROR driveObject->Param1,
+	GUID driveObject->Id.Id
+	);
+
+_TranslatePoolUpgradeErrors(
+	HEXINT32 HRESULT,
+	HEXINT32 SMRC
+	);
+
+StorageJobEvent(
+	ANSISTRING Activity,
+	GUID ID,
+	UNICODESTRING Name,
+	UINT16 State,
+	UINT32 ReturnCode,
+	UINT64 ElapsedTime_ms
+	);
+
+Drive Operation Failure(
+	UINT32 Su Operation,
+	UINT32 DeviceNumber,
+	UINT32 ErrorCode,
+	UINT32 Drive InSharedView
+	);
+
+_TranslateSetDriveErrors(
+	HEXINT32 HRESULT,
+	HEXINT32 SMRC
+	);
+
+_TranslateResizeSpaceErrors(
+	HEXINT32 HRESULT,
+	HEXINT32 SMRC
+	);
+
+Impersonating cluster creation context failed(
+	HEXINT32 Win32
+	);
+
+Notification Ignored(
+	UINT32 ObjectType,
+	HEXINT64 FilterFlags
+	);
+
+Cluster resource state poll(
+	INT32 DesiredState,
+	INT32 ReturnState
+	);
+
+ClusterEvent(
+	ANSISTRING ResourceType,
+	ANSISTRING State
+	);
+
+No drive letters available in cluster(
+	VOID
+	);
+
+Notification Received(
+	UINT32 ObjectType,
+	HEXINT64 FilterFlags
+	);
+
+Notification Failure(
+	BOOL32 IsClusteredNode
+	);
+
+Failed to initialize cluster state(
+	VOID
+	);
+
+Cluster was renamed. Refreshing cluster state...(
+	VOID
+	);
+
+Retaining existing object in cluster aggregation map(
+	UINT32 NodeIdx,
+	HEX Object being rejected (new object) - SpWmiObject:{ClassName;ObjectID;Rank;Timestamp},
+	UNICODESTRING ClassName,
+	UNICODESTRING ObjectId,
+	UINT32 Rank,
+	UINT64 TimeStamp,
+	HEX Object being retained (existing object) - SpWmiObject:{ClassName;ObjectID;Rank;Timestamp},
+	UNICODESTRING ClassName,
+	UNICODESTRING ObjectId,
+	UINT32 Rank,
+	UINT64 TimeStamp
+	);
+
+Total objects returned by node(
+	UINT32 NodeIdx,
+	UINT32 ObjectCount
+	);
+
+Replacing object in cluster aggregation map(
+	UINT32 NodeIdx,
+	HEX Object being inserted (new object) - SpWmiObject:{ClassName;ObjectID;Rank;Timestamp},
+	UNICODESTRING ClassName,
+	UNICODESTRING ObjectId,
+	UINT32 Rank,
+	UINT64 TimeStamp,
+	HEX Object being replaced (existing object) - SpWmiObject:{ClassName;ObjectID;Rank;Timestamp},
+	UNICODESTRING ClassName,
+	UNICODESTRING ObjectId,
+	UINT32 Rank,
+	UINT64 TimeStamp
+	);
+
+Inserting object in cluster aggregation map(
+	UINT32 NodeIdx,
+	HEX Object being inserted (new object) - SpWmiObject:{ClassName;ObjectID;Rank;Timestamp},
+	UNICODESTRING ClassName,
+	UNICODESTRING ObjectId,
+	UINT32 Rank,
+	UINT64 TimeStamp
+	);
+
+Copy WMI Element(
+	UNICODESTRING PropertyName
+	);
+
+Management Node Version Too Low(
+	UINT32 Version
+	);
+
+Ping Failed(
+	UNICODESTRING SubsystemId,
+	UNICODESTRING SubsystemURI,
+	HEXINT32 ErrorCode_HRESULT
+	);
+
+RemoteAck(
+	VOID
+	);
+
+MI Callback Failed(
+	UNICODESTRING SubsystemId,
+	UNICODESTRING SubsystemURI,
+	BOOL32 MoreResults,
+	BOOL32 Cancelled,
+	HEXINT32 MIResult,
+	UNICODESTRING ErrorString
+	);
+
+Message(
+	ANSISTRING Message
+	);
+
+Incoming Remote Call(
+	UNICODESTRING SubsystemId
+	);
+
+Ping Succeeded(
+	UNICODESTRING SubsystemId,
+	UNICODESTRING SubsystemURI
+	);
+
+Ping Subsystem(
+	UNICODESTRING SubsystemId,
+	UNICODESTRING SubsystemURI
+	);
+
+RemoteSubsystemError(
+	ANSISTRING Method,
+	UNICODESTRING SubsystemId,
+	UINT32 MIResult,
+	UNICODESTRING ErrorMessage
+	);
+
+Management Node MinVersion Not Met(
+	UINT32 MinVersion
+	);
+
+Message(
+	ANSISTRING Message
+	);
+
+Notification Ignored(
+	ANSISTRING Message
+	);
+
+Notification Recieved(
+	UINT32 Type,
+	GUID PoolId,
+	GUID Id,
+	HEXINT32 Flags
+	);
+
+MI_TO_SM_RC(
+	HEXINT32 MI Result,
+	HEXINT32 SMRC
+	);
+
+GleToSmpReturnCode(
+	HEXINT32 HRESULT,
+	HEXINT32 SMRC
+	);
+
+Attempting to add non-poolable Physical Disk to storage pool.(
+	UNICODESTRING ObjectId
+	);
+
+Attempting to add Physical Disk in wrong subsystem to storage pool.(
+	UNICODESTRING badPhysicalDisks[badPhysicalDiskCount]
+	);
+
+MSFT_StorageExtendedStatus Creation Failed(
+	UINT32 MessageId,
+	UINT32 MI_Result
+	);
+
+Extended Status Creation Failed(
+	UINT32 MessageId
+	);
+
+Response to Provider Control Received on Orchestrator Node - Success(
+	HEX SP_CONTROL_HANDLE:{TypeName;TypeValue;ObjectID;NodeMask},
+	UNICODESTRING Type(Name),
+	UINT32 Type(Value),
+	UNICODESTRING ObjectID,
+	HEXINT64 Node Mask,
+	STRING  ControlCode {Name;Value},
+	UNICODESTRING ControlCode(Name),
+	HEXINT32 ControlCode(Value),
+	UINT32 InputBufferSize,
+	UINT32 OutputBufferSize,
+	UINT32 ProviderControlStatus,
+	BOOLEAN Response {Buffer;Status;Size},
+	HEXINT64 Buffer,
+	HEXINT32 Status,
+	UINT32 Size
+	);
+
+Cannot remove drive from pool (legacy), has allocations(
+	GUID PoolId,
+	GUID DriveId
+	);
+
+Provider Control Serviced on responding Node(
+	HEX SP_CONTROL_HANDLE:{TypeName;TypeValue;ObjectID;NodeMask},
+	UNICODESTRING Type(Name),
+	UINT32 Type(Value),
+	UNICODESTRING ObjectID,
+	HEXINT64 Node Mask,
+	STRING  ControlCode {Name;Value},
+	UNICODESTRING ControlCode(Name),
+	HEXINT32 ControlCode(Value),
+	UINT32 InputBufferSize,
+	UINT32 OutputBufferSize,
+	UINT64 ProcessingTime(milliseconds) ,
+	BOOLEAN Response {Buffer;Status;Size},
+	HEXINT64 Buffer,
+	HEXINT32 Status,
+	UINT32 Size,
+	HEXINT32 ErrorReturned,
+	UINT32 BytesReturned
+	);
+
+Response to Provider Control Received on Orchestrator Node - Insufficient Buffer(
+	HEX SP_CONTROL_HANDLE:{TypeName;TypeValue;ObjectID;NodeMask},
+	UNICODESTRING Type(Name),
+	UINT32 Type(Value),
+	UNICODESTRING ObjectID,
+	HEXINT64 Node Mask,
+	STRING  ControlCode {Name;Value},
+	UNICODESTRING ControlCode(Name),
+	HEXINT32 ControlCode(Value),
+	UINT32 InputBufferSize,
+	UINT32 OutputBufferSize,
+	UINT32 ProviderControlStatus,
+	BOOLEAN Response {Buffer;Status;Size},
+	HEXINT64 Buffer,
+	HEXINT32 Status,
+	UINT32 Size
+	);
+
+Found regen error on extent for space(
+	GUID PoolId,
+	GUID SpaceId,
+	GUID DriveId,
+	UINT16 Reason
+	);
+
+Pool Metadata Rebalance Failure(
+	GUID PoolId,
+	UINT32 ErrorCode
+	);
+
+Space Metadata Rebalance Failure(
+	GUID PoolId,
+	GUID SpaceId,
+	UINT32 ErrorCode
+	);
+
+Cluster Unavailable - Falling back to localhost only ...(
+	HEX SP_CONTROL_HANDLE:{TypeName;TypeValue;ObjectID;NodeMask},
+	UNICODESTRING Type(Name),
+	UINT32 Type(Value),
+	UNICODESTRING ObjectID,
+	HEXINT64 Node Mask,
+	STRING  ControlCode {Name;Value},
+	UNICODESTRING ControlCode(Name),
+	HEXINT32 ControlCode(Value),
+	HEXINT32 Status
+	);
+
+Response to Provider Control Received on Orchestrator Node - Error(
+	HEX SP_CONTROL_HANDLE:{TypeName;TypeValue;ObjectID;NodeMask},
+	UNICODESTRING Type(Name),
+	UINT32 Type(Value),
+	UNICODESTRING ObjectID,
+	HEXINT64 Node Mask,
+	STRING  ControlCode {Name;Value},
+	UNICODESTRING ControlCode(Name),
+	HEXINT32 ControlCode(Value),
+	UINT32 InputBufferSize,
+	UINT32 OutputBufferSize,
+	UINT32 ProviderControlStatus,
+	BOOLEAN Response {Buffer;Status;Size},
+	HEXINT64 Buffer,
+	HEXINT32 Status,
+	UINT32 Size
+	);
+
+Sending Provider Control from Orchestrator Node(
+	HEX SP_CONTROL_HANDLE:{TypeName;TypeValue;ObjectID;NodeMask},
+	UNICODESTRING Type(Name),
+	UINT32 Type(Value),
+	UNICODESTRING ObjectID,
+	HEXINT64 Node Mask,
+	STRING  ControlCode {Name;Value},
+	UNICODESTRING ControlCode(Name),
+	HEXINT32 ControlCode(Value),
+	UINT32 InputBufferSize,
+	UINT32 OutputBufferSize
+	);
+
+Cluster unable to locate object - Falling back to localhost ...(
+	HEX SP_CONTROL_HANDLE:{TypeName;TypeValue;ObjectID;NodeMask},
+	UNICODESTRING Type(Name),
+	UINT32 Type(Value),
+	UNICODESTRING ObjectID,
+	HEXINT64 Node Mask,
+	STRING  ControlCode {Name;Value},
+	UNICODESTRING ControlCode(Name),
+	HEXINT32 ControlCode(Value),
+	HEXINT32 Status,
+	ANSISTRING OriginalTarget,
+	ANSISTRING FallbackTarget
+	);
+
+Cluster was unable to locate pool - Falling back to locating by broadcast ...(
+	HEX SP_CONTROL_HANDLE:{TypeName;TypeValue;ObjectID;NodeMask},
+	UNICODESTRING Type(Name),
+	UINT32 Type(Value),
+	UNICODESTRING ObjectID,
+	HEXINT64 Node Mask,
+	STRING  ControlCode {Name;Value},
+	UNICODESTRING ControlCode(Name),
+	HEXINT32 ControlCode(Value),
+	HEXINT32 Status,
+	ANSISTRING OriginalTarget,
+	ANSISTRING FallbackTarget
+	);
+
+Provider Control Received on responding Node(
+	HEX SP_CONTROL_HANDLE:{TypeName;TypeValue;ObjectID;NodeMask},
+	UNICODESTRING Type(Name),
+	UINT32 Type(Value),
+	UNICODESTRING ObjectID,
+	HEXINT64 Node Mask,
+	STRING  ControlCode {Name;Value},
+	UNICODESTRING ControlCode(Name),
+	HEXINT32 ControlCode(Value),
+	UINT32 InputBufferSize,
+	UINT32 OutputBufferSize
+	);
+
+Send repair failed for virtual disk(
+	UINT32 Phase,
+	GUID PoolId,
+	GUID SpaceId
+	);
+
+Cannot remove drive from pool, has allocations(
+	GUID PoolId,
+	GUID DriveId
+	);
+
+Cluster was unable to locate space - Falling back to locating by broadcast ...(
+	HEX SP_CONTROL_HANDLE:{TypeName;TypeValue;ObjectID;NodeMask},
+	UNICODESTRING Type(Name),
+	UINT32 Type(Value),
+	UNICODESTRING ObjectID,
+	HEXINT64 Node Mask,
+	STRING  ControlCode {Name;Value},
+	UNICODESTRING ControlCode(Name),
+	HEXINT32 ControlCode(Value),
+	HEXINT32 Status,
+	ANSISTRING OriginalTarget,
+	ANSISTRING FallbackTarget
+	);
+
+Failed to locate object(
+	HEX Search for SP_CONTROL_HANDLE:{TypeName;TypeValue;ObjectID;NodeMask},
+	UNICODESTRING Type(Name),
+	UINT32 Type(Value),
+	UNICODESTRING ObjectID,
+	HEXINT64 Node Mask,
+	HEXINT32 Status
+	);
+
+Locate Object Failed(
+	UNICODESTRING ObjectId,
+	UNICODESTRING ObjectType
+	);
+
+Successfully located object(
+	HEX Search for SP_CONTROL_HANDLE:{TypeName;TypeValue;ObjectID;NodeMask},
+	UNICODESTRING Type(Name),
+	UINT32 Type(Value),
+	UNICODESTRING ObjectID,
+	HEXINT64 Node Mask,
+	HEX Found SP_CONTROL_HANDLE:{TypeName;TypeValue;ObjectID;NodeMask},
+	UNICODESTRING Type(Name),
+	UINT32 Type(Value),
+	UNICODESTRING ObjectID,
+	HEXINT64 Node Mask,
+	HEXINT32 Status
+	);
+
+OptimizeStoragePool(
+	GUID PoolId,
+	UINT32 PoolVersion,
+	UINT32 SubsystemType,
+	UINT64 Duration,
+	UINT64 BytesProcessed,
+	UINT64 BytesTotal,
+	UINT32 ReturnCode
+	);
+
+Failed to retrieve created volume.(
+	STRING SpaceId {Id;PoolId},
+	GUID SpaceId(Id),
+	GUID SpaceId(PoolId)
+	);
+
+Virtual disk repair failed during drive removal(
+	GUID PoolId,
+	GUID SpaceId
+	);
+
+Failed to create virtual disk.(
+	VOID
+	);
+
+Repair virtual disk cannot progress(
+	HEXINT32 SM_RC
+	);
+
+RepairVirtualDisk(
+	GUID SpaceId,
+	UINT32 SubsystemType,
+	UINT16 OldHealthStatus,
+	UINT16 OldOperationalStatus,
+	UINT16 NewHealthStatus,
+	UINT16 NewOperationalStatus,
+	UINT64 Duration,
+	UINT64 BytesProcessed,
+	UINT64 BytesTotal,
+	UINT32 ReturnCode
+	);
+
+ObjectAggregation(
+	UNICODESTRING ObjectType,
+	PID Properties {PartitionStyle;SubsystemType;UniqueId;Guid;Signature},
+	UNICODESTRING PartitionStyle,
+	UNICODESTRING SubsystemType,
+	UNICODESTRING UniqueId,
+	GUID Guid,
+	UINT32 Signature,
+	UNICODESTRING Response->pNodes[i].pszNodeName,
+	UINT16 Rank
+	);
+
+PmCreatePartition(
+	ANSISTRING Message
+	);
+
+ObjectFound(
+	UNICODESTRING ObjectType,
+	PID Properties {PartitionStyle;SubsystemType;UniqueId;Guid;Signature},
+	UNICODESTRING PartitionStyle,
+	UNICODESTRING SubsystemType,
+	UNICODESTRING UniqueId,
+	GUID Guid,
+	UINT32 Signature
+	);
+
+ObjectAggregation(
+	ANSISTRING "Adding or Replacing Object in Map."
+	);
+
+ClusterPipe(
+	UINT32 NodeID,
+	INT32 ErrorCode,
+	ANSISTRING Reason,
+	UINT32 Status
+	);
+
+FmIfsShouldDismountVolume(
+	BOOL32 ShouldContinue
+	);
+
+FmIfsComplete(
+	UINT32 pFinishedInfo->FinalResult
+	);
+
+FormatParameters(
+	UNICODESTRING FileSystem,
+	UNICODESTRING FileSystemLabel,
+	BOOL32 Full,
+	BOOL32 Force,
+	BOOL32 Compress,
+	BOOL32 UseIntegrityDefault,
+	BOOL32 EnableIntegrity,
+	BOOL32 UseDefaultFRSSize,
+	BOOL32 UseLargeFRS,
+	BOOL32 UseShortNamesDefault,
+	BOOL32 EnableShortFileNames,
+	BOOL32 IsDAXDefault,
+	BOOL32 IsDAX,
+	HEXINT32 ClusterSize
+	);
+
+ObjectFound(
+	ANSISTRING "Found offline CSV",
+	UNICODESTRING UniqueId
+	);
+
+ChkdskParameters(
+	UNICODESTRING DriveName,
+	UNICODESTRING FileSystemName,
+	BOOL32 Fix,
+	HEXINT32 Flags
+	);
+
+ClusterPipe(
+	UINT32 NodeID,
+	INT32 ErrorCode,
+	ANSISTRING Reason
+	);
+
+ChkdskResult(
+	HEXINT32 *result
+	);
+
+VolumeFSHealthState(
+	HEXINT32 *VolumeState
+	);
+
+Partition to volume association(
+	NOPRINT WspObjectFilter {ObjectId},
+	UNICODESTRING ObjectId,
+	UNICODESTRING VolumeGuid
+	);
+
+ObjectAggregation(
+	UNICODESTRING ObjectType,
+	HEX Properties {SubsystemType;UniqueId;FSName;FSType},
+	UNICODESTRING SubsystemType,
+	UNICODESTRING UniqueId,
+	UNICODESTRING FSName,
+	UINT16 FSType,
+	UNICODESTRING Response->pNodes[i].pszNodeName,
+	UINT16 Rank
+	);
+
+ClusterPipe(
+	UINT32 NodeID,
+	INT32 ErrorCode,
+	ANSISTRING Reason,
+	UINT32 Size,
+	UINT64 ExpectedSize
+	);
+
+CorruptionCount(
+	UINT32 records
+	);
+
+FmIfsStatusString(
+	UNICODESTRING status
+	);
+
+ObjectFound(
+	UNICODESTRING ObjectType,
+	HEX Properties {SubsystemType;UniqueId;FSName;FSType},
+	UNICODESTRING SubsystemType,
+	UNICODESTRING UniqueId,
+	UNICODESTRING FSName,
+	UINT16 FSType
+	);
+
+FmIfsShouldCheckOnReboot(
+	BOOL32 ShouldContinue
+	);
+
+FmIfsCallbackType(
+	UINT32 PacketType
+	);
+
+FmIfsPercentComplete(
+	UINT32 percent
+	);
+
+RepairParameters(
+	BOOL32 Scan,
+	BOOL32 Fix,
+	BOOL32 SpotFix
+	);
+
+FmIfsLongFormat(
+	BOOL32 ShouldContinue
+	);
+
+PmSetPartitionAttributes(
+	ANSISTRING Message,
+	HEXINT32 ErrorCode_SM_RC
+	);
+
+Disk to partition association(
+	NOPRINT WspObjectFilter {ObjectId},
+	UNICODESTRING ObjectId,
+	UNICODESTRING DiskUniqueId
+	);
+
+Cluster was unable to locate resource even after broadcast - Giving up ...(
+	NOPRINT WspObjectFilter {ObjectId},
+	UNICODESTRING ObjectId,
+	HEXINT32 WspControlCode,
+	HEXINT32 Status
+	);
+
+Cluster was unable to locate resource - Falling back to locating by broadcast ...(
+	NOPRINT WspObjectFilter {ObjectId},
+	UNICODESTRING ObjectId,
+	HEXINT32 WspControlCode,
+	HEXINT32 Status
+	);
+
+OptimizeParameter_DefragOperation(
+	INT32 DefragOperations[index]
+	);
+
+OptimizeParameter_DefragOperation(
+	INT32 DF_OPERATION_NOT_SUPPORTED
+	);
+
+OptimizeResult(
+	HEXINT32 hr
+	);
+
+OptimizeParameter_DeviceType(
+	INT32 DeviceType
+	);
+
+OptimizeParameter_OperationMask(
+	HEXINT32 dwOperationMask
+	);
+
+InstanceMethod(
+	ANSISTRING InputClassName,
+	ANSISTRING MethodName,
+	UNICODESTRING InputObjectId,
+	BOOL32 IsRemoteObject,
+	HEXINT32 ReturnCode,
+	HEXINT32 PostedResult,
+	UINT64 ElapsedTime_ms,
+	ANSISTRING ResultClassName,
+	UNICODESTRING ResultObjectId,
+	UNICODESTRING ResultStorageJobId
+	);
+
+InstanceMethod(
+	ANSISTRING InputClassName,
+	ANSISTRING MethodName,
+	UNICODESTRING InputObjectId,
+	BOOL32 IsRemoteObject,
+	HEXINT32 ReturnCode,
+	HEXINT32 PostedResult,
+	UINT64 ElapsedTime_ms,
+	ANSISTRING ResultClassName,
+	UNICODESTRING ResultObjectId,
+	UNICODESTRING ResultStorageJobId,
+	UINT32 NumberOfDisks
+	);
+
+InstanceMethod(
+	ANSISTRING InputClassName,
+	ANSISTRING MethodName,
+	UNICODESTRING InputObjectId,
+	BOOL32 IsRemoteObject,
+	HEXINT32 ReturnCode,
+	HEXINT32 PostedResult,
+	UINT64 ElapsedTime_ms,
+	ANSISTRING ResultClassName,
+	UNICODESTRING ResultObjectId,
+	UNICODESTRING ResultStorageJobId,
+	UINT32 NumberOfFaultDomains
+	);
+
+InstanceMethod(
+	ANSISTRING InputClassName,
+	ANSISTRING MethodName,
+	UNICODESTRING InputObjectId,
+	BOOL32 IsRemoteObject,
+	HEXINT32 ReturnCode,
+	HEXINT32 PostedResult,
+	UINT64 ElapsedTime_ms,
+	ANSISTRING ResultClassName,
+	UNICODESTRING ResultObjectId,
+	UNICODESTRING ResultStorageJobId,
+	UNICODESTRING Subsystem_UniqueId
+	);
+
+InstanceRemoteCall(
+	ANSISTRING InputClassName,
+	ANSISTRING MethodName,
+	BOOL32 IsRemoteObject,
+	UINT64 ElapsedTime_ms
+	);
+
+ExitFunction(
+	UNICODESTRING Function,
+	UINT32 Line,
+	UINT64 ElapsedTime_ms
+	);
+
+PostInstance(
+	UNICODESTRING ObjectId,
+	UNICODESTRING ObjectType,
+	HEX Properties {SubsystemType;UniqueId;FSName;FSType},
+	UNICODESTRING SubsystemType,
+	UNICODESTRING UniqueId,
+	UNICODESTRING FSName,
+	UINT16 FSType
+	);
+
+WspParseCreatePartitionParameters(
+	ANSISTRING Message
+	);
+
+PostInstance(
+	UNICODESTRING ObjectId,
+	UNICODESTRING ObjectType,
+	PID Properties {PartitionStyle;SubsystemType;UniqueId;Guid;Signature},
+	UNICODESTRING PartitionStyle,
+	UNICODESTRING SubsystemType,
+	UNICODESTRING UniqueId,
+	GUID Guid,
+	UINT32 Signature
+	);
+
+InstanceMethod(
+	ANSISTRING InputClassName,
+	ANSISTRING MethodName,
+	UNICODESTRING InputObjectId,
+	BOOL32 IsRemoteObject,
+	HEXINT32 ReturnCode,
+	HEXINT32 PostedResult,
+	UINT64 ElapsedTime_ms,
+	ANSISTRING ResultClassName,
+	UNICODESTRING ResultObjectId,
+	UNICODESTRING ResultStorageJobId,
+	BOOLEAN EnableMaintenanceMode,
+	BOOLEAN IgnoreDetachedVirtualDisks
+	);
+
+InstanceMethod(
+	ANSISTRING InputClassName,
+	ANSISTRING MethodName,
+	UNICODESTRING InputObjectId,
+	BOOL32 IsRemoteObject,
+	HEXINT32 ReturnCode,
+	HEXINT32 PostedResult,
+	UINT64 ElapsedTime_ms,
+	ANSISTRING ResultClassName,
+	UNICODESTRING ResultObjectId,
+	UNICODESTRING ResultStorageJobId,
+	BOOLEAN EnableIndication,
+	BOOLEAN EnableMaintenanceMode,
+	BOOLEAN IgnoreDetachedVirtualDisks
+	);
+
+InstanceMethod(
+	ANSISTRING InputClassName,
+	ANSISTRING MethodName,
+	UNICODESTRING InputObjectId,
+	BOOL32 IsRemoteObject,
+	HEXINT32 ReturnCode,
+	HEXINT32 PostedResult,
+	UINT64 ElapsedTime_ms,
+	ANSISTRING ResultClassName,
+	UNICODESTRING ResultObjectId,
+	UNICODESTRING ResultStorageJobId,
+	BOOLEAN EnableIndication
+	);
+
+HealthResClient(
+	UNICODESTRING Function
+	);
+
+PuResizePartition(
+	UNICODESTRING lastStage,
+	HRESULT hResult
+	);
+
+SendScsiCommand(
+	HEXINT32 Command,
+	HEXINT32 SCSI Status,
+	HEXINT32 Sense Key,
+	HEXINT32 Additional Sense Code,
+	HEXINT32 Additional Sense Code Qualifier
+	);
+
+SendScsiCommand(
+	ANSISTRING Message
+	);
+
+FveCheckSuspendBitLockerOnUpgrade(
+	INT32 ShouldSuspendBitlocker,
+	BOOLEAN IsSecureBootBound,
+	BOOLEAN IsOsPreRS1,
+	UINT32 AuthUsesFlags,
+	INT32 hr
+	);
+
+FveAddTrustedWimData(
+	INT32 hr
+	);
+
+FveRemoveTrustedWimData(
+	INT32 hr
+	);
+

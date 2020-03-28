@@ -1,0 +1,302 @@
+ProviderNames:
+	Microsoft.Windows.Graphics.Display.DisplayEnhancementService
+	Microsoft.Windows.Sensors.SensorService
+	TelemetryAssert
+	TelemetryAssertDiagTrack
+
+
+
+**** Events *****
+AlrCurveVariantConfigEvent(
+	UINT32 InboxAlrCurveVariant,
+	UINT32 InboxAlrCurveVariantVersion,
+	UINT64 PartA_PrivTags
+	);
+
+DisplayCapabilityEvent(
+	UINT32 SupportedMillinitRanges,
+	UNICODESTRING BrightnessSupportType,
+	UINT32 PreferredMaxBrightness,
+	UINT64 PartA_PrivTags
+	);
+
+IlluminanceLuxHistogram(
+	UINT32 RoomLuxChangeDurationInMilliSeconds,
+	UINT64 PartA_PrivTags
+	);
+
+NitsHistogram(
+	UINT32 MinMilliNits,
+	UINT32 MaxMilliNits,
+	UINT32 DurationHistogram,
+	UINT32 CountHistogram,
+	BOOL32 EnergySaverStateChange,
+	UINT64 PartA_PrivTags
+	);
+
+AutobrightnessInfoEvent(
+	NULL DisplayIdentifier,
+	UINT32 AlrCurve,
+	UINT32 AlrCurveVersion,
+	UINT32 MaxAbsBiasCurve,
+	UINT32 MinAbsBiasCurve,
+	UINT64 PartA_PrivTags
+	);
+
+UserBrightnessOrColorControlChangedEvent(
+	NULL DisplayIdentifier,
+	UINT32 EventSource,
+	UINT32 LastSystemBrightnessEventOneMinute,
+	UINT32 LastSystemBrightnessEventTwoMinutes,
+	INT32 AbsBias,
+	UINT32 AverageIlluminance,
+	UINT32 CurrentIlluminance,
+	DOUBLE CurrentColorSensorData,
+	BOOL32 HasAls,
+	BOOL32 HasColorSensor,
+	BOOL32 IsAutobrightnessOn,
+	BOOL32 IsAdaptiveColorOn,
+	BOOL32 IsNightLightOn,
+	BOOL32 IsBatterySaverModeOn,
+	FLOAT BatterySaverMultiplier,
+	BOOL32 IsAlsSampleValid,
+	BOOL32 IsColorSensorSampleValid,
+	UINT32 NewBrightnessSlider,
+	UINT32 PreviousBrightnessSlider,
+	UINT32 NewAdaptiveColorSlider,
+	UINT32 PreviousAdaptiveColorSlider,
+	UINT32 NewBrightnessPercent,
+	UINT32 PreviousBrightnessPercent,
+	UINT32 NewBrightnessMillinits,
+	UINT32 PreviousBrightnessMillinits,
+	UINT32 CurrentPostOEMColorCompNits,
+	UINT32 PreviousPostOEMColorCompNits,
+	DOUBLE PreviousWhitePoint,
+	DOUBLE The current white point of the display. array[0] = x and array[1] = y,
+	UINT32 AcDcPowerSource,
+	UINT32 AcDcOffset,
+	UINT32 ThermalThrottlingBrightness,
+	DOUBLE TransitionTable,
+	UINT64 PartA_PrivTags
+	);
+
+AutobrightnessBiasHistogramEvent(
+	NULL DisplayIdentifier,
+	UINT32 BelowCurveHistogram,
+	UINT32 OnCurveHistogram,
+	UINT32 AboveCurveHistogram,
+	UINT64 PartA_PrivTags
+	);
+
+FallbackError(
+	UINT64 PartA_PrivTags,
+	SIGNED wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+FallbackError(
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+BrightnessChanged(
+	UINT32 newBrightness,
+	UINT32 oldBrightness,
+	INT32 currentIlluminance,
+	INT32 averageIlluminance,
+	BOOLEAN isAdaptive,
+	BOOLEAN isPowerSaving,
+	UINT32 powerSavingBrightness,
+	UINT32 displayState,
+	BOOLEAN isProximityDetected,
+	UINT32 acDcPowerSource,
+	BOOLEAN hasAls,
+	ANSISTRING SensorType
+	);
+
+IlluminanceLuxHistogram(
+	UINT32 RoomLuxChangeCount,
+	UINT32 RoomLuxChangeDurationInMilliSeconds,
+	BOOLEAN HasBrightnessSliderChanged,
+	UINT32 BrightnessSlider,
+	ANSISTRING SensorType,
+	GUID SessionGuid,
+	UINT32 ALRCurveInformation,
+	UINT32 ALRCurveVersion,
+	UINT32 ALRCurveSource
+	);
+
+IlluminanceLuxHistogram(
+	UINT32 RoomLuxChangeCount,
+	UINT32 RoomLuxChangeDurationInMilliSeconds,
+	BOOLEAN HasBrightnessSliderChanged,
+	UINT32 BrightnessSlider,
+	ANSISTRING SensorType,
+	GUID SessionGuid
+	);
+
+ALRCurveInformation(
+	UINT32 ALRCurveInformation,
+	UINT32 ALRCurveVersion,
+	UINT32 ALRCurveSource,
+	ANSISTRING SensorType
+	);
+
+AverageLuxes(
+	UINT32 AverageMilliLux,
+	UINT32 RawMilliLux,
+	INT32 FilterLengthMs,
+	ANSISTRING SensorType
+	);
+
+CalculateNitsTarget(
+	UINT32 targetBrightnessPercent,
+	UINT32 sliderValue,
+	ANSISTRING SensorType
+	);
+
+DisplayBrightnessAndTransitionsUpdated(
+	UINT32 effectiveBrightnessPercentage,
+	UINT32 effectiveBrightnessMillinits,
+	UINT32 newBrightnessTransitionTime,
+	UINT32 dimmingTransitionTime,
+	UINT32 dimmedBrightnessPercentage,
+	UINT32 dimmedBrightnessMillinits,
+	UINT32 newDimmedTransitionTime,
+	UINT32 unDimmingTransitionTime,
+	ANSISTRING SensorType
+	);
+
+DisplayStateChanged(
+	UINT32 displayState,
+	ANSISTRING SensorType
+	);
+
+UpdateAcDcPowerSource(
+	UINT32 acDcPowerSource,
+	ANSISTRING SensorType
+	);
+
+ServiceStart(
+	UINT32 brightness,
+	INT32 currentIlluminance,
+	INT32 averageIlluminance,
+	BOOLEAN isAdaptive,
+	BOOLEAN isPowerSaving,
+	UINT32 powerSavingBrightness,
+	UINT32 displayState,
+	BOOLEAN isProximityDetected,
+	UINT32 acDcPowerSource,
+	BOOLEAN hasAls,
+	ANSISTRING SensorType
+	);
+
+DimBrightnessChanged(
+	UINT32 dimBrightness,
+	ANSISTRING SensorType
+	);
+
+AdaptiveModeChanged(
+	UINT32 brightness,
+	INT32 currentIlluminance,
+	INT32 averageIlluminance,
+	BOOLEAN isAdaptive,
+	BOOLEAN isPowerSaving,
+	UINT32 powerSavingBrightness,
+	UINT32 displayState,
+	BOOLEAN isProximityDetected,
+	UINT32 acDcPowerSource,
+	BOOLEAN hasAls,
+	ANSISTRING SensorType
+	);
+
+PowerSavingChanged(
+	BOOLEAN isSaving,
+	ANSISTRING SensorType
+	);
+
+PowerSavingBrightnessChanged(
+	UINT32 powerSavingBrightness,
+	ANSISTRING SensorType
+	);
+
+ProximityChangeDetected(
+	BOOLEAN proximityDetected,
+	ANSISTRING SensorType
+	);
+
+AmbientLightChanged(
+	UINT32 milliLux,
+	ANSISTRING SensorType
+	);
+
+MicrosoftInternalRegistryKeysError(
+	ANSISTRING ErrorStr
+	);
+
+SensorStarted(
+	UINT32 intervalMs,
+	ANSISTRING SensorType
+	);
+
+SensorStopped(
+	ANSISTRING SensorType
+	);
+
+Assert(
+	UINT32 assertVersion,
+	UINT32 rva,
+	UINT32 timestamp,
+	UINT32 imageSize,
+	ANSISTRING imageName,
+	UINT32 count,
+	UINT32 totalHits,
+	UINT32 ModuleCollection,
+	UINT32 GlobalCollection
+	);
+
+AssertWithArgs(
+	UINT32 assertVersion,
+	UINT32 rva,
+	UINT32 timestamp,
+	UINT32 imageSize,
+	ANSISTRING imageName,
+	UINT32 count,
+	UINT32 totalHits,
+	ANSISTRING originatingBinary,
+	UINT32 bucketArgument1,
+	UINT32 bucketArgument2,
+	UINT32 ModuleCollection,
+	UINT32 GlobalCollection
+	);
+

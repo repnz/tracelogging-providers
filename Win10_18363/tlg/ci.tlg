@@ -1,0 +1,224 @@
+ProviderNames:
+	MicrosoftWindowsCodeIntegrityTraceLoggingProvider
+	MicrosoftWindowsCodeIntegrityAuditTraceLoggingProvider
+	Microsoft.Windows.TlgAggregateInternal
+
+
+
+**** Events *****
+InitializeAcPolicyFailure(
+	HEXINT32 Status
+	);
+
+AcPolicyIgnored(
+	HEXINT32 Status
+	);
+
+CodeIntegrityBinarySignatureExpired(
+	COUNTEDSTRING FileName,
+	SYSTEMTIME ValidFrom,
+	SYSTEMTIME ValidTo,
+	SYSTEMTIME CurrentSystemTime
+	);
+
+CiPPLBypassBlocked(
+	COUNTEDSTRING FileName
+	);
+
+SyntheticEA(
+	UINT8 SigningLevel
+	);
+
+DriverRevokePolicyError(
+	ANSISTRING mitigationMode
+	);
+
+CiHVCIDriverLoadFailureAudit(
+	COUNTEDSTRING FileName,
+	COUNTEDSTRING ProcessName,
+	HEX FileHash,
+	HEXINT32 FileHashAlg,
+	HEXINT32 GenericVerificationError,
+	UINT32 NumberOfSignatures,
+	HEXINT32 NTErrorStatus
+	);
+
+CiTraceImageVerificationFailureGenericInfo(
+	NULL Count,
+	HEXINT32 Options,
+	HEXINT32 DeveloperOptions,
+	COUNTEDSTRING FileName,
+	COUNTEDSTRING ProcesseName,
+	HEXINT32 SecureRequiredFlags,
+	UINT8 RequestedSigningLevel,
+	HEX FileHash,
+	BOOL32 AllowedToLoad,
+	HEXINT32 GenericVerificationError,
+	UINT32 NumberOfSignatures,
+	HEXINT32 Status,
+	UINT32 FailedSiPolicyType,
+	UINT32 FailedSiPolicyOptions,
+	UINT32 FailedSiPolicyHVCIOptions,
+	UINT32 LockdownMode,
+	COUNTEDSTRING OriginalFileName,
+	COUNTEDSTRING InternalName,
+	COUNTEDSTRING FileDescription,
+	COUNTEDSTRING ProductName,
+	UINT64 FileVersion,
+	UINT32 TimeDateStamp,
+	GUID FailedSiPolicyGuidID,
+	NULL MinBlockTime,
+	NULL MaxBlockTime
+	);
+
+CiInitializeSIPolicyActivityStop(
+	VOID
+	);
+
+CiTraceInitialization(
+	HEXINT32 BuildType,
+	HEXINT32 Options,
+	HEXINT32 DeveloperOptions,
+	BOOL32 SecureBootCapable,
+	BOOL32 SecureBootEnabled,
+	UINT32 PolicyVersion,
+	GUID PolicyPublisher,
+	HEXINT32 PolicyOptions,
+	HEXINT32 StatusCode,
+	HEXINT32 HstiStatus,
+	HEXINT32 ConfigCIPolicyStatus,
+	BOOL32 IsUpgradedSystem,
+	HEXINT32 SIPoliciesStatus
+	);
+
+CiAuditTraceSignatureInfo(
+	HEXINT32 VerificationError,
+	UINT8 ValidatedSigningLevel,
+	COUNTEDSTRING IssuerName,
+	HEX IssuerTbs,
+	HEX CertTBS,
+	HEXINT32 PolicyFlags,
+	BOOL32 RequiresWHQLFlag,
+	UINT8 EncodedCertBlob
+	);
+
+CiImageVerificationFailureActivityStop(
+	VOID
+	);
+
+CiSmartlockerVerboseEvent(
+	COUNTEDSTRING FileName,
+	HEXINT32 StatusCode,
+	BOOL32 ManagedInstallerEnabled,
+	BOOL32 PassesManagedInstaller,
+	BOOL32 SmartlockerEnabled,
+	BOOL32 PassesSmartlocker,
+	BOOL32 AuditEnabled,
+	HEXINT32 DefenderTrust,
+	COUNTEDSTRING PolicyName,
+	COUNTEDSTRING PolicyID
+	);
+
+CiCatalogReloadAudit(
+	HEX Stage,
+	HEXINT32 Status,
+	HEXINT32 SecureRequiredFlags,
+	UINT8 RequestedSigningLevel,
+	COUNTEDSTRING FileName,
+	COUNTEDSTRING ProcessName
+	);
+
+DriverRevokePolicyError(
+	ANSISTRING mitigationMode
+	);
+
+CiWindowsLockdownModeChange(
+	HEXINT32 CiWindowsLockdownMode,
+	HEXINT32 StatusCode
+	);
+
+CiImageVerificationFailureActivityStart(
+	VOID
+	);
+
+CiInitializeSIPolicyActivityStart(
+	VOID
+	);
+
+SIPoliciesInitInfo(
+	HEXINT32 NumberOfSIPolicies
+	);
+
+CiWHQLAuditExempt(
+	COUNTEDSTRING FileName,
+	BOOL32 RequireWHQL
+	);
+
+CiAuditTraceSignatureInfo(
+	HEXINT32 VerificationError,
+	UINT8 ValidatedSigningLevel,
+	COUNTEDSTRING IssuerName,
+	HEX IssuerTbs,
+	HEX CertTBS,
+	HEXINT32 PolicyFlags,
+	BOOL32 RequiresWHQLFlag
+	);
+
+CiAuditImageVerificationActivityStop(
+	VOID
+	);
+
+SIPolicyDetails(
+	HEXINT32 SIPolicyIndex,
+	HEXINT32 PolicyOptions,
+	HEXINT32 PolicyHVCIOptions,
+	UINT64 PolicyVersion,
+	BOOLEAN PolicyAllowKernelSigners,
+	COUNTEDSTRING PolicyName,
+	COUNTEDSTRING PolicyId,
+	GUID PolicyIdGuid
+	);
+
+HstiInformationV2(
+	HEXINT32 HSTIVersion,
+	HEXINT32 HSTIProviderCount,
+	HEXINT32 HSTIBlobSize,
+	HEX HSTIBlobInfo
+	);
+
+CiAuditTraceImageVerificationGenericInfo(
+	COUNTEDSTRING FileName,
+	HEXINT32 SecureRequiredFlags,
+	HEX FileHash,
+	HEXINT32 GenericVerificationError,
+	UINT32 NumberOfSignatures
+	);
+
+CiTraceSignatureVerificationFailure(
+	NULL Count,
+	HEXINT32 VerificationError,
+	UINT8 ValidatedSigningLevel,
+	HEX CertTBS,
+	COUNTEDSTRING IssuerName,
+	HEXINT32 PolicyFlags,
+	BOOL32 RequiresWHQLFlag,
+	SYSTEMTIME ValidFrom,
+	SYSTEMTIME ValidTo
+	);
+
+CiAuditImageVerificationActivityStart(
+	VOID
+	);
+
+TlgAggregateSummary(
+	GUID Provider,
+	UINT64 NumFlushes,
+	UINT64 MaxEntriesStored,
+	UINT64 TotalEntriesFlushed,
+	UINT32 MaxEntriesFlushed,
+	UINT32 MinEntriesFlushed,
+	UINT32 NumBucketLimitReached,
+	UINT32 NumAllocationFailures,
+	UINT32 NumLargeEventFailures
+	);
+

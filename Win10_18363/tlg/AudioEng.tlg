@@ -1,0 +1,1713 @@
+ProviderNames:
+	Microsoft.Windows.Audio.Engine
+	Microsoft.Windows.Audio.Spatial.Renderer
+	Microsoft.Windows.Audio.Pump
+	Microsoft.Windows.Audio.AudioEngineUtil
+	Microsoft.Windows.Audio.Spatial.Metadata
+	TelemetryAssert
+	TelemetryAssertDiagTrack
+	Microsoft.Windows.MediaFoundation.CallStack
+	Microsoft.Windows.Audio.AcousticEchoCancellation
+	Microsoft.Windows.AudioUnderstanding.Capture
+	Microsoft.Windows.Analog.NUI.Audio
+	Microsoft.Windows.Audio.Processor
+
+
+
+**** Events *****
+UnregisterSpatialAudioProcessBlockBegin(
+	GUID AsarId,
+	HEXINT64 pBlockRT
+	);
+
+RegisterSpatialAudioProcessBlockBegin(
+	GUID AsarId,
+	HEXINT64 pBlockRT
+	);
+
+FallbackError(
+	UINT64 PartA_PrivTags,
+	SIGNED wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+FallbackError(
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+RenderSilenceDetected(
+	UNICODESTRING EndpointID,
+	GUID GraphID,
+	FLOAT TimeSinceLastEvent,
+	FLOAT TotalTime
+	);
+
+AudioSilenceMonitorScreenOnSessionSummary(
+	UINT64 ScreenOnSessionDurationInSec,
+	BOOLEAN LoggingDueToAPOShutdown,
+	UINT32 CumulativeTotalFrames,
+	UINT32 CumulativeSilenceFrames,
+	UINT32 CumulativeTotalPlaybackTimeInSec,
+	UINT32 CumulativeSilenceTimeInSec,
+	GUID SessionGuid
+	);
+
+Info(
+	GUID AsarId,
+	ANSISTRING Func,
+	UINT32 LineNum,
+	ANSISTRING Msg
+	);
+
+HrtfGlitches(
+	INT32 TelemetryVersion,
+	UINT32 RenderingMode,
+	INT32 SkippedAddCount,
+	BOOLEAN InputGlitchFullQueue,
+	INT64 Count,
+	FILETIME Start,
+	FILETIME End,
+	BOOLEAN NotEnoughDataForMix,
+	INT64 Count,
+	FILETIME Start,
+	FILETIME End,
+	BOOLEAN WorkItemFailure,
+	INT64 Count,
+	FILETIME Start,
+	FILETIME End,
+	BOOLEAN StarvationDuringDraining,
+	INT64 Count,
+	FILETIME Start,
+	FILETIME End,
+	BOOLEAN CPEmpty,
+	INT64 Count,
+	FILETIME Start,
+	FILETIME End,
+	BOOLEAN NotEnoughDataForProcess,
+	INT64 Count,
+	FILETIME Start,
+	FILETIME End,
+	BOOLEAN PrepareForProcess,
+	INT64 Count,
+	FILETIME Start,
+	FILETIME End,
+	BOOLEAN MixLFE,
+	INT64 Count,
+	FILETIME Start,
+	FILETIME End,
+	BOOLEAN OutputGlitchFullQueue,
+	INT64 Count,
+	FILETIME Start,
+	FILETIME End
+	);
+
+AsarErrors(
+	INT32 TelemetryVersion,
+	UINT32 RenderingMode,
+	INT32 SkippedAddCount,
+	FILETIME StartTime,
+	FILETIME EndTime,
+	INT64 InvalidBufferFlags,
+	INT64 StaticObjectSubmixFailure
+	);
+
+MultiChannelPerfCounters(
+	INT32 TelemetryVersion,
+	INT64 QPCFrequency,
+	UINT32 RenderingMode,
+	INT32 SkippedAddCount,
+	PID ProcessTime,
+	UINT32 Count,
+	DOUBLE Sum,
+	INT64 Min,
+	INT64 Max,
+	DOUBLE StdDev
+	);
+
+MatPerfCounters(
+	INT32 TelemetryVersion,
+	INT64 QPCFrequency,
+	UINT32 RenderingMode,
+	INT32 SkippedAddCount,
+	PID MixChannelDataTime,
+	UINT32 Count,
+	DOUBLE Sum,
+	INT64 Min,
+	INT64 Max,
+	DOUBLE StdDev,
+	PID SetAudioObjectTime,
+	UINT32 Count,
+	DOUBLE Sum,
+	INT64 Min,
+	INT64 Max,
+	DOUBLE StdDev,
+	PID ProcessTime,
+	UINT32 Count,
+	DOUBLE Sum,
+	INT64 Min,
+	INT64 Max,
+	DOUBLE StdDev,
+	PID ActiveStreamCount,
+	UINT32 Count,
+	DOUBLE Sum,
+	INT64 Min,
+	INT64 Max,
+	DOUBLE StdDev,
+	PID BlockCount,
+	UINT32 Count,
+	DOUBLE Sum,
+	INT64 Min,
+	INT64 Max,
+	DOUBLE StdDev,
+	PID TotalObjectCount,
+	UINT32 Count,
+	DOUBLE Sum,
+	INT64 Min,
+	INT64 Max,
+	DOUBLE StdDev,
+	PID ActiveDynamicObjectCount,
+	UINT32 Count,
+	DOUBLE Sum,
+	INT64 Min,
+	INT64 Max,
+	DOUBLE StdDev,
+	PID AvailableObjectCount,
+	UINT32 Count,
+	DOUBLE Sum,
+	INT64 Min,
+	INT64 Max,
+	DOUBLE StdDev
+	);
+
+Info(
+	GUID AsarId,
+	ANSISTRING Func,
+	UINT32 LineNum,
+	ANSISTRING Msg,
+	INT32 hr
+	);
+
+MatErrors(
+	INT32 TelemetryVersion,
+	UINT32 RenderingMode,
+	INT32 SkippedAddCount,
+	FILETIME StartTime,
+	FILETIME EndTime,
+	INT64 FailedToReadFromBlock,
+	INT64 FailedToGetObjCount,
+	INT64 FailedToQueryStreamStatus,
+	INT64 MixChannelDataFailure,
+	INT64 SetAudioObjFailure,
+	INT64 ProcessFailure
+	);
+
+MultiChannelGlitches(
+	INT32 TelemetryVersion,
+	UINT32 RenderingMode,
+	INT32 SkippedAddCount,
+	BOOLEAN CPEmpty,
+	INT64 Count,
+	FILETIME Start,
+	FILETIME End
+	);
+
+MatRendererErrorBurstStart(
+	UINT32 MatRendererErrorType,
+	UINT64 PreviousBursts
+	);
+
+MultiChannelRendererErrorBurstStart(
+	UINT32 MultiChannelRendererErrorType,
+	UINT64 PreviousBursts
+	);
+
+Verbose(
+	GUID AsarId,
+	ANSISTRING Func,
+	UINT32 LineNum,
+	ANSISTRING Msg,
+	INT32 hr
+	);
+
+Verbose(
+	GUID AsarId,
+	ANSISTRING Func,
+	UINT32 LineNum,
+	ANSISTRING Msg
+	);
+
+Error(
+	GUID AsarId,
+	ANSISTRING Func,
+	UINT32 LineNum,
+	ANSISTRING Msg
+	);
+
+MatGlitches(
+	INT32 TelemetryVersion,
+	UINT32 RenderingMode,
+	INT32 SkippedAddCount,
+	BOOLEAN CPEmpty,
+	INT64 Count,
+	FILETIME Start,
+	FILETIME End
+	);
+
+ErrorBurstStart(
+	UINT32 ErrorType,
+	UINT64 PreviousBursts
+	);
+
+Warning(
+	GUID AsarId,
+	ANSISTRING Func,
+	UINT32 LineNum,
+	ANSISTRING Msg
+	);
+
+HrtfRendererErrorBurstStart(
+	UINT32 HrtfRendererErrorType,
+	UINT64 PreviousBursts
+	);
+
+Warning(
+	GUID AsarId,
+	ANSISTRING Func,
+	UINT32 LineNum,
+	ANSISTRING Msg,
+	INT32 hr
+	);
+
+MatAPICalls(
+	INT32 TelemetryVersion,
+	UINT32 RenderingMode,
+	INT32 SkippedAddCount,
+	PID CreateRenderer,
+	UINT32 Success,
+	UINT32 Failure,
+	HRESULT FirstErr,
+	HRESULT MostHitErr,
+	HRESULT MostHitErrHitCount,
+	PID RegSAPBlock,
+	UINT32 Success,
+	UINT32 Failure,
+	HRESULT FirstErr,
+	HRESULT MostHitErr,
+	HRESULT MostHitErrHitCount,
+	PID UnregSAPBlock,
+	UINT32 Success,
+	UINT32 Failure,
+	HRESULT FirstErr,
+	HRESULT MostHitErr,
+	HRESULT MostHitErrHitCount
+	);
+
+StaticObjectSubmixGlitches(
+	INT32 TelemetryVersion,
+	UINT32 RenderingMode,
+	INT32 SkippedAddCount,
+	BOOLEAN ReadGlitch,
+	INT64 Count,
+	FILETIME Start,
+	FILETIME End,
+	BOOLEAN WriteGlitch,
+	INT64 Count,
+	FILETIME Start,
+	FILETIME End
+	);
+
+Critical(
+	GUID AsarId,
+	ANSISTRING Func,
+	UINT32 LineNum,
+	ANSISTRING Msg,
+	INT32 hr
+	);
+
+GlitchBurstStart(
+	UINT32 GlitchType,
+	UINT64 PreviousBursts
+	);
+
+HrtfErrors(
+	INT32 TelemetryVersion,
+	UINT32 RenderingMode,
+	INT32 SkippedAddCount,
+	FILETIME StartTime,
+	FILETIME EndTime,
+	INT64 WriteFailure,
+	INT64 MixFailure,
+	INT64 SubmixFailure,
+	INT64 UnknownObjectType,
+	INT64 InvalidObjectFromClient,
+	INT64 InvalidBufferFlags,
+	INT64 FailedToReadFromBlock,
+	INT64 FailedToGetObjCount,
+	INT64 FailedToSetObjProperties,
+	INT64 FailedToSetEOS,
+	INT64 FailedToQueryStreamStatus,
+	INT64 FailedToSetObjectUsageCounts,
+	INT64 ResourceControlFailure,
+	INT64 FrameCountMismatch,
+	INT64 InactiveHost,
+	INT64 TooManyObjects,
+	INT64 SRCFrameCountError
+	);
+
+MultiChannelErrors(
+	INT32 TelemetryVersion,
+	UINT32 RenderingMode,
+	INT32 SkippedAddCount,
+	FILETIME StartTime,
+	FILETIME EndTime,
+	INT64 FailedToQueryStreamStatus,
+	INT64 FailedToReadFromBlock,
+	INT64 FailedToGetObjCountFromBlock,
+	INT64 SubmixFailure,
+	INT64 DynamicObjectType,
+	INT64 UnknownObjectType,
+	INT64 FrameCountMismatch,
+	INT64 InvalidBufferFlags,
+	INT64 SRCFrameCountError
+	);
+
+Error(
+	GUID AsarId,
+	ANSISTRING Func,
+	UINT32 LineNum,
+	ANSISTRING Msg,
+	INT32 hr
+	);
+
+Critical(
+	GUID AsarId,
+	ANSISTRING Func,
+	UINT32 LineNum,
+	ANSISTRING Msg
+	);
+
+HrtfAPICalls(
+	INT32 TelemetryVersion,
+	UINT32 RenderingMode,
+	INT32 SkippedAddCount,
+	PID CreateRenderer,
+	UINT32 Success,
+	UINT32 Failure,
+	HRESULT FirstErr,
+	HRESULT MostHitErr,
+	HRESULT MostHitErrHitCount,
+	PID CreateHost,
+	UINT32 Success,
+	UINT32 Failure,
+	HRESULT FirstErr,
+	HRESULT MostHitErr,
+	HRESULT MostHitErrHitCount,
+	PID CreateResourcePool,
+	UINT32 Success,
+	UINT32 Failure,
+	HRESULT FirstErr,
+	HRESULT MostHitErr,
+	HRESULT MostHitErrHitCount,
+	PID RegSAPBlock,
+	UINT32 Success,
+	UINT32 Failure,
+	HRESULT FirstErr,
+	HRESULT MostHitErr,
+	HRESULT MostHitErrHitCount,
+	PID UnregSAPBlock,
+	UINT32 Success,
+	UINT32 Failure,
+	HRESULT FirstErr,
+	HRESULT MostHitErr,
+	HRESULT MostHitErrHitCount
+	);
+
+MultiChannelAPICalls(
+	INT32 TelemetryVersion,
+	UINT32 RenderingMode,
+	INT32 SkippedAddCount,
+	PID CreateRenderer,
+	UINT32 Success,
+	UINT32 Failure,
+	HRESULT FirstErr,
+	HRESULT MostHitErr,
+	HRESULT MostHitErrHitCount,
+	PID RegSAPBlock,
+	UINT32 Success,
+	UINT32 Failure,
+	HRESULT FirstErr,
+	HRESULT MostHitErr,
+	HRESULT MostHitErrHitCount,
+	PID UnregSAPBlock,
+	UINT32 Success,
+	UINT32 Failure,
+	HRESULT FirstErr,
+	HRESULT MostHitErr,
+	HRESULT MostHitErrHitCount
+	);
+
+HrtfPerfCounters(
+	INT32 TelemetryVersion,
+	INT64 QPCFrequency,
+	UINT32 RenderingMode,
+	INT32 SkippedAddCount,
+	PID ProcessTime,
+	UINT32 Count,
+	DOUBLE Sum,
+	INT64 Min,
+	INT64 Max,
+	DOUBLE StdDev,
+	PID LFEProcessTime,
+	UINT32 Count,
+	DOUBLE Sum,
+	INT64 Min,
+	INT64 Max,
+	DOUBLE StdDev,
+	PID ActiveStreamCount,
+	UINT32 Count,
+	DOUBLE Sum,
+	INT64 Min,
+	INT64 Max,
+	DOUBLE StdDev,
+	PID BlockCount,
+	UINT32 Count,
+	DOUBLE Sum,
+	INT64 Min,
+	INT64 Max,
+	DOUBLE StdDev,
+	PID ActiveDynamicObjects,
+	UINT32 Count,
+	DOUBLE Sum,
+	INT64 Min,
+	INT64 Max,
+	DOUBLE StdDev,
+	PID ActiveStaticObjects,
+	UINT32 Count,
+	DOUBLE Sum,
+	INT64 Min,
+	INT64 Max,
+	DOUBLE StdDev,
+	PID AvailableDynamicObjects,
+	UINT32 Count,
+	DOUBLE Sum,
+	INT64 Min,
+	INT64 Max,
+	DOUBLE StdDev,
+	PID AvailableStaticObjects,
+	UINT32 Count,
+	DOUBLE Sum,
+	INT64 Min,
+	INT64 Max,
+	DOUBLE StdDev
+	);
+
+IsOutputFormatSupported(
+	GUID AsarId,
+	ANSISTRING "Compressed",
+	UINT32 SpatialRenderingMode,
+	UINT32 InputSamplesPerFrame,
+	FLOAT InputFramesPerSecond,
+	UINT32 InputValidBitsPerSample,
+	UINT32 InputChannelMask,
+	GUID InputGuidFormatType,
+	UINT16 RequestedOutputSamplesPerFrame,
+	UINT32 RequestedOutputFramesPerSecond,
+	UINT16 RequestedOutputValidBitsPerSample,
+	UINT32 RequestedOutputChannelMask,
+	GUID RequestedOutputGuidFormatType
+	);
+
+UnlockForProcess(
+	INT32 TelemetryVersion,
+	UNICODESTRING endpointId,
+	UINT32 SpatialRenderingMode,
+	INT32 Result
+	);
+
+FallbackToMultiChannelRenderer(
+	INT32 SpatialResult
+	);
+
+AsarInitialize(
+	GUID AsarId,
+	UNICODESTRING endpointId,
+	UINT32 SpatialRenderingMode,
+	UINT32 DataSize,
+	BOOL32 isInitVolume
+	);
+
+LockForProcess_Start(
+	GUID AsarId,
+	UNICODESTRING endpointId,
+	UINT32 SpatialRenderingMode
+	);
+
+IsInputFormatSupported(
+	GUID AsarId,
+	ANSISTRING isCompressed ? "Compressed" : "UnCompressed",
+	UINT32 SpatialRenderingMode,
+	UINT32 OutputSamplesPerFrame,
+	FLOAT OutputFramesPerSecond,
+	UINT32 OutputValidBitsPerSample,
+	UINT32 OutputChannelMask,
+	GUID OutputGuidFormatType,
+	UINT32 RequestedInputSamplesPerFrame,
+	FLOAT RequestedInputFramesPerSecond,
+	UINT32 RequestedInputValidBitsPerSample,
+	UINT32 RequestedInputChannelMask,
+	GUID RequestedInputGuidFormatType
+	);
+
+Initialize(
+	INT32 TelemetryVersion,
+	INT32 Result,
+	BOOLEAN Initialized,
+	ANSISTRING LastOpPerformed,
+	UINT32 RenderingMode,
+	UINT32 DataSize
+	);
+
+LockForProcess(
+	INT32 TelemetryVersion,
+	UNICODESTRING endpointId,
+	INT32 Result,
+	HRESULT HrCreateSpatialRenderer,
+	ANSISTRING LastOpPerformed,
+	BOOLEAN Locked,
+	UINT32 RenderingMode,
+	ANSISTRING MsHrtfRendererType,
+	UINT32 NumInConnections,
+	UINT32 NumOutConnections,
+	INT32 InFmtCompressed,
+	GUID InFmtType,
+	INT32 InFmtFormatTag,
+	UINT32 InFmtMaxFrameCount,
+	UINT32 InFmtSampleRate,
+	INT32 InFmtBitsPerSample,
+	UINT32 InFmtAvgBytesPerSec,
+	INT32 InFmtChannelCount,
+	UINT32 InFmtChannelMask,
+	UINT32 InFmtSamplesPerFrame,
+	UINT32 InFmtBytesPerSampleContainer,
+	INT32 OutFmtCompressed,
+	GUID OutFmtType,
+	INT32 OutFmtFormatTag,
+	UINT32 OutFmtSampleRate,
+	INT32 OutFmtBitsPerSample,
+	UINT32 OutFmtAvgBytesPerSec,
+	INT32 OutFmtChannelCount,
+	UINT32 OutFmtChannelMask,
+	UINT32 OutFmtSamplesPerFrame,
+	UINT32 OutFmtBytesPerSampleContainer
+	);
+
+IsOutputFormatSupported(
+	GUID AsarId,
+	ANSISTRING "Uncompressed",
+	UINT32 SpatialRenderingMode,
+	UINT32 InputSamplesPerFrame,
+	FLOAT InputFramesPerSecond,
+	UINT32 InputValidBitsPerSample,
+	UINT32 InputChannelMask,
+	GUID InputGuidFormatType,
+	UINT32 RequestedOutputSamplesPerFrame,
+	FLOAT RequestedOutputFramesPerSecond,
+	UINT32 RequestedOutputValidBitsPerSample,
+	UINT32 RequestedOutputChannelMask,
+	GUID RequestedOutputGuidFormatType
+	);
+
+InitializeHrtfResources_AllocateStaticHRTF_Begin(
+	VOID
+	);
+
+EndOfStreamBlock(
+	GUID AsarId
+	);
+
+InitializeHrtfResources_AllocateHRTF_End(
+	VOID
+	);
+
+ResourceControlUpdate(
+	GUID AsarId,
+	INT32 streamStatus,
+	UINT32 blockFrameCount,
+	UINT32 grantedDynamicObjectCount,
+	UINT32 objectCount,
+	UINT32 activeObjectCount
+	);
+
+InitializeHrtfResources_CreateEngine_End(
+	VOID
+	);
+
+InitializeHrtfResource_CreateEngine_Begin(
+	UINT32 _maxActiveDynamicObjectCount,
+	UINT32 _maxActiveStaticObjectCount,
+	UINT32 _engineSourceCount
+	);
+
+InitializeHrtfResources_AllocateDynamicHRTF_Begin(
+	VOID
+	);
+
+UnlockForProcessActivity(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId,
+	HEXINT64 instance
+	);
+
+LockForProcessActivity(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId,
+	HEXINT64 instance
+	);
+
+AcceptSpkDataActivity(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId,
+	HEXINT64 instance
+	);
+
+IsSpkFormatSupported(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId,
+	HEXINT64 instance,
+	UINT32 spkSampleRate,
+	UINT32 spkChannels
+	);
+
+AddAuxiliaryInputActivity(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId,
+	HEXINT64 instance,
+	UINT32 inputId
+	);
+
+IsOutFormatSupported(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId,
+	HEXINT64 instance,
+	UINT32 outSampleRate,
+	UINT32 outChannels
+	);
+
+IsMicFormatSupported(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId,
+	HEXINT64 instance,
+	UINT32 micSampleRate,
+	UINT32 micChannels
+	);
+
+ValidateConnectionInfoActivity(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId,
+	HEXINT64 instance
+	);
+
+ApoProcessActivity(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId,
+	HEXINT64 instance
+	);
+
+InitializeApo(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId
+	);
+
+BufferStatus(
+	UINT64 qpcTime,
+	UINT32 flags
+	);
+
+MicFormatPresent(
+	UINT32 micSampleRate,
+	UINT32 micChannels
+	);
+
+FormatChangeSpkChannels(
+	HEXINT64 instance,
+	UINT32 oldSpkChannels,
+	UINT32 newSpkChannels
+	);
+
+ApoDestroy(
+	HEXINT64 instance
+	);
+
+OutputFormatPresent(
+	UINT32 outSampleRate,
+	UINT32 outChannels
+	);
+
+FormatChangeMicChannels(
+	HEXINT64 instance,
+	UINT32 oldMicChannels,
+	UINT32 newMicChannels
+	);
+
+ApoCreate(
+	HEXINT64 instance
+	);
+
+AppendedZeroPad(
+	HEXINT64 instance,
+	UINT32 appendedSamples
+	);
+
+AecApoFailure(
+	HRESULT Result,
+	ANSISTRING Function
+	);
+
+UnlockForProcessActivity(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	SIGNED wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+UnlockForProcessActivity(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+ActivityIntermediateStop(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+LockForProcessActivity(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	SIGNED wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+LockForProcessActivity(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+EffectsList(
+	UINT32 Mode,
+	BOOLEAN AcousticEchoCancellation,
+	BOOLEAN AutomaticGainControl,
+	BOOLEAN BeamForming,
+	BOOLEAN NoiseSuppression,
+	GUID Effects,
+	UNICODESTRING EndpointID
+	);
+
+AcceptSpkDataActivity(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	SIGNED wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+AcceptSpkDataActivity(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+IsSpkFormatSupported(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	SIGNED wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function,
+	BOOLEAN spkFormatSupported
+	);
+
+IsSpkFormatSupported(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId,
+	BOOLEAN spkFormatSupported
+	);
+
+IsSpkFormatSupported(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	SIGNED wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+IsSpkFormatSupported(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+AddAuxiliaryInputActivity(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	SIGNED wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function,
+	UINT32 spkSampleRate,
+	UINT32 spkChannels,
+	UINT32 maxFrames
+	);
+
+AddAuxiliaryInputActivity(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId,
+	UINT32 spkSampleRate,
+	UINT32 spkChannels,
+	UINT32 maxFrames
+	);
+
+AddAuxiliaryInputActivity(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	SIGNED wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+AddAuxiliaryInputActivity(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+IsOutFormatSupported(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	SIGNED wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function,
+	BOOLEAN outFormatSupported,
+	BOOLEAN micFormatSupported
+	);
+
+IsOutFormatSupported(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId,
+	BOOLEAN outFormatSupported,
+	BOOLEAN micFormatSupported
+	);
+
+IsOutFormatSupported(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	SIGNED wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+IsOutFormatSupported(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+IsMicFormatSupported(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	SIGNED wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function,
+	BOOLEAN micFormatSupported,
+	BOOLEAN outFormatSupported
+	);
+
+IsMicFormatSupported(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId,
+	BOOLEAN micFormatSupported,
+	BOOLEAN outFormatSupported
+	);
+
+IsMicFormatSupported(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	SIGNED wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+IsMicFormatSupported(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+ValidateConnectionInfoActivity(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	SIGNED wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function,
+	UINT32 inSampleRate,
+	UINT32 inChannels,
+	UINT32 inMaxFrames,
+	UINT32 outSampleRate,
+	UINT32 outChannels,
+	UINT32 outMaxFrames
+	);
+
+ValidateConnectionInfoActivity(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId,
+	UINT32 inSampleRate,
+	UINT32 inChannels,
+	UINT32 inMaxFrames,
+	UINT32 outSampleRate,
+	UINT32 outChannels,
+	UINT32 outMaxFrames
+	);
+
+ValidateConnectionInfoActivity(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	SIGNED wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+ValidateConnectionInfoActivity(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+ActivityError(
+	UINT64 PartA_PrivTags,
+	SIGNED wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+ApoProcessActivity(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	SIGNED wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+ApoProcessActivity(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+ActivityStoppedAutomatically(
+	VOID
+	);
+
+InitializeApo(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	SIGNED wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function,
+	HEXINT64 instance,
+	HRESULT hr,
+	BOOLEAN initForDiscovery,
+	BOOLEAN hasMicGeometry,
+	BOOLEAN isRemoteEp,
+	UINT32 apoConfig,
+	BOOLEAN testMode,
+	BOOLEAN inProcMode,
+	BOOLEAN initForTarzan,
+	BOOLEAN isHMDDevice,
+	BOOLEAN isMicSensitivityFound,
+	DOUBLE micSensitivityOriginaldB,
+	FLOAT masterVolumedB,
+	DOUBLE combinedMicSensitivityMasterVolumedB,
+	GUID signalProcessingMode,
+	UNICODESTRING endpointId
+	);
+
+InitializeApo(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId,
+	HEXINT64 instance,
+	HRESULT hr,
+	BOOLEAN initForDiscovery,
+	BOOLEAN hasMicGeometry,
+	BOOLEAN isRemoteEp,
+	UINT32 apoConfig,
+	BOOLEAN testMode,
+	BOOLEAN inProcMode,
+	BOOLEAN initForTarzan,
+	BOOLEAN isHMDDevice,
+	BOOLEAN isMicSensitivityFound,
+	DOUBLE micSensitivityOriginaldB,
+	FLOAT masterVolumedB,
+	DOUBLE combinedMicSensitivityMasterVolumedB,
+	GUID signalProcessingMode,
+	UNICODESTRING endpointId
+	);
+
+Initialize(
+	BOOLEAN ForDiscoveryOnly,
+	BOOLEAN HasMicrophoneGeometry,
+	BOOLEAN IsRemoteEndpoint,
+	UINT32 Configuration,
+	BOOLEAN AcousticEchoCancellation,
+	BOOLEAN AutomaticGainControl,
+	BOOLEAN BeamForming,
+	BOOLEAN NoiseSuppression,
+	BOOLEAN ForTarzan,
+	BOOLEAN IsHMDDevice,
+	BOOLEAN IsMicSensitivityFound,
+	DOUBLE MicSensitivityOriginal,
+	FLOAT MasterVolumedB,
+	DOUBLE CombinedMicSensitivityMasterVolume,
+	GUID SignalProcessingMode,
+	UNICODESTRING EndpointID
+	);
+
+InitializeApo(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	SIGNED wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+InitializeApo(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+ActivityStoppedAutomatically(
+	VOID
+	);
+
+NuiAudioLoadTableEnd(
+	INT32 HResult
+	);
+
+NuiAudioGetFrameCollectionEnd(
+	UINT64 InstanceId,
+	INT32 HResult
+	);
+
+NuiAudioDataPumpSubmitSpkData(
+	UINT32 Buffer Len,
+	INT64 Time Stamp,
+	UINT32 Flag
+	);
+
+NuiAudioRecorderStopEnd(
+	UINT64 InstanceId,
+	INT32 HResult
+	);
+
+NuiAudioRecorderStopBegin(
+	UINT64 InstanceId
+	);
+
+NuiAudioCreateBegin(
+	UINT32 AECVer,
+	UINT32 KWSVer,
+	UINT32 SIDVer
+	);
+
+NuiAudioDataPumpSubmitMicData(
+	UINT32 Buffer Len,
+	INT64 Time Stamp,
+	UINT32 Flag
+	);
+
+NuiAudioRecorderRemoveMarkerEnd(
+	UINT64 InstanceId,
+	INT32 HResult
+	);
+
+NuiAudioRecorderAddMarkerBegin(
+	UINT64 InstanceId,
+	UINT32 WavMarkerId
+	);
+
+NuiAudioRecorderAddMarkerEnd(
+	UINT64 InstanceId,
+	INT32 HResult
+	);
+
+NuiAudioInitializeBegin(
+	UINT32 SoftwareVer
+	);
+
+NuiAudioProcessBegin(
+	UINT64 InstanceId
+	);
+
+NuiAudioLoadTableBegin(
+	ANSISTRING File Name
+	);
+
+NuiAudioReleaseEnd(
+	UINT64 InstanceId,
+	INT32 HResult
+	);
+
+NuiAudioReleaseBegin(
+	UINT64 InstanceId
+	);
+
+NuiAudioProcessEnd(
+	UINT64 InstanceId,
+	INT32 HResult
+	);
+
+NuiAudioRecorderRemoveMarkerBegin(
+	UINT64 InstanceId,
+	UINT32 WavMarkerId
+	);
+
+NuiAudioRecorderStartBegin(
+	UINT64 InstanceId
+	);
+
+NuiAudioRecorderStartEnd(
+	UINT64 InstanceId,
+	INT32 HResult
+	);
+
+NuiAudioSetParameterBegin(
+	UINT64 InstanceId,
+	INT32 OutputChannel,
+	INT32 Parameter
+	);
+
+NuiAudioInitializeEnd(
+	INT32 HResult
+	);
+
+NuiAudioSetParameterEnd(
+	UINT64 InstanceId,
+	INT32 HResult
+	);
+
+NuiAudioCreateEnd(
+	UINT64 InstanceId,
+	INT32 HResult
+	);
+
+NuiAudioGetFrameCollectionBegin(
+	UINT64 InstanceId
+	);
+
+NuiAudioTrace(
+	ANSISTRING Trace Message
+	);
+
+NuiAudioInitializeForceSpatialPlayspaceModeSource000(
+	VOID
+	);
+
+NuiAudioInitializationFailure(
+	VOID
+	);
+
+NuiAudioLoadFileBinary(
+	INT32 HResult,
+	BOOLEAN Fail On Missing,
+	ANSISTRING File Name
+	);
+
+DataPumpStats(
+	UINT64 DriverId,
+	INT32 StreamIndex,
+	UINT64 LatestTimeStamp,
+	UINT64 CountSamples,
+	UINT64 CountNaN,
+	UINT64 CountInf,
+	UINT64 CountOutOfBounds
+	);
+
+NuiAudioCopyOutputFrame(
+	UINT64 InstanceId,
+	UINT32 FrameNumber,
+	UINT64 TimeStamp
+	);
+
+NuiAudioCouldNotDeliverAllFrames(
+	UINT64 InstanceId
+	);
+
+NuiAudioInputBufferWraparound(
+	UINT64 InstanceId
+	);
+
+NuiAudioInputSpkError(
+	UINT64 InstanceId
+	);
+
+NuiAudioCoreSetParameterInt(
+	INT32 OutputChannel,
+	INT32 Parameter,
+	INT32 Value
+	);
+
+NuiAudioReset(
+	UINT64 InstanceId,
+	INT32 ResetOrigin
+	);
+
+NuiAudioOutputBufferWraparound(
+	UINT64 InstanceId
+	);
+
+NuiAudioInputMicError(
+	UINT64 InstanceId
+	);
+
+NuiAudioHardReset(
+	UINT64 InstanceId
+	);
+
+NuiAudioWriteToFileBinary(
+	INT32 HResult,
+	ANSISTRING File Name
+	);
+
+NuiAudioCoreSetParameterFloat(
+	INT32 OutputChannel,
+	INT32 Parameter,
+	FLOAT Value
+	);
+
+NuiAudioStartingStream(
+	UINT64 InstanceId
+	);
+
+CancelGraphChanges(
+	HEXINT64 this
+	);
+
+BeginGraphChanges(
+	HEXINT64 this
+	);
+
+CommitGraphChanges(
+	HEXINT64 this
+	);
+
+RenderEmptyPassDetected(
+	UNICODESTRING EndpointID,
+	GUID GraphID,
+	FLOAT TimeSinceLastEvent,
+	FLOAT TotalTime,
+	UINT32 TotalInvalidPositionEmptyPasses
+	);
+
+ScheduledBufferCompleteEventOnNextStart(
+	VOID
+	);
+
+FirePendingBufferCompleteEvent(
+	VOID
+	);
+
+ApoExceptionCaught(
+	ANSISTRING APOType,
+	GUID APOCLSID,
+	UNICODESTRING EndpointID,
+	ANSISTRING Func,
+	HRESULT HResult
+	);
+
+CSystemEffectWrapper::TrackAPOFailureUnhandled(
+	UINT32 APOType,
+	GUID APOCLSID,
+	UNICODESTRING EndpointID
+	);
+
+TrackSystemEffectBehavior(
+	UINT64 PartA_PrivTags,
+	BOOL32 IsException?,
+	UINT32 APOType,
+	GUID APOCLSID,
+	UNICODESTRING EndpointID
+	);
+
+Errors(
+	ANSISTRING Func,
+	INT32 LineNum,
+	HRESULT HResult
+	);
+
+AssertFailure(
+	ANSISTRING Function,
+	INT32 Line,
+	HRESULT ResultCode
+	);
+
+ReadNextItemCommand(
+	ANSISTRING Function,
+	INT32 Line,
+	HRESULT ResultCode
+	);
+
+Error(
+	ANSISTRING Function,
+	INT32 Line,
+	HRESULT ResultCode
+	);
+
+SpatialAudioMetadataDictionary::RuntimeClassInitialize(
+	HEXINT64 this,
+	HRESULT HResult,
+	GUID FormatId,
+	UNICODESTRING EndPointId
+	);
+
+Unknown SpatialAudioEncoderId(
+	ANSISTRING Function,
+	INT32 Line,
+	HRESULT ResultCode
+	);
+
+AssertWithArgs(
+	UINT32 assertVersion,
+	UINT32 rva,
+	UINT32 timestamp,
+	UINT32 imageSize,
+	ANSISTRING imageName,
+	UINT32 count,
+	UINT32 totalHits,
+	ANSISTRING originatingBinary,
+	UINT32 bucketArgument1,
+	UINT32 bucketArgument2,
+	UINT32 ModuleCollection,
+	UINT32 GlobalCollection
+	);
+

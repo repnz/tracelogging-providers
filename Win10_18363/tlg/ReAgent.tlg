@@ -1,0 +1,119 @@
+ProviderNames:
+	Microsoft.Windows.WinRE.Agent
+	Microsoft.Windows.StartRepairCore
+	FveDetectTelemetry
+
+
+
+**** Events *****
+FindTargetPartitionFailed(
+	UINT64 WinRESize
+	);
+
+FindTargetPartitionSucceed(
+	UNICODESTRING PartitionType,
+	UNICODESTRING RecoveryPartitionSubtype,
+	UINT64 WinRESize,
+	UINT64 PartitionSize
+	);
+
+WinreFormatPartitionFailed(
+	HRESULT HRESULT
+	);
+
+WinreFormatPartitionSucceed(
+	VOID
+	);
+
+WinreFormatPartition(
+	VOID
+	);
+
+InstallType(
+	UINT32 InstallType
+	);
+
+ShrinkOsPartitionFailed(
+	HRESULT HRESULT
+	);
+
+ShrinkOsPartitionSucceed(
+	VOID
+	);
+
+ShrinkOsPartition(
+	UINT32 ShrinkSize
+	);
+
+CreateWinRePartitionFailed(
+	UINT32 ErrorCode
+	);
+
+CreateWinRePartitionSucceed(
+	VOID
+	);
+
+CreateWinRePartition(
+	UINT32 PartitionSize
+	);
+
+MigrateOemToolsToWinREFailed(
+	UINT32 ErrorCode
+	);
+
+MigrateOemToolsToWinRESucceed(
+	VOID
+	);
+
+MigrateOemToolsToWinRE(
+	UNICODESTRING DownlevelWinREPath
+	);
+
+MigrateDriversToWinReFailed(
+	UINT32 ErrorCode
+	);
+
+MigrateDriversToWinReSucceed(
+	VOID
+	);
+
+MigrateDriversToWinRe(
+	UNICODESTRING WinReLocation,
+	UNICODESTRING SourceImagePath
+	);
+
+InstallWinREFailed(
+	INT32 IsOemDir,
+	UINT32 ErrorCode
+	);
+
+InstallWinRESucceed(
+	UINT32 WinRePartitionSize,
+	UINT32 WinRePartitionFreeSpace,
+	INT32 IsWinRePartitionBoot,
+	INT32 IsWinRePartitionActive,
+	INT32 IsWinRePartitionMBR,
+	INT32 IsOemDir
+	);
+
+InstallWinRE(
+	UNICODESTRING InstallPath,
+	INT32 CalledBySP
+	);
+
+FveCheckSuspendBitLockerOnUpgrade(
+	INT32 ShouldSuspendBitlocker,
+	BOOLEAN IsSecureBootBound,
+	BOOLEAN IsOsPreRS1,
+	UINT32 AuthUsesFlags,
+	INT32 hr
+	);
+
+FveRemoveTrustedWimData(
+	INT32 hr
+	);
+
+FveAddTrustedWimData(
+	INT32 hr
+	);
+

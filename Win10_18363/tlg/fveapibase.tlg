@@ -1,0 +1,98 @@
+ProviderNames:
+	FveAPILoggingProvider
+	Microsoft.Windows.Security.BitLocker.CSP.State.Update
+	Microsoft.Windows.Security.BitLocker.EncryptionDelay
+	Microsoft.Windows.Security.BitLocker.BcdUpdate
+	TelemetryAssert
+	TelemetryAssertDiagTrack
+	Microsoft.Windows.Security.BitLocker.KeyRolling.Engine
+
+
+
+**** Events *****
+Bitlocker.FveApi.Wipe.Resumed(
+	GUID FveID,
+	UINT32 PrevWipeState,
+	INT32 ConvState,
+	INT32 ExitCode
+	);
+
+Bitlocker.FveApi.Conversion.Resumed(
+	GUID FveID,
+	UINT32 PrevState,
+	INT32 ExitCode
+	);
+
+Bitlocker.FveApi.Wipe.Paused(
+	GUID FveID,
+	UINT32 PrevWipeState,
+	INT32 ConvState,
+	INT32 ExitCode
+	);
+
+Bitlocker.FveApi.Conversion.Paused(
+	GUID FveID,
+	UINT32 PrevState,
+	INT32 ExitCode
+	);
+
+Bitlocker.FveApi.Wipe.Stopped(
+	GUID FveID,
+	UINT32 PrevWipeState,
+	INT32 ConvState,
+	INT32 ExitCode
+	);
+
+Bitlocker.FveApi.Conversion.Stopped(
+	GUID FveID,
+	UINT32 PrevState,
+	INT32 ExitCode
+	);
+
+Bitlocker.FveApi.Set.BackupInfo(
+	GUID FveID,
+	UINT16 BackupType,
+	UINT16 SetFlag,
+	UINT16 ClearFlag,
+	HRESULT hr,
+	UINT64 PartA_PrivTags
+	);
+
+BitLocker.CFveApi.TcgLogOnSeal(
+	UINT32 TcgLogSize,
+	BINARY TcgLog
+	);
+
+BitLocker.FveApi.PCR.Values(
+	UINT32 EventID,
+	UINT32 PcrValuesSize,
+	BINARY PCRValues,
+	UINT32 PcrBitMapSource,
+	UINT32 PcrBitMap
+	);
+
+BitLocker.FveApi.Lib.Base.Log(
+	UINT16 EventID,
+	INT32 hr,
+	GUID FveID
+	);
+
+BitLocker.FveApi.FvekeyType(
+	GUID FveID,
+	UINT16 FveKType,
+	BOOLEAN IsEdrive,
+	INT32 ExitCode
+	);
+
+Assert(
+	UINT32 assertVersion,
+	UINT32 rva,
+	UINT32 timestamp,
+	UINT32 imageSize,
+	ANSISTRING imageName,
+	UINT32 count,
+	UINT32 totalHits,
+	UINT32 ModuleCollection,
+	UINT32 GlobalCollection
+	);
+

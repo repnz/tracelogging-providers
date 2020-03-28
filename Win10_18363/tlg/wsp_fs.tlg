@@ -1,0 +1,57 @@
+ProviderNames:
+	Microsoft.Windows.Storage.FileServer
+
+
+
+**** Events *****
+ActivityStoppedAutomatically(
+	VOID
+	);
+
+Exit function(
+	ANSISTRING Function,
+	UINT32 Line
+	);
+
+Error(
+	ANSISTRING Function,
+	UINT32 Line,
+	HEXINT32 ErrorCode_MIResult
+	);
+
+Enter function(
+	ANSISTRING Function,
+	UINT32 Line
+	);
+
+Provider Load(
+	VOID
+	);
+
+EnterFunction(
+	UNICODESTRING Function,
+	UINT32 Line
+	);
+
+BadArgument(
+	UNICODESTRING Function,
+	UINT32 Line
+	);
+
+HealthResClient(
+	UNICODESTRING Function
+	);
+
+Error(
+	UNICODESTRING Function,
+	UINT32 Line,
+	HEXINT32 ErrorCode_HRESULT
+	);
+
+ExitFunction(
+	UNICODESTRING Function,
+	UINT32 Line,
+	UINT64 ElapsedTime_ms,
+	HEXINT32 ErrorCode_HRESULT
+	);
+

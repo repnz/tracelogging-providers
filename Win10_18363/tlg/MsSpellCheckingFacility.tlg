@@ -1,0 +1,78 @@
+ProviderNames:
+	Microsoft.Windows.Globalization.Spelling
+
+
+
+**** Events *****
+FallbackError(
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+TrieInitializationFailure(
+	INT32 HResult
+	);
+
+FailureToLoadAutoCorrectionList(
+	INT32 HResult
+	);
+
+EmptySpellCheckerUsage(
+	VOID
+	);
+
+FallbackError(
+	UINT64 PartA_PrivTags,
+	SIGNED wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+FailureToLoadUpdateDictionary(
+	INT32 HResult
+	);
+
+DataSectionParsingFailure(
+	UINT32 LCID,
+	UNICODESTRING Resource
+	);
+
+FailureToAddWordToSpellingDictionary(
+	UNICODESTRING LanguageTag,
+	INT32 ErrorCode
+	);
+
+FailureToRemoveWordFromSpellingDictionary(
+	UNICODESTRING LanguageTag,
+	INT32 ErrorCode
+	);
+

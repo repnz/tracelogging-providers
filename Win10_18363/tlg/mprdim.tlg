@@ -1,0 +1,37 @@
+ProviderNames:
+	Microsoft.Windows.Networking.RAS.RASServer.AgileVPN
+	Microsoft.Windows.Networking.RAS.RASServer
+	Microsoft.Windows.Networking.RAS.Routing.BGP
+	Microsoft.Windows.Networking.RAS.RASServer.Ddm
+
+
+
+**** Events *****
+GlobalInfo(
+	BOOL32 isMultiTenant,
+	UINT32 routerRole
+	);
+
+S2sVpnTunnelInfo(
+	UINT32 totalIkev2Tunnels,
+	UINT32 enabledIkev2Tunnels,
+	UINT32 totalGreTunnels,
+	UINT32 enabledGreTunnels,
+	UINT32 ipFilters,
+	UINT32 triggerFilter,
+	UINT32 transmitBandwidthMbps,
+	UINT32 receiveBandwidthMbps
+	);
+
+S2sVpnTunnelInfo(
+	UINT32 totalIkev2Tunnels,
+	UINT32 enabledIkev2Tunnels,
+	UINT32 totalGreTunnels,
+	UINT32 enabledGreTunnels,
+	UINT32 ipFilters,
+	UINT32 triggerFilter,
+	UINT32 transmitBandwidthMbps,
+	UINT32 receiveBandwidthMbps,
+	UINT32 enabledTunnelCountPerRD
+	);
+

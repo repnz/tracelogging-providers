@@ -1,0 +1,79 @@
+ProviderNames:
+	Microsoft.Windows.WiProv.DafProvider
+
+
+
+**** Events *****
+DebugMsg(
+	UNICODESTRING Message,
+	UINT32 ErrorCode
+	);
+
+DebugInfo(
+	UNICODESTRING Message
+	);
+
+DeviceFound(
+	UNICODESTRING TelemetryTag,
+	UNICODESTRING PrinterId
+	);
+
+QueryEnd(
+	UNICODESTRING TelemetryTag
+	);
+
+QueryBegin(
+	UNICODESTRING TelemetryTag
+	);
+
+FallbackError(
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+FallbackError(
+	UINT64 PartA_PrivTags,
+	SIGNED wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+Association(
+	UNICODESTRING AepId,
+	ANSISTRING SsId,
+	INT32 hr,
+	UNICODESTRING Message,
+	INT32 PrinterRssi,
+	UINT32 PrinterLinkQuality,
+	UINT32 ApSignalQuality
+	);
+

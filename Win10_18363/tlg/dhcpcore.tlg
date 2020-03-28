@@ -1,0 +1,130 @@
+ProviderNames:
+	Microsoft.Windows.Networking.DHCP
+
+
+
+**** Events *****
+TimeToPlumbAddress(
+	UINT64 TotalTimeToPlumb,
+	UINT32 LeaseDuration,
+	UINT64 LeaseObtained,
+	UINT64 LeaseExpires,
+	GUID InterfaceGuid,
+	UINT32 InterfaceIndex,
+	UINT32 NdisMedium,
+	UINT32 NdisPhysicalMedium,
+	GUID SessionTrackingGuid,
+	GUID BootSessionTrackingGuid,
+	BOOL32 IsAdvancedDORAEnabled
+	);
+
+AddressPlumbed(
+	GUID InterfaceGuid,
+	UINT32 InterfaceIndex,
+	UINT32 NdisMedium,
+	UINT32 NdisPhysicalMedium,
+	UINT32 error,
+	BOOL32 anonymousFlag,
+	UINT32 LeaseDuration,
+	UINT64 LeaseObtained,
+	UINT64 LeaseExpires,
+	GUID SessionTrackingGuid,
+	GUID BootSessionTrackingGuid,
+	BOOL32 IsAdvancedDORAEnabled
+	);
+
+AddressUnplumbed(
+	GUID InterfaceGuid,
+	UINT32 InterfaceIndex,
+	UINT32 NdisMedium,
+	UINT32 NdisPhysicalMedium,
+	UINT32 error,
+	GUID SessionTrackingGuid,
+	GUID BootSessionTrackingGuid,
+	BOOL32 IsAdvancedDORAEnabled
+	);
+
+RenewalAttempt(
+	UINT64 TotalTimeToReceiveMs,
+	BOOL32 IsResponseReceived,
+	UINT32 Retries,
+	UINT64 RetryDurationMs,
+	UINT32 Error,
+	BOOL32 IsMachineInCSState,
+	BOOL32 IsMachineInDSState,
+	UINT64 SecondsSinceBoot,
+	UINT32 LeaseTime,
+	UINT64 LeaseObtained,
+	UINT64 T1Time,
+	UINT64 T2Time,
+	GUID InterfaceGuid,
+	UINT32 InterfaceIndex,
+	UINT32 NdisMedium,
+	UINT32 NdisPhysicalMedium,
+	GUID SessionTrackingGuid,
+	GUID BootSessionTrackingGuid,
+	BOOL32 IsAdvancedDORAEnabled
+	);
+
+RequestAttempt(
+	UINT64 TotalTimeToReceiveMs,
+	BOOL32 IsResponseReceived,
+	UINT32 Retries,
+	UINT64 RetryDurationMs,
+	UINT32 Error,
+	BOOL32 IsMachineInCSState,
+	BOOL32 IsMachineInDSState,
+	UINT64 SecondsSinceBoot,
+	UINT32 LeaseTime,
+	UINT64 LeaseObtained,
+	UINT64 T1Time,
+	UINT64 T2Time,
+	GUID InterfaceGuid,
+	UINT32 InterfaceIndex,
+	UINT32 NdisMedium,
+	UINT32 NdisPhysicalMedium,
+	GUID SessionTrackingGuid,
+	GUID BootSessionTrackingGuid,
+	BOOL32 IsAdvancedDORAEnabled
+	);
+
+DiscoveryAttempt(
+	UINT64 TotalTimeToRecieve,
+	BOOL32 GotOffer,
+	UINT32 Retries,
+	UINT32 Error,
+	BOOL32 IsMachineInCSState,
+	BOOL32 IsMachineInDSState,
+	UINT64 SecondsSinceBoot,
+	UINT32 LeaseTime,
+	UINT64 LeaseObtained,
+	UINT64 T1Time,
+	UINT64 T2Time,
+	GUID InterfaceGuid,
+	UINT32 InterfaceIndex,
+	UINT32 NdisMedium,
+	UINT32 NdisPhysicalMedium,
+	GUID SessionTrackingGuid,
+	GUID BootSessionTrackingGuid,
+	BOOL32 IsAdvancedDORAEnabled
+	);
+
+Dhcpv4Options(
+	GUID InterfaceGuid,
+	UINT32 InterfaceIndex,
+	UINT32 NdisMedium,
+	UINT32 NdisPhysicalMedium,
+	UINT32 DomainSearchListCount,
+	BOOL32 IsDomainSearchListValid,
+	BOOL32 bIsAndroidMetered,
+	UINT32 MessageType,
+	UINT32 Error,
+	UINT16 RcvdOptionCount,
+	UINT32 RcvdOptionsList,
+	UINT16 IgnoredOptionCount,
+	UINT32 IgnoredOptionsList,
+	GUID SessionTrackingGuid,
+	GUID BootSessionTrackingGuid,
+	BOOL32 IsAdvancedDORAEnabled
+	);
+

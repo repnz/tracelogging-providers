@@ -1,0 +1,115 @@
+ProviderNames:
+	Microsoft.Windows.Provisioning.CommandCsp
+	TelemetryAssert
+	TelemetryAssertDiagTrack
+
+
+
+**** Events *****
+CProvisioningCommandsNode::CreateNodeInstance(
+	UNICODESTRING URI,
+	UINT32 nodeId,
+	UINT32 fPermanent,
+	UINT32 fCreate
+	);
+
+CProvisioningCommandsNode::SetValue(
+	UINT32 nodeId
+	);
+
+CProvisioningCommandsNode::GetValue(
+	UINT32 nodeId
+	);
+
+CProvisioningCommandsNode::Clear(
+	UINT32 nodeId
+	);
+
+CProvisioningCommandsNode::DeleteChild(
+	UINT32 nodeId
+	);
+
+CProvisioningCommandsNode::Add(
+	UNICODESTRING URI,
+	UNICODESTRING Full URI,
+	UINT32 nodeId
+	);
+
+CProvisioningCommandsNode::GetChildNodeName.DeviceContext(
+	UINT32 nodeId
+	);
+
+CProvisioningCommandsNode::GetChildNodeName.PrimaryContext(
+	UINT32 nodeId
+	);
+
+RegistryConfig::AddCommand(
+	UNICODESTRING Phase,
+	UNICODESTRING Name,
+	UNICODESTRING CmdName,
+	UNICODESTRING WorkingDir
+	);
+
+RegistryConfig::ParsePhase.AddingCommandSet(
+	UNICODESTRING name
+	);
+
+RegistryConfig::Parse.FailedRegOpen(
+	UNICODESTRING subKey
+	);
+
+RegistryConfig::DeleteCommandSet(
+	UNICODESTRING Phase,
+	UNICODESTRING CommandSetName,
+	UNICODESTRING RegPath
+	);
+
+RegistryConfig::Parse.FailedPhaseRegOpen(
+	UNICODESTRING subKey,
+	UNICODESTRING phase
+	);
+
+RegistryConfig::ParsePhase.FailedRegOpen(
+	UNICODESTRING keyName
+	);
+
+RegistryConfig::ParseCommand(
+	UNICODESTRING name,
+	UNICODESTRING commandLine,
+	UNICODESTRING workingDirectory
+	);
+
+RegistryConfig::ParseCommandSet.Altitude(
+	UNICODESTRING name,
+	UINT32 altitude
+	);
+
+RegistryConfig::ParseCommandSet.FailedGetAltitude(
+	UNICODESTRING name
+	);
+
+RegistryConfig::Delete(
+	UNICODESTRING Phase,
+	UNICODESTRING CommandSetName,
+	UNICODESTRING CommandName,
+	UNICODESTRING RegPath
+	);
+
+RegistryResults::Add(
+	UNICODESTRING Phase,
+	UNICODESTRING PackageId,
+	UNICODESTRING CmdLineName
+	);
+
+Assert(
+	UINT32 assertVersion,
+	UINT32 rva,
+	UINT32 timestamp,
+	UINT32 imageSize,
+	ANSISTRING imageName,
+	UINT32 count,
+	UINT32 totalHits,
+	UINT32 ModuleCollection,
+	UINT32 GlobalCollection
+	);
+

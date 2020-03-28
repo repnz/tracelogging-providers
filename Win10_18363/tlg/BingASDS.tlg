@@ -1,0 +1,253 @@
+ProviderNames:
+	Microsoft.Windows.Shell.MTF.BingAutoSuggestionDS.Aggregate
+	Microsoft.Windows.TlgAggregateInternal
+	TelemetryAssert
+	TelemetryAssertDiagTrack
+	Microsoft.Windows.Shell.MTF.BingAutoSuggestionDS
+	Microsoft.Windows.Shell.MTF.BingAutoSuggestionDS.Perf
+
+
+
+**** Events *****
+FallbackError(
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+FallbackError(
+	UINT64 PartA_PrivTags,
+	SIGNED wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+ActivityFailure(
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+ActivityError(
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+QueryLatency(
+	UINT32 ServiceCandidateKind,
+	UNICODESTRING ServiceCandidateKindString,
+	INT64 PerfCounterFrequency,
+	UINT64 QueryStartTime,
+	UINT64 QueryEndTime,
+	UINT32 QueryLatencyInMicrosecond,
+	UINT32 QueryStatisticsEvent,
+	UNICODESTRING QueryStatisticsEventString
+	);
+
+QueryLatencyResampled(
+	UINT32 ServiceCandidateKind,
+	UNICODESTRING ServiceCandidateKindString,
+	INT64 PerfCounterFrequency,
+	UINT64 QueryStartTime,
+	UINT64 QueryEndTime,
+	UINT32 QueryLatencyInMicrosecond,
+	UINT32 QueryStatisticsEvent,
+	UNICODESTRING QueryStatisticsEventString,
+	UINT32 ResampleRate
+	);
+
+ActivityFailure(
+	UINT64 PartA_PrivTags,
+	HEX wilActivity,
+	UINT32 hresult,
+	UINT32 threadId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+ActivityError(
+	UINT64 PartA_PrivTags,
+	SIGNED wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+GetCandidates(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+QueryStatistics(
+	NULL ThrottledByPersonalInformation,
+	NULL ThrottledByLastFailedQueryAsPrefix,
+	NULL ThrottledByQueryLength,
+	NULL ThrottledByNetworkEnvironment,
+	NULL ThrottledByMaxQueryCountExceeded,
+	NULL AbortedByShortDuration,
+	NULL AbortedByFramework,
+	NULL AbortedByUnexpectedCompletion,
+	NULL FailedByNetworkTimeout,
+	NULL FailedByRateLimitExceeded,
+	NULL FailedByErrorResponse,
+	NULL SucceededWithNoCandidate,
+	NULL SucceededAndCandidatesFilteredByPostProcess,
+	NULL SucceededWithCandidates,
+	UINT32 ServiceCandidateKind,
+	UNICODESTRING ServiceCandidateKindString
+	);
+
+ActivityIntermediateStop(
+	UINT64 PartA_PrivTags,
+	STRING wilActivity,
+	UINT32 hresult,
+	UINT32 threadId
+	);
+
+GetCandidates(
+	UINT64 PartA_PrivTags,
+	NOPRINT wilActivity,
+	UINT32 threadId
+	);
+
+ActivityStoppedAutomatically(
+	VOID
+	);
+
+QueryStatisticsInSession(
+	UINT32 ServiceCandidateKind,
+	UNICODESTRING ServiceCandidateKindString,
+	UINT32 ThrottledByPersonalInformation,
+	UINT32 ThrottledByLastFailedQueryAsPrefix,
+	UINT32 ThrottledByQueryLength,
+	UINT32 ThrottledByNetworkEnvironment,
+	UINT32 ThrottledByMaxQueryCountExceeded,
+	UINT32 AbortedByShortDuration,
+	UINT32 AbortedByFramework,
+	UINT32 AbortedByUnexpectedCompletion,
+	UINT32 FailedByNetworkTimeout,
+	UINT32 FailedByRateLimitExceeded,
+	UINT32 FailedByErrorResponse,
+	UINT32 SucceededWithNoCandidate,
+	UINT32 SucceededAndCandidatesFilteredByPostProcess,
+	UINT32 SucceededWithCandidates
+	);
+
+GetCandidates(
+	UINT64 PartA_PrivTags,
+	UINT64 PartA_PrivTags,
+	SIGNED wilActivity,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+TlgAggregateSummary(
+	GUID Provider,
+	UINT64 NumFlushes,
+	UINT64 MaxEntriesStored,
+	UINT64 TotalEntriesFlushed,
+	UINT32 MaxEntriesFlushed,
+	UINT32 MinEntriesFlushed,
+	UINT32 NumBucketLimitReached,
+	UINT32 NumAllocationFailures,
+	UINT32 NumLargeEventFailures
+	);
+
+Assert(
+	UINT32 assertVersion,
+	UINT32 rva,
+	UINT32 timestamp,
+	UINT32 imageSize,
+	ANSISTRING imageName,
+	UINT32 count,
+	UINT32 totalHits,
+	UINT32 ModuleCollection,
+	UINT32 GlobalCollection
+	);
+

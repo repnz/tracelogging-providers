@@ -1,0 +1,119 @@
+ProviderNames:
+	Microsoft.Windows.Graphics.D3D11
+
+
+
+**** Events *****
+ProcessInfo(
+	BOOL32 UTCReplace_AppSessionGuid,
+	UINT8 schemaVersion
+	);
+
+TextureUINTViewUsage(
+	BOOL32 UTCReplace_AppSessionGuid,
+	UINT8 schemaVersion,
+	UINT32 format
+	);
+
+Texture420OpaqueUsage(
+	BOOL32 UTCReplace_AppSessionGuid,
+	UINT8 schemaVersion
+	);
+
+CreateVideoDecoder(
+	BOOL32 UTCReplace_AppSessionGuid,
+	UINT8 schemaVersion,
+	GUID decodeProfile,
+	UINT32 width,
+	UINT32 height,
+	GUID bitstreamEncryption,
+	HRESULT hr
+	);
+
+TextureLayoutUsage(
+	BOOL32 UTCReplace_AppSessionGuid,
+	UINT8 schemaVersion,
+	UINT32 textureLayout
+	);
+
+VideoProcessorSetStreamAlpha(
+	BOOL32 UTCReplace_AppSessionGuid,
+	UINT8 schemaVersion,
+	UINT32 streamIndex,
+	BOOL32 enabled,
+	FLOAT alpha
+	);
+
+VideoProcessorSetStreamAutoProcessingMode(
+	BOOL32 UTCReplace_AppSessionGuid,
+	UINT8 schemaVersion,
+	UINT32 streamIndex,
+	BOOL32 enabled
+	);
+
+VideoProcessorSetStreamLumaKey(
+	BOOL32 UTCReplace_AppSessionGuid,
+	UINT8 schemaVersion,
+	UINT32 streamIndex,
+	BOOL32 enabled
+	);
+
+VideoProcessorSetStreamFilter(
+	BOOL32 UTCReplace_AppSessionGuid,
+	UINT8 schemaVersion,
+	UINT32 streamIndex,
+	UINT32 filter,
+	BOOL32 enabled,
+	INT32 level
+	);
+
+VideoProcessorStreamUsage(
+	BOOL32 UTCReplace_AppSessionGuid,
+	UINT8 schemaVersion,
+	UINT32 numStreamsEnabled,
+	UINT32 numStereoStreams
+	);
+
+VideoProcessorSetStreamFormat(
+	BOOL32 UTCReplace_AppSessionGuid,
+	UINT8 schemaVersion,
+	UINT32 streamIndex,
+	UINT32 frameFormat
+	);
+
+InvalidUpdateSubresourceOnSwapChainBuffers(
+	BOOL32 UTCReplace_AppSessionGuid,
+	UINT8 schemaVersion
+	);
+
+RemoveDevice(
+	BOOL32 UTCReplace_AppSessionGuid,
+	UINT8 schemaVersion,
+	HEXINT64 deviceId,
+	UINT32 reasonHR,
+	UINT64 adapterLuid,
+	INT32 kernelDeviceExecutionState
+	);
+
+CreateDevice(
+	BOOL32 UTCReplace_AppSessionGuid,
+	UINT8 schemaVersion,
+	HEXINT64 deviceId,
+	INT32 driverType_in,
+	INT32 featureLevel_in,
+	INT32 featureLevel_out,
+	INT32 hwFeatureLevel_out,
+	UINT64 adapterLuid,
+	BOOL32 multisampleRTVWithForcedSampleCountOne,
+	INT32 tiledResourcesTier,
+	UINT32 11on12Reason
+	);
+
+TelemetryThrottled(
+	BOOL32 UTCReplace_AppSessionGuid,
+	UINT32 Bucket,
+	UINT32 IntervalEventCount,
+	FLOAT IntervalDuration,
+	FLOAT IntervalStartTime
+	);
+

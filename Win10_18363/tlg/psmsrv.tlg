@@ -1,0 +1,321 @@
+ProviderNames:
+	Microsoft.Windows.ProcessStateManager
+	Microsoft.Windows.ProcessStateManager.Refcount
+	TelemetryAssert
+	TelemetryAssertDiagTrack
+
+
+
+**** Events *****
+Application_Ref(
+	UINT32 NewRefCount,
+	UNICODESTRING PsmKey
+	);
+
+Host_Ref(
+	UINT32 NewRefCount,
+	UNICODESTRING PsmKey,
+	UINT32 HostJobType,
+	HEXINT64 HostId
+	);
+
+Application_Ref(
+	UINT32 NewRefCount,
+	UNICODESTRING PsmKey
+	);
+
+Application_Ref(
+	UINT32 NewRefCount,
+	UNICODESTRING PsmKey
+	);
+
+Application_Deref(
+	UINT32 NewRefCount,
+	UNICODESTRING PsmKey,
+	BOOLEAN CleanupNeeded
+	);
+
+Host_Ref(
+	UINT32 NewRefCount,
+	UNICODESTRING PsmKey,
+	UINT32 HostJobType,
+	HEXINT64 HostId,
+	BOOL32 FoundOnSecondAttempt
+	);
+
+Application_RegisterProcess(
+	NTSTATUS status,
+	UNICODESTRING psmKey,
+	HEXINT64 hostId,
+	PID pid,
+	UINT32 activationFlags,
+	UINT32 currentState,
+	UINT32 mixedWorkItems,
+	UINT32 pureWorkItems,
+	UINT32 systemWorkItems,
+	UINT32 sessionId,
+	SID userSid
+	);
+
+Application_RegisterProcess(
+	NTSTATUS status,
+	UNICODESTRING psmKey,
+	HEXINT64 hostId,
+	PID pid,
+	UINT32 activationFlags,
+	UINT32 sessionId,
+	SID userSid
+	);
+
+Host_Deref(
+	UINT32 NewRefCount,
+	UNICODESTRING PsmKey,
+	BOOL32 CleanupNeeded,
+	UINT32 HostJobType,
+	HEXINT64 HostId
+	);
+
+Application.ChangeState(
+	NTSTATUS status,
+	UNICODESTRING psmKey,
+	UINT8 newState,
+	UINT8 currentState,
+	UINT64 applicationId
+	);
+
+Application_Ref(
+	UINT32 NewRefCount,
+	UNICODESTRING PsmKey
+	);
+
+Application_RegisterProcess(
+	VOID
+	);
+
+Cleanup(
+	VOID
+	);
+
+InitializeFailed(
+	NTSTATUS Status,
+	HEXINT32 FailCode
+	);
+
+PsmDisconnectedStandbyStateChange(
+	BOOL32 NetworkLimited,
+	NTSTATUS Status
+	);
+
+Process.QueryClientAppInfoFail(
+	NTSTATUS status,
+	PID pid
+	);
+
+Application_Ref(
+	UINT32 NewRefCount,
+	UNICODESTRING PsmKey
+	);
+
+PsmResourceAwareTimerReset(
+	UNICODESTRING PsmKey,
+	SID UserSid,
+	UINT32 SessionId,
+	UINT32 HostJobType,
+	HEXINT64 HostId,
+	GUID TimerId,
+	UINT32 Flags
+	);
+
+PsmResourceAwareTimerResourceUsageGet(
+	UNICODESTRING PsmKey,
+	SID UserSid,
+	UINT32 SessionId,
+	UINT32 HostJobType,
+	HEXINT64 HostId,
+	GUID TimerId,
+	UINT64 UnbiasedInterruptTime,
+	UINT64 CpuRunningTime,
+	UINT64 CpuReadyTime,
+	UINT64 IoTotalNonOverlappedQueueTime,
+	UINT64 IoTotalNonOverlappedServiceTime,
+	UINT64 IoTotalSize,
+	UINT64 IoCount,
+	NTSTATUS NTSTATUS
+	);
+
+PsmResourceAwareTimerCallbackTimerNotFound(
+	NTSTATUS NTSTATUS
+	);
+
+PsmResourceAwareTimerCreate(
+	UNICODESTRING PsmKey,
+	SID UserSid,
+	UINT32 SessionId,
+	UINT32 HostJobType,
+	HEXINT64 HostId,
+	GUID TimerId,
+	NTSTATUS NTSTATUS
+	);
+
+PsmResourceAwareTimerReadyTimeInversion(
+	UINT64 BaselineReadyTime,
+	UINT64 NewReadyTime
+	);
+
+PsmResourceAwareTimerCallback(
+	UNICODESTRING PsmKey,
+	SID UserSid,
+	UINT32 SessionId,
+	UINT32 HostJobType,
+	HEXINT64 HostId,
+	GUID TimerId,
+	BOOLEAN Expired,
+	NTSTATUS NTSTATUS
+	);
+
+PsmResourceAwareTimerExpiration(
+	UNICODESTRING PsmKey,
+	SID UserSid,
+	UINT32 SessionId,
+	UINT32 HostJobType,
+	HEXINT64 HostId,
+	GUID TimerId,
+	UINT64 UnbiasedInterruptTime,
+	UINT64 CpuRunningTime,
+	UINT64 CpuReadyTime,
+	UINT64 IoTotalNonOverlappedQueueTime,
+	UINT64 IoTotalNonOverlappedServiceTime,
+	UINT64 IoTotalSize,
+	UINT64 IoCount
+	);
+
+PsmResourceAwareTimerRemainingTimeGet(
+	UNICODESTRING PsmKey,
+	SID UserSid,
+	UINT32 SessionId,
+	UINT32 HostJobType,
+	HEXINT64 HostId,
+	GUID TimerId,
+	UINT64 RemainingTimeMs,
+	NTSTATUS NTSTATUS
+	);
+
+PsmResourceAwareTimerStart(
+	UNICODESTRING PsmKey,
+	SID UserSid,
+	UINT32 SessionId,
+	UINT32 HostJobType,
+	HEXINT64 HostId,
+	GUID TimerId,
+	UINT64 DurationMs,
+	NTSTATUS NTSTATUS
+	);
+
+PsmResourceAwareTimerSet(
+	UNICODESTRING PsmKey,
+	SID UserSid,
+	UINT32 SessionId,
+	UINT32 HostJobType,
+	HEXINT64 HostId,
+	GUID TimerId,
+	BOOLEAN WallclockMode,
+	UINT64 DurationMs,
+	NTSTATUS NTSTATUS
+	);
+
+PsmResourceAwareTimerRemainingExtend(
+	UNICODESTRING PsmKey,
+	SID UserSid,
+	UINT32 SessionId,
+	UINT32 HostJobType,
+	HEXINT64 HostId,
+	GUID TimerId,
+	UINT64 UnbiasedInterruptTime,
+	UINT64 CpuRunningTime,
+	UINT64 CpuReadyTime,
+	UINT64 IoTotalNonOverlappedQueueTime,
+	UINT64 IoTotalNonOverlappedServiceTime,
+	UINT64 IoTotalSize,
+	UINT64 IoCount,
+	BOOLEAN Extended,
+	NTSTATUS NTSTATUS
+	);
+
+PsmpEnableDisableBackgroundMode(
+	UNICODESTRING PsmKey,
+	UINT32 SessionId,
+	UINT32 HostJobType,
+	BOOLEAN Enable,
+	UINT32 CurrentState,
+	UINT32 MixedWorkItems,
+	UINT32 PureWorkItems,
+	UINT32 SystemWorkItems
+	);
+
+PsmpEnableDisableSchedulingRankBias(
+	UNICODESTRING PsmKey,
+	UINT32 SessionId,
+	UINT32 HostJobType,
+	BOOLEAN Enable,
+	UINT32 CurrentState,
+	UINT32 MixedWorkItems,
+	UINT32 PureWorkItems,
+	UINT32 SystemWorkItems
+	);
+
+PsmpEnableDisableSchedulingGroup(
+	UNICODESTRING PsmKey,
+	UINT32 SessionId,
+	UINT32 HostJobType,
+	BOOLEAN Enable,
+	UINT32 CurrentState,
+	UINT32 MixedWorkItems,
+	UINT32 PureWorkItems,
+	UINT32 SystemWorkItems
+	);
+
+TerminateActiveMixedJob(
+	UNICODESTRING PsmKey,
+	SID UserSid,
+	UINT32 SessionId,
+	HEXINT64 HostId,
+	GUID appSessionGuid
+	);
+
+PsmpTerminateJobObject(
+	UNICODESTRING PsmKey,
+	UINT32 SessionId,
+	HEXINT64 HostId,
+	UINT32 HostJobType,
+	UINT32 TerminateDurationMs,
+	BOOLEAN Success
+	);
+
+Application_Ref(
+	UINT32 NewRefCount,
+	UNICODESTRING PsmKey
+	);
+
+Host_Ref(
+	UINT32 NewRefCount,
+	UNICODESTRING PsmKey,
+	UINT32 HostJobType,
+	HEXINT64 HostId
+	);
+
+PsmSrvRegisterProcessFailed(
+	NTSTATUS status
+	);
+
+Assert(
+	UINT32 assertVersion,
+	UINT32 rva,
+	UINT32 timestamp,
+	UINT32 imageSize,
+	ANSISTRING imageName,
+	UINT32 count,
+	UINT32 totalHits,
+	UINT32 ModuleCollection,
+	UINT32 GlobalCollection
+	);
+

@@ -1,0 +1,415 @@
+ProviderNames:
+	Microsoft.Windows.WinRTClassActivation
+	CombaseTraceLoggingProvider
+	TelemetryAssert
+	TelemetryAssertDiagTrack
+	CombaseTraceLoggingProvider
+	ActivationManager
+
+
+
+**** Events *****
+ContainerDCOM: Failed to register ICrossContainerObjectResolver(
+	WIN32ERROR STATUS
+	);
+
+RpcssDetectedUnhealthyProcess(
+	UNICODESTRING PathFindFileNameW(_pszExePath),
+	NTSTATUS NTSTATUS,
+	UINT64 PartA_PrivTags
+	);
+
+RpcssBindTimeoutReported(
+	UNICODESTRING PathFindFileNameW(_pszExePath),
+	UINT64 PartA_PrivTags
+	);
+
+RpcssBindTimeoutDetected(
+	UNICODESTRING PathFindFileNameW(_pszExePath),
+	UINT64 PartA_PrivTags
+	);
+
+RpcssBindTimeoutDueToRaceWithSuspension(
+	UNICODESTRING PathFindFileNameW(_pszExePath),
+	UINT64 PartA_PrivTags
+	);
+
+RpcssFailedToReportRpcBindTimeout(
+	UNICODESTRING PathFindFileNameW(_pszExePath),
+	WIN32ERROR RPC_STATUS,
+	UINT64 PartA_PrivTags
+	);
+
+ContainerDCOM: CrossContainerResolveOxid failed (server-side)(
+	HRESULT HRESULT,
+	UNICODESTRING Message,
+	ANSISTRING File,
+	UINT32 Line,
+	UINT64 OXID
+	);
+
+Microsoft.Windows.CUI.Activation(
+	UNICODESTRING SID
+	);
+
+ContainerDCOM: RPCSS failed to register s_dwContainerAuthnSvc(
+	WIN32ERROR STATUS,
+	UINT32 s_dwContainerAuthnSvc
+	);
+
+ContainerDCOM: RPCSS Listen(
+	WIN32ERROR STATUS,
+	UINT16 Protseq
+	);
+
+ContainerDCOM: CMid initialization failed since there is no mutually acceptable container transport(
+	WIN32ERROR STATUS
+	);
+
+ContainerDCOM: Failure in CrossContainerBulkUpdateOidsWorkerLoop(
+	HRESULT HRESULT,
+	UNICODESTRING Message,
+	ANSISTRING File,
+	UINT32 Line
+	);
+
+ContainerDCOM: CrossContainerResolveOxid failed (client-side)(
+	WIN32ERROR STATUS,
+	UINT64 OXID
+	);
+
+FallbackError(
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+ComError(
+	HRESULT hresult,
+	ANSISTRING code,
+	UNICODESTRING message,
+	ANSISTRING function,
+	ANSISTRING fileName,
+	UINT16 lineNumber
+	);
+
+FallbackError(
+	UINT64 PartA_PrivTags,
+	SIGNED wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+ComError(
+	HRESULT hresult,
+	ANSISTRING code,
+	UNICODESTRING message,
+	ANSISTRING function,
+	ANSISTRING fileName,
+	UINT16 lineNumber
+	);
+
+ComError(
+	HRESULT hresult,
+	ANSISTRING code,
+	UNICODESTRING message,
+	ANSISTRING function,
+	ANSISTRING fileName,
+	UINT32 lineNumber
+	);
+
+LogVerbose(
+	UNICODESTRING message
+	);
+
+ContainerDCOM: CrossContainerObjectResolverSecCallback failed(
+	HRESULT HRESULT,
+	UNICODESTRING Message,
+	ANSISTRING File,
+	UINT32 Line
+	);
+
+LogMachineClassesRootPermissions(
+	UNICODESTRING SD
+	);
+
+ContainerDCOM: Cross-container activation failed (client-side)(
+	HRESULT HRESULT,
+	UNICODESTRING Message,
+	ANSISTRING File,
+	UINT32 Line,
+	GUID CLSID,
+	UNICODESTRING ACID,
+	UNICODESTRING Client,
+	UNICODESTRING Server
+	);
+
+AAMCOMWaitForServerFailed(
+	UNICODESTRING classId,
+	UINT64 aamActivationId,
+	INT32 hr,
+	INT32 winerror
+	);
+
+COMOutOfProcessServerLaunchStart(
+	UNICODESTRING CLSID,
+	UNICODESTRING ACID,
+	UNICODESTRING ExecutionPackageName,
+	UINT32 ClientPID,
+	UINT64 AAMActivationID,
+	UNICODESTRING ClientPackageName
+	);
+
+COMOutOfProcessServerLaunchEnd(
+	UINT32 ServerPID,
+	INT32 Successful,
+	INT32 Debugged,
+	INT32 WinError,
+	INT32 hresult,
+	UNICODESTRING aumid,
+	UINT64 aamActivationId
+	);
+
+AAMActivationCreateProcess(
+	UNICODESTRING psmKey,
+	UNICODESTRING aumid,
+	UINT64 aamActivationId
+	);
+
+ContainerDCOM: LaunchPermission check failed(
+	HRESULT HRESULT,
+	UNICODESTRING Class ID,
+	UNICODESTRING Client SID,
+	BOOL32 fLaunch
+	);
+
+DesktopAppxComActivation(
+	INT32 hr,
+	BOOLEAN UTCReplace_AppSessionGuid,
+	UNICODESTRING executionPackageFullName,
+	UNICODESTRING deploymentPackageFullName,
+	UINT32 processCreationFlags,
+	UNICODESTRING exeAbsPath,
+	UNICODESTRING executionPackageFullNameAfterFailure,
+	UNICODESTRING deploymentPackageFullNameAfterFailure
+	);
+
+LogTokenInfo(
+	HEXINT64 Token,
+	UINT32 Ace#,
+	UNICODESTRING Sid,
+	UINT32 Access Mask,
+	UINT8 Ace type,
+	UINT8 Ace Flags
+	);
+
+LogTokenInfo(
+	HEXINT64 Token,
+	UINT16 Default Dacl Ace Count
+	);
+
+LogTokenInfo(
+	HEXINT64 Token,
+	UINT32 isTokenVirtualizationEnabled
+	);
+
+LogTokenInfo(
+	HEXINT64 Token,
+	UINT32 Session Id
+	);
+
+LogTokenInfo(
+	HEXINT64 Token,
+	UNICODESTRING Package SID
+	);
+
+LogTokenInfo(
+	HEXINT64 Token,
+	UINT32 lowBoxNumber
+	);
+
+LogTokenInfo(
+	HEXINT64 Token,
+	UNICODESTRING Capability
+	);
+
+LogTokenInfo(
+	HEXINT64 Token,
+	UINT32 Capability Count
+	);
+
+LogTokenInfo(
+	HEXINT64 Token,
+	UINT32 uiAccess
+	);
+
+LogTokenInfo(
+	HEXINT64 Token,
+	UNICODESTRING Integrity Level
+	);
+
+LogTokenInfo(
+	HEXINT64 Token,
+	UINT32 isLowBox
+	);
+
+LogTokenInfo(
+	HEXINT64 Token,
+	UINT32 sandboxInert
+	);
+
+LogTokenInfo(
+	HEXINT64 Token,
+	UNICODESTRING Primary Group Sid
+	);
+
+LogTokenInfo(
+	HEXINT64 Token,
+	UINT32 Privilege low part,
+	UINT32 Privilege high part,
+	UINT32 Attributes
+	);
+
+LogTokenInfo(
+	HEXINT64 Token,
+	UINT32 Mandatory Policy
+	);
+
+LogTokenInfo(
+	HEXINT64 Token,
+	UINT32 Elevation type
+	);
+
+LogTokenInfo(
+	HEXINT64 Token,
+	UNICODESTRING Sid,
+	UINT32 Attributes
+	);
+
+LogTokenInfo(
+	HEXINT64 Token,
+	UINT32 Group Count
+	);
+
+LogTokenInfo(
+	HEXINT64 Token,
+	UINT32 Restricted Group Count
+	);
+
+LogTokenInfo(
+	HEXINT64 Token,
+	ANSISTRING Value Type
+	);
+
+LogTokenInfo(
+	HEXINT64 Token,
+	COUNTEDSTRING Security Attribute Value,
+	UINT64 Version
+	);
+
+LogTokenInfo(
+	HEXINT64 Token,
+	UINT32 Authentication Id low part,
+	UINT32 Authentication Id high part
+	);
+
+LogTokenInfo(
+	HEXINT64 Token,
+	ANSISTRING Value Type,
+	UINT16 Value
+	);
+
+LogTokenInfo(
+	HEXINT64 Token,
+	UINT64 Security Attribute Value
+	);
+
+LogTokenInfo(
+	HEXINT64 Token,
+	INT64 Security Attribute Value
+	);
+
+LogTokenInfo(
+	HEXINT64 Token,
+	COUNTEDSTRING Security Attribute Value
+	);
+
+LogTokenInfo(
+	HEXINT64 Token,
+	COUNTEDSTRING Attribute Name
+	);
+
+Microsoft.Windows.CUI.Activation(
+	GUID ComponentProcessId
+	);
+
+Microsoft.Windows.CUI.Activation(
+	UNICODESTRING lpacAttributes
+	);
+
+Microsoft.Windows.CUI.Activation(
+	UNICODESTRING Server
+	);
+
+ContainerDCOM: Cross-container activation failed (server-side)(
+	HRESULT HRESULT,
+	UNICODESTRING Message,
+	ANSISTRING File,
+	UINT32 Line,
+	GUID CLSID,
+	UNICODESTRING ACID
+	);
+
+Assert(
+	UINT32 assertVersion,
+	UINT32 rva,
+	UINT32 timestamp,
+	UINT32 imageSize,
+	ANSISTRING imageName,
+	UINT32 count,
+	UINT32 totalHits,
+	UINT32 ModuleCollection,
+	UINT32 GlobalCollection
+	);
+
+ContainerDCOM: Cannot AddPotentialProxyOid after CrossContainerServerSet rundown(
+	WIN32ERROR STATUS
+	);
+
+ContainerDCOM: CServerOid not found(
+	WIN32ERROR STATUS,
+	UINT64 OID
+	);
+
+ContainerDCOM: Cannot AddOid after CrossContainerServerSet rundown(
+	WIN32ERROR STATUS
+	);
+

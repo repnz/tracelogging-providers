@@ -1,0 +1,285 @@
+ProviderNames:
+	Microsoft.Windows.Bluetooth.Gap
+	Microsoft.Windows.Bluetooth.GattInterface
+	Microsoft.Windows.Bluetooth.GattServer
+	Microsoft.Windows.Bluetooth.GattClient
+	Microsoft.Windows.Bluetooth.Proximity
+	Microsoft.Windows.Bluetooth.LooselyCoupledDevices
+	TelemetryAssert
+	TelemetryAssertDiagTrack
+
+
+
+**** Events *****
+DeviceOutOfRange(
+	GUID GapAdvertisementWatcherSessionId,
+	GUID GapAdvertisementScannerSessionId,
+	UINT64 TickCountInMS,
+	UNICODESTRING BTDeviceAddressType,
+	UINT64 BTDeviceAddress
+	);
+
+DeviceInRange(
+	GUID GapAdvertisementWatcherSessionId,
+	GUID GapAdvertisementScannerSessionId,
+	UINT64 TickCountInMS,
+	UNICODESTRING BTDeviceAddressType,
+	UINT64 BTDeviceAddress
+	);
+
+SessionStop(
+	GUID GapAdvertisementWatcherSessionId,
+	UINT64 TickCountInMS
+	);
+
+SessionStart(
+	GUID GapAdvertisementWatcherSessionId,
+	UINT64 TickCountInMS
+	);
+
+FallbackError(
+	UINT64 PartA_PrivTags,
+	SIGNED wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+FallbackError(
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+AppWriteRequestTimeout(
+	UNICODESTRING AppPackageFamilyName,
+	UNICODESTRING ProcessName,
+	GUID ServiceUuid,
+	HEX AttributeHandle,
+	UINT32 AttributeType,
+	UINT32 WriteOffset,
+	BOOL32 WriteResponseRequired
+	);
+
+AppReadRequestTimeout(
+	UNICODESTRING AppPackageFamilyName,
+	UNICODESTRING ProcessName,
+	GUID ServiceUuid,
+	HEX AttributeHandle,
+	UINT32 AttributeType,
+	UINT32 ReadLength,
+	UINT32 ReadOffset
+	);
+
+ServicePublishedAggregation(
+	UINT64 PartA_PrivTags,
+	GUID TelemetryObjectId,
+	UINT64 LocalAddress,
+	UNICODESTRING AppPackageFamilyName,
+	UNICODESTRING ProcessName,
+	UINT16 RecordCount,
+	UINT16 RecordCutOff,
+	STRING ServicePublicationList,
+	GUID ServiceUuid,
+	UINT16 PublicationCount,
+	UINT64 TimeFromLastTelemetryInMs
+	);
+
+ServiceActivityAggregation(
+	UINT64 PartA_PrivTags,
+	GUID TelemetryObjectId,
+	UINT64 LocalAddress,
+	UNICODESTRING AppPackageFamilyName,
+	UNICODESTRING ProcessName,
+	UINT16 RecordCount,
+	UINT16 RecordCutOff,
+	IPV4 ServiceRemoteDeviceActivityCount,
+	GUID ServiceUuid,
+	UINT64 RemoteAddress,
+	UINT32 ReadCount,
+	UINT32 WriteCount,
+	UINT32 NotificationCount,
+	UINT32 IndicationCount,
+	UINT32 UnknownCount,
+	UINT16 IsPaired,
+	UINT64 TimeFromLastTelemetryInMs
+	);
+
+GattClientDeviceActivity(
+	UINT64 PartA_PrivTags,
+	GUID TelemetryObjectId,
+	UINT64 LocalAddress,
+	UINT64 RemoteAddress,
+	UINT64 CreatedTimestamp,
+	UINT64 AliveTimeInMs,
+	UINT64 AppCount,
+	UINT64 ServiceUuidCount,
+	UINT32 CharacteristicDiscoveryCount,
+	UINT32 DescriptorDiscoveryCount,
+	UINT32 ReadCharacteristicCount,
+	UINT32 ReadDescriptorCount,
+	UINT32 WriteCharacteristicCount,
+	UINT32 WriteDescriptorCount,
+	UINT32 CharacteristicNotificationCount,
+	UINT32 CharacteristicIndicationCount,
+	UINT32 ServerConfigurationCount,
+	UINT32 PrimaryServiceDiscoveryCount,
+	UINT32 ServiceRelationshipDiscoveryCount,
+	UINT32 UnknownActivityCount,
+	UINT32 HciConnectionCount,
+	BOOLEAN IsConnectedJournal,
+	UINT64 IsConnectedTimeJournal,
+	BOOLEAN IsPairedJournal,
+	UINT64 IsPairedTimeJournal
+	);
+
+BatteryLevelChanged(
+	UINT64 PartA_PrivTags,
+	UINT64 RemoteAddress,
+	UINT8 BatteryLevel,
+	BOOL32 Succeeded
+	);
+
+GattClientServiceSessionActivity(
+	UINT64 PartA_PrivTags,
+	GUID TelemetryObjectId,
+	UINT64 LocalAddress,
+	UINT64 RemoteAddress,
+	UNICODESTRING AppPackageFamilyName,
+	UNICODESTRING ProcessName,
+	GUID ServiceUUID,
+	BOOLEAN IsPaired,
+	UINT32 CharacteristicDiscoveryCount,
+	UINT32 DescriptorDiscoveryCount,
+	UINT32 ReadCharacteristicCount,
+	UINT32 ReadDescriptorCount,
+	UINT32 WriteCharacteristicCount,
+	UINT32 WriteDescriptorCount,
+	UINT32 CharacteristicNotificationCount,
+	UINT32 CharacteristicIndicationCount,
+	UINT32 ServerConfigurationCount,
+	UINT32 PrimaryServiceDiscoveryCount,
+	UINT32 ServiceRelationshipDiscoveryCount,
+	UINT32 UnknownActivityCount,
+	UINT64 TimeFromLastTelemetryInMs
+	);
+
+GapClientPropertiesUpdated(
+	UINT64 PartA_PrivTags,
+	GUID TelemetryObjectId,
+	UINT64 LocalAddress,
+	UINT64 RemoteAddress,
+	UNICODESTRING DeviceName,
+	UINT16 LEAppearance,
+	UINT16 ConnectionLatency,
+	UINT16 MinimumConnectionInterval,
+	UINT16 MaximumConnectionInterval,
+	UINT16 ConnectionSupervisionTimeoutMultiplier,
+	BOOLEAN CentralAddressResolutionSupported
+	);
+
+DisClientDataUpdated(
+	UINT64 PartA_PrivTags,
+	GUID TelemetryObjectId,
+	UINT64 LocalAddress,
+	UINT64 RemoteAddress,
+	UNICODESTRING ManufacturerName,
+	UNICODESTRING ModelNumber,
+	UNICODESTRING SerialNumber,
+	UNICODESTRING HardwareVersion,
+	UNICODESTRING FirmwareVersion,
+	UINT8 PnpVidSource,
+	UINT16 PnpVid,
+	UINT16 PnpPid,
+	UINT16 PnpRevision
+	);
+
+SessionAborted(
+	GUID ProximitySessionId,
+	UINT16 DeviceProximitySessionAbortedReason,
+	UINT64 TickCountInMS
+	);
+
+TrackingSessionStop(
+	GUID ProximitySessionId,
+	GUID GapAdvertisementWatcherSessionId,
+	UINT64 TickCountInMS,
+	UNICODESTRING BTDeviceAddressType,
+	UINT64 BTDeviceAddress
+	);
+
+TrackingSessionStart(
+	GUID ProximitySessionId,
+	GUID GapAdvertisementWatcherSessionId,
+	UNICODESTRING AppPackageFamilyName,
+	UNICODESTRING ProcessName,
+	UINT8 DeviceProximityLevel,
+	UINT64 TickCountInMS,
+	UNICODESTRING BTDeviceAddressType,
+	UINT64 BTDeviceAddress
+	);
+
+PrimarySessionStop(
+	GUID ProximitySessionId,
+	GUID GapAdvertisementWatcherSessionId,
+	UINT8 Scenario,
+	UNICODESTRING SubscenarioString,
+	UINT64 TickCountInMS
+	);
+
+PrimarySessionStart(
+	GUID ProximitySessionId,
+	GUID GapAdvertisementWatcherSessionId,
+	UNICODESTRING AppPackageFamilyName,
+	UNICODESTRING ProcessName,
+	UINT8 Scenario,
+	UNICODESTRING SubscenarioString,
+	UINT64 TickCountInMS
+	);
+
+NewDeviceLooselyCoupled(
+	UINT8 BTDeviceAddressTypeRemote,
+	UINT64 BTDeviceAddressRemote,
+	UINT8 BTDeviceAddressTypeLocal,
+	UINT64 BTDeviceAddressLocal
+	);
+
+Assert(
+	UINT32 assertVersion,
+	UINT32 rva,
+	UINT32 timestamp,
+	UINT32 imageSize,
+	ANSISTRING imageName,
+	UINT32 count,
+	UINT32 totalHits,
+	UINT32 ModuleCollection,
+	UINT32 GlobalCollection
+	);
+

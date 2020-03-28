@@ -1,0 +1,40 @@
+ProviderNames:
+	Microsoft.Windows.Msconfig
+
+
+
+**** Events *****
+BootConfig(
+	UINT64 PartA_PrivTags,
+	UNICODESTRING OS,
+	UINT32 Timeout,
+	BOOLEAN Safeboot,
+	UNICODESTRING Safeboot-option,
+	BOOLEAN NoGuiBoot,
+	BOOLEAN BootLog,
+	BOOLEAN BaseVideo,
+	BOOLEAN OSBootInformation,
+	BOOLEAN SettingPermanent
+	);
+
+Services(
+	UINT64 PartA_PrivTags,
+	UNICODESTRING ServiceName,
+	BOOLEAN Status,
+	BOOLEAN HideMSFTservices
+	);
+
+Tools(
+	UINT64 PartA_PrivTags,
+	UNICODESTRING ToolName,
+	UNICODESTRING Options
+	);
+
+General(
+	UINT64 PartA_PrivTags,
+	UNICODESTRING StartupSelection,
+	UINT16 LoadSystemServices,
+	UINT16 LoadStartupItems,
+	UINT16 UseOriginalBootConfig
+	);
+

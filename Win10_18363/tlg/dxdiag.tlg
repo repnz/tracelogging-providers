@@ -1,0 +1,36 @@
+ProviderNames:
+	Microsoft.Windows.DxDiag
+
+
+
+**** Events *****
+DxDiagExeStop(
+	VOID
+	);
+
+DxDiagLaunch(
+	UINT32 C_Version,
+	BOOL32 IsGUI,
+	BOOL32 IsDontSkip,
+	BOOL32 IsStart64Bit,
+	BOOL32 IsSaveAsXML,
+	BOOL32 IsSaveAsText,
+	BOOL32 IsSaveOnly,
+	BOOL32 IsAllowWHQLChecks,
+	BOOL32 IsAdditionalAudio,
+	BOOL32 GotAllowWHQLChecksFromReg,
+	BOOL32 GotAllowWHQLChecksFromCmdLine
+	);
+
+SaveButtonPushed(
+	UINT32 C_Version
+	);
+
+DxDiagExeStart(
+	VOID
+	);
+
+ActivityStoppedAutomatically(
+	VOID
+	);
+

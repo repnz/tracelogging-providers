@@ -1,0 +1,194 @@
+ProviderNames:
+	Microsoft.Windows.MediaFoundation.SAR
+	Microsoft.Windows.MediaFoundation.UVC
+	Microsoft.Windows.MediaFoundation.DeviceSource
+	Microsoft.Windows.CameraDebug
+	Microsoft.Windows.MediaFoundation.MediaSession
+	Microsoft.Windows.MediaFoundation.CallStack
+
+
+
+**** Events *****
+TopologyGraph(
+	UNICODESTRING TopoString,
+	UNICODESTRING StreamString,
+	BOOL32 IsStreamStringFull,
+	UINT16 TVersion,
+	GUID MFMediaTelemetrySessionID,
+	UINT32 MFMediaTelemetrySessionInstance
+	);
+
+PartialTopologyGraph(
+	UNICODESTRING TopoString,
+	HRESULT HResult,
+	UNICODESTRING StreamString,
+	BOOL32 IsStreamStringFull,
+	UINT16 TVersion,
+	GUID MFMediaTelemetrySessionID,
+	UINT32 MFMediaTelemetrySessionInstance
+	);
+
+MediaSessionConstructionFailed(
+	HEXINT32 ErrorCode,
+	GUID MFMediaTelemetrySessionID,
+	UINT32 MFMediaTelemetrySessionInstance
+	);
+
+MediaSessionEvents(
+	GUID MFMediaTelemetrySessionID,
+	UINT32 MFMediaTelemetrySessionInstance,
+	UINT16 TVersion,
+	UINT64 LogTime,
+	ANSISTRING Events
+	);
+
+MFDeviceSourceSuspend(
+	UINT64 QPCTime,
+	GUID DeviceSourceSession
+	);
+
+MFDeviceSourceInitialize(
+	UINT64 QPCTime,
+	GUID DeviceSourceSession,
+	HEXINT32 HRESULT
+	);
+
+MFDeviceSourceShutdown(
+	UINT64 QPCTime,
+	GUID DeviceSourceSession,
+	HEXINT32 HRESULT
+	);
+
+MFDeviceSourceStop(
+	UINT64 QPCTime,
+	GUID DeviceSourceSession,
+	HEXINT32 HRESULT
+	);
+
+MFDeviceSourceStart(
+	UINT64 QPCTime,
+	GUID DeviceSourceSession,
+	HEXINT32 HRESULT
+	);
+
+MetadataConfiguration(
+	BOOLEAN MetadataStructFieldName,
+	INT32 PinId,
+	INT32 MetadataBufferSize,
+	INT32 MetadataType
+	);
+
+InfCustomization(
+	GUID DMFTClsId,
+	BOOLEAN Method2Enabled,
+	BOOLEAN PDMFTEnabled
+	);
+
+DriverCriticalError(
+	ANSISTRING Component,
+	HEXINT32 ErrorCode,
+	UINT32 ProcessId,
+	UINT32 ThreadId,
+	ANSISTRING Function,
+	UINT32 Line
+	);
+
+DriverCriticalError(
+	ANSISTRING Component,
+	HEXINT32 ErrorCode,
+	UINT32 ProcessId,
+	UINT32 ThreadId,
+	ANSISTRING Function,
+	UINT32 Line,
+	HEXINT32 OsErrorCode
+	);
+
+MetadataObserved(
+	UINT32 PinId,
+	INT32 MetadataIdObservedState
+	);
+
+SeamlessAudioMFT(
+	UINT32 ID,
+	UINT32 Crossfade (ms),
+	UINT32 Crossfade (samples),
+	GUID MFMediaTelemetrySessionID,
+	UINT32 MFMediaTelemetrySessionInstance
+	);
+
+SeamlessAudioMFT(
+	UINT32 ID,
+	UINT32 SilenceRemoved (ms),
+	UINT32 SilenceRemoved (samples),
+	GUID MFMediaTelemetrySessionID,
+	UINT32 MFMediaTelemetrySessionInstance
+	);
+
+SupportedFormats(
+	GUID MFMediaTelemetrySessionID,
+	UINT32 MFMediaTelemetrySessionInstance,
+	UINT32 TotalFormatCount,
+	UINT32 NonPCMTypes,
+	UINT32 PartialTypes,
+	UINT32 CompleteTypes,
+	ANSISTRING SupportedFormats
+	);
+
+SetMediaType(
+	GUID MFMediaTelemetrySessionID,
+	UINT32 MFMediaTelemetrySessionInstance,
+	GUID MediaSubType,
+	UINT32 Channels,
+	UINT32 SamplesPerSec,
+	UINT32 AvgBytesPerSec,
+	UINT32 BlockAlign,
+	UINT32 BitsPerSample,
+	HRESULT hr
+	);
+
+SAR_InvalidatedStarvationState(
+	GUID MFMediaTelemetrySessionID,
+	UINT32 MFMediaTelemetrySessionInstance,
+	BOOL32 IsExclusiveMode,
+	BOOL32 IsEventDriven,
+	BOOL32 IsWrapperInvalidated,
+	UINT32 FramesNeeded,
+	UINT32 FramesAvailable,
+	UINT64 StarvationDuration
+	);
+
+SAR_AggregateEvent(
+	GUID MFMediaTelemetrySessionID,
+	UINT32 MFMediaTelemetrySessionInstance,
+	UINT32 FrameCount,
+	UINT32 AveTimeInQueue,
+	UINT32 MinTimeInQueue,
+	UINT32 MaxTimeInQueue,
+	UINT32 StarvationCount,
+	UINT32 OutOfDataCount,
+	UINT32 OutOfGlitchCount,
+	UINT64 StarvationBytes,
+	UINT64 OutOfDataBytes,
+	UINT64 OutOfGlitchBytes,
+	ANSISTRING PowerAndMemory,
+	BOOL32 ExclusiveClientMode
+	);
+
+InitializeFaceDetectionTransform(
+	HRESULT hr,
+	UINT32 PreviewStreamID,
+	BOOL32 FaceDetectionMFTInstantiated,
+	BOOL32 IsRoiIspControlSupported,
+	BOOL32 IsRoiExposureControlSupported,
+	BOOL32 IsRoiWhiteBalanceControlSupported,
+	BOOL32 IsRoiFocusControlSupported,
+	BOOL32 IsMediaTypeSupportedForFaceDetection,
+	GUID MediaTypeSubType,
+	BOOL32 IsAppRequestingFaceDetection
+	);
+
+InitializeTransform(
+	HRESULT hr,
+	UINT32 PinCount
+	);
+

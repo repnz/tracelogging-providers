@@ -1,0 +1,106 @@
+ProviderNames:
+	Microsoft.Windows.MediaFoundation.XVP
+	Microsoft.Windows.Media.Settings.Video
+	Microsoft.Windows.MediaFoundation.CallStack
+	Microsoft.Windows.Shell.SystemSettings.VideoPlaybackHandler
+
+
+
+**** Events *****
+VideoQualitySettingChanged(
+	GUID pageSessionId,
+	INT32 VideoQualitySetting
+	);
+
+CurrentVideoQualitySetting(
+	GUID pageSessionId,
+	INT32 VideoQualitySetting,
+	BOOLEAN bVideoQualitySettingAvailable
+	);
+
+FallbackError(
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+FallbackError(
+	UINT64 PartA_PrivTags,
+	SIGNED wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+SystemSettings::DataModel::OptimizeForBatterySingleton::SystemHasCodecPackInstalled(
+	ANSISTRING "No codec pack"
+	);
+
+SystemSettings::DataModel::OptimizeForBatterySingleton::SystemHasCodecPackInstalled(
+	ANSISTRING "Has codec pack"
+	);
+
+SystemSettings::DataModel::OptimizeForBatterySingleton::SystemHasCodecPackInstalled(
+	INT32 swResult,
+	INT32 hwResult
+	);
+
+DumpVideoInfo(
+	BOOLEAN HasCalibrationCapableDisplay,
+	BOOLEAN IsAppRunningOnExternalDisplay,
+	BOOLEAN SystemHasHdrOrEdrCapableDisplay,
+	INT32 TargetDisplayType,
+	BOOLEAN TargetDisplayHasHDColorEnabled,
+	BOOLEAN IsOEMProvisioned,
+	BOOLEAN SystemHasAnHdrDisplay,
+	BOOLEAN IsEdrAvailable,
+	BOOLEAN IsEdrEnabled,
+	BOOLEAN SystemHasAnInternalHdrDisplay,
+	BOOLEAN SystemHasAnExternalHdrDisplay,
+	BOOLEAN IsHDRCalibrated,
+	BOOLEAN IsHDRSliderCalibrated,
+	BOOLEAN IsAdvancedColorSupported,
+	BOOLEAN IsOnBattery,
+	INT32 OEMLuminance,
+	BOOLEAN TargetDisplayIsInternal,
+	BOOLEAN ShowHDRVideo
+	);
+
+SystemSettings::DataModel::HDRColorLink::get_IsApplicable(
+	UINT8 fRemoteableSession
+	);
+
+OutsideModeInitialLux(
+	GUID MFMediaTelemetrySessionID,
+	UINT32 MFMediaTelemetrySessionInstance,
+	UINT32 LUX_CurentValue,
+	UINT32 LUX_AverageValue
+	);
+

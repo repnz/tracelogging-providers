@@ -1,0 +1,114 @@
+ProviderNames:
+	Microsoft.Windows.AppMan.AppV
+
+
+
+**** Events *****
+VirtualEnvironmentCreatedContainer(
+	BOOL32 UTCReplace_AppSessionGuid,
+	GUID PackageID,
+	GUID PackageVersion,
+	UINT64 VirtualEnvironmentID,
+	UINT64 AppVError
+	);
+
+VirtualEnvironmentTerminated(
+	BOOL32 UTCReplace_AppSessionGuid,
+	GUID PackageID,
+	GUID PackageVersion,
+	UINT64 PID,
+	UINT64 VirtualEnvironmentID,
+	UINT64 AppVError
+	);
+
+VirtualProcessLaunchFailed(
+	BOOL32 UTCReplace_AppSessionGuid,
+	GUID PackageID,
+	GUID PackageVersion,
+	UINT64 PID,
+	UINT64 VirtualEnvironmentID,
+	UINT64 AppVError
+	);
+
+UnpublishPackageContainer(
+	BOOL32 UTCReplace_AppSessionGuid,
+	GUID PackageID,
+	GUID PackageVersion,
+	BOOL32 Global,
+	UINT64 AppVError
+	);
+
+RemovePackageContainer(
+	BOOL32 UTCReplace_AppSessionGuid,
+	GUID PackageID,
+	GUID PackageVersion,
+	UINT64 AppVError
+	);
+
+VirtualEnvironmentTerminatedContainer(
+	BOOL32 UTCReplace_AppSessionGuid,
+	GUID PackageID,
+	GUID PackageVersion,
+	UINT64 VirtualEnvironmentID,
+	UINT64 AppVError
+	);
+
+PublishPackageContainer(
+	BOOL32 UTCReplace_AppSessionGuid,
+	GUID PackageID,
+	GUID PackageVersion,
+	BOOLEAN Global,
+	UINT64 AppVError
+	);
+
+VirtualEnvironmentCreated(
+	BOOL32 UTCReplace_AppSessionGuid,
+	GUID PackageID,
+	GUID PackageVersion,
+	BOOLEAN Standalone,
+	BOOLEAN Primary,
+	UINT64 PID,
+	UINT64 VirtualEnvironmentID,
+	UINT64 AppVError
+	);
+
+VirtualEnvironmentCreated(
+	BOOL32 UTCReplace_AppSessionGuid,
+	UINT64 AppVError
+	);
+
+VirtualEnvironmentTerminated(
+	BOOL32 UTCReplace_AppSessionGuid,
+	UINT64 AppVError
+	);
+
+AddPackageContainer(
+	BOOL32 UTCReplace_AppSessionGuid,
+	GUID PackageID,
+	GUID PackageVersion,
+	UINT64 AppVError
+	);
+
+DebugMessage(
+	UINT32 LOGLEVEL,
+	UNICODESTRING MESSAGE,
+	UNICODESTRING FUNCTION,
+	UINT32 LINENO,
+	BOOL32 UTCReplace_AppSessionGuid
+	);
+
+MigratePackageAttemptedContainer(
+	BOOL32 UTCReplace_AppSessionGuid,
+	GUID PackageID,
+	GUID PackageVersion,
+	BOOLEAN Global,
+	UINT64 AppVError
+	);
+
+MigratePackageGroupAttemptedContainer(
+	BOOL32 UTCReplace_AppSessionGuid,
+	GUID PackageID,
+	GUID PackageVersion,
+	UINT64 AppVError
+	);
+

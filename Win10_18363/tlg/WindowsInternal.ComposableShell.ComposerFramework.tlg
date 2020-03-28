@@ -1,0 +1,296 @@
+ProviderNames:
+	Microsoft.Windows.ComposableShell.Framework.ComposerFramework
+	Microsoft.Windows.ComposableShell.Framework.ComposerFramework
+	Microsoft.Windows.ComposableShell.Framework.ComposerFramework.HardwareManagement
+
+
+
+**** Events *****
+FallbackError(
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+FallbackError(
+	UINT64 PartA_PrivTags,
+	SIGNED wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+ResultLoggingCallback(
+	UINT64 PartA_PrivTags,
+	ANSISTRING file,
+	UINT32 lineNumber,
+	UINT32 failureType,
+	INT32 failureCount,
+	UINT32 threadId,
+	HEXINT32 hr,
+	UNICODESTRING message,
+	ANSISTRING code,
+	ANSISTRING function
+	);
+
+HardwareDetailsOutOfScope(
+	UNICODESTRING monitorDispositionId,
+	UINT32 changeId
+	);
+
+HardwareDetailsCreated(
+	UNICODESTRING monitorDispositionId,
+	UINT32 changeId,
+	INT64 adapterId,
+	UINT32 sourceId,
+	UINT32 modeId,
+	UINT32 directXPixelFormat,
+	UINT32 rotation
+	);
+
+ApplyChangesRequestedCompleted(
+	UNICODESTRING configuratorName,
+	UNICODESTRING monitorDispositionId,
+	BOOLEAN completed,
+	UINT32 elapsedTime
+	);
+
+NumApplyChangeRequestedTriggered(
+	UINT32 numTriggered
+	);
+
+OutputRemovedTriggered(
+	UNICODESTRING monitorDispositionId
+	);
+
+OutputAssociatedTriggered(
+	UNICODESTRING monitorDispositionId
+	);
+
+DesiredDisplayModeNotFound(
+	UNICODESTRING monitorDispositionId
+	);
+
+DesiredDisplayMode(
+	UNICODESTRING monitorDispositionId,
+	INT32 desiredResolutionWidth,
+	INT32 desiredResolutionHeight,
+	UINT32 desiredPixelFormat
+	);
+
+LookingForBestFitResolution(
+	UNICODESTRING monitorDispositionId
+	);
+
+HardwarePreferredResolution(
+	UNICODESTRING monitorDispositionId,
+	INT32 desiredResolutionWidth,
+	INT32 desiredResolutionHeight,
+	UINT32 desiredPixelFormat,
+	UNICODESTRING modeStatus
+	);
+
+UseHardwarePreferredResolution(
+	UNICODESTRING monitorDispositionId
+	);
+
+PreferringNativeResolution(
+	UNICODESTRING monitorDispositionId,
+	INT32 desiredResolutionWidth,
+	INT32 desiredResoutionHeight
+	);
+
+DesiredModeConstraints(
+	UNICODESTRING monitorDispositionId,
+	INT32 desiredResolutionWidth,
+	INT32 desiredResolutionHeight,
+	UINT32 desiredPixelFormat,
+	INT32 minimumDesiredResolutionWidth,
+	INT32 minimumDesiredResolutionHeight,
+	INT32 maximumDesiredResolutionWidth,
+	INT32 maximumDesiredResolutionHeight
+	);
+
+AcquireOwnershipFailed(
+	UNICODESTRING monitorDispositionId,
+	INT32 failureCode
+	);
+
+RestoredPendingChangeToWorkQueue(
+	UINT32 updatedWorkItemType,
+	UNICODESTRING monitorDispositionId
+	);
+
+AddedPendingDisplayResetChange(
+	UNICODESTRING monitorDispositionId,
+	UINT32 workItemType
+	);
+
+AddedPendingDisplayDisconnectChange(
+	UNICODESTRING monitorDispositionId
+	);
+
+AddedPendingDisplayConnectChange(
+	UNICODESTRING monitorDispositionId,
+	UNICODESTRING configuratorName
+	);
+
+DispositionRequestedCompleted(
+	UNICODESTRING configuratorName,
+	UNICODESTRING monitorDispositionId,
+	BOOLEAN completed,
+	UINT32 elapsedTime,
+	UINT32 disposition
+	);
+
+PendingHardwareConnectedChangeDoesNotMeetPrerequisites(
+	UNICODESTRING monitorDispositionId
+	);
+
+DisplayDispositionRejectedTriggered(
+	UNICODESTRING monitorDispositionId,
+	UINT32 disposition
+	);
+
+FailedToProcessWorkQueueItemToPendingChange(
+	UINT32 updatedWorkItemType,
+	UNICODESTRING monitorDispositionId
+	);
+
+DropConnectWorkItemDueToReset(
+	UNICODESTRING monitorDispositionId
+	);
+
+DropConnectWorkItemDueToDisconnect(
+	UNICODESTRING monitorDispositionId
+	);
+
+DropResetWorkItemDueToNewConnect(
+	UNICODESTRING monitorDispositionId
+	);
+
+DisplayDisconnected(
+	UNICODESTRING monitorDispositionId,
+	UINT64 connectTime,
+	UINT64 disconnectTime
+	);
+
+BestFitResult(
+	INT32 selectedModeWidth,
+	INT32 selectedModeHeight,
+	UINT32 selectedModePixelFormat,
+	UINT64 selectedModeAspectRatio
+	);
+
+BestFitNearestNeighbors(
+	UINT64 leastNeighbor,
+	UINT64 desiredAspectRatio,
+	UINT64 greatestNeighbor
+	);
+
+BestFitOption(
+	UINT64 aspectRatio,
+	INT32 resolutionWidth,
+	INT32 resolutionHeight,
+	UINT32 directXPixelFormat
+	);
+
+BeginBestFitLookup(
+	INT32 desiredResolutionWidth,
+	INT32 desiredResolutionHeight,
+	INT32 desiredPixelFormat,
+	UINT64 desiredAspectRatio
+	);
+
+InvalidBestFitResolution(
+	INT32 desiredResolutionWidth,
+	INT32 desiredResolutionHeight
+	);
+
+SimpleMouseRemovedHandlerFail(
+	UNICODESTRING exceptionMessage
+	);
+
+SimpleMouseAddedHandlerFail(
+	UNICODESTRING exceptionMessage
+	);
+
+ReadyToApplyPendingChanges(
+	VOID
+	);
+
+NoPendingChangesAfterProcessingWorkQueue(
+	VOID
+	);
+
+FoundAdditionalItemsInWorkQueue(
+	VOID
+	);
+
+ProcessWorkQueueIncomplete(
+	VOID
+	);
+
+EndHandleDisplayEventsRoutine(
+	VOID
+	);
+
+BeginHandleDisplayEventsRoutine(
+	VOID
+	);
+
+ConnectionDetected(
+	UNICODESTRING monitorDispositionId,
+	INT64 adapterId,
+	UINT32 targetId,
+	UNICODESTRING connectionDetectedState,
+	UNICODESTRING detectionDetails
+	);
+
+EndHandleDisplayPnPEvent(
+	VOID
+	);
+
+BeginHandleDisplayPnPEvent(
+	VOID
+	);
+
+AllApplyChangeRequestDeferralsCompleted(
+	VOID
+	);
+
+Stopped(
+	VOID
+	);
+
+Started(
+	VOID
+	);
+

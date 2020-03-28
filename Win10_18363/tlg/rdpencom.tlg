@@ -1,0 +1,32 @@
+ProviderNames:
+	RDP
+
+
+
+**** Events *****
+RDPCollabViewer(
+	IPV4 SessionInformation,
+	UNICODESTRING appName,
+	UNICODESTRING axVersion,
+	UINT32 sessionDurationMs,
+	BOOL32 universalApp,
+	UINT32 disconnectReason,
+	UINT32 exDisconnectReason,
+	UINT32 connectionResult,
+	UNICODESTRING sessionCorrelationId,
+	BOOL32 legacyDllUsed
+	);
+
+RDPCollabSharer(
+	IPV4 SessionInformation,
+	UNICODESTRING appName,
+	UINT32 sessionDurationMs,
+	BOOL32 universalApp,
+	UINT32 maxAttendees,
+	BOOL32 hadMCUConnection,
+	BOOL32 takeControlHappened,
+	UINT32 graphicsSource,
+	UNICODESTRING sessionCorrelationId,
+	BOOL32 legacyDllUsed
+	);
+

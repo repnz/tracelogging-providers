@@ -1,0 +1,71 @@
+ProviderNames:
+	Microsoft.Windows.UPnP.DafProvider
+
+
+
+**** Events *****
+ErrorStatus(
+	UNICODESTRING Source,
+	UINT32 Bucket,
+	UINT32 ErrorCode
+	);
+
+FallbackError(
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+FallbackError(
+	UINT64 PartA_PrivTags,
+	SIGNED wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+Association(
+	NULL AepId,
+	UNICODESTRING DeviceManufacturer,
+	UNICODESTRING DeviceModel,
+	INT32 Type,
+	INT32 PublicNetwork,
+	INT32 HResult,
+	GUID ActivityId
+	);
+
+Challenge(
+	NULL AepId,
+	UINT64 TicksSinceLast,
+	UINT64 LastChallengeTime,
+	INT32 InProgress,
+	INT32 Skipped
+	);
+

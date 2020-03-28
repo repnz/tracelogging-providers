@@ -1,0 +1,149 @@
+ProviderNames:
+	Microsoft.Windows.SystemEventsBroker
+	Microsoft.Windows.CSystemEventsBroker
+	Microsoft.Windows.UserPresencePredictor.HistoryPredictor
+	Microsoft.Windows.TlgAggregateInternal
+
+
+
+**** Events *****
+OnCreate(
+	NULL Count,
+	NULL AppEventsOfType,
+	WIN32ERROR Status,
+	UNICODESTRING AppName,
+	UINT32 Type,
+	BOOL32 OneShot
+	);
+
+SebBroker::UnpackRpcParameters(
+	VOID
+	);
+
+SebBroker::UnpackRpcParameters(
+	NTSTATUS Status,
+	UINT32 FailedCheck
+	);
+
+SebBroker::CancelEvent(
+	GUID BiEventId,
+	HEXINT32 ErrorCode,
+	UINT32 FailedCheck
+	);
+
+LogPredictions(
+	UINT32 Index,
+	INT32 UserStatus,
+	SYSTEMTIME Time
+	);
+
+LoadHistoryFromDiskError(
+	UNICODESTRING Error
+	);
+
+Initialize(
+	ANSISTRING Function,
+	ANSISTRING Error,
+	UINT32 Status
+	);
+
+Initialize(
+	ANSISTRING Function,
+	ANSISTRING Error
+	);
+
+UpdateUserPresence(
+	ANSISTRING FunctionName,
+	INT32 UserPresence,
+	INT32 UserPresent
+	);
+
+Initialize(
+	ANSISTRING Function,
+	ANSISTRING Info
+	);
+
+Initialize(
+	ANSISTRING Function,
+	ANSISTRING Error,
+	INT32 Status
+	);
+
+HistoryPredictorDestructor(
+	ANSISTRING Error
+	);
+
+UpdateStatus(
+	ANSISTRING Function,
+	ANSISTRING Info,
+	INT32 Current,
+	INT32 New,
+	SYSTEMTIME Time
+	);
+
+SavePrediction(
+	ANSISTRING FunctionName,
+	UINT32 PredictedDuration,
+	DOUBLE Threshold,
+	INT32 UserPresence,
+	FLOAT Precision
+	);
+
+UpdateUserPresence(
+	ANSISTRING FunctionName,
+	ANSISTRING Error
+	);
+
+DailyHistoryAccuracy(
+	INT32 PredPresentActualPresent,
+	INT32 PredAwayActualAway,
+	INT32 PredPresentActualAway,
+	INT32 PredAwayActualPresent,
+	INT32 PredUnknownActualPresent,
+	INT32 PredUnknownActualAway,
+	INT32 UnknownPredictions,
+	INT32 UnknownHistoryState,
+	INT32 LongestQuartersAway,
+	DOUBLE PredictionThreshold,
+	FLOAT Precision,
+	UINT32 NumberOfWeeksHistory,
+	INT32 Algorithm
+	);
+
+SerializeToDiskError(
+	UNICODESTRING Error
+	);
+
+CheckLastPredictionDuration(
+	ANSISTRING FunctionName,
+	UINT32 PredictedDuration,
+	BOOLEAN PredictionCorrect,
+	UINT32 BadPredictions
+	);
+
+PowerSettingChangedCallback(
+	ANSISTRING FunctionName,
+	ANSISTRING Error
+	);
+
+UpdateUserPresenceNotification(
+	ANSISTRING FunctionName,
+	UINT32 PredictedDuration,
+	FLOAT Threshold,
+	INT32 UserStatus,
+	BOOLEAN PredictionCorrect,
+	BOOLEAN PublishedNotification
+	);
+
+TlgAggregateSummary(
+	GUID Provider,
+	UINT64 NumFlushes,
+	UINT64 MaxEntriesStored,
+	UINT64 TotalEntriesFlushed,
+	UINT32 MaxEntriesFlushed,
+	UINT32 MinEntriesFlushed,
+	UINT32 NumBucketLimitReached,
+	UINT32 NumAllocationFailures,
+	UINT32 NumLargeEventFailures
+	);
+

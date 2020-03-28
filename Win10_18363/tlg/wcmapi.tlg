@@ -1,0 +1,159 @@
+ProviderNames:
+	Microsoft.Windows.ConnectionManager.WcmApi
+
+
+
+**** Events *****
+WcmQueryOnDemandRequestStateInfo(
+	UINT32 retCode,
+	UNICODESTRING callerModule,
+	UNICODESTRING callerService
+	);
+
+WcmCancelOnDemandRequest(
+	UINT32 retCode,
+	UNICODESTRING callerModule,
+	UNICODESTRING callerService
+	);
+
+WcmStartOnDemandRequest(
+	UINT32 retCode,
+	UNICODESTRING callerModule,
+	UNICODESTRING callerService
+	);
+
+WcmCloseOnDemandRequestHandle(
+	UINT32 retCode,
+	UNICODESTRING callerModule,
+	UNICODESTRING callerService
+	);
+
+WcmOpenOnDemandRequestHandleByWwanProfileName(
+	UNICODESTRING profileName,
+	UINT32 retCode,
+	UNICODESTRING callerModule,
+	UNICODESTRING callerService
+	);
+
+WcmOpenOnDemandRequestHandle(
+	UINT32 opCode,
+	UNICODESTRING appPackageFamilyName,
+	UINT32 onDemandAllowanceType,
+	UINT32 retCode,
+	UNICODESTRING callerModule,
+	UNICODESTRING callerService
+	);
+
+WcmEndIgnoreProfileList(
+	UINT32 retCode,
+	UNICODESTRING callerModule,
+	UNICODESTRING callerService
+	);
+
+WcmResetIgnoreProfileList(
+	UINT32 retCode,
+	UINT32 timeoutInMilliseconds,
+	UNICODESTRING callerModule,
+	UNICODESTRING callerService
+	);
+
+WcmBeginIgnoreProfileList(
+	UINT32 retCode,
+	UINT32 timeoutInMilliseconds,
+	UNICODESTRING callerModule,
+	UNICODESTRING callerService
+	);
+
+WcmOrderConnection(
+	UINT32 retCode,
+	UNICODESTRING profileName,
+	UINT32 orderOption,
+	UNICODESTRING callerModule,
+	UNICODESTRING callerService
+	);
+
+WcmGetInterfaceToken(
+	UINT32 retCode,
+	UNICODESTRING callerModule,
+	UNICODESTRING callerService
+	);
+
+WcmGetProfileListByPurpose(
+	UINT32 profileCount,
+	UINT32 retCode,
+	UNICODESTRING callerModule,
+	UNICODESTRING callerService
+	);
+
+WcmSetProfileList(
+	UINT32 profileCount,
+	UINT32 position,
+	BOOL32 ignoreUnknownProfiles,
+	UINT32 retCode,
+	UNICODESTRING callerModule,
+	UNICODESTRING callerService
+	);
+
+SetRestrictBackgroundTrafficDataError(
+	UINT32 dataSize,
+	UINT32 retCode
+	);
+
+SetRestrictBackgroundTraffic(
+	GUID interfaceId,
+	UINT32 backgroundTrafficRestriction,
+	UINT32 retCode
+	);
+
+SetUseOperatorDataError(
+	UINT32 dataSize,
+	UINT32 retCode
+	);
+
+SetUseOperator(
+	GUID interfaceId,
+	BOOL32 useOperator,
+	UINT32 retCode
+	);
+
+SetDataplanStatusDataError(
+	UINT32 opCode,
+	UINT32 dataSize,
+	UINT32 retCode
+	);
+
+SetDataplanStatus(
+	UINT32 opCode,
+	GUID interfaceId,
+	UINT32 usageInMegabytes,
+	FILETIME lastSyncTime,
+	UINT32 dataLimitInMegabytes,
+	UINT32 inboundBandwidthInKbps,
+	UINT32 outboundBandwidthInKbps,
+	FILETIME billingCycleStartDate,
+	UINT16 billingCycleDurationYear,
+	UINT16 billingCycleDurationMonth,
+	UINT16 billingCycleDurationDay,
+	UINT16 billingCycleDurationHour,
+	UINT16 billingCycleDurationMinute,
+	UINT16 billingCycleDurationSecond,
+	UINT16 billingCycleDurationMillisecond,
+	BOOL32 billingCycleReset,
+	UINT32 maxTransferSizeInMegabytes,
+	UINT32 retCode
+	);
+
+SetConnectionCostDataError(
+	UINT32 opCode,
+	UINT32 dataSize,
+	UINT32 retCode
+	);
+
+SetConnectionCost(
+	UINT32 opCode,
+	GUID interfaceId,
+	UINT32 connectionCost,
+	UINT32 costSource,
+	UINT32 retCode
+	);
+

@@ -1,0 +1,307 @@
+ProviderNames:
+	Microsoft.Windows.Graphics.DXGI
+	Microsoft.Windows.Graphics.DirectXDatabaseHelper
+
+
+
+**** Events *****
+ProcessInfo(
+	BOOL32 UTCReplace_AppSessionGuid,
+	UINT8 schemaVersion
+	);
+
+NotifyGraphicsPerformanceMonitor(
+	BOOL32 UTCReplace_AppSessionGuid,
+	INT32 Status,
+	UINT64 SwapChainLuid
+	);
+
+TakeOwnership(
+	BOOL32 UTCReplace_AppSessionGuid,
+	UINT8 schemaVersion
+	);
+
+ResizeBuffers(
+	BOOL32 UTCReplace_AppSessionGuid,
+	UINT8 schemaVersion,
+	UINT64 swapchainLuid,
+	UINT32 BufferCount,
+	UINT32 Width,
+	UINT32 Height,
+	UINT32 Width_out,
+	UINT32 Height_out,
+	UINT32 Format_old,
+	UINT32 Format_in,
+	UINT32 Format_out,
+	UINT32 SwapChainFlags,
+	UINT32 HResult
+	);
+
+DListMismatchResultInfo(
+	UINT64 PartA_PrivTags,
+	BOOL32 UTCReplace_AppSessionGuid,
+	UINT8 schemaVersion,
+	UNICODESTRING DxDbVersion,
+	UINT32 DxDbResult,
+	UINT64 IHVAdapterLuid,
+	UINT64 IHVDriverVersion,
+	BOOL32 IHVDListResult,
+	UINT32 IHVExportResult
+	);
+
+GpuPreferenceInfo(
+	BOOL32 UTCReplace_AppSessionGuid,
+	UINT8 schemaVersion,
+	UINT32 FactoryHybridReparented,
+	UINT32 FactoryHybridDecidingFactor,
+	UINT32 TotalNumAPICalls,
+	UINT64 AdapterLuid,
+	UINT32 AdapterHybridRole,
+	UINT32 APIGpuPreference,
+	UINT32 ActualGpuPreference,
+	UINT32 DecidingFactor
+	);
+
+DeviceRemovalSupport(
+	BOOL32 UTCReplace_AppSessionGuid,
+	UINT8 schemaVersion,
+	BOOL32 DeclaredSupported,
+	UINT32 HResult
+	);
+
+SwapchainSetMaximumFrameLatency(
+	BOOL32 UTCReplace_AppSessionGuid,
+	UINT8 schemaVersion,
+	UINT64 swapChainLuid,
+	UINT32 RequestedLatency,
+	UINT32 AppliedLatency
+	);
+
+DXGI2CreateFactoryAdapterInfo(
+	BOOL32 UTCReplace_AppSessionGuid,
+	UINT32 schemaVersion,
+	UINT32 AdapterIndex,
+	HEX AdapterDesc,
+	UINT32 VendorId,
+	UINT32 DeviceId,
+	UINT32 SubSysId,
+	UINT32 Revision
+	);
+
+DXGI2CreateFactoryAttempt(
+	BOOL32 UTCReplace_AppSessionGuid,
+	UINT32 schemaVersion
+	);
+
+FullscreenPresentInfo(
+	BOOL32 UTCReplace_AppSessionGuid,
+	UINT8 schemaVersion,
+	UINT64 swapChainLuid,
+	UINT32 processDPIAwareness,
+	UINT32 totalCount,
+	UINT32 bufferLayoutUnevaluatedCount,
+	JSON FullscreenPresentRectStatus,
+	UINT32 displayDescRotatedCount,
+	UINT32 rectAndDescMismatchCount,
+	UINT32 windowRectAndClientRectMismatchCount,
+	UINT32 windowRectAndDisplayRectMismatchCount,
+	UINT32 windowSizeAndBufferSizeMismatchCount,
+	UINT32 displayDescAndBufferDescMismatchCount,
+	UINT32 windowRectNotAtDisplayRectOriginCount,
+	UINT32 windowRectAndDisplayRectIntersectCount,
+	UINT32 windowRectHeightLargerThanDisplayRectCount,
+	UINT32 windowRectWidthLargerThanDisplayRectCount,
+	UINT32 displayDescAndBufferDescDimensionMismatchCount,
+	UINT32 displayDescAndBufferDescRefreshRateMismatchCount,
+	UINT32 fullscreenProxyWindowPromotionAttemptCount,
+	UINT32 fullscreenProxyWindowPromotionFailureCount,
+	HEXINT32 fullscreenProxyWindowPromotionFailureLastHr,
+	HEX MaximumWindowRect,
+	INT32 top,
+	INT32 left,
+	INT32 right,
+	INT32 bottom,
+	HEX MinimumWindowRect,
+	INT32 top,
+	INT32 left,
+	INT32 right,
+	INT32 bottom,
+	HEX MaximumDisplayRect,
+	INT32 top,
+	INT32 left,
+	INT32 right,
+	INT32 bottom,
+	HEX MinimumDisplayRect,
+	INT32 top,
+	INT32 left,
+	INT32 right,
+	INT32 bottom
+	);
+
+HighDpiCompatShimApplied(
+	BOOL32 UTCReplace_AppSessionGuid,
+	UINT8 schemaVersion,
+	INT32 api
+	);
+
+SetColorSpace1Change(
+	BOOL32 UTCReplace_AppSessionGuid,
+	UINT8 schemaVersion,
+	INT32 colorSpace_in,
+	BOOL32 succeeded_in
+	);
+
+SetColorSpace1Change(
+	BOOL32 UTCReplace_AppSessionGuid,
+	UINT8 schemaVersion,
+	INT32 colorSpace_in,
+	BOOL32 succeeded_in
+	);
+
+MultipleSwapChainPresent(
+	BOOL32 UTCReplace_AppSessionGuid,
+	UINT8 schemaVersion
+	);
+
+ResizeBuffersFullscreenProxyMode(
+	BOOL32 UTCReplace_AppSessionGuid,
+	UINT8 schemaVersion
+	);
+
+SwapChainStatus(
+	BOOL32 UTCReplace_AppSessionGuid,
+	UINT8 schemaVersion,
+	UINT64 swapchainLuid,
+	UINT32 presentCount,
+	UINT32 fullscreenRequestedCount,
+	BOOL32 isDestroying
+	);
+
+CreateSwapChain(
+	BOOL32 UTCReplace_AppSessionGuid,
+	UINT8 schemaVersion,
+	UINT64 swapchainLuid,
+	UINT64 adapterLuid,
+	UINT32 VidpnSourceId,
+	19 CreateSwapChainParams,
+	HEXINT64 deviceId,
+	INT32 type_in,
+	UINT32 width_in,
+	UINT32 height_in,
+	UINT32 refreshRateNum_in,
+	UINT32 refreshRateDen_in,
+	INT32 format_in,
+	INT32 scanlineOrdering_in,
+	INT32 bufferScaling_in,
+	BOOL32 stereo_in,
+	UINT32 sampleCount_in,
+	UINT32 sampleQuality_in,
+	UINT32 bufferUsage_in,
+	UINT32 bufferCount_in,
+	INT32 scaling_in,
+	INT32 swapEffect_in,
+	INT32 alphaMode_in,
+	UINT32 flags_in,
+	BOOL32 windowed_in,
+	UINT32 width_out,
+	UINT32 height_out,
+	BOOL32 maximizedWindowedFullscreenEnabled_out,
+	BOOL32 maximizedWindowedFullscreenSwapEffectTransitionEnabled_out,
+	TID MaximizedWindowedFullscreenShim,
+	BOOL32 maximizedWindowedFullscreenShimEnabled_in,
+	BOOL32 gameConfigStoreEnabled_in,
+	BOOL32 shimCompatDisabled_in,
+	BOOL32 regCompatEnabled_in,
+	BOOL32 maximizedWindowedByDefaultForApps_in,
+	BOOL32 windowed_out,
+	STRING VisualProxyAndZBandPromotion,
+	BOOL32 maximizedWindowedHwndOverride_in,
+	BOOL32 fullscreenProxyWindowPromotion_in,
+	STRING SwapEffectUpgradesShim,
+	BOOL32 shimCompatDisabled_in,
+	INT32 swapEffect_out,
+	NOPRINT SwapEffectTransitionShim,
+	BOOL32 shimCompatDisabled_in,
+	UINT32 hr,
+	INT32 api
+	);
+
+TelemetryThrottled(
+	BOOL32 UTCReplace_AppSessionGuid,
+	UINT32 Bucket,
+	UINT32 IntervalEventCount,
+	FLOAT IntervalDuration,
+	FLOAT IntervalStartTime
+	);
+
+FallbackError(
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+DirectXDatabaseAccessError(
+	BOOLEAN UTCReplace_AppSessionGuid,
+	UINT8 schemaVersion,
+	UINT32 HResult,
+	UNICODESTRING DxDbVersion,
+	UINT32 QueryType,
+	UNICODESTRING processName,
+	UINT32 DxDbSourceType,
+	UINT64 PartA_PrivTags
+	);
+
+FallbackError(
+	UINT64 PartA_PrivTags,
+	SIGNED wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+DirectXDatabaseConfigAccessError(
+	BOOLEAN UTCReplace_AppSessionGuid,
+	UINT8 schemaVersion,
+	UINT32 HResult,
+	UINT32 ConfigQueryType,
+	UINT32 DxDbSourceType,
+	UINT64 PartA_PrivTags
+	);
+
+DuplicateAppEntryInDatabase(
+	BOOLEAN UTCReplace_AppSessionGuid,
+	UINT8 schemaVersion,
+	UNICODESTRING processName,
+	UINT32 numDuplicates,
+	UNICODESTRING DxDbVersion,
+	UINT32 DxDbSourceType,
+	UINT64 PartA_PrivTags
+	);
+

@@ -1,0 +1,84 @@
+ProviderNames:
+	ClusApiTraceLogProvider
+
+
+
+**** Events *****
+UpgradeClusterFunctionalLevelExEvent(
+	GUID ClusterInstanceId,
+	BOOL32 PerformUpgrade,
+	INT32 UpgradedClusterVersion,
+	HEXINT32 ReturnCode
+	);
+
+UpgradeClusterFunctionalLevelEvent(
+	GUID ClusterInstanceId,
+	BOOL32 PerformUpgrade,
+	INT32 UpgradedClusterVersion,
+	HEXINT32 ReturnCode
+	);
+
+DestroyClusterEvent(
+	GUID ClusterInstanceId,
+	HEXINT32 ReturnCode
+	);
+
+AddClusterNodeEvent(
+	GUID ClusterInstanceId,
+	INT32 NewClusterNodeId,
+	HEXINT32 ReturnCode
+	);
+
+CreateClusterEvent(
+	GUID ClusterInstanceId,
+	INT32 ClusterVersion,
+	INT32 ClusterNodesCount,
+	HEXINT32 ReturnCode,
+	INT32 ElapsedMilliseconds
+	);
+
+CreateClusterConfigureNodeEvent(
+	GUID ClusterInstanceId,
+	INT32 ClusterNodeId
+	);
+
+EvictClusterNodeEvent(
+	UINT64 PartA_PrivTags,
+	GUID ClusterInstanceId,
+	INT32 EvictClusterNodeId,
+	INT32 CleanUpTimeOut,
+	HEXINT32 ReturnCode
+	);
+
+ResumeClusterNodeExEvent(
+	UINT64 PartA_PrivTags,
+	GUID ClusterInstanceId,
+	INT32 ResumeFlagsReserved,
+	INT32 ResumeFailBackType,
+	INT32 ResumeClusterExNodeId,
+	HEXINT32 ReturnCode
+	);
+
+ResumeClusterNodeEvent(
+	UINT64 PartA_PrivTags,
+	GUID ClusterInstanceId,
+	INT32 ResumeClusterNodeId,
+	HEXINT32 ReturnCode
+	);
+
+PauseClusterNodeExEvent(
+	UINT64 PartA_PrivTags,
+	GUID ClusterInstanceId,
+	INT32 PauseClusterExNodeId,
+	INT32 PauseClusterExDrainToNodeId,
+	INT32 PauseFlags,
+	HEXINT32 ReturnCode
+	);
+
+PauseClusterNodeEvent(
+	UINT64 PartA_PrivTags,
+	GUID ClusterInstanceId,
+	INT32 PauseClusterNodeId,
+	HEXINT32 ReturnCode
+	);
+

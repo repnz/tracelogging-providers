@@ -1,0 +1,81 @@
+ProviderNames:
+	Microsoft.Windows.UserDataAccess.Unistore
+
+
+
+**** Events *****
+FallbackError(
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+FallbackError(
+	UINT64 PartA_PrivTags,
+	SIGNED wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+OutOfProcessConnectionEstablished(
+	VOID
+	);
+
+DetectExistingCorruption(
+	UINT32 err
+	);
+
+MarkStoreCorruption(
+	UINT32 err
+	);
+
+JetFragmentationError(
+	UINT32 err
+	);
+
+JetInconsistentError(
+	UINT32 err
+	);
+
+ResetSecondaryIndexes(
+	VOID
+	);
+
+DataUpgradeFailure(
+	UINT32 err,
+	UINT32 version
+	);
+
+VersionStoreCleanup(
+	UINT32 oldBucketsInUse,
+	UINT32 bucketsInUse
+	);
+

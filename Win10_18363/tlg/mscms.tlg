@@ -1,0 +1,566 @@
+ProviderNames:
+	Microsoft.Windows.Graphics.WindowsColorSystemDiagnostics
+	Microsoft.Windows.Graphics.WindowsColorSystem
+
+
+
+**** Events *****
+DllUnregistered(
+	VOID
+	);
+
+DllUnregistered(
+	VOID
+	);
+
+DllRegistered(
+	VOID
+	);
+
+DllRegistered(
+	VOID
+	);
+
+WcsSetUsePerUserProfilesFinished(
+	BOOL32 ReturnValue,
+	WIN32ERROR lastError,
+	UNICODESTRING lastWarning,
+	UNICODESTRING pDeviceName,
+	UINT32 dwDeviceClass,
+	BOOL32 usePerUserProfiles,
+	UNICODESTRING wszPreviousDefaultProfile
+	);
+
+WcsSetUsePerUserProfilesInvoked(
+	UNICODESTRING pDeviceName,
+	UINT32 dwDeviceClass,
+	BOOL32 usePerUserProfiles
+	);
+
+CreatePropertiesFromProfileFailed(
+	HRESULT hresult,
+	WIN32ERROR lastError,
+	UNICODESTRING pwszProfileName
+	);
+
+InternalSetDefaultColorProfileFinished(
+	BOOL32 returnValue,
+	WIN32ERROR lastError,
+	UNICODESTRING lastWarning,
+	INT32 scope,
+	UNICODESTRING deviceName,
+	INT32 cptColorProfileType,
+	INT32 cpstColorProfileSubType,
+	UINT32 dwProfileID,
+	INT32 cptInputFileType,
+	UNICODESTRING filename,
+	UINT32 fileSize,
+	UINT16 creationTimeYear,
+	UINT16 creationTimeMonth,
+	UINT16 creationTimeDay,
+	UINT16 creationTimeHour,
+	UINT16 creationTimeMinute,
+	UINT16 creationTimeSecond,
+	UNICODESTRING profilePropertyName,
+	UNICODESTRING profilePropertyDescription,
+	UINT32 profilePropertyDeviceClass,
+	UNICODESTRING profilePropertyCmmSignature,
+	UNICODESTRING profilePropertyPcsSignature,
+	UNICODESTRING profilePropertyColorSpaceSignature,
+	INT32 profilePropertyDeviceType
+	);
+
+InternalSetDefaultColorProfile_Cleanup(
+	BOOL32 returnValue,
+	WIN32ERROR lastError,
+	UNICODESTRING lastWarning,
+	UNICODESTRING pProfileName,
+	INT32 scope,
+	INT32 profiletype,
+	INT32 profilesubtype,
+	BOOL32 bSpecificDevice
+	);
+
+InternalSetDefaultColorProfileInvoked(
+	INT32 scope,
+	UNICODESTRING deviceName,
+	INT32 cptColorProfileType,
+	INT32 cpstColorProfileSubType,
+	UINT32 dwProfileID
+	);
+
+InternalGetDefaultColorProfile_Cleanup(
+	BOOL32 returnValue,
+	WIN32ERROR lastError,
+	UNICODESTRING pProfileName,
+	INT32 scope,
+	INT32 profiletype,
+	INT32 profilesubtype,
+	BOOL32 bSpecificDevice
+	);
+
+InternalEnumColorProfilesFinished(
+	BOOL32 returnValue,
+	WIN32ERROR lastError,
+	UNICODESTRING lastWarning,
+	INT32 scope,
+	BOOL32 enumerationFallbackMode,
+	HEXINT64 pEnumRecord,
+	UINT32 pEnumRecord_dwSize,
+	UINT32 pEnumRecord_dwVersion,
+	UINT32 pEnumRecord_dwFields,
+	UNICODESTRING pEnumRecord_pDeviceName,
+	UINT32 pEnumRecord_dwMediaType,
+	UINT32 pEnumRecord_dwDitheringMode,
+	UINT32 pEnumRecord_dwResolution_x,
+	UINT32 pEnumRecord_dwResolution_y,
+	UINT32 pEnumRecord_dwCMMType,
+	UINT32 pEnumRecord_dwClass,
+	UINT32 pEnumRecord_dwDataColorSpace,
+	UINT32 pEnumRecord_dwConnectionSpace,
+	UINT32 pEnumRecord_dwSignature,
+	UINT32 pEnumRecord_dwPlatform,
+	UINT32 pEnumRecord_dwProfileFlags,
+	UINT32 pEnumRecord_dwManufacturer,
+	UINT32 pEnumRecord_dwModel,
+	UINT32 pEnumRecord_dwAttributes_0,
+	UINT32 pEnumRecord_dwAttributes_1,
+	UINT32 pEnumRecord_dwRenderingIntent,
+	UINT32 pEnumRecord_dwCreator,
+	UINT32 pEnumRecord_dwDeviceClass,
+	HEXINT64 pBuffer,
+	HEXINT64 pBufferStart,
+	HEXINT64 pcbBuffer,
+	UINT32 cbBuffer,
+	HEXINT64 pnProfiles,
+	UINT32 nProfiles,
+	BOOL32 isProfileListValid,
+	UNICODESTRING profileList
+	);
+
+InternalEnumColorProfilesInvoked(
+	INT32 scope,
+	INT32 enumerationFallbackMode,
+	HEXINT64 pEnumRecord
+	);
+
+InternalDisassociateColorProfileFromDeviceFinished(
+	BOOL32 returnValue,
+	WIN32ERROR lastError,
+	UNICODESTRING lastWarning,
+	INT32 scope,
+	UNICODESTRING pDeviceName,
+	BOOL32 fCalledFromLegacy,
+	UNICODESTRING pFilename,
+	UNICODESTRING wszPreviousDefaultProfile
+	);
+
+InternalDisassociateProfileWithDevice_Cleanup(
+	BOOL32 returnValue,
+	WIN32ERROR lastError,
+	UNICODESTRING lastWarning,
+	UNICODESTRING pFilename,
+	INT32 scope
+	);
+
+InternalDisassociateColorProfileFromDeviceInvoked(
+	INT32 scope,
+	UNICODESTRING pDeviceName,
+	BOOL32 fCalledFromLegacy
+	);
+
+InternalAssociateColorProfileWithDeviceFinished(
+	BOOL32 ReturnValue,
+	WIN32ERROR lastError,
+	UNICODESTRING lastWarning,
+	INT32 scope,
+	UNICODESTRING pDeviceName,
+	BOOL32 fSetAsDefaultProfile,
+	BOOL32 fCalledFromLegacy,
+	UNICODESTRING pFilename,
+	UNICODESTRING wszPreviousDefaultProfile,
+	UINT32 fileSize,
+	UINT16 creationTimeYear,
+	UINT16 creationTimeMonth,
+	UINT16 creationTimeDay,
+	UINT16 creationTimeHour,
+	UINT16 creationTimeMinute,
+	UINT16 creationTimeSecond,
+	UNICODESTRING profilePropertyCopyright,
+	UNICODESTRING profilePropertyName,
+	UNICODESTRING profilePropertyDescription,
+	UNICODESTRING profilePropertyAuthor,
+	UNICODESTRING profilePropertyDeviceManufacturer,
+	UNICODESTRING profilePropertyDeviceModel,
+	UNICODESTRING profilePropertyProfileVersion,
+	INT32 profilePropertyColorProfileType,
+	INT32 profilePropertyColorProfileSubtype,
+	UINT32 profilePropertyDeviceClass,
+	UNICODESTRING profilePropertyCmmSignature,
+	UNICODESTRING profilePropertyPcsSignature,
+	UNICODESTRING profilePropertyColorSpaceSignature,
+	INT32 profilePropertyDeviceType
+	);
+
+InternalAssociateProfileWithDevice_Cleanup(
+	BOOL32 returnValue,
+	WIN32ERROR lastError,
+	UNICODESTRING lastWarning,
+	UNICODESTRING pFilename,
+	INT32 scope
+	);
+
+InternalAssociateColorProfileWithDeviceInvoked(
+	INT32 scope,
+	UNICODESTRING pDeviceName,
+	BOOL32 fSetAsDefaultProfile,
+	BOOL32 fCalledFromLegacy
+	);
+
+UninstallColorProfileW_Cleanup(
+	BOOL32 returnValue,
+	UNICODESTRING pFilename
+	);
+
+UninstallColorProfileWFinished(
+	BOOL32 ReturnValue,
+	WIN32ERROR lastError,
+	UNICODESTRING pFilename,
+	BOOL32 bDelete
+	);
+
+UninstallColorProfileWInvoked(
+	BOOL32 bDelete
+	);
+
+InstallColorProfileW_Cleanup(
+	BOOL32 returnValue,
+	UNICODESTRING pFilename
+	);
+
+InstallColorProfileWFinished(
+	BOOL32 returnValue,
+	UNICODESTRING pFilename
+	);
+
+InstallColorProfileWInvoked(
+	VOID
+	);
+
+InternalRefreshCalibrationFinished(
+	INT32 hr,
+	UNICODESTRING pwszDeviceName,
+	BOOL32 fAlways
+	);
+
+GetStandardCalibrationDataFromIccProfile_Cleanup(
+	HRESULT hr,
+	BOOL32 CalibrationDataPresent,
+	BOOL32 ICCHasWCSCalibration
+	);
+
+SetMHC2DataToDisplay(
+	BOOL32 DefaultWCGProvisioningData,
+	INT32 HRESULT,
+	UINT32 Red_x,
+	UINT32 Red_y,
+	UINT32 Green_x,
+	UINT32 Green_y,
+	UINT32 Blue_x,
+	UINT32 Blue_y,
+	UINT32 wtpt_x,
+	UINT32 wtpt_y,
+	UINT32 MinLumi,
+	UINT32 MaxLumi,
+	UINT32 MaxFullFrameLumi
+	);
+
+GetCalibrationDataFromIccProfile_ProfilesParsed(
+	HRESULT hr,
+	INT32 hrAC
+	);
+
+InternalRefreshCalibrationInvoked(
+	UNICODESTRING pwszDeviceName,
+	BOOL32 fAlways
+	);
+
+CalibrationEnumCallback_DisplayValidated(
+	BOOL32 SetWCGData,
+	BOOL32 CurrentMode,
+	BOOL32 FellBackToStandardProfileList,
+	UINT32 CurrentSubtype
+	);
+
+CalibrationEnumCallback_ACState(
+	BOOL32 bAdvancedColor,
+	BOOL32 bWideColorEnforced,
+	BOOL32 bAdvancedColorSupported,
+	BOOL32 bDefaultEnterWCGModePostInitialACChecks
+	);
+
+SetMHC2DataToDisplay_Cleanup(
+	HRESULT hr
+	);
+
+GetColorProfileForSubtype_Cleanup(
+	HRESULT hr,
+	UNICODESTRING profileName
+	);
+
+WcsGetCalibrationManagementStateFinished(
+	BOOL32 returnValue,
+	WIN32ERROR lastError,
+	BOOL32 bIsEnabled
+	);
+
+WcsGetCalibrationManagementStateInvoked(
+	VOID
+	);
+
+GetMHC2ColorDataFromIccProfile_GetMHC2Tag(
+	HRESULT hr
+	);
+
+SetMHC2DataToDisplay_CharacterizationDataToSet(
+	BOOL32 DefaultWCGData,
+	BOOL32 InHDRMode,
+	BOOL32 ForAdvancedColor,
+	UINT32 RedPrimary,
+	UINT32 GreenPrimary,
+	UINT32 BluePrimary,
+	UINT32 WhitePrimary,
+	UINT64 MinLuminance,
+	UINT64 MaxLuminance,
+	UINT64 MaxFullFrameLuminance
+	);
+
+GetMHC2ColorDataFromIccProfile_Cleanup(
+	HRESULT hr
+	);
+
+GetCalibrationDataFromWcsProfile_Cleanup(
+	HRESULT hr
+	);
+
+GetCalibrationDataFromProfile(
+	VOID
+	);
+
+GetStandardCalibrationDataFromIccProfile_Succeeded(
+	UINT32 vcgttagtype
+	);
+
+CalibrationMonitorEnumCallbackInvoked(
+	VOID
+	);
+
+WcsSetCalibrationManagementStateInvoked(
+	BOOL32 bIsEnabled
+	);
+
+CalibrationEnumCallback_Cleanup(
+	HRESULT hr
+	);
+
+WcsSetCalibrationManagementStateFinished(
+	BOOL32 returnValue,
+	WIN32ERROR lastError,
+	BOOL32 bIsEnabled,
+	UINT32 dwPreviousCalibrationState
+	);
+
+CalibrationMonitorEnumCallbackFinished(
+	BOOL32 ReturnValue,
+	UNICODESTRING pwszProfileName,
+	UNICODESTRING pCallbackData_specificDisplayToRefresh,
+	BOOL32 pCallbackData_specificDisplayEnumerated,
+	BOOL32 pCallbackData_oneOrMoreDisplaysFailed,
+	INT32 pCallbackData_firstFailureCode,
+	INT32 pCallbackData_specificDisplayReturnCode,
+	HEXINT64 pCallbackData_pDxva2Wrapper
+	);
+
+CalibrationEnumCallback_DisplayValidated(
+	BOOL32 bUseUserProfiles
+	);
+
+InternalGetDefaultColorProfileICCAggregated(
+	INT32 scope,
+	UNICODESTRING deviceName,
+	INT32 colorProfileSubType,
+	UINT32 profileId,
+	BOOL32 succeeded,
+	UNICODESTRING profileName,
+	INT32 totalSuccessCountSincePreviousEvent,
+	INT32 totalFailCountSincePreviousEvent
+	);
+
+InternalSetDeviceTemperatureAggregated(
+	UINT64 elapsedTimeInMs,
+	FLOAT minTemperature,
+	FLOAT maxTemperature,
+	FLOAT avgTemperature,
+	UINT64 totalSuccessCountSincePreviousEvent,
+	UINT64 totalFailCountSincePreviousEvent,
+	HEXINT64 hdc,
+	FLOAT temperature,
+	BOOL32 adjustTemperatureRamp,
+	BOOL32 checkRange,
+	BOOL32 succeeded
+	);
+
+InternalGetAppliedGammaRamp(
+	BOOL32 bGetRamp,
+	GUID purposeGUID,
+	UINT16 Red,
+	UINT16 Green,
+	UINT16 Blue
+	);
+
+InternalSetDeviceTemperature(
+	BOOL32 succeeded,
+	FLOAT temperature,
+	BOOL32 checkRange,
+	BOOL32 adjustTemperatureRamp
+	);
+
+InternalSetDeviceGammaRamp(
+	BOOL32 checkRange,
+	UINT16 Red,
+	UINT16 Green,
+	UINT16 Blue
+	);
+
+InternalGetDeviceGammaCapability_ColorAdapterTest(
+	INT32 ColorAdapterCapabilities
+	);
+
+ColorAdapterGetDisplayProfile_Profile(
+	UNICODESTRING ProfileName,
+	UINT32 ProfileID,
+	BOOL32 bUseAccurate
+	);
+
+ColorAdapterGetCurrentProfileCalibration(
+	HRESULT hr,
+	BOOLEAN DisplayID,
+	UINT32 TargetAdapterIDLowPart,
+	INT32 TargetAdapterIDHighPart,
+	UINT32 SourceInfoID
+	);
+
+ColorAdapterRegisterOEMColorService(
+	HRESULT hr
+	);
+
+ColorAdapterGetDisplayCurrentStateID_displayStateID(
+	HRESULT hr,
+	BOOLEAN DisplayStateID,
+	UINT32 profileID,
+	UINT32 transformID,
+	UINT32 whitepointID
+	);
+
+ColorAdapterGetDisplayTargetWhitePoint(
+	HRESULT hr,
+	BOOLEAN DisplayID,
+	UINT32 TargetAdapterIDLowPart,
+	INT32 TargetAdapterIDHighPart,
+	UINT32 SourceInfoID
+	);
+
+ColorAdapterGetDisplayProfile(
+	HRESULT hr,
+	BOOLEAN DisplayID,
+	UINT32 TargetAdapterIDLowPart,
+	INT32 TargetAdapterIDHighPart,
+	UINT32 SourceInfoID
+	);
+
+ColorAdapterUpdateDeviceProfile(
+	HRESULT hr,
+	BOOLEAN DisplayID,
+	UINT32 TargetAdapterIDLowPart,
+	INT32 TargetAdapterIDHighPart,
+	UINT32 SourceInfoID,
+	UNICODESTRING ProfileName
+	);
+
+ColorAdapterGetSystemModifyWhitePointCaps_output(
+	BOOL32 isWhitePointAdjCapable,
+	BOOL32 isColorOverrideActive
+	);
+
+ColorAdapterGetSystemModifyWhitePointCaps(
+	HRESULT hr
+	);
+
+ColorAdapterGetDisplayTransformData_displayTransform(
+	BOOLEAN DisplayLut,
+	UINT16 displayTransformLut->red,
+	UINT16 displayTransformLut->green,
+	UINT16 displayTransformLut->blue,
+	UINT32 TransformID
+	);
+
+ColorAdapterGetDisplayCurrentStateID(
+	HRESULT hr,
+	BOOLEAN DisplayID,
+	UINT32 TargetAdapterIDLowPart,
+	INT32 TargetAdapterIDHighPart,
+	UINT32 SourceInfoID
+	);
+
+ColorAdapterUpdateDisplayGamma_displayTransform(
+	BOOLEAN DisplayLut,
+	UINT16 displayTransform->red,
+	UINT16 displayTransform->green,
+	UINT16 displayTransform->blue
+	);
+
+ColorAdapterGetDisplayTargetWhitePoint_WhitePoint(
+	BOOLEAN wtpt,
+	INT32 (INT32)wtpt->type,
+	FLOAT wtpt->CCT,
+	BOOLEAN xyY,
+	FLOAT wtpt->xyY.x,
+	FLOAT wtpt->xyY.y,
+	FLOAT wtpt->xyY.Y,
+	UINT32 TransitionID,
+	UINT32 WhitepointID
+	);
+
+ColorAdapterGetDisplayTransformData(
+	HRESULT hr,
+	BOOLEAN DisplayID,
+	UINT32 TargetAdapterIDLowPart,
+	INT32 TargetAdapterIDHighPart,
+	UINT32 SourceInfoID
+	);
+
+ColorAdapterUnregisterOEMColorService(
+	HRESULT hr
+	);
+
+ColorAdapterUpdateDisplayGamma(
+	HRESULT hr,
+	BOOL32 bInternal,
+	BOOLEAN DisplayID,
+	UINT32 TargetAdapterIDLowPart,
+	INT32 TargetAdapterIDHighPart,
+	UINT32 SourceInfoID
+	);
+
+ColorAdapterGetCurrentProfileCalibration_CalibrationBlob(
+	UINT32 CalibrationBlobSize
+	);
+
+ApplyAdvancedColorCalibration_Cleanup(
+	HRESULT hr
+	);
+
+ApplyCalibrationCurvesThroughGDI_Cleanup(
+	HRESULT hr
+	);
+

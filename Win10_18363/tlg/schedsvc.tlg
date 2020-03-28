@@ -1,0 +1,92 @@
+ProviderNames:
+	Microsoft.Windows.TaskScheduler
+
+
+
+**** Events *****
+Migration.TopLevelCopyFailed(
+	HRESULT hr
+	);
+
+Migration_TakeRestoreFail(
+	UINT32 status,
+	BOOLEAN backupWasEnabled,
+	BOOLEAN restoreWasEnabled
+	);
+
+LoadJobs(
+	HRESULT result
+	);
+
+Migration_DFNCreateFileFail(
+	HRESULT hr,
+	UNICODESTRING src,
+	UNICODESTRING dest
+	);
+
+Migration_TakeBackupFail(
+	UINT32 status,
+	BOOLEAN backupWasEnabled
+	);
+
+Migration.TopLevelCopy(
+	HRESULT hr
+	);
+
+Migration_DropRestorePrivFail(
+	UINT32 status,
+	BOOLEAN backupWasEnabled,
+	BOOLEAN restoreWasEnabled,
+	BOOLEAN previousState
+	);
+
+Migration_CopyFileFail(
+	HRESULT hr,
+	UNICODESTRING src,
+	UNICODESTRING dest
+	);
+
+Migration_Complete(
+	HRESULT hr
+	);
+
+Migration_SetSddlWithRestorePrivsFail(
+	HRESULT hr,
+	UNICODESTRING itempath,
+	UNICODESTRING sddl
+	);
+
+Migration_DropBackupPrivFail(
+	UINT32 status,
+	BOOLEAN backupWasEnabled,
+	BOOLEAN restoreWasEnabled,
+	BOOLEAN previousState
+	);
+
+Migration_SetSddlNotImpersonatingFail(
+	UNICODESTRING path,
+	UNICODESTRING sddl
+	);
+
+Migration_DFNRealPathInvalidFail(
+	HRESULT hr,
+	UNICODESTRING src,
+	UNICODESTRING dest
+	);
+
+LoadJobs(
+	BOOL32 BootTimeLoad
+	);
+
+Migration_DFNSetSecInfoFail(
+	HRESULT hr,
+	UNICODESTRING src,
+	UNICODESTRING dest
+	);
+
+Migration_DFNGetSecInfoFail(
+	HRESULT hr,
+	UNICODESTRING src,
+	UNICODESTRING dest
+	);
+

@@ -1,0 +1,23 @@
+ProviderNames:
+	Microsoft.Windows.AppMan.UEV
+
+
+
+**** Events *****
+DebugMessage(
+	UINT32 LOGLEVEL,
+	UNICODESTRING MESSAGE,
+	BOOL32 UTCReplace_AppSessionGuid
+	);
+
+TemplateAction(
+	BOOL32 UTCReplace_AppSessionGuid,
+	INT32 ActionType,
+	UNICODESTRING TemplateName,
+	UNICODESTRING TemplateID,
+	INT32 TargetType,
+	UNICODESTRING TemplateGeneratorVersion,
+	UNICODESTRING FileName,
+	UNICODESTRING AppVersionRange
+	);
+

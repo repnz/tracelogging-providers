@@ -1,0 +1,666 @@
+ProviderNames:
+	Microsoft.Windows.StoreAgent.Telemetry
+	Microsoft.Windows.StoreAgent.Telemetry
+	Microsoft.Xbox.WinHttp
+	TelemetryAssert
+	TelemetryAssertDiagTrack
+
+
+
+**** Events *****
+StateTransition(
+	UINT64 PartA_PrivTags,
+	UNICODESTRING ProductId,
+	UNICODESTRING PFN,
+	UNICODESTRING CatalogId,
+	UNICODESTRING FulfillmentPluginId,
+	UNICODESTRING PluginTelemetryData,
+	ANSISTRING Prevstate,
+	ANSISTRING NewState,
+	UINT8 PluginLastStage,
+	HRESULT HResult,
+	ANSISTRING __TlgCV__
+	);
+
+FulfillmentComplete(
+	UNICODESTRING ProductId,
+	UNICODESTRING PFN,
+	UNICODESTRING CatalogId,
+	BOOLEAN FailedRetry,
+	HRESULT HResult,
+	ANSISTRING __TlgCV__
+	);
+
+FulfillmentInitiate(
+	UNICODESTRING ProductId,
+	UNICODESTRING PFN,
+	UNICODESTRING CatalogId,
+	UNICODESTRING FulfillmentPluginId,
+	UNICODESTRING PluginTelemetryData,
+	ANSISTRING __TlgCV__
+	);
+
+Error(
+	IPV6 PartB_Ms.Telemetry.Error,
+	UNICODESTRING errorName,
+	UNICODESTRING errorMessage,
+	INT32 severity,
+	UNICODESTRING errorType,
+	INT32 errorCode,
+	UINT32 lineNumber,
+	BOOLEAN isDisplayed,
+	UNICODESTRING errorLocation,
+	UNICODESTRING errorMethod
+	);
+
+CompleteGetSlsURL(
+	ANSISTRING __TlgCV__,
+	UNICODESTRING TargetUri,
+	HRESULT hr
+	);
+
+CompleteGetAuthTickets(
+	ANSISTRING __TlgCV__,
+	HRESULT HResult,
+	INT32 TicketCount
+	);
+
+EndUpdateMetadataPrepare(
+	ANSISTRING __TlgCV__,
+	HRESULT HResult
+	);
+
+BeginUpdateMetadataPrepare(
+	ANSISTRING __TlgCV__
+	);
+
+EndGetInstalledContentIds(
+	ANSISTRING __TlgCV__,
+	HRESULT HResult
+	);
+
+BeginGetInstalledContentIds(
+	ANSISTRING __TlgCV__
+	);
+
+SearchForUpdateOperationRequest(
+	ANSISTRING __TlgCV__,
+	UNICODESTRING ProductId,
+	UNICODESTRING SkuId,
+	UNICODESTRING CatalogId
+	);
+
+UpdateAppOperationRequest(
+	ANSISTRING __TlgCV__,
+	UNICODESTRING PFamN
+	);
+
+ResumeOperationRequest(
+	ANSISTRING __TlgCV__,
+	UNICODESTRING ProductId
+	);
+
+CompleteInstallOperationRequest(
+	ANSISTRING __TlgCV__,
+	BOOLEAN IsBundle,
+	UNICODESTRING ProductId,
+	UNICODESTRING SkuId,
+	UNICODESTRING CatalogId,
+	UNICODESTRING PackageFamilyName,
+	HRESULT HResult
+	);
+
+InstallOperationRequest(
+	ANSISTRING __TlgCV__,
+	UNICODESTRING ProductId,
+	UNICODESTRING SkuId,
+	UNICODESTRING CatalogId,
+	UNICODESTRING BundleId,
+	UNICODESTRING VolumePath
+	);
+
+UpdateAppByPackageFamilyName(
+	UNICODESTRING PackageFamilyName,
+	HRESULT HResult
+	);
+
+HttpGetFile(
+	NTSTATUS PartB_Ms.Qos.OutgoingServiceRequest,
+	UNICODESTRING operationName,
+	UNICODESTRING targetUri,
+	INT32 latencyMs,
+	INT32 serviceErrorCode,
+	BOOLEAN succeeded,
+	UNICODESTRING requestMethod,
+	UNICODESTRING responseContentType,
+	UNICODESTRING protocol,
+	INT32 protocolStatusCode,
+	UNICODESTRING dependencyOperationName,
+	UNICODESTRING dependencyOperationVersion,
+	UNICODESTRING dependencyName,
+	UNICODESTRING dependencyType,
+	INT32 responseSizeBytes,
+	HRESULT HResult
+	);
+
+CompletePurchaseOrder(
+	ANSISTRING __TlgCV__,
+	NTSTATUS PartB_Ms.Qos.OutgoingServiceRequest,
+	UNICODESTRING operationName,
+	UNICODESTRING targetUri,
+	INT32 latencyMs,
+	INT32 serviceErrorCode,
+	BOOLEAN succeeded,
+	UNICODESTRING requestMethod,
+	UNICODESTRING responseContentType,
+	UNICODESTRING protocol,
+	INT32 protocolStatusCode,
+	UNICODESTRING dependencyOperationName,
+	UNICODESTRING dependencyOperationVersion,
+	UNICODESTRING dependencyName,
+	UNICODESTRING dependencyType,
+	INT32 responseSizeBytes,
+	HRESULT HResult
+	);
+
+CompletePostCampaignData(
+	ANSISTRING __TlgCV__,
+	NTSTATUS PartB_Ms.Qos.OutgoingServiceRequest,
+	UNICODESTRING operationName,
+	UNICODESTRING targetUri,
+	INT32 latencyMs,
+	INT32 serviceErrorCode,
+	BOOLEAN succeeded,
+	UNICODESTRING requestMethod,
+	UNICODESTRING responseContentType,
+	UNICODESTRING protocol,
+	INT32 protocolStatusCode,
+	UNICODESTRING dependencyOperationName,
+	UNICODESTRING dependencyOperationVersion,
+	UNICODESTRING dependencyName,
+	UNICODESTRING dependencyType,
+	UNICODESTRING ProductId,
+	UNICODESTRING SkuId,
+	UNICODESTRING CatalogId,
+	UNICODESTRING ClientId,
+	UNICODESTRING CampaignId,
+	UNICODESTRING ExtendedCampaignId,
+	HRESULT HResult
+	);
+
+CreatePurchaseOrder(
+	ANSISTRING __TlgCV__,
+	NTSTATUS PartB_Ms.Qos.OutgoingServiceRequest,
+	UNICODESTRING operationName,
+	UNICODESTRING targetUri,
+	INT32 latencyMs,
+	INT32 serviceErrorCode,
+	BOOLEAN succeeded,
+	UNICODESTRING requestMethod,
+	UNICODESTRING responseContentType,
+	UNICODESTRING protocol,
+	INT32 protocolStatusCode,
+	UNICODESTRING dependencyOperationName,
+	UNICODESTRING dependencyOperationVersion,
+	UNICODESTRING dependencyName,
+	UNICODESTRING dependencyType,
+	INT32 responseSizeBytes,
+	UNICODESTRING ProductId,
+	UNICODESTRING SkuId,
+	UNICODESTRING AvailabilityId,
+	HRESULT HResult
+	);
+
+DownloadUrl(
+	ANSISTRING __TlgCV__,
+	NTSTATUS PartB_Ms.Qos.OutgoingServiceRequest,
+	UNICODESTRING operationName,
+	UNICODESTRING targetUri,
+	INT32 latencyMs,
+	INT32 serviceErrorCode,
+	BOOLEAN succeeded,
+	UNICODESTRING requestMethod,
+	UNICODESTRING responseContentType,
+	UNICODESTRING protocol,
+	INT32 protocolStatusCode,
+	UNICODESTRING dependencyOperationName,
+	UNICODESTRING dependencyOperationVersion,
+	UNICODESTRING dependencyName,
+	UNICODESTRING dependencyType,
+	INT32 responseSizeBytes,
+	HRESULT HResult
+	);
+
+LaunchAfterInstall(
+	UNICODESTRING ProductId,
+	ANSISTRING __TlgCV__,
+	HRESULT HResult
+	);
+
+EndGetFreeEntitlement(
+	UNICODESTRING StoreId,
+	UNICODESTRING CampaignId,
+	BOOLEAN UseDeviceId,
+	ANSISTRING __TlgCV__,
+	HRESULT HResult
+	);
+
+BeginFrameworkUpdate(
+	ANSISTRING __TlgCV__
+	);
+
+EndScanForUpdates(
+	ANSISTRING __TlgCV__,
+	BOOLEAN IsOnline,
+	BOOLEAN IsApplicability,
+	BOOLEAN IsInteractive,
+	UNICODESTRING ClientAppId,
+	HRESULT HResult
+	);
+
+BeginGetFreeEntitlement(
+	UNICODESTRING StoreId,
+	UNICODESTRING CampaignId,
+	BOOLEAN UseDeviceId,
+	ANSISTRING __TlgCV__
+	);
+
+EndFrameworkUpdate(
+	ANSISTRING __TlgCV__,
+	HRESULT HResult
+	);
+
+PauseInstallation(
+	ANSISTRING __TlgCV__,
+	UNICODESTRING ProductId,
+	UNICODESTRING PFN,
+	UNICODESTRING CategoryId,
+	UNICODESTRING BundleId,
+	BOOLEAN IsUpdate,
+	BOOLEAN IsRemediation,
+	BOOLEAN IsInteractive,
+	BOOLEAN IsMandatory,
+	BOOLEAN IsRestore,
+	UINT32 AttemptNumber,
+	UINT32 SystemAttemptNumber,
+	UINT32 UserAttemptNumber,
+	UNICODESTRING ClientAppId,
+	UNICODESTRING ParentBundleId,
+	BOOLEAN IsBundle,
+	UNICODESTRING WUContentId,
+	UNICODESTRING AggregatedPackageFullNames,
+	INT32 PreviousInstallState,
+	HRESULT PreviousHResult,
+	ANSISTRING RelatedCV
+	);
+
+CancelInstallation(
+	ANSISTRING __TlgCV__,
+	UNICODESTRING ProductId,
+	UNICODESTRING PFN,
+	UNICODESTRING CategoryId,
+	UNICODESTRING BundleId,
+	BOOLEAN IsUpdate,
+	BOOLEAN IsRemediation,
+	BOOLEAN IsInteractive,
+	BOOLEAN IsMandatory,
+	BOOLEAN IsRestore,
+	UINT32 AttemptNumber,
+	UINT32 SystemAttemptNumber,
+	UINT32 UserAttemptNumber,
+	UNICODESTRING ClientAppId,
+	UNICODESTRING ParentBundleId,
+	BOOLEAN IsBundle,
+	UNICODESTRING WUContentId,
+	UNICODESTRING AggregatedPackageFullNames,
+	INT32 PreviousInstallState,
+	HRESULT PreviousHResult,
+	ANSISTRING RelatedCV
+	);
+
+BeginScanForUpdates(
+	ANSISTRING __TlgCV__,
+	BOOLEAN IsOnline,
+	BOOLEAN IsApplicability,
+	UNICODESTRING ClientAppId,
+	BOOLEAN IsInteractive
+	);
+
+ResumeInstallation(
+	ANSISTRING __TlgCV__,
+	UNICODESTRING ProductId,
+	UNICODESTRING PFN,
+	UNICODESTRING CategoryId,
+	UNICODESTRING BundleId,
+	BOOLEAN IsUpdate,
+	BOOLEAN IsRemediation,
+	BOOLEAN IsInteractive,
+	BOOLEAN IsMandatory,
+	BOOLEAN IsRestore,
+	UINT32 AttemptNumber,
+	UINT32 SystemAttemptNumber,
+	UINT32 UserAttemptNumber,
+	BOOLEAN IsUserRetry,
+	UNICODESTRING ClientAppId,
+	UNICODESTRING ResumeClientId,
+	UNICODESTRING ParentBundleId,
+	BOOLEAN IsBundle,
+	UNICODESTRING WUContentId,
+	UNICODESTRING AggregatedPackageFullNames,
+	INT32 PreviousInstallState,
+	HRESULT HResult,
+	HRESULT PreviousHResult,
+	ANSISTRING RelatedCV
+	);
+
+BeginSearchUpdatePackages(
+	ANSISTRING __TlgCV__,
+	UNICODESTRING ProductId,
+	UNICODESTRING PFN,
+	UNICODESTRING CategoryId,
+	UNICODESTRING BundleId,
+	BOOLEAN IsUpdate,
+	BOOLEAN IsRemediation,
+	BOOLEAN IsInteractive,
+	BOOLEAN IsMandatory,
+	BOOLEAN IsRestore,
+	UINT32 AttemptNumber,
+	UINT32 SystemAttemptNumber,
+	UINT32 UserAttemptNumber,
+	UNICODESTRING ClientAppId,
+	UNICODESTRING ParentBundleId,
+	BOOLEAN IsBundle,
+	UNICODESTRING WUContentId
+	);
+
+EndInstall(
+	ANSISTRING __TlgCV__,
+	UNICODESTRING ProductId,
+	UNICODESTRING PFN,
+	UNICODESTRING CategoryId,
+	UNICODESTRING BundleId,
+	BOOLEAN IsUpdate,
+	BOOLEAN IsRemediation,
+	BOOLEAN IsInteractive,
+	BOOLEAN IsMandatory,
+	BOOLEAN IsRestore,
+	UINT32 AttemptNumber,
+	UINT32 SystemAttemptNumber,
+	UINT32 UserAttemptNumber,
+	UNICODESTRING ClientAppId,
+	UNICODESTRING ParentBundleId,
+	BOOLEAN IsBundle,
+	UNICODESTRING WUContentId,
+	UNICODESTRING AggregatedPackageFullNames,
+	HRESULT HResult,
+	HRESULT ExtendedHResult
+	);
+
+AbortedInstallation(
+	ANSISTRING __TlgCV__,
+	UNICODESTRING ProductId,
+	UNICODESTRING PFN,
+	UNICODESTRING CategoryId,
+	UNICODESTRING BundleId,
+	BOOLEAN IsUpdate,
+	BOOLEAN IsRemediation,
+	BOOLEAN IsInteractive,
+	BOOLEAN IsMandatory,
+	BOOLEAN IsRestore,
+	UINT32 AttemptNumber,
+	UINT32 SystemAttemptNumber,
+	UINT32 UserAttemptNumber,
+	UNICODESTRING ClientAppId,
+	UNICODESTRING ParentBundleId,
+	BOOLEAN IsBundle,
+	UNICODESTRING WUContentId,
+	UNICODESTRING AggregatedPackageFullNames,
+	HRESULT HResult
+	);
+
+EndSearchUpdatePackages(
+	ANSISTRING __TlgCV__,
+	UNICODESTRING ProductId,
+	UNICODESTRING PFN,
+	UNICODESTRING CategoryId,
+	UNICODESTRING BundleId,
+	BOOLEAN IsUpdate,
+	BOOLEAN IsRemediation,
+	BOOLEAN IsInteractive,
+	BOOLEAN IsMandatory,
+	BOOLEAN IsRestore,
+	UINT32 AttemptNumber,
+	UINT32 SystemAttemptNumber,
+	UINT32 UserAttemptNumber,
+	UNICODESTRING ClientAppId,
+	UNICODESTRING ParentBundleId,
+	BOOLEAN IsBundle,
+	UNICODESTRING WUContentId,
+	UNICODESTRING AggregatedPackageFullNames,
+	HRESULT HResult
+	);
+
+BeginStageUserData(
+	ANSISTRING __TlgCV__,
+	UNICODESTRING ProductId,
+	UNICODESTRING PFN,
+	UNICODESTRING CategoryId,
+	UNICODESTRING BundleId,
+	BOOLEAN IsUpdate,
+	BOOLEAN IsRemediation,
+	BOOLEAN IsInteractive,
+	BOOLEAN IsMandatory,
+	BOOLEAN IsRestore,
+	UINT32 AttemptNumber,
+	UINT32 SystemAttemptNumber,
+	UINT32 UserAttemptNumber,
+	UNICODESTRING ClientAppId,
+	UNICODESTRING ParentBundleId,
+	BOOLEAN IsBundle,
+	UNICODESTRING WUContentId,
+	UNICODESTRING AggregatedPackageFullNames
+	);
+
+BeginInstall(
+	ANSISTRING __TlgCV__,
+	UNICODESTRING ProductId,
+	UNICODESTRING PFN,
+	UNICODESTRING CategoryId,
+	UNICODESTRING BundleId,
+	BOOLEAN IsUpdate,
+	BOOLEAN IsRemediation,
+	BOOLEAN IsInteractive,
+	BOOLEAN IsMandatory,
+	BOOLEAN IsRestore,
+	UINT32 AttemptNumber,
+	UINT32 SystemAttemptNumber,
+	UINT32 UserAttemptNumber,
+	UNICODESTRING ClientAppId,
+	UNICODESTRING ParentBundleId,
+	BOOLEAN IsBundle,
+	UNICODESTRING WUContentId,
+	UNICODESTRING AggregatedPackageFullNames
+	);
+
+EndStageUserData(
+	ANSISTRING __TlgCV__,
+	UNICODESTRING ProductId,
+	UNICODESTRING PFN,
+	UNICODESTRING CategoryId,
+	UNICODESTRING BundleId,
+	BOOLEAN IsUpdate,
+	BOOLEAN IsRemediation,
+	BOOLEAN IsInteractive,
+	BOOLEAN IsMandatory,
+	BOOLEAN IsRestore,
+	UINT32 AttemptNumber,
+	UINT32 SystemAttemptNumber,
+	UINT32 UserAttemptNumber,
+	UNICODESTRING ClientAppId,
+	UNICODESTRING ParentBundleId,
+	BOOLEAN IsBundle,
+	UNICODESTRING WUContentId,
+	UNICODESTRING AggregatedPackageFullNames,
+	HRESULT HResult
+	);
+
+BeginDownload(
+	ANSISTRING __TlgCV__,
+	UNICODESTRING ProductId,
+	UNICODESTRING PFN,
+	UNICODESTRING CategoryId,
+	UNICODESTRING BundleId,
+	BOOLEAN IsUpdate,
+	BOOLEAN IsRemediation,
+	BOOLEAN IsInteractive,
+	BOOLEAN IsMandatory,
+	BOOLEAN IsRestore,
+	UINT32 AttemptNumber,
+	UINT32 SystemAttemptNumber,
+	UINT32 UserAttemptNumber,
+	UNICODESTRING ClientAppId,
+	UNICODESTRING ParentBundleId,
+	BOOLEAN IsBundle,
+	UNICODESTRING WUContentId,
+	UNICODESTRING AggregatedPackageFullNames
+	);
+
+EndAcquireLicense(
+	ANSISTRING __TlgCV__,
+	UNICODESTRING ProductId,
+	UNICODESTRING PFN,
+	UNICODESTRING CategoryId,
+	UNICODESTRING BundleId,
+	BOOLEAN IsUpdate,
+	BOOLEAN IsRemediation,
+	BOOLEAN IsInteractive,
+	BOOLEAN IsMandatory,
+	BOOLEAN IsRestore,
+	UINT32 AttemptNumber,
+	UINT32 SystemAttemptNumber,
+	UINT32 UserAttemptNumber,
+	UNICODESTRING ClientAppId,
+	UNICODESTRING ParentBundleId,
+	BOOLEAN IsBundle,
+	UNICODESTRING WUContentId,
+	UNICODESTRING AggregatedPackageFullNames,
+	HRESULT HResult
+	);
+
+EndDownload(
+	ANSISTRING __TlgCV__,
+	UNICODESTRING ProductId,
+	UNICODESTRING PFN,
+	UNICODESTRING CategoryId,
+	UNICODESTRING BundleId,
+	BOOLEAN IsUpdate,
+	BOOLEAN IsRemediation,
+	BOOLEAN IsInteractive,
+	BOOLEAN IsMandatory,
+	BOOLEAN IsRestore,
+	UINT32 AttemptNumber,
+	UINT32 SystemAttemptNumber,
+	UINT32 UserAttemptNumber,
+	UNICODESTRING ClientAppId,
+	INT64 DownloadSize,
+	UNICODESTRING ParentBundleId,
+	BOOLEAN IsBundle,
+	UNICODESTRING WUContentId,
+	UNICODESTRING AggregatedPackageFullNames,
+	HRESULT HResult,
+	HRESULT ExtendedHResult
+	);
+
+BeginAcquireLicense(
+	ANSISTRING __TlgCV__,
+	UNICODESTRING ProductId,
+	UNICODESTRING PFN,
+	UNICODESTRING CategoryId,
+	UNICODESTRING BundleId,
+	BOOLEAN IsUpdate,
+	BOOLEAN IsRemediation,
+	BOOLEAN IsInteractive,
+	BOOLEAN IsMandatory,
+	BOOLEAN IsRestore,
+	UINT32 AttemptNumber,
+	UINT32 SystemAttemptNumber,
+	UINT32 UserAttemptNumber,
+	UNICODESTRING ClientAppId,
+	UNICODESTRING ParentBundleId,
+	BOOLEAN IsBundle,
+	UNICODESTRING WUContentId,
+	UNICODESTRING AggregatedPackageFullNames
+	);
+
+WinstoreAuth_SendTokenRequestAndGetTickets_Failure(
+	HRESULT hr
+	);
+
+WinstoreAuth_UserAuthRequired(
+	HRESULT HRESULT_FROM_WIN32(1317L)
+	);
+
+WinstoreAuth_SLSFailure(
+	HRESULT GetLastError()
+	);
+
+HttpRequestFailure(
+	NTSTATUS PartB_Ms.Qos.OutgoingServiceRequest,
+	UNICODESTRING operationName,
+	UNICODESTRING targetUri,
+	INT32 latencyMs,
+	INT32 serviceErrorCode,
+	BOOLEAN succeeded,
+	UNICODESTRING requestMethod,
+	UNICODESTRING responseContentType,
+	UNICODESTRING protocol,
+	UNICODESTRING protocolStatusCode,
+	UNICODESTRING dependencyOperationName,
+	UNICODESTRING dependencyOperationVersion,
+	UNICODESTRING dependencyName,
+	UNICODESTRING dependencyType,
+	INT32 responseSizeBytes,
+	UNICODESTRING __TlgCV__,
+	UINT32 InternetConnectionState,
+	UNICODESTRING Version,
+	UNICODESTRING Headers,
+	UINT32 SecureFailureFlags
+	);
+
+InternalFailureSummary(
+	UNICODESTRING OperationName,
+	UNICODESTRING TargetHostName,
+	UINT32 ServiceErrorCode,
+	UINT64 TotalLatencyMs,
+	UINT64 MinLatencyMs,
+	UINT32 ErrorCount,
+	UNICODESTRING Version
+	);
+
+OutgoingServiceRequestSummary(
+	UNICODESTRING OperationName,
+	UNICODESTRING TargetHostName,
+	UNICODESTRING RequestMethod,
+	UNICODESTRING ResponseCodeGrouping,
+	UINT16 GroupResponseCount,
+	UINT64 TotalGroupLatencyMs,
+	UINT64 MinimumGroupLatencyMs,
+	UINT64 MaximumGroupLatencyMs,
+	UNICODESTRING SampleCorrelationVector,
+	UNICODESTRING Protocol,
+	BOOL32 Succeeded,
+	UNICODESTRING Version
+	);
+
+Assert(
+	UINT32 assertVersion,
+	UINT32 rva,
+	UINT32 timestamp,
+	UINT32 imageSize,
+	ANSISTRING imageName,
+	UINT32 count,
+	UINT32 totalHits,
+	UINT32 ModuleCollection,
+	UINT32 GlobalCollection
+	);
+

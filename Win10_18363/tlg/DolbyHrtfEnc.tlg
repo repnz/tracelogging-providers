@@ -1,0 +1,94 @@
+ProviderNames:
+	Microsoft.Windows.Audio.Spatial.Renderer
+	Microsoft.Windows.Audio.DapEncoder
+	Microsoft.Windows.Audio.Spatial.Metadata
+
+
+
+**** Events *****
+ApiErrors(
+	INT32 TelemetryVersion,
+	INT32 SkippedAddCount,
+	UINT32 SpatialRenderingMode,
+	HEX Initialize,
+	UINT32 Failure,
+	HRESULT FirstErr,
+	HRESULT MostHitErr,
+	HRESULT MostHitErrHitCount,
+	HEX SetAudioObject,
+	UINT32 Failure,
+	HRESULT FirstErr,
+	HRESULT MostHitErr,
+	HRESULT MostHitErrHitCount,
+	HEX SetAudioObjectWithMetadataReader,
+	UINT32 Failure,
+	HRESULT FirstErr,
+	HRESULT MostHitErr,
+	HRESULT MostHitErrHitCount,
+	HEX MixChannelData,
+	UINT32 Failure,
+	HRESULT FirstErr,
+	HRESULT MostHitErr,
+	HRESULT MostHitErrHitCount,
+	HEX Process,
+	UINT32 Failure,
+	HRESULT FirstErr,
+	HRESULT MostHitErr,
+	HRESULT MostHitErrHitCount
+	);
+
+Verbose(
+	GUID ContextId,
+	ANSISTRING Func,
+	UINT32 LineNum,
+	ANSISTRING Msg
+	);
+
+Info(
+	GUID ContextId,
+	ANSISTRING Func,
+	UINT32 LineNum,
+	ANSISTRING Msg
+	);
+
+Warning(
+	GUID ContextId,
+	ANSISTRING Func,
+	UINT32 LineNum,
+	ANSISTRING Msg
+	);
+
+Error(
+	GUID ContextId,
+	ANSISTRING Func,
+	UINT32 LineNum,
+	ANSISTRING Msg
+	);
+
+Error(
+	GUID ContextId,
+	ANSISTRING Func,
+	UINT32 LineNum,
+	ANSISTRING Msg
+	);
+
+Error(
+	GUID ContextId,
+	ANSISTRING Func,
+	UINT32 LineNum,
+	ANSISTRING Msg,
+	INT32 hr
+	);
+
+AssertFailure(
+	ANSISTRING Function,
+	INT32 Line,
+	HRESULT ResultCode
+	);
+
+Error(
+	ANSISTRING Function,
+	INT32 Line,
+	HRESULT ResultCode
+	);
+

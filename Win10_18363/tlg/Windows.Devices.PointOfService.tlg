@@ -1,0 +1,1031 @@
+ProviderNames:
+	Microsoft.IoT.POS.DafDiscovery
+	Microsoft.Windows.PointOfService.Api
+	Microsoft.OSG.IoT.PosRt.Api
+	TelemetryAssert
+	TelemetryAssertDiagTrack
+
+
+
+**** Events *****
+PosPrintJobServer::ExecuteAsync(
+	HRESULT resultCode
+	);
+
+OpenDevice_GenerateBthAepId(
+	UNICODESTRING GeneratedAepId,
+	HRESULT hr
+	);
+
+OpenDevice_IsOobBlob(
+	HRESULT hr,
+	BOOL32 IsOobBlob
+	);
+
+OpenDevice_ValidateOobBlobAndGenerateAepId_OobBlobParseError(
+	UNICODESTRING Error oob field,
+	HRESULT HResult
+	);
+
+OpenDevice_ValidateOobBlobAndGenerateAepId(
+	UNICODESTRING GeneratedAepId,
+	HRESULT HResult
+	);
+
+OpenDevice_DevIntfNotification_CheckProps_Fail(
+	HRESULT hr,
+	UINT32 returnedPropertyCount,
+	BOOL32 (((DEVPKEY_Aep_AepId).pid == (properties[0].CompKey.Key).pid) && IsEqualGUID((DEVPKEY_Aep_AepId).fmtid, (properties[0].CompKey.Key).fmtid)),
+	UINT32 ActualDevPropType,
+	UINT32 ExpectedBufferSize,
+	UINT32 ActualBufferSize,
+	UNICODESTRING ActualPropValue,
+	UNICODESTRING ExpectedPropValue
+	);
+
+OpenDevice_DevIntfNotification_CheckProps_Success(
+	VOID
+	);
+
+OpenDevice_DevIntfNotification_GetProps(
+	HRESULT hr,
+	UINT32 returnedPropertyCount
+	);
+
+OpenDevice_DevIntfNotification_DeviceInterface(
+	UNICODESTRING devicePath
+	);
+
+OpenDevice_DevIntfNotification_Callback(
+	UINT32 action
+	);
+
+OpenDevice_FindDeviceInterfacePathForAep(
+	UNICODESTRING AepId,
+	HRESULT hr,
+	BOOL32 Found
+	);
+
+OpenDevice_CalledAssociationBroker(
+	UNICODESTRING aepId,
+	UNICODESTRING oobBlob,
+	HRESULT hr
+	);
+
+PairAepServiceFailed(
+	UNICODESTRING id,
+	HRESULT pairResult
+	);
+
+OpenDevice_ObjectInitialize(
+	UNICODESTRING path,
+	HRESULT hr
+	);
+
+OpenTaskThrewException(
+	HRESULT thrownResult
+	);
+
+OpenDevice_GetResults(
+	HRESULT hr,
+	HEXINT64 resultObjPtr
+	);
+
+OpenDevice_AssociationReportedComplete_Exiting(
+	BOOL32 Success
+	);
+
+OpenDevice_AssociationReportedComplete(
+	BOOLEAN continueAsyncOperation,
+	BOOLEAN successState
+	);
+
+OpenDevice_AssociationReceivedDeviceStatus_Exiting(
+	UINT32 device status
+	);
+
+OpenDevice_AssociationReceivedDeviceStatus(
+	BOOLEAN continueAsyncOperation,
+	UINT32 deviceStatus
+	);
+
+BarcodeScannerIsSymbologySupported(
+	HEXINT32 hResult
+	);
+
+AsyncBarcodeScannerIsSymbologySupported(
+	HEXINT32 hResult
+	);
+
+BarcodeScannerGetSupportedSymbologies(
+	HEXINT32 hResult
+	);
+
+BarcodeScannerIsProfileSupported(
+	BOOLEAN profileSupported,
+	HEXINT32 hResult
+	);
+
+BarcodeScannerLoadProfiles(
+	HEXINT32 hResult
+	);
+
+BarcodeScannerGetProfiles(
+	HEXINT32 hResult
+	);
+
+BarcodeScannerGetSupportedProfiles(
+	HEXINT32 hResult
+	);
+
+BarcodeScannerRetrieveStatistics(
+	HEXINT32 hResult
+	);
+
+BarcodeScannerClaim(
+	HEXINT32 hResult
+	);
+
+AsyncBarcodeScannerClaim(
+	HEXINT32 hResult
+	);
+
+BarcodeScannerCheckHealth(
+	HEXINT32 hResult
+	);
+
+AsyncBarcodeScannerCheckHealth(
+	HEXINT32 hResult
+	);
+
+BarcodeScannerGetCapabilities(
+	HEXINT32 hResult
+	);
+
+BarcodeScannerGetVideoDeviceId(
+	UNICODESTRING barcodeScannerVideoDeviceId,
+	HEXINT32 hResult
+	);
+
+BarcodeScannerGetDeviceId(
+	UNICODESTRING barcodeScannerDeviceId,
+	HEXINT32 hResult
+	);
+
+BarcodeScannerServerInitialize(
+	HEXINT32 hResult
+	);
+
+CashDrawerGetDrawerEventSource(
+	HEXINT32 hResult
+	);
+
+CashDrawerGetStatisticsAsync(
+	HRESULT hResult
+	);
+
+Async::CashDrawerServer::GetStatisticsAsync(
+	HRESULT ActualAsyncHResult,
+	HRESULT FilteredAsyncHResult
+	);
+
+CashDrawerCheckHealth(
+	HRESULT hResult
+	);
+
+AsyncCashDrawerCheckHealth(
+	HRESULT ActualAsyncHResult,
+	HRESULT FilteredAsyncHResult
+	);
+
+AsyncCashDrawerCheckHealth(
+	HRESULT ActualAsyncHResult,
+	HRESULT FilteredAsyncHResult
+	);
+
+RetryGetDataLengthFromDriver(
+	HRESULT ActualAsyncHResult,
+	HRESULT FilteredAsyncHResult
+	);
+
+CashDrawerClaimDrawerAsync(
+	HEXINT32 hResult
+	);
+
+Async::CashDrawerServer::ClaimDrawerAsync(
+	HRESULT ActualAsyncHResult,
+	HRESULT FilteredAsyncHResult
+	);
+
+CashDrawerGetIsDrawerOpen(
+	HEXINT32 hResult
+	);
+
+CashDrawerGetStatus(
+	HEXINT32 hResult
+	);
+
+CashDrawerGetCapabilities(
+	HEXINT32 hResult
+	);
+
+CashDrawerGetDeviceId(
+	UNICODESTRING CashDrawerDeviceId,
+	HEXINT32 hResult
+	);
+
+CashDrawerInitialize(
+	HEXINT32 hResult
+	);
+
+CashDrawerCreateProvider(
+	HEXINT32 hResult
+	);
+
+CashDrawerGetDeviceSelector(
+	HEXINT32 hResult
+	);
+
+ClaimedLineDisplayFromIdAsync(
+	HEXINT32 hResult,
+	UNICODESTRING deviceId
+	);
+
+LineDisplayFromIdAsync(
+	HEXINT32 hResult,
+	UNICODESTRING deviceId
+	);
+
+MagneticStripeReaderRetrieveStatistics(
+	HEXINT32 hResult
+	);
+
+MagneticStripeReaderClaim(
+	HEXINT32 hResult
+	);
+
+AsyncMagneticStripeReaderClaim(
+	HEXINT32 hResult
+	);
+
+AsyncMagneticStripeCheckHealth(
+	HEXINT32 hResult
+	);
+
+MagneticStripeCheckHealth(
+	HEXINT32 hResult
+	);
+
+MagneticStripeReaderGetErrorReportingTypes(
+	HEXINT32 hResult
+	);
+
+MagneticStripeReaderGetDeviceAuthenticationProtocol(
+	HEXINT32 hResult
+	);
+
+MagneticStripeReaderGetCapabilities(
+	HEXINT32 hResult
+	);
+
+MagneticStripeReaderGetSupportedCardTypes(
+	HEXINT32 hResult
+	);
+
+MagneticStripeReaderGetDeviceId(
+	UNICODESTRING magneticStripeReaderDeviceId,
+	HEXINT32 hResult
+	);
+
+MagneticStripeReaderServerInitialize(
+	HEXINT32 hResult
+	);
+
+PosPrinterGetDeviceSelector(
+	HEXINT32 hResult
+	);
+
+PosPrinterServer::RetrieveStatisticsAsync(
+	HRESULT hResult
+	);
+
+PosPrinterCheckHealth(
+	HRESULT hResult
+	);
+
+Async::PosPrinterServer::RetrieveStatisticsAsync(
+	HRESULT ActualAsyncOpHResult,
+	HRESULT FilteredAsyncOpHResult
+	);
+
+AsyncPosPrinterCheckHealth(
+	HRESULT ActualHResult,
+	HRESULT FilteredHResult
+	);
+
+AsyncPosPrinterCheckHealth(
+	HRESULT ActualAsyncOpHResult,
+	HRESULT FilteredAsyncOpHResult
+	);
+
+PosPrinterServer::ClaimPrinterAsync(
+	HRESULT hResult
+	);
+
+RetryGetDataLengthFromDriver(
+	HRESULT ActualHResult,
+	HRESULT FilteredHResult
+	);
+
+Async::PosPrinterServer::ClaimPrinterAsync(
+	HRESULT ActualAsyncHResult,
+	HRESULT FilteredAsyncHResult
+	);
+
+PosPrinterServer::get_SupportedTypeFaces(
+	HEXINT32 hResult
+	);
+
+PosPrinterServer::get_SupportedCharacterSets(
+	HEXINT32 hResult
+	);
+
+PointOfServicePrinterGetCapabilities(
+	HEXINT32 hResult
+	);
+
+PointOfServicePrinterGetDeviceId(
+	UNICODESTRING PointOfServicePrinterDeviceId,
+	HEXINT32 hResult
+	);
+
+PosPrinterInitialize(
+	HEXINT32 hResult
+	);
+
+PosPrinterServerInitialize(
+	HEXINT32 hResult
+	);
+
+DeviceObjectProperties(
+	INT32 DeviceType,
+	UNICODESTRING DeviceInstance,
+	UNICODESTRING DeviceDescription,
+	UNICODESTRING DeviceFriendlyName,
+	UNICODESTRING DeviceManufacturer,
+	UNICODESTRING DeviceDriverInf,
+	UNICODESTRING DeviceDriverVersion,
+	UINT64 PartA_PrivTags
+	);
+
+ConnectorAction(
+	INT32 DeviceType,
+	UNICODESTRING ActionType,
+	UNICODESTRING ActionName,
+	UINT32 ActionLength,
+	UNICODESTRING ConnectorName,
+	UNICODESTRING ConnectorCompany,
+	UNICODESTRING ConnectorVersion,
+	UNICODESTRING DeviceManufacturer,
+	UNICODESTRING DeviceModel,
+	UNICODESTRING DeviceVersion,
+	NULL Serial,
+	HRESULT hResult,
+	UINT64 PartA_PrivTags
+	);
+
+DeviceCapabilities(
+	INT32 DeviceType,
+	UNICODESTRING Manufacturer,
+	UNICODESTRING Model,
+	UNICODESTRING SetName,
+	UINT32 Capabilites1,
+	UINT32 Capabilites2,
+	UINT32 Capabilites3,
+	UINT32 Capabilites4,
+	UINT64 PartA_PrivTags
+	);
+
+DeviceAction(
+	INT32 DeviceType,
+	UNICODESTRING ActionType,
+	UINT32 ActionCode,
+	UINT32 ActionLength,
+	UNICODESTRING Manufacturer,
+	UNICODESTRING Model,
+	NULL Serial,
+	UNICODESTRING FirmwareRevision,
+	HRESULT hResult,
+	UINT64 PartA_PrivTags
+	);
+
+ApiResult(
+	UNICODESTRING FunctionDescription,
+	HRESULT hResult,
+	UINT64 PartA_PrivTags
+	);
+
+DeviceConnect(
+	UINT32 DeviceType,
+	UINT32 ConnectState,
+	UNICODESTRING DeviceInstance,
+	HRESULT hResult,
+	UINT64 PartA_PrivTags
+	);
+
+ResourceStatistic(
+	UINT32 DeviceType,
+	UNICODESTRING ResourceStatName1,
+	UINT32 ResourceStatValue1,
+	UNICODESTRING ResourceStatName2,
+	UINT32 ResourceStatValue2,
+	UNICODESTRING ResourceStatName3,
+	UNICODESTRING ResourceStatStrValue3,
+	UINT64 PartA_PrivTags
+	);
+
+ApiResult(
+	UNICODESTRING FunctionDescription,
+	HRESULT hResult,
+	UINT64 PartA_PrivTags
+	);
+
+PrintBitmapInstruction::Execute(
+	HRESULT resultCode
+	);
+
+BitmapFinished(
+	HRESULT resultCode,
+	UINT32 startCode,
+	BOOLEAN useWidth,
+	UINT32 customWidth,
+	UINT32 alignment,
+	UINT32 customAlignmentDistance
+	);
+
+SetBitmapInstruction::Execute(
+	HRESULT resultCode
+	);
+
+ClaimedPrintStationConnection::ValidateData(
+	HRESULT resultCode
+	);
+
+BarcodeScannerUsbImpl::SetActiveSymbologies(
+	HEXINT32 hResult
+	);
+
+BarcodeScannerUsbImpl::SetActiveProfile(
+	HEXINT32 hResult
+	);
+
+BarcodeScannerUsbImpl::CheckHealth(
+	HEXINT32 hResult
+	);
+
+RetryGetDataLengthFromDriver(
+	HEXINT32 hResult
+	);
+
+BarcodeScannerProcessEvent(
+	HEXINT32 hResult,
+	HEXINT32 posEventType
+	);
+
+ClaimedBarcodeScannerGetIsVideoPreviewShownOnEnable(
+	HEXINT32 hResult
+	);
+
+ClaimedBarcodeScannerPutIsVideoPreviewShownOnEnable(
+	HEXINT32 hResult
+	);
+
+ClaimedBarcodeScannerShowVideoPreviewAsync_getuithreadid(
+	HEXINT32 hResult
+	);
+
+ClaimedBarcodeScannerUpdateStatistics(
+	HEXINT32 hResult
+	);
+
+ClaimedBarcodeScannerResetStatistics(
+	HEXINT32 hResult
+	);
+
+ClaimedBarcodeScannerSetActiveProfile(
+	HEXINT32 hResult
+	);
+
+ClaimedBarcodeScannerSetActiveSymbologies(
+	HEXINT32 hResult
+	);
+
+ClaimedBarcodeScannerStopSoftwareTrigger(
+	HEXINT32 hResult
+	);
+
+ClaimedBarcodeScannerStartSoftwareTrigger(
+	HEXINT32 hResult
+	);
+
+ClaimedBarcodeScannerDisable(
+	HEXINT32 hResult
+	);
+
+ClaimedBarcodeScannerRetain(
+	HEXINT32 hResult
+	);
+
+ClaimedBarcodeScannerEnable(
+	HEXINT32 hResult
+	);
+
+ClaimedBarcodeScannerGetIsDecodeDataEnabled(
+	HEXINT32 hResult
+	);
+
+ClaimedBarcodeScannerGetIsDisabledOnDataReceived(
+	HEXINT32 hResult,
+	BOOLEAN disabledOnDataReceived
+	);
+
+ClaimedBarcodeScannerGetIsDisabledOnDataReceived(
+	HEXINT32 hResult
+	);
+
+ClaimedBarcodeScannerPutIsDecodeDataEnabled(
+	HEXINT32 hResult
+	);
+
+ClaimedBarcodeScannerIsEnabled(
+	HEXINT32 hResult
+	);
+
+ClaimedBarcodeScannerGetDeviceId(
+	UNICODESTRING barcodeScannerDeviceId,
+	HEXINT32 hResult
+	);
+
+ClaimedBarcodeScannerPutIsDisabledOnDataReceived(
+	BOOLEAN disabledOnDataReceived,
+	HEXINT32 hResult
+	);
+
+ClaimedBarcodeScannerInitialize(
+	HEXINT32 hResult
+	);
+
+BarcodeScannerUnClaim(
+	HEXINT32 hResult
+	);
+
+get_UiThreadId(
+	HEXINT32 hResult
+	);
+
+CashDrawerProcessEvent(
+	HEXINT32 hResult,
+	HEXINT32 posEventType
+	);
+
+CashDrawerStatusInitialize(
+	HEXINT32 hResult
+	);
+
+CashDraweCapabilitiesInitialize(
+	HEXINT32 hResult
+	);
+
+ClaimedCashDrawerUpdateStatisticsAsync(
+	HEXINT32 hResult
+	);
+
+Async::ClaimedCashDrawerServer::UpdateStatisticsAsync(
+	HRESULT ActualAsyncOpHResult,
+	HRESULT FilteredAsyncOpHResult
+	);
+
+ClaimedCashDrawerOpenDrawerAsync(
+	HEXINT32 hResult
+	);
+
+ClaimedCashDrawerResetStatisticsAsync(
+	HEXINT32 hResult
+	);
+
+ClaimedCashDrawerResetStatistics(
+	HEXINT32 hResult
+	);
+
+Async::ClaimedCashDrawerServer::RetainDeviceAsync(
+	HRESULT ActualAsyncOpHResult,
+	HRESULT FilteredAsyncOpHResult
+	);
+
+ClaimedCashDrawerDisableAsync(
+	HEXINT32 hResult
+	);
+
+Async::ClaimedCashDrawerServer::ResetStatisticsAsync(
+	HRESULT ActualAsyncOpHResult,
+	HRESULT FilteredAsyncOpHResult
+	);
+
+ClaimedCashDrawerRetainDeviceAsync(
+	HEXINT32 hResult
+	);
+
+ClaimedCashDrawerEnable(
+	HEXINT32 hResult
+	);
+
+Async::ClaimedCashDrawerServer::EnableAsync(
+	HRESULT ActualAsyncOpHResult,
+	HRESULT FilteredAsyncOpHResult
+	);
+
+Async::ClaimedCashDrawerServer::DisableAsync(
+	HRESULT ActualAsyncOpHResult,
+	HRESULT FilteredAsyncOpHResult
+	);
+
+ClaimedCashDrawerGetDeviceId(
+	UNICODESTRING CashDrawerDeviceId,
+	HEXINT32 hResult
+	);
+
+ClaimedCashDrawerOpened(
+	HEXINT32 hResult
+	);
+
+ClaimedCashDrawerIsEnabled(
+	HEXINT32 hResult
+	);
+
+ClaimedCashDrawerInitialize(
+	HEXINT32 hResult
+	);
+
+CashDrawerUnClaim(
+	HEXINT32 hResult
+	);
+
+CashDrawerEventSourceProcessEvent(
+	HEXINT32 hResult
+	);
+
+LineDisplayClaimAsync(
+	HEXINT32 hResult
+	);
+
+ClaimedLineDisplayRetainDevice(
+	HEXINT32 hResult
+	);
+
+MagneticStripeReaderProcessEvent(
+	HEXINT32 hResult,
+	HEXINT32 posEventType
+	);
+
+ClaimedMagneticStripeReaderStatistics(
+	HEXINT32 hResult
+	);
+
+ClaimedMagneticStripeReaderResetStatistics(
+	HEXINT32 hResult
+	);
+
+MagneticStripeReaderDeAuthenticateDevice(
+	HEXINT32 hResult
+	);
+
+AsyncMagneticStripeReaderDeAuthenticateDevice(
+	HEXINT32 hResult
+	);
+
+MagneticStripeReaderAuthenticateDevice(
+	HEXINT32 hResult
+	);
+
+AsyncMagneticStripeReaderAuthenticateDevice(
+	HEXINT32 hResult
+	);
+
+MagneticStripeReaderRetrieveDeviceAuthenticationData(
+	HEXINT32 hResult
+	);
+
+ClaimedMagnecticStripeReaderDisable(
+	HEXINT32 hResult
+	);
+
+AsyncMagneticStripeReaderRetrieveDeviceAuthenticationData(
+	HEXINT32 hResult
+	);
+
+ClaimedMagneticStripeReaderRetain(
+	HEXINT32 hResult
+	);
+
+ClaimedMagneticStripeReaderEnable(
+	HEXINT32 hResult
+	);
+
+ClaimedMagneticStripeReaderDisable(
+	HEXINT32 hResult
+	);
+
+AsyncClaimedMagneticStripeReaderDisable(
+	HEXINT32 hResult
+	);
+
+ClaimedMagneticStripeReaderSetErrorReportingType(
+	HEXINT32 hResult
+	);
+
+ClaimedMagneticStripeReaderGetIsTransmitSentinelsEnabled(
+	HEXINT32 hResult
+	);
+
+AsyncClaimedMagneticStripeReaderEnable(
+	HEXINT32 hResult
+	);
+
+ClaimedMagneticStripeReaderPutTracksToRead(
+	HEXINT32 hResult
+	);
+
+ClaimedMagneticStripeReaderGetDataEncryptionAlgorithm(
+	HEXINT32 hResult
+	);
+
+ClaimedMagneticStripeReaderPutIsTransmitSentinelsEnabled(
+	HEXINT32 hResult
+	);
+
+ClaimedMagneticStripReaderGetTracksToRead(
+	HEXINT32 hResult
+	);
+
+ClaimedMagneticStripeReaderGetIsDecodeDataEnabled(
+	HEXINT32 hResult
+	);
+
+ClaimedMagneticStripeReaderPutIsDecodeDataEnabled(
+	HEXINT32 hResult
+	);
+
+ClaimedMagneticStripeReaderPutDataEncryptionAlgorithm(
+	HEXINT32 hResult
+	);
+
+ClaimedMagneticStripeReaderGetIsDeviceAuthenticated(
+	HEXINT32 hResult
+	);
+
+ClaimedMagneticStripeReaderPutIsDisabledOnDataReceived(
+	BOOLEAN disabledOnDataReceived,
+	HEXINT32 hResult
+	);
+
+ClaimedMagneticStripeReaderIsEnabled(
+	HEXINT32 hResult
+	);
+
+ClaimedMagneticStripeReaderGetIsDisabledOnDataReceived(
+	HEXINT32 hResult
+	);
+
+MagneticStripeReaderUnClaim(
+	HEXINT32 hResult
+	);
+
+ClaimedMagneticStripeReaderGetDeviceId(
+	UNICODESTRING magneticStripeReaderDeviceId,
+	HEXINT32 hResult
+	);
+
+ClaimedMagneticStripeReaderInitialize(
+	HEXINT32 hResult
+	);
+
+PointOfServicePrinterProcessEvent(
+	HEXINT32 hResult,
+	HEXINT32 posEventType
+	);
+
+PointOfServicePrinterGetSupportedpReceiptBarcodeRotations(
+	HEXINT32 hResult
+	);
+
+CommonPosPrintStationCapabilitiesGetSupportedCharactersPerLine(
+	HEXINT32 hResult
+	);
+
+ClaimedPosPrinterServer::UpdateStatisticsAsync(
+	HRESULT resultCode
+	);
+
+Async::ClaimedPosPrinterServer::ResetStatisticsAsync(
+	HRESULT ActualAsyncOpHResult,
+	HRESULT FilteredAsyncOpHResult
+	);
+
+Async::ClaimedPosPrinterServer::UpdateStatisticsAsync(
+	HRESULT ActualAsyncOpHResult,
+	HRESULT FilteredAsyncOpHResult
+	);
+
+ClaimedPosPrinterServer::ResetStatisticsAsync(
+	HRESULT resultCode
+	);
+
+ClaimedPosPrinterServer::DisableAsync(
+	HRESULT resultCode
+	);
+
+Async::ClaimedPosPrinterServer::DisableAsync(
+	HRESULT ActualAsyncOpHResult,
+	HRESULT FilteredAsyncOpHResult
+	);
+
+ClaimedPosPrinterServer::RetainDeviceAsync(
+	HRESULT resultCode
+	);
+
+Async::ClaimedPosPrinterServer::RetainDeviceAsync(
+	HRESULT ActualAsyncOpHResult,
+	HRESULT FilteredAsyncOpHResult
+	);
+
+ClaimedPosPrinterServer::EnableAsync(
+	HRESULT resultCode
+	);
+
+Async::ClaimedPosPrinterServer::EnableAsync(
+	HRESULT ActualAsyncOpHResult,
+	HRESULT FilteredAsyncOpHResult
+	);
+
+ClaimedPosPrinterServer::get_DeviceId(
+	UNICODESTRING PointOfServicePrinterDeviceId,
+	HRESULT resultCode
+	);
+
+ClaimedPosPrinterServerInitialize(
+	HRESULT resultCode
+	);
+
+CashDrawerCloseAlarmProcessEvent(
+	HEXINT32 hResult,
+	HEXINT32 posEventType
+	);
+
+CashDrawerCloseAlarmSoftwareAlarmStartAsync(
+	HEXINT32 hResult
+	);
+
+CashDrawerCloseAlarmStartAsync(
+	HEXINT32 hResult
+	);
+
+CashDrawerCloseAlarmStartAsyncAsyncCall(
+	HEXINT32 hResult
+	);
+
+LineDisplayBaseDefineGlyph(
+	HEXINT32 hResult,
+	INT32 dataLength
+	);
+
+LineDisplayBaseSetMarqueeType(
+	HEXINT32 hResult,
+	INT32 value
+	);
+
+LineDisplayBaseSetMarqueeFormat(
+	HEXINT32 hResult,
+	INT32 value
+	);
+
+LineDisplayBaseSetBrightness(
+	HEXINT32 hResult,
+	INT32 value
+	);
+
+LineDisplayBaseStoreStorageFileBitmap(
+	HEXINT32 hResult,
+	INT32 widthInPixels
+	);
+
+LineDisplayBaseSetCharacterSet(
+	HEXINT32 hResult,
+	INT32 value
+	);
+
+LineDisplayBaseSetBlinkRate(
+	HEXINT32 hResult,
+	INT32 Milliseconds
+	);
+
+LineDisplayBaseScrollText(
+	HEXINT32 hResult,
+	INT32 direction,
+	INT32 numColsOrRows
+	);
+
+LineDisplayStorageFileBitmap(
+	HEXINT32 hResult,
+	INT32 widthInPixels,
+	INT32 horizontalAlignment,
+	INT32 verticalAlignment
+	);
+
+LineDisplayBaseGetPowerState(
+	HEXINT32 hResult,
+	INT32 PwrState
+	);
+
+LineDisplayBaseGetDeviceId(
+	HEXINT32 hResult,
+	UNICODESTRING deviceId
+	);
+
+LineDisplayBasePhysDeviceName(
+	HEXINT32 hResult,
+	UNICODESTRING PhysDevName
+	);
+
+LineDisplayBaseGetCapabilities(
+	HEXINT32 hResult
+	);
+
+LineDisplayBaseEnable(
+	HEXINT32 hResult
+	);
+
+LineDisplayBaseDisable(
+	HEXINT32 hResult
+	);
+
+LineDisplayBaseClassInitialize(
+	HEXINT32 hResult,
+	UNICODESTRING devicePath
+	);
+
+LineDisplayBaseClose(
+	HEXINT32 hResult,
+	BOOLEAN wasEnabled
+	);
+
+LineDisplayWindowServerInitialize(
+	HEXINT32 hResult,
+	FLOAT sizeHeight,
+	FLOAT sizeWidth
+	);
+
+LineDisplayGlyphsTryRedefineAsync(
+	HEXINT32 hResult
+	);
+
+Async::ClaimedSlipPrinterServer::RemoveSlipAsync(
+	HRESULT ActualAsyncOpHResult,
+	HRESULT FilteredAsyncOpHResult
+	);
+
+SoftwareAlarmStartAsync(
+	HEXINT32 hResult
+	);
+
+LineDisplayTryUpdateAttributesAsync(
+	HEXINT32 hResult
+	);
+
+LineDisplayMarqueeTryStopScrollingAsync(
+	HEXINT32 hResult
+	);
+
+LineDisplayMarqueeTryStartScrollingAsync(
+	HEXINT32 hResult
+	);
+
+LineDisplayMarqueeServerInitialize(
+	HEXINT32 hResult
+	);
+
+GetResourceDllHandleFailed(
+	WIN32ERROR lastError
+	);
+
+Assert(
+	UINT32 assertVersion,
+	UINT32 rva,
+	UINT32 timestamp,
+	UINT32 imageSize,
+	ANSISTRING imageName,
+	UINT32 count,
+	UINT32 totalHits,
+	UINT32 ModuleCollection,
+	UINT32 GlobalCollection
+	);
+

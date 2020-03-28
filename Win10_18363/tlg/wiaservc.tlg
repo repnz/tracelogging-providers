@@ -1,0 +1,71 @@
+ProviderNames:
+	Microsoft.Windows.Scan.WiaService
+
+
+
+**** Events *****
+FallbackError(
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+DeviceProperties(
+	UINT64 PartA_PrivTags,
+	UNICODESTRING FriendlyName,
+	UNICODESTRING InternalName,
+	UNICODESTRING Vendor,
+	UNICODESTRING DeviceDescription,
+	UINT32 DeviceType,
+	UNICODESTRING PortName,
+	UNICODESTRING PnpInterfaceId,
+	UINT32 StiVersion,
+	UNICODESTRING DriverVersion
+	);
+
+FallbackError(
+	UINT64 PartA_PrivTags,
+	SIGNED wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+WiaScanCompleted(
+	UNICODESTRING DeviceName,
+	UINT32 HResult
+	);
+
+WiaScanSessionCreated(
+	UINT32 WiaVersion,
+	UINT32 AppVersion,
+	INT32 IsStiScanner
+	);
+

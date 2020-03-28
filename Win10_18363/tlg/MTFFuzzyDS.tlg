@@ -1,0 +1,175 @@
+ProviderNames:
+	Microsoft.Windows.TextInput.FuzzyDS
+	Microsoft.Windows.Wil.FeatureLogging
+	TextInput
+	Microsoft.Windows.TextInput.InputPersonalizationTraceLogging
+
+
+
+**** Events *****
+FallbackError(
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+SaveUserClusterProfileFailure(
+	INT32 hr,
+	UINT16 LangID
+	);
+
+ClusterWordInserted(
+	UINT16 LangID,
+	DOUBLE WordAdjustment,
+	DOUBLE AverageAdjustment,
+	DOUBLE AverageAdjustmentTopN,
+	BOOLEAN ClusterAdjustmentsApplied,
+	BOOLEAN AppClusterProfileEnabled,
+	BOOLEAN UserClusterProfileEnabled,
+	UNICODESTRING AppName
+	);
+
+UserDictionarySize(
+	UNICODESTRING Filename,
+	UINT32 UnigramCount,
+	UINT64 Size,
+	INT32 GTKMEnabled
+	);
+
+FeatureUsage(
+	UINT32 featureId,
+	INT32 featureVersion,
+	INT32 featureBaseVersion,
+	INT16 featureStage,
+	BOOLEAN enabled,
+	UINT32 kind,
+	UINT64 addend
+	);
+
+FeatureError(
+	UINT32 featureId,
+	INT32 featureVersion,
+	INT32 featureBaseVersion,
+	INT16 featureStage,
+	HRESULT hr,
+	ANSISTRING file,
+	UINT16 lineNumber,
+	ANSISTRING module,
+	ANSISTRING process,
+	ANSISTRING originFile,
+	UINT16 originLineNumber,
+	ANSISTRING originModule,
+	ANSISTRING originName,
+	ANSISTRING message,
+	ANSISTRING callerModule,
+	UINT32 callerReturnAddressOffset,
+	ANSISTRING originCallerModule,
+	UINT32 originCallerReturnAddressOffset
+	);
+
+MTFMultilingual(
+	UINT16 CorrectLang,
+	UINT32 CorrectLangOrder,
+	UINT16 CurrentLang
+	);
+
+CheckUserClusterProfileFailure(
+	INT32 hr,
+	UINT16 LangID
+	);
+
+FallbackError(
+	UINT64 PartA_PrivTags,
+	SIGNED wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+CorruptedFuzzyDSTrie(
+	UINT32 QueryFlags
+	);
+
+DeletedUserDictionary(
+	UNICODESTRING Filename,
+	UNICODESTRING Reason,
+	UINT64 Size,
+	INT32 GTKMEnabled
+	);
+
+LoadUserClusterProfileFailure(
+	INT32 hr,
+	UINT16 LangID
+	);
+
+FeatureVariantUsage(
+	UINT32 featureId,
+	INT32 featureVersion,
+	INT32 featureBaseVersion,
+	INT16 featureStage,
+	BOOLEAN enabled,
+	UINT32 variantKind,
+	UINT8 variant,
+	UINT64 addend
+	);
+
+LoadFuzzyDSFailure(
+	INT32 HRESULT,
+	UINT16 LANGID,
+	UINT32 lineNumber,
+	UINT64 PartA_PrivTags
+	);
+
+EnabledFeatureUsage(
+	UINT32 featureId,
+	INT32 featureVersion,
+	INT32 featureBaseVersion,
+	INT16 featureStage,
+	BOOLEAN enabled,
+	UINT32 kind,
+	UINT64 addend
+	);
+
+LoadApplicationClusterProfileFailure(
+	INT32 hr,
+	UINT16 LangID,
+	UNICODESTRING AppName
+	);
+
+ClearHistoryFailure(
+	INT32 hr,
+	UINT16 LangID
+	);
+
+FailedHResult(
+	INT32 HRESULT,
+	UNICODESTRING Error Message
+	);
+

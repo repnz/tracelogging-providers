@@ -1,0 +1,299 @@
+ProviderNames:
+	Microsoft-Windows-Telephony-TelephonyInteractiveUser
+	Microsoft.Windows.Apps.TelephonyInteractiveUser
+	TelemetryAssert
+	TelemetryAssertDiagTrack
+	Microsoft.Windows.Wil.FeatureLogging
+
+
+
+**** Events *****
+[Error] Assert(
+	HRESULT HResult,
+	ANSISTRING Location,
+	UINT32 Line Number
+	);
+
+[Error] Propagate(
+	HRESULT HResult,
+	ANSISTRING Location,
+	UINT32 Line Number
+	);
+
+[Error] Originate(
+	HRESULT HResult,
+	ANSISTRING Location,
+	UINT32 Line Number
+	);
+
+AppLauncherDeviceUnlocked(
+	ANSISTRING details
+	);
+
+AppLauncherActivateApplicationAboveLock(
+	ANSISTRING details
+	);
+
+AppLauncherActivateApplication(
+	ANSISTRING details
+	);
+
+AppLauncherWaitForShellReady(
+	ANSISTRING details,
+	BOOL32 isReady
+	);
+
+AppLauncherUserUnlockedDevice(
+	ANSISTRING details,
+	BOOL32 true
+	);
+
+AppLauncherUserUnlockedDevice(
+	ANSISTRING details,
+	BOOL32 false
+	);
+
+AppLauncherUnlockDevice(
+	ANSISTRING details
+	);
+
+AppLauncherCallIsIdle(
+	ANSISTRING details
+	);
+
+AppLauncherCallNotFound(
+	ANSISTRING details
+	);
+
+AppLauncherLaunchApp(
+	ANSISTRING details,
+	UNICODESTRING aumId,
+	UNICODESTRING arguments
+	);
+
+AppLauncherLaunchForActiveCall(
+	ANSISTRING details,
+	HEXINT32 callId
+	);
+
+_ActivateInternal(
+	INT32 static_cast<int>(action)
+	);
+
+_GenerateIncomingToastActionXml(
+	INT32 static_cast<int>(action)
+	);
+
+_ShouldButtonBeVisible(
+	INT32 static_cast<int>(button)
+	);
+
+_AudioEndpointsAvailable(
+	BOOL32 BluetoothHandsFreeLineInfoParam_HfpAudioStatus valid?,
+	UINT32 lineInfo.hfpAudioStatus
+	);
+
+_DefaultAudioEndpointsExist(
+	BOOL32 audioRenderId?,
+	BOOL32 audioCaptureId?
+	);
+
+GetAppEndpoint(
+	INT32 static_cast<int>(userType)
+	);
+
+IncomingCallToastRemove(
+	ANSISTRING details,
+	UNICODESTRING AppUserModelId,
+	UNICODESTRING Tag,
+	UNICODESTRING Group
+	);
+
+IncomingCallToastPost(
+	ANSISTRING details,
+	UNICODESTRING AppUserModelId,
+	UNICODESTRING Tag,
+	UNICODESTRING Group,
+	UNICODESTRING NotificationData
+	);
+
+GetIncomingToastActionText(
+	INT32 static_cast<int>(action)
+	);
+
+IncomingCallToastActivated(
+	ANSISTRING details,
+	UNICODESTRING invokedArgs,
+	UNICODESTRING data[0].Key,
+	UNICODESTRING data[0].Value
+	);
+
+IncomingCallToastUpdate(
+	ANSISTRING details,
+	HEXINT32 callId,
+	UINT64 PartA_PrivTags,
+	HRESULT hresult
+	);
+
+IncomingCallToastHide(
+	ANSISTRING details,
+	HEXINT32 callId,
+	UINT64 PartA_PrivTags
+	);
+
+IncomingCallToastShow(
+	ANSISTRING details,
+	HEXINT32 callId,
+	UINT64 PartA_PrivTags,
+	HRESULT hresult
+	);
+
+FeatureError(
+	UINT32 featureId,
+	INT32 featureVersion,
+	INT32 featureBaseVersion,
+	INT16 featureStage,
+	HRESULT hr,
+	ANSISTRING file,
+	UINT16 lineNumber,
+	ANSISTRING module,
+	ANSISTRING process,
+	ANSISTRING originFile,
+	UINT16 originLineNumber,
+	ANSISTRING originModule,
+	ANSISTRING originName,
+	ANSISTRING message,
+	ANSISTRING callerModule,
+	UINT32 callerReturnAddressOffset,
+	ANSISTRING originCallerModule,
+	UINT32 originCallerReturnAddressOffset
+	);
+
+FeatureVariantUsage(
+	UINT32 featureId,
+	INT32 featureVersion,
+	INT32 featureBaseVersion,
+	INT16 featureStage,
+	BOOLEAN enabled,
+	UINT32 variantKind,
+	UINT8 variant,
+	UINT64 addend
+	);
+
+EnabledFeatureUsage(
+	UINT32 featureId,
+	INT32 featureVersion,
+	INT32 featureBaseVersion,
+	INT16 featureStage,
+	BOOLEAN enabled,
+	UINT32 kind,
+	UINT64 addend
+	);
+
+FeatureUsage(
+	UINT32 featureId,
+	INT32 featureVersion,
+	INT32 featureBaseVersion,
+	INT16 featureStage,
+	BOOLEAN enabled,
+	UINT32 kind,
+	UINT64 addend
+	);
+
+FallbackError(
+	UINT64 PartA_PrivTags,
+	SIGNED wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage,
+	UINT32 failureId,
+	UINT32 failureCount,
+	ANSISTRING function
+	);
+
+FallbackError(
+	UINT64 PartA_PrivTags,
+	NTSTATUS wilResult,
+	UINT32 hresult,
+	ANSISTRING fileName,
+	UINT32 lineNumber,
+	ANSISTRING module,
+	UINT32 failureType,
+	UNICODESTRING message,
+	UINT32 threadId,
+	ANSISTRING callContext,
+	UINT32 originatingContextId,
+	ANSISTRING originatingContextName,
+	UNICODESTRING originatingContextMessage,
+	UINT32 currentContextId,
+	ANSISTRING currentContextName,
+	UNICODESTRING currentContextMessage
+	);
+
+PhoneCallToastActivated(
+	UINT32 callId,
+	UNICODESTRING incomingToastAction,
+	HRESULT hresult,
+	UINT64 PartA_PrivTags
+	);
+
+PhoneCallToastHidden(
+	UINT32 callId,
+	UINT64 PartA_PrivTags
+	);
+
+PhoneCallToastUpdated(
+	UINT64 PartA_PrivTags,
+	UINT32 callId
+	);
+
+PhoneCallToastNotificationSent(
+	UINT32 callId,
+	UINT64 PartA_PrivTags,
+	ANSISTRING details,
+	HEXINT32 callId,
+	INT32 Hresult,
+	NULL displayName,
+	NULL callDetails,
+	NULL displayPicturePath
+	);
+
+PhoneCallApplicationActivatedAboveLock(
+	UNICODESTRING owningApplicationId,
+	UINT64 PartA_PrivTags
+	);
+
+PhoneCallApplicationActivated(
+	UNICODESTRING owningApplicationId,
+	UINT64 PartA_PrivTags
+	);
+
+IncomingCallToastInvoked(
+	ANSISTRING details,
+	HEXINT32 incomingCallId,
+	HEXINT32 toastStatus
+	);
+
+Assert(
+	UINT32 assertVersion,
+	UINT32 rva,
+	UINT32 timestamp,
+	UINT32 imageSize,
+	ANSISTRING imageName,
+	UINT32 count,
+	UINT32 totalHits,
+	UINT32 ModuleCollection,
+	UINT32 GlobalCollection
+	);
+
